@@ -246,8 +246,17 @@ caps the map near its own proportions and the panel absorbs the rest. The
 detail panel becomes a bottom sheet.
 
 Only the domains you can actually open are tabs — two of them, both visible
-without scrolling. The planned ones are named on a line underneath, never
-dressed as buttons that do nothing.
+without scrolling. The planned ones are named in a bar pinned to the bottom of
+the page on every width, never dressed as buttons that do nothing.
+
+Two things the bottom sheet gets wrong if you are not careful. Its `74dvh` is
+measured against the **viewport** while it is positioned inside the stage, so on
+a short screen its top — and the close button with it — is pushed up under the
+header, where `overflow: hidden` on the stage clips it; `max-height: 100%` caps
+it to its container. And the info panel needs `min-height: 0` to shrink below
+its content: without it a legend that does not fit spills past the clipped
+stage instead of scrolling, and its last row is simply cut off. Below 740 px of
+height the region key is dropped rather than half-shown.
 
 On a coarse pointer the markers grow from 9 px to 14 px, and the size below
 which a shape gets one rises from 13 px to 20 px, so more small units become

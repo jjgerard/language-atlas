@@ -164,8 +164,14 @@ nav.domains button:hover { border-color: var(--ink-faint); color: var(--ink); }
 nav.domains button[aria-current="true"] {
   background: var(--ink); border-color: var(--ink); color: var(--surface); font-weight: 600;
 }
-/* Planned domains are named, but never dressed as something clickable. */
-.planned { margin: 0; font-size: 11.5px; color: var(--ink-faint); line-height: 1.5; }
+/* Planned domains are named, but never dressed as something clickable, and
+   they sit below the map so they cannot crowd or cover anything. */
+.planned {
+  flex: none; margin: 0; padding: 8px 18px;
+  font-size: 11.5px; line-height: 1.45; color: var(--ink-faint);
+  background: var(--surface); border-top: 1px solid var(--hair);
+}
+.planned:empty { display: none; }
 .planned b { font-weight: 600; color: var(--ink-soft); }
 
 /* ---------------- map ---------------- */
@@ -465,7 +471,9 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
        the screen width, so the leftover cannot make the map bigger — better it
        reads as a panel than as empty ground. */
     position: static; width: auto; flex: 1 1 auto; order: 2;
-    max-height: none; overflow: visible;
+    /* min-height:0 lets a flex child shrink below its content, so a legend
+       that does not fit scrolls instead of spilling past the clipped stage. */
+    min-height: 0; max-height: none; overflow-y: auto;
     border-radius: 0; border-left: 0; border-right: 0; border-bottom: 0;
     border-top: 1px solid var(--hair);
     padding: 10px 14px 12px; box-shadow: none;
@@ -477,12 +485,21 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
   .legend .row { margin-bottom: 0; font-size: 11.5px; }
   .legend .note { display: none; }
   .legend .hues { margin-top: 12px; }
+}
+
+/* A short phone has no room for the region key on top of everything else, and
+   a half-shown legend reads as broken rather than as scrollable. */
+@media (max-width: 820px) and (max-height: 740px) {
+  .legend .hues, .legend .hueslabels { display: none; }
 
   .zoomctl { display: none; }
   .tip { display: none; }
 
   .panel {
-    top: auto; left: 0; width: auto; height: 74dvh;
+    /* 74dvh is measured against the viewport, but the sheet is positioned
+       inside the stage — on a short screen that pushed its top, and the close
+       button with it, up under the header where the stage clips it. */
+    top: auto; left: 0; width: auto; height: 74dvh; max-height: 100%;
     border-left: 0; border-top: 1px solid var(--hair);
     border-radius: 10px 10px 0 0; transform: translateY(100%);
   }
@@ -506,7 +523,6 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
       </div>
     </div>
     <nav class="domains" id="domains" aria-label="Choose what the map shows"></nav>
-    <p class="planned" id="planned"></p>
   </header>
 
   <div class="stage" id="stage">
@@ -549,6 +565,8 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
 
     <aside class="panel" id="panel" aria-label="Unit detail" tabindex="-1"></aside>
   </div>
+
+  <footer class="planned" id="planned"></footer>
 </div>
 
 <script type="module">
@@ -1359,7 +1377,7 @@ function buildDomains() {
   // Named, so the scope is clear, but not dressed as buttons that do nothing.
   const soon = B.domains.filter(d => !d.live);
   document.getElementById('planned').innerHTML = soon.length
-    ? 'Planned: <b>' + soon.map(d => esc(d.label)).join('</b>, <b>') + '</b>'
+    ? 'Planned pages: <b>' + soon.map(d => esc(d.label)).join('</b>, <b>') + '</b>'
     : '';
   document.getElementById('domainName').textContent = domain().label;
   document.getElementById('blurb').textContent = domain().blurb;
