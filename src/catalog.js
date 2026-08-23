@@ -1,11 +1,16 @@
 // Where each live domain's entries come from.
 //
 // A native domain reads the atlas's own store. A proxied one is fetched from
-// its tracker, server to server — the trackers send no CORS headers, so the
-// browser cannot call them directly, and fetching here is what lets the atlas
-// show their live data, community submissions included, without either tracker
-// repo changing. Both arrive in the same entry shape, so everything downstream
-// of this file is unaware of the difference.
+// its tracker, server to server — the trackers send no CORS headers, so a
+// browser on this origin cannot call them directly. Both arrive in the same
+// entry shape, so everything downstream of this file is unaware of which is
+// which; that is what let the two trackers be folded in without touching a
+// single page.
+//
+// Every domain is native as of the import, so the fetch path below currently
+// runs for nothing. It stays because `origin` is still a supported way to
+// declare a domain, and because it is the road any future catalogue would come
+// in by. If it is still unused when a fourth subject lands, delete it.
 
 const fs = require('fs');
 const path = require('path');
@@ -138,6 +143,10 @@ async function getPayload() {
 // Write what the trackers currently serve, so a cold start has something to
 // fall back on even if both are unreachable.
 async function writeSnapshot() {
+  if (LIVE.every(d => d.native)) {
+    throw new Error('nothing to snapshot: every domain reads the store in this app. '
+      + 'Approved entries are kept by src/gitStore.js instead.');
+  }
   const catalogs = {};
   for (const d of LIVE) {
     if (d.native) continue; // already ours; nothing to fall back from

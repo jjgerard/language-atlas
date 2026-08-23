@@ -11,19 +11,22 @@
 // `hint` is the guidance shown under that field on the submission form.
 //
 // A domain gets its entries either from a tracker (`origin`) or from the
-// atlas's own store (`native`). Native is where all of them are headed; see
-// README for the migration order.
+// atlas's own store (`native`). All three are now native: the two trackers'
+// catalogues were imported by import-tracker.js and live in data/<id>.json.
+// Nothing else in the app had to change for that, which was the point of
+// keeping a stored row shaped like a tracker's catalog entry.
 const DOMAINS = [
   {
     id: 'eal',
     label: 'Majority language acquisition',
     blurb: 'Support for children who arrive at school without the language it teaches in — known in schools as EAL.',
     live: true,
-    origin: 'https://eal-policy-tracker.fly.dev',
+    native: true,
     fields: [
       ['newcomerCriteria', 'Newcomer criteria', 'text', 'Who counts as a newcomer or EAL pupil, and on what evidence.'],
       ['removalCriteria', 'Removal criteria', 'text', 'What ends the designation — a test, a time limit, a teacher judgement.'],
       ['newcomerProportion', 'Newcomer proportion', 'series', 'Share of pupils designated, by year, with the source of each figure.'],
+      ['achievementGap', 'Education outcomes', 'text', 'How these pupils do relative to their peers, and how that is measured.'],
       ['l2Support', 'L2 support', 'text', 'Teaching of the school language itself: who delivers it, where, for how long.'],
       ['l1Support', 'L1 support', 'text', 'Any provision in the pupil\u2019s home language.'],
       ['l3Support', 'L3 support', 'text', 'Whether these pupils are also taught a further language, or exempted.'],
@@ -36,7 +39,7 @@ const DOMAINS = [
     label: 'Language disorder support',
     blurb: 'Children with a lasting difficulty learning and using language: how it is identified, and what they are entitled to. Known in research as DLD.',
     live: true,
-    origin: 'https://dld-policy-tracker.fly.dev',
+    native: true,
     fields: [
       ['terminology', 'Terminology', 'text', 'The term used locally, and whether it maps onto DLD.'],
       ['identificationCriteria', 'Identification criteria', 'text', 'What has to be true for a child to be identified.'],

@@ -19,40 +19,50 @@ and `--ink-soft` are the two tokens to re-check if the palette moves.
 
 ## Where the data lives
 
-Each subject comes from one of two places, and the difference is confined to
-`src/catalog.js` and `src/server.js`:
+Every subject is held here. The two trackers were folded in by
+`import-tracker.js`, which reads a tracker's live `/api/catalog` and writes
+`data/<id>.json` — the same living-snapshot file the running app commits after
+an approval. Nothing else in the app changed for that, which was the point of
+keeping a stored row shaped like a tracker's catalog entry: `src/derive.js` and
+every page below it never knew the difference.
 
-    eal-policy-tracker.fly.dev ─┐
-    dld-policy-tracker.fly.dev ─┤ proxied
-                                ├─► /api/atlas ─► the map
-    src/store.js  (fl)         ─┘ native
+    src/store.js ─► /api/atlas ─► the map
+                 ◄─ /api/:domain/submissions
+                 ◄─ /api/:domain/edit-requests
+                 ◄─ /api/admin/*   (moderation)
 
-**Proxied** — `src/catalog.js` fetches the tracker's `/api/catalog`
-server-side every five minutes, so an entry approved in that tracker's own
-admin dashboard appears here without a rebuild. Submissions and edit requests
-are forwarded back to it, and moderation stays where it already is.
+A domain can still declare an `origin` instead of `native: true`, in which case
+`src/catalog.js` fetches its catalog server-side every five minutes and
+submissions are forwarded back to it. That path currently runs for nothing. It
+stays because it is the road any future catalogue would come in by — and
+because it had to exist for the migration to be a data move rather than a
+rewrite. If it is still unused when a fourth subject lands, delete it.
 
-Server-side is not an implementation detail: **neither tracker sends CORS
-headers**, so a browser on this origin cannot call them directly. Doing the
-fetch here is what lets the atlas read live data without changing either
-tracker repo. Only `submissions` and `edit-requests` are forwardable; nothing
-under `/api/admin` is proxied, so this cannot be used to reach a tracker's
-moderation routes.
+Server-side was not an implementation detail while it mattered: **neither
+tracker sends CORS headers**, so a browser on this origin could not call them
+directly. Only `submissions` and `edit-requests` are forwardable; nothing under
+`/api/admin` is proxied.
 
-If a tracker is unreachable the last good copy is served, and the page says so
-rather than presenting stale policy data as current. `npm run snapshot` writes
-a cold-start fallback to `data/snapshot.json` (gitignored — shipping a stale
-copy risks serving it unnoticed).
+### Importing a tracker
 
-**Native** — entries live in this app's own store, with submission, correction
-and moderation here. `fl` is the first; the other two are headed the same way,
-which is the point of the split.
+    node import-tracker.js eal dld
 
-Rows come out of `src/store.js` shaped exactly like a tracker's
-`/api/catalog` entry, so `src/derive.js` and every page below it cannot tell
-which kind a subject is. **Migrating a tracker in is therefore a data move,
-not a rewrite**: import its catalog into the store, drop `origin` and add
-`native: true` in `src/domains.js`, and point its old URL here.
+It refuses to write if any entry carries a key the target domain's field list
+would not store, naming the key and how many entries have content in it — a
+migration that silently drops a column is the kind of thing nobody notices for
+a year. `achievementGap` was found that way; it is now `Education outcomes` on
+the EAL list, which is why EAL entries count out of nine fields rather than
+eight.
+
+The source is `/api/catalog`, which serves **approved entries only**. Anything
+still unreviewed in a tracker's own queue does not come across.
+
+Run it once per tracker. Re-running overwrites `data/<id>.json` with the
+tracker's contents, which after the cutover means discarding anything approved
+here since — to bring across a single late approval, paste it into the
+dashboard's publish box instead. **Until the trackers are retired or pointed
+here, an entry approved in one of them will not reach this map**, because this
+no longer reads them.
 
 ### One table, not one per subject
 
@@ -111,7 +121,8 @@ public maps down with it.
 the Docker image does not need the Natural Earth downloads.
 
 - `GET /api/atlas` — merged, derived units for every live domain
-- `GET /api/health` — per-source state (`live` / `local` / `stale` / `snapshot`),
+- `GET /api/health` — per-source state (`local`, or `live` / `stale` /
+  `snapshot` for a proxied domain),
   counts, and which of admin / git / mail are configured
 - `POST /api/:domain/submissions`, `POST /api/:domain/edit-requests` — stored
   for a native domain, forwarded for a proxied one
@@ -120,7 +131,9 @@ the Docker image does not need the Natural Earth downloads.
 ## What is real
 
 - **All 213 majority-language (EAL) units and 216 language-disorder (DLD)
-  units**, read live from the two deployed trackers.
+  units**, imported from the two trackers. 4,725 field values were compared
+  against the live catalogs after the move, with no differences; doc links,
+  collaborators, support links and the policy-history link counts all match.
 - **216 foreign-languages-in-school units**, held here. Every one is a stub:
   the seed is the same list of places the other two map, with no policy text
   invented for any of them. The map is entirely grey until someone writes it,
@@ -139,9 +152,9 @@ the Docker image does not need the Natural Earth downloads.
                        silhouette. No nav bar: the page is the choice, and
                        About sits with the other destinations rather than in
                        a corner.
-    /eal      map      majority language acquisition   (proxied)
-    /dld      map      language disorder support        (proxied)
-    /fl       map      foreign languages in school      (native)
+    /eal      map      majority language acquisition
+    /dld      map      language disorder support
+    /fl       map      foreign languages in school
     /about    about    what this is and what it cannot do yet
     /submit   form     generated from the subject's field list
     /admin    review   native subjects only; noindex
@@ -163,6 +176,7 @@ lists the planned ones too.
     pages/              page sources -> public/ by assemble.js
     build-geometry.js   shapes -> public/geometry.json + world.svg  (build time)
     assemble.js         pages/*.html -> public/
+    import-tracker.js   a tracker's catalog -> data/<domain>.json  (migration)
     src/domains.js      the domain list; each live one names its source
     src/derive.js       catalog entries -> map units
     src/history.js      policy history -> the document it names
