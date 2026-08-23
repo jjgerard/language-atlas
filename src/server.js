@@ -73,6 +73,7 @@ app.get('/api/health', async (req, res) => {
       admin: adminEnabled,
       git: gitConfigured,
       mail: mail.configured,
+      accepting: durable(),
     });
   } catch (err) {
     res.status(503).json({ ok: false, error: String(err.message || err) });
@@ -91,6 +92,14 @@ function domainFor(req, res) {
 }
 
 const adminUrlFor = req => `${req.protocol}://${req.get('host')}/admin`;
+
+// Accepting a contribution into a store that will be wiped on the next deploy,
+// with nothing sent anywhere, would lose someone's work quietly. Either route
+// out is enough: git persistence keeps it, and the notification email carries
+// the whole entry as a block the dashboard can publish from. With neither, say
+// so instead of taking it. Outside production this is relaxed, or the form
+// could never be exercised locally without real credentials.
+const durable = () => gitConfigured || mail.configured || process.env.NODE_ENV !== 'production';
 
 // Only the two endpoints a contributor needs are proxied. Nothing under
 // /api/admin is forwarded, so this cannot be used to reach a tracker's
@@ -130,6 +139,7 @@ app.post('/api/:domain/submissions', async (req, res) => {
   if (missing.length) return res.status(400).json({ error: 'missing_fields', missing });
 
   if (!d.native) return forward(d, 'submissions', body, res);
+  if (!durable()) return res.status(503).json({ error: 'not_accepting_yet' });
 
   const id = store.insert(d, body);
   res.status(201).json({ id });
@@ -150,6 +160,7 @@ app.post('/api/:domain/edit-requests', async (req, res) => {
   if (!EMAIL_RE.test(email)) return res.status(400).json({ error: 'invalid_email' });
 
   if (!d.native) return forward(d, 'edit-requests', body, res);
+  if (!durable()) return res.status(503).json({ error: 'not_accepting_yet' });
 
   const payload = { domain: d.id, entryTitle, email, description };
   store.addEditRequest(payload);

@@ -1426,7 +1426,12 @@ document.getElementById('fixsend').onclick = async () => {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ description, email, entryTitle: `${fixUnit.name} (${fixUnit.cc})` }),
     });
-    if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || `Error ${res.status}`);
+    if (!res.ok) {
+      const e = (await res.json().catch(() => ({}))).error;
+      throw new Error(e === 'not_accepting_yet'
+        ? 'this map is not taking corrections just yet'
+        : (e || `Error ${res.status}`));
+    }
     said('Sent — thank you. You will get a copy at that address.', 'ok');
     document.getElementById('fixwhat').value = '';
     setTimeout(closeFix, 1600);

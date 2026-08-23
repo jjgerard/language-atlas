@@ -88,6 +88,14 @@ the dashboard says so in its footer, and `/api/health` reports it.
 | `GITHUB_TOKEN`, `GITHUB_REPO` | Approvals lost on redeploy |
 | `GMAIL_USER`, `GMAIL_APP_PASSWORD`, `NOTIFY_EMAIL` | No notification of a new submission |
 
+With **neither** git nor mail configured, a native subject refuses
+contributions in production rather than accepting them into a store that the
+next deploy wipes — `not_accepting_yet`, reported as `accepting: false` on
+`/api/health`, and said plainly on the form. Either one is enough: git keeps
+the entry, and the notification email carries the whole thing as a block the
+dashboard can publish from. Outside production the guard is relaxed, or the
+form could never be exercised locally.
+
 Missing admin credentials disable the dashboard rather than stopping the
 server, as the trackers do: a missing moderation secret should not take the
 public maps down with it.
