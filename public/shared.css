@@ -1,0 +1,187 @@
+/* Shared across every page: palette, base type, and the site nav.
+   Page-specific rules live in each page's own <style>. */
+
+/* ---------------------------------------------------------------
+   Palette: the muted inks of a printed thematic atlas plate.
+   Region hue carries WHICH part of the world; fill state carries
+   WHETHER anything is documented. Two variables, never conflated.
+   --------------------------------------------------------------- */
+:root {
+  --ground:      #E4E9EE;   /* sea — a cool paper, biased toward the lapis accent */
+  --ground-deep: #D6DDE4;
+  --surface:     #FBFCFD;
+  --surface-2:   #F1F4F7;
+  --ink:         #101820;
+  --ink-soft:    #5B6771;
+  --ink-faint:   #8A959F;
+  --hair:        #C3CDD6;
+  --hair-strong: #9DAAB6;
+  --focus:       #3F5BA9;
+
+  --nodata:      #C4CDD5;   /* nothing recorded */
+  --hatch-bg:    #CFD7DE;   /* looked, found nothing */
+  --hatch-line:  #8E9BA7;
+
+  --r-africa:   #C2703D;
+  --r-americas: #2E8B7A;
+  --r-asia:     #93548F;
+  --r-europe:   #3F5BA9;
+  --r-oceania:  #B5455F;
+
+  --shadow: 0 1px 2px rgba(16,24,32,.08), 0 8px 24px -8px rgba(16,24,32,.18);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:      #0D1319;
+    --ground-deep: #080C11;
+    --surface:     #161F27;
+    --surface-2:   #1D2831;
+    --ink:         #E7EEF4;
+    --ink-soft:    #97A6B2;
+    --ink-faint:   #6B7A87;
+    --hair:        #2A3640;
+    --hair-strong: #3E4E5A;
+    --focus:       #8AA3E8;
+
+    --nodata:      #2B3742;
+    --hatch-bg:    #2B3742;
+    --hatch-line:  #566673;
+
+    --r-africa:   #E0925C;
+    --r-americas: #4DBBA4;
+    --r-asia:     #C07ABB;
+    --r-europe:   #7E9AE8;
+    --r-oceania:  #E4738C;
+
+    --shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 30px -10px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"] {
+  --ground:      #0D1319;
+  --ground-deep: #080C11;
+  --surface:     #161F27;
+  --surface-2:   #1D2831;
+  --ink:         #E7EEF4;
+  --ink-soft:    #97A6B2;
+  --ink-faint:   #6B7A87;
+  --hair:        #2A3640;
+  --hair-strong: #3E4E5A;
+  --focus:       #8AA3E8;
+
+  --nodata:      #2B3742;
+  --hatch-bg:    #2B3742;
+  --hatch-line:  #566673;
+
+  --r-africa:   #E0925C;
+  --r-americas: #4DBBA4;
+  --r-asia:     #C07ABB;
+  --r-europe:   #7E9AE8;
+  --r-oceania:  #E4738C;
+
+  --shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 30px -10px rgba(0,0,0,.7);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+
+.eyebrow {
+  font-size: 10.5px; font-weight: 600; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+
+.eyebrow {
+  font-size: 10.5px; font-weight: 600; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+
+/* ---------------- site nav ---------------- */
+.sitebar {
+  display: flex; align-items: center; gap: 20px;
+  padding: 11px 18px;
+  background: var(--surface); border-bottom: 1px solid var(--hair);
+  position: relative; z-index: 30; flex: none;
+}
+.brand { display: flex; align-items: baseline; gap: 11px; text-decoration: none; color: inherit; min-width: 0; }
+.brand h1, .brand .name {
+  font-family: Newsreader, Georgia, serif;
+  font-size: 21px; font-weight: 500; letter-spacing: -.015em; line-height: 1;
+  margin: 0; white-space: nowrap; color: var(--ink);
+}
+.brand .tagline {
+  margin: 0; font-size: 12px; color: var(--ink-faint); white-space: nowrap;
+}
+
+/* Domain links, as pills. Live ones are links; planned ones never are. */
+.pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.pill {
+  font: inherit; font-size: 13.5px; font-weight: 500;
+  padding: 8px 15px; border-radius: 999px;
+  border: 1px solid var(--hair-strong); background: var(--surface);
+  color: var(--ink-soft); cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; white-space: nowrap;
+}
+.pill:hover { border-color: var(--ink-faint); color: var(--ink); }
+.pill[aria-current="true"], .pill.on {
+  background: var(--ink); border-color: var(--ink); color: var(--surface); font-weight: 600;
+}
+.pill.soon {
+  color: var(--ink-faint); border-style: dashed; cursor: default;
+  background: none; opacity: .8;
+}
+.pill.soon:hover { border-color: var(--hair-strong); color: var(--ink-faint); }
+.pill.soon::after {
+  content: "soon"; margin-left: 8px; font-size: 9.5px; letter-spacing: .1em;
+  text-transform: uppercase; opacity: .75;
+}
+
+.navright { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.aboutlink {
+  font-size: 13px; color: var(--ink-soft); text-decoration: none;
+  padding: 7px 11px; border-radius: 4px; white-space: nowrap;
+}
+.aboutlink:hover { background: var(--surface-2); color: var(--ink); }
+.aboutlink[aria-current="page"] { color: var(--ink); font-weight: 600; }
+
+/* The hamburger only exists on narrow screens; on desktop every destination
+   is already visible, so a menu would hide things for no reason. */
+.burger {
+  display: none; width: 40px; height: 40px; flex: none;
+  align-items: center; justify-content: center; gap: 4px; flex-direction: column;
+  background: none; border: 1px solid var(--hair-strong); border-radius: 5px; cursor: pointer;
+}
+.burger span { display: block; width: 17px; height: 1.5px; background: var(--ink); border-radius: 2px; }
+.menu {
+  display: none; position: absolute; top: calc(100% - 1px); left: 0; right: 0;
+  background: var(--surface); border-bottom: 1px solid var(--hair);
+  box-shadow: var(--shadow); padding: 10px 12px 14px; z-index: 40;
+}
+.menu.open { display: block; }
+.menu .pills { flex-direction: column; gap: 6px; }
+.menu .pill { justify-content: flex-start; padding: 11px 15px; }
+.menu .aboutlink {
+  display: block; margin-top: 10px; padding: 11px 4px;
+  border-top: 1px solid var(--hair); border-radius: 0; font-size: 14px;
+}
+
+@media (max-width: 820px) {
+  .sitebar { gap: 12px; padding: 9px 12px; }
+  .brand .name, .brand h1 { font-size: 19px; }
+  .brand .tagline { display: none; }
+  /* Pages with a menu move their links into it. The home page has no pills to
+     move, so it keeps About in the bar rather than hiding it behind nothing. */
+  .sitebar:not(.nomenu) > .pills,
+  .sitebar:not(.nomenu) > .navright .aboutlink { display: none; }
+  .sitebar:not(.nomenu) .burger { display: flex; }
+  .navright { gap: 6px; }
+}

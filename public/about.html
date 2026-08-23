@@ -1,0 +1,211 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About — Language Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+<link rel="stylesheet" href="/shared.css">
+
+<style>
+body { display: flex; flex-direction: column; min-height: 100dvh; }
+main { flex: 1; width: min(72ch, 100%); margin: 0 auto; padding: 40px 22px 72px; }
+
+main h2 {
+  font-family: Newsreader, Georgia, serif;
+  font-size: clamp(27px, 4.4vw, 36px); font-weight: 500; line-height: 1.15;
+  letter-spacing: -.015em; margin: 0 0 6px; text-wrap: balance;
+}
+main .standfirst { margin: 0 0 30px; font-size: 16px; color: var(--ink-soft); line-height: 1.6; }
+
+main h3 {
+  font-family: Newsreader, Georgia, serif;
+  font-size: 21px; font-weight: 500; letter-spacing: -.01em;
+  margin: 38px 0 10px; padding-top: 16px; border-top: 1px solid var(--hair);
+  text-wrap: balance;
+}
+main h4 {
+  font: inherit; font-size: 10.5px; font-weight: 600; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--ink-faint); margin: 24px 0 8px;
+}
+main p, main li { font-size: 15px; line-height: 1.65; }
+main p { margin: 0 0 14px; }
+main ul { margin: 0 0 14px; padding-left: 20px; }
+main li { margin-bottom: 8px; }
+main a { color: var(--focus); }
+main strong { font-weight: 600; }
+
+.keys { display: grid; gap: 9px; margin: 0 0 16px; }
+.keyrow { display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: start; font-size: 14.5px; }
+.keyrow .sw { width: 24px; height: 15px; border-radius: 3px; border: 1px solid var(--hair-strong); margin-top: 3px; }
+.sw.has { background: linear-gradient(90deg, var(--r-africa), var(--r-americas), var(--r-asia), var(--r-europe), var(--r-oceania)); }
+.sw.looked { background-color: var(--hatch-bg); background-image: repeating-linear-gradient(45deg, transparent 0 3px, var(--hatch-line) 3px 4px); }
+.sw.none { background: var(--nodata); }
+.sw.inh { background: var(--r-europe); border-style: dashed; border-color: var(--surface); outline: 1px solid var(--hair-strong); }
+
+blockquote.note {
+  margin: 0 0 16px; padding: 12px 15px; font-size: 14px; line-height: 1.6;
+  color: var(--ink-soft); background: var(--surface-2);
+  border-left: 2px solid var(--hair-strong); border-radius: 0 4px 4px 0;
+}
+footer.foot {
+  flex: none; padding: 14px 18px; background: var(--surface);
+  border-top: 1px solid var(--hair); font-size: 12px; color: var(--ink-faint);
+}
+footer.foot a { color: var(--ink-soft); }
+@media (max-width: 820px) { main { padding: 26px 16px 54px; } }
+</style>
+
+<header class="sitebar">
+  <a class="brand" href="/">
+    <span class="name">Language Atlas</span>
+    <span class="tagline">Provision and policy, by region</span>
+  </a>
+  <nav class="pills" id="pills"></nav>
+  <div class="navright">
+    <a class="aboutlink" href="/about" aria-current="page">About</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="menu" id="menu">
+    <nav class="pills" id="menupills"></nav>
+    <a class="aboutlink" href="/about" aria-current="page">About</a>
+  </div>
+</header>
+
+<main>
+  <h2>What this is, and what it can't do yet</h2>
+  <p class="standfirst">
+    One map per subject, covering every country in the world — most of them still
+    undocumented, and shown that way on purpose.
+  </p>
+
+  <p>
+    This atlas doesn't hold any data of its own. It reads two existing catalogues live —
+    the <a href="https://eal-policy-tracker.fly.dev">EAL / Newcomer Education Policy Tracker</a>
+    and the <a href="https://dld-policy-tracker.fly.dev">DLD Provision &amp; Policy Tracker</a> —
+    and draws what they contain onto a shared map, so the same country can be compared across
+    subjects instead of across websites. An entry approved in either tracker appears here without
+    anything being rebuilt.
+  </p>
+
+  <h3>Why every country is listed</h3>
+  <p>
+    A catalogue that shows only the countries someone has already researched quietly implies its
+    scope is "wherever we got to". A researcher from an undocumented country has no way to know
+    they are the missing piece. Listing everywhere from the start — with the gaps visible — makes
+    the real scope of the project legible, and turns browsing into an invitation rather than a
+    dead end.
+  </p>
+  <p>
+    So most of the map is grey, and that is the honest picture. What exists elsewhere stops
+    short of what is useful for comparison: Eurydice covers around 42 European education systems
+    and MIPEX's education strand a similar set of mostly OECD countries, but neither reaches the
+    level of exact eligibility criteria, funding models, home-language support, or links to the
+    legislation behind them. Outside Europe and the OECD there is essentially no comparative
+    resource at all.
+  </p>
+
+  <h3>Reading the map</h3>
+  <div class="keys">
+    <div class="keyrow"><span class="sw has"></span><span><strong>Documented.</strong> Something is on record for this place. The hue is only its world region, so neighbours stay apart — it carries no judgement about the policy.</span></div>
+    <div class="keyrow"><span class="sw looked"></span><span><strong>Looked, found nothing.</strong> Someone searched and recorded that they found nothing, and where they looked. This is not the same as nobody having tried.</span></div>
+    <div class="keyrow"><span class="sw none"></span><span><strong>Nothing recorded.</strong> Nobody has documented this place for this subject yet.</span></div>
+    <div class="keyrow"><span class="sw inh"></span><span><strong>Follows its country.</strong> A region with nothing of its own for this subject, showing what its country records instead.</span></div>
+  </div>
+  <p>
+    Regions are split as finely as the evidence needs. A sub-national unit exists because it
+    differs from its country <em>in some subject</em> — the US states are separate because their
+    school-language policy differs — so on a map where it has nothing of its own it follows the
+    national entry rather than reading as a hole in it. Its page says which fields are inherited
+    and which are its own.
+  </p>
+
+  <h3>Three tiers of coverage</h3>
+  <ul>
+    <li><strong>Where a published baseline exists.</strong> For language disorders, the 35 national vignettes in Law, McKean, Murphy &amp; Thordardottir (2019), out of COST Action IS1406. For school language support, Eurydice and national ministry documents. The work here is extraction, updating to the current position, and adding what those sources do not cover.</li>
+    <li><strong>Federal and decentralised systems.</strong> The US, Canada, Australia, Germany, Switzerland, Spain, India and others have no single national answer: eligibility, funding and workforce rules are set by state, province, Land or region. These are documented at that level rather than flattened into one national row.</li>
+    <li><strong>Everywhere else.</strong> No comparative source exists, and in many systems there is no recognised speech and language therapy profession at all — which is itself the entry. Only people who work in those systems can fill this in.</li>
+  </ul>
+
+  <h3>How entries are sourced and trusted</h3>
+  <p>
+    Every entry carries a <strong>confidence</strong> rating — official document,
+    researcher-verified, secondary source, or unverified submission — independent of how much
+    detail it has. A one-line, high-confidence entry is worth more than a long unsourced one, and
+    the point is to show both honestly rather than making everything look equally authoritative.
+    Content status (stub, partial, complete) is a separate axis: an entry can be published and
+    still be a stub.
+  </p>
+  <p>
+    Every entry also carries a <em>last verified</em> date. An old entry is not silently wrong,
+    but it is not silently right either. Where a claim traces to a document, the citation in the
+    text links to it; a citation that cannot be resolved to a real source stays as plain text
+    rather than being given a plausible-looking link.
+  </p>
+
+  <h3>Known sticking points</h3>
+  <p>These are stated openly so contributors know what they are walking into.</p>
+  <ul>
+    <li><strong>Policy versus practice.</strong> What a system is obliged to provide and what a child actually receives can be very far apart, and both are worth recording. A single entry can be accurate about the law and misleading about reality; contributors are asked to say which they are describing.</li>
+    <li><strong>The category boundary moves.</strong> Some systems have no "DLD" category at all, only a broader class such as speech, language and communication needs. Some have no separate designation for a pupil learning the language of instruction. Any cross-system count is comparing different objects, which is why the terminology and criteria fields exist.</li>
+    <li><strong>Survey figures are perceptions, not budgets.</strong> Several fields are computed from the COST Action IS1406 practitioner survey, where respondents described one child of their own choosing in 2017. Those are sampled cases and professional perception, never a national budget or a legal position.</li>
+    <li><strong>Assessment tools are commercial.</strong> Naming which battery a service uses is fine; reproducing norms, items or cut-off tables is not. This project links and names, and will not host assessment content.</li>
+    <li><strong>Sources are mostly not in English.</strong> Every entry has a source-language note, and anyone summarising from another language is asked to say so rather than implying a direct quotation.</li>
+  </ul>
+
+  <h3>What this is not</h3>
+  <p>
+    This is a catalogue of systems — not of children, and not of clinical practice. Nothing here
+    should be used to decide whether an individual child has a language disorder, or what support
+    any particular child should receive. Contributors are asked not to submit anything about
+    identifiable individuals.
+  </p>
+  <p>
+    It is also not a ranking. There is no score, no index and no league table, and there is not
+    going to be one: a single number would imply a comparison the underlying entries cannot
+    support.
+  </p>
+
+  <h3>Contributing</h3>
+  <p>
+    If you know how a system works for a place that is still a stub — or can add even one field to
+    an existing entry — it is worth adding. Partial is fine, and "there is no policy on this" is a
+    real answer. Submissions go to whichever tracker owns that subject and are reviewed before
+    publishing, never published automatically.
+  </p>
+  <blockquote class="note">
+    Submitting from the map isn't wired up yet. For now, contribute through
+    <a href="https://eal-policy-tracker.fly.dev/submit">the EAL tracker</a> or
+    <a href="https://dld-policy-tracker.fly.dev/submit">the DLD tracker</a> directly.
+  </blockquote>
+
+  <h3>Who built this</h3>
+  <p>
+    This project and its content were built by Juliana Gerard, a lecturer in Linguistics at
+    Ulster University. The application code was written with Claude Code (Anthropic), which was
+    also used to locate policy documents and research literature, extract what each source
+    actually establishes, and draft entries; the human work is setting the schema, directing the
+    research, and reviewing what gets published.
+  </p>
+  <p>
+    The summaries and metadata written for these catalogues are available under
+    <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> — reuse them anywhere,
+    including commercially, as long as you credit the project and link back. That licence covers
+    only what was written here: no copyright is claimed over the policy documents, clinical
+    guidelines or assessment materials themselves, which remain the property of their issuers, and
+    each entry simply links out. The application code is MIT-licensed and
+    <a href="https://github.com/jjgerard/language-atlas">open source</a>.
+  </p>
+</main>
+
+<footer class="foot">
+  Reads live from the
+  <a href="https://eal-policy-tracker.fly.dev">EAL</a> and
+  <a href="https://dld-policy-tracker.fly.dev">DLD</a> policy trackers. Entry text CC BY 4.0.
+</footer>
+
+<script type="module">
+import { mountNav } from '/nav.js';
+mountNav(null);
+</script>

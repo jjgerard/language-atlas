@@ -62,10 +62,30 @@ the Docker image does not need the Natural Earth downloads.
   Scotland, Wales and Northern Ireland; five Australian states; six Canadian
   provinces; five US states; Catalonia.
 
+## Pages
+
+    /         home     pick a subject, over a flat world silhouette
+    /eal      map      majority language acquisition
+    /dld      map      language disorder support
+    /about    about    what this is and what it cannot do yet
+
+One URL per map, so it can be linked and bookmarked; the page reads the domain
+back off the path. On desktop every destination sits in the bar, with About at
+the top right. Below 820 px the pills move into a hamburger menu — five pills
+wrap the header onto a second row otherwise, and on a phone the bar has to stay
+out of the map's way. Search stays in the bar at every width: it is the fastest
+route to a country and does not belong behind a menu.
+
+`public/shared.css` holds the palette, base type and the nav; `public/nav.js`
+builds the pills from `/api/atlas`, so adding a domain to `src/domains.js` is
+still the only edit needed. The bar shows only domains you can open; the menu
+lists the planned ones too.
+
 ## Layout
 
-    build-geometry.js   shapes -> public/geometry.json   (build time)
-    assemble.js         template.html -> public/index.html
+    pages/              page sources -> public/ by assemble.js
+    build-geometry.js   shapes -> public/geometry.json + world.svg  (build time)
+    assemble.js         pages/*.html -> public/
     src/domains.js      the domain list; each live one names its tracker
     src/derive.js       catalog entries -> map units
     src/history.js      policy history -> the document it names
@@ -244,10 +264,6 @@ as it is tall, so on a portrait screen the drawn map's size is fixed by the
 screen width and any extra height would only become empty ground. `sizeMap()`
 caps the map near its own proportions and the panel absorbs the rest. The
 detail panel becomes a bottom sheet.
-
-Only the domains you can actually open are tabs — two of them, both visible
-without scrolling. The planned ones are named in a bar pinned to the bottom of
-the page on every width, never dressed as buttons that do nothing.
 
 Two things the bottom sheet gets wrong if you are not careful. Its `74dvh` is
 measured against the **viewport** while it is positioned inside the stage, so on

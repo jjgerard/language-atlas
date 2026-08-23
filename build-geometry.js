@@ -323,6 +323,39 @@ async function main() {
               '| countries below the marker threshold:',
               Object.values(countries).filter(c => c.area < AREA_MIN).length);
 
+  // ---------- decorative silhouette for the home page ----------
+  // One path, no interactivity, simplified far harder than the map itself:
+  // the home page should not pay 352 KB for a background.
+  {
+    const RX = [1,.9986,.9954,.99,.9822,.973,.96,.9427,.9216,.8962,.8679,.835,.7986,.7597,.7186,.6732,.6213,.5722,.5322];
+    const RY = [0,.062,.124,.186,.248,.31,.372,.434,.4958,.5571,.6176,.6769,.7346,.7903,.8435,.8936,.9394,.9761,1];
+    const project = (lon, lat) => {
+      const a = Math.min(Math.abs(lat), 90);
+      const i = Math.min(Math.floor(a / 5), 17), t = (a - i * 5) / 5;
+      const x = RX[i] + (RX[i + 1] - RX[i]) * t, y = RY[i] + (RY[i + 1] - RY[i]) * t;
+      return [0.8487 * x * lon * Math.PI / 180 * 1000, -1.3523 * y * (lat < 0 ? -1 : 1) * 1000];
+    };
+    let d = '';
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+    // Only landmasses big enough to read at background size, and every third
+    // vertex of those: this is scenery, not data.
+    const coarse = simplify(Object.values(countries).flatMap(c => c.polys), 1, 4);
+    for (const poly of coarse) for (const ring of poly) {
+      if (ring.length < 8) continue;
+      for (let i = 0; i < ring.length; i += 3) {
+        const [px, py] = project(ring[i][0], ring[i][1]);
+        d += (i ? 'L' : 'M') + px.toFixed(0) + ' ' + py.toFixed(0);
+        if (px < x0) x0 = px; if (px > x1) x1 = px;
+        if (py < y0) y0 = py; if (py > y1) y1 = py;
+      }
+      d += 'Z';
+    }
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${x0.toFixed(0)} ${y0.toFixed(0)} ${(x1-x0).toFixed(0)} ${(y1-y0).toFixed(0)}" preserveAspectRatio="xMidYMid meet"><path fill="currentColor" d="${d}"/></svg>`;
+    const sp = path.join(__dirname, 'public', 'world.svg');
+    fs.writeFileSync(sp, svg);
+    console.log('  public/world.svg', (fs.statSync(sp).size / 1024).toFixed(0), 'KB');
+  }
+
   const geometry = { countries, subunits, territories, anchors, areaMin: AREA_MIN };
   const out = path.join(__dirname, 'public', 'geometry.json');
   fs.mkdirSync(path.dirname(out), { recursive: true });

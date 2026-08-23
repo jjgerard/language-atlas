@@ -1,10 +1,16 @@
-// Copies the page source into public/. The data used to be inlined here; it is
-// fetched at runtime now, so this is a straight copy kept as its own step so
-// the build stays one command.
+// Copies each page source into public/. Page data is fetched at runtime, so
+// this is a plain copy, kept as its own build step so `npm run build` stays
+// one command.
 const fs = require('fs');
 const path = require('path');
 
-const out = process.argv[2] || path.join(__dirname, 'public', 'index.html');
-fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.copyFileSync(path.join(__dirname, 'template.html'), out);
-console.log(out, (fs.statSync(out).size / 1024).toFixed(0) + ' KB');
+const SRC = path.join(__dirname, 'pages');
+const OUT = path.join(__dirname, 'public');
+const PAGES = { 'home.html': 'index.html', 'map.html': 'map.html', 'about.html': 'about.html' };
+
+fs.mkdirSync(OUT, { recursive: true });
+for (const [from, to] of Object.entries(PAGES)) {
+  const dest = path.join(OUT, to);
+  fs.copyFileSync(path.join(SRC, from), dest);
+  console.log('  public/' + to, (fs.statSync(dest).size / 1024).toFixed(0) + ' KB');
+}

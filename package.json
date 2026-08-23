@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "node src/server.js",
-    "build": "node --max-old-space-size=6144 build-geometry.js && node assemble.js public/index.html",
+    "build": "node --max-old-space-size=6144 build-geometry.js && node assemble.js",
     "snapshot": "node -e \"require('./src/catalog').writeSnapshot().then(c=>console.log(c))\""
   },
   "license": "MIT",

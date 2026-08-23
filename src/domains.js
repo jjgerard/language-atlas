@@ -45,7 +45,7 @@ const DOMAINS = [
   },
   { id: 'fl', label: 'Foreign languages in school', blurb: 'Compulsory or optional language learning by phase.', live: false, planned: true },
   { id: 'adult', label: 'Majority language for adults', blurb: 'Classes and entitlements for adults who move to a country, rather than children in its schools.', live: false, planned: true },
-  { id: 'ling', label: 'Studying language itself', blurb: 'Where linguistics can be studied, in secondary school and beyond.', live: false, planned: true },
+  { id: 'ling', label: 'Linguistics in higher education', blurb: 'Where linguistics can be studied as a subject in its own right.', live: false, planned: true },
 ];
 
 const LIVE = DOMAINS.filter(d => d.live);

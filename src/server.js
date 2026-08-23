@@ -86,7 +86,20 @@ app.post('/api/:domain/:endpoint', async (req, res) => {
   await forward(d, req.params.endpoint, req.body || {}, res);
 });
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '..', 'public', 'index.html')));
+// ---- pages ----
+// One URL per map so it can be linked and bookmarked; the page reads the
+// domain back off the path.
+const page = name => (req, res) => res.sendFile(path.join(__dirname, '..', 'public', name));
+
+app.get('/', page('index.html'));
+app.get('/about', page('about.html'));
+for (const d of LIVE) app.get('/' + d.id, page('map.html'));
+
+// Anything else is a real 404, not a silent fallback to the map.
+app.use((req, res) => {
+  if (req.accepts('html')) return res.status(404).sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+  res.status(404).json({ error: 'not_found' });
+});
 
 const server = app.listen(PORT, () => {
   console.log(`language-atlas on :${PORT}`);
