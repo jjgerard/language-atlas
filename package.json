@@ -13,7 +13,10 @@
   "license": "MIT",
   "author": "Juliana Gerard",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "nodemailer": "^9.0.5",
     "polygon-clipping": "^0.15.7"
   },
   "main": "src/server.js"

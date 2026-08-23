@@ -54,4 +54,24 @@ export async function mountNav(currentId, domains) {
   if (bar) bar.innerHTML = pillsHTML(list.filter(d => d.live), currentId);
   const menu2 = document.getElementById('menupills');
   if (menu2) menu2.innerHTML = pillsHTML(list, currentId);
+
+  fitBar();
+  addEventListener('resize', fitBar);
+  // Web fonts land after first paint and change how wide the pills are, so a
+  // measurement taken before they load can be wrong in either direction.
+  if (document.fonts) document.fonts.ready.then(fitBar);
+}
+
+/**
+ * Collapse the bar into the menu exactly when its contents stop fitting.
+ * A fixed breakpoint would need re-tuning every time a domain is added — and
+ * the labels are deliberately spelled out, so they are long.
+ */
+function fitBar() {
+  const bar = document.querySelector('.sitebar:not(.nomenu)');
+  if (!bar) return;
+  bar.classList.remove('compact');
+  // The bar overflows rather than shrinking because the pills are nowrap and
+  // min-width: max-content — see shared.css.
+  if (bar.scrollWidth > bar.clientWidth + 1) bar.classList.add('compact');
 }

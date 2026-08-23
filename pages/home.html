@@ -50,9 +50,16 @@ body { display: flex; flex-direction: column; min-height: 100dvh; }
 
 .choose { margin: 38px 0 0; }
 .choose > .eyebrow { display: block; margin-bottom: 12px; }
-.cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); }
+.cards {
+  display: grid; gap: 12px; align-items: stretch;
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+}
+/* A column, so the count sits on the bottom edge of every card whatever the
+   length of the blurb above it — three cards with three different blurbs
+   otherwise line up on nothing. */
 .card {
-  display: block; text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; height: 100%;
+  text-decoration: none; color: inherit;
   background: var(--surface); border: 1px solid var(--hair);
   border-radius: 8px; padding: 17px 18px 18px; box-shadow: var(--shadow);
 }
@@ -67,9 +74,9 @@ body { display: flex; flex-direction: column; min-height: 100dvh; }
   border-top: 1.5px solid var(--ink-faint); border-right: 1.5px solid var(--ink-faint);
   transform: rotate(45deg); align-self: center;
 }
-.card p { margin: 7px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
+.card p { margin: 7px 0 14px; font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
 .card .count {
-  display: block; margin-top: 12px; padding-top: 10px; font-size: 12px;
+  display: block; margin-top: auto; padding-top: 10px; font-size: 12px;
   border-top: 1px solid var(--hair); color: var(--ink-faint);
   font-variant-numeric: tabular-nums;
 }

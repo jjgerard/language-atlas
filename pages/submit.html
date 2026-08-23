@@ -1,0 +1,361 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Add an entry — Language Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/shared.css">
+
+<style>
+body { display: flex; flex-direction: column; min-height: 100dvh; }
+.wrap { flex: 1; width: 100%; }
+
+/* Which map this entry is for. On the map pages the answer is already known,
+   so this collapses to a line of text rather than asking again. */
+.forwhich { margin: 0 0 20px; }
+.forwhich .pills { margin-top: 8px; }
+
+.place { border-bottom: 1px solid var(--hair); padding-bottom: 4px; margin-bottom: 18px; }
+.place h3, .fieldset h3 {
+  font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase;
+  color: var(--ink-faint); margin: 0 0 12px;
+}
+.fieldset { border-top: 1px solid var(--hair); margin-top: 22px; padding-top: 18px; }
+.fieldset:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+
+.attest { background: var(--surface-2); border-radius: 6px; padding: 15px 16px; margin-top: 22px; }
+.attest .lbl { margin-bottom: 10px; }
+.attest .check + .check { margin-top: 10px; }
+
+.done { text-align: center; padding: 40px 20px; }
+.done .tick {
+  width: 46px; height: 46px; margin: 0 auto 14px; border-radius: 50%;
+  background: var(--r-americas); position: relative;
+}
+.done .tick::after {
+  content: ""; position: absolute; left: 16px; top: 12px; width: 11px; height: 20px;
+  border: solid var(--surface); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg);
+}
+.done h3 { font-size: 20px; font-weight: 600; margin: 0 0 8px; }
+.done p { color: var(--ink-soft); max-width: 46ch; margin: 0 auto 20px; }
+.done .actions { justify-content: center; }
+
+footer.foot {
+  flex: none; padding: 14px 18px; background: var(--surface);
+  border-top: 1px solid var(--hair); font-size: 12px; color: var(--ink-faint);
+}
+</style>
+
+<header class="sitebar">
+  <a class="brand" href="/"><span class="name">Language Atlas</span><span class="tagline">Provision and policy, by region</span></a>
+  <nav class="pills" id="pills"></nav>
+  <div class="navright">
+    <a class="aboutlink" href="/about">About</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="menu" id="menu"><nav class="pills" id="menupills"></nav><a class="aboutlink" href="/about">About</a></div>
+</header>
+
+<div class="wrap">
+  <p><a class="backlink" id="back" href="/">Back to the map</a></p>
+
+  <div class="pagehead">
+    <span class="eyebrow">Contribute</span>
+    <h2 id="head">Add an entry</h2>
+    <p class="lede" id="lede">Fill in whatever you know. A single field for a place nobody has documented is a real contribution — you do not need the whole picture.</p>
+  </div>
+
+  <div class="sheet" id="form">
+    <div class="note">
+      <b>Partial entries are welcome</b>
+      Every country is listed from the start, most of them empty. Leave blank anything you are not sure of, and say how well sourced the rest is — an honest partial entry is worth more than a confident guess.
+    </div>
+
+    <div class="forwhich" id="forwhich"></div>
+
+    <div class="fieldset">
+      <h3>The place</h3>
+      <div class="grid2">
+        <div class="field">
+          <label for="f-cc">Country code (ISO 3166-1 alpha-2) *</label>
+          <input type="text" id="f-cc" maxlength="2" autocomplete="off" placeholder="e.g. SE, AU, NG" list="cc-list">
+          <datalist id="cc-list"></datalist>
+        </div>
+        <div class="field">
+          <label for="f-unit">Place name *</label>
+          <input type="text" id="f-unit" autocomplete="off" placeholder="e.g. Sweden — or Northern Ireland, Quebec, South Australia" list="unit-list">
+          <datalist id="unit-list"></datalist>
+        </div>
+      </div>
+      <div class="field">
+        <label class="check"><input type="checkbox" id="f-national" checked>
+          <span>This applies to the whole country. Uncheck it if the policy belongs to one nation, state or province — those are mapped separately.</span></label>
+      </div>
+    </div>
+
+    <div class="fieldset">
+      <h3>You</h3>
+      <div class="grid2">
+        <div class="field">
+          <label for="f-by">Your name *</label>
+          <input type="text" id="f-by" placeholder="Or “Anonymous”">
+        </div>
+        <div class="field">
+          <label for="f-inst">Your institution</label>
+          <input type="text" id="f-inst" placeholder="Department, university, service">
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-email">Your email</label>
+        <span class="hint">Optional. Used only to confirm receipt and to ask you about anything unclear.</span>
+        <input type="email" id="f-email" placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <span class="lbl">Collaborators</span>
+        <span class="hint">Anyone else this entry should be credited to.</span>
+        <div class="rows" id="rows-collaborators"></div>
+        <button type="button" class="btn small" data-add="collaborators">Add a collaborator</button>
+      </div>
+    </div>
+
+    <div class="fieldset" id="domainfields"></div>
+
+    <div class="fieldset">
+      <h3>Sources</h3>
+      <div class="field">
+        <span class="lbl">Documents</span>
+        <span class="hint">Link the statute, circular, curriculum order or report this comes from. Every claim above should be traceable to one of these.</span>
+        <div class="rows" id="rows-docLinks"></div>
+        <button type="button" class="btn small" data-add="docLinks">Add a document</button>
+      </div>
+      <div class="grid2">
+        <div class="field">
+          <label for="f-confidence">How well sourced is this?</label>
+          <select id="f-confidence">
+            <option value="official-document">It cites an official document</option>
+            <option value="researcher-verified">I work in or research this system, no document cited</option>
+            <option value="secondary-source">From a report, article or news source</option>
+            <option value="unverified-submission" selected>Not sure</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-verified">Accurate as of</label>
+          <input type="text" id="f-verified" placeholder="e.g. 2026 or 2026-01">
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-langnote">Source language</label>
+        <span class="hint">If the documents are not in English, say so — it tells a reader how the wording got here.</span>
+        <input type="text" id="f-langnote" placeholder="e.g. Primary documents in Swedish, summarised in English by the contributor.">
+      </div>
+    </div>
+
+    <div class="attest">
+      <span class="lbl">Before you send</span>
+      <label class="check"><input type="checkbox" id="f-attest1">
+        <span>This is <strong>accurate to the best of my knowledge</strong>, and I have marked how well sourced it is honestly.</span></label>
+      <label class="check"><input type="checkbox" id="f-attest2">
+        <span>I understand it will be <strong>reviewed before it appears</strong> on the map.</span></label>
+    </div>
+
+    <div id="msg"></div>
+    <div class="actions" style="margin-top:18px">
+      <button class="btn primary" id="send" type="button">Send for review</button>
+    </div>
+  </div>
+
+  <div class="sheet done hidden" id="done">
+    <div class="tick" aria-hidden="true"></div>
+    <h3>It is in the review queue</h3>
+    <p>Every entry is checked before it goes on the map. If you left an email address you will get a copy of what you sent.</p>
+    <div class="actions">
+      <a class="btn primary" id="again" href="/submit">Add another</a>
+      <a class="btn" id="back2" href="/">Back to the map</a>
+    </div>
+  </div>
+</div>
+
+<footer class="foot">Entry text CC BY 4.0 · reviewed before publication</footer>
+
+<script type="module">
+import { mountNav } from '/nav.js';
+
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const $ = id => document.getElementById(id);
+const params = new URLSearchParams(location.search);
+
+const atlas = await fetch('/api/atlas').then(r => r.json());
+mountNav(null, atlas.domains);
+
+const live = atlas.domains.filter(d => d.live);
+let domain = live.find(d => d.id === params.get('domain')) || null;
+
+// ---- repeatable rows -------------------------------------------------
+// Every array field in every domain is the same widget: a few text boxes per
+// row, an add button, a remove button per row. Declared once here rather than
+// per field, because the field list comes from the server.
+const SHAPES = {
+  history: [{ k: 'year', ph: 'Year or range', narrow: true }, { k: 'description', ph: 'What changed' }],
+  series: [{ k: 'year', ph: 'Year', narrow: true }, { k: 'value', ph: 'Value', narrow: true }, { k: 'note', ph: 'Source or note' }],
+  collaborators: [{ k: 'name', ph: 'Name' }, { k: 'inst', ph: 'Institution' }],
+  docLinks: [{ k: 'label', ph: 'What it is' }, { k: 'url', ph: 'https://…' }],
+};
+
+function addRow(key, shape) {
+  const host = $('rows-' + key);
+  const row = document.createElement('div');
+  row.className = 'rrow';
+  row.innerHTML = shape.map(f => `<input type="text" data-k="${f.k}" class="${f.narrow ? 'narrow' : ''}" placeholder="${esc(f.ph)}">`).join('')
+    + '<button type="button" class="btn small drop" aria-label="Remove this row">Remove</button>';
+  row.querySelector('.drop').addEventListener('click', () => row.remove());
+  host.appendChild(row);
+  return row;
+}
+
+function readRows(key, shape) {
+  return [...$('rows-' + key).querySelectorAll('.rrow')].map(row => {
+    const out = {};
+    for (const f of shape) out[f.k] = row.querySelector(`[data-k="${f.k}"]`).value.trim();
+    return out;
+  }).filter(r => shape.some(f => r[f.k]));
+}
+
+const arrayFields = {}; // key -> shape, for everything on the page
+
+function mountRepeater(key, shape) {
+  arrayFields[key] = shape;
+  addRow(key, shape);
+}
+
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-add]');
+  if (btn) addRow(btn.dataset.add, arrayFields[btn.dataset.add]);
+});
+
+mountRepeater('collaborators', SHAPES.collaborators);
+mountRepeater('docLinks', SHAPES.docLinks);
+
+// ---- the domain's own fields ----------------------------------------
+function renderDomainFields(d) {
+  const host = $('domainfields');
+  host.innerHTML = `<h3>${esc(d.label)}</h3>` + d.fields.map(f => {
+    const hint = f.hint ? `<span class="hint">${esc(f.hint)}</span>` : '';
+    if (SHAPES[f.type]) {
+      return `<div class="field">
+        <span class="lbl">${esc(f.label)}</span>${hint}
+        <div class="rows" id="rows-${esc(f.k)}"></div>
+        <button type="button" class="btn small" data-add="${esc(f.k)}">Add a row</button>
+      </div>`;
+    }
+    return `<div class="field">
+      <label for="f-${esc(f.k)}">${esc(f.label)}</label>${hint}
+      <textarea id="f-${esc(f.k)}"></textarea>
+    </div>`;
+  }).join('');
+  for (const f of d.fields) if (SHAPES[f.type]) mountRepeater(f.k, SHAPES[f.type]);
+}
+
+// ---- which map ------------------------------------------------------
+function setDomain(d) {
+  domain = d;
+  const q = new URLSearchParams(location.search);
+  q.set('domain', d.id);
+  history.replaceState(null, '', '?' + q);
+  $('head').textContent = 'Add an entry: ' + d.label;
+  $('back').textContent = 'Back to ' + d.label.toLowerCase();
+  $('back').href = '/' + d.id;
+  $('back2').href = '/' + d.id;
+  $('again').href = '/submit?domain=' + d.id;
+  $('forwhich').innerHTML = `<span class="eyebrow">This entry is for</span>
+    <div class="pills">${live.map(x => `<button type="button" class="pill${x.id === d.id ? ' on' : ''}" data-domain="${esc(x.id)}">${esc(x.label)}</button>`).join('')}</div>`;
+  renderDomainFields(d);
+  fillUnits();
+}
+
+$('forwhich').addEventListener('click', e => {
+  const btn = e.target.closest('[data-domain]');
+  if (btn) setDomain(live.find(d => d.id === btn.dataset.domain));
+});
+
+// ---- places already on the map --------------------------------------
+// Not a closed list — a contributor may be adding a place the map splits for
+// the first time — but knowing the names already used keeps the same system
+// from being entered twice under two spellings.
+function fillUnits() {
+  const units = (atlas.units[domain.id] || []);
+  $('cc-list').innerHTML = [...new Set(units.map(u => u.cc))].sort()
+    .map(cc => `<option value="${esc(cc)}">`).join('');
+  $('unit-list').innerHTML = units.map(u => `<option value="${esc(u.name)}">`).join('');
+}
+
+function regionFor(cc) {
+  const u = (atlas.units[domain.id] || []).find(x => x.cc === cc)
+    || Object.values(atlas.units).flat().find(x => x.cc === cc);
+  return u ? u.region : '';
+}
+
+// Prefill from the map: the "I know this" button on an undocumented place
+// links straight here with the place already filled in.
+if (params.get('cc')) $('f-cc').value = params.get('cc').toUpperCase();
+if (params.get('unit')) $('f-unit').value = params.get('unit');
+if (params.get('national') === '0') $('f-national').checked = false;
+
+setDomain(domain || live[0]);
+
+// ---- send ------------------------------------------------------------
+function say(text, kind) {
+  $('msg').innerHTML = text ? `<div class="msg ${kind}">${esc(text)}</div>` : '';
+}
+
+const ERRORS = {
+  attestation_required: 'Please tick both boxes at the end before sending.',
+  missing_fields: 'A country code, a place name and your name are needed.',
+  unknown_domain: 'That map is not accepting entries.',
+  upstream_unavailable: 'The service holding this map did not respond. Nothing was lost — please try again shortly.',
+};
+
+$('send').addEventListener('click', async () => {
+  const cc = $('f-cc').value.trim().toUpperCase();
+  const body = {
+    countryCode: cc,
+    unitName: $('f-unit').value.trim(),
+    isNational: $('f-national').checked,
+    region: regionFor(cc),
+    by: $('f-by').value.trim(),
+    inst: $('f-inst').value.trim(),
+    email: $('f-email').value.trim(),
+    confidence: $('f-confidence').value,
+    lastVerified: $('f-verified').value.trim(),
+    sourceLanguageNote: $('f-langnote').value.trim(),
+    status: 'partial',
+    attest1: $('f-attest1').checked,
+    attest2: $('f-attest2').checked,
+  };
+  for (const [key, shape] of Object.entries(arrayFields)) body[key] = readRows(key, shape);
+  for (const f of domain.fields) if (!SHAPES[f.type]) body[f.k] = $('f-' + f.k).value.trim();
+
+  if (!body.countryCode || !body.unitName || !body.by) return say(ERRORS.missing_fields, 'bad');
+  if (!body.attest1 || !body.attest2) return say(ERRORS.attestation_required, 'bad');
+
+  say('', '');
+  $('send').disabled = true;
+  $('send').textContent = 'Sending…';
+  try {
+    const res = await fetch(`/api/${domain.id}/submissions`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const out = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(ERRORS[out.error] || out.error || `Error ${res.status}`);
+    $('form').classList.add('hidden');
+    $('done').classList.remove('hidden');
+    window.scrollTo({ top: 0 });
+  } catch (err) {
+    say(String(err.message || err), 'bad');
+  } finally {
+    $('send').disabled = false;
+    $('send').textContent = 'Send for review';
+  }
+});
+</script>

@@ -226,6 +226,54 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
   padding: 9px 11px; border-radius: 0 3px 3px 0; margin: 13px 0 0;
 }
 
+/* Contributing, from the entry you are looking at. An empty record is the
+   place a reader is most likely to know something, so the ask is loudest
+   there and quietest where the entry is already full. */
+.contribute { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--hair); }
+.contribute h3 {
+  font: inherit; font-size: 10.5px; font-weight: 600; letter-spacing: .11em;
+  text-transform: uppercase; color: var(--ink-faint); margin: 0 0 8px;
+}
+.contribute p { margin: 0 0 11px; font-size: 12.5px; line-height: 1.5; color: var(--ink-soft); }
+.contribute .row { display: flex; gap: 8px; flex-wrap: wrap; }
+.cbtn {
+  font: inherit; font-size: 12.5px; font-weight: 500; cursor: pointer;
+  padding: 8px 13px; border-radius: 6px; text-decoration: none;
+  border: 1px solid var(--hair-strong); background: var(--surface); color: var(--ink-soft);
+  display: inline-flex; align-items: center;
+}
+.cbtn:hover { border-color: var(--ink-faint); color: var(--ink); }
+.cbtn.lead { background: var(--ink); border-color: var(--ink); color: var(--surface); font-weight: 600; }
+.cbtn.lead:hover { color: var(--surface); opacity: .9; }
+.contribute .elsewhere { font-size: 11.5px; color: var(--ink-faint); margin: 10px 0 0; }
+
+/* Correction dialog. Kept on the map rather than sending the reader to a
+   separate page: a correction is about the entry they are already reading. */
+.dlg {
+  position: fixed; inset: 0; z-index: 60; display: none;
+  align-items: center; justify-content: center; padding: 18px;
+  background: color-mix(in srgb, var(--ink) 42%, transparent);
+}
+.dlg.on { display: flex; }
+.dlg .box {
+  background: var(--surface); border: 1px solid var(--hair); border-radius: 9px;
+  box-shadow: var(--shadow); width: min(460px, 100%); max-height: 92dvh;
+  overflow-y: auto; padding: 20px;
+}
+.dlg h3 { font-size: 18px; font-weight: 600; margin: 0 0 4px; letter-spacing: -.01em; }
+.dlg .sub { font-size: 12.5px; color: var(--ink-soft); margin: 0 0 16px; }
+.dlg label { display: block; font-size: 12.5px; font-weight: 600; margin: 0 0 4px; }
+.dlg input, .dlg textarea {
+  width: 100%; font: inherit; font-size: 13.5px; color: var(--ink);
+  background: var(--ground); border: 1px solid var(--hair-strong);
+  border-radius: 5px; padding: 8px 10px; margin-bottom: 13px;
+}
+.dlg textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
+.dlg .row { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
+.dlg .said { font-size: 12.5px; padding: 9px 11px; border-radius: 5px; margin: 0 0 13px; }
+.dlg .said.bad { background: color-mix(in srgb, var(--r-oceania) 15%, var(--surface)); }
+.dlg .said.ok { background: color-mix(in srgb, var(--r-americas) 15%, var(--surface)); }
+
 /* detail panel */
 .panel {
   position: absolute; top: 0; right: 0; bottom: 0; width: 380px;
@@ -375,6 +423,7 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
         <input id="search" type="search" placeholder="Find a country or region" autocomplete="off" aria-label="Find a country or region">
         <div class="results" id="results" role="listbox"></div>
       </div>
+      <a class="aboutlink" id="addlink" href="/submit">Add an entry</a>
       <a class="aboutlink" href="/about">About</a>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
         <span></span><span></span><span></span>
@@ -382,6 +431,7 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
     </div>
     <div class="menu" id="menu">
       <nav class="pills" id="menupills"></nav>
+      <a class="aboutlink" id="addlink2" href="/submit">Add an entry</a>
       <a class="aboutlink" href="/about">About</a>
     </div>
   </header>
@@ -419,12 +469,28 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
 
     <div class="loading" id="loading" role="status">
       <span class="spin" aria-hidden="true"></span>
-      <p id="loadingText">Loading the latest data from the trackers…</p>
+      <p id="loadingText">Loading the latest data…</p>
     </div>
 
     <div class="tip" id="tip" aria-hidden="true"></div>
 
     <aside class="panel" id="panel" aria-label="Unit detail" tabindex="-1"></aside>
+  </div>
+
+  <div class="dlg" id="fixdlg" role="dialog" aria-modal="true" aria-labelledby="fixtitle">
+    <div class="box">
+      <h3 id="fixtitle">Something wrong here?</h3>
+      <p class="sub" id="fixsub"></p>
+      <div id="fixsaid"></div>
+      <label for="fixwhat">What should change?</label>
+      <textarea id="fixwhat" placeholder="Say what is wrong and, if you can, where the right version is written down."></textarea>
+      <label for="fixmail">Your email</label>
+      <input type="email" id="fixmail" placeholder="you@example.com">
+      <div class="row">
+        <button class="cbtn" id="fixcancel" type="button">Cancel</button>
+        <button class="cbtn lead" id="fixsend" type="button">Send</button>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -1109,6 +1175,8 @@ function select(key, zoom, via) {
   panel.querySelectorAll('.sibs button[data-key]').forEach(b => {
     b.onclick = () => select(b.dataset.key, true);
   });
+  const fix = panel.querySelector('[data-fix]');
+  if (fix) fix.onclick = () => openFix(u);
   if (zoom) {
     const box = BOXES[key] || BOXES[u.cc];
     if (box) zoomToBox(box);
@@ -1222,12 +1290,42 @@ function panelHTML(u, via) {
       <div class="sibs">${sibRows}</div>
       <p class="caveat" style="margin-top:12px">${inheritNote}</p>
     </div>` : ''}
+
+    ${contributeHTML(u, d)}
+  </div>`;
+}
+
+// The ask sits at the end of the entry, phrased by what is already there: an
+// empty record asks the reader to write it, a partial one asks for the gaps,
+// and only an entry with something in it can be corrected.
+function submitHref(u) {
+  const q = new URLSearchParams({ domain: domainId, cc: u.cc, unit: u.name, national: u.nat ? '1' : '0' });
+  return '/submit?' + q;
+}
+
+function contributeHTML(u, d) {
+  const gaps = d.fields.length - u.filled.length;
+  const documented = u.filled.length > 0;
+  return `<div class="contribute">
+    <h3>${documented ? 'Add to this entry' : 'Do you know this system?'}</h3>
+    <p>${documented
+      ? `${gaps === 0 ? 'Every field here has something in it' : `${gaps} of the ${d.fields.length} fields are still blank for ${esc(u.name)}`}. You can add one field without documenting the rest.`
+      : `Nothing has been recorded for ${esc(u.name)} yet. If you teach, plan or research provision there, what you know is the record.`}</p>
+    <div class="row">
+      <a class="cbtn lead" href="${esc(submitHref(u))}">${documented ? 'Add what I know' : 'I know this'}</a>
+      ${documented ? `<button class="cbtn" type="button" data-fix="${esc(keyOf(u))}">Suggest a correction</button>` : ''}
+    </div>
+    <p class="elsewhere">Everything is reviewed before it appears on the map.</p>
   </div>`;
 }
 
 /* ---------- chrome ---------- */
 function buildDomains() {
   mountNav(domainId, B.domains);
+  for (const id of ['addlink', 'addlink2']) {
+    const a = document.getElementById(id);
+    if (a) a.href = '/submit?domain=' + domainId;
+  }
   document.getElementById('domainName').textContent = domain().label;
   document.getElementById('blurb').textContent = domain().blurb;
   // Each map is its own page, so it gets its own title in history and tabs.
@@ -1280,7 +1378,8 @@ loading.classList.add('done');
 // Say so when a tracker could not be reached and the page is showing an
 // older copy — silently serving stale policy data would be worse than a note.
 {
-  const stale = Object.entries(B.sources || {}).filter(([, s]) => s.state !== 'live');
+  const FRESH = new Set(['live', 'local']);
+  const stale = Object.entries(B.sources || {}).filter(([, s]) => !FRESH.has(s.state));
   if (stale.length) {
     const note = document.createElement('p');
     note.className = 'stalenote';
@@ -1290,6 +1389,54 @@ loading.classList.add('done');
     document.querySelector('.controls').appendChild(note);
   }
 }
+/* ---------- corrections ---------- */
+const dlg = document.getElementById('fixdlg');
+let fixUnit = null;
+
+function said(text, kind) {
+  document.getElementById('fixsaid').innerHTML = text ? `<div class="said ${kind}">${esc(text)}</div>` : '';
+}
+
+function openFix(u) {
+  fixUnit = u;
+  document.getElementById('fixsub').textContent =
+    `${u.name} · ${domain().label}. This goes to the maintainer, who will reply to you.`;
+  said('', '');
+  dlg.classList.add('on');
+  document.getElementById('fixwhat').focus();
+}
+
+function closeFix() { dlg.classList.remove('on'); }
+
+document.getElementById('fixcancel').onclick = closeFix;
+dlg.addEventListener('click', e => { if (e.target === dlg) closeFix(); });
+addEventListener('keydown', e => { if (e.key === 'Escape' && dlg.classList.contains('on')) closeFix(); });
+
+document.getElementById('fixsend').onclick = async () => {
+  const btn = document.getElementById('fixsend');
+  const description = document.getElementById('fixwhat').value.trim();
+  const email = document.getElementById('fixmail').value.trim();
+  if (!description) return said('Please say what should change.', 'bad');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return said('An email address is needed so you can be answered.', 'bad');
+  btn.disabled = true;
+  said('', '');
+  try {
+    const res = await fetch(`/api/${domainId}/edit-requests`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ description, email, entryTitle: `${fixUnit.name} (${fixUnit.cc})` }),
+    });
+    if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || `Error ${res.status}`);
+    said('Sent — thank you. You will get a copy at that address.', 'ok');
+    document.getElementById('fixwhat').value = '';
+    setTimeout(closeFix, 1600);
+  } catch (err) {
+    said('That did not send: ' + err.message + '. Nothing was lost — try again shortly.', 'bad');
+  } finally {
+    btn.disabled = false;
+  }
+};
+
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { paintLegend(); paintTally(); });
 addEventListener('resize', () => { sizeMap(); clampView(); applyView(); });
 

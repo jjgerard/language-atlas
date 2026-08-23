@@ -6,7 +6,13 @@ const path = require('path');
 
 const SRC = path.join(__dirname, 'pages');
 const OUT = path.join(__dirname, 'public');
-const PAGES = { 'home.html': 'index.html', 'map.html': 'map.html', 'about.html': 'about.html' };
+const PAGES = {
+  'home.html': 'index.html',
+  'map.html': 'map.html',
+  'about.html': 'about.html',
+  'submit.html': 'submit.html',
+  'admin.html': 'admin.html',
+};
 
 fs.mkdirSync(OUT, { recursive: true });
 for (const [from, to] of Object.entries(PAGES)) {

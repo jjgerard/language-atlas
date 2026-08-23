@@ -3,3 +3,7 @@ node_modules/
 .git/
 sources/
 data/snapshot.json
+# The running database. The image ships the committed JSON the store seeds
+# from, never a local copy of the database itself.
+data/*.db
+data/*.db-journal

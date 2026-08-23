@@ -1,0 +1,403 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Review — Language Atlas</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/shared.css">
+
+<style>
+body { display: flex; flex-direction: column; min-height: 100dvh; }
+.wrap { flex: 1; width: 100%; }
+
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 16px; }
+.tabs .pill .n {
+  margin-left: 8px; font-size: 11px; font-weight: 700; padding: 1px 7px;
+  border-radius: 999px; background: var(--r-oceania); color: #fff;
+}
+.tabs .pill.on .n { background: var(--surface); color: var(--ink); }
+
+.filters { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 14px; align-items: center; }
+.filters .btn.small.on { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+
+.entry { border: 1px solid var(--hair); border-radius: 7px; background: var(--surface); margin-bottom: 10px; }
+.entry > summary {
+  list-style: none; cursor: pointer; padding: 13px 15px;
+  display: flex; gap: 11px; align-items: baseline; flex-wrap: wrap;
+}
+.entry > summary::-webkit-details-marker { display: none; }
+.entry .who { font-weight: 600; }
+.entry .meta { font-size: 12.5px; color: var(--ink-faint); }
+.entry .meta.right { margin-left: auto; }
+.tag {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 999px; border: 1px solid var(--hair-strong); color: var(--ink-soft);
+}
+.tag.pending  { border-color: var(--r-oceania); color: var(--r-oceania); }
+.tag.approved { border-color: var(--r-americas); color: var(--r-americas); }
+.tag.rejected { border-color: var(--hair-strong); color: var(--ink-faint); }
+.entry .body { padding: 0 15px 15px; border-top: 1px solid var(--hair); }
+.entry .body .field:first-child { margin-top: 15px; }
+
+.reqs .req { border: 1px solid var(--hair); border-radius: 7px; background: var(--surface); padding: 13px 15px; margin-bottom: 9px; }
+.reqs .req.done { opacity: .55; }
+.reqs .req p { margin: 8px 0; white-space: pre-wrap; }
+.reqs .req .meta { font-size: 12.5px; color: var(--ink-faint); }
+
+.empty { color: var(--ink-soft); padding: 24px 0; }
+.warn { border-left-color: var(--r-oceania); }
+footer.foot { flex: none; padding: 14px 18px; background: var(--surface); border-top: 1px solid var(--hair); font-size: 12px; color: var(--ink-faint); }
+</style>
+
+<header class="sitebar nomenu">
+  <a class="brand" href="/"><span class="name">Language Atlas</span><span class="tagline">Review</span></a>
+  <div class="navright"><a class="aboutlink" href="/">Back to the atlas</a></div>
+</header>
+
+<div class="wrap wide">
+
+  <div id="login" class="hidden" style="max-width:380px;margin:56px auto">
+    <div class="sheet">
+      <div class="pagehead"><h2 style="font-size:22px">Review dashboard</h2></div>
+      <div class="field">
+        <label for="pw">Password</label>
+        <input type="password" id="pw" style="width:100%;font:inherit;font-size:14px;color:var(--ink);background:var(--ground);border:1px solid var(--hair-strong);border-radius:5px;padding:9px 11px">
+      </div>
+      <div class="actions"><button class="btn primary" id="signin">Sign in</button></div>
+      <div id="loginmsg"></div>
+    </div>
+  </div>
+
+  <div id="disabled" class="hidden">
+    <div class="sheet" style="max-width:560px;margin:56px auto">
+      <div class="note warn">
+        <b>Review is switched off</b>
+        ADMIN_PASSWORD and SESSION_SECRET are not set on this server, so there is nothing to sign in to. Submissions are still being stored — nothing is being lost — but they cannot be published until those are set.
+      </div>
+    </div>
+  </div>
+
+  <div id="app" class="hidden">
+    <div class="pagehead">
+      <span class="eyebrow">Moderation</span>
+      <h2>Review queue</h2>
+      <p class="lede" id="scope"></p>
+    </div>
+
+    <div class="tabs" id="tabs"></div>
+    <div class="filters" id="filters"></div>
+    <div id="list"></div>
+
+    <div class="sheet" style="margin-top:22px">
+      <div class="pagehead" style="margin-bottom:12px"><h2 style="font-size:17px">Publish from a pasted entry</h2></div>
+      <p class="lede" style="font-size:13.5px">Paste the JSON block from a notification email to publish it directly, without going through the queue. Useful if the queued row did not survive a restart.</p>
+      <div class="field" style="margin-top:12px">
+        <textarea id="paste" placeholder='{"domain":"fl","countryCode":"IE","unitName":"Ireland", …}' style="min-height:110px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px"></textarea>
+      </div>
+      <div class="actions"><button class="btn" id="publish">Publish it</button></div>
+      <div id="pastemsg"></div>
+    </div>
+
+    <div class="pagehead" style="margin-top:34px">
+      <h2 style="font-size:19px">Corrections sent in</h2>
+      <p class="lede" style="font-size:13.5px">Notes from readers about an entry that is already on a map. These are for you to act on by editing the entry — closing one only clears it from this list.</p>
+    </div>
+    <div class="reqs" id="reqs"></div>
+
+    <div class="actions" style="margin:30px 0 10px">
+      <button class="btn small" id="signout">Sign out</button>
+    </div>
+  </div>
+</div>
+
+<footer class="foot" id="foot"></footer>
+
+<script type="module">
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const $ = id => document.getElementById(id);
+const api = async (method, url, body) => {
+  const res = await fetch(url, {
+    method,
+    headers: body ? { 'content-type': 'application/json' } : undefined,
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  const out = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(out.error || `Error ${res.status}`);
+  return out;
+};
+const say = (id, text, kind) => { $(id).innerHTML = text ? `<div class="msg ${kind}">${esc(text)}</div>` : ''; };
+
+const SHAPES = {
+  history: [{ k: 'year', ph: 'Year', narrow: true }, { k: 'description', ph: 'What changed' }],
+  series: [{ k: 'year', ph: 'Year', narrow: true }, { k: 'value', ph: 'Value', narrow: true }, { k: 'note', ph: 'Note' }],
+  collaborators: [{ k: 'name', ph: 'Name' }, { k: 'inst', ph: 'Institution' }],
+  docLinks: [{ k: 'label', ph: 'What it is' }, { k: 'url', ph: 'https://…' }],
+  supportLinks: [{ k: 'label', ph: 'What it is' }, { k: 'url', ph: 'https://…' }],
+};
+
+let state = { domains: [], current: null, filter: 'pending', fields: {}, requests: [] };
+
+// ---- session ----
+const me = await api('GET', '/api/admin/me');
+if (!me.enabled) {
+  $('disabled').classList.remove('hidden');
+} else if (me.authed) {
+  start();
+} else {
+  $('login').classList.remove('hidden');
+  $('pw').focus();
+}
+
+$('signin').addEventListener('click', signIn);
+$('pw').addEventListener('keydown', e => { if (e.key === 'Enter') signIn(); });
+
+async function signIn() {
+  try {
+    await api('POST', '/api/admin/login', { password: $('pw').value });
+    $('login').classList.add('hidden');
+    start();
+  } catch (err) {
+    say('loginmsg', err.message === 'invalid_password' ? 'That password is not right.' : err.message, 'bad');
+  }
+}
+
+$('signout').addEventListener('click', async () => {
+  await api('POST', '/api/admin/logout');
+  location.reload();
+});
+
+async function start() {
+  $('app').classList.remove('hidden');
+  await loadQueue();
+}
+
+// ---- queue ----
+async function loadQueue() {
+  const q = await api('GET', '/api/admin/queue');
+  state.domains = q.domains;
+  state.requests = q.editRequests;
+  if (!state.current || !q.domains.some(d => d.id === state.current)) {
+    state.current = (q.domains.find(d => d.pending) || q.domains[0] || {}).id || null;
+  }
+  $('scope').textContent = q.domains.length
+    ? 'Maps the atlas holds itself. The others are still moderated in their own tracker.'
+    : 'No map is stored here yet.';
+  $('foot').textContent = q.git
+    ? 'Approved entries are committed back to the repository, so they survive a rebuild.'
+    : 'GITHUB_TOKEN and GITHUB_REPO are not set — approved entries live only on this machine and will not survive a rebuild.';
+  renderTabs();
+  renderRequests();
+  if (state.current) await loadEntries();
+}
+
+function renderTabs() {
+  $('tabs').innerHTML = state.domains.map(d =>
+    `<button class="pill${d.id === state.current ? ' on' : ''}" data-tab="${esc(d.id)}">${esc(d.label)}${d.pending ? `<span class="n">${d.pending}</span>` : ''}</button>`
+  ).join('');
+  const FILTERS = [['pending', 'Waiting'], ['approved', 'On the map'], ['rejected', 'Rejected'], ['', 'Everything']];
+  $('filters').innerHTML = FILTERS.map(([v, label]) =>
+    `<button class="btn small${v === state.filter ? ' on' : ''}" data-filter="${v}">${label}</button>`).join('');
+}
+
+document.addEventListener('click', async e => {
+  const tab = e.target.closest('[data-tab]');
+  if (tab) { state.current = tab.dataset.tab; renderTabs(); return loadEntries(); }
+  const f = e.target.closest('[data-filter]');
+  if (f) { state.filter = f.dataset.filter; renderTabs(); return loadEntries(); }
+});
+
+async function loadEntries() {
+  const url = `/api/admin/${state.current}/entries` + (state.filter ? `?status=${state.filter}` : '');
+  const { entries, fields } = await api('GET', url);
+  state.fields[state.current] = fields;
+  renderEntries(entries, fields);
+}
+
+const dateOf = s => (s || '').slice(0, 10);
+
+function renderEntries(entries, fields) {
+  if (!entries.length) {
+    $('list').innerHTML = `<p class="empty">Nothing ${state.filter === 'pending' ? 'waiting' : 'here'}.</p>`;
+    return;
+  }
+  $('list').innerHTML = entries.map(e => `
+    <details class="entry" data-id="${e.id}">
+      <summary>
+        <span class="who">${esc(e.unitName)}</span>
+        <span class="tag ${esc(e.moderationStatus)}">${esc(e.moderationStatus)}</span>
+        <span class="meta">${esc(e.countryCode)}${e.isNational ? '' : ' · subnational'}${e.by ? ' · ' + esc(e.by) : ''}</span>
+        <span class="meta right">${esc(dateOf(e.submittedAt))}</span>
+      </summary>
+      <div class="body"></div>
+    </details>`).join('');
+
+  // Built on open rather than up front: a full editor for 200 entries is a lot
+  // of DOM for a page where one is being read at a time.
+  for (const el of $('list').querySelectorAll('.entry')) {
+    el.addEventListener('toggle', () => {
+      if (!el.open || el.dataset.built) return;
+      el.dataset.built = '1';
+      const entry = entries.find(x => x.id === Number(el.dataset.id));
+      el.querySelector('.body').innerHTML = editorHTML(entry, fields);
+      for (const btn of el.querySelectorAll('[data-add]')) {
+        btn.addEventListener('click', () => addRow(el, btn.dataset.add, SHAPES[btn.dataset.shape]));
+      }
+      el.querySelector('.body').addEventListener('click', ev => {
+        const drop = ev.target.closest('.drop');
+        if (drop) drop.closest('.rrow').remove();
+      });
+      wireActions(el, entry, fields);
+    });
+  }
+}
+
+function rowsHTML(key, shape, values) {
+  const rows = (values || []).map(v =>
+    `<div class="rrow">${shape.map(f => `<input type="text" data-k="${f.k}" class="${f.narrow ? 'narrow' : ''}" placeholder="${esc(f.ph)}" value="${esc(v[f.k] || '')}">`).join('')}<button type="button" class="btn small drop">Remove</button></div>`
+  ).join('');
+  return `<div class="rows" data-rows="${esc(key)}">${rows}</div>
+    <button type="button" class="btn small" data-add="${esc(key)}" data-shape="${esc(shapeNameFor(key, shape))}">Add a row</button>`;
+}
+
+function shapeNameFor(key, shape) {
+  return Object.keys(SHAPES).find(n => SHAPES[n] === shape) || key;
+}
+
+function addRow(scope, key, shape) {
+  const host = scope.querySelector(`[data-rows="${key}"]`);
+  const row = document.createElement('div');
+  row.className = 'rrow';
+  row.innerHTML = shape.map(f => `<input type="text" data-k="${f.k}" class="${f.narrow ? 'narrow' : ''}" placeholder="${esc(f.ph)}">`).join('')
+    + '<button type="button" class="btn small drop">Remove</button>';
+  host.appendChild(row);
+}
+
+function editorHTML(e, fields) {
+  const text = (k, label, value, hint) => `<div class="field">
+    <label>${esc(label)}</label>${hint ? `<span class="hint">${esc(hint)}</span>` : ''}
+    <textarea data-f="${esc(k)}">${esc(value || '')}</textarea></div>`;
+  const line = (k, label, value) => `<div class="field">
+    <label>${esc(label)}</label><input type="text" data-f="${esc(k)}" value="${esc(value || '')}"></div>`;
+
+  return `
+    <div class="grid2">
+      ${line('countryCode', 'Country code', e.countryCode)}
+      ${line('unitName', 'Place name', e.unitName)}
+    </div>
+    <div class="field"><label class="check"><input type="checkbox" data-f="isNational" ${e.isNational ? 'checked' : ''}><span>National</span></label></div>
+    <div class="grid2">
+      ${line('by', 'Contributor', e.by)}
+      ${line('inst', 'Institution', e.inst)}
+    </div>
+    <div class="field"><span class="lbl">Collaborators</span>${rowsHTML('collaborators', SHAPES.collaborators, e.collaborators)}</div>
+    ${fields.map(f => SHAPES[f.type]
+      ? `<div class="field"><span class="lbl">${esc(f.label)}</span>${rowsHTML(f.k, SHAPES[f.type], e[f.k])}</div>`
+      : text(f.k, f.label, e[f.k])).join('')}
+    <div class="field"><span class="lbl">Documents</span>${rowsHTML('docLinks', SHAPES.docLinks, e.docLinks)}</div>
+    <div class="grid2">
+      <div class="field"><label>How well sourced</label>
+        <select data-f="confidence">
+          ${['official-document', 'researcher-verified', 'secondary-source', 'unverified-submission']
+            .map(v => `<option value="${v}"${e.confidence === v ? ' selected' : ''}>${v.replace(/-/g, ' ')}</option>`).join('')}
+        </select></div>
+      ${line('lastVerified', 'Accurate as of', e.lastVerified)}
+    </div>
+    ${line('sourceLanguageNote', 'Source language', e.sourceLanguageNote)}
+    ${text('stubNote', 'Placeholder note', e.stubNote, 'Shown when there is nothing else to show for this place.')}
+    <div class="actions" style="margin-top:16px">
+      <button class="btn primary" data-do="save">Save changes</button>
+      ${e.moderationStatus !== 'approved' ? '<button class="btn" data-do="approve">Put it on the map</button>' : '<button class="btn" data-do="unpublish">Take it off the map</button>'}
+      ${e.moderationStatus !== 'rejected' ? '<button class="btn" data-do="reject">Reject</button>' : ''}
+      <button class="btn" data-do="delete">Delete</button>
+      <span class="meta" data-role="msg"></span>
+    </div>`;
+}
+
+function readEditor(el, fields) {
+  const body = { collaborators: readRows(el, 'collaborators', SHAPES.collaborators), docLinks: readRows(el, 'docLinks', SHAPES.docLinks) };
+  for (const input of el.querySelectorAll('[data-f]')) {
+    body[input.dataset.f] = input.type === 'checkbox' ? input.checked : input.value.trim();
+  }
+  for (const f of fields) if (SHAPES[f.type]) body[f.k] = readRows(el, f.k, SHAPES[f.type]);
+  return body;
+}
+
+function readRows(scope, key, shape) {
+  const host = scope.querySelector(`[data-rows="${key}"]`);
+  if (!host) return [];
+  return [...host.querySelectorAll('.rrow')].map(row => {
+    const out = {};
+    for (const f of shape) out[f.k] = row.querySelector(`[data-k="${f.k}"]`).value.trim();
+    return out;
+  }).filter(r => shape.some(f => r[f.k]));
+}
+
+function wireActions(el, entry, fields) {
+  const msg = el.querySelector('[data-role="msg"]');
+  el.querySelector('.actions').addEventListener('click', async ev => {
+    const btn = ev.target.closest('[data-do]');
+    if (!btn) return;
+    const action = btn.dataset.do;
+    if (action === 'delete' && !confirm(`Delete the ${entry.unitName} entry for good? This cannot be undone.`)) return;
+    btn.disabled = true;
+    msg.textContent = '';
+    try {
+      if (action === 'save') {
+        await api('PUT', `/api/admin/entries/${entry.id}`, readEditor(el, fields));
+        msg.textContent = 'Saved.';
+        btn.disabled = false;
+        return;
+      }
+      if (action === 'delete') await api('DELETE', `/api/admin/entries/${entry.id}`);
+      else await api('POST', `/api/admin/entries/${entry.id}/${action}`);
+      await loadQueue();
+    } catch (err) {
+      msg.textContent = err.message;
+      btn.disabled = false;
+    }
+  });
+}
+
+// ---- publish from a pasted block ----
+$('publish').addEventListener('click', async () => {
+  say('pastemsg', '', '');
+  let body;
+  try { body = JSON.parse($('paste').value); }
+  catch { return say('pastemsg', 'That is not valid JSON — paste the whole block including the outer braces.', 'bad'); }
+  if (!body.domain) body.domain = state.current;
+  try {
+    const { entry } = await api('POST', '/api/admin/publish', body);
+    $('paste').value = '';
+    say('pastemsg', `Published ${entry.unitName}.`, 'ok');
+    await loadQueue();
+  } catch (err) {
+    say('pastemsg', err.message === 'not_a_native_domain'
+      ? 'That map is not stored here — publish it in its own tracker.' : err.message, 'bad');
+  }
+});
+
+// ---- corrections ----
+function renderRequests() {
+  if (!state.requests.length) {
+    $('reqs').innerHTML = '<p class="empty">Nothing sent in yet.</p>';
+    return;
+  }
+  $('reqs').innerHTML = state.requests.map(r => `
+    <div class="req ${r.state === 'done' ? 'done' : ''}">
+      <div class="meta">${esc(r.domain)} · ${esc(r.entryTitle)} · ${esc(dateOf(r.createdAt))}</div>
+      <p>${esc(r.description)}</p>
+      <div class="actions">
+        <a class="btn small" href="mailto:${esc(r.email)}">Reply to ${esc(r.email)}</a>
+        <button class="btn small" data-req="${r.id}" data-act="${r.state === 'done' ? 'reopen' : 'close'}">${r.state === 'done' ? 'Reopen' : 'Mark done'}</button>
+      </div>
+    </div>`).join('');
+  $('reqs').addEventListener('click', async ev => {
+    const btn = ev.target.closest('[data-req]');
+    if (!btn) return;
+    btn.disabled = true;
+    await api('POST', `/api/admin/edit-requests/${btn.dataset.req}/${btn.dataset.act}`);
+    await loadQueue();
+  }, { once: true });
+}
+</script>

@@ -1,13 +1,16 @@
-// Live catalog data, fetched from the trackers rather than snapshotted.
+// Where each live domain's entries come from.
 //
-// The trackers send no CORS headers, so the browser cannot call them directly.
-// Fetching here — server to server — is what makes the atlas show live data,
-// including community submissions once a tracker's moderator approves them,
-// and it needs no change to either tracker repo.
+// A native domain reads the atlas's own store. A proxied one is fetched from
+// its tracker, server to server — the trackers send no CORS headers, so the
+// browser cannot call them directly, and fetching here is what lets the atlas
+// show their live data, community submissions included, without either tracker
+// repo changing. Both arrive in the same entry shape, so everything downstream
+// of this file is unaware of the difference.
 
 const fs = require('fs');
 const path = require('path');
 const { LIVE } = require('./domains');
+const store = require('./store');
 const { makeHistoryMatcher } = require('./history');
 const { deriveUnits } = require('./derive');
 
@@ -51,7 +54,8 @@ function build(catalogs, sources) {
     sources,
     domains: require('./domains').DOMAINS.map(({ fields, origin, ...rest }) => ({
       ...rest,
-      fields: (fields || []).map(([k, label]) => ({ k, label })),
+      // Typed and hinted, because the submission form is generated from this.
+      fields: (fields || []).map(([k, label, type, hint]) => ({ k, label, type, hint })),
     })),
   };
 }
@@ -64,6 +68,12 @@ const lastGood = {};
 async function refresh() {
   const catalogs = {}, sources = {};
   await Promise.all(LIVE.map(async d => {
+    if (d.native) {
+      const entries = store.approved(d.id);
+      catalogs[d.id] = entries;
+      sources[d.id] = { origin: 'atlas', state: 'local', entries: entries.length, at: new Date().toISOString() };
+      return;
+    }
     try {
       const entries = await fetchCatalog(d);
       lastGood[d.id] = entries;
@@ -94,6 +104,27 @@ function snapshotFor(id) {
   return snapshotCache ? snapshotCache[id] : null;
 }
 
+// Approving an entry in a native domain has to show on the map now, not at the
+// end of the refresh window it happened to land in — and not on the request
+// after the next one either, which is what marking the payload stale would
+// give: getPayload deliberately serves what it holds while a refresh runs.
+// A native domain's entries are already here, so rebuild against them and
+// whatever the proxied domains last gave us.
+function invalidate() {
+  if (!state.payload) return;
+  const catalogs = {};
+  const sources = { ...state.sources };
+  for (const d of LIVE) {
+    if (d.native) {
+      catalogs[d.id] = store.approved(d.id);
+      sources[d.id] = { origin: 'atlas', state: 'local', entries: catalogs[d.id].length, at: new Date().toISOString() };
+    } else {
+      catalogs[d.id] = lastGood[d.id] || snapshotFor(d.id) || [];
+    }
+  }
+  state = { ...state, payload: build(catalogs, sources), sources };
+}
+
 let inflight = null;
 async function getPayload() {
   const fresh = state.payload && Date.now() - state.fetchedAt < REFRESH_MS;
@@ -108,11 +139,14 @@ async function getPayload() {
 // fall back on even if both are unreachable.
 async function writeSnapshot() {
   const catalogs = {};
-  for (const d of LIVE) catalogs[d.id] = await fetchCatalog(d);
+  for (const d of LIVE) {
+    if (d.native) continue; // already ours; nothing to fall back from
+    catalogs[d.id] = await fetchCatalog(d);
+  }
   fs.mkdirSync(path.dirname(SNAPSHOT), { recursive: true });
   fs.writeFileSync(SNAPSHOT, JSON.stringify(catalogs));
   snapshotCache = catalogs;
   return Object.fromEntries(Object.entries(catalogs).map(([k, v]) => [k, v.length]));
 }
 
-module.exports = { getPayload, refresh, writeSnapshot, REFRESH_MS };
+module.exports = { getPayload, refresh, invalidate, writeSnapshot, REFRESH_MS };

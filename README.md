@@ -17,36 +17,80 @@ behind it at WCAG AA — the muted greys were originally as low as 2.5:1 on the
 ground, which is what made a page of greys on greys hard to read. `--ink-faint`
 and `--ink-soft` are the two tokens to re-check if the palette moves.
 
-## It owns no data (for now)
+## Where the data lives
 
-The atlas currently reads the two existing trackers rather than storing
-anything. **The intention is to fold them into this site** and have it own the
-data directly, at which point the proxy below becomes a migration rather than a
-permanent architecture. Until then:
+Each subject comes from one of two places, and the difference is confined to
+`src/catalog.js` and `src/server.js`:
 
     eal-policy-tracker.fly.dev ─┐
+    dld-policy-tracker.fly.dev ─┤ proxied
                                 ├─► /api/atlas ─► the map
-    dld-policy-tracker.fly.dev ─┘
-                                ◄─ /api/:domain/submissions
-                                ◄─ /api/:domain/edit-requests
+    src/store.js  (fl)         ─┘ native
 
-`src/catalog.js` fetches each tracker's `/api/catalog` **server-side**, every
-five minutes, and derives the map from what comes back — so an entry approved
-in a tracker's own admin dashboard appears here without a rebuild. Submissions
-and edit requests are forwarded back to whichever tracker owns that domain.
+**Proxied** — `src/catalog.js` fetches the tracker's `/api/catalog`
+server-side every five minutes, so an entry approved in that tracker's own
+admin dashboard appears here without a rebuild. Submissions and edit requests
+are forwarded back to it, and moderation stays where it already is.
 
 Server-side is not an implementation detail: **neither tracker sends CORS
 headers**, so a browser on this origin cannot call them directly. Doing the
 fetch here is what lets the atlas read live data without changing either
-tracker repo, and it keeps moderation where it already is.
-
-Only `submissions` and `edit-requests` are forwardable. Nothing under
-`/api/admin` is proxied, so this cannot be used to reach a moderation route.
+tracker repo. Only `submissions` and `edit-requests` are forwardable; nothing
+under `/api/admin` is proxied, so this cannot be used to reach a tracker's
+moderation routes.
 
 If a tracker is unreachable the last good copy is served, and the page says so
 rather than presenting stale policy data as current. `npm run snapshot` writes
 a cold-start fallback to `data/snapshot.json` (gitignored — shipping a stale
 copy risks serving it unnoticed).
+
+**Native** — entries live in this app's own store, with submission, correction
+and moderation here. `fl` is the first; the other two are headed the same way,
+which is the point of the split.
+
+Rows come out of `src/store.js` shaped exactly like a tracker's
+`/api/catalog` entry, so `src/derive.js` and every page below it cannot tell
+which kind a subject is. **Migrating a tracker in is therefore a data move,
+not a rewrite**: import its catalog into the store, drop `origin` and add
+`native: true` in `src/domains.js`, and point its old URL here.
+
+### One table, not one per subject
+
+Both trackers keep a table per project with a column per field. That does not
+extend — a fourth subject would mean a fourth schema. Here the envelope every
+subject shares is columns and its declared fields are one JSON blob, so adding
+a subject stays a `src/domains.js` edit. Each field is `[key, label, type,
+hint]`; `type` is `text`, `history` (`{year, description}`) or `series`
+(`{year, value, note}`), and it drives the form widget, the sanitiser and the
+coverage rule together.
+
+### Two approved rows for one place is normal
+
+A place starts as a seeded stub, and the whole invitation to contributors is
+"add one field without documenting the rest". So `store.approved()` merges
+rows for the same place into one record: a later row fills what it knows and
+leaves an earlier row's fields standing, dated lists and document links pool,
+and everyone who wrote part of it is credited on it. The dashboard still lists
+each contribution separately, because that is what gets reviewed.
+
+### Persistence
+
+Fly gives this app no disk, so the SQLite file is gone when a machine is
+rebuilt. `src/gitStore.js` commits each native subject's approved set to
+`data/<domain>.json` after every change that alters it, and a fresh instance
+boots from that file (falling back to `data/<domain>.seed.json`). Without
+`GITHUB_TOKEN` and `GITHUB_REPO` set, **approvals do not survive a redeploy** —
+the dashboard says so in its footer, and `/api/health` reports it.
+
+| Variable | Without it |
+| --- | --- |
+| `ADMIN_PASSWORD`, `SESSION_SECRET` | No dashboard; submissions still stored |
+| `GITHUB_TOKEN`, `GITHUB_REPO` | Approvals lost on redeploy |
+| `GMAIL_USER`, `GMAIL_APP_PASSWORD`, `NOTIFY_EMAIL` | No notification of a new submission |
+
+Missing admin credentials disable the dashboard rather than stopping the
+server, as the trackers do: a missing moderation secret should not take the
+public maps down with it.
 
 ## Running it
 
@@ -59,12 +103,20 @@ copy risks serving it unnoticed).
 the Docker image does not need the Natural Earth downloads.
 
 - `GET /api/atlas` — merged, derived units for every live domain
-- `GET /api/health` — per-source state (`live` / `stale` / `snapshot`) and counts
+- `GET /api/health` — per-source state (`live` / `local` / `stale` / `snapshot`),
+  counts, and which of admin / git / mail are configured
+- `POST /api/:domain/submissions`, `POST /api/:domain/edit-requests` — stored
+  for a native domain, forwarded for a proxied one
+- `/api/admin/*` — native domains only, session-authenticated
 
 ## What is real
 
 - **All 213 majority-language (EAL) units and 216 language-disorder (DLD)
   units**, read live from the two deployed trackers.
+- **216 foreign-languages-in-school units**, held here. Every one is a stub:
+  the seed is the same list of places the other two map, with no policy text
+  invented for any of them. The map is entirely grey until someone writes it,
+  which is the honest starting state.
 - **Coverage** is computed with the same rule the catalogues use — the
   `hasContent()` / `NOT_DOCUMENTED_RE` pair. A field beginning "Not established
   from the sources consulted…" counts as *looked, found nothing*, never as
@@ -79,9 +131,12 @@ the Docker image does not need the Natural Earth downloads.
                        silhouette. No nav bar: the page is the choice, and
                        About sits with the other destinations rather than in
                        a corner.
-    /eal      map      majority language acquisition
-    /dld      map      language disorder support
+    /eal      map      majority language acquisition   (proxied)
+    /dld      map      language disorder support        (proxied)
+    /fl       map      foreign languages in school      (native)
     /about    about    what this is and what it cannot do yet
+    /submit   form     generated from the subject's field list
+    /admin    review   native subjects only; noindex
 
 One URL per map, so it can be linked and bookmarked; the page reads the domain
 back off the path. On desktop every destination sits in the bar, with About at
@@ -100,11 +155,36 @@ lists the planned ones too.
     pages/              page sources -> public/ by assemble.js
     build-geometry.js   shapes -> public/geometry.json + world.svg  (build time)
     assemble.js         pages/*.html -> public/
-    src/domains.js      the domain list; each live one names its tracker
+    src/domains.js      the domain list; each live one names its source
     src/derive.js       catalog entries -> map units
     src/history.js      policy history -> the document it names
-    src/catalog.js      fetch, cache, fallbacks
+    src/catalog.js      fetch or read, cache, fallbacks
+    src/store.js        the atlas's own entries, one table for every subject
+    src/gitStore.js     approved entries -> data/<domain>.json on GitHub
+    src/subregions.js   country code -> UN-geoscheme subregion
+    src/mailer.js       submission and correction notifications
     src/server.js       routes
+    data/fl.seed.json   the fl bootstrap set (216 stubs)
+
+## Contributing from the map
+
+The ask sits at the end of the entry you are already reading, phrased by what
+is there: **I know this** on a place with nothing recorded, **add what I know**
+where something is, and a correction dialog only where there is something to
+correct. Each links to `/submit` with the place already filled in.
+
+The form is generated from the subject's field list — every field, its label
+and its hint come from `src/domains.js`, and the array fields get the same
+repeatable-row widget whatever their shape. Nothing on the page is written per
+subject, which is what makes a new subject a description rather than a build.
+
+Two attestations are required and are the whole basis for trusting an entry:
+that it is accurate to the contributor's knowledge, and that they understand it
+is reviewed first. Region and subregion are derived server-side from the country
+code — a contributor should not have to know UN-geoscheme labels.
+
+Corrections are **stored as well as emailed**. The trackers only emailed them,
+so one arriving while mail was misconfigured was simply gone.
 
 ## Shading, hover, click
 
@@ -318,4 +398,12 @@ against the font stack and resolves to a real glyph.
   own units because both trackers already carry them.
 - **No history.** `policyHistory` is in the data and rendered in full, but there
   is no dated-version model behind any other field yet.
+- **`fl` is entirely undocumented.** Its 216 places are seeded as stubs and
+  nothing has been written for any of them. That is deliberate — policy text
+  must not be inferred — but it means the map has nothing to show until
+  contributions arrive.
+- **Merged records are not editable as a whole.** The dashboard edits one
+  contribution at a time; a place built from several is only assembled at read
+  time. Editing the stub of a place a submission has since filled looks like it
+  does nothing.
 - **No composite scores**, by design.
