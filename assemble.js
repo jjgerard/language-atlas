@@ -1,8 +1,10 @@
-// Injects bundle.json into template.html and writes the standalone page.
+// Copies the page source into public/. The data used to be inlined here; it is
+// fetched at runtime now, so this is a straight copy kept as its own step so
+// the build stays one command.
 const fs = require('fs');
-const OUT = process.argv[2];
-const tpl = fs.readFileSync('template.html', 'utf8');
-// Escape "<" so no field text can close the <script type="application/json"> tag.
-const json = fs.readFileSync('bundle.json', 'utf8').replace(/</g, '\u003c');
-fs.writeFileSync(OUT, tpl.replace('__BUNDLE__', () => json));
-console.log(OUT, (fs.statSync(OUT).size / 1024).toFixed(0) + ' KB');
+const path = require('path');
+
+const out = process.argv[2] || path.join(__dirname, 'public', 'index.html');
+fs.mkdirSync(path.dirname(out), { recursive: true });
+fs.copyFileSync(path.join(__dirname, 'template.html'), out);
+console.log(out, (fs.statSync(out).size / 1024).toFixed(0) + ' KB');

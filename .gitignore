@@ -1,5 +1,7 @@
 node_modules/
-# Downloaded on first build; ~65 MB, and reproducible from build.js
+# Geometry sources: ~65 MB, downloaded on first build, reproducible from
+# build-geometry.js
 sources/
-# Generated: build.js -> bundle.json -> (assemble.js) -> index.html
-bundle.json
+# Optional cold-start fallback written by `npm run snapshot`. Not committed:
+# shipping a stale copy of policy data risks serving it without anyone noticing.
+data/snapshot.json
