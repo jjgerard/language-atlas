@@ -1,23 +1,59 @@
-# Language Provision Atlas — prototype
+# Language Atlas
 
-A single self-contained page: world map, one layer per domain, hover for a
-summary, click for the entry. Tabs are written for a reader with no linguistics
-background — "Majority language acquisition" rather than EAL, "Language disorder
-support" rather than DLD — with the technical term named once in the blurb so
-it is still findable. `id`s in the data stay `eal` and `dld`. Built to test the interaction before any schema
-is committed to. **Nothing here writes back** — it reads a snapshot of the two
-existing trackers' seed files.
+One world map over several domains of language policy, shaded by what is
+documented. Hover a country for what its entry has and hasn't; click for the
+whole entry.
 
-Open it with the `language-atlas-prototype` entry in `.claude/launch.json`
-(`python -m http.server 8795 --directory language-atlas-prototype`), or serve
-the folder any other way. It needs a server, not `file://`, only because of
-the font stylesheet.
+Tabs are written for a reader with no linguistics background — "Majority
+language acquisition" rather than EAL, "Language disorder support" rather than
+DLD — with the technical term named once in the blurb so it stays findable.
+The `id`s in the data remain `eal` and `dld`.
+
+## It owns no data
+
+The atlas is a reader of the two existing trackers, not a replacement store:
+
+    eal-policy-tracker.fly.dev ─┐
+                                ├─► /api/atlas ─► the map
+    dld-policy-tracker.fly.dev ─┘
+                                ◄─ /api/:domain/submissions
+                                ◄─ /api/:domain/edit-requests
+
+`src/catalog.js` fetches each tracker's `/api/catalog` **server-side**, every
+five minutes, and derives the map from what comes back — so an entry approved
+in a tracker's own admin dashboard appears here without a rebuild. Submissions
+and edit requests are forwarded back to whichever tracker owns that domain.
+
+Server-side is not an implementation detail: **neither tracker sends CORS
+headers**, so a browser on this origin cannot call them directly. Doing the
+fetch here is what lets the atlas read live data without changing either
+tracker repo, and it keeps moderation where it already is.
+
+Only `submissions` and `edit-requests` are forwardable. Nothing under
+`/api/admin` is proxied, so this cannot be used to reach a moderation route.
+
+If a tracker is unreachable the last good copy is served, and the page says so
+rather than presenting stale policy data as current. `npm run snapshot` writes
+a cold-start fallback to `data/snapshot.json` (gitignored — shipping a stale
+copy risks serving it unnoticed).
+
+## Running it
+
+    npm install
+    npm run build     # geometry + page into public/  (first run downloads ~65 MB of sources)
+    npm start         # http://localhost:3200
+
+`npm run build` is only needed when the **shapes** or the page source change.
+`public/geometry.json` is committed, so a deploy never rebuilds geometry and
+the Docker image does not need the Natural Earth downloads.
+
+- `GET /api/atlas` — merged, derived units for every live domain
+- `GET /api/health` — per-source state (`live` / `stale` / `snapshot`) and counts
 
 ## What is real
 
 - **All 213 majority-language (EAL) units and 216 language-disorder (DLD)
-  units**, read from
-  `../dld-policy-tracker/data/seed.json` and `../eal-policy-tracker/data/seed.json`.
+  units**, read live from the two deployed trackers.
 - **Coverage** is computed with the same rule the catalogues use — the
   `hasContent()` / `NOT_DOCUMENTED_RE` pair. A field beginning "Not established
   from the sources consulted…" counts as *looked, found nothing*, never as
@@ -25,6 +61,16 @@ the font stylesheet.
 - **Sub-national units** for the five countries that have them: England,
   Scotland, Wales and Northern Ireland; five Australian states; six Canadian
   provinces; five US states; Catalonia.
+
+## Layout
+
+    build-geometry.js   shapes -> public/geometry.json   (build time)
+    assemble.js         template.html -> public/index.html
+    src/domains.js      the domain list; each live one names its tracker
+    src/derive.js       catalog entries -> map units
+    src/history.js      policy history -> the document it names
+    src/catalog.js      fetch, cache, fallbacks
+    src/server.js       routes
 
 ## Shading, hover, click
 
@@ -109,9 +155,20 @@ is what keeps the 2008 Bercow Review off *Bercow: Ten Years On (2018)* — two
 documents a decade apart that share a name. The 2008 row links to nothing,
 which is the right answer.
 
-Thresholds were tuned against the worked entries and are named constants at the
-top of `matchHistoryDocs()` in `build.js`. Re-check them after any substantial
-batch of new seed content.
+Rarity is measured as a **share** of the corpus and term weights are divided by
+`log(N)`, so every threshold means the same thing whatever size the catalogs
+grow to. Raw idf rises with N, which would have quietly loosened the matcher as
+entries accumulate — a real risk now the data is live rather than snapshotted.
+Verified identical on the current corpus (74 of 179 rows) and stable across a
+simulated 40× one.
+
+Term rarity is judged across **every** live domain at once, which is how the
+thresholds were calibrated; scoring each domain against only its own labels
+makes rare terms look commoner and silently drops correct matches.
+
+The thresholds are named constants at the top of `src/history.js`, and the
+linked/unlinked counts are logged at startup and exposed on `/api/health`, so
+drift is observable rather than silent.
 
 ## Territories
 
@@ -119,7 +176,7 @@ A polygon that belongs to a country's geometry but is not what people mean by
 that country's name is split out and labelled. French Guiana is the only such
 case in this geometry: it now says *French Guiana*, notes that it is an overseas
 department, and opens France's entry — the same inheritance rule the
-sub-national units follow. The table in `build.js` takes more if others turn up.
+sub-national units follow. The table in `build-geometry.js` takes more if others turn up.
 
 ## Sub-national units and inheritance
 
@@ -155,12 +212,10 @@ Splitting is demand-driven: a country stays a single unit until an entry
 documents a difference, and sub-national geometry is only loaded for the five
 countries that need it.
 
-## Rebuilding the data
+## Rebuilding the geometry
 
-`build.js` needs the four source files it downloads (world-atlas 110m, Natural
-Earth 50m and 10m admin-1, an ISO code table and a centroid table) plus
-`polygon-clipping`, so it runs from a scratch directory; `assemble.js` then
-injects `bundle.json` into `template.html`. The steps are:
+`build-geometry.js` downloads its five sources into `sources/` on first run
+(gitignored, ~65 MB) and reuses them after that. The steps are:
 
 1. decodes `world-atlas` countries-110m and maps ISO-numeric → alpha-2;
 2. clips rings that cross the antimeridian (without this, Fiji and Russia smear
@@ -170,11 +225,11 @@ injects `bundle.json` into `template.html`. The steps are:
 4. takes AU/CA/US states from Natural Earth 50m admin-1;
 5. reads both seeds and computes per-unit and per-field coverage;
 6. splits detached territories off their parent country;
-7. reads both seeds for per-unit and per-field coverage, every field's full
-   text, and the document and support links;
-8. inlines the lot into `template.html` → `index.html` (862 KB).
+7. emits an anchor point for every ISO country, so the page can place a marker
+   for any code that turns up in the live data.
 
-Antarctica is dropped.
+Antarctica is dropped. Coverage, field text and source links are **not** built
+here — they are derived per request in `src/derive.js`.
 
 ## Mobile
 
