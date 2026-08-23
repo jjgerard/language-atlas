@@ -1,0 +1,1318 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Language Provision Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+
+<style>
+/* ---------------------------------------------------------------
+   Palette: the muted inks of a printed thematic atlas plate.
+   Region hue carries WHICH part of the world; fill state carries
+   WHETHER anything is documented. Two variables, never conflated.
+   --------------------------------------------------------------- */
+:root {
+  --ground:      #E4E9EE;   /* sea — a cool paper, biased toward the lapis accent */
+  --ground-deep: #D6DDE4;
+  --surface:     #FBFCFD;
+  --surface-2:   #F1F4F7;
+  --ink:         #101820;
+  --ink-soft:    #5B6771;
+  --ink-faint:   #8A959F;
+  --hair:        #C3CDD6;
+  --hair-strong: #9DAAB6;
+  --focus:       #3F5BA9;
+
+  --nodata:      #C4CDD5;   /* nothing recorded */
+  --hatch-bg:    #CFD7DE;   /* looked, found nothing */
+  --hatch-line:  #8E9BA7;
+
+  --r-africa:   #C2703D;
+  --r-americas: #2E8B7A;
+  --r-asia:     #93548F;
+  --r-europe:   #3F5BA9;
+  --r-oceania:  #B5455F;
+
+  --shadow: 0 1px 2px rgba(16,24,32,.08), 0 8px 24px -8px rgba(16,24,32,.18);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:      #0D1319;
+    --ground-deep: #080C11;
+    --surface:     #161F27;
+    --surface-2:   #1D2831;
+    --ink:         #E7EEF4;
+    --ink-soft:    #97A6B2;
+    --ink-faint:   #6B7A87;
+    --hair:        #2A3640;
+    --hair-strong: #3E4E5A;
+    --focus:       #8AA3E8;
+
+    --nodata:      #2B3742;
+    --hatch-bg:    #2B3742;
+    --hatch-line:  #566673;
+
+    --r-africa:   #E0925C;
+    --r-americas: #4DBBA4;
+    --r-asia:     #C07ABB;
+    --r-europe:   #7E9AE8;
+    --r-oceania:  #E4738C;
+
+    --shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 30px -10px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"] {
+  --ground:      #0D1319;
+  --ground-deep: #080C11;
+  --surface:     #161F27;
+  --surface-2:   #1D2831;
+  --ink:         #E7EEF4;
+  --ink-soft:    #97A6B2;
+  --ink-faint:   #6B7A87;
+  --hair:        #2A3640;
+  --hair-strong: #3E4E5A;
+  --focus:       #8AA3E8;
+
+  --nodata:      #2B3742;
+  --hatch-bg:    #2B3742;
+  --hatch-line:  #566673;
+
+  --r-africa:   #E0925C;
+  --r-americas: #4DBBA4;
+  --r-asia:     #C07ABB;
+  --r-europe:   #7E9AE8;
+  --r-oceania:  #E4738C;
+
+  --shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 30px -10px rgba(0,0,0,.7);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+
+.eyebrow {
+  font-size: 10.5px; font-weight: 600; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+
+/* ---------------- shell ---------------- */
+.app { display: flex; flex-direction: column; height: 100dvh; }
+
+header.bar {
+  display: flex; align-items: center; gap: 20px;
+  padding: 10px 18px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--hair);
+  flex-wrap: wrap;
+  z-index: 5;
+}
+.wordmark { display: flex; align-items: baseline; gap: 10px; margin-right: 4px; }
+.wordmark h1 {
+  font-family: Newsreader, Georgia, serif;
+  font-size: 20px; font-weight: 500; letter-spacing: -.01em;
+  margin: 0; white-space: nowrap;
+}
+.wordmark .tag {
+  font-size: 11px; color: var(--ink-faint); white-space: nowrap;
+}
+
+nav.domains {
+  display: flex; gap: 2px; flex-wrap: nowrap; min-width: 0;
+  overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none;
+}
+nav.domains::-webkit-scrollbar { display: none; }
+nav.domains button {
+  font: inherit; font-size: 13px; font-weight: 500; flex: none;
+  padding: 6px 12px; border-radius: 3px;
+  border: 1px solid transparent; background: none; color: var(--ink-soft);
+  cursor: pointer; white-space: nowrap;
+}
+nav.domains button:hover:not(:disabled) { background: var(--surface-2); color: var(--ink); }
+nav.domains button[aria-current="true"] {
+  background: var(--ink); color: var(--surface); border-color: var(--ink);
+}
+nav.domains button:disabled { color: var(--ink-faint); cursor: not-allowed; opacity: .65; }
+nav.domains button:disabled::after {
+  content: "planned"; margin-left: 7px; font-size: 9.5px; letter-spacing: .1em;
+  text-transform: uppercase; border: 1px solid var(--hair-strong);
+  border-radius: 2px; padding: 1px 4px; vertical-align: 1px;
+}
+
+.searchwrap { position: relative; margin-left: auto; }
+.searchwrap input {
+  font: inherit; font-size: 13px;
+  width: 210px; padding: 7px 10px;
+  background: var(--surface-2); color: var(--ink);
+  border: 1px solid var(--hair); border-radius: 3px;
+}
+.searchwrap input::placeholder { color: var(--ink-faint); }
+.results {
+  position: absolute; top: calc(100% + 6px); right: 0; width: 280px;
+  max-height: 340px; overflow-y: auto; z-index: 40;
+  background: var(--surface); border: 1px solid var(--hair);
+  border-radius: 4px; box-shadow: var(--shadow); padding: 4px;
+}
+.results:empty { display: none; }
+.results button {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  font: inherit; font-size: 13px; text-align: left;
+  padding: 6px 8px; border: 0; border-radius: 3px;
+  background: none; color: var(--ink); cursor: pointer;
+}
+.results button:hover, .results button:focus-visible { background: var(--surface-2); }
+.results .sub { color: var(--ink-faint); font-size: 11.5px; margin-left: auto; }
+
+/* ---------------- map ---------------- */
+/* The panel parks off-screen via a transform, which still counts toward the
+   scrollable area — clip it here so the page itself never scrolls. */
+.stage { position: relative; flex: 1; min-height: 0; background: var(--ground); overflow: hidden; }
+#map { width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
+#map.dragging { cursor: grabbing; }
+
+.unit { stroke: var(--ground-deep); stroke-width: .5px; vector-effect: non-scaling-stroke; }
+.unit.hit { cursor: pointer; }
+.unit.base { pointer-events: none; }
+/* Inherited: same fill as the country it follows, with its border kept as a
+   hairline so you can still see there is something clickable there. */
+.unit.inherited { stroke: var(--surface); stroke-width: .75px; stroke-dasharray: 3 2.5; opacity: .96; }
+.dot.inherited { stroke-dasharray: 2 2; }
+.unit.sel { stroke: var(--ink); stroke-width: 2px; }
+.unit.hov { stroke: var(--ink); stroke-width: 1.5px; }
+.dot { stroke: var(--ground-deep); stroke-width: 1px; vector-effect: non-scaling-stroke; cursor: pointer; }
+.dot.sel, .dot.hov { stroke: var(--ink); stroke-width: 2px; }
+.leader { stroke: var(--hair-strong); stroke-width: .75px; vector-effect: non-scaling-stroke; fill: none; }
+
+/* floating panels over the map */
+.overlay {
+  position: absolute; background: var(--surface);
+  border: 1px solid var(--hair); border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+.controls { top: 14px; left: 14px; width: 252px; padding: 13px 14px 14px; }
+.controls h2 { font: inherit; font-size: 11px; margin: 0 0 7px; }
+.controls select {
+  font: inherit; font-size: 13px; width: 100%;
+  padding: 7px 8px; border-radius: 3px;
+  border: 1px solid var(--hair); background: var(--surface-2); color: var(--ink);
+}
+.blurb { font-size: 12px; color: var(--ink-soft); margin: 10px 0 0; }
+
+.tally { display: flex; gap: 3px; margin-top: 13px; }
+.tally .seg { height: 7px; border-radius: 1px; }
+.tallylabels {
+  display: flex; justify-content: space-between; margin-top: 6px;
+  font-size: 11px; color: var(--ink-soft); font-variant-numeric: tabular-nums;
+}
+
+.legend { bottom: 14px; left: 14px; padding: 12px 14px 13px; width: 252px; }
+.legend h2 { font: inherit; font-size: 11px; margin: 0 0 9px; }
+.legend .row { display: flex; align-items: center; gap: 9px; font-size: 12px; margin-bottom: 6px; }
+.legend .row:last-child { margin-bottom: 0; }
+.legend .sw { width: 22px; height: 13px; border-radius: 2px; border: 1px solid var(--hair-strong); flex: none; }
+.legend .note { font-size: 11px; color: var(--ink-faint); margin: 10px 0 0; line-height: 1.45; }
+.legend .hues { display: flex; gap: 3px; margin-top: 11px; }
+.legend .hues span { flex: 1; height: 7px; border-radius: 1px; }
+.legend .hueslabels {
+  display: flex; gap: 3px; margin-top: 5px;
+  font-size: 9.5px; color: var(--ink-faint); letter-spacing: .02em;
+}
+.legend .hueslabels span { flex: 1; text-align: center; }
+
+.zoomctl { bottom: 14px; right: 14px; display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.zoomctl button {
+  font: inherit; font-size: 17px; line-height: 1;
+  width: 34px; height: 34px; border: 0; background: var(--surface);
+  color: var(--ink); cursor: pointer;
+}
+.zoomctl button + button { border-top: 1px solid var(--hair); }
+.zoomctl button:hover { background: var(--surface-2); }
+.zoomctl .reset { font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+
+/* tooltip */
+.tip {
+  position: absolute; z-index: 30; pointer-events: none;
+  max-width: 280px; padding: 9px 11px;
+  background: var(--surface); border: 1px solid var(--hair-strong);
+  border-radius: 4px; box-shadow: var(--shadow);
+  opacity: 0; transition: opacity .09s;
+}
+@media (prefers-reduced-motion: reduce) { .tip { transition: none; } }
+.tip.on { opacity: 1; }
+.tip .name { font-weight: 600; font-size: 13.5px; }
+.tip .meta { font-size: 11.5px; color: var(--ink-soft); margin-top: 1px; }
+.tip .state { display: flex; align-items: center; gap: 7px; font-size: 12px; margin-top: 7px; }
+.tip .state .sw { width: 13px; height: 13px; border-radius: 2px; border: 1px solid var(--hair-strong); flex: none; }
+.tip .inherit {
+  font-size: 11px; color: var(--ink-soft); margin-top: 7px;
+  padding-top: 7px; border-top: 1px solid var(--hair);
+}
+.tip .hintline { font-size: 10.5px; color: var(--ink-faint); margin-top: 8px; }
+
+/* field checklist — the point of the hover is "what is and isn't here" */
+.fieldgrid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px 12px;
+  margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--hair);
+}
+.fieldgrid span {
+  font-size: 11px; line-height: 1.5; color: var(--ink-faint);
+  display: flex; align-items: center; gap: 6px;
+}
+.fieldgrid span::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%; flex: none;
+  border: 1px solid var(--hair-strong); background: transparent;
+}
+.fieldgrid span.on { color: var(--ink); }
+.fieldgrid span.on::before { background: var(--mark, var(--r-europe)); border-color: var(--mark, var(--r-europe)); }
+.fieldgrid span.looked { color: var(--ink-soft); }
+.fieldgrid span.looked::before { background: var(--hatch-line); border-color: var(--hatch-line); opacity: .55; }
+
+/* full entry in the panel */
+.field { padding: 11px 0; border-bottom: 1px solid var(--hair); }
+.field:last-child { border-bottom: 0; }
+.field h4 {
+  font: inherit; font-size: 10.5px; font-weight: 600; letter-spacing: .11em;
+  text-transform: uppercase; color: var(--ink-faint);
+  margin: 0 0 5px; display: flex; align-items: center; gap: 7px;
+}
+.field h4::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%; flex: none;
+  border: 1px solid var(--hair-strong);
+}
+.field.on h4 { color: var(--ink-soft); }
+.field.on h4::before { background: var(--mark, var(--r-europe)); border-color: var(--mark, var(--r-europe)); }
+.field.looked h4::before { background: var(--hatch-line); border-color: var(--hatch-line); opacity: .55; }
+.field p {
+  margin: 0; font-size: 13.5px; line-height: 1.58; white-space: pre-line;
+  overflow-wrap: break-word;
+}
+.field.empty p, .field.looked p { color: var(--ink-faint); font-style: italic; }
+.field.inh h4::before { background: transparent; border-style: dashed; border-color: var(--hair-strong); }
+.field.inh p { color: var(--ink-soft); }
+.field h4 .from {
+  margin-left: auto; letter-spacing: .04em; text-transform: none;
+  font-weight: 500; font-size: 10px; color: var(--ink-faint); font-style: italic;
+}
+
+a.cite {
+  color: inherit; text-decoration: underline; text-decoration-style: dotted;
+  text-underline-offset: 2px; text-decoration-color: var(--focus);
+}
+a.cite:hover { color: var(--focus); text-decoration-style: solid; }
+
+/* policy history reads as a dated list, each row carrying its document */
+.hist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.hist li { display: grid; grid-template-columns: 58px 1fr; gap: 11px; align-items: start; }
+.hist .yr {
+  font-variant-numeric: tabular-nums; font-size: 11.5px; font-weight: 600;
+  color: var(--ink-faint); padding-top: 2px; letter-spacing: .01em;
+}
+.hist p { margin: 0; }
+.hist .links { margin-top: 5px; gap: 4px; }
+.hist .links a { font-size: 12px; }
+
+.links { display: flex; flex-direction: column; gap: 7px; }
+.links a {
+  font-size: 12.5px; line-height: 1.4; color: var(--focus);
+  text-decoration: none; overflow-wrap: anywhere;
+}
+.links a:hover { text-decoration: underline; }
+.links a { position: relative; padding-left: 15px; }
+.links a::before {
+  content: ""; position: absolute; left: 1px; top: .48em;
+  width: 5px; height: 5px; opacity: .55;
+  border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+.viaterr {
+  font-size: 11.5px; color: var(--ink-soft); line-height: 1.5;
+  background: var(--surface-2); border-left: 2px solid var(--hair-strong);
+  padding: 9px 11px; border-radius: 0 3px 3px 0; margin: 13px 0 0;
+}
+
+/* detail panel */
+.panel {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 380px;
+  background: var(--surface); border-left: 1px solid var(--hair);
+  box-shadow: var(--shadow); overflow-y: auto; z-index: 20;
+  transform: translateX(100%); transition: transform .18s ease;
+}
+@media (prefers-reduced-motion: reduce) { .panel { transition: none; } }
+.panel.on { transform: none; }
+.panel .inner { padding: 18px 20px 40px; }
+.panel .close {
+  position: sticky; top: 0; float: right; margin: -4px -6px 0 0;
+  font: inherit; font-size: 20px; line-height: 1;
+  width: 30px; height: 30px; border: 0; border-radius: 3px;
+  background: var(--surface); color: var(--ink-soft); cursor: pointer;
+}
+.panel .close:hover { background: var(--surface-2); color: var(--ink); }
+.panel h2 {
+  font-family: Newsreader, Georgia, serif; font-weight: 500;
+  font-size: 25px; line-height: 1.18; margin: 6px 0 3px;
+  text-wrap: balance; letter-spacing: -.01em;
+}
+.panel .where { font-size: 12.5px; color: var(--ink-soft); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin: 13px 0 0; }
+.chip {
+  font-size: 11px; padding: 3px 8px; border-radius: 2px;
+  border: 1px solid var(--hair-strong); color: var(--ink-soft);
+}
+.chip.solid { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+.chip.hatched {
+  background-image: repeating-linear-gradient(45deg,
+    transparent 0 3px, var(--hatch-line) 3px 4px);
+  background-color: var(--hatch-bg); color: var(--ink);
+  border-color: var(--hair-strong);
+}
+
+.sect { margin-top: 22px; }
+.sect > h3 {
+  font: inherit; font-size: 10.5px; font-weight: 600; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--ink-faint);
+  margin: 0 0 9px; padding-bottom: 6px; border-bottom: 1px solid var(--hair);
+}
+.kv { display: grid; grid-template-columns: 108px 1fr; gap: 5px 12px; font-size: 12.5px; }
+.kv dt { color: var(--ink-faint); }
+.kv dd { margin: 0; }
+.excerpt {
+  font-family: Newsreader, Georgia, serif; font-size: 14.5px; line-height: 1.55;
+  color: var(--ink); margin: 0;
+}
+.excerpt .lbl {
+  display: block; font-family: Archivo, sans-serif; font-size: 10.5px;
+  font-weight: 600; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--ink-faint); margin-bottom: 5px;
+}
+.sibs { display: flex; flex-direction: column; gap: 1px; }
+.sibs button {
+  display: flex; align-items: center; gap: 9px; width: 100%;
+  font: inherit; font-size: 12.5px; text-align: left;
+  padding: 7px 8px; margin-left: -8px; border: 0; border-radius: 3px;
+  background: none; color: var(--ink); cursor: pointer;
+}
+.sibs button:hover { background: var(--surface-2); }
+.sibs button[disabled] { cursor: default; background: var(--surface-2); }
+.sibs .sw { width: 13px; height: 13px; border-radius: 2px; border: 1px solid var(--hair-strong); flex: none; }
+.sibs .role { margin-left: auto; font-size: 10.5px; color: var(--ink-faint); }
+.cross { display: flex; flex-direction: column; gap: 1px; }
+.cross .r { display: flex; align-items: center; gap: 9px; font-size: 12.5px; padding: 5px 0; }
+.cross .r .sw { width: 13px; height: 13px; border-radius: 2px; border: 1px solid var(--hair-strong); flex: none; }
+.cross .r .n { margin-left: auto; font-size: 11.5px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.caveat {
+  font-size: 11.5px; color: var(--ink-soft); line-height: 1.5;
+  background: var(--surface-2); border-left: 2px solid var(--hair-strong);
+  padding: 9px 11px; border-radius: 0 3px 3px 0; margin: 0;
+}
+
+/* ---------------- mobile ---------------- */
+@media (max-width: 820px) {
+  header.bar { gap: 10px; padding: 9px 12px; }
+  .wordmark h1 { font-size: 17px; }
+  .wordmark .tag { display: none; }
+  .searchwrap { margin-left: 0; width: 100%; order: 3; }
+  .searchwrap input { width: 100%; padding: 10px; }
+  .results { width: 100%; }
+  nav.domains { order: 2; width: 100%; padding-bottom: 2px; }
+  nav.domains button { padding: 9px 13px; }
+
+  /* The map keeps the whole viewport it is given; the legend and the domain
+     summary sit below it in normal flow instead of floating over it. */
+  .stage { display: flex; flex-direction: column; }
+  #map { flex: 1 1 auto; min-height: 0; }
+
+  .controls, .legend {
+    position: static; width: auto; flex: none;
+    border-radius: 0; border-left: 0; border-right: 0; box-shadow: none;
+  }
+  .controls { order: 2; border-top: 1px solid var(--hair); border-bottom: 0; padding: 10px 14px 0; }
+  .controls .blurb { display: none; }
+  .controls h2 { margin-bottom: 4px; }
+  .legend { order: 3; padding: 10px 14px 12px; }
+  .legend h2 { display: none; }
+  .legend .rows { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+  .legend .row { margin-bottom: 0; font-size: 11.5px; }
+  .legend .hues, .legend .hueslabels, .legend .note { display: none; }
+
+  .zoomctl { display: none; }
+  .tip { display: none; }
+
+  .panel {
+    top: auto; left: 0; width: auto; height: 74dvh;
+    border-left: 0; border-top: 1px solid var(--hair);
+    border-radius: 10px 10px 0 0; transform: translateY(100%);
+  }
+  .panel.on { transform: none; }
+  .panel .inner { padding: 16px 16px 40px; }
+  .hist li { grid-template-columns: 50px 1fr; gap: 9px; }
+}
+
+</style>
+
+<div class="app">
+  <header class="bar">
+    <div class="wordmark">
+      <h1>Language Provision Atlas</h1>
+      <span class="tag">prototype · seed data</span>
+    </div>
+    <nav class="domains" id="domains" aria-label="Domain"></nav>
+    <div class="searchwrap">
+      <input id="search" type="search" placeholder="Find a country or region" autocomplete="off" aria-label="Find a country or region">
+      <div class="results" id="results" role="listbox"></div>
+    </div>
+  </header>
+
+  <div class="stage" id="stage">
+    <svg id="map" role="img" aria-label="World map of documentation coverage"></svg>
+
+    <div class="overlay controls">
+      <h2 class="eyebrow" id="domainName"></h2>
+      <p class="blurb" id="blurb"></p>
+      <div class="tally" id="tally"></div>
+      <div class="tallylabels" id="tallylabels"></div>
+    </div>
+
+    <div class="overlay legend">
+      <h2 class="eyebrow">Fill</h2>
+      <div class="rows">
+        <div class="row"><span class="sw" id="sw-has"></span> Documented</div>
+        <div class="row"><span class="sw" id="sw-looked"></span> Looked, found nothing</div>
+        <div class="row"><span class="sw" id="sw-none"></span> Nothing recorded</div>
+        <div class="row"><span class="sw" id="sw-inh"></span> Follows its country</div>
+      </div>
+      <div class="hues" id="hues"></div>
+      <div class="hueslabels">
+        <span>Africa</span><span>Americas</span><span>Asia</span><span>Europe</span><span>Oceania</span>
+      </div>
+      <p class="note">Hue is the world region, so neighbours stay apart. It carries no judgement about the policy.</p>
+    </div>
+
+    <div class="overlay zoomctl">
+      <button id="zin" title="Zoom in" aria-label="Zoom in">+</button>
+      <button id="zout" title="Zoom out" aria-label="Zoom out">−</button>
+      <button id="zreset" class="reset" title="Reset view" aria-label="Reset view">Fit</button>
+    </div>
+
+    <div class="tip" id="tip" aria-hidden="true"></div>
+
+    <aside class="panel" id="panel" aria-label="Unit detail" tabindex="-1"></aside>
+  </div>
+</div>
+
+<script id="bundle" type="application/json">__BUNDLE__</script>
+<script>
+const B = JSON.parse(document.getElementById('bundle').textContent);
+
+/* ---------- Robinson projection ----------
+   A world thematic map wants Robinson: it keeps mid-latitude shapes
+   recognisable without Mercator's absurd polar inflation. */
+const RX = [1,.9986,.9954,.99,.9822,.973,.96,.9427,.9216,.8962,.8679,.835,.7986,.7597,.7186,.6732,.6213,.5722,.5322];
+const RY = [0,.062,.124,.186,.248,.31,.372,.434,.4958,.5571,.6176,.6769,.7346,.7903,.8435,.8936,.9394,.9761,1];
+const K = 1000;
+function project(lon, lat) {
+  const a = Math.min(Math.abs(lat), 90);
+  const i = Math.min(Math.floor(a / 5), 17), t = (a - i * 5) / 5;
+  const x = RX[i] + (RX[i + 1] - RX[i]) * t;
+  const y = RY[i] + (RY[i + 1] - RY[i]) * t;
+  return [0.8487 * x * lon * Math.PI / 180 * K, -1.3523 * y * (lat < 0 ? -1 : 1) * K];
+}
+
+const REGION_VAR = {
+  Africa: '--r-africa', Americas: '--r-americas', Asia: '--r-asia',
+  Europe: '--r-europe', Oceania: '--r-oceania',
+};
+const cssvar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+/* ---------- state ---------- */
+const LIVE = B.domains.filter(d => d.live);
+let domainId = LIVE[0].id;
+let selected = null;         // unit key
+let hovered = null;
+const view = { k: 1, tx: 0, ty: 0 };
+// Coastlines are simplified to ~1km, so past ~12x you are magnifying the
+// simplification, not revealing detail.
+const MAX_Z = 12;
+
+const domain = () => B.domains.find(d => d.id === domainId);
+const keyOf = u => u.cc + ':' + u.name;
+
+/* Index every unit of every live domain once. */
+const IDX = {};
+for (const d of LIVE) {
+  const byKey = new Map(), byCC = new Map();
+  for (const u of B.units[d.id]) {
+    byKey.set(keyOf(u), u);
+    if (!byCC.has(u.cc)) byCC.set(u.cc, []);
+    byCC.get(u.cc).push(u);
+  }
+  // The unit that owns the whole country outline: the national entry, or a
+  // lone entry standing in for the country when no national one exists.
+  const owner = new Map();
+  for (const [cc, list] of byCC) {
+    const nat = list.find(u => u.nat);
+    if (nat) owner.set(cc, nat);
+    else if (list.length === 1 && !B.subunits[keyOf(list[0])]) owner.set(cc, list[0]);
+  }
+  IDX[d.id] = { byKey, byCC, owner };
+}
+
+/* Shading answers one question only: is anything documented here?
+   Which fields are and are not filled is the hover's job, and the full
+   text is the panel's. */
+function stateOf(u) { return u.coverage; }
+const hueOf = u => cssvar(REGION_VAR[u.region] || '--r-europe');
+function fillFor(u, st) {
+  if (!u) return 'var(--nodata)';
+  if (st === 'has') return `var(${REGION_VAR[u.region] || '--r-europe'})`;
+  if (st === 'looked') return 'url(#hatch)';
+  return 'var(--nodata)';
+}
+const STATE_LABEL = { has: 'Documented', looked: 'Looked, found nothing', none: 'Nothing recorded' };
+
+/* ---------- build the scene once ---------- */
+const svg = document.getElementById('map');
+const NS = 'http://www.w3.org/2000/svg';
+const el = (n, a = {}) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); return e; };
+
+let ext = { x0: Infinity, y0: Infinity, x1: -Infinity, y1: -Infinity };
+function pathFor(polys, box) {
+  let d = '';
+  for (const poly of polys) for (const ring of poly) {
+    for (let i = 0; i < ring.length; i++) {
+      const [px, py] = project(ring[i][0], ring[i][1]);
+      d += (i ? 'L' : 'M') + px.toFixed(1) + ' ' + py.toFixed(1);
+      if (px < ext.x0) ext.x0 = px; if (px > ext.x1) ext.x1 = px;
+      if (py < ext.y0) ext.y0 = py; if (py > ext.y1) ext.y1 = py;
+      if (box) {
+        if (px < box.x0) box.x0 = px; if (px > box.x1) box.x1 = px;
+        if (py < box.y0) box.y0 = py; if (py > box.y1) box.y1 = py;
+      }
+    }
+    d += 'Z';
+  }
+  return d;
+}
+
+const defs = el('defs');
+const pat = el('pattern', { id: 'hatch', patternUnits: 'userSpaceOnUse', width: 9, height: 9 });
+pat.appendChild(el('rect', { width: 9, height: 9, fill: 'var(--hatch-bg)' }));
+pat.appendChild(el('path', { d: 'M-2 2 L2 -2 M0 9 L9 0 M7 11 L11 7', stroke: 'var(--hatch-line)', 'stroke-width': 1.6 }));
+defs.appendChild(pat);
+svg.appendChild(defs);
+
+const scene = el('g');
+svg.appendChild(scene);
+const gBase = el('g'), gSub = el('g'), gDot = el('g');
+scene.append(gBase, gSub, gDot);
+
+// One record per drawable shape. `key` links it back to a unit per domain.
+const SHAPES = [];   // {node, cc, name|null, box}
+const BOXES = {};    // key -> projected bbox
+
+for (const [cc, c] of Object.entries(B.countries)) {
+  const box = { x0: Infinity, y0: Infinity, x1: -Infinity, y1: -Infinity };
+  const node = el('path', { d: pathFor(c.polys, box), class: 'unit' });
+  node.dataset.cc = cc;
+  gBase.appendChild(node);
+  SHAPES.push({ node, cc, name: null, box });
+  BOXES[cc] = box;
+}
+for (const [k, s] of Object.entries(B.subunits)) {
+  const [cc, ...rest] = k.split(':');
+  const name = rest.join(':');
+  const box = { x0: Infinity, y0: Infinity, x1: -Infinity, y1: -Infinity };
+  const node = el('path', { d: pathFor(s.polys, box), class: 'unit' });
+  node.dataset.cc = cc; node.dataset.name = name;
+  gSub.appendChild(node);
+  SHAPES.push({ node, cc, name, box });
+  BOXES[k] = box;
+}
+const TERR = [];
+for (let i = 0; i < (B.territories || []).length; i++) {
+  const t = B.territories[i];
+  const box = { x0: Infinity, y0: Infinity, x1: -Infinity, y1: -Infinity };
+  const node = el('path', { d: pathFor(t.polys, box), class: 'unit' });
+  node.dataset.terr = String(i);
+  gSub.appendChild(node);
+  TERR.push({ node, t, box });
+  BOXES['terr:' + i] = box;
+}
+
+/* A marker stands in for any unit too small to aim at. It holds a constant
+   size on screen, so it fades out of the way as soon as zooming makes the
+   real shape big enough to click. Units with no usable polygon at all keep
+   their marker at every zoom. */
+const DOTS = [];
+function addMark(key, cx, cy, size, always) {
+  const node = el('circle', { cx: cx.toFixed(1), cy: cy.toFixed(1), r: 4, class: 'dot' });
+  gDot.appendChild(node);
+  DOTS.push({ node, key, size, always });
+  if (cx < ext.x0) ext.x0 = cx; if (cx > ext.x1) ext.x1 = cx;
+  if (cy < ext.y0) ext.y0 = cy; if (cy > ext.y1) ext.y1 = cy;
+  return node;
+}
+// Countries the geometry does not carry at all: anchored on their centroid.
+for (const [cc, ll] of Object.entries(B.dots)) {
+  if (B.countries[cc]) continue;
+  const [px, py] = project(ll[0], ll[1]);
+  addMark(cc, px, py, 0, true).dataset.cc = cc;
+  BOXES[cc] = { x0: px, y0: py, x1: px, y1: py };
+}
+// Everything that does have a shape: a marker that only shows while small.
+const CENTROID = {};
+for (const [cc, ll] of Object.entries(B.dots)) CENTROID[cc] = project(ll[0], ll[1]);
+for (const s of SHAPES.concat(TERR.map(t => ({ node: t.node, cc: t.t.cc, name: null, box: t.box, terr: t })))) {
+  const b = s.box;
+  if (!isFinite(b.x0)) continue;
+  const size = Math.max(b.x1 - b.x0, b.y1 - b.y0);
+  const c = (!s.name && !s.terr && CENTROID[s.cc]) ? CENTROID[s.cc] : [(b.x0 + b.x1) / 2, (b.y0 + b.y1) / 2];
+  const node = addMark(null, c[0], c[1], size, false);
+  node.dataset.cc = s.cc;
+  if (s.name) node.dataset.name = s.name;
+  if (s.terr) node.dataset.terr = s.node.dataset.terr;
+}
+
+const PAD = 30;
+const VB = { x: ext.x0 - PAD, y: ext.y0 - PAD, w: (ext.x1 - ext.x0) + PAD * 2, h: (ext.y1 - ext.y0) + PAD * 2 };
+svg.setAttribute('viewBox', `${VB.x} ${VB.y} ${VB.w} ${VB.h}`);
+svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+
+/* ---------- paint ---------- */
+function unitFor(cc, name) {
+  const ix = IDX[domainId];
+  if (name) return ix.byKey.get(cc + ':' + name) || null;
+  return ix.owner.get(cc) || null;
+}
+const parentOf = u => (!u || u.nat) ? null : (IDX[domainId].owner.get(u.cc) || null);
+
+/* A sub-unit exists because it differs from its country in SOME domain — the
+   US states are split out because their EAL policy differs. In a domain where
+   it has nothing of its own it does not become a hole in the country: it
+   follows the national entry, which is what inheritance means. */
+function resolve(cc, name) {
+  const own = unitFor(cc, name);
+  const nat = name ? (IDX[domainId].owner.get(cc) || null) : null;
+  if (!name) return { unit: own, paint: own, inherited: false, via: null };
+  if (!own) {
+    // no entry at all in this domain — the shape stands in for the country
+    return nat ? { unit: nat, paint: nat, inherited: true, via: name }
+               : { unit: null, paint: null, inherited: false, via: null };
+  }
+  if (own.coverage !== 'has' && nat && nat.coverage === 'has') {
+    return { unit: own, paint: nat, inherited: true, via: null };
+  }
+  return { unit: own, paint: own, inherited: false, via: null };
+}
+
+function paint() {
+  const ix = IDX[domainId];
+  for (const s of SHAPES) {
+    const r = resolve(s.cc, s.name);
+    // A country whose whole area is carved into sub-units (the UK) has no
+    // entry of its own: draw it as an inert base beneath them.
+    const carved = !s.name && !r.unit && (ix.byCC.get(s.cc) || []).some(x => B.subunits[keyOf(x)]);
+    s.node.setAttribute('fill', carved ? 'var(--nodata)'
+      : fillFor(r.paint, r.paint ? stateOf(r.paint) : 'none'));
+    s.node.setAttribute('class', 'unit'
+      + (carved ? ' base' : r.unit ? ' hit' : '')
+      + (r.inherited ? ' inherited' : ''));
+    s.node.dataset.key = r.unit ? keyOf(r.unit) : '';
+    if (r.via) s.node.dataset.via = r.via; else delete s.node.dataset.via;
+  }
+  for (const { node, t } of TERR) {
+    const u = unitFor(t.cc, null);
+    node.dataset.via = t.name;
+    node.setAttribute('fill', fillFor(u, u ? stateOf(u) : 'none'));
+    node.setAttribute('class', 'unit' + (u ? ' hit' : ''));
+    node.dataset.key = u ? keyOf(u) : '';
+  }
+  for (const d of DOTS) {
+    const n = d.node;
+    const r = resolve(n.dataset.cc, n.dataset.name || null);
+    const u = r.unit || (n.dataset.name ? null : (IDX[domainId].byCC.get(n.dataset.cc) || [])[0]) || null;
+    const pnt = r.paint || u;
+    n.setAttribute('fill', fillFor(pnt, pnt ? stateOf(pnt) : 'none'));
+    n.setAttribute('class', 'dot' + (r.inherited ? ' inherited' : ''));
+    n.dataset.key = u ? keyOf(u) : '';
+    if (r.via) n.dataset.via = r.via; else delete n.dataset.via;
+    d.hasUnit = !!u;
+  }
+  updateMarks();
+  markSelection();
+  paintTally();
+}
+
+function markSelection() {
+  for (const s of SHAPES) {
+    if (s.node.classList.contains('base')) continue;
+    s.node.classList.toggle('sel', !!selected && s.node.dataset.key === selected);
+    s.node.classList.toggle('hov', !!hovered && s.node.dataset.key === hovered && hovered !== selected);
+  }
+  for (const d of DOTS.concat(TERR.map(x => ({ node: x.node })))) {
+    d.node.classList.toggle('sel', !!selected && d.node.dataset.key === selected);
+    d.node.classList.toggle('hov', !!hovered && d.node.dataset.key === hovered && hovered !== selected);
+  }
+  // Selected shapes last so their outline is never overdrawn by a neighbour.
+  for (const s of SHAPES) if (s.node.classList.contains('sel')) s.node.parentNode.appendChild(s.node);
+}
+
+function paintTally() {
+  const units = B.units[domainId];
+  const c = { has: 0, looked: 0, none: 0 };
+  for (const u of units) c[stateOf(u)]++;
+  const bar = document.getElementById('tally');
+  bar.innerHTML = '';
+  const order = [['has', 'var(--r-europe)'], ['looked', 'url(#hatch)'], ['none', 'var(--nodata)']];
+  for (const [k, col] of order) {
+    if (!c[k]) continue;
+    const d = document.createElement('div');
+    d.className = 'seg';
+    d.style.flex = c[k];
+    d.style.background = k === 'looked'
+      ? `repeating-linear-gradient(45deg, ${cssvar('--hatch-bg')} 0 3px, ${cssvar('--hatch-line')} 3px 4px)`
+      : col;
+    d.title = `${STATE_LABEL[k]}: ${c[k]}`;
+    bar.appendChild(d);
+  }
+  // Counts each unit's OWN record. Inherited fills add colour to the map
+  // without adding research, so they are deliberately not counted here.
+  document.getElementById('tallylabels').innerHTML =
+    `<span>${c.has} with their own record</span><span>${c.none + c.looked} without</span>`;
+}
+
+/* ---------- pan & zoom ----------
+   Same canvas mechanics as the syntax-tree viewer: one finger or the mouse
+   pans, two fingers pinch, ctrl/⌘-wheel zooms, plain wheel scrolls the view. */
+// A fingertip needs a bigger target than a cursor, so both the marker and the
+// size below which a shape gets one grow on a touch screen.
+const COARSE = matchMedia('(pointer: coarse)').matches;
+const MARK_MIN_PX = COARSE ? 20 : 13;
+const MARK_R_PX = COARSE ? 7 : 4.5;
+function updateMarks() {
+  // r is authored in viewBox units, so convert from the screen size we want.
+  const s = baseScale() * view.k;
+  if (!s) return;
+  const r = (MARK_R_PX / s).toFixed(2);
+  for (const d of DOTS) {
+    d.node.setAttribute('r', r);
+    d.node.style.display = (d.hasUnit && (d.always || d.size * s < MARK_MIN_PX)) ? '' : 'none';
+  }
+}
+function applyView() {
+  scene.setAttribute('transform', `translate(${view.tx} ${view.ty}) scale(${view.k})`);
+  pat.setAttribute('patternTransform', `scale(${1 / view.k})`);
+  updateMarks();
+}
+function baseScale() {
+  const r = svg.getBoundingClientRect();
+  return Math.min(r.width / VB.w, r.height / VB.h);
+}
+function screenToContent(sx, sy) {
+  const r = svg.getBoundingClientRect(), s = baseScale();
+  const ox = r.left + (r.width - VB.w * s) / 2, oy = r.top + (r.height - VB.h * s) / 2;
+  const vx = (sx - ox) / s + VB.x, vy = (sy - oy) / s + VB.y;
+  return [(vx - view.tx) / view.k, (vy - view.ty) / view.k];
+}
+function zoomAt(sx, sy, factor) {
+  const [cx, cy] = screenToContent(sx, sy);
+  const k = Math.max(1, Math.min(MAX_Z, view.k * factor));
+  if (k === view.k) return;
+  const r = svg.getBoundingClientRect(), s = baseScale();
+  const ox = r.left + (r.width - VB.w * s) / 2, oy = r.top + (r.height - VB.h * s) / 2;
+  const vx = (sx - ox) / s + VB.x, vy = (sy - oy) / s + VB.y;
+  view.k = k; view.tx = vx - k * cx; view.ty = vy - k * cy;
+  clampView(); applyView();
+}
+function clampView() {
+  // Keep at least a third of the viewport covered by the map in each axis.
+  const spanX = VB.w * view.k, spanY = VB.h * view.k;
+  const minTx = VB.x + VB.w - spanX - VB.x * view.k - VB.w * 0.66;
+  view.tx = Math.min(VB.x + VB.w * 0.66 - VB.x * view.k, Math.max(minTx, view.tx));
+  const minTy = VB.y + VB.h - spanY - VB.y * view.k - VB.h * 0.66;
+  view.ty = Math.min(VB.y + VB.h * 0.66 - VB.y * view.k, Math.max(minTy, view.ty));
+}
+function resetView() { view.k = 1; view.tx = 0; view.ty = 0; applyView(); }
+
+function zoomToBox(box, margin = 5) {
+  // Margin keeps the neighbours in frame: a unit shown with no surroundings
+  // is much harder to place than one shown in its region.
+  const w = Math.max(box.x1 - box.x0, 6) * margin, h = Math.max(box.y1 - box.y0, 6) * margin;
+  const k = Math.max(1, Math.min(MAX_Z, Math.min(VB.w / w, VB.h / h)));
+  const cx = (box.x0 + box.x1) / 2, cy = (box.y0 + box.y1) / 2;
+  view.k = k;
+  view.tx = VB.x + VB.w / 2 - k * cx;
+  view.ty = VB.y + VB.h / 2 - k * cy;
+  clampView(); applyView();
+}
+
+const ptrs = new Map();
+let anchor = null, moved = false;
+svg.addEventListener('pointerdown', ev => {
+  ptrs.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
+  moved = false;
+  if (ptrs.size === 1) {
+    anchor = { mode: 'pan', x: ev.clientX, y: ev.clientY, tx: view.tx, ty: view.ty };
+    svg.classList.add('dragging');
+  } else if (ptrs.size === 2) {
+    try { svg.setPointerCapture(ev.pointerId); } catch (e) { /* pointer already gone */ }
+    const [a, b] = [...ptrs.values()];
+    anchor = { mode: 'pinch', dist: Math.hypot(a.x - b.x, a.y - b.y) || 1, k: view.k,
+               mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2 };
+    anchor.c = screenToContent(anchor.mx, anchor.my);
+  }
+});
+svg.addEventListener('pointermove', ev => {
+  if (ptrs.has(ev.pointerId)) ptrs.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
+  if (anchor && anchor.mode === 'pan' && ptrs.size === 1) {
+    const s = baseScale();
+    const dx = ev.clientX - anchor.x, dy = ev.clientY - anchor.y;
+    if (!moved && (Math.abs(dx) > 3 || Math.abs(dy) > 3)) {
+      moved = true;
+      // Capture only now: taking it on pointerdown would retarget the click.
+      try { svg.setPointerCapture(ev.pointerId); } catch (e) { /* pointer already gone */ }
+    }
+    view.tx = anchor.tx + dx / s; view.ty = anchor.ty + dy / s;
+    clampView(); applyView();
+    hideTip();
+    return;
+  }
+  if (anchor && anchor.mode === 'pinch' && ptrs.size === 2) {
+    moved = true;
+    const [a, b] = [...ptrs.values()];
+    const dist = Math.hypot(a.x - b.x, a.y - b.y) || 1;
+    const k = Math.max(1, Math.min(MAX_Z, anchor.k * (dist / anchor.dist)));
+    const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+    const r = svg.getBoundingClientRect(), s = baseScale();
+    const ox = r.left + (r.width - VB.w * s) / 2, oy = r.top + (r.height - VB.h * s) / 2;
+    view.k = k;
+    view.tx = ((mx - ox) / s + VB.x) - k * anchor.c[0];
+    view.ty = ((my - oy) / s + VB.y) - k * anchor.c[1];
+    clampView(); applyView();
+    return;
+  }
+  hoverAt(ev);
+});
+function endPtr(ev) {
+  ptrs.delete(ev.pointerId);
+  if (ptrs.size === 0) { anchor = null; svg.classList.remove('dragging'); }
+  else if (ptrs.size === 1) {
+    const p = [...ptrs.values()][0];
+    anchor = { mode: 'pan', x: p.x, y: p.y, tx: view.tx, ty: view.ty };
+  }
+}
+svg.addEventListener('pointerup', endPtr);
+svg.addEventListener('pointercancel', endPtr);
+svg.addEventListener('pointerleave', () => { hovered = null; markSelection(); hideTip(); });
+
+svg.addEventListener('wheel', ev => {
+  ev.preventDefault();
+  if (ev.ctrlKey || ev.metaKey) {
+    zoomAt(ev.clientX, ev.clientY, Math.exp(-ev.deltaY * 0.0025));
+  } else {
+    const s = baseScale();
+    view.tx -= ev.deltaX / s; view.ty -= ev.deltaY / s;
+    clampView(); applyView();
+  }
+}, { passive: false });
+
+document.getElementById('zin').onclick = () => { const r = svg.getBoundingClientRect(); zoomAt(r.left + r.width / 2, r.top + r.height / 2, 1.5); };
+document.getElementById('zout').onclick = () => { const r = svg.getBoundingClientRect(); zoomAt(r.left + r.width / 2, r.top + r.height / 2, 1 / 1.5); };
+document.getElementById('zreset').onclick = resetView;
+
+/* ---------- hover & select ---------- */
+const tip = document.getElementById('tip');
+function hideTip() { tip.classList.remove('on'); }
+
+// Hit-test the point rather than trusting ev.target: pointer capture and
+// the tooltip both sit between the cursor and the shape underneath it.
+function shapeAt(ev) {
+  const prev = tip.style.pointerEvents;
+  tip.style.pointerEvents = 'none';
+  const t = document.elementFromPoint(ev.clientX, ev.clientY);
+  tip.style.pointerEvents = prev;
+  if (!(t instanceof SVGElement)) return null;
+  if (!t.classList.contains('hit') && !t.classList.contains('dot')) return null;
+  return t;
+}
+function targetKey(ev) {
+  const t = shapeAt(ev);
+  return t ? (t.dataset.key || null) : null;
+}
+function hoverAt(ev) {
+  const node = shapeAt(ev);
+  const key = node ? (node.dataset.key || null) : null;
+  if (key !== hovered) { hovered = key; markSelection(); }
+  if (!key) return hideTip();
+  const u = IDX[domainId].byKey.get(key);
+  if (!u) return hideTip();
+  const terr = node.dataset.terr ? B.territories[+node.dataset.terr] : null;
+  tip.innerHTML = tipHTML(u, terr, node.dataset.via || null,
+    node.classList.contains('inherited'));
+  tip.classList.add('on');
+  const r = document.getElementById('stage').getBoundingClientRect();
+  const tw = tip.offsetWidth, th = tip.offsetHeight;
+  let x = ev.clientX - r.left + 16, y = ev.clientY - r.top + 16;
+  if (x + tw > r.width - 8) x = ev.clientX - r.left - tw - 16;
+  if (y + th > r.height - 8) y = ev.clientY - r.top - th - 16;
+  tip.style.left = Math.max(8, x) + 'px';
+  tip.style.top = Math.max(8, y) + 'px';
+}
+svg.addEventListener('click', ev => {
+  if (moved) return;
+  const node = shapeAt(ev);
+  if (!node || !node.dataset.key) { closePanel(); return; }
+  const terr = node.dataset.terr ? B.territories[+node.dataset.terr] : null;
+  const via = terr ? { name: terr.name, note: terr.note }
+    : node.dataset.via ? { name: node.dataset.via, note: null } : null;
+  select(node.dataset.key, false, via);
+});
+
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const escAttr = esc;   // esc already escapes the double quote
+
+/* ------------------------------------------------------------------
+   In-text citation linking, lifted verbatim from the DLD catalogue's
+   catalog.html so the two stay in step. Resolves a citation first
+   against the entry's own docLinks labels, then against the DOI
+   registry; anything that resolves to neither stays plain text.
+   ------------------------------------------------------------------ */
+const REFERENCES = {
+  "armon-lotem|2016": "https://doi.org/10.1111/1460-6984.12242",
+  "almeida|2017": "https://doi.org/10.1075/lab.15019.alm",
+  "fleckstein|2018": "https://doi.org/10.1080/10489223.2016.1192635",
+  "tuller|2018": "https://doi.org/10.1111/1460-6984.12397",
+  "hamann|2017": "https://doi.org/10.3389/fcomm.2017.00016",
+  "chondrogianni|2018": "https://doi.org/10.1111/1460-6984.12363",
+  "antonijevic|2017": "https://doi.org/10.1075/lab.15026.ant",
+  "antonijevic-elliott|2019": "https://doi.org/10.1080/02699206.2019.1637458",
+  "gavarró|2017": "https://doi.org/10.3389/fpsyg.2017.01865",
+  // The COST IS1406 volume cited in every vignette stub note.
+  "law|2019": "https://doi.org/10.4324/9780429455308",
+};
+
+// An author-ish run immediately before a year, in either narrative
+// "Author (2016)" or parenthetical "(Author et al., 2016)" form. The run is
+// deliberately permissive and capped in length; correctness comes from
+// resolution, not from parsing — a run that resolves to nothing stays plain.
+// String.raw, not plain quotes: these are regex fragments, and inside an
+// ordinary string literal "\w" collapses to "w" before RegExp ever sees it.
+const NAME = String.raw`[A-ZÀ-Þ][\w'’À-ɏ-]+`;
+const AUTHORISH = "(?:" + NAME + String.raw`|[A-ZÀ-Þ]\.|&amp;|and|et|al\.|de|van|von|den|der|ter|di|da|la|le)`;
+const RUN = AUTHORISH + String.raw`(?:[,\s]+` + AUTHORISH + "){0,5}";
+const YEARS = String.raw`((?:19|20)\d{2})[a-z]?(?:,\s*(?:19|20)\d{2}[a-z]?)*`;
+const NARRATIVE_RE = new RegExp(RUN + String.raw`[,\s]*\(` + YEARS + String.raw`\)`, "g");
+const PARENTHETICAL_RE = new RegExp(String.raw`\(` + RUN + String.raw`,?\s*` + YEARS + String.raw`\)`, "g");
+
+function citationKey(surname, year) {
+  return surname.toLowerCase().replace(/['\u2019]/g, "") + "|" + year;
+}
+
+// A source link on this same entry resolves a citation when its label names
+// both the surname and the year — which is how the seed labels are written
+// ("Norbury et al. (2016), SCALES prevalence study").
+function resolveFromDocLinks(entry, surname, year) {
+  // Same normalisation as citationKey — otherwise a surname with an apostrophe
+  // matches the registry but never its own source link.
+  const lower = surname.toLowerCase().replace(/['’]/g, "");
+  const hit = (entry.docLinks || []).find(d => {
+    const l = (d.label || "").toLowerCase();
+    return l.includes(lower) && l.includes(year);
+  });
+  return hit ? hit.url : null;
+}
+
+// Try every capitalised token against every year in the match. This is what
+// makes "See Chondrogianni & John (2018)" work — "See" simply resolves to
+// nothing and the next candidate is tried.
+function resolveCitation(matchText, entry) {
+  const names = matchText.match(new RegExp(NAME, "g")) || [];
+  const years = matchText.match(/(?:19|20)\d{2}/g) || [];
+  for (const n of names) {
+    // All-caps tokens are acronyms, not surnames ("TOS' (2016)" is a document
+    // title, and its own source pill sits at the foot of the card).
+    if (n.length > 1 && n === n.toUpperCase()) continue;
+    for (const y of years) {
+      const url = REFERENCES[citationKey(n, y)] || resolveFromDocLinks(entry, n, y);
+      if (url) return { url, name: n };
+    }
+  }
+  return null;
+}
+
+// Runs over already-escaped HTML, and only ever wraps a plain run in an <a>.
+const KEEP_IN_LINK = /^[(\s]*(?:(?:de|van|von|den|der|ter|di|da|la|le)\s+)?$/i;
+
+function linkCitations(escapedText, entry) {
+  const wrap = (match) => {
+    const hit = resolveCitation(match, entry);
+    if (!hit) return match;
+    // The run can absorb a leading ordinary word ("See Chondrogianni…",
+    // "and Tuller…"). Start the link at the surname that actually resolved so
+    // the anchor text is the citation and nothing else.
+    const at = match.indexOf(hit.name);
+    let lead = at > 0 ? match.slice(0, at) : "";
+    let cite = at > 0 ? match.slice(at) : match;
+    // An opening bracket or a lowercase name particle belongs to the citation,
+    // not to the sentence — otherwise "(Bishop…2017)" links with an unbalanced
+    // paren and "de Almeida" loses its "de".
+    if (lead && KEEP_IN_LINK.test(lead)) { cite = lead + cite; lead = ""; }
+    return `${lead}<a class="cite" href="${escAttr(hit.url)}" target="_blank" rel="noopener">${cite}</a>`;
+  };
+  return escapedText.replace(NARRATIVE_RE, wrap).replace(PARENTHETICAL_RE, wrap);
+}
+const swatch = (u, st) => {
+  if (st === 'has') return `<span class="sw" style="background:${cssvar(REGION_VAR[u.region] || '--r-europe')}"></span>`;
+  if (st === 'looked') return `<span class="sw" style="background:repeating-linear-gradient(45deg,${cssvar('--hatch-bg')} 0 3px,${cssvar('--hatch-line')} 3px 4px)"></span>`;
+  return `<span class="sw" style="background:${cssvar('--nodata')}"></span>`;
+};
+
+function fieldMarks(u, d) {
+  return d.fields.map((f, i) => {
+    const c = u.fieldStates[i];
+    const cls = c === 'h' ? 'on' : c === 'l' ? 'looked' : '';
+    return `<span class="${cls}">${esc(f.label)}</span>`;
+  }).join('');
+}
+
+function tipHTML(u, terr, via, inheriting) {
+  const d = domain();
+  const sibs = (IDX[domainId].byCC.get(u.cc) || []).filter(x => x !== u);
+  const countryName = (B.countries[u.cc] || {}).name || u.cc;
+
+  // When the shape follows its country, every number and marker has to come
+  // from the country's entry — that is the record actually on offer here.
+  const nat = IDX[domainId].owner.get(u.cc) || null;
+  const src = (inheriting && !via && nat) ? nat : u;
+  const st = stateOf(src);
+  const nDoc = src.filled.length;
+
+  let inherit = '';
+  if (terr) {
+    inherit = `${esc(terr.note)}`;
+  } else if (via) {
+    inherit = `No separate ${esc(d.label)} entry for ${esc(via)}. What applies is the <b>${esc(u.name)}</b> record shown here.`;
+  } else if (inheriting) {
+    inherit = `Nothing recorded for ${esc(u.name)} itself in this domain, so it follows <b>${esc(nat ? nat.name : countryName)}</b>. It is a separate unit because it differs in another domain.`;
+  } else if (u.nat && sibs.length) {
+    inherit = `${sibs.length} sub-national entr${sibs.length === 1 ? 'y' : 'ies'} also exist for ${esc(u.name)}. Each one falls back to this record where it has nothing of its own.`;
+  } else if (sibs.length) {
+    inherit = nat
+      ? `Sits inside <b>${esc(nat.name)}</b>. Anything not recorded here follows the national entry.`
+      : `${sibs.length + 1} separate entries for ${esc(countryName)} — nothing is recorded at national level, so none of them inherit.`;
+  }
+
+  const label = terr ? terr.name : (via || u.name);
+  const meta = (terr || via) ? esc(u.name) + ' · shows that entry'
+    : esc(u.subregion || u.region) + (u.nat ? ' · national' : ' · sub-national');
+  return `
+    <div class="name">${esc(label)}</div>
+    <div class="meta">${meta}</div>
+    <div class="state">${swatch(src, st)} ${nDoc} of ${d.fields.length} fields documented${src !== u ? ' by ' + esc(src.name) : ''}</div>
+    <div class="fieldgrid" style="--mark:${hueOf(src)}">${fieldMarks(src, d)}</div>
+    ${inherit ? `<div class="inherit">${inherit}</div>` : ''}
+    <div class="hintline">Click for the full entry</div>`;
+}
+
+/* ---------- detail panel ---------- */
+const panel = document.getElementById('panel');
+function closePanel() { selected = null; panel.classList.remove('on'); markSelection(); }
+
+function select(key, zoom, via) {
+  const u = IDX[domainId].byKey.get(key);
+  if (!u) return;
+  selected = key;
+  markSelection();
+  panel.innerHTML = panelHTML(u, via);
+  panel.classList.add('on');
+  panel.scrollTop = 0;
+  panel.querySelector('.close').onclick = closePanel;
+  panel.querySelectorAll('.sibs button[data-key]').forEach(b => {
+    b.onclick = () => select(b.dataset.key, true);
+  });
+  if (zoom) {
+    const box = BOXES[key] || BOXES[u.cc];
+    if (box) zoomToBox(box);
+  }
+}
+
+// Each dated row links to the policy it names, where the entry's own sources
+// hold it. Rows whose document could not be identified stay as plain text.
+function historyHTML(rows, entry) {
+  return `<ol class="hist">` + (rows || []).map(h => `<li>
+      <span class="yr">${esc(h.year)}</span>
+      <div>
+        ${linkCitations(esc(h.description), entry) ? `<p>${linkCitations(esc(h.description), entry)}</p>` : ''}
+        ${h.links.length ? `<div class="links">${linkList(h.links)}</div>` : ''}
+      </div>
+    </li>`).join('') + `</ol>`;
+}
+
+function linkList(links) {
+  return links.map(l =>
+    `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label || l.url)}</a>`
+  ).join('');
+}
+
+function panelHTML(u, via) {
+  const d = domain();
+  const st = stateOf(u);
+  const hue = hueOf(u);
+  const countryName = (B.countries[u.cc] || {}).name || u.cc;
+  const sibs = (IDX[domainId].byCC.get(u.cc) || []).filter(x => x !== u);
+  const nat = sibs.find(x => x.nat);
+
+  // Every field, in order. A field this unit has nothing of its own for falls
+  // back to its country's text, marked as inherited rather than presented as
+  // the unit's own work.
+  const par = parentOf(u);
+  let nInherited = 0;
+  const block = (cls, label, body, from) =>
+    `<div class="field ${cls}"><h4>${esc(label)}${from ? `<span class="from">inherited from ${esc(from)}</span>` : ''}</h4>${body}</div>`;
+  const prose = (text, entry) => `<p>${linkCitations(esc(text), entry)}</p>`;
+  const fields = d.fields.map((f, i) => {
+    const c = u.fieldStates[i];
+    const isHist = f.k === 'policyHistory';
+    if (c === 'h') return block('on', f.label, isHist ? historyHTML(u.history, u) : prose(u.values[f.k], u));
+    if (c === 'l') return block('looked', f.label, prose(u.values[f.k], u));
+    const inheritable = par && (isHist ? (par.history || []).length : par.values[f.k]);
+    if (inheritable) {
+      nInherited++;
+      return block('inh', f.label,
+        isHist ? historyHTML(par.history, par) : prose(par.values[f.k], par), par.name);
+    }
+    return block('empty', f.label, '<p>Not recorded.</p>');
+  }).join('');
+
+  const cross = LIVE.map(dd => {
+    const other = IDX[dd.id].byKey.get(keyOf(u));
+    return `<div class="r">${other ? swatch(other, other.coverage) : swatch(u, 'none')}
+      <span>${esc(dd.label)}</span>
+      <span class="n">${other ? other.filled.length + '/' + other.nFields + ' fields' : 'no entry'}</span></div>`;
+  }).join('');
+
+  const sibRows = sibs.map(x =>
+    `<button data-key="${esc(keyOf(x))}">${swatch(x, stateOf(x))}<span>${esc(x.name)}</span>
+      <span class="role">${x.nat ? 'national' : 'sub-national'}</span></button>`).join('');
+
+  const inheritNote = !sibs.length ? ''
+    : u.nat
+      ? `These sub-national units exist because they differ somewhere. In this domain each of them falls back to the record above wherever it has nothing of its own.`
+      : nat
+        ? `A field left blank here is not necessarily a gap in the record — it falls back to <b>${esc(nat.name)}</b>, marked as inherited above.`
+        : `${esc(countryName)} has no national entry in this domain, so these ${sibs.length + 1} units inherit nothing from each other. Every field has to be documented separately.`;
+
+  return `
+  <div class="inner" style="--mark:${hue}">
+    <button class="close" aria-label="Close">×</button>
+    <div class="eyebrow">${esc(u.nat ? 'National' : 'Sub-national')} · ${esc(d.label)}</div>
+    <h2>${esc(u.name)}</h2>
+    <div class="where">${esc(u.nat ? u.subregion || u.region : countryName + ' · ' + (u.subregion || u.region))}</div>
+    ${via ? `<p class="viaterr">You clicked <b>${esc(via.name)}</b>. ${via.note
+      ? esc(via.note)
+      : `There is no separate ${esc(d.label)} entry for it, so what applies is the ${esc(u.name)} record below.`}</p>` : ''}
+    ${nInherited && !via ? `<p class="viaterr">${nInherited} of these ${d.fields.length} fields have nothing recorded for ${esc(u.name)} itself and follow <b>${esc(par.name)}</b>. They are marked below.</p>` : ''}
+
+    <div class="chips">
+      <span class="chip">${u.filled.length}/${d.fields.length} fields</span>
+      <span class="chip">${esc(u.status)}</span>
+      <span class="chip">${esc(u.confidence.replace(/-/g, ' '))}</span>
+      ${u.lastVerified ? `<span class="chip">verified ${esc(u.lastVerified)}</span>` : ''}
+    </div>
+
+    <div class="sect">
+      <h3>The entry</h3>
+      ${fields}
+    </div>
+
+    ${u.docLinks.length ? `<div class="sect"><h3>Evidence for this entry</h3>
+      <div class="links">${linkList(u.docLinks)}</div></div>` : ''}
+    ${u.supportLinks.length ? `<div class="sect"><h3>Support available there</h3>
+      <div class="links">${linkList(u.supportLinks)}</div></div>` : ''}
+
+    <div class="sect">
+      <h3>Across domains</h3>
+      <div class="cross">${cross}</div>
+    </div>
+
+    ${u.collaborators.length ? `<div class="sect"><h3>Contributors</h3>
+      <dl class="kv"><dt>Worked on by</dt><dd>${esc(u.collaborators.join(', '))}</dd></dl></div>` : ''}
+
+    ${sibs.length ? `<div class="sect">
+      <h3>Others in ${esc(countryName)}</h3>
+      <div class="sibs">${sibRows}</div>
+      <p class="caveat" style="margin-top:12px">${inheritNote}</p>
+    </div>` : ''}
+  </div>`;
+}
+
+/* ---------- chrome ---------- */
+function buildDomains() {
+  const nav = document.getElementById('domains');
+  nav.innerHTML = '';
+  for (const d of B.domains) {
+    const b = document.createElement('button');
+    b.textContent = d.label;
+    b.disabled = !d.live;
+    b.title = d.blurb;
+    if (d.live) {
+      b.setAttribute('aria-current', String(d.id === domainId));
+      b.onclick = () => { domainId = d.id; closePanel(); buildDomains(); paint(); };
+    }
+    nav.appendChild(b);
+  }
+  document.getElementById('domainName').textContent = domain().label;
+  document.getElementById('blurb').textContent = domain().blurb;
+}
+
+/* search */
+const search = document.getElementById('search'), results = document.getElementById('results');
+search.addEventListener('input', () => {
+  const q = search.value.trim().toLowerCase();
+  results.innerHTML = '';
+  if (q.length < 2) return;
+  const hits = B.units[domainId]
+    .filter(u => u.name.toLowerCase().includes(q) || u.cc.toLowerCase() === q ||
+                 (u.subregion || '').toLowerCase().includes(q) || u.region.toLowerCase().includes(q))
+    .slice(0, 40);
+  for (const u of hits) {
+    const b = document.createElement('button');
+    b.innerHTML = `${swatch(u, stateOf(u))}<span>${esc(u.name)}</span><span class="sub">${esc(u.subregion || u.region)}</span>`;
+    b.onclick = () => { select(keyOf(u), true); results.innerHTML = ''; search.value = ''; };
+    results.appendChild(b);
+  }
+});
+document.addEventListener('click', e => {
+  if (!e.target.closest('.searchwrap')) results.innerHTML = '';
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closePanel(); results.innerHTML = ''; } });
+
+/* legend swatches */
+function paintLegend() {
+  document.getElementById('sw-has').style.background =
+    `linear-gradient(90deg, ${cssvar('--r-africa')}, ${cssvar('--r-americas')}, ${cssvar('--r-asia')}, ${cssvar('--r-europe')}, ${cssvar('--r-oceania')})`;
+  document.getElementById('sw-looked').style.background =
+    `repeating-linear-gradient(45deg, ${cssvar('--hatch-bg')} 0 3px, ${cssvar('--hatch-line')} 3px 4px)`;
+  document.getElementById('sw-none').style.background = cssvar('--nodata');
+  const inh = document.getElementById('sw-inh');
+  inh.style.background = cssvar('--r-europe');
+  inh.style.borderStyle = 'dashed';
+  inh.style.borderColor = cssvar('--surface');
+  const hues = document.getElementById('hues');
+  hues.innerHTML = ['--r-africa', '--r-americas', '--r-asia', '--r-europe', '--r-oceania']
+    .map(v => `<span style="background:${cssvar(v)}"></span>`).join('');
+}
+
+buildDomains(); paint(); applyView(); paintLegend();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { paintLegend(); paintTally(); });
+addEventListener('resize', () => { clampView(); applyView(); });
+</script>

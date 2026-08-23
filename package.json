@@ -1,0 +1,13 @@
+{
+  "name": "language-atlas",
+  "version": "0.1.0",
+  "description": "One world map over several domains of language policy, shaded by what is documented. Reads the DLD and EAL trackers' seed data.",
+  "engines": { "node": ">=22.5.0" },
+  "scripts": {
+    "build": "node --max-old-space-size=6144 build.js && node assemble.js index.html",
+    "serve": "python -m http.server 8795"
+  },
+  "license": "MIT",
+  "author": "Juliana Gerard",
+  "dependencies": { "polygon-clipping": "^0.15.7" }
+}

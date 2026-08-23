@@ -1,0 +1,5 @@
+node_modules/
+# Downloaded on first build; ~65 MB, and reproducible from build.js
+sources/
+# Generated: build.js -> bundle.json -> (assemble.js) -> index.html
+bundle.json
