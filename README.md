@@ -237,11 +237,17 @@ The page carries a viewport meta tag; without one a phone lays it out at 980 CSS
 pixels and scales the result down, so the `max-width: 820px` rules never fire at
 all and everything reads tiny.
 
-Below 820 px the legend and the domain summary leave the map and sit beneath it
-in normal flow, so nothing floats over the map; the legend's four fill rows wrap
-into a single strip. The domain tabs scroll sideways rather than wrapping — at
-every width, not just on phones, because wrapping five tabs cost 193 px of
-header on a narrow desktop window. The detail panel becomes a bottom sheet.
+Below 820 px the info panel leaves the map and sits beneath it in normal flow,
+so nothing floats over the map, and its fill rows wrap into a strip. The panel
+takes whatever height the map does not need: a world map is about 2.3x as wide
+as it is tall, so on a portrait screen the drawn map's size is fixed by the
+screen width and any extra height would only become empty ground. `sizeMap()`
+caps the map near its own proportions and the panel absorbs the rest. The
+detail panel becomes a bottom sheet.
+
+Only the domains you can actually open are tabs — two of them, both visible
+without scrolling. The planned ones are named on a line underneath, never
+dressed as buttons that do nothing.
 
 On a coarse pointer the markers grow from 9 px to 14 px, and the size below
 which a shape gets one rises from 13 px to 20 px, so more small units become
