@@ -9,9 +9,20 @@ language acquisition" rather than EAL, "Language disorder support" rather than
 DLD — with the technical term named once in the blurb so it stays findable.
 The `id`s in the data remain `eal` and `dld`.
 
-## It owns no data
+## Typography and contrast
 
-The atlas is a reader of the two existing trackers, not a replacement store:
+One sans face (Archivo) throughout; hierarchy is weight, size and tracking
+rather than a change of voice. Every text colour is checked against the surface
+behind it at WCAG AA — the muted greys were originally as low as 2.5:1 on the
+ground, which is what made a page of greys on greys hard to read. `--ink-faint`
+and `--ink-soft` are the two tokens to re-check if the palette moves.
+
+## It owns no data (for now)
+
+The atlas currently reads the two existing trackers rather than storing
+anything. **The intention is to fold them into this site** and have it own the
+data directly, at which point the proxy below becomes a migration rather than a
+permanent architecture. Until then:
 
     eal-policy-tracker.fly.dev ─┐
                                 ├─► /api/atlas ─► the map

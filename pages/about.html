@@ -3,7 +3,7 @@
 <title>About — Language Atlas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/shared.css">
 
 <style>
@@ -11,14 +11,12 @@ body { display: flex; flex-direction: column; min-height: 100dvh; }
 main { flex: 1; width: min(72ch, 100%); margin: 0 auto; padding: 40px 22px 72px; }
 
 main h2 {
-  font-family: Newsreader, Georgia, serif;
   font-size: clamp(27px, 4.4vw, 36px); font-weight: 500; line-height: 1.15;
   letter-spacing: -.015em; margin: 0 0 6px; text-wrap: balance;
 }
 main .standfirst { margin: 0 0 30px; font-size: 16px; color: var(--ink-soft); line-height: 1.6; }
 
 main h3 {
-  font-family: Newsreader, Georgia, serif;
   font-size: 21px; font-weight: 500; letter-spacing: -.01em;
   margin: 38px 0 10px; padding-top: 16px; border-top: 1px solid var(--hair);
   text-wrap: balance;
@@ -81,12 +79,11 @@ footer.foot a { color: var(--ink-soft); }
   </p>
 
   <p>
-    This atlas doesn't hold any data of its own. It reads two existing catalogues live —
-    the <a href="https://eal-policy-tracker.fly.dev">EAL / Newcomer Education Policy Tracker</a>
-    and the <a href="https://dld-policy-tracker.fly.dev">DLD Provision &amp; Policy Tracker</a> —
-    and draws what they contain onto a shared map, so the same country can be compared across
-    subjects instead of across websites. An entry approved in either tracker appears here without
-    anything being rebuilt.
+    It grew out of two separate catalogues — one on school language support, one on language
+    disorder provision — which it currently reads from directly, so that the same country can be
+    compared across subjects rather than across websites. Those catalogues are being folded into
+    this site; for now they remain where entries are submitted and reviewed, and anything approved
+    in them appears here immediately.
   </p>
 
   <h3>Why every country is listed</h3>
@@ -98,12 +95,44 @@ footer.foot a { color: var(--ink-soft); }
     dead end.
   </p>
   <p>
-    So most of the map is grey, and that is the honest picture. What exists elsewhere stops
-    short of what is useful for comparison: Eurydice covers around 42 European education systems
-    and MIPEX's education strand a similar set of mostly OECD countries, but neither reaches the
-    level of exact eligibility criteria, funding models, home-language support, or links to the
-    legislation behind them. Outside Europe and the OECD there is essentially no comparative
-    resource at all.
+    So most of the map is grey, and that is the honest picture rather than a gap in effort.
+  </p>
+
+  <h3>What already exists</h3>
+  <p>
+    Plenty, for part of the picture. It is worth being precise about which part, because this
+    project only earns its place where those stop.
+  </p>
+  <ul>
+    <li>
+      <a href="https://www.mipex.eu/education">MIPEX</a> scores migrant integration policy across
+      56 countries, with education as one of eight strands. It is the closest model for how this
+      site presents itself, and the reason there is no score here: MIPEX's strength is a single
+      comparable index, which is exactly what a catalogue of criteria and entitlements cannot
+      honestly produce.
+    </li>
+    <li>
+      <a href="https://eurydice.eacea.ec.europa.eu/">Eurydice</a> maps the integration of migrant
+      students and the teaching of languages across roughly 40 European education systems, in
+      genuine depth, and is the best source there is for the countries it covers.
+    </li>
+    <li>
+      The <a href="https://www.migpolgroup.com/">SIRIUS Migrant Education Policy Index</a> (2025)
+      is newer and narrower, assessing inclusive policy for migrant learners in Europe.
+    </li>
+    <li>
+      For language disorders there is no maintained comparative database at all — only studies.
+      The COST Action IS1406 practitioner survey and the funding analysis that came out of it are
+      the baseline, and both are fixed snapshots rather than something anyone updates.
+    </li>
+  </ul>
+  <p>
+    Two things follow. All of these stop at Europe and the OECD, so for most of the world there
+    is no comparative resource in either subject. And where they do cover a country, they report
+    at a coarser grain than the question usually needs: whether support exists, rather than the
+    exact criterion for gaining or losing it, who pays, what happens to the home language, and
+    which document says so. This site is aimed at that second gap as much as the first, which is
+    why an entry is a set of sourced fields rather than a rating.
   </p>
 
   <h3>Reading the map</h3>
@@ -175,9 +204,10 @@ footer.foot a { color: var(--ink-soft); }
     publishing, never published automatically.
   </p>
   <blockquote class="note">
-    Submitting from the map isn't wired up yet. For now, contribute through
-    <a href="https://eal-policy-tracker.fly.dev/submit">the EAL tracker</a> or
-    <a href="https://dld-policy-tracker.fly.dev/submit">the DLD tracker</a> directly.
+    Submitting from the map isn't wired up yet. Until it is, entries go through the two
+    catalogues this site was built from —
+    <a href="https://eal-policy-tracker.fly.dev/submit">school language support</a> or
+    <a href="https://dld-policy-tracker.fly.dev/submit">language disorder provision</a>.
   </blockquote>
 
   <h3>Who built this</h3>
@@ -200,9 +230,7 @@ footer.foot a { color: var(--ink-soft); }
 </main>
 
 <footer class="foot">
-  Reads live from the
-  <a href="https://eal-policy-tracker.fly.dev">EAL</a> and
-  <a href="https://dld-policy-tracker.fly.dev">DLD</a> policy trackers. Entry text CC BY 4.0.
+  Entry text CC BY 4.0 · code <a href="https://github.com/jjgerard/language-atlas">open source</a>
 </footer>
 
 <script type="module">

@@ -12,8 +12,8 @@
   --surface:     #FBFCFD;
   --surface-2:   #F1F4F7;
   --ink:         #101820;
-  --ink-soft:    #5B6771;
-  --ink-faint:   #8A959F;
+  --ink-soft:    #47525C;
+  --ink-faint:   #566169;
   --hair:        #C3CDD6;
   --hair-strong: #9DAAB6;
   --focus:       #3F5BA9;
@@ -37,8 +37,8 @@
     --surface:     #161F27;
     --surface-2:   #1D2831;
     --ink:         #E7EEF4;
-    --ink-soft:    #97A6B2;
-    --ink-faint:   #6B7A87;
+    --ink-soft:    #AEBCC7;
+    --ink-faint:   #9AA8B3;
     --hair:        #2A3640;
     --hair-strong: #3E4E5A;
     --focus:       #8AA3E8;
@@ -62,8 +62,8 @@
   --surface:     #161F27;
   --surface-2:   #1D2831;
   --ink:         #E7EEF4;
-  --ink-soft:    #97A6B2;
-  --ink-faint:   #6B7A87;
+  --ink-soft:    #AEBCC7;
+  --ink-faint:   #9AA8B3;
   --hair:        #2A3640;
   --hair-strong: #3E4E5A;
   --focus:       #8AA3E8;
@@ -114,7 +114,6 @@ body {
 }
 .brand { display: flex; align-items: baseline; gap: 11px; text-decoration: none; color: inherit; min-width: 0; }
 .brand h1, .brand .name {
-  font-family: Newsreader, Georgia, serif;
   font-size: 21px; font-weight: 500; letter-spacing: -.015em; line-height: 1;
   margin: 0; white-space: nowrap; color: var(--ink);
 }
@@ -136,10 +135,10 @@ body {
   background: var(--ink); border-color: var(--ink); color: var(--surface); font-weight: 600;
 }
 .pill.soon {
-  color: var(--ink-faint); border-style: dashed; cursor: default;
-  background: none; opacity: .8;
+  color: var(--ink-soft); border-style: dashed; cursor: default;
+  background: var(--surface);
 }
-.pill.soon:hover { border-color: var(--hair-strong); color: var(--ink-faint); }
+.pill.soon:hover { border-color: var(--hair-strong); color: var(--ink-soft); }
 .pill.soon::after {
   content: "soon"; margin-left: 8px; font-size: 9.5px; letter-spacing: .1em;
   text-transform: uppercase; opacity: .75;
