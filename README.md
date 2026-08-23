@@ -75,7 +75,10 @@ the Docker image does not need the Natural Earth downloads.
 
 ## Pages
 
-    /         home     pick a subject, over a flat world silhouette
+    /         home     name, tagline and the subjects, over a flat world
+                       silhouette. No nav bar: the page is the choice, and
+                       About sits with the other destinations rather than in
+                       a corner.
     /eal      map      majority language acquisition
     /dld      map      language disorder support
     /about    about    what this is and what it cannot do yet

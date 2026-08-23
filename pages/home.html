@@ -32,16 +32,23 @@ body { display: flex; flex-direction: column; min-height: 100dvh; }
 }
 @supports not (backdrop-filter: blur(2px)) { .hero > .inner { background: var(--ground); } }
 
-.hero h2 {
-  font-size: clamp(30px, 5.4vw, 46px); font-weight: 500; line-height: 1.12;
-  letter-spacing: -.02em; margin: 0; text-wrap: balance; max-width: 17ch;
+.hero .wordmark {
+  font-size: clamp(38px, 7vw, 60px); font-weight: 600; line-height: 1.02;
+  letter-spacing: -.03em; margin: 0; color: var(--ink);
 }
 .hero .lede {
-  margin: 14px 0 0; font-size: 16px; line-height: 1.6;
-  color: var(--ink-soft); max-width: 56ch;
+  margin: 10px 0 0; font-size: clamp(15px, 2.2vw, 18px); line-height: 1.5;
+  color: var(--ink-soft);
 }
 
-.choose { margin: 34px 0 0; }
+.aboutrow { margin: 26px 0 0; font-size: 14px; }
+.aboutrow a {
+  color: var(--ink-soft); text-decoration: none;
+  border-bottom: 1px solid var(--hair-strong); padding-bottom: 2px;
+}
+.aboutrow a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+.choose { margin: 38px 0 0; }
 .choose > .eyebrow { display: block; margin-bottom: 12px; }
 .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); }
 .card {
@@ -83,32 +90,18 @@ footer.foot a { color: var(--ink-soft); }
   body { min-height: 100dvh; }
   .hero { padding: 26px 16px 36px; justify-content: flex-start; }
   .hero .lede { font-size: 15px; }
-  .choose { margin-top: 24px; }
+  .choose { margin-top: 28px; }
   .soonlist { margin-top: 22px; }
   .backdrop img { width: 210%; }
   .hero > .inner { padding: 0; background: none; backdrop-filter: none; }
 }
 </style>
 
-<header class="sitebar nomenu">
-  <a class="brand" href="/">
-    <span class="name">Language Atlas</span>
-    <span class="tagline">Provision and policy, by region</span>
-  </a>
-  <div class="navright">
-    <a class="aboutlink" href="/about">About</a>
-  </div>
-</header>
-
 <div class="hero">
   <div class="backdrop"><img src="/world.svg" alt="" aria-hidden="true"></div>
   <div class="inner">
-    <h2>What a country actually does about language</h2>
-    <p class="lede">
-      Every country in the world is on each map from the start — most of them still
-      undocumented, and shown as such. Pick a subject to see what is on record, and where
-      the gaps are.
-    </p>
+    <h1 class="wordmark">Language Atlas</h1>
+    <p class="lede">Provision and policy, by region</p>
 
     <div class="choose">
       <span class="eyebrow">Open a map</span>
@@ -119,12 +112,13 @@ footer.foot a { color: var(--ink-soft); }
       <span class="eyebrow">Planned pages</span>
       <div class="pills" id="soon"></div>
     </div>
+
+    <p class="aboutrow"><a href="/about">About this project</a></p>
   </div>
 </div>
 
 <footer class="foot">
-  Every country listed from the start, most still undocumented ·
-  entry text CC BY 4.0 · <a href="/about">how this works</a>
+  Every country listed from the start, most still undocumented · entry text CC BY 4.0
 </footer>
 
 <script type="module">
