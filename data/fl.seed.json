@@ -688,18 +688,23 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Bilingual Education in Burkina Faso: an alternative approach for quality basic education: Ilboudo, ADEA African Experiences country case study 11",
+    "url": "https://www.adeanet.org/sites/default/files/publications/PDF/experiencesafricaines_01_en.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "In the bilingual stream, French is a subject before it is a medium\nYear one: 90% of the programme in the national language, 10% French\nFrench's share rises year by year across a five-year primary cycle\nFrom an ADEA country case study, not from a ministry instrument",
   "secondaryRequirement": "",
   "upperSecondary": "",
   "languagesOffered": "",
@@ -708,7 +713,7 @@
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "regionalMinorityLanguages": "",
+  "regionalMinorityLanguages": "National languages are the medium in the bilingual stream, not an add-on subject\nBilingual primary schools have run since 1994\nWith early-learning centres below and multilingual middle schools above",
   "policyHistory": []
  },
  {
@@ -5144,18 +5149,23 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Unlocking potential amid Nigeria's return to English-only education (2026): Ogunleye, World Education Blog (GEM Report)",
+    "url": "https://world-education-blog.org/2026/04/22/unlocking-potential-amid-nigerias-return-to-english-only-education/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Reversed in November 2025 — read the policy history before the current state\nEnglish is now the sole medium of instruction from pre-primary to tertiary\nThe 2022 policy had made the mother tongue compulsory as medium through Primary 6\nReported through the GEM Report's blog, not a peer-reviewed source",
   "secondaryRequirement": "",
   "upperSecondary": "",
   "languagesOffered": "",
@@ -5164,8 +5174,17 @@
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Over 500 languages, and no current medium-of-instruction role for any of them\nThe 2022 policy sought to preserve indigenous languages through schooling\nThat rationale was not disputed in the reversal; examination results were the reason given",
+  "policyHistory": [
+   {
+    "year": 2022,
+    "description": "The National Language Policy makes the mother tongue or language of the immediate environment the compulsory medium of instruction from early childhood through Primary 6."
+   },
+   {
+    "year": 2025,
+    "description": "The Federal Government reverses that policy in November, reinstating English as the sole medium of instruction at every level."
+   }
+  ]
  },
  {
   "countryCode": "NI",
