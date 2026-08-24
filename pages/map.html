@@ -194,10 +194,6 @@
   content: ""; position: absolute; left: 2px; top: .68em;
   width: 5px; height: 1px; background: var(--hair-strong);
 }
-.field p.src {
-  margin: 7px 0 0; font-size: 10.5px; line-height: 1.45; color: var(--ink-faint);
-  white-space: normal;
-}
 .field.looked ul.bul li { color: var(--ink-faint); font-style: italic; }
 .field.inh ul.bul li { color: var(--ink-soft); }
 .field h4 .from {
@@ -1215,11 +1211,6 @@ function linkList(links) {
   ).join('');
 }
 
-// Field text stores its source as a final line. The prefix is a convention, not
-// a schema change: the panel already renders newlines, and no prose field
-// contains one.
-const SOURCE_PREFIX = 'Source — ';
-
 function panelHTML(u, via) {
   const d = domain();
   const st = stateOf(u);
@@ -1235,23 +1226,24 @@ function panelHTML(u, via) {
   let nInherited = 0;
   const block = (cls, label, body, from) =>
     `<div class="field ${cls}"><h4>${esc(label)}${from ? `<span class="from">inherited from ${esc(from)}</span>` : ''}</h4>${body}</div>`;
-  // A field is either a paragraph or a set of sub-bullets — one bullet per
-  // line, with a final "Source — …" line set as the source note. Prose fields
-  // hold no newline, so they fall through to the paragraph they always were,
-  // and a contributor who types a single block of text still gets one.
+  // A field is either a paragraph or a set of sub-bullets, one per line. Sources
+  // are not repeated per field — every one is linked once under "Evidence for
+  // this entry" at the foot of the panel. Prose fields hold no newline, so they
+  // fall through to the paragraph they always were, and a contributor who types
+  // a single block of text still gets one.
   const prose = (text, entry) => {
     const lines = String(text == null ? '' : text).split('\n').map(s => s.trim()).filter(Boolean);
-    if (lines.length < 2) return `<p>${linkCitations(esc(text), entry)}</p>`;
-    const last = lines[lines.length - 1];
-    const src = last.startsWith(SOURCE_PREFIX) ? lines.pop().slice(SOURCE_PREFIX.length) : null;
-    return `<ul class="bul">${lines.map(l => `<li>${linkCitations(esc(l), entry)}</li>`).join('')}</ul>`
-      + (src ? `<p class="src">${linkCitations(esc(src), entry)}</p>` : '');
+    if (!d.bulleted || !lines.length) return `<p>${linkCitations(esc(text), entry)}</p>`;
+    return `<ul class="bul">${lines.map(l => `<li>${linkCitations(esc(l), entry)}</li>`).join('')}</ul>`;
   };
   const fields = d.fields.map((f, i) => {
     const c = u.fieldStates[i];
     const isHist = f.k === 'policyHistory';
     if (c === 'h') return block('on', f.label, isHist ? historyHTML(u.history, u) : prose(u.values[f.k], u));
-    if (c === 'l') return block('looked', f.label, prose(u.values[f.k], u));
+    // "Not established from the sources consulted…" is a sentence explaining an
+    // absence, not a list of facts, so it stays a paragraph even where the
+    // domain's documented fields are bulleted.
+    if (c === 'l') return block('looked', f.label, `<p>${linkCitations(esc(u.values[f.k]), u)}</p>`);
     const inheritable = par && (isHist ? (par.history || []).length : par.values[f.k]);
     if (inheritable) {
       nInherited++;

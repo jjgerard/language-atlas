@@ -60,6 +60,12 @@ const DOMAINS = [
     label: 'Foreign languages in school',
     blurb: 'Which languages children are taught besides the language of the school, at what age, and whether it is a requirement or a choice.',
     live: true,
+    // This domain's field text is written as sub-bullets, one per line, rather
+    // than as paragraphs; the panel renders it as a list. Inferring it from the
+    // presence of a newline would leave a one-bullet field looking like a
+    // paragraph beside its bulleted siblings. eal and dld are still prose and
+    // get the flag when they are converted; when all three carry it, it goes.
+    bulleted: true,
     fields: [
       ['primaryRequirement', 'Primary school', 'text', 'Is a language other than the school language compulsory in primary school, from what age or year, and under what rule.'],
       ['secondaryRequirement', 'Lower secondary', 'text', 'Whether it is compulsory, for how many years, and how many languages.'],
