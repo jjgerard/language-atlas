@@ -19,55 +19,48 @@ and `--ink-soft` are the two tokens to re-check if the palette moves.
 
 ## Where the data lives
 
-Every subject is held here. The two trackers were folded in by
-`import-tracker.js`, which reads a tracker's live `/api/catalog` and writes
-`data/<id>.json` — the same living-snapshot file the running app commits after
-an approval. Nothing else in the app changed for that, which was the point of
-keeping a stored row shaped like a tracker's catalog entry: `src/derive.js` and
-every page below it never knew the difference.
+Every subject is held here, in `data/<id>.json` — the living snapshot the
+running app commits back after an approval, and the file a rebuilt machine boots
+from.
 
     src/store.js ─► /api/atlas ─► the map
                  ◄─ /api/:domain/submissions
                  ◄─ /api/:domain/edit-requests
                  ◄─ /api/admin/*   (moderation)
 
-A domain can still declare an `origin` instead of `native: true`, in which case
-`src/catalog.js` fetches its catalog server-side every five minutes and
-submissions are forwarded back to it. That path currently runs for nothing. It
-stays because it is the road any future catalogue would come in by — and
-because it had to exist for the migration to be a data move rather than a
-rewrite. If it is still unused when a fourth subject lands, delete it.
+### The trackers this grew out of
 
-Server-side was not an implementation detail while it mattered: **neither
-tracker sends CORS headers**, so a browser on this origin could not call them
-directly. Only `submissions` and `edit-requests` are forwardable; nothing under
-`/api/admin` is proxied.
+Two of the three subjects began as separate apps — `dld-policy-tracker` and
+`eal-policy-tracker`. They were folded in during August 2026 by reading their
+live `/api/catalog` into `data/<id>.json`, and retired that same month: both
+Fly apps now do nothing but 301 their old URLs here, and their repositories are
+private archives.
 
-### Importing a tracker
+Before the switch the two sides were compared field by field, not entry count by
+entry count — an entry can be present in both and still have lost a field. No
+unit and no field existed in either tracker that the atlas lacked.
 
-    node import-tracker.js eal dld
+For a while a domain could declare an `origin` instead of holding its own
+entries, and `src/catalog.js` fetched that catalogue server-side every five
+minutes while `/api/:domain/submissions` forwarded upstream. That path was
+removed with the trackers. What made the migration a data move rather than a
+rewrite still holds: a stored row is shaped exactly like a tracker's
+`/api/catalog` entry, so `src/derive.js` and every page below it never knew the
+difference. Re-introducing a proxied catalogue would mean restoring that path,
+not reshaping anything downstream.
 
-It refuses to write if any entry carries a key the target domain's field list
-would not store, naming the key and how many entries have content in it — a
-migration that silently drops a column is the kind of thing nobody notices for
-a year. `achievementGap` was found that way; it is now `Education outcomes` on
+One thing the import surfaced is worth keeping in mind for any future one: it
+refused to write when an entry carried a key the target domain's field list
+would not store, naming the key and how many entries had content in it. A
+migration that silently drops a column is the kind of thing nobody notices for a
+year. `achievementGap` was caught that way; it is now `Education outcomes` on
 the EAL list, which is why EAL entries count out of nine fields rather than
 eight.
 
-The source is `/api/catalog`, which serves **approved entries only**. Anything
-still unreviewed in a tracker's own queue does not come across.
-
-Run it once per tracker. Re-running overwrites `data/<id>.json` with the
-tracker's contents, which after the cutover means discarding anything approved
-here since — to bring across a single late approval, paste it into the
-dashboard's publish box instead. **Until the trackers are retired or pointed
-here, an entry approved in one of them will not reach this map**, because this
-no longer reads them.
-
 ### One table, not one per subject
 
-Both trackers keep a table per project with a column per field. That does not
-extend — a fourth subject would mean a fourth schema. Here the envelope every
+Each tracker kept a table per project with a column per field. That does not
+extend — a fourth subject would have meant a fourth schema. Here the envelope every
 subject shares is columns and its declared fields are one JSON blob, so adding
 a subject stays a `src/domains.js` edit. Each field is `[key, label, type,
 hint]`; `type` is `text`, `history` (`{year, description}`) or `series`
@@ -107,7 +100,7 @@ dashboard can publish from. Outside production the guard is relaxed, or the
 form could never be exercised locally.
 
 Missing admin credentials disable the dashboard rather than stopping the
-server, as the trackers do: a missing moderation secret should not take the
+server, as the trackers did: a missing moderation secret should not take the
 public maps down with it.
 
 ## Running it
@@ -121,11 +114,10 @@ public maps down with it.
 the Docker image does not need the Natural Earth downloads.
 
 - `GET /api/atlas` — merged, derived units for every live domain
-- `GET /api/health` — per-source state (`local`, or `live` / `stale` /
-  `snapshot` for a proxied domain),
-  counts, and which of admin / git / mail are configured
+- `GET /api/health` — per-domain entry counts, and which of admin / git / mail
+  are configured
 - `POST /api/:domain/submissions`, `POST /api/:domain/edit-requests` — stored
-  for a native domain, forwarded for a proxied one
+  here, for every domain
 - `/api/admin/*` — native domains only, session-authenticated
 
 ## What is real
@@ -176,8 +168,7 @@ lists the planned ones too.
     pages/              page sources -> public/ by assemble.js
     build-geometry.js   shapes -> public/geometry.json + world.svg  (build time)
     assemble.js         pages/*.html -> public/
-    import-tracker.js   a tracker's catalog -> data/<domain>.json  (migration)
-    src/domains.js      the domain list; each live one names its source
+    src/domains.js      the domain list and each one's fields
     src/derive.js       catalog entries -> map units
     src/history.js      policy history -> the document it names
     src/catalog.js      fetch or read, cache, fallbacks
@@ -245,9 +236,10 @@ every zoom.
 
 ## In-text citations
 
-`linkCitations()` and the `REFERENCES` DOI registry are lifted **verbatim** from
-`dld-policy-tracker/public/catalog.html`, so the two stay in step — a change to
-the registry there needs copying here. A citation resolves first against the
+`linkCitations()` and the `REFERENCES` DOI registry were lifted **verbatim**
+from `dld-policy-tracker/public/catalog.html`. That tracker is retired, so this
+is now the only copy and there is nothing left to keep in step with; `String.raw`
+in there is load-bearing. A citation resolves first against the
 entry's own `docLinks` labels, then against the registry; anything that resolves
 to neither stays plain text. 161 citations link across the two corpora, 9 of
 them from the registry.
@@ -339,7 +331,7 @@ The tally counts each unit's **own** record only. Inherited fills add colour to
 the map without adding research, so counting them would overstate coverage.
 
 The UK is the exception and the interesting case: there is no UK-level entry in
-either tracker, so England, Scotland, Wales and Northern Ireland tile the whole
+any domain, so England, Scotland, Wales and Northern Ireland tile the whole
 country and inherit nothing from each other. The tooltip and the panel both say
 so. Once a national entry exists, the panel's *Others in …* section is where
 "inherited from United Kingdom" rows would be marked.
@@ -417,7 +409,7 @@ against the font stack and resolves to a real glyph.
   national sibling, so it currently fills the whole country.
 - **Disputed borders.** The geometry is Natural Earth's, which takes positions
   on Western Sahara, Kosovo, Crimea and Taiwan. `HK` and `PS` appear as their
-  own units because both trackers already carry them.
+  own units because both trackers already carried them.
 - **No history.** `policyHistory` is in the data and rendered in full, but there
   is no dated-version model behind any other field yet.
 - **`fl` is documented for Europe only.** 41 of its 216 places carry an entry:

@@ -6,15 +6,15 @@
 // fields declared for that domain in domains.js live in one JSON blob. Adding
 // a domain stays a domains.js edit.
 //
-// Rows come back out shaped exactly like a tracker's /api/catalog entry — the
-// blob spread back to the top level — so derive.js cannot tell the difference
-// between a native domain and a proxied one. That is what makes migrating the
-// trackers in later a data move rather than a rewrite.
+// Rows come back out shaped exactly like the retired trackers' /api/catalog
+// entries — the blob spread back to the top level. Keeping that shape is what
+// made folding the trackers in a data move rather than a rewrite, and it is
+// still the shape derive.js and every page below it expect.
 
 const { DatabaseSync } = require('node:sqlite');
 const fs = require('fs');
 const path = require('path');
-const { byId, NATIVE } = require('./domains');
+const { byId, LIVE } = require('./domains');
 const { subregionFor, regionFor } = require('./subregions');
 
 const DB_PATH = process.env.DB_PATH || path.join(__dirname, '..', 'data', 'atlas.db');
@@ -355,7 +355,7 @@ function loadJson(file) {
 }
 
 function seedIfEmpty() {
-  for (const domain of NATIVE) {
+  for (const domain of LIVE) {
     const { n } = db.prepare('SELECT COUNT(*) AS n FROM entries WHERE domain = ?').get(domain.id);
     if (n > 0) continue;
     const living = loadJson(`${domain.id}.json`);

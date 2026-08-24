@@ -1,19 +1,18 @@
 // The atlas server.
 //
-// Domains come from one of two places and the difference is confined to this
-// file and catalog.js. A native domain's entries live in the atlas's own store,
-// with its submissions, edit requests and moderation here. A proxied domain
-// still belongs to its tracker: submissions are forwarded there so moderation
-// stays in the dashboard that already has it. Everything else — the map, the
-// panel, the forms — is generated from domains.js and cannot tell which is
-// which, so migrating a tracker in means moving its data, not rewriting a page.
+// Every domain's entries live in the atlas's own store, with its submissions,
+// edit requests and moderation here. Until August 2026 a domain could instead
+// be proxied from its own tracker, with submissions forwarded upstream; the two
+// trackers were retired and that path was removed. Everything a reader sees —
+// the map, the panel, the forms — is generated from domains.js, which is why
+// folding them in meant moving data rather than rewriting pages.
 
 require('dotenv').config({ quiet: true });
 const crypto = require('node:crypto');
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
-const { byId, LIVE, NATIVE } = require('./domains');
+const { byId, LIVE } = require('./domains');
 const { getPayload, refresh, invalidate, REFRESH_MS } = require('./catalog');
 const store = require('./store');
 const { syncDomain, configured: gitConfigured } = require('./gitStore');
@@ -101,31 +100,6 @@ const adminUrlFor = req => `${req.protocol}://${req.get('host')}/admin`;
 // could never be exercised locally without real credentials.
 const durable = () => gitConfigured || mail.configured || process.env.NODE_ENV !== 'production';
 
-// Only the two endpoints a contributor needs are proxied. Nothing under
-// /api/admin is forwarded, so this cannot be used to reach a tracker's
-// moderation routes.
-async function forward(d, endpoint, body, res) {
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 20000);
-  try {
-    const upstream = await fetch(`${d.origin}/api/${endpoint}`, {
-      method: 'POST',
-      signal: ctrl.signal,
-      headers: { 'content-type': 'application/json', accept: 'application/json' },
-      body: JSON.stringify(body),
-    });
-    const text = await upstream.text();
-    res.status(upstream.status);
-    res.type(upstream.headers.get('content-type') || 'application/json');
-    res.send(text);
-  } catch (err) {
-    console.error(`[forward:${d.id}/${endpoint}]`, err.message);
-    res.status(502).json({ error: 'upstream_unavailable', detail: String(err.message || err) });
-  } finally {
-    clearTimeout(timer);
-  }
-}
-
 const REQUIRED = ['countryCode', 'unitName', 'by'];
 
 app.post('/api/:domain/submissions', async (req, res) => {
@@ -138,7 +112,6 @@ app.post('/api/:domain/submissions', async (req, res) => {
   const missing = REQUIRED.filter(f => !String(body[f] || '').trim());
   if (missing.length) return res.status(400).json({ error: 'missing_fields', missing });
 
-  if (!d.native) return forward(d, 'submissions', body, res);
   if (!durable()) return res.status(503).json({ error: 'not_accepting_yet' });
 
   const id = store.insert(d, body);
@@ -159,7 +132,6 @@ app.post('/api/:domain/edit-requests', async (req, res) => {
   if (!description) return res.status(400).json({ error: 'missing_description' });
   if (!EMAIL_RE.test(email)) return res.status(400).json({ error: 'invalid_email' });
 
-  if (!d.native) return forward(d, 'edit-requests', body, res);
   if (!durable()) return res.status(503).json({ error: 'not_accepting_yet' });
 
   const payload = { domain: d.id, entryTitle, email, description };
@@ -170,8 +142,6 @@ app.post('/api/:domain/edit-requests', async (req, res) => {
 });
 
 // ---- admin ----
-// Native domains only. A proxied domain is still moderated in its own tracker,
-// and nothing here can reach it.
 
 function timingSafeEqual(a, b) {
   const bufA = Buffer.from(String(a));
@@ -186,10 +156,10 @@ function requireAuth(req, res, next) {
   res.status(401).json({ error: 'not_authenticated' });
 }
 
-function nativeDomain(req, res) {
+function liveDomain(req, res) {
   const d = byId(req.body && req.body.domain ? req.body.domain : req.params.domain);
-  if (!d || !d.native) {
-    res.status(404).json({ error: 'not_a_native_domain' });
+  if (!d || !d.live) {
+    res.status(404).json({ error: 'unknown_domain' });
     return null;
   }
   return d;
@@ -221,21 +191,21 @@ app.get('/api/admin/me', (req, res) => {
   res.json({
     authed: !!(adminEnabled && req.session && req.session.authed),
     enabled: adminEnabled,
-    domains: NATIVE.map(d => ({ id: d.id, label: d.label })),
+    domains: LIVE.map(d => ({ id: d.id, label: d.label })),
   });
 });
 
 app.get('/api/admin/queue', requireAuth, (req, res) => {
   const counts = store.pendingCounts();
   res.json({
-    domains: NATIVE.map(d => ({ id: d.id, label: d.label, pending: counts[d.id] || 0 })),
+    domains: LIVE.map(d => ({ id: d.id, label: d.label, pending: counts[d.id] || 0 })),
     editRequests: store.editRequests(),
     git: gitConfigured,
   });
 });
 
 app.get('/api/admin/:domain/entries', requireAuth, (req, res) => {
-  const d = nativeDomain(req, res);
+  const d = liveDomain(req, res);
   if (!d) return;
   const status = typeof req.query.status === 'string' ? req.query.status : undefined;
   res.json({ entries: store.all(d.id, status), fields: d.fields.map(([k, label, type, hint]) => ({ k, label, type, hint })) });
@@ -268,7 +238,7 @@ app.delete('/api/admin/entries/:id', requireAuth, (req, res) => {
 // Publish straight from a pasted JSON block — the one in the notification
 // email. Works even if the queued row never survived to be reviewed.
 app.post('/api/admin/publish', requireAuth, (req, res) => {
-  const d = nativeDomain(req, res);
+  const d = liveDomain(req, res);
   if (!d) return;
   const body = req.body || {};
   const missing = REQUIRED.filter(f => !String(body[f] || '').trim());
@@ -305,17 +275,18 @@ app.use((req, res) => {
 
 const server = app.listen(PORT, () => {
   console.log(`language-atlas on :${PORT}`);
-  console.log(`  domains: ${LIVE.map(d => `${d.id} -> ${d.native ? 'atlas store' : d.origin}`).join(', ')}`);
-  // Warm the cache so the first visitor does not wait on two upstream fetches.
-  refresh()
-    .then(p => {
-      for (const [id, s] of Object.entries(p.sources)) {
-        const st = p.stats[id];
-        console.log(`  ${id}: ${s.state}, ${s.entries} entries, ${st.documented} documented, ` +
-                    `policy history ${st.historyLinked}/${st.historyRows} linked`);
-      }
-    })
-    .catch(err => console.warn('  initial catalog fetch failed:', err.message));
+  console.log(`  domains: ${LIVE.map(d => d.id).join(', ')}`);
+  // Warm the cache so the first visitor does not wait on the history matcher.
+  try {
+    const p = refresh();
+    for (const [id, s] of Object.entries(p.sources)) {
+      const st = p.stats[id];
+      console.log(`  ${id}: ${s.entries} entries, ${st.documented} documented, ` +
+                  `policy history ${st.historyLinked}/${st.historyRows} linked`);
+    }
+  } catch (err) {
+    console.warn('  initial payload build failed:', err.message);
+  }
 });
 
 module.exports = { app, server };

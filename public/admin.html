@@ -181,7 +181,7 @@ async function loadQueue() {
     state.current = (q.domains.find(d => d.pending) || q.domains[0] || {}).id || null;
   }
   $('scope').textContent = q.domains.length
-    ? 'Maps the atlas holds itself. The others are still moderated in their own tracker.'
+    ? 'Every map the atlas shows is moderated here.'
     : 'No map is stored here yet.';
   $('foot').textContent = q.git
     ? 'Approved entries are committed back to the repository, so they survive a rebuild.'
@@ -372,8 +372,8 @@ $('publish').addEventListener('click', async () => {
     say('pastemsg', `Published ${entry.unitName}.`, 'ok');
     await loadQueue();
   } catch (err) {
-    say('pastemsg', err.message === 'not_a_native_domain'
-      ? 'That map is not stored here — publish it in its own tracker.' : err.message, 'bad');
+    say('pastemsg', err.message === 'unknown_domain'
+      ? 'No such map — check the domain id in the pasted entry.' : err.message, 'bad');
   }
 });
 

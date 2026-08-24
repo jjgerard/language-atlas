@@ -2,9 +2,6 @@ node_modules/
 # Geometry sources: ~65 MB, downloaded on first build, reproducible from
 # build-geometry.js
 sources/
-# Optional cold-start fallback written by `npm run snapshot`. Not committed:
-# shipping a stale copy of policy data risks serving it without anyone noticing.
-data/snapshot.json
 # The running SQLite database. Approved entries are persisted as
 # data/<domain>.json instead (see src/gitStore.js), which is what a rebuilt
 # machine boots from.

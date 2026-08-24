@@ -10,18 +10,18 @@
 //   'series'  a dated list of [{year, value, note}]
 // `hint` is the guidance shown under that field on the submission form.
 //
-// A domain gets its entries either from a tracker (`origin`) or from the
-// atlas's own store (`native`). All three are now native: the two trackers'
-// catalogues were imported by import-tracker.js and live in data/<id>.json.
-// Nothing else in the app had to change for that, which was the point of
-// keeping a stored row shaped like a tracker's catalog entry.
+// Every domain's entries live in the atlas's own store, in data/<id>.json.
+// Two of them began life in separate trackers and were proxied over the network
+// for a while; those were retired in August 2026, and the `origin`/`native`
+// distinction that supported them went with them. A stored row is still shaped
+// exactly like the trackers' /api/catalog entries were, which is why folding
+// them in was a data move rather than a rewrite.
 const DOMAINS = [
   {
     id: 'eal',
     label: 'Majority language acquisition',
     blurb: 'Support for children who arrive at school without the language it teaches in — known in schools as EAL.',
     live: true,
-    native: true,
     fields: [
       ['newcomerCriteria', 'Newcomer criteria', 'text', 'Who counts as a newcomer or EAL pupil, and on what evidence.'],
       ['removalCriteria', 'Removal criteria', 'text', 'What ends the designation — a test, a time limit, a teacher judgement.'],
@@ -39,7 +39,6 @@ const DOMAINS = [
     label: 'Language disorder support',
     blurb: 'Children with a lasting difficulty learning and using language: how it is identified, and what they are entitled to. Known in research as DLD.',
     live: true,
-    native: true,
     fields: [
       ['terminology', 'Terminology', 'text', 'The term used locally, and whether it maps onto DLD.'],
       ['identificationCriteria', 'Identification criteria', 'text', 'What has to be true for a child to be identified.'],
@@ -61,7 +60,6 @@ const DOMAINS = [
     label: 'Foreign languages in school',
     blurb: 'Which languages children are taught besides the language of the school, at what age, and whether it is a requirement or a choice.',
     live: true,
-    native: true,
     fields: [
       ['primaryRequirement', 'Primary school', 'text', 'Is a language other than the school language compulsory in primary school, from what age or year, and under what rule.'],
       ['secondaryRequirement', 'Lower secondary', 'text', 'Whether it is compulsory, for how many years, and how many languages.'],
@@ -85,7 +83,6 @@ for (const d of DOMAINS) {
 }
 
 const LIVE = DOMAINS.filter(d => d.live);
-const NATIVE = DOMAINS.filter(d => d.native);
 const byId = id => DOMAINS.find(d => d.id === id) || null;
 
-module.exports = { DOMAINS, LIVE, NATIVE, byId };
+module.exports = { DOMAINS, LIVE, byId };

@@ -17,9 +17,10 @@ because this app holds entries of its own.
 - **Keep the hedges.** Survey-derived prose that says respondents described *one
   child of their own choosing* keeps that qualifier. Never edit it out to
   tighten a sentence.
-- `linkCitations()` and the `REFERENCES` registry in `pages/map.html` are lifted
-  verbatim from `dld-policy-tracker/public/catalog.html`. `String.raw` in there
-  is load-bearing. Port changes across; do not rewrite.
+- `linkCitations()` and the `REFERENCES` registry in `pages/map.html` came
+  verbatim from `dld-policy-tracker/public/catalog.html`. That tracker is
+  retired, so this is the only copy now — there is nothing to port changes to.
+  `String.raw` in there is load-bearing; do not rewrite it.
 
 ## Adding a domain
 

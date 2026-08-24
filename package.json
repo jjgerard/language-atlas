@@ -1,14 +1,13 @@
 {
   "name": "language-atlas",
   "version": "0.1.0",
-  "description": "One world map over several domains of language policy, reading the DLD and EAL trackers' live catalogs and forwarding contributions back to them.",
+  "description": "One world map over several domains of language policy, held in the atlas's own store.",
   "engines": {
     "node": ">=22.5.0"
   },
   "scripts": {
     "start": "node src/server.js",
-    "build": "node --max-old-space-size=6144 build-geometry.js && node assemble.js",
-    "snapshot": "node -e \"require('./src/catalog').writeSnapshot().then(c=>console.log(c))\""
+    "build": "node --max-old-space-size=6144 build-geometry.js && node assemble.js"
   },
   "license": "MIT",
   "author": "Juliana Gerard",

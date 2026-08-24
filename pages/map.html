@@ -120,10 +120,6 @@
 .loading.failed .spin { display: none; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .loading .spin { animation-duration: 3s; } }
-.stalenote {
-  font-size: 11px; color: var(--ink-faint); margin: 9px 0 0;
-  padding-top: 8px; border-top: 1px solid var(--hair);
-}
 
 /* tooltip */
 .tip {
@@ -498,9 +494,8 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
 <script type="module">
 import { mountNav } from '/nav.js';
 
-/* Geometry is a static build artifact; the units come from the trackers'
-   live catalogs via this server, which fetches them server-side because the
-   trackers send no CORS headers. */
+/* Geometry is a static build artifact; the units come from this server's own
+   store, assembled into one payload by src/catalog.js. */
 const loading = document.getElementById('loading');
 const loadingText = document.getElementById('loadingText');
 
@@ -1375,20 +1370,9 @@ function paintLegend() {
 buildDomains(); paint(); sizeMap(); applyView(); paintLegend();
 loading.classList.add('done');
 
-// Say so when a tracker could not be reached and the page is showing an
-// older copy — silently serving stale policy data would be worse than a note.
-{
-  const FRESH = new Set(['live', 'local']);
-  const stale = Object.entries(B.sources || {}).filter(([, s]) => !FRESH.has(s.state));
-  if (stale.length) {
-    const note = document.createElement('p');
-    note.className = 'stalenote';
-    note.textContent = stale
-      .map(([id, s]) => `${(B.domains.find(d => d.id === id) || {}).label || id}: showing a ${s.state} copy — ${s.origin} did not respond.`)
-      .join(' ');
-    document.querySelector('.controls').appendChild(note);
-  }
-}
+// There was a banner here for when a tracker could not be reached and the page
+// was showing an older copy. Every domain is served from this app's own store
+// now, so there is no upstream left to go stale against.
 /* ---------- corrections ---------- */
 const dlg = document.getElementById('fixdlg');
 let fixUnit = null;
