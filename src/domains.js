@@ -22,6 +22,8 @@ const DOMAINS = [
     label: 'Majority language acquisition',
     blurb: 'Support for children who arrive at school without the language it teaches in — known in schools as EAL.',
     live: true,
+    // All six fields are written as sub-bullets; see the note on `fl`.
+    bulleted: true,
     fields: [
       ['newcomerCriteria', 'Newcomer criteria', 'text', 'Who counts as a newcomer or EAL pupil, and on what evidence.'],
       ['removalCriteria', 'Removal criteria', 'text', 'What ends the designation — a test, a time limit, a teacher judgement.'],
