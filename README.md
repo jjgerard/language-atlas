@@ -186,7 +186,7 @@ lists the planned ones too.
     src/subregions.js   country code -> UN-geoscheme subregion
     src/mailer.js       submission and correction notifications
     src/server.js       routes
-    data/fl.seed.json   the fl bootstrap set (216 stubs)
+    data/fl.seed.json   the fl bootstrap set (216 places, 41 documented)
 
 ## Contributing from the map
 
@@ -420,10 +420,16 @@ against the font stack and resolves to a real glyph.
   own units because both trackers already carry them.
 - **No history.** `policyHistory` is in the data and rendered in full, but there
   is no dated-version model behind any other field yet.
-- **`fl` is entirely undocumented.** Its 216 places are seeded as stubs and
-  nothing has been written for any of them. That is deliberate — policy text
-  must not be inferred — but it means the map has nothing to show until
-  contributions arrive.
+- **`fl` is documented for Europe only.** 41 of its 216 places carry an entry:
+  the 36 systems covered by Eurydice's *Key data on teaching languages at
+  school in Europe – 2023 edition* (CC BY 4.0), plus England, Northern Ireland,
+  Scotland and Wales, which left the Eurydice network after Brexit and were
+  sourced separately. Everywhere else is still a stub, and `higherEducation` is
+  empty everywhere — the Eurydice report is about schools and says nothing about
+  degree-level provision. Three European systems (Albania, Bosnia and
+  Herzegovina, Türkiye) have no starting age recorded because it sits only in a
+  chart in the report and is not on their Eurypedia pages; that gap is left as a
+  gap rather than guessed at.
 - **Merged records are not editable as a whole.** The dashboard edits one
   contribution at a time; a place built from several is only assembled at read
   time. Editing the stub of a place a submission has since filled looks like it
