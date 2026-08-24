@@ -213,28 +213,38 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ley 26.206, Ley de Educación Nacional (Ministerio de Educación)",
+    "url": "https://www.argentina.gob.ar/sites/default/files/ley-de-educ-nac-58ac89392ea4c.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
+  "primaryRequirement": "At least one foreign language is compulsory in every primary school (art. 87)\nThe statute says 'al menos un idioma extranjero' and never names it\nStrategies and timetables are left to Consejo Federal de Educación resolutions",
+  "secondaryRequirement": "Compulsory in every secondary school under the same article\nArt. 30(d): secondary must develop Spanish competence\nAnd the ability to understand and express oneself in a foreign language",
   "upperSecondary": "",
-  "languagesOffered": "",
+  "languagesOffered": "No language is named in the statute\nThe choice, and the timetable for implementing it, sits with the federal council",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Educación Intercultural Bilingüe, arts. 52–53\nA modality at initial, primary and secondary level\nResting on the indigenous peoples' constitutional right, art. 75 inc. 17\nIndigenous representatives sit on the bodies that define and evaluate it",
+  "policyHistory": [
+   {
+    "year": 2006,
+    "description": "Ley 26.206 (Ley de Educación Nacional) makes at least one foreign language compulsory across primary and secondary, and establishes Educación Intercultural Bilingüe as a modality of the system."
+   }
+  ]
  },
  {
   "countryCode": "AT",
@@ -7135,28 +7145,42 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ley 18.437, Ley General de Educación (IMPO)",
+    "url": "https://www.impo.com.uy/bases/leyes/18437-2008"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Ley 18.437 art. 25: primary begins the fundamental literacies\nWith particular emphasis on mother tongue, SECOND LANGUAGE and mathematics\nA second language is named in the statute at primary level, which is unusual",
   "secondaryRequirement": "",
   "upperSecondary": "",
-  "languagesOffered": "",
+  "languagesOffered": "Art. 40(5): plurilingual formation through second languages and foreign languages\nNeither the second language nor the foreign language is named",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Art. 40(5) recognises three mother tongues existing in the country\nEspañol del Uruguay, portugués del Uruguay, lengua de señas uruguaya\nUruguayan Portuguese is a border variety, not a foreign language\nSo the plurilingual aim starts from varieties already spoken here",
+  "policyHistory": [
+   {
+    "year": 2008,
+    "description": "Ley 18.437 (Ley General de Educación) sets linguistic education around the country's three mother tongues and plurilingual formation through second and foreign languages."
+   },
+   {
+    "year": 2020,
+    "description": "Ley 19.889 art. 133 redrafts art. 25, keeping second language among the fundamental literacies of primary education."
+   }
+  ]
  },
  {
   "countryCode": "UZ",
