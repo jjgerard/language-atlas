@@ -33,10 +33,6 @@ async function ensureSources() {
 }
 const source = name => JSON.parse(fs.readFileSync(path.join(SRC_DIR, name), 'utf8'));
 
-// The two trackers sit alongside this repo. Override with SEED_ROOT if they
-// live somewhere else on your machine.
-const REPO = process.env.SEED_ROOT || path.join(__dirname, '..');
-
 // ---------- topojson decode (world-atlas countries-110m) ----------
 function decodeTopo(topo, objName) {
   const { scale, translate } = topo.transform;
@@ -228,30 +224,82 @@ async function main() {
   }
 
   // ---------- sub-national overlays ----------
-  // Only for units that actually have their own entry — splitting is
-  // demand-driven, so an unsplit region keeps showing the national fill.
+  // Where a country's school system is run below the national level, the map
+  // carves it up. This used to be a hand-written list of the five or six units
+  // that happened to have entries, which quietly made the geometry the limit on
+  // what could ever be documented: there was no way to add a US state without
+  // editing this file. It now takes EVERY admin-1 unit of the listed countries,
+  // so adding a country here is the whole job and the data files decide which
+  // units actually have something to say.
+  //
+  // Natural Earth's names are not always current, and its India predates
+  // several changes: Telangana (2014) and Ladakh (2019) have no polygon in this
+  // source at all, so they cannot be units yet. RENAME fixes the ones that are
+  // only out of date rather than missing.
   const subunits = {}; // "GB:Northern Ireland" -> {polys,bbox,area}
+
+  const RENAME = {
+    'Québec': 'Quebec',
+    'Orissa': 'Odisha',                                  // renamed 2011
+    'Uttaranchal': 'Uttarakhand',                        // renamed 2007
+    'Andaman and Nicobar': 'Andaman and Nicobar Islands',
+    'Inner Mongol': 'Inner Mongolia',
+    'Xizang': 'Tibet',
+  };
+  // Not education systems in their own right: disputed islands with no
+  // population to school, and Jervis Bay, which the ACT administers.
+  const SKIP_UNITS = new Set(['Paracel Islands', 'Spratly Islands', 'Jervis Bay Territory']);
+  // Merged in 2020. Natural Earth still has them apart, so they are unioned
+  // back into the union territory that actually runs schools today.
+  const MERGE = {
+    IN: [{ into: 'Dadra and Nagar Haveli and Daman and Diu',
+           from: ['Dadra and Nagar Haveli', 'Daman and Diu'] }],
+  };
+
+  function addSubunits(features, cc, dp, minArea) {
+    let n = 0;
+    for (const m of MERGE[cc] || []) {
+      const parts = features
+        .filter(f => m.from.includes(f.properties.name))
+        .flatMap(f => geojsonPolys(f.geometry));
+      if (!parts.length) { console.warn('  MERGE found nothing:', cc, m.into); continue; }
+      const polys = simplify(dissolve(parts), dp, minArea);
+      if (polys.length) { subunits[cc + ':' + m.into] = { polys, bbox: bboxOf(polys), area: totalArea(polys) }; n++; }
+    }
+    const merged = new Set((MERGE[cc] || []).flatMap(m => m.from));
+    for (const f of features) {
+      const raw = f.properties.name;
+      if (!raw || SKIP_UNITS.has(raw) || merged.has(raw)) continue;
+      const polys = simplify(geojsonPolys(f.geometry), dp, minArea);
+      if (!polys.length) { console.warn('  EMPTY after simplify:', cc, raw); continue; }
+      subunits[cc + ':' + (RENAME[raw] || raw)] = { polys, bbox: bboxOf(polys), area: totalArea(polys) };
+      n++;
+    }
+    console.log('  ' + cc, n, 'units');
+  }
 
   console.log('reading 50m admin-1 (AU/CA/US)...');
   const a50 = source('ne50admin1.json');
-  const WANT_50 = {
-    AU: ['New South Wales', 'Queensland', 'South Australia', 'Victoria', 'Western Australia'],
-    CA: ['Alberta', 'British Columbia', 'Manitoba', 'Nova Scotia', 'Ontario', 'Québec'],
-    US: ['California', 'Illinois', 'New York', 'Texas', 'Washington'],
-  };
-  const RENAME = { 'Québec': 'Quebec' };
-  for (const [cc, names] of Object.entries(WANT_50)) {
-    for (const name of names) {
-      const f = a50.features.find(x => x.properties.iso_a2 === cc && x.properties.name === name);
-      if (!f) { console.warn('  MISSING 50m', cc, name); continue; }
-      const polys = simplify(geojsonPolys(f.geometry), 2, 0.02);
-      const key = cc + ':' + (RENAME[name] || name);
-      subunits[key] = { polys, bbox: bboxOf(polys), area: totalArea(polys) };
-    }
+  // minArea is far below the 0.02 used for countries: a small state is still a
+  // school system, and District of Columbia at ~0.02 square degrees was being
+  // dropped silently by the country threshold.
+  for (const cc of ['AU', 'CA', 'US']) {
+    addSubunits(a50.features.filter(x => x.properties.iso_a2 === cc), cc, 2, 0.001);
   }
 
-  console.log('reading 10m admin-1 (GB nations, Catalonia)... [large file]');
+  console.log('reading 10m admin-1 (GB nations, Catalonia, IN, CN)... [large file]');
   const a10 = source('ne10admin1.json');
+
+  // India and China are only in the 10m file, and only under `admin` — their
+  // iso_a2 is unset there. Simplified harder than the 50m set: these are large
+  // shapes read at continental zoom, and the detail is all cost and no signal.
+  // dp=1 (about 11 km) rather than the 2 used elsewhere. The 10m source carries
+  // far more vertices than any of these get drawn with — China alone came to
+  // 667 KB at dp=2, more than four times the whole country layer — and at
+  // continental zoom the extra precision is invisible.
+  for (const [cc, admin] of [['IN', 'India'], ['CN', 'China']]) {
+    addSubunits(a10.features.filter(x => x.properties.admin === admin), cc, 1, 0.001);
+  }
 
   // GB: dissolve districts into the four nations via `geonunit`.
   for (const nation of ['England', 'Scotland', 'Wales', 'Northern Ireland']) {
@@ -284,25 +332,6 @@ async function main() {
     SG: [103.82, 1.35], MC: [7.42, 43.74], SM: [12.46, 43.94],
   });
 
-  // ---------- coverage data from the two trackers ----------
-  const NOT_DOCUMENTED_RE = /^Not established from the sources consulted/i;
-
-  // Some fields are arrays of dated records ({year, description} for
-  // policyHistory, {year, value, note} for the prevalence/proportion fields).
-  // An array counts as documented when it has entries; the sentinel phrase
-  // only ever appears in the free-text fields.
-  const asText = v => {
-    if (Array.isArray(v)) {
-      return v.map(r => [r.year, r.value, r.description || r.note].filter(Boolean).join(' — ')).join('\n');
-    }
-    return typeof v === 'string' ? v : (v == null ? '' : String(v));
-  };
-  const hasContent = v => {
-    if (Array.isArray(v)) return v.length > 0;
-    const t = asText(v).trim();
-    return !!t && !NOT_DOCUMENTED_RE.test(t);
-  };
-  const isNotEstablished = v => !Array.isArray(v) && NOT_DOCUMENTED_RE.test(asText(v).trim());
 
   // ---------- anchors for units too small (or absent) to click ----------
   // Which countries actually have entries is a runtime question now, so ship a

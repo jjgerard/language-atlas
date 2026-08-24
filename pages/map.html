@@ -519,7 +519,10 @@ const loadingText = document.getElementById('loadingText');
 
 async function loadAtlas() {
   const [geo, atlas] = await Promise.all([
-    fetch('geometry.json').then(r => { if (!r.ok) throw new Error('geometry ' + r.status); return r.json(); }),
+    // ?v= is the content hash, stamped in by assemble.js. geometry.json is
+    // cached for a day, so without it a rebuild would not reach anyone who had
+    // already loaded the map until that day was up.
+    fetch('geometry.json?v=__GEOMETRY_HASH__').then(r => { if (!r.ok) throw new Error('geometry ' + r.status); return r.json(); }),
     fetch('api/atlas').then(r => { if (!r.ok) throw new Error('data ' + r.status); return r.json(); }),
   ]);
 
