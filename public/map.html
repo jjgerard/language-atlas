@@ -1298,8 +1298,10 @@ function panelHTML(u, via) {
       ${u.lastVerified ? `<span class="chip">verified ${esc(u.lastVerified)}</span>` : ''}
     </div>
 
+    <!-- No heading over the fields: they are the entry, and saying so above
+         them only pushes the first field further down the panel. The sections
+         that follow still need their headings, because they are not. -->
     <div class="sect">
-      <h3>The entry</h3>
       ${fields}
     </div>
 
