@@ -10,6 +10,13 @@
 //   'series'  a dated list of [{year, value, note}]
 // `hint` is the guidance shown under that field on the submission form.
 //
+// A 'text' field is written as sub-bullets, one per line: at most four points,
+// each short enough for two lines in the entry panel, in the clipped register of
+// a conference poster rather than in sentences. A qualifier that would mislead
+// the reader if dropped — that a figure is a practitioner survey, that a task
+// exists without any service using it — may take a fifth line, and belongs at
+// the top, since a reader of a list may not reach the bottom of it.
+//
 // Every domain's entries live in the atlas's own store, in data/<id>.json.
 // Two of them began life in separate trackers and were proxied over the network
 // for a while; those were retired in August 2026, and the `origin`/`native`
@@ -22,8 +29,6 @@ const DOMAINS = [
     label: 'Majority language acquisition',
     blurb: 'Support for children who arrive at school without the language it teaches in — known in schools as EAL.',
     live: true,
-    // All six fields are written as sub-bullets; see the note on `fl`.
-    bulleted: true,
     fields: [
       ['newcomerCriteria', 'Newcomer criteria', 'text', 'Who counts as a newcomer or EAL pupil, and on what evidence.'],
       ['removalCriteria', 'Removal criteria', 'text', 'What ends the designation — a test, a time limit, a teacher judgement.'],
@@ -62,12 +67,6 @@ const DOMAINS = [
     label: 'Foreign languages in school',
     blurb: 'Which languages children are taught besides the language of the school, at what age, and whether it is a requirement or a choice.',
     live: true,
-    // This domain's field text is written as sub-bullets, one per line, rather
-    // than as paragraphs; the panel renders it as a list. Inferring it from the
-    // presence of a newline would leave a one-bullet field looking like a
-    // paragraph beside its bulleted siblings. eal and dld are still prose and
-    // get the flag when they are converted; when all three carry it, it goes.
-    bulleted: true,
     fields: [
       ['primaryRequirement', 'Primary school', 'text', 'Is a language other than the school language compulsory in primary school, from what age or year, and under what rule.'],
       ['secondaryRequirement', 'Lower secondary', 'text', 'Whether it is compulsory, for how many years, and how many languages.'],

@@ -249,7 +249,7 @@ function renderDomainFields(d) {
     }
     return `<div class="field">
       <label for="f-${esc(f.k)}">${esc(f.label)}</label>${hint}
-      <textarea id="f-${esc(f.k)}"></textarea>
+      <textarea id="f-${esc(f.k)}" placeholder="One point per line — at most four, a line or two each."></textarea>
     </div>`;
   }).join('');
   for (const f of d.fields) if (SHAPES[f.type]) mountRepeater(f.k, SHAPES[f.type]);

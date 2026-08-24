@@ -1234,15 +1234,13 @@ function panelHTML(u, via) {
   // this entry" at the foot of the panel. Prose fields hold no newline, so they
   // fall through to the paragraph they always were, and a contributor who types
   // a single block of text still gets one.
-  // Bullets when the field is written as bullets — one per line. A domain that
-  // has been fully converted sets `bulleted`, which also catches its
-  // single-bullet fields, where there is no newline to go on. A domain part-way
-  // through conversion has no flag yet, so its converted fields are recognised
-  // by their line breaks and its untouched prose still renders as a paragraph.
+  // One bullet per line. All three live maps are written this way, so there is
+  // no longer a per-domain flag: a field with no line break is one bullet, not
+  // a paragraph, which is the only reading that renders a genuinely one-point
+  // field — Northern Ireland's removal criteria, say — like its siblings.
   const prose = (text, entry) => {
     const lines = String(text == null ? '' : text).split('\n').map(s => s.trim()).filter(Boolean);
     if (!lines.length) return `<p>${linkCitations(esc(text), entry)}</p>`;
-    if (!d.bulleted && lines.length < 2) return `<p>${linkCitations(esc(text), entry)}</p>`;
     return `<ul class="bul">${lines.map(l => `<li>${linkCitations(esc(l), entry)}</li>`).join('')}</ul>`;
   };
   const fields = d.fields.map((f, i) => {
