@@ -2829,28 +2829,54 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Language-in-education policies in Ghana: identifying the gaps (2025): Agyeman & Ansah, Language Policy in Africa 1(2)",
+    "url": "https://doi.org/10.36950/lpia-01-02-2025-3"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Reconstructed from scholarship — the policy documents could not be obtained\nThe direction has changed four times since 2001\n2007: the medium in kindergarten and lower primary is a Ghanaian language and English\n'Where necessary' — that qualifier sits in the policy statement itself\nUnder the 2001 model English became the medium from P4, the Ghanaian language a subject",
   "secondaryRequirement": "",
   "upperSecondary": "",
-  "languagesOffered": "",
+  "languagesOffered": "The 2002 English-only turn also encouraged the learning of French\nA Ghanaian language was to be taught as a subject from P1 under that model",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Nine indigenous languages are 'government-sponsored' — developed for basic education\nAkan (Asante-Twi, Akuapem-Twi, Fante), Dagbani, Dagaare, Dangme\nEwe, Ga, Gonja, Kasem and Nzema\nWhich one a school uses depends on the region it is in",
+  "policyHistory": [
+   {
+    "year": 2001,
+    "description": "Bilingual model: a Ghanaian language as medium of instruction with English as a taught subject from P1 to P3; from P4 English becomes the medium and the Ghanaian language a subject (Anyidoho 2018, in Agyeman & Ansah 2025)."
+   },
+   {
+    "year": 2002,
+    "description": "Reversed to English-only medium of instruction throughout primary, with a Ghanaian language taught as a subject from P1 and the learning of French encouraged."
+   },
+   {
+    "year": 2004,
+    "description": "Reversed again to a bilingual model using both English and a Ghanaian language as medium of instruction from kindergarten to P3."
+   },
+   {
+    "year": 2007,
+    "description": "Education Reform replicates the 2004 model: 'medium of instruction in Kindergarten and Lower Primary will be a Ghanaian language and English, where necessary'."
+   },
+   {
+    "year": 2009,
+    "description": "The National Literacy Acceleration Programme (NALAP) is introduced by GES and the Ministry of Education — the first policy in Ghana devoted exclusively to language-in-education rather than folded into a general reform."
+   }
+  ]
  },
  {
   "countryCode": "GM",
