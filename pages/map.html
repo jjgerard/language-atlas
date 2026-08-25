@@ -375,17 +375,24 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
   /* The map keeps the whole viewport it is given; the panel sits below it in
      normal flow instead of floating over it. */
   .stage { display: flex; flex-direction: column; }
-  /* Height is set in sizeMap(): a world map is about 2.3x as wide as it is
-     tall, so letting it stretch to fill a portrait screen leaves two thirds of
-     the map area as empty ground. Cap it near its own proportions and give the
-     rest to the panel. */
-  #map { flex: 0 0 auto; min-height: 0; }
+  /* The map takes every pixel the legend does not need. A world map is 2.3x as
+     wide as it is tall, so on a portrait phone the drawn map is always limited
+     by WIDTH — giving it more height cannot make the drawing bigger, it just
+     centres it in more of the map's own ground colour. That is the right place
+     for the slack: ground reads as ocean and belongs to the map, whereas the
+     same gap under a short legend read as a dead white slab across the bottom
+     third of the screen. */
+  #map { flex: 0 0 auto; min-height: 140px; }
 
   .controls {
-    /* Takes whatever the map does not need. The drawn map's size is fixed by
-       the screen width, so the leftover cannot make the map bigger — better it
-       reads as a panel than as empty ground. */
-    position: static; width: auto; flex: 1 1 auto; order: 2;
+    /* Natural height, pushed to the bottom by margin-top:auto so the legend
+       ends flush with the bottom of the screen. The slack left between map and
+       legend is .stage's own ground colour — the same grey the map floats in —
+       so it reads as ocean continuing down to the key rather than as a blank
+       panel. Letting this box FLEX instead was worse both ways: stretch it and
+       you get a white slab, shrink it and the legend silently scrolls with rows
+       clipped off the bottom. */
+    position: static; width: auto; flex: 0 0 auto; order: 2; margin-top: auto;
     /* min-height:0 lets a flex child shrink below its content, so a legend
        that does not fit scrolls instead of spilling past the clipped stage. */
     min-height: 0; max-height: none; overflow-y: auto;
@@ -853,11 +860,28 @@ function updateMarks() {
 // On a portrait screen the stage is far taller than the map's proportions, so
 // stretching the map into it just adds empty ground above and below. Allow a
 // little letterboxing, not a screenful.
+// The map is 2.33x as wide as it is tall; a portrait phone is about 1:2. So the
+// drawing is always WIDTH-bound here and extra height cannot enlarge it — the
+// only questions are how much ground it floats in and where the legend lands.
+// Give the legend the height it actually needs, pin it to the bottom, and let
+// the map take what is left up to a modest multiple of its own proportions.
 function sizeMap() {
-  const stage = document.getElementById('stage');
   if (!matchMedia('(max-width: 820px)').matches) { svg.style.height = ''; return; }
+  const stage = document.getElementById('stage');
+  const controls = document.querySelector('.controls');
+  // Collapse the map first so the panel reports its unconstrained height rather
+  // than whatever the previous pass squeezed it to.
+  svg.style.height = '0px';
+  const need = controls.scrollHeight;
   const natural = stage.clientWidth * (VB.h / VB.w);
-  svg.style.height = Math.round(Math.min(stage.clientHeight, natural * 1.3)) + 'px';
+  // Take everything the legend does not need. There is no cap: capping the box
+  // cannot shrink the drawing (width-bound) and only decides whether the slack
+  // shows as ocean around the map or as a void somewhere else. Centred in the
+  // full field, the ocean sits symmetrically above and below the continents.
+  // `natural` is still measured because a landscape phone can be shorter than
+  // the map is tall, and there the box must not exceed what the drawing needs.
+  const room = Math.max(140, stage.clientHeight - need);
+  svg.style.height = Math.round(room < natural ? room : Math.max(room, natural)) + 'px';
 }
 
 function applyView() {
@@ -1467,5 +1491,20 @@ document.getElementById('fixsend').onclick = async () => {
 
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { paintLegend(); paintTally(); });
 addEventListener('resize', () => { sizeMap(); clampView(); applyView(); });
+// A phone's address bar collapsing on scroll changes 100dvh without reliably
+// firing `resize`, and the legend's own height changes when its text rewraps.
+// Watch the boxes themselves so the split is recomputed whenever either moves.
+if (window.ResizeObserver) {
+  let queued = false;
+  const ro = new ResizeObserver(() => {
+    if (queued) return;                       // the observer fires again when
+    queued = true;                            // sizeMap resizes the map, so
+    requestAnimationFrame(() => {             // coalesce to one pass a frame
+      queued = false; sizeMap(); clampView(); applyView();
+    });
+  });
+  ro.observe(document.getElementById('stage'));
+  ro.observe(document.querySelector('.controls'));
+}
 
 </script>
