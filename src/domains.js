@@ -27,10 +27,10 @@ const DOMAINS = [
   {
     id: 'eal',
     label: 'Majority language acquisition',
-    blurb: 'Support for children who arrive at school without the language it teaches in — known in schools as EAL.',
+    blurb: 'Support for children who arrive at school without the language it teaches in — called EAL where that language is English.',
     live: true,
     fields: [
-      ['newcomerCriteria', 'Newcomer criteria', 'text', 'Who counts as a newcomer or EAL pupil, and on what evidence.'],
+      ['newcomerCriteria', 'Newcomer criteria', 'text', 'Who counts as a newcomer or second-language pupil, and on what evidence.'],
       ['removalCriteria', 'Removal criteria', 'text', 'What ends the designation — a test, a time limit, a teacher judgement.'],
       ['newcomerProportion', 'Newcomer proportion', 'series', 'Share of pupils designated, by year, with the source of each figure.'],
       ['achievementGap', 'Education outcomes', 'text', 'How these pupils do relative to their peers, and how that is measured.'],

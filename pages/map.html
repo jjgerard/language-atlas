@@ -745,7 +745,7 @@ function unitFor(cc, name) {
 const parentOf = u => (!u || u.nat) ? null : (IDX[domainId].owner.get(u.cc) || null);
 
 /* A sub-unit exists because it differs from its country in SOME domain — the
-   US states are split out because their EAL policy differs. In a domain where
+   US states are split out because their second-language policy differs. In a domain
    it has nothing of its own it does not become a hole in the country: it
    follows the national entry, which is what inheritance means. */
 function resolve(cc, name) {
