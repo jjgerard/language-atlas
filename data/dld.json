@@ -439,28 +439,37 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "ACT Auditor-General, Performance Audit Report 8/2023, Supports for students with disability in ACT public schools",
+    "url": "https://www.audit.act.gov.au/__data/assets/pdf_file/0019/2306017/Report-No.-8-of-2023-Supports-for-students-with-disability-in-ACT-public-schools.pdf"
+   },
+   {
+    "label": "ACT Government, Child Development Service — get your child's development checked",
+    "url": "https://www.act.gov.au/community/families/child-development-service/get-your-childs-development-checked"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "The criteria document is delisted; wording read via ACT Auditor-General Report 8/2023\n'Language disorder' is one of eight ACT Student Disability Criteria\nListed separately from intellectual disability and autism spectrum disorder",
+  "identificationCriteria": "Requires a DSM-5 or ICD-10 diagnosis, not teacher judgement\nPlus evidence of impairment in functioning that affects school participation\nPlus a need for significant or extensive adjustments",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "A split system: the Education Directorate and ACT Health run separately\nThe health-side Child Development Service is under-7s and non-NDIS only",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
-  "dischargeCriteria": "",
-  "outcomesEvidence": "",
+  "dischargeCriteria": "Language disorder carries a mandatory review, unlike some other categories\nReview of extent and support needs every two years in primary settings\nA further review on entry to high school",
+  "outcomesEvidence": "The Auditor-General found the diagnosis requirement burdens families and schools\nSchools reported long waits and significant expense to reach specialists",
   "identifiedPrevalence": [],
   "policyHistory": []
  },
@@ -470,24 +479,41 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "NSW Department of Education, Disability Criteria 2024",
+    "url": "https://education.nsw.gov.au/content/dam/main-education/teaching-and-learning/disability-learning-and-support/disability-criteria/NSW_Department_of_Education_Disability_Criteria_2024.pdf"
+   },
+   {
+    "label": "South Western Sydney Local Health District, Child and Family Allied Health — speech pathology",
+    "url": "https://www.swslhd.health.nsw.gov.au/communityhealth/speechPathology.html"
+   },
+   {
+    "label": "Illawarra Shoalhaven Local Health District, child and family speech pathology, Nowra",
+    "url": "https://www.islhd.health.nsw.gov.au/services-clinics/speech-pathology-nowra"
+   },
+   {
+    "label": "Nationally Consistent Collection of Data on School Students with Disability, Step 3: what is the category of disability?",
+    "url": "https://www.nccd.edu.au/wider-support-materials/step-3-what-category-disability"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
-  "assessments": "",
+  "terminology": "NSW keeps its own 'Language' category in the Disability Criteria 2024\nThree sub-types: severe expressive, severe receptive, and both in severe range\nThe severity threshold is built into the name of the category itself",
+  "identificationCriteria": "Needs a current speech pathologist's report, generally under 24 months old\nThe report must show the communication difficulty is a direct result of the disorder\nThe NCCD, which drives funding, has no speech or language category at all",
+  "assessments": "NSW names no instrument, only a required property of the test\nAt least one standardised language test is required\nIt must report both receptive and expressive language skills",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "serviceModel": "Health-side child speech pathology runs through Local Health Districts, not statewide\nCriteria differ by district, so one district's rule is not NSW policy\nSouth Western Sydney limits the service to children up to Term 2 of kindergarten\nIllawarra Shoalhaven sets no age ceiling but calls its therapy short term",
+  "legalEntitlement": "A sharp limit: the language criteria mainly determine Support Class Early Intervention\nMeeting the Language criterion is not a general school-age entitlement",
   "funding": "",
   "workforce": "",
   "dischargeCriteria": "",
@@ -501,23 +527,36 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Department of Education and Training (NT), Students with Disability policy",
+    "url": "https://education.nt.gov.au/media/docs/policies/access-and-equity/students-with-disability/policy-students-with-disability.docx"
+   },
+   {
+    "label": "Department of Education and Training (NT), Students with Disability guidelines",
+    "url": "https://education.nt.gov.au/media/docs/policies/access-and-equity/students-with-disability/Guidelines-Students-with-Disability.docx"
+   },
+   {
+    "label": "Northern Territory Government, children's therapy services",
+    "url": "https://nt.gov.au/wellbeing/allied-health/childrens-therapy-services"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "NT policy names 'language/communication disability' as a recognised type\nListed beside intellectual/cognitive, sensory, physical and social/emotional\nBroader than the four NCCD categories used to drive funding",
   "identificationCriteria": "",
   "assessments": "",
-  "multilingualProvision": "",
+  "multilingualProvision": "Both policy and guidelines were read in full; the finding is absence\nNo provision for speech-language assessment in any Aboriginal language\nThe only interpreter provision in the guidelines concerns sign language\nThis in a jurisdiction where most remote pupils speak an Aboriginal language first",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "Health-side children's allied health therapy is free from birth to 18\nThe team includes speech pathologists, occupational therapists and physiotherapists\nBeing an NDIS participant disqualifies a child from the NT Health service",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
@@ -532,30 +571,52 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Queensland Department of Education, EAP verification in the category of intellectual disability — handbook, reviewed December 2022",
+    "url": "https://education.qld.gov.au/student/Documents/eap-handbook.pdf"
+   },
+   {
+    "label": "Deloitte Access Economics for Queensland DET, Review of education for students with disability in Queensland state schools (February 2017)",
+    "url": "https://education.qld.gov.au/student/Documents/disability-review-report.pdf"
+   },
+   {
+    "label": "Queensland Department of Education, supports at school for students with speech language communication difficulties",
+    "url": "https://education.qld.gov.au/students/students-with-disability/supports-for-students-with-disability/speech-language-communication-difficulties/supports-at-school-for-students-with-speech-language-communication-difficulties"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "The former verification category Speech-Language Impairment no longer operates\nCurrent departmental wording is 'speech language communication difficulties'\nThe shift is from a diagnostic label to a description of difficulty",
+  "identificationCriteria": "No diagnostic threshold is published for speech language communication difficulties\nAccess turns on reasonable adjustments identified from individual need\nOnly intellectual disability still needs EAP verification, for special school entry",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "Speech language pathologists are teacher-facing, not a guaranteed therapy service\nThey advise on individual students or build whole-school strategies",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
   "dischargeCriteria": "",
-  "outcomesEvidence": "",
+  "outcomesEvidence": "2017 review: pupils with speech-language impairment show no higher absenteeism\nCompared against students without disability, in the same review",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2017,
+    "description": "Deloitte review records six Education Adjustment Program categories, one of them Speech-language Impairment"
+   },
+   {
+    "year": 2022,
+    "description": "EAP verification retained only for intellectual disability; Speech-Language Impairment ceases as a verified category"
+   }
+  ]
  },
  {
   "countryCode": "AU",
@@ -563,25 +624,38 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "SA.GOV.AU, speech and language impairments",
+    "url": "https://www.sa.gov.au/topics/education-and-learning/disability-and-special-supports/speech-and-language-impairments"
+   },
+   {
+    "label": "Department for Education (SA), 2025 school resource entitlement statement — supporting information",
+    "url": "https://www.education.sa.gov.au/docs/finance/res-notes/school-res-notes-2025.pdf"
+   },
+   {
+    "label": "Women's and Children's Health Network (SA Health), how to access speech pathology services",
+    "url": "https://cdn.wchn.sa.gov.au/downloads/WCH/professionals/gp/gp-education-day/2025/dev-ramping/How-to-Access-Speech-Pathology-Services.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "Student records keep a distinct impairment code, 'Language (L)'\nIt survives even though the NCCD has no language category\nNo count is published against that code",
+  "identificationCriteria": "Entry needs a speech pathologist diagnosis of severe speech or language impairment\nNon-verbal intelligence must be within or above the average range\nExcluded if diagnosed with a significant additional disability or syndrome",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "The clearest education-health split of any Australian jurisdiction\nSA Health and the Department for Education jointly cover children under 18\nEducation typically offers assessment, with limited access to ongoing therapy",
   "legalEntitlement": "",
-  "funding": "",
+  "funding": "Speech and language classes are staffed at one teacher to eight students\nThey also attract 15 support-officer hours a week for those eight",
   "workforce": "",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -594,26 +668,43 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Department for Education, Children and Young People (Tasmania), school speech and language pathologists",
+    "url": "https://www.decyp.tas.gov.au/learning/supporting-student-need/school-speech-pathologists/"
+   },
+   {
+    "label": "Department for Education, Children and Young People (Tasmania), educational adjustments — model overview",
+    "url": "https://www.decyp.tas.gov.au/learning/supporting-student-need/educational-adjustments/model-overview/"
+   },
+   {
+    "label": "Department of Health (Tasmania), speech pathology services, South",
+    "url": "https://www.health.tas.gov.au/health-topics/speech/speech-pathology-services/speech-pathology-services-south"
+   },
+   {
+    "label": "Speech Pathology Australia, Speech Pathology Workforce Analysis (March 2023)",
+    "url": "https://www.speechpathologyaustralia.org.au/Common/Uploaded%20files/Smart%20Suite/Smart%20Library/3c538667-094d-4674-8e7e-8c0edf784cae/Speech%20Pathology%20Workforce%20Analysis%20report%202023.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
   "terminology": "",
-  "identificationCriteria": "",
+  "identificationCriteria": "No language or speech category appears anywhere in the funding model\nEligibility runs on moderated NCCD level of adjustment, not on diagnosis\nThe model uses the Disability Discrimination Act 1992 definition of disability",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "The department employs speech and language pathologists in government schools\nIn the south, publicly funded child therapy comes from St Giles and the department\nPrivate-school pupils in the north west cannot get it through their school",
   "legalEntitlement": "",
   "funding": "",
-  "workforce": "",
+  "workforce": "A national analysis, using modelled ratios rather than a headcount\nTasmania had the lowest ratio of speech pathologists to population in Australia",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -625,30 +716,66 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Department of Education (Victoria), Program for Students with Disabilities guidelines (legacy site)",
+    "url": "https://www.education.vic.gov.au/school/teachers/learningneeds/Pages/psdhandbook.aspx"
+   },
+   {
+    "label": "Department of Education (Victoria), Policy and Advisory Library — Disability Inclusion Profile",
+    "url": "https://www2.education.vic.gov.au/pal/disability-inclusion-profile/print-all"
+   },
+   {
+    "label": "Department of Education (Victoria), Policy and Advisory Library — Student Support Services",
+    "url": "https://www2.education.vic.gov.au/pal/student-support-services/print-all"
+   },
+   {
+    "label": "Victorian Auditor-General's Office, Programs for Students with Special Learning Needs (tabled 29 August 2012)",
+    "url": "https://www.audit.vic.gov.au/report/programs-students-special-learning-needs"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "The retired PSD category was 'severe language difficulties with critical educational needs'\nThe Disability Inclusion Profile speaks of adjustment levels, not diagnosis",
+  "identificationCriteria": "The criteria below are from the retired PSD, not from current practice\nIt required severe impairment on two recommended tests, plus a non-verbal floor\nIt also required a verbal to non-verbal discrepancy, and named no instrument\nThe Disability Inclusion Profile requires no diagnosis and no mandatory assessments",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
   "serviceModel": "",
   "legalEntitlement": "",
   "funding": "",
-  "workforce": "",
+  "workforce": "Education-funded speech pathologists sit in area-based Student Support Services teams\nThose teams also carry psychologists, social workers and occupational therapists",
   "dischargeCriteria": "",
-  "outcomesEvidence": "",
-  "identifiedPrevalence": [],
-  "policyHistory": []
+  "outcomesEvidence": "Severe language disorder was the most frequently rejected PSD category\nAlmost half of all applications in that category were unsuccessful",
+  "identifiedPrevalence": [
+   {
+    "year": 2011,
+    "value": "263 students (1.3% of PSD)",
+    "note": "Severe language disorder with critical educational needs, of 20,883 PSD-funded students; Victorian Auditor-General's Office, Programs for Students with Special Learning Needs (2012). The year is inferred from the report's stated PSD total and is not printed beside the list."
+   }
+  ],
+  "policyHistory": [
+   {
+    "year": 1995,
+    "description": "Program for Students with Disabilities begins"
+   },
+   {
+    "year": 2021,
+    "description": "Disability Inclusion introduced, replacing the Program for Students with Disabilities"
+   },
+   {
+    "year": 2025,
+    "description": "All Victorian government schools transitioned to Disability Inclusion by Term 1"
+   }
+  ]
  },
  {
   "countryCode": "AU",
@@ -656,25 +783,42 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Department of Education (WA), language development schools and centres",
+    "url": "https://www.education.wa.edu.au/language-development-schools-and-centres"
+   },
+   {
+    "label": "Department of Education (WA), enrolment framework for students with disability in public schools",
+    "url": "https://www.education.wa.edu.au/web/policies/-/enrolment-framework-for-students-with-disability-in-public-schools"
+   },
+   {
+    "label": "West Coast Language Development Centre, eligibility and referrals",
+    "url": "https://westcoastldc.wa.edu.au/about-us/referrals/"
+   },
+   {
+    "label": "Child and Adolescent Health Service (WA Health), Child Development Service — eligibility and referrals",
+    "url": "https://cahs.health.wa.gov.au/our-services/community-health/child-development-service/eligibility-and-referrals"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "The only Australian department to say 'developmental language disorder' in its own terms\nLanguage development centres require a primary diagnosis of one\nThe enrolment framework instead says 'language impairment'",
+  "identificationCriteria": "Centre entry needs a significant primary language disorder in one or more areas\nLanguage must be the main concern, with non-verbal ability average or above\nLanguage impairment is not a route into education support enrolment",
   "assessments": "",
-  "multilingualProvision": "",
+  "multilingualProvision": "Pupils learning English as a second language may be eligible for entry\nConditional on there also being difficulties in the primary home language",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "Education-funded: five language development centres in the metropolitan area\nHealth-funded: the Child Development Service in Perth metro\nRegional children go through the WA Country Health Service instead",
   "legalEntitlement": "",
-  "funding": "",
+  "funding": "The individual disability allocation criteria are not published\nThe framework's link to them is marked for staff use only",
   "workforce": "",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -4036,26 +4180,43 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Melanesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Rights of Persons with Disabilities Act 2018 (Act No. 4 of 2018), Republic of Fiji — text published by UN DESA",
+    "url": "https://social.desa.un.org/sites/default/files/migrated/15/2019/12/Fiji_Rights-of-Persons-with-Disabilities-Act-2018.pdf"
+   },
+   {
+    "label": "Ministry of Education, Heritage and Arts (Fiji), Policy on Special and Inclusive Education 2016 (Internet Archive copy; the ministry host is unreachable)",
+    "url": "https://web.archive.org/web/20240722030758id_/https://www.education.gov.fj/wp-content/uploads/2022/06/Special_and_Inclusive_Education_Policy_-_20161.pdf"
+   },
+   {
+    "label": "Frank Hilton Organisation, Hilton speech pathology unit (Internet Archive copy; the live site is dead)",
+    "url": "https://web.archive.org/web/20250428000143/https://frankhilton.org.fj/Areas-of-Operation/Speech-Unit"
+   },
+   {
+    "label": "Pacific Disability Forum and UNICEF Pacific, Pacific Regional Inclusive Education Review (data collected 2020–2021)",
+    "url": "https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "The 2016 policy defines speech and language impairments as communication disorders\nThe 2018 disability Act never uses the word 'speech' at all\nIts statutory impairment list runs sight, hearing, developmental, learning, mental health",
+  "identificationCriteria": "Teachers complete a Student Learning Profile from functional observations\nThat yields an Educational Support Need category informing resourcing levels\nThe FEMIS Disability Disaggregation Toolkit is a general screen, not a language one",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
-  "funding": "",
-  "workforce": "",
+  "serviceModel": "The Frank Hilton Organisation runs a speech pathology unit in Suva\nIt serves children with moderate to severe communication and speech delays\nThe regional review records early intervention as a priority but limited in practice",
+  "legalEntitlement": "The Act gives a right to early identification and intervention as appropriate\nIt contains no speech, language or communication impairment category",
+  "funding": "A Special and Inclusive Education Grant goes to schools enrolling such learners\nIt covers support costs including referrals to services",
+  "workforce": "The Hilton unit is staffed by two speech pathologists and two assistants\nA 2016 policy action was to advocate for local university-level courses\nSpecial and inclusive education is managed by one person at the ministry",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -4067,29 +4228,56 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "FSM Department of Education, Special Education Procedural Manual (2012)",
+    "url": "https://www.national.doe.fm/wp-content/uploads/2026/04/FSM-Special-Education-Procedural-Manual-2012.pdf"
+   },
+   {
+    "label": "FSM Code, title 40, ch. 2 — FSM Special Education Act of 1993 (PL 8-21)",
+    "url": "https://www.fsmlaw.org/fsm/code/title40/T40_Ch02.htm"
+   },
+   {
+    "label": "20 U.S.C. § 1411(b)(1), Individuals with Disabilities Education Act Part B — outlying areas and freely associated States",
+    "url": "https://www.law.cornell.edu/uscode/text/20/1411"
+   },
+   {
+    "label": "US Department of Education, IDEA Section 618, State Part B child count and educational environments, 2024-25",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv"
+   },
+   {
+    "label": "US Department of Education, IDEA Section 618, State Part B personnel, 2023-24",
+    "url": "https://data.ed.gov/dataset/fc85541b-d729-4722-8622-e814dae86b5b/resource/4f814d4e-a6b2-409c-ad14-a66f6718a669/download/bpersonnel2023-24.csv"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "The manual copies the US federal definition of speech or language impairment\nA communication disorder such as stuttering, impaired articulation or voice\nIt must adversely affect the child's educational performance",
+  "identificationCriteria": "Separate criteria sets for speech disorder and for language disorder\nThe language route covers syntax, morphology, pragmatics or semantics\nThe disorder must not be the result of another disability",
   "assessments": "",
-  "multilingualProvision": "",
-  "referralPathway": "",
+  "multilingualProvision": "Assessments must be provided in the child's native language or other mode",
+  "referralPathway": "Each school has a Child Assistance Team that monitors progress\nThe team initiates referrals for special education evaluation",
   "serviceModel": "",
-  "legalEntitlement": "",
+  "legalEntitlement": "FSM Special Education Act of 1993 promises free education for children with disabilities\nIDEA Part B grant on State-like terms, 20 USC 1411(b)(1)",
   "funding": "",
-  "workforce": "",
+  "workforce": "An official US federal return, not a survey estimate\nZero speech-language pathologists reported for 2023-24",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
-  "identifiedPrevalence": [],
+  "identifiedPrevalence": [
+   {
+    "year": 2024,
+    "value": "68 pupils aged 6–21",
+    "note": "Speech or language impairment, of 1,317 with all disabilities; US Department of Education, IDEA Section 618 Part B child count 2024-25, read directly from the published CSV."
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -6722,26 +6910,43 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Kiribati Education Act 2013 (PacLII, Kiribati sessional legislation)",
+    "url": "https://www.paclii.org/ki/legis/num_act/ea2013104/"
+   },
+   {
+    "label": "Kiribati Inclusive Education Policy 2015 (Pacific Data Hub)",
+    "url": "https://www.pacificdata.org/data/dataset/f3620dd2-33a5-494a-83e5-567d35de2c6b/resource/e7fbbb2a-69d6-4c82-b5d2-0227852e0144/download/Kiribati%20-%20Inclusive%20Education%20Policy_2015"
+   },
+   {
+    "label": "Kiribati National Disability Policy and Action Plan 2018–2021 (UN DESA)",
+    "url": "https://www.un.org/development/desa/disabilities/wp-content/uploads/sites/15/2019/10/Kiribati_Kiribati-National-Disability-Policy-and-Action-Plan-2018-%E2%80%93-2021.pdf"
+   },
+   {
+    "label": "Pacific Disability Forum and UNICEF Pacific, Pacific Regional Inclusive Education Review (data collected 2020–2021)",
+    "url": "https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "The Education Act 2013 and the 2015 policy were read in full; the finding is absence\nNeither instrument uses the word 'speech' or the word 'language' anywhere\nOnly a generic 'special educational needs' tied to disability is defined",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "serviceModel": "The regional review records early intervention services as not available at all\nRehabilitation and therapy are available in the capital",
+  "legalEntitlement": "The Act defines SEN as education tailored to the student's own requirements\nThe Minister may establish centres for special education — the power is permissive",
   "funding": "",
-  "workforce": "",
+  "workforce": "An aspiration under the health ministry, not a service that exists\nThe national disability policy seeks scholarships in speech therapy\nThat is the sole mention of speech therapy in the whole policy",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -7616,29 +7821,52 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Republic of the Marshall Islands Public School System, rules and regulations 2015, made under P.L. 2013-23",
+    "url": "https://pacificdata.org/data/dataset/aad9ce43-0f09-4b43-8cb4-391c46ffd7bd/resource/21d89637-dd38-4bf8-9b1a-e8d9115bdfb5/download/school-system-rules-and-regulations-2015.pdf"
+   },
+   {
+    "label": "20 U.S.C. § 1411(b)(1), Individuals with Disabilities Education Act Part B — outlying areas and freely associated States",
+    "url": "https://www.law.cornell.edu/uscode/text/20/1411"
+   },
+   {
+    "label": "US Department of Education, IDEA Section 618, State Part B child count and educational environments, 2024-25",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv"
+   },
+   {
+    "label": "US Department of Education, IDEA Section 618, State Part B personnel, 2023-24",
+    "url": "https://data.ed.gov/dataset/fc85541b-d729-4722-8622-e814dae86b5b/resource/4f814d4e-a6b2-409c-ad14-a66f6718a669/download/bpersonnel2023-24.csv"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "The 2015 school system rules contain no disability categories at all\nThe word 'speech' does not appear in them anywhere\nA disabled child is defined functionally instead",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
   "serviceModel": "",
-  "legalEntitlement": "",
+  "legalEntitlement": "IDEA Part B grant on State-like terms, 20 USC 1411(b)(1)\nThe statute requires eligibility to be established as a State would",
   "funding": "",
-  "workforce": "",
+  "workforce": "An official US federal return, not a survey estimate\nZero speech-language pathologists reported for 2023-24",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
-  "identifiedPrevalence": [],
+  "identifiedPrevalence": [
+   {
+    "year": 2024,
+    "value": "30 pupils aged 6–21",
+    "note": "Speech or language impairment, of 671 with all disabilities; US Department of Education, IDEA Section 618 Part B child count 2024-25, read directly from the published CSV."
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -8434,26 +8662,35 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Nauru Education Act 2011, Part 11 — special education (PacLII)",
+    "url": "https://www.paclii.org/nr/legis/num_act/ea2011104/"
+   },
+   {
+    "label": "Republic of Nauru Department of Education, Nauru Inclusive Education Policy and Guidelines 2017 (Pacific Data Hub)",
+    "url": "https://pacificdata.org/data/dataset/0208b22b-e019-4fc4-9e20-9251855ce9e1/resource/172a7c3c-5898-4287-8055-65a94a1bc412/download/nauru-inclusive-education-policy-and-guidelines.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "The policy's four categories are physical, mental, intellectual and sensory\nCommunication difficulties are folded into the intellectual category\nAnd only where they are the result of neurological issues\nThe word 'speech' appears nowhere in the policy or the Education Act",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "",
+  "referralPathway": "A multi-disciplinary approach using health, education and other professionals\nThe policy seeks a memorandum between Education and Health on shared personnel",
   "serviceModel": "",
-  "legalEntitlement": "",
+  "legalEntitlement": "Inclusive education is mandated by Part 11 of the Education Act 2011\nThe Act requires teachers trained in augmentative and alternative communication\nThe Minister must establish a special education centre — mandatory, unlike Kiribati",
   "funding": "",
-  "workforce": "",
+  "workforce": "Speech pathologists are absent from the policy's list of shared specialists\nIt lists psychologists, occupational therapists, physiotherapists and audiologists",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -8621,29 +8858,44 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Melanesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "National Department of Education (Papua New Guinea), Inclusive Education Policy 2024–2028 (Internet Archive copy; the ministry host was rebuilt)",
+    "url": "https://web.archive.org/web/20241130112700id_/https://www.education.gov.pg/admin/images/products/INCLUSIVE%20EDUCATION%20POLICY.pdf"
+   },
+   {
+    "label": "Pacific Disability Forum and UNICEF Pacific, Pacific Regional Inclusive Education Review (data collected 2020–2021)",
+    "url": "https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "The category is 'students with disabilities and additional learning needs'\nThe policy states this replaces the term 'students with special needs'\nAdditional learning needs expressly include speech and language difficulties",
   "identificationCriteria": "",
-  "assessments": "",
-  "multilingualProvision": "",
-  "referralPathway": "",
-  "serviceModel": "",
+  "assessments": "The named screen is the Whole Child Checklist\nAdministered by specialist resource centre teachers or trained mainstream teachers",
+  "multilingualProvision": "The policy makes no link to PNG's vernacular language-of-instruction system\nNeither 'vernacular' nor 'sign language' occurs anywhere in it",
+  "referralPathway": "Mainstream schools must register such students with the nearest resource centre\nScreening is done by the centres and community-based rehabilitation officers\nData is reported disaggregated in the annual school census",
+  "serviceModel": "Inclusive Education Resource Centres are the organising structure\nTheir pre-schools deliver early intervention programmes\nLearning support includes specialist services such as speech therapy",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
-  "identifiedPrevalence": [],
+  "identifiedPrevalence": [
+   {
+    "year": 2023,
+    "value": "657 students",
+    "note": "Recorded under 'Speech Impairment' of 17,972 students with disability and additional learning needs; National Department of Education internal inclusive education data, printed in the Inclusive Education Policy 2024-2028. The policy itself states that accurate statistical data is not available."
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -8892,29 +9144,60 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Republic of Palau, RPPL No. 3-9 (1989), Programs and Services for Handicapped Children Act",
+    "url": "https://www.palaumoe.net/files/sped/policies/RPPL_3-9.pdf"
+   },
+   {
+    "label": "Palau Ministry of Education, special education policies (finalised 2008)",
+    "url": "https://www.palaumoe.net/files/sped/policies/Special_Education_Policies.pdf"
+   },
+   {
+    "label": "Palau Ministry of Education, special education procedural manual (updated 6 September 2010)",
+    "url": "https://www.palaumoe.net/files/sped/policies/PW.SpEdProceduralManual.Updated.9.6.10.pdf"
+   },
+   {
+    "label": "20 U.S.C. § 1411(b)(1), Individuals with Disabilities Education Act Part B — outlying areas and freely associated States",
+    "url": "https://www.law.cornell.edu/uscode/text/20/1411"
+   },
+   {
+    "label": "US Department of Education, IDEA Section 618, State Part B child count and educational environments, 2024-25",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv"
+   },
+   {
+    "label": "US Department of Education, IDEA Section 618, State Part B personnel, 2023-24",
+    "url": "https://data.ed.gov/dataset/fc85541b-d729-4722-8622-e814dae86b5b/resource/4f814d4e-a6b2-409c-ad14-a66f6718a669/download/bpersonnel2023-24.csv"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "Structurally distinctive: the statute counts speech pathology AS special education\nRPPL 3-9 includes speech pathological services within the definition itself\nUS federal law instead treats it as a related service",
+  "identificationCriteria": "The procedural manual sets out no eligibility criteria for any disability category\nEligibility rests on the school team applying the policy category list",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
   "serviceModel": "",
-  "legalEntitlement": "",
-  "funding": "",
-  "workforce": "",
+  "legalEntitlement": "RPPL 3-9 of 1989, Programs and Services for Handicapped Children Act\nFree appropriate public education from birth through 21\nIDEA Part B grant on State-like terms, 20 USC 1411(b)(1)",
+  "funding": "RPPL 3-9 pegs funding to the last year of eligibility under the 1975 US Act",
+  "workforce": "An official US federal return, not a survey estimate\nZero speech-language pathologists reported for 2023-24\nSpeech is excluded from the services special education teachers provide",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
-  "identifiedPrevalence": [],
+  "identifiedPrevalence": [
+   {
+    "year": 2024,
+    "value": "1 pupil aged 6–21",
+    "note": "Speech or language impairment, of 88 with all disabilities; US Department of Education, IDEA Section 618 Part B child count 2024-25, read directly from the published CSV."
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -9214,24 +9497,37 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Melanesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Education Act 2023 (No. 8 of 2023), Solomon Islands — sealed copy published by the Ministry of Education and Human Resources Development",
+    "url": "https://www.mehrd.gov.sb/documents?view=download&format=raw&fileId=5402"
+   },
+   {
+    "label": "Ministry of Education and Human Resources Development (Solomon Islands), annual report 2023",
+    "url": "https://www.mehrd.gov.sb/documents?view=download&format=raw&fileId=5406"
+   },
+   {
+    "label": "Pacific Disability Forum and UNICEF Pacific, Pacific Regional Inclusive Education Review (data collected 2020–2021)",
+    "url": "https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
   "terminology": "",
-  "identificationCriteria": "",
+  "identificationCriteria": "Most teachers rely on their own judgement of visibly obvious disabilities\nA visibility-based approach will systematically miss language disorder\nFurther teacher training in identification is flagged as needed",
   "assessments": "",
-  "multilingualProvision": "",
+  "multilingualProvision": "Section 65 puts sign language on a par with the spoken languages\nLocal vernacular, Pijin, English or sign language, individually or in combination\nThe choice is made according to the needs of the students\nTeachers must endeavour to use English as the principal language from primary",
   "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "serviceModel": "Health ministry community-based rehabilitation assesses children in the community",
+  "legalEntitlement": "Education Act 2023 passed 12 October 2023 and assented 3 November 2023\nIt repeals the Education Act, Cap. 69\nThe Act contains no definition of disability or special needs\nIts equity clause covers economic, social, physical and mental disadvantage",
   "funding": "",
   "workforce": "",
   "dischargeCriteria": "",
@@ -10157,26 +10453,39 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Tonga Education Act 2013, Part XXI — special needs and inclusive education (Ministry extract, Pacific Data Hub)",
+    "url": "https://www.pacificdata.org/data/dataset/bc8bc6ca-1887-4d9f-adad-6703ee621cde/resource/257c9ec9-74bc-4fd2-af9b-956683d3b887/download/Tonga%20-%20Special%20Needs%20and%20Inclusive%20Education,%20Education%20Act,%202013"
+   },
+   {
+    "label": "Tonga Education Policy Framework 2004–2019, Ministry of Education (final draft, 23 April 2004)",
+    "url": "https://neqmap.bangkok.unesco.org/wp-content/uploads/2019/08/Tonga-Education-Policy-Framework-2004-2019.pdf"
+   },
+   {
+    "label": "Pacific Disability Forum and UNICEF Pacific, Pacific Regional Inclusive Education Review (data collected 2020–2021)",
+    "url": "https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "The one Pacific unit whose own policy names a speech category\nThe Education Policy Framework lists 'those with speech defects'\nBeside physical, visual, hearing and intellectual categories\nThe Education Act 2013 Part XXI itself never uses the word",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "",
+  "referralPathway": "Paediatric specialist assessment is the route into a special education class",
   "serviceModel": "",
-  "legalEntitlement": "",
+  "legalEntitlement": "Part XXI commencement is conditional on a ministerial proclamation\nA child with special educational needs has the same right to enrol",
   "funding": "",
-  "workforce": "",
+  "workforce": "The regional review names speech pathologists as a specialist Tonga needs",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -10275,26 +10584,43 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Tuvalu Education Ordinance, Laws of Tuvalu, revised edition 1990, Cap. 38 (PacLII)",
+    "url": "https://www.paclii.org/tv/legis/consol_act/eo157/"
+   },
+   {
+    "label": "Tuvalu National Curriculum Policy Framework, Ministry of Education, Youth and Sport",
+    "url": "https://meys.gov.tv/images/curriculum/1._Revised_Tuvaulu_National_Curriculum_Policy_Framework_TNCPF.pdf"
+   },
+   {
+    "label": "Tavola, H., Tuvalu study on people with disability (2018), DFAT / Pacific Women Shaping Pacific Development",
+    "url": "https://www.pacificdata.org/data/dataset/230b0944-c9c4-4e80-aff4-45e49f5b699c/resource/4a893ce0-10c2-4d98-8b0b-edac1ab7c25e/download/Tuvalu%20Study%20on%20People%20with%20Disability%20"
+   },
+   {
+    "label": "Pacific Disability Forum and UNICEF Pacific, Pacific Regional Inclusive Education Review (data collected 2020–2021)",
+    "url": "https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "Curriculum framework categories are intellectual, physical, emotional or social\nNo speech, language or communication category appears anywhere in it\nSpecial education is not treated as a separate curriculum or category",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "serviceModel": "The regional review records rehabilitation and early intervention as not available\nThe 2018 national study found no community based rehabilitation in Tuvalu",
+  "legalEntitlement": "The Education Ordinance was read in full and has no disability provision at all\nZero occurrences of 'disability', 'special education' or 'inclusive'",
   "funding": "",
-  "workforce": "",
+  "workforce": "No speech therapist appears in the listed health ministry paramedical staff\nListed instead: physiotherapist, pharmacist, radiologist, dentist, lab technician\nEducation staff report lacking the skills to diagnose disabilities",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -12651,30 +12977,48 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Melanesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Vanuatu National Disability Inclusive Development Policy 2018–2025, Ministry of Justice and Community Services",
+    "url": "https://mjcs.gov.vu/images/policy/DID_Policy_2018-2025.pdf"
+   },
+   {
+    "label": "Vira, E. et al., Towards a National Sign Language in Vanuatu, Te Reo 68(3) (2025), author manuscript",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12718632/"
+   },
+   {
+    "label": "Pacific Disability Forum and UNICEF Pacific, Pacific Regional Inclusive Education Review (data collected 2020–2021)",
+    "url": "https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
   "terminology": "",
-  "identificationCriteria": "",
+  "identificationCriteria": "A teachers' guidebook for identifying students with disabilities is the instrument\nUNICEF supported principal and teacher training in identification\nNo speech or language category appears in the regional review account",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "The grid and the narrative of the regional review disagree on early intervention\nThe narrative names the Vanuatu Society for People with Disability as a provider\nThe country service grid lists early intervention as not available",
   "legalEntitlement": "",
-  "funding": "",
-  "workforce": "",
+  "funding": "Vanuatu is one of only two Pacific states with no inclusive education budget line",
+  "workforce": "No speech therapist post is documented in Vanuatu's education system\nThe disability policy seeks scholarships in speech therapy among other fields\nNamed beside occupational therapists, podiatrists and audiologists",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2025,
+    "description": "Inclusive Education and Training Policy 2025–2030 launched, directing the ministry to lead development of a Sign Language of Vanuatu; the policy text itself could not be retrieved and this rests on a peer-reviewed account"
+   }
+  ]
  },
  {
   "countryCode": "WS",
@@ -12682,26 +13026,43 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Education Act 2009 (Samoa), Part IX — students with special needs",
+    "url": "https://www.mesc.gov.ws/wp-content/uploads/2019/09/Education-Act-2009.pdf"
+   },
+   {
+    "label": "Ministry of Education, Sports and Culture (Samoa), Samoan schools becoming more inclusive",
+    "url": "https://www.mesc.gov.ws/education/samoan-schools-becoming-more-inclusive/"
+   },
+   {
+    "label": "Ministry of the Prime Minister and Cabinet (Samoa), press release on SENESE's hearing, speech and language therapy project (18 October 2021)",
+    "url": "https://mpmc.gov.ws/pr-children-and-youth-with-hearing-and-speech-impediments-benefit-from-seneses-project/"
+   },
+   {
+    "label": "Samoa Education Sector Plan 2025–2030, Ministry of Education, Sports and Culture",
+    "url": "https://www.mesc.gov.ws/wp-content/uploads/2026/02/ESP2025-2030-FINAL.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
   "terminology": "",
-  "identificationCriteria": "",
+  "identificationCriteria": "The only universal national screen is for hearing, not speech or language\nAn annual national hearing screening of all Year 1 students, first run 2019\nIt is budgeted again in the Education Sector Plan 2025-2030\nThe statistical digest counts disability with no breakdown by impairment",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
-  "funding": "",
-  "workforce": "",
+  "serviceModel": "The ministry's inclusive education unit works with SENESE and other providers\nSENESE delivers hearing services and speech and language therapy",
+  "legalEntitlement": "Education Act 2009 Part IX is headed 'students with special needs'\nIt requires the chief executive to set guidelines on identification and assessment\nThe Act never defines 'special needs' and never defines 'disability'\nNeither 'speech' nor 'disability' occurs anywhere in its text",
+  "funding": "Speech and language therapy runs on donor project money, not recurrent budget\nAn Australian civil society grant covered hearing, speech and vocational components",
+  "workforce": "No established government speech-language therapist post is documented\nThe ministry names a volunteer speech language therapist on its specialist team\nSupplied through the Australian Volunteer Program rather than as a ministry post",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
