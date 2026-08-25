@@ -86,6 +86,9 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: now
 td.yr { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink-soft); }
 td.unit { white-space: nowrap; font-weight: 500; }
 td.desc { min-width: 30ch; }
+.pages {
+  display: block; font-size: 11.5px; color: var(--ink-faint); margin-top: 2px;
+}
 .chip {
   display: inline-block; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
   padding: 2px 6px; border-radius: 4px; background: var(--surface-2); color: var(--ink-soft); white-space: nowrap;
@@ -345,8 +348,12 @@ function render() {
       if (g && !s.regions.includes(g)) return false;
       return !q || s.label.toLowerCase().includes(q);
     },
+    // A row that folds a per-jurisdiction instrument stands for many pages, and
+    // saying so is the difference between a source count and a claim about one
+    // document. Ordinary sources report pages === 1 and print nothing extra.
     render: s => `<tr><td class="num">${s.entries}</td>
-      <td><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a></td>
+      <td><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a>${
+        s.pages > 1 ? `<span class="pages">${s.pages} country pages</span>` : ''}</td>
       <td>${s.regions.map(r => `<span class="chip">${esc(r)}</span>`).join(' ')}</td>
       <td>${esc(s.domainsText)}</td></tr>`,
   });
@@ -379,8 +386,8 @@ function render() {
       csv('changes', ['year', 'place', 'region', 'map', 'change'],
         T.timeline.rows.map(r => [r.year, r.unit, r.region, r.domainLabel, r.description]));
     if (b.dataset.csv === 'sources')
-      csv('sources', ['entries', 'source', 'url', 'regions', 'maps'],
-        T.provenance.sources.map(s => [s.entries, s.label, s.url, s.regions.join('; '), s.domains.join('; ')]));
+      csv('sources', ['entries', 'pages', 'source', 'url', 'regions', 'maps'],
+        T.provenance.sources.map(s => [s.entries, s.pages, s.label, s.url, s.regions.join('; '), s.domains.join('; ')]));
     if (b.dataset.csv === 'coverage')
       csv('coverage-' + covSel.value, ['field', 'documented', 'looked', 'blank', 'entries'],
         covRows().map(f => [f.label, f.has, f.looked, f.none, T.coverage[covSel.value].entries]));

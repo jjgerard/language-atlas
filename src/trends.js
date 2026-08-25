@@ -38,6 +38,38 @@
 
 const NOT_LEVERAGE = 5; // a source cited by more entries than this is doing comparative work
 
+// A comparative instrument that publishes ONE PAGE PER JURISDICTION gives every
+// entry a different address, so keyed on the raw url each page reads as a
+// one-off and the instrument behind them disappears. That is not hypothetical:
+// UNESCO's PEER profiles are cited 83 times across 59 urls and were scoring as
+// 59 unrelated sources, which made regions built largely FROM that one
+// instrument report as though they had been assembled country by country.
+//
+// Only genuine per-jurisdiction editions of a single publication belong here.
+// The test is uses-vs-distinct measured over the real data: a host where the
+// same url repeats (OECD's PISA volume 71 times, ECS across 2 pages, American
+// Councils on 1) already aggregates and must NOT be folded, and a host that
+// merely carries many separate works — doi.org, Cornell's LII, the Internet
+// Archive — is a library, not an instrument, so its items stay separate.
+const FAMILIES = [
+  { key: 'unesco-peer', re: /^https?:\/\/(www\.)?education-profiles\.org\//i,
+    label: 'UNESCO GEM Report — PEER country profiles',
+    home: 'https://education-profiles.org/' },
+  { key: 'eurydice', re: /^https?:\/\/eurydice\.eacea\.ec\.europa\.eu\//i,
+    label: 'European Commission — Eurydice national education systems',
+    home: 'https://eurydice.eacea.ec.europa.eu/national-education-systems' },
+  { key: 'wida', re: /^https?:\/\/(www\.)?wida\.wisc\.edu\//i,
+    label: 'WIDA — state identification and placement documents',
+    home: 'https://wida.wisc.edu/memberships/consortium' },
+];
+
+// The grouping key for a link: its instrument where it belongs to one, else the
+// url itself, which leaves every other source counted exactly as before.
+function familyOf(url) {
+  const f = FAMILIES.find(x => x.re.test(url));
+  return f ? f.key : url;
+}
+
 const pct = (n, d) => (d ? Math.round((n / d) * 100) : 0);
 
 // ---- the three structural surfaces --------------------------------------
@@ -87,25 +119,37 @@ function timeline(payload) {
 // shape: a region with a comparative source covering forty systems fills in one
 // pass, and a region without one has to be assembled a country at a time.
 function provenance(payload) {
-  const byUrl = new Map();
+  const byKey = new Map();
   for (const d of payload.domains.filter(x => x.live)) {
     for (const u of payload.units[d.id] || []) {
       for (const l of u.docLinks || []) {
         if (!l || !l.url) continue;
-        let rec = byUrl.get(l.url);
-        if (!rec) byUrl.set(l.url, (rec = { url: l.url, label: l.label || l.url, entries: 0, domains: new Set(), regions: new Set() }));
+        const key = familyOf(l.url);
+        const fam = FAMILIES.find(x => x.key === key);
+        let rec = byKey.get(key);
+        if (!rec) byKey.set(key, (rec = {
+          key,
+          url: fam ? fam.home : l.url,
+          label: fam ? fam.label : (l.label || l.url),
+          // How many separate pages of the instrument are cited. 1 for an
+          // ordinary source, so the sources table can say "59 pages" where that
+          // is the honest description of what is being counted on one row.
+          pages: new Set(),
+          entries: 0, domains: new Set(), regions: new Set(),
+        }));
+        rec.pages.add(l.url);
         rec.entries++;
         rec.domains.add(d.id);
         rec.regions.add(u.region);
       }
     }
   }
-  const sources = [...byUrl.values()]
-    .map(r => ({ ...r, domains: [...r.domains].sort(), regions: [...r.regions].sort() }))
+  const sources = [...byKey.values()]
+    .map(r => ({ ...r, pages: r.pages.size, domains: [...r.domains].sort(), regions: [...r.regions].sort() }))
     .sort((a, b) => b.entries - a.entries || a.label.localeCompare(b.label));
 
   const slots = sources.reduce((s, r) => s + r.entries, 0);
-  const leverage = new Set(sources.filter(r => r.entries > NOT_LEVERAGE).map(r => r.url));
+  const leverage = new Set(sources.filter(r => r.entries > NOT_LEVERAGE).map(r => r.key));
 
   // The asymmetry, measured rather than asserted: of the documented entries in
   // each region, how many lean on a source that also documents somewhere else.
@@ -115,7 +159,7 @@ function provenance(payload) {
       if (u.coverage !== 'has') continue;
       const r = (byRegion[u.region] = byRegion[u.region] || { documented: 0, onLeverage: 0 });
       r.documented++;
-      if ((u.docLinks || []).some(l => l && leverage.has(l.url))) r.onLeverage++;
+      if ((u.docLinks || []).some(l => l && leverage.has(familyOf(l.url)))) r.onLeverage++;
     }
   }
   for (const k of Object.keys(byRegion)) byRegion[k].share = pct(byRegion[k].onLeverage, byRegion[k].documented);
