@@ -19,6 +19,7 @@ const PAGES = {
   'home.html': 'index.html',
   'map.html': 'map.html',
   'about.html': 'about.html',
+  'patterns.html': 'patterns.html',
   'submit.html': 'submit.html',
   'admin.html': 'admin.html',
 };

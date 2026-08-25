@@ -1,0 +1,399 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Patterns — Language Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/shared.css">
+<style>
+/* Wider than /about: the tables below the findings need the room, and every one
+   of them scrolls inside its own box rather than pushing the page sideways. */
+body { display: flex; flex-direction: column; min-height: 100dvh; }
+main { flex: 1; width: min(96ch, 100%); margin: 0 auto; padding: 40px 22px 72px; }
+
+main h2 {
+  font-size: clamp(27px, 4.4vw, 36px); font-weight: 500; line-height: 1.15;
+  letter-spacing: -.015em; margin: 0 0 6px; text-wrap: balance;
+}
+main .standfirst { margin: 0 0 30px; font-size: 16px; color: var(--ink-soft); line-height: 1.6; max-width: 68ch; }
+main h3 {
+  font-size: 21px; font-weight: 500; letter-spacing: -.01em;
+  margin: 40px 0 10px; padding-top: 16px; border-top: 1px solid var(--hair);
+  text-wrap: balance;
+}
+main h3 .count { font-size: 13px; color: var(--ink-faint); font-weight: 400; letter-spacing: 0; }
+main p, main li { font-size: 15px; line-height: 1.65; }
+main p { margin: 0 0 14px; max-width: 68ch; }
+main a { color: var(--focus); }
+
+/* ---- findings: the claim carries its own number, so the number is the type ---- */
+.finding { margin: 0 0 22px; padding-left: 14px; border-left: 2px solid var(--hair-strong); }
+.finding .claim { font-size: 17px; line-height: 1.5; margin: 0 0 6px; text-wrap: pretty; }
+.finding .why { font-size: 13.5px; line-height: 1.6; color: var(--ink-soft); margin: 0; max-width: 66ch; }
+.finding .scope {
+  display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-faint); margin-bottom: 5px;
+}
+.finding.dld { border-left-color: var(--r-asia); }
+.finding.fl  { border-left-color: var(--r-americas); }
+.finding.eal { border-left-color: var(--r-europe); }
+
+.withdrawn { font-size: 13px; color: var(--ink-faint); margin: 18px 0 0; }
+
+/* ---- decade bars ---- */
+.decades { display: grid; gap: 5px; margin: 4px 0 18px; max-width: 60ch; }
+.decrow { display: grid; grid-template-columns: 62px 1fr 44px; gap: 10px; align-items: center; font-size: 13px; }
+.decrow .bar { height: 13px; border-radius: 2px; background: var(--r-europe); min-width: 2px; }
+.decrow .n { text-align: right; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.decrow .lab { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+
+/* ---- region strip ---- */
+.regions { display: grid; gap: 6px; margin: 4px 0 18px; max-width: 66ch; }
+.regrow { display: grid; grid-template-columns: 92px 1fr 96px; gap: 10px; align-items: center; font-size: 13px; }
+.regrow .track { height: 13px; border-radius: 2px; background: var(--surface-2); overflow: hidden; }
+.regrow .fill { height: 100%; border-radius: 2px; }
+.regrow .n { text-align: right; color: var(--ink-soft); font-variant-numeric: tabular-nums; font-size: 12.5px; }
+.f-Africa { background: var(--r-africa); } .f-Americas { background: var(--r-americas); }
+.f-Asia { background: var(--r-asia); } .f-Europe { background: var(--r-europe); } .f-Oceania { background: var(--r-oceania); }
+
+/* ---- tables ---- */
+.tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 10px; }
+.tools input, .tools select {
+  font: inherit; font-size: 13px; padding: 6px 9px; border-radius: 6px;
+  border: 1px solid var(--hair-strong); background: var(--surface); color: var(--ink);
+}
+.tools input { min-width: 210px; }
+.tools .grow { flex: 1; }
+.tools button {
+  font: inherit; font-size: 12.5px; padding: 6px 11px; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--hair-strong); background: var(--surface); color: var(--ink-soft);
+}
+.tools button:hover { color: var(--ink); border-color: var(--focus); }
+.twrap { overflow-x: auto; border: 1px solid var(--hair); border-radius: 8px; max-height: 460px; overflow-y: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+thead th {
+  position: sticky; top: 0; z-index: 1; background: var(--surface-2); text-align: left;
+  font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-faint); padding: 9px 11px; border-bottom: 1px solid var(--hair); white-space: nowrap;
+  cursor: pointer; user-select: none;
+}
+thead th[aria-sort]::after { content: ' ▾'; opacity: .5; }
+thead th[aria-sort="ascending"]::after { content: ' ▴'; opacity: 1; }
+thead th[aria-sort="descending"]::after { content: ' ▾'; opacity: 1; }
+tbody td { padding: 8px 11px; border-bottom: 1px solid var(--hair); vertical-align: top; line-height: 1.45; }
+tbody tr:last-child td { border-bottom: 0; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.yr { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink-soft); }
+td.unit { white-space: nowrap; font-weight: 500; }
+td.desc { min-width: 30ch; }
+.chip {
+  display: inline-block; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
+  padding: 2px 6px; border-radius: 4px; background: var(--surface-2); color: var(--ink-soft); white-space: nowrap;
+}
+.empty { padding: 22px; text-align: center; color: var(--ink-faint); font-size: 14px; }
+.bar-thin { height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; min-width: 60px; }
+.bar-thin > i { display: block; height: 100%; background: var(--r-europe); }
+
+blockquote.note {
+  margin: 0 0 16px; padding: 12px 15px; font-size: 14px; line-height: 1.6;
+  color: var(--ink-soft); background: var(--surface-2); max-width: 68ch;
+  border-left: 2px solid var(--hair-strong); border-radius: 0 4px 4px 0;
+}
+footer.foot {
+  flex: none; padding: 14px 18px; background: var(--surface);
+  border-top: 1px solid var(--hair); font-size: 12px; color: var(--ink-faint);
+}
+footer.foot a { color: var(--ink-soft); }
+@media (max-width: 820px) { main { padding: 26px 16px 54px; } .regrow { grid-template-columns: 78px 1fr 78px; } }
+</style>
+
+<header class="sitebar">
+  <a class="brand" href="/">
+    <span class="name">Language Atlas</span>
+    <span class="tagline">Provision and policy, by region</span>
+  </a>
+  <nav class="pills" id="pills"></nav>
+  <div class="navright">
+    <a class="aboutlink" href="/patterns" aria-current="page">Patterns</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="menu" id="menu">
+    <nav class="pills" id="menupills"></nav>
+    <a class="aboutlink" href="/patterns" aria-current="page">Patterns</a>
+    <a class="aboutlink" href="/about">About</a>
+  </div>
+</header>
+
+<main>
+  <h2>What the entries have in common</h2>
+  <p class="standfirst">
+    The maps answer what one place does. This page answers what the places have in common — and,
+    just as often, what none of them record. Everything here is counted from the entries as they
+    stand, so it changes when they do.
+  </p>
+
+  <blockquote class="note">
+    Nothing on this page is read out of the entry text. The wording of an entry is deliberately
+    hedged — <i>encouraged but not required</i>, <i>no requirement in primary but 100 hours across
+    Years 7–10</i> — and a classifier run over it leaves nearly half of the cases unresolved,
+    landing hardest exactly where the answer is interesting. So these counts come only from things
+    the schema already knows: which fields are filled, which dated changes are recorded, which
+    sources an entry cites. A comparative reading of the entries themselves has to be written
+    alongside them, from the same documents, and that layer does not exist yet.
+  </blockquote>
+
+  <h3>Findings</h3>
+  <div id="findings"></div>
+  <p class="withdrawn" id="withdrawn" hidden></p>
+
+  <h3>When policy changed <span class="count" id="tl-count"></span></h3>
+  <p>
+    Every dated change recorded across the three maps. Years are kept as written, because real
+    ones are ranges and qualifications; the sort uses the first four-digit year in each.
+  </p>
+  <div class="decades" id="decades"></div>
+  <div class="tools">
+    <input id="tl-q" class="grow" type="search" placeholder="Filter by place, description…" aria-label="Filter changes">
+    <select id="tl-domain" aria-label="Filter by map"><option value="">All maps</option></select>
+    <select id="tl-region" aria-label="Filter by region"><option value="">All regions</option></select>
+    <button data-csv="timeline">Download CSV</button>
+  </div>
+  <div class="twrap"><table id="tl"><thead><tr>
+    <th data-k="yearNum" data-num="1">Year</th><th data-k="unit">Place</th>
+    <th data-k="region">Region</th><th data-k="domainLabel">Map</th><th data-k="description">Change</th>
+  </tr></thead><tbody></tbody></table></div>
+
+  <h3>What the atlas rests on <span class="count" id="src-count"></span></h3>
+  <p>
+    One comparative document can fill forty entries in a single pass; everything else is assembled
+    a country at a time. That difference decides which parts of the map look full first, so it is
+    worth being able to see it.
+  </p>
+  <div class="regions" id="regions"></div>
+  <div class="tools">
+    <input id="src-q" class="grow" type="search" placeholder="Filter sources…" aria-label="Filter sources">
+    <select id="src-region" aria-label="Filter by region"><option value="">All regions</option></select>
+    <button data-csv="sources">Download CSV</button>
+  </div>
+  <div class="twrap"><table id="src"><thead><tr>
+    <th data-k="entries" data-num="1">Entries</th><th data-k="label">Source</th>
+    <th data-k="regionsText">Regions</th><th data-k="domainsText">Maps</th>
+  </tr></thead><tbody></tbody></table></div>
+
+  <h3>What nobody records <span class="count" id="cov-count"></span></h3>
+  <p>
+    Field by field, across every entry. The rows at the top are the ones worth reading: a question
+    almost nobody answers is a fact about what these systems publish, not only about how far the
+    atlas has got. <b>Looked</b> counts the places where somebody searched and recorded finding
+    nothing, which is why the two can be told apart at all.
+  </p>
+  <div class="tools">
+    <select id="cov-domain" aria-label="Filter by map"></select>
+    <button data-csv="coverage">Download CSV</button>
+  </div>
+  <div class="twrap"><table id="cov"><thead><tr>
+    <th data-k="label">Field</th><th data-k="has" data-num="1">Documented</th>
+    <th data-k="looked" data-num="1">Looked</th><th data-k="none" data-num="1">Blank</th><th>Share</th>
+  </tr></thead><tbody></tbody></table></div>
+
+  <h3>Taking this away</h3>
+  <p>
+    Every number here comes from <a href="/api/trends">/api/trends</a>, which returns the whole
+    computation as JSON — findings, timeline, sources and coverage — from the same live data as
+    the maps. Each table above also downloads as CSV. The entry text is
+    <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; if you use these counts,
+    please say when you took them, because they move.
+  </p>
+</main>
+
+<footer class="foot">
+  Entry text CC BY 4.0 · code <a href="https://github.com/jjgerard/language-atlas">open source</a>
+</footer>
+
+<script type="module">
+import { mountNav } from '/nav.js';
+
+const esc = s => String(s == null ? '' : s)
+  .replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const $ = s => document.querySelector(s);
+
+let T = null;
+
+// A table that filters and sorts in place. Kept deliberately small: three
+// tables share it, and each supplies its rows, its renderer and its filter.
+function table(sel, { rows, render, filter, sort }) {
+  const el = $(sel), tb = el.querySelector('tbody');
+  let sortKey = sort.k, sortDir = sort.dir, num = sort.num;
+
+  const draw = () => {
+    let out = rows().filter(filter);
+    out.sort((a, b) => {
+      const x = a[sortKey], y = b[sortKey];
+      const c = num ? (Number(y) || -Infinity) - (Number(x) || -Infinity)
+                    : String(x || '').localeCompare(String(y || ''));
+      return sortDir === 'ascending' ? -c : c;
+    });
+    tb.innerHTML = out.length ? out.map(render).join('')
+      : '<tr><td class="empty" colspan="9">Nothing matches that filter.</td></tr>';
+    el.querySelectorAll('thead th').forEach(th => {
+      if (th.dataset.k === sortKey) th.setAttribute('aria-sort', sortDir);
+      else th.removeAttribute('aria-sort');
+    });
+  };
+
+  el.querySelectorAll('thead th[data-k]').forEach(th => {
+    th.addEventListener('click', () => {
+      const k = th.dataset.k;
+      if (k === sortKey) sortDir = sortDir === 'ascending' ? 'descending' : 'ascending';
+      else { sortKey = k; num = !!th.dataset.num; sortDir = 'descending'; }
+      draw();
+    });
+  });
+  return draw;
+}
+
+function csv(name, header, rows) {
+  const q = v => `"${String(v == null ? '' : v).replace(/"/g, '""')}"`;
+  const body = [header.join(','), ...rows.map(r => r.map(q).join(','))].join('\r\n');
+  const url = URL.createObjectURL(new Blob(['﻿' + body], { type: 'text/csv;charset=utf-8' }));
+  const a = document.createElement('a');
+  a.href = url; a.download = `language-atlas-${name}-${T.generated}.csv`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function fillSelect(sel, values, label) {
+  const el = $(sel);
+  for (const v of values) {
+    const o = document.createElement('option');
+    o.value = v; o.textContent = v;
+    el.appendChild(o);
+  }
+  if (label) el.selectedIndex = 0;
+}
+
+function render() {
+  // ---- findings ----
+  $('#findings').innerHTML = T.findings.held.map(f => `
+    <div class="finding ${esc(f.scope)}">
+      <div class="scope">${f.scope === 'all' ? 'Across all three maps' : esc(scopeLabel(f.scope))}</div>
+      <p class="claim">${esc(f.text)}</p>
+      <p class="why">${esc(f.note)}</p>
+    </div>`).join('');
+
+  // A claim whose guard stopped holding is withdrawn rather than quietly
+  // reworded, and saying so is the point of having the guard.
+  const w = T.findings.withdrawn;
+  if (w.length) {
+    $('#withdrawn').hidden = false;
+    $('#withdrawn').textContent =
+      `${w.length} further ${w.length === 1 ? 'finding is' : 'findings are'} not shown because the data no longer supports ${w.length === 1 ? 'it' : 'them'}.`;
+  }
+
+  // ---- decades ----
+  const dec = T.timeline.byDecade;
+  const max = Math.max(...Object.values(dec), 1);
+  $('#decades').innerHTML = Object.keys(dec).sort().map(d => `
+    <div class="decrow">
+      <span class="lab">${esc(d)}s</span>
+      <span class="bar" style="width:${(dec[d] / max * 100).toFixed(1)}%"></span>
+      <span class="n">${dec[d]}</span>
+    </div>`).join('');
+  $('#tl-count').textContent = `${T.timeline.rows.length} changes · ${T.timeline.units} places · ${T.timeline.span[0]}–${T.timeline.span[1]}`;
+
+  // ---- region strip ----
+  const R = T.provenance.byRegion;
+  $('#regions').innerHTML = Object.entries(R).sort((a, b) => b[1].share - a[1].share).map(([k, v]) => `
+    <div class="regrow">
+      <span>${esc(k)}</span>
+      <span class="track"><i class="fill f-${esc(k)}" style="width:${v.share}%"></i></span>
+      <span class="n">${v.share}% of ${v.documented}</span>
+    </div>`).join('');
+  $('#src-count').textContent = `${T.provenance.distinct} sources · ${T.provenance.slots} entry-slots`;
+
+  // ---- timeline table ----
+  fillSelect('#tl-domain', [...new Set(T.timeline.rows.map(r => r.domainLabel))].sort());
+  fillSelect('#tl-region', [...new Set(T.timeline.rows.map(r => r.region))].sort());
+  const drawTL = table('#tl', {
+    rows: () => T.timeline.rows,
+    sort: { k: 'yearNum', dir: 'descending', num: true },
+    filter: r => {
+      const q = $('#tl-q').value.trim().toLowerCase();
+      const d = $('#tl-domain').value, g = $('#tl-region').value;
+      if (d && r.domainLabel !== d) return false;
+      if (g && r.region !== g) return false;
+      return !q || (r.unit + ' ' + r.description + ' ' + r.region).toLowerCase().includes(q);
+    },
+    render: r => `<tr><td class="yr">${esc(r.year)}</td><td class="unit">${esc(r.unit)}</td>
+      <td><span class="chip">${esc(r.region)}</span></td><td>${esc(r.domainLabel)}</td>
+      <td class="desc">${esc(r.description)}</td></tr>`,
+  });
+  ['#tl-q', '#tl-domain', '#tl-region'].forEach(s => $(s).addEventListener('input', drawTL));
+  drawTL();
+
+  // ---- sources table ----
+  const srcRows = T.provenance.sources.map(s => ({ ...s, regionsText: s.regions.join(', '), domainsText: s.domains.join(', ') }));
+  fillSelect('#src-region', [...new Set(srcRows.flatMap(s => s.regions))].sort());
+  const drawSrc = table('#src', {
+    rows: () => srcRows,
+    sort: { k: 'entries', dir: 'descending', num: true },
+    filter: s => {
+      const q = $('#src-q').value.trim().toLowerCase();
+      const g = $('#src-region').value;
+      if (g && !s.regions.includes(g)) return false;
+      return !q || s.label.toLowerCase().includes(q);
+    },
+    render: s => `<tr><td class="num">${s.entries}</td>
+      <td><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a></td>
+      <td>${s.regions.map(r => `<span class="chip">${esc(r)}</span>`).join(' ')}</td>
+      <td>${esc(s.domainsText)}</td></tr>`,
+  });
+  ['#src-q', '#src-region'].forEach(s => $(s).addEventListener('input', drawSrc));
+  drawSrc();
+
+  // ---- coverage table ----
+  const covSel = $('#cov-domain');
+  for (const [id, d] of Object.entries(T.coverage)) {
+    const o = document.createElement('option');
+    o.value = id; o.textContent = d.label;
+    covSel.appendChild(o);
+  }
+  const covRows = () => T.coverage[covSel.value].fields;
+  const drawCov = table('#cov', {
+    rows: covRows,
+    sort: { k: 'has', dir: 'ascending', num: true },
+    filter: () => true,
+    render: f => `<tr><td class="unit">${esc(f.label)}</td>
+      <td class="num">${f.has}</td><td class="num">${f.looked}</td><td class="num">${f.none}</td>
+      <td><span class="bar-thin"><i style="width:${f.share}%"></i></span></td></tr>`,
+  });
+  covSel.addEventListener('change', () => { drawCov(); setCovCount(); });
+  const setCovCount = () => { $('#cov-count').textContent = `${T.coverage[covSel.value].entries} entries`; };
+  drawCov(); setCovCount();
+
+  // ---- exports ----
+  document.querySelectorAll('[data-csv]').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.csv === 'timeline')
+      csv('changes', ['year', 'place', 'region', 'map', 'change'],
+        T.timeline.rows.map(r => [r.year, r.unit, r.region, r.domainLabel, r.description]));
+    if (b.dataset.csv === 'sources')
+      csv('sources', ['entries', 'source', 'url', 'regions', 'maps'],
+        T.provenance.sources.map(s => [s.entries, s.label, s.url, s.regions.join('; '), s.domains.join('; ')]));
+    if (b.dataset.csv === 'coverage')
+      csv('coverage-' + covSel.value, ['field', 'documented', 'looked', 'blank', 'entries'],
+        covRows().map(f => [f.label, f.has, f.looked, f.none, T.coverage[covSel.value].entries]));
+  }));
+}
+
+const scopeLabel = id => (T.coverage[id] && T.coverage[id].label) || id;
+
+mountNav(null);
+fetch('/api/trends')
+  .then(r => r.ok ? r.json() : Promise.reject(new Error('trends ' + r.status)))
+  .then(d => { T = d; render(); })
+  .catch(err => {
+    $('#findings').innerHTML = `<p class="why">The summaries could not be loaded (${esc(err.message)}). The maps themselves are unaffected.</p>`;
+  });
+</script>

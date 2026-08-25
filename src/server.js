@@ -14,6 +14,7 @@ const express = require('express');
 const session = require('express-session');
 const { byId, LIVE } = require('./domains');
 const { getPayload, refresh, invalidate, REFRESH_MS } = require('./catalog');
+const { computeTrends } = require('./trends');
 const store = require('./store');
 const { syncDomain, configured: gitConfigured } = require('./gitStore');
 const mail = require('./mailer');
@@ -57,6 +58,21 @@ app.get('/api/atlas', async (req, res) => {
     res.json(payload);
   } catch (err) {
     console.error('[atlas]', err);
+    res.status(503).json({ error: 'catalog_unavailable', detail: String(err.message || err) });
+  }
+});
+
+// The cross-cutting summaries. Same derived payload as /api/atlas, so an
+// approved submission shows up in the trends without a rebuild — and served as
+// its own endpoint because the researcher-facing use of this page is to take
+// the numbers away, not to read them here.
+app.get('/api/trends', async (req, res) => {
+  try {
+    const payload = await getPayload();
+    res.set('Cache-Control', 'public, max-age=60');
+    res.json(computeTrends(payload));
+  } catch (err) {
+    console.error('[trends]', err);
     res.status(503).json({ error: 'catalog_unavailable', detail: String(err.message || err) });
   }
 });
@@ -263,6 +279,7 @@ const page = name => (req, res) => res.sendFile(path.join(__dirname, '..', 'publ
 
 app.get('/', page('index.html'));
 app.get('/about', page('about.html'));
+app.get('/patterns', page('patterns.html'));
 app.get('/submit', page('submit.html'));
 app.get('/admin', page('admin.html'));
 for (const d of LIVE) app.get('/' + d.id, page('map.html'));
