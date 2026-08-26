@@ -201,10 +201,13 @@ so one arriving while mail was misconfigured was simply gone.
 
 ## Shading, hover, click
 
-Shading answers one question: **is anything documented here?** Region hue when
-yes, grey when no, hatched grey for "looked, found nothing". There is no field
-selector — hue is the world region so neighbours stay apart, and it carries no
-judgement about the policy.
+Shading answers one question: **how much of this place's record is filled in?**
+A five-step ramp when something is documented, grey when nothing is, hatched
+grey for "looked, found nothing". There is no field selector.
+
+It used to answer only *is anything here at all*, with hue standing for the
+world region. That made a country with one sourced sentence and a country with
+eleven look identical, so the map could not show its own biggest weakness.
 
 **Hover** lists every field with a filled or hollow marker, so you can see what
 the entry has and what it is missing without opening it. **Click** opens the
@@ -216,14 +219,48 @@ that country.
 
 | Fill | Meaning |
 | --- | --- |
-| Region hue, full saturation | Documented |
+| Coverage ramp, five steps | Documented — the step is the share of fields filled |
 | Grey with diagonal hatching | Looked, found nothing |
 | Flat grey | Nothing recorded |
-| Country's hue, dashed border | Nothing of its own — follows its country |
+| Ramp colour, dashed border | Nothing of its own — follows its country |
 
-Hue is the **world region**, not a score — it exists so neighbouring countries
-stay distinguishable, and it carries no judgement about the policy. Saturation
-is the only channel carrying information about coverage.
+The ramp measures **what we know**, not how good the policy is. A pale country
+may have an excellent system that nobody has written down here yet.
+
+The step is computed per unit against its own domain, because domains have
+different field counts (fl 11, dld 13, eal 9). Step 1 starts above zero: a unit
+with nothing documented is `--nodata`, never the palest step.
+
+### Why this palette, and what not to break
+
+Two properties make it safe for colour-vision deficiency, and both are
+load-bearing:
+
+- **Hue runs teal to blue and never touches the red-green axis**, so protanopes
+  and deuteranopes see the same progression as everyone else.
+- **Lightness is monotonic across the five steps** — about 12-16 L\* apart. That
+  is what carries the ramp for anyone who cannot separate the hues at all,
+  including in monochromacy and on a photocopy.
+
+Simulating dichromacy (Viénot, Brettel & Mollon 1999), the closest adjacent pair
+is 12.2 ΔE, and every pair clears 12 on all of normal, protan, deutan and tritan
+vision.
+
+`--nodata` is part of this and was moved for it. It used to sit at almost
+exactly the lightness of `--cov-1` and differ only in chroma — which is the one
+thing colour deficiency removes. Simulated deuteranopia put "nothing recorded"
+and "barely documented" **3.7 ΔE** apart, and those two mean opposite things.
+The separation now runs through lightness instead, at 12.8 ΔE or better.
+
+If you change any of these values, re-run the check before committing:
+
+```bash
+node check-palette.js
+```
+
+It parses the values out of `public/shared.css` rather than keeping its own
+copy, so it cannot drift into checking a palette the site no longer uses. It
+exits non-zero on failure.
 
 ## Markers for small units
 

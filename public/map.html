@@ -155,7 +155,7 @@
   border: 1px solid var(--hair-strong); background: transparent;
 }
 .fieldgrid span.on { color: var(--ink); }
-.fieldgrid span.on::before { background: var(--mark, var(--r-europe)); border-color: var(--mark, var(--r-europe)); }
+.fieldgrid span.on::before { background: var(--mark, var(--cov-3)); border-color: var(--mark, var(--cov-3)); }
 .fieldgrid span.looked { color: var(--ink-soft); }
 .fieldgrid span.looked::before { background: var(--hatch-line); border-color: var(--hatch-line); opacity: .55; }
 
@@ -175,7 +175,7 @@
   border: 1px solid var(--hair-strong);
 }
 .field.on h4 { color: var(--ink-soft); }
-.field.on h4::before { background: var(--mark, var(--r-europe)); border-color: var(--mark, var(--r-europe)); }
+.field.on h4::before { background: var(--mark, var(--cov-3)); border-color: var(--mark, var(--cov-3)); }
 .field.looked h4::before { background: var(--hatch-line); border-color: var(--hatch-line); opacity: .55; }
 .field p {
   margin: 0; font-size: 13.5px; line-height: 1.58; white-space: pre-line;
@@ -469,16 +469,15 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
       <div class="legend">
         <h2 class="eyebrow">Fill</h2>
         <div class="rows">
-          <div class="row"><span class="sw" id="sw-has"></span> Documented</div>
           <div class="row"><span class="sw" id="sw-looked"></span> Looked, found nothing</div>
           <div class="row"><span class="sw" id="sw-none"></span> Nothing recorded</div>
           <div class="row"><span class="sw" id="sw-inh"></span> Follows its country</div>
         </div>
-        <div class="hues" id="hues"></div>
+        <div class="hues" id="hues" role="img" aria-label="Colour ramp: share of fields documented, from a fifth or less to nearly all"></div>
         <div class="hueslabels">
-          <span>Africa</span><span>Americas</span><span>Asia</span><span>Europe</span><span>Oceania</span>
+          <span>20%</span><span>40%</span><span>60%</span><span>80%</span><span>100%</span>
         </div>
-        <p class="note">Hue is the world region, so neighbours stay apart. It carries no judgement about the policy.</p>
+        <p class="note">Colour is the share of this map's fields that have content, not a judgement about the policy. Paler means we know less, not that the system does less.</p>
       </div>
     </div>
 
@@ -574,11 +573,6 @@ function project(lon, lat) {
   return [0.8487 * x * lon * Math.PI / 180 * K, -1.3523 * y * (lat < 0 ? -1 : 1) * K];
 }
 
-const REGION_VAR = {
-  Africa: '--r-africa', Americas: '--r-americas', Asia: '--r-asia',
-  Europe: '--r-europe', Oceania: '--r-oceania',
-};
-const cssvar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 
 /* ---------- state ---------- */
 const LIVE = B.domains.filter(d => d.live);
@@ -615,14 +609,47 @@ for (const d of LIVE) {
   IDX[d.id] = { byKey, byCC, owner };
 }
 
-/* Shading answers one question only: is anything documented here?
-   Which fields are and are not filled is the hover's job, and the full
-   text is the panel's. */
+/* Shading answers one question: HOW MUCH of this unit's record is filled in.
+   It used to answer only "is anything here at all", with hue standing for the
+   world region — which meant a country with one sourced sentence and a country
+   with eleven looked identical, and the map's own biggest weakness was the one
+   thing it could not show.
+
+   The ramp is five steps of the share of that domain's fields with content.
+   Domains have different field counts (fl 11, dld 13, eal 9), so the share is
+   computed per unit against its own domain rather than against a fixed number.
+
+   Bucket 1 starts ABOVE zero on purpose: a unit with nothing documented is not
+   the palest step of the ramp, it is --nodata, and a unit that was searched and
+   came back empty is the hatch. Three states, still never conflated. */
 function stateOf(u) { return u.coverage; }
-const hueOf = u => cssvar(REGION_VAR[u.region] || '--r-europe');
+
+const COV_STEPS = 5;
+/* Share of fields with content, 0..1. nFields is per-domain and never zero,
+   but the guard costs nothing and a divide-by-zero here would paint the whole
+   map one colour without ever throwing. */
+function covRatio(u) {
+  const n = u && u.nFields ? u.nFields : 0;
+  return n ? (u.filled ? u.filled.length : 0) / n : 0;
+}
+/* 1..5. Anything documented is at least 1, so the ramp's low step always means
+   "a little" and never "none". */
+function covStep(u) {
+  const r = covRatio(u);
+  if (r <= 0) return 1;
+  return Math.min(COV_STEPS, Math.ceil(r * COV_STEPS));
+}
+const covVar = u => `--cov-${covStep(u)}`;
+/* Returns var(--cov-N), NOT a resolved hex. Anything written into an inline
+   style must stay a var() reference: these are painted once at load, and a
+   frozen hex silently keeps the old theme's colour when the reader switches
+   between light and dark — which showed up as a legend contradicting the map
+   it explains. */
+const hueOf = u => `var(${covVar(u)})`;
+
 function fillFor(u, st) {
   if (!u) return 'var(--nodata)';
-  if (st === 'has') return `var(${REGION_VAR[u.region] || '--r-europe'})`;
+  if (st === 'has') return `var(${covVar(u)})`;
   if (st === 'looked') return 'url(#hatch)';
   return 'var(--nodata)';
 }
@@ -821,14 +848,17 @@ function paintTally() {
   for (const u of units) c[stateOf(u)]++;
   const bar = document.getElementById('tally');
   bar.innerHTML = '';
-  const order = [['has', 'var(--r-europe)'], ['looked', 'url(#hatch)'], ['none', 'var(--nodata)']];
+  // 'has' spans the whole ramp now, so the segment shows the ramp rather than
+  // picking one arbitrary step to stand for every documented unit.
+  const ramp = 'linear-gradient(90deg, var(--cov-1), var(--cov-3), var(--cov-5))';
+  const order = [['has', ramp], ['looked', 'url(#hatch)'], ['none', 'var(--nodata)']];
   for (const [k, col] of order) {
     if (!c[k]) continue;
     const d = document.createElement('div');
     d.className = 'seg';
     d.style.flex = c[k];
     d.style.background = k === 'looked'
-      ? `repeating-linear-gradient(45deg, ${cssvar('--hatch-bg')} 0 3px, ${cssvar('--hatch-line')} 3px 4px)`
+      ? 'repeating-linear-gradient(45deg, var(--hatch-bg) 0 3px, var(--hatch-line) 3px 4px)'
       : col;
     d.title = `${STATE_LABEL[k]}: ${c[k]}`;
     bar.appendChild(d);
@@ -1147,9 +1177,9 @@ function linkCitations(escapedText, entry) {
   return escapedText.replace(NARRATIVE_RE, wrap).replace(PARENTHETICAL_RE, wrap);
 }
 const swatch = (u, st) => {
-  if (st === 'has') return `<span class="sw" style="background:${cssvar(REGION_VAR[u.region] || '--r-europe')}"></span>`;
-  if (st === 'looked') return `<span class="sw" style="background:repeating-linear-gradient(45deg,${cssvar('--hatch-bg')} 0 3px,${cssvar('--hatch-line')} 3px 4px)"></span>`;
-  return `<span class="sw" style="background:${cssvar('--nodata')}"></span>`;
+  if (st === 'has') return `<span class="sw" style="background:var(${covVar(u)})"></span>`;
+  if (st === 'looked') return `<span class="sw" style="background:repeating-linear-gradient(45deg,var(--hatch-bg) 0 3px,var(--hatch-line) 3px 4px)"></span>`;
+  return `<span class="sw" style="background:var(--nodata)"></span>`;
 };
 
 function fieldMarks(u, d) {
@@ -1416,18 +1446,16 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') { closePanel
 
 /* legend swatches */
 function paintLegend() {
-  document.getElementById('sw-has').style.background =
-    `linear-gradient(90deg, ${cssvar('--r-africa')}, ${cssvar('--r-americas')}, ${cssvar('--r-asia')}, ${cssvar('--r-europe')}, ${cssvar('--r-oceania')})`;
   document.getElementById('sw-looked').style.background =
-    `repeating-linear-gradient(45deg, ${cssvar('--hatch-bg')} 0 3px, ${cssvar('--hatch-line')} 3px 4px)`;
-  document.getElementById('sw-none').style.background = cssvar('--nodata');
+    'repeating-linear-gradient(45deg, var(--hatch-bg) 0 3px, var(--hatch-line) 3px 4px)';
+  document.getElementById('sw-none').style.background = 'var(--nodata)';
   const inh = document.getElementById('sw-inh');
-  inh.style.background = cssvar('--r-europe');
+  inh.style.background = 'var(--cov-3)';
   inh.style.borderStyle = 'dashed';
-  inh.style.borderColor = cssvar('--surface');
+  inh.style.borderColor = 'var(--surface)';
   const hues = document.getElementById('hues');
-  hues.innerHTML = ['--r-africa', '--r-americas', '--r-asia', '--r-europe', '--r-oceania']
-    .map(v => `<span style="background:${cssvar(v)}"></span>`).join('');
+  hues.innerHTML = Array.from({ length: COV_STEPS }, (_, i) =>
+    `<span style="background:var(--cov-${i + 1})"></span>`).join('');
 }
 
 buildDomains(); paint(); sizeMap(); applyView(); paintLegend();

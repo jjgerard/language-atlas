@@ -3,8 +3,9 @@
 
 /* ---------------------------------------------------------------
    Palette: the muted inks of a printed thematic atlas plate.
-   Region hue carries WHICH part of the world; fill state carries
-   WHETHER anything is documented. Two variables, never conflated.
+   The map's fill carries HOW COMPLETE a unit's record is, on the
+   five-step --cov ramp below. Region hues survive because the rest
+   of the site still groups by region; the map no longer uses them.
    --------------------------------------------------------------- */
 :root {
   --ground:      #E4E9EE;   /* sea — a cool paper, biased toward the lapis accent */
@@ -18,7 +19,9 @@
   --hair-strong: #9DAAB6;
   --focus:       #3F5BA9;
 
-  --nodata:      #C4CDD5;   /* nothing recorded */
+  --nodata:      #A1A6AB;   /* nothing recorded — 14 dE from --cov-1 under
+                               simulated protanopia and deuteranopia, where the
+                               old #C4CDD5 was 3.7 and read as "documented" */
   --hatch-bg:    #CFD7DE;   /* looked, found nothing */
   --hatch-line:  #8E9BA7;
 
@@ -27,6 +30,31 @@
   --r-asia:     #93548F;
   --r-europe:   #3F5BA9;
   --r-oceania:  #B5455F;
+
+  /* Coverage ramp: how much of a unit's record is filled in, in five steps.
+     Two properties make it safe for colour-vision deficiency, and both are
+     load-bearing rather than decorative.
+
+     First, the hue runs teal to blue and never touches the red-green axis, so
+     protanopes and deuteranopes — between them almost everyone with a colour
+     deficiency — see the same progression everyone else does.
+
+     Second, and more important, LIGHTNESS is monotonic across the five steps.
+     Anyone who cannot separate the hues at all, including in full monochromacy
+     and on a photocopy, still reads the ramp correctly, because each step is
+     about fourteen L* from its neighbours. Never reorder these values or insert
+     a step without re-checking that lightness still climbs.
+
+     The dark theme keeps the same HUE order — teal at the low end, blue at the
+     high end — but runs lightness the other way, because "more documented"
+     must always mean "more contrast against the ground", and the ground flips.
+     Each theme carries its own legend ramp, so the direction is never ambiguous
+     to a reader looking at one of them. */
+  --cov-1: #A9D9CE;
+  --cov-2: #6FBCC0;
+  --cov-3: #3F92AE;
+  --cov-4: #2C639A;
+  --cov-5: #1E3A6B;
 
   --shadow: 0 1px 2px rgba(16,24,32,.08), 0 8px 24px -8px rgba(16,24,32,.18);
 }
@@ -43,7 +71,7 @@
     --hair-strong: #3E4E5A;
     --focus:       #8AA3E8;
 
-    --nodata:      #2B3742;
+    --nodata:      #282D30;   /* darker than --cov-1, not merely greyer */
     --hatch-bg:    #2B3742;
     --hatch-line:  #566673;
 
@@ -52,6 +80,15 @@
     --r-asia:     #C07ABB;
     --r-europe:   #7E9AE8;
     --r-oceania:  #E4738C;
+
+    /* Same hue order as the light ramp — teal at the low end, blue at the high
+       end — but lightness climbs instead of falling, so "more documented" still
+       means "more contrast against the ground" now that the ground is dark. */
+    --cov-1: #1B4E51;
+    --cov-2: #2D6F77;
+    --cov-3: #3392A6;
+    --cov-4: #69AED3;
+    --cov-5: #A9CAED;
 
     --shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 30px -10px rgba(0,0,0,.7);
   }
@@ -68,7 +105,7 @@
   --hair-strong: #3E4E5A;
   --focus:       #8AA3E8;
 
-  --nodata:      #2B3742;
+  --nodata:      #282D30;   /* darker than --cov-1, not merely greyer */
   --hatch-bg:    #2B3742;
   --hatch-line:  #566673;
 
@@ -77,6 +114,15 @@
   --r-asia:     #C07ABB;
   --r-europe:   #7E9AE8;
   --r-oceania:  #E4738C;
+
+  /* Same hue order as the light ramp — teal at the low end, blue at the high
+     end — but lightness climbs instead of falling, so "more documented" still
+     means "more contrast against the ground" now that the ground is dark. */
+  --cov-1: #1B4E51;
+  --cov-2: #2D6F77;
+  --cov-3: #3392A6;
+  --cov-4: #69AED3;
+  --cov-5: #A9CAED;
 
   --shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 30px -10px rgba(0,0,0,.7);
 }

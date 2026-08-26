@@ -35,10 +35,10 @@ main strong { font-weight: 600; }
 .keys { display: grid; gap: 9px; margin: 0 0 16px; }
 .keyrow { display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: start; font-size: 14.5px; }
 .keyrow .sw { width: 24px; height: 15px; border-radius: 3px; border: 1px solid var(--hair-strong); margin-top: 3px; }
-.sw.has { background: linear-gradient(90deg, var(--r-africa), var(--r-americas), var(--r-asia), var(--r-europe), var(--r-oceania)); }
+.sw.has { background: linear-gradient(90deg, var(--cov-1), var(--cov-2), var(--cov-3), var(--cov-4), var(--cov-5)); }
 .sw.looked { background-color: var(--hatch-bg); background-image: repeating-linear-gradient(45deg, transparent 0 3px, var(--hatch-line) 3px 4px); }
 .sw.none { background: var(--nodata); }
-.sw.inh { background: var(--r-europe); border-style: dashed; border-color: var(--surface); outline: 1px solid var(--hair-strong); }
+.sw.inh { background: var(--cov-3); border-style: dashed; border-color: var(--surface); outline: 1px solid var(--hair-strong); }
 
 blockquote.note {
   margin: 0 0 16px; padding: 12px 15px; font-size: 14px; line-height: 1.6;
@@ -144,7 +144,7 @@ footer.foot a { color: var(--ink-soft); }
 
   <h3>Reading the map</h3>
   <div class="keys">
-    <div class="keyrow"><span class="sw has"></span><span><strong>Documented.</strong> Something is on record for this place. The hue is only its world region, so neighbours stay apart — it carries no judgement about the policy.</span></div>
+    <div class="keyrow"><span class="sw has"></span><span><strong>Documented.</strong> Something is on record for this place, and the colour says how much: the ramp runs from a fifth of this map&rsquo;s fields filled to nearly all of them. It measures what we know, not how good the policy is — a pale country may have an excellent system nobody has written down here yet.</span></div>
     <div class="keyrow"><span class="sw looked"></span><span><strong>Looked, found nothing.</strong> Someone searched and recorded that they found nothing, and where they looked. This is not the same as nobody having tried.</span></div>
     <div class="keyrow"><span class="sw none"></span><span><strong>Nothing recorded.</strong> Nobody has documented this place for this subject yet.</span></div>
     <div class="keyrow"><span class="sw inh"></span><span><strong>Follows its country.</strong> A region with nothing of its own for this subject, showing what its country records instead.</span></div>
