@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Language Atlas">
+  <!--
+    A globe banded in the map's own coverage ramp: pale at the top, deep at the
+    bottom. The colours are the cov ramp from shared.css, hardcoded because a
+    favicon is a separate document and never sees the page's custom properties.
+
+    Designed at 16px and checked there against both a light and a dark tab
+    strip, which settled two things a larger view had hidden.
+
+    FOUR BANDS, NOT FIVE. Five steps of a ramp built for country-sized areas
+    turn to mud in a 16-pixel circle; four hold their edges.
+
+    NO GRATICULE. A meridian and equator make it read as a globe at 64px and as
+    dirt at 16px, which is the size that matters. The banding alone still says
+    sphere, because the eye reads a light-to-dark vertical gradient in a circle
+    as curvature.
+
+    The rim is stroked INSIDE the clip. Outside it, half its width falls beyond
+    the disc and blends with whatever sits behind the tab, which reads as a
+    fuzzy grey halo rather than an edge.
+
+    Note for anyone editing these comments: a double hyphen is illegal inside an
+    XML comment and makes the file fail to parse. The first draft named the CSS
+    variables literally and rendered as a browser error page.
+  -->
+  <defs>
+    <clipPath id="globe"><circle cx="16" cy="16" r="14"/></clipPath>
+  </defs>
+  <g clip-path="url(#globe)">
+    <rect x="0" y="0"  width="32" height="8" fill="#C7E7DF"/>
+    <rect x="0" y="8"  width="32" height="8" fill="#6FBCC0"/>
+    <rect x="0" y="16" width="32" height="8" fill="#3F92AE"/>
+    <rect x="0" y="24" width="32" height="8" fill="#1E3A6B"/>
+    <circle cx="16" cy="16" r="14" fill="none" stroke="#0E1B2E" stroke-opacity=".75" stroke-width="2.5"/>
+  </g>
+</svg>
