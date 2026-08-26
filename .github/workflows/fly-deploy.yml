@@ -5,6 +5,11 @@ on:
   push:
     branches:
       - main
+  # A push to main sometimes fails to create a run at GitHub's end — it happened
+  # on the commit that added the fourth map, which sat on origin/main for ten
+  # minutes with no run against it. Without a manual trigger the only recourse
+  # is an empty commit, so this exists to make a re-run one command.
+  workflow_dispatch:
 jobs:
   deploy:
     name: Deploy app
