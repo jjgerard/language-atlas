@@ -1322,30 +1322,48 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ley 070 de la Educación “Avelino Siñani - Elizardo Pérez” (2010), arts. 7, 25-27",
+    "url": "https://www.minedu.gob.bo/files/documentos-normativos/normativa/LEY-070-Ley-de-la-Educacion.pdf"
+   },
+   {
+    "label": "UNESCO PEER, Bolivia (Plurinational State of) — inclusion profile (platform archived; profiles no longer updated)",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/bolivia-plurinational-states-of/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "No speech, language or communication category exists in Bolivian education law\nLey 070/2010 uses dificultades en el aprendizaje as the nearest category\nTerm count in Ley 070: fonoaudiolog 0, logoped 0, lenguaje 2, both sign language\nSame count in Ley 223/2012 on disability: fonoaudiolog 0, habla 0",
   "identificationCriteria": "",
   "assessments": "",
-  "multilingualProvision": "",
-  "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "multilingualProvision": "Ley 070 Art. 7 requires schooling to begin in the mother tongue\nIn indigenous-majority communities the native language is L1 and Spanish L2\nIn Spanish-majority communities Spanish is L1 and the native language L2\nSign language teaching is a right and part of all teachers' plurilingual training",
+  "referralPathway": "No language-specific referral route found in Ley 070 or Ley 223\nRM 001/2020 requires dual enrolment in a mainstream and a special education centre\nA technical and pedagogical support teacher is assigned at the special centre",
+  "serviceModel": "Art. 27 places support in centros integrales multisectoriales\nProgrammes run valoracion, deteccion, asesoramiento and atencion directa\nThe direct modality serves disabled pupils, the indirect one mainstream inclusion\nPEER cites 178 public and 35 private special education centres at January 2020",
+  "legalEntitlement": "Ley 070/2010 Art. 25 frames Educacion Especial as a subsystem, not a right\nArt. 26 names three areas: disability, learning difficulty, extraordinary talent\nNo entitlement attaches to a language disorder as such",
   "funding": "",
   "workforce": "",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2010,
+    "description": "Ley 070 creates Educacion Especial as a subsystem with three named areas"
+   },
+   {
+    "year": 2012,
+    "description": "Ley 223 on disability enacted, naming no speech or language category"
+   }
+  ]
  },
  {
   "countryCode": "BR",
@@ -3541,30 +3559,48 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Central America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ley 7600 de Igualdad de Oportunidades para las Personas con Discapacidad (1996), arts. 14-22",
+    "url": "https://www.oas.org/juridico/spanish/mesicic2_cri_ley_7600.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "The regulated profession is terapia del lenguaje, licensed under Ley 8989\nColegio scope covers habla, lenguaje, voz, fluidez and deglucion\nLey 7600 itself never names speech or language, only servicios de apoyo\nTerm count on the Ley 7600 text: fonoaudiolog 0, habla 0, terapia 0",
+  "identificationCriteria": "School staff define the provisions, taking specialist technical advice\nNo statutory panel or external gatekeeper is named in Ley 7600",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "",
+  "referralPathway": "Parents have a statutory right to take part in selection and placement\nNo language-specific referral route is set out in the statute",
   "serviceModel": "",
-  "legalEntitlement": "",
-  "funding": "",
-  "workforce": "",
+  "legalEntitlement": "Ley 7600 Art. 18: SEN pupils may be educated in the regular system with support\nArt. 17 obliges schools to make adaptations and provide support services\nSupport services expressly include recursos humanos especializados\nArt. 14 guarantees access from early stimulation through to higher education",
+  "funding": "Ley 7600 Art. 22 places the funding duty on the Ministerio de Educacion Publica",
+  "workforce": "No headcount published: the public listing is an opt-in directory, not a register\nThe Colegio de Terapeutas is a public non-state body created by Ley 8989 of 2011\nTerapia del Lenguaje is one of six regulated areas it licenses\nThe training route dates from June 1994 at Universidad Autonoma de Centroamerica",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 1994,
+    "description": "Terapia del Lenguaje degree established at Universidad Autonoma de Centroamerica"
+   },
+   {
+    "year": 1996,
+    "description": "Ley 7600 creates the servicios de apoyo entitlement in education"
+   },
+   {
+    "year": 2011,
+    "description": "Ley 8989 creates the Colegio de Terapeutas, licensing terapia del lenguaje"
+   }
+  ]
  },
  {
   "countryCode": "CU",
@@ -4127,30 +4163,44 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO PEER, Ecuador — inclusion profile (platform archived; profiles no longer updated)",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/ecuador/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "Umbrella term is necesidades educativas especiales, with no language category\nThe ministry definition names a cultural or linguistic cause, meaning disadvantage\nPEER profile has zero hits for speech, language disorder or language therapy\nSpecialized education is a distinct legal category under 2018 regulations",
+  "identificationCriteria": "Ley Organica de Discapacidades 2012 requires assessment before special placement\nAssessment must be requested or approved by the parent or legal representative\nIt is carried out by a multidisciplinary team specialising in disability",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "referralPathway": "140 District Inclusion Support Units, the UDAI, assess and route pupils\nUDAI decide between specialised education and ordinary inclusive education\nNo language-specific referral route was found",
+  "serviceModel": "An Under-Secretariat of Specialized and Inclusive Education runs the system\nArt. 28 allows specialised temporary or permanent staff\nIt also allows communication and learning-space accessibility adaptations\nA National Centre for Educational Resources for Diversity supplies materials",
+  "legalEntitlement": "LOEI 2011 and Ley Organica de Discapacidades 2012 are the entitling statutes\nSpecial placement is permitted only where mainstream cannot accommodate the pupil",
   "funding": "",
   "workforce": "",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2011,
+    "description": "Ley Organica de Educacion Intercultural (LOEI) enacted"
+   },
+   {
+    "year": 2012,
+    "description": "Ley Organica de Discapacidades sets the assessment requirement"
+   }
+  ]
  },
  {
   "countryCode": "EE",
@@ -5305,25 +5355,30 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO PEER, Guyana — inclusion profile (platform archived; profiles no longer updated)",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/guyana/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "Anglophone-Caribbean vocabulary applies: the term is special education needs\nThe 2014 Education Bill names persons mute, deaf, blind or otherwise challenged\nNo developmental language disorder category exists in Guyanese education law\nEntitlement hangs on the word communicative in the chief education officer's duty",
+  "identificationCriteria": "The school principal decides, with professional staff and the parent\nMultidisciplinary assessment is required only if possible\nWritten parental consent is required before any assessment",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "",
+  "referralPathway": "School Health Unit screening is the main identification route\nA Special Education Unit sits within NCERD and sets policy\nA national special education needs coordinator sits in the central ministry\nParents have a right of appeal to the minister",
   "serviceModel": "",
-  "legalEntitlement": "",
-  "funding": "",
+  "legalEntitlement": "Caveat: PEER calls the 2014 instrument a Bill, and enactment was not verified\nThe chief education officer must provide a programme for eligible pupils\nEligibility covers intellectual, communicative, behavioural or physical attributes\nDelivery must be in the least restrictive environment that resources permit",
+  "funding": "Unusual in this region: the cost of an individual education plan is shared\nIt is apportioned between the parents and the ministry",
   "workforce": "",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -9725,30 +9780,48 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ley 1264/1998 General de Educación (Paraguay), arts. 31, 80-84",
+    "url": "https://www.bacn.gov.py/leyes-paraguayas/2404/ley-n-1264-general-de-educacion"
+   },
+   {
+    "label": "UNESCO PEER, Paraguay — inclusion profile (platform archived; profiles no longer updated)",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/paraguay/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "Ley 1264/1998 Art. 80 names trastornos de lenguaje as a statutory SEN category\nIt sits alongside superdotados, dificultades de aprendizaje, trastornos de conducta\nThe later Ley 5136/2013 drops the term for necesidades especificas de apoyo\nThe 2013 list names specific learning disorders but not language disorder",
+  "identificationCriteria": "Art. 31 requires early-years prevention and early-detection assessment\nThat duty names intellectual level and sensory impairment, not language\nArt. 84 makes early diagnosis and treatment an explicit government duty",
   "assessments": "",
-  "multilingualProvision": "",
+  "multilingualProvision": "Art. 31: teaching is in the pupil's official mother tongue from first grade\nThe other official language is taught from the start as a second language\nGuarani and Spanish are both official and the rule is symmetrical between them",
   "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "serviceModel": "Special-education content and assessment are approved by the MEC under Art. 82\nInclusion support centres replace special schools under the 2018-2023 plan\nAround 70 special schools and centres existed in 2014\nEradicating special schools is a stated goal of the inclusive education directorate",
+  "legalEntitlement": "Art. 80 obliges the state to guarantee formacion basica for the named groups\nArt. 81 requires integrated placement in mainstream schools where possible\nLey 5136/2013 extends the duty to public, private and subsidised institutions",
   "funding": "",
-  "workforce": "",
+  "workforce": "Art. 83 requires specialised training for teachers in this modality\nNo fonoaudiologo or terapeuta del lenguaje is named in the statute, term count 0",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 1998,
+    "description": "Ley 1264 Art. 80 names trastornos de lenguaje as a special-needs category"
+   },
+   {
+    "year": 2013,
+    "description": "Ley 5136 on inclusive education replaces that list, dropping the term"
+   }
+  ]
  },
  {
   "countryCode": "QA",
@@ -10519,30 +10592,40 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO PEER, Suriname — inclusion profile (platform archived; profiles no longer updated)",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/suriname/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "Suriname has no inclusive education law and no official definition\nThe 2008 special-education report lists handicaps and behaviour, not language\nDutch logopedie is the term that would apply, and it is absent from policy",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "referralPathway": "Very limited national capacity for early detection of disabilities\nNo referral route specific to speech or language was located",
+  "serviceModel": "The Pedologisch Instituut implements special education programmes nationally\nA Health Care Network for Special Education supports pupils who need it\nSpecial schools are concentrated in Paramaribo, 18 of them; five districts have none\nNo school-based speech and language service was found",
+  "legalEntitlement": "No statutory entitlement: PEER finds no law or policy on inclusive education\nThe 1987 Constitution Art. 39 guarantees free primary education only\nSuriname ratified the CRPD on 29 March 2017",
   "funding": "",
-  "workforce": "",
+  "workforce": "Speech therapists sit on the 2004 National Advisory Board on disability policy\nThat is a policy body, not a school service; no register or headcount was found\nCRC reporting in 2014 found most service providers inadequately trained",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2017,
+    "description": "Suriname ratifies the Convention on the Rights of Persons with Disabilities"
+   }
+  ]
  },
  {
   "countryCode": "SS",
@@ -10622,30 +10705,44 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Central America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO PEER, El Salvador — inclusion profile (platform archived; profiles no longer updated)",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/el-salvador/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "Umbrella term is educacion especial for pupils with special educational needs\nNo speech, language or communication category appears in national policy\nTerm count on the national inclusion profile: speech 0, language disorder 0\nLey General de Educacion defines special education by method, not by category",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "serviceModel": "A Full Time Inclusive School Model was formalised in 2009 after a 2005 pilot\nA Department of Inclusive Education sits inside the Ministry of Education\nA deputy directorate for the full-time inclusive system was created in 2012\nThe target is 351 full-time integrated inclusive systems between 2016 and 2026",
+  "legalEntitlement": "Special education is free of charge when provided by the state\nThe 2009 child protection law makes special education free alongside other stages\nPlacement is in specialised institutions or mainstream centres as needs require",
   "funding": "",
-  "workforce": "",
+  "workforce": "No speech and language therapist role appears in national education policy\nThe ministry has 600 inclusion support teachers for 5,100 public schools\nThose teachers serve more than 8,000 pupils with disabilities",
   "dischargeCriteria": "",
-  "outcomesEvidence": "",
+  "outcomesEvidence": "No language-specific figure exists and none can be derived from the school census\n18 per cent of disability registrations do not specify the type of disability\n2014 school census: 85 per cent of disabled children are in mainstream schools",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2009,
+    "description": "Full Time Inclusive School Model formalised after a 2005 pilot"
+   },
+   {
+    "year": 2012,
+    "description": "Deputy directorate for the full-time inclusive school system created"
+   }
+  ]
  },
  {
   "countryCode": "SY",
@@ -13526,30 +13623,48 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO PEER, Venezuela (Bolivarian Republic of) — inclusion profile (platform archived; profiles no longer updated)",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/venezuela-bolivarian-republic-of/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
-  "identificationCriteria": "",
+  "terminology": "Trastornos de lenguaje is one of nine areas de atencion set by a 1976 policy\nSpecialist training pairs it with hearing, as Deficiencias Auditivas y Lenguaje\nThe 1976 policy expressly rejects aetiological categories for a functional profile\nLater instruments use necesidades educativas especiales with no language sub-category",
+  "identificationCriteria": "Assessment is educational and psychological, producing a functional profile\nThe stated aim is to stop diagnostic labels prejudicing educational intervention\nPlacement decisions require a multidisciplinary team",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "referralPathway": "Centres for diagnosis, guidance and monitoring of disability created in 2011\nAn interdisciplinary group evaluates the pupil at these centres\n153 centres nationwide by 2015, against a stated target of 335",
+  "serviceModel": "Special education runs as a modalidad parallel to the basic education subsystem\nA 2011 reform converted special schools into Bolivarian and technical schools\nThe 2013 school inventory lists no school type for language",
+  "legalEntitlement": "Resolucion 2005 of 1996 obliges all schools to admit and retain SEN pupils\nLey para Personas con Discapacidad 2007 Art. 16 gives a right to attend\nArt. 20 guarantees deaf pupils bilingual education in sign language and Spanish",
   "funding": "",
-  "workforce": "",
+  "workforce": "Specialist teachers, not therapists, are the trained workforce named in policy\nTraining began in September 1976 at the Instituto Pedagogico de Caracas",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 1976,
+    "description": "Conceptualizacion y Politica names trastornos de lenguaje an area de atencion"
+   },
+   {
+    "year": 1996,
+    "description": "Resolucion 2005 obliges all schools to admit and retain SEN pupils"
+   },
+   {
+    "year": 2007,
+    "description": "Ley para Personas con Discapacidad Art. 16 gives a right of attendance"
+   }
+  ]
  },
  {
   "countryCode": "VN",
