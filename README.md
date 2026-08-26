@@ -122,21 +122,37 @@ the Docker image does not need the Natural Earth downloads.
 
 ## What is real
 
-- **All 213 majority-language (EAL) units and 216 language-disorder (DLD)
-  units**, imported from the two trackers. 4,725 field values were compared
-  against the live catalogs after the move, with no differences; doc links,
-  collaborators, support links and the policy-history link counts all match.
-- **216 foreign-languages-in-school units**, held here. Every one is a stub:
-  the seed is the same list of places the other two map, with no policy text
-  invented for any of them. The map is entirely grey until someone writes it,
-  which is the honest starting state.
-- **Coverage** is computed with the same rule the catalogues use — the
-  `hasContent()` / `NOT_DOCUMENTED_RE` pair. A field beginning "Not established
-  from the sources consulted…" counts as *looked, found nothing*, never as
-  coverage.
-- **Sub-national units** for the five countries that have them: England,
-  Scotland, Wales and Northern Ireland; five Australian states; six Canadian
-  provinces; five US states; Catalonia.
+**336 units on each of the three maps, so 1,008 slots in total.** A slot is one
+unit on one map. 851 of them carry a record with at least one documented field.
+
+| map | units | with a record | field-slots filled |
+| --- | --- | --- | --- |
+| Majority language acquisition (`eal`) | 336 | 294 | 1,246 / 3,024 (41%) |
+| Language disorder support (`dld`) | 336 | 267 | 1,125 / 4,368 (26%) |
+| Foreign languages in school (`fl`) | 336 | 290 | 1,424 / 3,696 (39%) |
+
+The two numbers measure different things and both matter. "With a record" says
+somebody has written *something* about that unit; "field-slots filled" says how
+much of the record exists. The second is the honest one, and at 34% overall it
+is the number the project is actually working on. The map shades by it.
+
+By region, every unit outside Asia now has a record on all three maps: Africa
+54/54, the Americas 99/99, Europe 49/49, Oceania 22/22. Asia is 112 units, of
+which China's 31 provinces are untouched by deliberate choice.
+
+**Coverage** is computed with the `hasContent()` / `NOT_DOCUMENTED_RE` pair. A
+field beginning "Not established from the sources consulted…" counts as *looked,
+found nothing* — never as coverage, and never as an unanswered question.
+
+**Sub-national units** exist where a country's answer differs internally: 51 US
+states and DC, 33 Indian states and union territories, 31 Chinese provinces, 13
+Canadian provinces and territories, 8 Australian states and territories, the
+four UK nations, Catalonia, the Belgian French Community, and Hong Kong. A unit
+exists because it differs from its country *in some subject*, so on a map where
+it has nothing of its own it inherits and is marked as inheriting.
+
+**2,074 source links and 648 dated policy-history rows** sit behind those
+entries.
 
 ## Pages
 
@@ -177,7 +193,8 @@ lists the planned ones too.
     src/subregions.js   country code -> UN-geoscheme subregion
     src/mailer.js       submission and correction notifications
     src/server.js       routes
-    data/fl.seed.json   the fl bootstrap set (216 places, 41 documented)
+    data/fl.seed.json   the fl entries (336 units, 290 with a record)
+    check-palette.js    colour-vision check on the coverage ramp
 
 ## Contributing from the map
 
@@ -449,16 +466,31 @@ against the font stack and resolves to a real glyph.
   own units because both trackers already carried them.
 - **No history.** `policyHistory` is in the data and rendered in full, but there
   is no dated-version model behind any other field yet.
-- **`fl` is documented for Europe only.** 41 of its 216 places carry an entry:
-  the 36 systems covered by Eurydice's *Key data on teaching languages at
-  school in Europe – 2023 edition* (CC BY 4.0), plus England, Northern Ireland,
-  Scotland and Wales, which left the Eurydice network after Brexit and were
-  sourced separately. Everywhere else is still a stub, and `higherEducation` is
-  empty everywhere — the Eurydice report is about schools and says nothing about
-  degree-level provision. Three European systems (Albania, Bosnia and
-  Herzegovina, Türkiye) have no starting age recorded because it sits only in a
-  chart in the report and is not on their Eurypedia pages; that gap is left as a
-  gap rather than guessed at.
+- **China's 31 provinces are untouched**, by choice rather than oversight. They
+  are 93 of the remaining slots and would roughly double the sub-national unit
+  count with entries likely thinner than the national ones. The decision to do
+  them has not been taken.
+- **India's disorder map is national, not per-state.** No state-level source
+  exists: the RPwD Act 2016 defines "speech and language disability" once and
+  narrowly, and the Rehabilitation Council of India publishes a single national
+  count of registered therapists with no state breakdown. RCI does publish a
+  32-row state table, but it counts approved TRAINING INSTITUTIONS across every
+  disability specialism, so using it as a therapist count would have made
+  Rajasthan's 196 institutions read as a workforce. The 33 state entries carry
+  the two language maps only.
+- **Some fields are thin because the thing rarely exists**, and some because
+  nobody has looked, and the map cannot yet tell you which. `dischargeCriteria`
+  and `identifiedPrevalence` sit near 3%; most systems genuinely have no such
+  rule, but only 44 of 7,400 empty slots say so with the "Not established"
+  sentinel. Closing that gap is real work, not tidying.
+- **`fl.higherEducation` is empty almost everywhere** (6%). The comparative
+  sources this map leans on are about schools and say nothing about
+  degree-level provision.
+- **Uptake and newcomer-proportion are Europe-and-Americas fields.**
+  `fl.uptake` is 0 of 54 in Africa and 0 of 112 in Asia; `eal.newcomerProportion`
+  is 0 of 54 and 3 of 112. That is not neglect — no comparative instrument
+  publishes those figures for those regions, and inventing a denominator would
+  be worse than leaving them empty.
 - **Merged records are not editable as a whole.** The dashboard edits one
   contribution at a time; a place built from several is only assembled at read
   time. Editing the stub of a place a submission has since filled looks like it
