@@ -20,6 +20,7 @@ const PAGES = {
   'map.html': 'map.html',
   'about.html': 'about.html',
   'patterns.html': 'patterns.html',
+  'explore.html': 'explore.html',
   'submit.html': 'submit.html',
   'admin.html': 'admin.html',
 };

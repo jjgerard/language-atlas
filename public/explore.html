@@ -1,0 +1,622 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Explore — Language Atlas</title>
+<link rel="stylesheet" href="/shared.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Cross-tabulate any two things the atlas records, across all four maps at once.">
+
+<!--
+  Explore: relate any two variables across all four maps.
+
+  The maps answer what one place does and /patterns answers what the places
+  have in common. Neither lets you ask a question of your own. This page does,
+  and it is the only page that holds all four domains in one frame at once.
+
+  IT INHERITS THE PATTERNS PAGE'S RULE, WHICH IS THE IMPORTANT THING HERE.
+  Nothing on this page is read out of entry prose. Entry text is deliberately
+  hedged — "encouraged but not required", "no requirement in primary but 100
+  hours across Years 7-10" — and a classifier over it leaves half the cases
+  unresolved, landing hardest exactly where the answer is interesting. So every
+  variable below is schema-level: which fields are filled, what a unit's status
+  and confidence are, how many dated rows and sources it carries, where it is.
+  Those are facts the store knows about itself. "Does this country teach in a
+  minority language" is NOT offered, because answering it would mean reading the
+  prose, and the honest answer to that is a comparative reading written by hand.
+
+  The query box is a DETERMINISTIC PARSER, not a language model. See parseQuery.
+  That is a deliberate choice, not a limitation of what was available: a model
+  asked to answer from this data could produce a number that is not in it, and
+  a fabricated figure on a page whose whole claim is that every figure traces to
+  a source would be worse than no page. The parser can only ever SELECT
+  variables that already exist; the counting is done by the same code the
+  dropdowns drive. If a model is added later it should translate a sentence into
+  a selection and then get out of the way, never emit a figure of its own.
+-->
+
+<style>
+  main { max-width: 1180px; margin: 0 auto; padding: 30px 22px 70px; }
+  h2 { font-size: 25px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .standfirst { color: var(--ink-soft); max-width: 66ch; margin: 0 0 22px; line-height: 1.6; }
+  h3 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft);
+       margin: 34px 0 12px; font-weight: 600; }
+
+  /* Ask box ------------------------------------------------------------- */
+  .ask { background: var(--surface); border: 1px solid var(--hair); border-radius: 12px;
+         padding: 16px 18px; margin: 0 0 8px; }
+  .ask label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+  .askrow { display: flex; gap: 8px; flex-wrap: wrap; }
+  .ask input { flex: 1 1 320px; min-width: 0; font: inherit; font-size: 14px; padding: 9px 12px;
+               border: 1px solid var(--hair-strong); border-radius: 8px;
+               background: var(--ground); color: var(--ink); }
+  .ask input:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+  .egs { margin: 10px 0 0; font-size: 12.5px; color: var(--ink-soft); line-height: 1.9; }
+  .eg { background: var(--surface-2); border: 1px solid var(--hair); border-radius: 999px;
+        padding: 3px 10px; cursor: pointer; font: inherit; font-size: 12.5px; color: var(--ink-soft); }
+  .eg:hover { color: var(--ink); border-color: var(--hair-strong); }
+  .said { font-size: 13px; color: var(--ink-soft); margin: 10px 0 0; min-height: 1.2em; }
+  .said b { color: var(--ink); font-weight: 600; }
+  .said.miss { color: #a4472c; }
+
+  /* Controls ------------------------------------------------------------ */
+  .controls { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+              margin: 18px 0 6px; }
+  .ctl label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;
+               color: var(--ink-soft); margin-bottom: 5px; font-weight: 600; }
+  .ctl select { width: 100%; font: inherit; font-size: 13.5px; padding: 8px 10px;
+                border: 1px solid var(--hair-strong); border-radius: 8px;
+                background: var(--ground); color: var(--ink); }
+  .ctl select:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+
+  .modes { display: flex; gap: 6px; margin: 16px 0 0; flex-wrap: wrap; }
+  .mode { font: inherit; font-size: 13px; padding: 6px 14px; border-radius: 999px;
+          border: 1px solid var(--hair); background: var(--surface); color: var(--ink-soft);
+          cursor: pointer; }
+  .mode[aria-pressed="true"] { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+
+  /* Output -------------------------------------------------------------- */
+  .out { margin-top: 18px; overflow-x: auto; }
+  table { border-collapse: collapse; font-size: 13.5px; min-width: 100%; }
+  th, td { text-align: left; padding: 7px 12px; border-bottom: 1px solid var(--hair);
+           white-space: nowrap; }
+  thead th { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em;
+             color: var(--ink-soft); border-bottom: 1px solid var(--hair-strong); }
+  tbody tr:hover { background: var(--surface); }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.rowhead { font-weight: 600; white-space: normal; }
+  tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong); border-bottom: none; }
+  .zero { color: var(--ink-faint); }
+
+  /* the cell shade carries the row share, so a crosstab reads as a shape */
+  .cell { position: relative; }
+  .cell i { position: absolute; inset: 0; background: var(--cov-4); opacity: var(--a, 0);
+            pointer-events: none; }
+  .cell span { position: relative; }
+
+  .bars { display: grid; gap: 7px; margin-top: 6px; }
+  .bar { display: grid; grid-template-columns: minmax(130px, 230px) 1fr 62px; gap: 12px;
+         align-items: center; font-size: 13.5px; }
+  .bar .track { background: var(--surface-2); border-radius: 5px; height: 19px; overflow: hidden; }
+  .bar .fill { height: 100%; background: var(--cov-3); border-radius: 5px; }
+  .bar .val { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft);
+              font-size: 12.5px; }
+  .bar .lab { white-space: normal; line-height: 1.3; }
+
+  .units { columns: 3 200px; column-gap: 22px; font-size: 13px; margin-top: 4px; }
+  .units div { break-inside: avoid; padding: 1.5px 0; color: var(--ink-soft); }
+  .units b { color: var(--ink); font-weight: 500; }
+
+  .summary { font-size: 13.5px; color: var(--ink-soft); margin: 14px 0 0; line-height: 1.6;
+             max-width: 74ch; }
+  .summary b { color: var(--ink); }
+  .empty { color: var(--ink-soft); font-size: 14px; padding: 22px 0; }
+
+  @media (max-width: 760px) {
+    main { padding: 24px 15px 56px; }
+    .units { columns: 1; }
+    .bar { grid-template-columns: 1fr; gap: 3px; }
+    .bar .val { text-align: left; }
+  }
+</style>
+
+<header class="sitebar">
+  <a class="brand" href="/">
+    <span class="name">Language Atlas</span>
+    <span class="tagline">Provision and policy, by region</span>
+  </a>
+  <nav class="pills" id="pills"></nav>
+  <div class="navright">
+    <a class="aboutlink" href="/explore" aria-current="page">Explore</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="menu" id="menu">
+    <nav class="pills" id="menupills"></nav>
+    <a class="aboutlink" href="/explore" aria-current="page">Explore</a>
+    <a class="aboutlink" href="/patterns">Patterns</a>
+    <a class="aboutlink" href="/about">About</a>
+  </div>
+</header>
+
+<main>
+  <h2>Explore</h2>
+  <p class="standfirst">
+    Each map answers one question about one place. This page holds all four at once, so you can
+    ask how they relate — whether the places that name a language disorder are the places that
+    teach in a minority language, or where a country's foreign-language entry runs ahead of its
+    newcomer entry. Pick two things and it counts them.
+  </p>
+
+  <div class="ask">
+    <label for="q">Describe what you want to see</label>
+    <div class="askrow">
+      <input id="q" type="text" autocomplete="off" spellcheck="false"
+             placeholder="coverage by region on the indigenous map">
+      <button class="btn" id="go">Show</button>
+    </div>
+    <p class="said" id="said"></p>
+    <p class="egs" id="egs"></p>
+  </div>
+
+  <blockquote class="note">
+    That box is a plain parser, not a chatbot — it matches your words against the variables
+    below and moves the dropdowns. It cannot produce a figure of its own, which is the point:
+    every number on this page is counted from the entries by the same code either way.
+    Nothing here is read out of entry text, for the reason
+    <a href="/patterns">Patterns</a> gives — the wording is hedged, and a classifier run over it
+    leaves the interesting cases unresolved. These variables are what the schema knows about
+    itself: which fields are filled, how many dated rows and sources an entry carries, where it is.
+  </blockquote>
+
+  <div class="controls">
+    <div class="ctl">
+      <label for="x">Rows</label>
+      <select id="x"></select>
+    </div>
+    <div class="ctl">
+      <label for="y">Columns</label>
+      <select id="y"></select>
+    </div>
+    <div class="ctl">
+      <label for="scope">Limited to</label>
+      <select id="scope"></select>
+    </div>
+  </div>
+
+  <div class="modes">
+    <button class="mode" id="m-cross" aria-pressed="true">Cross-tabulate</button>
+    <button class="mode" id="m-bars" aria-pressed="false">Distribution</button>
+    <button class="mode" id="m-units" aria-pressed="false">List the units</button>
+  </div>
+
+  <div class="out" id="out"><p class="empty">Loading the atlas…</p></div>
+  <p class="summary" id="summary"></p>
+</main>
+
+<script>
+"use strict";
+
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const $ = id => document.getElementById(id);
+
+let PAYLOAD = null;   // /api/atlas
+let ROWS = [];        // one row per unit per domain, flattened
+let VARS = [];        // the variable registry
+let MODE = 'cross';
+
+/* ------------------------------------------------------------------ *
+ * The flattened table.
+ *
+ * One row per (unit, domain). A country documented on three maps is
+ * three rows, which is what makes "documented on the fl map but not the
+ * eal map" answerable by a crosstab rather than by special-case code.
+ * `perUnit` keeps the four together so cross-map variables can look
+ * sideways without another pass.
+ * ------------------------------------------------------------------ */
+function flatten(payload) {
+  const rows = [], perUnit = new Map();
+  for (const d of payload.domains) {
+    if (!payload.units[d.id]) continue;
+    for (const u of payload.units[d.id]) {
+      const key = u.cc + '|' + u.name;
+      const row = {
+        key, cc: u.cc, name: u.name, domain: d.id, domainLabel: d.label,
+        region: u.region || 'Unrecorded', subregion: u.subregion || 'Unrecorded',
+        national: String(u.nat) === 'true',
+        status: u.status || 'stub',
+        confidence: u.confidence || '',
+        coverage: u.coverage || 'none',
+        fieldStates: u.fieldStates || '',
+        fields: d.fields,
+        history: (u.history || []).length,
+        sources: ((u.docLinks || []).length) + ((u.supportLinks || []).length),
+        langs: (u.records && u.records.languages ? u.records.languages.length : 0),
+      };
+      rows.push(row);
+      if (!perUnit.has(key)) perUnit.set(key, {});
+      perUnit.get(key)[d.id] = row;
+    }
+  }
+  for (const r of rows) r.siblings = perUnit.get(r.key);
+  return rows;
+}
+
+/* ------------------------------------------------------------------ *
+ * Variables. Each is { id, label, group, of(row) -> string|null }.
+ * Returning null drops the row from that tabulation — used where a
+ * variable simply does not apply, e.g. a field-level variable on a
+ * different map. Dropping is honest; bucketing them as "no" would count
+ * an inapplicable row as a negative finding.
+ * ------------------------------------------------------------------ */
+const COVER_LABEL = {
+  has: 'Documented', some: 'Partly documented', looked: 'Looked, found nothing',
+  none: 'Nothing recorded', inherit: 'Follows its country',
+};
+const band = (n, edges, names) => { for (let i = 0; i < edges.length; i++) if (n <= edges[i]) return names[i]; return names[names.length - 1]; };
+
+function buildVars(payload) {
+  const v = [];
+    // `unit: true` marks a variable that describes the PLACE, not one map entry.
+  // It matters for counting: the flattened table holds one row per unit per
+  // map, so tabulating two place-level variables against each other would
+  // count every country four times. See the collapse in tabulate().
+  const push = (id, label, group, of, unit) => v.push({ id, label, group, of, unit: !!unit });
+
+  push('region', 'Region', 'Where', r => r.region, true);
+  push('subregion', 'Sub-region', 'Where', r => r.subregion, true);
+  push('level', 'National or sub-national', 'Where', r => r.national ? 'A country' : 'Inside a country', true);
+
+  push('domain', 'Which map', 'The entry', r => r.domainLabel);
+  push('coverage', 'Coverage', 'The entry', r => COVER_LABEL[r.coverage] || r.coverage);
+  push('status', 'Status', 'The entry', r => r.status);
+  push('confidence', 'Confidence', 'The entry',
+    r => r.confidence ? r.confidence.replace(/-/g, ' ') : 'not recorded');
+  push('filledcount', 'How many fields filled', 'The entry',
+    r => band([...r.fieldStates].filter(c => c === 'h').length, [0, 2, 5, 9], ['None', '1 to 2', '3 to 5', '6 to 9', '10 or more']));
+  push('hashistory', 'Has a policy timeline', 'The entry', r => r.history ? 'Yes' : 'No');
+  push('historycount', 'How many dated rows', 'The entry',
+    r => band(r.history, [0, 2, 5, 10], ['None', '1 to 2', '3 to 5', '6 to 10', 'More than 10']));
+  push('sourcecount', 'How many sources cited', 'The entry',
+    r => band(r.sources, [0, 1, 3, 6], ['None', 'One', '2 to 3', '4 to 6', 'More than 6']));
+
+  // Cross-map: the whole reason this page exists.
+  push('nmaps', 'Documented on how many maps', 'Across the maps', r => {
+    const n = Object.values(r.siblings).filter(s => s.coverage === 'has' || s.coverage === 'some').length;
+    return n + (n === 1 ? ' map' : ' maps');
+  }, true);
+  for (const d of payload.domains) {
+    push('on_' + d.id, 'Documented on: ' + d.label, 'Across the maps', r => {
+      const s = r.siblings[d.id];
+      if (!s) return null;
+      return (s.coverage === 'has' || s.coverage === 'some') ? 'Yes' : 'No';
+    }, true);
+  }
+
+  // Field-level, per domain. Only meaningful on that domain's own rows.
+  for (const d of payload.domains) {
+    (d.fields || []).forEach((f, i) => {
+      push('f_' + d.id + '_' + f.k, d.label + ' — ' + f.label, 'A single field', r => {
+        if (r.domain !== d.id) return null;
+        const c = r.fieldStates[i];
+        if (c === 'h') return 'Filled';
+        if (c === 'l') return 'Looked, found nothing';
+        return 'Empty';
+      });
+    });
+  }
+  return v;
+}
+
+const varById = id => VARS.find(v => v.id === id) || null;
+
+/* ------------------------------------------------------------------ *
+ * Scope filters — the third dropdown.
+ * ------------------------------------------------------------------ */
+function scopes(payload) {
+  const s = [{ id: 'all', label: 'Everything', keep: () => true }];
+  for (const d of payload.domains) s.push({ id: 'd_' + d.id, label: 'Only the ' + d.label.toLowerCase() + ' map', keep: r => r.domain === d.id });
+  const regions = [...new Set(ROWS.map(r => r.region))].sort();
+  for (const g of regions) s.push({ id: 'r_' + g, label: 'Only ' + g, keep: r => r.region === g });
+  s.push({ id: 'nat', label: 'Only whole countries', keep: r => r.national });
+  s.push({ id: 'sub', label: 'Only units inside a country', keep: r => !r.national });
+  return s;
+}
+let SCOPES = [];
+
+/* ------------------------------------------------------------------ *
+ * The query parser.
+ *
+ * Deliberately dumb and completely predictable. It scores each variable
+ * against the words you typed and picks the best two, honouring "by" and
+ * "vs" as a separator when one is present. It never invents a category
+ * and never produces a number — it only moves the three dropdowns, and
+ * then the same tabulate() the dropdowns use does the counting.
+ * ------------------------------------------------------------------ */
+// Deliberately short. An earlier version also stopped "which", "map", "how" and
+// "many", which silently broke every query naming a variable that is actually
+// CALLED "Which map" or "How many sources cited" — the stopword list was eating
+// the only words that identified them.
+const STOP = new Set('the a an of on in for and or is are do does show me see view about with across all as to entries entry unit units'.split(' '));
+
+/* Scope is matched only on an explicit cue, never on a loose word.
+ *
+ * Matching scope labels by keyword read "coverage by region" as "only the
+ * indigenous and REGIONAL languages map", because that domain's label contains
+ * the word. A filter nobody asked for is worse than no filter: it silently
+ * changes every number on the page. So a scope now needs a region named
+ * outright, or an explicit "on/only the ... map". */
+function detectScope(raw) {
+  for (const s of SCOPES) {
+    if (!s.id.startsWith('r_')) continue;
+    const name = s.id.slice(2).toLowerCase();
+    if (new RegExp('\\b' + name.replace(/[^a-z ]/g, '') + '\\b').test(raw)) return { scope: s, hit: true };
+  }
+  const m = raw.match(/\b(?:on|only|just|within|in)\s+the\s+([a-z\s-]+?)\s+map\b/);
+  if (m) {
+    const want = m[1].trim();
+    for (const s of SCOPES) {
+      if (s.id.startsWith('d_') && s.label.toLowerCase().includes(want)) return { scope: s, hit: true };
+    }
+  }
+  if (/\bwhole countries\b|\bcountries\b|\bnational\b/.test(raw)) {
+    const s = SCOPES.find(z => z.id === 'nat');
+    if (s) return { scope: s, hit: true };
+  }
+  if (/\bsub-?national\b|\bstates\b|\bprovinces\b|\bregions inside\b/.test(raw)) {
+    const s = SCOPES.find(z => z.id === 'sub');
+    if (s) return { scope: s, hit: true };
+  }
+  return { scope: SCOPES[0], hit: false };
+}
+
+function score(v, words) {
+  const hay = (v.label + ' ' + v.group).toLowerCase();
+  let s = 0;
+  for (const w of words) {
+    if (w.length < 3) continue;
+    if (hay.includes(w)) s += w.length >= 6 ? 3 : 2;
+    else if (w.length > 4 && hay.includes(w.slice(0, -1))) s += 1;   // crude plural
+  }
+  return s;
+}
+
+function parseQuery(text) {
+  const raw = String(text || '').toLowerCase().trim();
+  if (!raw) return null;
+  const clean = w => w.replace(/[^a-z0-9-]/g, '');
+  const split = raw.split(/\bby\b|\bvs\.?\b|\bversus\b|\bagainst\b/);
+  const parts = split.map(p => p.split(/\s+/).map(clean).filter(w => w && !STOP.has(w)));
+  const allWords = parts.flat();
+
+  const { scope, hit: scopeHit } = detectScope(raw);
+
+  const pick = words => {
+    if (!words.length) return null;
+    let best = null, bestScore = 0;
+    for (const v of VARS) {
+      const s = score(v, words);
+      if (s > bestScore) { bestScore = s; best = v; }
+    }
+    return bestScore > 0 ? best : null;
+  };
+
+  let x = null, y = null;
+  if (parts.length >= 2) {
+    // "coverage by region" reads as rows=region, columns=coverage: the thing
+    // after "by" is what you are grouping along.
+    y = pick(parts[0]);
+    x = pick(parts.slice(1).flat());
+  }
+  if (!x && !y) { x = pick(allWords); }
+  if (x && y && x.id === y.id) y = null;
+  if (!x && y) { x = y; y = null; }
+  return x ? { x, y, scope, matchedScope: scopeHit } : null;
+}
+
+/* ------------------------------------------------------------------ *
+ * Tabulation and rendering.
+ * ------------------------------------------------------------------ */
+// Composite key for a crosstab cell. The separator has to be something no
+// category value can contain: joining on a space would make the pair
+// ("Not", "established") collide with ("Not established", "").
+const SEP = String.fromCharCode(31);   // unit separator
+
+function tabulate(xv, yv, keep) {
+  let rows = ROWS.filter(keep);
+  // Both variables describe the place rather than one map entry, so each place
+  // must be counted once. Without this, asking "documented on the indigenous
+  // map against documented on the disorder map" over 193 countries reported
+  // 772 — every country counted once per map, which reads as a sample four
+  // times the size of the real one.
+  const collapsed = xv.unit && (!yv || yv.unit);
+  if (collapsed) {
+    const seen = new Set();
+    rows = rows.filter(r => (seen.has(r.key) ? false : (seen.add(r.key), true)));
+  }
+  const cells = new Map(), xs = new Map(), ys = new Map();
+  let counted = 0;
+  for (const r of rows) {
+    const xk = xv.of(r);
+    if (xk == null) continue;
+    if (yv) {
+      const yk = yv.of(r);
+      if (yk == null) continue;
+      const k = xk + SEP + yk;
+      cells.set(k, (cells.get(k) || 0) + 1);
+      ys.set(yk, (ys.get(yk) || 0) + 1);
+    }
+    xs.set(xk, (xs.get(xk) || 0) + 1);
+    counted++;
+  }
+  const order = m => [...m.entries()].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
+  return { cells, xs: order(xs), ys: order(ys), counted, dropped: rows.length - counted, collapsed };
+}
+
+function renderCross(xv, yv, t) {
+  if (!yv) return renderBars(xv, t);
+  if (!t.xs.length) return '<p class="empty">Nothing to count — those two do not apply to the same entries.</p>';
+  const head = t.ys.map(([k, n]) => `<th class="n">${esc(k)}<br><span class="zero">${n}</span></th>`).join('');
+  const body = t.xs.map(([xk, xn]) => {
+    const cells = t.ys.map(([yk]) => {
+      const n = t.cells.get(xk + SEP + yk) || 0;
+      const share = xn ? n / xn : 0;
+      return `<td class="n cell" style="--a:${(share * 0.75).toFixed(3)}"><i></i><span class="${n ? '' : 'zero'}">${n || '·'}</span></td>`;
+    }).join('');
+    return `<tr><td class="rowhead">${esc(xk)}</td>${cells}<td class="n">${xn}</td></tr>`;
+  }).join('');
+  return `<table><thead><tr><th>${esc(xv.label)}</th>${head}<th class="n">All</th></tr></thead>
+    <tbody>${body}</tbody>
+    <tfoot><tr><td>All</td>${t.ys.map(([, n]) => `<td class="n">${n}</td>`).join('')}<td class="n">${t.counted}</td></tr></tfoot></table>`;
+}
+
+function renderBars(xv, t) {
+  if (!t.xs.length) return '<p class="empty">Nothing to count for that variable.</p>';
+  const max = t.xs[0][1];
+  return '<div class="bars">' + t.xs.map(([k, n]) => `
+    <div class="bar">
+      <span class="lab">${esc(k)}</span>
+      <span class="track"><span class="fill" style="width:${max ? (n / max * 100).toFixed(1) : 0}%"></span></span>
+      <span class="val">${n} · ${t.counted ? Math.round(n / t.counted * 100) : 0}%</span>
+    </div>`).join('') + '</div>';
+}
+
+function renderUnits(xv, yv, keep) {
+  const rows = ROWS.filter(keep);
+  const groups = new Map();
+  for (const r of rows) {
+    const xk = xv.of(r);
+    if (xk == null) continue;
+    const yk = yv ? yv.of(r) : null;
+    if (yv && yk == null) continue;
+    const k = yv ? xk + ' · ' + yk : xk;
+    if (!groups.has(k)) groups.set(k, new Set());
+    groups.get(k).add(r.name);
+  }
+  if (!groups.size) return '<p class="empty">Nothing to list.</p>';
+  return [...groups.entries()]
+    .sort((a, b) => b[1].size - a[1].size || a[0].localeCompare(b[0]))
+    .slice(0, 40)
+    .map(([k, set]) => {
+      const names = [...set].sort();
+      return `<h3>${esc(k)} <span class="zero">${names.length}</span></h3>
+        <div class="units">${names.map(n => `<div><b>${esc(n)}</b></div>`).join('')}</div>`;
+    }).join('');
+}
+
+function draw() {
+  const xv = varById($('x').value), yv = varById($('y').value);
+  const scope = SCOPES.find(s => s.id === $('scope').value) || SCOPES[0];
+  if (!xv) return;
+  const t = tabulate(xv, yv, scope.keep);
+  const out = $('out');
+  if (MODE === 'units') out.innerHTML = renderUnits(xv, yv, scope.keep);
+  else if (MODE === 'bars') out.innerHTML = renderBars(xv, tabulate(xv, null, scope.keep));
+  else out.innerHTML = renderCross(xv, yv, t);
+
+  const bits = [`<b>${t.counted}</b> entries counted`];
+  if (scope.id !== 'all') bits.push(`limited to ${esc(scope.label.toLowerCase())}`);
+  if (t.dropped) bits.push(`<b>${t.dropped}</b> left out because the variable does not apply to them`);
+  $('summary').innerHTML = bits.join(' · ') + '. ' + (t.collapsed
+    ? 'Both of those describe the place rather than one map, so each place is counted once.'
+    : 'An entry appears once per map it exists on, so a country documented on three maps is counted three times here.');
+
+  const u = new URL(location.href);
+  u.searchParams.set('x', xv.id);
+  yv ? u.searchParams.set('y', yv.id) : u.searchParams.delete('y');
+  scope.id === 'all' ? u.searchParams.delete('s') : u.searchParams.set('s', scope.id);
+  u.searchParams.set('v', MODE);
+  history.replaceState(null, '', u);
+}
+
+function fillSelects() {
+  const groups = [...new Set(VARS.map(v => v.group))];
+  const opts = extra => extra + groups.map(g =>
+    `<optgroup label="${esc(g)}">` +
+    VARS.filter(v => v.group === g).map(v => `<option value="${esc(v.id)}">${esc(v.label)}</option>`).join('') +
+    '</optgroup>').join('');
+  $('x').innerHTML = opts('');
+  $('y').innerHTML = opts('<option value="">— nothing, just count the rows —</option>');
+  $('scope').innerHTML = SCOPES.map(s => `<option value="${esc(s.id)}">${esc(s.label)}</option>`).join('');
+}
+
+const EXAMPLES = [
+  'coverage by region',
+  'documented on how many maps by region',
+  'policy timeline by which map',
+  'confidence by coverage',
+  'how many sources cited by which map',
+];
+
+function runQuery() {
+  const parsed = parseQuery($('q').value);
+  const said = $('said');
+  if (!parsed) {
+    said.className = 'said miss';
+    said.textContent = 'No variable matched that. Try one of the examples, or use the dropdowns — everything the atlas can count is in them.';
+    return;
+  }
+  $('x').value = parsed.x.id;
+  $('y').value = parsed.y ? parsed.y.id : '';
+  $('scope').value = parsed.scope.id;
+  said.className = 'said';
+  said.innerHTML = 'Showing <b>' + esc(parsed.x.label) + '</b>' +
+    (parsed.y ? ' against <b>' + esc(parsed.y.label) + '</b>' : '') +
+    (parsed.matchedScope ? ', ' + esc(parsed.scope.label.toLowerCase()) : '') + '.';
+  draw();
+}
+
+function setMode(m) {
+  MODE = m;
+  for (const id of ['cross', 'bars', 'units']) $('m-' + id).setAttribute('aria-pressed', String(id === m));
+  draw();
+}
+
+async function init() {
+  const res = await fetch('/api/atlas');
+  if (!res.ok) { $('out').innerHTML = '<p class="empty">The atlas could not be loaded.</p>'; return; }
+  PAYLOAD = await res.json();
+  ROWS = flatten(PAYLOAD);
+  VARS = buildVars(PAYLOAD);
+  SCOPES = scopes(PAYLOAD);
+  fillSelects();
+
+  const q = new URLSearchParams(location.search);
+  $('x').value = varById(q.get('x')) ? q.get('x') : 'region';
+  $('y').value = varById(q.get('y')) ? q.get('y') : 'coverage';
+  if (SCOPES.some(s => s.id === q.get('s'))) $('scope').value = q.get('s');
+  MODE = ['cross', 'bars', 'units'].includes(q.get('v')) ? q.get('v') : 'cross';
+  for (const id of ['cross', 'bars', 'units']) $('m-' + id).setAttribute('aria-pressed', String(id === MODE));
+
+  $('egs').innerHTML = 'Try: ' + EXAMPLES.map(e => `<button class="eg" type="button">${esc(e)}</button>`).join(' ');
+  $('egs').addEventListener('click', e => {
+    const b = e.target.closest('.eg');
+    if (!b) return;
+    $('q').value = b.textContent;
+    runQuery();
+  });
+
+  $('go').addEventListener('click', runQuery);
+  $('q').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); runQuery(); } });
+  for (const id of ['x', 'y', 'scope']) $(id).addEventListener('change', draw);
+  $('m-cross').addEventListener('click', () => setMode('cross'));
+  $('m-bars').addEventListener('click', () => setMode('bars'));
+  $('m-units').addEventListener('click', () => setMode('units'));
+
+  // The map pills and the burger, same as every other page.
+  const pills = (PAYLOAD.domains || []).filter(d => d.live !== false)
+    .map(d => `<a class="pill" href="/${esc(d.id)}">${esc(d.label)}</a>`).join('');
+  $('pills').innerHTML = pills;
+  $('menupills').innerHTML = pills;
+  const burger = $('burger'), menu = $('menu');
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('on');
+    burger.setAttribute('aria-expanded', String(open));
+  });
+
+  draw();
+}
+
+init();
+</script>

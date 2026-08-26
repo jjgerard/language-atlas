@@ -280,6 +280,7 @@ const page = name => (req, res) => res.sendFile(path.join(__dirname, '..', 'publ
 app.get('/', page('index.html'));
 app.get('/about', page('about.html'));
 app.get('/patterns', page('patterns.html'));
+app.get('/explore', page('explore.html'));
 app.get('/submit', page('submit.html'));
 app.get('/admin', page('admin.html'));
 for (const d of LIVE) app.get('/' + d.id, page('map.html'));
