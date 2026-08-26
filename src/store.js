@@ -80,7 +80,15 @@ function records(value, maxItems, keys) {
     .filter(r => keys.some(k => r[k]));
 }
 
-const SHAPES = { history: ['year', 'description'], series: ['year', 'value', 'note'] };
+const SHAPES = {
+  history: ['year', 'description'],
+  series: ['year', 'value', 'note'],
+  // A named language, with the identifiers that make it checkable. `wals` is
+  // WALS's OWN code and is not the ISO code: Maori is `mao` in WALS and `mri`
+  // in ISO 639-3, and `mri` is Moraori in WALS. A row with no `wals` gets no
+  // link rather than a plausible wrong one.
+  languages: ['name', 'wals', 'iso', 'family', 'genus', 'typology'],
+};
 
 /** Pull the domain's declared fields out of a submitted body, typed and capped. */
 function fieldsFor(domain, body) {

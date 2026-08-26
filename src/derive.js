@@ -17,7 +17,11 @@ const NOT_DOCUMENTED_RE = /^Not established from the sources consulted/i;
 function asText(v) {
   if (Array.isArray(v)) {
     return v
-      .map(r => [r.year, r.value, r.description || r.note].filter(Boolean).join(' — '))
+      .map(r => (r.name
+        // A language row flattens to something a reader and a search box can
+        // both use; the structured record is what the panel actually renders.
+        ? [r.name, [r.family, r.genus].filter(Boolean).join(' > '), r.typology].filter(Boolean).join(' — ')
+        : [r.year, r.value, r.description || r.note].filter(Boolean).join(' — ')))
       .join('\n');
   }
   return typeof v === 'string' ? v : (v == null ? '' : String(v));
@@ -60,7 +64,13 @@ function deriveUnits(domain, entries, sharedMatcher) {
       .join('');
 
     const values = {};
-    for (const [k] of domain.fields) {
+    // Typed record fields keep their structure alongside the flattened text.
+    // `values` is what search and the bullet renderer use; `records` is what a
+    // renderer needs when the field is a list of things rather than prose —
+    // a language row has to keep its WALS code to be linkable at all.
+    const records = {};
+    for (const [k, , type] of domain.fields) {
+      if (type === 'languages' && Array.isArray(e[k])) records[k] = e[k];
       const t = asText(e[k]).trim();
       if (t) values[k] = t;
     }
@@ -90,6 +100,7 @@ function deriveUnits(domain, entries, sharedMatcher) {
       docs: docLinks.length,
       supports: cleanLinks(e.supportLinks).length,
       values,
+      records,
       history,
       docLinks,
       supportLinks: cleanLinks(e.supportLinks),

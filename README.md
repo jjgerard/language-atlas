@@ -213,6 +213,36 @@ carries a note saying so, and every entry records the word its own sources use
 in the **Local term** field. The atlas names the category; the sources keep
 theirs.
 
+### Naming the languages, and linking them to WALS
+
+Each entry names the languages it is about in a `languages` field — a typed
+record, not prose — carrying the name, family, genus, ISO 639-3 code, basic
+typology and WALS code. Classification and typology are read from the WALS CLDF
+release (`cldf-datasets/wals`, CC BY 4.0) by `scratchpad/wals/wals.js`, never
+typed from memory.
+
+That tool exists because **a WALS URL must never be constructed from an ISO
+code**, and the traps are not hypothetical. Every one of these was hit while
+building it:
+
+- **WALS codes are not ISO codes and they COLLIDE.** Maori is `mao` in WALS and
+  `mri` in ISO 639-3 — and `mri` in WALS is **Moraori**, an unrelated Papuan
+  language. Building a link from the ISO code sends the reader to the wrong
+  language, with a working page and a plausible family. The resolver reports the
+  collision instead of choosing.
+- **Prefix matching swallows longer names.** An early version matched
+  "Tamazight" to **Tama**, an Eastern Sudanic language of Chad, complete with a
+  family, a word order and a live link. Only a WALS name that *extends* the
+  query is now allowed, with a four-character floor.
+- **Genus records use a different URL and 404 on the usual one.** IDs beginning
+  `genus-` live at `/languoid/genus/<name>`, not `/languoid/lect/wals_code_<id>`.
+- **WALS is variety-level.** There is no single record for "Inuktitut" (three),
+  "Quechua" (many) or "Berber" (eight plus a genus). An entry must pick the
+  variety its source names, or the genus, or nothing.
+- **Coverage is partial.** Scottish Gaelic and Tamazight have no WALS record at
+  all. Those languages are still named in the entry, with no link. **A missing
+  link means WALS has no record, not that the language does not matter.**
+
 ### What the map records
 
 The distinctions are structural and quotable, which is what keeps the map

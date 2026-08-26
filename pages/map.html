@@ -219,6 +219,19 @@ a.cite {
 a.cite:hover { color: var(--focus); text-decoration-style: solid; }
 
 /* policy history reads as a dated list, each row carrying its document */
+/* The languages themselves: a name that links to its WALS record where one
+   exists, then classification, typology and identifiers, each stepping down in
+   weight so the name is what the eye lands on. */
+.langs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+.langs li { display: flex; flex-direction: column; gap: 1px; }
+.langs .lname { font-size: 13px; font-weight: 500; }
+.langs .lname a { color: inherit; text-decoration: underline; text-decoration-style: dotted;
+  text-underline-offset: 2px; text-decoration-color: var(--focus); }
+.langs .lname a:hover { color: var(--focus); text-decoration-style: solid; }
+.langs .lcls { font-size: 11.5px; color: var(--ink-soft); }
+.langs .ltyp { font-size: 11.5px; color: var(--ink-soft); }
+.langs .lids { font-size: 10.5px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+
 .hist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
 .hist li { display: grid; grid-template-columns: 58px 1fr; gap: 11px; align-items: start; }
 .hist .yr {
@@ -1274,6 +1287,27 @@ function historyHTML(rows, entry) {
     </li>`).join('') + `</ol>`;
 }
 
+// A named language, with its classification and a link to its WALS record.
+// The link exists ONLY where a WALS code was resolved from WALS's own data:
+// wals.info uses codes of its own that are not ISO 639-3, and they collide
+// (Maori is `mao` in WALS while `mri`, its ISO code, is Moraori in WALS). A row
+// with no code is shown without a link rather than with a plausible wrong one.
+function languagesHTML(rows) {
+  return `<ul class="langs">` + (rows || []).map(l => {
+    const cls = [l.family, l.genus].filter(Boolean).join(' › ');
+    const ids = [l.iso ? `ISO ${l.iso}` : '', l.wals ? `WALS ${l.wals}` : ''].filter(Boolean).join(', ');
+    const name = l.wals
+      ? `<a href="https://wals.info/languoid/lect/wals_code_${encodeURIComponent(l.wals)}" target="_blank" rel="noopener noreferrer">${esc(l.name)}</a>`
+      : esc(l.name);
+    return `<li>
+      <span class="lname">${name}</span>
+      ${cls ? `<span class="lcls">${esc(cls)}</span>` : ''}
+      ${l.typology ? `<span class="ltyp">${esc(l.typology)}</span>` : ''}
+      ${ids ? `<span class="lids">${esc(ids)}</span>` : ''}
+    </li>`;
+  }).join('') + `</ul>`;
+}
+
 function linkList(links) {
   return links.map(l =>
     `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label || l.url)}</a>`
@@ -1312,16 +1346,22 @@ function panelHTML(u, via) {
   const fields = d.fields.map((f, i) => {
     const c = u.fieldStates[i];
     const isHist = f.k === 'policyHistory';
-    if (c === 'h') return block('on', f.label, isHist ? historyHTML(u.history, u) : prose(u.values[f.k], u));
+    const isLangs = f.type === 'languages';
+    if (c === 'h') return block('on', f.label,
+      isHist ? historyHTML(u.history, u) : isLangs ? languagesHTML(u.records[f.k]) : prose(u.values[f.k], u));
     // "Not established from the sources consulted…" is a sentence explaining an
     // absence, not a list of facts, so it stays a paragraph even where the
     // domain's documented fields are bulleted.
     if (c === 'l') return block('looked', f.label, `<p>${linkCitations(esc(u.values[f.k]), u)}</p>`);
-    const inheritable = par && (isHist ? (par.history || []).length : par.values[f.k]);
+    const inheritable = par && (isHist ? (par.history || []).length
+      : isLangs ? (par.records[f.k] || []).length
+      : par.values[f.k]);
     if (inheritable) {
       nInherited++;
       return block('inh', f.label,
-        isHist ? historyHTML(par.history, par) : prose(par.values[f.k], par), par.name);
+        isHist ? historyHTML(par.history, par)
+          : isLangs ? languagesHTML(par.records[f.k])
+          : prose(par.values[f.k], par), par.name);
     }
     return block('empty', f.label, '<p>Not recorded.</p>');
   }).join('');
