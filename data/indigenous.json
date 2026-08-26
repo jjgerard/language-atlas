@@ -4784,7 +4784,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 24 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Berber",
+    "wals": "genus-berber",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   }
+  ]
  },
  {
   "countryCode": "EC",
@@ -4921,7 +4930,24 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 15 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Nobiin",
+    "wals": "nob",
+    "iso": "fia",
+    "family": "Eastern Sudanic",
+    "genus": "Nubian",
+    "typology": "Simple tone system"
+   },
+   {
+    "name": "Berber (Siwa)",
+    "wals": "bsi",
+    "iso": "siz",
+    "family": "Afro-Asiatic",
+    "genus": "Berber",
+    "typology": "Noun-Adjective"
+   }
+  ]
  },
  {
   "countryCode": "ER",
@@ -4954,7 +4980,64 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 15 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Tigré",
+    "wals": "tgr",
+    "iso": "tig",
+    "family": "Afro-Asiatic",
+    "genus": "Semitic",
+    "typology": "Word order SOV; Adjective-Noun; Weakly suffixing; No tones"
+   },
+   {
+    "name": "Qafar",
+    "wals": "qaf",
+    "iso": "aar",
+    "family": "Afro-Asiatic > Cushitic",
+    "genus": "Lowland East Cushitic",
+    "typology": "Word order SOV; Adjective-Noun"
+   },
+   {
+    "name": "Beja",
+    "wals": "bej",
+    "iso": "bej",
+    "family": "Afro-Asiatic > Cushitic",
+    "genus": "Beja",
+    "typology": "Word order SOV; No dominant order; Weakly suffixing; Simple tone system"
+   },
+   {
+    "name": "Bilin",
+    "wals": "bln",
+    "iso": "byn",
+    "family": "Afro-Asiatic > Cushitic",
+    "genus": "Central Cushitic",
+    "typology": "Word order No dominant order; Noun-Adjective; Strongly suffixing"
+   },
+   {
+    "name": "Saho",
+    "wals": "sao",
+    "iso": "ssy",
+    "family": "Afro-Asiatic > Cushitic",
+    "genus": "Lowland East Cushitic",
+    "typology": ""
+   },
+   {
+    "name": "Nara (in Ethiopia)",
+    "wals": "nar",
+    "iso": "nrb",
+    "family": "Eastern Sudanic",
+    "genus": "Nara",
+    "typology": "Word order SOV; Noun-Adjective; Strongly suffixing; Simple tone system"
+   },
+   {
+    "name": "Tigrinya",
+    "wals": "tig",
+    "iso": "tir",
+    "family": "Afro-Asiatic",
+    "genus": "Semitic",
+    "typology": "Word order SOV; Adjective-Noun"
+   }
+  ]
  },
  {
   "countryCode": "ES",
@@ -5057,7 +5140,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 105 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Amharic",
+    "wals": "amh",
+    "iso": "amh",
+    "family": "Afro-Asiatic",
+    "genus": "Semitic",
+    "typology": "Word order SOV; Adjective-Noun; Weakly suffixing; No tones"
+   }
+  ]
  },
  {
   "countryCode": "FI",
@@ -5678,7 +5770,80 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 96 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Akan",
+    "wals": "akn",
+    "iso": "aka",
+    "family": "Niger-Congo > Kwa",
+    "genus": "Tano",
+    "typology": "Word order SVO; Noun-Adjective; Strong prefixing; Simple tone system"
+   },
+   {
+    "name": "Dagbani",
+    "wals": "dgb",
+    "iso": "dag",
+    "family": "Niger-Congo > Gur",
+    "genus": "Oti-Volta",
+    "typology": "Word order SVO; Noun-Adjective; Weakly suffixing; Simple tone system"
+   },
+   {
+    "name": "Dagaare",
+    "wals": "dga",
+    "iso": "dga",
+    "family": "Niger-Congo > Gur",
+    "genus": "Oti-Volta",
+    "typology": "Word order SVO; Noun-Adjective"
+   },
+   {
+    "name": "Dangme",
+    "wals": "",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   },
+   {
+    "name": "Ewe",
+    "wals": "ewe",
+    "iso": "ewe",
+    "family": "Niger-Congo > Kwa",
+    "genus": "Gbe",
+    "typology": "Word order SVO; Noun-Adjective; Equal prefixing and suffixing; Simple tone system"
+   },
+   {
+    "name": "Gã",
+    "wals": "ga",
+    "iso": "gaa",
+    "family": "Niger-Congo > Kwa",
+    "genus": "Ga-Dangme",
+    "typology": "Word order SVO; Noun-Adjective; Complex tone system"
+   },
+   {
+    "name": "Gonja",
+    "wals": "",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   },
+   {
+    "name": "Kasem",
+    "wals": "ksm",
+    "iso": "xsm",
+    "family": "Niger-Congo > Gur",
+    "genus": "Grusi",
+    "typology": "Word order SVO"
+   },
+   {
+    "name": "Nzema",
+    "wals": "",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   }
+  ]
  },
  {
   "countryCode": "GM",
@@ -5748,7 +5913,32 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 53 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Maninka",
+    "wals": "mnk",
+    "iso": "emk",
+    "family": "Mande",
+    "genus": "Western Mande",
+    "typology": ""
+   },
+   {
+    "name": "Fula (Guinean)",
+    "wals": "fgu",
+    "iso": "fuf",
+    "family": "Niger-Congo > North-Central Atlantic",
+    "genus": "Peul-Serer",
+    "typology": ""
+   },
+   {
+    "name": "Susu",
+    "wals": "sus",
+    "iso": "sus",
+    "family": "Mande",
+    "genus": "Western Mande",
+    "typology": "Word order SOV"
+   }
+  ]
  },
  {
   "countryCode": "GQ",
@@ -5896,7 +6086,40 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 34 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Fula (Guinean)",
+    "wals": "fgu",
+    "iso": "fuf",
+    "family": "Niger-Congo > North-Central Atlantic",
+    "genus": "Peul-Serer",
+    "typology": ""
+   },
+   {
+    "name": "Mandinka",
+    "wals": "mdk",
+    "iso": "mnk",
+    "family": "Mande",
+    "genus": "Western Mande",
+    "typology": ""
+   },
+   {
+    "name": "Manjaku",
+    "wals": "mjk",
+    "iso": "mfv",
+    "family": "Niger-Congo > North-Central Atlantic",
+    "genus": "Manjaku",
+    "typology": ""
+   },
+   {
+    "name": "Guinea Bissau Crioulo",
+    "wals": "gbc",
+    "iso": "pov",
+    "family": "other",
+    "genus": "Creoles and Pidgins",
+    "typology": ""
+   }
+  ]
  },
  {
   "countryCode": "GY",
@@ -10025,7 +10248,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 84 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Swahili",
+    "wals": "swa",
+    "iso": "swh",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective; Weakly prefixing; No tones"
+   }
+  ]
  },
  {
   "countryCode": "KG",
@@ -10186,7 +10418,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 5 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Comorian",
+    "wals": "com",
+    "iso": "swb",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": ""
+   }
+  ]
  },
  {
   "countryCode": "KN",
@@ -10656,7 +10897,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 6 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Sesotho",
+    "wals": "ses",
+    "iso": "sot",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective"
+   }
+  ]
  },
  {
   "countryCode": "LT",
@@ -10898,7 +11148,32 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 17 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Berber",
+    "wals": "genus-berber",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   },
+   {
+    "name": "Tubu",
+    "wals": "tbu",
+    "iso": "",
+    "family": "Saharan > Saharan",
+    "genus": "Western Saharan",
+    "typology": "Word order SOV; Noun-Adjective; Strongly suffixing"
+   },
+   {
+    "name": "Tuareg (Ghat)",
+    "wals": "tgh",
+    "iso": "thv",
+    "family": "Afro-Asiatic",
+    "genus": "Berber",
+    "typology": "Weakly prefixing"
+   }
+  ]
  },
  {
   "countryCode": "MA",
@@ -10935,7 +11210,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 16 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Berber",
+    "wals": "genus-berber",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   }
+  ]
  },
  {
   "countryCode": "MC",
@@ -11146,7 +11430,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 17 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Malagasy",
+    "wals": "mal",
+    "iso": "plt",
+    "family": "Austronesian",
+    "genus": "Barito",
+    "typology": "Word order VOS; Noun-Adjective; Little affixation; No tones"
+   }
+  ]
  },
  {
   "countryCode": "MH",
@@ -11261,7 +11554,40 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 79 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Bambara",
+    "wals": "bam",
+    "iso": "bam",
+    "family": "Mande",
+    "genus": "Western Mande",
+    "typology": "Word order SOV; Noun-Adjective; Strongly suffixing; Simple tone system"
+   },
+   {
+    "name": "Fulfulde (Maasina)",
+    "wals": "fum",
+    "iso": "ffm",
+    "family": "Niger-Congo > North-Central Atlantic",
+    "genus": "Peul-Serer",
+    "typology": ""
+   },
+   {
+    "name": "Koyra Chiini",
+    "wals": "kch",
+    "iso": "khq",
+    "family": "Songhay",
+    "genus": "Songhay",
+    "typology": "Word order SVO; Noun-Adjective; Little affixation; No tones"
+   },
+   {
+    "name": "Tamashek",
+    "wals": "tsk",
+    "iso": "taq",
+    "family": "Afro-Asiatic",
+    "genus": "Berber",
+    "typology": "Word order VSO; Noun-Adjective; Equal prefixing and suffixing"
+   }
+  ]
  },
  {
   "countryCode": "MM",
@@ -11358,7 +11684,32 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 10 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Pulaar",
+    "wals": "fma",
+    "iso": "fuc",
+    "family": "Niger-Congo > North-Central Atlantic",
+    "genus": "Peul-Serer",
+    "typology": ""
+   },
+   {
+    "name": "Soninke",
+    "wals": "snn",
+    "iso": "snk",
+    "family": "Mande",
+    "genus": "Western Mande",
+    "typology": "Word order SOV; Noun-Adjective"
+   },
+   {
+    "name": "Wolof",
+    "wals": "wlf",
+    "iso": "wol",
+    "family": "Niger-Congo > North-Central Atlantic",
+    "genus": "Wolof",
+    "typology": "Word order SVO; Noun-Adjective; Little affixation; No tones"
+   }
+  ]
  },
  {
   "countryCode": "MT",
@@ -11440,7 +11791,32 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 2 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Mauritian Creole",
+    "wals": "mcr",
+    "iso": "mfe",
+    "family": "other",
+    "genus": "Creoles and Pidgins",
+    "typology": ""
+   },
+   {
+    "name": "Bhojpuri",
+    "wals": "bho",
+    "iso": "bho",
+    "family": "Indo-European",
+    "genus": "Indic",
+    "typology": "Word order SOV; Adjective-Noun; Strongly suffixing"
+   },
+   {
+    "name": "Kreol Rodrige",
+    "wals": "",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   }
+  ]
  },
  {
   "countryCode": "MV",
@@ -11501,7 +11877,32 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 29 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Chichewa",
+    "wals": "cic",
+    "iso": "nya",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective"
+   },
+   {
+    "name": "Yao (in Malawi)",
+    "wals": "yao",
+    "iso": "yao",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective"
+   },
+   {
+    "name": "Citumbuka",
+    "wals": "",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   }
+  ]
  },
  {
   "countryCode": "MX",
@@ -13173,7 +13574,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 9 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Kinyarwanda",
+    "wals": "kin",
+    "iso": "kin",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective"
+   }
+  ]
  },
  {
   "countryCode": "SA",
@@ -13296,7 +13706,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 2 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Seychelles Creole",
+    "wals": "sey",
+    "iso": "crs",
+    "family": "other",
+    "genus": "Creoles and Pidgins",
+    "typology": ""
+   }
+  ]
  },
  {
   "countryCode": "SD",
@@ -13767,7 +14186,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 12 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Somali",
+    "wals": "som",
+    "iso": "som",
+    "family": "Afro-Asiatic > Cushitic",
+    "genus": "Lowland East Cushitic",
+    "typology": "Word order SOV; Noun-Adjective; Strongly suffixing; Simple tone system"
+   }
+  ]
  },
  {
   "countryCode": "SR",
@@ -13828,7 +14256,24 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 87 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Bari",
+    "wals": "bar",
+    "iso": "bfa",
+    "family": "Eastern Sudanic > Nilotic",
+    "genus": "Eastern Nilotic",
+    "typology": "Word order SVO; Noun-Adjective; Weakly prefixing"
+   },
+   {
+    "name": "Dinka",
+    "wals": "din",
+    "iso": "din",
+    "family": "Eastern Sudanic > Nilotic",
+    "genus": "Western Nilotic",
+    "typology": "Word order No dominant order; Noun-Adjective; Little affixation; Complex tone system"
+   }
+  ]
  },
  {
   "countryCode": "ST",
@@ -13953,7 +14398,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 4 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Swati",
+    "wals": "swt",
+    "iso": "ssw",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order No dominant order; No dominant order"
+   }
+  ]
  },
  {
   "countryCode": "TD",
@@ -14031,7 +14485,24 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 52 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Kabiyé",
+    "wals": "kby",
+    "iso": "kbp",
+    "family": "Niger-Congo > Gur",
+    "genus": "Grusi",
+    "typology": "Word order SVO; Noun-Adjective"
+   },
+   {
+    "name": "Ewe",
+    "wals": "ewe",
+    "iso": "ewe",
+    "family": "Niger-Congo > Kwa",
+    "genus": "Gbe",
+    "typology": "Word order SVO; Noun-Adjective; Equal prefixing and suffixing; Simple tone system"
+   }
+  ]
  },
  {
   "countryCode": "TH",
@@ -14378,7 +14849,16 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 143 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Swahili",
+    "wals": "swa",
+    "iso": "swh",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective; Weakly prefixing; No tones"
+   }
+  ]
  },
  {
   "countryCode": "UA",
@@ -14444,7 +14924,40 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 61 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Luganda",
+    "wals": "lda",
+    "iso": "lug",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Noun-Adjective; Strong prefixing"
+   },
+   {
+    "name": "Acholi",
+    "wals": "acl",
+    "iso": "ach",
+    "family": "Eastern Sudanic > Nilotic",
+    "genus": "Western Nilotic",
+    "typology": "Word order SVO; Noun-Adjective; Equal prefixing and suffixing"
+   },
+   {
+    "name": "Lango",
+    "wals": "lan",
+    "iso": "laj",
+    "family": "Eastern Sudanic > Nilotic",
+    "genus": "Western Nilotic",
+    "typology": "Word order SVO; Noun-Adjective; Equal prefixing and suffixing; Simple tone system"
+   },
+   {
+    "name": "Kumam",
+    "wals": "",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   }
+  ]
  },
  {
   "countryCode": "US",
@@ -18709,7 +19222,88 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 43 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Sotho (Northern)",
+    "wals": "stn",
+    "iso": "nso",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO"
+   },
+   {
+    "name": "Sesotho",
+    "wals": "ses",
+    "iso": "sot",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective"
+   },
+   {
+    "name": "Tswana",
+    "wals": "tsw",
+    "iso": "tsn",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": ""
+   },
+   {
+    "name": "Swati",
+    "wals": "swt",
+    "iso": "ssw",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order No dominant order; No dominant order"
+   },
+   {
+    "name": "Venda",
+    "wals": "ven",
+    "iso": "ven",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective"
+   },
+   {
+    "name": "Tsonga",
+    "wals": "tsn",
+    "iso": "tso",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": ""
+   },
+   {
+    "name": "Afrikaans",
+    "wals": "afr",
+    "iso": "afr",
+    "family": "Indo-European",
+    "genus": "Germanic",
+    "typology": ""
+   },
+   {
+    "name": "isiNdebele",
+    "wals": "",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   },
+   {
+    "name": "Xhosa",
+    "wals": "xho",
+    "iso": "xho",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective; Strong prefixing"
+   },
+   {
+    "name": "Zulu",
+    "wals": "zul",
+    "iso": "zul",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective; Strong prefixing; Simple tone system"
+   }
+  ]
  },
  {
   "countryCode": "ZM",
@@ -18742,7 +19336,64 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 51 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Bemba",
+    "wals": "bem",
+    "iso": "bem",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Noun-Adjective"
+   },
+   {
+    "name": "Kaonde",
+    "wals": "",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   },
+   {
+    "name": "Lunda",
+    "wals": "lbu",
+    "iso": "lun",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective; Weakly prefixing"
+   },
+   {
+    "name": "Luvale",
+    "wals": "luv",
+    "iso": "lue",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective; Strong prefixing; Simple tone system"
+   },
+   {
+    "name": "Lozi",
+    "wals": "loz",
+    "iso": "loz",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": ""
+   },
+   {
+    "name": "Chichewa",
+    "wals": "cic",
+    "iso": "nya",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective"
+   },
+   {
+    "name": "Tonga (in Zambia)",
+    "wals": "toz",
+    "iso": "toi",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective; Strong prefixing"
+   }
+  ]
  },
  {
   "countryCode": "ZW",
@@ -18775,6 +19426,23 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 27 living languages for this country",
-  "languages": []
+  "languages": [
+   {
+    "name": "Shona",
+    "wals": "shn",
+    "iso": "sna",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective; Strong prefixing"
+   },
+   {
+    "name": "Ndebele",
+    "wals": "ndb",
+    "iso": "nde",
+    "family": "Niger-Congo > Benue-Congo",
+    "genus": "Bantu",
+    "typology": "Word order SVO; Noun-Adjective; Strong prefixing"
+   }
+  ]
  }
 ]
