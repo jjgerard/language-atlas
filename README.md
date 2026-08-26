@@ -122,21 +122,26 @@ the Docker image does not need the Natural Earth downloads.
 
 ## What is real
 
-**336 units on each of the three maps, so 1,008 slots in total.** A slot is one
-unit on one map. 851 of them carry a record with at least one documented field.
+**336 units on each of the four maps, so 1,344 slots in total.** A slot is one
+unit on one map. 1,087 of them carry a record with at least one documented field.
 
 | map | units | with a record | field-slots filled |
 | --- | --- | --- | --- |
-| Majority language acquisition (`eal`) | 336 | 294 | 1,246 / 3,024 (41%) |
-| Language disorder support (`dld`) | 336 | 267 | 1,125 / 4,368 (26%) |
-| Foreign languages in school (`fl`) | 336 | 290 | 1,424 / 3,696 (39%) |
+| Majority language acquisition (`eal`) | 336 | 294 | 1,301 / 3,024 (43%) |
+| Language disorder support (`dld`) | 336 | 267 | 1,129 / 4,368 (26%) |
+| Foreign languages in school (`fl`) | 336 | 288 | 1,282 / 3,360 (38%) |
+| Indigenous and regional languages (`indigenous`) | 336 | 238 | 238 / 3,360 (7%) |
 
 The two numbers measure different things and both matter. "With a record" says
 somebody has written *something* about that unit; "field-slots filled" says how
-much of the record exists. The second is the honest one, and at 34% overall it
+much of the record exists. The second is the honest one, and at 28% overall it
 is the number the project is actually working on. The map shades by it.
 
-By region, every unit outside Asia now has a record on all three maps: Africa
+The `indigenous` map is new and its 7% is real: 238 units carry one filled field
+each, because that is exactly what migrated into it. See below for why it exists
+and why it is named as it is.
+
+By region, every unit outside Asia has a record on the three older maps: Africa
 54/54, the Americas 99/99, Europe 49/49, Oceania 22/22. Asia is 112 units, of
 which China's 31 provinces are untouched by deliberate choice.
 
@@ -153,6 +158,78 @@ it has nothing of its own it inherits and is marked as inheriting.
 
 **2,074 source links and 648 dated policy-history rows** sit behind those
 entries.
+
+## Why this map is called what it is
+
+The `indigenous` map exists because the other three had nowhere honest to put a
+language that is *from* the place the school stands in. That content lived in a
+field called "Regional and minority languages" on the FOREIGN LANGUAGES map —
+whose own blurb says it covers languages taught "besides the language of the
+school". In Nunavut, Inuktut IS the language of the school.
+
+The entries had started arguing with their own label. Two of them, verbatim from
+the data before the split:
+
+> Inuktut is an official language, not minority provision - do not read this as a minority field
+
+> Wrong frame: these are official languages of the territory, not a minority provision
+
+52 bullets in that field described a medium of instruction or an official
+status. When contributors have to write warnings about the heading above them,
+the heading is wrong.
+
+### The name is a compromise, and the evidence says it has to be
+
+There is no globally common policy term for these languages. That is not an
+opinion; it was counted across the sources this atlas has retrieved:
+
+| corpus | "minority language" | "indigenous language" | "mother tongue" | "national language" |
+| --- | --- | --- | --- | --- |
+| India | **973** | 0 | 284 | 3 |
+| Canada | 65 | **606** | 8 | 93 |
+| Africa (UNESCO PEER) | 3 | 14 | 29 | **93** |
+| Latin America | 0 | **18** | 6 | 0 |
+| US states | 6 | 3 | **15** | 15 |
+| West Asia | 0 | 0 | **7** | 3 |
+
+"Minority language" has the highest raw total across the whole corpus (2,130),
+but it leads only because India's Commissioner for Linguistic **Minorities**
+supplies 973 of the hits. Strip that one institution and it is a European and
+South Asian term, carried by the Council of Europe's *Charter for Regional or
+Minority Languages*. Canada's sources say Indigenous; Africa's say national
+languages — for the same kind of language, and in Africa's case usually for the
+majority one.
+
+"Mother tongue" is the only term spread evenly across every corpus, and it is
+the wrong concept here: a mother tongue is a property of the CHILD, and this map
+asks about the languages of the PLACE. A Bradford pupil's mother tongue is Urdu,
+which the majority-language map already answers.
+
+So every available term of art is a regional loan. "Indigenous and regional
+languages" was chosen because it is the phrasing most legible to the field this
+atlas serves, in full knowledge that it will read as natural in Ottawa and
+foreign in Dakar, where the same languages are the national ones. The map
+carries a note saying so, and every entry records the word its own sources use
+in the **Local term** field. The atlas names the category; the sources keep
+theirs.
+
+### What the map records
+
+The distinctions are structural and quotable, which is what keeps the map
+descriptive rather than evaluative:
+
+- **taught in** — Inuktut, the NWT's eleven official languages, Bolivia's EIB
+- **taught as a subject** — Louisiana French, Kokborok in Tripura
+- **recognised without an entitlement** — South Dakota's O'ceti Sakowin is
+  official in Title 1, not Title 13
+- **taught *about*, not taught** — Wisconsin's Act 31; Maine's Native American
+  studies requirement, which enumerates cultural systems and territories and
+  contains no language clause
+- **absent** — Gujarat's Bhili, 2.4 million speakers, in no provision table at all
+
+There are no composite scores here, as everywhere else in this atlas. "Montana
+requires American Indian studies of all pupils but has no Native-language
+qualification" is a sourced fact; a score out of ten would be an argument.
 
 ## Pages
 

@@ -65,7 +65,7 @@ const DOMAINS = [
   {
     id: 'fl',
     label: 'Foreign languages in school',
-    blurb: 'Which languages children are taught besides the language of the school, at what age, and whether it is a requirement or a choice.',
+    blurb: 'Languages from outside the country, taught as school subjects: which ones, at what age, and whether required or chosen. Languages of the place have their own map.',
     live: true,
     fields: [
       ['primaryRequirement', 'Primary school', 'text', 'Is a language other than the school language compulsory in primary school, from what age or year, and under what rule.'],
@@ -77,8 +77,33 @@ const DOMAINS = [
       ['teacherSupply', 'Teacher supply', 'text', 'Qualification routes, shortages, and which languages cannot be staffed.'],
       ['higherEducation', 'Higher education', 'text', 'Whether languages can be studied at degree level, including departments opening or closing.'],
       ['uptake', 'Uptake', 'series', 'Numbers or shares of pupils taking a language, by year, with the source of each figure.'],
-      ['regionalMinorityLanguages', 'Regional and minority languages', 'text', 'Provision for languages of the country itself, where it sits alongside foreign language teaching.'],
       ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, curriculum order or funding decision, one per row.'],
+    ],
+  },
+  {
+    id: 'indigenous',
+    label: 'Indigenous and regional languages',
+    blurb: 'Languages already spoken where the school stands, and what school does with them: teaches in them, teaches them, recognises them, or not.',
+    // Signposted on the map because the NAME of this map is a compromise, and a
+    // reader is owed that. There is no globally common policy term: counted
+    // across the sources this atlas has retrieved, "minority language" leads
+    // only because India's Commissioner for Linguistic Minorities supplies 973
+    // of its hits, while Canada's sources say Indigenous 606 times and Africa's
+    // say national languages. Every available term of art is a regional loan.
+    // See the README section "Why this map is called what it is".
+    note: 'No single term for these languages is used worldwide: the same languages are "national languages" in Senegal, "linguistic minorities" in India and "Indigenous" in Canada. This map keeps one name for navigation, and every entry uses the word its own sources use — recorded in the Local term field.',
+    live: true,
+    fields: [
+      ['localTerm', 'Local term', 'text', 'What the system itself calls these languages — national, minority, Indigenous, regional, or its own word.'],
+      ['standing', 'Standing', 'text', 'The position the system gives them: official, co-official, recognised, or none, and the instrument that says so.'],
+      ['mediumOfInstruction', 'Medium of instruction', 'text', 'Whether school is taught IN the language, at which stages and in which schools.'],
+      ['taughtAsSubject', 'Taught as a subject', 'text', 'Whether it is taught, compulsory or optional, at which stages. Note where the curriculum teaches ABOUT the community rather than the language.'],
+      ['teacherSupply', 'Teachers', 'text', 'Who may teach it, how they qualify, and whether fluent speakers can teach without a conventional licence.'],
+      ['materials', 'Curriculum and materials', 'text', 'Whether a curriculum, textbooks or an agreed orthography exist.'],
+      ['assessment', 'Assessment', 'text', 'Whether it can be examined or certificated, and in what.'],
+      ['revitalisation', 'Revitalisation', 'text', 'Programmes aimed at reversing language shift, and who runs them.'],
+      ['speakers', 'Speakers', 'series', 'Speaker numbers or shares, by year, with the source of each figure and who it counted.'],
+      ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, order or funding decision, one per row.'],
     ],
   },
   { id: 'adult', label: 'Majority language for adults', blurb: 'Classes and entitlements for adults who move to a country, rather than children in its schools.', live: false, planned: true },

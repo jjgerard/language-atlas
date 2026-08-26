@@ -7,8 +7,8 @@ because this app holds entries of its own.
 
 - **Do not generate policy content for a place from inference.** A stub is more
   honest than a plausible guess, and every claim in a worked entry must trace to
-  a `docLinks` entry on that same entry. This is why `data/fl.seed.json` is 216
-  stubs and not 216 paragraphs.
+  a `docLinks` entry on that same entry. This is why the maps launch as stubs
+  and fill in from sources, rather than from plausible-sounding paragraphs.
 - **Assessment instruments may be named and linked, never reproduced.** No
   norms, items, scoring tables or cut-off values from commercial batteries.
 - **A citation with no match stays plain text.** Never invent a DOI to make one
@@ -30,6 +30,12 @@ count, the hover checklist, the entry panel, the submission form and the
 sanitiser together. A native domain needs a `data/<id>.seed.json` — generate it
 from the unit list the other domains already use, so a country split for one
 question is split for all of them.
+
+`indigenous` was added this way and is the worked example: one entry in
+`src/domains.js` plus a `data/indigenous.json` built from the same 336 units,
+and the map, submission form, nav, coverage counts and hover checklist all
+followed with no other edit. It also carries a `note`, rendered under the map's
+blurb, for a domain whose own NAME needs explaining to a reader.
 
 ## Deploys
 

@@ -72,6 +72,14 @@
   border: 1px solid var(--hair); background: var(--surface-2); color: var(--ink);
 }
 .blurb { font-size: 12px; color: var(--ink-soft); margin: 10px 0 0; }
+/* A domain's note about its own framing. Set apart from the blurb by a rule
+   rather than a colour, so it reads as an aside rather than as a warning —
+   nothing here is wrong, the naming is just contested. */
+.domainnote {
+  font-size: 11.5px; line-height: 1.5; color: var(--ink-faint);
+  margin: 9px 0 0; padding-left: 9px; border-left: 2px solid var(--hair);
+}
+.domainnote[hidden] { display: none; }
 
 .tally { display: flex; gap: 3px; margin-top: 13px; }
 .tally .seg { height: 7px; border-radius: 1px; }
@@ -463,6 +471,7 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
     <div class="overlay controls">
       <h2 class="eyebrow" id="domainName"></h2>
       <p class="blurb" id="blurb"></p>
+      <p class="domainnote" id="domainnote" hidden></p>
       <div class="tally" id="tally"></div>
       <div class="tallylabels" id="tallylabels"></div>
 
@@ -1416,6 +1425,16 @@ function buildDomains() {
   }
   document.getElementById('domainName').textContent = domain().label;
   document.getElementById('blurb').textContent = domain().blurb;
+  // A domain may carry a note about its own framing. Only one does: the
+  // Indigenous and regional languages map, whose NAME is a compromise between
+  // regional terms of art that do not agree with each other. A reader who
+  // notices that Senegal's entry says "national languages" under a heading
+  // that says Indigenous is owed the reason on the same screen, not in a
+  // repository README they will never open.
+  const noteEl = document.getElementById('domainnote');
+  const note = domain().note;
+  noteEl.textContent = note || '';
+  noteEl.hidden = !note;
   // Each map is its own page, so it gets its own title in history and tabs.
   document.title = domain().label + ' — Language Atlas';
 }
