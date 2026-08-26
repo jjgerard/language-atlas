@@ -7797,26 +7797,72 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Southern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Constitution of the Islamic Republic of Iran (1979, as amended 1989), Arts. 15 and 16 — Constitute Project English text",
+    "url": "https://www.constituteproject.org/constitution/Iran_1989"
+   },
+   {
+    "label": "UNESCO GEM Report PEER, Iran (Islamic Republic of) — Inclusion profile (archived platform), sections 'Ethnic and linguistic groups' and 'Refugees'",
+    "url": "https://education-profiles.org/central-and-southern-asia/iran-islamic-republic-of/~inclusion"
+   },
+   {
+    "label": "Asia Displacement Solutions Platform (ADSP), 'Afghan Children's Access to Education in Iran: What happened after the Supreme Leader's Decree?' (2018)",
+    "url": "https://adsp.ngo/wp-content/uploads/2018/12/IR-15_Afghan-Children%E2%80%99s-Access-to-Education-in-Iran-What-happened-after-the-Supreme-Leader%E2%80%99s-Decree.pdf"
+   },
+   {
+    "label": "UNHCR Iran — Education country page",
+    "url": "https://www.unhcr.org/ir/education"
+   },
+   {
+    "label": "Center for Human Rights in Iran, 'Non-Persian Mother Languages Treated as National Security Threat in Iran' (Feb 2021)",
+    "url": "https://iranhumanrights.org/2021/02/non-persian-mother-languages-treated-as-national-security-threat-in-iran/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source exists for this system yet. If you work in or study this education system, please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "",
+  "newcomerCriteria": "Two separate questions: refugee access, and domestic non-Persian-speaking pupils\nMay 2015 Supreme Leader decree: all Afghan children enrolled whatever their documents\nCategories are Amayesh card holder, visa holder, or undocumented\n2023: 800,080 Afghan and Iraqi pupils enrolled, 380,000 of them undocumented",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "",
-  "l1Support": "",
+  "l2Support": "Not established from the sources consulted. Persian is the constitutionally required language of textbooks and instruction (Art. 15, 1989 Constitution), and the UNHCR Iran education page states refugee and undocumented children follow \"the same national curriculum\" as Iranian children, but no source retrieved in this session sets out a Persian-as-a-second-language provision: no entitlement, no hours, no designated staff. Searched: UNESCO PEER Iran inclusion profile (no language-support section), UNHCR Iran education page, the ADSP 2018 review of the Supreme Leader's decree (access only, silent on language), and the Center for Human Rights in Iran 2021 report on mother languages, which describes teachers in Sistan and Baluchistan teaching Persian from scratch in first grade as an unsupported local difficulty rather than a programme. Not asserted either way.",
+  "l1Support": "Permissive and partial; CHRI reports mother-language teaching allowed only in restricted cases\nArt 15: regional and tribal languages may be taught as literature, in addition to Persian\nArt 15 also requires all textbooks to be in Persian script\nJune 2016: government ordered Kurdish and Azeri taught in schools in their own regions",
   "l3Support": "",
-  "bilingualEducationNotes": "",
-  "policyHistory": []
+  "bilingualEducationNotes": "No dual-medium programme found; Art 15 reserves textbooks and instruction to Persian\nRegional languages enter as a subject of study, not as a medium\nArabic compulsory in all secondary classes and all fields of study (Art 16)\nPEER: Arabic taught grades 7-12, plus one foreign language in grades 3-12",
+  "policyHistory": [
+   {
+    "year": 1989,
+    "description": "Constitution Arts. 15-16 make Persian the official language and language of textbooks, permit teaching of regional and tribal languages' literature, and make Arabic compulsory in secondary"
+   },
+   {
+    "year": 2002,
+    "description": "Council of Ministers directive allows the Ministry of Education to enrol Afghan children regardless of legal status"
+   },
+   {
+    "year": 2004,
+    "description": "Directive of the Executive Coordination Council for Foreign Nationals bans enrolment of undocumented foreign nationals and permits fees for Afghan refugee children"
+   },
+   {
+    "year": 2015,
+    "description": "Supreme Leader's decree (made public 17 May 2015) requires all Afghan children, including undocumented, to be enrolled in Iranian schools"
+   },
+   {
+    "year": 2016,
+    "description": "Council of Ministers directive of 20 April 2016 nullifies the 2004 directive, creates a special educational support card for undocumented Afghan children and voids tuition-fee articles"
+   },
+   {
+    "year": 2016,
+    "description": "Government orders Kurdish and Azeri to be taught in schools in regions where they are the primary local languages, starting in Kurdistan Province; first university classes in Kurdish and Azeri-Turkish offered in August"
+   }
+  ]
  },
  {
   "countryCode": "IS",
@@ -8123,26 +8169,64 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Central Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO GEM Report PEER, Kyrgyzstan — Inclusion profile (archived platform), section 'Ethnic and linguistic groups'",
+    "url": "https://education-profiles.org/central-and-southern-asia/kyrgyzstan/~inclusion"
+   },
+   {
+    "label": "OSCE HCNM press release, 'OSCE High Commissioner on National Minorities and Government of Kyrgyzstan to intensify co-operation on inter-ethnic policy and multilingual education', Bishkek, 12 April 2018",
+    "url": "https://www.osce.org/hcnm/377635"
+   },
+   {
+    "label": "OSCE HCNM press release, 'National Forum explores future of multilingual education in Kyrgyzstan' (National Forum, Bishkek, 25 October 2024)",
+    "url": "https://www.osce.org/hcnm/579406"
+   },
+   {
+    "label": "OSCE HCNM press release, 'In first official trip to Central Asia, OSCE High Commissioner on National Minorities Christophe Kamp visits Tajikistan and Kyrgyzstan' (visit 14–24 May 2025)",
+    "url": "https://www.osce.org/hcnm/593399"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source exists for this system yet. If you work in or study this education system, please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "",
+  "newcomerCriteria": "Domestic minority-medium schooling, not migration, is the question here\n2010 Constitution: Kyrgyz is the state language, Russian holds official language status\nArt 10.3 recognises every ethnicity's right to preserve and learn its native language\nPEER records no newcomer designation; schools are classed by language of instruction",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "",
-  "l1Support": "",
+  "l2Support": "State-language teaching runs through curriculum and MLE, not a separate withdrawal service\n2003 Law on Education: equal conditions for learning the state and official languages\n2012-20 strategy action plan aims to enhance Kyrgyz in Russian-medium school groups\nOSCE HCNM: MLE schools support learning mother tongue and Kyrgyz together",
+  "l1Support": "Constitution Art 10.3 protects native-language preservation, learning and development\n2003 Law on Education Art 6 allows instruction in another language under conditions\nRussian, Uzbek and Tajik medium schools exist alongside Kyrgyz-medium ones\nMLE lets minority pupils study in their mother tongues while learning the state language",
   "l3Support": "",
-  "bilingualEducationNotes": "",
-  "policyHistory": []
+  "bilingualEducationNotes": "MLE reaches a small minority of schools, not the whole system\nSince 2005 MLE introduced in 78 schools and 13 kindergartens (OSCE HCNM, 2018)\nFive universities involved in MLE teacher preparation\nDraft multilingual education roadmap for 2025-2030 presented at Bishkek forum, Oct 2024",
+  "policyHistory": [
+   {
+    "year": 2003,
+    "description": "Law on Education commits the state to equal conditions for learning the state and official languages and permits instruction in another language under conditions (Art. 6)"
+   },
+   {
+    "year": 2005,
+    "description": "Multilingual education introduced in Kyrgyzstan, reaching 78 schools and 13 kindergartens by 2018"
+   },
+   {
+    "year": 2010,
+    "description": "Constitution makes Kyrgyz the state language and Russian an official language, and recognises all ethnicities' right to preserve and develop their native language (Art. 10)"
+   },
+   {
+    "year": 2018,
+    "description": "OSCE HCNM and the Ministry of Education and Science sign a Memorandum of Co-operation on Multilingual and Multicultural Education (12 April 2018)"
+   },
+   {
+    "year": 2024,
+    "description": "National Forum on Multilingual Education in Bishkek (25 October) presents a draft multilingual education roadmap for 2025–2030"
+   }
+  ]
  },
  {
   "countryCode": "KH",
@@ -8150,26 +8234,68 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Kingdom of Cambodia, Ministry of Education, Youth and Sport, Multilingual Education Action Plan 2019–2023 (MEAP), 2019 — PDF hosted on the UNESCO GEM Report PEER file server",
+    "url": "https://education-profiles.org/sites/default/files/2020-03/MEAP%202019-2023.pdf"
+   },
+   {
+    "label": "UNESCO GEM Report PEER, Cambodia — Inclusion profile (archived platform), section 'Ethnic and linguistic groups and indigenous groups'",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/cambodia/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source exists for this system yet. If you work in or study this education system, please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "",
+  "newcomerCriteria": "Domestic indigenous minorities, not migrants; category is \"ethnic minority origin\"\n2007 Education Law Art 24: Khmer is the official language of teaching and learning\nArt 24 leaves the language for minority-origin learners to a ministerial Prakas\nPrakas No 48 of 10 Jan 2013 governs identification of language for such learners",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "",
-  "l1Support": "",
+  "l2Support": "Khmer is explicitly the L2 inside the multilingual education programme\nPreschool age 5, semester 2: 20 minutes of oral Khmer every day\nGrade 1 Khmer is 20 per cent of time and oral only; Grades 4-6 are 100 per cent Khmer\nMEAP 2019-23 target: primary MLE teachers and contract teachers from 197 to 253",
+  "l1Support": "Orthographies for five indigenous languages developed from 1990, approved 2003\nMLE runs in Ratanakiri, Mondulkiri, Kratie, Stung Treng and Preah Vihear\nLanguages in use: Phnong, Tumpuon, Kavet, Kroeung, Prov, Kouy; Charai in preparation\nMother tongue is 80 per cent of Grade 1 time, falling to 30 per cent by Grade 3",
   "l3Support": "",
-  "bilingualEducationNotes": "",
-  "policyHistory": []
+  "bilingualEducationNotes": "An early-exit transitional model, not maintenance bilingual education\nGuideline No 2972 of 26 Aug 2010 set up bilingual education in the highland provinces\nL1 share falls 80/60/30 per cent across Grades 1-3, Khmer only from Grade 4\nPiloted 2002 as the Highland Children Education Project with CARE in Ratanakiri",
+  "policyHistory": [
+   {
+    "year": 1990,
+    "description": "MoEYS with International Cooperation for Cambodia begins developing orthographies for five indigenous languages of the north-east"
+   },
+   {
+    "year": 2002,
+    "description": "Highland Children Education Project piloted with CARE International in Ratanakiri province"
+   },
+   {
+    "year": 2003,
+    "description": "Khmer-based orthographies approved for Phnong, Tumpuon, Kavet, Prov and Krung"
+   },
+   {
+    "year": 2007,
+    "description": "Education Law Art. 24 makes Khmer the official language of teaching and learning and refers the language of minority-origin learners to ministerial Prakas"
+   },
+   {
+    "year": 2007,
+    "description": "MoEYS and UNICEF begin multilingual education in primary schools with CARE technical support in Ratanakiri, extending to Mondulkiri, Stung Treng and Kratie"
+   },
+   {
+    "year": 2010,
+    "description": "Guideline No. 2972 of 26 August 2010 on Implementation of the Bilingual Education Program for Indigenous Children in the Highland Provinces"
+   },
+   {
+    "year": 2013,
+    "description": "Prakas No. 48 of 10 January 2013 on Identification of Language for Learners of Khmer Nationality and Ethnic Minority Origin"
+   },
+   {
+    "year": 2019,
+    "description": "Multilingual Education Action Plan 2019–2023 adopted, expanding from five to six languages by adding Charai"
+   }
+  ]
  },
  {
   "countryCode": "KI",
@@ -8303,25 +8429,34 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Socialist Constitution of the Democratic People's Republic of Korea (as amended 2016), Arts. 54 and 159 — Constitute Project English text",
+    "url": "https://www.constituteproject.org/constitution/Peoples_Republic_of_Korea_2016"
+   },
+   {
+    "label": "UNESCO GEM Report PEER, Democratic People's Republic of Korea — Inclusion profile (archived platform)",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/democratic-peoples-republic-of-korea/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source exists for this system yet. If you work in or study this education system, please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "",
+  "newcomerCriteria": "Not established from the sources consulted. The UNESCO PEER inclusion profile for the DPRK, read in full, contains no occurrence of \"minority\", \"ethnic\", \"foreign\", \"refugee\", \"migrant\" or \"language of instruction\" anywhere in the document; its entire inclusion content concerns disability, and \"Korean\" appears only in institution names. The 2016 Socialist Constitution's language provisions (Arts. 54 and 159) concern protecting the Korean language and the language of court proceedings, not schooling. Searched: PEER DPRK inclusion profile, Constitute Project text of the Socialist Constitution, UNESCO UIS country pages (uis.unesco.org/en/country/kp redirects to a generic landing page and does not resolve to a DPRK profile), and UNESDOC. Not asserted either way.",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "",
-  "l1Support": "",
+  "l2Support": "Not established from the sources consulted. No source retrieved in this session describes any teaching of Korean as a second or additional language to pupils entering DPRK schools without it. Searched: PEER DPRK inclusion profile (no language-of-instruction content at all), the 2016 Socialist Constitution via Constitute Project (Arts. 54 and 159 only), UNESCO UIS and UNESDOC. Not asserted either way.",
+  "l1Support": "Not established from the sources consulted. No source retrieved in this session records any provision in a pupil's home language other than Korean in DPRK schools, nor any recognised linguistic minority in education policy. The PEER DPRK inclusion profile has no ethnic or linguistic minority section, unlike the other nine profiles consulted in this batch, which all do. Searched: PEER DPRK inclusion profile, Constitute Project constitutional text, UNESCO UIS, UNESDOC. Not asserted either way.",
   "l3Support": "",
-  "bilingualEducationNotes": "",
+  "bilingualEducationNotes": "Not established from the sources consulted. No source retrieved in this session describes any programme in the DPRK teaching content through two languages. Searched: PEER DPRK inclusion profile, Constitute Project text of the 2016 Socialist Constitution, UNESCO UIS and UNESDOC. Not asserted either way.",
   "policyHistory": []
  },
  {
@@ -8447,26 +8582,44 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO GEM Report PEER, Lao People's Democratic Republic — Inclusion profile (archived platform), sections 'Ethnic and language groups and indigenous groups', 'Laws, Plans, Policies and Programmes', 'Curricula and learning materials'",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/lao-peoples-democratic-republic/~inclusion"
+   },
+   {
+    "label": "UNICEF Lao PDR — Education country page",
+    "url": "https://www.unicef.org/laos/education"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source exists for this system yet. If you work in or study this education system, please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "",
+  "newcomerCriteria": "Domestic highland minorities, not migrants, are the population in question\nLao remains the medium of instruction in public schools (2006-15 NESRS)\nInclusive education strategy counts \"ethnic children\" as learners with special needs\nUNICEF: many pre-primary-age children do not speak Lao, the language of instruction",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "",
-  "l1Support": "",
+  "l2Support": "Recorded as plan commitments; no entitlement, hours or staffing was found\nEducation Strategic Vision 2020 recommended teaching Lao as a second language\n2016-20 Education Sector Development Plan: materials for teaching Lao to ethnic groups\nUNICEF supports a Community-Based School Readiness Programme in non-Lao-speaking villages",
+  "l1Support": "Not established from the sources consulted. The UNESCO PEER inclusion profile for Lao PDR contains no occurrence of \"mother tongue\", \"bilingual\" or \"multilingual\" anywhere in the document; its ethnic-group provision is framed entirely as access to Lao-medium schooling, with \"ethnic primary and secondary schools\" described as boarding-type provision for remote learners (\"As of 2017, there were only 20 throughout the country\") rather than as minority-language schools. The closest thing to home-language provision recorded is the recruitment of ethnic teachers to teach in their home areas. Searched: PEER Lao PDR inclusion profile in full, the UNICEF Lao PDR education page, and unicef.org's Lao community-based school readiness story (HTTP 403 to both curl and WebFetch, not usable). Not asserted either way.",
   "l3Support": "",
-  "bilingualEducationNotes": "",
-  "policyHistory": []
+  "bilingualEducationNotes": "Not established from the sources consulted. No source retrieved in this session describes any programme in Lao PDR teaching content through two languages: no transition model, no language allocation by grade, no named bilingual or multilingual schools. The PEER Lao PDR inclusion profile, read in full, does not use the words \"bilingual\" or \"multilingual\" at all, and the UNICEF Lao PDR education page describes school-readiness support in non-Lao-speaking villages without stating what language it is delivered in. Searched: PEER Lao PDR inclusion profile, UNICEF Lao PDR education page, unicef.org Lao community-based school readiness story (403), UNICEF Lao PDR 2023 Country Office Annual Report at unicef.org/media/152161/... (404). Not asserted either way.",
+  "policyHistory": [
+   {
+    "year": 2003,
+    "description": "Constitution amended; Art. 22 obliges the state to create favourable education conditions for people in remote areas and ethnic groups"
+   },
+   {
+    "year": 2015,
+    "description": "Education Law revised, raising compulsory education to at least age 14 and making primary and lower secondary education compulsory"
+   }
+  ]
  },
  {
   "countryCode": "LB",
@@ -9397,26 +9550,52 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO GEM Report PEER, Myanmar — Inclusion profile (archived platform), sections 'Ethnic and linguistic groups and indigenous groups'",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/myanmar/~inclusion"
+   },
+   {
+    "label": "PEN International, 'Myanmar: Regressive changes to education policy undermine linguistic rights and exacerbate ethnic divisions' (2 December 2022)",
+    "url": "https://www.pen-international.org/news/myanmar-regressive-changes-education-policy-undermine-linguistic-rights-exacerbate-ethnic-divisions"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source exists for this system yet. If you work in or study this education system, please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "",
+  "newcomerCriteria": "Domestic ethnic minorities, not migrants, are the population in question\nConstitution Art 450: Myanmar is the official language; Art 354(d) protects own language\nEducation review found the language barrier contributes to pupils dropping out\nStateless Rohingya are excluded from basic services including education (1982 Act)",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "",
-  "l1Support": "",
+  "l2Support": "PEN International reads the 2022 amendments as making Burmese the sole medium\nNESP promotes Myanmar language via an enrichment programme in some states and regions\nNo separate second-language entitlement, hours or staffing was found in any source\nThe amendment text was not retrievable; PEN International is the source for it",
+  "l1Support": "PEN reports amendments in force 29 October 2022 cut back the 2014-15 entitlement\nNEL Art 42 requires state and regional governments to set up ethnic language classes\nDepartment of Myanmar Nationalities' Languages leads on ethnic languages, local curricula\nPer PEN, the amendment confines ethnic language teaching to the primary level",
   "l3Support": "",
-  "bilingualEducationNotes": "",
-  "policyHistory": []
+  "bilingualEducationNotes": "PEN reports the 2022 amendments reversed the 2014-15 position described below\nNEL Art 43 allowed an ethnic language as medium of instruction in basic education\nArt 44 let regional governments teach ethnic languages from primary upward\nPEN: first time non-dominant ethnic language teaching was recognised in Myanmar law",
+  "policyHistory": [
+   {
+    "year": 1982,
+    "description": "Citizenship Act denies citizenship to Rohingya, who become effectively stateless and cannot access education"
+   },
+   {
+    "year": 2014,
+    "description": "National Education Law enacted, allowing an ethnic language as a medium of instruction at basic education level (Art. 43) and requiring ethnic language classes (Art. 42)"
+   },
+   {
+    "year": 2015,
+    "description": "National Education Law amended; Ethnic Rights Protection Law adopted"
+   },
+   {
+    "year": 2022,
+    "description": "PEN International reports military amendments to the National Education Law, in force 29 October and published 30 October, that exclude ethnic minority languages as a classroom language at primary level (Art. 43[B]) and limit ethnic language and literature teaching to primary level (Art. 44)"
+   }
+  ]
  },
  {
   "countryCode": "MN",
@@ -9424,26 +9603,52 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Constitution of Mongolia (1992, as amended 2001), Article 8 — Constitute Project English text",
+    "url": "https://www.constituteproject.org/constitution/Mongolia_2001"
+   },
+   {
+    "label": "UNESCO GEM Report PEER, Mongolia — Inclusion profile (archived platform), section 'Ethnic and linguistic groups'",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/mongolia/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source exists for this system yet. If you work in or study this education system, please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "",
+  "newcomerCriteria": "Domestic minorities, not migrants; Kazakh and Tuvan are the recognised groups\nConstitution Art 8: Mongolian is the official language of the State\nArt 8 preserves national minorities' right to use native languages in learning\nNo newcomer or additional-language designation appears in the PEER profile",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "",
-  "l1Support": "",
+  "l2Support": "Not established from the sources consulted. Mongolian is the constitutional official language (Art. 8) and the 2002 Law on Education as amended in 2006 \"permits the use of the local language for communicating in the school environment (Art. 30.1.12)\", but no source retrieved in this session sets out a Mongolian-as-a-second-language provision for Kazakh- or Tuvan-speaking pupils: no entitlement, no hours, no designated staff. Searched: UNESCO PEER Mongolia inclusion profile, the Constitute Project text of the Constitution, and the Asia-Pacific Multilingual Education Working Group Mongolia country profile at asiapacificmle.net, which returned HTTP 200 but served an empty JavaScript shell with no retrievable text. Not asserted either way.",
+  "l1Support": "Entitlement covers pre-primary and primary only, per the PEER profile\nConstitution Art 8 protects minorities' use of native languages in learning\nKazakh and Tuvan children have free access to pre-primary and primary in mother tongue\nSpecial higher education quotas are reserved for Tuvan students",
   "l3Support": "",
-  "bilingualEducationNotes": "",
-  "policyHistory": []
+  "bilingualEducationNotes": "Not established from the sources consulted. The PEER Mongolia inclusion profile records a mother-tongue entitlement at pre-primary and primary level and a 2017 Asian Development Bank project \"improving textbooks and other teaching and learning materials in the Kazakh language\", but describes no programme that teaches content through two languages: no transition model, no language allocation, no named bilingual schools. Searched: PEER Mongolia inclusion profile, Constitute Project constitutional text, and the Asia-Pacific Multilingual Education Working Group country profile (JavaScript shell, no text). Mongolia was cited as an international example at Kyrgyzstan's 2024 National Forum on Multilingual Education (https://www.osce.org/hcnm/579406), but that release gives no description of what the Mongolian model is, so nothing is inferred from it. Not asserted either way.",
+  "policyHistory": [
+   {
+    "year": 2001,
+    "description": "Constitution Art. 8 makes Mongolian the official language of the State while preserving national minorities' right to use their native languages in learning and communication"
+   },
+   {
+    "year": 2002,
+    "description": "Law on Education adopted; Art. 30.1.12 permits use of the local language for communicating in the school environment"
+   },
+   {
+    "year": 2006,
+    "description": "Law on Education amended"
+   },
+   {
+    "year": 2017,
+    "description": "Asian Development Bank project supports improved Kazakh-language textbooks and teaching and learning materials"
+   }
+  ]
  },
  {
   "countryCode": "MR",
@@ -12230,26 +12435,52 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Central Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO GEM Report PEER, Tajikistan — Inclusion profile (archived platform), sections 'Ethnic and linguistic groups'",
+    "url": "https://education-profiles.org/central-and-southern-asia/tajikistan/~inclusion"
+   },
+   {
+    "label": "OSCE HCNM press release, 'OSCE High Commissioner on National Minorities promotes multilingual education in Tajikistan', issued 24 June 2019 (visit 18–22 June 2019)",
+    "url": "https://www.osce.org/hcnm/423926"
+   },
+   {
+    "label": "OSCE HCNM press release, 'OSCE High Commissioner on National Minorities visits Tajikistan, commends good practices in multilingual education', Dushanbe, 19 May 2023",
+    "url": "https://www.osce.org/hcnm/544066"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source exists for this system yet. If you work in or study this education system, please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "",
+  "newcomerCriteria": "Domestic minority-medium schooling, not migration, is the question here\n1994 Constitution Art 2: Tajik is the state language, all groups may use their mother tongue\nMedium of instruction set by a required minimum number of pupils, classes and groups\nNo newcomer or additional-language designation appears in the PEER profile",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "",
-  "l1Support": "",
+  "l2Support": "Support is structural, through choice of medium, not a designated language service\nLaw on Education: state language is the main medium in educational institutions\nCitizens may choose their language of instruction alongside study of the state language\nOSCE HCNM works on balancing minority-language learning with state-language proficiency",
+  "l1Support": "Native-language medium is conditional on the system being able to meet the need\nLaw allows native-language schooling in areas with a high concentration of ethnic groups\n224 of 3,836 general schools teach in Uzbek, 36 in Kyrgyz, 26 in Russian\nEducation strategy to 2020 planned minority-language textbooks and teacher training",
   "l3Support": "",
-  "bilingualEducationNotes": "",
-  "policyHistory": []
+  "bilingualEducationNotes": "Bilingual schools are a long-standing structural feature, not a designed programme\n620 schools teach in Tajik and Uzbek, 22 in Tajik and Kyrgyz, 22 in three languages\nOSCE Central Asia Education Programme has supported minority-school MLE since 2012\n2019 Memorandum of Understanding signed with the Tajikistan Education Ministry",
+  "policyHistory": [
+   {
+    "year": 1994,
+    "description": "Constitution makes Tajik the state language, Russian the language of international communication, and recognises all national groups' right to use their mother tongue (Art. 2)"
+   },
+   {
+    "year": 2012,
+    "description": "OSCE HCNM Central Asia Education Programme begins supporting multilingual education in national minority schools in the region"
+   },
+   {
+    "year": 2019,
+    "description": "OSCE High Commissioner on National Minorities signs a Memorandum of Understanding with the Tajikistan Education Ministry on participation in the Central Asia Education Programme"
+   }
+  ]
  },
  {
   "countryCode": "TL",
@@ -12257,26 +12488,52 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO GEM Report PEER, Timor-Leste — Inclusion profile (archived platform), section 'Linguistic groups'",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/timor-leste/~inclusion"
+   },
+   {
+    "label": "Walter, S. L. (2016). The Mother Tongue-Based Multilingual Education (EMBLI) Pilot Program Endline Assessment — Executive Summary. Published on the Government of Timor-Leste website, October 2016",
+    "url": "https://timor-leste.gov.tl/wp-content/uploads/2017/01/Eng-Executive-Summary-for-EMBLI-Endline-Assessment-V4.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source exists for this system yet. If you work in or study this education system, please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "",
+  "newcomerCriteria": "No newcomer designation; the question is framed as language of instruction, not migration\nTwo official languages, Tetum and Portuguese, are both L2 for most rural children\nOver 20 languages spoken nationally, per the 2016 EMBLI endline assessment\nUNESCO PEER: many students do not speak either official language on entry",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "",
-  "l1Support": "",
+  "l2Support": "No separate second-language service; support is the medium-of-instruction rule itself\nStandard schools use both official languages as media of instruction\nNational Base Curriculum: Tetum as medium in early basic, planned Portuguese literacy\nApril 2015 ministerial rules regulate school language use, per 2017 Inclusive Ed Policy",
+  "l1Support": "Provision is a pilot, not a national entitlement\nEMBLI mother-tongue pilot launched 2012, teaching from 2013\nFataluku (Lautem), Galolen (Manatuto), Baikeno (Oe-cusse) used as media of instruction\n2011-30 NESP commits to mother tongue use in the early years",
   "l3Support": "",
-  "bilingualEducationNotes": "",
-  "policyHistory": []
+  "bilingualEducationNotes": "Evidence is the 2016 EMBLI endline evaluation, not a national programme\nEMBLI ran in two preschools and two primary schools per pilot district\nCovers last preschool year, Grade 1 and Grade 2\nTetum writing from last trimester of Grade 2; Portuguese oral only by end of Grade 2",
+  "policyHistory": [
+   {
+    "year": 2012,
+    "description": "Mother Tongue-Based Multilingual Education (EMBLI) pilot launched to test non-official national languages as media of instruction in early basic education"
+   },
+   {
+    "year": 2013,
+    "description": "EMBLI teaching begins in pilot preschools and primary schools in Lautem, Manatuto and Oe-cusse"
+   },
+   {
+    "year": 2015,
+    "description": "Minister of Education approves rules regulating language use in school (April 2015), as reported in the 2017 Inclusive Education Policy"
+   },
+   {
+    "year": 2016,
+    "description": "EMBLI endline assessment delivered to the Ministry of Education and Timor-Leste National Commission for UNESCO"
+   }
+  ]
  },
  {
   "countryCode": "TM",
@@ -12284,26 +12541,56 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Central Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO GEM Report PEER, Turkmenistan — Inclusion profile (archived platform), sections 'Ethnic and linguistic groups' and 'Refugees'",
+    "url": "https://education-profiles.org/central-and-southern-asia/turkmenistan/~inclusion"
+   },
+   {
+    "label": "Aminov, K., Jensen, V., Juraev, S., Overland, I., Tyan, D. & Uulu, Y. (2010). 'Language Use and Language Policy in Central Asia', Central Asia Regional Data Review Vol. 2 No. 1 — OSCE Academy in Bishkek",
+    "url": "https://www.osce-academy.net/upload/file/language_use_and_language_policy_in_central_asia.pdf"
+   },
+   {
+    "label": "Minority Rights Group International, 'Uzbeks in Turkmenistan' (World Directory of Minorities and Indigenous Peoples)",
+    "url": "https://minorityrights.org/communities/uzbeks-4/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source exists for this system yet. If you work in or study this education system, please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "",
+  "newcomerCriteria": "Refugee entitlement is statutory; domestic minority provision has been withdrawn\nConstitution Art 21: Turkmen is the state language, other native languages guaranteed\n2017 Law on Refugees: refugees and asylum seekers access school on the same terms\nArt 18.8 obliges educational authorities to protect unaccompanied minors",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "",
-  "l1Support": "",
+  "l2Support": "No designated second-language service found; Turkmen is simply the universal medium\n2013 Law on Education Art 5.2: Turkmen is taught in all education institutions\nPEER, 2016: only Turkmen was comprehensively taught\nUniversity entrance exams are in Turkmen, limiting Uzbek and Kazakh pupils' access",
+  "l1Support": "Statutory right is undercut by practice; the two main minority mediums were closed\n2013 Law on Education Art 5.3: state assists study of native languages other than Turkmen\nEnrolment in Uzbek- and Kazakh-medium schools was stopped from 2000\nMinority Rights Group: use of Uzbek as a medium of instruction effectively banned",
   "l3Support": "",
-  "bilingualEducationNotes": "",
-  "policyHistory": []
+  "bilingualEducationNotes": "Bilingual provision is residual and mostly foreign-partnership schools\nArt 5.5: non-state schools may use other media but must teach the national component in Turkmen\nRussian-medium schools shifted to Turkmen; a few Russian-medium classes survive in cities\nFour Turkmen-Turkish schools teach in Turkish and Turkmen",
+  "policyHistory": [
+   {
+    "year": 2000,
+    "description": "Enrolment of new pupils in Uzbek-medium and Kazakh-medium schools stopped"
+   },
+   {
+    "year": 2001,
+    "description": "Russian-medium schools (49 fully Russian-medium and 56 mixed-medium until this point) shift to Turkmen as the language of instruction"
+   },
+   {
+    "year": 2013,
+    "description": "Law on Education requires Turkmen to be taught in all education institutions, provides state assistance for study of other native languages, and restricts non-state schools' use of other media of instruction (Art. 5)"
+   },
+   {
+    "year": 2017,
+    "description": "Law on Refugees gives asylum seekers, recognised refugees and persons entitled to special protection access to preschool and general secondary education on the same terms as citizens"
+   }
+  ]
  },
  {
   "countryCode": "TN",
