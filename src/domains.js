@@ -94,7 +94,8 @@ const DOMAINS = [
     note: 'No single term for these languages is used worldwide: the same languages are "national languages" in Senegal, "linguistic minorities" in India and "Indigenous" in Canada. This map keeps one name for navigation, and every entry uses the word its own sources use — recorded in the Local term field.',
     live: true,
     fields: [
-      ['languages', 'The languages', 'languages', 'Which languages these actually are. Name, family and typology come from WALS; leave the WALS code blank rather than guess one.'],
+      ['inventory', 'How many languages', 'text', 'How many languages the place has, and who counted them — so a short list below reads as provision, not as an inventory.'],
+      ['languages', 'The languages', 'languages', 'The languages the SYSTEM engages with, which is nearly always far fewer than the place has. Name, family and typology come from WALS; leave the WALS code blank rather than guess one.'],
       ['localTerm', 'Local term', 'text', 'What the system itself calls these languages — national, minority, Indigenous, regional, or its own word.'],
       ['standing', 'Standing', 'text', 'The position the system gives them: official, co-official, recognised, or none, and the instrument that says so.'],
       ['mediumOfInstruction', 'Medium of instruction', 'text', 'Whether school is taught IN the language, at which stages and in which schools.'],

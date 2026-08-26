@@ -239,9 +239,39 @@ building it:
 - **WALS is variety-level.** There is no single record for "Inuktitut" (three),
   "Quechua" (many) or "Berber" (eight plus a genus). An entry must pick the
   variety its source names, or the genus, or nothing.
-- **Coverage is partial.** Scottish Gaelic and Tamazight have no WALS record at
-  all. Those languages are still named in the entry, with no link. **A missing
-  link means WALS has no record, not that the language does not matter.**
+- **A NAME MISS IS NOT AN ABSENCE, and this bit me.** I recorded Scottish Gaelic
+  and Tamazight as having no WALS record. Both are there: Scottish Gaelic as
+  **"Gaelic (Scots)"** and Tamazight as **"Berber (Middle Atlas)"**, the latter
+  carrying ISO `tzm`, which is Central Atlas Tamazight's own code. WALS names
+  languages its own way, so a failed name lookup must be retried by ISO 639-3
+  before anything is called absent. The tool now says so when a name misses.
+  Where a language genuinely has no record it is still named, with no link, and
+  **a missing link means WALS has no record, not that the language does not
+  matter.**
+
+### Naming a handful is not an inventory
+
+A four-language list reads as a complete picture unless the reader is told
+otherwise, so the `inventory` field carries the real number, counted from the
+Glottolog CLDF release (`glottolog/glottolog-cldf`, CC BY 4.0) restricted to
+`Level == "language"`:
+
+| | languages Glottolog counts |
+| --- | --- |
+| Papua New Guinea | 899 |
+| Indonesia | 756 |
+| Nigeria | 589 |
+| India | 518 |
+| Australia | 401 |
+| Mexico | 339 |
+
+The `languages` field is what the SYSTEM engages with — names, teaches, teaches
+in, or recognises. The gap between those two numbers is the most interesting
+thing on this map, and it only exists as a fact once both are on the page.
+
+`inventory` is filled for NATIONAL UNITS ONLY. Glottolog counts by country, so
+attributing India's 518 to Kerala would be plainly wrong; the 143 sub-national
+units are left empty rather than given a figure that is not theirs.
 
 ### What the map records
 
