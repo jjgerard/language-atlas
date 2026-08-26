@@ -1494,28 +1494,94 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Official Languages Act (R.S.C., 1985, c. 31 (4th Supp.)), s. 43 — Special mandate of Minister of Canadian Heritage",
+    "url": "https://laws-lois.justice.gc.ca/eng/acts/O-3.01/section-43.html"
+   },
+   {
+    "label": "CMEC / Government of Canada, Protocol for Agreements for Minority-Language Education and Second-Language Instruction, 2024-2025 to 2027-2028 (signed) — THE CURRENT PROTOCOL",
+    "url": "https://cmec.ca/Publications/Lists/Publications/Attachments/446/Protocol_2024-28_signed_EN.pdf"
+   },
+   {
+    "label": "CMEC / Government of Canada, Protocol for Agreements for Minority-Language Education and Second-Language Instruction, 2019–2020 to 2022–2023 (CH14-49/2020E-PDF, ISBN 978-0-660-35668-6) — the previous protocol",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   },
+   {
+    "label": "Government of Alberta, Official Languages in Education Programs (confirms ratification dates of the 2024-28 Protocol and the Canada-Alberta bilateral)",
+    "url": "https://www.alberta.ca/official-languages-in-education-programs"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
+  "primaryRequirement": "No national curriculum and no federal second-language requirement\nCMEC-Canada Protocol cl 1.1: education is exclusive provincial and territorial jurisdiction\nFederal role is funding and the Charter s 23 minority-language education right\n\"Second language\" federally means the other official language, English or French",
+  "secondaryRequirement": "Set province by province, not federally\nProtocol funds second-language instruction but does not prescribe grades or hours",
   "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
-  "higherEducation": "",
-  "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "languagesOffered": "Federal instruments cover English and French only\nProtocol defines minority and second language as \"the two official languages of Canada\"\nOther languages fall outside the federal transfer entirely",
+  "curriculumTime": "Federal transfer, not instructional time: base $235,520,472 a year, 2024-28 Protocol\nBase second-language envelope is $86,392,115 a year, unchanged since 2019\nPlus $58,200,000 a year extra for French second-language learning, 2024-25 to 2027-28\nPlus $27.6m a year for minority-language education and $26m a year for post-secondary",
+  "assessment": "No federal assessment of second-language attainment\nP/Ts file annual and periodic reports to Canadian Heritage under the bilateral agreements",
+  "teacherSupply": "Commissioner of Official Languages 2019: persistent national shortage of qualified FSL teachers\nStudy was contracted to Canadian Parents for French, so its figures are CPF's\n\"Support for educational staff\" is one of six funded areas of intervention in the Protocol\nDelivery and teacher certification remain provincial\n2024-28 Protocol adds $12,742,500 a year for teacher recruitment and retention",
+  "higherEducation": "OLA s 43(1)(e): Canadian Heritage may help P/Ts create chances to learn both languages\nCCMEC administers the Explore, Destination Clic and Odyssey bursary and monitor programs\nThese run under separate contribution agreements, not the Protocol budget",
+  "uptake": [
+   {
+    "year": 2017,
+    "value": "2,449,842 learning a second official language",
+    "note": "Statistics Canada, reported via CMEC; counts second-official-language learners, not foreign languages"
+   },
+   {
+    "year": 2020,
+    "value": "12.3% in French immersion",
+    "note": "Statistics Canada ESES; the peak share, public-school students"
+   },
+   {
+    "year": 2023,
+    "value": "11.6% in French immersion",
+    "note": "Statistics Canada ESES 2023/24; a third consecutive annual decline from the 2020/21 peak"
+   }
+  ],
+  "regionalMinorityLanguages": "Federal Protocol covers only official-language minorities, English and French\nIndigenous languages sit outside it, under separate instruments",
+  "policyHistory": [
+   {
+    "year": 1982,
+    "description": "Charter s 23 creates the minority-language education right where numbers warrant"
+   },
+   {
+    "year": 1988,
+    "description": "Official Languages Act gives Canadian Heritage the second-language mandate"
+   },
+   {
+    "year": 2019,
+    "description": "2023 Protocol sets the $235.5m/yr transfer; Quebec does not subscribe to it"
+   },
+   {
+    "year": 2023,
+    "description": "Bill C-13 (S.C. 2023 c.15 s.22) amends OLA s.43"
+   },
+   {
+    "year": 1982,
+    "description": "Charter s 23 creates the minority-language education right where numbers warrant"
+   },
+   {
+    "year": 1988,
+    "description": "Official Languages Act gives Canadian Heritage the second-language mandate"
+   },
+   {
+    "year": 2023,
+    "description": "Modernized Official Languages Act (Bill C-13) amends OLA s 43"
+   },
+   {
+    "year": 2024,
+    "description": "Current Protocol for 2024-25 to 2027-28 ratified in November"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1523,28 +1589,74 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Alberta Education and Childcare, Guide to Education — Grade 1 to Grade 9 (program planning)",
+    "url": "https://manuals.alberta.ca/guide-to-education/program-planning-ecs-to-grade-9/grade-1-to-grade-9/"
+   },
+   {
+    "label": "Alberta Education and Childcare, Guide to Education — Alberta High School Diploma: Graduation requirements (English)",
+    "url": "https://manuals.alberta.ca/guide-to-education/program-administration-and-delivery-diploma-and-certificate-requirements/alberta-high-school-diploma-graduation-requirements-english/"
+   },
+   {
+    "label": "Alberta Education and Childcare, Guide to Education — Language programs / course sequences / courses",
+    "url": "https://manuals.alberta.ca/guide-to-education/program-planning-courses-and-programs/language-programs-course-sequences-courses/"
+   },
+   {
+    "label": "Education Act, S.A. 2012, c. E-0.3, s.17 (Language of instruction), office consolidation current as of December 11, 2025, Alberta King's Printer",
+    "url": "https://kings-printer.alberta.ca/documents/Acts/e00p3.pdf"
+   },
+   {
+    "label": "Government of Alberta, Official Languages in Education Programs",
+    "url": "https://www.alberta.ca/official-languages-in-education-programs"
+   },
+   {
+    "label": "CBC News, 'Calgary schools end mandatory 2nd language classes', 26 April 2011",
+    "url": "https://www.cbc.ca/news/canada/calgary/calgary-schools-end-mandatory-2nd-language-classes-1.1042799"
+   },
+   {
+    "label": "CMEC / Government of Canada, Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019–2023, cl. 5.1.1",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
-  "higherEducation": "",
+  "primaryRequirement": "No compulsory second language at any grade in Alberta\nGrades 1-9 time table puts second languages in an optional 15% block\nThat block also holds drama, locally developed courses and religious instruction\nRecommended 10% where a provincial language and culture programme is run",
+  "secondaryRequirement": "Still optional; the 9-year FSL sequence runs Grade 4 to Grade 9 where offered\nA 3-year FSL sequence lets students start fresh at Grade 10",
+  "upperSecondary": "Alberta High School Diploma needs 100 credits, none of them a language other than English\nSecond Languages courses are one of six ways to fill a 10-credit elective block\nFine arts, CTS, PE 20/30 and Knowledge and Employability compete for the same block",
+  "languagesOffered": "Provincial K-12 programmes: Blackfoot, Cree, Arabic, Chinese, German, Italian, Japanese\nAlso Latin, Punjabi, Spanish and Ukrainian\nLanguage and Culture sequences come in 12-year, 9-year, 6-year and 3-year versions\nBilingual (partial immersion) programmes may use a language up to 50% of the day",
+  "curriculumTime": "Minimum 950 hours of instruction a year in each of Grades 1 to 9\nFSL is typically taught 30 to 40 minutes a day in elementary and junior high\nSenior high FSL courses carry 5 credits each",
+  "assessment": "Not documented from an Alberta source this session",
+  "teacherSupply": "CMEC-Canada Protocol 2019-23 allots Alberta $8,894,859 a year for second-language instruction\nA further $5,310,966 a year goes to francophone minority-language education\nCommissioner of Official Languages 2019: persistent national shortage of qualified FSL teachers\nStudy was contracted to Canadian Parents for French, so its figures are CPF's\nNamed problems: unfilled teacher-education places and poor mobility to rural areas",
+  "higherEducation": "Not documented from an Alberta source this session",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Education Act s 17(2): a board may authorise any other language as the medium\nBlackfoot and Cree have provincial K-12 programmes of study\nLocally developed courses cover further First Nations, Metis and Inuit languages\nFrancophone education is a separate constitutional system, not a second-language programme",
+  "policyHistory": [
+   {
+    "year": 2012,
+    "description": "Education Act s 17 carries the language-of-instruction power (in force 2019)"
+   },
+   {
+    "year": 2024,
+    "description": "New CMEC-Canada Protocol 2024-25 to 2027-28 ratified in November"
+   },
+   {
+    "year": 2025,
+    "description": "Canada-Alberta bilateral agreement ratified in April"
+   },
+   {
+    "year": 2006,
+    "description": "2011 Calgary board required then dropped a Grade 4-9 second language (board, not province)"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1552,28 +1664,66 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "BC Ministerial Order M295/95, Required Areas of Learning in an Educational Program Order (School Act s.168(2)(a)), consolidation dated March 6, 2025",
+    "url": "https://www2.gov.bc.ca/assets/gov/education/administration/legislation-policy/legislation/schoollaw/e/m295_95.pdf"
+   },
+   {
+    "label": "BC Ministry of Education and Child Care, Language Education Policy (came into force 1997, revised 2004; page last updated December 18, 2025)",
+    "url": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/legislation-policy/public-schools/language-education-policy"
+   },
+   {
+    "label": "BC Ministerial Order M302/04, Graduation Program Order (School Act s.168(2)(b)), consolidation dated September 29, 2023",
+    "url": "https://www2.gov.bc.ca/assets/gov/education/administration/legislation-policy/legislation/schoollaw/e/m302_04.pdf"
+   },
+   {
+    "label": "BC Ministerial Order M333/99, Educational Program Guide Order, consolidation dated June 27, 2025",
+    "url": "https://www2.gov.bc.ca/assets/gov/education/administration/legislation-policy/legislation/schoollaw/e/m333_99.pdf"
+   },
+   {
+    "label": "BC Ministry of Education and Child Care, School Act Ministerial Orders — table of contents",
+    "url": "https://www2.gov.bc.ca/assets/gov/education/administration/legislation-policy/legislation/schoollaw/e/ministerialorders_toc.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
-  "higherEducation": "",
+  "primaryRequirement": "Second language compulsory Grades 5 to 8 only, under Ministerial Order M295/95 s 4\nRequirement is for \"a language other than English\", not French specifically\nCore French is the default only where the board offers no alternative\nExempt: students with an IEP, ELL students, and Grade 6 late French immersion",
+  "secondaryRequirement": "Requirement stops at Grade 8; Grade 9 upward is elective\nA local Aboriginal language course can substitute under M295/95 s 6\nThat route needs a board agreement with a band council or treaty first nation",
+  "upperSecondary": "No second language in the Graduation Program Order Table 1 required areas of learning\nRequired areas: Language Arts, Social Studies, Science, Maths, PHE, Arts/ADST, Career\nFrench immersion diploma adds FLS-immersion 10, 11, 12 plus 12 credits of French courses\nProgramme francophone adds Français langue première and Français langue et culture 12",
+  "languagesOffered": "K-9 guides: Core French, Spanish, Mandarin, Japanese, Korean, German, Italian, Punjabi\nGrade 10-12 courses exist for each of those, plus Introductory 11 entry courses\nTemplate packages add Arabic, Croatian, Farsi, Russian\nBoards may develop local language courses under the Board Authorized Course Order",
+  "curriculumTime": "No prescribed minutes in the order; it sets learning standards, not time\nPolicy asks boards to keep the same language across Grades 5 to 8 for continuity",
+  "assessment": "No provincial second-language exam in the English-language stream\nFrench immersion graduates sit the Évaluation de littératie de la 12e année - FLS immersion\nProgramme francophone has its own Français langue première literacy assessments",
+  "teacherSupply": "Not documented from a BC government source this session\nCommissioner of Official Languages 2019: persistent national shortage of qualified FSL teachers\nStudy was contracted to Canadian Parents for French, so its figures are CPF's\nNamed problems: unfilled teacher-education places and poor mobility to rural areas",
+  "higherEducation": "Not documented from a BC government source this session",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Policy: all students should have the chance to learn an Indigenous language\nAround 20 First Nations languages have provincial 5-12 Integrated Resource Packages\nOnly those with a Grades 5-8 provincial curriculum count for the second-language requirement\nGraduation now needs 4 credits of Indigenous-focused coursework (Sched. 1, M302/04)",
+  "policyHistory": [
+   {
+    "year": 1995,
+    "description": "M295/95 sets required areas of learning; second language in Grades 5-8"
+   },
+   {
+    "year": 1997,
+    "description": "Language Education Policy issued, revised 2004"
+   },
+   {
+    "year": 2016,
+    "description": "M307/16 rewrites the order for the redesigned K-9 curriculum"
+   },
+   {
+    "year": 2023,
+    "description": "M183/23 adds the 4-credit Indigenous-focused graduation requirement"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1581,28 +1731,134 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "The Public Schools Act, C.C.S.M. c. P250, s. 79 (Languages of instruction) and Part I.1 (Francophone school division), consolidated",
+    "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/p250.php"
+   },
+   {
+    "label": "Manitoba Education and Early Childhood Learning, \"Guidelines and Tools for French in the English Program\" (PDF, © 2026, ISBN 978-0-7711-6858-1)",
+    "url": "https://www.edu.gov.mb.ca/k12/cur/french/docs/french_english_program.pdf"
+   },
+   {
+    "label": "Manitoba Education and Early Childhood Learning, \"Graduation Requirements for the English Program\" (17 compulsory / 13 optional credits chart)",
+    "url": "https://www.edu.gov.mb.ca/k12/policy/gradreq/docs/grad_req_en.pdf"
+   },
+   {
+    "label": "Manitoba Education and Early Childhood Learning, \"Graduation Requirements for the French Immersion Program",
+    "url": "https://www.edu.gov.mb.ca/k12/policy/gradreq/docs/grad_req-fi.pdf"
+   },
+   {
+    "label": "Manitoba Education, \"Graduation Requirements for Manitoba High School Diplomas\" (policy page)",
+    "url": "https://www.edu.gov.mb.ca/k12/policy/grad_require.html"
+   },
+   {
+    "label": "Manitoba Education and Early Childhood Learning, \"The French Immersion Policy in Manitoba\" (May 2023)",
+    "url": "https://www.edu.gov.mb.ca/k12/docs/policy/frenchimm/docs/Document_The_French_Immersion_Policy_in_Manitoba.pdf"
+   },
+   {
+    "label": "Manitoba Education, \"International and Heritage Languages\" curriculum page (policy, overview, bilingual programming table)",
+    "url": "https://www.edu.gov.mb.ca/k12/cur/languages/index.html"
+   },
+   {
+    "label": "Manitoba Education, \"Bilingual Education and Programming in Manitoba – Questions and Answers",
+    "url": "https://www.edu.gov.mb.ca/k12/cur/languages/bilingual_qa.html"
+   },
+   {
+    "label": "Manitoba Education, \"Special Language Credit Option (SPLCO)",
+    "url": "https://www.edu.gov.mb.ca/k12/cur/languages/langcredit.html"
+   },
+   {
+    "label": "Manitoba Education, \"Indigenous Languages\" (Indigenous Education) page",
+    "url": "https://www.edu.gov.mb.ca/k12/abedu/languages.html"
+   },
+   {
+    "label": "The Aboriginal Languages Recognition Act, C.C.S.M. c. A1.5 (S.M. 2010, c. 22; amended S.M. 2021, c. 4, s. 1)",
+    "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/a001-5.php?lang=en"
+   },
+   {
+    "label": "Manitoba Education and Early Childhood Learning, \"Funding of Schools 2026/2027\" booklet, ss. 8–9",
+    "url": "https://www.edu.gov.mb.ca/k12/finance/schfund/2026-2027/2026-27_funding_booklet.pdf"
+   },
+   {
+    "label": "Manitoba Education, \"French (English Program)\" curriculum page",
+    "url": "https://www.edu.gov.mb.ca/k12/cur/french/index.html"
+   },
+   {
+    "label": "CMEC, \"Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019-2023\", clause 5.1.1 allocation table",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   },
+   {
+    "label": "Education Administration Miscellaneous Provisions Regulation, M.R. 468/88 R (checked, negative — see NEGATIVES)",
+    "url": "https://web2.gov.mb.ca/laws/regs/current/468-88r.php"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
+  "primaryRequirement": "No compulsory second language: French courses optional at every grade level\nDivisions strongly encouraged to offer French from Kindergarten through Grade 12\nEarly Start French K-3; French: Communication and Culture Grades 4-12\nPublic Schools Act s.79 sets languages of instruction, not a required subject",
+  "secondaryRequirement": "No language credit among the 17 compulsory Senior Years credits\nCompulsory areas are English language arts, maths, PE/health, social studies, science\nFrench (English Program) and \"other languages\" sit in the 13 optional credits\nFrench Immersion stream: 15 of 30 credits must be taught in French",
+  "upperSecondary": "Minimum 30 credits for a Manitoba high school diploma, 17 of them compulsory\nFour diplomas: English, Francais, French Immersion, Technology Education\nFrench Immersion diploma needs 15 of 30 credits taught in French from Sept 2024\nSpecial Language Credit Option: up to 4 credits by exam or foreign transcript",
+  "languagesOffered": "Three French options: Francais, French Immersion, French in the English Program\nStudy languages include Arabic, Cree, Filipino, German, Hebrew, Japanese, Mandarin\nAlso Ojibwe, Portuguese, Spanish, Ukrainian and American Sign Language\nBilingual 50/50 divisional programmes in Cree, German, Hebrew, Ukrainian and more",
+  "curriculumTime": "Figures are recommended minimums, not a regulated time allocation\nK 10 minutes daily half-time; Grades 1-8 20 minutes daily, about 7% of time\nGrades 9-12 French 30 or 43 minutes daily, 9% to 13%; one credit is 110 hours\nImmersion: 100% French in K, 75-80% Grades 1-6, 50-86% Grades 7-8",
+  "assessment": "Provincial tests attach only to Grade 12 English language arts and mathematics\nNo provincial French examination appears in the graduation requirement charts\nSpecial language credits awarded by examination or by recognised transcript",
+  "teacherSupply": "2026 guidelines set French teacher competencies in language, curriculum, culture\nThree delivery models named: homeroom, specialist and hybrid\nFrench Immersion for Teachers (FIT) runs at Universite de Saint-Boniface\nBursaries offered to Manitoba teachers improving their French competencies",
   "higherEducation": "",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Aboriginal Languages Recognition Act 2010 names Cree, Dakota, Dene, Inuktitut\nAlso Michif, Ojibwe and Ojibwe-Cree as languages spoken and used in Manitoba\nCree and Ojibwe bilingual programmes run in Winnipeg and Seven Oaks divisions\nK-12 Aboriginal Languages and Cultures framework of outcomes underpins curricula",
+  "policyHistory": [
+   {
+    "year": 1973,
+    "description": "First French immersion classes open in Saint-Boniface and Winnipeg divisions"
+   },
+   {
+    "year": 1974,
+    "description": "Bureau de l'education francaise mandated to lead French-language education"
+   },
+   {
+    "year": 1979,
+    "description": "Public Schools Act amended to permit instruction in languages other than English or French"
+   },
+   {
+    "year": 1993,
+    "description": "S.M. 1993 c. 33 inserts the Francophone School Division Part into The Public Schools Act"
+   },
+   {
+    "year": 1995,
+    "description": "French immersion recognised as one of four official Kindergarten to Grade 12 programs"
+   },
+   {
+    "year": 2004,
+    "description": "American Sign Language becomes eligible for Special Language Credit Option credits"
+   },
+   {
+    "year": 2010,
+    "description": "The Aboriginal Languages Recognition Act recognises seven Indigenous languages of Manitoba"
+   },
+   {
+    "year": 2013,
+    "description": "Special Language Credit Option extended to recognition of non-Manitoba credentials"
+   },
+   {
+    "year": 2014,
+    "description": "French Language Education funding gains its own review process"
+   },
+   {
+    "year": 2023,
+    "description": "The French Immersion Policy in Manitoba issued (May 2023)"
+   },
+   {
+    "year": 2024,
+    "description": "Grade 9 entrants must earn 15 of 30 credits in French for a French immersion diploma"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1610,28 +1866,112 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "NB Dept of Education and Early Childhood Development, Policy 309 \"French Second Language Instruction\", revised July 1, 2025 (CURRENT VERSION) — Internet Archive capture 2025-08-30 of www2.gnb.ca",
+    "url": "https://web.archive.org/web/20250830070604if_/https://www2.gnb.ca/content/dam/gnb/Departments/ed/pdf/K12/policies-politiques/e/309A.pdf"
+   },
+   {
+    "label": "NB EECD Policy 309 \"French Second Language Programs\", revised September 18, 2023 (SUPERSEDED) — Internet Archive capture 2025-07-17",
+    "url": "https://web.archive.org/web/20250717071320if_/https://www2.gnb.ca/content/dam/gnb/Departments/ed/pdf/K12/policies-politiques/e/309A.pdf"
+   },
+   {
+    "label": "NB EECD Policy 309 \"French Second Language Programs\", revised July 25, 2018 (SUPERSEDED) — Internet Archive capture 2022-09-01",
+    "url": "https://web.archive.org/web/20220901065935if_/https://www2.gnb.ca/content/dam/gnb/Departments/ed/pdf/K12/policies-politiques/e/309A.pdf"
+   },
+   {
+    "label": "Education Act, SNB 1997, c. E-1.12 (laws.gnb.ca consolidation) — Internet Archive capture 2026-05-20",
+    "url": "https://web.archive.org/web/20260520224053/https://laws.gnb.ca/en/showfulldoc/cs/E-1.12/"
+   },
+   {
+    "label": "NB EECD, \"Provincial Assessment Results 2023-24: Grade 12 French Second Language Oral Proficiency\", Assessment and Analysis Services — Anglophone Division — Internet Archive capture 2025-04-28",
+    "url": "https://web.archive.org/web/20250428165006if_/https://www2.gnb.ca/content/dam/gnb/Departments/ed/pdf/K12/results/grade-12-french-second-language-oral-proficiency.pdf"
+   },
+   {
+    "label": "CMEC, \"Secondary Education in the Provinces and Territories of Canada: A Student Transfer Guide 2023-24 — New Brunswick (anglophone sector)",
+    "url": "https://cmec.ca/docs/transferguide/2024/New-Brunswick-CMEC-Student-Transfer-Guide_ANG_EN.pdf"
+   },
+   {
+    "label": "CMEC, \"Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019-20 to 2022-23\", cl. 5.1.1 funding table, p. 4",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   },
+   {
+    "label": "CBC News, \"Report recommends elimination of early French immersion in N.B.\", Feb 27, 2008 (the Croll-Lee review)",
+    "url": "https://www.cbc.ca/news/canada/new-brunswick/report-recommends-elimination-of-early-french-immersion-in-n-b-1.700267"
+   },
+   {
+    "label": "Maclean's / Canadian Press, \"Judge quashes N.B. plan to cut early French immersion\", June 11, 2008",
+    "url": "https://macleans.ca/education/uniandcollege/judge-quashes-nb-govt-plan-to-cut-early-french-immersion/"
+   },
+   {
+    "label": "CBC News, \"French immersion returns to Grade 1 early entry\", Sept 30, 2016",
+    "url": "https://www.cbc.ca/news/canada/new-brunswick/french-immersion-announcement-gallant-government-1.3785370"
+   },
+   {
+    "label": "CBC News, \"Gallant proposes French immersion to start in Grade 1\", Apr 24, 2014",
+    "url": "https://www.cbc.ca/news/canada/new-brunswick/gallant-proposes-french-immersion-to-start-in-grade-1-1.2621405"
+   },
+   {
+    "label": "CBC News (Jacques Poitras), \"N.B. radically rethinks French second-language education\", Dec 15, 2022",
+    "url": "https://www.cbc.ca/news/canada/new-brunswick/new-french-immersion-replacement-system-new-brunswick-1.6686859"
+   },
+   {
+    "label": "Global News, \"N.B. backtracks on scrapping French immersion in English schools\", Feb 17, 2023",
+    "url": "https://globalnews.ca/news/9494460/nb-backtracks-proposed-french-immersion-program-blaine-higgs"
+   },
+   {
+    "label": "CBC News, \"Wolastoqey immersion school set to open this fall in Fredericton\", May 29, 2022",
+    "url": "https://www.cbc.ca/news/indigenous/wolastoqey-immersion-school-kehkimin-1.6468485"
+   },
+   {
+    "label": "NEȾOLṈEW̱ / Indigenous Language Education Policy in Canada (Univ. of Victoria, 2023), \"New Brunswick (NB)",
+    "url": "https://indigenouslanguagepolicy.ca/new-brunswick/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
+  "primaryRequirement": "Duality: French is the second language in the anglophone sector, English in the francophone\nPolicy 309 governs French second language in anglophone districts only\nFrench Learning Experiences mandatory for English-pathway students Kindergarten to Grade 3\nImmersion entry points are Grade 1 (early) and Grade 6 (late), parents choose in K or Grade 5",
+  "secondaryRequirement": "FSL instruction compulsory until the end of Grade 10, optional in Grades 11 and 12\nEnglish pathway gets FSL instruction in Grades 4 through 10 per Policy 309 Appendix A\nSuperintendents must give K-12 access to FSL instruction and learning experiences\nSuperintendent may exempt a student in exceptional circumstances under Policy 322",
+  "upperSecondary": "No second-language credit among the 2026 graduation conditions for the NB diploma\nDiploma needs 100 credit-hours from September 2023, 80 of them from seven core clusters\nImmersion students alone must take 40 credit-hours in Grades 10-12 French\nGraduation gate is the English Language Proficiency Assessment, not the French OPI",
+  "languagesOffered": "Only French is offered as a second language in the anglophone sector\nCurrent policy names two pathways: English pathway and French Immersion pathway\nUntil 2025 the English pathway ran Pre-Intensive, Intensive and Post-Intensive French\nTechniques de communication orale 110/120 is an oral-focused senior FSL option",
+  "curriculumTime": "Figures below are the pre-2025 model; the July 2025 policy moved detail to an Appendix A\nIntensive French Grade 5: minimum 345 hours, of which 300 in a five-month intensive term\nPost-Intensive French about 120 hours a year in Grades 6-8, 90 hours in Grades 9-10\nEarly immersion minimum French fell from 90 to 85 per cent in Grades 1-2 in Sept 2023",
+  "assessment": "Grade 12 French Oral Proficiency Interview is an exit assessment, not a graduation requirement\nMandatory for immersion students with 5+ FSL courses in Grades 11-12\nMandatory for English-pathway students taking at least one course taught in French\nOthers may opt in to obtain a French oral proficiency certificate",
+  "teacherSupply": "Policy sets a French proficiency standard for FSL teachers on the NB Second Language scale\n2018 policy let a superintendent temporarily assign a teacher below the required level\nSuch a teacher needs an agreed written plan to reach the proficiency requirement\n2025 policy moved the proficiency standard from Requirements to Guidelines",
   "higherEducation": "",
-  "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "uptake": [
+   {
+    "year": 2023,
+    "value": "1,469 Grade 12 students assessed",
+    "note": "2023-24 French oral proficiency assessment cohort — an ASSESSED cohort, not programme enrolment: 912 Grade 3 entry immersion, 258 Grade 6 entry, 30 Post-Intensive French"
+   }
+  ],
+  "regionalMinorityLanguages": "Education Act purpose recognises the cultures and languages of Mi'kmaq and Wolastoqey peoples\nSection 7 programming for Mi'kmaq and Wolastoqey children depends on a First Nation agreement\nKehkimin Wolastoqey immersion school opened in Fredericton in 2022, K to Grade 4\nKehkimin is an independent school, not part of the New Brunswick public system",
+  "policyHistory": [
+   {
+    "year": 2008,
+    "description": "Croll-Lee review urged grandfathering out early immersion for Grade 5 intensive French"
+   },
+   {
+    "year": 2008,
+    "description": "June 2008: Court of Queen's Bench quashed the minister's decision as unfair and unreasonable"
+   },
+   {
+    "year": 2016,
+    "description": "Announcement returned early immersion to Grade 1 effective September 2017"
+   },
+   {
+    "year": 2023,
+    "description": "Feb 2023: government dropped its plan to replace French immersion after 13,000 consulted"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1639,28 +1979,104 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "NL Dept of Education and Early Childhood Development, \"Program Descriptors by Grade Bands\" (Program of Studies 2025-2026)",
+    "url": "https://www.gov.nl.ca/education/k12/curriculum/descriptions/program-descriptors-by-grade-bands/"
+   },
+   {
+    "label": "NL Dept of Education and Early Childhood Development, \"Core French\" course descriptors (Program of Studies 2025-2026)",
+    "url": "https://www.gov.nl.ca/education/k12/curriculum/descriptions/core-french/"
+   },
+   {
+    "label": "NL Dept of Education and Early Childhood Development, \"Description (FI)\" — French immersion programs",
+    "url": "https://www.gov.nl.ca/education/k12/french/immersion/description/"
+   },
+   {
+    "label": "NL Dept of Education and Early Childhood Development, \"Graduation Requirements\" (K-12 high school)",
+    "url": "https://www.gov.nl.ca/education/k12/highschool/gradreq/"
+   },
+   {
+    "label": "NL Dept of Education, \"OnCourse — A Handbook for Grade 9 Students and Parents\", 15th Edition (2025), pp. 1-2, 6-7",
+    "url": "https://www.gov.nl.ca/education/files/Fifteenth-Edition-English-for-web-2025.pdf"
+   },
+   {
+    "label": "NL Dept of Education, \"Indicators 2008 — A Report on Schools\", Chapter 7: French as a Second Language, pp. 29-32",
+    "url": "https://www.gov.nl.ca/education/files/publications_k12_indicators_ch7_french_second_language.pdf"
+   },
+   {
+    "label": "NL Dept of Education, \"Indicators 2008 — A Report on Schools\" chapter index (dates the chapter above)",
+    "url": "https://www.gov.nl.ca/education/publications/k12/indicators/"
+   },
+   {
+    "label": "NL Dept of Education and Early Childhood Development, \"Core French — Curriculum Support\" (documents list)",
+    "url": "https://www.gov.nl.ca/education/k12/curriculum/documents/corefrench/"
+   },
+   {
+    "label": "Schools Act, 1997, SNL1997 c. S-12.2 (official version, Queen's Printer / House of Assembly of NL)",
+    "url": "https://www.assembly.nl.ca/legislation/sr/statutes/s12-2.htm"
+   },
+   {
+    "label": "Government of Newfoundland and Labrador, \"Indigenous Education Framework\" (Draft 2.0)",
+    "url": "https://www.gov.nl.ca/education/files/IndigenousEducationFrameworkDraft2.0.pdf"
+   },
+   {
+    "label": "CASLT, \"The Neurolinguistic Approach: Intensive and Post-Intensive French",
+    "url": "https://www.caslt.org/en/in-the-classroom/nla/"
+   },
+   {
+    "label": "NEȾOLṈEW̱ / Indigenous Language Education Policy in Canada (Univ. of Victoria, 2023), \"Newfoundland and Labrador (NL)",
+    "url": "https://indigenouslanguagepolicy.ca/newfoundland-and-labrador/"
+   },
+   {
+    "label": "CMEC, \"Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019-20 to 2022-23\", cl. 5.1.1 funding table, p. 4",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
+  "primaryRequirement": "Core French is the FSL programme; French is an official language, not a foreign language\nCore French compulsory Grades 4 to 9, optional at high school (Indicators 2008)\nElementary Grades 4-6 recommended time allotment for French is 10 per cent\nNo French in the Primary (K-Grade 3) English-programme time allotments",
+  "secondaryRequirement": "Intermediate level is Grades 7 to 9, Core French recommended at 10 per cent of time\nLate French Immersion entry at Grade 7, about 75 per cent French in Grades 7 and 8\nGrade 6 Intensive Core French: min 60 per cent of the day for half the school year\nIntensive Core French is an optional enrichment, not a universal programme",
+  "upperSecondary": "No compulsory second-language credit in the 36-credit high school diploma\nCore French 1200/2200/3200 sit inside a 4-credit Other Required Credits basket\nAny high school French course can also satisfy the 2-credit Optional Language Arts rule\nFrench Immersion Designation needs 6 Francais credits plus 6 credits studied in French",
+  "languagesOffered": "Four FSL programmes named in 2008: core, expanded core, intensive core French, immersion\nCurrent descriptors cover Core French 4-12 and Grade 6 Intensive Core French\nEarly French Immersion from Kindergarten, Late French Immersion from Grade 7\nFrancais langue premiere is a Charter s.23 minority-language programme, not FSL",
+  "curriculumTime": "Elementary Grades 4-6: French 10 per cent of instructional time\nIntermediate Grades 7-9: Core French 10 per cent of instructional time\nEarly immersion minimum French: 100 per cent K-Gr 2, 80 Gr 3-4, 70 Gr 5, 65 Gr 6, 30 Gr 7+\nGrade 6 Intensive Core French: minimum 60 per cent of the day for half a year",
+  "assessment": "Core French 3200 Oral Testing Manual listed in departmental curriculum-support documents\nCore French curriculum follows the Orientation Document for Atlantic Canada Core French\nNo provincial FSL proficiency certificate found comparable to New Brunswick's OPI",
+  "teacherSupply": "Commissioner of Official Languages 2019: persistent national shortage of qualified FSL teachers\nStudy was contracted to Canadian Parents for French, so its figures are CPF's\nNamed problems: unfilled teacher-education places and poor mobility to rural areas",
   "higherEducation": "",
-  "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "uptake": [
+   {
+    "year": 2007,
+    "value": "43,868 in French as a second language",
+    "note": "Indicators 2008, for 2007/08; down 11.2% from 49,420 in 2002/03. No current NL series was retrievable"
+   }
+  ],
+  "regionalMinorityLanguages": "Schools Act 1997 has no Indigenous-language instruction provision\nSection 2.1 gives the Labrador Inuit Land Claims Agreement Act precedence over the Act\nInnu Nation has run K-12 education in Sheshatshiu and Natuashish since 2009\nMiawpukek Mi'kamawey Mawi'omi at Conne River has operated its own school since 1987",
+  "policyHistory": [
+   {
+    "year": 1997,
+    "description": "Schools Act: English entitlement s.8, Charter s.23 French instruction s.9"
+   },
+   {
+    "year": 1998,
+    "description": "Intensive French pilot begins in NL, a three-year Core French pilot"
+   },
+   {
+    "year": 2004,
+    "description": "Schools Act s.2.1 added, Labrador Inuit Land Claims Agreement Act takes precedence"
+   },
+   {
+    "year": 2009,
+    "description": "Innu Nation assumes jurisdiction for K-12 education at Sheshatshiu and Natuashish"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1668,28 +2084,188 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Official Languages Act, R.S.N.W.T. 1988, c.O-1 (office consolidation, Legislation Division, GNWT Dept of Justice), ss.4, 9(2), 26(2)",
+    "url": "https://www.justice.gov.nt.ca/en/files/legislation/official-languages/official-languages.a.pdf"
+   },
+   {
+    "label": "Education Act, S.N.W.T. 1995, c.28 (office consolidation), Part III Cultural Diversity, ss.70-76",
+    "url": "https://www.justice.gov.nt.ca/en/files/legislation/education/education.a.pdf"
+   },
+   {
+    "label": "GNWT ECE, NWT Junior Kindergarten - Grade 12 Indigenous Languages and Education (ILE) Policy, FINAL August 2018",
+    "url": "https://www.ece.gov.nt.ca/sites/ece/files/resources/nwt_indigenous_languages_and_education_ile_policy_-_final_august_2018.pdf"
+   },
+   {
+    "label": "GNWT ECE, Our Languages Curriculum (JK-12), 2020",
+    "url": "https://www.ece.gov.nt.ca/sites/ece/files/resources/our_languages_curriculum_2020_low_res.pdf"
+   },
+   {
+    "label": "GNWT ECE, NWT Graduation Program Implementation Guide, Grades 10 to 12, Updated January 2026",
+    "url": "https://www.ece.gov.nt.ca/sites/ece/files/resources/nwt_graduation_program_implementation_guide_1.pdf"
+   },
+   {
+    "label": "GNWT ECE, Annual Report on Official Languages 2023-2024 (September 2024)",
+    "url": "https://www.ece.gov.nt.ca/sites/ece/files/resources/2024-09_-_annual_report_-_official_languages_2023-24_-_eng_-_final_.pdf"
+   },
+   {
+    "label": "GNWT, Northwest Territories Aboriginal Languages Framework: A Shared Responsibility (2017)",
+    "url": "https://www.ece.gov.nt.ca/sites/ece/files/resources/northwest_territories_aboriginal_languages_framework_-_may_2017.pdf"
+   },
+   {
+    "label": "GNWT, NWT Indigenous Languages Action Plan (2018-2025, extended)",
+    "url": "https://www.ece.gov.nt.ca/sites/ece/files/resources/nwt_indigenous_lanaguages_action_plan.pdf"
+   },
+   {
+    "label": "GNWT ECE, JK-12 School Curriculum",
+    "url": "https://www.ece.gov.nt.ca/en/services/jk-12-school-curriculum"
+   },
+   {
+    "label": "GNWT ECE, Core French (JK-12 School Curriculum)",
+    "url": "https://www.ece.gov.nt.ca/en/services/jk-12-school-curriculum/core-french"
+   },
+   {
+    "label": "GNWT ECE, Dene Kede and Inuuqatigiit (JK-12 School Curriculum)",
+    "url": "https://www.ece.gov.nt.ca/en/services/jk-12-school-curriculum/dene-kede-and-inuuqatigiit"
+   },
+   {
+    "label": "GNWT ECE, Graduation Requirements",
+    "url": "https://www.ece.gov.nt.ca/en/services/jk-12-school-curriculum/graduation-requirements"
+   },
+   {
+    "label": "GNWT ECE, Student Assessment Approaches and Tools",
+    "url": "https://www.ece.gov.nt.ca/en/services/jk-12-school-curriculum/student-assessment-approaches-and-tools"
+   },
+   {
+    "label": "GNWT ECE, JK-12 Curriculum Renewal",
+    "url": "https://www.ece.gov.nt.ca/en/curriculumrenewal"
+   },
+   {
+    "label": "GNWT ECE, Official Languages",
+    "url": "https://www.ece.gov.nt.ca/en/official-languages"
+   },
+   {
+    "label": "GNWT ECE, Indigenous Languages Secretariat",
+    "url": "https://www.ece.gov.nt.ca/en/ILES"
+   },
+   {
+    "label": "GNWT ECE, Indigenous Languages Education",
+    "url": "https://www.ece.gov.nt.ca/en/indigenous-languages-education"
+   },
+   {
+    "label": "GNWT ECE, Our Languages Curriculum (programme page)",
+    "url": "https://www.ece.gov.nt.ca/en/services/indigenous-languages-and-education-secretariat/our-languages-curriculum"
+   },
+   {
+    "label": "GNWT ECE, Indigenous Language Revitalization Scholarship",
+    "url": "https://www.ece.gov.nt.ca/en/ILR-scholarship"
+   },
+   {
+    "label": "GNWT ECE, Interpreter Career Pathway Program",
+    "url": "https://www.ece.gov.nt.ca/en/services/indigenous-languages-and-education/interpreter-career-pathway-program"
+   },
+   {
+    "label": "GNWT news release, 'GNWT launches new Our Languages Curriculum', 30 October 2020",
+    "url": "https://www.gov.nt.ca/en/newsroom/gnwt-launches-new-our-languages-curriculum"
+   },
+   {
+    "label": "Supreme Court of Canada, Case in Brief: Commission scolaire francophone des Territoires du Nord-Ouest v. Northwest Territories (Education, Culture and Employment), 2023 SCC 31, 8 December 2023",
+    "url": "https://www.scc-csc.ca/judgments-jugements/cb/2023/39915/"
+   },
+   {
+    "label": "CMEC, Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019-20 to 2022-23, cl.5.1.1 and cl.5.1.2 table",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   },
+   {
+    "label": "Office of the Commissioner of Official Languages of Canada, Accessing opportunity: A study on challenges in French-as-a-second-language education teacher supply and demand in Canada, published 13 February 2019",
+    "url": "https://www.clo-ocol.gc.ca/en/publications/studies-other-reports/2019/accessing-opportunity-study-challenges-french-second-language-education-teacher-supply-demand-canada"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
-  "higherEducation": "",
-  "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "primaryRequirement": "Education Act s.70(1): the language of instruction must be an Official Language\ns.73(3): where English is the medium, another Official Language must be taught\nThe mandated second language is therefore official, never foreign\nGNWT gloss: delivered by a core-language approach or by immersion",
+  "secondaryRequirement": "Education Act s.73 is not grade-limited, it binds the whole education program\nThe District Education Authority picks which Official Language is taught, s.73(1)\nLanguage-of-instruction choice gated on demand, fluent teachers, materials, s.71(4)\nNo separate junior-secondary language rule found in the Act or in ECE guidance",
+  "upperSecondary": "80 credits, 56 required, and no language credit among the required courses\nGrad guide lists Second Language as 'No required credits', elective only\nFrançais langue première and Français langue seconde-immersion are 12-credit streams\nNew Trilingual High School Diploma carries translations in all nine Indigenous languages",
+  "languagesOffered": "Second-language courses in 18 different languages at grades 10-12, all elective\nNine Indigenous streams carried under Our Languages Curriculum course codes\nAlso Core French, German, Italian, Japanese, Korean, Mandarin, Punjabi, Spanish\nAmerican Sign Language sits on the same approved second-language list",
+  "curriculumTime": "Core French curricula assume students take French at least 30 minutes a day\nGrades 1-9 Core French curriculum is based on three levels of competencies\nILE Policy requires 'dedicated time' for Indigenous languages but does not quantify it\nGrade 10-12 Core French splits into a -9y and a -3y sequence",
+  "assessment": "Only three graduation assessments, all literacy or numeracy, none in a language\nStudents must sit them but are not required to pass to graduate\nFrench first-language and immersion literacy papers are separately developed, not translated\nOur Languages uses five levels: Emergent, Beginner, Intermediate, Advanced, Capable",
+  "teacherSupply": "Three of 49 schools had no Indigenous language instructor in 2023-24\nIndigenous Language Instructor Employment Plan piloted in five schools from 2023-24\nTeachers proficient in an official Aboriginal language receive a language allowance\n$177,900 in 2023-24 for French educator recruitment and retention work",
+  "higherEducation": "Official Languages Act s.26(2)(c) tasks the Minister with post-secondary promotion\nIndigenous Language Revitalization Scholarship pays up to $5,000 a year\n61 such scholarships awarded between 2018 and 2023\nCollège Nordique francophone named the GNWT's French post-secondary partner",
+  "uptake": [
+   {
+    "year": 2023,
+    "value": "39 of 49 schools taught an Indigenous language",
+    "note": "NWT 2023-24; counts schools, not pupils. Three of the ten without it had no Indigenous language instructor"
+   }
+  ],
+  "regionalMinorityLanguages": "Wrong frame: these are official languages of the territory, not a minority provision\nOfficial Languages Act s.4 lists eleven official languages, nine of them Indigenous\nFrench is the separate s.23 Charter minority language, with its own commission scolaire\nRegulations set French 'significant demand' in Yellowknife, Hay River, Fort Smith, Inuvik",
+  "policyHistory": [
+   {
+    "year": 1984,
+    "description": "Official Languages Act adopted, making the Aboriginal languages official alongside English and French"
+   },
+   {
+    "year": 1993,
+    "description": "Dene Kede K-6 foundational curriculum issued"
+   },
+   {
+    "year": 1996,
+    "description": "Education Act ss.70-73 in force, requiring an Official Language medium and a second Official Language taught"
+   },
+   {
+    "year": 2003,
+    "description": "Dene Kede extended to grades 7-9; Official Languages Act s.4 amended by SNWT 2003 c.23"
+   },
+   {
+    "year": 2004,
+    "description": "Ministerial Directive on Aboriginal Language and Culture Based Education issued to all education bodies"
+   },
+   {
+    "year": 2016,
+    "description": "Ministerial directive on enrolment in French first language education programs adopted"
+   },
+   {
+    "year": 2017,
+    "description": "NWT Aboriginal Languages Framework - A Shared Responsibility tabled"
+   },
+   {
+    "year": 2018,
+    "description": "JK-12 Indigenous Languages and Education Policy finalised, replacing the 2004 ALCBE Directive"
+   },
+   {
+    "year": 2018,
+    "description": "NWT Indigenous Languages Action Plan begun, later extended to 2024-25"
+   },
+   {
+    "year": 2019,
+    "description": "CMEC Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019-2020 to 2022-2023 sets NWT federal contributions"
+   },
+   {
+    "year": 2020,
+    "description": "Our Languages JK-12 Indigenous languages curriculum officially launched"
+   },
+   {
+    "year": 2023,
+    "description": "Supreme Court of Canada in 2023 SCC 31 sets aside refusals to admit non-rights-holder children to NWT French schools"
+   },
+   {
+    "year": 2023,
+    "description": "Final year of Alberta Achievement Tests as NWT phases in the BC curriculum and assessments"
+   },
+   {
+    "year": 2024,
+    "description": "BC Grade 10 Literacy and Numeracy graduation assessments implemented in NWT"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1697,28 +2273,50 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Nova Scotia Department of Education and Early Childhood Development, Nova Scotia Curriculum — Core French",
+    "url": "https://curriculum.novascotia.ca/core-french"
+   },
+   {
+    "label": "Nova Scotia Public School Program — French Second Language",
+    "url": "https://www.ednet.ns.ca/psp/french-second-language"
+   },
+   {
+    "label": "Nova Scotia, Credits for Graduation Diploma (information item)",
+    "url": "https://www.ednet.ns.ca/docs/creditsforgraduationdiplomaen.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
-  "higherEducation": "",
+  "primaryRequirement": "Core French compulsory for all students Grades 4 to 9\nExempt only if enrolled in French Immersion or Integrated French instead\nRegional Centres must offer Core French classes Grades 4 to 12\nTaught by the Neurolinguistic Approach per the 2016 Time to Learn document",
+  "secondaryRequirement": "Compulsory Core French stops at the end of Grade 9\nIntensive French runs at Grade 6 in some schools, 5 months of concentrated French\nIntegrated French runs Grades 7 to 12: French language arts plus one subject in French",
+  "upperSecondary": "No second language among the 18 compulsory graduation credits\nOptional French Immersion Certificate needs French language arts in Grades 10, 11 and 12\nImmersion certificate also needs half of high-school credits taught in French\nIntegrated French Certificate is a parallel, lighter option",
+  "languagesOffered": "Not documented from a Nova Scotia source this session\nProvincial curriculum index lists only English, French Second Language, French First Language\nNo international-languages curriculum stream appears on the provincial index\nLocally developed courses approved by the department can still carry credit\nGaelic Studies 11 and Mi'kmaw Studies 11 exist but count as Canadian history credits",
+  "curriculumTime": "Time allocations sit in the Time to Learn document (April 2016), not retrieved this session\nIntensive French concentrates the Grade 6 year's French into 5 months",
+  "assessment": "Not documented from a Nova Scotia source this session",
+  "teacherSupply": "CMEC-Canada Protocol 2019-23 allots NS $3,761,355 a year for second-language instruction\nCommissioner of Official Languages 2019: persistent national shortage of qualified FSL teachers\nStudy was contracted to Canadian Parents for French, so its figures are CPF's\nNamed problems: unfilled teacher-education places and poor mobility to rural areas",
+  "higherEducation": "Not documented from a Nova Scotia source this session",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Gaelic Studies 11 and Mi'kmaw Studies 11 both count for the Canadian history credit\nConseil scolaire acadien provincial is the province's only francophone school board\nCSAP is French first language, not a second-language programme",
+  "policyHistory": [
+   {
+    "year": 2016,
+    "description": "Time to Learn document (April) revises Core French instructional time"
+   },
+   {
+    "year": 2017,
+    "description": "Diploma change: students starting Grade 10 from Sept 2017 need three maths credits"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1726,28 +2324,70 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Official Consolidation of Inuktut Protection Act, C.S.Nu., c.I-140 (consolidation date September 18, 2025)",
+    "url": "https://www.nunavutlegislation.ca/en/file-download/download/public/8767"
+   },
+   {
+    "label": "Inuit Language Protection Act, S.Nu. 2008, c.17, as assented to September 18, 2008",
+    "url": "https://www.nunavutlegislation.ca/en/file-download/download/public/2772"
+   },
+   {
+    "label": "Official Consolidation of Education Act, C.S.Nu., c.E-10 (consolidation current to July 1, 2021), Schedule: Phasing In and Application of Inuit Language Provisions, Grades 4 to 12",
+    "url": "https://www.nunavutlegislation.ca/en/file-download/download/public/8291"
+   },
+   {
+    "label": "Government of Nunavut, The Next Steps On Our Learning Journey: A User Guide to the revised Education Act 2020 and the Inuit Language Protection Act 2020",
+    "url": "https://www.gov.nu.ca/sites/default/files/policies-legislations/2022-04/a_user_guide_to_the_revised_education_act_2020.pdf"
+   },
+   {
+    "label": "Bill 25, An Act to Amend the Education Act and the Inuit Language Protection Act (assented version), Legislative Assembly of Nunavut",
+    "url": "https://assembly.nu.ca/sites/default/files/Bill-25-5A2S-AATA-Education-Act-and-ILPA-EN-FR-Assent.pdf"
+   },
+   {
+    "label": "CMEC / Government of Canada, Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019–2023",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
-  "higherEducation": "",
+  "primaryRequirement": "Not a foreign-language system: Inuktut is official and a medium of instruction\nInuktut Protection Act s 8(1): every parent has the right to Inuktut instruction for their child\nThat right has been in force for K-3 since 1 July 2009\nExtended to all other primary and secondary grades on 11 November 2020",
+  "secondaryRequirement": "District Education Authorities choose a bilingual education model for their schools\nSince 2020 they may only pick a model their community's teaching capacity can deliver\nThe Minister approves the model and may direct which applies by grade and programme",
+  "upperSecondary": "Statutory goal: secondary graduates \"fully proficient in Inuktut\", spoken and written\nGrade 12 Inuktut-as-first-language obligation does not bite until 1 July 2039",
+  "languagesOffered": "Inuktut covers Inuktitut and Inuinnaqtun, with separate implementation timetables\nInuinnaqtun provisions apply only in the designated western area\nFrench is provided by the Commission scolaire francophone du Nunavut\nCSFN must also teach Inuktut as a second language",
+  "curriculumTime": "Education Act Schedule sets application dates, not hours\nInuktitut first language: Grade 4 in 2026 rising to Grade 12 in 2039\nInuktitut second language: Grade 4 in 2028 rising to Grade 12 in 2034\nInuinnaqtun: Grade 4 in 2030 rising to Grade 12 in 2037",
+  "assessment": "Act requires Inuktut competency targets and measures of assessment\nRecords must be kept of individual attainment and programme outcomes",
+  "teacherSupply": "Teaching capacity is the binding constraint, named as such in the 2020 reform\nMinister must maintain an Inuktut teacher retention and recruitment strategy\nMinister must assist Nunavut Arctic College's Inuktut teacher education programmes\nFederal second-language transfer to Nunavut: $649,746 a year, 2019-23 Protocol",
+  "higherEducation": "Nunavut Arctic College runs the territory's Inuktut teacher education programmes",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Inuktut is an official language, not minority provision - do not read this as a minority field\nStatute: retention and revitalization of the Inuit Language is the primary consideration\nFrench is the constitutional minority language here, delivered by the CSFN\nCSFN is exempt from choosing a bilingual model but must teach Inuktut as a second language",
+  "policyHistory": [
+   {
+    "year": 2008,
+    "description": "Education Act and Inuit Language Protection Act passed, assented 18 Sept 2008"
+   },
+   {
+    "year": 2009,
+    "description": "ILPA s 8 in force for Kindergarten to Grade 3 on 1 July"
+   },
+   {
+    "year": 2020,
+    "description": "Bill 25 defers full bilingual education from 2019 to a schedule ending 2039"
+   },
+   {
+    "year": 2025,
+    "description": "The Act is renamed the Inuktut Protection Act, in force 18 September"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1755,28 +2395,62 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "The Ontario Curriculum, Grades 1–8: French as a Second Language — Core French Grades 4–8, Extended French Grades 4–8, French Immersion Grades 1–8 (Ministry of Education, 2013)",
+    "url": "https://www.edu.gov.on.ca/eng/curriculum/elementary/FSL18-2013curr.pdf"
+   },
+   {
+    "label": "Ontario Schools, Kindergarten to Grade 12: Policy and Program Requirements — §6 Diploma and certificate requirements and related procedures for secondary schools",
+    "url": "https://www.ontario.ca/document/ontario-schools-kindergarten-grade-12-policy-and-program-requirements/diploma-and-certificate-requirements-related-procedures"
+   },
+   {
+    "label": "The Ontario Curriculum, Grades 9–12: French as a Second Language (2014)",
+    "url": "https://www.edu.gov.on.ca/eng/curriculum/secondary/fsl912curr2014.pdf"
+   },
+   {
+    "label": "R.R.O. 1990, Reg. 298 (Operation of Schools — General) under the Education Act, consolidated e-Laws text",
+    "url": "https://www.ontario.ca/laws/regulation/900298"
+   },
+   {
+    "label": "The Ontario Curriculum, Grades 1–8: Native Languages (Ministry of Education)",
+    "url": "https://www.edu.gov.on.ca/eng/curriculum/elementary/nativelang18curr.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
-  "higherEducation": "",
+  "primaryRequirement": "Core French mandatory Grades 4-8 in English-language elementary schools\nMinimum 600 hours of French instruction accumulated by the end of Grade 8\nSequence must run uninterrupted once begun\nExtended French or French Immersion may be taken instead where a board offers it",
+  "secondaryRequirement": "No year-by-year requirement in Grades 9-12; the rule is a credit count\nFSL courses exist at all of Grades 9-12 in Core, Extended and Immersion streams",
+  "upperSecondary": "OSSD needs 1 compulsory credit in French as a second language\nUp to 2 further FSL credits may count as additional compulsory credits\nA Level 1 or 2 Native languages course can replace the compulsory FSL credit\nThat substitution is open to students who took Native languages instead of FSL in elementary",
+  "languagesOffered": "Ontario's foreign-language stream is called \"classical and international languages\"\nAmerican Sign Language as a second language is a listed credit group option\nLangue des signes québécoise langue seconde exists but only in French-language schools\nNative languages is a separate curriculum, not grouped with international languages",
+  "curriculumTime": "Core French: 600 hours minimum by end of Grade 8\nExtended French: at least 25% of instructional time, 1260 hours by end of Grade 8\nFrench Immersion: at least 50% of instructional time, 3800 hours by end of Grade 8\nImmersion may run at 100% French to Grade 3 or 4 before English is introduced",
+  "assessment": "Not documented from an Ontario government source this session",
+  "teacherSupply": "Not documented from an Ontario government source this session\nCommissioner of Official Languages 2019: persistent national shortage of qualified FSL teachers\nStudy was contracted to Canadian Parents for French, so its figures are CPF's\nNamed problems: unfilled teacher-education places and poor mobility to rural areas",
+  "higherEducation": "Not documented from an Ontario government source this session",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Ontario has a separate Native Languages curriculum for Grades 1-8\nA Native languages course can substitute for the compulsory FSL diploma credit\nFrench-language schools are a separate school system, not a second-language programme",
+  "policyHistory": [
+   {
+    "year": 1984,
+    "description": "1999 OSIS diploma already required 1 credit \"French as a second language (or anglais)\""
+   },
+   {
+    "year": 2013,
+    "description": "Grades 1-8 FSL curriculum sets the 600/1260/3800-hour thresholds"
+   },
+   {
+    "year": 2014,
+    "description": "Grades 9-12 FSL curriculum issued"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1784,28 +2458,84 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Education Act, R.S.P.E.I. 1988, Cap. E-.02 (Legislative Counsel Office office consolidation, current to May 29, 2026)",
+    "url": "https://www.princeedwardisland.ca/sites/default/files/legislation/e-.02-education_act.pdf"
+   },
+   {
+    "label": "French Language Services Act, R.S.P.E.I. 1988, Cap. F-15.2 (office consolidation current to December 14, 2013)",
+    "url": "https://www.princeedwardisland.ca/sites/default/files/legislation/F-15-2-French%20Language%20Services%20Act.pdf"
+   },
+   {
+    "label": "PEI Dept of Education and Early Years, \"Senior High Program of Studies and List of Authorized Materials 2026-2027\" (DG-2024)",
+    "url": "https://www.princeedwardisland.ca/sites/default/files/feb2/DEEY%20-%20Senior%20High%20POS%20%202026-2027.pdf"
+   },
+   {
+    "label": "PEI Dept of Education, \"Intermediate Program of Studies and List of Authorized Materials 2022-2023",
+    "url": "https://www.princeedwardisland.ca/sites/default/files/publications/intermediate_program_of_studies_and_authorized_materials.pdf"
+   },
+   {
+    "label": "PEI Dept of Education, \"Elementary Program of Studies and List of Authorized Materials 2022-2023",
+    "url": "https://www.princeedwardisland.ca/sites/default/files/publications/elementary_program_of_studies_and_authorized_materials.pdf"
+   },
+   {
+    "label": "PEI Dept of Education, Early Learning and Culture, \"Elementary Program of Studies and Authorized Materials\" (2016 edition, in effect for 2016-2017)",
+    "url": "https://www.princeedwardisland.ca/sites/default/files/publications/eelc_program_of_studies_k-6.pdf"
+   },
+   {
+    "label": "PEI Dept of Education and Early Years, \"Annual Report 2024-2025",
+    "url": "https://www.princeedwardisland.ca/sites/default/files/c925/Annual%20Report%20EEY%202024-2025.pdf"
+   },
+   {
+    "label": "NEȾOLṈEW̱ / Indigenous Language Education Policy in Canada (Univ. of Victoria, 2023), \"Prince Edward Island (PE)",
+    "url": "https://indigenouslanguagepolicy.ca/prince-edward-island/"
+   },
+   {
+    "label": "CMEC, \"Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019-20 to 2022-23\", cl. 5.1.1 funding table, p. 4",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
+  "primaryRequirement": "French is an official language of Canada, taught as a second language, not a foreign one\nSecond language courses in all schools, instruction beginning no later than grade four\nGrades 4-6 time on task: Core French 10 per cent, a distinct special area\nGrades 1-3 Core French exists only on a local pilot basis",
+  "secondaryRequirement": "Intermediate Grades 7-9 table names the subject Other Official Language, 11-13 per cent\nTime allotment set by the Minister's Directive on Intermediate School Subject Time Allotments\nCore French course codes run 7FREA, 8FREA, 9FREA across all three intermediate grades\nThree immersion entry points: Kindergarten early, Grade 4 middle, Grade 7 late",
+  "upperSecondary": "No second-language credit among the 11 compulsory credits for the 20-credit diploma\nCompulsory list is 3 English, 2 math, 2 science, 2 social studies, 1 PE, 1 career education\nImmersion students face the same graduation requirements as English-programme peers\nFrench Immersion Certificate needs 6 French credits within the graduation parameters",
+  "languagesOffered": "French is the only second language in the PEI Program of Studies at every key stage\nSenior high Core French: FRE421A, FRE521A, FRE521G, FRE621A\nSenior high immersion: FRE421F, FRE521F, FRE521G, FRE621F plus French-medium subjects\nCore French pedagogy cites the Neurolinguistic Approach and the CEFR",
+  "curriculumTime": "Time allotments are based on a 300 minute instructional day\nElementary Core French 10 per cent, intermediate 11-13 per cent of the day\nLate immersion: minimum 75 per cent of courses in French in Grades 7-8, 50 per cent in Grade 9\nEarly immersion: minimum 90 per cent French K-Gr 3, 65 per cent Grades 4-6 (2016 edition)",
+  "assessment": "DELF is optional and has no impact on the student's final mark in high school French\nOffered at end of Grade 12 to students with at least one Grade 12 French course\nDepartmental initiative covers DELF for both French Immersion Grade 12 and Core French\nNo mandatory provincial oral proficiency exit assessment, unlike New Brunswick",
+  "teacherSupply": "Education Act lets certification be refused for insufficient English or French proficiency\nTCOs, Oral Language Competency Assessments, run for French Second Language teachers\nPPL Programme de perfectionnement linguistique supports teacher language upgrading\nFrench Education, Programs and Services division: 26.00 FTE, $3,717,300 in 2024-2025",
   "higherEducation": "",
-  "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "uptake": [
+   {
+    "year": 2024,
+    "value": "4,895 in French immersion, K-12",
+    "note": "PEI Public Schools Branch 2024-25; against a PSB total of 20,824, which is 23.5% by arithmetic, not a published rate"
+   }
+  ],
+  "regionalMinorityLanguages": "No PEI Mi'kmaw LANGUAGE course found in any Program of Studies\nMi'kmaw Studies MKS801A is a senior high social studies course, pilot schools only\nGrade 11 Mi'kmaw Studies curriculum was under development in 2024-2025\nAn Indigenous Education framework was still being created as of the 2024-25 annual report",
+  "policyHistory": [
+   {
+    "year": 2016,
+    "description": "Education Act repeals the 1988 School Act and continues the French Language School Board"
+   },
+   {
+    "year": 2013,
+    "description": "French Language Services Act covers services only, with no education provisions"
+   },
+   {
+    "year": 2019,
+    "description": "Mi'kmaq, PEI and Canada Framework Agreement lists Mi'kmaq language as a subject"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1813,28 +2543,66 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ministère de l'Éducation, du Loisir et du Sport, Programme de formation de l'école québécoise — Anglais, langue seconde, premier cycle du primaire (2006, ISBN 2-550-47377-9)",
+    "url": "https://cdn-contenu.quebec.ca/cdn-contenu/education/pfeq/primaire/programmes/PFEQ-anglais-langue-seconde-1er-cycle-primaire.pdf"
+   },
+   {
+    "label": "Gouvernement du Québec, Elementary English as a Second Language Programs (Québec Education Program)",
+    "url": "https://www.quebec.ca/en/education/preschool-elementary-and-secondary-schools/programs-training-evaluation/quebec-education-program/elementary/english-second-language"
+   },
+   {
+    "label": "Régime pédagogique de l'éducation préscolaire, de l'enseignement primaire et de l'enseignement secondaire, RLRQ c. I-13.3, r. 8, arts. 22 and 23",
+    "url": "https://web.archive.org/web/20260309210503/https://www.legisquebec.gouv.qc.ca/fr/document/rc/I-13.3,%20r.%208"
+   },
+   {
+    "label": "Charte de la langue française, RLRQ c. C-11, chapitre VIII 'Langue de l'enseignement', arts. 72, 73, 88, 88.0.2, 97",
+    "url": "https://web.archive.org/web/20260411172545/https://www.legisquebec.gouv.qc.ca/fr/document/lc/C-11"
+   },
+   {
+    "label": "CMEC / Government of Canada, Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019–2023, footnote 1 and cl. 5.1.1",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
-  "higherEducation": "",
+  "primaryRequirement": "The second language here is English, not French: \"anglais, langue seconde\"\nCompulsory from Cycle 1 of primary (Grade 1) since September 2006\nRégime pédagogique art 22 lists \"Langue seconde (français ou anglais)\" at every cycle\nCycle 1 programme sets no reading or writing expectations, only oral",
+  "secondaryRequirement": "Secondary Cycle 1: anglais langue seconde 200 hours, 8 units, over the cycle\nEnglish-sector mirror: français langue seconde 300 hours, 12 units\nIntensive ESL (IIESL) is a ministry-supported model, not a universal requirement",
+  "upperSecondary": "Secondary Cycle 2 runs on parcours de formation générale or générale appliquée\nSecond language stays compulsory across secondary in both sectors",
+  "languagesOffered": "The compulsory pairing is French and English; there is no \"foreign language\" category\nWhich language is second depends on the sector the student attends\nCharter art 73 controls eligibility for English-language schooling",
+  "curriculumTime": "Primary: second language is compulsory but carries no indicative weekly hours\nPrimary indicative time is 18h of 25h in Cycle 1, 14h of 25h in Cycles 2-3\nSecondary Cycle 1: 200 hours anglais langue seconde in the French sector\nSecondary Cycle 1: 300 hours français langue seconde in the English sector",
+  "assessment": "Ministry publishes a Framework for the Evaluation of Learning for ESL\nReport Card Weightings and Wording set the reporting rules",
+  "teacherSupply": "Ministry publishes guidance on homeroom-teacher / ESL-teacher collaboration in intensive ESL\nCommissioner of Official Languages 2019: persistent national shortage of qualified FSL teachers\nStudy was contracted to Canadian Parents for French, so its figures are CPF's\nNamed problems: unfilled teacher-education places and poor mobility to rural areas",
+  "higherEducation": "Bill 96 (2022 c.14): every college is classed francophone or anglophone\nEnglish-college DEC students must pass at least three courses given in French\nLanguage-of-instruction, second-language and PE courses do not count toward those three",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Charter art 97: Indian reserves are not subject to the Act\nCree and Kativik school boards set their own pace for introducing French and English\nSame rule applies with adaptations to the Naskapi of Schefferville\nThis flows from the 1975 James Bay and Northern Quebec Agreement",
+  "policyHistory": [
+   {
+    "year": 1977,
+    "description": "Charter of the French Language makes French the language of instruction"
+   },
+   {
+    "year": 2006,
+    "description": "ESL becomes compulsory from Cycle 1 of primary, from September"
+   },
+   {
+    "year": 2010,
+    "description": "C.23 amends Charter art 73 eligibility and adds art 73.1"
+   },
+   {
+    "year": 2022,
+    "description": "Bill 96 adds three French courses for English-college DEC students"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1842,28 +2610,134 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Saskatchewan Ministry of Education, Registrar's Handbook for School Administrators, \"Section 1 — Time Allocations and Credit Policy\", valid 1 August 2026 to 31 July 2027 (Publications Centre product 118422, format 136102, file RH_Section 1_2026-27.pdf)",
+    "url": "https://publications.saskatchewan.ca/api/v1/products/118422/formats/136102/download"
+   },
+   {
+    "label": "Saskatchewan Ministry of Education, \"Handbook for Leaders of French as a Second Language (FSL) Programs\", 2025",
+    "url": "https://www.edonline.sk.ca/bbcswebdav/xid-858306_1"
+   },
+   {
+    "label": "The Education Act, 1995, S.S. 1995, c. E-0.2 (consolidated), s. 180 Language of instruction; s. 181 Minority language education program; s. 42.1 Conseil scolaire established",
+    "url": "https://publications.saskatchewan.ca/api/v1/products/487/formats/614/download"
+   },
+   {
+    "label": "Saskatchewan Curriculum, \"Core French 10, 20, 30\" curriculum home",
+    "url": "https://curriculum.gov.sk.ca/CurriculumHome?id=669&language=fr"
+   },
+   {
+    "label": "Saskatchewan Curriculum, \"Aboriginal Languages K-12\" curriculum home (PDF resolves to Aboriginal_Languages_K-12_1994.pdf)",
+    "url": "https://curriculum.gov.sk.ca/CurriculumHome?id=1"
+   },
+   {
+    "label": "Saskatchewan Curriculum, \"nēhiyawēwin 10, 20, 30",
+    "url": "https://curriculum.gov.sk.ca/CurriculumHome?id=2"
+   },
+   {
+    "label": "Saskatchewan Curriculum, \"Nakawē 10, 20, 30",
+    "url": "https://curriculum.gov.sk.ca/CurriculumHome?id=513"
+   },
+   {
+    "label": "Saskatchewan Curriculum, \"Nakoda 10, 20, 30",
+    "url": "https://curriculum.gov.sk.ca/CurriculumHome?id=661"
+   },
+   {
+    "label": "Saskatchewan Curriculum, \"Dene 10, 20, 30",
+    "url": "https://curriculum.gov.sk.ca/CurriculumHome?id=511"
+   },
+   {
+    "label": "Saskatchewan Curriculum, \"Michif 10, 20, 30",
+    "url": "https://curriculum.gov.sk.ca/CurriculumHome?id=512"
+   },
+   {
+    "label": "Saskatchewan Curriculum, \"Dakota 10, 20, 30",
+    "url": "https://curriculum.gov.sk.ca/CurriculumHome?id=788"
+   },
+   {
+    "label": "Saskatchewan Curriculum, \"Core Ukrainian K-12",
+    "url": "https://curriculum.gov.sk.ca/CurriculumHome?id=5"
+   },
+   {
+    "label": "Saskatchewan Curriculum, \"Ukrainian 10, 20, 30",
+    "url": "https://curriculum.gov.sk.ca/CurriculumHome?id=776"
+   },
+   {
+    "label": "Saskatchewan Curriculum home page (Languages area of study menu listing every language curriculum)",
+    "url": "https://curriculum.gov.sk.ca/"
+   },
+   {
+    "label": "Saskatchewan Ministry of Education, \"First Nations and Métis Language Framework 1-9 (2026 PRELIMINARY)\" (.docx)",
+    "url": "https://www.edonline.sk.ca/bbcswebdav/xid-13911628_1"
+   },
+   {
+    "label": "CMEC, \"Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019-2023\", clause 5.1.1 allocation table",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
-  "higherEducation": "",
+  "primaryRequirement": "No compulsory second language anywhere in Saskatchewan Kindergarten to Grade 12\nEight Required Areas of Study include no language beyond language arts\nCore French is a locally determined option at elementary and middle levels\nDivisions may take up to 20% off a required area for locally determined options",
+  "secondaryRequirement": "No language credit required for a 24-credit Saskatchewan secondary diploma\nLanguage courses count only towards elective credits\nRegular English programme takes nine electives, the new SK programme eleven\nFrench Immersion bilingual mention needs 12 credits taken in French",
+  "upperSecondary": "Minimum 24 credits, at least five of them at the 30 level\nThree credit categories: required courses, specified areas, electives\nNew \"SK\" graduation requirements approved October 2023, transition ends 2028-29\nBilingual mention on the transcript for 12 credits taught in French",
+  "languagesOffered": "Core French runs as levels 1-9 then Core French 10, 20 and 30\nProvincial curricula also for German, Mandarin, Spanish, Ukrainian\nAmerican Sign Language and Deaf Culture 10, 20, 30 is a provincial curriculum\nFrench Immersion (Bilingual) and Fransaskois programmes run alongside English",
+  "curriculumTime": "Core French times are recommended minimums, not a required allocation\n120 minutes a week at elementary level, 150 minutes a week at middle level\nSecondary: 100 hours per credit, one credit equalling 100 instructional hours\nImmersion French share: 100% in K, 90-100% Grades 1-2, 50-60% Grades 10-12",
+  "assessment": "No provincial second-language examination appears in the credit policy\nCourse challenge gives credit at 10 or 20 level on a mark of 80% or above\nDivisions told to build their own oral, reading and writing FSL assessments\nCEFR, TEF, ACTFL and DELF named as scales for rating teachers' French",
+  "teacherSupply": "Ministry: hard to recruit and retain French Immersion teachers in Saskatchewan\nCause given is a shortage of qualified educators plus drift to larger centres\nCore French teacher shortage pushes small schools towards distance education\nFederal bursaries flagged to divisions for FSL professional development",
+  "higherEducation": "Ministry notes some post-secondary programmes need high school French\nSchools urged to steer immersion pupils towards French university majors\nLa Cite universitaire francophone (Regina) and U of S rate French proficiency",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Secondary curricula for nehiyawewin, Nakawe, Nakoda, Dene, Dakota and Michif\nMichif French 10, 20, 30 released as a 2026 preliminary curriculum\nAboriginal Languages K-12 (1994) is the umbrella framework document\nFirst Nations and Metis Language Framework 1-9 is a 2026 preliminary template",
+  "policyHistory": [
+   {
+    "year": 1925,
+    "description": "Association culturelle franco-canadienne offers one hour of French a day, the maximum then allowed"
+   },
+   {
+    "year": 1966,
+    "description": "First French immersion programme opens at l'ecole francaise de Saskatoon"
+   },
+   {
+    "year": 1968,
+    "description": "First schools with French as language of instruction; St. Pius X in Regina designated"
+   },
+   {
+    "year": 1994,
+    "description": "Aboriginal Languages K-12 curriculum published"
+   },
+   {
+    "year": 1995,
+    "description": "The Education Act, 1995 enacted, s. 180 setting English as the language of instruction"
+   },
+   {
+    "year": 1998,
+    "description": "Conseil scolaire fransaskois established as a corporation by 1998, c. 21, s. 12"
+   },
+   {
+    "year": 2007,
+    "description": "Saskatchewan becomes the first province to mandate Treaty Education"
+   },
+   {
+    "year": 2019,
+    "description": "Section 180 language-of-instruction provisions amended by 2019, c. 3, s. 21"
+   },
+   {
+    "year": 2023,
+    "description": "New \"SK\" secondary graduation requirements approved in October 2023"
+   },
+   {
+    "year": 2026,
+    "description": "Michif French 10, 20, 30 and a First Nations and Metis Language Framework 1-9 issued as preliminary"
+   }
+  ]
  },
  {
   "countryCode": "CA",
@@ -1871,28 +2745,70 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Government of Yukon news release 19-176, 'New curriculum for Grades 11 and 12', published 15 August 2019",
+    "url": "https://open.yukon.ca/information/b1cbb21a-1e7d-4bd5-b4ee-01b04901749c/resource/4d4ec8c9-1cd0-4b3c-ba80-240e220db42e/download/19-176.html"
+   },
+   {
+    "label": "Government of Yukon news release 18-173, 'Grade 10 students using new school curriculum this year', published 17 August 2018",
+    "url": "https://open.yukon.ca/information/e47f800b-7763-4d5e-b08a-c1334e932057/resource/4d7309cd-76c2-4d85-b8cc-c16a7fab06fc/download/18-173.html"
+   },
+   {
+    "label": "Government of Yukon / Yukon First Nation Education Directorate joint news release 21-163, 'Next steps for Yukon First Nation School Board outlined in newly signed agreement', published 3 June 2021",
+    "url": "https://open.yukon.ca/information/9a5f1a39-3ef6-4bd8-a118-5c507fda8df9/resource/1fff40c7-c775-4fe0-93ba-5a91d4ca3896/download/21-163.html"
+   },
+   {
+    "label": "First Nation School Board (Yukon), Land and Language",
+    "url": "https://www.fnsb.ca/land-and-language"
+   },
+   {
+    "label": "CMEC / Government of Canada, Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019–2023, cl. 5.1.1",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   },
+   {
+    "label": "BC Ministerial Order M295/95, Required Areas of Learning in an Educational Program Order (the curriculum Yukon adopts)",
+    "url": "https://www2.gov.bc.ca/assets/gov/education/administration/legislation-policy/legislation/schoollaw/e/m295_95.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
-  "higherEducation": "",
+  "primaryRequirement": "Yukon has no curriculum of its own; it uses BC's, adapted for the territory\nBC K-9 curriculum adopted from 2017-18, Grade 10 in 2018-19, Grades 11-12 in 2019-20\nAdaptations embed Yukon First Nations ways of knowing and doing at every grade\nBC's rule therefore applies: a second language in Grades 5 to 8",
+  "secondaryRequirement": "Inherited from BC: the requirement stops at the end of Grade 8\nYukon-specific regulation not retrieved this session (see negatives)",
+  "upperSecondary": "Yukon follows BC's graduation programme, which requires no second language\nNot separately confirmed from a Yukon graduation document this session",
+  "languagesOffered": "Not documented from a Yukon source this session",
+  "curriculumTime": "Federal second-language transfer to Yukon: $977,100 a year under the 2019-23 Protocol\nCanada commits to flexibility in allocating territorial funding",
+  "assessment": "Yukon uses BC's graduation numeracy and literacy assessments on BC's schedule\nGrade 10 numeracy from June 2018; Grade 12 literacy from January 2021\nThese replaced the former BC Provincial Exams",
+  "teacherSupply": "First Nation School Board employs a Language Coach for First Nation language programming\nLand and Language Connectors work with Elders, Knowledge Keepers and school staff\nCommissioner of Official Languages 2019: persistent national shortage of qualified FSL teachers\nStudy was contracted to Canadian Parents for French, so its figures are CPF's\nNamed problems: unfilled teacher-education places and poor mobility to rural areas",
+  "higherEducation": "Not documented from a Yukon source this session",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "First Nation School Board created under the Education Act by a 2021 framework agreement\nTen Yukon First Nations and the Government of Yukon signed it\nBoard's Land and Language stream funds language revitalization in class and on the land\nProgramming is specific to the First Nation on whose territory each school sits",
+  "policyHistory": [
+   {
+    "year": 2017,
+    "description": "18 Yukon adopts BC's redesigned Kindergarten to Grade 9 curriculum"
+   },
+   {
+    "year": 2018,
+    "description": "19 Grade 10 follows; 2019-20 Grades 11 and 12 follow"
+   },
+   {
+    "year": 2021,
+    "description": "Yukon First Nation School Board Framework Agreement signed on 3 June"
+   },
+   {
+    "year": 2019,
+    "description": "23 CMEC Protocol allots Yukon $977,100 a year for second-language instruction"
+   }
+  ]
  },
  {
   "countryCode": "CD",
