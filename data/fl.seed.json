@@ -3596,28 +3596,50 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO GEM Report PEER, Dominican Republic — INCLUSION profile",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/dominican-republic/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
-  "higherEducation": "",
+  "primaryRequirement": "Not established from the sources consulted for this entry — here: the primary curriculum could not be retrieved, MINERD host returned 522. If you work in this system, this is exactly the field to fill in.",
+  "secondaryRequirement": "Not established from the sources consulted for this entry — here: only Segundo Ciclo 4to-6to was retrieved, not Primer Ciclo. If you work in this system, this is exactly the field to fill in.",
+  "upperSecondary": "Both English and French are compulsory in Modalidad Académica, 4to to 6to\nHours set by Ordenanza No. 22-2017, Artículo 9\nForeign Languages is a single curriculum area holding two named languages",
+  "languagesOffered": "Exactly two: Inglés and Francés, each with its own curriculum per grade\nNo third foreign language appears in the 617-page design\nHaitian Creole is not offered anywhere in the curriculum",
+  "curriculumTime": "A teaching hour is defined as 45 minutes, Ordenanza 22-2017 Art. 9 Párrafo II\nJornada Extendida, 40h week: English 4h and French 2h in each of 4to, 5to, 6to\nJornada Regular, 30h week: English 3h and French 1h in each of 4to, 5to, 6to\nBy comparison Lengua Española gets 6h extended and 5h regular",
+  "assessment": "Curriculum is aligned to the Common European Framework of Reference\nMINERD cites the Council of Europe 2002 Spanish edition as its reference\nProficiency levels set from CEFR descriptors for oral and written production",
+  "teacherSupply": "Not established: no teacher-supply or vacancy data retrieved\nMINERD maintains a Coordinadora del Área de Lenguas Extranjeras",
+  "higherEducation": "Not established from the sources consulted for this entry — no MESCyT source was retrieved in this session. If you work in this system, this is exactly the field to fill in.",
   "uptake": [],
-  "regionalMinorityLanguages": "",
-  "policyHistory": []
+  "regionalMinorityLanguages": "Haitian Creole is absent from the curriculum: criollo=1 hit, and it is a history term\nAll seven Haitian references are history content, not language provision\nFrench is a foreign language in its own right, not a bridge to Haiti\n\"Lengua materna\" appears twice, both in generic graduate-profile wording",
+  "policyHistory": [
+   {
+    "year": 1997,
+    "description": "General Education Act 66-97 regulates the Dominican education system (per UNESCO PEER; the Act itself was not retrieved)"
+   },
+   {
+    "year": 2002,
+    "description": "Council of Europe Common European Framework of Reference, Spanish edition, adopted by MINERD as the reference for the Foreign Languages curriculum"
+   },
+   {
+    "year": 2017,
+    "description": "Ordenanza No. 22-2017 sets the Modalidad Académica timetable, defining a teaching hour as 45 minutes and fixing English and French hours for Segundo Ciclo"
+   },
+   {
+    "year": 2018,
+    "description": "Diseño Curricular, Nivel Secundario, Modalidad Académica, Segundo Ciclo published (preliminary version for review and feedback)"
+   }
+  ]
  },
  {
   "countryCode": "DZ",

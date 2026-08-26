@@ -3261,26 +3261,52 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Constitución de la República de Cuba, proclamada el 10 de abril de 2019 — Gaceta Oficial No. 5 Extraordinaria de 10 de abril de 2019 (GOC-2019-406-EX5), Asamblea Nacional del Poder Popular",
+    "url": "https://www.gacetaoficial.gob.cu/sites/default/files/goc-2019-ex5.pdf"
+   },
+   {
+    "label": "UNESCO GEM Report PEER, Cuba — INCLUSIÓN profile, Spanish edition (last modified 15/06/2020; not validated by the country)",
+    "url": "https://education-profiles.org/es/america-latina-y-el-caribe/cuba/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source exists for this system yet. If you work in or study this education system, please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "",
-  "removalCriteria": "",
+  "newcomerCriteria": "No newcomer or additional-language designation exists in Cuban education law\nThe 2019 Constitution names Spanish as the sole official language, Art. 2\nConstitution term count: idioma=1, lengua=0, sanity word educación=14\nArt. 73 grants a universal education right with no language qualification",
+  "removalCriteria": "Not applicable: no additional-language category exists to exit from",
   "newcomerProportion": [],
-  "achievementGap": "",
-  "l2Support": "",
-  "l1Support": "",
-  "l3Support": "",
-  "bilingualEducationNotes": "",
-  "policyHistory": []
+  "achievementGap": "Not established from the sources consulted for this entry — no attainment data disaggregated by home language located. If you work in this system, this is exactly the field to fill in.",
+  "l2Support": "Not found: no Spanish-as-an-additional-language provision located in any instrument\nConstitution makes no medium-of-instruction provision at all",
+  "l1Support": "No home-language maintenance provision exists for any language\nCuban Sign Language interpreters are named, but only within special education",
+  "l3Support": "Foreign languages are a standard curriculum discipline, English named explicitly\nResolución no. 56 de 2008 lets rectors exempt deaf university students from a foreign language\nThat exemption applies to higher education, not to schools",
+  "bilingualEducationNotes": "Spanish is the sole official language under Art. 2 of the 2019 Constitution\nThe Constitution uses the word \"lengua\" zero times\nNo minority or indigenous language of instruction exists in the retrieved sources\nA Ley de Educación was still forthcoming as of the 2020 UNESCO profile",
+  "policyHistory": [
+   {
+    "year": 1961,
+    "description": "Ley de Nacionalización general y gratuita de la enseñanza establishes free education for all citizens without distinction or privilege"
+   },
+   {
+    "year": 2008,
+    "description": "Resolución no. 56 de 2008 empowers higher education rectors to exempt deaf university students from English or any other foreign language in their programme"
+   },
+   {
+    "year": 2019,
+    "description": "Constitución de la República de Cuba proclaimed 10 April 2019, Gaceta Oficial No. 5 Extraordinaria; Art. 2 makes Spanish the sole official language, Art. 73 makes education a universal right"
+   },
+   {
+    "year": 2023,
+    "description": "A Ley de Educación was listed on the legislative timetable for 2023 per the 2020 UNESCO PEER profile; enactment NOT verified - do not state it as enacted"
+   }
+  ]
  },
  {
   "countryCode": "CV",
