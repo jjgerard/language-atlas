@@ -267,6 +267,16 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
   padding: 9px 11px; border-radius: 0 3px 3px 0; margin: 13px 0 0;
 }
 
+/* What was looked for and not found, where someone recorded it. Set apart from
+   .viaterr because it is a finding about the world, not a note about how this
+   panel is assembled. */
+.stubnote {
+  font-size: 12px; color: var(--ink-soft); line-height: 1.55;
+  background: var(--surface-2); border-left: 2px solid var(--hatch-line);
+  padding: 10px 12px; border-radius: 0 3px 3px 0; margin: 13px 0 0;
+}
+.stubnote b { color: var(--ink); font-weight: 600; }
+
 /* Contributing, from the entry you are looking at. An empty record is the
    place a reader is most likely to know something, so the ask is loudest
    there and quietest where the entry is already full. */
@@ -472,6 +482,8 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
         <div class="results" id="results" role="listbox"></div>
       </div>
       <a class="aboutlink" id="addlink" href="/submit">Add an entry</a>
+      <a class="aboutlink" href="/patterns">Patterns</a>
+      <a class="aboutlink" href="/sources">Sources</a>
       <a class="aboutlink" href="/about">About</a>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
         <span></span><span></span><span></span>
@@ -1408,6 +1420,7 @@ function panelHTML(u, via) {
       ? esc(via.note)
       : `There is no separate ${esc(d.label)} entry for it, so what applies is the ${esc(u.name)} record below.`}</p>` : ''}
     ${nInherited && !via ? `<p class="viaterr">${nInherited} of these ${d.fields.length} fields have nothing recorded for ${esc(u.name)} itself and follow <b>${esc(par.name)}</b>. They are marked below.</p>` : ''}
+    ${u.stubNote ? `<p class="stubnote">${esc(u.stubNote)}</p>` : ''}
 
     <div class="chips">
       <span class="chip">${u.filled.length}/${d.fields.length} fields</span>

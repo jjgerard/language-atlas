@@ -193,13 +193,21 @@ body {
   text-transform: uppercase; opacity: .75;
 }
 
-.navright { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.navright { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+/* These are destinations, not footnotes. At --ink-soft and 13px they read as
+   fine print beside the domain pills and were being missed; Patterns and
+   Sources in particular are whole pages that nothing else on the map points
+   to. Full ink and medium weight put them on the same footing as the pills
+   without turning four links into four buttons. */
 .aboutlink {
-  font-size: 13px; color: var(--ink-soft); text-decoration: none;
-  padding: 7px 11px; border-radius: 4px; white-space: nowrap;
+  font-size: 13.5px; font-weight: 500; color: var(--ink); text-decoration: none;
+  padding: 7px 10px; border-radius: 4px; white-space: nowrap;
 }
-.aboutlink:hover { background: var(--surface-2); color: var(--ink); }
-.aboutlink[aria-current="page"] { color: var(--ink); font-weight: 600; }
+.aboutlink:hover { background: var(--surface-2); }
+.aboutlink[aria-current="page"] {
+  font-weight: 600; background: var(--surface-2);
+  box-shadow: inset 0 -2px 0 var(--hair-strong);
+}
 
 /* The hamburger only exists on narrow screens; on desktop every destination
    is already visible, so a menu would hide things for no reason. */

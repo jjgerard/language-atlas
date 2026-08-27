@@ -104,6 +104,12 @@ function deriveUnits(domain, entries, sharedMatcher) {
       region: e.region || '',
       subregion: e.subregion || '',
       status: e.status || 'stub',
+      // Why an entry is thin, in the words of whoever established it. Written
+      // on 190 entries and, until now, never sent to the client: the reader saw
+      // a blank record and no account of what had been looked for. The
+      // distinction it carries is the one the whole map is built on — a gap in
+      // the record is not a gap in the world.
+      stubNote: String(e.stubNote || ''),
       confidence: e.confidence || 'unverified-submission',
       lastVerified: e.lastVerified || '',
       coverage: filled.length ? 'has' : (looked.length ? 'looked' : 'none'),

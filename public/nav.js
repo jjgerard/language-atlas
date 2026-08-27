@@ -47,13 +47,16 @@ export async function mountNav(currentId, domains) {
   }
   if (!list || !list.length) return;
 
-  // The top bar carries only what you can actually open — five pills wrap the
-  // desktop header onto a second row, and the planned ones are already named
-  // on the home page. The menu has room to list them, so it does.
+  // Both the bar and the menu carry only what you can actually open. The menu
+  // used to list the planned domains too, on the reasoning that it had room —
+  // but room is not a reason. A "soon" pill in a menu is a dead tap, and the
+  // planned maps are already named on the home page, which is where someone
+  // deciding whether to come back will look.
+  const live = list.filter(d => d.live);
   const bar = document.getElementById('pills');
-  if (bar) bar.innerHTML = pillsHTML(list.filter(d => d.live), currentId);
+  if (bar) bar.innerHTML = pillsHTML(live, currentId);
   const menu2 = document.getElementById('menupills');
-  if (menu2) menu2.innerHTML = pillsHTML(list, currentId);
+  if (menu2) menu2.innerHTML = pillsHTML(live, currentId);
 
   fitBar();
   addEventListener('resize', fitBar);
