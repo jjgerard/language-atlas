@@ -133,24 +133,35 @@ function deriveUnits(domain, entries, sharedMatcher) {
     };
   });
 
-  // A sub-national unit with nothing of its own is not automatically a gap.
-  // Where the question is answered at national level -- India's speech and
-  // language disability category is defined once, in the RPwD Act Schedule --
-  // the national record IS what applies in the state, and marking 33 states
-  // grey says the opposite of what was found.
+  // A sub-national unit with NOTHING of its own is covered by its country, not
+  // a gap. The national record is what applies there until someone documents
+  // the unit itself, and painting it grey says the opposite.
   //
-  // This is deliberately NOT the default. It applies only where a domain
-  // declares the country in `nationalFor`, because the inverse error is worse:
-  // painting every US state as covered by a federal policy would erase exactly
-  // the state-level variation the units were split apart to show. Across the
-  // whole atlas only two countries have sub-units with no record of their own
-  // at all, so the declaration stays short and readable rather than becoming a
-  // rule nobody can audit.
+  // Worth knowing why this is safe to do by default. It can only ever fire
+  // where a sub-unit is completely blank, and across the whole atlas that is
+  // two countries: China on all four maps, and India on the disorder map.
+  // Every other split country -- the 51 US states, 13 Canadian provinces, 8
+  // Australian states, the 4 UK nations -- has its own record on every map, so
+  // no federal rule is being spread over units known to differ from it.
+  //
+  // India is more than an assumption: a scouting pass established that the
+  // RPwD Act Schedule defines speech and language disability once for the
+  // whole country, that the Rehabilitation Council publishes a national
+  // therapist count with no state breakdown, and that state portals, the PRS
+  // state-acts archive, UDISE+ and the NAS report cards carry no state-level
+  // provision. research/parts/inscout-bottomline.md.
+  //
+  // `distinctSubunits` is the escape hatch for a domain that learns its
+  // sub-units really do differ. It is empty, and a country belongs in it the
+  // day one of its units is documented differently from the national record.
+  //
+  // A unit marked `looked` keeps that state: someone searched THERE and found
+  // nothing, which is its own finding and not the country's answer.
   const national = new Map();
   for (const u of units) if (u.nat) national.set(u.cc, u);
-  const inheritsIn = new Set(domain.nationalFor || []);
+  const differs = new Set(domain.distinctSubunits || []);
   for (const u of units) {
-    if (u.nat || u.coverage !== 'none' || !inheritsIn.has(u.cc)) continue;
+    if (u.nat || u.coverage !== 'none' || differs.has(u.cc)) continue;
     const nat = national.get(u.cc);
     if (nat && nat.coverage === 'has') u.coverage = 'inherited';
   }
