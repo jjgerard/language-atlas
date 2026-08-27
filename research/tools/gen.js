@@ -35,7 +35,7 @@ function pick(walsId) {
     genus: d.genus, typology: d.typology.map(SHORTEN).join("; ") };
 }
 
-const OUT = path.join(__dirname, "reports", "parts");
+const OUT = path.join(__dirname, "..", "parts");
 let nRows = 0, nWals = 0, nNo = 0, files = [];
 
 function write(spec) {

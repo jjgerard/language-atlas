@@ -32,21 +32,27 @@
 // header is the one thing all of them share.
 const fs = require("fs");
 const path = require("path");
-const { parseFile, toHistory } = require("./parseparts");
+const { parseText, sections, toHistory } = require("./parseparts");
+const { resolveHeader } = require("./unitkey");
 
 const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
 const STORE = { fl: "fl.seed.json", dld: "dld.json", eal: "eal.json", indigenous: "indigenous.json" };
-const PARTS = path.join(__dirname, "reports", "parts");
+const PARTS = path.join(__dirname, "..", "parts");
 
 // Word boundaries here are load-bearing, not decoration. Without \b, "SEN"
 // matches "present" and "sense", "cree" matches "decree", and "innu" matches
 // "innumerable" — each of which would file a foreign-language row on the
 // disorder map with a straight face. An earlier run of this script did exactly
 // that, because a heredoc ate the backslashes on the way to disk.
+// One alternative earned its own note. `second[- ]language` sat on the eal
+// pattern and, in Canada, put six FSL funding and curriculum rows on the
+// newcomer map: "second-language instruction" there means French, not support
+// for a child who arrived without the school's language. It now needs a learner
+// word to count as eal, and the instruction sense goes to fl.
 const SUBJECT = {
   dld: /disabilit|disabled|special education|special needs|\bSEN\b|inclusive education|speech|therap|logoped|orthophon|fonoaudiolog|impairment|handicap|autis|dyslex|language disorder|rehabilitat|accessib|\bdeaf\b|\bblind\b|sign language|\bCRPD\b|persons with disabilit|Salamanca|resource room|remedial|learning difficult|psycholog|audiolog|inclusi[oó]n|inclusive school|mainstream|developmental disorder|diagnostic|early intervention|educaci[oó]n inclusiva|discapacidad|educaci[oó]n especial/i,
-  eal: /refugee|asylum|migrant|immigrant|newcomer|newly arrived|displaced|\bEAL\b|\bESL\b|English learner|English as an additional|second[- ]language|langue seconde|reception class|welcome class|accueil|francisation|castellaniz|host language|language support|integration of (pupils|students|children)|home language survey|Equal Educational Opportunities|language minority student|limited English/i,
-  fl: /foreign[- ]language|langue étrang|lengua extranjera|world language|English as a foreign|\bCEFR\b|\bCLIL\b|\bDELF\b|Common European Framework|language teaching|teaching of English|English teaching|three[- .]language formula|two[- .]language formula|compulsory (English|French|Spanish|German)|modern language|immersion|core [Ff]rench|intensive [Ff]rench|extended [Ff]rench|language credit|conversational (Spanish|French|English)|(Spanish|French|German|Mandarin) programme|\bFSL\b|French as a second|French[- ]language (education|programme|program|school)|French first language|fransaskois|franco[- ]canadienne|Charter of the French Language|French Language Services|conseil scolaire/i,
+  eal: /refugee|asylum|migrant|immigrant|newcomer|newly arrived|displaced|\bEAL\b|\bESL\b|English learner|English as an additional|second[- ]language (learner|pupil|student|support)|langue seconde d.accueil|reception class|welcome class|accueil|francisation|castellaniz|host language|language support|integration of (pupils|students|children)|home language survey|Equal Educational Opportunities|language minority student|limited English/i,
+  fl: /foreign[- ]language|langue étrang|lengua extranjera|world language|English as a foreign|\bCEFR\b|\bCLIL\b|\bDELF\b|Common European Framework|language teaching|teaching of English|English teaching|three[- .]language formula|two[- .]language formula|compulsory (English|French|Spanish|German)|modern language|immersion|core [Ff]rench|intensive [Ff]rench|extended [Ff]rench|language credit|conversational (Spanish|French|English)|(Spanish|French|German|Mandarin) programme|\bFSL\b|French as a second|second[- ]language (instruction|education|programme|program|mandate|credit|teaching)|Second-Language Instruction|langue seconde|French[- ]language (education|programme|program|school)|French first language|fransaskois|franco[- ]canadienne|Charter of the French Language|French Language Services|conseil scolaire/i,
   indigenous: /minorit|indigenous|ind[ií]gena|regional language|national language|mother[- ]tongue|lengua originaria|autochton|tribal|aborigin|first nation|\binuit\b|\binnu\b|m[ée]tis|\bmaori\b|\bsami\b|mi.kmaq|\bcree\b|intercultural|bilingual|charter for regional|vernacular|creole|patois|heritage language|medium of instruction|official medium|official language|eighth schedule|scheduled tribe|linguistic minorit|\bCLM\b|Commissioner for Linguistic|(Urdu|Punjabi|Sindhi|Maithili|Bhojpuri|Sanskrit|Telugu|Tamil|Bengali|Marathi|Gujarati)\s+Academy|language of instruction|inuktut|inuktitut|\bdene\b|treaty education|\bILPA\b|indigenous language|native language/i,
 };
 // A general instrument: dated, about schooling, but not about any one of the
@@ -98,15 +104,17 @@ function existing(d, key) {
 
 function collect() {
   const out = {};                        // domain -> key -> rows
-  const stats = { read: 0, placed: 0, dropped: 0, viaGeneral: 0, dupe: 0, undoc: 0 };
-  const dropped = [], samples = [], seen = {};
+  const stats = { read: 0, placed: 0, dropped: 0, viaGeneral: 0, dupe: 0, undoc: 0, unresolved: 0 };
+  const dropped = [], samples = [], seen = {}, unresolved = [];
   for (const f of fs.readdirSync(PARTS).filter(x => x.endsWith(".md")).sort()) {
     const text = fs.readFileSync(path.join(PARTS, f), "utf8");
-    const hdr = text.match(/^###\s+([A-Z]{2}(?:-[A-Z0-9]{1,3})?)\|([^\n—]+?)(?:\s+—.*)?$/m);
-    if (!hdr) continue;
-    const key = hdr[1] + "|" + hdr[2].trim();
+    // Per SECTION, not per file. Several part files carry more than one unit,
+    // and reading only the first header filed every row in that file under it.
+    for (const sec of sections(text)) {
+    const key = resolveHeader(sec.head);
+    if (!key) { stats.unresolved++; unresolved.push(f + ": " + sec.head.slice(0, 70)); continue; }
     let fields;
-    try { ({ fields } = parseFile(f)); } catch (e) { continue; }
+    try { ({ fields } = parseText(sec.body)); } catch (e) { continue; }
     if (!(fields.policyHistory || []).length) continue;
     for (const row of toHistory(fields.policyHistory, [], f)) {
       stats.read++;
@@ -128,10 +136,11 @@ function collect() {
         if (samples.length < 16 && row.description.length > 45) samples.push(`${d.padEnd(11)} ${key.padEnd(24)} ${row.year}  ${row.description.slice(0, 68)}`);
       }
     }
+    }
   }
   // A timeline is read top to bottom; the store does not sort for us.
   for (const d of Object.keys(out)) for (const k of Object.keys(out[d])) out[d][k].sort((a, b) => a.year - b.year);
-  return { out, stats, dropped, samples };
+  return { out, stats, dropped, samples, unresolved };
 }
 
 /** Merge the routed rows into the stores.
@@ -175,11 +184,12 @@ function write(out) {
 module.exports = { collect, subjectsOf, live, documented };
 
 if (require.main === module) {
-  const { out, stats, dropped, samples } = collect();
+  const { out, stats, dropped, samples, unresolved } = collect();
   console.log(`READ ${stats.read} rows -> PLACED ${stats.placed}`);
   console.log(`  dropped, no subject matched   ${stats.dropped}`);
   console.log(`  already on the entry          ${stats.dupe}`);
   console.log(`  unit not documented on any matching map  ${stats.undoc}`);
+  console.log(`  section header not resolvable to a unit  ${stats.unresolved}`);
   console.log(`  of the placed, ${stats.viaGeneral} are a general education instrument fanned to the three language maps`);
   console.log("");
   for (const d of Object.keys(STORE)) {

@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require("path");
 const { build } = require("./parseparts");
 
-const PARTS = path.join(__dirname, "reports", "parts");
+const PARTS = path.join(__dirname, "..", "parts");
 const FRESH_MS = 90 * 1000;
 const now = Date.now();
 const skipped = [];

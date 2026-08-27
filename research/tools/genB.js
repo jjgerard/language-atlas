@@ -1,5 +1,5 @@
 const fs = require("fs"), path = require("path");
-const OUT = path.join(__dirname, "reports", "parts");
+const OUT = path.join(__dirname, "..", "parts");
 const files = {};
 
 files["lang-CA.md"] = `### CA|Canada

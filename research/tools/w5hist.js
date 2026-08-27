@@ -15,7 +15,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const PARTS = path.join(__dirname, "reports", "parts");
+const PARTS = path.join(__dirname, "..", "parts");
 const FILE = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas", "data", "indigenous.json");
 
 function rowsIn(file) {

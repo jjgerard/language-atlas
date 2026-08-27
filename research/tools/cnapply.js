@@ -22,7 +22,7 @@ const { run } = require("./fl/apply");
 
 const FILE = "w4-CN.md";
 const KEY = "CN|China";
-const PARTS = path.join(__dirname, "reports", "parts");
+const PARTS = path.join(__dirname, "..", "parts");
 const text = fs.readFileSync(path.join(PARTS, FILE), "utf8");
 
 // Only the final section counts: the agent appended drafts as it went and then

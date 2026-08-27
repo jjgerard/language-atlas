@@ -1,5 +1,5 @@
 const fs = require("fs"), path = require("path");
-const OUT = path.join(__dirname, "reports", "parts");
+const OUT = path.join(__dirname, "..", "parts");
 const work = JSON.parse(fs.readFileSync(path.join(__dirname, "langwork.json"), "utf8"))
   .filter(x => x.region === "Americas");
 const byUnit = Object.fromEntries(work.map(x => [x.unit, x]));

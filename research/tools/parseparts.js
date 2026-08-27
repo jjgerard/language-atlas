@@ -19,7 +19,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const PARTS = path.join(__dirname, "reports", "parts");
+const PARTS = path.join(__dirname, "..", "parts");
 const SERIES = new Set(["uptake", "newcomerProportion", "identifiedPrevalence"]);
 
 // The SOURCES block above DRAFT BULLETS pairs a citation label with the URL it
@@ -38,7 +38,21 @@ function parseSources(text) {
 }
 
 function parseFile(file) {
-  const text = fs.readFileSync(path.join(PARTS, file), "utf8");
+  return parseText(fs.readFileSync(path.join(PARTS, file), "utf8"));
+}
+
+// Split a part file into its "### CC|Unit" sections. Several files carry more
+// than one unit, and a caller that reads only the first header files every
+// row in the file under that first unit.
+function sections(text) {
+  const idx = [...text.matchAll(/^###\s+(.+)$/gm)];
+  return idx.map((m, i) => ({
+    head: m[1].trim(),
+    body: text.slice(m.index, i + 1 < idx.length ? idx[i + 1].index : text.length),
+  }));
+}
+
+function parseText(text) {
   const sources = parseSources(text);
   const start = text.search(/^\s*DRAFT BULLETS/m);
   if (start < 0) return { fields: {}, sources, note: "no DRAFT BULLETS section" };
@@ -108,6 +122,14 @@ function toHistory(bullets, problems, where) {
     const lead = b.match(/^(1[6-9]\d{2}|20\d{2})\b[\s:,–-]*(.+)$/);
     if (lead) {
       let d = lead[2].trim().replace(/^[–-]\s*/, "");
+      // A description that itself opens with a year means the bullet carried a
+      // RANGE or a pair of dates ("2006-2011 ...", "1984 ... 1999 OSIS"), and
+      // the leading number is then not reliably the year of the change. The
+      // timeline is keyed on that year, so this is reported, never guessed.
+      if (/^(1[6-9]\d{2}|20\d{2})\b/.test(d)) {
+        problems.push(where + ': policyHistory row opens with two years, cannot key it — "' + b.slice(0, 70) + '"');
+        continue;
+      }
       d = d.charAt(0).toUpperCase() + d.slice(1);
       rows.push({ year: Number(lead[1]), description: d });
       continue;
@@ -146,4 +168,4 @@ function build(filter, unitOf) {
   return { spec, problems, skipped, files: files.length };
 }
 
-module.exports = { build, parseFile, toHistory };
+module.exports = { build, parseFile, parseText, sections, toHistory };

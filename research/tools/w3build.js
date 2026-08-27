@@ -8,7 +8,7 @@ const fs = require("fs"), path = require("path");
 const { build } = require("./parseparts");
 const { map } = require("./w3map");
 
-const PARTS = path.join(__dirname, "reports", "parts");
+const PARTS = path.join(__dirname, "..", "parts");
 const FRESH_MS = 90 * 1000, now = Date.now();
 const skipped = [];
 const settled = f => {

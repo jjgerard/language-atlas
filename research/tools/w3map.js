@@ -59,7 +59,7 @@ function resolve(slug) {
   return { error: `"${rest}" matches ${near.length} ${cc} units` };
 }
 
-const PARTS = path.join(__dirname, "reports", "parts");
+const PARTS = path.join(__dirname, "..", "parts");
 const files = fs.readdirSync(PARTS).filter(f => /^w3-.+\.md$/.test(f)).sort();
 const map = {}, errors = [];
 for (const f of files) {

@@ -16,7 +16,7 @@ const path = require("path");
 const { parseFile } = require("./parseparts");
 const { run } = require("./fl/apply");
 
-const PARTS = path.join(__dirname, "reports", "parts");
+const PARTS = path.join(__dirname, "..", "parts");
 const prefix = process.argv[2];
 if (!prefix) { console.log("usage: node w4apply.js <prefix> [--write]"); process.exit(1); }
 
