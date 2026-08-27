@@ -59,8 +59,14 @@ const strip = s => s
 
 // Fold away everything extraction mangles: accents, curly quotes, case, runs of
 // space. What is left is words, which is what a quote is really made of.
+// CJK is kept, not folded away. Stripping every non-Latin character reduced a
+// Chinese quote to a handful of stray letters and then failed to find it --
+// which is how Taiwan lost 43 bullets drawn from its own statutes.
+const CJK = "㐀-䶿一-鿿豈-﫿぀-ヿ";
+const FOLD_RE = new RegExp("[^a-z0-9" + CJK + "]+", "g");
 const fold = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "")
-  .toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  .toLowerCase().replace(FOLD_RE, " ").trim();
+const hasCJK = s => new RegExp("[" + CJK + "]").test(String(s));
 
 const words = s => fold(s).split(" ").filter(Boolean);
 
@@ -81,8 +87,12 @@ function quoteOn(quote, page) {
   // a checker reading another disagree on where the spaces are while agreeing
   // on every letter. Requiring a long run keeps this from matching on noise.
   const qs = q.join(""), ps = p.replace(/ /g, "");
-  if (qs.length >= 40 && ps.includes(qs)) return true;
-  const RUNC = Math.max(40, Math.ceil(qs.length * 0.6));
+  // A run of CJK carries far more meaning per character than Latin text, so it
+  // needs a shorter threshold to be a safe match -- and it has no spaces to
+  // align on in the first place, which is why the word-run test above misses it.
+  const MIN = hasCJK(quote) ? 12 : 40;
+  if (qs.length >= MIN && ps.includes(qs)) return true;
+  const RUNC = Math.max(MIN, Math.ceil(qs.length * 0.6));
   for (let i = 0; i + RUNC <= qs.length; i += 8) {
     if (ps.includes(qs.slice(i, i + RUNC))) return true;
   }
