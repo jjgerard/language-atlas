@@ -135,17 +135,18 @@ function provenance(payload) {
           // ordinary source, so the sources table can say "59 pages" where that
           // is the honest description of what is being counted on one row.
           pages: new Set(),
-          entries: 0, domains: new Set(), regions: new Set(),
+          entries: 0, domains: new Set(), regions: new Set(), subregions: new Set(),
         }));
         rec.pages.add(l.url);
         rec.entries++;
         rec.domains.add(d.id);
         rec.regions.add(u.region);
+        if (u.subregion) rec.subregions.add(u.subregion);
       }
     }
   }
   const sources = [...byKey.values()]
-    .map(r => ({ ...r, pages: r.pages.size, domains: [...r.domains].sort(), regions: [...r.regions].sort() }))
+    .map(r => ({ ...r, pages: r.pages.size, domains: [...r.domains].sort(), regions: [...r.regions].sort(), subregions: [...r.subregions].sort() }))
     .sort((a, b) => b.entries - a.entries || a.label.localeCompare(b.label));
 
   const slots = sources.reduce((s, r) => s + r.entries, 0);

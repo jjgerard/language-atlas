@@ -84,6 +84,55 @@ body { display: flex; flex-direction: column; min-height: 100dvh; }
 .soonlist { margin: 26px 0 0; }
 .soonlist > .eyebrow { display: block; margin-bottom: 10px; }
 
+/* These are pages you can open, not a planned list, so they read as controls
+   rather than as labels. */
+.pill.go {
+  text-decoration: none; background: var(--surface); border-color: var(--hair-strong);
+  color: var(--ink-soft);
+}
+.pill.go:hover { color: var(--ink); border-color: var(--cov-3); background: var(--ground); }
+.pill.go:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* ---- colour ----
+   The ramp is the site's one visual idea: pale means little is known, deep
+   means a lot is. So it is used here to say something true rather than to
+   decorate. Each card carries its map's OWN coverage as a filled bar, in the
+   same colours the map uses, which makes the four cards legible against each
+   other at a glance — and makes the emptiest map look empty, which is the
+   honest thing for this project's front door to do. */
+/* Only cov-4 and cov-5 clear 3:1 against the page in BOTH themes — measured,
+   not guessed. A sweep running down to cov-2 left the tail of the wordmark at
+   1.78 on the light ground, which is a gradient you cannot read. */
+.hero .wordmark {
+  background: linear-gradient(100deg, var(--cov-5), var(--cov-4) 62%, var(--cov-5));
+  -webkit-background-clip: text; background-clip: text;
+  color: var(--ink);                       /* the fallback, and it must stay */
+}
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .hero .wordmark { -webkit-text-fill-color: transparent; }
+}
+
+/* A wash behind the silhouette, so the backdrop is not a flat grey field.
+   Sits under the map rather than over it: an overlay would tint the text. */
+.backdrop::before {
+  content: ""; position: absolute; inset: -10%;
+  background:
+    radial-gradient(58% 52% at 22% 32%, color-mix(in srgb, var(--cov-2) 40%, transparent), transparent 70%),
+    radial-gradient(52% 48% at 78% 68%, color-mix(in srgb, var(--cov-4) 34%, transparent), transparent 70%);
+  filter: blur(28px);
+}
+@supports not (color-mix(in srgb, red 50%, transparent)) { .backdrop::before { display: none; } }
+
+.card { border-top: 3px solid var(--edge, var(--hair)); }
+.card:hover { border-color: var(--hair); border-top-color: var(--edge, var(--ink-faint)); }
+.card .cov {
+  display: block; height: 5px; border-radius: 3px; margin: 0 0 9px;
+  background: var(--surface-2); overflow: hidden;
+}
+.card .cov > i { display: block; height: 100%; border-radius: 3px; background: var(--edge, var(--cov-3)); }
+.card .count { display: flex; align-items: baseline; gap: 6px; }
+.card .count b { font-weight: 600; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+
 footer.foot {
   flex: none; padding: 14px 18px; background: var(--surface);
   border-top: 1px solid var(--hair);
@@ -116,11 +165,13 @@ footer.foot a { color: var(--ink-soft); }
     </div>
 
     <div class="soonlist">
-      <span class="eyebrow">Planned pages</span>
-      <div class="pills" id="soon"></div>
+      <span class="eyebrow">Read across the maps</span>
+      <div class="pills">
+        <a class="pill go" href="/patterns" title="What the entries have in common, and a cross-tabulation you can drive yourself">Patterns</a>
+        <a class="pill go" href="/sources" title="Every document the atlas rests on, by region and map">Sources</a>
+        <a class="pill go" href="/about" title="What this is, how to read it, and what it cannot do yet">About</a>
+      </div>
     </div>
-
-    <p class="aboutrow"><a href="/explore">Explore the entries</a> · <a href="/patterns">Patterns</a> · <a href="/about">About this project</a></p>
   </div>
 </div>
 
@@ -136,16 +187,24 @@ const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&am
 try {
   const atlas = await fetch('/api/atlas').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
   const live = atlas.domains.filter(d => d.live);
+  // Per-map colour, matching the convention /patterns already uses for its
+  // findings. Deliberately NOT four steps of the coverage ramp: that puts cov-2
+  // on one card, and cov-2 measures 1.98 against the bar track — an edge and a
+  // bar nobody can see. Every region colour clears 3:1 in both themes.
+  const EDGE = {
+    eal: 'var(--r-europe)', dld: 'var(--r-asia)',
+    fl: 'var(--r-americas)', indigenous: 'var(--r-oceania)',
+  };
   document.getElementById('cards').innerHTML = live.map(d => {
     const s = atlas.stats[d.id] || {};
-    return `<a class="card" href="/${esc(d.id)}">
+    const share = (s.entries ? Math.round((s.documented / s.entries) * 100) : 0);
+    return `<a class="card" href="/${esc(d.id)}" style="--edge:${EDGE[d.id] || 'var(--cov-4)'}">
       <h3>${esc(d.label)}</h3>
       <p>${esc(d.blurb)}</p>
-      <span class="count">${s.documented ?? '—'} of ${s.entries ?? '—'} places documented so far</span>
+      <span class="cov" role="img" aria-label="${share}% of places documented"><i style="width:${share}%"></i></span>
+      <span class="count"><b>${s.documented ?? '—'}</b> of ${s.entries ?? '—'} places documented</span>
     </a>`;
   }).join('');
-  document.getElementById('soon').innerHTML = atlas.domains.filter(d => !d.live)
-    .map(d => `<span class="pill soon" title="${esc(d.blurb)}">${esc(d.label)}</span>`).join('');
 } catch (err) {
   // Never leave the page with no way in: fall back to plain links.
   document.getElementById('cards').innerHTML = `

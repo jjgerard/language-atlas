@@ -107,7 +107,78 @@ footer.foot {
   border-top: 1px solid var(--hair); font-size: 12px; color: var(--ink-faint);
 }
 footer.foot a { color: var(--ink-soft); }
-@media (max-width: 820px) { main { padding: 26px 16px 54px; } .regrow { grid-template-columns: 78px 1fr 78px; } }
+
+/* ---- the cross-tabulation panel ----
+   Prefixed `x` throughout because this page already has `table`, `.tools` and
+   `.empty` meaning something else, and a bare `.cell` or `.bar` here would be
+   picked up by the rules above. */
+.xask { background: var(--surface); border: 1px solid var(--hair); border-radius: 10px; padding: 14px 16px; margin: 0 0 10px; }
+.xask label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 7px; }
+.xaskrow { display: flex; gap: 8px; flex-wrap: wrap; }
+.xask input { flex: 1 1 300px; min-width: 0; font: inherit; font-size: 14px; padding: 8px 11px;
+  border: 1px solid var(--hair-strong); border-radius: 7px; background: var(--ground); color: var(--ink); }
+.xbtn { font: inherit; font-size: 13.5px; padding: 8px 16px; border-radius: 7px; cursor: pointer;
+  border: 1px solid var(--ink); background: var(--ink); color: var(--ground); }
+.xegs { margin: 9px 0 0; font-size: 12.5px; color: var(--ink-soft); line-height: 1.9; }
+.xeg { background: var(--surface-2); border: 1px solid var(--hair); border-radius: 999px; padding: 3px 10px;
+  cursor: pointer; font: inherit; font-size: 12.5px; color: var(--ink-soft); }
+.xeg:hover { color: var(--ink); border-color: var(--hair-strong); }
+.xsaid { font-size: 13px; color: var(--ink-soft); margin: 9px 0 0; min-height: 1.2em; }
+.xsaid b { color: var(--ink); font-weight: 600; }
+.xsaid.miss { color: #a4472c; }
+
+.xcontrols { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin: 16px 0 4px; }
+.xctl label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--ink-faint); margin-bottom: 4px; font-weight: 600; }
+.xctl select { width: 100%; font: inherit; font-size: 13px; padding: 7px 9px;
+  border: 1px solid var(--hair-strong); border-radius: 7px; background: var(--surface); color: var(--ink); }
+
+.xmodes { display: flex; gap: 6px; margin: 14px 0 0; flex-wrap: wrap; }
+.xmode { font: inherit; font-size: 12.5px; padding: 5px 13px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--hair); background: var(--surface); color: var(--ink-soft); }
+.xmode[aria-pressed="true"] { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+
+.xout { margin-top: 16px; overflow-x: auto; border: 1px solid var(--hair); border-radius: 8px; }
+table.xtab { border-collapse: collapse; font-size: 13px; width: 100%; }
+table.xtab th, table.xtab td { text-align: left; padding: 7px 11px; border-bottom: 1px solid var(--hair); white-space: nowrap; }
+table.xtab thead th { position: sticky; top: 0; background: var(--surface-2); cursor: default; }
+table.xtab td.n, table.xtab th.n { text-align: right; font-variant-numeric: tabular-nums; }
+table.xtab td.rowhead { font-weight: 500; white-space: normal; }
+table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong); border-bottom: none; }
+.zero { color: var(--ink-faint); }
+.xcell { position: relative; }
+.xcell i { position: absolute; inset: 0; background: var(--cov-4); opacity: var(--a, 0); pointer-events: none; }
+.xcell span { position: relative; }
+
+.xbars { display: grid; gap: 6px; padding: 12px; }
+.xbar { display: grid; grid-template-columns: minmax(120px, 220px) 1fr 66px; gap: 11px; align-items: center; font-size: 13px; }
+.xbar .track { background: var(--surface-2); border-radius: 4px; height: 16px; overflow: hidden; }
+.xbar .fill { height: 100%; background: var(--cov-3); border-radius: 4px; }
+.xbar .val { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); font-size: 12px; }
+.xbar .lab { white-space: normal; line-height: 1.3; }
+.xgroup { margin: 14px 12px 4px; font-size: 13px; font-weight: 600; }
+.xunits { columns: 3 190px; column-gap: 20px; font-size: 12.5px; padding: 0 12px 12px; }
+.xunits div { break-inside: avoid; padding: 1px 0; color: var(--ink-soft); }
+.xempty { padding: 22px; text-align: center; color: var(--ink-faint); font-size: 14px; }
+.xsummary { font-size: 13px; color: var(--ink-soft); margin: 12px 0 0; line-height: 1.6; max-width: 72ch; }
+.xsummary b { color: var(--ink); }
+
+.xreading { margin-top: 18px; padding: 14px 16px; border: 1px solid var(--hair);
+  border-left: 3px solid var(--cov-3); border-radius: 0 9px 9px 0; background: var(--surface); max-width: 72ch; }
+.xreading h4 { margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--ink-faint); font-weight: 600; }
+.xreading p { margin: 0; font-size: 14px; line-height: 1.6; }
+.xreading .prov { margin-top: 8px; font-size: 12px; color: var(--ink-faint); }
+.xreading.thinking p { color: var(--ink-soft); font-style: italic; }
+.hidden { display: none; }
+
+@media (max-width: 820px) {
+  main { padding: 26px 16px 54px; }
+  .regrow { grid-template-columns: 78px 1fr 78px; }
+  .xunits { columns: 1; }
+  .xbar { grid-template-columns: 1fr; gap: 3px; }
+  .xbar .val { text-align: left; }
+}
 </style>
 
 <header class="sitebar">
@@ -124,10 +195,10 @@ footer.foot a { color: var(--ink-soft); }
   </div>
   <div class="menu" id="menu">
     <nav class="pills" id="menupills"></nav>
-    <a class="aboutlink" href="/explore">Explore</a>
-    <a class="aboutlink" href="/patterns" aria-current="page">Patterns</a>
-    <a class="aboutlink" href="/about">About</a>
-  </div>
+      <a class="aboutlink" href="/patterns" aria-current="page">Patterns</a>
+      <a class="aboutlink" href="/sources">Sources</a>
+      <a class="aboutlink" href="/about">About</a>
+    </div>
 </header>
 
 <main>
@@ -169,23 +240,6 @@ footer.foot a { color: var(--ink-soft); }
     <th data-k="region">Region</th><th data-k="domainLabel">Map</th><th data-k="description">Change</th>
   </tr></thead><tbody></tbody></table></div>
 
-  <h3>What the atlas rests on <span class="count" id="src-count"></span></h3>
-  <p>
-    One comparative document can fill forty entries in a single pass; everything else is assembled
-    a country at a time. That difference decides which parts of the map look full first, so it is
-    worth being able to see it.
-  </p>
-  <div class="regions" id="regions"></div>
-  <div class="tools">
-    <input id="src-q" class="grow" type="search" placeholder="Filter sources…" aria-label="Filter sources">
-    <select id="src-region" aria-label="Filter by region"><option value="">All regions</option></select>
-    <button data-csv="sources">Download CSV</button>
-  </div>
-  <div class="twrap"><table id="src"><thead><tr>
-    <th data-k="entries" data-num="1">Entries</th><th data-k="label">Source</th>
-    <th data-k="regionsText">Regions</th><th data-k="domainsText">Maps</th>
-  </tr></thead><tbody></tbody></table></div>
-
   <h3>What nobody records <span class="count" id="cov-count"></span></h3>
   <p>
     Field by field, across every entry. The rows at the top are the ones worth reading: a question
@@ -201,6 +255,53 @@ footer.foot a { color: var(--ink-soft); }
     <th data-k="label">Field</th><th data-k="has" data-num="1">Documented</th>
     <th data-k="looked" data-num="1">Looked</th><th data-k="none" data-num="1">Blank</th><th>Share</th>
   </tr></thead><tbody></tbody></table></div>
+
+  <h3>Ask it something <span class="count" id="xcount"></span></h3>
+  <p>
+    The sections above are the questions worth asking that we thought to ask. This one takes
+    yours: pick two things the atlas records and it counts them against each other, across all
+    four maps at once.
+  </p>
+
+  <div class="xask">
+    <label for="xq" id="xasklabel">Describe what you want to see</label>
+    <div class="xaskrow">
+      <input id="xq" type="text" autocomplete="off" spellcheck="false"
+             placeholder="coverage by region">
+      <button class="xbtn" id="xgo">Show</button>
+    </div>
+    <p class="xsaid" id="xsaid"></p>
+    <p class="xegs" id="xegs"></p>
+  </div>
+
+  <blockquote class="note">
+    <span id="xasknote"></span>
+    Same rule as the rest of this page: nothing here is read out of entry text. These variables
+    are what the schema knows about itself — which fields are filled, an entry's status and
+    confidence, how many dated rows and sources it carries, where it is. A question the atlas
+    cannot answer is told so rather than answered with the nearest thing that fits.
+  </blockquote>
+
+  <div class="xcontrols">
+    <div class="xctl"><label for="x">Rows</label><select id="x"></select></div>
+    <div class="xctl"><label for="y">Columns</label><select id="y"></select></div>
+    <div class="xctl"><label for="scope">Limited to</label><select id="scope"></select></div>
+  </div>
+
+  <div class="xmodes">
+    <button class="xmode" id="xm-cross" aria-pressed="true">Cross-tabulate</button>
+    <button class="xmode" id="xm-bars" aria-pressed="false">Distribution</button>
+    <button class="xmode" id="xm-units" aria-pressed="false">List the units</button>
+  </div>
+
+  <div class="xout" id="xout"></div>
+  <p class="xsummary" id="xsummary"></p>
+
+  <div class="xreading hidden" id="xreading">
+    <h4>Reading of the table above</h4>
+    <p id="xreadingtext"></p>
+    <p class="prov" id="xreadingprov"></p>
+  </div>
 
   <h3>Taking this away</h3>
   <p>
@@ -218,6 +319,7 @@ footer.foot a { color: var(--ink-soft); }
 
 <script type="module">
 import { mountNav } from '/nav.js';
+import { mountExplore } from '/explore-panel.js';
 
 const esc = s => String(s == null ? '' : s)
   .replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -307,16 +409,6 @@ function render() {
     </div>`).join('');
   $('#tl-count').textContent = `${T.timeline.rows.length} changes · ${T.timeline.units} places · ${T.timeline.span[0]}–${T.timeline.span[1]}`;
 
-  // ---- region strip ----
-  const R = T.provenance.byRegion;
-  $('#regions').innerHTML = Object.entries(R).sort((a, b) => b[1].share - a[1].share).map(([k, v]) => `
-    <div class="regrow">
-      <span>${esc(k)}</span>
-      <span class="track"><i class="fill f-${esc(k)}" style="width:${v.share}%"></i></span>
-      <span class="n">${v.share}% of ${v.documented}</span>
-    </div>`).join('');
-  $('#src-count').textContent = `${T.provenance.distinct} sources · ${T.provenance.slots} entry-slots`;
-
   // ---- timeline table ----
   fillSelect('#tl-domain', [...new Set(T.timeline.rows.map(r => r.domainLabel))].sort());
   fillSelect('#tl-region', [...new Set(T.timeline.rows.map(r => r.region))].sort());
@@ -336,30 +428,6 @@ function render() {
   });
   ['#tl-q', '#tl-domain', '#tl-region'].forEach(s => $(s).addEventListener('input', drawTL));
   drawTL();
-
-  // ---- sources table ----
-  const srcRows = T.provenance.sources.map(s => ({ ...s, regionsText: s.regions.join(', '), domainsText: s.domains.join(', ') }));
-  fillSelect('#src-region', [...new Set(srcRows.flatMap(s => s.regions))].sort());
-  const drawSrc = table('#src', {
-    rows: () => srcRows,
-    sort: { k: 'entries', dir: 'descending', num: true },
-    filter: s => {
-      const q = $('#src-q').value.trim().toLowerCase();
-      const g = $('#src-region').value;
-      if (g && !s.regions.includes(g)) return false;
-      return !q || s.label.toLowerCase().includes(q);
-    },
-    // A row that folds a per-jurisdiction instrument stands for many pages, and
-    // saying so is the difference between a source count and a claim about one
-    // document. Ordinary sources report pages === 1 and print nothing extra.
-    render: s => `<tr><td class="num">${s.entries}</td>
-      <td><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a>${
-        s.pages > 1 ? `<span class="pages">${s.pages} country pages</span>` : ''}</td>
-      <td>${s.regions.map(r => `<span class="chip">${esc(r)}</span>`).join(' ')}</td>
-      <td>${esc(s.domainsText)}</td></tr>`,
-  });
-  ['#src-q', '#src-region'].forEach(s => $(s).addEventListener('input', drawSrc));
-  drawSrc();
 
   // ---- coverage table ----
   const covSel = $('#cov-domain');
@@ -386,9 +454,6 @@ function render() {
     if (b.dataset.csv === 'timeline')
       csv('changes', ['year', 'place', 'region', 'map', 'change'],
         T.timeline.rows.map(r => [r.year, r.unit, r.region, r.domainLabel, r.description]));
-    if (b.dataset.csv === 'sources')
-      csv('sources', ['entries', 'pages', 'source', 'url', 'regions', 'maps'],
-        T.provenance.sources.map(s => [s.entries, s.pages, s.label, s.url, s.regions.join('; '), s.domains.join('; ')]));
     if (b.dataset.csv === 'coverage')
       csv('coverage-' + covSel.value, ['field', 'documented', 'looked', 'blank', 'entries'],
         covRows().map(f => [f.label, f.has, f.looked, f.none, T.coverage[covSel.value].entries]));
@@ -397,7 +462,19 @@ function render() {
 
 const scopeLabel = id => (T.coverage[id] && T.coverage[id].label) || id;
 
-mountNav(null);
+// The cross-tabulation panel reads /api/atlas, not /api/trends, so it stands up
+// on its own and a failure in either does not take the other down with it.
+//
+// One request, though, not three. The payload is over 3MB, and nav.js and the
+// panel each fetched their own copy before this — so the page pulled it twice
+// on every load, for data neither of them changes.
+const atlas = fetch('/api/atlas').then(r => r.ok ? r.json() : Promise.reject(new Error('atlas ' + r.status)));
+atlas.then(a => mountNav(null, a.domains)).catch(() => mountNav(null));
+atlas.then(a => mountExplore(a)).catch(err => {
+  document.getElementById('xout').innerHTML =
+    `<p class="xempty">The entries could not be loaded (${esc(err.message)}).</p>`;
+});
+
 fetch('/api/trends')
   .then(r => r.ok ? r.json() : Promise.reject(new Error('trends ' + r.status)))
   .then(d => { T = d; render(); })

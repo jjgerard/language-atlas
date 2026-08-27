@@ -78,7 +78,7 @@ app.get('/api/trends', async (req, res) => {
   }
 });
 
-// The question box on /explore. Two steps, deliberately separate — see ask.js.
+// The question box on /patterns. Two steps, deliberately separate — see ask.js.
 //
 // These are the only routes on the site that cost money per request and the
 // only ones an unauthenticated visitor can use to reach a third party, so they
@@ -343,7 +343,10 @@ const page = name => (req, res) => res.sendFile(path.join(__dirname, '..', 'publ
 app.get('/', page('index.html'));
 app.get('/about', page('about.html'));
 app.get('/patterns', page('patterns.html'));
-app.get('/explore', page('explore.html'));
+app.get('/sources', page('sources.html'));
+// /explore was folded into /patterns. Redirect rather than 404: the URL was
+// live and may have been shared or bookmarked.
+app.get('/explore', (req, res) => res.redirect(301, '/patterns'));
 app.get('/submit', page('submit.html'));
 app.get('/admin', page('admin.html'));
 for (const d of LIVE) app.get('/' + d.id, page('map.html'));

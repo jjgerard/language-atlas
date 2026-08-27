@@ -1,0 +1,276 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sources — Language Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/shared.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Every document the atlas rests on, filterable by region, sub-region and map.">
+
+<!--
+  What the atlas rests on, as its own page.
+
+  This was a section of /patterns, which made it hard to use for the thing it is
+  actually good for: checking whether a claim about a region is really a claim
+  about one comparative document. One UNESCO profile set fills hundreds of
+  entry-slots in a single pass; everything else is assembled a country at a
+  time, and that difference decides which parts of the map look full first.
+
+  Filters are region, sub-region and map, because those are the three ways the
+  question gets asked. Sub-region needed adding to the provenance computation in
+  src/trends.js — the rows carried regions and maps but not sub-regions.
+-->
+<style>
+body { display: flex; flex-direction: column; min-height: 100dvh; }
+main { flex: 1; width: min(96ch, 100%); margin: 0 auto; padding: 40px 22px 72px; }
+
+main h2 { font-size: clamp(27px, 4.4vw, 36px); font-weight: 500; line-height: 1.15;
+  letter-spacing: -.015em; margin: 0 0 6px; text-wrap: balance; }
+main .standfirst { margin: 0 0 26px; font-size: 16px; color: var(--ink-soft); line-height: 1.6; max-width: 68ch; }
+main h3 { font-size: 21px; font-weight: 500; letter-spacing: -.01em;
+  margin: 38px 0 10px; padding-top: 16px; border-top: 1px solid var(--hair); text-wrap: balance; }
+main h3 .count { font-size: 13px; color: var(--ink-faint); font-weight: 400; letter-spacing: 0; }
+main p { margin: 0 0 14px; max-width: 68ch; font-size: 15px; line-height: 1.65; }
+main a { color: var(--focus); }
+
+/* ---- the leverage strip ---- */
+.regions { display: grid; gap: 6px; margin: 4px 0 22px; max-width: 66ch; }
+.regrow { display: grid; grid-template-columns: 92px 1fr 118px; gap: 10px; align-items: center; font-size: 13px; }
+.regrow .track { height: 13px; border-radius: 2px; background: var(--surface-2); overflow: hidden; }
+.regrow .fill { height: 100%; border-radius: 2px; }
+.regrow .n { text-align: right; color: var(--ink-soft); font-variant-numeric: tabular-nums; font-size: 12.5px; }
+.f-Africa { background: var(--r-africa); } .f-Americas { background: var(--r-americas); }
+.f-Asia { background: var(--r-asia); } .f-Europe { background: var(--r-europe); } .f-Oceania { background: var(--r-oceania); }
+
+/* ---- table ---- */
+.tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 10px; }
+.tools input, .tools select { font: inherit; font-size: 13px; padding: 6px 9px; border-radius: 6px;
+  border: 1px solid var(--hair-strong); background: var(--surface); color: var(--ink); }
+.tools input { min-width: 200px; }
+.tools .grow { flex: 1; }
+.tools button { font: inherit; font-size: 12.5px; padding: 6px 11px; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--hair-strong); background: var(--surface); color: var(--ink-soft); }
+.tools button:hover { color: var(--ink); border-color: var(--focus); }
+.twrap { overflow-x: auto; border: 1px solid var(--hair); border-radius: 8px; max-height: 620px; overflow-y: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+thead th { position: sticky; top: 0; z-index: 1; background: var(--surface-2); text-align: left;
+  font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-faint); padding: 9px 11px; border-bottom: 1px solid var(--hair);
+  white-space: nowrap; cursor: pointer; user-select: none; }
+thead th[aria-sort]::after { content: ' ▾'; opacity: .5; }
+thead th[aria-sort="ascending"]::after { content: ' ▴'; opacity: 1; }
+thead th[aria-sort="descending"]::after { content: ' ▾'; opacity: 1; }
+tbody td { padding: 8px 11px; border-bottom: 1px solid var(--hair); vertical-align: top; line-height: 1.45; }
+tbody tr:last-child td { border-bottom: 0; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pages { display: block; font-size: 11.5px; color: var(--ink-faint); margin-top: 2px; }
+.chip { display: inline-block; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
+  padding: 2px 6px; border-radius: 4px; background: var(--surface-2); color: var(--ink-soft); white-space: nowrap; }
+.empty { padding: 22px; text-align: center; color: var(--ink-faint); font-size: 14px; }
+
+blockquote.note { margin: 0 0 16px; padding: 12px 15px; font-size: 14px; line-height: 1.6;
+  color: var(--ink-soft); background: var(--surface-2); max-width: 68ch;
+  border-left: 2px solid var(--hair-strong); border-radius: 0 4px 4px 0; }
+footer.foot { flex: none; padding: 14px 18px; background: var(--surface);
+  border-top: 1px solid var(--hair); font-size: 12px; color: var(--ink-faint); }
+footer.foot a { color: var(--ink-soft); }
+@media (max-width: 820px) { main { padding: 26px 16px 54px; } .regrow { grid-template-columns: 78px 1fr 92px; } }
+</style>
+
+<header class="sitebar">
+  <a class="brand" href="/">
+    <span class="name">Language Atlas</span>
+    <span class="tagline">Provision and policy, by region</span>
+  </a>
+  <nav class="pills" id="pills"></nav>
+  <div class="navright">
+    <a class="aboutlink" href="/sources" aria-current="page">Sources</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="menu" id="menu">
+    <nav class="pills" id="menupills"></nav>
+      <a class="aboutlink" href="/patterns">Patterns</a>
+      <a class="aboutlink" href="/sources" aria-current="page">Sources</a>
+      <a class="aboutlink" href="/about">About</a>
+    </div>
+</header>
+
+<main>
+  <h2>What the atlas rests on</h2>
+  <p class="standfirst">
+    Every document any entry cites, and how far each one reaches. One comparative source can fill
+    hundreds of entry-slots in a single pass; everything else is assembled a country at a time.
+    That difference decides which parts of the map look full first, so it is worth being able to
+    see it directly.
+  </p>
+
+  <blockquote class="note">
+    A row counts <b>entry-slots</b>, not documents: a source cited by forty entries counts forty.
+    Where one row stands for many separate pages of the same instrument — a country-profile series,
+    say — it says how many, because that is the difference between a source count and a claim about
+    a single document.
+  </blockquote>
+
+  <h3>How much of each region leans on a shared source</h3>
+  <p>
+    Of the documented entries in each region, the share citing a source that also documents
+    somewhere else. A high share is not a fault — comparative sources are how any of this gets
+    done — but it does mean those entries move together if the source turns out to be wrong.
+  </p>
+  <div class="regions" id="regions"></div>
+
+  <h3>Every source <span class="count" id="src-count"></span></h3>
+  <div class="tools">
+    <input id="src-q" class="grow" type="search" placeholder="Filter by name…" aria-label="Filter sources by name">
+    <select id="src-region" aria-label="Filter by region"><option value="">All regions</option></select>
+    <select id="src-subregion" aria-label="Filter by sub-region"><option value="">All sub-regions</option></select>
+    <select id="src-domain" aria-label="Filter by map"><option value="">All maps</option></select>
+    <button data-csv="sources">Download CSV</button>
+  </div>
+  <div class="twrap"><table id="src"><thead><tr>
+    <th data-k="entries" data-num="1">Entries</th><th data-k="label">Source</th>
+    <th data-k="regionsText">Regions</th><th data-k="domainsText">Maps</th>
+  </tr></thead><tbody></tbody></table></div>
+
+  <h3>Taking this away</h3>
+  <p>
+    These rows come from <a href="/api/trends">/api/trends</a>, which returns the whole
+    computation as JSON from the same live data as the maps, and the table downloads as CSV.
+    The entry text is <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; if you
+    use these counts, please say when you took them, because they move.
+    <a href="/patterns">Patterns</a> holds the findings, the timeline and the cross-tabulations.
+  </p>
+</main>
+
+<footer class="foot">
+  Entry text CC BY 4.0 · code <a href="https://github.com/jjgerard/language-atlas">open source</a>
+</footer>
+
+<script type="module">
+import { mountNav } from '/nav.js';
+
+const esc = s => String(s == null ? '' : s)
+  .replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const $ = s => document.querySelector(s);
+
+let T = null, ROWS = [];
+
+function table(sel, { rows, render, filter, sort }) {
+  const el = $(sel), tb = el.querySelector('tbody');
+  let sortKey = sort.k, sortDir = sort.dir, num = sort.num;
+  const draw = () => {
+    let out = rows().filter(filter);
+    out.sort((a, b) => {
+      const x = a[sortKey], y = b[sortKey];
+      const c = num ? (Number(y) || -Infinity) - (Number(x) || -Infinity)
+                    : String(x || '').localeCompare(String(y || ''));
+      return sortDir === 'ascending' ? -c : c;
+    });
+    tb.innerHTML = out.length ? out.map(render).join('')
+      : '<tr><td class="empty" colspan="9">Nothing matches those filters.</td></tr>';
+    $('#src-count').textContent = `${out.length} of ${ROWS.length} sources · ${out.reduce((s, r) => s + r.entries, 0)} entry-slots`;
+    el.querySelectorAll('thead th').forEach(th => {
+      if (th.dataset.k === sortKey) th.setAttribute('aria-sort', sortDir);
+      else th.removeAttribute('aria-sort');
+    });
+  };
+  el.querySelectorAll('thead th[data-k]').forEach(th => {
+    th.addEventListener('click', () => {
+      const k = th.dataset.k;
+      if (k === sortKey) sortDir = sortDir === 'ascending' ? 'descending' : 'ascending';
+      else { sortKey = k; num = !!th.dataset.num; sortDir = 'descending'; }
+      draw();
+    });
+  });
+  return draw;
+}
+
+function csv(name, header, rows) {
+  const q = v => `"${String(v == null ? '' : v).replace(/"/g, '""')}"`;
+  const body = [header.join(','), ...rows.map(r => r.map(q).join(','))].join('\r\n');
+  const url = URL.createObjectURL(new Blob(['﻿' + body], { type: 'text/csv;charset=utf-8' }));
+  const a = document.createElement('a');
+  a.href = url; a.download = `language-atlas-${name}-${T.generated}.csv`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function fillSelect(sel, values) {
+  const el = $(sel);
+  for (const v of values) {
+    const o = document.createElement('option');
+    o.value = v; o.textContent = v;
+    el.appendChild(o);
+  }
+}
+
+function render() {
+  const R = T.provenance.byRegion;
+  $('#regions').innerHTML = Object.entries(R).sort((a, b) => b[1].share - a[1].share).map(([k, v]) => `
+    <div class="regrow">
+      <span>${esc(k)}</span>
+      <span class="track"><i class="fill f-${esc(k)}" style="width:${v.share}%"></i></span>
+      <span class="n">${v.share}% of ${v.documented}</span>
+    </div>`).join('');
+
+  // A map's id is not its name. The label comes from /api/atlas so the filter
+  // reads the way the nav does, and falls back to the id if that request fails.
+  ROWS = T.provenance.sources.map(s => ({
+    ...s,
+    regionsText: s.regions.join(', '),
+    subregionsText: (s.subregions || []).join(', '),
+    domainsText: s.domains.map(d => DOMAIN_LABEL[d] || d).join(', '),
+  }));
+
+  fillSelect('#src-region', [...new Set(ROWS.flatMap(s => s.regions))].sort());
+  fillSelect('#src-subregion', [...new Set(ROWS.flatMap(s => s.subregions || []))].sort());
+  fillSelect('#src-domain', [...new Set(ROWS.flatMap(s => s.domains))].sort()
+    .map(d => DOMAIN_LABEL[d] || d));
+
+  const draw = table('#src', {
+    rows: () => ROWS,
+    sort: { k: 'entries', dir: 'descending', num: true },
+    filter: s => {
+      const q = $('#src-q').value.trim().toLowerCase();
+      const g = $('#src-region').value;
+      const sub = $('#src-subregion').value;
+      const d = $('#src-domain').value;
+      if (g && !s.regions.includes(g)) return false;
+      if (sub && !(s.subregions || []).includes(sub)) return false;
+      if (d && !s.domainsText.split(', ').includes(d)) return false;
+      return !q || s.label.toLowerCase().includes(q);
+    },
+    render: s => `<tr><td class="num">${s.entries}</td>
+      <td><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a>${
+        s.pages > 1 ? `<span class="pages">${s.pages} separate pages</span>` : ''}</td>
+      <td>${s.regions.map(r => `<span class="chip">${esc(r)}</span>`).join(' ')}</td>
+      <td>${esc(s.domainsText)}</td></tr>`,
+  });
+  ['#src-q', '#src-region', '#src-subregion', '#src-domain'].forEach(s => $(s).addEventListener('input', draw));
+  draw();
+
+  $('[data-csv]').addEventListener('click', () =>
+    csv('sources', ['entries', 'pages', 'source', 'url', 'regions', 'sub-regions', 'maps'],
+      ROWS.map(s => [s.entries, s.pages, s.label, s.url, s.regions.join('; '), (s.subregions || []).join('; '), s.domainsText])));
+}
+
+let DOMAIN_LABEL = {};
+
+Promise.all([
+  fetch('/api/trends').then(r => r.ok ? r.json() : Promise.reject(new Error('trends ' + r.status))),
+  fetch('/api/atlas').then(r => r.ok ? r.json() : null).catch(() => null),
+]).then(([trends, atlas]) => {
+  T = trends;
+  if (atlas) { for (const d of atlas.domains) DOMAIN_LABEL[d.id] = d.label; mountNav(null, atlas.domains); } else mountNav(null);
+  render();
+}).catch(err => {
+  mountNav(null);
+  $('#src').querySelector('tbody').innerHTML =
+    `<tr><td class="empty" colspan="9">The sources could not be loaded (${esc(err.message)}). The maps themselves are unaffected.</td></tr>`;
+});
+</script>
