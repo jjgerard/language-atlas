@@ -119,28 +119,29 @@
 .domainnote a:hover { text-decoration-style: solid; }
 .domainnote[hidden] { display: none; }
 
-.tally { display: flex; gap: 3px; margin-top: 13px; }
-.tally .seg { height: 7px; border-radius: 1px; }
-.tallylabels {
-  display: flex; justify-content: space-between; margin-top: 6px;
-  font-size: 11px; color: var(--ink-soft); font-variant-numeric: tabular-nums;
-}
 
-.legend { margin-top: 13px; }
+/* Bottom of the map beside the zoom, laid out along the edge rather than down
+   a column: it is a caption for the whole map now, not part of any one box. */
+.legendbox {
+  bottom: 14px; right: 62px; padding: 9px 13px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.legendbox .rows { display: flex; align-items: center; gap: 14px; }
+.legendbox .ramp { min-width: 168px; }
 
 
 .legend h2 { font: inherit; font-size: 11px; margin: 0 0 9px; }
-.legend .row { display: flex; align-items: center; gap: 9px; font-size: 12px; margin-bottom: 6px; }
-.legend .row:last-child { margin-bottom: 0; }
-.legend .sw { width: 22px; height: 13px; border-radius: 2px; border: 1px solid var(--hair-strong); flex: none; }
+.legendbox .row { display: flex; align-items: center; gap: 9px; font-size: 12px; margin-bottom: 6px; }
+.legendbox .row { margin-bottom: 0; }
+.legendbox .sw { width: 22px; height: 13px; border-radius: 2px; border: 1px solid var(--hair-strong); flex: none; }
 .legend .note { font-size: 11px; color: var(--ink-faint); margin: 10px 0 0; line-height: 1.45; }
-.legend .hues { display: flex; gap: 3px; margin-top: 11px; }
-.legend .hues span { flex: 1; height: 7px; border-radius: 1px; }
-.legend .hueslabels {
+.legendbox .hues { display: flex; gap: 3px; }
+.legendbox .hues span { flex: 1; height: 7px; border-radius: 1px; }
+.legendbox .hueslabels {
   display: flex; gap: 3px; margin-top: 5px;
   font-size: 9.5px; color: var(--ink-faint); letter-spacing: .02em;
 }
-.legend .hueslabels span { flex: 1; text-align: center; }
+.legendbox .hueslabels span { flex: 1; text-align: center; }
 
 .zoomctl { bottom: 14px; right: 14px; display: flex; flex-direction: column; padding: 0; overflow: hidden; }
 .zoomctl button {
@@ -508,11 +509,15 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
   /* No animation to run when there is only ever one box showing. */
   .dbody { grid-template-rows: 1fr; transition: none; }
   #dcontent { padding: 0 14px 12px; }
-  .legend { margin-top: 10px; padding-top: 10px; }
-  .legend h2 { display: none; }
-  .legend .rows { display: flex; flex-wrap: wrap; gap: 4px 14px; }
-  .legend .row { margin-bottom: 0; font-size: 11.5px; }
-  .legend .note { display: none; }
+  .legendbox {
+    position: static; order: 3; flex: 0 0 auto;
+    border-radius: 0; border-left: 0; border-right: 0; border-bottom: 0;
+    border-top: 1px solid var(--hair); box-shadow: none;
+    padding: 9px 14px 11px; gap: 8px 14px;
+  }
+  .legendbox .rows { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+  .legendbox .row { margin-bottom: 0; font-size: 11.5px; }
+  .legendbox .ramp { flex: 1 1 160px; min-width: 0; }
   .legend .hues { margin-top: 12px; }
 }
 
@@ -577,15 +582,18 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
     <div id="dcontent" hidden>
       <p class="blurb" id="blurb"></p>
       <p class="domainnote" id="domainnote" hidden></p>
-      <div class="tally" id="tally"></div>
-      <div class="tallylabels" id="tallylabels"></div>
+    </div>
 
-      <div class="legend">
-        <div class="rows">
-          <div class="row"><span class="sw" id="sw-looked"></span> Looked, found nothing</div>
-          <div class="row"><span class="sw" id="sw-none"></span> Nothing recorded</div>
-          <div class="row"><span class="sw" id="sw-inh"></span> Follows its country</div>
-        </div>
+    <!-- The key is the same on every map, so it belongs to the map rather than
+         to the domain: repeated inside all four boxes it was the tallest thing
+         in each of them and said nothing that changed. -->
+    <div class="overlay legendbox">
+      <div class="rows">
+        <div class="row"><span class="sw" id="sw-looked"></span> Looked, found nothing</div>
+        <div class="row"><span class="sw" id="sw-none"></span> Nothing recorded</div>
+        <div class="row"><span class="sw" id="sw-inh"></span> Follows its country</div>
+      </div>
+      <div class="ramp">
         <div class="hues" id="hues" role="img" aria-label="Colour ramp: share of fields documented, from a fifth or less to nearly all"></div>
         <div class="hueslabels">
           <span>20%</span><span>40%</span><span>60%</span><span>80%</span><span>100%</span>
@@ -742,7 +750,16 @@ const COV_STEPS = 5;
    map one colour without ever throwing. */
 function covRatio(u) {
   const n = u && u.nFields ? u.nFields : 0;
-  return n ? (u.filled ? u.filled.length : 0) / n : 0;
+  if (!n) return 0;
+  // Own fields PLUS the ones answered by its country. A US state records the
+  // four questions that vary by state and inherits the nine that IDEA settles
+  // federally; counting only its own reported it as a pale, half-researched
+  // place when every question about it has an answer. The panel still shows
+  // which are its own and which are inherited, and the chip still counts only
+  // its own, so nothing here claims the research was done twice.
+  const own = u.filled ? u.filled.length : 0;
+  const inherited = u.inh ? u.inh.length : 0;
+  return Math.min(1, (own + inherited) / n);
 }
 /* 1..5. Anything documented is at least 1, so the ramp's low step always means
    "a little" and never "none". */
@@ -945,7 +962,6 @@ function paint() {
   }
   updateMarks();
   markSelection();
-  paintTally();
 }
 
 function markSelection() {
@@ -962,38 +978,6 @@ function markSelection() {
   for (const s of SHAPES) if (s.node.classList.contains('sel')) s.node.parentNode.appendChild(s.node);
 }
 
-function paintTally() {
-  const units = B.units[domainId];
-  const c = { has: 0, inherited: 0, looked: 0, none: 0 };
-  for (const u of units) c[stateOf(u)]++;
-  const bar = document.getElementById('tally');
-  bar.innerHTML = '';
-  // 'has' spans the whole ramp now, so the segment shows the ramp rather than
-  // picking one arbitrary step to stand for every documented unit.
-  const ramp = 'linear-gradient(90deg, var(--cov-1), var(--cov-3), var(--cov-5))';
-  const order = [['has', ramp], ['inherited', 'var(--cov-2)'], ['looked', 'url(#hatch)'], ['none', 'var(--nodata)']];
-  for (const [k, col] of order) {
-    if (!c[k]) continue;
-    const d = document.createElement('div');
-    d.className = 'seg';
-    d.style.flex = c[k];
-    d.style.background = k === 'looked'
-      ? 'repeating-linear-gradient(45deg, var(--hatch-bg) 0 3px, var(--hatch-line) 3px 4px)'
-      : col;
-    d.title = `${STATE_LABEL[k]}: ${c[k]}`;
-    bar.appendChild(d);
-  }
-  // A unit that follows its country is counted as covered, separately from one
-  // with a record of its own. It is not padding: the domain has to declare the
-  // country's sub-units as answering nationally, which India's do for language
-  // disorder because the RPwD Act defines the category once for the whole
-  // country. Kept as its own number rather than folded into `has`, so the
-  // amount of actual research is still readable off the bar.
-  document.getElementById('tallylabels').innerHTML =
-    `<span>${c.has} with their own record</span>`
-    + (c.inherited ? `<span>${c.inherited} following their country</span>` : '')
-    + `<span>${c.none + c.looked} without</span>`;
-}
 
 /* ---------- pan & zoom ----------
    Same canvas mechanics as the syntax-tree viewer: one finger or the mouse
@@ -1104,10 +1088,16 @@ function sizeMap() {
   if (!matchMedia('(max-width: 820px)').matches) { svg.style.height = ''; return; }
   const stage = document.getElementById('stage');
   const controls = document.getElementById('domainstack');
+  const key = document.querySelector('.legendbox');
   // Collapse the map first so the panel reports its unconstrained height rather
   // than whatever the previous pass squeezed it to.
   svg.style.height = '0px';
-  const need = controls.scrollHeight;
+  // scrollHeight excludes the element's own border, and on this layout both
+  // boxes have a 1px top rule against the map. Two pixels is enough to clip
+  // the ramp's bottom labels, so the borders are measured rather than ignored.
+  const border = el => (el ? parseFloat(getComputedStyle(el).borderTopWidth) || 0 : 0);
+  const need = controls.scrollHeight + border(controls)
+             + (key ? key.getBoundingClientRect().height : 0);
   const natural = stage.clientWidth * (VB.h / VB.w);
   // Take everything the legend does not need. There is no cap: capping the box
   // cannot shrink the drawing (width-bound) and only decides whether the slack
@@ -1783,7 +1773,7 @@ document.getElementById('fixsend').onclick = async () => {
   }
 };
 
-matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { paintLegend(); paintTally(); });
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { paintLegend(); });
 addEventListener('resize', () => { sizeMap(); clampView(); applyView(); });
 // A phone's address bar collapsing on scroll changes 100dvh without reliably
 // firing `resize`, and the legend's own height changes when its text rewraps.

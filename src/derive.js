@@ -116,6 +116,9 @@ function deriveUnits(domain, entries, sharedMatcher) {
       fieldStates,
       filled,
       looked,
+      // Labels of fields this unit has nothing of its own for that ARE answered
+      // by its country. Filled in below, once every unit is derived.
+      inh: [],
       // The denominator for the coverage ramp: fields that COULD be filled
       // here. Counting the inapplicable ones would cap a sub-national unit
       // below 100% however complete it is.
@@ -161,9 +164,23 @@ function deriveUnits(domain, entries, sharedMatcher) {
   for (const u of units) if (u.nat) national.set(u.cc, u);
   const differs = new Set(domain.distinctSubunits || []);
   for (const u of units) {
-    if (u.nat || u.coverage !== 'none' || differs.has(u.cc)) continue;
+    if (u.nat || differs.has(u.cc)) continue;
     const nat = national.get(u.cc);
-    if (nat && nat.coverage === 'has') u.coverage = 'inherited';
+    if (!nat) continue;
+
+    // Fields with nothing of their own here that DO have an answer at national
+    // level. This is the same inheritance the entry panel already showed field
+    // by field; it just never reached the colour. Every US state reads 4 of 13
+    // on the disorder map, because the other nine questions -- the IDEA
+    // entitlement, the referral route, the funding, when services end -- are
+    // answered once federally and have no state-level answer to record. Paint
+    // that as a pale state and the map reports a gap in the research where
+    // there is only an absence of state-level divergence.
+    u.inh = domain.fields
+      .filter((f, i) => u.fieldStates[i] === 'n' && nat.fieldStates[i] === 'h')
+      .map(f => f[1]);
+
+    if (u.coverage === 'none' && nat.coverage === 'has') u.coverage = 'inherited';
   }
 
   return {

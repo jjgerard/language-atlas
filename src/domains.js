@@ -65,7 +65,7 @@ const DOMAINS = [
   {
     id: 'fl',
     label: 'Foreign languages in school',
-    blurb: 'Languages from outside the country, taught as school subjects: which ones, at what age, and whether required or chosen. Languages of the place have their own map.',
+    blurb: 'Languages from outside the country, taught as school subjects: which ones, at what age, and whether required or chosen.',
     live: true,
     fields: [
       ['primaryRequirement', 'Primary school', 'text', 'Is a language other than the school language compulsory in primary school, from what age or year, and under what rule.'],
