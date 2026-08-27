@@ -194,9 +194,6 @@ body {
 }
 
 .navright { margin-left: auto; display: flex; align-items: center; gap: 4px; }
-/* A bar with no domain pills has nothing to sit opposite, so its links belong
-   beside the title rather than pushed to the far edge with a gulf between. */
-.sitebar.nopills > .navright { margin-left: 18px; }
 /* These are destinations, not footnotes. At --ink-soft and 13px they read as
    fine print beside the domain pills and were being missed; Patterns and
    Sources in particular are whole pages that nothing else on the map points
