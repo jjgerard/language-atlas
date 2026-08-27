@@ -37,6 +37,7 @@ main a { color: var(--focus); }
 .finding.dld { border-left-color: var(--r-asia); }
 .finding.fl  { border-left-color: var(--r-americas); }
 .finding.eal { border-left-color: var(--r-europe); }
+.finding.indigenous { border-left-color: var(--r-oceania); }
 
 .withdrawn { font-size: 13px; color: var(--ink-faint); margin: 18px 0 0; }
 
@@ -380,7 +381,7 @@ function render() {
   // ---- findings ----
   $('#findings').innerHTML = T.findings.held.map(f => `
     <div class="finding ${esc(f.scope)}">
-      <div class="scope">${f.scope === 'all' ? 'Across all three maps' : esc(scopeLabel(f.scope))}</div>
+      <div class="scope">${f.scope === 'all' ? 'Across all four maps' : esc(scopeLabel(f.scope))}</div>
       <p class="claim">${esc(f.text)}</p>
       <p class="why">${esc(f.note)}</p>
     </div>`).join('');

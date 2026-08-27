@@ -34,7 +34,7 @@ const esc = s => String(s == null ? '' : s)
   .replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const $ = id => document.getElementById(id);
 
-let PAYLOAD = null, ROWS = [], VARS = [], SCOPES = [], MODE = 'cross', MODEL = null, LEFT = null;
+let PAYLOAD = null, ROWS = [], LANGS = [], VARS = [], SCOPES = [], MODE = 'cross', MODEL = null, LEFT = null;
 
 // Composite key for a crosstab cell. The separator has to be something no
 // category value can contain: joining on a space would make the pair
@@ -61,6 +61,16 @@ function flatten(payload) {
         fieldStates: u.fieldStates || '',
         history: (u.history || []).length,
         sources: ((u.docLinks || []).length) + ((u.supportLinks || []).length),
+        // Substantive facts, read off the entry rather than off its metadata.
+        named: (u.records && u.records.languages) ? u.records.languages.length : null,
+        // "Glottolog counts 899 living languages for this country" — the count
+        // is in the inventory text because that is where the field puts it.
+        present: (() => {
+          const m = String((u.values && u.values.inventory) || '').match(/Glottolog counts (\d+) living language/);
+          return m ? Number(m[1]) : null;
+        })(),
+        firstYear: (u.history || []).length ? Math.min(...u.history.map(h => h.year)) : null,
+        lastYear: (u.history || []).length ? Math.max(...u.history.map(h => h.year)) : null,
       };
       rows.push(row);
       if (!perUnit.has(key)) perUnit.set(key, {});
@@ -68,7 +78,61 @@ function flatten(payload) {
     }
   }
   for (const r of rows) r.siblings = perUnit.get(r.key);
+
+  // How many languages a country has, and how many its school system names,
+  // are facts about the PLACE — but they are only recorded on the indigenous
+  // entry, because that is the map that asks. A pair of place-level variables
+  // collapses to one row per place, and that row is often another map's, where
+  // both were null: "share of its languages the system names" against region
+  // counted 0 and dropped all 336. So they are copied across the siblings.
+  for (const r of rows) {
+    const ind = r.siblings && r.siblings.indigenous;
+    if (ind && ind !== r) { r.named = ind.named; r.present = ind.present; }
+  }
   return rows;
+}
+
+/* ---- the second grain: one row per NAMED LANGUAGE ------------------- *
+ *
+ * The panel counted entries, so it could only ever describe entries — how
+ * many were filled, how well sourced, how complete. Every one of those is a
+ * fact about the catalogue rather than about language policy, and a page of
+ * them tells a reader nothing they came for.
+ *
+ * The indigenous map carries 719 language records with family, genus and a
+ * WALS typology, so counting THOSE asks a different kind of question: what
+ * word order do the languages a school system names actually have, which
+ * families appear, how many carry tone. Those are relations between the
+ * entries rather than a report on them. */
+function flattenLanguages(payload) {
+  const out = [];
+  for (const d of payload.domains) {
+    for (const u of payload.units[d.id] || []) {
+      const langs = (u.records && u.records.languages) || [];
+      for (const l of langs) {
+        // The typology is one string — "Word order SVO; Noun-Adjective; No
+        // tones" — so it is split into the facts it actually states rather
+        // than offered whole, which nothing could group by.
+        const parts = String(l.typology || '').split(';').map(s => s.trim()).filter(Boolean);
+        const find = re => parts.find(p => re.test(p)) || null;
+        out.push({
+          name: l.name || '(unnamed)',
+          family: l.family || 'Not recorded',
+          genus: l.genus || 'Not recorded',
+          hasWals: l.wals ? 'Has a WALS record' : 'No WALS record',
+          wordOrder: (find(/word order/i) || '').replace(/^Word order\s*/i, '') || 'Not recorded',
+          adjective: find(/Adjective|Noun-Adj/i) || 'Not recorded',
+          tone: find(/tone/i) || 'Not recorded',
+          affix: find(/suffixing|prefixing|affixation/i) || 'Not recorded',
+          unit: u.name, cc: u.cc,
+          region: u.region || 'Unrecorded',
+          subregion: u.subregion || 'Unrecorded',
+          national: String(u.nat) === 'true',
+        });
+      }
+    }
+  }
+  return out;
 }
 
 const COVER_LABEL = {
@@ -86,40 +150,76 @@ const band = (n, edges, names) => {
  * bucketing those as "no" would count an inapplicable row as a negative.
  * `unit: true` marks a variable describing the PLACE rather than one map
  * entry, which decides whether a pair is collapsed. */
+/* The registry, ordered on purpose.
+ *
+ * What a system DOES comes first, then WHEN it changed, then where. The
+ * variables describing how complete the record is come last and say plainly
+ * that they are about the catalogue, because they are the least interesting
+ * thing here and they were previously the only thing here.
+ *
+ * `grain` says which row set a variable reads: 'entries' (one row per unit per
+ * map) or 'languages' (one row per named language). */
 function buildVars(payload) {
   const v = [];
-  const push = (id, label, group, of, unit) => v.push({ id, label, group, of, unit: !!unit });
+  const push = (id, label, group, of, opts = {}) =>
+    v.push({ id, label, group, of, unit: !!opts.unit, grain: opts.grain || 'entries' });
 
-  push('region', 'Region', 'Where', r => r.region, true);
-  push('subregion', 'Sub-region', 'Where', r => r.subregion, true);
-  push('level', 'National or sub-national', 'Where', r => r.national ? 'A country' : 'Inside a country', true);
+  // ---- what the systems do, counted over languages ----
+  const G = { grain: 'languages' };
+  push('l_wordOrder', 'Word order', 'The languages themselves', r => r.wordOrder, G);
+  push('l_adjective', 'Adjective and noun', 'The languages themselves', r => r.adjective, G);
+  push('l_tone', 'Tone', 'The languages themselves', r => r.tone, G);
+  push('l_affix', 'Affixation', 'The languages themselves', r => r.affix, G);
+  push('l_family', 'Language family', 'The languages themselves', r => r.family, G);
+  push('l_genus', 'Genus', 'The languages themselves', r => r.genus, G);
+  push('l_wals', 'Described by WALS', 'The languages themselves', r => r.hasWals, G);
+  push('l_region', 'Region it is named in', 'The languages themselves', r => r.region, G);
+  push('l_subregion', 'Sub-region it is named in', 'The languages themselves', r => r.subregion, G);
+  push('l_unit', 'Place that names it', 'The languages themselves', r => r.unit, G);
 
-  push('domain', 'Which map', 'The entry', r => r.domainLabel);
-  push('coverage', 'Coverage', 'The entry', r => COVER_LABEL[r.coverage] || r.coverage);
-  push('status', 'Status', 'The entry', r => r.status);
-  push('confidence', 'Confidence', 'The entry', r => r.confidence ? r.confidence.replace(/-/g, ' ') : 'not recorded');
-  push('filledcount', 'How many fields filled', 'The entry',
+  // ---- what the systems do, counted over places ----
+  push('namedCount', 'How many languages the system names', 'What the system engages with',
+    r => r.named == null ? null : band(r.named, [0, 1, 3, 10], ['None', 'One', '2 to 3', '4 to 10', 'More than 10']), { unit: true });
+  push('presentCount', 'How many languages the country has', 'What the system engages with',
+    r => r.present == null ? null : band(r.present, [5, 20, 60, 150], ['Up to 5', '6 to 20', '21 to 60', '61 to 150', 'More than 150']), { unit: true });
+  // The distance between those two is the point the atlas exists to show.
+  push('engagedShare', 'Share of its languages the system names', 'What the system engages with', r => {
+    if (r.present == null || r.named == null || !r.present) return null;
+    const pctv = (r.named / r.present) * 100;
+    return band(pctv, [1, 5, 20, 50], ['Under 1%', '1 to 5%', '5 to 20%', '20 to 50%', 'More than half']);
+  }, { unit: true });
+
+  // ---- when it changed ----
+  push('firstChange', 'Earliest recorded change', 'When policy changed',
+    r => r.firstYear ? (Math.floor(r.firstYear / 10) * 10) + 's' : null);
+  push('lastChange', 'Most recent recorded change', 'When policy changed',
+    r => r.lastYear ? (Math.floor(r.lastYear / 10) * 10) + 's' : null);
+  push('changeSpan', 'Years between first and last change', 'When policy changed',
+    r => (r.firstYear && r.lastYear) ? band(r.lastYear - r.firstYear, [0, 10, 30, 60], ['One year only', 'Up to 10 years', '11 to 30', '31 to 60', 'More than 60']) : null);
+
+  // ---- where ----
+  push('region', 'Region', 'Where', r => r.region, { unit: true });
+  push('subregion', 'Sub-region', 'Where', r => r.subregion, { unit: true });
+  push('level', 'National or sub-national', 'Where', r => r.national ? 'A country' : 'Inside a country', { unit: true });
+  push('domain', 'Which map', 'Where', r => r.domainLabel);
+
+  // ---- how complete the record is ----
+  // Last, and named for what they are. These describe the atlas, not the world:
+  // a place counted as undocumented means nobody has written it up here.
+  push('coverage', 'Coverage of this entry', 'How complete the record is', r => COVER_LABEL[r.coverage] || r.coverage);
+  push('confidence', 'How the entry was sourced', 'How complete the record is',
+    r => r.confidence ? r.confidence.replace(/-/g, ' ') : 'not recorded');
+  push('filledcount', 'How many fields are filled', 'How complete the record is',
     r => band([...r.fieldStates].filter(c => c === 'h').length, [0, 2, 5, 9], ['None', '1 to 2', '3 to 5', '6 to 9', '10 or more']));
-  push('hashistory', 'Has a policy timeline', 'The entry', r => r.history ? 'Yes' : 'No');
-  push('historycount', 'How many dated rows', 'The entry',
-    r => band(r.history, [0, 2, 5, 10], ['None', '1 to 2', '3 to 5', '6 to 10', 'More than 10']));
-  push('sourcecount', 'How many sources cited', 'The entry',
+  push('sourcecount', 'How many sources are cited', 'How complete the record is',
     r => band(r.sources, [0, 1, 3, 6], ['None', 'One', '2 to 3', '4 to 6', 'More than 6']));
-
-  push('nmaps', 'Documented on how many maps', 'Across the maps', r => {
+  push('nmaps', 'Recorded on how many maps', 'How complete the record is', r => {
     const n = Object.values(r.siblings).filter(s => s.coverage === 'has' || s.coverage === 'some').length;
     return n + (n === 1 ? ' map' : ' maps');
-  }, true);
-  for (const d of payload.domains) {
-    push('on_' + d.id, 'Documented on: ' + d.label, 'Across the maps', r => {
-      const s = r.siblings[d.id];
-      if (!s) return null;
-      return (s.coverage === 'has' || s.coverage === 'some') ? 'Yes' : 'No';
-    }, true);
-  }
+  }, { unit: true });
   for (const d of payload.domains) {
     (d.fields || []).forEach((f, i) => {
-      push('f_' + d.id + '_' + f.k, d.label + ' — ' + f.label, 'A single field', r => {
+      push('f_' + d.id + '_' + f.k, d.label + ' — ' + f.label, 'Whether one field is filled', r => {
         if (r.domain !== d.id) return null;
         const c = r.fieldStates[i];
         if (c === 'h') return 'Filled';
@@ -212,13 +312,35 @@ function parseQuery(text) {
 }
 
 /* ---- counting -------------------------------------------------------- */
-function tabulate(xv, yv, keep) {
-  let rows = ROWS.filter(keep);
+/** Which row set a pair of variables reads. A language variable and an entry
+ *  variable cannot be crossed — they count different things — so the language
+ *  grain wins and the other axis is dropped rather than silently mixing two
+ *  populations into one table. */
+function grainOf(xv, yv) {
+  return (xv && xv.grain === 'languages') || (yv && yv.grain === 'languages') ? 'languages' : 'entries';
+}
+
+function tabulate(xv, yv, scope) {
+  const grain = grainOf(xv, yv);
+  // Scopes were written for entry rows. A language row has a region and a
+  // country but no map, so a "only the foreign-languages map" scope would
+  // filter every language away and show an empty table rather than saying why.
+  // Region and country scopes carry over; map scopes are ignored at this grain.
+  let rows;
+  if (grain === 'languages') {
+    rows = LANGS.filter(r => scope.id.startsWith('d_') ? true
+      : scope.id.startsWith('r_') ? r.region === scope.id.slice(2)
+      : scope.id === 'nat' ? r.national
+      : scope.id === 'sub' ? !r.national
+      : true);
+  } else {
+    rows = ROWS.filter(scope.keep);
+  }
   // Both variables describe the place rather than one map entry, so each place
   // is counted once. Without this, "documented on the indigenous map against
   // documented on the disorder map" over 193 countries reported 772 — every
   // country counted once per map, reading as a sample four times the real one.
-  const collapsed = xv.unit && (!yv || yv.unit);
+  const collapsed = grain === 'entries' && xv.unit && (!yv || yv.unit);
   if (collapsed) {
     const seen = new Set();
     rows = rows.filter(r => (seen.has(r.key) ? false : (seen.add(r.key), true)));
@@ -271,9 +393,20 @@ function renderBars(t) {
     </div>`).join('') + '</div>';
 }
 
-function renderUnits(xv, yv, keep) {
+function renderUnits(xv, yv, scope) {
+  // Same grain as the table above it: listing places under a count of
+  // languages, or the reverse, would be a different answer from the one on
+  // screen.
+  const grain = grainOf(xv, yv);
+  const rows = grain === 'languages'
+    ? LANGS.filter(r => scope.id.startsWith('r_') ? r.region === scope.id.slice(2)
+        : scope.id === 'nat' ? r.national : scope.id === 'sub' ? !r.national : true)
+    : ROWS.filter(scope.keep);
+  // A Set, so a language named by four countries is listed once. That is the
+  // right answer to "which languages have this word order" and the wrong one
+  // to "how many", which is what the table above already says.
   const groups = new Map();
-  for (const r of ROWS.filter(keep)) {
+  for (const r of rows) {
     const xk = xv.of(r);
     if (xk == null) continue;
     const yk = yv ? yv.of(r) : null;
@@ -297,18 +430,30 @@ function draw() {
   const xv = varById($('x').value), yv = varById($('y').value);
   const scope = SCOPES.find(s => s.id === $('scope').value) || SCOPES[0];
   if (!xv) return;
-  const t = tabulate(xv, yv, scope.keep);
+  const t = tabulate(xv, yv, scope);
   const out = $('xout');
-  if (MODE === 'units') out.innerHTML = renderUnits(xv, yv, scope.keep);
-  else if (MODE === 'bars') out.innerHTML = renderBars(tabulate(xv, null, scope.keep));
+  if (MODE === 'units') out.innerHTML = renderUnits(xv, yv, scope);
+  else if (MODE === 'bars') out.innerHTML = renderBars(tabulate(xv, null, scope));
   else out.innerHTML = renderCross(xv, yv, t);
 
-  const bits = [`<b>${t.counted}</b> entries counted`];
-  if (scope.id !== 'all') bits.push(`limited to ${esc(scope.label.toLowerCase())}`);
+  const grain = grainOf(xv, yv);
+  const bits = [`<b>${t.counted}</b> ${grain === "languages" ? "named languages counted" : "entries counted"}`];
+  // A map-scope does not apply to language rows, which have no map, so saying
+  // "limited to the disorder map" over a table that ignored it would be a
+  // caption describing a filter that never ran.
+  const scopeApplies = scope.id !== 'all' && !(grain === 'languages' && scope.id.startsWith('d_'));
+  if (scopeApplies) bits.push(`limited to ${esc(scope.label.toLowerCase())}`);
+  else if (grain === 'languages' && scope.id.startsWith('d_')) bits.push('the map filter does not apply to languages, so it was ignored');
   if (t.dropped) bits.push(`<b>${t.dropped}</b> left out because the variable does not apply to them`);
-  $('xsummary').innerHTML = bits.join(' · ') + '. ' + (t.collapsed
-    ? 'Both of those describe the place rather than one map, so each place is counted once.'
-    : 'An entry appears once per map it exists on, so a country documented on three maps is counted three times here.');
+  // What one row IS, which differs by grain and by whether the pair collapsed.
+  // Getting this wrong is not cosmetic: a reader who thinks 719 is a count of
+  // places rather than of language records reads the whole table wrong.
+  $('xsummary').innerHTML = bits.join(' · ') + '. ' + (
+    grain === 'languages'
+      ? 'One row per language named by a school system, so a language named in four countries is counted four times.'
+      : t.collapsed
+        ? 'Both of those describe the place rather than one map, so each place is counted once.'
+        : 'An entry appears once per map it exists on, so a country documented on three maps is counted three times here.');
 }
 
 /* ---- asking ---------------------------------------------------------- */
@@ -418,7 +563,7 @@ async function readTable(question) {
     const res = await fetch('/api/ask/read', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ question, table: tableText(xv, yv, tabulate(xv, yv, scope.keep)) }),
+      body: JSON.stringify({ question, table: tableText(xv, yv, tabulate(xv, yv, scope)) }),
     });
     const out = await res.json();
     if (typeof out.left === 'number') { LEFT = out.left; showLeft(); }
@@ -431,14 +576,16 @@ async function readTable(question) {
 }
 
 const EXAMPLES_PARSER = [
-  'coverage by region', 'documented on how many maps by region',
-  'policy timeline by which map', 'confidence by coverage',
+  "word order by region",
+  "language family by region",
+  "share of its languages the system names by region",
+  "most recent change by which map",
 ];
 const EXAMPLES_MODEL = [
-  'Which regions are best covered?',
-  'Are the places with a disorder entry also the ones with an indigenous entry?',
-  'Do entries with a policy timeline tend to be better documented?',
-  'Where is the atlas thinnest?',
+  "What word order do the languages schools teach in actually have?",
+  "Do countries with many languages name more of them, or fewer?",
+  "Which language families turn up in school systems, and where?",
+  "When did minority-language policy change, and does that differ by region?",
 ];
 
 function setMode(m) {
@@ -450,6 +597,7 @@ function setMode(m) {
 export async function mountExplore(payload) {
   PAYLOAD = payload || await fetch('/api/atlas').then(r => r.json());
   ROWS = flatten(PAYLOAD);
+  LANGS = flattenLanguages(PAYLOAD);
   VARS = buildVars(PAYLOAD);
   SCOPES = buildScopes(PAYLOAD);
 

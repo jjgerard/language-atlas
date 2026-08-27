@@ -209,7 +209,137 @@ function coverage(payload) {
 
 // Each entry: a sentence with a hole for the number, the number, and the
 // condition under which the sentence is worth making at all.
+/* What the entries say about languages, rather than about themselves.
+ *
+ * Everything above this counts the catalogue: how much is filled, how well
+ * sourced, how far one document reaches. Useful for judging the atlas, useless
+ * for the question a reader arrives with. This reads the 719 language records
+ * on the indigenous map — each with a family, a genus and a WALS typology — and
+ * the Glottolog count each national entry carries, so the findings below can be
+ * about language policy instead.
+ *
+ * The one number that matters most here is the distance between how many
+ * languages a country has and how many its school system names. */
+function languages(payload) {
+  const rows = [];
+  const gaps = [];
+  for (const u of payload.units.indigenous || []) {
+    const named = (u.records && u.records.languages) || [];
+    for (const l of named) {
+      const parts = String(l.typology || '').split(';').map(s => s.trim()).filter(Boolean);
+      rows.push({
+        name: l.name, family: l.family || '', genus: l.genus || '', wals: l.wals || '',
+        region: u.region, unit: u.name,
+        wordOrder: (parts.find(p => /word order/i.test(p)) || '').replace(/^Word order\s*/i, ''),
+        tone: parts.find(p => /tone/i.test(p)) || '',
+        adjective: parts.find(p => /Adjective|Noun-Adj/i.test(p)) || '',
+      });
+    }
+    const m = String((u.values && u.values.inventory) || '').match(/Glottolog counts (\d+) living language/);
+    if (m && named.length) gaps.push({ unit: u.name, region: u.region, present: Number(m[1]), named: named.length });
+  }
+
+  const tally = (get, filter = () => true) => {
+    const out = {};
+    for (const r of rows) if (filter(r)) { const k = get(r); if (k) out[k] = (out[k] || 0) + 1; }
+    return out;
+  };
+  const top = o => Object.entries(o).sort((a, b) => b[1] - a[1])[0] || null;
+
+  const present = gaps.reduce((a, g) => a + g.present, 0);
+  const named = gaps.reduce((a, g) => a + g.named, 0);
+
+  return {
+    rows: rows.length,
+    units: new Set(rows.map(r => r.unit)).size,
+    families: tally(r => r.family),
+    wordOrder: tally(r => r.wordOrder),
+    tone: tally(r => r.tone),
+    adjective: tally(r => r.adjective),
+    withWals: rows.filter(r => r.wals).length,
+    gap: gaps.length ? {
+      units: gaps.length, present, named,
+      share: present ? Math.round((named / present) * 1000) / 10 : 0,
+      widest: gaps.slice().sort((a, b) => (b.present - b.named) - (a.present - a.named))[0],
+    } : null,
+    topFamily: top(tally(r => r.family)),
+    topWordOrder: top(tally(r => r.wordOrder)),
+  };
+}
+
 const FINDINGS = [
+  // ---- what the entries say about languages ----
+  {
+    id: 'engagement-gap',
+    scope: 'indigenous',
+    compute: c => c.languages.gap,
+    holds: v => v.units >= 25 && v.share < 50,
+    text: v => `School systems name a small fraction of the languages around them: across ${v.units} countries that record both, ${v.named} languages are named out of ${v.present} counted as living there — ${v.share}%. The widest single gap is ${v.widest.unit}, naming ${v.widest.named} of ${v.widest.present}.`,
+    note: 'Both numbers come from the entry itself: the count from Glottolog, the list from what the school system names, teaches or recognises. The distance between them is the subject of that map, not a shortfall in the record.',
+  },
+  {
+    id: 'word-order',
+    scope: 'indigenous',
+    compute: c => {
+      const w = c.languages.wordOrder;
+      const total = Object.values(w).reduce((a, b) => a + b, 0);
+      const sov = w.SOV || 0, svo = w.SVO || 0;
+      return total >= 100 ? { total, sov, svo, pct: Math.round((sov / total) * 100) } : null;
+    },
+    holds: v => v.sov > v.svo,
+    text: v => `Verb-final is the commonest shape among the languages these systems name: of ${v.total} with a recorded word order, ${v.sov} are subject-object-verb and ${v.svo} subject-verb-object.`,
+    note: 'Word order is taken from each language\'s WALS record, not inferred. Languages with no WALS entry are not counted here at all.',
+  },
+  {
+    id: 'tone',
+    scope: 'indigenous',
+    compute: c => {
+      const t = c.languages.tone;
+      const none = Object.entries(t).filter(([k]) => /^No tones/i.test(k)).reduce((a, [, n]) => a + n, 0);
+      const some = Object.entries(t).filter(([k]) => !/^No tones/i.test(k)).reduce((a, [, n]) => a + n, 0);
+      return (none + some) >= 100 ? { none, some, total: none + some } : null;
+    },
+    holds: v => v.none > v.some,
+    text: v => `Tone is rare among them: ${v.some} of ${v.total} languages with a recorded tone system have one, and ${v.none} have none.`,
+    note: 'A property of the languages that happen to be named in school policy, not of the world\'s languages — the two are different populations, and tonal languages are common globally.',
+  },
+  {
+    id: 'family-concentration',
+    scope: 'indigenous',
+    compute: c => {
+      const f = c.languages.families;
+      const total = Object.values(f).reduce((a, b) => a + b, 0);
+      const t = c.languages.topFamily;
+      return t && total >= 100 ? { name: t[0], n: t[1], total, families: Object.keys(f).length, pct: Math.round((t[1] / total) * 100) } : null;
+    },
+    holds: v => v.pct >= 25,
+    text: v => `The named languages cluster in a few families: ${v.families} families appear in all, and ${v.name} alone accounts for ${v.n} of ${v.total} — ${v.pct}%.`,
+    note: 'Counted over the languages named in entries so far, so it moves as more places are documented. Families come from each language\'s WALS record.',
+  },
+  {
+    id: 'when-changed',
+    scope: 'all',
+    compute: c => {
+      const d = c.timeline.byDecade || {};
+      const e = Object.entries(d).map(([k, n]) => [Number(k), n]).filter(([k]) => k >= 1900);
+      if (e.length < 4) return null;
+      const total = e.reduce((a, [, n]) => a + n, 0);
+      const peak = e.slice().sort((a, b) => b[1] - a[1])[0];
+      const since2000 = e.filter(([k]) => k >= 2000).reduce((a, [, n]) => a + n, 0);
+      return { peak: peak[0], peakN: peak[1], total, since2000, pct: Math.round((since2000 / total) * 100) };
+    },
+    holds: v => v.pct >= 40,
+    text: v => `Language-in-education policy is recent almost everywhere: ${v.pct}% of the ${v.total} dated changes recorded since 1900 fall after 2000, peaking in the ${v.peak}s with ${v.peakN}.`,
+    note: 'Dated instruments recorded on any of the four maps. Recent policy is also easier to find than old policy, so the slope is steeper than the history alone would make it.',
+  },
+];
+
+// Retired, not deleted. Every one of these was a claim about the CATALOGUE —
+// how many fields are filled, how far one source reaches, how many blanks have
+// been looked at. They are true and they belong on /sources, where the question
+// is how the atlas was built. They do not belong in a list of findings about
+// language policy, which is what a reader comes to this page for.
+const RETIRED_FINDINGS = [
   {
     id: 'discharge',
     scope: 'dld',
@@ -299,6 +429,7 @@ function computeTrends(payload) {
     timeline: timeline(payload),
     provenance: provenance(payload),
     coverage: coverage(payload),
+    languages: languages(payload),
   };
   return { ...ctx, findings: findings(ctx), generated: new Date().toISOString().slice(0, 10) };
 }
