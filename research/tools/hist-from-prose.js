@@ -44,6 +44,35 @@ const INSTRUMENT = new RegExp([
   "\\bpublic law\\b", "\\bp\\.?l\\.?\\s?\\d", "\\bno\\.\\s?\\d",
 ].join("|"), "i");
 
+
+// Instrument nouns the list above lacks. Added after a sweep found real acts
+// declined for want of vocabulary: Lei 14.945/2024 (Brazil), Decreto 280
+// (Chile), the 1949 Resolution carried by eighteen Indian states.
+const EXTRA = new RegExp([
+  "\\blei\\b", "\\blegge\\b", "\\bwet\\b", "\\bdecreto\\b", "\\bdekret\\b", "\\bustawa\\b", "\\bzakon\\b", "\\bkanun\\b", "\\bqanun\\b", "\\bproclamation\\b",
+  "\\bresolution\\b", "\\bbill\\b", "\\bcharter\\b", "\\bconvention\\b", "\\bprotocol\\b", "\\bdirective\\b", "\\breform\\b", "\\bnotification\\b", "\\bgazette\\b",
+  "\\bdécret", "\\bcódigo", "\\bregulamento", "\\breglamento", "\\bverordnung"
+].join("|"), "i");
+
+// "programme" is far too common in survey prose to admit on its own -- most
+// hits are a programme being DESCRIBED, or described as absent. It counts only
+// when a verb of creation sits beside it.
+const MADE = "(\\bcreated\\b|\\blaunched\\b|\\bestablished\\b|\\bintroduced\\b|\\badopted\\b|\\bbegan\\b|\\bran from\\b|\\bset up\\b)";
+const PROG = "(\\bprogramme\\b|\\bprogram\\b)";
+const PROGRAMME = new RegExp(PROG + ".{0,40}" + MADE + "|" + MADE + ".{0,40}" + PROG, "i");
+
+// A line can name an instrument and still be a verdict on it rather than a
+// record of it: "the Ministry took a lukewarm approach to its own 1996
+// directive" dates nothing that happened in 1996.
+const EVALUATIVE = new RegExp(["\\blukewarm\\b", "\\breluctant\\b", "\\bcriticis\\b", "\\bcriticiz\\b", "\\bpraised\\b", "\\bpatchy\\b", "\\buneven\\b", "\\bhalf-hearted\\b", "\\bweakly\\b", "\\bpoorly\\b", "\\bslow to\\b"].join("|"), "i");
+
+// The vocabulary above is wider, so lines admitted BY IT ONLY face stricter
+// rejection: a negative anywhere in the line rather than only at its start, and
+// a longer list of measurement words. The original path is left exactly as it
+// was, because its output has already been read and accepted.
+const NEG_ANY = new RegExp(["\\bno\\b", "\\bnot\\b", "\\bnone\\b", "\\bnever\\b", "\\bneither\\b", "\\bnothing\\b", "\\bwithout\\b"].join("|"), "i");
+const MEASURED = new RegExp(["\\bschools\\b", "\\bpupils\\b", "\\bstudents\\b", "\\bper cent\\b", "\\breached\\b", "\\bprofile\\b", "\\ballocat\\b"].join("|"), "i");
+
 // A year that belongs to a measurement rather than to an instrument.
 const FIGURE = /\b(census|survey|cohort|enrolment|enrollment|reported|counted|figures?|data|statistics|as of|by the|intake|cohort)\b/i;
 
@@ -62,7 +91,7 @@ const THIS_YEAR = 2026;
 // A few bullets name a year while saying outright that they are NOT describing
 // policy: a practitioner survey, an auditor reading a delisted document. Those
 // are evidence about the record, not events in it.
-const NOT_POLICY = new RegExp(["perceptions?", "not policy", "never mentions", "delisted"].join("|"), "i");
+const NOT_POLICY = new RegExp(["perceptions?", "not policy", "never mentions", "delisted", "term count"].join("|"), "i");
 
 const YEAR = /\b(1[6-9]\d{2}|20[0-4]\d)\b/g;
 const args = process.argv.slice(2);
@@ -89,7 +118,9 @@ for (const d of DOMAINS.filter(x => x.live)) {
       for (const line of String(e[k]).split(NL)) {
         const years = [...new Set([...line.matchAll(YEAR)].map(m => Number(m[1])))];
         if (!years.length) continue;
-        if (!INSTRUMENT.test(line)) { skippedNoInstrument += years.length; continue; }
+        const viaExtra = !INSTRUMENT.test(line);
+        if (viaExtra && !(EXTRA.test(line) || PROGRAMME.test(line))) { skippedNoInstrument += years.length; continue; }
+        if (viaExtra && (NEG_ANY.test(line) || MEASURED.test(line) || EVALUATIVE.test(line))) { skippedFigure += years.length; continue; }
         if (FIGURE.test(line)) { skippedFigure += years.length; continue; }
         if (NEGATIVE.test(line.trim())) { skippedNegative += years.length; continue; }
         if (STATE_NOT_EVENT.test(line)) { skippedState += years.length; continue; }
