@@ -55,14 +55,23 @@ function textFrom(content) {
   return out;
 }
 
-const buf = fs.readFileSync(process.argv[2]);
-let all = "";
-for (const s of streams(buf)) {
-  let data;
-  try { data = zlib.inflateSync(s); } catch { try { data = zlib.inflateRawSync(s); } catch { continue; } }
-  const str = data.toString("latin1");
-  if (!/(Tj|TJ|BT)/.test(str)) continue;
-  all += textFrom(str) + "\n";
+/** Pull what text there is out of a PDF buffer. Exported so a caller that
+ *  already holds the bytes -- a verifier checking a quote against the file it
+ *  came from -- does not have to shell out and write a temp file. */
+function pdfText(buf) {
+  let all = "";
+  for (const s of streams(buf)) {
+    let data;
+    try { data = zlib.inflateSync(s); } catch { try { data = zlib.inflateRawSync(s); } catch { continue; } }
+    const str = data.toString("latin1");
+    if (!/(Tj|TJ|BT)/.test(str)) continue;
+    all += textFrom(str) + String.fromCharCode(10);
+  }
+  return all.replace(/[ 	]+/g, " ").replace(new RegExp(String.fromCharCode(10) + "{3,}", "g"), String.fromCharCode(10, 10));
 }
-all = all.replace(/[ \t]+/g, " ").replace(/\n{3,}/g, "\n\n");
-process.stdout.write(all);
+
+module.exports = { pdfText, streams, textFrom };
+
+if (require.main === module) {
+  process.stdout.write(pdfText(fs.readFileSync(process.argv[2])));
+}
