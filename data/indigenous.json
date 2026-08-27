@@ -775,6 +775,22 @@
    {
     "label": "Victorian Department of Education and Training, Languages Provision in Victorian Government Schools, 2020",
     "url": "https://content.sdp.education.vic.gov.au/media/languages-provision-in-victorian-government-schools-2020-pdf-1966"
+   },
+   {
+    "label": "Victorian Curriculum and Assessment Authority, Victorian Curriculum F-10, Languages: Victorian Aboriginal Languages — 'Rationale and Aims'",
+    "url": "https://victoriancurriculum.vcaa.vic.edu.au/languages/victorian-aboriginal-languages/introduction/rationale-and-aims"
+   },
+   {
+    "label": "Victorian Curriculum and Assessment Authority, Victorian Curriculum F-10, Languages: Victorian Aboriginal Languages — 'Structure' (sequences of learning; strands and sub-strands)",
+    "url": "https://victoriancurriculum.vcaa.vic.edu.au/languages/victorian-aboriginal-languages/introduction/structure"
+   },
+   {
+    "label": "Victorian Curriculum and Assessment Authority, 'About Victorian Aboriginal Languages' — curriculum area resources, Languages (Aboriginal languages protocols; Language revival/reclamation)",
+    "url": "https://www.vcaa.vic.edu.au/curriculum/foundation-10/curriculum-area-resources/languages/about-victorian-aboriginal-languages"
+   },
+   {
+    "label": "Department of Education (Victoria), Policy and Advisory Library, 'Languages Education: Policy' (policy last updated 29 July 2025; page updated 20 November 2025) — requirement under the Education and Training Reform Act 2006 (Vic) and Education and Training Reform Regulations 2017 (Vic), reg 61",
+    "url": "https://www2.education.vic.gov.au/pal/languages-education/policy"
    }
   ],
   "supportLinks": [],
@@ -783,14 +799,23 @@
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "localTerm": "",
   "standing": "Aboriginal languages teaching centres on reclamation, revival and cultural studies\nA permission-to-teach category exists for Aboriginal elders and qualified staff\nThese are Indigenous languages of Victoria, not foreign languages",
-  "mediumOfInstruction": "",
-  "taughtAsSubject": "",
+  "mediumOfInstruction": "Subject only: no medium-of-instruction provision for a Victorian Aboriginal Language was found\nVCAA places Victorian Aboriginal Languages inside the Languages learning area, F to 10\nVCAA: most are reclamation languages, \"no longer spoken on a daily basis\"\nDepartmental policy requires a language program, not a language of instruction",
+  "taughtAsSubject": "Which language a school offers is a school decision, endorsed by the local Aboriginal community\nVictorian Curriculum has a Victorian Aboriginal Languages sequence for Foundation to Level 10\nBands are F-Level 2, Levels 3-6 and Levels 7-10; strands Communicating and Understanding\nSchools must provide a language program F-10; VRQA may exempt a school under reg 61\nPTT (Aboriginal languages) lets Aboriginal elders teach it without VIT registration",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
   "revitalisation": "",
   "speakers": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2006,
+    "description": "Education and Training Reform Act 2006 (Vic) requires registered schools to provide a curriculum substantially addressing eight learning areas, Languages among them"
+   },
+   {
+    "year": 2017,
+    "description": "Education and Training Reform Regulations 2017 (Vic), reg 61, allows the VRQA to exempt a school from providing a language program"
+   }
+  ],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
   "languages": [
    {
@@ -7102,6 +7127,18 @@
    {
     "label": "République de Guinée, MEPU-A / INRAP, Cadre d'orientation curriculaire pour les apprentissages et la professionnalisation des enseignants, September 2023 — hosted by UNESCO IBE",
     "url": "https://www.ibe.unesco.org/sites/default/files/medias/fichiers/2023/10/COC%20R%C3%A9publique%20de%20Guin%C3%A9e%20Version%2028%2009%2023%20V3_0.pdf"
+   },
+   {
+    "label": "République de Guinée, Secteur de l'Education et de la Formation, Programme Décennal de l'Education en Guinée, ProDEG 2020-2029 (Guinea's education sector plan, GPE library copy)",
+    "url": "https://www.globalpartnership.org/node/document/download?file=document%2Ffile%2F2020-Guinea-ESP.pdf"
+   },
+   {
+    "label": "UNESCO Global Education Monitoring Report, Profiles Enhancing Education Reviews (PEER), Guinea, Inclusion",
+    "url": "https://education-profiles.org/sub-saharan-africa/guinea/~inclusion"
+   },
+   {
+    "label": "Jacques Leclerc, L'aménagement linguistique dans le monde, 'Guinée-Conakry française', sections on the 1968 reform and on education",
+    "url": "https://www.axl.cefan.ulaval.ca/afrique/guinee_franco.htm"
    }
   ],
   "supportLinks": [],
@@ -7110,14 +7147,35 @@
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "localTerm": "",
   "standing": "National languages sit inside the primary languages domain\nPreschool uses national languages as the medium of communication\nLiteracy work uses codified national languages and the N'ko and Adjami scripts",
-  "mediumOfInstruction": "",
-  "taughtAsSubject": "",
+  "mediumOfInstruction": "National-language medium ran 1968 to 1984; French restored as sole medium on Toure's death\nProDEG 2020-29 target: bilingual primaries rise from 0.1% of schools to 10% by 2029\nProDEG calls the ELAN bilingual start precipitate and keeps the reform at pilot stage\nLeclerc: national languages at primary are subjects, not languages of instruction\nPre-primary is usually in the child's mother tongue, but is private and urban only",
+  "taughtAsSubject": "UNESCO PEER: eight national languages recognised and codified by the IRLA\nUNESCO PEER: literacy is taught in all national languages\nProDEG sub-programme 2.7 is Promotion des langues nationales, aimed at primary\nUNESCO PEER: few policies for including vulnerable ethnic and linguistic groups",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
   "revitalisation": "",
   "speakers": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1965,
+    "description": "\"Alphabets for eight national languages — malinké, soussou, peul/poular, kissi, basari, loma, koniagi, kpellé — adopted by the Conseil national de la révolution meeting at Nzérékoré in June 1965; the same languages became taught subjects through school and university (Leclerc)\""
+   },
+   {
+    "year": 1968,
+    "description": "\"Sékou Touré applies his africanisation language policy and reforms primary education; basic literacy and numeracy are taught in a national language in year 1, French only orally, with a staged handover to French as medium over the following three years (Leclerc)\""
+   },
+   {
+    "year": 1984,
+    "description": "\"On Sékou Touré's death on 26 March 1984 the national-language experiment ends; French is once again the sole language of instruction in schools (Leclerc)\""
+   },
+   {
+    "year": 1997,
+    "description": "\"Loi n° L/97/022/AN du 19 juin 1997 portant orientation de l'éducation nationale and décret n° 97/196/PRG/SGG du 21 août 1997 define the fundamental characteristics of education in Guinea. CAUTION: cited here only for existence and date, from Leclerc, who states the texts are unavailable; their language content was not read.\""
+   },
+   {
+    "year": 2019,
+    "description": "\"ProDEG 2020-2029 makes 'Promotion des langues nationales' sub-programme 2.7, setting a target for the share of primary schools using bilingual French-plus-national-language teaching to rise from a 0.1% baseline to 10%\""
+   }
+  ],
   "inventory": "Glottolog counts 53 living languages for this country",
   "languages": [
    {
@@ -9558,7 +9616,12 @@
   "assessment": "",
   "revitalisation": "",
   "speakers": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2001,
+    "description": "Jharkhand State Minority Commission constituted, covering both religious and linguistic minorities, with eleven members under Notification No. 1/Commission-30-083/2011-39"
+   }
+  ],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
   "languages": [
    {
@@ -12941,6 +13004,18 @@
    {
     "label": "Eurypedia — Lithuania: teaching and learning in primary education",
     "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/lithuania/teaching-and-learning-primary-education"
+   },
+   {
+    "label": "Council of Europe Treaty Office, chart of signatures and ratifications of ETS No. 148, machine-readable data behind the Treaty Office page",
+    "url": "https://conventions-ws.coe.int/WS_LFRConventions/api/signatures?numSTE=148&langue=ENG"
+   },
+   {
+    "label": "Advisory Committee on the Framework Convention for the Protection of National Minorities, Fifth Opinion on Lithuania, ACFC/OP/V(2024)3, adopted 15 October 2024, published 27 January 2025",
+    "url": "https://rm.coe.int/5th-op-lithuania-en/1680b3a61c"
+   },
+   {
+    "label": "Lietuvos Respublikos švietimo įstatymas (Republic of Lithuania Law on Education), 25 June 1991 No. I-1489, new redaction from 1 July 2011 by Law No. XI-1281 of 17 March 2011; consolidated version in force 24 July 2026 – 31 August 2026, Article 30 'Teisė mokytis valstybine ir gimtąja kalba'",
+    "url": "https://e-seimas.lrs.lt/rs/actualedition/TAIS.1480/cjuSNDAeAJ/"
    }
   ],
   "supportLinks": [],
@@ -12949,14 +13024,35 @@
   "by": "",
   "localTerm": "",
   "standing": "Lithuanian is the sole official language, but steering documents promote regional ones",
-  "mediumOfInstruction": "",
-  "taughtAsSubject": "",
+  "mediumOfInstruction": "Since the 2020 amendment no pre-school may be run wholly in a minority language\nArt 30(2): teaching IN the language needs the school statute plus parent demand\nArt 30(2)(2): primary, basic and secondary run bilingually, with Lithuanian\nLithuania's history and geography, world knowledge and civics go in Lithuanian\n2023/24: Polish 47 schools, Russian 27, Belarusian 1, German 1; none vocational",
+  "taughtAsSubject": "Art 30(2): schools shall create conditions to learn mother tongue, history, culture\nLithuanian gets no less time than the mother tongue in those schools, Art 30(2)\nArt 30(4): a minority member may instead learn it via non-formal education\nHebrew and Yiddish are taught in general education; Karaim and Romani are not",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
   "revitalisation": "",
   "speakers": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1991,
+    "description": "\"Lietuvos Respublikos švietimo įstatymas (Law on Education) No. I-1489 adopted 25 June 1991, published Lietuvos aidas 1991 No. 153 and Valstybės žinios 1991 No. 23-593\""
+   },
+   {
+    "year": 2011,
+    "description": "\"New redaction of the Law on Education in force from 1 July 2011, enacted by Law No. XI-1281 of 17 March 2011 (Valstybės žinios 2011 No. 38-1804); Article 30 becomes 'Right to be taught in the state language and in the mother tongue' and makes primary, basic and secondary programmes at national minority schools bilingual, with Lithuanian history, geography, knowledge of the world and civics taught in Lithuanian\""
+   },
+   {
+    "year": 2020,
+    "description": "\"Law No. XIII-3361 of 5 November 2020 (published TAR 2020-11-12, i. k. 2020-23809) amends Article 30(2) point 1 to require at least five hours a week of education in Lithuanian in pre-school and pre-primary programmes at national minority schools; the Advisory Committee records that this amendment entered into force in 2021 and made pre-school education wholly in a minority language impossible\""
+   },
+   {
+    "year": 2024,
+    "description": "\"Advisory Committee on the Framework Convention adopts its Fifth Opinion on Lithuania on 15 October 2024 (published 27 January 2025), recording minority-language education in Belarusian, German, Polish and Russian only, none in vocational education, and no teaching of Karaim or Romani in general education\""
+   },
+   {
+    "year": 2026,
+    "description": "\"Law No. XV-842 of 23 April 2026 (TAR 2026-04-28, i. k. 2026-06951) amends Article 30(3), under which the Minister of Education, Science and Sport sets the procedure for education in Lithuanian in general-education and non-formal-education schools, and Article 30(7) on ensuring command of the state language\""
+   }
+  ],
   "inventory": "Glottolog counts 16 living languages for this country",
   "languages": [
    {
