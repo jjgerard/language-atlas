@@ -18,6 +18,7 @@ const { computeTrends } = require('./trends');
 const store = require('./store');
 const { syncDomain, configured: gitConfigured } = require('./gitStore');
 const mail = require('./mailer');
+const ask = require('./ask');
 
 const PORT = Number(process.env.PORT || 3200);
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -74,6 +75,68 @@ app.get('/api/trends', async (req, res) => {
   } catch (err) {
     console.error('[trends]', err);
     res.status(503).json({ error: 'catalog_unavailable', detail: String(err.message || err) });
+  }
+});
+
+// The question box on /explore. Two steps, deliberately separate — see ask.js.
+//
+// These are the only routes on the site that cost money per request and the
+// only ones an unauthenticated visitor can use to reach a third party, so they
+// are capped per address. The cap is small on purpose: the page works without
+// them, falling back to its own parser, so a visitor who hits the limit loses a
+// convenience rather than the feature.
+const askHits = new Map();
+const ASK_WINDOW_MS = 60 * 60 * 1000;
+const ASK_MAX = Number(process.env.ASK_MAX_PER_HOUR || 40);
+
+function askAllowed(req) {
+  const ip = String(req.headers['fly-client-ip'] || req.ip || 'local');
+  const now = Date.now();
+  const hits = (askHits.get(ip) || []).filter(t => now - t < ASK_WINDOW_MS);
+  if (hits.length >= ASK_MAX) { askHits.set(ip, hits); return false; }
+  hits.push(now);
+  askHits.set(ip, hits);
+  if (askHits.size > 5000) for (const [k, v] of askHits) if (!v.some(t => now - t < ASK_WINDOW_MS)) askHits.delete(k);
+  return true;
+}
+
+app.get('/api/ask', (req, res) => res.json({ available: ask.available(), model: ask.available() ? ask.MODEL : null }));
+
+app.post('/api/ask/select', async (req, res) => {
+  if (!ask.available()) return res.status(503).json({ error: 'no_model', detail: 'No ANTHROPIC_API_KEY is configured.' });
+  if (!askAllowed(req)) return res.status(429).json({ error: 'rate_limited', detail: 'Too many questions from this address in the last hour.' });
+  const { question, variables, scopes } = req.body || {};
+  if (typeof question !== 'string' || !question.trim()) return res.status(400).json({ error: 'no_question' });
+  if (!Array.isArray(variables) || !variables.length || !Array.isArray(scopes)) return res.status(400).json({ error: 'no_registry' });
+  try {
+    const out = await ask.choose(question.slice(0, 500), variables.slice(0, 400), scopes.slice(0, 100));
+    // The model is not trusted to return a real id. An id it invented would
+    // read as a working answer to a question the atlas cannot answer, which is
+    // the exact failure this whole design exists to prevent.
+    const ids = new Set(variables.map(v => v.id));
+    const scopeIds = new Set(scopes.map(s => s.id));
+    if (out.x != null && !ids.has(out.x)) return res.json({ x: null, y: null, scope: 'all', why: 'The model chose a variable this atlas does not have, so nothing was shown.', rejected: out.x });
+    if (out.y != null && !ids.has(out.y)) out.y = null;
+    if (!scopeIds.has(out.scope)) out.scope = 'all';
+    res.json({ x: out.x ?? null, y: out.y ?? null, scope: out.scope, why: String(out.why || '').slice(0, 300) });
+  } catch (err) {
+    console.error('[ask/select]', err.message);
+    res.status(502).json({ error: 'model_failed', detail: String(err.message).slice(0, 200) });
+  }
+});
+
+app.post('/api/ask/read', async (req, res) => {
+  if (!ask.available()) return res.status(503).json({ error: 'no_model' });
+  if (!askAllowed(req)) return res.status(429).json({ error: 'rate_limited' });
+  const { question, table } = req.body || {};
+  if (typeof table !== 'string' || !table.trim()) return res.status(400).json({ error: 'no_table' });
+  try {
+    // Only the finished table crosses this line — labels and integers the
+    // browser already computed. No entry text ever reaches the model.
+    res.json({ reading: await ask.read(String(question || '').slice(0, 500), table.slice(0, 12000)) });
+  } catch (err) {
+    console.error('[ask/read]', err.message);
+    res.status(502).json({ error: 'model_failed', detail: String(err.message).slice(0, 200) });
   }
 });
 

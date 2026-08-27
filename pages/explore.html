@@ -22,14 +22,22 @@
   minority language" is NOT offered, because answering it would mean reading the
   prose, and the honest answer to that is a comparative reading written by hand.
 
-  The query box is a DETERMINISTIC PARSER, not a language model. See parseQuery.
-  That is a deliberate choice, not a limitation of what was available: a model
-  asked to answer from this data could produce a number that is not in it, and
-  a fabricated figure on a page whose whole claim is that every figure traces to
-  a source would be worse than no page. The parser can only ever SELECT
-  variables that already exist; the counting is done by the same code the
-  dropdowns drive. If a model is added later it should translate a sentence into
-  a selection and then get out of the way, never emit a figure of its own.
+  THE QUESTION BOX NEVER PRODUCES A FIGURE. That is the constraint everything
+  else here is arranged around, because a fabricated number on a page whose
+  whole claim is that every figure traces to a source would be worse than no
+  page.
+
+  With a key configured, a model does two jobs and neither is arithmetic. It
+  reads the question against a list of VARIABLE NAMES — no entries, no counts —
+  and returns a selection, which the server checks against the registry and
+  rejects if invented. The browser then counts with the same tabulate() the
+  dropdowns drive. Only the FINISHED TABLE goes back for a reading, so the prose
+  describes figures that already existed and a reader can check every one of
+  them against the table printed directly above it.
+
+  With no key, parseQuery() runs instead: it matches words against the same
+  variables and moves the same dropdowns. The page works either way, on the same
+  numbers, which is why the parser stays rather than being replaced.
 -->
 
 <style>
@@ -109,6 +117,18 @@
   .summary b { color: var(--ink); }
   .empty { color: var(--ink-soft); font-size: 14px; padding: 22px 0; }
 
+  /* The model's reading. Visibly a different kind of thing from the table:
+     the table is counted, this is written about it. */
+  .reading { margin-top: 22px; padding: 15px 18px; border: 1px solid var(--hair);
+             border-left: 3px solid var(--cov-3); border-radius: 0 10px 10px 0;
+             background: var(--surface); max-width: 74ch; }
+  .reading h4 { margin: 0 0 7px; font-size: 11.5px; text-transform: uppercase;
+                letter-spacing: 0.08em; color: var(--ink-soft); font-weight: 600; }
+  .reading p { margin: 0; font-size: 14px; line-height: 1.62; }
+  .reading .prov { margin-top: 9px; font-size: 12px; color: var(--ink-soft); }
+  .reading.thinking p { color: var(--ink-soft); font-style: italic; }
+  .hidden { display: none; }
+
   @media (max-width: 760px) {
     main { padding: 24px 15px 56px; }
     .units { columns: 1; }
@@ -147,7 +167,7 @@
   </p>
 
   <div class="ask">
-    <label for="q">Describe what you want to see</label>
+    <label for="q" id="asklabel">Describe what you want to see</label>
     <div class="askrow">
       <input id="q" type="text" autocomplete="off" spellcheck="false"
              placeholder="coverage by region on the indigenous map">
@@ -158,13 +178,12 @@
   </div>
 
   <blockquote class="note">
-    That box is a plain parser, not a chatbot — it matches your words against the variables
-    below and moves the dropdowns. It cannot produce a figure of its own, which is the point:
-    every number on this page is counted from the entries by the same code either way.
-    Nothing here is read out of entry text, for the reason
-    <a href="/patterns">Patterns</a> gives — the wording is hedged, and a classifier run over it
-    leaves the interesting cases unresolved. These variables are what the schema knows about
-    itself: which fields are filled, how many dated rows and sources an entry carries, where it is.
+    <span id="asknote"></span>
+    Nothing here is read out of entry text, for the reason <a href="/patterns">Patterns</a>
+    gives — the wording is hedged, and a classifier run over it leaves the interesting cases
+    unresolved. These variables are what the schema knows about itself: which fields are filled,
+    how many dated rows and sources an entry carries, where it is. A question the atlas cannot
+    answer gets told so rather than answered with the nearest thing that fits.
   </blockquote>
 
   <div class="controls">
@@ -190,6 +209,12 @@
 
   <div class="out" id="out"><p class="empty">Loading the atlas…</p></div>
   <p class="summary" id="summary"></p>
+
+  <div class="reading hidden" id="reading">
+    <h4>Reading of the table above</h4>
+    <p id="readingtext"></p>
+    <p class="prov" id="readingprov"></p>
+  </div>
 </main>
 
 <script>
@@ -538,17 +563,112 @@ function fillSelects() {
   $('scope').innerHTML = SCOPES.map(s => `<option value="${esc(s.id)}">${esc(s.label)}</option>`).join('');
 }
 
-const EXAMPLES = [
+// Two sets. The parser needs variable words; the model takes a real question.
+const EXAMPLES_PARSER = [
   'coverage by region',
   'documented on how many maps by region',
   'policy timeline by which map',
   'confidence by coverage',
   'how many sources cited by which map',
 ];
+const EXAMPLES_MODEL = [
+  'Which regions are best covered?',
+  'Are the places with a language disorder entry also the ones with an indigenous entry?',
+  'Is the foreign-languages map better sourced than the others?',
+  'Do entries with a policy timeline tend to be better documented?',
+  'Where is the atlas thinnest?',
+];
 
-function runQuery() {
-  const parsed = parseQuery($('q').value);
+/* ------------------------------------------------------------------ *
+ * Asking a question.
+ *
+ * Two steps, and the split is the point. The model picks the variables
+ * from a list of NAMES — it never sees an entry — and the browser then
+ * counts with the same tabulate() the dropdowns use. Only the finished
+ * table goes back for a reading, so the prose describes figures that
+ * already existed rather than producing any. Every number it mentions
+ * is checkable against the table printed directly above it.
+ *
+ * When no model is configured, or the call fails, parseQuery() runs
+ * instead. That is why the parser stays: the page must work without a
+ * key, on the same variables, with no figure lost.
+ * ------------------------------------------------------------------ */
+let MODEL = null;         // {available, model} from /api/ask
+
+/** The table as plain text. This is the ONLY thing sent for a reading. */
+function tableText(xv, yv, t) {
+  const lines = [];
+  lines.push(`Rows: ${xv.label}`);
+  if (yv) lines.push(`Columns: ${yv.label}`);
+  lines.push(`Total entries counted: ${t.counted}`);
+  lines.push(t.collapsed
+    ? 'Each place is counted once.'
+    : 'Each place is counted once per map it has an entry on.');
+  lines.push('');
+  if (!yv) {
+    lines.push(`${xv.label}\tcount`);
+    t.xs.forEach(([k, n]) => lines.push(`${k}\t${n}`));
+  } else {
+    lines.push(['', ...t.ys.map(([k]) => k), 'ALL'].join('\t'));
+    t.xs.forEach(([xk, xn]) => {
+      lines.push([xk, ...t.ys.map(([yk]) => t.cells.get(xk + SEP + yk) || 0), xn].join('\t'));
+    });
+    lines.push(['ALL', ...t.ys.map(([, n]) => n), t.counted].join('\t'));
+  }
+  return lines.join('\n');
+}
+
+function showReading(state, text, prov) {
+  const box = $('reading');
+  box.classList.toggle('hidden', state === 'off');
+  box.classList.toggle('thinking', state === 'thinking');
+  $('readingtext').textContent = text || '';
+  $('readingprov').textContent = prov || '';
+}
+
+async function runQuery() {
+  const question = $('q').value.trim();
   const said = $('said');
+  if (!question) return;
+
+  if (MODEL && MODEL.available) {
+    said.className = 'said';
+    said.textContent = 'Working out which variables answer that…';
+    showReading('off');
+    try {
+      const res = await fetch('/api/ask/select', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          question,
+          variables: VARS.map(v => ({ id: v.id, label: v.label, group: v.group })),
+          scopes: SCOPES.map(s => ({ id: s.id, label: s.label })),
+        }),
+      });
+      const out = await res.json();
+      if (!res.ok) throw new Error(out.detail || out.error || 'failed');
+      if (!out.x) {
+        said.className = 'said miss';
+        said.textContent = out.why || 'The atlas does not record anything that answers that.';
+        return;
+      }
+      $('x').value = out.x;
+      $('y').value = out.y || '';
+      $('scope').value = SCOPES.some(s => s.id === out.scope) ? out.scope : 'all';
+      const xv = varById(out.x), yv = varById(out.y);
+      said.className = 'said';
+      said.innerHTML = esc(out.why || '') + ' <b>' + esc(xv.label) + '</b>' +
+        (yv ? ' against <b>' + esc(yv.label) + '</b>' : '');
+      draw();
+      return readTable(question);
+    } catch (err) {
+      said.className = 'said miss';
+      said.textContent = 'The model could not be reached (' + err.message + '). Falling back to plain matching.';
+    }
+  }
+
+  const parsed = parseQuery(question);
+  showReading('off');
   if (!parsed) {
     said.className = 'said miss';
     said.textContent = 'No variable matched that. Try one of the examples, or use the dropdowns — everything the atlas can count is in them.';
@@ -562,6 +682,26 @@ function runQuery() {
     (parsed.y ? ' against <b>' + esc(parsed.y.label) + '</b>' : '') +
     (parsed.matchedScope ? ', ' + esc(parsed.scope.label.toLowerCase()) : '') + '.';
   draw();
+}
+
+async function readTable(question) {
+  const xv = varById($('x').value), yv = varById($('y').value);
+  const scope = SCOPES.find(s => s.id === $('scope').value) || SCOPES[0];
+  if (!xv) return;
+  showReading('thinking', 'Reading the table…');
+  try {
+    const res = await fetch('/api/ask/read', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ question, table: tableText(xv, yv, tabulate(xv, yv, scope.keep)) }),
+    });
+    const out = await res.json();
+    if (!res.ok) throw new Error(out.detail || out.error || 'failed');
+    showReading('on', out.reading,
+      'Written by ' + (MODEL.model || 'a language model') + ' from the table above, which it was given already counted. It has not seen the entries, and every figure it names is in that table.');
+  } catch (err) {
+    showReading('off');
+  }
 }
 
 function setMode(m) {
@@ -579,6 +719,22 @@ async function init() {
   SCOPES = scopes(PAYLOAD);
   fillSelects();
 
+  // Whether a model is configured decides what the box says it does, so this
+  // is settled before the page describes itself.
+  try { MODEL = await fetch('/api/ask').then(r => r.json()); } catch (e) { MODEL = { available: false }; }
+  if (MODEL.available) {
+    $('q').placeholder = 'Are the places that record a language disorder the same ones that record indigenous languages?';
+    $('asklabel').textContent = 'Ask a question about the maps';
+    $('asknote').innerHTML = 'A model reads your question and picks which of the ' + VARS.length +
+      ' variables answer it, then writes a reading of the table. It never sees the entries and never counts: ' +
+      'the browser does the counting, and the model is handed the finished table. ' +
+      'Every figure it mentions is in the table above it, so you can check it.';
+  } else {
+    $('asknote').innerHTML = 'This box matches your words against the ' + VARS.length +
+      ' variables below and moves the dropdowns. It cannot produce a figure of its own — ' +
+      'every number on this page is counted from the entries either way.';
+  }
+
   const q = new URLSearchParams(location.search);
   $('x').value = varById(q.get('x')) ? q.get('x') : 'region';
   $('y').value = varById(q.get('y')) ? q.get('y') : 'coverage';
@@ -586,7 +742,8 @@ async function init() {
   MODE = ['cross', 'bars', 'units'].includes(q.get('v')) ? q.get('v') : 'cross';
   for (const id of ['cross', 'bars', 'units']) $('m-' + id).setAttribute('aria-pressed', String(id === MODE));
 
-  $('egs').innerHTML = 'Try: ' + EXAMPLES.map(e => `<button class="eg" type="button">${esc(e)}</button>`).join(' ');
+  const examples = (MODEL && MODEL.available) ? EXAMPLES_MODEL : EXAMPLES_PARSER;
+  $('egs').innerHTML = 'Try: ' + examples.map(e => `<button class="eg" type="button">${esc(e)}</button>`).join(' ');
   $('egs').addEventListener('click', e => {
     const b = e.target.closest('.eg');
     if (!b) return;
