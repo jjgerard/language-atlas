@@ -105,8 +105,7 @@ const THIS_YEAR = 2026;
   for (const s of Object.values(specs)) for (const r of (s.history || [])) if (r && r.url) urls.add(r.url);
   console.log(Object.keys(specs).length + " unit-domains, " + urls.size + " distinct source urls to check" + NL);
 
-  const page = new Map();
-  for (const u of urls) {
+  async function fetchInto(u, pause) {
     const r = await get(u);
     let text;
     if (/pdf/i.test(r.type || "") || (r.raw && r.raw.slice(0, 5).toString() === "%PDF-")) {
@@ -117,7 +116,27 @@ const THIS_YEAR = 2026;
     page.set(u, { status: r.status, text, bytes: (r.body || "").length });
     console.log("  " + String(r.status).padStart(3) + "  " + String((r.body || "").length).padStart(7) + "b  " +
       (/pdf/i.test(r.type || "") ? "pdf " : "    ") + String(u).slice(0, 88));
-    await new Promise(r2 => setTimeout(r2, 400));
+    await new Promise(r2 => setTimeout(r2, pause));
+  }
+
+  const page = new Map();
+  for (const u of urls) await fetchInto(u, 400);
+
+  // A source that did not come back is not the same failure as a quote that is
+  // not on the page. The first is the host's afternoon; the second is the claim
+  // being wrong, and only the second should cost a row. So every url that
+  // failed to yield text gets ONE more attempt, after a longer wait -- a flaky
+  // host, a rate limit, a connection reset. A url that fails twice is reported
+  // as a fetch failure and its rows are dropped exactly as before.
+  //
+  // Once, and only once. A retry loop against a host that is genuinely down
+  // turns a verification pass into a slow one that ends the same way.
+  const failed = [...urls].filter(u => { const p = page.get(u); return !p || p.status !== 200 || !p.text; });
+  if (failed.length) {
+    console.log(NL + "  " + failed.length + " source" + (failed.length === 1 ? "" : "s") + " did not yield text; one retry each");
+    for (const u of failed) await fetchInto(u, 1500);
+    const still = failed.filter(u => { const p = page.get(u); return !p || p.status !== 200 || !p.text; });
+    console.log("  retry recovered " + (failed.length - still.length) + " of " + failed.length);
   }
 
   console.log(NL + "---- per unit-domain ----");

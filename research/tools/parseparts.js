@@ -66,7 +66,14 @@ function parseText(text) {
     const f = line.match(/^\s*-\s*field:\s*(\S+)/);
     // Some agents qualified the field with its domain ("fl.primaryRequirement");
     // the store's key is the bare field name.
-    if (f) { cur = f[1].replace(/[:,]$/, "").replace(/^(fl|eal|dld)\./, ""); fields[cur] = fields[cur] || []; inList = false; continue; }
+    // `indigenous` was missing from this list for as long as the map has
+    // existed, and it is the one domain whose researchers qualified their
+    // fields most consistently: 119 part files write `indigenous.taughtAsSubject`
+    // and `indigenous.mediumOfInstruction`. Unstripped, the key matches no field
+    // on any store, so apply.js reported "no field indigenous.taughtAsSubject"
+    // if it was pointed at them and every other run simply skipped them. 445
+    // drafted fields on 236 entries were sitting unread behind this one word.
+    if (f) { cur = f[1].replace(/[:,]$/, "").replace(/^(fl|eal|dld|indigenous)\./, ""); fields[cur] = fields[cur] || []; inList = false; continue; }
     if (/^\s*(bullets|rows)\s*:/.test(line)) { inList = true; continue; }
     // "year:" / "description:" continuation lines sit deeper than a bullet dash.
     const cont = line.match(/^\s{6,}(year|description)\s*:\s*(.*)$/);

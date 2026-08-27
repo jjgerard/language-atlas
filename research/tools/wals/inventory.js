@@ -15,7 +15,7 @@
 // India's 518 is not Kerala's number. Sub-national units are left empty rather
 // than given a figure that does not belong to them.
 const fs = require("fs"), path = require("path");
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..", "..");
 
 function parseCsv(t) {
   const rows = []; let row = [], f = "", q = false;

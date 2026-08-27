@@ -22,7 +22,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const STORE = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
 const NL = String.fromCharCode(10);
 const MARKERS = ["NOT ESTABLISHED", "WHAT I TRIED AND COULD NOT GET", "DO NOT PUBLISH", "NOTES ON WHAT"];

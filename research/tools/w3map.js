@@ -6,7 +6,7 @@
 // the worst failure available and is invisible afterwards — so every resolution
 // is printed for review and anything ambiguous is reported, never assumed.
 const fs = require("fs"), path = require("path");
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 
 const units = new Map();  // "CC|Name" -> row
 for (const f of ["eal.json", "dld.json", "fl.seed.json"]) {

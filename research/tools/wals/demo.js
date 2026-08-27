@@ -5,7 +5,7 @@
 const fs = require("fs"), path = require("path");
 const { find, describe } = require("./wals");
 
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..", "..");
 const P = path.join(ATLAS, "data", "indigenous.json");
 
 // Which languages each unit's own entry already names. Taken from the text

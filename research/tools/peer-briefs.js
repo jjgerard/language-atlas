@@ -8,7 +8,7 @@
 // The profile itself stays on disk — the agent reads it rather than receiving
 // it, so the brief stays small and the text it quotes is the text on file.
 const fs = require("fs"), path = require("path");
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const PEER = path.join(ATLAS, "research", "peer");
 const { DOMAINS } = require(path.join(ATLAS, "src", "domains.js"));
 const DLD = DOMAINS.find(d => d.id === "dld");

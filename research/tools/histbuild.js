@@ -35,46 +35,13 @@ const path = require("path");
 const { parseText, sections, toHistory } = require("./parseparts");
 const { resolveHeader } = require("./unitkey");
 
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const STORE = { fl: "fl.seed.json", dld: "dld.json", eal: "eal.json", indigenous: "indigenous.json" };
 const PARTS = path.join(__dirname, "..", "parts");
 
-// Word boundaries here are load-bearing, not decoration. Without \b, "SEN"
-// matches "present" and "sense", "cree" matches "decree", and "innu" matches
-// "innumerable" — each of which would file a foreign-language row on the
-// disorder map with a straight face. An earlier run of this script did exactly
-// that, because a heredoc ate the backslashes on the way to disk.
-// One alternative earned its own note. `second[- ]language` sat on the eal
-// pattern and, in Canada, put six FSL funding and curriculum rows on the
-// newcomer map: "second-language instruction" there means French, not support
-// for a child who arrived without the school's language. It now needs a learner
-// word to count as eal, and the instruction sense goes to fl.
-const SUBJECT = {
-  dld: /disabilit|disabled|special education|special needs|\bSEN\b|inclusive education|speech|therap|logoped|orthophon|fonoaudiolog|impairment|handicap|autis|dyslex|language disorder|rehabilitat|accessib|\bdeaf\b|\bblind\b|sign language|\bCRPD\b|persons with disabilit|Salamanca|resource room|remedial|learning difficult|psycholog|audiolog|inclusi[oó]n|inclusive school|mainstream|developmental disorder|diagnostic|early intervention|educaci[oó]n inclusiva|discapacidad|educaci[oó]n especial/i,
-  eal: /refugee|asylum|migrant|immigrant|newcomer|newly arrived|displaced|\bEAL\b|\bESL\b|English learner|English as an additional|second[- ]language (learner|pupil|student|support)|langue seconde d.accueil|reception class|welcome class|accueil|francisation|castellaniz|host language|language support|integration of (pupils|students|children)|home language survey|Equal Educational Opportunities|language minority student|limited English/i,
-  fl: /foreign[- ]language|langue étrang|lengua extranjera|world language|English as a foreign|\bCEFR\b|\bCLIL\b|\bDELF\b|Common European Framework|language teaching|teaching of English|English teaching|three[- .]language formula|two[- .]language formula|compulsory (English|French|Spanish|German)|modern language|immersion|core [Ff]rench|intensive [Ff]rench|extended [Ff]rench|language credit|conversational (Spanish|French|English)|(Spanish|French|German|Mandarin) programme|\bFSL\b|French as a second|second[- ]language (instruction|education|programme|program|mandate|credit|teaching)|Second-Language Instruction|langue seconde|French[- ]language (education|programme|program|school)|French first language|fransaskois|franco[- ]canadienne|Charter of the French Language|French Language Services|conseil scolaire/i,
-  indigenous: /minorit|indigenous|ind[ií]gena|regional language|national language|mother[- ]tongue|lengua originaria|autochton|tribal|aborigin|first nation|\binuit\b|\binnu\b|m[ée]tis|\bmaori\b|\bsami\b|mi.kmaq|\bcree\b|intercultural|bilingual|charter for regional|vernacular|creole|patois|heritage language|medium of instruction|official medium|official language|eighth schedule|scheduled tribe|linguistic minorit|\bCLM\b|Commissioner for Linguistic|(Urdu|Punjabi|Sindhi|Maithili|Bhojpuri|Sanskrit|Telugu|Tamil|Bengali|Marathi|Gujarati)\s+Academy|language of instruction|inuktut|inuktitut|\bdene\b|treaty education|\bILPA\b|indigenous language|native language/i,
-};
-// A general instrument: dated, about schooling, but not about any one of the
-// four questions in particular.
-//
-// These fan out to the three LANGUAGE maps only, never to dld. Three of the
-// four maps ask a language question and a general education act plausibly bears
-// on all three; the disorder map asks a clinical and provision question that a
-// generic act rarely speaks to. When one does, SUBJECT.dld catches it directly.
-// Without this split, Papua New Guinea's constitutional clause on literacy in
-// tok ples was filed on the disorder map, and \bconstitution had matched the
-// "Unconstitutional" in Madagascar's 2009 coup.
-const GENERAL = /education act|education law|school act|schools act|\bconstitution|basic law|language policy|language.in.education|ley general de educaci|loi.*(éducation|enseignement)|education ordinance|education code|ministry of education|education strategic plan|sector plan|curriculum framework|compulsory education|national curriculum|education policy|education reform/i;
-
-const GENERAL_MAPS = ["fl", "eal", "indigenous"];
-
-function subjectsOf(desc) {
-  const hits = Object.keys(SUBJECT).filter(k => SUBJECT[k].test(desc));
-  if (hits.length) return hits;
-  if (GENERAL.test(desc)) return ["*"];
-  return [];
-}
+// The subject routing and the word-boundary cases behind it now live in
+// hist-guards.js, shared with hist-from-prose.js and hist-from-parts.js.
+const { subjectsOf, GENERAL_MAPS } = require("./hist-guards");
 
 const load = d => JSON.parse(fs.readFileSync(path.join(ATLAS, "data", STORE[d]), "utf8"));
 const live = Object.fromEntries(Object.keys(STORE).map(d => [d, new Map(load(d).map(r => [r.countryCode + "|" + r.unitName, r]))]));

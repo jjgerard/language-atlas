@@ -15,7 +15,7 @@ const fs = require("fs");
 const path = require("path");
 
 const NL = String.fromCharCode(10);
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const FILE = path.join(ATLAS, "data", "dld.json");
 
 const EDITS = [

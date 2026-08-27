@@ -23,7 +23,7 @@ const DOMAIN_OF = {
   l1Support: "eal", l2Support: "eal", bilingualEducationNotes: "eal", newcomerCriteria: "eal",
 };
 
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const STORE = { fl: "fl.seed.json", dld: "dld.json", eal: "eal.json" };
 const live = {};
 for (const [d, f] of Object.entries(STORE)) {

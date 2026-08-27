@@ -33,7 +33,7 @@ const DOMAIN_OF = {
 // moment anything is written. Checking the live store instead means a field
 // already filled is dropped here rather than rejected by apply.js's overwrite
 // guard, which lets a wave be applied repeatedly as agents finish.
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const STORE = { fl: "fl.seed.json", dld: "dld.json", eal: "eal.json" };
 const live = {};
 for (const [d, f] of Object.entries(STORE)) {

@@ -16,7 +16,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const UNITS = JSON.parse(fs.readFileSync(path.join(ATLAS, "data", "eal.json"), "utf8"));
 
 const norm = s => String(s).toLowerCase().replace(/[^a-z0-9]/g, "");
