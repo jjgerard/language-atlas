@@ -248,6 +248,14 @@ body {
 .sitebar.tight > .pills { gap: 3px; }
 .sitebar.tight .pill { padding-left: 10px; padding-right: 10px; }
 
+/* Second stage. The burger takes the page links first and leaves the domain
+   pills in the bar: the pills ARE the map's navigation and the thing a reader
+   came to switch between, while Patterns, Sources and About are destinations
+   they can go looking for. Losing both at once cost more than it saved. */
+.sitebar.nolinks > .navright .aboutlink { display: none; }
+.sitebar.nolinks .burger { display: flex; }
+
+/* Last stage: the pills go too. */
 .sitebar.compact > .pills,
 .sitebar.compact > .navright .aboutlink { display: none; }
 .sitebar.compact .burger { display: flex; }

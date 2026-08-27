@@ -73,13 +73,23 @@ export async function mountNav(currentId, domains) {
 function fitBar() {
   const bar = document.querySelector('.sitebar:not(.nomenu)');
   if (!bar) return;
-  // Two stages, tried in order, because going straight to the burger threw
-  // away the pills and the page links together over an overflow that was
-  // mostly search box and padding.
-  bar.classList.remove('compact', 'tight');
+  // Three stages, each tried before the next, because going straight to the
+  // burger threw away the pills and the page links together over an overflow
+  // that was mostly search box and padding.
+  //
+  //   tight    narrower search, tighter padding — nothing disappears
+  //   nolinks  burger appears and takes Patterns/Sources/About; pills stay
+  //   compact  the pills go too
+  //
+  // The order is what a reader loses least by losing. The pills are the map's
+  // own navigation; the page links are destinations they can go looking for.
+  bar.classList.remove('compact', 'tight', 'nolinks');
   // The bar overflows rather than shrinking because the pills are nowrap and
   // min-width: max-content — see shared.css.
-  if (bar.scrollWidth <= bar.clientWidth + 1) return;
+  const over = () => bar.scrollWidth > bar.clientWidth + 1;
+  if (!over()) return;
   bar.classList.add('tight');
-  if (bar.scrollWidth > bar.clientWidth + 1) bar.classList.add('compact');
+  if (!over()) return;
+  bar.classList.add('nolinks');
+  if (over()) bar.classList.add('compact');
 }
