@@ -409,28 +409,107 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "American Samoa Code Annotated 16.1601, Short title (American Samoa Bar Association)",
+    "url": "https://asbar.org/code-annotated/16-1601-short-title/"
+   },
+   {
+    "label": "American Samoa Code Annotated 16.1602, Purpose (American Samoa Bar Association)",
+    "url": "https://asbar.org/code-annotated/16-1602-purpose/"
+   },
+   {
+    "label": "American Samoa Code Annotated 16.1603, Definitions (American Samoa Bar Association)",
+    "url": "https://asbar.org/code-annotated/16-1603-definitions/"
+   },
+   {
+    "label": "American Samoa Code Annotated 16.1604, Division of special education - Administration",
+    "url": "https://asbar.org/code-annotated/16-1604-division-of-special-education-administration/"
+   },
+   {
+    "label": "American Samoa Code Annotated 16.1605, Identification (American Samoa Bar Association)",
+    "url": "https://asbar.org/code-annotated/16-1605-identification/"
+   },
+   {
+    "label": "American Samoa Code Annotated 16.1606, Funding - Federal aid (American Samoa Bar Association)",
+    "url": "https://asbar.org/code-annotated/16-1606-funding-federal-aid/"
+   },
+   {
+    "label": "American Samoa Administrative Code 31.0421, License required (American Samoa Bar Association)",
+    "url": "https://asbar.org/regulation/31-0421-license-required/"
+   },
+   {
+    "label": "American Samoa Department of Education, Special Education Division",
+    "url": "https://www.amsamoadoe.com/divisions/specialeducation"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2024-25 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2023-24 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/aa572553-f494-49a6-a01e-99c52f0cf948/download/bchildcountandedenvironment2023-24.csv"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2014 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/9e399910-ae82-4153-a944-40ac45bcfa99/download/bchildcountandedenvironments2014.csv"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
-  "terminology": "",
-  "identificationCriteria": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
+  "terminology": "ASCA 16.1603 lists speech or language impairments among qualifying disabilities\nWording follows IDEA; the territory sets no term of its own",
+  "identificationCriteria": "Statute covers persons three through 21 who need special education for the disability\nNo local criteria in statute; identification follows federal mandates",
   "assessments": "",
-  "multilingualProvision": "",
-  "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
-  "funding": "",
-  "workforce": "",
+  "multilingualProvision": "ASDOE publishes the procedural safeguards notice in Samoan as well as English",
+  "referralPathway": "Director sets identification policy with other agencies; statute fixes no timeline",
+  "serviceModel": "Speech language pathology may be counted as special education, not a related service\nRelated services take their meaning from federal rules, not territorial ones\nOne Division of Special Education inside ASDOE supervises all programmes",
+  "legalEntitlement": "American Samoa Special Education Act of 2000 is the territorial entitlement\nFAPE rests on the territory's own constitutional duty as well as IDEA\nSuspended or expelled children keep the entitlement",
+  "funding": "ASCA 16.1606 requires at least the per-child amount budgeted for non-disabled children\nDepartment may apply for, administer, receive and expend federal aid for the programme",
+  "workforce": "Health licensing rule 31.0421 lists licensed professions; speech-language pathology is absent\nDirector of Special Education must be qualified by education, training and experience",
   "dischargeCriteria": "",
-  "outcomesEvidence": "",
-  "identifiedPrevalence": [],
-  "policyHistory": []
+  "outcomesEvidence": "Director must report enrolment, location, programmes and funding to the Legislature yearly",
+  "identifiedPrevalence": [
+   {
+    "year": 2024,
+    "value": "15",
+    "note": "Children aged 6-21 served under IDEA Part B with speech or language impairment, American Samoa, 2024-25 OSEP child count; 441 in all categories"
+   },
+   {
+    "year": 2023,
+    "value": "12",
+    "note": "Children aged 6-21 with speech or language impairment, American Samoa, 2023-24 OSEP child count file"
+   },
+   {
+    "year": 2024,
+    "value": "3",
+    "note": "Children aged 3-5 with speech or language impairment, American Samoa, 2024-25 OSEP child count; 16 preschoolers in all categories"
+   },
+   {
+    "year": 2014,
+    "value": "88",
+    "note": "Children aged 3-5 with speech or language impairment, American Samoa, 2014 OSEP child count; 112 preschoolers in all categories"
+   }
+  ],
+  "policyHistory": [
+   {
+    "year": 1977,
+    "description": "PL 15-1 enacts the original special education chapter of the American Samoa Code"
+   },
+   {
+    "year": 1993,
+    "description": "PL 23-3 amends the special education chapter"
+   },
+   {
+    "year": 2000,
+    "description": "PL 26-33 recasts it as the American Samoa Special Education Act of 2000"
+   }
+  ]
  },
  {
   "countryCode": "AT",
@@ -6342,16 +6421,37 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "17 Guam Code Annotated ch. 9, Education and Training Facilities and Opportunities for Individuals with Disabilities (Compiler of Laws)",
+    "url": "https://col.guamcourts.gov/sites/default/files/17gc009.pdf"
+   },
+   {
+    "label": "10 Guam Code Annotated ch. 12 art. 18, Speech Language Pathology (Compiler of Laws)",
+    "url": "https://col.guamcourts.gov/sites/default/files/10gc012-2_0.pdf"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2024-25 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2023-24 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/aa572553-f494-49a6-a01e-99c52f0cf948/download/bchildcountandedenvironment2023-24.csv"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2014 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/9e399910-ae82-4153-a944-40ac45bcfa99/download/bchildcountandedenvironments2014.csv"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
-  "terminology": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
+  "terminology": "Licensing law defines speech-language pathology to cover language and fluency",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
@@ -6359,11 +6459,49 @@
   "serviceModel": "",
   "legalEntitlement": "",
   "funding": "",
-  "workforce": "",
+  "workforce": "10 GCA 121802 requires a current ASHA Certificate of Clinical Competence to be licensed\nOne licensed SLP may supervise no more than five assistants at a time",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
-  "identifiedPrevalence": [],
-  "policyHistory": []
+  "identifiedPrevalence": [
+   {
+    "year": 2024,
+    "value": "4",
+    "note": "Children aged 6-21 served under IDEA Part B with speech or language impairment, Guam, 2024-25 OSEP child count; 1,652 in all categories"
+   },
+   {
+    "year": 2023,
+    "value": "6",
+    "note": "Children aged 6-21 with speech or language impairment, Guam, 2023-24 OSEP child count file"
+   },
+   {
+    "year": 2014,
+    "value": "129",
+    "note": "Children aged 6-21 with speech or language impairment, Guam, 2014 OSEP child count file"
+   },
+   {
+    "year": 2014,
+    "value": "72",
+    "note": "Children aged 3-5 with speech or language impairment, Guam, 2014 OSEP child count; the 2024-25 preschool count is 1"
+   }
+  ],
+  "policyHistory": [
+   {
+    "year": 1998,
+    "description": "P.L. 24-329 adds the speech-language pathology licensing article to 10 GCA"
+   },
+   {
+    "year": 2012,
+    "description": "P.L. 31-158 amends 17 GCA chapter 9 on education of children with disabilities"
+   },
+   {
+    "year": 2017,
+    "description": "P.L. 34-048 rewrites SLP licensing and adds the two assistant grades"
+   },
+   {
+    "year": 2020,
+    "description": "P.L. 35-080 amends the supervisor filing rules for SLP assistants"
+   }
+  ]
  },
  {
   "countryCode": "GW",
@@ -10140,28 +10278,83 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "NMIAC Title 60, Chapter 60-50, Special Education Program Regulations (CNMI Law Revision Commission)",
+    "url": "https://cnmilaw.gov/docs/admincode/T60/T60-50.pdf"
+   },
+   {
+    "label": "NMIAC Title 185, Chapter 185-10, Commonwealth Health Care Professions Licensing Board Regulations, Part 5000",
+    "url": "https://cnmilaw.gov/docs/admincode/T185/T185-10.pdf"
+   },
+   {
+    "label": "CNMI PSS, IDEA Part B State Performance Plan / Annual Performance Report FFY 2022-23",
+    "url": "https://www.cnmipss.org/sites/default/files/final-mp-01_spp_part_b_ffy_2022-23_2927_20240621174558.pdf"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2024-25 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2023-24 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/aa572553-f494-49a6-a01e-99c52f0cf948/download/bchildcountandedenvironment2023-24.csv"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2014 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/9e399910-ae82-4153-a944-40ac45bcfa99/download/bchildcountandedenvironments2014.csv"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "terminology": "",
-  "identificationCriteria": "",
-  "assessments": "",
-  "multilingualProvision": "",
+  "identificationCriteria": "Disorder must adversely affect educational performance and need special education\nCommunication development is one of the delay areas CNMI counts",
+  "assessments": "No instrument is named in regulation; tests must be valid, reliable, non-discriminatory\nAssessment must cover communicative status where that is a suspected area",
+  "multilingualProvision": "Assessments given in the native language unless clearly not feasible\nMaterials for limited English proficient children must not measure English skill\nPSS improvement plan names Chamorro and Carolinian family language needs",
   "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "serviceModel": "SLP services may count as special education rather than a related service\nServices plans cover parentally placed private school children too",
+  "legalEntitlement": "Entitlement is NMIAC chapter 60-50 read with IDEA Part B, not a separate CNMI act",
   "funding": "",
-  "workforce": "",
+  "workforce": "Related services staff must hold CNMI-recognised licences for their discipline\nLicences may not be waived on an emergency, temporary or provisional basis\nAssistant grade needs a bachelor's with 24 semester hours in speech and language",
   "dischargeCriteria": "",
-  "outcomesEvidence": "",
-  "identifiedPrevalence": [],
-  "policyHistory": []
+  "outcomesEvidence": "PSS reports preschool outcome B on early language and communication to OSEP",
+  "identifiedPrevalence": [
+   {
+    "year": 2024,
+    "value": "19",
+    "note": "Children aged 6-21 served under IDEA Part B with speech or language impairment, CNMI, 2024-25 OSEP child count; 918 in all categories"
+   },
+   {
+    "year": 2023,
+    "value": "21",
+    "note": "Children aged 6-21 with speech or language impairment, CNMI, 2023-24 OSEP child count file"
+   },
+   {
+    "year": 2014,
+    "value": "23",
+    "note": "Children aged 6-21 with speech or language impairment, CNMI, 2014 OSEP child count file"
+   },
+   {
+    "year": 2024,
+    "value": "1",
+    "note": "Children aged 3-5 with speech or language impairment, CNMI, 2024-25 OSEP child count; 76 preschoolers in all categories"
+   }
+  ],
+  "policyHistory": [
+   {
+    "year": 2013,
+    "description": "Chapter 60-50 special education regulations adopted, replacing the former chapter entirely"
+   },
+   {
+    "year": 2023,
+    "description": "Speech-language pathologist and audiologist licensing rules adopted under Title 185-10"
+   }
+  ]
  },
  {
   "countryCode": "MR",
@@ -11699,28 +11892,87 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ley Num. 51 de 7 de junio de 1996, Ley de Servicios Educativos Integrales para Personas con Impedimentos (OGP compilation)",
+    "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/Personas%20con%20Impedimentos/51-1996/51-1996.pdf"
+   },
+   {
+    "label": "Ley Num. 77 de 3 de junio de 1983, Ley para Reglamentar el Ejercicio de las Profesiones de Patologia del Habla-Lenguaje, Audiologia y Terapia del Habla-Lenguaje (OGP compilation)",
+    "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/77-1983.pdf"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2024-25 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2023-24 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/aa572553-f494-49a6-a01e-99c52f0cf948/download/bchildcountandedenvironment2023-24.csv"
+   },
+   {
+    "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2014 state-level data file",
+    "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/9e399910-ae82-4153-a944-40ac45bcfa99/download/bchildcountandedenvironments2014.csv"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
-  "terminology": "",
-  "identificationCriteria": "",
-  "assessments": "",
-  "multilingualProvision": "",
-  "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
-  "funding": "",
-  "workforce": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
+  "terminology": "Federal IDEA category speech or language impairment applies in PR as in the states\nLey 51-1996 lists problemas del habla o lenguaje among qualifying impedimentos\nClinical side uses patologia del habla-lenguaje, defined by Ley 77-1983",
+  "identificationCriteria": "Ley 51 sets no numeric cut-off; eligibility rests on need for educacion especial\nEvaluacion must be administered by staff qualified and certified in their discipline",
+  "assessments": "No instrument is named in statute; the law regulates who may administer, not which test",
+  "multilingualProvision": "Ley 51 grants FAPE responsive to the pupil's individual and linguistic needs\nIntegrated services must also answer particular and linguistic needs",
+  "referralPathway": "Identification, location, registry and multidisciplinary evaluation run birth to 21\nEvery agency must locate, identify and refer people with impedimentos\nA confidential Registro Central of people with impedimentos is kept continuously",
+  "serviceModel": "Departamento de Educacion is responsible from age 3 to 21 inclusive\nA Secretaria Auxiliar inside Educacion delivers and coordinates related services\nRelated services also reach pupils placed in the regular programme",
+  "legalEntitlement": "Ley 51-1996 is the territorial entitlement, alongside IDEA Part B\nRight to free appropriate special education in the least restrictive placement",
+  "funding": "Ley 51 seeded 500,000 dollars each to Educacion and Salud for its first year\nEach agency must budget annually for the resources the master plan requires",
+  "workforce": "Ley 77-1983 licenses three grades: patologo del habla-lenguaje, audiologo, terapista\nTerapista del habla-lenguaje works only under an SLP's direct supervision\nPatologo needs a master or doctorate; terapista needs a bachelor in terapia del habla",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
-  "identifiedPrevalence": [],
-  "policyHistory": []
+  "identifiedPrevalence": [
+   {
+    "year": 2024,
+    "value": "8,208",
+    "note": "Children aged 6-21 served under IDEA Part B with speech or language impairment, Puerto Rico, 2024-25 OSEP child count file"
+   },
+   {
+    "year": 2024,
+    "value": "7,390",
+    "note": "Children aged 3-5 with speech or language impairment, Puerto Rico, 2024-25 OSEP child count; 12,676 preschoolers in all categories"
+   },
+   {
+    "year": 2023,
+    "value": "8,806",
+    "note": "Children aged 6-21 with speech or language impairment, Puerto Rico, 2023-24 OSEP child count file"
+   },
+   {
+    "year": 2014,
+    "value": "27,849",
+    "note": "Children aged 6-21 with speech or language impairment, Puerto Rico, 2014 OSEP child count file"
+   }
+  ],
+  "policyHistory": [
+   {
+    "year": 1983,
+    "description": "Ley 77 creates the examining board for speech-language pathology, audiology and speech therapy"
+   },
+   {
+    "year": 1996,
+    "description": "Ley 51 repeals the 1977 special education programme law and creates the Secretaria Auxiliar"
+   },
+   {
+    "year": 2016,
+    "description": "Ley 94 amends the speech-language professions law"
+   },
+   {
+    "year": 2025,
+    "description": "Ley 70 is the latest amendment folded into Ley 51-1996"
+   }
+  ]
  },
  {
   "countryCode": "PS",

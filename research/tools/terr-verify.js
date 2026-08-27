@@ -75,6 +75,17 @@ function quoteOn(quote, page) {
   for (let i = 0; i + RUN <= q.length; i++) {
     if (p.includes(" " + q.slice(i, i + RUN).join(" ") + " ")) return true;
   }
+  // Last resort: compare with the spaces taken out entirely. Two different PDF
+  // extractors mangle the same page differently -- Guam's own text layer reads
+  // "middl e schools" and "pr ogram" -- so a drafter quoting one extraction and
+  // a checker reading another disagree on where the spaces are while agreeing
+  // on every letter. Requiring a long run keeps this from matching on noise.
+  const qs = q.join(""), ps = p.replace(/ /g, "");
+  if (qs.length >= 40 && ps.includes(qs)) return true;
+  const RUNC = Math.max(40, Math.ceil(qs.length * 0.6));
+  for (let i = 0; i + RUNC <= qs.length; i += 8) {
+    if (ps.includes(qs.slice(i, i + RUNC))) return true;
+  }
   return false;
 }
 
@@ -136,10 +147,31 @@ function quoteOn(quote, page) {
       }
       if (good.length) kept[field] = good;
     }
+    // Series rows go through the same gate. A figure is the thing most worth
+    // checking and least self-evidently wrong: "8,208" looks equally plausible
+    // whatever the truth is, so it is matched against the evidence quote -- for
+    // these, the raw line of the published data file it was read from.
+    const keptSeries = {};
+    for (const [field, rows2] of Object.entries(s.series || {})) {
+      const good = [];
+      for (const r of (rows2 || [])) {
+        if (!r || !r.year || !r.value || !r.note) { dropped.push(field + ": row missing year, value or note"); continue; }
+        const e = ev.get(String(r.value));
+        if (!e) { dropped.push(field + ": no evidence for the figure " + r.value); continue; }
+        const p = page.get(e.url);
+        if (!p || p.status !== 200) { dropped.push(field + ": source returned " + (p ? p.status : "?") + " for " + r.value); continue; }
+        if (!p.text) { dropped.push(field + ": no text extracted from the source of " + r.value); continue; }
+        if (!quoteOn(e.quote, p.text)) { dropped.push(field + ": quote not found for the figure " + r.value); continue; }
+        good.push({ year: r.year, value: String(r.value), note: String(r.note) });
+      }
+      if (good.length) keptSeries[field] = good;
+    }
+
+    const ns = Object.values(keptSeries).reduce((a, b) => a + b.length, 0);
     const nb = Object.values(kept).reduce((a, b) => a + b.length, 0);
-    console.log(NL + key + ": " + Object.keys(kept).length + " fields, " + nb + " bullets verified, " + dropped.length + " dropped");
+    console.log(NL + key + ": " + Object.keys(kept).length + " fields, " + nb + " bullets, " + ns + " series rows verified, " + dropped.length + " dropped");
     dropped.forEach(d => console.log("    - " + d));
-    if (nb) out[key] = { fields: kept, history: s.history || [], sources: s.sources || [] };
+    if (nb || ns) out[key] = { fields: kept, series: keptSeries, history: s.history || [], sources: s.sources || [] };
   }
 
   fs.writeFileSync(path.join(specDir, OUT), JSON.stringify(out, null, 1) + NL);
