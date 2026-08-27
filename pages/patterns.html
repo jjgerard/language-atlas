@@ -126,6 +126,8 @@ footer.foot a { color: var(--ink-soft); }
 .xsaid { font-size: 13px; color: var(--ink-soft); margin: 9px 0 0; min-height: 1.2em; }
 .xsaid b { color: var(--ink); font-weight: 600; }
 .xsaid.miss { color: #a4472c; }
+.xleft { font-size: 12px; color: var(--ink-faint); margin: 5px 0 0; }
+.xleft:empty { display: none; }
 
 .xcontrols { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin: 16px 0 4px; }
 .xctl label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .07em;
@@ -209,15 +211,56 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
     stand, so it changes when they do.
   </p>
 
+  <p class="lead">
+    Ask it something. Pick two things the atlas records and it counts them against each other
+    across all four maps at once — or describe what you want and let it choose the two. The
+    findings, the timeline and the coverage tables are below.
+  </p>
+
+  <div class="xask">
+    <label for="xq" id="xasklabel">Describe what you want to see</label>
+    <div class="xaskrow">
+      <input id="xq" type="text" autocomplete="off" spellcheck="false"
+             placeholder="coverage by region">
+      <button class="xbtn" id="xgo">Show</button>
+    </div>
+    <p class="xsaid" id="xsaid"></p>
+    <p class="xleft" id="xleft"></p>
+    <p class="xegs" id="xegs"></p>
+  </div>
+
   <blockquote class="note">
-    Nothing on this page is read out of the entry text. The wording of an entry is deliberately
+    <span id="xasknote"></span>
+    Nothing on this page is read out of entry text. The wording of an entry is deliberately
     hedged — <i>encouraged but not required</i>, <i>no requirement in primary but 100 hours across
-    Years 7–10</i> — and a classifier run over it leaves nearly half of the cases unresolved,
-    landing hardest exactly where the answer is interesting. So these counts come only from things
-    the schema already knows: which fields are filled, which dated changes are recorded, which
-    sources an entry cites. A comparative reading of the entries themselves has to be written
-    alongside them, from the same documents, and that layer does not exist yet.
+    Years 7&ndash;10</i> — and a classifier run over it leaves nearly half the cases unresolved,
+    landing hardest exactly where the answer is interesting. So everything counted here comes from
+    what the schema already knows about itself: which fields are filled, an entry's status and
+    confidence, how many dated rows and sources it carries, where it is. A question the atlas
+    cannot answer is told so rather than answered with the nearest thing that fits.
   </blockquote>
+
+  <div class="xcontrols">
+    <div class="xctl"><label for="x">Rows</label><select id="x"></select></div>
+    <div class="xctl"><label for="y">Columns</label><select id="y"></select></div>
+    <div class="xctl"><label for="scope">Limited to</label><select id="scope"></select></div>
+  </div>
+
+  <div class="xmodes">
+    <button class="xmode" id="xm-cross" aria-pressed="true">Cross-tabulate</button>
+    <button class="xmode" id="xm-bars" aria-pressed="false">Distribution</button>
+    <button class="xmode" id="xm-units" aria-pressed="false">List the units</button>
+  </div>
+
+  <div class="xout" id="xout"></div>
+  <p class="xsummary" id="xsummary"></p>
+
+  <div class="xreading hidden" id="xreading">
+    <h4>Reading of the table above</h4>
+    <p id="xreadingtext"></p>
+    <p class="prov" id="xreadingprov"></p>
+  </div>
+
 
   <h3>Findings</h3>
   <div id="findings"></div>
@@ -255,53 +298,6 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
     <th data-k="label">Field</th><th data-k="has" data-num="1">Documented</th>
     <th data-k="looked" data-num="1">Looked</th><th data-k="none" data-num="1">Blank</th><th>Share</th>
   </tr></thead><tbody></tbody></table></div>
-
-  <h3>Ask it something <span class="count" id="xcount"></span></h3>
-  <p>
-    The sections above are the questions worth asking that we thought to ask. This one takes
-    yours: pick two things the atlas records and it counts them against each other, across all
-    four maps at once.
-  </p>
-
-  <div class="xask">
-    <label for="xq" id="xasklabel">Describe what you want to see</label>
-    <div class="xaskrow">
-      <input id="xq" type="text" autocomplete="off" spellcheck="false"
-             placeholder="coverage by region">
-      <button class="xbtn" id="xgo">Show</button>
-    </div>
-    <p class="xsaid" id="xsaid"></p>
-    <p class="xegs" id="xegs"></p>
-  </div>
-
-  <blockquote class="note">
-    <span id="xasknote"></span>
-    Same rule as the rest of this page: nothing here is read out of entry text. These variables
-    are what the schema knows about itself — which fields are filled, an entry's status and
-    confidence, how many dated rows and sources it carries, where it is. A question the atlas
-    cannot answer is told so rather than answered with the nearest thing that fits.
-  </blockquote>
-
-  <div class="xcontrols">
-    <div class="xctl"><label for="x">Rows</label><select id="x"></select></div>
-    <div class="xctl"><label for="y">Columns</label><select id="y"></select></div>
-    <div class="xctl"><label for="scope">Limited to</label><select id="scope"></select></div>
-  </div>
-
-  <div class="xmodes">
-    <button class="xmode" id="xm-cross" aria-pressed="true">Cross-tabulate</button>
-    <button class="xmode" id="xm-bars" aria-pressed="false">Distribution</button>
-    <button class="xmode" id="xm-units" aria-pressed="false">List the units</button>
-  </div>
-
-  <div class="xout" id="xout"></div>
-  <p class="xsummary" id="xsummary"></p>
-
-  <div class="xreading hidden" id="xreading">
-    <h4>Reading of the table above</h4>
-    <p id="xreadingtext"></p>
-    <p class="prov" id="xreadingprov"></p>
-  </div>
 
   <h3>Taking this away</h3>
   <p>

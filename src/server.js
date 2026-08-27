@@ -82,29 +82,85 @@ app.get('/api/trends', async (req, res) => {
 //
 // These are the only routes on the site that cost money per request and the
 // only ones an unauthenticated visitor can use to reach a third party, so they
-// are capped per address. The cap is small on purpose: the page works without
-// them, falling back to its own parser, so a visitor who hits the limit loses a
-// convenience rather than the feature.
+// are capped two ways, because the two stop different things.
+//
+// PER VISITOR bounds one person's use, so nobody sits on the box all afternoon.
+// PER DAY, site-wide, bounds the bill: a hundred visitors each inside their own
+// limit is still a hundred visitors, and only a global ceiling makes the worst
+// case a number that can be named in advance. At the defaults that ceiling is
+// 250 questions, which is a few pounds a day rather than an open tap.
+//
+// A question is TWO model calls but is charged ONCE, on the first — otherwise
+// the number a reader is shown counts down twice as fast as they ask.
+//
+// Both are deliberately small, because the page works without them: it falls
+// back to its own word-matching on the same variables and the same counts, so a
+// visitor who runs out loses a convenience rather than the feature.
+//
+// The counters are in memory, so they reset when the machine does. That is the
+// right trade here — the ceiling is a cost guard, not a security control, and
+// persisting it would mean a database write on every question.
 const askHits = new Map();
 const ASK_WINDOW_MS = 60 * 60 * 1000;
-const ASK_MAX = Number(process.env.ASK_MAX_PER_HOUR || 40);
+const ASK_MAX = Number(process.env.ASK_MAX_PER_HOUR || 10);
+const ASK_MAX_DAY = Number(process.env.ASK_MAX_PER_DAY || 250);
+let askDay = { key: '', used: 0 };
 
-function askAllowed(req) {
+const dayKey = () => new Date().toISOString().slice(0, 10);
+
+/** Questions left today across the whole site. */
+function dayLeft() {
+  if (askDay.key !== dayKey()) askDay = { key: dayKey(), used: 0 };
+  return Math.max(0, ASK_MAX_DAY - askDay.used);
+}
+
+/** Questions left for this visitor in the trailing hour. */
+function visitorLeft(req) {
   const ip = String(req.headers['fly-client-ip'] || req.ip || 'local');
   const now = Date.now();
   const hits = (askHits.get(ip) || []).filter(t => now - t < ASK_WINDOW_MS);
-  if (hits.length >= ASK_MAX) { askHits.set(ip, hits); return false; }
-  hits.push(now);
   askHits.set(ip, hits);
-  if (askHits.size > 5000) for (const [k, v] of askHits) if (!v.some(t => now - t < ASK_WINDOW_MS)) askHits.delete(k);
-  return true;
+  return { ip, hits, left: Math.max(0, ASK_MAX - hits.length) };
 }
 
-app.get('/api/ask', (req, res) => res.json({ available: ask.available(), model: ask.available() ? ask.MODEL : null }));
+/** Charge one question against both counters. Called once per question, on the
+ *  first of its two calls, so a question costs one rather than two. */
+function askAllowed(req, charge) {
+  const { ip, hits, left } = visitorLeft(req);
+  if (!left) return 'visitor';
+  if (!dayLeft()) return 'day';
+  if (charge) {
+    hits.push(Date.now());
+    askHits.set(ip, hits);
+    askDay.used++;
+    if (askHits.size > 5000) {
+      const now = Date.now();
+      for (const [k, v] of askHits) if (!v.some(t => now - t < ASK_WINDOW_MS)) askHits.delete(k);
+    }
+  }
+  return null;
+}
+
+app.get('/api/ask', (req, res) => res.json({
+  available: ask.available(),
+  model: ask.available() ? ask.MODEL : null,
+  left: Math.min(visitorLeft(req).left, dayLeft()),
+  perVisitor: ASK_MAX,
+  perDay: ASK_MAX_DAY,
+}));
 
 app.post('/api/ask/select', async (req, res) => {
   if (!ask.available()) return res.status(503).json({ error: 'no_model', detail: 'No ANTHROPIC_API_KEY is configured.' });
-  if (!askAllowed(req)) return res.status(429).json({ error: 'rate_limited', detail: 'Too many questions from this address in the last hour.' });
+  // Charged here, on the first of the question's two calls, so the second is
+  // free — a question that got its table but no reading of it would otherwise
+  // count twice against a limit the reader can see.
+  const blocked = askAllowed(req, true);
+  if (blocked) return res.status(429).json({
+    error: 'rate_limited', scope: blocked, left: 0,
+    detail: blocked === 'day'
+      ? `The site answers ${ASK_MAX_DAY} questions a day and today's are used up. The dropdowns below still work, and so does the plain word-matching in the box.`
+      : `That is ${ASK_MAX} questions in an hour from this address. The dropdowns below still work, and so does the plain word-matching in the box.`,
+  });
   const { question, variables, scopes } = req.body || {};
   if (typeof question !== 'string' || !question.trim()) return res.status(400).json({ error: 'no_question' });
   if (!Array.isArray(variables) || !variables.length || !Array.isArray(scopes)) return res.status(400).json({ error: 'no_registry' });
@@ -118,7 +174,8 @@ app.post('/api/ask/select', async (req, res) => {
     if (out.x != null && !ids.has(out.x)) return res.json({ x: null, y: null, scope: 'all', why: 'The model chose a variable this atlas does not have, so nothing was shown.', rejected: out.x });
     if (out.y != null && !ids.has(out.y)) out.y = null;
     if (!scopeIds.has(out.scope)) out.scope = 'all';
-    res.json({ x: out.x ?? null, y: out.y ?? null, scope: out.scope, why: String(out.why || '').slice(0, 300) });
+    res.json({ x: out.x ?? null, y: out.y ?? null, scope: out.scope, why: String(out.why || '').slice(0, 300),
+      left: Math.min(visitorLeft(req).left, dayLeft()) });
   } catch (err) {
     console.error('[ask/select]', err.message);
     res.status(502).json({ error: 'model_failed', detail: String(err.message).slice(0, 200) });
@@ -127,13 +184,14 @@ app.post('/api/ask/select', async (req, res) => {
 
 app.post('/api/ask/read', async (req, res) => {
   if (!ask.available()) return res.status(503).json({ error: 'no_model' });
-  if (!askAllowed(req)) return res.status(429).json({ error: 'rate_limited' });
+  if (askAllowed(req, false)) return res.status(429).json({ error: 'rate_limited' });
   const { question, table } = req.body || {};
   if (typeof table !== 'string' || !table.trim()) return res.status(400).json({ error: 'no_table' });
   try {
     // Only the finished table crosses this line — labels and integers the
     // browser already computed. No entry text ever reaches the model.
-    res.json({ reading: await ask.read(String(question || '').slice(0, 500), table.slice(0, 12000)) });
+    const reading = await ask.read(String(question || '').slice(0, 500), table.slice(0, 12000));
+    res.json({ reading, left: Math.min(visitorLeft(req).left, dayLeft()) });
   } catch (err) {
     console.error('[ask/read]', err.message);
     res.status(502).json({ error: 'model_failed', detail: String(err.message).slice(0, 200) });

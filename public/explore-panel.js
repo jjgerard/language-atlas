@@ -34,7 +34,7 @@ const esc = s => String(s == null ? '' : s)
   .replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const $ = id => document.getElementById(id);
 
-let PAYLOAD = null, ROWS = [], VARS = [], SCOPES = [], MODE = 'cross', MODEL = null;
+let PAYLOAD = null, ROWS = [], VARS = [], SCOPES = [], MODE = 'cross', MODEL = null, LEFT = null;
 
 // Composite key for a crosstab cell. The separator has to be something no
 // category value can contain: joining on a space would make the pair
@@ -331,6 +331,18 @@ function tableText(xv, yv, t) {
   return lines.join('\n');
 }
 
+/* How many questions are left, shown next to the box rather than sprung on
+   someone at zero. Only below a handful: a full allowance is not news, and a
+   counter ticking down from ten on arrival reads as a warning nobody needs. */
+function showLeft() {
+  const el = $('xleft');
+  if (!el) return;
+  if (LEFT == null || !MODEL || !MODEL.available) { el.textContent = ''; return; }
+  el.textContent = LEFT === 0 ? 'No model questions left for now — the box falls back to word-matching, and the dropdowns are unaffected'
+    : LEFT <= 3 ? LEFT + (LEFT === 1 ? ' model question left' : ' model questions left')
+    : '';
+}
+
 function showReading(state, text, prov) {
   const box = $('xreading');
   box.classList.toggle('hidden', state === 'off');
@@ -359,6 +371,7 @@ async function runQuery() {
         }),
       });
       const out = await res.json();
+      if (typeof out.left === 'number') { LEFT = out.left; showLeft(); }
       if (!res.ok) throw new Error(out.detail || out.error || 'failed');
       if (!out.x) {
         said.className = 'xsaid miss';
@@ -408,6 +421,7 @@ async function readTable(question) {
       body: JSON.stringify({ question, table: tableText(xv, yv, tabulate(xv, yv, scope.keep)) }),
     });
     const out = await res.json();
+    if (typeof out.left === 'number') { LEFT = out.left; showLeft(); }
     if (!res.ok) throw new Error(out.detail || out.error || 'failed');
     showReading('on', out.reading,
       'Written by ' + (MODEL.model || 'a language model') + ' from the table above, which it was given already counted. It has not seen the entries, and every figure it names is in that table.');
@@ -451,6 +465,8 @@ export async function mountExplore(payload) {
   $('y').value = 'coverage';
 
   try { MODEL = await fetch('/api/ask').then(r => r.json()); } catch { MODEL = { available: false }; }
+  if (typeof MODEL.left === 'number') LEFT = MODEL.left;
+  showLeft();
   if (MODEL.available) {
     $('xq').placeholder = 'Are the places that record a language disorder the same ones that record indigenous languages?';
     $('xasklabel').textContent = 'Ask a question about the maps';
