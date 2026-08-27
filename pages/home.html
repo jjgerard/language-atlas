@@ -52,11 +52,13 @@ body { display: flex; flex-direction: column; min-height: 100dvh; }
 .choose > .eyebrow { display: block; margin-bottom: 12px; }
 .cards {
   display: grid; gap: 12px; align-items: stretch;
-  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+  /* Wide enough that four maps land as 2x2 rather than three across with a
+     lone card stranded underneath. min(100%, ...) keeps it to one column on a
+     phone instead of overflowing. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
 }
-/* A column, so the count sits on the bottom edge of every card whatever the
-   length of the blurb above it — three cards with three different blurbs
-   otherwise line up on nothing. */
+/* A column of equal height, so four cards with four different blurb lengths
+   still line up as a row rather than stepping down the page. */
 .card {
   display: flex; flex-direction: column; height: 100%;
   text-decoration: none; color: inherit;
@@ -75,11 +77,7 @@ body { display: flex; flex-direction: column; min-height: 100dvh; }
   transform: rotate(45deg); align-self: center;
 }
 .card p { margin: 7px 0 14px; font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
-.card .count {
-  display: block; margin-top: auto; padding-top: 10px; font-size: 12px;
-  border-top: 1px solid var(--hair); color: var(--ink-faint);
-  font-variant-numeric: tabular-nums;
-}
+
 
 .soonlist { margin: 26px 0 0; }
 .soonlist > .eyebrow { display: block; margin-bottom: 10px; }
@@ -125,13 +123,10 @@ body { display: flex; flex-direction: column; min-height: 100dvh; }
 
 .card { border-top: 3px solid var(--edge, var(--hair)); }
 .card:hover { border-color: var(--hair); border-top-color: var(--edge, var(--ink-faint)); }
-.card .cov {
-  display: block; height: 5px; border-radius: 3px; margin: 0 0 9px;
-  background: var(--surface-2); overflow: hidden;
-}
-.card .cov > i { display: block; height: 100%; border-radius: 3px; background: var(--edge, var(--cov-3)); }
-.card .count { display: flex; align-items: baseline; gap: 6px; }
-.card .count b { font-weight: 600; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+
+
+
+
 
 footer.foot {
   flex: none; padding: 14px 18px; background: var(--surface);
@@ -196,19 +191,22 @@ try {
     fl: 'var(--r-americas)', indigenous: 'var(--r-oceania)',
   };
   document.getElementById('cards').innerHTML = live.map(d => {
-    const s = atlas.stats[d.id] || {};
-    const share = (s.entries ? Math.round((s.documented / s.entries) * 100) : 0);
+    // No coverage figure here. A share on the front page is a claim about the
+    // whole atlas made before the reader has seen a single entry, and it went
+    // stale against itself the moment inherited fields started counting. The
+    // map colours every place individually, which is the honest version of the
+    // same information.
     return `<a class="card" href="/${esc(d.id)}" style="--edge:${EDGE[d.id] || 'var(--cov-4)'}">
       <h3>${esc(d.label)}</h3>
       <p>${esc(d.blurb)}</p>
-      <span class="cov" role="img" aria-label="${share}% of places documented"><i style="width:${share}%"></i></span>
-      <span class="count"><b>${s.documented ?? '—'}</b> of ${s.entries ?? '—'} places documented</span>
     </a>`;
   }).join('');
 } catch (err) {
   // Never leave the page with no way in: fall back to plain links.
   document.getElementById('cards').innerHTML = `
     <a class="card" href="/eal"><h3>Majority language acquisition</h3></a>
-    <a class="card" href="/dld"><h3>Language disorder support</h3></a>`;
+    <a class="card" href="/dld"><h3>Language disorder support</h3></a>
+    <a class="card" href="/fl"><h3>Foreign languages in school</h3></a>
+    <a class="card" href="/indigenous"><h3>Indigenous and regional languages</h3></a>`;
 }
 </script>
