@@ -91,7 +91,19 @@
   font-size: 11px; color: var(--ink-soft); font-variant-numeric: tabular-nums;
 }
 
-.legend { margin-top: 15px; padding-top: 14px; border-top: 1px solid var(--hair); }
+.legend { margin-top: 14px; }
+/* The other maps, where the reader already is. This box names the domain and
+   explains it, so the switch belongs beside that rather than in the header
+   competing with the site's own links -- and the map being read needs no link
+   to itself, which is what keeps the list short as domains are added. */
+.othermaps { margin-top: 15px; padding-top: 13px; border-top: 1px solid var(--hair); display: flex; flex-direction: column; gap: 5px; }
+.othermaps a {
+  font: inherit; font-size: 12.5px; line-height: 1.35; text-decoration: none;
+  color: var(--ink-soft); padding: 6px 9px; border-radius: 4px;
+  border: 1px solid var(--hair); background: var(--surface);
+}
+.othermaps a:hover { color: var(--ink); border-color: var(--ink-faint); background: var(--surface-2); }
+
 .legend h2 { font: inherit; font-size: 11px; margin: 0 0 9px; }
 .legend .row { display: flex; align-items: center; gap: 9px; font-size: 12px; margin-bottom: 6px; }
 .legend .row:last-child { margin-bottom: 0; }
@@ -490,11 +502,11 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
 </style>
 
 <div class="app">
-  <header class="sitebar">
+  <header class="sitebar nopills">
     <a class="brand" href="/">
       <span class="name">Language Atlas</span>
+      <span class="tagline">Provision and policy, by region</span>
     </a>
-    <nav class="pills" id="pills" aria-label="Choose what the map shows"></nav>
     <div class="navright">
       <div class="searchwrap">
         <input id="search" type="search" placeholder="Find a country or region" autocomplete="off" aria-label="Find a country or region">
@@ -528,7 +540,6 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
       <div class="tallylabels" id="tallylabels"></div>
 
       <div class="legend">
-        <h2 class="eyebrow">Fill</h2>
         <div class="rows">
           <div class="row"><span class="sw" id="sw-looked"></span> Looked, found nothing</div>
           <div class="row"><span class="sw" id="sw-none"></span> Nothing recorded</div>
@@ -538,8 +549,9 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
         <div class="hueslabels">
           <span>20%</span><span>40%</span><span>60%</span><span>80%</span><span>100%</span>
         </div>
-        <p class="note">Colour is the share of this map's fields that have content, not a judgement about the policy. Paler means we know less, not that the system does less.</p>
       </div>
+
+      <nav class="othermaps" id="othermaps" aria-label="The other maps"></nav>
     </div>
 
     <div class="overlay zoomctl">
@@ -1534,6 +1546,15 @@ function buildDomains() {
   for (const id of ['addlink', 'addlink2']) {
     const a = document.getElementById(id);
     if (a) a.href = '/submit?domain=' + domainId;
+  }
+  // The other maps, listed here rather than in the header. The one being read
+  // is left out on purpose: this box already names it directly above, so a
+  // link to it would be a link to where you are, and leaving it out is what
+  // keeps the list from growing as domains are added.
+  const others = document.getElementById('othermaps');
+  if (others) {
+    others.innerHTML = B.domains.filter(x => x.live && x.id !== domainId)
+      .map(x => `<a href="/${esc(x.id)}" title="${esc(x.blurb)}">${esc(x.label)}</a>`).join('');
   }
   document.getElementById('domainName').textContent = domain().label;
   document.getElementById('blurb').textContent = domain().blurb;
