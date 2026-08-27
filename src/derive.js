@@ -10,6 +10,18 @@ const { makeHistoryMatcher } = require('./history');
 // worth showing, and it must never count as coverage: three states, not two.
 const NOT_DOCUMENTED_RE = /^Not established from the sources consulted/i;
 
+// A FOURTH state, distinct from the other three and needed because some slots
+// can never be filled by anyone. Glottolog counts languages per COUNTRY, so
+// "How many languages" has no meaning on a state or a province — India has 518
+// and Kerala does not have a number at all. Left blank, those 143 slots read as
+// work nobody has got to, and they drag the coverage figure down as though
+// somebody had been lazy.
+//
+// Blank means nobody has looked. "Not established" means somebody looked and
+// found nothing. This means the question does not apply here, and it is
+// excluded from the denominator rather than counted as a miss.
+const NOT_APPLICABLE_RE = /^Not applicable/i;
+
 // Some fields are arrays of dated records ({year, description} for
 // policyHistory, {year, value, note} for the prevalence/proportion fields).
 // An array counts as documented when it has entries; the sentinel phrase only
@@ -30,10 +42,11 @@ function asText(v) {
 function hasContent(v) {
   if (Array.isArray(v)) return v.length > 0;
   const t = asText(v).trim();
-  return !!t && !NOT_DOCUMENTED_RE.test(t);
+  return !!t && !NOT_DOCUMENTED_RE.test(t) && !NOT_APPLICABLE_RE.test(t);
 }
 
 const isNotEstablished = v => !Array.isArray(v) && NOT_DOCUMENTED_RE.test(asText(v).trim());
+const isNotApplicable = v => !Array.isArray(v) && NOT_APPLICABLE_RE.test(asText(v).trim());
 
 const cleanLinks = links =>
   (Array.isArray(links) ? links : [])
@@ -54,11 +67,12 @@ function deriveUnits(domain, entries, sharedMatcher) {
   let historyRows = 0, historyLinked = 0;
 
   const units = rows.map(e => {
-    const filled = [], looked = [];
+    const filled = [], looked = [], na = [];
     const fieldStates = domain.fields
       .map(([k, label]) => {
         if (hasContent(e[k])) { filled.push(label); return 'h'; }
         if (isNotEstablished(e[k])) { looked.push(label); return 'l'; }
+        if (isNotApplicable(e[k])) { na.push(label); return 'x'; }
         return 'n';
       })
       .join('');
@@ -96,7 +110,11 @@ function deriveUnits(domain, entries, sharedMatcher) {
       fieldStates,
       filled,
       looked,
-      nFields: domain.fields.length,
+      // The denominator for the coverage ramp: fields that COULD be filled
+      // here. Counting the inapplicable ones would cap a sub-national unit
+      // below 100% however complete it is.
+      nFields: domain.fields.length - na.length,
+      na,
       docs: docLinks.length,
       supports: cleanLinks(e.supportLinks).length,
       values,
@@ -121,4 +139,4 @@ function deriveUnits(domain, entries, sharedMatcher) {
   };
 }
 
-module.exports = { deriveUnits, hasContent, isNotEstablished, asText, NOT_DOCUMENTED_RE };
+module.exports = { deriveUnits, hasContent, isNotEstablished, isNotApplicable, asText, NOT_DOCUMENTED_RE, NOT_APPLICABLE_RE };

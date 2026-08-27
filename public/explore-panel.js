@@ -481,12 +481,13 @@ function draw() {
   // What one row IS, which differs by grain and by whether the pair collapsed.
   // Getting this wrong is not cosmetic: a reader who thinks 719 is a count of
   // places rather than of language records reads the whole table wrong.
+  // What one row is, in a clause rather than a paragraph. The long version
+  // explained the counting rule twice over and nobody reads a caption that
+  // size; the fact a reader needs is simply what got counted once.
   $('xsummary').innerHTML = bits.join(' · ') + '. ' + (
-    grain === 'languages'
-      ? 'One row per language named by a school system, so a language named in four countries is counted four times.'
-      : t.collapsed
-        ? 'Both of those describe the place rather than one map, so each place is counted once.'
-        : 'An entry appears once per map it exists on, so a country documented on three maps is counted three times here.');
+    grain === 'languages' ? 'Counted once per place that names it.'
+      : t.collapsed ? 'Each place counted once.'
+        : 'Each entry counted once per map.');
 }
 
 /* ---- asking ---------------------------------------------------------- */
@@ -655,13 +656,12 @@ export async function mountExplore(payload) {
   if (MODEL.available) {
     $('xq').placeholder = 'How much of their own language stock do school systems actually engage with?';
     $('xasklabel').textContent = 'Ask a question about the maps';
-    $('xasknote').innerHTML = 'A model reads your question and picks which of the ' + VARS.length +
-      ' variables answer it, then writes a reading of the table. It never sees the entries and never counts: ' +
-      'the browser does the counting and the model is handed the finished table, so every figure it mentions is above it.';
+    $('xasknote').innerHTML = 'A model picks which of the ' + VARS.length +
+      ' variables answer your question, then reads the finished table. It never counts and never sees the entries, ' +
+      'so every figure it names is in the table above it.';
   } else {
     $('xasknote').innerHTML = 'This box matches your words against the ' + VARS.length +
-      ' variables below and moves the dropdowns. It cannot produce a figure of its own — ' +
-      'every number here is counted from the entries either way.';
+      ' variables below and moves the dropdowns. It cannot produce a figure of its own.';
   }
   const examples = MODEL.available ? EXAMPLES_MODEL : EXAMPLES_PARSER;
   $('xegs').innerHTML = 'Try: ' + examples.map(e => `<button class="xeg" type="button">${esc(e)}</button>`).join(' ');

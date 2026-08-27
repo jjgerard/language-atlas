@@ -39,6 +39,7 @@ main strong { font-weight: 600; }
 .sw.looked { background-color: var(--hatch-bg); background-image: repeating-linear-gradient(45deg, transparent 0 3px, var(--hatch-line) 3px 4px); }
 .sw.none { background: var(--nodata); }
 .sw.inh { background: var(--cov-3); border-style: dashed; border-color: var(--surface); outline: 1px solid var(--hair-strong); }
+.sw.na { background: transparent; border-style: dotted; border-color: var(--hair-strong); }
 
 blockquote.note {
   margin: 0 0 16px; padding: 12px 15px; font-size: 14px; line-height: 1.6;
@@ -113,6 +114,7 @@ footer.foot a { color: var(--ink-soft); }
     <div class="keyrow"><span class="sw looked"></span><span><strong>Looked, found nothing.</strong> Someone searched and recorded finding nothing, and where they looked. Not the same as nobody having tried.</span></div>
     <div class="keyrow"><span class="sw none"></span><span><strong>Nothing recorded.</strong> Nobody has documented this place for this subject yet.</span></div>
     <div class="keyrow"><span class="sw inh"></span><span><strong>Follows its country.</strong> A region with nothing of its own, showing what its country records instead.</span></div>
+    <div class="keyrow"><span class="sw na"></span><span><strong>Not applicable.</strong> The question has no meaning for this place &mdash; Glottolog counts languages per country, so a state has no count of its own. Left out of that entry&rsquo;s total rather than counted against it.</span></div>
   </div>
   <p>
     A sub-national unit exists because it differs from its country <em>in some subject</em> &mdash;

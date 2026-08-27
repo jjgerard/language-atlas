@@ -193,6 +193,12 @@
   overflow-wrap: break-word;
 }
 .field.empty p, .field.looked p { color: var(--ink-faint); font-style: italic; }
+/* Not applicable: the question has no meaning for this unit. Set apart from
+   "empty" so it does not read as an invitation to fill it in. */
+.field.na h4::before { background: transparent; border-style: dotted; border-color: var(--hair-strong); }
+.field.na p { color: var(--ink-faint); font-style: italic; }
+.fieldgrid span.na { color: var(--ink-faint); }
+.fieldgrid span.na::before { background: transparent; border-style: dotted; border-color: var(--hair-strong); }
 .field.inh h4::before { background: transparent; border-style: dashed; border-color: var(--hair-strong); }
 .field.inh p { color: var(--ink-soft); }
 
@@ -1212,7 +1218,7 @@ const swatch = (u, st) => {
 function fieldMarks(u, d) {
   return d.fields.map((f, i) => {
     const c = u.fieldStates[i];
-    const cls = c === 'h' ? 'on' : c === 'l' ? 'looked' : '';
+    const cls = c === 'h' ? 'on' : c === 'l' ? 'looked' : c === 'x' ? 'na' : '';
     return `<span class="${cls}">${esc(f.label)}</span>`;
   }).join('');
 }
@@ -1358,6 +1364,12 @@ function panelHTML(u, via) {
     // absence, not a list of facts, so it stays a paragraph even where the
     // domain's documented fields are bulleted.
     if (c === 'l') return block('looked', f.label, `<p>${linkCitations(esc(u.values[f.k]), u)}</p>`);
+    // The question does not apply here — not a gap, and not something a
+    // contributor should be invited to fill. It must be shown BEFORE the
+    // inheritance branch: a state has no language count of its own, but its
+    // country does, and inheriting India's 518 onto Kerala would state the one
+    // thing the field is careful not to say.
+    if (c === 'x') return block('na', f.label, `<p>${linkCitations(esc(u.values[f.k]), u)}</p>`);
     const inheritable = par && (isHist ? (par.history || []).length
       : isLangs ? (par.records[f.k] || []).length
       : par.values[f.k]);

@@ -184,12 +184,16 @@ function coverage(payload) {
   for (const d of payload.domains.filter(x => x.live)) {
     const units = payload.units[d.id] || [];
     const fields = d.fields.map((f, i) => {
-      let has = 0, looked = 0, none = 0;
+      let has = 0, looked = 0, none = 0, na = 0;
       for (const u of units) {
         const c = (u.fieldStates || '')[i];
-        if (c === 'h') has++; else if (c === 'l') looked++; else none++;
+        if (c === 'h') has++; else if (c === 'l') looked++; else if (c === 'x') na++; else none++;
       }
-      return { k: f.k, label: f.label, type: f.type, has, looked, none, share: pct(has, units.length) };
+      // Share is of the units the field CAN apply to. Counting the inapplicable
+      // ones reports a finished field as a thin one: "How many languages" is
+      // filled for all 193 countries and impossible on the 143 sub-national
+      // units, and was reading as 57% rather than 100%.
+      return { k: f.k, label: f.label, type: f.type, has, looked, none, na, share: pct(has, units.length - na) };
     }).sort((a, b) => a.has - b.has);
 
     const regions = {};
@@ -412,6 +416,15 @@ const RETIRED_FINDINGS = [
   },
 ];
 
+// The order a reader meets them in, stated here rather than left to wherever
+// each finding happens to sit in the array above. Policy first — what school
+// systems do with these languages, and when that changed — then what the
+// languages themselves are like. The second kind is more eye-catching and
+// less to the point, and left to its own devices it drifts to the top.
+//
+// A finding not named here still shows, after the named ones.
+const FINDING_ORDER = ['engagement-gap', 'when-changed', 'word-order', 'tone', 'family-concentration'];
+
 function findings(ctx) {
   const held = [], withdrawn = [];
   for (const f of FINDINGS) {
@@ -421,6 +434,11 @@ function findings(ctx) {
     if (!f.holds(v)) { withdrawn.push({ id: f.id, scope: f.scope, reason: 'the data no longer supports the claim' }); continue; }
     held.push({ id: f.id, scope: f.scope, text: f.text(v), note: f.note, value: v });
   }
+  const rank = f => {
+    const i = FINDING_ORDER.indexOf(f.id);
+    return i === -1 ? FINDING_ORDER.length : i;
+  };
+  held.sort((a, b) => rank(a) - rank(b));
   return { held, withdrawn };
 }
 
