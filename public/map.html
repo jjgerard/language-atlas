@@ -83,7 +83,13 @@
      keep their height and let the stack scroll instead. */
   flex: 0 0 auto;
 }
-.dbox.open { border-color: var(--hair-strong); }
+/* The open box carries the map you are reading, so it should not be a box
+   like the other three with more inside it. An inset edge in the ramp's own
+   colour and a heavier heading; the padding shift keeps the text off the bar. */
+.dbox.open {
+  border-color: var(--ink-faint);
+  box-shadow: var(--shadow), inset 3px 0 0 var(--cov-4);
+}
 .dhead {
   width: 100%; font: inherit; font-size: 11px; font-weight: 600;
   letter-spacing: .085em; text-transform: uppercase; color: var(--ink-soft);
@@ -91,7 +97,10 @@
   display: flex; align-items: center; gap: 9px; text-align: left; line-height: 1.35;
 }
 .dhead:hover { color: var(--ink); background: var(--surface-2); }
-.dbox.open .dhead { color: var(--ink); cursor: default; background: none; }
+.dbox.open .dhead {
+  color: var(--ink); cursor: default; background: none;
+  font-weight: 700; padding-left: 17px; padding-bottom: 5px;
+}
 .dbox.open .dhead:hover { background: none; }
 /* The swatch is the map's own colour for that domain's best-documented step,
    so a collapsed box still says which map it is without reading the words. */
@@ -102,7 +111,7 @@
 .dbody { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .26s ease; }
 .dbox.open .dbody { grid-template-rows: 1fr; }
 .dinner { overflow: hidden; }
-#dcontent { padding: 0 14px 13px; }
+#dcontent { padding: 0 14px 12px 17px; }
 #dcontent[hidden] { display: none; }
 @media (prefers-reduced-motion: reduce) { .dbody { transition: none; } }
 .domainstack select {
@@ -110,11 +119,11 @@
   padding: 7px 8px; border-radius: 3px;
   border: 1px solid var(--hair); background: var(--surface-2); color: var(--ink);
 }
-.blurb { font-size: 12px; color: var(--ink-soft); margin: 10px 0 0; }
+.blurb { font-size: 12px; color: var(--ink-soft); margin: 0; line-height: 1.45; }
 /* A domain's note about its own framing. Set apart from the blurb by a rule
    rather than a colour, so it reads as an aside rather than as a warning —
    nothing here is wrong, the naming is just contested. */
-.domainnote { margin: 7px 0 0; font-size: 11.5px; line-height: 1.45; }
+.domainnote { margin: 6px 0 0; font-size: 11.5px; line-height: 1.45; }
 .domainnote a {
   color: var(--focus); text-decoration: underline; text-decoration-style: dotted;
   text-underline-offset: 2px;
@@ -125,12 +134,20 @@
 
 /* Bottom of the map beside the zoom, laid out along the edge rather than down
    a column: it is a caption for the whole map now, not part of any one box. */
+/* Swatches, then the ramp under them, both starting at the same left edge.
+   Sitting them side by side centred the ramp against a block that wraps to
+   two or three lines depending on the width, so it floated at a different
+   height every time. */
 .legendbox {
-  bottom: 14px; right: 62px; padding: 9px 13px;
-  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  bottom: 14px; right: 62px; padding: 10px 13px 11px;
+  display: flex; flex-direction: column; gap: 9px;
+  width: 236px;
 }
-.legendbox .rows { display: flex; align-items: center; gap: 14px; }
-.legendbox .ramp { min-width: 168px; }
+.legendbox .rows { display: flex; flex-direction: column; gap: 5px; }
+.legendbox .ramplabel {
+  display: block; font-size: 10px; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-faint); margin-bottom: 5px;
+}
 
 
 .legend h2 { font: inherit; font-size: 11px; margin: 0 0 9px; }
@@ -513,14 +530,17 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
   .dbody { grid-template-rows: 1fr; transition: none; }
   #dcontent { padding: 0 14px 12px; }
   .legendbox {
-    position: static; order: 3; flex: 0 0 auto;
+    /* The desktop box is a fixed 236px so the ramp does not resize as domains
+       change; in the phone layout it is a full-width strip instead. */
+    position: static; order: 3; flex: 0 0 auto; width: auto;
+    flex-direction: row; align-items: center; justify-content: space-between;
     border-radius: 0; border-left: 0; border-right: 0; border-bottom: 0;
     border-top: 1px solid var(--hair); box-shadow: none;
     padding: 9px 14px 11px; gap: 8px 14px;
   }
-  .legendbox .rows { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+  .legendbox .rows { display: flex; flex-direction: row; flex-wrap: wrap; gap: 4px 14px; }
   .legendbox .row { margin-bottom: 0; font-size: 11.5px; }
-  .legendbox .ramp { flex: 1 1 160px; min-width: 0; }
+  .legendbox .ramp { flex: 0 1 190px; min-width: 0; }
   .legend .hues { margin-top: 12px; }
 }
 
@@ -597,6 +617,7 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
         <div class="row"><span class="sw" id="sw-inh"></span> Follows its country</div>
       </div>
       <div class="ramp">
+        <span class="ramplabel">Questions answered</span>
         <div class="hues" id="hues" role="img" aria-label="Colour ramp: share of fields documented, from a fifth or less to nearly all"></div>
         <div class="hueslabels">
           <span>20%</span><span>40%</span><span>60%</span><span>80%</span><span>100%</span>

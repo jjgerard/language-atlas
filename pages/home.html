@@ -50,6 +50,10 @@ body { display: flex; flex-direction: column; min-height: 100dvh; }
 
 .choose { margin: 38px 0 0; }
 .choose > .eyebrow { display: block; margin-bottom: 12px; }
+.intro {
+  margin: 0 0 20px; font-size: 15px; line-height: 1.6; color: var(--ink-soft);
+  max-width: 62ch; text-wrap: pretty;
+}
 .cards {
   display: grid; gap: 12px; align-items: stretch;
   /* Wide enough that four maps land as 2x2 rather than three across with a
@@ -155,6 +159,9 @@ footer.foot a { color: var(--ink-soft); }
     <p class="lede">Provision and policy, by region</p>
 
     <div class="choose">
+      <p class="intro">Each map asks one question about language in school &mdash; of every country
+        in the world, and of the states and regions that answer it differently from their country.
+        The colour shows where someone has written that answer down.</p>
       <span class="eyebrow">Open a map</span>
       <div class="cards" id="cards"></div>
     </div>
