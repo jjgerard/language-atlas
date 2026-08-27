@@ -18,7 +18,7 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const OUT = path.join(ATLAS, "research", "peer");
 const { DOMAINS } = require(path.join(ATLAS, "src", "domains.js"));
 const DLD = DOMAINS.find(d => d.id === "dld");

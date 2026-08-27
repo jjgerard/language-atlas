@@ -20,7 +20,7 @@ const settled = f => {
   return true;
 };
 
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const store = JSON.parse(fs.readFileSync(path.join(ATLAS, "data", "indigenous.json"), "utf8"));
 const byKey = new Map(store.map(r => [r.countryCode + "|" + r.unitName, r]));
 

@@ -106,7 +106,7 @@ let files = 0, skippedFields = 0, skippedFiles = 0;
 // The store as it stands, so an already-written field can be skipped rather
 // than reported as a collision.
 const STOREFILES = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
-const ATLAS_DIR = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS_DIR = path.join(__dirname, "..", "..");
 const store = {};
 if (domain && STOREFILES[domain]) store[domain] = JSON.parse(fs.readFileSync(path.join(ATLAS_DIR, "data", STOREFILES[domain]), "utf8"));
 
@@ -184,7 +184,7 @@ if (problems.length) { console.log("\nPROBLEMS"); problems.forEach(p => console.
 // not touch the store.
 if (process.argv.includes("--write") && REPLACE.size) {
   const FILES = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
-  const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+  const ATLAS = path.join(__dirname, "..", "..");
   const file = path.join(ATLAS, "data", FILES[domain]);
   const rows = JSON.parse(fs.readFileSync(file, "utf8"));
   let cleared = 0;
@@ -205,7 +205,7 @@ run(spec);
 // The timeline merge, after run() has written the fields.
 if (process.argv.includes("--write")) {
   const FILES = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
-  const ATLAS2 = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+  const ATLAS2 = path.join(__dirname, "..", "..");
   const file = path.join(ATLAS2, "data", FILES[domain]);
   const rows = JSON.parse(fs.readFileSync(file, "utf8"));
   const norm = s => String(s).toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 60);

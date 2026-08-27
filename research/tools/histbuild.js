@@ -35,7 +35,7 @@ const path = require("path");
 const { parseText, sections, toHistory } = require("./parseparts");
 const { resolveHeader } = require("./unitkey");
 
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const STORE = { fl: "fl.seed.json", dld: "dld.json", eal: "eal.json", indigenous: "indigenous.json" };
 const PARTS = path.join(__dirname, "..", "parts");
 

@@ -11,7 +11,7 @@
 // day earlier when a generator flattened Ireland's upper-secondary entry.
 const fs = require("fs"), path = require("path");
 
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..", "..");
 const FILES = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
 const LIMIT = 96;
 // Fields that are NOT bullet text. `policyHistory` is a list of

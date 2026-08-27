@@ -2,7 +2,7 @@
 // could answer it. Printed as a worklist so drafting is aimed rather than
 // read-everything-and-hope.
 const fs = require("fs"), path = require("path");
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const PEER = path.join(ATLAS, "research", "peer");
 const { DOMAINS } = require(path.join(ATLAS, "src", "domains.js"));
 const DLD = DOMAINS.find(d => d.id === "dld");

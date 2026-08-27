@@ -101,7 +101,7 @@ function crc32(buf) {
   return c ^ -1;
 }
 
-const OUT = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas", "public");
+const OUT = path.join(__dirname, "..", "..", "public");
 for (const [size, name] of [[32, "favicon-32.png"], [180, "apple-touch-icon.png"]]) {
   const buf = png(size, render(size));
   fs.writeFileSync(path.join(OUT, name), buf);

@@ -25,7 +25,7 @@ const fs = require("fs");
 const path = require("path");
 
 const NL = String.fromCharCode(10);
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const { DOMAINS } = require(path.join(ATLAS, "src", "domains.js"));
 const { hasContent } = require(path.join(ATLAS, "src", "derive.js"));
 const STORE = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };

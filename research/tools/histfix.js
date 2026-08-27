@@ -20,7 +20,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const ATLAS = path.join(__dirname, "..", "..");
 const FILES = ["fl.seed.json", "dld.json", "eal.json", "indigenous.json"];
 
 let fixed = 0, spans = 0, unparsed = 0, resorted = 0;
