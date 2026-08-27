@@ -237,6 +237,17 @@ body {
    screen. nav.js measures and sets .compact; see fitBar there. In the bar the
    pills must not wrap or shrink, or there would be nothing to measure. */
 .sitebar > .pills { flex-wrap: nowrap; min-width: max-content; }
+
+/* One stage before the burger. The bar used to go straight from everything to
+   nothing, so a laptop lost the four domain pills AND the four page links at
+   once while 190px of the overflow was search box and link padding. `tight`
+   gives that back first and collapses only if it still does not fit. */
+.sitebar.tight .searchwrap, .sitebar.tight #search { width: 132px; }
+.sitebar.tight > .navright { gap: 0; }
+.sitebar.tight .aboutlink { padding: 7px 6px; font-size: 13px; }
+.sitebar.tight > .pills { gap: 3px; }
+.sitebar.tight .pill { padding-left: 10px; padding-right: 10px; }
+
 .sitebar.compact > .pills,
 .sitebar.compact > .navright .aboutlink { display: none; }
 .sitebar.compact .burger { display: flex; }

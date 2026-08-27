@@ -133,11 +133,34 @@ function deriveUnits(domain, entries, sharedMatcher) {
     };
   });
 
+  // A sub-national unit with nothing of its own is not automatically a gap.
+  // Where the question is answered at national level -- India's speech and
+  // language disability category is defined once, in the RPwD Act Schedule --
+  // the national record IS what applies in the state, and marking 33 states
+  // grey says the opposite of what was found.
+  //
+  // This is deliberately NOT the default. It applies only where a domain
+  // declares the country in `nationalFor`, because the inverse error is worse:
+  // painting every US state as covered by a federal policy would erase exactly
+  // the state-level variation the units were split apart to show. Across the
+  // whole atlas only two countries have sub-units with no record of their own
+  // at all, so the declaration stays short and readable rather than becoming a
+  // rule nobody can audit.
+  const national = new Map();
+  for (const u of units) if (u.nat) national.set(u.cc, u);
+  const inheritsIn = new Set(domain.nationalFor || []);
+  for (const u of units) {
+    if (u.nat || u.coverage !== 'none' || !inheritsIn.has(u.cc)) continue;
+    const nat = national.get(u.cc);
+    if (nat && nat.coverage === 'has') u.coverage = 'inherited';
+  }
+
   return {
     units,
     stats: {
       entries: units.length,
       documented: units.filter(u => u.coverage === 'has').length,
+      inherited: units.filter(u => u.coverage === 'inherited').length,
       sourceLabels: matcher.labelCount,
       historyRows,
       historyLinked,

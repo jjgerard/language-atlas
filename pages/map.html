@@ -380,6 +380,23 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
   font-weight: 600; letter-spacing: .13em; text-transform: uppercase;
   color: var(--ink-faint); margin-bottom: 5px;
 }
+/* Moving between a state and its country. The country name was already
+   printed above every sub-national entry and above every inheritance note, but
+   only as text, so the way back up was the map or the sibling list at the very
+   bottom of a long panel. */
+.tocountry {
+  font: inherit; color: var(--focus); background: none; border: 0; padding: 0;
+  cursor: pointer; text-decoration: underline; text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+.tocountry:hover { text-decoration-style: solid; }
+.viaterr .tocountry { color: var(--ink); font-weight: 600; }
+.wherewrap { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.tosub {
+  font: inherit; font-size: 12.5px; color: var(--ink); background: var(--surface-2);
+  border: 1px solid var(--hair-strong); border-radius: 4px; padding: 4px 7px;
+  max-width: 100%; cursor: pointer;
+}
 .sibs { display: flex; flex-direction: column; gap: 1px; }
 .sibs button {
   display: flex; align-items: center; gap: 9px; width: 100%;
@@ -473,7 +490,6 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
   <header class="sitebar">
     <a class="brand" href="/">
       <span class="name">Language Atlas</span>
-      <span class="tagline">Provision and policy, by region</span>
     </a>
     <nav class="pills" id="pills" aria-label="Choose what the map shows"></nav>
     <div class="navright">
@@ -693,9 +709,12 @@ function fillFor(u, st) {
   if (!u) return 'var(--nodata)';
   if (st === 'has') return `var(${covVar(u)})`;
   if (st === 'looked') return 'url(#hatch)';
+  // An inherited unit is painted from its country's record, which resolve()
+  // passes in as `paint`, so this branch is only reached for the unit itself.
+  if (st === 'inherited') return 'var(--cov-1)';
   return 'var(--nodata)';
 }
-const STATE_LABEL = { has: 'Documented', looked: 'Looked, found nothing', none: 'Nothing recorded' };
+const STATE_LABEL = { has: 'Documented', inherited: 'Follows its country', looked: 'Looked, found nothing', none: 'Nothing recorded' };
 
 /* ---------- build the scene once ---------- */
 const svg = document.getElementById('map');
@@ -826,7 +845,12 @@ function resolve(cc, name) {
     return nat ? { unit: nat, paint: nat, inherited: true, via: name }
                : { unit: null, paint: null, inherited: false, via: null };
   }
-  if (own.coverage !== 'has' && nat && nat.coverage === 'has') {
+  // Only where derive.js has marked this unit `inherited`, which it does from
+  // the domain's own `nationalFor` list. Painting any empty sub-unit with its
+  // country's colour was the old behaviour and it overstated: China's
+  // provinces took the national colour on every map while being counted as
+  // undocumented, so the picture and the tally underneath it disagreed.
+  if (own.coverage === 'inherited' && nat && nat.coverage === 'has') {
     return { unit: own, paint: nat, inherited: true, via: null };
   }
   return { unit: own, paint: own, inherited: false, via: null };
@@ -886,14 +910,14 @@ function markSelection() {
 
 function paintTally() {
   const units = B.units[domainId];
-  const c = { has: 0, looked: 0, none: 0 };
+  const c = { has: 0, inherited: 0, looked: 0, none: 0 };
   for (const u of units) c[stateOf(u)]++;
   const bar = document.getElementById('tally');
   bar.innerHTML = '';
   // 'has' spans the whole ramp now, so the segment shows the ramp rather than
   // picking one arbitrary step to stand for every documented unit.
   const ramp = 'linear-gradient(90deg, var(--cov-1), var(--cov-3), var(--cov-5))';
-  const order = [['has', ramp], ['looked', 'url(#hatch)'], ['none', 'var(--nodata)']];
+  const order = [['has', ramp], ['inherited', 'var(--cov-2)'], ['looked', 'url(#hatch)'], ['none', 'var(--nodata)']];
   for (const [k, col] of order) {
     if (!c[k]) continue;
     const d = document.createElement('div');
@@ -905,10 +929,16 @@ function paintTally() {
     d.title = `${STATE_LABEL[k]}: ${c[k]}`;
     bar.appendChild(d);
   }
-  // Counts each unit's OWN record. Inherited fills add colour to the map
-  // without adding research, so they are deliberately not counted here.
+  // A unit that follows its country is counted as covered, separately from one
+  // with a record of its own. It is not padding: the domain has to declare the
+  // country's sub-units as answering nationally, which India's do for language
+  // disorder because the RPwD Act defines the category once for the whole
+  // country. Kept as its own number rather than folded into `has`, so the
+  // amount of actual research is still readable off the bar.
   document.getElementById('tallylabels').innerHTML =
-    `<span>${c.has} with their own record</span><span>${c.none + c.looked} without</span>`;
+    `<span>${c.has} with their own record</span>`
+    + (c.inherited ? `<span>${c.inherited} following their country</span>` : '')
+    + `<span>${c.none + c.looked} without</span>`;
 }
 
 /* ---------- pan & zoom ----------
@@ -1284,9 +1314,11 @@ function select(key, zoom, via) {
   panel.classList.add('on');
   panel.scrollTop = 0;
   panel.querySelector('.close').onclick = closePanel;
-  panel.querySelectorAll('.sibs button[data-key]').forEach(b => {
+  panel.querySelectorAll('.sibs button[data-key], .tocountry[data-key]').forEach(b => {
     b.onclick = () => select(b.dataset.key, true);
   });
+  const toSub = panel.querySelector('.tosub');
+  if (toSub) toSub.onchange = () => { if (toSub.value) select(toSub.value, true); };
   const fix = panel.querySelector('[data-fix]');
   if (fix) fix.onclick = () => openFix(u);
   if (zoom) {
@@ -1415,11 +1447,21 @@ function panelHTML(u, via) {
     <button class="close" aria-label="Close">×</button>
     <div class="eyebrow">${esc(u.nat ? 'National' : 'Sub-national')} · ${esc(d.label)}</div>
     <h2>${esc(u.name)}</h2>
-    <div class="where">${esc(u.nat ? u.subregion || u.region : countryName + ' · ' + (u.subregion || u.region))}</div>
+    <div class="wherewrap">
+      <div class="where">${u.nat
+        ? esc(u.subregion || u.region)
+        : (nat
+            ? `<button class="tocountry" data-key="${esc(keyOf(nat))}">${esc(nat.name)}</button> · ${esc(u.subregion || u.region)}`
+            : esc(countryName + ' · ' + (u.subregion || u.region)))}</div>
+      ${u.nat && sibs.length ? `<select class="tosub" aria-label="Go to a sub-national entry">
+        <option value="">${esc(sibs.length + ' sub-national entr' + (sibs.length === 1 ? 'y' : 'ies'))}…</option>
+        ${sibs.map(x => `<option value="${esc(keyOf(x))}">${esc(x.name)}</option>`).join('')}
+      </select>` : ''}
+    </div>
     ${via ? `<p class="viaterr">You clicked <b>${esc(via.name)}</b>. ${via.note
       ? esc(via.note)
       : `There is no separate ${esc(d.label)} entry for it, so what applies is the ${esc(u.name)} record below.`}</p>` : ''}
-    ${nInherited && !via ? `<p class="viaterr">${nInherited} of these ${d.fields.length} fields have nothing recorded for ${esc(u.name)} itself and follow <b>${esc(par.name)}</b>. They are marked below.</p>` : ''}
+    ${nInherited && !via ? `<p class="viaterr">${nInherited} of these ${d.fields.length} fields have nothing recorded for ${esc(u.name)} itself and follow <button class="tocountry" data-key="${esc(keyOf(par))}">${esc(par.name)}</button>. They are marked below.</p>` : ''}
     ${u.stubNote ? `<p class="stubnote">${esc(u.stubNote)}</p>` : ''}
 
     <div class="chips">

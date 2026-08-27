@@ -73,8 +73,13 @@ export async function mountNav(currentId, domains) {
 function fitBar() {
   const bar = document.querySelector('.sitebar:not(.nomenu)');
   if (!bar) return;
-  bar.classList.remove('compact');
+  // Two stages, tried in order, because going straight to the burger threw
+  // away the pills and the page links together over an overflow that was
+  // mostly search box and padding.
+  bar.classList.remove('compact', 'tight');
   // The bar overflows rather than shrinking because the pills are nowrap and
   // min-width: max-content — see shared.css.
+  if (bar.scrollWidth <= bar.clientWidth + 1) return;
+  bar.classList.add('tight');
   if (bar.scrollWidth > bar.clientWidth + 1) bar.classList.add('compact');
 }

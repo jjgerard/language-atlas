@@ -44,6 +44,22 @@ const DOMAINS = [
   {
     id: 'dld',
     label: 'Language disorder support',
+    // Countries whose SUB-NATIONAL units answer this question at national
+    // level, so an empty sub-unit is covered by its country rather than a gap.
+    //
+    // India: established by a scouting pass, not assumed. The RPwD Act 2016
+    // Schedule defines 'speech and language disability' once for the whole
+    // country; the Rehabilitation Council publishes a national therapist count
+    // with no state breakdown; state education portals, the PRS state-acts
+    // archive, UDISE+ and the NAS report cards were each tested and none
+    // carries state-level provision. Written up in
+    // research/parts/inscout-bottomline.md.
+    //
+    // China: weaker, and worth revisiting. The national entry rests on the Law
+    // on the Protection of Persons with Disabilities and GB/T 26341-2010, both
+    // national instruments, and the PEER profile names no provincial one. No
+    // provincial scouting pass has been run.
+    nationalFor: ['IN', 'CN'],
     blurb: 'Children with a lasting difficulty learning and using language: how it is identified, and what they are entitled to. Known in research as DLD.',
     live: true,
     fields: [
