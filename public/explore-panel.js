@@ -255,7 +255,19 @@ function score(v, words) {
     if (hay.includes(w)) s += w.length >= 6 ? 3 : 2;
     else if (w.length > 4 && hay.includes(w.slice(0, -1))) s += 1;
   }
-  return s;
+  if (!s) return 0;
+  // "by region" matched "Region it is named in" as readily as "Region", because
+  // both contain the word and the first one in the registry won. Putting the
+  // language variables first therefore silently changed what half the examples
+  // resolved to, and crossing a language variable with an entry variable drops
+  // every row. So a label the query nearly fills wins over one it barely
+  // touches: exact match first, then how much of the label was actually
+  // matched.
+  const label = v.label.toLowerCase();
+  const q = words.join(' ');
+  if (label === q) return s + 100;
+  const covered = words.filter(w => label.includes(w)).join(' ').length;
+  return s + (covered / Math.max(label.length, 1)) * 10;
 }
 
 /* Scope is matched only on an explicit cue, never on a loose word. Matching
@@ -293,21 +305,42 @@ function parseQuery(text) {
   const allWords = parts.flat();
   const { scope, hit } = detectScope(raw);
 
-  const pick = words => {
-    if (!words.length) return null;
+  const pick2 = (words, grain) => {
+    if (!words || !words.length) return null;
     let best = null, bestScore = 0;
     for (const v of VARS) {
+      if (grain && v.grain !== grain) continue;
       const s = score(v, words);
       if (s > bestScore) { bestScore = s; best = v; }
     }
     return bestScore > 0 ? best : null;
   };
+  const pick = words => pick2(words, null);
 
   let x = null, y = null;
   if (parts.length >= 2) { y = pick(parts[0]); x = pick(parts.slice(1).flat()); }
   if (!x && !y) x = pick(allWords);
   if (x && y && x.id === y.id) y = null;
   if (!x && y) { x = y; y = null; }
+
+  // The two axes must count the same population: crossing a language variable
+  // with an entry one yields an empty table, which reads as "no data" rather
+  // than "those cannot be crossed".
+  //
+  // Which grain to keep is decided by SCORE, not by position. Forcing both onto
+  // the first axis's grain read "word order by region" as Region against
+  // "Language disorder support — Funding", because "disorder" contains "order"
+  // and that was the best entry-grain match available. Both reconciliations are
+  // tried and the better-fitting pair wins.
+  if (x && y && x.grain !== y.grain) {
+    const wordsY = parts[0], wordsX = parts.slice(1).flat();
+    const fit = (a, b) => (a && b && a.id !== b.id) ? score(a, wordsX) + score(b, wordsY) : -1;
+    const keepX = { x, y: pick2(wordsY, x.grain) };
+    const keepY = { x: pick2(wordsX, y.grain), y };
+    const best = fit(keepY.x, keepY.y) > fit(keepX.x, keepX.y) ? keepY : keepX;
+    x = best.x || x;
+    y = (best.y && best.y.id !== x.id) ? best.y : null;
+  }
   return x ? { x, y, scope, matchedScope: hit } : null;
 }
 
@@ -575,17 +608,21 @@ async function readTable(question) {
   }
 }
 
+// Provision and policy, not typology. The language-shape variables are the
+// showiest thing here and were over-represented in these prompts, which taught
+// every first-time visitor that the page is about word order. It is about what
+// school systems do.
 const EXAMPLES_PARSER = [
-  "word order by region",
-  "language family by region",
   "share of its languages the system names by region",
+  "how many languages the country has by share the system names",
   "most recent change by which map",
+  "earliest recorded change by region",
 ];
 const EXAMPLES_MODEL = [
-  "What word order do the languages schools teach in actually have?",
-  "Do countries with many languages name more of them, or fewer?",
-  "Which language families turn up in school systems, and where?",
-  "When did minority-language policy change, and does that differ by region?",
+  "How much of their own language stock do school systems actually engage with?",
+  "Do countries with more languages engage with more of them, or fewer?",
+  "When did policy last change, and on which of the four questions?",
+  "Which regions have the oldest language-in-education policy on record?",
 ];
 
 function setMode(m) {
@@ -616,7 +653,7 @@ export async function mountExplore(payload) {
   if (typeof MODEL.left === 'number') LEFT = MODEL.left;
   showLeft();
   if (MODEL.available) {
-    $('xq').placeholder = 'Are the places that record a language disorder the same ones that record indigenous languages?';
+    $('xq').placeholder = 'How much of their own language stock do school systems actually engage with?';
     $('xasklabel').textContent = 'Ask a question about the maps';
     $('xasknote').innerHTML = 'A model reads your question and picks which of the ' + VARS.length +
       ' variables answer it, then writes a reading of the table. It never sees the entries and never counts: ' +
