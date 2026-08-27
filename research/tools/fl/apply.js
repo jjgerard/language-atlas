@@ -1,0 +1,158 @@
+// Shared writer for new atlas entries across the three maps.
+//
+//     const { apply, run } = require("./apply");
+//     run({ eal: {...}, dld: {...}, fl: {...} });
+//
+// Same guards as everywhere else in this conversion: every bullet inside the
+// panel's character budget, at most four points plus a hedge, nothing ending in
+// punctuation, and nothing written at all if any entry breaks a rule. It also
+// refuses to overwrite a field that already has text — these runs add to stubs,
+// and silently replacing existing research is exactly the accident that cost a
+// day earlier when a generator flattened Ireland's upper-secondary entry.
+const fs = require("fs"), path = require("path");
+
+const ATLAS = path.join("C:", "Users", "jgera", "Documents", "Claude code projects", "AI repository", "language-atlas");
+const FILES = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
+const LIMIT = 96;
+// Fields that are NOT bullet text. `policyHistory` is a list of
+// {year, description}; the rest are series of {year, value, note}.
+const TYPED = {
+  policyHistory: "history",
+  uptake: "series",
+  newcomerProportion: "series",
+  identifiedPrevalence: "series",
+};
+
+function apply(domain, spec) {
+  const FILE = path.join(ATLAS, "data", FILES[domain]);
+  const rows = JSON.parse(fs.readFileSync(FILE, "utf8"));
+  const problems = [];
+  let touched = 0, filled = 0, bullets = 0, hist = 0, rows_ = 0, notEst = 0;
+
+  for (const [key, s] of Object.entries(spec)) {
+    const [cc, name] = key.split("|");
+    const e = rows.find(r => r.countryCode === cc && r.unitName === name);
+    if (!e) { problems.push(`${domain} ${key}: no such entry`); continue; }
+    for (const [f, set] of Object.entries(s.fields || {})) {
+      // A typed field written as bullets is silently destructive: `fields`
+      // joins its array with a newline, so policyHistory becomes a STRING
+      // where the renderer and every consumer expect an array of
+      // {year, description}.
+      // Suriname reached the committed data that way and read back as ~190
+      // rows, one per character. Caught here rather than in a QA sweep.
+      if (TYPED[f]) problems.push(`${domain} ${key}/${f}: is a ${TYPED[f]} field — pass it as \`${TYPED[f]}\`, not \`fields\``);
+      if (!Object.prototype.hasOwnProperty.call(e, f)) problems.push(`${domain} ${key}: no field ${f}`);
+      if (String(e[f] || "").trim()) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      set.forEach(b => {
+        if (b.length > LIMIT) problems.push(`${domain} ${key}/${f}: ${b.length} chars — "${b.slice(0, 55)}…"`);
+        if (/[.;]$/.test(b)) problems.push(`${domain} ${key}/${f}: ends with punctuation`);
+      });
+      if (set.length > 5) problems.push(`${domain} ${key}/${f}: ${set.length} bullets`);
+    }
+    // A field where the researcher looked and found nothing is the map's third
+    // state, not coverage: derive.js only recognises it by the exact opening
+    // phrase "Not established from the sources consulted", and only in free
+    // text. Written as bullets it would trip the length guard and, worse, would
+    // count as documented -- which is how a coverage figure quietly stops
+    // meaning anything. So these bypass the bullet rules and are checked for the
+    // sentinel instead.
+    for (const [f, prose] of Object.entries(s.notEstablished || {})) {
+      if (!Object.prototype.hasOwnProperty.call(e, f)) problems.push(`${domain} ${key}: no field ${f}`);
+      if (String(e[f] || "").trim()) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      if (!/^Not established from the sources consulted/i.test(prose))
+        problems.push(`${domain} ${key}/${f}: not-established text must open with the sentinel phrase`);
+    }
+    // Series fields ('uptake', 'newcomerProportion', 'identifiedPrevalence') are
+    // arrays of {year, value, note}, not bullet text. Joining an array with "\n"
+    // the way a text field is joined would silently write "[object Object]", so
+    // they are validated and assigned separately rather than shoehorned in.
+    for (const [f, arr] of Object.entries(s.series || {})) {
+      if (!Object.prototype.hasOwnProperty.call(e, f)) problems.push(`${domain} ${key}: no field ${f}`);
+      if (Array.isArray(e[f]) && e[f].length) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      if (!Array.isArray(arr)) { problems.push(`${domain} ${key}/${f}: series must be an array`); continue; }
+      arr.forEach(r => {
+        if (!r || !r.year || !r.value) problems.push(`${domain} ${key}/${f}: row needs year and value`);
+        // A figure with no source is not a figure. Every row carries its note.
+        if (r && !r.note) problems.push(`${domain} ${key}/${f}: row ${r.year} has no note`);
+      });
+    }
+    // `languages` is a typed record like series and history, but its rows carry
+    // identifiers rather than dates, and a row claiming a WALS code that WALS
+    // does not hold would put a link to the wrong language on the map.
+    for (const [f, arr] of Object.entries(s.languages || {})) {
+      if (!Object.prototype.hasOwnProperty.call(e, f)) problems.push(`${domain} ${key}: no field ${f}`);
+      if (Array.isArray(e[f]) && e[f].length) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      if (!Array.isArray(arr)) { problems.push(`${domain} ${key}/${f}: languages must be an array`); continue; }
+      arr.forEach(r => {
+        if (!r || !r.name) problems.push(`${domain} ${key}/${f}: a row has no name`);
+        // An empty code is fine and means WALS has no record. A code that is
+        // not three-to-twelve lowercase characters is not a WALS code at all.
+        if (r && r.wals && !/^[a-z0-9-]{2,20}$/.test(r.wals)) problems.push(`${domain} ${key}/${f}: "${r.wals}" is not a WALS code`);
+      });
+    }
+
+    const sup = new Set((e.supportLinks || []).map(l => l.url));
+    [...(s.docLinks || []), ...(s.addDocLinks || [])]
+      .forEach(l => { if (sup.has(l.url)) problems.push(`${domain} ${key}: ${l.url} is a supportLink`); });
+  }
+  if (problems.length) {
+    console.log(`${domain}: ${problems.length} PROBLEMS`);
+    problems.forEach(p => console.log("  " + p));
+    return null;
+  }
+
+  for (const [key, s] of Object.entries(spec)) {
+    const [cc, name] = key.split("|");
+    const e = rows.find(r => r.countryCode === cc && r.unitName === name);
+    for (const [f, set] of Object.entries(s.fields || {})) { e[f] = set.join("\n"); filled++; bullets += set.length; }
+    for (const [f, arr] of Object.entries(s.series || {})) { e[f] = arr; filled++; rows_ += arr.length; }
+    for (const [f, arr] of Object.entries(s.languages || {})) { e[f] = arr; filled++; rows_ += arr.length; }
+    for (const [f, prose] of Object.entries(s.notEstablished || {})) { e[f] = prose; notEst++; }
+    if (s.history) { e.policyHistory = s.history; hist += s.history.length; }
+    if (s.docLinks) e.docLinks = s.docLinks;
+    if (s.addDocLinks) e.docLinks = [...(e.docLinks || []), ...s.addDocLinks];
+    // Metadata belongs to the entry as a whole, so a pass that ADDS one field to
+    // an already-documented entry must not rewrite it. Stamping confidence here
+    // would have quietly downgraded 76 established entries to the tier of the
+    // single field being added, and overwritten who documented them.
+    // Only a stub is a stub. Testing `!== "partial"` swept in the 35 entries
+    // marked "complete" — the fullest ones on the map — and overwrote their
+    // provenance, including Ireland's, which was seeded from Meehan et al.
+    // A "complete" entry must also not be demoted to "partial" for gaining a field.
+    const wasStub = e.status === "stub";
+    if (wasStub) {
+      e.status = "partial";
+      // 'official-document' where the instrument itself was read;
+      // 'secondary-source' where a peer-reviewed account of it was. Both are
+      // evidence — the field exists so a reader can tell which they are looking
+      // at, and 47 of the DLD map's documented entries were already the second.
+      e.confidence = s.confidence || "official-document";
+      e.lastVerified = "2026-08";
+      e.stubNote = "";
+      e.by = s.by || (s.confidence === "secondary-source"
+        ? "Seeded via AI-assisted deep research (2026), peer-reviewed sources read"
+        : "Seeded via AI-assisted deep research (2026), primary sources verified");
+    }
+    touched++;
+  }
+  console.log(`${domain}: ${touched} entries, ${filled} fields, ${bullets} bullets, ${rows_} series rows, ${hist} history rows, ${notEst} marked not established`);
+  return { FILE, rows };
+}
+
+function run(specs) {
+  const staged = [];
+  for (const [domain, spec] of Object.entries(specs)) {
+    if (!spec || !Object.keys(spec).length) continue;
+    const out = apply(domain, spec);
+    if (!out) process.exit(1);
+    staged.push(out);
+  }
+  if (process.argv.includes("--write")) {
+    staged.forEach(({ FILE, rows }) => {
+      fs.writeFileSync(FILE, JSON.stringify(rows, null, 1) + "\n");
+      console.log("  wrote " + path.basename(FILE));
+    });
+  }
+}
+
+module.exports = { apply, run, ATLAS, LIMIT };
