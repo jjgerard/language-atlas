@@ -1460,23 +1460,36 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ministry of Health Brunei Darussalam, 'Professional Board' — Allied Health Professions Council of Brunei Darussalam (AHPCBD), schedule of 19 regulated professions",
+    "url": "https://moh.gov.bn/about-us/professional-board/"
+   },
+   {
+    "label": "Ministry of Health Brunei Darussalam, 'Child Development Centre, Kiarong' — facility page with List of Services",
+    "url": "https://moh.gov.bn/facilities/child-development-center-kiarong/"
+   },
+   {
+    "label": "UNESCO GEM Report PEER country profile, Brunei Darussalam — Inclusion (last modified 09/09/2021; the page itself states 'Validated by the country: No')",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/brunei-darussalam/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "No local diagnostic category for language disorder found on any Brunei government page\nProtected title is Speech and Language Therapist, Allied Health Professions Act Cap 221\nHealth service is named \"Speech and Language Therapy\" at the Child Development Centre\nSchools work from \"special educational needs\"; nearest label is \"communication\" impairment",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "Health-sector model: the Child Development Centre at Kiarong is the paediatric hub\nCDC pairs speech and language therapy with audiology, OT, physio and psychology\nTherapists must hold AHPCBD registration; the Act took effect on 1 July 2017\nSchools deploy SENA special-needs teachers; no school-based therapist post was found",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
@@ -4757,6 +4770,18 @@
    {
     "label": "Llei 12/2009, del 10 de juliol, d'educacio (Catalonia), arts. 11 and 12, consolidated Spanish text on BOE",
     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2009-13038"
+   },
+   {
+    "label": "XTEC (Departament d'Educació, Generalitat de Catalunya), 'Serveis educatius. SEE. Centres de recursos per a deficients auditius (CREDA)', page updated 28.01.2026",
+    "url": "https://xtec.gencat.cat/ca/serveis/see/creda/"
+   },
+   {
+    "label": "Departament d'Educació i Formació Professional, 'Documents per a l'organització i la gestió dels centres (DOIGC): Educació inclusiva', sections 2.3.2 and 2.3.5",
+    "url": "https://documents.espai.educacio.gencat.cat/IPCNormativa/DOIGC/GEST_Educacio_inclusiva.pdf"
+   },
+   {
+    "label": "DECRET 150/2017, de 17 d'octubre, de l'atenció educativa a l'alumnat en el marc d'un sistema educatiu inclusiu — Portal Jurídic de Catalunya record (page is a JS shell; text NOT retrieved, so NOT cited below)",
+    "url": "https://portaljuridic.gencat.cat/ca/document-del-pjur/?documentId=799722"
    }
   ],
   "supportLinks": [],
@@ -4770,7 +4795,7 @@
   "assessments": "LITMUS sentence repetition (SRep) task for Catalan\nDeveloped by Anna Gavarró (Universitat Autònoma de Barcelona)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nPublished as Gavarró (2017), Frontiers in Psychology 8:1865\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Not established from the sources consulted — a language-appropriate LITMUS sentence repetition instrument exists for this system (see assessments above), but whether any service, clinical guideline or funder requires, supports or reimburses assessment in all of a child's languages was not determined. That gap between an available research instrument and routine clinical practice is the single most useful thing a contributor here could resolve.",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "Education-service model run by the Departament d'Educacio, not a health clinic pathway\n11 CREDA centres serve pupils with severe language/communication disorders and deaf pupils\nCREDA staff are mestres d'audicio i llenguatge, psicopedagogs and audioprotetistes\nReferral is made by the school's EAP psychopedagogical team, not by a physician",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
@@ -6438,6 +6463,22 @@
    {
     "label": "'Rights of Persons with Disability' Act: a boon for persons with aphasia (analysis of the Act's speech/language provisions)",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7731671/"
+   },
+   {
+    "label": "Ministry of Health and Family Welfare, National Health Mission, 'Setting up District Early Intervention Centres: Operational Guidelines' (Rashtriya Bal Swasthya Karyakram)",
+    "url": "https://nhm.gov.in/images/pdf/programmes/RBSK/Operational_Guidelines/Operational-Guidelines-DEIC-RBSK.pdf"
+   },
+   {
+    "label": "Ministry of Health and Family Welfare, National Health Mission, 'RBSK 2.0 Operational Guidelines 2026 (English)'",
+    "url": "https://nhm.gov.in/images/pdf/programmes/RBSK/RBSK%202.0_Operational_Guidelines_2026_English.pdf"
+   },
+   {
+    "label": "The Rehabilitation Council of India Act, 1992 (Act No. 34 of 1992), ss. 13 and 20 — India Code / Government of India hosted text",
+    "url": "https://cdnbbsr.s3waas.gov.in/s3e58aea67b01fa747687f038dfde066f6/uploads/2023/11/202311021027188848.pdf"
+   },
+   {
+    "label": "NHM Guidelines (RBSK) index page, from which the two PDFs above were taken",
+    "url": "https://nhm.gov.in/index4.php?lang=1&level=0&linkid=535&lid=775"
    }
   ],
   "supportLinks": [
@@ -6460,7 +6501,7 @@
   "assessments": "",
   "multilingualProvision": "Not established from the sources consulted for this entry — no national protocol was identified. With 22 scheduled languages and widespread everyday multilingualism, the availability of appropriately normed assessments across Indian languages is the obvious question, and this entry does not answer it. If you work in this system, this is exactly the field to fill in.",
   "referralPathway": "",
-  "serviceModel": "Not established from the sources consulted for this entry — how services are actually organised between hospitals, private clinics, NGOs and schools, and how they differ between states, could not be established from the sources consulted. If you work in this system, this is exactly the field to fill in.",
+  "serviceModel": "Documented for the health sector; school-age and NGO provision not established here\nHealth route is the District Early Intervention Centre, sited at the district hospital\nEach DEIC carries one combined Audiologist and Speech Therapist post, free of cost\nRBSK 2.0 of 2026 sets DEIC assessment at 0-18; earlier guidance centred on under-6s\nRCI Act 1992 s.13 bars practice by anyone not on the Central Rehabilitation Register",
   "legalEntitlement": "Runs through the RPwD Act 2016 and the National Trust Act 1999\nNot through education or health legislation specifically\nAnd gated by the certification process rather than by clinical need",
   "funding": "",
   "workforce": "Regulated by the Rehabilitation Council of India\nOnly those on the Central Rehabilitation Register may practise; RCI approves the training\nOver 900 approved institutions running more than 1,700 programmes in 2022–23\nWorkforce numbers relative to population need were not established",
@@ -7922,23 +7963,40 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Bryce, R., Easton, C., Bong, D., Net, C., Chan, S., Knight, J. et al., 'Building the speech-language pathology workforce in Cambodia through the lens of the Sustainable Development Goals', International Journal of Speech-Language Pathology 25(1), doi:10.1080/17549507.2022.2146192 — ABSTRACT ONLY (full text paywalled; only the abstract was read)",
+    "url": "https://www.tandfonline.com/doi/full/10.1080/17549507.2022.2146192"
+   },
+   {
+    "label": "ACCESS 2, 'Enhancing Disability Inclusion, Equity and Rights in Cambodia: a resource for action', October 2024 — Part 1 (types of disability), Glossary, Annex 2 (stakeholders), Annex 3 (legal frameworks)",
+    "url": "https://access2cambodia.org/wp-content/uploads/2025/01/ACCESS%202-Enhancing%20DI%20in%20Cambodia_Final_Eng_19Nov2024.pdf"
+   },
+   {
+    "label": "OIC Cambodia, organisation website — 'Who We Are' and FAQ ('What is speech therapy?', 'What is the need?', 'Current speech therapy practice?')",
+    "url": "https://www.oiccambodia.org/"
+   },
+   {
+    "label": "UNESCO GEM Report PEER country profile, Cambodia — Inclusion (definitions and school organisation)",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/cambodia/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "No settled clinical term: the speech therapy profession is not yet established in Cambodia\nRecognised disability types run physical, vision, hearing, intellectual, psychosocial, autism\nNo speech, language or communication category appears among those recognised types\nMain provider's working English term is \"language impairment\", the pre-CATALISE label",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "NGO- and private-led: a study found 27 practitioners across 13 facilities\nWorkforce density reported at 0.16 per 100,000, urban services far ahead of provincial\nThere is no Cambodian university training programme in speech-language pathology\nServices are limited in scope, accessibility and integration into government systems",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
@@ -8280,23 +8338,36 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Prathanee, B., Pumnum, T., Yoodee, P. & Makarabhirom, K. (2020), 'Speech therapy model for patients with cleft palate in Lao People's Democratic Republic: Lack of speech services', International Journal of Pediatric Otorhinolaryngology 138: 110366 — full text PDF hosted by the Department of Communication Sciences and Disorders, Ramathibodi Hospital, Mahidol University",
+    "url": "https://www.rama.mahidol.ac.th/commdis/sites/default/files/public/pdf/Speech%20Therapy%20Model%20for%20Patients%20with%20Cleft%20Palate%20in%20Lao%20People%E2%80%99s%20Democratic%20Republic%20Lack%20of%20Speech%20Services.pdf"
+   },
+   {
+    "label": "Same article, PubMed record (PMID 33152960)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33152960/"
+   },
+   {
+    "label": "UNESCO GEM Report PEER country profile, Lao People's Democratic Republic — Inclusion",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/lao-peoples-democratic-republic/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "Not established from the sources consulted. No Lao term for a childhood language disorder was found, and no category that a child with DLD would fall into. The UNESCO PEER profile for Lao PDR reports that \"A definition of special education needs has not been found\", and the operational definition it does record — from the 2011-15 National Strategy and Plan of Action on Inclusive Education — is built from social groups (girls and women, ethnic children, learners with disabilities, remote populations), not from types of impairment. A peer-reviewed 2020 account of cleft-palate speech services states there is no speech-language pathologist profession in the country, which is consistent with no clinical vocabulary having been settled. Searched: the UNESCO PEER Lao PDR inclusion profile, the 2020 IJPORL paper and its PubMed record, and general web search for speech and language therapy terminology and services in Lao PDR. No Lao Ministry of Education or Ministry of Health page naming such a category was located.",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "Evidence is a 2020 cleft-palate study; no Lao government service description was found\nNo speech-language pathologist profession: speech therapy is not an attainable specialty\nOne project trained local nurses as \"speech assistants\", supervised by Thai therapists\nCorrection was given at primary health care units and practised at home by caregivers\nDiagnosis of disability aged 0-18 sits with the Center for Medical Rehabilitation",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
@@ -9233,23 +9304,32 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Parami General Hospital, Yangon — 'Speech & Language Therapy Services' department page",
+    "url": "https://paramihospital.com/?medilink_departments=speech-language-therapy-services&lang=en"
+   },
+   {
+    "label": "UNESCO GEM Report PEER country profile, Myanmar — Inclusion (page states 'Validated by the country: No'; last modified Wed, 28/07/2021)",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/myanmar/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "No speech or language category in the 2014 National Education Law's list of special needs\nStatutory groups are visually impaired, hearing impaired, mentally disabled, diverse learners\nLeading private clinic's working label is \"Expressive Receptive Language Disorder\"\nThat is the pre-CATALISE term; DLD does not appear in any source read",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "All service evidence is one private hospital's own page plus a 2021 UNESCO profile\nPrivate, fee-charging clinic in Yangon describes itself as the first such centre in Myanmar\nNo public speech and language therapy service was found in any ministry source\nSchools have no IEPs or referral systems in place; NGOs run the disability teacher training",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
@@ -10247,6 +10327,22 @@
    {
     "label": "Ministry of Education — apply for ORS for school students",
     "url": "https://www.education.govt.nz/education-professionals/schools-year-0-13/learning-support/apply-ongoing-resourcing-scheme-school-students"
+   },
+   {
+    "label": "Ministry of Education (Te Tāhuhu o te Mātauranga), 'Hāpainga kōrero, hāpainga reo, hāpainga whakawhiti kōrero mō ngā tamariki — Speech, language and communication support for children', last updated 20 August 2026",
+    "url": "https://www.education.govt.nz/education-professionals/schools-year-0-13/learning-support/speech-language-and-communication-support-children"
+   },
+   {
+    "label": "Ministry of Education, 'The Ongoing Resourcing Scheme (ORS) guidelines', January 2025 (.docx)",
+    "url": "https://web-assets.education.govt.nz/s3fs-public/2025-03/ORS-Guidelines-January%202025.docx?VersionId=g0e_IqErT5r2ubArtxK.iqZNnpPshQu3"
+   },
+   {
+    "label": "New Zealand Speech-language Therapists' Association (NZSTA), 'How to find a speech-language therapist'",
+    "url": "https://speechtherapy.org.nz/for-whanau/how-to-find-a-speech-language-therapist/"
+   },
+   {
+    "label": "Ministry of Education, 'Learning support for literacy and communication' (parents page)",
+    "url": "https://www.education.govt.nz/parents-and-caregivers/schools-year-0-13/learning-support/learning-support-literacy-and-communication"
    }
   ],
   "supportLinks": [
@@ -10260,7 +10356,7 @@
   "by": "",
   "inst": "",
   "source": "seed",
-  "terminology": "Not established from the sources consulted for this entry — Ministry of Education material reviewed here uses functional descriptions ('high communication needs', 'significant language delay') rather than a diagnostic label, so whether 'DLD' is in official use could not be determined. If you work in this system, this is exactly the field to fill in.",
+  "terminology": "Ministry of Education describes needs functionally and assigns no diagnostic label\nWorking term is \"speech, language and communication needs\", not DLD or SLI\nTe reo on the MoE page: \"hapainga korero, hapainga reo, hapainga whakawhiti korero\"\nORS gate needs \"a severe disorder of both language use and social communication\"\nORS guidelines never use \"developmental language disorder\" or \"language disorder\"",
   "identificationCriteria": "Access is set by service thresholds, not by a diagnostic definition\nORS: extreme or severe difficulty in learning, hearing, vision, physical or communication\nOr moderate to high difficulty across several of those areas\nMoE Communication Service: a narrower age-banded threshold — high communication needs",
   "assessments": "",
   "multilingualProvision": "Not established from the sources consulted for this entry — no protocol for assessing children who speak more than one language was identified in the Ministry of Education material reviewed. How this interacts with te reo Māori, Māori-medium education and Pasifika languages is the obvious question for a contributor to answer. If you work in this system, this is exactly the field to fill in.",
@@ -11035,6 +11131,22 @@
    {
     "label": "Russian Federation, Federal Law No. 273-FZ 'On education in the Russian Federation', art. 14 'Язык образования', ConsultantPlus consolidated text",
     "url": "https://www.consultant.ru/document/cons_doc_LAW_140174/bf7fadb3532c712ccd28cc2599243fb8018ed869/"
+   },
+   {
+    "label": "Распоряжение Минпросвещения России от 06.08.2020 N Р-75 (ред. от 06.04.2021) 'Об утверждении примерного Положения об оказании логопедической помощи в организациях, осуществляющих образовательную деятельность' — full text, LegalActs mirror",
+    "url": "https://legalacts.ru/doc/rasporjazhenie-minprosveshchenija-rossii-ot-06082020-n-r-75-ob-utverzhdenii/"
+   },
+   {
+    "label": "Same instrument, ГАРАНТ (base.garant.ru) copy, used as an independent check on the text",
+    "url": "https://base.garant.ru/74507854/"
+   },
+   {
+    "label": "Минпросвещения России, Банк документов — record for Распоряжение Р-75, adopted 06.08.2020, published 12.08.2020",
+    "url": "https://docs.edu.gov.ru/document/50b384797ceaa94a9cf1e429db295f58/"
+   },
+   {
+    "label": "Приказ Минздрава России от 23.10.2019 N 878н 'Об утверждении Порядка организации медицинской реабилитации детей', staffing schedule",
+    "url": "https://www.cito-priorov.ru/upload/iblock/ebb/w9s9vw1uzkjop1kthh73evpdtgk5g26c.pdf"
    }
   ],
   "supportLinks": [],
@@ -11048,7 +11160,7 @@
   "assessments": "LITMUS sentence repetition (SRep) task for Russian\nDeveloped by Natalia Meir and Sharon Armon-Lotem (Bar-Ilan University)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nStrongest diagnostic-accuracy evidence in the set, with Hebrew — Armon-Lotem & Meir (2016)\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Not established from the sources consulted — a language-appropriate LITMUS sentence repetition instrument exists for this system (see assessments above), but whether any service, clinical guideline or funder requires, supports or reimburses assessment in all of a child's languages was not determined. That gap between an available research instrument and routine clinical practice is the single most useful thing a contributor here could resolve.",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "Delivered inside school and preschool by the uchitel-logoped, an education-service post\nMinistry model regulation R-75 of 2020 governs logopedic help in education organisations\nEntry via a PMPK or school PPk panel, or logopedist screening, with parental consent\nHealth sector has a separate meditsinskiy logoped post in child rehabilitation units",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
@@ -12397,23 +12509,40 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Lei n.º 14/2008, de 29 de Outubro — Lei de Bases da Educação, Artigo 29.º (Educação especial); Jornal da República, Série I, N.° 40, 29 de Outubro de 2008, p. 2650",
+    "url": "https://indmo.gov.tl/wp-content/uploads/2021/02/Lei-de-Bases-da-Educacao.pdf"
+   },
+   {
+    "label": "Hospital Nacional Guido Valadares (Ministério da Saúde), home page — 'Lista Servisu' (list of hospital services)",
+    "url": "https://hngv.ms.gov.tl/"
+   },
+   {
+    "label": "UNESCO GEM Report PEER country profile, Timor-Leste — Inclusion (page states 'Validated by the country: No'; last modified 05/07/2021)",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/timor-leste/~inclusion"
+   },
+   {
+    "label": "International Communication Project, 'Speech Pathology in Timor-Leste' — first-person account by Celina Lai, an Australian speech pathologist on visiting cleft surgical missions (page undated; site copyright 2014-2022)",
+    "url": "https://internationalcommunicationproject.com/profile/speech-pathology-in-timor-leste/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented — no comparative source covers how DLD is identified, funded and supported here. If you work in or study this system (speech and language therapy, education, or research), please contribute what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "",
+  "terminology": "Statutory frame is \"necessidades educativas especiais\", a single broad SEN category\nLei 14/2008 art. 29 lists limitations \"da fala, da linguagem e da comunicacao\"\nThat is speech, language and communication as one domain, not a named disorder\nNo DLD or SLI term found in any Timorese source read in this session",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "Not established from the sources consulted. The Lei de Bases da Educação (Lei n.º 14/2008) entitles children with limitations of speech, language and communication to \"respostas educativas adequadas\" and says special education is delivered by teachers \"e outros técnicos especializados\", but names no profession and no setting. The published service list of the Hospital Nacional Guido Valadares, the country's tertiary referral hospital, contains no speech therapy line — its nearest entries are Medisina Rehabilitasaun and ENT. The only account found of a Timorese speech pathologist is a visiting Australian clinician's undated first-person piece for the International Communication Project, which describes a single practitioner based in Dili working alongside visiting cleft surgical missions. Searched: hngv.ms.gov.tl (Ministry of Health national hospital), the Jornal da República text of the education framework law, the UNESCO PEER Timor-Leste inclusion profile (itself marked \"Validated by the country: No\"), and general web search for speech and language therapy provision in Timor-Leste.",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
@@ -14113,6 +14242,18 @@
    {
     "label": "Miss. State Board Policy 74.19 (Title 7 Part 34), Language or Speech Impairment",
     "url": "https://www.mdek12.org/sites/default/files/documents/part-34-rule-74-19_20160614161027_365113.pdf"
+   },
+   {
+    "label": "Mississippi Department of Education, Office of Special Education, 'Handbook for Speech-Language Pathologists in Mississippi Schools' (web version dated 2/22/2024), Ch. I 'MDE Licensure Types', Ch. III 'Service Delivery', Ch. on 'Workload/Caseload'",
+    "url": "https://www.mdek12.org/sites/default/files/slp_handbook_web_version_2_22_2024.pdf"
+   },
+   {
+    "label": "Mississippi Department of Education, Special Education, 'Speech/OT/PT for Districts' (page hosting the Handbook and related forms)",
+    "url": "https://mdek12.org/specialeducation/speech-ot-pt/"
+   },
+   {
+    "label": "MDE Office of Special Education, 'Teacher Unit Allocation Methodology to Support Programs for Students with Disabilities'",
+    "url": "https://www.mdek12.org/sites/default/files/tu_methodology.pdf"
    }
   ],
   "supportLinks": [],
@@ -14126,7 +14267,7 @@
   "assessments": "",
   "multilingualProvision": "Limited English proficiency must not be a determinant factor\nSocial or cultural differences are excluded on the same footing",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "School-based: district-employed SLP, amount of service set by the IEP committee\nMDE caps a full-time school SLP's caseload at 48 students\nTwo MDE licences: 215 AA full scope, 216 A limited to articulation therapy only\nNamed delivery models are pull-out, push-in, consultation, team teaching and teletherapy",
   "legalEntitlement": "",
   "funding": "",
   "workforce": "",
@@ -15398,6 +15539,30 @@
    {
     "label": "Holy See, Second periodic report to the UN Committee on the Rights of the Child, CRC/C/VAT/2, UN document G12/468/09",
     "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf"
+   },
+   {
+    "label": "Direzione di Sanità e Igiene, Stato della Città del Vaticano — 'Poliambulatorio', list of services provided (Elenco delle prestazioni erogate)",
+    "url": "https://dsi.va/assistenza/poliambulatorio"
+   },
+   {
+    "label": "Direzione di Sanità e Igiene — 'Fruitori' (who is entitled to assistance)",
+    "url": "https://dsi.va/assistenza/fruitori"
+   },
+   {
+    "label": "Direzione di Sanità e Igiene — 'Funzioni e competenze'",
+    "url": "https://dsi.va/direzione/funzioni-competenze"
+   },
+   {
+    "label": "Fondo Assistenza Sanitaria (F.A.S.), Stato Città del Vaticano — Carta Servizi, 'Assistenza diretta'",
+    "url": "https://www.fas.va/content/fas/it/servizi-procedure/carta-servizi/assistenza-diretta.html"
+   },
+   {
+    "label": "Fondo Assistenza Sanitaria — Enti convenzionati: 'Logopedia' (list of contracted speech-therapy providers)",
+    "url": "https://www.fas.va/content/fas/it/servizi-procedure/carta-servizi/enti-convenzionati/logopedia.html"
+   },
+   {
+    "label": "Fondo Assistenza Sanitaria — Carta Servizi, 'Assistenza indiretta' (reimbursement route)",
+    "url": "https://www.fas.va/content/fas/it/servizi-procedure/carta-servizi/assistenza-indiretta.html"
    }
   ],
   "supportLinks": [],
@@ -15411,7 +15576,7 @@
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
-  "serviceModel": "",
+  "serviceModel": "Covers clergy, Vatican citizens and residents, and Holy See staff insured by the FAS fund\nThe DSI polyclinic's own service list has paediatrics and ENT but no logopedia\nTherapy is bought in: FAS contracts named logopedia providers, all at Rome addresses\nEach episode needs prior authorisation from a DSI or FAS-contracted doctor\nFAS also contracts \"neuropsicomotricita eta evolutiva\" for developmental therapy",
   "legalEntitlement": "There is no national school system, so no support framework exists to record\nThe Holy See's own report to the UN says children attend schools elsewhere\nAny entitlement therefore arises under the law of the State running the school\nThe report names no health or education service inside the territory",
   "funding": "",
   "workforce": "",
@@ -15813,6 +15978,18 @@
    {
     "label": "Allocation and funding of SLT across Europe (2022): Knudsen, Jalali-Moghadam, Nieva, Czaplewska, Laasonen, Gerrits, McKean & Law, Research in Developmental Disabilities — corrected republication",
     "url": "https://doi.org/10.1016/j.ridd.2021.104139"
+   },
+   {
+    "label": "Department of Basic Education, 'Policy on Screening, Identification, Assessment and Support (SIAS) 2014' (copy hosted by Western Cape Government)",
+    "url": "https://www.westerncape.gov.za/education/files/wcg-blob-files?file=2025-01%2F-sias-policy-on-screening-identification-assessment-and-support-2014-1.pdf&type=file"
+   },
+   {
+    "label": "Department of Education, 'Education White Paper 6: Special Needs Education — Building an Inclusive Education and Training System' (2001), paras 1.2.3–1.2.4",
+    "url": "https://www.gov.za/sites/default/files/gcis_document/201409/educ61.pdf"
+   },
+   {
+    "label": "Ndou, N.N. & Omidire, M.F. (2022), 'Systemic support for learners with developmental language disorders in Zimbabwe and South Africa', South African Journal of Communication Disorders 69(1), a850, doi:10.4102/sajcd.v69i1.850",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8907893/"
    }
   ],
   "supportLinks": [
@@ -15826,7 +16003,7 @@
   "by": "",
   "inst": "",
   "source": "seed",
-  "terminology": "Not established from the sources consulted for this entry — the South African literature reviewed here works largely in terms of 'language impairment' and 'communication disorders'; how far the CATALISE 'DLD' terminology has been adopted in local clinical and education practice could not be determined. If you work in this system, this is exactly the field to fill in.",
+  "terminology": "Policy category is \"learners who experience barriers to learning\", a deliberately broad framing\nWhite Paper 6 chose \"barriers to learning and development\" over \"special education needs\"\nSIAS domain \"Communication\" is scoped to little or no functional speech, requiring AAC\nNo DLD or SLI category in SIAS; CATALISE terms appear in SA research, not in school policy",
   "identificationCriteria": "Not established from the sources consulted for this entry — no national diagnostic or eligibility criteria were identified. The dominant constraint reported in the literature is not the criteria but the assessment tools available to apply them — see below. If you work in this system, this is exactly the field to fill in.",
   "assessments": "The central documented problem\nShortage of valid tools for multilingual populations, and for several SA languages\nTests in use are built on European and American contexts, with guidance that does not fit\nLanguage sample analysis used as a partial response to the missing norms",
   "multilingualProvision": "Multilingualism is the whole problem — 11 official spoken languages, plus SASL\nHPCSA requires cultural competence; parts of the workforce reportedly do not meet it\nShortage of therapists fluent in African languages; ad hoc translation used as a stopgap\nLess experienced therapists more often able to work in African languages — a pipeline issue",

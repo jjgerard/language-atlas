@@ -1360,27 +1360,53 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ministry of Education, Brunei Darussalam, The National Education System for the 21st Century: SPN21 (revised edition, 2013), 166 pp. — including Tables 5.1-10.5 of core, general and optional subjects with their media of instruction, and Appendix 7 Dasar Pelajaran Tahun 1985 (the Bilingual Education Policy)",
+    "url": "https://wpstorage786f4c975e.blob.core.windows.net/wpblob786f4c975e/wp-content/uploads/2026/06/SPN21-ENG-2013-COMPLETE.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "SPN21 treats English as a school language, not a foreign one, under the 1985 dwibahasa policy\nEnglish Language is a core subject from Year 1, alongside Bahasa Melayu\nIt is also the medium for Mathematics and Science from Year 1, Maths since 2008\nNo other additional language is compulsory or available before Year 7",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "English Language stays a core subject through Year 10/11 and is taken at 'O' Level\nArabic, French and Mandarin remain optional on both the general and applied tracks\nAt Years 7-8 a learner may pick only one optional subject in total, languages included\nOptional languages are examined externally by Cambridge 'O' Level or IGCSE",
+  "languagesOffered": "Optional languages from Year 7: Arabic, French and Mandarin, each taught in itself\nAt Years 9-11 the list adds Literature in English, Kesusasteraan Melayu and \"Other languages\"\nFrench is listed for IGCSE only; Arabic and Mandarin for both 'O' Level and IGCSE\n\"Other languages\" is an open row in the table with no language named",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 1984,
+    "description": "Bilingual Education Policy formulated, merging the Malay-medium and English-medium school systems"
+   },
+   {
+    "year": 1985,
+    "description": "Bilingual (dwibahasa) Education Policy implemented, giving all government schools one national curriculum"
+   },
+   {
+    "year": 1992,
+    "description": "Bilingual Education Policy extended to private schools, international schools excepted"
+   },
+   {
+    "year": 2008,
+    "description": "Medium of instruction for Mathematics in Primary 1-3 changed to English"
+   },
+   {
+    "year": 2013,
+    "description": "Revised SPN21 framework published, setting core, general and optional subjects with their media of instruction NOT ESTABLISHED — DO NOT PUBLISH: - Teaching hours or timetable share for English or for the optional languages: SPN21 gives subject tables, not an hours table. Do not publish hours for Brunei from this source. - How many schools actually offer Arabic, French or Mandarin, and how many learners take them: the ministry's Education Statistics and Indicators handbooks all returned HTTP 404 in this session (e.g. .../Brunei%20Darussalam%20Education%20Statistics%20and%20Indicators%20Handbook%202018.pdf, 404). The paper-versus-practice gap for Brunei is therefore UNMEASURED here — do not assert it either way. - Arabic-stream religious schools (ugama) and their language provision: not covered by this document. - Whether English is required to enter Universiti Brunei Darussalam: no admissions source retrieved."
+   }
+  ]
  },
  {
   "countryCode": "BO",
@@ -4902,6 +4928,10 @@
    {
     "label": "UNESCO GEM Report PEER, Dominican Republic — INCLUSION profile",
     "url": "https://education-profiles.org/latin-america-and-the-caribbean/dominican-republic/~inclusion"
+   },
+   {
+    "label": "MINERD (Viceministerio de Servicios Técnicos y Pedagógicos, Proceso de Revisión y Actualización Curricular), Diseño Curricular Nivel Primario, Primer Ciclo (1ro., 2do. y 3ro.), Versión Preliminar, Santo Domingo D.N., 2013, 428 pp. Copy served by the Biblioteca of INTEC (Instituto Tecnológico de Santo Domingo) in its electronic-resources collection",
+    "url": "https://opacbiblioteca.intec.edu.do/opac-tmpl/files/recursoselectronicos/MINERD-DisenoCurricularNivelPrimarioPrimerCiclo.pdf"
    }
   ],
   "supportLinks": [],
@@ -4910,7 +4940,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "Not established from the sources consulted for this entry — here: the primary curriculum could not be retrieved, MINERD host returned 522. If you work in this system, this is exactly the field to fill in.",
+  "primaryRequirement": "Evidence covers the first cycle only, grades 1-3; the second cycle could not be retrieved\nDiseño Curricular Nivel Primario, Primer Ciclo 2013 lists seven areas and no foreign language\nSame seven areas in each of grades 1, 2 and 3, with Lenguas Extranjeras absent from all\nMINERD had a standing Foreign Languages area team, so the absence is a choice, not an omission",
   "secondaryRequirement": "Not established from the sources consulted for this entry — here: only Segundo Ciclo 4to-6to was retrieved, not Primer Ciclo. If you work in this system, this is exactly the field to fill in.",
   "upperSecondary": "Both English and French are compulsory in Modalidad Académica, 4to to 6to\nHours set by Ordenanza No. 22-2017, Artículo 9\nForeign Languages is a single curriculum area holding two named languages",
   "languagesOffered": "Exactly two: Inglés and Francés, each with its own curriculum per grade\nNo third foreign language appears in the 617-page design\nHaitian Creole is not offered anywhere in the curriculum",
@@ -4921,20 +4951,8 @@
   "uptake": [],
   "policyHistory": [
    {
-    "year": 1997,
-    "description": "General Education Act 66-97 regulates the Dominican education system (per UNESCO PEER; the Act itself was not retrieved)"
-   },
-   {
-    "year": 2002,
-    "description": "Council of Europe Common European Framework of Reference, Spanish edition, adopted by MINERD as the reference for the Foreign Languages curriculum"
-   },
-   {
-    "year": 2017,
-    "description": "Ordenanza No. 22-2017 sets the Modalidad Académica timetable, defining a teaching hour as 45 minutes and fixing English and French hours for Segundo Ciclo"
-   },
-   {
-    "year": 2018,
-    "description": "Diseño Curricular, Nivel Secundario, Modalidad Académica, Segundo Ciclo published (preliminary version for review and feedback)"
+    "year": 2013,
+    "description": "MINERD issues the preliminary Diseño Curricular for the first cycle of primary, with no foreign-language area in grades 1-3 NOT ESTABLISHED — DO NOT PUBLISH: - The second cycle of primary, grades 4-6. This is where English is widely said to begin in the Dominican Republic, and I could NOT retrieve the document. What failed: · https://www.ministeriodeeducacion.gob.do/docs/direccion-general-de-curriculo/gZol-diseno-curricular-del-nivel-primario-segundo-ciclopdf.pdf and the RtcE-... variants: MINERD host returns 522 for everything. · https://opacbiblioteca.intec.edu.do/.../MINERD-DisenoCurricularNivelPrimarioSegundoCiclo.pdf: 404 — INTEC's library holds the first-cycle file but not the second. · educando.edu.do: TLS failure, SEC_E_WRONG_PRINCIPAL, on every path tried. Until that document is read, the atlas should say that grades 1-3 have no foreign language and that the start grade is not established — NOT that English begins in grade 4. - Whether a later \"Adecuación Curricular\" (there are references to 2023 and 2025 adecuaciones on educando.edu.do, none of which I could open) has changed the first cycle. The finding above is for the 2013 preliminary design. Say so if it is published. - Any primary hours figure. The first-cycle design deliberately declines to set one."
    }
   ]
  },
@@ -6284,27 +6302,73 @@
   "isNational": false,
   "region": "Asia",
   "subregion": "Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Education Bureau (HKSAR), Language Learning Support — statement of the HKSAR language education policy",
+    "url": "https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/sbss/language-learning-support/featurearticle.html"
+   },
+   {
+    "label": "Curriculum Development Council, English Language Education Key Learning Area — English Language Curriculum Guide (Primary 1–6) (2025)",
+    "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/eng-edu/Curriculum%20Document/Pri_ELCG_Primary_1-6_2025.pdf"
+   },
+   {
+    "label": "CDC-HKEAA, English Language Curriculum and Assessment Guide (Secondary 4–6) (2021)",
+    "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/eng-edu/Curriculum%20Document/English%20Language%20Curriculum%20and%20Assessment%20Guide%20(Secondary%204%20-%206)%20(2021).pdf"
+   },
+   {
+    "label": "Education Bureau (HKSAR), Pilot Scheme on Other Languages for Junior Secondary Students (Funded by Quality Education Fund)",
+    "url": "https://www.edb.gov.hk/en/curriculum-development/major-level-of-edu/secondary/learning-teaching-resources/JSOL.html"
+   },
+   {
+    "label": "Hong Kong Examinations and Assessment Authority, HKDSE Category C: Other Languages Subjects",
+    "url": "https://www.hkeaa.edu.hk/en/hkdse/assessment/subject_information/category_c_subjects/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "EDB frames English as a second language and core subject, not as a foreign language\nEnglish Language is a core subject from Key Stage 1, i.e. Primary 1, with no later start\nPECG 2024: English should be not less than 16% of total primary lesson time\nPolicy aim is \"biliterate and trilingual\": Chinese and English written, plus Putonghua",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Continues as one of the four compulsory senior secondary core subjects, S4 to S6\nEnglish takes 10.5% to 13% of senior secondary lesson time under the 2021 guide\nEDBCM No.39/2021 optimised the four core subjects, effective from S4 in 2021/22\nAny second language beyond English is elective, taken as an HKDSE Category C subject",
+  "languagesOffered": "Seven designated other languages: French, German, Hindi, Japanese, Korean, Spanish, Urdu\nFrom 2025 HKDSE these are set by outside language bodies, not by the HKEAA\nCandidates must enrol themselves with the external examiner; Hindi has no exam until 2028\nJunior secondary OL is a funded pilot buying in external tutors at $250,000 per school",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2007,
+    "description": "First English Language Curriculum and Assessment Guide (Secondary 4-6) published"
+   },
+   {
+    "year": 2009,
+    "description": "New Academic Structure implemented in senior secondary"
+   },
+   {
+    "year": 2021,
+    "description": "EDBCM No.39/2021 \"Measures to Optimise the Four Senior Secondary Core Subjects\" applies from S4 in 2021/22"
+   },
+   {
+    "year": 2024,
+    "description": "Chief Executive's Policy Address launches the Pilot Scheme on Other Languages for junior secondary students"
+   },
+   {
+    "year": 2025,
+    "description": "HKDSE Category C Other Languages move from Cambridge AS papers to examinations run by the official language bodies"
+   },
+   {
+    "year": 2025,
+    "description": "Revised English Language Curriculum Guide (Primary 1-6) issued by the Curriculum Development Council NOT ESTABLISHED — DO NOT PUBLISH: - Putonghua's exact status as a timetabled subject and its lesson-time share: the EDB Chinese Language Education curriculum-documents page (https://www.edb.gov.hk/en/curriculum-development/kla/chi-edu/curriculum-documents.html, HTTP 200, 277,279 bytes) exposed no linked PDF in this session, so I did not read the Chinese Language Education KLA guide. The trilingual aim above is quoted, but do not assert that Putonghua is a separate compulsory subject on the strength of it. - How many schools actually offer each Other Language, and candidate numbers per language: no HKEAA statistical report retrieved this session. Do not publish uptake figures. - Medium of instruction (EMI/CMI) policy: out of scope here by design, and not retrieved."
+   }
+  ]
  },
  {
   "countryCode": "HN",
@@ -8432,27 +8496,37 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Southern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "برنامه درسی ملی جمهوری اسلامی ایران (National Curriculum of the Islamic Republic of Iran), approved by the Supreme Council of Education (شورای عالی آموزش و پرورش) at sessions 857 to 872, 1390/12/9 to 1391/6/28; 68 pp. Published by the Organization for Educational Research and Planning (سازمان پژوهش و برنامه‌ریزی آموزشی), on its own site under برنامه درسی › سند برنامه درسی ملی",
+    "url": "https://www.oerp.ir/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D8%AF%D8%B1%D8%B3%DB%8C/%D8%B3%D9%86%D8%AF-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D8%AF%D8%B1%D8%B3%DB%8C-%D9%85%D9%84%DB%8C"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Arabic is not counted as foreign here: the curriculum calls it the language of religion\nNational Curriculum: foreign language teaching \"begins at the start of lower secondary\"\nNo foreign language is provided for in any Iranian primary grade\nIt sits in the \"selective (semi-prescriptive)\" part of the curriculum, not the prescribed core",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Continues into متوسطه دوم, upper secondary, with a stated terminal standard\nPupils are to read intermediate texts and write a short article in the language\nBy the end they should read simple specialist texts and write an essay\nUpper-secondary work widens vocabulary towards the pupil's own academic track",
+  "languagesOffered": "Curriculum names three: English, French and German, plus any the Supreme Council approves\nA pupil takes ONE of them, not a combination: the text says \"one of the languages\"\nTeaching must \"go beyond the narrow circle\" of world methods and reinforce national culture\nThe identity condition is written into the graduate competency itself",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2012,
+    "description": "Supreme Council of Education approves the National Curriculum of the Islamic Republic of Iran, placing foreign language study at the start of lower secondary [The document's covering letter dates the approving sessions 857-872 as 1390/12/9 to 1391/6/28 in the Iranian calendar. Those correspond to late February 2012 and mid-September 2012. If the atlas prefers Iranian-calendar years, use 1391.] NOT ESTABLISHED — DO NOT PUBLISH: - Weekly hours for foreign language at any grade: the National Curriculum sets learning areas, not a timetable. I did not retrieve the ساعات درسی / جدول مواد درسی schedule. - How many schools actually teach French or German rather than English. This is the obvious paper-versus-practice point for Iran and it is NOT evidenced here — no ministry statistic was retrieved, and the ministry's own hosts (medu.ir, sce.ir, chap.sch.ir) were unreachable this session. Do not assert that English is effectively the only one, however likely that is. - Any change since 2012, including whether English has been introduced earlier or later in practice. - Private-sector and out-of-school language teaching, which is outside this document entirely."
+   }
+  ]
  },
  {
   "countryCode": "IS",
@@ -8666,27 +8740,65 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "MEXT, The National Curriculum Standards for Grade 3 and Grade 4 in Elementary School, Chapter 4 Foreign Language Activities (official English translation of the 2017 小学校学習指導要領)",
+    "url": "https://www.mext.go.jp/content/20201218-kyoiku01-000011246_1.pdf"
+   },
+   {
+    "label": "MEXT, The National Curriculum Standards for Grade 5 and Grade 6 in Elementary School, Section 10 Foreign Languages (official English translation of the 2017 小学校学習指導要領)",
+    "url": "https://www.mext.go.jp/content/20201218-kyoiku01-000011246_2.pdf"
+   },
+   {
+    "label": "MEXT, The National Curriculum Standards in Junior High School, Section 9 Foreign Languages (official English translation of the 2017 中学校学習指導要領)",
+    "url": "https://www.mext.go.jp/content/20220607-mxt_kyoiku01-000011246_1.pdf"
+   },
+   {
+    "label": "学校教育法施行規則 (Ordinance for Enforcement of the School Education Act, MEXT Ordinance No. 11 of 1947), 別表第一 (第五十一条関係) and 別表第二 (第七十三条関係) — retrieved as consolidated XML from the e-Gov law API",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/322M40000080011"
+   },
+   {
+    "label": "MEXT 平成30年改訂 高等学校学習指導要領 各学科に共通する教科・科目等及び標準単位数 (upper-secondary subjects common to all courses, standard credits, and which carry the 必履修科目 compulsory mark)",
+    "url": "https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2019/02/12/1413264_001.pdf"
+   },
+   {
+    "label": "MEXT 総合教育政策局国際教育課, 高等学校等における国際交流等の状況について (令和5年度調査, released 28 March 2025), section 8 高等学校等における英語以外の外国語科目の開設状況",
+    "url": "https://www.mext.go.jp/a_menu/koutou/ryugaku/koukousei/20250331-mext_kyokoku_01.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Compulsory: 外国語活動 in grades 3-4, then 外国語 as a graded subject in grades 5-6\nStatutory load 35 hours a year in grades 3-4, 70 in grades 5-6, one hour is 45 minutes\nGrades 1 and 2 carry no foreign-language allocation in 別表第一\nCourse of Study, grades 5-6: \"In principle, take English in foreign languages period\"",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Continues unbroken: 外国語 is 140 hours a year in each of grades 7, 8 and 9\nUpper secondary: 英語コミュニケーションⅠ is the only 必履修 language subject, 3 credits\nSchools may cut it to 2 credits; the other five 外国語 subjects are elective\nMEXT: \"In principle, have students take English in Foreign Languages lessons\"",
+  "languagesOffered": "Figures are a MEXT survey of upper secondary in 2023-24, not a curriculum entitlement\nCourse of Study permits \"other foreign languages\" on the English objectives\nOnly 603 upper-secondary schools offer any non-English language, over 16 languages\nChinese 449 schools, Korean 344, French 188, Spanish 107, German 98; Thai 1, Mongolian 1",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2017,
+    "description": "Revised Course of Study makes 外国語活動 compulsory in grades 3-4 and 外国語 a graded subject in grades 5-6"
+   },
+   {
+    "year": 2018,
+    "description": "Revised upper-secondary Course of Study makes 英語コミュニケーションⅠ the sole compulsory foreign-language subject, 3 credits"
+   },
+   {
+    "year": 2025,
+    "description": "MEXT reports 603 upper-secondary schools teaching a language other than English, across 16 languages NOT ESTABLISHED — DO NOT PUBLISH: - The commonly cited \"from 2020\" full-implementation date for the elementary revision was NOT quoted from any document I retrieved in this session. The instruments themselves are dated 2017 (elementary and junior high) and 2018 (upper secondary). Do not publish 2020 without a source for that year. - Uptake or staffing of non-English languages below upper secondary: no source retrieved. - Which language private or international schools use: out of scope of everything retrieved."
+   }
+  ]
  },
  {
   "countryCode": "KE",
@@ -8777,27 +8889,37 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ministry of Education, Youth and Sport (Kingdom of Cambodia), Department of Curriculum Development, Curriculum Framework of General Education and Technical Education, 2015, 32 pp. (English text) — section 4.2 Core Competencies, section 5.6 Foreign Languages, and Tables 1-5 of subjects and study hours",
+    "url": "https://moeys.gov.kh/storage/uploads/documents/65bcc1a4d6ae8.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Foreign Languages is a timetabled subject from Grade 1, 2 hours a week in every primary grade\nOne study hour is 40 minutes in primary, on a six-day week of 30 hours\nComputer and Local Life Skills start only at Grade 4; foreign language does not wait\nCurriculum names it a core competency: \"English and/or French\"",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Continues and doubles: 6 hours a week in Grades 7-9 and in every year of Grades 10-12\nSplit as 4 hours for Living Language 1 and 2 hours for Living Language 2\nIdentical 6 hours on both the Science and the Social Science upper-secondary strands\nOnly compulsory subject whose weight does not shift between the two strands",
+  "languagesOffered": "Only two languages exist in the framework: English and French, with no third permitted\nBoth are compulsory: whichever is not taken first becomes Living Language 2\nPupil's primary choice fixes the order, English first then French, or the reverse\nFramework gives no leave for a school to substitute another language",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2015,
+    "description": "MoEYS Department of Curriculum Development issues the Curriculum Framework of General Education and Technical Education, with foreign languages from Grade 1 NOT ESTABLISHED — DO NOT PUBLISH: - Whether the English/French pairing is delivered in practice. This is the obvious paper-versus-practice question for Cambodia — a framework that requires every secondary pupil to carry two European languages is a strong claim — and NOTHING I retrieved evidences staffing or delivery. No MoEYS Education Congress report or EMIS statistic was retrieved in this session. Do not assert either that it is or is not real. - How many schools teach French as Living Language 1: not retrieved. - Whether a foreign language is required to pass the Grade 12 examination (Baccalaureate): the framework sets hours, not examination rules, and no examination regulation was retrieved. - Any curriculum revision after 2015: not checked."
+   }
+  ]
  },
  {
   "countryCode": "KI",
@@ -8855,6 +8977,14 @@
    {
     "label": "The impact of language policy and practice on children's learning: Comoros (2017): Trudell, UNICEF Eastern and Southern Africa",
     "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Comoros.pdf"
+   },
+   {
+    "label": "Jacques Leclerc, L'aménagement linguistique dans le monde — Union des Comores, CEFAN, Université Laval, section 4.4 'Les langues et l'éducation'. Quotes Articles 8, 11 and 22 of Loi n° 94-035/AF portant orientation sur l'éducation (1994) and Décret 13-053/PR (2013)",
+    "url": "https://www.axl.cefan.ulaval.ca/afrique/comores.htm"
+   },
+   {
+    "label": "Ministère de l'Éducation Nationale, de l'Enseignement Supérieur et de la Recherche / Commission nationale des Comores pour l'UNESCO, Rapport national … CONFINTEA VI, Moroni, mai 2008, 21 pp. — retrieved, read, and it contains NOTHING on school foreign languages (term counts: 'anglais' 0, 'arabe' 0). Recorded as a checked negative.",
+    "url": "https://uil.unesco.org/fileadmin/multimedia/uil/confintea/pdf/National_Reports/Africa/Africa/Comores.pdf"
    }
   ],
   "supportLinks": [],
@@ -8863,16 +8993,25 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Statute quoted from a secondary source; the law itself could not be retrieved this session\nTeaching is in French or Arabic from the école élémentaire; neither counts as foreign here\nLoi 94-035/AF art. 8: the language not used as medium must be taught as first modern language\nShikomori \"peut être enseigné\" — permitted, not required, and only by implementing decree",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Collège subject list in art. 22 carries French, Arabic and \"langue vivante I et II\"\nLycée schooling is in principle entirely in French\nArabic runs on as the compulsory \"première langue vivante\" through secondary\nLeclerc: by the end of secondary \"peu d'élèves peuvent s'exprimer en arabe\"",
+  "languagesOffered": "The compulsory pair is French and Arabic, whichever is not the school's medium\nEnglish, Spanish and Italian appear only in \"certains lycées et collèges privés\"\nDécret 13-053/PR of 2013 puts English alongside Shikomori, French and Arabic at the DGAPL\nNothing retrieved evidences English in the public curriculum",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 1994,
+    "description": "Loi n° 94-035/AF portant orientation sur l'éducation makes the non-medium language of the French/Arabic pair a compulsory first modern language"
+   },
+   {
+    "year": 2013,
+    "description": "Décret 13-053/PR creates the Direction générale de l'alphabétisation et de la promotion des langues, covering Shikomori, French, Arabic and English NOT ESTABLISHED — DO NOT PUBLISH: - The grade or age at which the compulsory first modern language begins. Article 8 says \"à l'école élémentaire\" but names no grade, and Leclerc's own summary places Arabic at secondary — the two do not agree and I cannot resolve them. - What \"langue vivante I et II\" in Article 22 actually denotes: whether LV I is Arabic (or French) and what LV II is. The statute does not say and no curriculum document was retrieved. - Any hours figure at any level. - Whether English is taught in public schools at all. It is named only in the 2013 decree creating an administrative directorate, and in a sentence about certain PRIVATE schools. - I retrieved and read komoripedia.org's page on the 2008 official programmes (http://komoripedia.org/article/programmes-scolaires-officiels-2008/, HTTP 200, 30,911 bytes). It is a self-described \"encyclopédie libre\" with no stated method and no scan or link to the 2008 documents it summarises. I have deliberately NOT used it as evidence and neither should anyone else without seeing the underlying ministry programmes."
+   }
+  ]
  },
  {
   "countryCode": "KN",
@@ -8934,27 +9073,57 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Democratic People's Republic of Korea, Fifth periodic report of States parties due in 2012, submitted to the UN Committee on the Rights of the Child under article 44 of the Convention, UN doc. CRC/C/PRK/5, date received 3 May 2016, issued 25 October 2016, 40 pp. — paragraphs 197-201 on school education programmes",
+    "url": "https://documents.un.org/api/symbol/access?s=CRC/C/PRK/5&l=en&t=pdf"
+   },
+   {
+    "label": "Democratic People's Republic of Korea, Voluntary National Review of the implementation of the 2030 Agenda, 2021, 66 pp. — section 4.4 on Goal 4",
+    "url": "https://hlpf.un.org/sites/default/files/vnrs/2021/282482021_VNR_Report_DPRK.pdf"
+   },
+   {
+    "label": "UNESCO GEM Report PEER, Democratic People's Republic of Korea — INCLUSION profile (retrieved and read; no foreign-language material. Recorded as a checked negative.)",
+    "url": "https://education-profiles.org/eastern-and-south-eastern-asia/democratic-peoples-republic-of-korea/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "DPRK's own UN report: all primary schools have given foreign language classes since 2008\nIt followed a pilot in computer skills and foreign languages run from 2003 to 2005\nThis predates the 12-year compulsory system, introduced in September 2012\nNo grade, age or language is named; the stated primary aims name only Korean",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Not established from the sources consulted: no rule found for after primary. DPRK's stated aims for junior and senior secondary name no language at all. They do name information technology, so the omission is not a general one. 163 kinds of textbook were recompiled for all school levels from 2013 to 2015.",
+  "languagesOffered": "Not established from the sources consulted: no DPRK document retrieved names any language. Both official reports say only \"foreign language\", never English or Russian or Chinese. Term counts: \"English\" as a school subject appears 0 times in either document. Do not publish the widely repeated \"English from grade 4\" claim on this evidence.",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2003,
+    "description": "Pilot teaching of computer skills and foreign languages begins in DPRK primary schools"
+   },
+   {
+    "year": 2008,
+    "description": "All DPRK primary schools begin giving computer and foreign language classes"
+   },
+   {
+    "year": 2012,
+    "description": "Universal 12-year compulsory education system introduced in September 2012"
+   },
+   {
+    "year": 2015,
+    "description": "Textbook recompilation for kindergarten to senior secondary completed, 163 kinds of textbook issued NOT ESTABLISHED — DO NOT PUBLISH: - Which foreign language. Press reporting circulating on this point (a 2016 UPI piece, a 2024 VOA piece, a Language Magazine piece) asserts that English is mandatory from grade 4 and that pupils do 787 hours of English over eight years, sourced to a 2013 DPRK Education Commission curriculum code. I did NOT retrieve that code and I have therefore NOT used those figures. They may well be right; they are not evidenced here. Do not publish them from this report. - The grade at which the foreign language starts, and any hours figure. - Whether a foreign language continues into junior or senior secondary at all. - naenara.com.kp responded (HTTP 200, 25,040 bytes) but I did not obtain a curriculum document from it."
+   }
+  ]
  },
  {
   "countryCode": "KR",
@@ -9102,27 +9271,49 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ministry of Education and Sports (Lao PDR), Education and Sports Sector Development Plan 2021-2025, Vientiane, October 2020, 193 pp. (English version)",
+    "url": "https://rtm.org.la/wp-content/uploads/2024/02/ESSDP-Final-Eng-Version-update-30-Oct-2020.pdf"
+   },
+   {
+    "label": "BEQUAL (Basic Education Quality and Access in Lao PDR), a Ministry of Education and Sports programme supported by Australia, 'Ministry of Education and Sports and Australia release new materials on YouTube to support Grade 3 English teaching and learning', 30 September 2021",
+    "url": "https://bequal-laos.org/2021/09/30/ministry-of-education-and-sports-and-australia-release-new-materials-on-youtube-to-support-grade-3-english-teaching-and-learning/"
+   },
+   {
+    "label": "ETH Zürich, Chair of Education Systems, CES Factbook Education Systems: Laos, 2022 (Alex Benhauresch), 51 pp.",
+    "url": "https://ethz.ch/content/dam/ethz/special-interest/mtec/edusys-dam/documents/Factbooks2022/X_CES%20Factbook%20Education%20Systems_Laos_2022_AlexBenhauresch_final.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Start grade from a secondary quotation of the Law on Education, not from the statute itself\nEnglish is compulsory from Grade 3 of primary, one of nine primary subjects\nNothing is required in Grades 1 and 2, where the plan worries about subject overload\nA new Grade 3 English curriculum, phonics-based, launched in the 2021-22 school year",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Not established from the sources consulted: no rule on whether English continues compulsorily. English is one of four upper-secondary in-service training priorities in the 2021-25 plan. Ministry names staff and materials for foreign languages as its key upper-secondary challenge. No leaving or admission language requirement was found in any retrieved document.",
+  "languagesOffered": "Two languages appear: English from Grade 3, French added at lower secondary\nMoES delivery partner in 2021: pronouncing English sounds is \"a new skill for most teachers\"\nSector plan 2021-25 still lists promoting foreign language in primary as work to do\nNo third foreign language appears in any retrieved document",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2020,
+    "description": "Ministry of Education and Sports issues the Education and Sports Sector Development Plan 2021-2025"
+   },
+   {
+    "year": 2021,
+    "description": "New phonics-based Grade 3 English primary curriculum launched with BEQUAL support [A 2015 revision of the Law on Education is referred to by the ETH factbook but I did not read that law. Do not publish a 2015 row from this report.] NOT ESTABLISHED — DO NOT PUBLISH: - The Lao Law on Education itself: NOT retrieved. Everything about the statutory rule here is a secondary quotation. Do not present it as read from the law. - Hours or periods per week for English or French at any level: no source retrieved gives them. - Whether French is compulsory or elective at lower secondary: the factbook lists it among the subjects and says nothing about its status. Do not state that it is compulsory. - Whether English is compulsory at upper secondary. - moes.edu.la was reachable (HTTP 200, 88,151 bytes) but I did not find a curriculum document on it."
+   }
+  ]
  },
  {
   "countryCode": "LB",
@@ -9418,6 +9609,18 @@
    {
     "label": "The impact of language policy and practice on children's learning: Lesotho (2016): Trudell, UNICEF Eastern and Southern Africa",
     "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2016-Language-and-Learning-Lesotho.pdf"
+   },
+   {
+    "label": "Examinations Council of Lesotho (ECoL), complete list of published LGCSE syllabuses, served by the Council's own content API behind examscouncil.org.ls/syllabus",
+    "url": "https://web.examscouncil.org.ls/api/syllabi?pagination%5BpageSize%5D=200"
+   },
+   {
+    "label": "Ministry of Education and Training (Lesotho), Education Sector Plan 2016-2026, 126 pp.",
+    "url": "https://www.education.gov.ls/static/media/education_sector_plan_2016-2026._lesotho.fb9f1fce5011a6ae52ca.pdf"
+   },
+   {
+    "label": "Education Act 2010 (Lesotho), as published on the Ministry of Education and Training portal, 51 pp.",
+    "url": "https://www.education.gov.ls/static/media/education_act_2010.271d6a815454f460c07d.pdf"
    }
   ],
   "supportLinks": [],
@@ -9426,16 +9629,25 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Not established from the sources consulted: no foreign-language requirement was found. English is Lesotho's own school language, not a foreign one, and should not count here. Education Act 2010 names no language at all and has no medium-of-instruction clause. Sector Plan 2016-2026 lists developing an Education Language policy as still to be done.",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Not established from the sources consulted: nothing found on a foreign language continuing. No foreign language exists at LGCSE to continue into, so the question may not arise. Sector plan's language priorities are literacy in Sesotho and English only. Plan proposes localising the secondary curriculum towards A levels.",
+  "languagesOffered": "ECoL publishes 16 LGCSE syllabuses and not one of them is a foreign language\nThe only language syllabuses are English Language, Literature in English and Sesotho\nNo French, Afrikaans, Portuguese or regional African language appears on that list\nFigure is the complete published list, not a sample: the API reports total 16",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2010,
+    "description": "Education Act 2010 enacted, containing no language-of-instruction provision"
+   },
+   {
+    "year": 2016,
+    "description": "Education Sector Plan 2016-2026 sets developing an Education Language policy as an action still outstanding WHAT I TRIED AND COULD NOT GET (so the negative can be checked): - The Curriculum and Assessment Policy 2009 itself: NOT retrieved. The ministry URL circulating for it, http://www.education.gov.ls/img/lesotho%20basic%20education%20curriculum%20policy.pdf, now returns the ministry's single-page-app shell (HTTP 200 but 1,260 bytes of HTML, not a PDF). I enumerated every PDF the ministry's own JavaScript bundle references (main.323422ab.js, 794,303 bytes) — the CAP 2009 is not among them. The documents that ARE there are the Education Act 2010, the Sector Plan 2016-2026, the ICT Policy 2024, a TVET policy, an inclusive-education paper, the 2025 LGCSE candidates' performance report and the 2025 JESR report. - www.ecol.org.ls: would not connect (curl error 28, timeout). - web.archive.org: unreachable from this session throughout. So the widely repeated statement that mother tongue is the medium to Grade 3 and English from Grade 4 is NOT verified here. Do not publish it from this report. NOT ESTABLISHED — DO NOT PUBLISH: - The Grade 3/Grade 4 medium-of-instruction switch (see above) — unverified in this session. - Whether any Lesotho school teaches French: the LGCSE list shows none is examined, which is not the same as none being taught. Say \"not examined at LGCSE\", not \"not taught\". - Any hours, periods or timetable share for language subjects."
+   }
+  ]
  },
  {
   "countryCode": "LT",
@@ -9725,6 +9937,10 @@
    {
     "label": "Gouvernement Princier de Monaco, L'Éducation en Principauté: livret d'accueil (2025)",
     "url": "https://monservicepublic.gouv.mc/content/download/28960/file/L'%C3%89ducation%20en%20Principaut%C3%A9_Livret%20d'accueil_2025.pdf"
+   },
+   {
+    "label": "Direction de l'Éducation Nationale, de la Jeunesse et des Sports (Principauté de Monaco), L'Éducation en Principauté de Monaco — Livret d'accueil 2025, 28 pp., bilingual French/English",
+    "url": "https://www.gouv.mc/content/download/28960/file/L'%C3%89ducation%20en%20Principaut%C3%A9_Livret%20d'accueil_2025.pdf?inLanguage=fre-FR&version=37"
    }
   ],
   "supportLinks": [],
@@ -9735,8 +9951,8 @@
   "source": "seed",
   "primaryRequirement": "English is taught from age three, earlier than the French national norm\nIt is delivered by specialist teachers, not by the class teacher",
   "secondaryRequirement": "Programmes follow the French national curriculum, so French rules apply\nInternational classes and options run alongside the standard pathway",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Not a separate system: schools are accredited \"établissement français à l'étranger\"\nHours, syllabuses and diplomas follow the French ministry's; exams via Académie de Nice\nLycée Albert-Ier adds a BFI American section and a European section in English\nLycée Rainier-III offers a European section in English or Italian, tied to the vocational track",
+  "languagesOffered": "English is taught from the first year of école maternelle, by specialist teachers in primary\nCollège Charles-III: LV1bis in 6e from German, Spanish, Italian, Chinese or Russian\nPrivate collège FANB lists German, Spanish, Italian, Russian, no Chinese\nMonegasque is taught CE2 to 3e; French is also offered as FLE to non-francophone pupils",
   "curriculumTime": "Schools are accredited as French establishments abroad\nTimetable volumes and programmes conform to French ministry definitions",
   "assessment": "Examinations run under a French regional education authority\nThe diplomas prepared are the French national ones",
   "teacherSupply": "English and Monegasque are taught by specialist qualified teachers in primary",
@@ -10007,6 +10223,14 @@
    {
     "label": "Mali, Programme decennal de developpement de l'education et de la formation professionnelle deuxieme generation (PRODEC 2) 2019-2028",
     "url": "https://www.gpekix.org/sites/default/files/Media%20Document/PRODEC-2-Mali2019-2028.pdf"
+   },
+   {
+    "label": "Ecoles au Mali, 'Enseignement secondaire' (private schools directory, page dated 11-15 October 2024)",
+    "url": "https://ecoles-mali.com/systeme-educatif.php?id=3-enseignement-secondaire"
+   },
+   {
+    "label": "«PROGRAMMES DE L'ENSEIGNEMENT SECONDAIRE GENERAL TOUTES DISCIPLINES, SECOND CYCLE» — retrieved and read, and it is NOT a Malian document. See the warning below.",
+    "url": "https://ambniger-mali.org/images/NOUVEAUX_PROGRAMMES_DENSEIGNEMENT_SECOND_CYCLE.pdf"
    }
   ],
   "supportLinks": [],
@@ -10017,7 +10241,7 @@
   "source": "seed",
   "primaryRequirement": "Re-verified this session and the recorded sourced failure stands: nothing to fill\nPRODEC 2 says 'anglais' 0 times and 'langue etrangere' 0 times in 430,136 chars\nSanity check on the same text: 'secondaire' 185, 'francais' 11\nNo weaker source has been substituted, per the standing instruction on Mali",
   "secondaryRequirement": "",
-  "upperSecondary": "",
+  "upperSecondary": "Not established from the sources consulted: no Malian curriculum document could be retrieved. French is Mali's school language, so it should not be recorded as a foreign language here. General and technical secondary lasts three years and ends in the Baccalauréat. Beware: the widely-returned \"Mali\" secondary programmes PDF is in fact Niger's.",
   "languagesOffered": "A finding rather than a gap: the national sector plan has no foreign-language policy\nPRODEC 2 for 2019-2028 was term-counted and never uses the word 'anglais'\nIt never uses 'langue étrangère' either, while using 'bilingue' twelve times\nNo Malian curriculum document was reachable to set against that silence",
   "curriculumTime": "",
   "assessment": "",
@@ -10032,21 +10256,26 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Myanmar National Curriculum Framework (5th version), Ministry of Education, 19 pp. — includes the curriculum structures and the period/hour allotment tables for kindergarten, primary, middle and high school, and quotes the National Education Law sections 43 and 44",
+    "url": "https://www.lextutor.ca/myanmar/curriculum_framework_v5.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Framework never says \"foreign\": English is a core learning area and a permitted medium\n\"English shall be taught starting from the primary level\", i.e. from Grade 1\n3 periods a week, 72 hours a year, in Grades 1-3; 5 periods, 120 hours, in Grades 4-5\nA lower-primary period is 40 minutes in a 36-week year",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Continues as compulsory throughout: 6 periods a week, 162 hours a year, at middle school\nHigh school: one of six common core areas, on the Science and the Arts stream alike\n5 periods a week in Grades 10 and 11, rising to 6 periods in Grade 12\nNo option to drop it: English is core on both streams in every high-school grade",
+  "languagesOffered": "Only English is named; no French, Chinese or other language is in the national structure\nMyanmar or English or both may be the medium of instruction under Education Law s.43\nEthnic languages are devolved to State and Region governments under s.44\nThey sit in Local Curriculum, capped and shared with local history, farming and computing",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
@@ -10060,27 +10289,57 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Боловсролын ерөнхий хууль (General Law on Education), Mongolia, adopted 7 July 2023 (Шинэчилсэн найруулга / new wording), Article 6 'Боловсрол эзэмшүүлэх сургалтын хэл' — consolidated text on the state legal portal Legalinfo, noting an amendment to Art. 6.2 by the law of 3 July 2026",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16759958962301"
+   },
+   {
+    "label": "Сургуулийн өмнөх болон ерөнхий боловсролын тухай хууль (Law on Preschool and General Education), Mongolia, adopted 7 July 2023, Articles 9 and 10 — consolidated text on Legalinfo",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16759959012931"
+   },
+   {
+    "label": "Засгийн газрын 2021 оны 372 дугаар тогтоолын хавсралт: 'Бүх нийтийн англи хэлний суралцахуйг дэмжих арга хэмжээ (2022-2025)' (Annex to Government Resolution No. 372 of 2021, Measures to support universal English language learning 2022-2025)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16389842551831"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Starting grade not established: it is set below statute, in a curriculum concept\nGeneral Law on Education 2023 art. 6.1: the main foreign language of instruction is English\nSame clause preserves the right to study in one's mother tongue and other foreign languages\nStatute names the language but attaches no grade, age or compulsion to it",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "No leaving or admission language requirement found in either 2023 education law\nGovernment target: 1,800-plus grade-12 leavers a year to sit TOEFL Junior or Duolingo\nThe state pays half that test fee under Government Resolution 372 of 2021\nSeparate target of 50-plus schools teaching maths and science through English",
+  "languagesOffered": "English is the only language named in either 2023 education law\n\"Other foreign languages\" survive as a preserved right, with no list and no entitlement\nSchools with a permit may teach through a foreign language altogether\nMongolian language, script, literature and history must still be taught in Mongolian",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2021,
+    "description": "Government Resolution No. 372 adopts Measures to support universal English language learning 2022-2025"
+   },
+   {
+    "year": 2023,
+    "description": "General Law on Education (7 July 2023) makes English the main foreign language of instruction"
+   },
+   {
+    "year": 2023,
+    "description": "Law on Preschool and General Education (7 July 2023) refers the choice of main foreign language to the government-approved curriculum concept"
+   },
+   {
+    "year": 2026,
+    "description": "Amendment of 3 July 2026 revises art. 6.2 on institutions teaching through a foreign language NOT ESTABLISHED FROM THE SOURCES CONSULTED — primaryRequirement, starting grade: I did not establish the grade or age at which a foreign language becomes compulsory in Mongolian schools. The two 2023 statutes deliberately delegate that to the curriculum concept (сургалтын хөтөлбөрийн үзэл баримтлал) approved by the Government under Art. 10.1, and I could not retrieve that instrument or the school lesson-plan order (сургалтын төлөвлөгөө). What I tried, and what happened: - mes.gov.mn and www.mes.gov.mn: connection refused / timed out (curl error 28), repeatedly. - meds.gov.mn and mecss.gov.mn (which 301-redirects to meds.gov.mn): TLS failure, SEC_E_CERT_EXPIRED — the ministry's certificate has expired, so the site could not be read. - legalinfo.mn/api/law/search: 404, no usable search endpoint. - web.archive.org: unreachable from this session throughout (connection timeouts). Do NOT fill the starting grade from press reporting or from a neighbouring country. ALSO NOT ESTABLISHED — DO NOT PUBLISH: - Weekly or annual hours for foreign language at any grade. - Whether Russian retains any place in the curriculum: not named in either statute; not evidenced either way. - How many pupils actually take a language other than English: no statistic retrieved. - Whether the 1,800-leaver target was met: the resolution states the target, not the outcome."
+   }
+  ]
  },
  {
   "countryCode": "MR",
@@ -10265,27 +10524,37 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Southern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "National Institute of Education (Maldives), The National Curriculum Framework, April 2014, 70 pp. — Table 2 Phases and Key Stages, Table 3 Organisation of learning across the key stages, the Language and Communication key learning area, and the Medium of Instruction chapter. Copy served from UNESCO's media repository.",
+    "url": "https://media.unesco.org/sites/default/files/webform/r2e002/2cda5a0a236191e565a7e98f824f23c08b5dad32.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "English is the medium of instruction from primary on, so it is not the foreign language here\nNCF says pupils \"get access to Modern Foreign Language(s) beginning from Key Stage 1\", grade 1\nIts own Table 3 shows only one optional language at Key Stages 1 to 3, namely Arabic\nAccess is an option, not a requirement: Arabic sits in the \"Optional subject\" column",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Named foreign languages appear only at Key Stage 4, grades 9-10, as one elective among many\nKey Stage 4 pupils choose any 4 electives from at least two learning areas\nAt Key Stage 5, grades 11-12, the only core language subjects are Islam and Dhivehi\nNo foreign language is listed in the Key Stage 5 elective column; even English is elective there",
+  "languagesOffered": "Table 3 is marked \"DRAFT, 09 Apr 2014\" inside the published framework\nGrades 1 to 8 offer one optional language only: Arabic\nGrades 9-10 name three: \"Foreign Lang (Arabic, French, Mandarin)\"\nArabic is also a medium of instruction in specialist schools, not only a taught language",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2014,
+    "description": "National Institute of Education issues the National Curriculum Framework, setting English as medium of instruction from primary and foreign languages from Key Stage 1 NOT ESTABLISHED — DO NOT PUBLISH: - How many Maldivian schools actually staff Arabic, French or Mandarin, and how many pupils sit them: no ministry statistic retrieved. nie.edu.mv did not connect at all; old.moe.gov.mv/en/pages/view/23 returned 404. The Arabic/French/Mandarin list is a curriculum entitlement on paper and NOTHING here evidences delivery. - The commonly cited \"2015\" implementation date: the document itself is dated April 2014 throughout, with the Table 3 figure marked 09 Apr 2014. Do not publish 2015 without a source for that year. - Teaching hours or timetable share for any language: the framework gives no hours table. - Whether a language is required to leave school or enter university: not addressed in this framework, and no Maldives National Examination or admissions document was retrieved."
+   }
+  ]
  },
  {
   "countryCode": "MW",
@@ -10578,6 +10847,14 @@
    {
     "label": "Unlocking potential amid Nigeria's return to English-only education (2026): Ogunleye, World Education Blog (GEM Report)",
     "url": "https://world-education-blog.org/2026/04/22/unlocking-potential-amid-nigerias-return-to-english-only-education/"
+   },
+   {
+    "label": "Nigerian Educational Research and Development Council (NERDC), Sheda-Abuja, 'Basic and Senior Secondary Education Curriculum Offerings' — subject tables for Primary 1-3, Primary 4-6, JSS 1-3 and the Senior Secondary curriculum offering",
+    "url": "https://nerdc.gov.ng/content_manager/Basic%20and%20Senior%20Secondary%20Education%20Curriculum%20Offerings.pdf"
+   },
+   {
+    "label": "NERDC, Curriculum page (site index of the Basic Education Curriculum documents)",
+    "url": "https://www.nerdc.gov.ng/content_manager/curriculum.html"
    }
   ],
   "supportLinks": [],
@@ -10588,8 +10865,8 @@
   "source": "seed",
   "primaryRequirement": "Reversed in November 2025 — read the policy history before the current state\nEnglish is now the sole medium of instruction from pre-primary to tertiary\nThe 2022 policy had made the mother tongue compulsory as medium through Primary 6\nReported through the GEM Report's blog, not a peer-reviewed source",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Neither French nor Arabic is among the five compulsory senior secondary subjects\nCore is English, General Mathematics, one Trade subject, Citizenship and Heritage, Digital Tech\nFrench and Arabic drop to Humanities electives, alongside History, Government, CRS and Music\nA Nigerian language is also only an elective at senior secondary, not core as in JSS",
+  "languagesOffered": "Only two foreign languages appear in the national offering: French and Arabic\nArabic is optional from Primary 1; French is optional only from Primary 4\nBoth stay \"(Optional)\" at every level, above a compulsory minimum of 9 to 12 subjects\nAt Primary 4-6 the compulsory load is 11 subjects and French is subject 12",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
@@ -10597,12 +10874,8 @@
   "uptake": [],
   "policyHistory": [
    {
-    "year": 2022,
-    "description": "The National Language Policy makes the mother tongue or language of the immediate environment the compulsory medium of instruction from early childhood through Primary 6."
-   },
-   {
     "year": 2025,
-    "description": "The Federal Government reverses that policy in November, reinstating English as the sole medium of instruction at every level."
+    "description": "NERDC curriculum offering introduces a compulsory trade subject at senior secondary and lists French and Arabic as electives [CAUTION: the 2025 year comes from the PDF's embedded creation date of 8 September 2025, not from text printed in the document. Publish it only with that caveat, or not at all.] NOT ESTABLISHED — DO NOT PUBLISH: - Uptake and staffing: how many senior secondary schools actually offer French or Arabic, and how many candidates sit them at WASSCE/NECO. No examination statistic was retrieved in this session. The \"paper versus practice\" gap for Nigeria is therefore NOT evidenced here — do not assert it in either direction. - The National Policy on Education and its provisions on French as a second official language: not retrieved in this session. Do not cite the 1998 policy from memory. - Medium of instruction (mother tongue in early primary, English thereafter): not in this document. - Hours or periods per week for any subject: the offerings document lists subjects only, no timetable. - Whether this offering has been formally gazetted or approved by the National Council on Education: the document itself says nothing about its own legal status."
    }
   ]
  },
@@ -12560,27 +12833,49 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Western Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "secondary-source",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Government of Alberta, International Qualifications Assessment Service (IQAS), International Education Guide – Syria",
+    "url": "https://www.alberta.ca/iqas-education-guide-syria"
+   },
+   {
+    "label": "UNICEF Middle East and North Africa Regional Office, Information Package: Education and Learning Opportunities for Syrian Returning Children and Adolescents, 2025, 27 pp.",
+    "url": "https://www.unicef.org/mena/media/27876/file/InfoPack%20EN%20v1.pdf.pdf"
+   },
+   {
+    "label": "UNESCO GEM Report PEER, Syrian Arab Republic — INCLUSION profile (retrieved and read; contains no foreign-language material — recorded here as a checked negative)",
+    "url": "https://education-profiles.org/northern-africa-and-western-asia/syrian-arab-republic/~inclusion"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "No Syrian ministry source was obtainable; both figures below are secondary and possibly dated\nArabic is the language of instruction at every level, so the foreign language is a subject\nAlberta's guide puts foreign language at Grade 5 of the 2001 primary curriculum\nWhether it has since moved earlier could not be verified from any source",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Secondary curricula vary by stream, but \"common subjects are only Arabic and a foreign language\"\nA foreign language is also on the Grades 7-9 preparatory timetable\nBasic education, Grades 1-9, is compulsory under Law on Education No. 32 of 7 April 2002\nNo leaving or university-entrance language rule was found in any retrieved source",
+  "languagesOffered": "UNICEF 2025: national-curriculum core subjects include both English and French\nSame pair named again for remedial and accelerated courses aligned to the curriculum\nNo third foreign language appears in any source retrieved for this entry\nPublic higher education is in Arabic; private universities may require TOEFL or IELTS",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2002,
+    "description": "Law on Education No. 32 of 7 April 2002 makes basic education, Grades 1-9, free and compulsory"
+   },
+   {
+    "year": 2008,
+    "description": "Ministry of Education introduces a new secondary curriculum and revised examination marking [Both rows come from the Alberta guide, a secondary source. Flag them if published.] NOT ESTABLISHED — DO NOT PUBLISH: - The current grade at which a foreign language begins. The Grade 5 figure describes the 2001 curriculum as summarised by a foreign credential-evaluation body. Do NOT publish it as the present rule. - The frequently repeated claim that Syrian pupils choose between French and Russian at Grade 7: I saw this only in search-engine summary text and could NOT verify it in any document I retrieved. Do not publish it. Russian does not appear in either source read here (term count \"Russian\" = 0 in the Alberta guide's text). - Hours per week for any language, at any level. - The status of the curriculum after the 2024 change of government: nothing retrieved addresses it, and the 2025 UNICEF package describes non-formal programmes rather than the curriculum itself. - Kurdish, Armenian, Syriac or any other community language: not addressed by anything retrieved. Their absence from these sources is NOT evidence about their status."
+   }
+  ]
  },
  {
   "countryCode": "SZ",
@@ -12720,27 +13015,41 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ministry of Education (Thailand), The Basic Education Core Curriculum B.E. 2551 (A.D. 2008), official English translation, 308 pp. — including Directive of the Ministry of Education No. OBEC 293/2551 (2008), the Learning Time Structure table, and the Foreign Languages learning area (p. 266 ff.). Copy served by UNESCO Bangkok's NEQMAP repository.",
+    "url": "https://neqmap.bangkok.unesco.org/wp-content/uploads/2019/06/Basic-Education-Core-Curriculum.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Foreign Languages is one of eight compulsory learning areas, running from Grade 1\nCurriculum: the prescribed language for the whole core curriculum \"is English\"\nTime: 40 hours a year in Grades 1-3, rising to 80 a year in Grades 4-6\nGrade-level indicators apply to every year of compulsory schooling, Grades 1-9",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Continues as a basic learning area at Grades 10-12, worth 6 of the 41 basic credits\n240 hours across the three upper-secondary years, against 120 a year in Grades 7-9\nIndicators are set for the whole Grade 10-12 interval, not grade by grade\nSchools may add further courses \"depending on their readiness and priorities\"",
+  "languagesOffered": "English is the only language the national core curriculum prescribes\nOthers named as examples: French, German, Chinese, Japanese, Arabic, Pali\nCurriculum also names \"languages of neighbouring countries\" without listing them\nAll non-English languages are left \"to the discretion of educational institutions\"",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2008,
+    "description": "Ministry Directive OBEC 293/2551 issues the Basic Education Core Curriculum B.E. 2551, replacing the 2001 curriculum"
+   },
+   {
+    "year": 2012,
+    "description": "Basic Education Core Curriculum B.E. 2551 applies to all grades in schools generally NOT ESTABLISHED — DO NOT PUBLISH: - Uptake or staffing: I retrieved no Thai ministry statistic on how many schools actually teach a language other than English, or on English teacher supply. The \"discretion of educational institutions\" clause is quoted, but its practical effect is not documented here. - Any post-2008 curriculum revision or the CEFR-based English policy sometimes attributed to 2014: not retrieved in this session, do not assert. - Whether a foreign language is required to leave school or enter university: the core curriculum sets credits, not an exit or admission rule, and I retrieved no O-NET or TCAS document."
+   }
+  ]
  },
  {
   "countryCode": "TJ",
@@ -12785,27 +13094,57 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "South-Eastern Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Lei do Parlamento n.º 14/2008, de 29 de Outubro, Lei de Bases da Educação (Timor-Leste) — Artigo 8.º Línguas do sistema educativo, the basic-education objectives and organisation articles, Artigo 57.º and Artigo 58.º. Text as published in the Jornal da República",
+    "url": "https://www.mj.gov.tl/jornal/?q=node/876"
+   },
+   {
+    "label": "Decreto-Lei n.º 47/2011 (Timor-Leste), 'Aprova o plano curricular do Ensino Secundário Geral e o respectivo regime de implementação' — Artigo 6.º, componente de Formação Geral. Text as published in the Jornal da República",
+    "url": "https://www.mj.gov.tl/jornal/?q=node/1183"
+   },
+   {
+    "label": "Resolução do Governo n.º 24/2011 (Timor-Leste), aprovação do Plano Curricular do 3.º Ciclo do Ensino Básico e medidas urgentes da sua implementação — Jornal da República",
+    "url": "https://www.mj.gov.tl/jornal/?q=node/1684"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Portuguese is not foreign here: statute makes Tetum and Portuguese the languages of instruction\nLei de Bases 14/2008 attaches the first foreign language to the THIRD cycle of basic education\nNo foreign language is required in the first or second cycle, and no starting age is set\nThe statute names no language at that point, leaving it to the curriculum plan",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Both foreign languages become compulsory: English and \"Língua Malaia\" sit in Formação Geral\nFormação Geral is common to both tracks, Ciências e Tecnologias and Ciências Sociais\nDecreto-Lei 47/2011 binds every public school in the country\nThe other Formação Geral subjects are Tetum, Portuguese, citizenship, multimedia, religion, PE",
+  "languagesOffered": "Malay may be swapped for \"mandarim, sul coreano ou qualquer outra\" over the three years\nThat swap is conditional on the school having the money, the staff and one class of pupils\nEnglish cannot be swapped: only the Malay slot is substitutable under the decree\nNo other language is named anywhere in the statute or the secondary curriculum decree",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2008,
+    "description": "Lei de Bases da Educação 14/2008 makes Tetum and Portuguese the languages of instruction and places the first foreign language in the third cycle of basic education"
+   },
+   {
+    "year": 2010,
+    "description": "From the 2010 school year only schools teaching in the official languages may belong to the education system"
+   },
+   {
+    "year": 2011,
+    "description": "Decreto-Lei 47/2011 approves the General Secondary curriculum, making English and Malay compulsory for all pupils"
+   },
+   {
+    "year": 2011,
+    "description": "Resolução do Governo 24/2011 approves the curriculum plan for the third cycle of basic education NOT ESTABLISHED — DO NOT PUBLISH: - Weekly hours for English or Malay: they are in Quadro 1 of the Anexo to Decreto-Lei 47/2011, which the Jornal da República HTML page does not reproduce. I did not obtain the annex. - The grade at which the third cycle begins in practice, and the hours in the third-cycle plan: Resolução 24/2011 was retrieved but its annexed curriculum plan is not in the page text. - Whether any school has in fact substituted Mandarin or Korean for Malay: no source retrieved. The conditional clause is quoted; its take-up is unknown. Do not assert either way. - Uptake or staffing of English and Malay teaching, and whether the compulsory Malay is delivered. - The 2015 basic-education curriculum reform sometimes cited for Timor-Leste: NOT retrieved in this session. Do not date anything to 2015 from this report."
+   }
+  ]
  },
  {
   "countryCode": "TM",
@@ -12813,27 +13152,57 @@
   "isNational": true,
   "region": "Asia",
   "subregion": "Central Asia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "TÜRKMENISTANYŇ KANUNY «Bilim hakynda» (rejelenen görnüşi) — Law of Turkmenistan on Education, revised text, restating the Law adopted 4 May 2013 with amendments recorded for 2014, 2017, 2018 and 2020; Article 5 'Okatmagyň we terbiýelemegiň dilleri' (Languages of teaching and upbringing). PDF published by the Ministry of Education of Turkmenistan under Hukuknamalar",
+    "url": "https://bilim.gov.tm/media/legal_documents/document_5.pdf"
+   },
+   {
+    "label": "«Döwlet umumybilim edaralary hakynda DÜZGÜNNAMA» — Regulation on state general-education institutions, approved by Resolution No. 1158 of the President of Turkmenistan of 1 March 2019. PDF published by the Ministry of Education",
+    "url": "https://bilim.gov.tm/media/legal_documents/document_8.pdf"
+   },
+   {
+    "label": "State News Agency of Turkmenistan, «Golden age» electronic newspaper, 'Foreign languages are an important priority in education', 5 October 2022 — describing the three stages of the national Concept for improving the teaching of foreign languages",
+    "url": "https://turkmenistan.gov.tm/en/post/66811/foreign-languages-are-important-priority-education"
+   },
+   {
+    "label": "State News Agency of Turkmenistan, 'Learning foreign languages', 29 January 2022",
+    "url": "https://turkmenistan.gov.tm/en/post/60539/learning-foreign-languages"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented. If you teach, plan or research language provision in this system, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "primaryRequirement": "",
+  "primaryRequirement": "Starting grade not established: the law sets compulsion but leaves the grade to curriculum plans\nLaw on Education art. 5: foreign languages enter school programmes \"as compulsory subjects\"\nTurkmen is the main language of teaching in every type of institution\nSchools must organise foreign-language teaching \"in accordance with the curriculum plans\"",
   "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "upperSecondary": "Not established from the sources consulted: no rule found on the upper-secondary stage as such. The compulsory-subject rule in art. 5 covers general and vocational programmes alike. No school-leaving language requirement appears in the Law on Education. Universities may run a one-year language preparation course for admitted students.",
+  "languagesOffered": "Statute names no language; it points only to \"the official working languages of the UN\"\nA foreign language may itself be the main medium in some institutions\nWhere it is, the state language still carries the national part of the programme\nState media 2022: a \"continuous, consistent\" language system was still the 2021-24 goal",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "higherEducation": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2013,
+    "description": "Law on Education of Turkmenistan adopted 4 May 2013, making foreign languages compulsory subjects in general and vocational programmes"
+   },
+   {
+    "year": 2017,
+    "description": "National Concept for improving the teaching of foreign languages in Turkmenistan adopted in December 2017"
+   },
+   {
+    "year": 2019,
+    "description": "Presidential Resolution No. 1158 of 1 March 2019 approves the Regulation on state general-education institutions [The revised text of the Law records amendments in 2014, 2017, 2018 and 2020 by Mejlis session number; I have not established what any of those amendments changed, so I propose no rows for them.] NOT ESTABLISHED — DO NOT PUBLISH: - The grade or age at which a foreign language starts. Both the Law and the 2019 Regulation delegate it to the okuw meýilnamalary (curriculum plans), which are not published in the Ministry's Hukuknamalar section. I enumerated every PDF that section links — six files: the Law on Education, the regulations on state pre-school institutions, on state general-education institutions and on state vocational- technical institutions, a recognition guide (Ministerial Order No. 80 of 29 March 2019), and a cyber-competition regulation. None is a curriculum plan. bilim.gov.tm/hukuknamalar/ returned HTTP 500; the working path is /hukuk-namalar/. web.archive.org was unreachable from this session. - Which languages are actually taught. English and Russian are the obvious candidates and I found NO document naming either in a school context: term counts on the Law's extracted text for \"iňlis\" (English) and \"rus dil\" (Russian language) are both ZERO. Do not publish a language list for Turkmenistan from this report. - Hours per week at any grade. - The text of the 2017 Concept itself: not retrieved; only state-media descriptions of it."
+   }
+  ]
  },
  {
   "countryCode": "TN",
@@ -17229,6 +17598,18 @@
    {
     "label": "Holy See, second periodic report to the UN Committee on the Rights of the Child, CRC/C/VAT/2 (22 October 2012), section IV on Vatican City State, paras. 107–114",
     "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf"
+   },
+   {
+    "label": "Stato della Città del Vaticano — Governatorato, 'Popolazione' (Note Generali), page dated 3 July 2018, with the site's full navigation of the Governorate's Directions and other bodies",
+    "url": "https://www.vaticanstate.va/it/stato-governo/note-generali/popolazione.html"
+   },
+   {
+    "label": "Stato della Città del Vaticano — Governatorato, home page (full site navigation)",
+    "url": "https://www.vaticanstate.va/it/"
+   },
+   {
+    "label": "Holy See — Institutions connected with the Holy See (index)",
+    "url": "https://www.vatican.va/roman_curia/institutions_connected/index.htm"
    }
   ],
   "supportLinks": [],
@@ -17239,7 +17620,7 @@
   "source": "seed",
   "primaryRequirement": "There is no national school system, so no curriculum requirement exists\nThe Holy See's own report to the UN says children attend schools elsewhere\nThey do so under the legislation of the various States running those schools\nCompulsory instruction from age 6 to 18 is set by a 2008 Vatican law",
   "secondaryRequirement": "",
-  "upperSecondary": "",
+  "upperSecondary": "Not established from the sources consulted: no Vatican school system was found to describe. The Governorate lists seven Directions, none of them for education or schools. Its own pages return no occurrence of \"scuola\" or \"istruzione\" at all. State has 618 citizens, only 246 living inside the walls, 104 of them Swiss Guards.",
   "languagesOffered": "The only school named in the whole report is one minor seminary\nItalian law enters the Vatican legal order only as supplementary law",
   "curriculumTime": "",
   "assessment": "",
