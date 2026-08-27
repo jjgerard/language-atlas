@@ -1,0 +1,19 @@
+### GE|Georgia
+URL: https://education-profiles.org/northern-africa-and-western-asia/georgia/~inclusion
+HTTP: 200  bytes: 816619
+dld fields now: 4/12
+
+## School Organization
+  In 2005, inclusive education was piloted in 10 public schools in Tbilisi and in 10 additional public schools throughout the country with the support of the Government of Norway. After an assessment conducted in 2009–10, only eight special schools were maintained, including those targeted at children with visual impairments, those for learners with hearing impairments, one school for persons with behavioural disorders and centres for people with mental disorders.
+  Since 2012, the main approach endorsed is integration of children with special education needs into regular schools. However, special education is still in place. Within the 2013 Inclusive Education Support programme, the Ministry of Education and Science has introduced integrated classes in regular schools for learners with hearing impairments, with leukemia or affected by autism.
+  According to Decree N05/N on the Enrolment of Students in the Institutions of General Education and Termination of the Status of a Student , a multidisciplinary group of specialists consisting of, among others, a psychologist, an occupational therapist, a psychiatrist and a special teacher is responsible for the definition of the special education needs of a child, based on a form filled out by the parent or legal representative.
+
+## Laws, Plans, Policies and Programmes
+  The 1995 Constitution of Georgia , amended in 2018, lays down the right to equality, prohibiting ‘any discrimination on the grounds of race, colour, sex, origin, ethnicity, language, religion, political or other views, social affiliation, property or titular status, place of residence, or on any other grounds’ (Art. 11.1). It enshrines the right to education for all and to choose the form of education provision (Art. 27.1). The 2014 Law on the Elimination of All Forms of Discrimination consolidates and harmonizes anti-discrimination provisions set in previous legislation, ‘ regardless of race, color, language, sex, age, nationality, origin, place of birth, residence, property or title, religion or faith, national, ethnic or social belonging, profession, marital status, health condition, disability, sexual orientation, gender identity and expression, political or other beliefs or other basis.’
+  The 2005 Law on General Education , amended in 2010, provides access to general education for each pupil based on the principles of proximity (‘as close to his/her place of residence as possible’), inclusion (‘including those with special education needs’) and multilingualism (‘in the official, or in his/her native, language’) (Art. 7.1). Linked to the socio-economic development strategy Georgia 2020 and the four-point plan of the reform of the Government of Georgia, the 2017–21 Unified Strategy for Education and Science reaffirms the country’s commitment to developing and expanding inclusive education, paying special attention to the most vulnerable groups, such as learners belonging to ethnic minorities, pupils with special needs, children and youth who are socially vulnerable or living along the demarcation line of the occupied territories of Georgia, and students residing in mountainous villages.
+
+## Teachers and Support Personnel
+  Many programmes are attempting to strengthen teacher training and development in different areas.
+
+## Monitoring and Reporting
+  In 2015, a monitoring instrument for inclusive education was elaborated with the financial support of the European Union and with the assistance of the non-government organization DEA (Association of Disabled Women and Mothers of Children with Disabilities). Based on a unified educational monitoring system model, developed by the European Agency for Development in Special Needs Education, the instrument was launched in 2016.

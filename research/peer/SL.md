@@ -1,0 +1,23 @@
+### SL|Sierra Leone
+URL: https://education-profiles.org/sub-saharan-africa/sierra-leone/~inclusion
+HTTP: 200  bytes: 820402
+dld fields now: 3/12
+
+## School Organization
+  The 2004 Education Act provides for the establishment and maintenance of separate education systems for pupils of the two sexes or for religious or linguistic purposes. Special schools provide education for people with physical and mental disabilities. However , most children with disabilities are not enrolled in schools due to the lack of adequate facilities.
+  Although admission of persons with disabilities to education institutions is protected and promoted by the 2011 Persons with Disability Act , the act requires a medical board to issue a permanent disability certificate to make persons with disabilities eligible for the rights and services protected by the act, including education.
+
+## Laws, Plans, Policies and Programmes
+  The 1991 Constitution of Sierra Leone , as amended in 2008, mandates the government to ensure that every citizen has the opportunity to be educated ‘to the best of his ability, aptitude and inclination by providing educational facilities at all levels and aspects of education such as primary, secondary, vocational, technical, college and university’ (Art. 9.1[a]). Special emphasis is laid on the protection and promotion of the rights of vulnerable groups, including children, women and persons with disabilities (Art. 9.1[b]). The Constitution further prohibits discrimination ‘on the grounds of place of origin, circumstance of birth, sex, religion, status, ethnic or linguistic association or ties’ (Art. 6.2).
+  The 2021 National Policy on Radical Inclusion in Schools seeks to enable marginalized and excluded groups to enter and remain in school until they graduate. The policy also seeks to increase enrolment, retention and successful transition of all students regardless of  disability, gender, pregnancy or parenting status, geographic location and socio-economic background.
+
+## Teachers and Support Personnel
+  Established in 2011 , the Sierra Leone Teaching Service Commission , consisting of, among others, at least one female educationist and a person with qualification and experience in special needs education, is responsible for teacher management and teachers’ professional status and well-being.
+  An experimental project to train teachers on inclusive education was introduced in 2013 in Freetown for teachers from across the country. It consisted of two weeks of workshops in which teachers learnt how to deal with diversity, including children with disabilities and children from ethnic minorities. In 2012 , the University of Makeni began to offer train teacher in special education. However, the goals remains to improve pre-service education programmes, develop new standards and competencies for teachers, strengthen in-service teacher training through continuous professional development and encourage teacher recruitment for needy areas.
+  The 2011 Capacity Development Strategy aimed to strengthen inclusion in teacher training, in particular targeting children with special education needs, and to develop guidance to identify special needs. A code of conduct for teachers and other education personnel was developed in 2009, containing references to both disability and gender provisions.
+  As part of the National Policy on Radical Inclusion in Schools , teachers will be trained to be more  aware of the needs of students with disabilities in inclusive classrooms. The policy fosters an ongoing partnership and engagement between special needs and mainstream education with proper early screening and assessment of children’s abilities. The policy allows for the development of individual learning plans for children with cognitive disabilities, with the involvement of parents and specialists.
+
+## Monitoring and Reporting
+  Annual joint education sector reviews provide updates on progress against sector targets pursued through collaboration with donors, partners and relevant stakeholders, including the private sector and organizations of people with disabilities.
+  At the ministry level , the Monitoring and Evaluation Unit within the Directorate of Planning and Policy provides technical expertise and guidance. Information is managed by district education offices, which collect aggregated data at school level throughout the country, and by the Situation Room, whose role is expected to be strengthened in the future.
+  The 2007 Child Rights Act established village-level child welfare committees to monitor the advancement of girls in education .

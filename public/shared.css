@@ -282,7 +282,13 @@ body {
   padding: 11px 14px; border-radius: 0 5px 5px 0; font-size: 13.5px;
   color: var(--ink-soft); margin: 0 0 20px;
 }
-.note b { color: var(--ink); display: block; margin-bottom: 3px; }
+/* A note's leading label takes its own line and says so with .label. This was
+   `.note b`, which caught every bold in a note: the sources page's "A row counts
+   entry-slots, not documents" rendered as three stacked fragments. Position is
+   no use as the test either -- :first-child matches an opening <b> whether or
+   not text precedes it, because a text node is not a child element. */
+.note b { color: var(--ink); }
+.note b.label { display: block; margin-bottom: 3px; }
 
 .field { margin: 0 0 17px; }
 .field > label, .field > .lbl {

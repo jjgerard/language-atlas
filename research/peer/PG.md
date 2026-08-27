@@ -1,0 +1,22 @@
+### PG|Papua New Guinea
+URL: https://education-profiles.org/oceania/papua-new-guinea/~inclusion
+HTTP: 200  bytes: 819952
+dld fields now: 6/12
+
+## School Organization
+  The 2010–19 UBE Plan mentions that ‘ UBE is there for all and special provisions need to be made for those children who cannot take part in the regular schooling system.’ The same source mentions that ‘the Callan Institute [helping to deliver education to children with impairments] will become a full member of the PNG Education System and will receive greater assistance in covering its operating costs.’
+  Callan Services provides education to children with disabilities; for example, every week, a Callan Services teacher visits schools with pupils with hearing impairments to teach sign language. It also works with inclusive education resource centres to upgrade skills and knowledge in inclusive education and community-based rehabilitation services.
+  The 1993 National Special Education Policy, Plans and Guidelines (NSEPPG) affirmed the right of children with disabilities to access education in the same settings as their peers, when feasible. The 2011–30 Education Sector Strategic Plan highlights that children with severe disabilities cannot be educated within the formal school system.
+  Flexible open distance education (FODE) provides distance learning for students who wish to complete and obtain certificates for grades 10 and 12 and for those who cannot continue their education in the mainstream school system.
+  With regards to multilingual education , in ‘Viles Tok Ples Priskuls’, pre-primary schools, education is provided in local languages in some communities in an approach officially recognized by the province in the 1980s. Throughout the years, over 400 vernacular languages have been taught in local elementary schools based on a written system developed by communities.
+
+## Laws, Plans, Policies and Programmes
+  The 1975 Constitution does not explicitly provide the right to education but calls for mutual respect and dialogue in education (Art. 2.1). The 1983 Education Act mandates all education providers, including local authorities, churches and communities, to develop a system ‘fitted to the requirements of the country and its people’ and to make it ‘available as widely as possible’ (Art. 4[b] and [d]). In particular, it sets out to make education accessible to ‘the poor and the physically, mentally and socially handicapped’ and ‘to those who are educationally disadvantaged’ (Art. 4[e]).
+  Framed within the Vision 2050 and built on the 2011–30 Education Sector Strategic Plan , the 2015–19 National Education Plan reaffirms the goal of inclusive education for all and of creating a learner-centred environment sensitive to the psycho-social development needs of students and more aware of gender biases. On the other hand, the 2010–19 UBE Plan qualifies concerns such as gender, special needs education, HIV/AIDS, most vulnerable children and remote and overcrowded schools as equity issues.
+
+## Teachers and Support Personnel
+  Pre-service and in-service teacher training is offered in teacher colleges and public universities or private institutes, approved by the Papua New Guinea Education Institute. At university level, the University of Goroka offers a special education course as part of an in-service programme and an inclusive education course as part of the pre-service programme for secondary teaching, as stated in the 2010–19 UBE Plan . The Callan Studies National Institute offers training in applied diploma of special education and inclusive education for mainstream teachers. The Department of Education has designed and produced Teachers in Schools Electronic Resources ( TISeR ) as an electronic tool for teachers. It contains several resources to learn more about different topics including gender and language
+
+## Monitoring and Reporting
+  A monitoring and evaluation system has been established to support the continuing review of policies and guidelines and to assess progress of the activities of the Department of Education. The regular reporting of progress is carried out quarterly as a part of the budget review process.
+  The monitoring and evaluation of the National Education Plan and the UBE Plan are undertaken annually and report on indicators developed for the Performance Assessment Framework, based on annual education census figures disaggregated by province, district and gender.
