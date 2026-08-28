@@ -1,7 +1,28 @@
+// NOTE (August 2026): the reader below is dependency-free and fine for
+// born-digital journal PDFs, but as its own note says it does NOT handle CID
+// fonts with custom encodings -- and national law gazettes are full of them.
+// Left alone it read Slovakia's ZZ_2008_322 as "UTzbc/bcsUPyovsCJ8", Greece's
+// FEK as 391,000 control characters, and a 2.2 MB Portuguese Diario da
+// Republica as the empty string. Every quote drafted off those documents
+// failed the verification gate as though the drafter had invented it.
+//
+// So the exported pdfText (see the bottom of this file) now asks every
+// extractor on the machine -- pdftotext, PyMuPDF, then this reader -- and
+// returns them joined. A quote is verified if it appears in ANY faithful
+// extraction of the cited document, which is the standard a careful drafter
+// already applies by hand when checking a quote survives both extractors.
+//
+// Asking more than one is not belt-and-braces. On the Greek FEK pdftotext
+// finds the quote and PyMuPDF does not; elsewhere it goes the other way.
+// Neither is a superset of the other, and picking one silently loses rows.
+
 // Minimal PDF text extractor: inflate every FlateDecode stream, then pull the
 // string operands out of the text-showing operators. Good enough for reading
 // born-digital journal PDFs; it does not handle CID fonts with custom encodings.
 const fs = require("fs"), zlib = require("zlib");
+const { execFileSync } = require("child_process");
+const os = require("os");
+const path = require("path");
 
 function streams(buf) {
   const out = [];
@@ -137,8 +158,55 @@ function pdfText(buf) {
     .replace(new RegExp(LF + "{3,}", "g"), LF + LF);
 }
 
-module.exports = { pdfText, streams, textFrom, parseCMap };
+// A sentinel that survives the matchers' fold(), which strips everything that is
+// not alphanumeric -- so a quote can never be matched across the seam between
+// two extractions of the same file.
+const SEAM = String.fromCharCode(10) + "XSEAMX" + String.fromCharCode(10);
+const RUN = { encoding: "utf8", maxBuffer: 256 * 1024 * 1024, timeout: 120000, stdio: ["ignore", "pipe", "ignore"] };
+
+function viaPdftotext(file) {
+  try { return execFileSync("pdftotext", ["-enc", "UTF-8", file, "-"], RUN); }
+  catch { return ""; }
+}
+
+function viaPyMuPDF(file) {
+  const code = "import sys,fitz" + String.fromCharCode(10) +
+    "d=fitz.open(sys.argv[1])" + String.fromCharCode(10) +
+    "sys.stdout.reconfigure(encoding=" + JSON.stringify("utf-8") + ", errors=" + JSON.stringify("replace") + ")" + String.fromCharCode(10) +
+    "print(chr(10).join(p.get_text() for p in d))";
+  for (const py of ["python", "python3"]) {
+    try { return execFileSync(py, ["-c", code, file], RUN); }
+    catch { /* try the next interpreter */ }
+  }
+  return "";
+}
+
+// The built-in reader, kept under its own name so the exported function can
+// call it as one candidate among several rather than as the only one.
+const builtinPdfText = pdfText;
+
+function pdfTextAll(buf) {
+  const parts = [];
+  let file = null;
+  try {
+    pdfTextAll.n = (pdfTextAll.n || 0) + 1;
+    file = path.join(os.tmpdir(), "pdftext-" + process.pid + "-" + pdfTextAll.n + ".pdf");
+    fs.writeFileSync(file, buf);
+    for (const fn of [viaPdftotext, viaPyMuPDF]) {
+      const t = fn(file);
+      if (t && t.trim().length > 40) parts.push(t);
+    }
+  } catch { /* fall through to the built-in reader */ }
+  finally { if (file) { try { fs.unlinkSync(file); } catch { /* already gone */ } } }
+  try {
+    const t = builtinPdfText(buf);
+    if (t && t.trim()) parts.push(t);
+  } catch { /* the built-in reader is a last resort, not a requirement */ }
+  return parts.join(SEAM);
+}
+
+module.exports = { pdfText: pdfTextAll, builtinPdfText, streams, textFrom, parseCMap, SEAM };
 
 if (require.main === module) {
-  process.stdout.write(pdfText(fs.readFileSync(process.argv[2])));
+  process.stdout.write(pdfTextAll(fs.readFileSync(process.argv[2])));
 }

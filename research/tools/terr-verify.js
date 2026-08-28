@@ -63,7 +63,20 @@ const strip = s => s
 // Chinese quote to a handful of stray letters and then failed to find it --
 // which is how Taiwan lost 43 bullets drawn from its own statutes.
 const CJK = "㐀-䶿一-鿿豈-﫿぀-ヿ";
-const FOLD_RE = new RegExp("[^a-z0-9" + CJK + "]+", "g");
+// Keep every LETTER and NUMBER in any script, and strip only punctuation,
+// whitespace and symbols. The old form was "[^a-z0-9" + CJK + "]+", an
+// allow-list of two scripts, and it silently deleted every other non-Latin
+// one: a Greek or Cyrillic quote folded to the empty string, so words() came
+// back empty and quoteOn returned false before it ever looked at the page.
+// Pure-Greek and pure-Cyrillic quotes were unverifiable BY CONSTRUCTION --
+// which zeroed Greece and North Macedonia on the European pass, and would
+// have done the same to Bulgaria, Serbia, Russia, Ukraine and Belarus.
+//
+// CJK was added to that allow-list when folding it cost Taiwan 43 bullets.
+// That was the same bug found once and patched for one script. p{L} and
+// p{N} fix the general case, so the next script does not have to be found
+// by losing a country first.
+const FOLD_RE = /[^\p{L}\p{N}]+/gu;   // a regex LITERAL: inside new RegExp("...") the backslash-p collapses to p
 const fold = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "")
   .toLowerCase().replace(FOLD_RE, " ").trim();
 const hasCJK = s => new RegExp("[" + CJK + "]").test(String(s));
