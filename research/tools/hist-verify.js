@@ -28,6 +28,8 @@ const https = require("https");
 const http = require("http");
 const zlib = require("zlib");
 const { pdfText } = require("./pdftext");
+const { execFileSync } = require("child_process");
+const os = require("os");
 
 const NL = String.fromCharCode(10);
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
@@ -58,6 +60,32 @@ function get(url, redirects = 0) {
     req.setTimeout(45000, () => { req.destroy(); resolve({ status: 0, body: "" }); });
     req.on("error", () => resolve({ status: 0, body: "" }));
   });
+}
+
+// Some registers sit behind a WAF that fingerprints the TLS handshake rather
+// than reading the headers. rm.coe.int and unicef.org answer curl with a 200
+// and Node with a 403 on byte-identical headers -- tested every combination of
+// User-Agent, Accept, Accept-Encoding and Referer, and all of them are refused.
+// There is no header that fixes it, because the header is not what is read.
+//
+// So when the built-in client is refused, the same url is fetched once more
+// with curl. The gate is not weakened by this: same url, same verbatim quote,
+// same extraction. Only the client changes. If curl is not on the machine the
+// fallback returns null and the row drops exactly as it did before.
+function getViaCurl(url) {
+  const tmp = path.join(os.tmpdir(), "hist-verify-" + process.pid + ".bin");
+  try {
+    const out = execFileSync("curl",
+      ["-sSL", "--max-time", "45", "-A", UA, "-o", tmp, "-w", "%{http_code}	%{content_type}", url],
+      { encoding: "utf8", timeout: 60000 });
+    const parts = String(out).trim().split(String.fromCharCode(9));
+    const raw = fs.readFileSync(tmp);
+    return { status: Number(parts[0]) || 0, body: raw.toString("utf8"), raw, type: parts[1] || "" };
+  } catch {
+    return null;
+  } finally {
+    try { fs.unlinkSync(tmp); } catch { /* nothing to remove */ }
+  }
 }
 
 const strip = s => s
@@ -106,7 +134,12 @@ const THIS_YEAR = 2026;
   console.log(Object.keys(specs).length + " unit-domains, " + urls.size + " distinct source urls to check" + NL);
 
   async function fetchInto(u, pause) {
-    const r = await get(u);
+    let r = await get(u);
+    let via = "    ";
+    if (r.status !== 200) {
+      const c = getViaCurl(u);
+      if (c && c.status === 200) { r = c; via = "curl"; }
+    }
     let text;
     if (/pdf/i.test(r.type || "") || (r.raw && r.raw.slice(0, 5).toString() === "%PDF-")) {
       try { text = pdfText(r.raw); } catch { text = ""; }
@@ -115,7 +148,7 @@ const THIS_YEAR = 2026;
     }
     page.set(u, { status: r.status, text, bytes: (r.body || "").length });
     console.log("  " + String(r.status).padStart(3) + "  " + String((r.body || "").length).padStart(7) + "b  " +
-      (/pdf/i.test(r.type || "") ? "pdf " : "    ") + String(u).slice(0, 88));
+      (/pdf/i.test(r.type || "") ? "pdf " : "    ") + " " + via + "  " + String(u).slice(0, 88));
     await new Promise(r2 => setTimeout(r2, pause));
   }
 
