@@ -31,7 +31,7 @@ spend a pass on them.
 | `legifrance.gouv.fr` | Cloudflare challenge; 403 to curl `[checked here]` | `education.gouv.fr/bo` for the curriculum arrêtés |
 | `ris.bka.gv.at`, `ogd.ris.bka.gv.at` | Myra "Security Check" 503 to curl `[checked here]` | `jusline.at` consolidated text; confirm Stammfassung dates against the OGD JSON API at `data.bka.gv.at`, which does answer |
 | `legislation.gov.im` | 403 challenge page `[checked here]` | none found; the Isle of Man stays a stub |
-| `gibraltarlaws.gov.gi` | HTTPS connection accepted, then no bytes, then timeout `[checked here]` | none found; Gibraltar stays a stub. `gibraltar.gov.gi` itself answers 200 |
+| ~~`gibraltarlaws.gov.gi`~~ | **WITHDRAWN — it was an outage, not a block.** See section 6 |  |
 | `guernseylegalresources.gg` | Cloudflare `cf-mitigated: challenge`, 403 on every path including root | `gov.gg` serves States resolution PDFs, but the enacted Education (Guernsey) Law 1970 and the Prevention of Discrimination (Guernsey) Ordinance 2022 live only on the blocked host |
 | `isap.sejm.gov.pl` | Imperva/Incapsula; `download.xsp` returns a self-referential 302 cookie challenge and never yields the file | `dziennikustaw.gov.pl`, pattern `D{YYYY}{poz}01.pdf` |
 | `lex.bg` | 403 to every request | `dv.parliament.bg`, the official gazette, full act text in literal UTF-8 |
@@ -253,6 +253,32 @@ permanent stub. If it is geo-blocking, New Hampshire is merely unreachable
 FROM HERE, and a run from a US or Canadian host would fill it and Yukon with
 it. Do not write either unit off until someone has tried from inside the
 country.
+
+## 6. Withdrawn: an outage is not a block
+
+`gibraltarlaws.gov.gi` was recorded in section 1 as refusing every client,
+on two direct tests from this machine that each accepted a connection and
+then returned zero bytes before timing out. On the strength of that, four
+user-facing `stubNote`s told readers Gibraltar's register could not be read,
+and a drafting batch was told not to bother with it.
+
+Later the same day it answered **200 in 0.46 seconds** on the root, and an
+agent pulled seven verified policy-history rows out of it. It was down, and
+it came back.
+
+The document pattern is worth recording, because the landing page does not
+serve the text: `/legislations/<slug>` carries an `iframe` whose `src` points
+at `.../uploads/legislations/<topic>/<actno>/<file>.pdf`, and that `uploads/`
+path serves the PDF to a plain GET.
+
+**The lesson for this file.** Two failed probes an hour apart look exactly
+like a permanent block and are not one. Anything recorded here on the
+strength of connection timeouts alone should be re-probed before a unit is
+written off, and a `stubNote` should not assert that a register cannot be
+read unless the failure has been seen across days rather than minutes.
+`legislation.gov.im` is the contrasting case and stays in section 1: it
+returns a deliberate 403 challenge page, which is a server choosing to
+refuse rather than a server that is down. Re-tested today, still 403.
 
 ## A note on consolidators
 
