@@ -57,7 +57,7 @@ prefer the side door, because it is still the state's own publication.
 | `slov-lex.sk`, `zakonypreludi.sk` | JS shell or Cloudflare challenge | `slov-lex.sk/static/pdf/...` |
 | `pisrs.si` | JS shell | `uradni-list.si` |
 | `njt.hu` | does not resolve | `net.jogtar.hu` (a consolidator — see the note at the end) |
-| `gazzettaufficiale.it` | page furniture only for `/eli/.../sg` and `caricaDettaglioAtto` | `normattiva.it` `uri-res/N2Ls` URNs. Normattiva's own `esporta/attoCompleto` needs a session and errors out |
+| `gazzettaufficiale.it` | page furniture only for `/eli/.../sg` and `caricaDettaglioAtto` | `normattiva.it` `uri-res/N2Ls` URNs — but **the bare URN is not enough**: without an `~artN` fragment it returns 36 KB of navigation and no act body. Use the article form, `...;66~art5`. Normattiva's own `esporta/attoCompleto` needs a session and errors out |
 | `dre.pt`, `diariodarepublica.pt`, including their ELI URLs | OutSystems SPA, returns a 2 KB shell | `files.diariodarepublica.pt` issue PDFs |
 | `legimonaco.mc` | JS-only SPA | `journaldemonaco.gouv.mc` |
 | `bopa.ad`, and `portaljuridic.ad` which does not resolve | JS-only shell | `portaljuridicandorra.ad` |
@@ -354,6 +354,40 @@ the Saudi Bureau of Experts register is unreachable) · much of the Thai
 points there) · **`diputados.gob.mx`** (no connection on 443 or 80, which is
 why the DOF edition PDFs are the only route to Mexican statute text) ·
 `majlis.gov.mv` · `senado.gob.mx` · `canlii.org` on Yukon pages.
+
+### Added by the identificationCriteria pass
+
+- `education.gov.mt` and `sustainabledevelopment.gov.mt` — 403 to the gate's
+  own client, an identical 4,541-byte block page from both. This is the only
+  reason Malta's identification criteria rest on a comparative review rather
+  than on Malta's own Policy on Inclusive Education.
+- `desc.gov.im` — **200 with a 269-byte `text/plain` stub**, the same
+  silent-success pattern as `legislation.gov.im`. `www.gov.im` serves fine,
+  and it is what gave the Isle of Man an entry at all.
+- `adilet.zan.kz` — Node rejects it with `unable to verify the first
+  certificate`, an **incomplete chain**; curl gets 200. Not fingerprinting,
+  but section 4's remedy applies, and it is why `terr-verify.js` now has the
+  curl fallback that `hist-verify.js` had from the morning. Before that fix
+  the prose gate could not read anything in section 4 at all, which cost the
+  African batch four unicef.org PDFs.
+- `unevoc.unesco.org` — serves the UNEVOC homepage at 200 in place of the
+  requested PDF. Botswana's Inclusive Education Policy 2011 has no other
+  located copy, so Botswana is empty for access, not for absence.
+- `socialprotection-pfm.org` — the domain now serves an unrelated gambling
+  site at 200. Its Senegal study is gone.
+- `handicap.sn` — 200 with a zero-byte body. `vie-publique.sn` is a Nuxt SPA
+  whose act PDFs sit behind a pdf.js worker with no plain-GET url.
+
+- `orgm.meb.gov.tr` / `ookgm.meb.gov.tr` PDFs — serve 200 and extract, but the
+  font encoding is a SHIFTED CIPHER: `OZEL EGITIM HIZMETLERI` comes out as
+  `g=(/(oo7o0+o=0(7/(5o`. This is not a Latin-1 problem and `-enc UTF-8` does
+  not help; it is the CID class in a new costume. Use `aile.tr`, the Ministry
+  of Family republication, which serves clean UTF-8.
+- `mevzuat.gov.tr` and `resmigazete.gov.tr` — connect timeout to BOTH Node and
+  curl. Node reports it as `unable to verify the first certificate`, which
+  reads like a TLS fault and is not one. Section 7 above recommends
+  mevzuat.gov.tr over resmigazete for Turkish text; when neither answers,
+  `aile.tr` does.
 
 ### Nothing quotable, which is not the same as blocked
 
