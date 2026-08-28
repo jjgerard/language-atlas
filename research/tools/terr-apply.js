@@ -24,10 +24,14 @@ for (const [key, v] of Object.entries(verified)) {
   const s = { confidence: "official-document" };
   if (v.fields && Object.keys(v.fields).length) s.fields = v.fields;
   if (v.series && Object.keys(v.series).length) s.series = v.series;
+  if (v.notEstablished && Object.keys(v.notEstablished).length) s.notEstablished = v.notEstablished;
+  // fl/apply.js validates the sentinel phrase and writes this. Without the line
+  // below it never arrived, so an absence finding died between the gate and the
+  // store with nothing logged either side.
   if (v.sources && v.sources.length) {
     s.addDocLinks = v.sources.map(x => ({ label: x.label, url: x.url }));
   }
-  if (!s.fields && !s.series) continue;
+  if (!s.fields && !s.series && !s.notEstablished) continue;
   spec[key] = s;
   if (v.history && v.history.length) history[key] = v.history;
 }

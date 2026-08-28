@@ -190,11 +190,29 @@ function quoteOn(quote, page) {
       if (good.length) keptSeries[field] = good;
     }
 
+    // `notEstablished` is the THIRD state -- a source positively saying that a
+    // thing is not recorded -- and derive.js is explicit that it must never
+    // count as coverage: three states, not two. It was not handled here at all.
+    // A unit whose only finding was an absence had that finding dropped and,
+    // having no surviving bullets, vanished from the output entirely.
+    //
+    // Laos was about to be lost exactly that way: two peer-reviewed sources
+    // state there is no speech and language therapy service to be had, which is
+    // precisely the kind of finding this atlas exists to record.
+    //
+    // It is passed through rather than quote-checked. A claim of absence is not
+    // the same shape of claim as a quoted provision, and the sentinel phrase is
+    // validated downstream by fl/apply.js. That it is NOT gated here is printed
+    // out loud below, so it can never be mistaken for a verified bullet.
+    const notEst = s.notEstablished || {};
+    const nn = Object.keys(notEst).length;
+
     const ns = Object.values(keptSeries).reduce((a, b) => a + b.length, 0);
     const nb = Object.values(kept).reduce((a, b) => a + b.length, 0);
     console.log(NL + key + ": " + Object.keys(kept).length + " fields, " + nb + " bullets, " + ns + " series rows verified, " + dropped.length + " dropped");
+    if (nn) console.log("    " + nn + " notEstablished finding" + (nn === 1 ? "" : "s") + " passed through UNGATED (a claim of absence is not quote-checked)");
     dropped.forEach(d => console.log("    - " + d));
-    if (nb || ns) out[key] = { fields: kept, series: keptSeries, history: s.history || [], sources: s.sources || [] };
+    if (nb || ns || nn) out[key] = { fields: kept, series: keptSeries, notEstablished: notEst, history: s.history || [], sources: s.sources || [] };
   }
 
   fs.writeFileSync(path.join(specDir, OUT), JSON.stringify(out, null, 1) + NL);
