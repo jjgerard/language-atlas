@@ -12,10 +12,33 @@
 //
 // A 'text' field is written as sub-bullets, one per line: at most four points,
 // each short enough for two lines in the entry panel, in the clipped register of
-// a conference poster rather than in sentences. A qualifier that would mislead
-// the reader if dropped — that a figure is a practitioner survey, that a task
-// exists without any service using it — may take a fifth line, and belongs at
-// the top, since a reader of a list may not reach the bottom of it.
+// a conference poster rather than in sentences.
+//
+// EACH BULLET ANSWERS A FIXED QUESTION, IN A FIXED ORDER. The `hint` on every
+// text field lists those questions. They are a drafting discipline, not labels:
+// the bullet carries the content only, never the name of the slot.
+//
+// Two rules make this work. Order the questions so the first is the one almost
+// every system answers and the last is the one few do -- then a thin entry
+// carries the SAME first two points as every other thin entry, instead of two
+// arbitrary ones. And OMIT a question you cannot answer: never pad, never write
+// a placeholder. Four blank slots and four missing ones look identical to a
+// reader, and only one of them is honest.
+//
+// This replaces choosing four points per entry ad hoc, which made entries
+// unusable side by side: the first bullet of dld.terminology was answering four
+// different questions across France, Kenya, India and Japan -- provenance, an
+// absence, the term itself, and a comparison to the rest of the atlas.
+//
+// CITE INSIDE THE BULLET, in a terse parenthesis:
+//   "trouble du langage (TL)" used throughout (COST IS1406 survey translation)
+// The budget is unforgiving here -- writing that as "not a statutory label"
+// costs 97 characters and is refused. Keep the parenthesis short.
+//
+// A qualifier that would mislead the reader if dropped belongs INSIDE the bullet
+// it qualifies, as above. Only a qualifier that applies to the whole field and
+// cannot attach to one point takes a fifth line, at the top, since a reader of a
+// list may not reach the bottom of it.
 //
 // Every domain's entries live in the atlas's own store, in data/<id>.json.
 // Two of them began life in separate trackers and were proxied over the network
@@ -47,17 +70,17 @@ const DOMAINS = [
     blurb: 'Children with a lasting difficulty learning and using language: how it is identified, and what they are entitled to. Known in research as DLD.',
     live: true,
     fields: [
-      ['terminology', 'Terminology', 'text', 'The term used locally, and whether it maps onto DLD.'],
-      ['identificationCriteria', 'Identification criteria', 'text', 'What has to be true for a child to be identified.'],
-      ['assessments', 'Assessments', 'text', 'Instruments in routine use \u2014 name and link them, never reproduce items or norms.'],
-      ['multilingualProvision', 'Multilingual provision', 'text', 'How children assessed in a language other than their first are handled.'],
-      ['referralPathway', 'Referral pathway', 'text', 'Who refers, to whom, and what happens next.'],
-      ['serviceModel', 'Service model', 'text', 'Where therapy happens and in what form.'],
-      ['legalEntitlement', 'Legal entitlement', 'text', 'What the law obliges the system to provide.'],
-      ['funding', 'Funding', 'text', 'Who pays, and how the money reaches a child.'],
-      ['workforce', 'Workforce', 'text', 'Numbers, training and distribution of therapists.'],
-      ['dischargeCriteria', 'Discharge criteria', 'text', 'What ends a child\u2019s support.'],
-      ['outcomesEvidence', 'Outcomes evidence', 'text', 'Published evidence on how the system performs.'],
+      ['terminology', 'Terminology', 'text', 'In this order, omitting any you cannot answer: the term itself in the local language · what the category covers · how it relates to DLD, whether wider, narrower or absent · where the term is fixed, in statute, in guidance, or in practice only.'],
+      ['identificationCriteria', 'Identification criteria', 'text', 'In this order, omitting any you cannot answer: who decides · what evidence is required · the threshold, in words and never as scores from a commercial test · what rules a child out.'],
+      ['assessments', 'Assessments', 'text', 'In this order, omitting any you cannot answer: what is in routine use, named and linked but never reproduced · which languages it exists in · whether the norms are local · whether its use is required or chosen.'],
+      ['multilingualProvision', 'Multilingual provision', 'text', 'In this order, omitting any you cannot answer: whether a child can be assessed in a language they speak · who provides that · what the rule says about bilingual children · whether norms exist for them.'],
+      ['referralPathway', 'Referral pathway', 'text', 'In this order, omitting any you cannot answer: who may refer · to whom · what triggers a referral · what gates it, such as a wait, a threshold or an age limit.'],
+      ['serviceModel', 'Service model', 'text', 'In this order, omitting any you cannot answer: where therapy happens · who delivers it · how much of it, the intensity or dosage · whether provision is tiered or universal.'],
+      ['legalEntitlement', 'Legal entitlement', 'text', 'In this order, omitting any you cannot answer: the instrument, named · what it obliges · who carries the duty · what redress or appeal exists.'],
+      ['funding', 'Funding', 'text', 'In this order, omitting any you cannot answer: who pays · how the money reaches a child · any co-payment or cap · whether it is ring-fenced.'],
+      ['workforce', 'Workforce', 'text', 'In this order, omitting any you cannot answer: how many there are and when they were counted · the ratio to population · the qualification route · where they are and are not.'],
+      ['dischargeCriteria', 'Discharge criteria', 'text', 'In this order, omitting any you cannot answer: what ends support · who decides · whether a child can re-enter · any age ceiling.'],
+      ['outcomesEvidence', 'Outcomes evidence', 'text', 'In this order, omitting any you cannot answer: what was measured · by whom and when · what it found · whether it is repeated.'],
       ['identifiedPrevalence', 'Identified prevalence', 'series', 'Rates identified by the system, by year, with the source of each figure.'],
       ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, guidance or funding decision, one per row.'],
     ],
