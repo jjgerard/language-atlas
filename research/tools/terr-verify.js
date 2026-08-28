@@ -20,7 +20,7 @@ const path = require("path");
 const https = require("https");
 const http = require("http");
 const zlib = require("zlib");
-const { pdfText } = require("./pdftext");
+const { pdfText, SEAM } = require("./pdftext");
 
 const NL = String.fromCharCode(10);
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
@@ -151,7 +151,22 @@ function quoteOn(quote, page) {
     if (magic) {
       try { text = pdfText(r.raw); } catch { text = ""; }
     } else {
-      text = strip(r.body);
+      // Content-Type is a claim, and pages lie or omit it. Decode as UTF-8 and
+      // again as latin-1, and search both: impo.com.uy serves ISO-8859-1, and a
+      // UTF-8 decode of it produced 3,675 replacement characters and lost both
+      // Uruguayan rows whose quotes match perfectly under latin-1. That would
+      // cost rows silently on any latin-1 register -- Spanish, French,
+      // Portuguese, German.
+      //
+      // Same remedy as the PDF extractors: do not pick, search the union. The
+      // two decodings are joined by the seam sentinel, which survives fold(),
+      // so nothing can match across the join.
+      const utf8 = strip(r.body);
+      let latin = "";
+      try {
+        if (r.raw && Buffer.isBuffer(r.raw)) latin = strip(r.raw.toString("latin1"));
+      } catch { /* utf8 alone */ }
+      text = (latin && latin !== utf8) ? utf8 + SEAM + latin : utf8;
     }
     page.set(u, { status: r.status, text, type: r.type, bytes: r.body.length });
     console.log("  " + String(r.status).padStart(3) + "  " + String(r.body.length).padStart(7) + "b  " + (/pdf/i.test(r.type||"")?"pdf ":"    ") + u.slice(0, 88));
