@@ -271,7 +271,113 @@ function languages(payload) {
   };
 }
 
+// ---- what the four maps say about each other -----------------------------
+
+/* The atlas holds four policy domains on ONE unit list, and nothing else does.
+ * Eurydice covers foreign languages in Europe. MIPEX scores integration. The
+ * MLA counts American university enrolments. Every comparable resource is one
+ * domain, or one region, or both, so no existing source can ask whether a
+ * system that supports children's home languages also teaches foreign ones.
+ *
+ * This asks that, and four questions like it, by JOINING ON THE UNIT. It reads
+ * `fieldStates`, which derive.js already computes -- 'h' for documented, 'l'
+ * for looked-and-found-nothing, 'x' for not applicable, 'n' for blank -- so
+ * these findings inherit the same definition of documented that the coverage
+ * ramp and the hover checklist use, rather than inventing a second one.
+ *
+ * They are co-occurrence, not causation, and the notes say so. Two fields
+ * being documented together across 300 units is a fact about what systems
+ * write down, which is the thing this atlas is a record of.
+ *
+ * `fields` is stripped from the payload in catalog.js, so the field order
+ * comes from domains.js directly. */
+const { DOMAINS } = require("./domains");
+
+function crossDomain(payload) {
+  const index = {}, units = {};
+  for (const d of DOMAINS.filter(x => x.live)) {
+    index[d.id] = {};
+    d.fields.forEach(([k], i) => { index[d.id][k] = i; });
+    units[d.id] = new Map((payload.units[d.id] || []).map(u => [u.cc + "|" + u.name, u]));
+  }
+
+  const state = (domain, field, key) => {
+    const u = units[domain] && units[domain].get(key);
+    if (!u || typeof u.fieldStates !== "string") return null;
+    const i = index[domain] && index[domain][field];
+    return i === undefined ? null : u.fieldStates[i];
+  };
+  const has = (domain, field, key) => state(domain, field, key) === "h";
+
+  // Every unit key that exists on any live map.
+  const keys = new Set();
+  for (const m of Object.values(units)) for (const k of m.keys()) keys.add(k);
+
+  const pair = (a, fa, b, fb) => {
+    let both = 0, onlyA = 0, onlyB = 0, neither = 0;
+    for (const k of keys) {
+      const x = has(a, fa, k), y = has(b, fb, k);
+      if (x && y) both++; else if (x) onlyA++; else if (y) onlyB++; else neither++;
+    }
+    return { both, onlyA, onlyB, neither, of: keys.size };
+  };
+
+  // How many of the four maps carry a timeline for the same place.
+  const live = DOMAINS.filter(x => x.live).map(d => d.id);
+  const timelines = { 1: 0, 2: 0, 3: 0, 4: 0 };
+  let anyTimeline = 0;
+  for (const k of keys) {
+    let n = 0;
+    for (const d of live) {
+      const u = units[d] && units[d].get(k);
+      if (u && Array.isArray(u.history) && u.history.length) n++;
+    }
+    if (n) { anyTimeline++; timelines[n] = (timelines[n] || 0) + 1; }
+  }
+
+  return {
+    units: keys.size,
+    homeLanguageAndForeign: pair("eal", "l1Support", "fl", "languagesOffered"),
+    standingAndForeign: pair("indigenous", "standing", "fl", "primaryRequirement"),
+    homeLanguageAndMedium: pair("eal", "l1Support", "indigenous", "mediumOfInstruction"),
+    assessedInLanguage: pair("dld", "multilingualProvision", "eal", "newcomerCriteria"),
+    timelines, anyTimeline, allFour: timelines[4] || 0,
+  };
+}
 const FINDINGS = [
+  // ---- what the four maps say about each other ----
+  {
+    id: 'home-language-two-ways',
+    scope: 'all',
+    compute: c => c.crossDomain.homeLanguageAndMedium,
+    holds: v => v.onlyA >= 40 && v.both >= 100,
+    text: v => `Systems answer the home-language question for newcomers far more often than for the languages already spoken where the school stands: ${v.both} places document both, but ${v.onlyA} describe provision in an arriving child's home language while recording nothing about whether a local or Indigenous language is a medium of instruction.`,
+    note: 'The same question -- is a child taught in a language they already speak -- is treated as an integration matter when the child has arrived and as a heritage matter when the language was there first. These are the places that answer it once.',
+  },
+  {
+    id: 'standing-and-foreign',
+    scope: 'all',
+    compute: c => c.crossDomain.standingAndForeign,
+    holds: v => v.both >= 100,
+    text: v => `Recognising the languages already spoken locally does not come at the expense of teaching foreign ones: ${v.both} places document both a standing for their regional or Indigenous languages and a foreign-language rule in primary school, while only ${v.onlyB} document the foreign-language rule alone.`,
+    note: 'The crowding-out worry -- that room made for one kind of language is taken from another -- is old and rarely tested across systems. Co-occurrence is not the whole answer to it, but it is the first thing to look at.',
+  },
+  {
+    id: 'assessed-in-a-language-they-speak',
+    scope: 'all',
+    compute: c => c.crossDomain.assessedInLanguage,
+    holds: v => v.both >= 50 && v.onlyB > 0,
+    text: v => `Whether a child can be assessed for a language disorder in a language they actually speak is recorded far less often than who counts as a second-language pupil: ${v.both} places document both, but ${v.onlyB} define their newcomer category without saying anything about assessing those same children for a disorder.`,
+    note: 'A live clinical question with almost no cross-national evidence behind it. The gap between the two numbers is the finding: systems identify these children for one purpose and are silent about them for the other.',
+  },
+  {
+    id: 'reform-together',
+    scope: 'all',
+    compute: c => (c.crossDomain.anyTimeline ? c.crossDomain : null),
+    holds: v => v.allFour >= 25,
+    text: v => `When a country changes language-in-education policy it rarely changes only one part of it: of ${v.anyTimeline} places with any dated change recorded, ${v.timelines[2] + v.timelines[3] + v.allFour} carry one on two or more of the four maps and ${v.allFour} on all four.`,
+    note: 'Nothing else holds four language-policy domains on one unit list, so nothing else can ask whether reform arrives across the board or one question at a time. Recording is uneven, so this is a floor rather than a measurement.',
+  },
   // ---- what the entries say about languages ----
   {
     id: 'engagement-gap',
@@ -423,7 +529,9 @@ const RETIRED_FINDINGS = [
 // less to the point, and left to its own devices it drifts to the top.
 //
 // A finding not named here still shows, after the named ones.
-const FINDING_ORDER = ['engagement-gap', 'when-changed', 'word-order', 'tone', 'family-concentration'];
+const FINDING_ORDER = ['home-language-two-ways', 'assessed-in-a-language-they-speak',
+  'standing-and-foreign', 'reform-together', 'engagement-gap', 'when-changed',
+  'word-order', 'tone', 'family-concentration'];
 
 function findings(ctx) {
   const held = [], withdrawn = [];
@@ -448,6 +556,7 @@ function computeTrends(payload) {
     provenance: provenance(payload),
     coverage: coverage(payload),
     languages: languages(payload),
+    crossDomain: crossDomain(payload),
   };
   return { ...ctx, findings: findings(ctx), generated: new Date().toISOString().slice(0, 10) };
 }
