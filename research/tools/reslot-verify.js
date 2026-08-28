@@ -86,7 +86,22 @@ const fold = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase
 const words = s => fold(s).replace(/[^a-z0-9À-ɏ]+/g, " ").split(" ").filter(Boolean);
 const stems = set => new Set([...set].map(w => w.slice(0, 5)));
 const numbers = s => (String(s).match(/\d+/g) || []);
-const quoted = s => (String(s).match(/[“"']([^”"']{2,60})[”"']/g) || [])
+// A quoted term is a fact, so a new one is refused -- but the apostrophe is
+// not only a quote mark. Pairing them positionally makes a possessive offset
+// everything after it: "SESEP's work on 'orthophonie'" pairs the apostrophe
+// in SESEP's with the one opening orthophonie, so a term that IS in the
+// stored text reads as newly invented. Guinea lost its quote marks to this.
+//
+// So a straight apostrophe delimits a quote only when it is not touching a
+// letter on the outside, which is what separates 'orthophonie' from SESEP's.
+// Curly quotes and double quotes have no such ambiguity and are matched
+// plainly.
+const QUOTE_RES = [
+  /[\u201C]([^\u201D]{2,60})[\u201D]/g,
+  /"([^"]{2,60})"/g,
+  /(?<![\p{L}\p{N}])'([^']{2,60})'(?![\p{L}\p{N}])/gu,
+];
+const quoted = s => QUOTE_RES.flatMap(re => String(s).match(re) || [])
   .map(x => fold(x).replace(/[^a-z0-9 ]+/g, "").trim()).filter(Boolean);
 
 const rows = JSON.parse(fs.readFileSync(path.join(ATLAS, "data", FILES[domain]), "utf8"));
