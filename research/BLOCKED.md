@@ -276,9 +276,14 @@ like a permanent block and are not one. Anything recorded here on the
 strength of connection timeouts alone should be re-probed before a unit is
 written off, and a `stubNote` should not assert that a register cannot be
 read unless the failure has been seen across days rather than minutes.
-`legislation.gov.im` is the contrasting case and stays in section 1: it
-returns a deliberate 403 challenge page, which is a server choosing to
-refuse rather than a server that is down. Re-tested today, still 403.
+I reached for `legislation.gov.im` as the contrasting case here -- a server
+deliberately refusing rather than one that is down -- and by the end of the
+same day that was wrong too. It had stopped returning 403 and started
+returning 200 with a 269-byte challenge stub. See section 7. The honest
+version of the lesson is therefore stronger than the one I first wrote: a
+host recorded here on a single day's evidence should be assumed stale, in
+either direction, and the file should say what was seen rather than what a
+server is like.
 
 ## 7. The dld history sweep, and what encoding cost
 
