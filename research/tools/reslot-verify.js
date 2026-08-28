@@ -43,6 +43,7 @@
 // work done while it was running.
 const fs = require("fs");
 const path = require("path");
+const { NOT_DOCUMENTED_RE } = require(path.join(__dirname, "..", "..", "src", "derive"));
 
 const ATLAS = path.join(__dirname, "..", "..");
 const FILES = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
@@ -111,6 +112,13 @@ for (const [key, s] of Object.entries(specs)) {
     const p = [];
 
     if (!old.trim()) p.push("nothing stored to re-slot");
+    // A not-established field HAS text, so it would otherwise look re-slottable.
+    // It is not prose: it is the record that someone looked and found nothing,
+    // and rewording it risks breaking the sentinel phrase that derive.js keys the
+    // third state on. The worklist never offers these, but an agent could still
+    // send one, and the cost of that going through is a coverage figure that
+    // quietly starts counting an absence as documented.
+    if (NOT_DOCUMENTED_RE.test(old.trim())) p.push("this field is a not-established finding, not prose to re-slot");
     if (!Array.isArray(bullets) || !bullets.length) p.push("no bullets offered");
     if (bullets && bullets.length > 5) p.push(bullets.length + " bullets");
     for (const b of (bullets || [])) {
