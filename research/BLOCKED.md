@@ -176,16 +176,69 @@ and falls back to curl. A host that refuses a bare request or the short
 **Test with the full string before writing a host off or reaching for an
 archive mirror.**
 
+### Second wave: the remaining US states and eastern Canada
+
+| Host | Failure | Consequence or way round |
+|---|---|---|
+| `legislature.mi.gov` | Check Point "UserCheck" WAF, 403 on every path including root, identical 19,283-byte block page. Unchanged by full browser UA, by `Accept`/`Accept-Language`/`Sec-Fetch` headers, by HTTP/1.1, or by TLS 1.2 pinning | — |
+| `legislature.michigan.gov` | the same WAF from the TLS side: a self-signed certificate, and with `-k` the server closes abruptly | **Michigan statutes (MCL) are unreachable.** Every consolidator tried is blocked, gone or JS-walled, so Michigan's 1976 row is sourced to the Revised School Code authority citation printed in the official rules document, and its 2024 dyslexia screening act (PA 146) could not be sourced at all |
+| the whole `yukon.ca` estate — `laws.yukon.ca`, `legislation.yukon.ca`, `yukon.ca` | 403 to a full browser UA `[checked here]` | Second whole-estate refusal after `nh.gov`. Yukon's one row cites a web.archive.org mirror and is currently unproven, because archive.org is rate-limiting |
+| the whole `gnb.ca` estate — `laws.gnb.ca`, `www1`, `www2`, `www.gnb.ca` | Cloudflare interstitial, 403 to a full browser header set | **`legnb.ca`, the Legislative Assembly, is NOT blocked** `[checked here]` and serves bill text as single-language English HTML at `/content/house_business/<leg>/<sess>/bills/Bill-NN-e.htm`. That also avoids the bilingual two-column extraction problem in the consolidated PDFs |
+| `statutes.capitol.texas.gov` | the identical 250,874-byte JavaScript shell for every path, `/Docs/ED/htm/`, `/Docs/ED/pdf/` and `GetStatute.aspx` alike | `capitol.texas.gov` enrolled bill text, which serves real HTML |
+| `texreg.sos.state.tx.us` | the Texas Administrative Code has moved to `texas-sos.appianportalsgov.com`, an Appian portal, JS-only | 19 TAC ch. 89 unreachable; no Texas admin-rule rows |
+| `oregonlegislature.gov` | connection refused or timed out on 443, every retry and variant `[checked here]` | `oregon.public.law` (consolidator) — all five Oregon rows |
+| `secure.sos.state.or.us` | BIG-IP/ASM JavaScript challenge | OAR 581-015 unreachable |
+| `oscn.net` | connection failure on 80 and 443 `[checked here]` | Oklahoma statute text unreachable; only enrolled bills usable |
+| `rules.ok.gov` | React SPA, empty shell | — |
+| `akleg.gov/basis/statutes.asp`, `aac.asp` | always the same ~15 KB shell regardless of query; the Folio `folioproxy.asp` backend answers but IGNORES the `[JUMP:'14.30.180']` query and returns Title 01 every time | `akleg.gov/PDF/32/Bills/*.PDF` works |
+| `alisondb.legislature.state.al.us` | DNS non-existent; the old ALISON host is retired | — |
+| `alison.legislature.state.al.us` | JavaScript-only. Worse, `/api/code-of-alabama` **ignores** the `section` parameter and returns an unrelated ~700 KB bulk tree; `/section/`, `/search?q=` all 404 | **No plain-GET url exists for a Code of Alabama section or an enrolled act.** Alabama's rows come from the administrative code instead |
+| `regulations.delaware.gov` | Angular shell, an identical 65,540-byte body for every path INCLUDING the `.pdf` ones | `archive.regulations.delaware.gov`, Delaware's own retired-but-live static site, serves both the Administrative Code and Register final orders |
+| `palegis.us`, `legis.state.pa.us` statute viewer | 200 OK, but the body is injected by JS into an `about:blank` iframe; `txtType=PDF` returns HTML | session-law text at `palegis.us/WU01/LI/LI/US/HTM/<year>/0/<actnum>..HTM` |
+| `mgaleg.maryland.gov/.../StatuteText` | JS-rendered, no statute text in the HTML | the same host's `Legislation/Details/` pages and `RS/Chapters_noln/CH_*.pdf` chapter PDFs do serve |
+| `dsd.maryland.gov/regulations/Pages/<COMAR>.aspx` | 404, a 13-byte body, for every chapter tried | COMAR 13A.05.01 unobtainable, so Maryland has no regulation row. `dsd.maryland.gov/MDRIssues/<n>/Assembled.aspx` DOES serve full Register issues if a later pass wants to hunt an adoption notice by issue number |
+| `regs.nysed.gov` | connection failure, no response | — |
+| `dos.ny.gov` | 403 WAF | This is the official publisher of 8 NYCRR, so New York's two rows cite `nysed.gov` instead — whose own disclaimer calls its regulation text "unofficial". Category 2, and worth upgrading if a route to 8 NYCRR is found |
+| `legisquebec.gouv.qc.ca` | **502 on every path including root** `[checked here]` | An OUTAGE, not a block — retry it. Quebec's rows came from the Éditeur officiel at `publicationsduquebec.gouv.qc.ca`, which is category 1 anyway |
+
+### Silent failures: the dangerous class
+
+These do not error. They return something that looks like a document and is not, so a drafter believes it has read the text and the gate then rejects every quote taken from it.
+
+- **`ars.apps.lara.state.mi.us` with `&ReturnHTML=True`** — returns a 1.3 MB HTML rendering with per-glyph absolutely-positioned `<span>`s. The words are shredded and no tag-stripping extractor can find any phrase in it. **Dropping that one parameter returns the genuine 265 KB PDF**, which extracts cleanly. An earlier brief passed the `ReturnHTML=True` form on, and any pass reusing it verbatim fails the gate no matter how good its quotes are.
+- **`arkleg.state.ar.us` act PDFs** — `/assembly/<yr>/<sess>/Acts/ActNNNN.pdf` and `/Home/FTPDocument?path=` both return a **zero-byte `image/gif`**. The working form is `/Acts/FTPDocument?path=%2FACTS%2F<sess>%2FPublic%2F&file=<n>.pdf&ddBienniumSession=<bien>%2F<sess>`.
+- **`codes.findlaw.com`** — serves the text but strips the session-law credit lines. Usable for wording, useless for dating.
+- **`ksde.gov`** PDF path — returns 245 bytes of HTML, not the PDF.
+- **`rules.mt.gov`** — an 894-byte stub. **`rules.wyo.gov`** `DownloadFile.aspx` — a 17-byte file.
+
+### Quote hazards in extracted text
+
+Not host problems, but they cost rows the same way, and each one was found by a drafter losing rows to it:
+
+- **Arkansas and Louisiana bill PDFs** interleave margin line numbers into the extracted text. A quote spanning a line wrap picks up a stray digit and fails. Keep each quote within one source line.
+- **Montana** section cross-references are hyperlinked, so extracted text reads `20-7-420 ,` with a space before the comma. Avoid quoting across a section reference.
+- **Michigan MARSE** prints each rule's `History:` line *before* the next rule's heading, so it is easy to attribute a date to the neighbouring rule. Read the block, not the adjacency.
+- **Slovak PDFs** carry non-breaking spaces that `pdftotext` normalises and PyMuPDF preserves; **Croatian** gazette pages are hard-wrapped. Choose quotes that are NBSP-free and within a single source line so they are identical under either extractor.
+
+### Intermittent, not blocked
+
+Recording these as blocked would send a later pass to a worse source for nothing.
+
+- `princeedwardisland.ca/en/` — a Radware bot check stopped one agent, and served me 200 with 125 KB on retest `[checked here]`. Its `/sites/default/files/` static path serves PDFs regardless, and is the reliable way in.
+- `rules.sos.ga.gov` — served one agent, then 403'd me twice `[checked here]`. Georgia's 2007 row is unproven for this reason rather than disproven.
+- `web.archive.org` — began returning **429 Too Many Requests** during the run and was still doing so an hour later `[checked here]`. Its CDX API kept working. This is a real operational constraint on any pass that leans on archive mirrors, and it is why Yukon's only row is currently unverified.
+
 ### A geography caveat worth keeping
 
-An entire US state government estate refusing every request — HTML and PDF,
-legislature and agencies alike, as `nh.gov` does — looks more like
+An entire government estate refusing every request — HTML and PDF,
+legislature and agencies alike, as `nh.gov` and `yukon.ca` both do — looks more like
 geo-blocking of non-US traffic than like bot-blocking. That is a hypothesis,
 not a finding: it has not been tested from a US address. It matters because
 the two have opposite consequences. If it is bot-blocking, New Hampshire is a
 permanent stub. If it is geo-blocking, New Hampshire is merely unreachable
-FROM HERE, and a run from a US host would fill it. Do not write the unit off
-until someone has tried from inside the country.
+FROM HERE, and a run from a US or Canadian host would fill it and Yukon with
+it. Do not write either unit off until someone has tried from inside the
+country.
 
 ## A note on consolidators
 
@@ -193,7 +246,8 @@ Where the official register is in section 1 or 2 and has no side door, the
 substitute is sometimes a commercial or third-party consolidator:
 `paragraf.rs`, `paragraf.ba`, `net.jogtar.hu`, `jusline.at`, `cylaw.org`,
 `natlex.ilo.org`, `fgos.ru`, and from the North America pass
-`law.cornell.edu` (Nevada, Georgia) and `files.eric.ed.gov` (Alberta).
+`law.cornell.edu` (Nevada, Georgia, Alaska), `oregon.public.law` (all five
+Oregon rows) and `files.eric.ed.gov` (Alberta).
 Those rows are true — the quote is verbatim on
 the page cited, and the gate confirms it — but they cite someone else's copy
 of the state's text rather than the state's own publication.
