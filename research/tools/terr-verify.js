@@ -53,9 +53,31 @@ function get(url, redirects = 0) {
   });
 }
 
-const strip = s => s
+const NAMED = {
+  amp: 38, lt: 60, gt: 62, quot: 34, apos: 39, nbsp: 32, shy: 45,
+  aacute: 225, eacute: 233, iacute: 237, oacute: 243, uacute: 250,
+  Aacute: 193, Eacute: 201, Iacute: 205, Oacute: 211, Uacute: 218,
+  agrave: 224, egrave: 232, igrave: 236, ograve: 242, ugrave: 249,
+  Agrave: 192, Egrave: 200, Igrave: 204, Ograve: 210, Ugrave: 217,
+  acirc: 226, ecirc: 234, icirc: 238, ocirc: 244, ucirc: 251,
+  Acirc: 194, Ecirc: 202, Icirc: 206, Ocirc: 212, Ucirc: 219,
+  auml: 228, euml: 235, iuml: 239, ouml: 246, uuml: 252,
+  Auml: 196, Euml: 203, Iuml: 207, Ouml: 214, Uuml: 220,
+  atilde: 227, ntilde: 241, otilde: 245, Atilde: 195, Ntilde: 209, Otilde: 213,
+  ccedil: 231, Ccedil: 199, aring: 229, Aring: 197, aelig: 230, AElig: 198,
+  oslash: 248, Oslash: 216, szlig: 223, yacute: 253, yuml: 255,
+  ordf: 170, ordm: 186, deg: 176, laquo: 171, raquo: 187, middot: 183,
+  ndash: 8211, mdash: 8212, lsquo: 8216, rsquo: 8217, ldquo: 8220, rdquo: 8221,
+  hellip: 8230, euro: 8364, pound: 163, sect: 167, para: 182,
+};
+const unescapeEntities = s => String(s)
+  .replace(/&#x([0-9a-f]+);/gi, (m, h) => String.fromCodePoint(parseInt(h, 16)))
+  .replace(/&#(\d+);/g, (m, d) => String.fromCodePoint(Number(d)))
+  .replace(/&([a-z]+[0-9]*);/gi, (m, n) => (NAMED[n] !== undefined ? String.fromCodePoint(NAMED[n]) : " "));
+
+const strip = s => unescapeEntities(String(s)
   .replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ")
-  .replace(/<[^>]+>/g, " ").replace(/&[a-z]+;|&#\d+;/gi, " ");
+  .replace(/<[^>]+>/g, " "));
 
 // Fold away everything extraction mangles: accents, curly quotes, case, runs of
 // space. What is left is words, which is what a quote is really made of.

@@ -30,7 +30,7 @@ spend a pass on them.
 |---|---|---|
 | `legifrance.gouv.fr` | Cloudflare challenge; 403 to curl `[checked here]` | `education.gouv.fr/bo` for the curriculum arrêtés |
 | `ris.bka.gv.at`, `ogd.ris.bka.gv.at` | Myra "Security Check" 503 to curl `[checked here]` | `jusline.at` consolidated text; confirm Stammfassung dates against the OGD JSON API at `data.bka.gv.at`, which does answer |
-| `legislation.gov.im` | 403 challenge page `[checked here]` | none found; the Isle of Man stays a stub |
+| ~~`legislation.gov.im`~~ | **CORRECTED — it no longer 403s, it returns 200 with a 269-byte challenge stub.** See section 7 | still unusable by this pipeline, but a challenge rather than a refusal |
 | ~~`gibraltarlaws.gov.gi`~~ | **WITHDRAWN — it was an outage, not a block.** See section 6 |  |
 | `guernseylegalresources.gg` | Cloudflare `cf-mitigated: challenge`, 403 on every path including root | `gov.gg` serves States resolution PDFs, but the enacted Education (Guernsey) Law 1970 and the Prevention of Discrimination (Guernsey) Ordinance 2022 live only on the blocked host |
 | `isap.sejm.gov.pl` | Imperva/Incapsula; `download.xsp` returns a self-referential 302 cookie challenge and never yields the file | `dziennikustaw.gov.pl`, pattern `D{YYYY}{poz}01.pdf` |
@@ -279,6 +279,107 @@ read unless the failure has been seen across days rather than minutes.
 `legislation.gov.im` is the contrasting case and stays in section 1: it
 returns a deliberate 403 challenge page, which is a server choosing to
 refuse rather than a server that is down. Re-tested today, still 403.
+
+## 7. The dld history sweep, and what encoding cost
+
+Added 28 August 2026 on the pass that took `dld` policy history to 279 of the
+289 units that can carry one. `[checked here]` marks a host retested directly
+from this machine.
+
+### Encoding: the class that cost the most
+
+None of these look like failures. The document arrives, the extractor runs,
+and the quote is simply not found — which reads exactly like a drafter having
+made it up. Five separate cases turned up in one day, and each was silently
+discarding correct work.
+
+| What | Where it bit | Fix |
+|---|---|---|
+| **`pdftotext` defaults to Latin-1 on this machine**, not UTF-8 | Nearly cost Türkiye all three rows — every ğ and ş silently dropped, î a replacement char, which reads exactly like a broken font in the source | `-enc UTF-8`, which `pdftext.js` passes. Found independently by two agents |
+| **A page served as ISO-8859-1 and read as UTF-8** | `impo.com.uy` — 3,675 replacement characters, both Uruguayan rows lost, quotes match perfectly under latin-1 `[checked here]` | Both gates now decode UTF-8 **and** latin-1 and search the union |
+| **A page that entity-encodes accents** | `dof.gob.mx` serves `educaci&oacute;n especial`, never `educación` in any charset. `strip()` blanked entities to a space, giving `educaci n` | `strip()` now decodes entities instead of blanking them |
+| **Header charset and meta charset disagree** | `funcionpublica.gov.co` sends `charset=UTF-8` while its meta says ISO-8859-1, and the bytes are UTF-8. A client trusting the meta tag mangles every accented Colombian quote | Trust the bytes; decode both ways |
+| **windows-1254** | `resmigazete.gov.tr/eskiler/**.htm` — mojibake on every Turkish diacritic to a UTF-8 reader | Prefer `mevzuat.gov.tr/File/GeneratePdf?...` |
+
+### Silent failures: more of the dangerous class
+
+Each returns a success status and something that is not the document.
+
+- **`legislation.gov.im` — the entry in section 1 is now WRONG and this is the
+  correction.** It no longer returns a flat 403. It returns **HTTP 200 with a
+  269-byte challenge stub** `[checked here]`, which is worse, because 200 reads
+  as success. An agent reported getting the real 878 KB act through with a
+  cookie jar and a Referer; I could not reproduce that, and the gate's own
+  client got the stub, so the two Isle of Man rows drafted from it were
+  correctly dropped as unverifiable. Treat as unusable by this pipeline, but
+  note it is a challenge, not a refusal, so a browser-shaped client may get
+  through where curl and Node do not.
+- `legislation.nsw.gov.au/view/whole/html/asmade/...` — **200 with zero bytes**.
+  `/view/pdf/asmade/act-YYYY-NNN` serves the real as-made PDF.
+- `sso.agc.gov.sg` — **202 with a zero-byte body** when hit too fast; three
+  requests in a row triggered it. Wait and retry; `?ViewType=Pdf` serves clean.
+- `moeys.gov.kh` — the **same 3,426-byte shell for every path**, PDFs included.
+- LeyChile's PDF export `/servicios/Consulta/Exportar?...` — **200, zero bytes**.
+
+### Side doors found on this pass
+
+Worth more than the blocks, because each one is a register that stays usable.
+
+| Register | The door that works |
+|---|---|
+| `dof.gob.mx` (Mexico) | the edition PDF, `abrirPDF.php?archivo=DDMMYYYY-MAT.pdf&anio=YYYY&repo=repositorio/` — real text layer, no entities. `nota_to_doc.php` returns a binary OLE `.doc`, not text |
+| `bcn.cl` (Chile) | `/leychile/Consulta/obtxml?opt=7&idNorma=<id>` returns the full act as XML. The `navegar` pages are now an Angular shell |
+| `law.go.kr` (South Korea) | `/LSW/lsRvsRsnListP.do?lsId=<6-digit>` serves every version's 제정·개정이유 server-side. Repealed acts are not reachable by Korean-name URL |
+| `laws.e-gov.go.jp` (Japan) | the `/api/1/lawdata/<num>` XML API |
+| CVDR (Sint Maarten) | the **XML** at `repository.officiele-overheidspublicaties.nl/CVDR/CVDR<id>/2/xml/...` carries enactment dates in a `redactioneleToevoeging` note; the HTML pages omit them |
+| `laws.moj.gov.jm` (Jamaica) | append `/download` to the record path |
+| `legislation.wa.gov.au` | `RedirectURL?OpenAgent&query=mrdoc_NNNNN.pdf`, which 302s to a `filestore.nsf/FileURL/...?OpenElement` that serves the PDF |
+| `legislation.act.gov.au` | `/a/<num>/current/pdf/<num>.pdf`. An **amending** act has no `current` PDF; date it from the principal Act's endnote |
+| `gobierno.aw` (Aruba) | gazette PDFs on the CDN at `cuatro.sim-cdn.nl`; `azv.aw` 403s |
+| `web.archive.org` | the **exact-timestamp** form works where `/web/2024/<url>` returns 429 |
+
+### Refuses every client, newly observed
+
+`ratchakitcha.soc.go.th` (Cloudflare, all gazette paths) · the whole
+`boe.gov.sa` estate plus `ncd.gov.sa` and `mhrsd.gov.sa` (connect timeout, so
+the Saudi Bureau of Experts register is unreachable) · much of the Thai
+`.go.th` estate including `krisdika.go.th` and `moe.go.th` · `namiblii.org`
+(403; `lac.org.na` and `npc.gov.na` serve the same texts) · `lexpol.pf` and
+`lexpol.cloud.pf` (connection failure, and every DGEE "textes officiels" link
+points there) · **`diputados.gob.mx`** (no connection on 443 or 80, which is
+why the DOF edition PDFs are the only route to Mexican statute text) ·
+`majlis.gov.mv` · `senado.gob.mx` · `canlii.org` on Yukon pages.
+
+### Nothing quotable, which is not the same as blocked
+
+- **Thai official PDFs have no usable Unicode.** Krisdika's consolidation
+  corrupts every สระ อา into สระ อำ, so the extracted string is not the Thai on
+  the page; the Senate's copy is a scan with a 75-byte text layer; and current
+  gazette PDFs put tone marks in the Private Use Area (U+F70A/B/E). Thailand is
+  `insufficient` for this reason and not for want of a statute.
+- **Maldives gazette PDFs extract differently under different extractors** —
+  `pdftotext` and PyMuPDF produce completely different Thaana from the same
+  file, with characters migrating across line breaks. No span survives both.
+  The gazette's own server-side search at
+  `gazette.gov.mv/gazette?type=gaanoonu&q=<Thaana>` is genuinely good and does
+  find the instruments; they simply cannot be quoted reproducibly.
+- Nigeria's **Disability Act 2018** — every copy located is an image scan:
+  `placng.org` 647 KB yielding 40 bytes of text, the UN DESA copy 5.4 MB
+  yielding 27. PLAC's factsheet has clean text but is a summary, not the Act.
+- `ctes.education.pf` arrêté PDFs — 1.2 MB and 511 KB, text layer of 3 bytes.
+- Aruba's gazettes — one special-education instrument exists in the whole run
+  1986–2025, *Regeling schoolreglement openbaar basis- en speciaal onderwijs*
+  (AB 1992 no. 75), and its OCR is corrupt ("speeiaal onderwijs", "sehool",
+  "beiast"). The parent Landsverordening is an image scan yielding 240 bytes.
+
+### One that is simply absence
+
+**Bhutan.** The Attorney General's own complete list of Acts at
+`oag.gov.bt/language/en/resources/acts-2/` contains no education act, no
+disability act and no special education act. Nothing is blocked and nothing is
+unreadable. There is no instrument to find, and that is a fact about Bhutan
+rather than about the network — the only one of this pass's ten remaining gaps
+that is.
 
 ## A note on consolidators
 
