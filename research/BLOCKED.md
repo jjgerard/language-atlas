@@ -389,6 +389,18 @@ why the DOF edition PDFs are the only route to Mexican statute text) ·
   mevzuat.gov.tr over resmigazete for Turkish text; when neither answers,
   `aile.tr` does.
 
+- `busquedas.elperuano.pe` serves a Peruvian resolution but NOT its anexo,
+  which is where every criterion lives. The anexo is at
+  `cdn.www.gob.pe/uploads/document/file/<id>/...` — 11 MB, clean text layer.
+- `ctes.education.pf` sub-pages return 200 but inject their content through an
+  Advanced iFrame, so the extracted text is empty. The main `/ctes/` page serves.
+- `cnb.mineduc.gob.gt` ECONNREFUSED on 443, `mineduc.gob.gt` and
+  `cnbguatemala.org` 403. Guatemala’s own register is unreachable by every
+  door tried, which is why Guatemala is omitted rather than documented.
+- Bolivia: the entry’s own Ley 070 docLink now 404s while other paths on
+  `minedu.gob.bo` serve, and its PEER profile url is dead. A reminder that a
+  docLink recorded once is not a docLink that still works.
+
 ### Nothing quotable, which is not the same as blocked
 
 - **Thai official PDFs have no usable Unicode.** Krisdika's consolidation
