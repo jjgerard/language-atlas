@@ -21,6 +21,8 @@ const https = require("https");
 const http = require("http");
 const zlib = require("zlib");
 const { pdfText, SEAM } = require("./pdftext");
+const { execFileSync } = require("child_process");
+const os = require("os");
 
 const NL = String.fromCharCode(10);
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
@@ -51,6 +53,32 @@ function get(url, redirects = 0) {
     req.setTimeout(45000, () => { req.destroy(); resolve({ status: 0, body: "" }); });
     req.on("error", () => resolve({ status: 0, body: "" }));
   });
+}
+
+// Some registers sit behind a WAF that fingerprints the TLS handshake rather
+// than reading the headers. rm.coe.int and unicef.org answer curl with a 200
+// and Node with a 403 on byte-identical headers -- tested every combination of
+// User-Agent, Accept, Accept-Encoding and Referer, and all of them are refused.
+// There is no header that fixes it, because the header is not what is read.
+//
+// So when the built-in client is refused, the same url is fetched once more
+// with curl. The gate is not weakened by this: same url, same verbatim quote,
+// same extraction. Only the client changes. If curl is not on the machine the
+// fallback returns null and the row drops exactly as it did before.
+function getViaCurl(url) {
+  const tmp = path.join(os.tmpdir(), "hist-verify-" + process.pid + ".bin");
+  try {
+    const out = execFileSync("curl",
+      ["-sSL", "--max-time", "45", "-A", UA, "-o", tmp, "-w", "%{http_code}	%{content_type}", url],
+      { encoding: "utf8", timeout: 60000 });
+    const parts = String(out).trim().split(String.fromCharCode(9));
+    const raw = fs.readFileSync(tmp);
+    return { status: Number(parts[0]) || 0, body: raw.toString("utf8"), raw, type: parts[1] || "" };
+  } catch {
+    return null;
+  } finally {
+    try { fs.unlinkSync(tmp); } catch { /* nothing to remove */ }
+  }
 }
 
 const NAMED = {
@@ -156,7 +184,11 @@ function quoteOn(quote, page) {
 
   const page = new Map();
   for (const u of urls) {
-    const r = await get(u);
+    let r = await get(u);
+    if (r.status !== 200) {
+      const c = getViaCurl(u);
+      if (c && c.status === 200) r = c;
+    }
     // A PDF is not "binary, give up": most of the instruments these drafters
     // worked from are PDFs, and skipping them threw away correct work. The
     // repo already had an extractor for exactly this.
