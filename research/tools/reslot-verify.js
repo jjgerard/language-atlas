@@ -77,7 +77,13 @@ const FREE = new Set(("a an and or the of to in on at by for from with without a
 
 // If the old text hedges, the new text must hedge. These are the words that
 // carry a qualification a reader would act on differently without.
-const HEDGE = ["established", "survey", "surveys", "practitioner", "practitioners", "estimate",
+// NOTE: "established" is deliberately NOT here. It went in because of the
+// sentinel phrase "Not established from the sources consulted", but that whole
+// phrase is guarded separately -- a not-established field cannot be re-slotted
+// at all -- and the bare word is an ordinary verb. It refused Turkiye's
+// "Established Temporary Education Centers in provinces with mass influx",
+// which is a provision, not a qualification.
+const HEDGE = ["survey", "surveys", "practitioner", "practitioners", "estimate",
   "estimated", "estimates", "unofficial", "draft", "pilot", "choosing", "approximately",
   "roughly", "unclear", "proposed", "repealed", "archived", "translation", "reportedly",
   "self", "anecdotal", "provisional", "indicative", "untested", "unverified"];

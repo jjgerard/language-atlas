@@ -8,7 +8,14 @@ const { makeHistoryMatcher } = require('./history');
 
 // A contributor who looked and found nothing writes that into the field. It is
 // worth showing, and it must never count as coverage: three states, not two.
-const NOT_DOCUMENTED_RE = /^Not established from the sources consulted/i;
+// Written form is "Not established from the sources consulted.", and fl/apply.js
+// still REFUSES to write anything else -- new work must use the exact phrase.
+// But three fields already say it differently: "from the sources cited on this
+// entry", "in this pass", and a bare "Not established:". Keying on the long
+// phrase let those count as documented coverage, which is the one thing this
+// sentinel exists to prevent. Liberal in what is recognised, strict in what may
+// be written.
+const NOT_DOCUMENTED_RE = /^Not established\b/i;
 
 // A FOURTH state, distinct from the other three and needed because some slots
 // can never be filled by anyone. Glottolog counts languages per COUNTRY, so
