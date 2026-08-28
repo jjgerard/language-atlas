@@ -111,12 +111,90 @@ research record.
 If you meet a host that answers curl and refuses the tool, it belongs here,
 not in section 1.
 
+## 5. North America, from the US and Canada pass
+
+Added 28 August 2026 while filling sub-national `dld` policy history for 44
+US states and 10 Canadian provinces and territories. `[checked here]` again
+marks a host retested directly from this machine.
+
+### Refuses every client
+
+| Host | Failure | Consequence |
+|---|---|---|
+| the whole `nh.gov` estate — `gencourt.state.nh.us`, `gc.nh.gov`, `education.nh.gov`, `nh.gov`, `sos.nh.gov`, `oplc.nh.gov`, `dhhs.nh.gov` | 403, or the connection closed abruptly, to curl with a full browser UA `[checked here]` | **New Hampshire is the only unit in the pass marked `insufficient` for access rather than for absence.** See the note below |
+| `webserver.rilin.state.ri.us`, and its successor `webserver.rilegislature.gov` | connection refused on 443, then a connect timeout `[checked here]` | Rhode Island has Board of Education regulations but no statute row |
+| `ncleg.gov`, `ncleg.net` | Cloudflare challenge, 403 to curl with a browser UA, HTML and PDF alike | North Carolina has one row; the statutory history of Art. 9 of Ch. 115C is unreachable |
+| `nebraskalegislature.gov` | TCP connection refused | The Nebraska Special Education Act itself is unrecorded; the two Nebraska rows are Department of Education rules |
+| `leg.state.nv.us` | Cloudflare interstitial, 403 | Nevada rests on Cornell LII; no NRS-level row |
+| `law.justia.com`, `regulations.justia.com` | 403 to every agent that tried it, for four different states | — |
+| `sos.nebraska.gov/rules-and-regs/`, `nebraska.gov/nesos/` | 403 on the rules paths while the site root returns 200 | — |
+| `sos.mo.gov` | 403 | no Missouri administrative-code row |
+| `apps.azsos.gov` | 403 for both .pdf and .htm forms | A.A.C. R7-2-401 could not be dated |
+| `content.leg.colorado.gov`, `leg.colorado.gov` | 403 for the CRS PDF and bill PDFs | no Colorado statutory row; its rows are State Board rules |
+| `apps.gadoe.org` | connection refused or timed out on 443 | — |
+| `wvde.us` | 403 | WV Board Policy 2419 could not be dated |
+| `laws.yukon.ca` | 403 to a full browser UA `[checked here]` | Yukon uses a web.archive.org mirror of the same PDF |
+| `open.alberta.ca` | Cloudflare interstitial on the dataset download path | the 2004 Standards for Special Education came from `files.eric.ed.gov` |
+| `casetext.com` | 410 on document paths. NOT retired site-wide — the root returns 200 `[checked here]` | — |
+
+### Answers, but returns no text
+
+| Host | Failure | Side door |
+|---|---|---|
+| `legis.ga.gov` | ~1.5 KB JavaScript shell | none found; Georgia Code sections unavailable officially |
+| `rules.sos.ga.gov` INDIVIDUAL rule pages | JS shell, ~5.7 KB | the CHAPTER pages (`/gac/160-4-7`) serve full text server-side — but carry no Authority/History notes, so adoption dates are not obtainable there |
+| `le.utah.gov` section pages | JavaScript shell | the dated version files, e.g. `C53E-7-S201_2022050420220504.html`, which carry the text AND the "Enacted by Chapter N, YEAR" line |
+| `rules.mt.gov` | an 894-byte stub with no rule content | ARM 10.16 not obtainable |
+| `rules.wyo.gov` | `DownloadFile.aspx` returns a 17-byte file | Wyoming Ch. 7 special-education rules not obtainable |
+| `codes.findlaw.com` | serves text but STRIPS the session-law credit lines | usable for wording, useless for dating |
+| `ksde.gov` PDF path | returns 245 bytes of HTML, not the PDF | — |
+
+### Moved, not blocked
+
+- `leg.mt.gov/bills/mca/...` → `archive.legmt.gov/...` → **`mca.legmt.gov/...`**. Only the
+  last serves content, and its section pages carry the "History:" source notes
+  that date every Montana row.
+- `sos.state.co.us` 403s while **`coloradosos.gov`** serves the identical path.
+  Use the latter.
+- `ksrevisor.org` redirects to **`ksrevisor.gov`**.
+
+### UA-sensitive, and therefore NOT blocked
+
+This is section 4 in a different costume, and it cost real provenance before
+it was understood. `hist-verify.js` sends the FULL browser User-Agent string
+and falls back to curl. A host that refuses a bare request or the short
+`Mozilla/5.0` may still serve the gate perfectly.
+
+- `nunavutlegislation.ca` — no UA gives 200, a full browser UA gives 200, but
+  the short `Mozilla/5.0` gives a 403 challenge. An agent assumed that short
+  string was what the checker sends and moved all three Nunavut rows onto
+  web.archive.org mirrors. The official Territorial Printer PDFs answer the
+  real UA with 200 at byte-identical sizes `[checked here]`, and the rows
+  were moved back.
+- `flrules.org` — 403 to bare curl, serves fine with a browser UA.
+
+**Test with the full string before writing a host off or reaching for an
+archive mirror.**
+
+### A geography caveat worth keeping
+
+An entire US state government estate refusing every request — HTML and PDF,
+legislature and agencies alike, as `nh.gov` does — looks more like
+geo-blocking of non-US traffic than like bot-blocking. That is a hypothesis,
+not a finding: it has not been tested from a US address. It matters because
+the two have opposite consequences. If it is bot-blocking, New Hampshire is a
+permanent stub. If it is geo-blocking, New Hampshire is merely unreachable
+FROM HERE, and a run from a US host would fill it. Do not write the unit off
+until someone has tried from inside the country.
+
 ## A note on consolidators
 
 Where the official register is in section 1 or 2 and has no side door, the
 substitute is sometimes a commercial or third-party consolidator:
 `paragraf.rs`, `paragraf.ba`, `net.jogtar.hu`, `jusline.at`, `cylaw.org`,
-`natlex.ilo.org`, `fgos.ru`. Those rows are true — the quote is verbatim on
+`natlex.ilo.org`, `fgos.ru`, and from the North America pass
+`law.cornell.edu` (Nevada, Georgia) and `files.eric.ed.gov` (Alberta).
+Those rows are true — the quote is verbatim on
 the page cited, and the gate confirms it — but they cite someone else's copy
 of the state's text rather than the state's own publication.
 
