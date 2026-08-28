@@ -87,7 +87,14 @@ fixes it.
   windows-1253 and arrives as mojibake; use its `nomoi/arith/*.pdf` scans.
 - Portugal's Lei 46/86, the Lei de Bases — the 1986 PDF is a scan with no
   text layer.
-- Guam Compiler of Laws — CID-encoded; extraction returns garbage.
+- ~~Guam Compiler of Laws — CID-encoded; extraction returns garbage.~~
+  **WITHDRAWN 28 August 2026.** The `col.guamcourts.gov/sites/default/files/*.pdf`
+  copies extract cleanly with plain `pdftotext`, and Guam was documented from
+  them. Either the earlier attempt used a different host — `gcic.guam.gov` is
+  now NXDOMAIN and `guamlegislature.gov.gu` likewise — or the CID problem was
+  the pre-fix extractor rather than the file. Kept, struck through, because a
+  wrong entry here sends a later pass to a worse source, and knowing an entry
+  was withdrawn is worth more than deleting it.
 
 ## 4. Refuses Node and Python, but answers curl
 
@@ -207,6 +214,13 @@ These do not error. They return something that looks like a document and is not,
 
 - **`ars.apps.lara.state.mi.us` with `&ReturnHTML=True`** — returns a 1.3 MB HTML rendering with per-glyph absolutely-positioned `<span>`s. The words are shredded and no tag-stripping extractor can find any phrase in it. **Dropping that one parameter returns the genuine 265 KB PDF**, which extracts cleanly. An earlier brief passed the `ReturnHTML=True` form on, and any pass reusing it verbatim fails the gate no matter how good its quotes are.
 - **`arkleg.state.ar.us` act PDFs** — `/assembly/<yr>/<sess>/Acts/ActNNNN.pdf` and `/Home/FTPDocument?path=` both return a **zero-byte `image/gif`**. The working form is `/Acts/FTPDocument?path=%2FACTS%2F<sess>%2FPublic%2F&file=<n>.pdf&ddBienniumSession=<bien>%2F<sess>`.
+- **`col.guamcourts.gov`** — served one request as HTTP **200** with
+  `Content-Type: application/pdf` and an HTML "Page Not Found" body. Three
+  immediate retries returned the genuine PDF, so it is intermittent rather than
+  a block. Both gates now decide PDF-ness from the `%PDF-` magic bytes rather
+  than the header, and log when a header claims pdf and the bytes disagree —
+  before that fix an HTML error page went to the PDF extractor, returned
+  nothing, and read downstream as every quote on the page being unverifiable.
 - **`codes.findlaw.com`** — serves the text but strips the session-law credit lines. Usable for wording, useless for dating.
 - **`ksde.gov`** PDF path — returns 245 bytes of HTML, not the PDF.
 - **`rules.mt.gov`** — an 894-byte stub. **`rules.wyo.gov`** `DownloadFile.aspx` — a 17-byte file.

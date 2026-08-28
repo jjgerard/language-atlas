@@ -7553,6 +7553,14 @@
    {
     "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2014 state-level data file",
     "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/9e399910-ae82-4153-a944-40ac45bcfa99/download/bchildcountandedenvironments2014.csv"
+   },
+   {
+    "label": "17 GCA Chapter 9, Education and Training Facilities and Opportunities for Individuals with Disabilities (Guam Compiler of Laws)",
+    "url": "https://col.guamcourts.gov/sites/default/files/17gc009.pdf"
+   },
+   {
+    "label": "17 GCA Chapter 6, Pupils, Article 3 Auxiliary Services (Guam Compiler of Laws)",
+    "url": "https://col.guamcourts.gov/sites/default/files/17gc006.pdf"
    }
   ],
   "supportLinks": [],
@@ -7560,12 +7568,12 @@
   "stubNote": "",
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "terminology": "Licensing law defines speech-language pathology to cover language and fluency",
-  "identificationCriteria": "",
+  "identificationCriteria": "The impairment must be one for which the child needs special education and related services\nAges three to five turn on delay measured by appropriate diagnostic instruments",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "referralPathway": "Child Find must identify, locate and evaluate all such children residing on Guam\nIt reaches private-school pupils, whatever the severity of their disabilities\nChildren suspected of a disability and needing services are referred for evaluation\nReferral, evaluation and eligibility policy is set by the Guam Education Board",
+  "serviceModel": "Instruction is to be in the least restrictive environment for identified children\nSpecial classes only where regular class with supplementary aids cannot work\nSpeech and hearing services are auxiliary services the education department may supply\nDiagnostic speech and hearing services may be given in the non-public school attended",
+  "legalEntitlement": "Free appropriate public education is due to children with disabilities aged three to 21\nEarly intervention services are to be made available from birth through age two\n18 to 21s in adult custody never identified and without an IEP are excepted",
   "funding": "",
   "workforce": "10 GCA 121802 requires a current ASHA Certificate of Clinical Competence to be licensed\nOne licensed SLP may supervise no more than five assistants at a time",
   "dischargeCriteria": "",
@@ -11791,17 +11799,25 @@
    {
     "label": "OSEP, IDEA Part B Child Count and Educational Environments, 2014 state-level data file",
     "url": "https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/9e399910-ae82-4153-a944-40ac45bcfa99/download/bchildcountandedenvironments2014.csv"
+   },
+   {
+    "label": "CNMI Public School System, Special Education Program Handbook (IDEA), as of May 24 2017",
+    "url": "https://www.cnmipss.org/sites/default/files/sped_handbook_updated.5.2017.pdf"
+   },
+   {
+    "label": "CNMI Public School System — Special Education Program overview",
+    "url": "https://www.cnmipss.org/special-education/special-education-program"
    }
   ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
-  "terminology": "",
+  "terminology": "Speech or Language Impairment is the eligibility category, defined as a communication disorder\nDevelopmental Delay is a separate category, available only up to age nine\nDevelopmental aphasia is listed under specific learning disability, not under language",
   "identificationCriteria": "Disorder must adversely affect educational performance and need special education\nCommunication development is one of the delay areas CNMI counts",
   "assessments": "No instrument is named in regulation; tests must be valid, reliable, non-discriminatory\nAssessment must cover communicative status where that is a suspected area",
   "multilingualProvision": "Assessments given in the native language unless clearly not feasible\nMaterials for limited English proficient children must not measure English skill\nPSS improvement plan names Chamorro and Carolinian family language needs",
-  "referralPathway": "",
+  "referralPathway": "A parent of a child or the school system may request an initial evaluation\nThe evaluation must be completed within 60 days of receipt of parental consent\nThe referral packet carries speech and language screenings and RtI data",
   "serviceModel": "SLP services may count as special education rather than a related service\nServices plans cover parentally placed private school children too",
   "legalEntitlement": "Entitlement is NMIAC chapter 60-50 read with IDEA Part B, not a separate CNMI act",
   "funding": "",
@@ -12405,22 +12421,39 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Melanesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Délibération n°119 du 26 septembre 2005 relative à la prise en charge des besoins éducatifs particuliers à l'école primaire (JONC du 6 octobre 2005)",
+    "url": "https://denc.gouv.nc/sites/default/files/documents/deliberation_119_du_26-09-2005.pdf"
+   },
+   {
+    "label": "Délibération n°120 du 26 septembre 2005 relative aux modalités de scolarisation des enfants en situation de handicap ou présentant un trouble invalidant de la santé à l'école primaire",
+    "url": "https://denc.gouv.nc/sites/default/files/documents/deliberation_120_du_26-09-2005.pdf"
+   },
+   {
+    "label": "Délibération n°122 du 26 septembre 2005 relative aux commissions pour les enfants et les jeunes en situation de handicap",
+    "url": "https://denc.gouv.nc/sites/default/files/documents/delib_122.pdf"
+   },
+   {
+    "label": "Annexe — Nomenclature générale des actes professionnels (NGAP), Nouvelle-Calédonie, mise à jour du 11 février 2026 (Juridoc)",
+    "url": "https://mobi-juridoc.gouv.nc/juridoc/jdjopj.nsf/0/7A24975693B053FD4B258AA9001CC372/$File/Annexe%20-%20Nomenclature%20g%C3%A9n%C3%A9rales%20des%20actes%20professionnels%20(NGAP)_11-02-2026.pdf?OpenElement="
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
-  "terminology": "",
-  "identificationCriteria": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
+  "terminology": "Troubles du langage is the term used in New Caledonia's own school deliberations\nDysphasie is named a trouble du neurodeveloppement in the territorial health nomenclature\nThat nomenclature keeps dyslexie and dysorthographie with written, not oral, language",
+  "identificationCriteria": "Cover turns on a substantial, lasting alteration of one or more functions\nThe CEJH-NC fixes an incapacity rate against a government-set guide bareme\nCommission decisions rest on multidisciplinary evaluations by the education teams",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "referralPathway": "The head of the school the child attends may refer the case to the commission\nThe commission file holds medical, social, school and psychological information\nThe CCEP proposes, the territorial CEJH-NC decides in last resort\nFor therapy the prescriber receives the orthophoniste's report and proposals",
+  "serviceModel": "Orthophonie is a nomenclature act of its own in New Caledonia, keyed AMO\nA bilan orthophonique requires a medical prescription before any reeducation\nIn school, enseignants specialises give aid, expressly for pupils with troubles du langage\nOrdinary class first, under a projet personnalise d'education et de scolarisation amenagee",
+  "legalEntitlement": "No child is to be left without a schooling and educational solution\nEvery child in a handicap situation has a right to assessment of skills and needs",
   "funding": "",
   "workforce": "",
   "dischargeCriteria": "",
@@ -13140,22 +13173,43 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Circonscription 12 ASH, Direction générale de l'éducation et des enseignements — Mon enfant a des besoins spécifiques (hors champ du handicap)",
+    "url": "https://ash-polynesie.education.pf/mon-enfant-a-des-besoins-specifiques-hors-champ-du-handicap/"
+   },
+   {
+    "label": "Circonscription 12 ASH, DGEE — Accueillir un élève à besoins éducatifs particuliers",
+    "url": "https://ash-polynesie.education.pf/accueillir-un-eleve-bep/"
+   },
+   {
+    "label": "Circonscription 12 ASH, DGEE — Scolarisation en milieu ordinaire (ULIS)",
+    "url": "https://ash-polynesie.education.pf/en-milieu-ordinaire/"
+   },
+   {
+    "label": "Commission territoriale de l'éducation spéciale (CTES), DGEE — missions et saisine",
+    "url": "https://ctes.education.pf/ctes/"
+   },
+   {
+    "label": "Circonscription 9, DGEE — DASED, missions et formes d'interventions",
+    "url": "https://cir9.education.pf/dased/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
-  "terminology": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
+  "terminology": "Since 2017 the DGEE glosses dysphasie as trouble developpemental du langage\nDysphasie is described as a structural, lasting disorder of oral language development\nTroubles specifiques du langage et des apprentissages names the group in DGEE guidance",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "referralPathway": "Schools and specialist establishments the child attends may refer to the CTES\nThe CTES rules on orientation into specialist establishments and services\nIt is the CTES that decides orientation and assignment of a pupil to ULIS",
+  "serviceModel": "ULIS is the open collective inclusion setting, first and second degree alike\nDASED specialist aid is given inside class hours, in whatever form the pupil needs\nThat aid targets school difficulties the classroom teacher's own help has not shifted",
+  "legalEntitlement": "The CTES covers disabled children and young adults from birth to twenty",
   "funding": "",
   "workforce": "",
   "dischargeCriteria": "",
@@ -20314,22 +20368,27 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Vice-rectorat des îles Wallis et Futuna — Scolarisation des élèves en situation de handicap (web.archive.org mirror; ac-wf.wf will not accept connections from this pipeline)",
+    "url": "https://web.archive.org/web/20240724103018/https://www.ac-wf.wf/-Scolarisation-des-eleves-en-107-.html"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "terminology": "",
   "identificationCriteria": "",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "",
-  "serviceModel": "",
-  "legalEntitlement": "",
+  "referralPathway": "Human support follows a family request and a notification by the CTHD\nThe CSPE draws up the PPS, standing in for the MDPH evaluation team\nThe CTHD then validates the PPS, in place of the CDAPH",
+  "serviceModel": "No medico-social or health establishment on the islands can take a disabled child\nInclusion is therefore the core of the scheme, full time or part time in school\nULIS units run in three schools and two colleges across Wallis and Futuna",
+  "legalEntitlement": "The 2005 French disability rights law is not applied, given the territory's status",
   "funding": "",
   "workforce": "",
   "dischargeCriteria": "",

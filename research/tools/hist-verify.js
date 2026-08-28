@@ -154,7 +154,16 @@ const THIS_YEAR = 2026;
       if (c && c.status === 200) { r = c; via = "curl"; }
     }
     let text;
-    if (/pdf/i.test(r.type || "") || (r.raw && r.raw.slice(0, 5).toString() === "%PDF-")) {
+    // The magic bytes are the fact; Content-Type is only a claim about it. A
+    // host serving an HTML error page as application/pdf sent that page to the
+    // PDF extractor, which returned nothing, which read downstream as every
+    // quote on it being unverifiable. col.guamcourts.gov was caught doing
+    // exactly that, intermittently, with HTTP 200. Trust the bytes.
+    const magic = r.raw && r.raw.slice(0, 5).toString() === "%PDF-";
+    if (/pdf/i.test(r.type || "") && !magic && r.raw && r.raw.length > 5) {
+      console.log("       content-type says pdf but the bytes do not: reading as html");
+    }
+    if (magic) {
       try { text = pdfText(r.raw); } catch { text = ""; }
     } else {
       text = strip(r.body);
