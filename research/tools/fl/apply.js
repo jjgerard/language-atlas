@@ -10,6 +10,7 @@
 // and silently replacing existing research is exactly the accident that cost a
 // day earlier when a generator flattened Ireland's upper-secondary entry.
 const fs = require("fs"), path = require("path");
+const { NOT_DOCUMENTED_RE } = require(path.join(__dirname, "..", "..", "..", "src", "derive"));
 
 const ATLAS = path.join(__dirname, "..", "..", "..");
 const FILES = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
@@ -28,6 +29,7 @@ function apply(domain, spec) {
   const rows = JSON.parse(fs.readFileSync(FILE, "utf8"));
   const problems = [];
   let touched = 0, filled = 0, bullets = 0, hist = 0, rows_ = 0, notEst = 0;
+  const upgrades = [];
 
   for (const [key, s] of Object.entries(spec)) {
     const [cc, name] = key.split("|");
@@ -42,7 +44,20 @@ function apply(domain, spec) {
       // rows, one per character. Caught here rather than in a QA sweep.
       if (TYPED[f]) problems.push(`${domain} ${key}/${f}: is a ${TYPED[f]} field — pass it as \`${TYPED[f]}\`, not \`fields\``);
       if (!Object.prototype.hasOwnProperty.call(e, f)) problems.push(`${domain} ${key}: no field ${f}`);
-      if (String(e[f] || "").trim()) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      // A field holding the not-established sentinel is NOT written content in
+      // the sense this guard protects. It is a record that someone looked and
+      // found nothing, and the whole point of it is to be superseded when
+      // evidence turns up. Treating it as untouchable made an absence finding
+      // permanent: Timor-Leste's serviceModel was marked not established from
+      // the 2008 Lei de Bases, and when Lei 4/2026 replaced that statute the
+      // pipeline had no way to record the provision it creates.
+      //
+      // So a sentinel value may be UPGRADED to documented content. Real prose
+      // still may not be overwritten -- that needs a person, because it means
+      // someone's sourced work is wrong rather than merely missing.
+      const prior = String(e[f] || "").trim();
+      if (prior && !NOT_DOCUMENTED_RE.test(prior)) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      else if (prior) upgrades.push(`${domain} ${key}/${f}`);
       set.forEach(b => {
         if (b.length > LIMIT) problems.push(`${domain} ${key}/${f}: ${b.length} chars — "${b.slice(0, 55)}…"`);
         if (/[.;]$/.test(b)) problems.push(`${domain} ${key}/${f}: ends with punctuation`);
@@ -94,6 +109,11 @@ function apply(domain, spec) {
     const sup = new Set((e.supportLinks || []).map(l => l.url));
     [...(s.docLinks || []), ...(s.addDocLinks || [])]
       .forEach(l => { if (sup.has(l.url)) problems.push(`${domain} ${key}: ${l.url} is a supportLink`); });
+  }
+  // An upgrade replaces a published statement that nothing was found. Say so.
+  if (upgrades.length) {
+    console.log(`${domain}: ${upgrades.length} field(s) UPGRADED from not-established to documented`);
+    upgrades.forEach(u => console.log(`  ${u}`));
   }
   if (problems.length) {
     console.log(`${domain}: ${problems.length} PROBLEMS`);
