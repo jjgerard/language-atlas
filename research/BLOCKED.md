@@ -747,6 +747,34 @@ rest** — the whole point is that a link is only as good as the quote that
 still verifies against it. `linkcheck.js` will tell you which of the 386 are
 still serving; it will not tell you whether the quotes still match, and that
 is the question that matters.
+## 12. The reverse User-Agent case, and a third fallback
+
+Nearly every host in this file refuses a bare client and wants a browser
+string. A few do the exact opposite, and the gate was sending the string they
+refuse.
+
+**`education.gov.gy`**, same url, same second:
+
+```
+full Chrome UA (what the gate sent)  ->  403,  75,193 bytes (block page)
+"Mozilla/5.0"                        ->  200,  99,392 bytes (the real page)
+no User-Agent at all                 ->  200,  99,392 bytes
+```
+
+The only difference is the length of the header. This cost Guyana its bullet
+on the Wapichan bilingual programme, on the Ministry's own page.
+
+Both gates now try a short `Mozilla/5.0` as a **third** fallback, after the
+built-in client and after curl, and only when neither produced a usable body.
+A/B tested on that host: with it, 200 and 99,389 bytes and the bullet
+verifies; without it, 403 and the bullet is dropped.
+
+The fallback chain is now, in order: **Node with a browser UA -> curl with a
+browser UA -> Node with a bare UA.** Each covers a different refusal — TLS
+handshake fingerprinting, a client the WAF dislikes, and a header the WAF
+dislikes. Nothing is weakened by any of them: same url, same verbatim quote,
+same extraction, and a failure still drops the row exactly as before.
+
 ## A note on consolidators
 
 Where the official register is in section 1 or 2 and has no side door, the

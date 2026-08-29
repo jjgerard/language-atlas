@@ -36,14 +36,14 @@ const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const specDir = process.argv[2];
 if (!specDir) { console.log("usage: node hist-verify.js <specDir>"); process.exit(1); }
 
-function get(url, redirects = 0) {
+function get(url, redirects = 0, ua = UA) {
   return new Promise(resolve => {
     let mod;
     try { mod = new URL(url).protocol === "http:" ? http : https; } catch { return resolve({ status: 0, body: "" }); }
-    const req = mod.get(url, { headers: { "User-Agent": UA, Referer: "https://www.google.com/", "Accept-Encoding": "gzip, deflate" } }, res => {
+    const req = mod.get(url, { headers: { "User-Agent": ua, Referer: "https://www.google.com/", "Accept-Encoding": "gzip, deflate" } }, res => {
       if ([301, 302, 303, 307, 308].includes(res.statusCode) && res.headers.location && redirects < 5) {
         res.resume();
-        return resolve(get(new URL(res.headers.location, url).href, redirects + 1));
+        return resolve(get(new URL(res.headers.location, url).href, redirects + 1, ua));
       }
       const chunks = [];
       res.on("data", c => chunks.push(c));
@@ -177,6 +177,12 @@ const THIS_YEAR = 2026;
     if (r.status !== 200 || (r.raw && r.raw.length < TINY)) {
       const c = getViaCurl(u);
       if (c && c.status === 200 && (r.status !== 200 || c.raw.length > (r.raw ? r.raw.length : 0) * 2)) { r = c; via = "curl"; }
+      // See terr-verify: a few hosts refuse the browser string and serve a
+      // bare one, which is the reverse of the usual problem.
+      if (r.status !== 200 || (r.raw && r.raw.length < TINY)) {
+        const short = await get(u, 0, "Mozilla/5.0");
+        if (short.status === 200 && short.raw && short.raw.length > TINY) { r = short; via = "shrt"; }
+      }
     }
     let text;
     // The magic bytes are the fact; Content-Type is only a claim about it. A

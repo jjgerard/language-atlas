@@ -29,14 +29,14 @@ const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const specDir = process.argv[2];
 if (!specDir) { console.log("usage: node terr-verify.js <specDir>"); process.exit(1); }
 
-function get(url, redirects = 0) {
+function get(url, redirects = 0, ua = UA) {
   return new Promise(resolve => {
     let mod;
     try { mod = new URL(url).protocol === "http:" ? http : https; } catch { return resolve({ status: 0, body: "" }); }
-    const req = mod.get(url, { headers: { "User-Agent": UA, Referer: "https://www.google.com/", "Accept-Encoding": "gzip, deflate" } }, res => {
+    const req = mod.get(url, { headers: { "User-Agent": ua, Referer: "https://www.google.com/", "Accept-Encoding": "gzip, deflate" } }, res => {
       if ([301, 302, 303, 307, 308].includes(res.statusCode) && res.headers.location && redirects < 5) {
         res.resume();
-        return resolve(get(new URL(res.headers.location, url).href, redirects + 1));
+        return resolve(get(new URL(res.headers.location, url).href, redirects + 1, ua));
       }
       const chunks = [];
       res.on("data", c => chunks.push(c));
@@ -196,6 +196,16 @@ function quoteOn(quote, page) {
     if (r.status !== 200 || (r.raw && r.raw.length < TINY)) {
       const c = getViaCurl(u);
       if (c && c.status === 200 && (r.status !== 200 || c.raw.length > (r.raw ? r.raw.length : 0) * 2)) r = c;
+      // Some hosts refuse the browser string and serve a bare one. Same url,
+      // same second: education.gov.gy gives the full Chrome UA a 403 and a
+      // 75,193-byte block page, and "Mozilla/5.0" a 200 with 99,392 bytes.
+      if (r.status !== 200 || (r.raw && r.raw.length < TINY)) {
+        const short = await get(u, 0, "Mozilla/5.0");
+        if (short.status === 200 && short.raw && short.raw.length > TINY) {
+          console.log("       (refused the browser UA, served a short one)");
+          r = short;
+        }
+      }
     }
     // A PDF is not "binary, give up": most of the instruments these drafters
     // worked from are PDFs, and skipping them threw away correct work. The
