@@ -619,6 +619,87 @@ register at all, and **the one comparative source that would answer it for
 everyone — Knudsen et al. on allocation and funding of SLT across Europe —
 resolves to a 2,744-byte ScienceDirect JavaScript shell** and cannot be read.
 Five entries cite it.
+## 10. The indigenous fill pass (Asia)
+
+### Two gate bugs, both of the same family
+
+Both are the family this file keeps meeting: **the gate could not read a
+document it had successfully fetched, and the drafter's correct quote was
+reported as not on the page.** Neither host was blocked. Both are fixed.
+
+**A PDF whose header is not at byte 0.** The check was
+`raw.slice(0,5).toString() === "%PDF-"`, so a UTF-8 BOM in front of the
+signature — three bytes — sent a genuine PDF to the HTML extractor. Found on
+`hrnk.org`'s copy of the DPRK constitution, which serves at 200 with
+`Content-Type: application/pdf` and reads fine in pdftotext; it dropped all
+four DPRK bullets. Reproduced by prefixing a BOM to a PDF the gate reads
+happily: the check goes PASS to FAIL on those three bytes alone. Both gates
+now locate `%PDF-` within the first kilobyte and extract from wherever it
+starts, which also covers stray leading whitespace.
+
+**Chinese pages served as GB2312.** The decode union was UTF-8 plus latin-1,
+and neither reads GB2312/GBK — so a Chinese government page at HTTP 200
+decoded to noise and every quote on it was dropped. Two agents hit this
+independently: `jxrd.jxnews.com.cn` (Jiangxi's own minority-rights
+regulation) lost five quotes to it, and `lawdb.cncourt.org` was abandoned
+unread for the same reason.
+
+The union now takes a third decoding when — and only when — the page
+*declares* a legacy East Asian charset in its header or its own meta tag:
+gb18030 (a strict superset covering gb2312 and gbk), Big5, Shift-JIS,
+EUC-JP/KR. Guessing an encoding for every page would risk a quote matching
+by accident, which is the one thing this gate must never do. Demonstrated on
+a declared-gb2312 page: UTF-8 produced 16 replacement characters where
+gb18030 recovered 少数民族语言文字.
+
+This is the encoding class for the third time — after latin-1 cost Uruguay
+and the `fold()` allow-list cost Greece, North Macedonia and Taiwan. The
+pattern is always the same and so is the remedy: **do not pick a decoding,
+search the union.**
+
+### A correction
+
+- **`mevzuat.gov.tr` is no longer a connect timeout.** Section 7 records it
+  as one; it served real PDFs at 200 to both curl and the gate's own client
+  on this pass. Türkiye's entry rests on it directly.
+
+### A 404 large enough to look like a document
+
+`education-profiles.org` country slugs are not guessable — Iran is
+`/central-and-southern-asia/iran-islamic-republic-of/`, and `/iran/` returns
+a **404 page of 24,707 bytes that extracts to 11,840 characters of real
+text**. That is far above the under-1,000-byte tripwire added in section 9,
+and prose enough that a careless quote could conceivably match it. Check the
+status, not just the size.
+
+### Newly observed
+
+- **`planipolis.iiep.unesco.org`** now serves a 3,143-byte Anubis JavaScript
+  bot challenge at HTTP 200 for PDF paths. It was a working source on
+  earlier passes — silent-success class, newly arrived.
+- **`agc.gov.bn`** (Brunei Attorney General's Chambers) — TLS certificate
+  **expired**, to Node and curl alike, on both the Constitution and the
+  Education Order 2003. Brunei's own statutes are unreadable here, which is
+  why that entry rests on UNESCO PEER.
+- **`rc.majlis.ir`** — 200 with a 203-byte JavaScript redirect stub, so the
+  Persian original of Iran's Constitution art. 15 is not in the entry.
+- **`flk.npc.gov.cn`** (国家法律法规数据库) — a Vite SPA shell of ~455 bytes on
+  every path including `/api/`. This is the obvious route to Chinese
+  provincial regulations and it is closed to plain GET; provincial
+  government hosts and municipal republications are the working doors.
+- **`xxgk.jl.gov.cn`** — 200 with a WZWS obfuscated-JavaScript challenge.
+- **`npc.gov.cn/englishnpc/constitution2019/`** — 200 with 89 KB of site
+  furniture and no constitution text. `english.www.gov.cn` serves it.
+- **`nlb.gov.sg`** article paths — 202 with a zero-byte body, the shape
+  already recorded for `sso.agc.gov.sg`.
+- **`jyt.henan.gov.cn`**, **`jyt.gansu.gov.cn`** (412 WAF),
+  **`www.hebei.gov.cn`**, **`www.shaanxi.gov.cn`**, **`www.qhrd.gov.cn`**,
+  **`mzzj.yn.gov.cn`**, **`www.hainan.gov.cn`** — 403, timeout or NXDOMAIN.
+  `www.gov.cn`, `moe.gov.cn`, `npc.gov.cn` and `neac.gov.cn` all serve, so
+  this is host-specific rather than a China-wide block.
+- **`npc.gov.cn` is UA/client-sensitive in the figshare direction**: curl
+  fails it with a schannel TLS alert while Node gets 200. The gate reads it
+  correctly because it tries Node first.
 ## A note on consolidators
 
 Where the official register is in section 1 or 2 and has no side door, the

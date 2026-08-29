@@ -206,12 +206,18 @@ function quoteOn(quote, page) {
     // PDF extractor, which returned nothing, which read downstream as every
     // quote on it being unverifiable. col.guamcourts.gov was caught doing
     // exactly that, intermittently, with HTTP 200. Trust the bytes.
-    const magic = r.raw && r.raw.slice(0, 5).toString() === "%PDF-";
+    // Not `slice(0,5)`: the signature is not always at byte 0. A UTF-8 BOM in
+    // front of it -- three bytes -- sent a genuine PDF to the HTML extractor
+    // and made every quote on it read as invented. Scan the first kilobyte and
+    // extract from wherever the header actually begins.
+    const at = r.raw ? r.raw.indexOf("%PDF-", 0, "latin1") : -1;
+    const magic = at >= 0 && at < 1024;
     if (/pdf/i.test(r.type || "") && !magic && r.raw && r.raw.length > 5) {
       console.log("       content-type says pdf but the bytes do not: reading as html");
     }
     if (magic) {
-      try { text = pdfText(r.raw); } catch { text = ""; }
+      if (at > 0) console.log("       (pdf header at byte " + at + ", not 0 - extracting from there)");
+      try { text = pdfText(at ? r.raw.subarray(at) : r.raw); } catch { text = ""; }
     } else {
       // Content-Type is a claim, and pages lie or omit it. Decode as UTF-8 and
       // again as latin-1, and search both: impo.com.uy serves ISO-8859-1, and a
@@ -224,11 +230,45 @@ function quoteOn(quote, page) {
       // two decodings are joined by the seam sentinel, which survives fold(),
       // so nothing can match across the join.
       const utf8 = strip(r.body);
-      let latin = "";
+      const parts = [utf8];
       try {
-        if (r.raw && Buffer.isBuffer(r.raw)) latin = strip(r.raw.toString("latin1"));
+        if (r.raw && Buffer.isBuffer(r.raw)) {
+          const latin = strip(r.raw.toString("latin1"));
+          if (latin && latin !== utf8) parts.push(latin);
+
+          // A third decoding, for the legacy East Asian ones Buffer cannot do.
+          // jxrd.jxnews.com.cn serves Jiangxi's own minority-rights regulation
+          // as GB2312 at HTTP 200; utf8 and latin-1 both turn it to noise, so
+          // all five Chinese quotes on it were dropped as "not on the page".
+          // That is the encoding class this gate has been bitten by twice --
+          // once for latin-1, once for the fold() allow-list -- and the same
+          // remedy applies: do not pick a decoding, search the union.
+          //
+          // Only decode what the page declares, from the header or its own
+          // meta tag. Guessing an encoding for every page would add noise that
+          // could match a quote by accident, which is the one thing this gate
+          // must never do.
+          const declared = (String(r.type || "").match(/charset=\s*\"?([\w-]+)/i) || [])[1]
+            || (utf8.slice(0, 4096).match(/charset=\s*\"?([\w-]+)/i) || [])[1]
+            || (r.raw.subarray(0, 2048).toString("latin1").match(/charset=\s*\"?([\w-]+)/i) || [])[1];
+          const legacy = /^(gb ?2312|gbk|gb18030|big ?5|shift[-_]?jis|sjis|euc[-_]?(jp|kr)|ks_c_5601[-\w]*)$/i;
+          if (declared && legacy.test(declared.trim())) {
+            // gb18030 is a strict superset of gb2312 and gbk, so it decodes
+            // all three and never fails on the narrower ones.
+            const label = /^(gb ?2312|gbk|gb18030)$/i.test(declared.trim()) ? "gb18030" : declared.trim();
+            try {
+              const cjk = strip(new TextDecoder(label, { fatal: false }).decode(r.raw));
+              if (cjk && !parts.includes(cjk)) {
+                parts.push(cjk);
+                console.log("       (decoded also as " + label + ", declared by the page)");
+              }
+            } catch { /* unknown label: the other two decodings stand */ }
+          }
+        }
       } catch { /* utf8 alone */ }
-      text = (latin && latin !== utf8) ? utf8 + SEAM + latin : utf8;
+      // Joined by the seam sentinel, which survives fold(), so no quote can
+      // match across the join between two decodings.
+      text = parts.join(SEAM);
     }
     page.set(u, { status: r.status, text, type: r.type, bytes: r.body.length });
     console.log("  " + String(r.status).padStart(3) + "  " + String(r.body.length).padStart(7) + "b  " + (/pdf/i.test(r.type||"")?"pdf ":"    ") + u.slice(0, 88));
