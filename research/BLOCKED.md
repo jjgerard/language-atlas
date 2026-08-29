@@ -430,6 +430,49 @@ never record the S3 url as the document's address.
 of a block is a hypothesis. Two of the three blocks withdrawn from this file
 were withdrawn after someone spent ninety seconds probing the host directly.
 
+## 8. A link check over one whole region
+
+Bolivia's own Ley 070 docLink 404s while its siblings on the same host serve,
+and nothing in the app would ever notice: a docLink is rendered, never
+fetched. So every docLink on the 54 Europe `dld` entries was fetched once —
+**272 distinct urls**. The result is worth recording mostly for how few of
+the failures were real.
+
+**37 of the 50 suspects were DOIs, and all of them are fine.** `doi.org`
+resolves them correctly (302 to the publisher); the publisher then refuses
+the bot. A DOI that 403s at Taylor & Francis is a correct, permanent citation
+to a paywalled chapter, which is exactly what this project's rule about never
+inventing a DOI is there to protect. **Do not "fix" these.** Any future link
+checker must resolve a DOI at `doi.org` and stop there.
+
+**Most of the rest were the checker's own fault.** Its curl fallback sent no
+`User-Agent`, so it reported `education.gouv.fr`, Wiley and `cpbmd.info` as
+dead. With the gate's real UA, curl gets 200 and 91,970 bytes, 77,600 bytes
+and 391,526 bytes from those three. Worth stating plainly: **a link checker
+that does not use the gate's own client measures the checker.**
+
+One thing that check did settle. `education.gouv.fr` returns 403 to Node
+with the full Chrome UA and with a short one, and 200 to curl with either.
+The UA is not what it objects to — section 4 is right that this is handshake
+fingerprinting, and the curl fallback is the remedy.
+
+### Genuinely unreachable, after probing each one
+
+- **`hse.ie` — a real 404**, and the only true dead link found in 272. The
+  Cavan/Monaghan language-class page Ireland's entry cites is gone; the host
+  serves a 38 KB not-found page at 404. Needs a replacement or removal.
+- **`eani.org.uk` — 403 to every client tried**, plain and with a browser UA.
+  Northern Ireland's newcomer-support page is not readable by this pipeline.
+- **Three hosts fail on the certificate, not on the content.**
+  `slvesnik.com.mk` (North Macedonia's official gazette) has an incomplete
+  chain; `docs.edu.gov.ru` uses a self-signed national CA; the Bercow report
+  at `bercow10yearson.com`, which England's entry rests on, has an expired
+  certificate. Each serves its document when certificate verification is
+  relaxed — 5,252,946 bytes, 32,832 and 84,294 respectively. **The gate
+  cannot read any of them.** Making it able to is a deliberate security
+  tradeoff that has not been made here, and is left as a decision rather
+  than taken quietly.
+
 ### Nothing quotable, which is not the same as blocked
 
 - **Thai official PDFs have no usable Unicode.** Krisdika's consolidation
