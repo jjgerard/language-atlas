@@ -739,6 +739,29 @@ chosen quote could plausibly match it. **Check the status code.** Size is
 not a proxy for success and this is the clearest demonstration of it in this
 file.
 
+### An empty chapter is not a degraded page
+
+An agent reported the archived site serving country pages as "pure site
+navigation", on the strength of North Macedonia's inclusion page containing
+zero occurrences of the word *language*. Checked across three countries, that
+is not what is happening:
+
+```
+North Macedonia   200   790 KB html   110,459 chars of text   "language" x0
+UAE               200   851 KB html   139,663 chars           "language" x4
+Kenya             200   836 KB html   133,417 chars           "language" x7
+```
+
+The pages carry full profile prose. North Macedonia's *inclusion* chapter
+simply does not discuss language, which is a fact about that chapter and not
+about the host. Costa Rica's page says so outright — 790 KB whose body reads
+"The Inclusion chapter is not available in this language."
+
+**The distinction matters because believing the host is degrading would
+trigger the migration this section says not to do.** A country page with no
+hits for your term is a coverage gap; check a second and third country before
+concluding anything about the site.
+
 ### What to do when someone does migrate
 
 Work out the new path scheme from the `/gem-report/en/peer` index, migrate a
