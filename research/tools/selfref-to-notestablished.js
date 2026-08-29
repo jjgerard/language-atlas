@@ -35,7 +35,16 @@ const fs = require("fs");
 const path = require("path");
 
 const ATLAS = path.join(__dirname, "..", "..");
-const FILES = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
+// Adding `he` broke this: the map was hand-maintained, the new domain was not
+// in it, and the tool died on path.join(undefined) partway through a run --
+// after it had already reported on eal, so a --write would have converted one
+// domain and then crashed. Derive the filename instead, the same way store.js
+// resolves a domain's data: the living snapshot if there is one, else the seed.
+function fileFor(id) {
+  for (const name of [id + ".json", id + ".seed.json"])
+    if (fs.existsSync(path.join(ATLAS, "data", name))) return name;
+  return null;
+}
 const NL = String.fromCharCode(10);
 const { hasContent } = require(path.join(ATLAS, "src", "derive"));
 const { DOMAINS } = require(path.join(ATLAS, "src", "domains"));
@@ -68,7 +77,9 @@ const ENDS_SENTENCE = new RegExp("[.!?]$");
 
 let touched = 0;
 for (const d of DOMAINS.filter(x => x.live)) {
-  const p = path.join(ATLAS, "data", FILES[d.id]);
+  const name = fileFor(d.id);
+  if (!name) { console.log("--- " + d.id + ": no data file, skipped"); continue; }
+  const p = path.join(ATLAS, "data", name);
   const rows = JSON.parse(fs.readFileSync(p, "utf8"));
   let n = 0;
   for (const e of rows) {
