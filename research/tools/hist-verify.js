@@ -171,9 +171,12 @@ const THIS_YEAR = 2026;
   async function fetchInto(u, pause) {
     let r = await get(u);
     let via = "    ";
-    if (r.status !== 200) {
+    // See terr-verify: a 200 carrying a few hundred bytes is a rejection page,
+    // not a document, and the status alone never caught it.
+    const TINY = 1000;
+    if (r.status !== 200 || (r.raw && r.raw.length < TINY)) {
       const c = getViaCurl(u);
-      if (c && c.status === 200) { r = c; via = "curl"; }
+      if (c && c.status === 200 && (r.status !== 200 || c.raw.length > (r.raw ? r.raw.length : 0) * 2)) { r = c; via = "curl"; }
     }
     let text;
     // The magic bytes are the fact; Content-Type is only a claim about it. A

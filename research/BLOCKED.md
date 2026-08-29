@@ -549,6 +549,76 @@ unreadable. There is no instrument to find, and that is a fact about Bhutan
 rather than about the network — the only one of this pass's ten remaining gaps
 that is.
 
+## 9. The Europe referral/entitlement/workforce pass
+
+### A gate bug this pass found, and the fix
+
+**A refusal dressed as HTTP 200 never reached the curl fallback.** Both gates
+fell back only on a non-200, so a host that answers 200 with a few hundred
+bytes of rejection page sent that stub straight to the extractor — and every
+quote on the url then read as invented. `desc.gov.im` is the clean example:
+
+```
+node  -> 200,     269 bytes, "<html><head><title>Request Rejected</title>"
+curl  -> 200, 121,787 bytes, the real page
+```
+
+Both gates now also fall back when a 200 carries under 1,000 bytes, and take
+the curl result only if it is more than twice the size. A/B tested on that
+host: **with the fix, 121,784 bytes and the bullet verifies; without it, 269
+bytes and the bullet is dropped.** `gallilex.cfwb.be` at 244 bytes and
+`legislation.gov.im` at 269 are the same shape, so this class is now handled
+rather than merely documented.
+
+### Corrections to earlier entries
+
+- **`esla.eu` is not the European speech and language therapy association.**
+  The domain now serves a Spanish ladder and scaffolding manufacturer —
+  "ESLA - Ladders, work platforms and scaffolding", 200 and 173,596 bytes.
+  This was in a drafting brief as a recommended source for workforce counts,
+  which is where it came from and where it has been removed. **Never cite it.**
+- **`portaldogc.gencat.cat` is no longer curl-only.** Section 4 lists it; it
+  answered the gate's own Node client directly, 116,040 bytes of PDF. The
+  requirement seems to have lapsed. Left in section 4 but flagged here.
+- **`legislation.gov.im` has changed failure mode again**, from a 269-byte
+  200 stub to `ECONNRESET` / curl error 35. Still unusable either way, which
+  is why the Isle of Man has no `legalEntitlement`.
+- **`www.gov.im` is intermittent, not blocked.** It dropped all three Isle of
+  Man bullets on one gate run and served 22,977 bytes on the next, and to
+  both clients on a later probe. Retry rather than write it off — the same
+  lesson section 6 records for Gibraltar.
+
+### Newly observed
+
+- **`monservicepublic.gouv.mc` and `www.gouv.mc`** — 403 to every client
+  including the root, 244–245 byte body. Both of Monaco's existing docLinks
+  point there. **`journaldemonaco.gouv.mc` is the working door** to Monegasque
+  law: 200 and 963 KB on the root.
+- **`www.valstybeskontrole.lt`** `/LT/Product/Download/<id>` — 403 to the
+  gate's client and to the curl fallback. Lithuania's audit of special-
+  education support is unreachable.
+- **`santesecu.public.lu`** serves a 404 page for the health-profession
+  statistics, which is why Luxembourg has no orthophoniste headcount.
+- **`island.is/heilbrigdisstarfsfolk-tolur`** answers 200 but publishes only
+  `.xls`/`.xlsx`, which neither extractor reads. Not a block — simply not
+  quotable, which is why Iceland's workforce rests on a parliamentary answer.
+- **`www.jusline.at`** returned HTTP 500 once mid-run and 200 on three
+  immediate re-probes. Intermittent; do not record it as blocked.
+
+### Why so many `workforce` fields have no number
+
+Worth stating once, because it will otherwise look like thin research. Of the
+49 Europe units with a workforce field, most carry a qualification route and
+no headcount, and in nearly every case that is what the sources contain.
+Austria publishes a register count, Ireland a CORU count, France a DREES
+figure, the Netherlands a Nivel study, Northern Ireland an HSC census — and
+Estonia, Switzerland, Latvia, Italy, Catalonia, Hungary, Albania, Denmark and
+Scotland publish nothing a bullet could rest on. Two structural reasons:
+several systems place logopedists as education staff who appear on no health
+register at all, and **the one comparative source that would answer it for
+everyone — Knudsen et al. on allocation and funding of SLT across Europe —
+resolves to a 2,744-byte ScienceDirect JavaScript shell** and cannot be read.
+Five entries cite it.
 ## A note on consolidators
 
 Where the official register is in section 1 or 2 and has no side door, the

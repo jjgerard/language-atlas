@@ -185,9 +185,17 @@ function quoteOn(quote, page) {
   const page = new Map();
   for (const u of urls) {
     let r = await get(u);
-    if (r.status !== 200) {
+    // A refusal dressed as success never reached the fallback. desc.gov.im
+    // hands Node 269 bytes of "Request Rejected" at HTTP 200 and hands curl
+    // 121,787 bytes of the real page; gallilex.cfwb.be does the same at 244
+    // bytes. Because the status is 200 the old test passed and the stub went
+    // straight to the extractor, so every quote on that url read as invented.
+    // No real document is a few hundred bytes, so a tiny 200 is worth a second
+    // opinion -- and the result is only taken if it is substantially bigger.
+    const TINY = 1000;
+    if (r.status !== 200 || (r.raw && r.raw.length < TINY)) {
       const c = getViaCurl(u);
-      if (c && c.status === 200) r = c;
+      if (c && c.status === 200 && (r.status !== 200 || c.raw.length > (r.raw ? r.raw.length : 0) * 2)) r = c;
     }
     // A PDF is not "binary, give up": most of the instruments these drafters
     // worked from are PDFs, and skipping them threw away correct work. The
