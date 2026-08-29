@@ -144,7 +144,7 @@ const WORKED = [
       { label: "SEND Code of Practice: 0 to 25 years (2015)", url: "https://www.gov.uk/government/publications/send-code-of-practice-0-to-25" },
       { label: "Children and Families Act 2014, Part 3", url: "https://www.legislation.gov.uk/ukpga/2014/6/part/3" },
       { label: "RCSLT clinical information on DLD", url: "https://www.rcslt.org/speech-and-language-therapy/clinical-information/developmental-language-disorder/" },
-      { label: "Bercow: Ten Years On (2018)", url: "https://www.bercow10yearson.com/" },
+      { label: "Bercow: Ten Years On (2018), RCSLT copy", url: "https://www.rcslt.org/wp-content/uploads/media/Project/RCSLT/bercow-ten-years-on-report.pdf" },
       { label: "Norbury et al. (2016), SCALES prevalence study", url: "https://acamh.onlinelibrary.wiley.com/doi/10.1111/jcpp.12573" },
       { label: "Bishop et al. (2017), CATALISE Phase 2 — terminology", url: "https://acamh.onlinelibrary.wiley.com/doi/10.1111/jcpp.12721" },
     ],

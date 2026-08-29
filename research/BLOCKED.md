@@ -401,78 +401,123 @@ why the DOF edition PDFs are the only route to Mexican statute text) ·
   `minedu.gob.bo` serve, and its PEER profile url is dead. A reminder that a
   docLink recorded once is not a docLink that still works.
 
-### Withdrawn before it was believed: figshare is not blocked
+### figshare: the fallback is backwards for this host
 
-A drafting agent reported `ndownloader.figshare.com` answering **202 with a
-zero-byte body** behind `x-amzn-waf-action: challenge`, and this file said so
-for about ten minutes. It is wrong, and it mattered enough to check, because
-that url is what **19 European DLD entries cite for the COST Action IS1406
-practitioner survey** — the single most-used source on this map. Recording it
-as blocked would have told every later drafter to stop using the one document
-that covers identification practice across European systems.
+This host produced two flatly contradictory reports in one afternoon, and the
+resolution is more useful than either. A drafting agent probed it six times —
+three with the gate's Node client, three with curl and the full browser UA —
+and got **202 Accepted, Content-Length 0, `x-amzn-waf-action: challenge`**
+every time. I probed it three times and got **200 and 24,976,303 bytes** every
+time. Neither of us was careless.
 
-Probed directly, with curl and then with the gate's own client three times in
-a row: **302, followed, 200, 24,976,303 bytes, magic bytes `%PDF-`.** Both
-clients get the file. `get()` in `terr-verify.js` has followed up to five
-redirects since it was written.
+Probed again with both clients in the same minute:
 
-**What is true, and is probably what the agent hit.** The 302 goes to a
-*signed* S3 url carrying `X-Amz-Expires=10`. The link is dead ten seconds
-after it is issued. So a client that captures the `Location`, logs it, and
-fetches it as a separate step — or that stores it in a worklist for later —
-gets nothing, and the failure looks like the host refusing rather than a
-credential timing out. Always follow the redirect in the same request chain;
-never record the S3 url as the document's address.
+```
+curl  -> 202, 0 bytes, x-amzn-waf-action: challenge   (twice)
+node  -> 200, 24,976,303 bytes, %PDF-                 (three times)
+```
 
-`data.ncl.ac.uk/ndownloader/...` does 403, and that part stands.
+**The AWS WAF challenges curl and lets Node through.** Not intermittency —
+a client difference, reproducible on demand, and the reverse of the pattern
+the rest of this file documents. Everywhere else Node is refused and curl
+rescues it; here curl is refused and Node is the one that works. Windows curl
+negotiates through schannel, Node through OpenSSL, and the WAF is evidently
+reading the handshake.
 
-**The lesson, which section 6 already taught once.** A single agent's report
-of a block is a hypothesis. Two of the three blocks withdrawn from this file
-were withdrawn after someone spent ninety seconds probing the host directly.
+**What this means in practice.** `terr-verify.js` and `hist-verify.js` try
+Node first and only fall back to curl on a non-200, so **the gate reads this
+host correctly** and anything resting on it can be verified. What cannot read
+it is an agent reaching for curl or WebFetch — which is exactly what produced
+the "blocked" report. It matters because that url carries the COST Action
+IS1406 survey volume cited by **19 European DLD entries**, the most-used
+source on this map.
+
+So: **do not route around this host, and do not trust a curl probe of it.**
+The 302 also goes to a signed S3 url carrying `X-Amz-Expires=10` — dead ten
+seconds after issue — so follow the redirect in the same request chain and
+never record the S3 address as the document's url.
+
+`data.ncl.ac.uk/ndownloader/...` 403s, and that part stands.
+
+**The general lesson.** A one-client probe is not a verdict. Two of the
+withdrawals in this file came from probing a host directly; this one came from
+probing it with *both* clients, and only the second kind of check would have
+found it.
 
 ## 8. A link check over one whole region
 
 Bolivia's own Ley 070 docLink 404s while its siblings on the same host serve,
 and nothing in the app would ever notice: a docLink is rendered, never
 fetched. So every docLink on the 54 Europe `dld` entries was fetched once —
-**272 distinct urls**. The result is worth recording mostly for how few of
-the failures were real.
+**272 distinct urls**. The result is worth recording mostly for how few of the
+failures were real. `linkcheck.js` in this directory runs it for any domain
+and region.
 
 **37 of the 50 suspects were DOIs, and all of them are fine.** `doi.org`
-resolves them correctly (302 to the publisher); the publisher then refuses
-the bot. A DOI that 403s at Taylor & Francis is a correct, permanent citation
-to a paywalled chapter, which is exactly what this project's rule about never
-inventing a DOI is there to protect. **Do not "fix" these.** Any future link
-checker must resolve a DOI at `doi.org` and stop there.
+resolves them correctly (302 to the publisher); the publisher then refuses the
+bot. A DOI that 403s at Taylor & Francis is a correct, permanent citation to a
+paywalled chapter, which is exactly what this project's rule about never
+inventing a DOI exists to protect. **Do not "fix" these.** A link checker
+must resolve a DOI at `doi.org` and stop there, which `linkcheck.js` now does.
 
 **Most of the rest were the checker's own fault.** Its curl fallback sent no
-`User-Agent`, so it reported `education.gouv.fr`, Wiley and `cpbmd.info` as
-dead. With the gate's real UA, curl gets 200 and 91,970 bytes, 77,600 bytes
-and 391,526 bytes from those three. Worth stating plainly: **a link checker
-that does not use the gate's own client measures the checker.**
+`User-Agent`, so it reported `education.gouv.fr`, Wiley, `cpbmd.info` and both
+`slvesnik.com.mk` issues as dead. With the gate's real UA, curl gets 200 and
+91,970 bytes, 77,600, 391,526, 5,252,946 and 1,247,755 from those five. Worth
+stating plainly: **a link checker that does not use the gate's own client is
+measuring the checker.**
 
-One thing that check did settle. `education.gouv.fr` returns 403 to Node
-with the full Chrome UA and with a short one, and 200 to curl with either.
-The UA is not what it objects to — section 4 is right that this is handshake
+One thing that check did settle. `education.gouv.fr` returns 403 to Node with
+the full Chrome UA and with a short one, and 200 to curl with either. The UA
+is not what it objects to — section 4 is right that this is handshake
 fingerprinting, and the curl fallback is the remedy.
+### The three certificate failures, resolved without touching the gate
 
-### Genuinely unreachable, after probing each one
+This subsection first said three hosts were unreadable and that reading them
+meant relaxing certificate verification. Chasing each one down, none of them
+needed it.
+
+- **The Bercow report — replaced with the publisher's own copy.**
+  `bercow10yearson.com` does have an expired certificate. But the RCSLT, one
+  of the two bodies that published the review, serves the full PDF on a valid
+  one: 2,689,447 bytes, magic bytes `%PDF-`, 360,363 characters out of all
+  three extractors, and the extracted text opens with the report's own title
+  page. England's docLink and `gen-dld-seed.js` both now point there. This is
+  not a workaround — it is a better citation than the one it replaced.
+- **`slvesnik.com.mk` was never blocked.** North Macedonia's official gazette
+  presents an incomplete chain and Node refuses it, but **curl accepts it
+  with no special flags**, and the gate falls back to curl on any non-200 —
+  a TLS failure returns status 0, which qualifies. Both cited issues come
+  down that path: 5,252,946 and 1,247,755 bytes. The earlier "curl also
+  failed" was the checker sending no User-Agent, the same bug twice in one
+  afternoon.
+- **`docs.edu.gov.ru` is not load-bearing.** It uses a self-signed national
+  CA and curl will not take it either. It is cited as the ministry's
+  publication *record* for Распоряжение Р-75 — and Russia's entry already
+  carries the full text of that same instrument twice, on `legalacts.ru` and
+  `base.garant.ru`, both serving 200 (106,727 and 105,628 bytes), with
+  `consultant.ru` serving art. 14 of 273-ФЗ besides. Nothing rests on the
+  unreadable link alone.
+
+**So the gate stays as it is**, and the general lesson is worth more than the
+three fixes: a host that fails on its certificate is a prompt to look for the
+publisher's own copy, the `www.` variant, or a second citation of the same
+instrument — not a prompt to lower the bar. Two of these three were solved by
+reading the entry's other docLinks.
+
+### Genuinely unreachable
 
 - **`hse.ie` — a real 404**, and the only true dead link found in 272. The
   Cavan/Monaghan language-class page Ireland's entry cites is gone; the host
   serves a 38 KB not-found page at 404. Needs a replacement or removal.
 - **`eani.org.uk` — 403 to every client tried**, plain and with a browser UA.
   Northern Ireland's newcomer-support page is not readable by this pipeline.
-- **Three hosts fail on the certificate, not on the content.**
-  `slvesnik.com.mk` (North Macedonia's official gazette) has an incomplete
-  chain; `docs.edu.gov.ru` uses a self-signed national CA; the Bercow report
-  at `bercow10yearson.com`, which England's entry rests on, has an expired
-  certificate. Each serves its document when certificate verification is
-  relaxed — 5,252,946 bytes, 32,832 and 84,294 respectively. **The gate
-  cannot read any of them.** Making it able to is a deliberate security
-  tradeoff that has not been made here, and is left as a decision rather
-  than taken quietly.
-
+- **`doi.org/10.1016/j.ridd.2021.104139`** (Knudsen et al., allocation and
+  funding of SLT across Europe) resolves, then ScienceDirect serves a
+  2,744-byte JavaScript "Redirecting" shell and never the article. Five
+  entries cite it, and it is the obvious source for SLT-per-population ratios
+  across Europe. Unusable by this pipeline — which is part of why so many
+  `workforce` fields have a qualification route and no number.
 ### Nothing quotable, which is not the same as blocked
 
 - **Thai official PDFs have no usable Unicode.** Krisdika's consolidation
