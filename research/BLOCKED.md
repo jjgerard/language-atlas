@@ -700,6 +700,53 @@ status, not just the size.
 - **`npc.gov.cn` is UA/client-sensitive in the figshare direction**: curl
   fails it with a schannel TLS alert while Node gets 200. The gate reads it
   correctly because it tries Node first.
+## 11. PEER has moved, and 386 docLinks point at the old site
+
+**This is the largest single source dependency in the atlas.** UNESCO's
+Profiles Enhancing Education Reviews is cited by **386 docLinks across all
+five live maps** — 150 on `dld`, 102 on `indigenous`, 77 on `eal`, 51 on
+`fl`, 6 on `he`. For many units outside Europe it is the only comparative
+source that exists.
+
+`education-profiles.org` now serves every page with a banner reading
+**"This website has been archived and is no longer updated"**, pointing at
+a new home on `unesco.org/gem-report/en/peer`.
+
+### Do not migrate those links yet
+
+Three reasons, and the third is the one that would cost work:
+
+1. **The old site still serves.** Probed here: HTTP 200, 851,511 bytes of
+   full profile text. Nothing is broken today.
+2. **The quotes on 386 docLinks were verified against the old site's
+   rendering.** Repointing them at a differently-rendered page invites the
+   gate to drop bullets that are perfectly correct.
+3. **The new site's paths are not the old ones.** The obvious
+   `/gem-report/en/peer/<country>/inclusion` form 404s — tested on two
+   different countries, both 404 — so a mechanical rewrite would break every
+   link it touched. The index at `/gem-report/en/peer` serves at 200 and is
+   the place to work out the real scheme.
+
+### The new site's 404 is the worst big-404 yet
+
+**`unesco.org/gem-report/en/peer/<anything-wrong>` returns HTTP 404 with a
+1,789,233-byte body.** That is 1.79 MB — far past the under-1,000-byte
+tripwire from section 9, and vastly bigger than the 24,707-byte
+`education-profiles.org` 404 recorded in section 10.
+
+A body that size, full of real UNESCO prose, is prose enough that a loosely
+chosen quote could plausibly match it. **Check the status code.** Size is
+not a proxy for success and this is the clearest demonstration of it in this
+file.
+
+### What to do when someone does migrate
+
+Work out the new path scheme from the `/gem-report/en/peer` index, migrate a
+handful of links, and **re-run the gate over those units before touching the
+rest** — the whole point is that a link is only as good as the quote that
+still verifies against it. `linkcheck.js` will tell you which of the 386 are
+still serving; it will not tell you whether the quotes still match, and that
+is the question that matters.
 ## A note on consolidators
 
 Where the official register is in section 1 or 2 and has no side door, the
