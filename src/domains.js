@@ -98,9 +98,38 @@ const DOMAINS = [
       ['curriculumTime', 'Curriculum time', 'text', 'Hours or periods per week, and how that is set.'],
       ['assessment', 'Assessment', 'text', 'The qualifications or exams these courses lead to.'],
       ['teacherSupply', 'Teacher supply', 'text', 'Qualification routes, shortages, and which languages cannot be staffed.'],
-      ['higherEducation', 'Higher education', 'text', 'Whether languages can be studied at degree level, including departments opening or closing.'],
       ['uptake', 'Uptake', 'series', 'Numbers or shares of pupils taking a language, by year, with the source of each figure.'],
       ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, curriculum order or funding decision, one per row.'],
+    ],
+  },
+  {
+    id: 'he',
+    label: 'Languages and linguistics in higher education',
+    blurb: 'Where languages and linguistics can be studied as degree subjects, what school qualifications it takes to get in, and which language a degree is taught in.',
+    // This map began as one field on `fl`, and splitting it out was not tidying.
+    // Read side by side, the 28 entries written into fl.higherEducation were
+    // answering six different questions -- Egypt and Morocco the language a
+    // degree is TAUGHT IN, the United States how many institutions offer one,
+    // Belarus whether every student must take one, Guyana who trains the school
+    // system's teachers. A single field cannot hold those and stay comparable,
+    // which is the same failure the slot convention exists to fix, one level up.
+    //
+    // Linguistics shares this map rather than having its own. A place that
+    // drops languages at school and a place with no linguistics department are
+    // the same story told twice, and separating them would have meant fetching
+    // the same university prospectus into two domains.
+    note: 'Languages and linguistics sit on one map because they are usually documented in one place — a university\'s own prospectus covers both — and because the interesting question links them: whether a system that stops teaching languages at school still trains people to study language itself.',
+    live: true,
+    fields: [
+      ['degreeSubjects', 'Languages as a degree', 'text', 'In this order, omitting any you cannot answer: whether a language can be taken as a degree in its own right · which languages · at how many institutions, and when that was counted · whether single honours or only combined with something else.'],
+      ['linguistics', 'Linguistics', 'text', 'In this order, omitting any you cannot answer: whether linguistics is a degree subject in its own right · at what level, bachelor, master or doctorate · where it sits, its own department or inside languages or education · whether it exists only as modules within another degree.'],
+      ['offerings', 'What is offered where', 'offering', 'One row per language or subject: the level it reaches, how many institutions offer it, and the year counted. This is the field the trends page reads, so a row with no year is worth less than no row. Leave `institutions` blank rather than estimate it.'],
+      ['mediumOfInstruction', 'Language of instruction', 'text', 'In this order, omitting any you cannot answer: which language degrees are taught in · whether another is permitted and on what condition · in which subjects or institutions · whether this is a rule or observed practice.'],
+      ['requiredStudy', 'Compulsory language study', 'text', 'In this order, omitting any you cannot answer: whether every student must study a language whatever their degree · which language · how much of it · who may exempt a student.'],
+      ['entryRequirements', 'Entry requirements', 'text', 'In this order, omitting any you cannot answer: whether a school language qualification is needed to enter · which, and at what level · whether a beginners route exists for those without it · who sets the requirement, the state or each institution.'],
+      ['teacherPipeline', 'Teacher pipeline', 'text', 'In this order, omitting any you cannot answer: whether higher education trains the school system\'s language teachers · at which institutions · by what route, a degree, a postgraduate qualification or in service · whether places are capped, funded or bursaried.'],
+      ['enrolment', 'Enrolment', 'series', 'Students, enrolments or degrees awarded, by year, with the source of each figure and what it counted. Say whether it counts students or course enrolments — they are not the same number.'],
+      ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, funding decision, or a department opening or closing, one per row.'],
     ],
   },
   {
@@ -132,7 +161,10 @@ const DOMAINS = [
     ],
   },
   { id: 'adult', label: 'Majority language for adults', blurb: 'Classes and entitlements for adults who move to a country, rather than children in its schools.', live: false, planned: true },
-  { id: 'ling', label: 'Linguistics in higher education', blurb: 'Where linguistics can be studied as a subject in its own right.', live: false, planned: true },
+  // `ling` was a planned domain of its own until the higher-education map was
+  // built; it is now the `linguistics` field on `he`, for the reason recorded
+  // there. Removed rather than left as a stub, so the nav does not promise a
+  // page that will never arrive.
 ];
 
 for (const d of DOMAINS) {

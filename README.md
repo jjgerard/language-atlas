@@ -620,9 +620,15 @@ against the font stack and resolves to a real glyph.
   and `identifiedPrevalence` sit near 3%; most systems genuinely have no such
   rule, but only 44 of 7,400 empty slots say so with the "Not established"
   sentinel. Closing that gap is real work, not tidying.
-- **`fl.higherEducation` is empty almost everywhere** (6%). The comparative
-  sources this map leans on are about schools and say nothing about
-  degree-level provision.
+- **Higher education is its own map now, and it is nearly empty** (22 of 353).
+  It began as one field on `fl`, and splitting it out was not tidying: read
+  side by side, those 28 entries were answering six different questions —
+  Egypt and Morocco the language a degree is *taught in*, the United States how
+  many institutions offer one, Belarus whether every student must take one,
+  Guyana who trains the school system's teachers. The comparative sources the
+  school maps lean on are about schools and say almost nothing about
+  degree-level provision, so this map has to be built from national and
+  institutional sources rather than harvested from the existing ones.
 - **Uptake and newcomer-proportion are Europe-and-Americas fields.**
   `fl.uptake` is 0 of 54 in Africa and 0 of 112 in Asia; `eal.newcomerProportion`
   is 0 of 54 and 3 of 112. That is not neglect — no comparative instrument

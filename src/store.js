@@ -88,6 +88,12 @@ const SHAPES = {
   // in ISO 639-3, and `mri` is Moraori in WALS. A row with no `wals` gets no
   // link rather than a plausible wrong one.
   languages: ['name', 'wals', 'iso', 'family', 'genus', 'typology'],
+  // What a system offers, in a shape that can be counted. Prose could say
+  // "several universities teach Japanese" and the trends page could do nothing
+  // with it; this keeps the language, how far it goes, how many institutions
+  // and WHEN that was true. `year` is what makes it comparable -- an offering
+  // count with no date cannot be set against a school-level one.
+  offering: ['language', 'level', 'institutions', 'year', 'note'],
 };
 
 /** Pull the domain's declared fields out of a submitted body, typed and capped. */

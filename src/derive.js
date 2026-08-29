@@ -36,11 +36,19 @@ const NOT_APPLICABLE_RE = /^Not applicable/i;
 function asText(v) {
   if (Array.isArray(v)) {
     return v
-      .map(r => (r.name
+      .map(r => {
         // A language row flattens to something a reader and a search box can
         // both use; the structured record is what the panel actually renders.
-        ? [r.name, [r.family, r.genus].filter(Boolean).join(' > '), r.typology].filter(Boolean).join(' — ')
-        : [r.year, r.value, r.description || r.note].filter(Boolean).join(' — ')))
+        if (r.name) return [r.name, [r.family, r.genus].filter(Boolean).join(' > '), r.typology].filter(Boolean).join(' — ');
+        // An offering row has no `name`, and without its own branch it fell
+        // through to the series one and flattened to "2021 — the note",
+        // dropping the language and the level, which are the whole point of it.
+        if (r.language) {
+          const count = r.institutions ? r.institutions + ' institutions' : '';
+          return [r.language, r.level, count, r.year, r.note].filter(Boolean).join(' — ');
+        }
+        return [r.year, r.value, r.description || r.note].filter(Boolean).join(' — ');
+      })
       .join('\n');
   }
   return typeof v === 'string' ? v : (v == null ? '' : String(v));
@@ -91,7 +99,7 @@ function deriveUnits(domain, entries, sharedMatcher) {
     // a language row has to keep its WALS code to be linkable at all.
     const records = {};
     for (const [k, , type] of domain.fields) {
-      if (type === 'languages' && Array.isArray(e[k])) records[k] = e[k];
+      if ((type === 'languages' || type === 'offering') && Array.isArray(e[k])) records[k] = e[k];
       const t = asText(e[k]).trim();
       if (t) values[k] = t;
     }
