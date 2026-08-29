@@ -36,7 +36,7 @@ spend a pass on them.
 | `isap.sejm.gov.pl` | Imperva/Incapsula; `download.xsp` returns a self-referential 302 cookie challenge and never yields the file | `dziennikustaw.gov.pl`, pattern `D{YYYY}{poz}01.pdf` |
 | `lex.bg` | 403 to every request | `dv.parliament.bg`, the official gazette, full act text in literal UTF-8 |
 | `e-tar.lt` | 403 on plain GET | `e-seimas.lrs.lt/rs/legalact/TAD/{id}/` |
-| `gallilex.cfwb.be` | WAF "Request Rejected" | `ejustice.just.fgov.be` `article_body.pl` |
+| `gallilex.cfwb.be`, `enseignement.be` | **200 with a 244-byte BIG-IP "Request Rejected" page** for every path, root included — a silent failure, not a refusal, so nothing downstream logs it | `ejustice.just.fgov.be` `article_body.pl` still, but it **drops connections intermittently** (`ECONNRESET` to Node, curl error 56) and comes back — probed here twice, 200 and 12,695 bytes both times. On a reset, retry before substituting. `etaamb.openjustice.be` is a working consolidator if it stays down; label it as a consolidator in `sources` |
 | `legis.md` | Cloudflare "Just a moment", 403 on every path | ministry-published PDFs with real text layers |
 | `mon.bg` | 403 | `nio.government.bg` |
 | `svenskforfattningssamling.se/doc/` | 403 to plain GET | none; Sweden rests on the base Skollag and Skolförordning from `riksdagen.se`, so its amendment acts are not represented |
@@ -400,6 +400,35 @@ why the DOF edition PDFs are the only route to Mexican statute text) ·
 - Bolivia: the entry’s own Ley 070 docLink now 404s while other paths on
   `minedu.gob.bo` serve, and its PEER profile url is dead. A reminder that a
   docLink recorded once is not a docLink that still works.
+
+### Withdrawn before it was believed: figshare is not blocked
+
+A drafting agent reported `ndownloader.figshare.com` answering **202 with a
+zero-byte body** behind `x-amzn-waf-action: challenge`, and this file said so
+for about ten minutes. It is wrong, and it mattered enough to check, because
+that url is what **19 European DLD entries cite for the COST Action IS1406
+practitioner survey** — the single most-used source on this map. Recording it
+as blocked would have told every later drafter to stop using the one document
+that covers identification practice across European systems.
+
+Probed directly, with curl and then with the gate's own client three times in
+a row: **302, followed, 200, 24,976,303 bytes, magic bytes `%PDF-`.** Both
+clients get the file. `get()` in `terr-verify.js` has followed up to five
+redirects since it was written.
+
+**What is true, and is probably what the agent hit.** The 302 goes to a
+*signed* S3 url carrying `X-Amz-Expires=10`. The link is dead ten seconds
+after it is issued. So a client that captures the `Location`, logs it, and
+fetches it as a separate step — or that stores it in a worklist for later —
+gets nothing, and the failure looks like the host refusing rather than a
+credential timing out. Always follow the redirect in the same request chain;
+never record the S3 url as the document's address.
+
+`data.ncl.ac.uk/ndownloader/...` does 403, and that part stands.
+
+**The lesson, which section 6 already taught once.** A single agent's report
+of a block is a hypothesis. Two of the three blocks withdrawn from this file
+were withdrawn after someone spent ninety seconds probing the host directly.
 
 ### Nothing quotable, which is not the same as blocked
 
