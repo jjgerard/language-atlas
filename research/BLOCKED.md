@@ -965,6 +965,70 @@ The BOPA side door, found on the same pass: the JS-only gazette at `bopa.ad`
 reads a static store at `documents.bopa.ad/bopa-documents/<issue>/html/<doc>.html`
 which serves full act text to a plain GET.
 
+## 15. American legislature sites, from the dld entitlement pass
+
+Sixty-odd US states, Canadian provinces and territories in one pass, so this
+is a reasonable survey of how legislature sites fail.
+
+### A side door worth copying
+
+**`sdlegislature.gov/api/Statutes/Statute/<section>` returns clean JSON with
+the full statute text**, where the HTML page is a JavaScript shell. South
+Dakota's four bullets all verify through it.
+
+That is the same shape as the BOPA store in section 14: a JS front end over a
+plain-GET data endpoint. When a legislature site renders nothing, look for
+the API the page itself is calling before writing the host off.
+
+### JavaScript shells serving 200
+
+- **`delcode.delaware.gov`** — 200 with a **794-character** shell reading
+  "Delaware Code Online" and nothing else. Title 14 ch. 31 is unreachable;
+  the archived Administrative Code site serves and is what Delaware rests on.
+- **`codeofarrules.arkansas.gov`** — 200 with a 3.4 KB "enable JavaScript"
+  shell.
+- **`mgaleg.maryland.gov/.../StatuteText`** — JS-rendered, so Maryland's
+  Education Article is unquotable and that entry rests on COMAR.
+
+### Whole hosts and estates that would not connect
+
+- **The whole `legis.wisconsin.gov` estate**, `docs.legis.wisconsin.gov`
+  included — connect timeout on 443 to both clients, root and documents
+  alike. **Wisconsin statute text is unreachable from here**, which is why
+  that entry rests on DPI's own SEA Policies and Procedures.
+- `ilga.gov` — connect failure on 443 to both clients. Illinois came from
+  ISBE's own Part 226 PDF, which is a better source anyway.
+- `codes.ohio.gov`, `txrules.elaws.us` — connection failure / timeout.
+- `legisquebec.gouv.qc.ca` — **still 502 on the root.** Section 5 called this
+  an outage; it has not come back, and Quebec's consolidated LIP remains
+  unreachable.
+
+### A url form that matters
+
+`leginfo.legislature.ca.gov` — the `codes_displayText.xhtml?chapter=&article=`
+form returns a 1,206-character empty shell where that article does not exist.
+**`codes_displaySection.xhtml?sectionNum=` is the dependable door.**
+
+### Two more big-404s
+
+- `dpi.wi.gov/sped/laws-procedures-bulletins/procedural-safeguards` — **HTTP
+  404 with a 133,861-byte body.**
+- `web.archive.org` returned **HTTP 500** on a New Hampshire snapshot — a new
+  failure mode for a host this file records as 429-ing. New Hampshire is now
+  blocked at the register *and* at the archive, and is the pass's one
+  access-blocked US state.
+
+### OCR that is clean in only one extraction
+
+Jamaica's Disabilities Act is an image scan on `laws.moj.gov.jm` (200, 2 MB,
+no text layer). The Houses of Parliament printed copy does extract — but
+**only one of the three extractions in the union is clean OCR**; the others
+shred words into "edt rammg" and "nede s".
+
+This is the multi-extractor union earning its keep in a way worth stating:
+it is not only that one extractor may find a page another cannot, but that
+two extractors of the SAME page can disagree about the words. Take the quote
+from the clean one, and check which that is rather than assuming.
 ## A note on consolidators
 
 Where the official register is in section 1 or 2 and has no side door, the
