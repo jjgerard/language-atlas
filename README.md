@@ -122,8 +122,8 @@ the Docker image does not need the Natural Earth downloads.
 
 ## What is real
 
-**336 units on each of the four maps, so 1,344 slots in total.** A slot is one
-unit on one map. 1,087 of them carry a record with at least one documented field.
+**353 units on each of the five maps, so 1,765 slots in total.** A slot is one
+unit on one map. 1,341 of them carry a record with at least one documented field.
 
 | map | units | with a record | field-slots filled |
 | --- | --- | --- | --- |

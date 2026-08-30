@@ -347,6 +347,33 @@ function crossDomain(payload) {
 const FINDINGS = [
   // ---- what the four maps say about each other ----
   {
+    id: 'no-rule-is-an-answer',
+    scope: 'all',
+    compute: c => {
+      // The base has to be big enough that the rate is about the world rather
+      // than about how far one pass happened to get. At a threshold of 12 this
+      // picked he.degreeSubjects -- 6 documented and 6 absences on a map two
+      // days old, reporting 50% -- which is the exact mistake the retired
+      // findings below were retired for. 40 settled answers is the floor.
+      const rows = [];
+      for (const [dom, d] of Object.entries(c.coverage)) {
+        for (const f of d.fields) {
+          if (f.type !== 'text') continue;
+          const settled = f.has + f.looked;
+          if (settled < 40 || !f.looked) continue;
+          rows.push({ dom, k: f.k, label: f.label, looked: f.looked, settled, rate: pct(f.looked, settled) });
+        }
+      }
+      if (!rows.length) return null;
+      rows.sort((a, b) => b.rate - a.rate);
+      const total = rows.reduce((n, r) => n + r.looked, 0);
+      return { top: rows[0], rows, total, fields: rows.length };
+    },
+    holds: v => v.top.rate >= 8 && v.top.settled >= 100,
+    text: v => `Sometimes the answer is that there is no provision, and this atlas can tell that apart from nobody having looked. Of the ${v.top.settled} places that have settled the question of ${v.top.label.toLowerCase()}, ${v.top.looked} — ${v.top.rate}% — record that there is none. That is the highest rate among ${v.fields} questions, and one of ${v.total} settled answers across the five maps that record an absence rather than a provision.`,
+    note: 'This is the one number here that needs the atlas\'s four states to exist at all. A blank field means nobody has checked; a not-established field means somebody did and the thing is not there. Counting only settled questions keeps an unworked field from reading as a finding — which is why the rate is over has-plus-looked, never over all 353 places.',
+  },
+  {
     id: 'home-language-two-ways',
     scope: 'all',
     compute: c => c.crossDomain.homeLanguageAndMedium,
@@ -468,8 +495,8 @@ const RETIRED_FINDINGS = [
   },
   {
     id: 'highered',
-    scope: 'fl',
-    compute: c => { const f = c.coverage.fl && c.coverage.fl.fields.find(x => x.k === 'higherEducation'); return f && { n: f.has, of: f.has + f.looked + f.none }; },
+    scope: 'he',
+    compute: c => { const f = c.coverage.he && c.coverage.he.fields.find(x => x.k === 'degreeSubjects'); return f && { n: f.has, of: f.has + f.looked + f.none }; },
     holds: v => v.n / v.of < 0.05,
     text: v => `School language policy is written down and university provision is not: degree-level study is recorded for ${v.n} of ${v.of} entries.`,
     note: 'Departments open and close without a comparative record. Where an entry does carry this, it is usually a news report of a closure.',
@@ -530,8 +557,8 @@ const RETIRED_FINDINGS = [
 //
 // A finding not named here still shows, after the named ones.
 const FINDING_ORDER = ['home-language-two-ways', 'assessed-in-a-language-they-speak',
-  'standing-and-foreign', 'reform-together', 'engagement-gap', 'when-changed',
-  'word-order', 'tone', 'family-concentration'];
+  'no-rule-is-an-answer', 'standing-and-foreign', 'reform-together',
+  'engagement-gap', 'when-changed', 'word-order', 'tone', 'family-concentration'];
 
 function findings(ctx) {
   const held = [], withdrawn = [];

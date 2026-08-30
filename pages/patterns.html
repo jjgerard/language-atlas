@@ -217,7 +217,7 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
 
   <p class="lead">
     Ask it something. Pick two things the atlas records and it counts them against each other
-    across all four maps at once — or describe what you want and let it choose the two. The
+    across every map at once — or describe what you want and let it choose the two. The
     findings, the timeline and the coverage tables are below.
   </p>
 
@@ -380,7 +380,7 @@ function render() {
   // ---- findings ----
   $('#findings').innerHTML = T.findings.held.map(f => `
     <div class="finding ${esc(f.scope)}">
-      <div class="scope">${f.scope === 'all' ? 'Across all four maps' : esc(scopeLabel(f.scope))}</div>
+      <div class="scope">${f.scope === 'all' ? 'Across every map' : esc(scopeLabel(f.scope))}</div>
       <p class="claim">${esc(f.text)}</p>
       <p class="why">${esc(f.note)}</p>
     </div>`).join('');
