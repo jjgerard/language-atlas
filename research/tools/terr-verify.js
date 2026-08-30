@@ -246,6 +246,29 @@ function quoteOn(quote, page) {
           const latin = strip(r.raw.toString("latin1"));
           if (latin && latin !== utf8) parts.push(latin);
 
+          // UTF-16, detected by BOM or by NUL density. A NUL byte does not
+          // occur in valid UTF-8 or latin-1 HTML, so a body carrying them in
+          // quantity is UTF-16 and the decoding is unambiguous.
+          const b0 = r.raw[0], b1 = r.raw[1];
+          const bom16 = (b0 === 0xFF && b1 === 0xFE) ? "utf16le"
+                      : (b0 === 0xFE && b1 === 0xFF) ? "utf-16be" : null;
+          const head = r.raw.subarray(0, 1024);
+          let nuls = 0;
+          for (const byte of head) if (byte === 0) nuls++;
+          const label16 = bom16 || (nuls > head.length / 4 ? "utf16le" : null);
+          if (label16) {
+            try {
+              const body16 = bom16 ? r.raw.subarray(2) : r.raw;
+              const u16 = strip(label16 === "utf16le"
+                ? body16.toString("utf16le")
+                : new TextDecoder("utf-16be", { fatal: false }).decode(body16));
+              if (u16 && !parts.includes(u16)) {
+                parts.push(u16);
+                console.log("       (decoded also as " + label16 + ")");
+              }
+            } catch { /* the other decodings stand */ }
+          }
+
           // A third decoding, for the legacy East Asian ones Buffer cannot do.
           // jxrd.jxnews.com.cn serves Jiangxi's own minority-rights regulation
           // as GB2312 at HTTP 200; utf8 and latin-1 both turn it to noise, so

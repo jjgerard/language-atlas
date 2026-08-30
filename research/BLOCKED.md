@@ -580,9 +580,14 @@ rather than merely documented.
 - **`portaldogc.gencat.cat` is no longer curl-only.** Section 4 lists it; it
   answered the gate's own Node client directly, 116,040 bytes of PDF. The
   requirement seems to have lapsed. Left in section 4 but flagged here.
-- **`legislation.gov.im` has changed failure mode again**, from a 269-byte
-  200 stub to `ECONNRESET` / curl error 35. Still unusable either way, which
-  is why the Isle of Man has no `legalEntitlement`.
+- **`legislation.gov.im` has changed failure mode again** — now a third
+  shape: `ECONNRESET` on `www.`, and **HTTP 202 with a 249-byte challenge
+  stub** on the bare host. Still unusable, but **no longer load-bearing**:
+  `desc.gov.im/corporate/corporate/legislation/` links a `media/<hash>/`
+  store that serves the Education Act 2001 (867,605 b) and the Education
+  (Special Needs) Regulations 2004 with clean text layers. `desc.gov.im`
+  hands Node the 269-byte stub and curl the real PDF, so the gate reads it
+  through the fallback. The Isle of Man now has a `legalEntitlement`.
 - **`www.gov.im` is intermittent, not blocked.** It dropped all three Isle of
   Man bullets on one gate run and served 22,977 bytes on the next, and to
   both clients on a later probe. Retry rather than write it off — the same
@@ -930,6 +935,36 @@ A url in a 2019 report is not evidence the document is still there.
   fallbacks are exhausted.
 - `indianemployees.com`, `divyangkalyan.maharashtra.gov.in` — TLS handshake
   failure to both clients.
+## 14. UTF-16, the fourth encoding case
+
+Older BOPA documents — the Andorran gazette — are served as **UTF-16LE**.
+Neither UTF-8 nor latin-1 reads them: both turn the body into characters
+separated by NUL bytes. Andorra's 2004 Conava reglament verified only through
+`quoteOn`'s last-resort space-stripped comparison, which survived by luck
+because the quote was long. **A short quote on such a page would have been
+dropped as invented.**
+
+Both gates now add a UTF-16 decoding to the union, detected by BOM or by NUL
+density in the first kilobyte. A NUL byte does not occur in valid UTF-8 or
+latin-1 HTML, so a body carrying them in quantity is UTF-16 and nothing else —
+which is why this needs no "only when declared" restraint, unlike the
+legacy-CJK decoding in section 10.
+
+Verified on a BOM'd UTF-16LE body: UTF-8 and latin-1 both return the
+NUL-separated mangling, `utf16le` returns the text, and the phrase is found in
+the union.
+
+**That is four encoding cases now** — latin-1 (Uruguay), the `fold()`
+allow-list (Greece, North Macedonia, Taiwan), GB2312 (Jiangxi), and UTF-16
+(Andorra). Every one had the same signature: a document fetched successfully,
+unreadable, and a correct quote reported as invented. The remedy has been the
+same every time, and it is worth stating as a rule rather than rediscovering:
+**do not pick a decoding, search the union.**
+
+The BOPA side door, found on the same pass: the JS-only gazette at `bopa.ad`
+reads a static store at `documents.bopa.ad/bopa-documents/<issue>/html/<doc>.html`
+which serves full act text to a plain GET.
+
 ## A note on consolidators
 
 Where the official register is in section 1 or 2 and has no side door, the
