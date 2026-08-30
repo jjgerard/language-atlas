@@ -127,23 +127,28 @@ unit on one map. 1,341 of them carry a record with at least one documented field
 
 | map | units | with a record | field-slots filled |
 | --- | --- | --- | --- |
-| Majority language acquisition (`eal`) | 336 | 294 | 1,301 / 3,024 (43%) |
-| Language disorder support (`dld`) | 336 | 267 | 1,129 / 4,368 (26%) |
-| Foreign languages in school (`fl`) | 336 | 288 | 1,282 / 3,360 (38%) |
-| Indigenous and regional languages (`indigenous`) | 336 | 238 | 238 / 3,360 (7%) |
+| Majority language acquisition (`eal`) | 353 | 310 | 1,763 / 3,177 (55%) |
+| Language disorder support (`dld`) | 353 | 349 | 2,290 / 4,589 (50%) |
+| Foreign languages in school (`fl`) | 353 | 309 | 1,703 / 3,177 (54%) |
+| Indigenous and regional languages (`indigenous`) | 353 | 353 | 2,059 / 4,236 (49%) |
+| Languages and linguistics in higher education (`he`) | 353 | 22 | 22 / 3,177 (1%) |
 
 The two numbers measure different things and both matter. "With a record" says
 somebody has written *something* about that unit; "field-slots filled" says how
-much of the record exists. The second is the honest one, and at 28% overall it
-is the number the project is actually working on. The map shades by it.
+much of the record exists. The second is the honest one, and at **43% overall**
+it is the number the project is actually working on. The map shades by it.
 
-The `indigenous` map is new and its 7% is real: 238 units carry one filled field
-each, because that is exactly what migrated into it. See below for why it exists
-and why it is named as it is.
+`indigenous` reached 49% in a single day's work and is now the most complete
+map by units — every one of its 353 carries a record. Its four core questions
+(standing, local term, medium of instruction, taught as a subject) sit between
+89% and 97%.
 
-By region, every unit outside Asia has a record on the three older maps: Africa
-54/54, the Americas 99/99, Europe 49/49, Oceania 22/22. Asia is 112 units, of
-which China's 31 provinces are untouched by deliberate choice.
+`he` is the new one and its 1% is real: it was split out of `fl` in August 2026
+because the 28 entries in `fl.higherEducation` were answering six different
+questions, and it starts from those 22 migrated records. The comparative
+sources the school maps lean on say almost nothing about degree-level
+provision, so this map has to be built from national higher-education law and
+universities' own prospectuses rather than harvested.
 
 **Coverage** is computed with the `hasContent()` / `NOT_DOCUMENTED_RE` pair. A
 field beginning "Not established from the sources consulted…" counts as *looked,
@@ -156,7 +161,7 @@ four UK nations, Catalonia, the Belgian French Community, and Hong Kong. A unit
 exists because it differs from its country *in some subject*, so on a map where
 it has nothing of its own it inherits and is marked as inheriting.
 
-**2,074 source links and 648 dated policy-history rows** sit behind those
+**5,361 source links and 3,339 dated policy-history rows** sit behind those
 entries.
 
 ## Why this map is called what it is
@@ -603,12 +608,19 @@ against the font stack and resolves to a real glyph.
   own units because both trackers already carried them.
 - **No history.** `policyHistory` is in the data and rendered in full, but there
   is no dated-version model behind any other field yet.
-- **China's 31 provinces are untouched**, by choice rather than oversight. They
-  are 93 of the remaining slots and would roughly double the sub-national unit
-  count with entries likely thinner than the national ones. The decision to do
-  them has not been taken.
-- **India's disorder map is national, not per-state.** No state-level source
-  exists: the RPwD Act 2016 defines "speech and language disability" once and
+- **China's 31 provinces were untouched by choice, and no longer are.** All 31
+  now carry a record. The door that made it possible is the China Disabled
+  Persons' Federation law-disclosure index, which serves provincial regulations
+  as full text where the national database is a JavaScript shell and half the
+  provincial hosts refuse — recorded in `research/BLOCKED.md` section 13, along
+  with the twenty province slugs and the warning that seven of them sit in
+  three collision groups. A wrong slug does not fail; it serves a real
+  regulation belonging to a different province, and the gate cannot see it.
+- **India's disorder map was national, and is now per-state for 29 of 33
+  units.** State RPwD Rules, s.57 certification notifications and state
+  gazettes carry identification and entitlement material the national
+  instruments do not, reached mostly through `cdnbbsr.s3waas.gov.in`. What
+  remains true is the reason it took this long: the RPwD Act 2016 defines "speech and language disability" once and
   narrowly, and the Rehabilitation Council of India publishes a single national
   count of registered therapists with no state breakdown. RCI does publish a
   32-row state table, but it counts approved TRAINING INSTITUTIONS across every
