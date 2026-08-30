@@ -798,6 +798,75 @@ handshake fingerprinting, a client the WAF dislikes, and a header the WAF
 dislikes. Nothing is weakened by any of them: same url, same verbatim quote,
 same extraction, and a failure still drops the row exactly as before.
 
+## 13. Two doors that opened, and a slug that can misattribute a law
+
+### The China Disabled Persons' Federation index
+
+Section 10 records that `flk.npc.gov.cn` is a Vite shell and that half the
+provincial government hosts refuse, leaving no general route to Chinese
+provincial regulations. There is one:
+
+```
+cdpf.org.cn/ztzl/zxzt1/2024/cjrqybzflfggzxxgkxt/dfxfgjgz/
+```
+
+The CDPF's law-disclosure system carries a **per-province index of
+provincial disability regulations**, serving full act text to a plain Node
+GET at 200. It reached Inner Mongolia, Shaanxi, Xinjiang, Anhui, Guizhou,
+Hainan, Jiangxi and Shanxi across two passes, including a Shaanxi
+disability-education measure naming 语言残疾 outright.
+
+### The slug trap, and why it is worse than a dead link
+
+**`sxs1` is Shaanxi 陕西. `sxs2` is Shanxi 山西.** Two different provinces,
+one character apart in the slug, and both serve a real regulation at 200.
+
+A wrong slug here does not fail — it succeeds, and quietly attributes one
+province's law to another. The quote verifies, because the quote really is on
+the page that was fetched. **This gate cannot catch it**: it checks that a
+quote is on the page cited, not that the page is the right province's.
+
+Read the province slugs off the index. Never guess them, and never pattern
+them from a neighbour.
+
+### `cdnbbsr.s3waas.gov.in`, for Indian state gazettes
+
+The NIC CDN behind Indian state department sites serves state gazette PDFs
+with clean text layers at 200, where the parent site's own viewer pages
+redirect to a homepage or refuse. It reached Haryana's 2019 rules and 2021
+certification notification, and Maharashtra's 2024 gazette where
+`divyangkalyan.maharashtra.gov.in` would not.
+
+Caveat: Marathi extraction from it is mangled — doubled matras, stray
+U+FFFD. Pull quotes programmatically out of the same `pdftext` union the
+gate reads rather than retyping any of it.
+
+### Delhi: a whole estate down, and the one door that is not
+
+`delhi.gov.in`, `www.delhi.gov.in`, `discomm.delhi.gov.in`,
+`dcpcr.delhi.gov.in`, `dsssb.delhi.gov.in` and
+`socialwelfare.delhigovt.nic.in` all connect-timeout on 443 to a full browser
+UA — the same whole-estate shape section 5 records for `nh.gov` and
+`yukon.ca`.
+
+**`edudel.nic.in` answers 200 on the same government**, and its
+`/welcome_folder/inclusive_education/*.pdf` tree carries the Directorate's
+orders, the Delhi RPwD Rules 2018 gazette and the hospital-panel circular as
+plain-GET PDFs.
+
+One document there is worth knowing about and not using: Delhi's "Checklist
+for Screening and Identification of Children with Disabilities" is an **11 MB
+image scan yielding 1,888 characters of noise**. It is the one document that
+would answer Delhi's identification slots directly, and it is not quotable.
+
+### Also observed
+
+- `commonlii.org` — served, 403'd, then served again within minutes.
+  Intermittent; retry rather than substitute.
+- `indiankanoon.org` — 403 to Node, curl and the bare UA alike, so all three
+  fallbacks are exhausted.
+- `indianemployees.com`, `divyangkalyan.maharashtra.gov.in` — TLS handshake
+  failure to both clients.
 ## A note on consolidators
 
 Where the official register is in section 1 or 2 and has no side door, the
