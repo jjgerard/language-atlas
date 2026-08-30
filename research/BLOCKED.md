@@ -829,6 +829,29 @@ quote is on the page cited, not that the page is the right province's.
 Read the province slugs off the index. Never guess them, and never pattern
 them from a neighbour.
 
+**Slugs confirmed by reading them off the index**, across two passes:
+
+```
+Shaanxi 陕西 sxs1     Shanxi 山西  sxs2     Hunan   hns2
+Henan        hns3     Hainan      hns4     Fujian  fjs2
+Qinghai      qhs1     Yunnan      yns3     Jiangxi jxs2
+```
+
+Note `hns2`/`hns3`/`hns4` are three different provinces and `sxs1`/`sxs2` two
+more. Five of the nine slugs above sit one character from another province's.
+
+### Scan-ness is per FILE, not per host
+
+Indian state gazette PDFs are overwhelmingly image scans, and the numbers are
+stark: Tripura's RPwD Rules 2018 is 5.5 MB yielding 79 bytes of text, Bihar's
+2021 gazette 1.7 MB yielding zero, Jharkhand's RTE Rules 4.6 MB yielding zero,
+Bihar's 2010 education rules 30 MB yielding zero.
+
+But **the same host's Tripura RTE Rules 2011 has a clean text layer.** Do not
+write a host off after one scan, and do not assume a host is good after one
+success — probe each file. A 30 MB PDF returning zero characters is not a
+blocked host; it is a photograph of a document.
+
 ### `cdnbbsr.s3waas.gov.in`, for Indian state gazettes
 
 The NIC CDN behind Indian state department sites serves state gazette PDFs
@@ -858,6 +881,15 @@ One document there is worth knowing about and not using: Delhi's "Checklist
 for Screening and Identification of Children with Disabilities" is an **11 MB
 image scan yielding 1,888 characters of noise**. It is the one document that
 would answer Delhi's identification slots directly, and it is not quotable.
+
+### Two Indian national paths that are simply gone
+
+- **`education.gov.in/sites/upload_files/mhrd/files/upload_document/`** — the
+  entire path returns 404 with a 3,042-byte body, including urls still being
+  returned by search engines and still cited in published reports.
+- **`mhrd.gov.in`** no longer resolves at all.
+
+A url in a 2019 report is not evidence the document is still there.
 
 ### Also observed
 
