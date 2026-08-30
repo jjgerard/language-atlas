@@ -832,13 +832,24 @@ them from a neighbour.
 **Slugs confirmed by reading them off the index**, across two passes:
 
 ```
-Shaanxi 陕西 sxs1     Shanxi 山西  sxs2     Hunan   hns2
-Henan        hns3     Hainan      hns4     Fujian  fjs2
-Qinghai      qhs1     Yunnan      yns3     Jiangxi jxs2
+Shaanxi 陕西 sxs1     Shanxi 山西  sxs2     Hunan  湖南 hns2
+Henan   河南 hns3     Hainan 海南  hns4     Hebei  河北 hbs2
+Hubei   湖北 hbs3     Fujian      fjs2     Qinghai     qhs1
+Yunnan       yns3     Jiangxi     jxs2     Jilin       jls2
+Liaoning     lns2     Heilongjiang hljs2   Sichuan     scs3
+Chongqing    cqs3     Tibet       xczzq1   Guangxi     gxzzzzq2
+Shanghai     shs2     Jiangsu     jss2
 ```
 
-Note `hns2`/`hns3`/`hns4` are three different provinces and `sxs1`/`sxs2` two
-more. Five of the nine slugs above sit one character from another province's.
+**Seven of these sit in three collision groups**: `sxs1`/`sxs2` are Shaanxi and
+Shanxi, `hns2`/`hns3`/`hns4` are Hunan, Henan and Hainan, and `hbs2`/`hbs3`
+are Hebei and Hubei. Every one serves a real regulation at 200.
+
+**Read the index as UTF-8.** Its anchor text is UTF-8 served with no declared
+charset, so a gb18030 decode of the index itself returns mojibake — the gate's
+legacy-CJK decoding fires only on a *declared* charset, which is why it does
+not misread this page, but a drafter decoding by hand can. Match province
+names by position against the plain-text list rather than by guessing a slug.
 
 ### Scan-ness is per FILE, not per host
 
@@ -890,6 +901,26 @@ would answer Delhi's identification slots directly, and it is not quotable.
 - **`mhrd.gov.in`** no longer resolves at all.
 
 A url in a 2019 report is not evidence the document is still there.
+
+### Two more whole-estate refusals, and one bad move
+
+- **`gujarat.gov.in`** — the estate connect-times-out (`sje.`, `education.`,
+  `egazette.`, `gujaratindia.`) or is NXDOMAIN (`dpal.`, `swd.`, `ssamis.`).
+  **`ssagujarat.org` is not part of it and serves**, which is the working door.
+- **`meghalaya.gov.in`** — `megscpwd.`, `megpolice.`, `megeducation.`,
+  `ssa.megeducation.` all connect-timeout. Meghalaya's gazette rules came from
+  a `web.archive.org` `id_` mirror, which extracts cleanly.
+- **`dsel.education.gov.in` moved badly.** Every `/sites/default/files/...`
+  path 301s to `www.dsel-education.gov.in` at the same path, which then 404s.
+  The new host is a Next.js SPA whose `_next/data` endpoint returns the shell.
+  A 301 into a 404 is worse than either alone: it looks like a live
+  redirect chain.
+- **`upload.indiacode.nic.in`** connect-times-out while `www.indiacode.nic.in`
+  serves. `upload.` is the host holding the state-rule PDFs, so India Code is
+  effectively closed for subordinate legislation.
+- **`legitquest.com`** serves 200 with real text but **truncates statutes after
+  rule 2** — usable for a definitions clause and nothing further. A silent
+  partial, which is worse than a refusal.
 
 ### Also observed
 
