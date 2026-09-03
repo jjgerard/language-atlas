@@ -44,7 +44,13 @@ const PARTS = path.join(__dirname, "..", "parts");
 // hand-maintained map here that did not know about the `he` map and threw
 // path.join(undefined) the moment one was reached.
 const { fileFor } = require("./datafile");
-const STORE = new Proxy({}, { get: (_, id) => fileFor(String(id)) });
+// A REAL object, not a Proxy. The Proxy that stood here had only a get
+// trap, so it answered STORE[domain] correctly while reporting NO OWN
+// KEYS -- and this tool ITERATES the map. Object.entries() asked the empty
+// target for its keys, got none, and the loop ran zero times, so the tool
+// reported a clean nothing-to-do over data that did need work.
+const { DOMAINS } = require("../../src/domains");
+const STORE = Object.fromEntries(DOMAINS.map(d => [d.id, fileFor(d.id)]).filter(([, f]) => f));
 const { LIVE } = require(path.join(ATLAS, "src", "domains.js"));
 const { hasContent } = require(path.join(ATLAS, "src", "derive.js"));
 

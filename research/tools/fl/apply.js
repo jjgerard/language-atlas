@@ -146,7 +146,22 @@ function apply(domain, spec) {
     }
     if (s.history) { e.policyHistory = s.history; hist += s.history.length; }
     if (s.docLinks) e.docLinks = s.docLinks;
-    if (s.addDocLinks) e.docLinks = [...(e.docLinks || []), ...s.addDocLinks];
+    // Deduped on the url. This was a plain concat, and terr-apply builds
+    // addDocLinks out of the evidence of every bullet it writes -- so a
+    // source backing four bullets arrived four times, and a source already
+    // cited on the entry arrived again on every later pass. That put 357
+    // repeated citations on 211 dld entries in one session. It also inflates
+    // the Sources page, which counts entry-slots and exists to report exactly
+    // that number.
+    if (s.addDocLinks) {
+      const have = new Set((e.docLinks || []).map(l => l && l.url));
+      const add = [];
+      for (const l of s.addDocLinks) {
+        if (!l || !l.url || have.has(l.url)) continue;
+        have.add(l.url); add.push(l);
+      }
+      if (add.length) e.docLinks = [...(e.docLinks || []), ...add];
+    }
     // Metadata belongs to the entry as a whole, so a pass that ADDS one field to
     // an already-documented entry must not rewrite it. Stamping confidence here
     // would have quietly downgraded 76 established entries to the tier of the
