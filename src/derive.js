@@ -63,6 +63,27 @@ function hasContent(v) {
 const isNotEstablished = v => !Array.isArray(v) && NOT_DOCUMENTED_RE.test(asText(v).trim());
 const isNotApplicable = v => !Array.isArray(v) && NOT_APPLICABLE_RE.test(asText(v).trim());
 
+// The third state for a TYPED field. A prose field records "looked, found
+// nothing" by holding the sentinel phrase; an array field cannot hold a
+// phrase, so until now it had two states only -- rows, or empty -- and empty
+// read as nobody having looked. That threw away real findings: a drafter read
+// NDCC 15.1-13-22, the ESPB licence page and North Dakota's own SB2304
+// standards, found they name no language, and the only thing the store could
+// keep was `languages: []`, indistinguishable from North Dakota never having
+// been opened. The next pass would redo the reading, the coverage figure
+// counted it as a gap, and the map could not say the one thing worth saying.
+//
+// So an entry may carry `notEstablished: { <typedField>: "Not established
+// from the sources consulted. <why>" }`. Same sentinel, same regex, same
+// reader-facing text as a prose field -- it is put into `values[k]` below so
+// the panel renders it through the branch it already has for the prose case.
+// Rows always win: the flag is only read when the array is empty, and the
+// store drops it the moment rows arrive.
+const typedNotEstablished = (e, k) => {
+  const v = e && e.notEstablished && e.notEstablished[k];
+  return typeof v === 'string' && NOT_DOCUMENTED_RE.test(v.trim()) ? v.trim() : '';
+};
+
 const cleanLinks = links =>
   (Array.isArray(links) ? links : [])
     .filter(l => l && typeof l.url === 'string' && /^https?:\/\//i.test(l.url))
@@ -87,6 +108,7 @@ function deriveUnits(domain, entries, sharedMatcher) {
       .map(([k, label]) => {
         if (hasContent(e[k])) { filled.push(label); return 'h'; }
         if (isNotEstablished(e[k])) { looked.push(label); return 'l'; }
+        if (Array.isArray(e[k]) && typedNotEstablished(e, k)) { looked.push(label); return 'l'; }
         if (isNotApplicable(e[k])) { na.push(label); return 'x'; }
         return 'n';
       })
@@ -102,6 +124,9 @@ function deriveUnits(domain, entries, sharedMatcher) {
       if ((type === 'languages' || type === 'offering') && Array.isArray(e[k])) records[k] = e[k];
       const t = asText(e[k]).trim();
       if (t) values[k] = t;
+      // An empty typed field flagged not-established shows its sentinel text
+      // exactly where a prose field would, so the panel needs no new branch.
+      else if (Array.isArray(e[k])) { const ne = typedNotEstablished(e, k); if (ne) values[k] = ne; }
     }
 
     const docLinks = cleanLinks(e.docLinks);
@@ -211,4 +236,4 @@ function deriveUnits(domain, entries, sharedMatcher) {
   };
 }
 
-module.exports = { deriveUnits, hasContent, isNotEstablished, isNotApplicable, asText, NOT_DOCUMENTED_RE, NOT_APPLICABLE_RE };
+module.exports = { deriveUnits, hasContent, isNotEstablished, isNotApplicable, typedNotEstablished, asText, NOT_DOCUMENTED_RE, NOT_APPLICABLE_RE };

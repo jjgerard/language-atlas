@@ -152,7 +152,10 @@ universities' own prospectuses rather than harvested.
 
 **Coverage** is computed with the `hasContent()` / `NOT_DOCUMENTED_RE` pair. A
 field beginning "Not established from the sources consulted…" counts as *looked,
-found nothing* — never as coverage, and never as an unanswered question.
+found nothing* — never as coverage, and never as an unanswered question. A typed
+field (`languages`, `policyHistory`, `speakers`, `offering`) cannot hold that
+phrase, so an entry carries it as `notEstablished: { <field>: "Not established
+from the sources consulted. <why>" }` instead; rows on the field always win.
 
 **Sub-national units** exist where a country's answer differs internally: 51 US
 states and DC, 33 Indian states and union territories, 31 Chinese provinces, 13

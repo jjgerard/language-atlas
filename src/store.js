@@ -96,6 +96,32 @@ const SHAPES = {
   offering: ['language', 'level', 'institutions', 'year', 'note'],
 };
 
+const NOT_ESTABLISHED_RE = /^Not established from the sources consulted/i;
+
+// "Looked and found nothing" for a TYPED field. A prose field carries that as
+// the sentinel phrase in its own text; an array cannot, so it is carried here,
+// keyed by field, and lives inside the `fields` blob so it needs no column and
+// survives the seed path -- seedIfEmpty() runs every row through sanitize()
+// on boot, so anything this function does not keep is gone by the next deploy.
+//
+// Strict in what it keeps, the way fl/apply.js is: only typed fields of THIS
+// domain, only a value opening with the exact sentinel phrase derive.js
+// recognises, and never for a field that has rows in the same body -- rows win.
+function notEstablishedFor(domain, body, fields) {
+  const src = body && body.notEstablished;
+  const out = {};
+  if (!src || typeof src !== 'object') return out;
+  for (const [k, , type] of domain.fields) {
+    if (!SHAPES[type]) continue;
+    const v = Array.isArray(src) ? (src.includes(k) ? 'Not established from the sources consulted.' : '') : src[k];
+    const t = str(v, 1000).trim();
+    if (!t || !NOT_ESTABLISHED_RE.test(t)) continue;
+    if (Array.isArray(fields[k]) && fields[k].length) continue;
+    out[k] = t;
+  }
+  return out;
+}
+
 /** Pull the domain's declared fields out of a submitted body, typed and capped. */
 function fieldsFor(domain, body) {
   const out = {};
@@ -103,6 +129,8 @@ function fieldsFor(domain, body) {
     if (SHAPES[type]) out[k] = records(body[k], 50, SHAPES[type]);
     else out[k] = str(body[k], 4000);
   }
+  const ne = notEstablishedFor(domain, body, out);
+  if (Object.keys(ne).length) out.notEstablished = ne;
   return out;
 }
 
@@ -137,6 +165,9 @@ function rowToEntry(row) {
   for (const [k, , type] of (domain ? domain.fields : [])) {
     entry[k] = blob[k] != null ? blob[k] : (SHAPES[type] ? [] : '');
   }
+  // Re-checked on the way out as well as on the way in, so a blob written by
+  // an older build cannot flag a prose field or a field that has since gained rows.
+  entry.notEstablished = domain ? notEstablishedFor(domain, blob, entry) : {};
   return entry;
 }
 
@@ -223,6 +254,12 @@ function mergeEntries(domain, rows) {
     if (SHAPES[type]) { seen.clear(); out[k] = dedupe(listOf(k)); }
   }
   for (const k of ['docLinks', 'supportLinks', 'collaborators']) { seen.clear(); out[k] = dedupe(listOf(k)); }
+  // A not-established flag from any contribution stands, unless some
+  // contribution supplied rows for that field -- pooled rows beat a flag.
+  out.notEstablished = {};
+  for (const r of rows) for (const [k, v] of Object.entries(r.notEstablished || {})) {
+    if (!(Array.isArray(out[k]) && out[k].length)) out.notEstablished[k] = out.notEstablished[k] || v;
+  }
 
   // Everyone who wrote part of this place is a contributor to it.
   const names = new Set(out.collaborators.map(c => c.name).filter(Boolean));

@@ -78,7 +78,11 @@ function apply(domain, spec) {
     // sentinel instead.
     for (const [f, prose] of Object.entries(s.notEstablished || {})) {
       if (!Object.prototype.hasOwnProperty.call(e, f)) problems.push(`${domain} ${key}: no field ${f}`);
-      if (String(e[f] || "").trim()) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      // A typed field cannot hold the phrase; its flag lives on the entry
+      // instead (see derive.js typedNotEstablished). Rows are the thing that
+      // must not be overwritten there.
+      if (Array.isArray(e[f])) { if (e[f].length) problems.push(`${domain} ${key}/${f}: would overwrite ${e[f].length} row(s)`); }
+      else if (String(e[f] || "").trim()) problems.push(`${domain} ${key}/${f}: would overwrite`);
       if (!/^Not established from the sources consulted/i.test(prose))
         problems.push(`${domain} ${key}/${f}: not-established text must open with the sentinel phrase`);
     }
@@ -129,10 +133,17 @@ function apply(domain, spec) {
   for (const [key, s] of Object.entries(spec)) {
     const [cc, name] = key.split("|");
     const e = rows.find(r => r.countryCode === cc && r.unitName === name);
+    // Rows arriving on a typed field UPGRADE any not-established flag it
+    // carried, the same way documented prose upgrades a prose sentinel.
+    const unflag = f => { if (e.notEstablished && e.notEstablished[f]) delete e.notEstablished[f]; };
     for (const [f, set] of Object.entries(s.fields || {})) { e[f] = set.join("\n"); filled++; bullets += set.length; }
-    for (const [f, arr] of Object.entries(s.series || {})) { e[f] = arr; filled++; rows_ += arr.length; }
-    for (const [f, arr] of Object.entries(s.languages || {})) { e[f] = arr; filled++; rows_ += arr.length; }
-    for (const [f, prose] of Object.entries(s.notEstablished || {})) { e[f] = prose; notEst++; }
+    for (const [f, arr] of Object.entries(s.series || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
+    for (const [f, arr] of Object.entries(s.languages || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
+    for (const [f, prose] of Object.entries(s.notEstablished || {})) {
+      if (Array.isArray(e[f])) { e.notEstablished = e.notEstablished || {}; e.notEstablished[f] = prose; }
+      else e[f] = prose;
+      notEst++;
+    }
     if (s.history) { e.policyHistory = s.history; hist += s.history.length; }
     if (s.docLinks) e.docLinks = s.docLinks;
     if (s.addDocLinks) e.docLinks = [...(e.docLinks || []), ...s.addDocLinks];
