@@ -60,6 +60,28 @@ const SELF = new RegExp([
   "catalogue page", "landing page", "not retriev", "unfillable", "not filled",
   "this session", "this pass", "no bullet", "before this field",
   "should be written", "not the data annex", "does not resolve", "404",
+  // A second vocabulary of fetch-narration, added after three dld
+  // serviceModel fields survived this tool while saying nothing about their
+  // state. Georgia's read "Not filled: the Internet Archive rate-limited this
+  // network with HTTP 429" / "The live state host 403s a browser-identified
+  // request with a Google referer" / "Retry from another network before
+  // calling this unit genuinely undocumented". The first line matched "not
+  // filled"; the other two matched nothing, so the every-bullet rule spared
+  // the field and hasContent() went on counting Georgia as documented on a
+  // question nobody had answered.
+  "rate.?limit", "\b429\b", "\b403\b", "\b503\b", "retry", "another network",
+  "this unit", "browser.identified", "does not extract", "cannot be extracted",
+  "from cited sources", "no source could", "timed out", "refused",
+  // Commentary on the project's OWN notes, which is the furthest a bullet can
+  // get from the place it is filed under. Nevada and New Hampshire each carry
+  // "This contradicts the project note that the Archive is reachable again".
+  "project note", "the project's own",
+  // A third vocabulary: the extraction itself. Kyrgyzstan's languagesOffered
+  // is four bullets on pdftotext dropping every Cyrillic glyph and on the
+  // document stamp being legible enough to prove it is the right file. All
+  // true, none of it about Kyrgyzstan's language offer.
+  "pdftotext", "glyph", "\bOCR\b", "the extraction", "is legible",
+  "the right document", "can be quoted", "no body claim",
 ].join("|"), "i");
 
 // A note to the next drafter, rather than a reason a reader needs.
@@ -67,6 +89,10 @@ const TODO = new RegExp([
   "no bullet should", "should be drawn", "needs a different source",
   "needs a [a-z]+ source", "before this field can", "should be written into",
   "is needed before", "cannot answer this and",
+  // "Retry from another network before calling this unit genuinely
+  // undocumented" is an instruction to the next drafter, not a reason a reader
+  // needs, so it goes the way the rest of that class goes.
+  "retry from", "before calling this unit", "contradicts the project",
 ].join("|"), "i");
 
 // An absence or a process note, as opposed to a statement of fact.
