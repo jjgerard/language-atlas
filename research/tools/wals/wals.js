@@ -135,8 +135,19 @@ function find(q) {
     return asWals;
   }
   if (asIso.length) return asIso;
+  // The CLDF release carries 625 GENUS-level pseudo-records alongside its
+  // languages, with IDs like `genus-tlingit`. They exist to hang genus-level
+  // datapoints on and they are not languages: no ISO code, and a "name" that
+  // is the genus. They were competing in name lookups, so "Tlingit" matched
+  // the real language AND genus-tlingit, came back as two candidates, and was
+  // written unlinked for an ambiguity that does not exist. A genus is never
+  // the answer to "which language is this", so it is not a candidate here.
+  const notGenus = hits => hits.filter(l => !/^genus-/.test(l.ID));
   const n = norm(s);
-  if (byName[n]) return byName[n];
+  if (byName[n]) {
+    const real = notGenus(byName[n]);
+    if (real.length) return real;
+  }
   // Last resort: a WALS name that EXTENDS the query, so "Inuktitut" finds
   // "Inuktitut (Eastern Canadian)". Reported as partial, never silently.
   //
@@ -146,7 +157,7 @@ function find(q) {
   // entirely convincing, with a family, a word order and a working link. The
   // four-character floor stops two- and three-letter names doing the same.
   if (n.length < 4) return [];
-  const near = languages.filter(l => norm(l.Name).startsWith(n));
+  const near = notGenus(languages.filter(l => norm(l.Name).startsWith(n)));
   return near.map(l => ({ ...l, _partial: true }));
 }
 
