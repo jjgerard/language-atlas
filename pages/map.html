@@ -395,6 +395,14 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
 .panel .inner { padding: 18px 20px 40px; }
 .panel .close {
   position: sticky; top: 0; float: right; margin: -4px -6px 0 0;
+  /* Sticky and z-index:auto put this in DOM order against the other positioned
+     elements in the panel, and every bullet and every source link is
+     position:relative to hang its ::before marker on. All of them come later in
+     the DOM, so anything scrolling under the button painted over it: the X went
+     dead below its top few pixels, and a .links a passing through took the click
+     and navigated away to the source. The panel is its own stacking context, so
+     one z-index here is scoped to it. */
+  z-index: 1;
   font: inherit; font-size: 20px; line-height: 1;
   width: 30px; height: 30px; border: 0; border-radius: 3px;
   background: var(--surface); color: var(--ink-soft); cursor: pointer;
