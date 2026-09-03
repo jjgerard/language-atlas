@@ -41,7 +41,30 @@ function parseCsv(text) {
   return rows.filter(r => r.length > 1).map(r => Object.fromEntries(hdr.map((h, i) => [h, r[i] ?? ""])));
 }
 
-const load = f => parseCsv(fs.readFileSync(path.join(DIR, f), "utf8"));
+// The CLDF files are NOT in git. They are a third-party release of ~7.7 MB,
+// reproducible from the URL above, so they follow the same rule as sources/ in
+// .gitignore rather than being vendored. That is a fine convention right up
+// until a fresh clone runs this and gets `ENOENT: languages.csv` with a stack
+// trace into node:fs and no clue what is wanted, which is what happened. Say
+// what is missing and where it comes from instead.
+const load = f => {
+  const p = path.join(DIR, f);
+  if (!fs.existsSync(p)) {
+    console.error("WALS data file missing: " + p);
+    console.error("");
+    console.error("This tool needs four CSVs from the WALS CLDF release:");
+    console.error("  languages.csv  parameters.csv  codes.csv  values.csv");
+    console.error("Get them from https://github.com/cldf-datasets/wals (cldf/ directory)");
+    console.error("and put them next to this script. They are deliberately not in git:");
+    console.error("~7.7 MB of third-party data, reproducible from that release.");
+    console.error("");
+    console.error("Until they are there, no language can be resolved, and NOTHING");
+    console.error("should be written to a `languages` field -- a hand-written WALS");
+    console.error("code is exactly the error this tool exists to prevent.");
+    process.exit(1);
+  }
+  return parseCsv(fs.readFileSync(p, "utf8"));
+};
 
 const languages = load("languages.csv");
 const parameters = load("parameters.csv");

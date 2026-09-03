@@ -10,3 +10,9 @@ data/*.db-journal
 
 # Local admin credentials for development.
 .env
+
+# The WALS CLDF release: languages/parameters/codes/values, plus the Glottolog
+# table beside them. ~7.7 MB of third-party data, reproducible from
+# https://github.com/cldf-datasets/wals, so it follows the same rule as
+# sources/ above. research/tools/wals/wals.js says so when they are absent.
+research/tools/wals/*.csv
