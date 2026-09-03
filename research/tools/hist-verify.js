@@ -182,6 +182,15 @@ const THIS_YEAR = 2026;
       if (r.status !== 200 || (r.raw && r.raw.length < TINY)) {
         const short = await get(u, 0, "Mozilla/5.0");
         if (short.status === 200 && short.raw && short.raw.length > TINY) { r = short; via = "shrt"; }
+        // And some refuse ANYTHING that opens with "Mozilla". Every fallback
+        // above sends one, so a host filtering on that prefix defeated all
+        // three and the url was written off as a 403.
+        // monservicepublic.gouv.mc hands every Mozilla string a 245-byte block
+        // page and hands curl's own UA the real 1.8 MB PDF.
+        if (r.status !== 200 || (r.raw && r.raw.length < TINY)) {
+          const plain = await get(u, 0, "curl/8.5.0");
+          if (plain.status === 200 && plain.raw && plain.raw.length > TINY) { r = plain; via = "plain"; }
+        }
       }
     }
     let text;

@@ -205,6 +205,20 @@ function quoteOn(quote, page) {
           console.log("       (refused the browser UA, served a short one)");
           r = short;
         }
+        // And some refuse ANYTHING that opens with "Mozilla". Every fallback
+        // above sends one -- the full Chrome string, then curl carrying the
+        // same string, then a bare "Mozilla/5.0" -- so a host filtering on
+        // that prefix defeated all three and the url was written off as a 403.
+        // monservicepublic.gouv.mc hands every Mozilla string a 245-byte block
+        // page and hands curl's own UA the real 1.8 MB PDF. A non-browser
+        // agent is the one thing left to try.
+        if (r.status !== 200 || (r.raw && r.raw.length < TINY)) {
+          const plain = await get(u, 0, "curl/8.5.0");
+          if (plain.status === 200 && plain.raw && plain.raw.length > TINY) {
+            console.log("       (refused every browser string, served a non-browser one)");
+            r = plain;
+          }
+        }
       }
     }
     // A PDF is not "binary, give up": most of the instruments these drafters
