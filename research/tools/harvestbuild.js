@@ -34,7 +34,12 @@ const DOMAIN_OF = {
 // already filled is dropped here rather than rejected by apply.js's overwrite
 // guard, which lets a wave be applied repeatedly as agents finish.
 const ATLAS = path.join(__dirname, "..", "..");
-const STORE = { fl: "fl.seed.json", dld: "dld.json", eal: "eal.json" };
+// Domain data files are resolved by research/tools/datafile.js, which
+// prefers the living snapshot and falls back to the seed. It replaced a
+// hand-maintained map here that did not know about the `he` map and threw
+// path.join(undefined) the moment one was reached.
+const { fileFor } = require("./datafile");
+const STORE = new Proxy({}, { get: (_, id) => fileFor(String(id)) });
 const live = {};
 for (const [d, f] of Object.entries(STORE)) {
   live[d] = new Map();

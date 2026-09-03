@@ -39,7 +39,12 @@ const { subjectsOf, GENERAL_MAPS, declineReason, yearsIn, THIS_YEAR } = require(
 const NL = String.fromCharCode(10);
 const ATLAS = path.join(__dirname, "..", "..");
 const PARTS = path.join(__dirname, "..", "parts");
-const STORE = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
+// Domain data files are resolved by research/tools/datafile.js, which
+// prefers the living snapshot and falls back to the seed. It replaced a
+// hand-maintained map here that did not know about the `he` map and threw
+// path.join(undefined) the moment one was reached.
+const { fileFor } = require("./datafile");
+const STORE = new Proxy({}, { get: (_, id) => fileFor(String(id)) });
 const { LIVE } = require(path.join(ATLAS, "src", "domains.js"));
 const { hasContent } = require(path.join(ATLAS, "src", "derive.js"));
 

@@ -13,7 +13,12 @@ const fs = require("fs"), path = require("path");
 const { NOT_DOCUMENTED_RE } = require(path.join(__dirname, "..", "..", "..", "src", "derive"));
 
 const ATLAS = path.join(__dirname, "..", "..", "..");
-const FILES = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
+// Domain data files are resolved by research/tools/datafile.js, which
+// prefers the living snapshot and falls back to the seed. It replaced a
+// hand-maintained map here that did not know about the `he` map and threw
+// path.join(undefined) the moment one was reached.
+const { fileFor } = require("../datafile");
+const FILES = new Proxy({}, { get: (_, id) => fileFor(String(id)) });
 const LIMIT = 96;
 // Fields that are NOT bullet text. `policyHistory` is a list of
 // {year, description}; the rest are series of {year, value, note}.
