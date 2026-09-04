@@ -322,26 +322,56 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "American Samoa Community College awards an Associate of Arts with emphasis in Samoan Studies\nA Certificate of Proficiency with Certification to Teach Samoan Language is offered as well\nCandidates for that certificate must already hold an associate's degree or higher\nIt gives content knowledge of Samoan but not the methodologies of teaching the language",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Samoan",
+    "level": "degree",
+    "institution": "American Samoa Community College",
+    "url": "https://www.amsamoa.edu/academicprograms/aasamoanstudies.html",
+    "institutions": "",
+    "year": "",
+    "note": "Associate of Arts with emphasis in Samoan Studies, a two-year degree below bachelor level"
+   },
+   {
+    "language": "Samoan",
+    "level": "certificate",
+    "institution": "American Samoa Community College",
+    "url": "https://www.amsamoa.edu/academicprograms/cpsamoanstudies.html",
+    "institutions": "",
+    "year": "",
+    "note": "Certificate of Proficiency with Certification to Teach Samoan Language, from the Samoan Studies Institute"
+   }
+  ],
+  "mediumOfInstruction": "Certificate holders should deliver instruction and communicate using the Samoan language",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1,
+    3,
+    3
+   ],
+   "mediumOfInstruction": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "AT",
@@ -417,7 +447,71 @@
   "source": "",
   "degreeSubjects": "Languages offered by Australian universities fell from 66 to 29\nThat figure is a Group of Eight count reported in the 2018 NSW review",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Gamilaraay",
+    "level": "module",
+    "institution": "University of Sydney",
+    "url": "https://ulpa.edu.au/where-can-study-indigenous-languages/",
+    "institutions": "",
+    "year": "",
+    "note": "heritage language of northern NSW, being revitalised"
+   },
+   {
+    "language": "Gamilaraay",
+    "level": "module",
+    "institution": "Australian National University",
+    "url": "https://ulpa.edu.au/where-can-study-indigenous-languages/",
+    "institutions": "",
+    "year": "",
+    "note": "offered in semesters and in summer and winter school, and cross-institutionally by video conferencing"
+   },
+   {
+    "language": "Kaurna",
+    "level": "bachelor",
+    "institution": "Adelaide University",
+    "url": "https://adelaide.edu.au/study/degrees/bachelor-of-arts-kaurna-languages/",
+    "institutions": "",
+    "year": "2026",
+    "note": "Bachelor of Arts majoring in Kaurna Languages"
+   },
+   {
+    "language": "Pitjantjatjara",
+    "level": "module",
+    "institution": "Adelaide University",
+    "url": "https://ulpa.edu.au/where-can-study-indigenous-languages/",
+    "institutions": "",
+    "year": "",
+    "note": "the first Indigenous language taught in a university in Australia"
+   },
+   {
+    "language": "Wiradjuri",
+    "level": "certificate",
+    "institution": "Charles Sturt University",
+    "url": "https://ulpa.edu.au/where-can-study-indigenous-languages/",
+    "institutions": "",
+    "year": "",
+    "note": "Graduate Certificate in Wiradjuri Language, Culture and Heritage; a certificate, not a degree"
+   },
+   {
+    "language": "Gupapuyngu",
+    "level": "bachelor",
+    "institution": "Charles Darwin University",
+    "url": "https://www.cdu.edu.au/study/languages",
+    "institutions": "",
+    "year": "",
+    "note": "taught as Yolngu Matha, a group of Yolngu languages; Gupapuyngu is the variety taught first"
+   },
+   {
+    "language": "Arrernte",
+    "level": "module",
+    "institution": "Batchelor Institute",
+    "url": "https://ulpa.edu.au/where-can-study-indigenous-languages/",
+    "institutions": "",
+    "year": "",
+    "note": "ULPA records it as not currently available but taught online there until recently"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
@@ -431,26 +525,53 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "ANU teaches Gamilaraay in a course developing speaking, listening, reading and writing skills\nGamilaraay runs at ANU in semesters and in summer and winter school\nANU's school covers classical and modern European and Australian Indigenous languages\nANU also offers a Tok Pisin Language minor through its College of Asia and the Pacific",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Gamilaraay",
+    "level": "module",
+    "institution": "Australian National University",
+    "url": "https://programsandcourses.anu.edu.au/course/INDG2004",
+    "institutions": "",
+    "year": "",
+    "note": "INDG2004 Continuing Gamilaraay, an undergraduate course, also run cross-institutionally by video conferencing"
+   },
+   {
+    "language": "Tok Pisin",
+    "level": "minor",
+    "institution": "Australian National University",
+    "url": "https://programsandcourses.anu.edu.au/minor/TOKP-MIN",
+    "institutions": "",
+    "year": "",
+    "note": "Tok Pisin Language minor, 24 units, offered by the ANU College of Asia and the Pacific"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -458,26 +579,54 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Sydney's Master of Indigenous Languages Education is a one-year full time degree\nCourses in Wiradjuri are offered at Charles Sturt University as a graduate certificate\nThe University of Sydney also offers courses in Gamilaraay\nCSU called that graduate certificate the only university course of its kind in Australia\nThe introductory Wiradjuri subject is taught online with a compulsory 10-day residential school",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Wiradjuri",
+    "level": "certificate",
+    "institution": "Charles Sturt University",
+    "url": "https://study.csu.edu.au/courses/teaching-education/graduate-certificate-wiradjuri-language-culture-heritage",
+    "institutions": "",
+    "year": "",
+    "note": "Graduate Certificate in Wiradjuri Language, Culture and Heritage; a certificate, not a degree"
+   },
+   {
+    "language": "Gamilaraay",
+    "level": "module",
+    "institution": "University of Sydney",
+    "url": "https://www.sydney.edu.au/units/INDG2005",
+    "institutions": "",
+    "year": "",
+    "note": "taught in the unit INDG2005 Learning an Australian Language, worth 6 credit points"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -485,26 +634,99 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Charles Darwin University's BA lets students take Yolngu, Arrernte or Bininj Kunwok\nIn 2026 Yolngu languages and culture units were available under a Diploma of Arts\nGreek, Indonesian and Chinese (Mandarin) are the other languages inside that BA\nCDU said it taught three Indigenous languages, more than any other university in the country\nYolngu Matha can be studied at CDU online and as a major",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Gupapuyngu",
+    "level": "bachelor",
+    "institution": "Charles Darwin University",
+    "url": "https://www.cdu.edu.au/study/languages",
+    "institutions": "",
+    "year": "",
+    "note": "CDU lists the subject as Yolngu or Yolngu Matha; Gupapuyngu is the variety non-Yolngu students start with"
+   },
+   {
+    "language": "Gupapuyngu",
+    "level": "diploma",
+    "institution": "Charles Darwin University",
+    "url": "https://yolngustudies.cdu.edu.au/study.html",
+    "institutions": "",
+    "year": "2026",
+    "note": "Diploma of Arts; Yolngu units also run under a Graduate Certificate of Arts and Master of Arts"
+   },
+   {
+    "language": "Arrernte",
+    "level": "bachelor",
+    "institution": "Charles Darwin University",
+    "url": "https://www.cdu.edu.au/study/languages",
+    "institutions": "",
+    "year": "",
+    "note": "one of three Indigenous languages available inside the BA"
+   },
+   {
+    "language": "Bininj Kunwok",
+    "level": "bachelor",
+    "institution": "Charles Darwin University",
+    "url": "https://www.cdu.edu.au/study/languages",
+    "institutions": "",
+    "year": "",
+    "note": "a chain of six mutually intelligible dialects of West Arnhem Land, Kunwinjku the most widely used"
+   },
+   {
+    "language": "Greek",
+    "level": "bachelor",
+    "institution": "Charles Darwin University",
+    "url": "https://www.cdu.edu.au/study/languages",
+    "institutions": "",
+    "year": "",
+    "note": "non-Indigenous language available inside the BA"
+   },
+   {
+    "language": "Indonesian",
+    "level": "bachelor",
+    "institution": "Charles Darwin University",
+    "url": "https://www.cdu.edu.au/study/languages",
+    "institutions": "",
+    "year": "",
+    "note": "non-Indigenous language available inside the BA"
+   },
+   {
+    "language": "Chinese",
+    "level": "bachelor",
+    "institution": "Charles Darwin University",
+    "url": "https://www.cdu.edu.au/study/languages",
+    "institutions": "",
+    "year": "",
+    "note": "listed as Chinese (Mandarin)"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -512,26 +734,108 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "UQ teaches languages to students in the Bachelor of Arts and Bachelor of International Studies\nChinese, French, German, Indonesian, Japanese, Korean, Russian and Spanish are taught at UQ\nUQ calls itself one of the largest language schools in Australia, offering eight languages\nIts languages also run through a concurrent Diploma in Languages and dual degree programs\nQUT and Griffith students can cross-enrol at UQ and have the major credited back",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Chinese",
+    "level": "bachelor",
+    "institution": "University of Queensland",
+    "url": "https://languages-cultures.uq.edu.au/mission-and-overview",
+    "institutions": "",
+    "year": "",
+    "note": "taught into the BA, BInternational Studies, the concurrent Diploma in Languages and dual degrees"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institution": "University of Queensland",
+    "url": "https://languages-cultures.uq.edu.au/mission-and-overview",
+    "institutions": "",
+    "year": "",
+    "note": "one of the eight languages of the School of Languages and Cultures"
+   },
+   {
+    "language": "German",
+    "level": "bachelor",
+    "institution": "University of Queensland",
+    "url": "https://languages-cultures.uq.edu.au/mission-and-overview",
+    "institutions": "",
+    "year": "",
+    "note": "one of the eight languages of the School of Languages and Cultures"
+   },
+   {
+    "language": "Indonesian",
+    "level": "bachelor",
+    "institution": "University of Queensland",
+    "url": "https://languages-cultures.uq.edu.au/mission-and-overview",
+    "institutions": "",
+    "year": "",
+    "note": "one of the eight languages of the School of Languages and Cultures"
+   },
+   {
+    "language": "Japanese",
+    "level": "bachelor",
+    "institution": "University of Queensland",
+    "url": "https://languages-cultures.uq.edu.au/mission-and-overview",
+    "institutions": "",
+    "year": "",
+    "note": "one of the eight languages of the School of Languages and Cultures"
+   },
+   {
+    "language": "Korean",
+    "level": "bachelor",
+    "institution": "University of Queensland",
+    "url": "https://languages-cultures.uq.edu.au/mission-and-overview",
+    "institutions": "",
+    "year": "",
+    "note": "one of the eight languages of the School of Languages and Cultures"
+   },
+   {
+    "language": "Russian",
+    "level": "bachelor",
+    "institution": "University of Queensland",
+    "url": "https://languages-cultures.uq.edu.au/mission-and-overview",
+    "institutions": "",
+    "year": "",
+    "note": "one of the eight languages of the School of Languages and Cultures"
+   },
+   {
+    "language": "Spanish",
+    "level": "bachelor",
+    "institution": "University of Queensland",
+    "url": "https://languages-cultures.uq.edu.au/mission-and-overview",
+    "institutions": "",
+    "year": "",
+    "note": "one of the eight languages of the School of Languages and Cultures"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -539,26 +843,62 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Adelaide University offers a Bachelor of Arts majoring in Kaurna Languages\nPitjantjatjara is also offered by Adelaide University\nULPA records Kaurna at Adelaide as currently offered as an intensive summer school\nAdelaide's BA lets you add a minor or another major alongside the Kaurna Languages pathway",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Kaurna",
+    "level": "bachelor",
+    "institution": "Adelaide University",
+    "url": "https://adelaide.edu.au/study/degrees/bachelor-of-arts-kaurna-languages/",
+    "institutions": "",
+    "year": "2026",
+    "note": "Bachelor of Arts majoring in Kaurna Languages; the heritage language of the Adelaide Plains"
+   },
+   {
+    "language": "Kaurna",
+    "level": "module",
+    "institution": "Adelaide University",
+    "url": "https://adelaide.edu.au/study/courses/indg-1008/",
+    "institutions": "",
+    "year": "",
+    "note": "Australian Indigenous Languages (Kaurna focus) I; ULPA records it as an intensive summer school"
+   },
+   {
+    "language": "Pitjantjatjara",
+    "level": "module",
+    "institution": "Adelaide University",
+    "url": "https://adelaide.edu.au/study/courses/2026/indgx-100/",
+    "institutions": "",
+    "year": "2026",
+    "note": "Pitjantjatjara Yankunytjatjara Language and Culture 1; first Indigenous language taught in an Australian university"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -566,26 +906,81 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Tasmania offers a Diploma of Languages as a stand-alone qualification\nAll its language options are also available inside the Bachelor of Arts\nLatin and Greek are among the languages taught\nJapanese combines language and cultural studies units at Hobart and Launceston\nThe Diploma can also be taken in conjunction with another degree",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Latin",
+    "level": "diploma",
+    "institution": "University of Tasmania",
+    "url": "https://www.utas.edu.au/study/undergraduate/languages",
+    "institutions": "",
+    "year": "",
+    "note": "taught in the Ancient Languages program; also available inside the Bachelor of Arts"
+   },
+   {
+    "language": "Greek",
+    "level": "diploma",
+    "institution": "University of Tasmania",
+    "url": "https://www.utas.edu.au/study/undergraduate/languages",
+    "institutions": "",
+    "year": "",
+    "note": "taught in the Ancient Languages program alongside Latin"
+   },
+   {
+    "language": "Chinese",
+    "level": "diploma",
+    "institution": "University of Tasmania",
+    "url": "https://www.utas.edu.au/study/undergraduate/languages",
+    "institutions": "",
+    "year": "",
+    "note": "online and on campus at Hobart and Launceston; described as Mandarin Chinese"
+   },
+   {
+    "language": "Indonesian",
+    "level": "diploma",
+    "institution": "University of Tasmania",
+    "url": "https://www.utas.edu.au/study/undergraduate/languages",
+    "institutions": "",
+    "year": "",
+    "note": "online and on campus at Hobart"
+   },
+   {
+    "language": "Japanese",
+    "level": "diploma",
+    "institution": "University of Tasmania",
+    "url": "https://www.utas.edu.au/study/undergraduate/languages",
+    "institutions": "",
+    "year": "",
+    "note": "online and on campus at Hobart and Launceston"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -593,26 +988,107 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Monash's Chinese studies major runs six entry points from beginner to advanced\nFrench, German, Italian and Spanish sit in one European languages area of study\nMonash runs both a Japanese study program and a Korean language program\nMonash offers over 40 double degree combinations, including Arts + Business and Arts + Law",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Chinese",
+    "level": "bachelor",
+    "institution": "Monash University",
+    "url": "https://www.monash.edu/arts/languages-literatures-cultures-linguistics/study-languages-literatures-cultures-and-linguistics",
+    "institutions": "",
+    "year": "",
+    "note": "major or minor in the Bachelor of Arts; six entry points from beginner to advanced"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institution": "Monash University",
+    "url": "https://www.monash.edu/arts/languages-literatures-cultures-linguistics/study-languages-literatures-cultures-and-linguistics",
+    "institutions": "",
+    "year": "",
+    "note": "taken inside the European languages area of study"
+   },
+   {
+    "language": "German",
+    "level": "bachelor",
+    "institution": "Monash University",
+    "url": "https://www.monash.edu/arts/languages-literatures-cultures-linguistics/study-languages-literatures-cultures-and-linguistics",
+    "institutions": "",
+    "year": "",
+    "note": "taken inside the European languages area of study"
+   },
+   {
+    "language": "Italian",
+    "level": "bachelor",
+    "institution": "Monash University",
+    "url": "https://www.monash.edu/arts/languages-literatures-cultures-linguistics/study-languages-literatures-cultures-and-linguistics",
+    "institutions": "",
+    "year": "",
+    "note": "taken inside the European languages area of study"
+   },
+   {
+    "language": "Spanish",
+    "level": "bachelor",
+    "institution": "Monash University",
+    "url": "https://www.monash.edu/arts/languages-literatures-cultures-linguistics/study-languages-literatures-cultures-and-linguistics",
+    "institutions": "",
+    "year": "",
+    "note": "listed as Spanish and Latin American Studies"
+   },
+   {
+    "language": "Indonesian",
+    "level": "bachelor",
+    "institution": "Monash University",
+    "url": "https://www.monash.edu/arts/languages-literatures-cultures-linguistics/study-languages-literatures-cultures-and-linguistics",
+    "institutions": "",
+    "year": "",
+    "note": "Indonesian studies, a major or minor in the Bachelor of Arts"
+   },
+   {
+    "language": "Japanese",
+    "level": "bachelor",
+    "institution": "Monash University",
+    "url": "https://www.monash.edu/arts/languages-literatures-cultures-linguistics/study-languages-literatures-cultures-and-linguistics",
+    "institutions": "",
+    "year": "",
+    "note": "flexible entry points from beginner to proficient speaker"
+   },
+   {
+    "language": "Korean",
+    "level": "bachelor",
+    "institution": "Monash University",
+    "url": "https://www.monash.edu/arts/languages-literatures-cultures-linguistics/study-languages-literatures-cultures-and-linguistics",
+    "institutions": "",
+    "year": "",
+    "note": "beginner to advanced levels, starting from Hangul"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -620,26 +1096,116 @@
   "isNational": false,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The Bachelor of Modern Languages at UWA lets students study two languages in depth\nChinese, French, German, Indonesian, Italian, Japanese, Korean and Spanish are the choices\nCurtin runs a Noongar Language and Culture MOOC introducing Noongar culture and language\nThe UWA degree can be combined with Engineering, Science, Arts or Business",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Chinese",
+    "level": "bachelor",
+    "institution": "University of Western Australia",
+    "url": "https://www.uwa.edu.au/study/courses/bachelor-of-modern-languages",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Modern Languages; open to absolute beginners, with a higher entry point available"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institution": "University of Western Australia",
+    "url": "https://www.uwa.edu.au/study/courses/bachelor-of-modern-languages",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Modern Languages; open to absolute beginners, with a higher entry point available"
+   },
+   {
+    "language": "German",
+    "level": "bachelor",
+    "institution": "University of Western Australia",
+    "url": "https://www.uwa.edu.au/study/courses/bachelor-of-modern-languages",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Modern Languages; open to absolute beginners, with a higher entry point available"
+   },
+   {
+    "language": "Indonesian",
+    "level": "bachelor",
+    "institution": "University of Western Australia",
+    "url": "https://www.uwa.edu.au/study/courses/bachelor-of-modern-languages",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Modern Languages; open to absolute beginners, with a higher entry point available"
+   },
+   {
+    "language": "Italian",
+    "level": "bachelor",
+    "institution": "University of Western Australia",
+    "url": "https://www.uwa.edu.au/study/courses/bachelor-of-modern-languages",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Modern Languages; open to absolute beginners, with a higher entry point available"
+   },
+   {
+    "language": "Japanese",
+    "level": "bachelor",
+    "institution": "University of Western Australia",
+    "url": "https://www.uwa.edu.au/study/courses/bachelor-of-modern-languages",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Modern Languages; open to absolute beginners, with a higher entry point available"
+   },
+   {
+    "language": "Korean",
+    "level": "bachelor",
+    "institution": "University of Western Australia",
+    "url": "https://www.uwa.edu.au/study/courses/bachelor-of-modern-languages",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Modern Languages; available to absolute beginners"
+   },
+   {
+    "language": "Spanish",
+    "level": "bachelor",
+    "institution": "University of Western Australia",
+    "url": "https://www.uwa.edu.au/study/courses/bachelor-of-modern-languages",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Modern Languages; available to absolute beginners"
+   },
+   {
+    "language": "Noongar",
+    "level": "module",
+    "institution": "Curtin University",
+    "url": "https://karda.curtin.edu.au/study/cultural-study-units/",
+    "institutions": "",
+    "year": "",
+    "note": "free Massive Open Online Course run by the Centre for Aboriginal Studies, not an award course"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AW",
@@ -4616,26 +5182,80 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Melanesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The Pacific Vernacular Language major at USP runs in Fijian and Hindi among others\nUSP also awards a Diploma in Vernacular Language in Fijian and one in Hindi\nA minor is also offered in Rotuman\nA single major adds one 300 level course to the double major course list",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Fijian",
+    "level": "bachelor",
+    "institution": "University of the South Pacific",
+    "url": "https://www.usp.ac.fj/handbook-calendar-2024-archive/programme-requirements-and-regulations/school-of-pacific-arts-communication-and-education-space/",
+    "institutions": "",
+    "year": "2024",
+    "note": "Fijian Studies track of the Pacific Vernacular Language major, single or double major"
+   },
+   {
+    "language": "Fijian",
+    "level": "diploma",
+    "institution": "University of the South Pacific",
+    "url": "https://www.usp.ac.fj/learning-teaching/usp-graduate-attributes-and-outcomes/programme-graduate-outcomes/space/diploma-in-vernacular-language-fijian/",
+    "institutions": "",
+    "year": "2024",
+    "note": "Diploma in Vernacular Language (Fijian), twelve courses"
+   },
+   {
+    "language": "Hindi",
+    "level": "bachelor",
+    "institution": "University of the South Pacific",
+    "url": "https://www.usp.ac.fj/learning-teaching/usp-graduate-attributes-and-outcomes/programme-graduate-outcomes/space/bachelor-of-arts-pacific-vernacular-languages/",
+    "institutions": "",
+    "year": "",
+    "note": "Hindi Studies track; covers the emergence of Hindi language, literature and culture in Fiji"
+   },
+   {
+    "language": "Hindi",
+    "level": "diploma",
+    "institution": "University of the South Pacific",
+    "url": "https://www.usp.ac.fj/handbook-calendar-2024-archive/programme-requirements-and-regulations/school-of-pacific-arts-communication-and-education-space/",
+    "institutions": "",
+    "year": "2024",
+    "note": "Diploma in Vernacular Language (Hindi), twelve courses"
+   },
+   {
+    "language": "Rotuman",
+    "level": "minor",
+    "institution": "University of the South Pacific",
+    "url": "https://www.usp.ac.fj/handbook-calendar-2024-archive/programme-requirements-and-regulations/school-of-pacific-arts-communication-and-education-space/",
+    "institutions": "",
+    "year": "2024",
+    "note": "offered as a minor only, four courses; not available as a major"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "FM",
@@ -4665,7 +5285,35 @@
   "source": "",
   "degreeSubjects": "The national college offered only a non-credit Pohnpeian course when this was written",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Pohnpeian",
+    "level": "module",
+    "institution": "College of Micronesia-FSM",
+    "url": "https://www.national.doe.fm/wp-content/uploads/2023/03/FSM-language-Policy.pdf",
+    "institutions": "",
+    "year": "",
+    "note": "a non-credit course carrying no award, as recorded in the FSM National Language Policy"
+   },
+   {
+    "language": "Pohnpeian",
+    "level": "module",
+    "institution": "University of Guam",
+    "url": "https://www.national.doe.fm/wp-content/uploads/2023/03/FSM-language-Policy.pdf",
+    "institutions": "",
+    "year": "",
+    "note": "recorded by the FSM policy as offered at Guam rather than in the FSM"
+   },
+   {
+    "language": "Chuukese",
+    "level": "module",
+    "institution": "University of Guam",
+    "url": "https://www.national.doe.fm/wp-content/uploads/2023/03/FSM-language-Policy.pdf",
+    "institutions": "",
+    "year": "",
+    "note": "recorded by the FSM policy as offered at Guam rather than in the FSM"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
@@ -5447,26 +6095,66 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Guam runs a CHamoru Studies Program to sustain a CHamoru-literate community\nIt draws on courses such as CHamoru Language, Anthropology, Biology, Literature and Geography\nA track called CHamoru Studies for Education prepares public school CHamoru teachers\nA Certificate in CHamoru Language and Culture Research is also offered",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Chamorro",
+    "level": "bachelor",
+    "institution": "University of Guam",
+    "url": "https://catalog.uog.edu/current/programs/college-of-liberal-arts-and-social-sciences/chamoru-studies",
+    "institutions": "",
+    "year": "",
+    "note": "BA in CHamoru Studies, the university's spelling; tracks in CHamoru Studies and CHamoru Studies for Education"
+   },
+   {
+    "language": "Chamorro",
+    "level": "minor",
+    "institution": "University of Guam",
+    "url": "https://catalog.uog.edu/current/programs/college-of-liberal-arts-and-social-sciences/chamoru-studies",
+    "institutions": "",
+    "year": "",
+    "note": "minor in CHamoru Studies"
+   },
+   {
+    "language": "Chamorro",
+    "level": "certificate",
+    "institution": "University of Guam",
+    "url": "https://catalog.uog.edu/current/programs/college-of-liberal-arts-and-social-sciences/chamoru-studies",
+    "institutions": "",
+    "year": "",
+    "note": "Certificate in CHamoru Language and Culture Research, alongside a CHamoru Studies certificate"
+   }
+  ],
+  "mediumOfInstruction": "All capstone projects in CHamoru Studies are delivered in the CHamoru language\nGraduates must express ideas in written and oral forms in both CHamoru and English",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "GW",
@@ -8419,26 +9107,98 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Northern Marianas College teaches Carolinian and Chamorro among its language courses\nJapanese, Mandarin, Korean, Tagalog, English and Russian are taught alongside them\nThese are developmental language courses provided through the CDI\nLevels run from conversational to advanced college level English",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Carolinian",
+    "level": "module",
+    "institution": "Northern Marianas College",
+    "url": "https://marianas.edu/media/NMC%20Catalog/2012-2013/8-Community%20Programs.pdf",
+    "institutions": "",
+    "year": "2012",
+    "note": "Community Development Institute language course, not a course inside a degree"
+   },
+   {
+    "language": "Chamorro",
+    "level": "module",
+    "institution": "Northern Marianas College",
+    "url": "https://marianas.edu/media/NMC%20Catalog/2012-2013/8-Community%20Programs.pdf",
+    "institutions": "",
+    "year": "2012",
+    "note": "Community Development Institute language course, not a course inside a degree"
+   },
+   {
+    "language": "Japanese",
+    "level": "module",
+    "institution": "Northern Marianas College",
+    "url": "https://marianas.edu/media/NMC%20Catalog/2012-2013/8-Community%20Programs.pdf",
+    "institutions": "",
+    "year": "2012",
+    "note": "Community Development Institute language course"
+   },
+   {
+    "language": "Chinese",
+    "level": "module",
+    "institution": "Northern Marianas College",
+    "url": "https://marianas.edu/media/NMC%20Catalog/2012-2013/8-Community%20Programs.pdf",
+    "institutions": "",
+    "year": "2012",
+    "note": "listed as Chinese (Mandarin)"
+   },
+   {
+    "language": "Korean",
+    "level": "module",
+    "institution": "Northern Marianas College",
+    "url": "https://marianas.edu/media/NMC%20Catalog/2012-2013/8-Community%20Programs.pdf",
+    "institutions": "",
+    "year": "2012",
+    "note": "Community Development Institute language course"
+   },
+   {
+    "language": "Tagalog",
+    "level": "module",
+    "institution": "Northern Marianas College",
+    "url": "https://marianas.edu/media/NMC%20Catalog/2012-2013/8-Community%20Programs.pdf",
+    "institutions": "",
+    "year": "2012",
+    "note": "Community Development Institute language course"
+   },
+   {
+    "language": "Russian",
+    "level": "module",
+    "institution": "Northern Marianas College",
+    "url": "https://marianas.edu/media/NMC%20Catalog/2012-2013/8-Community%20Programs.pdf",
+    "institutions": "",
+    "year": "2012",
+    "note": "Community Development Institute language course"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    2,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "MR",
@@ -8845,26 +9605,74 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Melanesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of New Caledonia runs a degree programme in Kanak languages\nThe Kanak languages taught are Ajie and Paici, plus Drehu and Nengone in the Loyalties\nCore units cover linguistics, Oceanian arts, oral literature and Pacific civilisations",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Ajie",
+    "level": "bachelor",
+    "institution": "Universite de la Nouvelle-Caledonie",
+    "url": "https://unc.nc/en/formations/degree-in-languages-literatures-foreign-and-regional-civilisations-llcer-oceanian-languages-and-cultures/",
+    "institutions": "",
+    "year": "2021",
+    "note": "written Ajie; one of the two mainland Kanak languages in the licence LLCER, Langues et Cultures Oceaniennes"
+   },
+   {
+    "language": "Paici",
+    "level": "bachelor",
+    "institution": "Universite de la Nouvelle-Caledonie",
+    "url": "https://unc.nc/en/formations/degree-in-languages-literatures-foreign-and-regional-civilisations-llcer-oceanian-languages-and-cultures/",
+    "institutions": "",
+    "year": "2021",
+    "note": "written Paici; the other mainland Kanak language of the degree"
+   },
+   {
+    "language": "Drehu",
+    "level": "bachelor",
+    "institution": "Universite de la Nouvelle-Caledonie",
+    "url": "https://unc.nc/en/formations/degree-in-languages-literatures-foreign-and-regional-civilisations-llcer-oceanian-languages-and-cultures/",
+    "institutions": "",
+    "year": "2021",
+    "note": "language of Lifou, one of the two Loyalty Islands languages of the degree"
+   },
+   {
+    "language": "Nengone",
+    "level": "bachelor",
+    "institution": "Universite de la Nouvelle-Caledonie",
+    "url": "https://unc.nc/en/formations/degree-in-languages-literatures-foreign-and-regional-civilisations-llcer-oceanian-languages-and-cultures/",
+    "institutions": "",
+    "year": "2021",
+    "note": "language of Mare, the other Loyalty Islands language of the degree"
+   }
+  ],
+  "mediumOfInstruction": "Kanak languages are, with French, languages of instruction and culture in New Caledonia\nThe university sets its degree inside that Noumea Agreement policy",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3
+   ],
+   "mediumOfInstruction": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "NE",
@@ -9094,26 +9902,93 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Australia and New Zealand",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Te reo Maori is available as a first major for the Bachelor of Arts at the University of Waikato\nTe Wananga o Raukawa runs Poutuarongo Reo Maori, its own qualification in te reo Maori\nAuckland teaches Samoan, Cook Islands Reo and Tongan among the languages of Pacific Studies\nAt Waikato te reo Maori may also be a second major or minor in other undergraduate degrees",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Maori",
+    "level": "bachelor",
+    "institution": "University of Waikato",
+    "url": "https://www.waikato.ac.nz/study/subject-regulations/maori-language-te-reo-maori/",
+    "institutions": "",
+    "year": "",
+    "note": "te reo Maori; first major for the BA"
+   },
+   {
+    "language": "Maori",
+    "level": "minor",
+    "institution": "University of Waikato",
+    "url": "https://www.waikato.ac.nz/study/subject-regulations/maori-language-te-reo-maori/",
+    "institutions": "",
+    "year": "",
+    "note": "also available as a second major or minor in other undergraduate degrees"
+   },
+   {
+    "language": "Maori",
+    "level": "bachelor",
+    "institution": "Te Wananga o Raukawa",
+    "url": "https://www.wananga.com/bachelor-of-te-reo-maori",
+    "institutions": "",
+    "year": "2026",
+    "note": "Poutuarongo Reo Maori, NZQA Level 7; taught in te reo Maori at Otaki"
+   },
+   {
+    "language": "Samoan",
+    "level": "module",
+    "institution": "University of Auckland",
+    "url": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/pacific-studies/undergraduate.html",
+    "institutions": "",
+    "year": "",
+    "note": "language courses inside the BA Pacific Studies major, not a major of its own"
+   },
+   {
+    "language": "Cook Islands Maori",
+    "level": "module",
+    "institution": "University of Auckland",
+    "url": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/pacific-studies/undergraduate.html",
+    "institutions": "",
+    "year": "",
+    "note": "named Cook Islands Reo by the university"
+   },
+   {
+    "language": "Tongan",
+    "level": "module",
+    "institution": "University of Auckland",
+    "url": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/pacific-studies/undergraduate.html",
+    "institutions": "",
+    "year": "",
+    "note": "language courses inside the BA Pacific Studies major"
+   }
+  ],
+  "mediumOfInstruction": "Te Wananga o Raukawa teaches its Bachelor of Te Reo Maori in te reo Maori\nWaikato's Te Tohu Paetahi is taught predominantly in te reo Maori",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "OM",
@@ -9231,26 +10106,52 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The Universite de la Polynesie francaise awards a licence LLCER in Polynesian languages\nIt strengthens oral and written skill in Tahitian and other Polynesian languages\nThe degree also covers Polynesian and Oceanian literature, ancient and contemporary",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Tahitian",
+    "level": "bachelor",
+    "institution": "Universite de la Polynesie francaise",
+    "url": "https://www.upf.pf/fr/formations/licence-l1-l2-l3-langues-litteratures-et-civilisations-etrangeres-regionales-llcer",
+    "institutions": "",
+    "year": "",
+    "note": "reo tahiti; the main language of the licence LLCER parcours Langues polynesiennes"
+   },
+   {
+    "language": "Marquesan",
+    "level": "bachelor",
+    "institution": "Universite de la Polynesie francaise",
+    "url": "https://www.upf.pf/sites/default/files/2024-04/Maquette%20LICENCE-LLCER%20LP%202024-2028.pdf",
+    "institutions": "",
+    "year": "2024",
+    "note": "listed as Marquisien, a course in the 2024-2028 licence structure rather than a degree of its own"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "PG",
@@ -9498,26 +10399,43 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Palau Community College teaches Conversational Palauan as a basic course\nIt covers basic vocabulary and simple sentence structures\nStudents practise pronunciation and phrases for everyday social and business contacts",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Palauan",
+    "level": "module",
+    "institution": "Palau Community College",
+    "url": "https://pcc.palau.edu/course/pw101/",
+    "institutions": "",
+    "year": "",
+    "note": "PW101 Conversational Palauan, a single course rather than an award in the language"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "PY",
@@ -10602,26 +11520,72 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "USP's Pacific Vernacular Language major runs in Tongan and Niuafo'ou\nThe Certificate in Vernacular Language (Tongan and Niuafo'ou) consists of six courses\nThe Diploma in the same subject consists of twelve courses\nGraduates should show competence in and understanding of Tongan and Niuafo'ou\nA single major adds one 300 level course to the double major course list",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Tongan",
+    "level": "bachelor",
+    "institution": "University of the South Pacific",
+    "url": "https://www.usp.ac.fj/handbook-calendar-2024-archive/programme-requirements-and-regulations/school-of-pacific-arts-communication-and-education-space/",
+    "institutions": "",
+    "year": "2024",
+    "note": "taught jointly with Niuafo'ou as one Pacific Vernacular Language major track"
+   },
+   {
+    "language": "Tongan",
+    "level": "certificate",
+    "institution": "University of the South Pacific",
+    "url": "https://www.usp.ac.fj/learning-teaching/usp-graduate-attributes-and-outcomes/programme-graduate-outcomes/space/certificate-in-vernacular-language-tongan-and-niuafoou/",
+    "institutions": "",
+    "year": "",
+    "note": "Certificate in Vernacular Language (Tongan and Niuafo'ou), six courses"
+   },
+   {
+    "language": "Tongan",
+    "level": "diploma",
+    "institution": "University of the South Pacific",
+    "url": "https://www.usp.ac.fj/handbook-calendar-2024-archive/programme-requirements-and-regulations/school-of-pacific-arts-communication-and-education-space/",
+    "institutions": "",
+    "year": "2024",
+    "note": "Diploma in Vernacular Language (Tongan and Niuafo'ou), twelve courses"
+   },
+   {
+    "language": "Niuafo'ou",
+    "level": "certificate",
+    "institution": "University of the South Pacific",
+    "url": "https://www.usp.ac.fj/learning-teaching/usp-graduate-attributes-and-outcomes/programme-graduate-outcomes/space/certificate-in-vernacular-language-tongan-and-niuafoou/",
+    "institutions": "",
+    "year": "",
+    "note": "a separate language of Tonga, taught in the same programme as Tongan"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "TR",
@@ -12883,26 +13847,52 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Melanesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "USP's Certificate in Vernacular Language (Vanuatu Language Studies) consists of six courses\nVanuatu Language Studies is also one of USP's Pacific Vernacular Language majors\nGraduates should show competence in Bislama or another Vanuatu language",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Bislama",
+    "level": "certificate",
+    "institution": "University of the South Pacific",
+    "url": "https://www.usp.ac.fj/learning-teaching/usp-graduate-attributes-and-outcomes/programme-graduate-outcomes/space/certificate-in-vernacular-language-vanuatu-language-studies/",
+    "institutions": "",
+    "year": "",
+    "note": "Certificate in Vernacular Language (Vanuatu Language Studies); outcome names Bislama or another Vanuatu language"
+   },
+   {
+    "language": "Bislama",
+    "level": "bachelor",
+    "institution": "University of the South Pacific",
+    "url": "https://www.usp.ac.fj/handbook-calendar-2024-archive/programme-requirements-and-regulations/school-of-pacific-arts-communication-and-education-space/",
+    "institutions": "",
+    "year": "2024",
+    "note": "Vanuatu Language Studies track of the Pacific Vernacular Language major, for fluent speakers of Bislama"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "WF",
@@ -12937,26 +13927,72 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The National University of Samoa offers Samoan Language as a major in its BA\nIt also runs a Master of Samoan Studies above a Postgraduate Diploma in Samoan Studies\nSamoan Language and Culture is a separate discipline from Samoan Language\nSamoan Language is also available as a minor\nA BA pairs it with a second major of eight courses from any faculty",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Samoan",
+    "level": "bachelor",
+    "institution": "National University of Samoa",
+    "url": "https://nus.edu.ws/area-of-study-2/",
+    "institutions": "",
+    "year": "",
+    "note": "Samoan Language major in the BA, taught by the Centre for Samoan Studies"
+   },
+   {
+    "language": "Samoan",
+    "level": "minor",
+    "institution": "National University of Samoa",
+    "url": "https://nus.edu.ws/area-of-study-2/",
+    "institutions": "",
+    "year": "",
+    "note": "Samoan Language minor, four courses"
+   },
+   {
+    "language": "Samoan",
+    "level": "master",
+    "institution": "National University of Samoa",
+    "url": "https://nus.edu.ws/area-of-study-2/",
+    "institutions": "",
+    "year": "",
+    "note": "Master of Samoan Studies; includes HSA503 In-depth Study of Samoan Language"
+   },
+   {
+    "language": "Samoan",
+    "level": "diploma",
+    "institution": "National University of Samoa",
+    "url": "https://nus.edu.ws/area-of-study-2/",
+    "institutions": "",
+    "year": "",
+    "note": "Postgraduate Diploma in Samoan Studies, six courses, the step below the master's"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1,
+    2,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "YE",
