@@ -63,6 +63,23 @@ const PEAK_DF_SHARE = 0.01;   // rarest shared term: in at most 1% of labels
 const HIST_MIN_SCORE = 0.83;  // normalised weight, summed over shared terms
 const YEAR_BONUS = 0.25;
 
+/** Longest run of tokens appearing in the same order in both, contiguously. */
+function longestRun(a, b) {
+  if (!a.length || !b.length) return 0;
+  let best = 0;
+  const prev = new Array(b.length + 1).fill(0);
+  for (let i = 1; i <= a.length; i++) {
+    let diagonal = 0;
+    for (let j = 1; j <= b.length; j++) {
+      const here = a[i - 1] === b[j - 1] ? diagonal + 1 : 0;
+      diagonal = prev[j];
+      prev[j] = here;
+      if (here > best) best = here;
+    }
+  }
+  return best;
+}
+
 function matchHistoryDocs(row, docLinks, weight, dfShare) {
   const hTok = new Set(histTokens(row.description));
   const hNames = nameLike(row.description);
@@ -81,8 +98,28 @@ function matchHistoryDocs(row, docLinks, weight, dfShare) {
       score += weight(t); shared++; lone = t;
       rarest = Math.min(rarest, dfShare(t));
     }
-    if (!shared || rarest > PEAK_DF_SHARE) continue;
-    if (shared >= 2 || yearAgrees) {
+    // A CONTIGUOUS RUN beats the rarity test, because it is evidence of a
+    // different kind. Rarity asks whether a shared word is distinctive across
+    // the corpus; a run asks whether the row is quoting the document's name.
+    //
+    // Taiwan showed why that matters. Its 2019 row reads "Development of
+    // National Languages Act makes national-language classes compulsory" and
+    // its entry already cited "Development of National Languages Act
+    // (announced 9 January 2019)". Same title, same year, and the pair was
+    // rejected before scoring -- because in an atlas whose every label is
+    // about language policy, "development", "national", "languages" and "act"
+    // are all commoner than one label in a hundred, so the RAREST shared term
+    // was not rare enough. Three of Taiwan's seven rows and both of South
+    // Africa's 1997 rows failed this way, each against a document already on
+    // the entry.
+    //
+    // Four tokens in order, or three with the year agreeing, is a title rather
+    // than a coincidence. The year check above still applies either way, and
+    // the search is only ever over one entry's own docLinks.
+    const run = longestRun(histTokens(row.description), histTokens(d.label));
+    const named = run >= 4 || (run >= 3 && yearAgrees);
+    if (!shared || (rarest > PEAK_DF_SHARE && !named)) continue;
+    if (named || shared >= 2 || yearAgrees) {
       if (yearAgrees) score += YEAR_BONUS;
       if (score >= HIST_MIN_SCORE) strong.push({ label: d.label, url: d.url, score });
     } else if (hNames.has(lone) && lNames.has(lone)) {
