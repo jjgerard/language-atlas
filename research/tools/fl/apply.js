@@ -21,13 +21,24 @@ const { fileFor } = require("../datafile");
 const FILES = new Proxy({}, { get: (_, id) => fileFor(String(id)) });
 const LIMIT = 96;
 // Fields that are NOT bullet text. `policyHistory` is a list of
-// {year, description}; the rest are series of {year, value, note}.
-const TYPED = {
-  policyHistory: "history",
-  uptake: "series",
-  newcomerProportion: "series",
-  identifiedPrevalence: "series",
-};
+// {year, description}; the rest are series, languages, offerings, programmes.
+//
+// This was a hardcoded list of four field names, and a hardcoded list cannot
+// know about a field that becomes typed later. `he.linguistics` did exactly
+// that, and six units had their bullets joined with newlines and written into
+// it as a STRING before anything noticed -- the failure this guard exists to
+// prevent, walking straight past the guard.
+//
+// So it is derived from the domain declarations instead: any field whose
+// declared type has a SHAPE is typed, on every domain, forever. Adding a
+// domain or retyping a field stays a domains.js edit, which is the rule this
+// repo works to.
+const { DOMAINS } = require(path.join(ATLAS, "src", "domains"));
+const { SHAPES } = require(path.join(ATLAS, "src", "store"));
+const TYPED = {};
+for (const d of DOMAINS)
+  for (const [k, , type] of d.fields)
+    if (SHAPES[type]) TYPED[k] = type;
 
 function apply(domain, spec) {
   const FILE = path.join(ATLAS, "data", FILES[domain]);
