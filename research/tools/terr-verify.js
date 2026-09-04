@@ -380,12 +380,45 @@ function quoteOn(quote, page) {
     const notEst = s.notEstablished || {};
     const nn = Object.keys(notEst).length;
 
+    // History rows go through the gate too, and did not used to. They were
+    // passed straight out as `s.history` on the drafter's word, and a spec
+    // whose ONLY content was history rows failed the `nb || ns || nn` test
+    // below and vanished with them.
+    //
+    // Both halves of that were wrong, and the session that found it had just
+    // finished correcting 78 published history rows that described their own
+    // document incorrectly -- a repealed article cited as the operative one, a
+    // constitution credited with a provision belonging to the one it replaced,
+    // an Act that was only ever a Bill. Every one of those would have been
+    // caught here by the rule this file already applies to bullets: fetch the
+    // page, look for the quote.
+    //
+    // Evidence is keyed by the row's `description`, which is what the drafting
+    // brief asks for. A row with no evidence entry is dropped like a bullet
+    // with none: the year is the part most worth checking and the part that
+    // looks equally plausible whatever the truth is.
+    const keptHist = [];
+    for (const r of (s.history || [])) {
+      const label = "policyHistory " + (r && r.year);
+      if (!r || !r.description) { dropped.push(label + ": row missing a description"); continue; }
+      if (!Number.isInteger(Number(r.year))) { dropped.push(label + ": year is not a number"); continue; }
+      const e = ev.get(r.description);
+      if (!e) { dropped.push(label + ": no evidence entry - " + String(r.description).slice(0, 48)); continue; }
+      const p = page.get(e.url);
+      if (!p || p.status !== 200) { dropped.push(label + ": source returned " + (p ? p.status : "?")); continue; }
+      if (!p.text) { dropped.push(label + ": no text could be extracted from the source"); continue; }
+      if (!quoteOn(e.quote, p.text)) { dropped.push(label + ": quote not found on the page - " + String(r.description).slice(0, 40)); continue; }
+      keptHist.push({ year: Number(r.year), description: String(r.description) });
+    }
+    keptHist.sort((a, b) => a.year - b.year);
+
     const ns = Object.values(keptSeries).reduce((a, b) => a + b.length, 0);
     const nb = Object.values(kept).reduce((a, b) => a + b.length, 0);
-    console.log(NL + key + ": " + Object.keys(kept).length + " fields, " + nb + " bullets, " + ns + " series rows verified, " + dropped.length + " dropped");
+    const nh = keptHist.length;
+    console.log(NL + key + ": " + Object.keys(kept).length + " fields, " + nb + " bullets, " + ns + " series rows, " + nh + " history rows verified, " + dropped.length + " dropped");
     if (nn) console.log("    " + nn + " notEstablished finding" + (nn === 1 ? "" : "s") + " passed through UNGATED (a claim of absence is not quote-checked)");
     dropped.forEach(d => console.log("    - " + d));
-    if (nb || ns || nn) out[key] = { fields: kept, series: keptSeries, notEstablished: notEst, history: s.history || [], sources: s.sources || [] };
+    if (nb || ns || nn || nh) out[key] = { fields: kept, series: keptSeries, notEstablished: notEst, history: keptHist, sources: s.sources || [] };
   }
 
   fs.writeFileSync(path.join(specDir, OUT), JSON.stringify(out, null, 1) + NL);

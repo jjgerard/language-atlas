@@ -1295,7 +1295,24 @@
   "entryRequirements": "Every applicant sits language, a foreign language and maths in the leaving exam\nGroup III language-history subgroup is examined on language, history and literature\nLeaving exam results stay valid two years for the admission competition\nAdmission is run centrally by the State Examination Centre in two stages",
   "teacherPipeline": "Azerbaijani language and literature teaching is a bachelor specialty in the education group\nForeign language teaching degrees are run separately for each language\nAzerbaijan University of Languages lists English, French and German Language Teaching BAs",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 1948,
+    "description": "A Pedagogical Foreign Languages Institute was created in Baku from the API faculty"
+   },
+   {
+    "year": 1959,
+    "description": "Ministerial order of 14 May merged it with the Axundov Russian Language Institute"
+   },
+   {
+    "year": 2000,
+    "description": "A decree of 13 June turned the state languages institute into a university"
+   },
+   {
+    "year": 2009,
+    "description": "Education Law No. 833-IIIQ of 19 June set Azerbaijani as the language of instruction"
+   }
+  ]
  },
  {
   "countryCode": "BA",
@@ -1342,7 +1359,7 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "At UWI Cave Hill, French and Spanish are each available as a single BA major\nCave Hill also lists BA Literatures in English and BA Linguistics as majors\nChinese is offered only as a minor at Cave Hill, not as a BA major\nFrench and Spanish may be taken singly, jointly, or with Management Studies",
-  "linguistics": "",
+  "linguistics": "Linguistics is a Bachelor of Arts in its own right at UWI Cave Hill\nIt sits in the Department of Language, Linguistics and Literature\nLinguistics may also be taken as a minor within that Bachelor of Arts",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -1355,6 +1372,11 @@
     1,
     2,
     2,
+    4
+   ],
+   "linguistics": [
+    1,
+    3,
     4
    ]
   }
@@ -1764,7 +1786,7 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Language is taken inside UMSA's Lingüística e Idiomas licenciatura, as a mención\nUMSA runs an Área de Aymara aimed at teaching and researching that language\nA parallel Área de Quechua trains specialists in Quechua\nA third mención covers Spanish, and another covers foreign languages",
-  "linguistics": "",
+  "linguistics": "UMSA's Linguistica e Idiomas has a mencion in Linguistica y Lenguas Nativas\nA second mencion pairs linguistics with the learning of foreign languages",
   "offerings": [],
   "mediumOfInstruction": "The UNIBOL indigenous universities teach every degree course in Aymara, Quechua or Guaraní\nSpanish and a foreign language are learned alongside, under the same decree\nTheses must be written and defended orally in that university's native language\nThis is a rule of Decreto Supremo 29664 of 2008, binding on teaching staff too",
   "requiredStudy": "",
@@ -1784,6 +1806,10 @@
     2,
     3,
     4
+   ],
+   "linguistics": [
+    1,
+    1
    ]
   }
  },
@@ -2047,26 +2073,32 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Central America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": "",
+  "linguistics": "The University of Belize houses English in its Arts Department\nLinguistic structures are studied inside the Bachelor in English there",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "linguistics": [
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -2223,12 +2255,12 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Not established from the sources consulted. Not documented from a BC government source this session.",
-  "linguistics": "",
+  "linguistics": "Linguistics is a degree subject in its own right at UBC\nUBC's graduate programs lead to an MA, an MDS and a PhD in linguistics\nUBC's Department of Linguistics was established in 1969",
   "offerings": [],
   "mediumOfInstruction": "UBC Okanagan's Nsyilxcn Language Fluency degree is language-specific and immersion-based\nStudents there take intensive immersion language courses and language-informed culture courses\nUBC Okanagan also lists a Bachelor of Secwépemc Language Fluency\nThe UBC Okanagan Calendar states the curricula are highly structured and language specific",
-  "requiredStudy": "",
+  "requiredStudy": "UBC's Arts Language Requirement applies to BA students who started before 2024\nA grade 12 level in a language other than English already meets it\nStudents with no background in the language must take 12 credits, four courses",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "B.C. universities deliver the province's approved teacher education programs\nThose programs run one to two years",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -2237,6 +2269,20 @@
     3,
     3,
     4
+   ],
+   "linguistics": [
+    1,
+    2,
+    3
+   ],
+   "requiredStudy": [
+    1,
+    3,
+    3
+   ],
+   "teacherPipeline": [
+    2,
+    3
    ]
   }
  },
@@ -2258,12 +2304,12 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Universite de Saint-Boniface offers a first-cycle programme in traduction\nIts graduate programmes are in education and Canadian studies, not in a language",
-  "linguistics": "",
+  "linguistics": "Linguistics at U of M is the study of how human language is structured, acquired and used\nThe PhD programme in linguistics is flexible and strongly research-oriented\nThe programme specialises in spoken and signed language, focused on local languages",
   "offerings": [],
   "mediumOfInstruction": "Universite de Saint-Boniface is described as Manitoba's French-language university\nIt is open to anyone able to pursue postsecondary studies in French\nSome of its programmes also require English, and those entrants are profiled in English",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "The maitrise en education is offered by Universite de Saint-Boniface, an affiliated college\nUSB's language of instruction and communication is French",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -2275,6 +2321,15 @@
     1,
     1,
     2
+   ],
+   "linguistics": [
+    1,
+    2,
+    3
+   ],
+   "teacherPipeline": [
+    2,
+    3
    ]
   }
  },
@@ -2626,13 +2681,19 @@
   "mediumOfInstruction": "At Universite de l'Ontario francais teaching is in French, in anglophone Toronto\nIts programmes are described as running in a 100 per cent francophone environment",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Ontario faculties of education train French and French as a second language teachers\nThe Ontario College of Teachers accredits all initial teacher education programmes\nThe consecutive route is a four-semester program leading to a Bachelor of Education\nBursaries help teachers attend summer immersion programmes to improve their oral French",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
    "mediumOfInstruction": [
     1,
     3
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -2801,12 +2862,12 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "At U of S, Indigenous languages come as a two-year certificate, not a degree\nStudents take either a Cree stream or a Michif stream\nThe Cree stream covers the three dialects of Cree spoken on the Prairies\nTen courses over two years, part time, at the University of Saskatchewan",
-  "linguistics": "",
+  "linguistics": "At the U of S linguistics is an interdisciplinary programme exploring the structure of language",
   "offerings": [],
   "mediumOfInstruction": "One U of S certificate course, the final teaching placement, is taught entirely in Cree\nCourses teach writing and teaching Cree in both syllabics and the English alphabet",
   "requiredStudy": "",
   "entryRequirements": "Ministry notes some post-secondary programmes need high school French\nSchools urged to steer immersion pupils towards French university majors\nLa Cite universitaire francophone (Regina) and U of S rate French proficiency",
-  "teacherPipeline": "",
+  "teacherPipeline": "SUNTEP has a strong emphasis on Metis history, the Michif language and social justice\nIt is offered by the Gabriel Dumont Institute with the U of S and the Ministry of Education\nThe route is a four-year, fully accredited direct entry Bachelor of Education",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -2818,6 +2879,14 @@
    ],
    "mediumOfInstruction": [
     1,
+    3
+   ],
+   "linguistics": [
+    1
+   ],
+   "teacherPipeline": [
+    1,
+    2,
     3
    ]
   }
@@ -3721,7 +3790,20 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1987,
+    "description": "Heilongjiang University gained doctoral rights in Russian language and literature"
+   },
+   {
+    "year": 1999,
+    "description": "A foreign languages and literature postdoctoral research station was approved"
+   },
+   {
+    "year": 2024,
+    "description": "Two double-bachelor's routes approved, pairing Russian with law and with trade"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -3931,7 +4013,28 @@
   "entryRequirements": "Universities may not restrict exam language except for foreign languages and literature majors\nChinese, maths and a foreign language are the three national unified gaokao subjects\nCandidates pick one of English, Russian, Japanese, French, German or Spanish\nApplicants to foreign-language majors also sit an oral test, scored to the university's rule",
   "teacherPipeline": "Teachers must reach Putonghua level two, Chinese-language teachers level two-A or above\nPhonetics teachers and broadcasting or drama teachers must reach level one\nThose failing the standard must be trained by their unit until they reach it",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 1981,
+    "description": "Nanjing University English and French literature entered the first batch of doctoral units"
+   },
+   {
+    "year": 2002,
+    "description": "English language and literature at Nanjing University made a national key discipline"
+   },
+   {
+    "year": 2003,
+    "description": "Nanjing University gained doctoral rights in foreign linguistics and applied linguistics"
+   },
+   {
+    "year": 2006,
+    "description": "Jiangsu's measure implementing the national common language law took effect on 1 March"
+   },
+   {
+    "year": 2006,
+    "description": "First-level doctoral authorisation; Russian and German literature doctoral points set up"
+   }
+  ]
  },
  {
   "countryCode": "CN",
@@ -4018,7 +4121,20 @@
   "entryRequirements": "Yanbian University admits only English-exam candidates to English and Japanese (zero start)\nZero-start English and Japanese take candidates who answered the exam in Korean\nKorean language admits non-Korean-ethnicity candidates who answered the exam in Chinese\nThe university writes these rules in its own charter under national law and Ministry rules",
   "teacherPipeline": "Yanbian's Normal College runs an English education undergraduate direction\nIts education master's covers subject teaching in Chinese and in English\nNortheast Normal trains secondary English teachers on a state-funded normal track",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 1994,
+    "description": "Jilin University gained master's degree authorisation in linguistics and applied linguistics"
+   },
+   {
+    "year": 1996,
+    "description": "Jilin University began admitting master's students in linguistics and applied linguistics"
+   },
+   {
+    "year": 2006,
+    "description": "Doctoral authorisation granted for the subject, with doctoral students admitted the same year"
+   }
+  ]
  },
  {
   "countryCode": "CN",
@@ -4196,7 +4312,28 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1951,
+    "description": "Northwest Russian College formed by merging Lanzhou and Northwest university Russian units"
+   },
+   {
+    "year": 1952,
+    "description": "Party school Russian class merged in; undergraduate-level foreign language training began"
+   },
+   {
+    "year": 1979,
+    "description": "Xi'an International Studies University began admitting postgraduate students"
+   },
+   {
+    "year": 1986,
+    "description": "Xi'an International Studies University became a master's degree-awarding unit"
+   },
+   {
+    "year": 2013,
+    "description": "Xi'an International Studies University became a doctoral degree-awarding unit"
+   }
+  ],
   "slots": {
    "mediumOfInstruction": [
     1,
@@ -4313,7 +4450,28 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1919,
+    "description": "Shanxi University admitted its first four-year arts-faculty English class"
+   },
+   {
+    "year": 1936,
+    "description": "The English literature department expanded into a multilingual foreign literature department"
+   },
+   {
+    "year": 1984,
+    "description": "English language and literature approved as a master's degree point by the State Council"
+   },
+   {
+    "year": 2003,
+    "description": "The Ministry of Education approved a German undergraduate major at Shanxi University"
+   },
+   {
+    "year": 2010,
+    "description": "A first-level master's point in foreign languages and literature was approved"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -4651,14 +4809,23 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": "",
+  "linguistics": "Lingüística is one of three areas inside the Universidad de La Habana carrera de Letras",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "Idioma Inglés is a discipline within degree study plans, MES Res. 47/2022\nEnglish communication is a compulsory cross-curricular strategy in all degrees\nRectors may exceptionally exempt deaf students from the English discipline",
-  "entryRequirements": "",
+  "entryRequirements": "Access to Cuban higher education runs through entrance exams that include Español\nThe Español exam sits alongside Matemática and Historia in that round",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "linguistics": [
+    4
+   ],
+   "entryRequirements": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "CV",
@@ -6494,7 +6661,7 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Ilisimatusarfik's Sprog, Litteratur & Medier degree pairs language with literature and media\nA separate Oversættelse & Tolkning bachelor is a language degree in its own right\nGreenlandic is the language taught, within general language theory\nThe translation bachelor works on the Greenlandic-Danish pair, with English added\nSprog, Litteratur & Medier can be a hovedfag or a bifag in the teaching degree",
-  "linguistics": "",
+  "linguistics": "Sprog, Litteratur & Medier covers three subject areas: language, literature and media",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -6509,6 +6676,9 @@
     2,
     2,
     4
+   ],
+   "linguistics": [
+    1
    ]
   }
  },
@@ -6977,7 +7147,7 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "UNAH's Carrera de Letras leads to a Licenciado en Letras in its own right\nIts Carrera de Lenguas Extranjeras runs in English and in French, both at licenciatura level\nLetras is taken with an orientation in Lingüística or in Literatura",
-  "linguistics": "",
+  "linguistics": "UNAH's Carrera de Letras offers a licenciatura with an orientación en Lingüística\nThat orientación is at licenciatura level\nLingüística is an orientation inside the Letras degree, alongside one in Literatura",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -6990,6 +7160,11 @@
     1,
     2,
     2
+   ],
+   "linguistics": [
+    1,
+    2,
+    4
    ]
   }
  },
@@ -7038,11 +7213,11 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "The UEH degree is in applied linguistics, not in a single named language\nCreole and French are the languages: many of its graduates teach both\nThe faculty's origin was making teaching tools in Creole and for Creole\nStudies run four years to a licence at the Faculte de Linguistique Appliquee",
-  "linguistics": "",
+  "linguistics": "Studies run four years to a licence en linguistique appliquee\nIt has its own Faculte, which succeeded the Centre de Linguistique Appliquee founded in 1978",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "The FLA takes bacheliers, after a concours\nThe concours tests written production in Haitian Creole and in French\nEntry goes to the 160 candidates with the best results in the concours",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [],
@@ -7052,6 +7227,15 @@
     2,
     2,
     4
+   ],
+   "linguistics": [
+    1,
+    3
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2
    ]
   }
  },
@@ -7113,7 +7297,20 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2003,
+    "description": "Law 20/2003 made Indonesian the language of instruction in national education"
+   },
+   {
+    "year": 2009,
+    "description": "Law 24/2009 of 9 July made Indonesian compulsory as the language of instruction"
+   },
+   {
+    "year": 2012,
+    "description": "Law 12/2012 of 10 August made Indonesian compulsory in higher education"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -7587,7 +7784,20 @@
   "entryRequirements": "All undergraduate entry to Delhi University runs through the CUET common entrance test\nCandidates must sit CUET in the subjects they took at Class XII\nB.A. honours English needs English from List A plus three domain subjects\nB.A. honours French also admits on any List A language, so beginners have a route",
   "teacherPipeline": "The Central Institute of Education is Delhi University's teacher education institution\nIts Bachelor of Elementary Education gives elementary school teachers a university degree\nEntry to it is by CUET on any one List A language plus domain subjects",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 1963,
+    "description": "The Department of Linguistics was started, offering only a diploma course at first"
+   },
+   {
+    "year": 1966,
+    "description": "Master's and doctoral programmes in linguistics were introduced"
+   },
+   {
+    "year": 2010,
+    "description": "UGC gave the department Centre for Advanced Studies status, with effect from 2010-11"
+   }
+  ]
  },
  {
   "countryCode": "IN",
@@ -8051,7 +8261,28 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1979,
+    "description": "The Department of English was established under NEHU's Mizoram Campus"
+   },
+   {
+    "year": 1997,
+    "description": "The Mizo Department was established under North-Eastern Hill University"
+   },
+   {
+    "year": 2001,
+    "description": "The English department was absorbed under Mizoram University on 2 July 2001"
+   },
+   {
+    "year": 2010,
+    "description": "A Department of Hindi was established, running M.A. and Ph.D. courses"
+   },
+   {
+    "year": 2022,
+    "description": "The English department was renamed Department of English and Culture Studies"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -9276,13 +9507,17 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "SALCC offers an Associate Degree in Secondary Education for those aspiring to teach\nOne specialist subject is taken as the teaching Major, made up of five courses",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
    "degreeSubjects": [
     1,
     2,
+    3
+   ],
+   "teacherPipeline": [
+    1,
     3
    ]
   }
@@ -10486,7 +10721,7 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "At UNAM each modern language is its own licenciatura, with its own intake\nThe languages are German, French, English, Italian and Portuguese\nDemand and places were counted for the 2023-2024 admissions cycle at UNAM",
-  "linguistics": "",
+  "linguistics": "UNAM runs a Programa de Maestria y Doctorado en Linguistica of its own\nENALLT takes part in two programmes inside UNAM's Posgrado en Linguistica",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -10498,6 +10733,10 @@
    "degreeSubjects": [
     1,
     2,
+    3
+   ],
+   "linguistics": [
+    1,
     3
    ]
   }
@@ -11168,7 +11407,12 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1987,
+    "description": "Sultan Qaboos University's Department of Arabic Language and Literature was founded"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -11510,7 +11754,12 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1999,
+    "description": "An-Najah National University established a Department of French"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -12171,7 +12420,24 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1956,
+    "description": "Nanyang University opened, admitting its first Chinese-medium cohort in March"
+   },
+   {
+    "year": 1975,
+    "description": "All Nanyang classes but Chinese language and Chinese history switched to English"
+   },
+   {
+    "year": 1978,
+    "description": "Nantah and the University of Singapore agreed a joint campus at Bukit Timah"
+   },
+   {
+    "year": 1980,
+    "description": "Nanyang University merged into the University of Singapore, launched as NUS"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -13308,18 +13574,24 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "UWI St Augustine's language department spans linguistics, foreign languages and literature\nOfferings include Conference Interpreting and Caribbean Sign Language Interpreting",
-  "linguistics": "",
+  "linguistics": "UWI St Augustine's BA Linguistics trains students in all aspects of the study of language",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "The BA Linguistics is a recognised pathway to Teacher III status for teachers of English",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
    "degreeSubjects": [
     1,
     2
+   ],
+   "linguistics": [
+    1
+   ],
+   "teacherPipeline": [
+    1
    ]
   }
  },
@@ -13800,26 +14072,33 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": "",
+  "linguistics": "Linguistics is a degree subject in its own right at the University of Arizona\nIt runs at bachelor, master and PhD level there\nIt sits in the university's own Department of Linguistics",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "linguistics": [
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -13928,7 +14207,7 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Italian is a major in its own right at UConn's Literatures, Cultures and Languages\nUConn also offers Comparative Literary and Cultural Studies for those wanting no single language\nThat CLCS major pairs 12 credits in CLCS with 12 in one national literature",
-  "linguistics": "",
+  "linguistics": "There are two ways to major in linguistics at UConn\nA linguistics minor is offered for students adding it to another major",
   "offerings": [],
   "mediumOfInstruction": "A dedicated CLCS course at UConn is taught in English most semesters",
   "requiredStudy": "",
@@ -13944,6 +14223,10 @@
    ],
    "mediumOfInstruction": [
     3
+   ],
+   "linguistics": [
+    1,
+    4
    ]
   }
  },
@@ -13953,26 +14236,32 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": "",
+  "linguistics": "Delaware offers undergraduate and graduate degrees in linguistics and cognitive science\nLinguistics sits with Cognitive Science in one interdisciplinary department",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "linguistics": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -14055,11 +14344,11 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Georgia Tech offers a B.S. in Applied Languages and Intercultural Studies\nIt also lists B.S. degrees pairing Modern Languages with International Affairs or Economics\nApplied Languages and Intercultural Studies can also be taken there as a double major",
-  "linguistics": "",
+  "linguistics": "Linguistics is a degree subject in its own right at the University of Georgia\nUGA offers it at A.B., M.A. and Ph.D. level\nIt sits in UGA's own Department of Linguistics",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "USG's Required High School Curriculum includes foreign language units for admission\nTwo units of the same foreign language are required\nAmerican Sign Language or computer science may be taken instead of those two units",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [],
@@ -14068,6 +14357,16 @@
     1,
     2,
     4
+   ],
+   "linguistics": [
+    1,
+    2,
+    3
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2
    ]
   }
  },
@@ -14092,9 +14391,9 @@
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "UH Hilo's College of Hawaiian Language works through the medium of Hawaiian, since 1998\nHilo holds a preschool-to-graduate-school Hawaiian medium system, not just one course\nPhD outcomes require advancement in spoken and written Hawaiian in all educational contexts",
-  "requiredStudy": "",
+  "requiredStudy": "The Hawaiian or Second Language requirement varies by UH Manoa college or school\nBefore graduation students must show competence at the 202 level, usually four semesters\nWaivers may be given to students who are native speakers of a language other than English\nEight schools and colleges have had the requirement modified or waived",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Kahuawaiola prepares teachers for Hawaiian medium schools and for English medium programmes\nIt is the first and only teacher licensing programme taught entirely in the Hawaiian language",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -14107,6 +14406,16 @@
     1,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    3,
+    4,
+    4
+   ],
+   "teacherPipeline": [
+    1,
+    3
    ]
   }
  },
@@ -14190,10 +14499,10 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "French is a major in its own right at Indiana University Bloomington\nItalian is likewise a major in the same IU department\nMinors and a certificate are listed there alongside the two majors",
-  "linguistics": "",
+  "linguistics": "IU Bloomington awards degrees in general Linguistics as well as named concentrations\nIt has an undergraduate program and one of the largest Linguistics graduate programs",
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "IU's College of Arts and Sciences requires all undergraduate majors to show language proficiency\nA B.A. or B.F.A. needs proficiency through the fourth semester of a single foreign language\nA B.S. needs proficiency through the second or third semester of that language\nInternational students may meet it through proficiency in their native languages",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -14203,6 +14512,16 @@
     1,
     2,
     2
+   ],
+   "linguistics": [
+    1,
+    2
+   ],
+   "requiredStudy": [
+    1,
+    3,
+    3,
+    4
    ]
   }
  },
@@ -14311,7 +14630,7 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "UL Lafayette offers a B.A. in French as an undergraduate degree in its own right\nFrench and Spanish are its two language majors in Modern Languages\nLatin American Studies and Spanish are also available there as minors\nModern Languages at UL Lafayette also lists double majors and dual degrees",
-  "linguistics": "",
+  "linguistics": "LSU's M.A. and Ph.D. programs in Linguistics have been closed to new applications\nLSU's linguistics minor can be combined with any major field of study at the university",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -14323,6 +14642,10 @@
    "degreeSubjects": [
     1,
     2,
+    2,
+    4
+   ],
+   "linguistics": [
     2,
     4
    ]
@@ -14436,7 +14759,7 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "German is a major in its own right at Michigan State University\nJapanese is likewise a major in MSU's Linguistics, Languages and Cultures\nKorean is offered there as a major or a minor",
-  "linguistics": "",
+  "linguistics": "MSU's linguistics sits in an interdisciplinary department covering three areas",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -14449,6 +14772,9 @@
     1,
     2,
     2
+   ],
+   "linguistics": [
+    3
    ]
   }
  },
@@ -14458,15 +14784,15 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -14475,9 +14801,16 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "A world languages licence requires a Board of Teaching approved preparation programme\nThe degree must come from a regionally accredited college or university\nThe licence names the specific language or languages the teacher may teach",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -14562,7 +14895,7 @@
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "Entry to a 4-year Montana University System campus needs a college preparatory program\nThe Montana Board of Regents of Higher Education sets that program",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [],
@@ -14572,6 +14905,10 @@
     2,
     2,
     2
+   ],
+   "entryRequirements": [
+    1,
+    4
    ]
   }
  },
@@ -14714,11 +15051,11 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "At UNM, Navajo is offered as a minor rather than a degree of its own\nThe language is Navajo, taught with its linguistics, history and culture\nThe minor takes 18 hours of Navajo language courses above the 200 level",
-  "linguistics": "",
+  "linguistics": "UNM has the only degree-granting linguistics programme in New Mexico\nThe department concentrates on regional languages, especially Navajo and Spanish varieties",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "UNM prefers two sequential units of a language other than English for entry",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [],
@@ -14727,6 +15064,13 @@
     1,
     2,
     4
+   ],
+   "linguistics": [
+    1,
+    3
+   ],
+   "entryRequirements": [
+    1
    ]
   }
  },
@@ -14935,7 +15279,7 @@
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Penn State's Applied Linguistics B.A. requires 12th credit proficiency in one world language",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -14947,6 +15291,9 @@
     2,
     2,
     2
+   ],
+   "requiredStudy": [
+    3
    ]
   }
  },
@@ -15078,26 +15425,36 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": "",
+  "linguistics": "UT Austin has a Department of Linguistics teaching and researching the study of human language",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "UT Austin offers state-approved teacher preparation programmes\nIts programmes are accredited by the Texas Education Agency\nPaths to certification exist for undergraduates, post-baccalaureates and working professionals",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "linguistics": [
+    1
+   ],
+   "teacherPipeline": [
+    2,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -15183,7 +15540,7 @@
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "All students in UVA's College must satisfy the World Language Requirement\nThey must reach the 2020, advanced intermediate, level or its equivalent\nIt can be met by test credits, UVA courses, or placing above 2020 on a placement test\nNative-speaker mastery of a language not taught at UVA may be grounds for exemption",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -15192,6 +15549,12 @@
    "degreeSubjects": [
     1,
     2,
+    4
+   ],
+   "requiredStudy": [
+    1,
+    3,
+    3,
     4
    ]
   }
@@ -15202,26 +15565,37 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": "",
+  "linguistics": "The UW Department of Linguistics offers undergraduate and graduate degrees",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "Two world language credits are required, devoted to a single language\nAny natural language that has been formally studied may satisfy the requirement\nIt counts as satisfied for applicants schooled through the seventh grade in another language\nEach school district decides which of its courses meet the state CADRs",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "linguistics": [
+    1
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -15342,7 +15716,7 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "UdelaR's FHCE lists Lingüística and Letras among its Montevideo licenciaturas\nFHCE runs nine licenciaturas in all, in Montevideo and the interior",
-  "linguistics": "",
+  "linguistics": "UdelaR's Licenciatura en Linguistica trains specialists in the language sciences",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -15354,6 +15728,9 @@
    "degreeSubjects": [
     1,
     3
+   ],
+   "linguistics": [
+    1
    ]
   }
  },
@@ -15724,7 +16101,20 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1997,
+    "description": "Faculty of Languages founded at Sana'a University by rectoral decision No. 149"
+   },
+   {
+    "year": 2007,
+    "description": "Turkish and Persian language departments opened at the Faculty of Languages"
+   },
+   {
+    "year": 2015,
+    "description": "Study in the Turkish language department was suspended"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,

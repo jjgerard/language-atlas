@@ -67,9 +67,21 @@ for (const [key, v] of Object.entries(verified)) {
   if (v.sources && v.sources.length) {
     s.addDocLinks = v.sources.map(x => ({ label: x.label, url: x.url }));
   }
-  if (!s.fields && !s.series && !s.notEstablished && !s.offerings) continue;
+  // A unit whose ONLY finding is policy history is a real unit. The test below
+  // used to skip it before line 72 had recorded its rows, so the rows and the
+  // sources backing them were both dropped, silently, and the run reported
+  // "+0 rows" as though the drafter had found nothing. Thirteen units went
+  // that way in one pass -- Singapore, Indonesia, five Chinese provinces --
+  // each carrying verified rows for a field that stood at 0% across all 353.
+  //
+  // It stays in `spec` rather than being merged on its own, because that is
+  // what carries `addDocLinks` and the stub promotion through apply(). The
+  // ROWS are still merged below rather than assigned, since apply() assigns
+  // and entries elsewhere already carry rows from the Indigenous pass.
+  const hasHistory = !!(v.history && v.history.length);
+  if (hasHistory) history[key] = v.history;
+  if (!s.fields && !s.series && !s.notEstablished && !s.offerings && !hasHistory) continue;
   spec[key] = s;
-  if (v.history && v.history.length) history[key] = v.history;
 }
 
 const out = apply(domain, spec);
