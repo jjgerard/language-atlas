@@ -5,26 +5,41 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Southern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The Universitat d'Andorra awards a state batxelor in Catalan Language\nIt is taught online with the Universitat Oberta de Catalunya, which carries 150 of 180 credits\nA further 66 credits earn the matching Spanish grado title as a double degree",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Catalan",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Universitat d'Andorra, bàtxelor en Llengua catalana, 180 ECTS online; 150 credits delivered by the Universitat Oberta de Catalunya, 30 Andorra-specific"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AE",
@@ -225,26 +240,54 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Middle Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The Faculdade de Letras of Universidade Agostinho Neto opened in Luanda in October 2010\nIt lists six licenciatura courses and nine master's courses for 2,827 students",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Portuguese",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Universidade Agostinho Neto, Faculdade de Letras, Luanda; course listed as Lingua e Literaturas em Lingua Portuguesa"
+   },
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Universidade Agostinho Neto, Faculdade de Letras, Luanda; course listed as Lingua e Literaturas em Lingua Inglesa"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Universidade Agostinho Neto, Faculdade de Letras, Luanda; course listed as Lingua e Literaturas em Lingua Francesa"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "AR",
@@ -306,26 +349,41 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Central Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Klagenfurt teaches Austrian Sign Language courses alongside deaf history and culture\nFrom 2025/26 the Austrian Sign Language certificate gains three specialist strands\nThe certificate needs four sign language courses, a translation exercise and a theory course",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Austrian Sign Language",
+    "level": "certificate",
+    "institutions": "",
+    "year": "2025",
+    "note": "University of Klagenfurt, Zertifikat Osterreichische Gebardensprache, from the Besonderer Studienbereich Gebardensprache; a certificate, not a degree"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    2,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -773,26 +831,33 @@
   "isNational": false,
   "region": "Europe",
   "subregion": "Western Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "French is the language of teaching and assessment of learning activities\nIn the first cycle at most a quarter of credits may be in another language\nFor master's studies the cap rises to half the credits",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "BF",
@@ -1131,26 +1196,99 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Southern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Botswana awards a BA in African Languages and Literature\nIt also names Portuguese, French and Chinese as international language degree programmes\nKiswahili, Ikalanga, Setswana, IsiZulu and Shekgalagari run as proficiency courses, not degrees\n38 proficiency certificates were awarded on 30 June 2021 in Kiswahili, Ikalanga and Setswana\nThe single-major stream totals 18 credits, three core and three optional courses a semester",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Portuguese",
+    "level": "degree",
+    "institutions": "",
+    "year": "2021",
+    "note": "University of Botswana; named in a UB news item as an international language degree programme"
+   },
+   {
+    "language": "French",
+    "level": "degree",
+    "institutions": "",
+    "year": "2021",
+    "note": "University of Botswana; named in a UB news item as an international language degree programme"
+   },
+   {
+    "language": "Chinese",
+    "level": "degree",
+    "institutions": "",
+    "year": "2021",
+    "note": "University of Botswana; named in a UB news item as an international language degree programme"
+   },
+   {
+    "language": "Swahili",
+    "level": "certificate",
+    "institutions": "",
+    "year": "2021",
+    "note": "University of Botswana, Department of African Languages and Literature; listed as Kiswahili"
+   },
+   {
+    "language": "Kalanga",
+    "level": "certificate",
+    "institutions": "",
+    "year": "2021",
+    "note": "University of Botswana, Department of African Languages and Literature; listed as Ikalanga"
+   },
+   {
+    "language": "Tswana",
+    "level": "certificate",
+    "institutions": "",
+    "year": "2021",
+    "note": "University of Botswana, Department of African Languages and Literature; listed as Setswana"
+   },
+   {
+    "language": "Zulu",
+    "level": "certificate",
+    "institutions": "",
+    "year": "2021",
+    "note": "University of Botswana, Department of African Languages and Literature; listed as IsiZulu"
+   },
+   {
+    "language": "Kgalagadi",
+    "level": "certificate",
+    "institutions": "",
+    "year": "2021",
+    "note": "University of Botswana, Department of African Languages and Literature; listed as Shekgalagari"
+   },
+   {
+    "language": "Herero",
+    "level": "certificate",
+    "institutions": "",
+    "year": "2025",
+    "note": "University of Botswana proficiency course list, start date 1 September 2025; listed as Otjimbanderu-Otjiherero"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BY",
@@ -1177,12 +1315,19 @@
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "The state languages of Belarus are the main languages of instruction and upbringing\nTeaching in a foreign language needs suitable conditions and Ministry agreement\nThe founder of each institution determines the language of instruction",
   "requiredStudy": "Study of Belarusian is compulsory in vocational and higher education",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BZ",
@@ -2108,26 +2253,53 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Western Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "At Fribourg both French and German language and literature studies run at native level\nIts bilingualism bachelor combines German and French studies as minor fields of study",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "University of Fribourg, bachelor French and German: Bilingualism and Cultural Exchange; French studies taken as a minor field inside the programme"
+   },
+   {
+    "language": "German",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "University of Fribourg, bachelor French and German: Bilingualism and Cultural Exchange; German studies taken as a minor field inside the programme"
+   }
+  ],
+  "mediumOfInstruction": "Fribourg is the only Swiss university with a full course range in each of two languages\nIn most cases students choose French or German as their sole language of study\nSome programmes are partly French and partly German, as the study plan sets out\nWhere parallel courses run in both, students may follow either language",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    2,
+    4
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CI",
@@ -2135,26 +2307,69 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The UFR LLC at Universite Felix Houphouet-Boigny teaches at licence, master and doctorate\nIts Licence d'Etudes anglophones is a common trunk running over six semesters\nThat licence feeds two selective masters, one literary and civilisational, one linguistic",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2025",
+    "note": "Universite Felix Houphouet-Boigny, UFR Langues Litteratures et Civilisations, Abidjan; Licence Anglais and Licence d'Etudes anglophones"
+   },
+   {
+    "language": "English",
+    "level": "master",
+    "institutions": "",
+    "year": "2025",
+    "note": "Same UFR; Master Anglais and Master Linguistique anglaise listed among its master parcours"
+   },
+   {
+    "language": "German",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2025",
+    "note": "Universite Felix Houphouet-Boigny, UFR LLC; Licence Allemand, with a Master Allemand also listed"
+   },
+   {
+    "language": "Spanish",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2025",
+    "note": "Universite Felix Houphouet-Boigny, UFR LLC; Licence Espagnol, with Spanish civilisation masters also listed"
+   },
+   {
+    "language": "Portuguese",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2025",
+    "note": "Universite Felix Houphouet-Boigny, UFR LLC; Licence Portugais, listed with no master counterpart"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CL",
@@ -3597,26 +3812,70 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Uni-CV awards licenciaturas in Linguas, Literaturas e Culturas, each on a named language\nThe English strand aims at teaching English language, literature and anglophone culture\nThe French strand trains future teachers of French as a foreign language\nThe licenciatura is set up as the base for a master's and a doctorate",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Universidade de Cabo Verde; Linguas, Literaturas e Culturas - Estudos Ingleses (EI - Ensino)"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Universidade de Cabo Verde; Linguas, Literaturas e Culturas - Estudos Franceses (EF - Ensino)"
+   },
+   {
+    "language": "Chinese",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Universidade de Cabo Verde; Linguas, Literaturas e Culturas - Estudos Chineses (EC - Ensino)"
+   },
+   {
+    "language": "Portuguese",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Universidade de Cabo Verde; Linguas, Literaturas e Culturas - Estudos Cabo-Verdianos e Portugueses, a joint strand"
+   },
+   {
+    "language": "Cape Verdean Creole",
+    "level": "master",
+    "institutions": "",
+    "year": "2026",
+    "note": "Universidade de Cabo Verde; Mestrado em Linguistica Cabo-verdiana e Portuguesa, paired with Portuguese in one degree"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CW",
@@ -3692,26 +3951,31 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Central Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "A public university running a study programme in a foreign language may charge fees",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    2
+   ]
+  }
  },
  {
   "countryCode": "DE",
@@ -3811,26 +4075,40 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The Copenhagen programme in Danish leads to the title bachelor i dansk\nIt covers Danish language, literature and media",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Danish",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "University of Copenhagen, bacheloruddannelse i dansk, awarding the title bachelor i dansk"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "DM",
@@ -3901,26 +4179,56 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Northern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Tamazight is taught inside the LMD system, so licence, master and doctorate all exist\nFour departments of langue et culture amazighes run; Tizi-Ouzou has about 2,700 students\nBouira holds 700 licence and master students, Batna about 1,400\nBatna's first cohort of tamazight graduates came to 72 licenciés",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Tamazight",
+    "level": "bachelor",
+    "institutions": "4",
+    "year": "2017",
+    "note": "Departments of langue et culture amazighes at Tizi-Ouzou, Bouira, Batna and Bejaia; licence within the LMD system"
+   },
+   {
+    "language": "Tamazight",
+    "level": "master",
+    "institutions": "",
+    "year": "2017",
+    "note": "Bouira counts 700 students across licence and master; count of master-awarding institutions not stated"
+   },
+   {
+    "language": "Tamazight",
+    "level": "doctorate",
+    "institutions": "",
+    "year": "2017",
+    "note": "Doctoral students finishing theses at Bouira and Tizi-Ouzou; Batna reported doctorates starting the following year"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    3,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "EC",
@@ -4114,26 +4422,32 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Southern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Universities must promote their territories' own official languages as teaching languages\nThe law leaves the detail to each university's statutes and regional rules",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "ES",
@@ -4194,26 +4508,57 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Jimma University's Amharic department runs BA and MA programmes, regular, summer and distance\nIt also runs a BA in English Language and Literature on the same three modes\nArabic appears there only as short-term training, not as a degree\nAn Oromo Folklore and Literature department sat in the pre-2009 humanities faculty\nThe Amharic department split off from the English department in 2003",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Amharic",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "Jimma University, Department of Ethiopian Language(s) and Literature - Amharic; BA and MA, regular, summer and distance; page undated"
+   },
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "Jimma University, Department of English Language and Literature; BA plus four MA programmes; page undated"
+   },
+   {
+    "language": "Arabic",
+    "level": "module",
+    "institutions": "",
+    "year": "",
+    "note": "Jimma University, English department; described only as short-term training, with no named award"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "FI",
@@ -4221,26 +4566,49 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "It can also be taken there as a free minor subject",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "North Sami",
+    "level": "bachelor",
+    "institutions": "1",
+    "year": "2026",
+    "note": "University of Oulu, Giellagas Institute; the only place in Finland where North Sámi can be a major. Teaching language is North Sámi"
+   },
+   {
+    "language": "North Sami",
+    "level": "minor",
+    "institutions": "1",
+    "year": "2026",
+    "note": "University of Oulu, free minor open from the basics; teaching shifts gradually into North Sámi after the first year"
+   }
+  ],
+  "mediumOfInstruction": "On the minor, teaching moves gradually into North Sami after the first year",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    4
+   ],
+   "mediumOfInstruction": [
+    2
+   ]
+  }
  },
  {
   "countryCode": "FJ",
@@ -4363,18 +4731,18 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Western Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Inalco in Paris teaches languages from the licence through to the doctorate\nAbout a hundred languages and civilisations are taught there to over 9,000 students",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -4382,7 +4750,13 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "GA",
@@ -4457,26 +4831,44 @@
   "isNational": false,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Queen's University Belfast runs a BA in modern Irish language and culture\nThe BA exempts graduates from the An Teastas Gaeilge examinations",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Irish",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2027",
+    "note": "Queen's University Belfast, BA Irish, 2027/28 entry; taught mainly through Irish. Other Northern Ireland institutions are not covered by this source"
+   }
+  ],
+  "mediumOfInstruction": "All language teaching and most other modules on the Queen's BA Irish are given in Irish\nStudents take 3-4 hours of Irish language classes a week on the national syllabus",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1
+   ],
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "GB",
@@ -4528,26 +4920,46 @@
   "isNational": false,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Cardiff University runs a BA in Welsh covering the language, its literature and culture\nIts School of Welsh calls the programme a single honours degree\nCardiff welcomes students who studied Welsh as a first or as a second language",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Welsh",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Cardiff University, BA Welsh, single honours; up to 100% available through Welsh. The number of Welsh institutions offering it is not stated in the source"
+   }
+  ],
+  "mediumOfInstruction": "Up to 100% of Cardiff's BA in Welsh is available through the medium of Welsh\nThe Coleg Cymraeg's 2017 plan counted over 900 degree courses with a Welsh-medium part\nThe Coleg awards no degrees itself; it works through the existing Welsh universities",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    4,
+    4
+   ],
+   "mediumOfInstruction": [
+    1,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "GD",
@@ -4644,26 +5056,127 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Ghana's Modern Languages department runs six single-language BA programmes\nThey are BA Arabic, BA Chinese, BA Russian, BA Spanish, BA Swahili and BA Translation\nA Bachelor of Arts in French sits in its own department, created in August 2011\nTwo more undergraduate programmes run in the same university's Department of Linguistics\nOne is BA Ghanaian Language Studies, taught only at Levels 300 and 400",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Arabic",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon, Department of Modern Languages; one named university, not a national count"
+   },
+   {
+    "language": "Chinese",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon, Department of Modern Languages; one named university, not a national count"
+   },
+   {
+    "language": "Russian",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon, Department of Modern Languages; one named university, not a national count"
+   },
+   {
+    "language": "Spanish",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon, Department of Modern Languages; one named university, not a national count"
+   },
+   {
+    "language": "Swahili",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon, Department of Modern Languages; one named university, not a national count"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon, Department of French, separated out in August 2011; MA and MPhil also run"
+   },
+   {
+    "language": "Akan",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon; within BA Ghanaian Language Studies, named as a course example"
+   },
+   {
+    "language": "Dagaare",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon; within BA Ghanaian Language Studies, named as a course example"
+   },
+   {
+    "language": "Dagbani",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon; within BA Ghanaian Language Studies, named as a course example"
+   },
+   {
+    "language": "Dangme",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon; within BA Ghanaian Language Studies, named as a course example"
+   },
+   {
+    "language": "Ewe",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon; within BA Ghanaian Language Studies, named as a course example"
+   },
+   {
+    "language": "Ga",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon; within BA Ghanaian Language Studies, named as a course example"
+   },
+   {
+    "language": "Gurene",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Ghana, Legon; handbook spells it Guren; within BA Ghanaian Language Studies"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "GI",
@@ -4671,26 +5184,47 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Southern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Gibraltar Language Centre designs English and Spanish courses\nIts teaching follows the Common European Framework, from level A2 to C2",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "English",
+    "level": "certificate",
+    "institutions": "",
+    "year": "2026",
+    "note": "University of Gibraltar Language Centre short courses carrying a Certificate of Completion, CEFR A2-C2; not a degree"
+   },
+   {
+    "language": "Spanish",
+    "level": "certificate",
+    "institutions": "",
+    "year": "2026",
+    "note": "University of Gibraltar Language Centre, General Spanish and business Spanish short courses; not a degree"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GL",
@@ -5214,26 +5748,43 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Galway's BA Cumarsaid agus Gaeilge is a four-year degree in media and Irish\nThird year opens with a semester at the Gaeltacht campus in An Cheathru Rua",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Irish",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "University of Galway, BA (Cumarsáid agus Gaeilge), four years, taught entirely through Irish, with a Gaeltacht semester at An Cheathrú Rua"
+   }
+  ],
+  "mediumOfInstruction": "The Galway BA in Cumarsaid agus Gaeilge is taught entirely through Irish",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    4
+   ],
+   "mediumOfInstruction": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "IL",
@@ -6597,26 +7148,43 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Iceland runs a BA in Icelandic as a second language\nIt covers the language, literature and culture of Iceland",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Icelandic",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "University of Iceland, BA in Icelandic as a second language, three years / 180 ECTS; entry by an Icelandic examination at CEFR A2+"
+   }
+  ],
+  "mediumOfInstruction": "The BA is meant to equip students for further programmes taught in Icelandic",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ],
+   "mediumOfInstruction": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "IT",
@@ -7345,26 +7913,48 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Southern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The languages named at the National University of Lesotho are African, English and French\nThey sit among seven academic departments and one unit in the Faculty of Humanities\nThe faculty's degrees are taken as a single or a double major",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "English",
+    "level": "degree",
+    "institutions": "",
+    "year": "",
+    "note": "National University of Lesotho, Department of English Language and Literature; single or double major, no year stated on the page"
+   },
+   {
+    "language": "French",
+    "level": "degree",
+    "institutions": "",
+    "year": "",
+    "note": "National University of Lesotho, Department of French; single or double major, no year stated on the page"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "LT",
@@ -7372,26 +7962,47 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Vilnius University runs a Lithuanian philology bachelor joining language and literature\nStudents there can branch into Lithuanian Sign Language and sign studies",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Lithuanian",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Vilnius University, Lietuvių filologija bachelor at the Faculty of Philology"
+   },
+   {
+    "language": "Lithuanian Sign Language",
+    "level": "module",
+    "institutions": "",
+    "year": "2026",
+    "note": "Vilnius University, offered as an optional strand inside the Lietuvių filologija bachelor, not a degree of its own"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "LU",
@@ -7426,26 +8037,34 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Higher education study programmes are delivered in the state language\nPart may run in another EU official language, but not state exams or theses\nForeign students staying over six months must take state-language courses\nA whole programme may be foreign-language where it studies that language and its culture",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "LY",
@@ -7597,26 +8216,49 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "English is a licence subject at the University of Antananarivo's faculty of letters\nIts three tracks are English teaching, English for work, and English with Japanese\n132 students were enrolled and 114 took the licence in the year to May 2026\nOpenings for graduates of the stream are described as varied",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Universite d'Antananarivo, Faculte des lettres et des sciences humaines, departement d'Etudes anglophones; 114 licences awarded"
+   },
+   {
+    "language": "Japanese",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Universite d'Antananarivo; taught only as the English-with-Japanese track, not as a standalone degree in this source"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "MH",
@@ -7886,26 +8528,98 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Mauritius runs a four-year full-time BA (Hons)/MA in English Studies\nIts French degree has two specialisms, Creole Studies and Translation Studies\nCreole Studies students take modules on linguistic and literary analysis of Creole\nGraduates of that stream must show high proficiency in written and oral Mauritian Creole",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2017",
+    "note": "University of Mauritius, Department of English Studies; four-year combined BA (Hons)/MA English Studies, SH 537"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2019",
+    "note": "University of Mauritius; BA (Hons) French and Creole Studies / BA (Hons) French with Translation Studies, SH 321 C"
+   },
+   {
+    "language": "Mauritian Creole",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2019",
+    "note": "University of Mauritius; Creole Studies stream of BA (Hons) French and Creole Studies, locally Kreol Morisien"
+   },
+   {
+    "language": "Hindi",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2012",
+    "note": "University of Mauritius with the Mahatma Gandhi Institute, code GI300, 3 years full-time, 2012/2013 list"
+   },
+   {
+    "language": "Urdu",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2012",
+    "note": "University of Mauritius with the Mahatma Gandhi Institute, code GI306, 3 years full-time, 2012/2013 list"
+   },
+   {
+    "language": "Marathi",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2012",
+    "note": "University of Mauritius with the Mahatma Gandhi Institute, code GI307, 3 years full-time, 2012/2013 list"
+   },
+   {
+    "language": "Tamil",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2012",
+    "note": "University of Mauritius with the Mahatma Gandhi Institute, code GI308, 3 years full-time, 2012/2013 list"
+   },
+   {
+    "language": "Telugu",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2012",
+    "note": "University of Mauritius with the Mahatma Gandhi Institute, code GI309, 3 years full-time, 2012/2013 list"
+   },
+   {
+    "language": "Chinese",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2012",
+    "note": "University of Mauritius with the Mahatma Gandhi Institute, GI325 BA (Hons) Modern Chinese, part-time top-up for diploma holders"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "MV",
@@ -8046,26 +8760,57 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Eduardo Mondlane runs licenciaturas in language teaching, translation and Mozambican literature\nIts variants cover Portuguese, English and French with their matching translation pairs\nA further variant teaches Bantu languages and Bantu-to-Portuguese translation\nUniversidade Pedagogica de Maputo runs a licenciatura in teaching French as a foreign language\nEntry needs command of Portuguese and of the language of the variant chosen",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Portuguese",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "Universidade Eduardo Mondlane; Ensino de Portugues variant of the language-teaching licenciatura, 4 years, 240 credits; page carries no date"
+   },
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "Universidade Eduardo Mondlane variant; also Licenciatura em Ensino de Lingua Inglesa at Universidade Pedagogica de Maputo"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "Universidade Eduardo Mondlane variant; also Licenciatura em Ensino de Frances at Universidade Pedagogica de Maputo"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "NA",
@@ -8208,26 +8953,45 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Western Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Groningen runs a bachelor in Frisian language and culture, full time or part time\nIt is the only university in the Netherlands where Frisian can be studied\nIn 2024 the minister put 340,000 euros a year into Frisian at university level",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Frisian",
+    "level": "bachelor",
+    "institutions": "1",
+    "year": "2026",
+    "note": "Rijksuniversiteit Groningen, BA Friese taal en cultuur, 180 EC over 36 months; the only Dutch university where Frisian can be studied"
+   }
+  ],
+  "mediumOfInstruction": "Teaching is given and examinations taken in Dutch under the higher education act\nAnother language may be used where the programme concerns that language",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    3,
+    3
+   ],
+   "mediumOfInstruction": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "NO",
@@ -8595,26 +9359,40 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Central Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Gdansk's etnofilologia kaszubska centres on fluent spoken and written Kashubian\nIt is a first-cycle licencjat, from which graduates go on to second-cycle study",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Kashubian",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "University of Gdańsk, etnofilologia kaszubska, first-cycle licencjat; first students entered in 2013/2014. The source page carries no year for the current offer"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "PR",
@@ -8825,26 +9603,69 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Southeast Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Romanian",
+    "level": "bachelor",
+    "institutions": "1",
+    "year": "2026",
+    "note": "Babeș-Bolyai University Cluj-Napoca: 158 of its 248 bachelor programmes are taught in Romanian. This is a medium of instruction, not a Romanian-language degree count"
+   },
+   {
+    "language": "Hungarian",
+    "level": "bachelor",
+    "institutions": "1",
+    "year": "2026",
+    "note": "Babeș-Bolyai University Cluj-Napoca: 66 of its 248 bachelor programmes are taught in Hungarian, organised through the Hungarian Study Line"
+   },
+   {
+    "language": "German",
+    "level": "bachelor",
+    "institutions": "1",
+    "year": "2026",
+    "note": "Babeș-Bolyai University Cluj-Napoca: 8+1 of its 248 bachelor programmes are taught in German"
+   },
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institutions": "1",
+    "year": "2026",
+    "note": "Babeș-Bolyai University Cluj-Napoca: 15 of its 248 bachelor programmes are taught in English"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institutions": "1",
+    "year": "2026",
+    "note": "Babeș-Bolyai University Cluj-Napoca: one of its 248 bachelor programmes is taught in French"
+   }
+  ],
+  "mediumOfInstruction": "Of 248 bachelor programmes 158 are Romanian, 66 Hungarian, 8+1 German, 15 English, 1 French\nBabes-Bolyai in Cluj offers 248 bachelor programmes and 264 master programmes\nA standing Hungarian Study Line organises the university work carried on in Hungarian",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "RS",
@@ -9162,26 +9983,42 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Central Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Ljubljana runs a second-cycle master's programme in Slovene Studies",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Slovene",
+    "level": "master",
+    "institutions": "",
+    "year": "2026",
+    "note": "University of Ljubljana, second-cycle Slovenistika; admission requires a certificate of Slovene at CEFR B2"
+   }
+  ],
+  "mediumOfInstruction": "Applicants to that master's must certify Slovene at CEFR level B2",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1
+   ],
+   "mediumOfInstruction": [
+    2
+   ]
+  }
  },
  {
   "countryCode": "SK",
@@ -10089,26 +10926,78 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Ugandan languages are degree subjects at Makerere, undergraduate and postgraduate\nMakerere lists Luganda, Kiswahili, Luo, Runyakitara, Ateso and Lusoga\nLuganda began in 1976, with Runyakitara and Luo added in the 1990s\nLusoga was added in 2024 and launched at Makerere in February 2026\nLuganda is combined with two other subjects for a BA, one other for a BA in Education",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Luganda",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Makerere University, Department of African Languages; BA (Arts) and BA (Education), introduced 1976"
+   },
+   {
+    "language": "Swahili",
+    "level": "degree",
+    "institutions": "",
+    "year": "2026",
+    "note": "Makerere University, Department of African Languages; listed locally as Kiswahili"
+   },
+   {
+    "language": "Runyakitara",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "2026",
+    "note": "Makerere University; cluster of Runyoro, Rutooro, Runyankore and Rukiga, added in the 1990s"
+   },
+   {
+    "language": "Luo",
+    "level": "degree",
+    "institutions": "",
+    "year": "2026",
+    "note": "Makerere University; Lwo family (Acholi, Lango, Dhopadhola, Alur, Kumam), added in the 1990s"
+   },
+   {
+    "language": "Lusoga",
+    "level": "degree",
+    "institutions": "",
+    "year": "2026",
+    "note": "Makerere University; included 2024, formally launched February 2026"
+   },
+   {
+    "language": "Ateso",
+    "level": "degree",
+    "institutions": "",
+    "year": "2026",
+    "note": "Makerere University; in the curriculum, with a launch still described as forthcoming in 2026"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
