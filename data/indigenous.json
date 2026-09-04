@@ -8375,7 +8375,24 @@
    }
   ],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [
+   {
+    "name": "Irish",
+    "wals": "iri",
+    "iso": "gle",
+    "family": "Indo-European",
+    "genus": "Celtic",
+    "typology": "Word order VSO; Noun-Adjective; Equal prefixing and suffixing"
+   },
+   {
+    "name": "Ulster Scots",
+    "wals": "",
+    "iso": "",
+    "family": "",
+    "genus": "",
+    "typology": ""
+   }
+  ]
  },
  {
   "countryCode": "GB",
