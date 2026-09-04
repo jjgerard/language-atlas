@@ -5273,6 +5273,10 @@
    {
     "label": "PISA 2022 National Report for Northern Ireland, Department of Education NI, 5 December 2023 — section 6.4.4 immigrant background and language",
     "url": "https://www.education-ni.gov.uk/sites/default/files/publications/education/PISA%202022%20Northern%20Ireland%20National%20Report.pdf"
+   },
+   {
+    "label": "Annual enrolments at schools and in funded pre-school education in Northern Ireland 2024/25, Department of Education NI - Table 6b, newcomer pupils by school type 2019/20 to 2024/25",
+    "url": "https://datavis.nisra.gov.uk/DEstatistics/annual-enrolments-schools-and-funded-pre-school-education-northern-ireland-202425.html"
    }
   ],
   "supportLinks": [],
@@ -5285,12 +5289,37 @@
   "removalCriteria": "3 years after Newcomer designation",
   "newcomerProportion": [
    {
-    "year": "2025",
-    "value": "5",
-    "note": "% of school population (approx.)"
+    "year": "2019/20",
+    "value": "5.0",
+    "note": "17,391 newcomer pupils, all school types (DE NI Table 6b)"
+   },
+   {
+    "year": "2020/21",
+    "value": "5.0",
+    "note": "17,664 pupils"
+   },
+   {
+    "year": "2021/22",
+    "value": "5.2",
+    "note": "18,356 pupils"
+   },
+   {
+    "year": "2022/23",
+    "value": "5.5",
+    "note": "19,471 pupils"
+   },
+   {
+    "year": "2023/24",
+    "value": "5.9",
+    "note": "20,987 pupils"
+   },
+   {
+    "year": "2024/25",
+    "value": "6.0",
+    "note": "21,352 pupils; primary 8.7%, secondary non-grammar 4.8%, grammar 1.0% - the single figure hides a wide split by school type"
    }
   ],
-  "achievementGap": "PISA 2022 reading, from Northern Ireland's own national report, not the UK figure\nFirst-generation immigrant pupils scored 449 against 492 for non-immigrant pupils\nSecond-generation immigrant pupils scored 492, the same as non-immigrant pupils\n11% of pupils had an immigrant background in 2022, against 10% in 2018",
+  "achievementGap": "PISA 2022 reading, from Northern Ireland's own national report, not the UK figure\nMeasured on 15-year-olds only, so it says nothing about primary, where most Newcomers are\nFirst-generation immigrant pupils scored 449 against 492 for non-immigrant pupils\nSecond-generation immigrant pupils scored 492, the same as non-immigrant pupils",
   "l2Support": "Funding per Newcomer",
   "l1Support": "The retrieved page is a service landing page and describes no home-language teaching\nSupport is organised centrally by the Education Authority rather than school by school\nThe service is the Intercultural Education Service",
   "l3Support": "",
@@ -5312,9 +5341,9 @@
   "slots": {
    "achievementGap": [
     1,
+    1,
     2,
-    3,
-    4
+    3
    ]
   }
  },
