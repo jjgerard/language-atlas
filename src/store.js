@@ -70,7 +70,7 @@ const parse = (s, fallback) => { try { return JSON.parse(s); } catch { return fa
 // A `url` on a typed row becomes a link in the panel, so it is held to the
 // same standard as docLinks: http(s) or dropped. A row is never discarded for
 // a bad url -- the offering is still true without a link to it.
-const URL_OK = /^https?:///i;
+const URL_OK = /^https?:\/\//i;
 
 function records(value, maxItems, keys) {
   if (!Array.isArray(value)) return [];
@@ -108,6 +108,29 @@ const SHAPES = {
   // what makes any of it comparable: an offering count with no date cannot be
   // set against a school-level one.
   offering: ['language', 'level', 'institution', 'url', 'institutions', 'year', 'note'],
+  // A degree programme in a SUBJECT rather than a language, which is what
+  // `he.linguistics` is a list of.
+  //
+  // It was prose, and prose could not answer the questions actually being
+  // asked of it. "Which institutions teach linguistics, with links, and how
+  // many offer it at undergraduate level" is a count and a set of links; a
+  // text field can hold neither, and what it held instead was sentences like
+  // "Linguistics at U of M is the study of how human language is structured,
+  // acquired and used" -- a definition of the discipline, true of everywhere,
+  // filed under one place.
+  //
+  // It is deliberately NOT the `offering` shape, though the two are near
+  // twins. Offerings are keyed by `language`, and that key feeds the
+  // language-centred index: click a language, see every institution teaching
+  // it. Filing linguistics there would put "Linguistics" and "Applied
+  // Linguistics" in that index as though they were languages.
+  //
+  // `orientation` is the one field here with no analogue in `offering`:
+  // whether a programme leans generative or usage-based. It is often not
+  // stated, and stays blank when it is not -- it is a fact about a
+  // department's own account of itself, never an inference from a reading
+  // list or a staff page.
+  programme: ['subject', 'level', 'institution', 'url', 'institutions', 'orientation', 'year', 'note'],
 };
 
 const NOT_ESTABLISHED_RE = /^Not established from the sources consulted/i;
@@ -194,7 +217,7 @@ function notEstablishedFor(domain, body, fields) {
 //
 // Every cell is still capped at 500 characters by records(), so the worst
 // case a submission can post stays bounded.
-const MAX_ROWS = { series: 500, languages: 500, offering: 200, history: 100 };
+const MAX_ROWS = { series: 500, languages: 500, offering: 200, programme: 200, history: 100 };
 
 /** Pull the domain's declared fields out of a submitted body, typed and capped. */
 function fieldsFor(domain, body) {

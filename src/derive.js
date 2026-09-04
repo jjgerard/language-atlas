@@ -43,6 +43,16 @@ function asText(v) {
         // An offering row has no `name`, and without its own branch it fell
         // through to the series one and flattened to "2021 — the note",
         // dropping the language and the level, which are the whole point of it.
+        // A programme row is an offering keyed by SUBJECT rather than by
+        // language, and needs its own branch for the same reason offerings did:
+        // without one it falls through to the series branch and flattens to
+        // "2024 — the note", dropping the institution and the level, which are
+        // the whole point.
+        if (r.subject) {
+          const count = r.institutions ? r.institutions + ' institutions' : '';
+          return [r.subject, r.level, r.institution, count, r.orientation, r.year, r.note]
+            .filter(Boolean).join(' — ');
+        }
         if (r.language) {
           // `institution` names one; `institutions` is a total the source
           // stated without naming them. Both can be present, and a row may
@@ -125,7 +135,7 @@ function deriveUnits(domain, entries, sharedMatcher) {
     // a language row has to keep its WALS code to be linkable at all.
     const records = {};
     for (const [k, , type] of domain.fields) {
-      if ((type === 'languages' || type === 'offering') && Array.isArray(e[k])) records[k] = e[k];
+      if ((type === 'languages' || type === 'offering' || type === 'programme') && Array.isArray(e[k])) records[k] = e[k];
       const t = asText(e[k]).trim();
       if (t) values[k] = t;
       // An empty typed field flagged not-established shows its sentinel text

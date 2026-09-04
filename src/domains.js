@@ -122,7 +122,15 @@ const DOMAINS = [
     live: true,
     fields: [
       ['degreeSubjects', 'Languages as a degree', 'text', 'In this order, omitting any you cannot answer: whether a language can be taken as a degree in its own right · which languages · at how many institutions, and when that was counted · whether single honours or only combined with something else.'],
-      ['linguistics', 'Linguistics', 'text', 'In this order, omitting any you cannot answer: whether linguistics is a degree subject in its own right · at what level, bachelor, master or doctorate · where it sits, its own department or inside languages or education · whether it exists only as modules within another degree.'],
+      // Prose here answered the wrong question. Asked "whether linguistics is a
+      // degree subject in its own right", drafters wrote sentences like
+      // "Linguistics at U of M is the study of how human language is
+      // structured, acquired and used" — a definition of the discipline, true
+      // everywhere, filed under one place. What a reader wants is which
+      // institutions run a linguistics degree, a link to each, how many there
+      // are, and — where a department says so itself — which way it leans.
+      // None of that is expressible as a paragraph, so this is rows.
+      ['linguistics', 'Linguistics', 'programme', 'One row per programme PER INSTITUTION where the institution is known: its name, a url to the programme page, and the level it reaches — bachelor, master or doctorate. Where a source gives only a total, one row with `institutions` set and `institution` blank is right. `orientation` records whether the programme describes itself as generative or usage-based, and stays blank unless the department says so in its own words — never inferred from a reading list or a staff page. Never estimate a count.'],
       ['offerings', 'What is offered where', 'offering', 'One row per language PER INSTITUTION where the institution is known: its name, a url to the programme, and the level it reaches. Where a source gives only a total, one row with `institutions` set and `institution` blank is right. This is the field the trends page reads and the one that answers which institutions teach a language, so a row with no year is worth less than no row. Never estimate a count.'],
       ['mediumOfInstruction', 'Language of instruction', 'text', 'In this order, omitting any you cannot answer: which language degrees are taught in · whether another is permitted and on what condition · in which subjects or institutions · whether this is a rule or observed practice.'],
       ['requiredStudy', 'Compulsory language study', 'text', 'In this order, omitting any you cannot answer: whether every student must study a language whatever their degree · which language · how much of it · who may exempt a student.'],

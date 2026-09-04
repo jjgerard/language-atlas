@@ -298,7 +298,19 @@ function quoteOn(quote, page) {
           const declared = (String(r.type || "").match(/charset=\s*\"?([\w-]+)/i) || [])[1]
             || (utf8.slice(0, 4096).match(/charset=\s*\"?([\w-]+)/i) || [])[1]
             || (r.raw.subarray(0, 2048).toString("latin1").match(/charset=\s*\"?([\w-]+)/i) || [])[1];
-          const legacy = /^(gb ?2312|gbk|gb18030|big ?5|shift[-_]?jis|sjis|euc[-_]?(jp|kr)|ks_c_5601[-\w]*)$/i;
+          // The SINGLE-BYTE legacy encodings belong here for the same reason,
+          // and were the third time this gate was bitten by an encoding.
+          // Resmî Gazete serves windows-1254; latin-1 covers ISO-8859-1 only,
+          // and 1254 differs from it in precisely the Turkish letters -- ğ, İ,
+          // ı, ş -- so a quote containing any of them read as absent from a
+          // page it was plainly on. A drafter's correct quote reported as
+          // fabricated is the worst failure this tool has, because the whole
+          // point of it is to tell those two apart.
+          //
+          // Same class: windows-1251 and koi8 for Cyrillic, 1253 for Greek,
+          // 1250 for Central European, 1256 for Arabic, 1255 for Hebrew,
+          // tis-620/windows-874 for Thai, and the ISO-8859 family behind them.
+          const legacy = /^(gb ?2312|gbk|gb18030|big ?5|shift[-_]?jis|sjis|euc[-_]?(jp|kr)|ks_c_5601[-\w]*|windows-125[0-8]|cp125[0-8]|windows-874|cp874|tis-?620|koi8-[ru]|iso-?8859-([2-9]|1[0-6]))$/i;
           if (declared && legacy.test(declared.trim())) {
             // gb18030 is a strict superset of gb2312 and gbk, so it decodes
             // all three and never fails on the narrower ones.

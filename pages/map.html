@@ -295,6 +295,19 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
 .langs .lcls { font-size: 11.5px; color: var(--ink-soft); }
 .langs .ltyp { font-size: 11.5px; color: var(--ink-soft); }
 .langs .lids { font-size: 10.5px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+/* Offering and programme rows. Same visual grammar as .langs -- the head of
+   the row reads as the name, everything under it as its detail -- because a
+   reader moving between "The languages" and "Linguistics" on one panel should
+   not have to learn two layouts. The institution is the link. */
+.offs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+.offs li { display: flex; flex-direction: column; gap: 1px; }
+.offs .oname { font-size: 13px; font-weight: 500; }
+.offs .oinst { font-size: 12px; }
+.offs .oinst a { color: inherit; text-decoration: underline; text-decoration-style: dotted;
+  text-underline-offset: 2px; text-decoration-color: var(--focus); }
+.offs .oinst a:hover { color: var(--focus); text-decoration-style: solid; }
+.offs .ometa { font-size: 11px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.offs .onote { font-size: 11.5px; color: var(--ink-soft); }
 
 .hist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
 .hist li { display: grid; grid-template-columns: 58px 1fr; gap: 11px; align-items: start; }
@@ -1512,6 +1525,36 @@ function languagesHTML(rows) {
   }).join('') + `</ul>`;
 }
 
+// Offering and programme rows: "which institutions, and take me to one".
+//
+// Both shapes carry a `url` to the programme page and NEITHER was rendering
+// it. The rows reached the panel through asText(), which flattens a row to a
+// dash-joined line and drops `url` on the floor — so every one of those links
+// was collected, gated, stored, and then shown to nobody.
+//
+// The head of each row is what the row is ABOUT: the language for an offering,
+// the subject for a programme. The institution is the link, because that is
+// the thing a reader wants to reach. A row with no institution but a count is
+// a legitimate row -- a source that says "twelve universities" without naming
+// them -- and renders as the count.
+function rowsHTML(rows, headKey) {
+  return `<ul class="offs">` + (rows || []).map(r => {
+    const head = esc(r[headKey] || '');
+    const inst = r.institution
+      ? (r.url
+          ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.institution)}</a>`
+          : esc(r.institution))
+      : (r.institutions ? `${esc(r.institutions)} institutions` : '');
+    const meta = [r.level, r.orientation, r.year].filter(Boolean).map(esc).join(' · ');
+    return `<li>
+      ${head ? `<span class="oname">${head}</span>` : ''}
+      ${inst ? `<span class="oinst">${inst}</span>` : ''}
+      ${meta ? `<span class="ometa">${meta}</span>` : ''}
+      ${r.note ? `<span class="onote">${esc(r.note)}</span>` : ''}
+    </li>`;
+  }).join('') + `</ul>`;
+}
+
 function linkList(links) {
   return links.map(l =>
     `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label || l.url)}</a>`
@@ -1551,8 +1594,14 @@ function panelHTML(u, via) {
     const c = u.fieldStates[i];
     const isHist = f.k === 'policyHistory';
     const isLangs = f.type === 'languages';
-    if (c === 'h') return block('on', f.label,
-      isHist ? historyHTML(u.history, u) : isLangs ? languagesHTML(u.records[f.k]) : prose(u.values[f.k], u));
+    // `offering` is keyed by language, `programme` by subject; the renderer is
+    // the same and only the head of the row differs.
+    const rowKey = f.type === 'offering' ? 'language' : f.type === 'programme' ? 'subject' : null;
+    const renderOwn = () => isHist ? historyHTML(u.history, u)
+      : isLangs ? languagesHTML(u.records[f.k])
+      : rowKey ? rowsHTML(u.records[f.k], rowKey)
+      : prose(u.values[f.k], u);
+    if (c === 'h') return block('on', f.label, renderOwn());
     // "Not established from the sources consulted…" is a sentence explaining an
     // absence, not a list of facts, so it stays a paragraph even where the
     // domain's documented fields are bulleted.
@@ -1564,13 +1613,14 @@ function panelHTML(u, via) {
     // thing the field is careful not to say.
     if (c === 'x') return block('na', f.label, `<p>${linkCitations(esc(u.values[f.k]), u)}</p>`);
     const inheritable = par && (isHist ? (par.history || []).length
-      : isLangs ? (par.records[f.k] || []).length
+      : (isLangs || rowKey) ? (par.records[f.k] || []).length
       : par.values[f.k]);
     if (inheritable) {
       nInherited++;
       return block('inh', f.label,
         isHist ? historyHTML(par.history, par)
           : isLangs ? languagesHTML(par.records[f.k])
+          : rowKey ? rowsHTML(par.records[f.k], rowKey)
           : prose(par.values[f.k], par), par.name);
     }
     return block('empty', f.label, '<p>Not recorded.</p>');
