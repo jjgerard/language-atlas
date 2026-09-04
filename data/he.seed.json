@@ -142,26 +142,34 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Southeast Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Study programmes are normally offered in the Albanian language\nA programme may also run in an official EU language if approved when it opens\nJoint programmes offered with foreign higher education institutions are exempt\nSo are programmes whose object is the teaching of foreign languages",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "AM",
@@ -3711,26 +3719,64 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Western Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Sorbian studies is taken as a degree in its own right at the University of Leipzig\nLeipzig's Sorabistik institute runs two BA and two MA courses plus Sorbian teacher training",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Upper Sorbian",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "Universität Leipzig, Institut für Sorabistik; local name Obersorbisch; the institute lists two BA courses, one named university rather than a Germany-wide count"
+   },
+   {
+    "language": "Lower Sorbian",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "Universität Leipzig, Institut für Sorabistik; local name Niedersorbisch; language training there is in Upper and/or Lower Sorbian"
+   },
+   {
+    "language": "Upper Sorbian",
+    "level": "master",
+    "institutions": "",
+    "year": "",
+    "note": "Universität Leipzig, Institut für Sorabistik, which lists two master's courses"
+   },
+   {
+    "language": "Lower Sorbian",
+    "level": "master",
+    "institutions": "",
+    "year": "",
+    "note": "Universität Leipzig, Institut für Sorabistik, which lists two master's courses"
+   }
+  ],
+  "mediumOfInstruction": "Language training at Leipzig's Sorabistik institute is predominantly in Upper or Lower Sorbian",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    3
+   ],
+   "mediumOfInstruction": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "DJ",
@@ -3915,26 +3961,93 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Estonian and Finno-Ugric Languages is a degree in its own right at the University of Tartu\nCourses run in Finnish, Hungarian, Komi, Livonian, Erzya, Saami varieties and Kamas\nIt is a two-year master's with a specialisation in either Estonian or Finno-Ugric languages",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Estonian",
+    "level": "master",
+    "institutions": "",
+    "year": "2026",
+    "note": "University of Tartu, Estonian and Finno-Ugric Languages MA, curriculum version 2026/2027; one named university, not an Estonia-wide count"
+   },
+   {
+    "language": "Finnish",
+    "level": "module",
+    "institutions": "",
+    "year": "2026",
+    "note": "Course within the Finno-Ugric Languages module of the Tartu MA, 2026/2027 curriculum"
+   },
+   {
+    "language": "Hungarian",
+    "level": "module",
+    "institutions": "",
+    "year": "2026",
+    "note": "Course within the Finno-Ugric Languages module of the Tartu MA, 2026/2027 curriculum"
+   },
+   {
+    "language": "Komi",
+    "level": "module",
+    "institutions": "",
+    "year": "2026",
+    "note": "Course within the Finno-Ugric Languages module of the Tartu MA, 2026/2027 curriculum"
+   },
+   {
+    "language": "Livonian",
+    "level": "module",
+    "institutions": "",
+    "year": "2026",
+    "note": "Course within the Finno-Ugric Languages module of the Tartu MA, 2026/2027 curriculum"
+   },
+   {
+    "language": "Erzya",
+    "level": "module",
+    "institutions": "",
+    "year": "2026",
+    "note": "Course within the Finno-Ugric Languages module of the Tartu MA, 2026/2027 curriculum"
+   },
+   {
+    "language": "Sami",
+    "level": "module",
+    "institutions": "",
+    "year": "2026",
+    "note": "Tartu MA lists Saami varieties, not one named Sami language; 2026/2027 curriculum"
+   },
+   {
+    "language": "Kamas",
+    "level": "module",
+    "institutions": "",
+    "year": "2026",
+    "note": "Course within the Finno-Ugric Languages module of the Tartu MA, 2026/2027 curriculum"
+   }
+  ],
+  "mediumOfInstruction": "The Tartu master's in Estonian and Finno-Ugric Languages is English-based in its linguistics",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3
+   ],
+   "mediumOfInstruction": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "EG",
@@ -4028,26 +4141,52 @@
   "isNational": false,
   "region": "Europe",
   "subregion": "Southern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The old Catalan Philology licenciatura became a degree in Catalan Philology and Occitan Studies\nOccitan, second official language of Catalonia, is studied alongside Catalan on it\nIt is taught at the Universitat de Lleida, one university rather than all of Catalonia",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Catalan",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "Universitat de Lleida, Facultat de Lletres: Grau en Filologia Catalana i Estudis Occitans; one named university, not a Catalonia-wide count"
+   },
+   {
+    "language": "Occitan",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "Universitat de Lleida, on the same Grau en Filologia Catalana i Estudis Occitans; local name occità, the language of the Val d'Aran"
+   }
+  ],
+  "mediumOfInstruction": "Catalan is the own language of Catalonia's universities and the normal language of activities\nCatalan and Spanish are both official languages of Catalonia's universities",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3
+   ],
+   "mediumOfInstruction": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "ET",
@@ -4172,26 +4311,51 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Faroese language and literature is taken as a degree in its own right\nProgrammes run at both BA and MA level\nThe University of the Faroe Islands calls itself the only institution in the world doing this",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Faroese",
+    "level": "bachelor",
+    "institutions": "1",
+    "year": "",
+    "note": "University of the Faroe Islands, Faculty of Faroese Language and Literature, Tórshavn; the faculty says it is the only institution in the world with these tasks"
+   },
+   {
+    "language": "Faroese",
+    "level": "master",
+    "institutions": "1",
+    "year": "",
+    "note": "University of the Faroe Islands, Faculty of Faroese Language and Literature, Tórshavn"
+   }
+  ],
+  "mediumOfInstruction": "Faroese is the primary language of instruction at the University of the Faroe Islands",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    3,
+    3
+   ],
+   "mediumOfInstruction": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "FR",
@@ -4253,26 +4417,39 @@
   "isNational": false,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Arabic is taken as a degree in its own right, the BA Arabic at SOAS in London",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Arabic",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "SOAS University of London, BA Arabic; one named university, not a count for England as a whole"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "GB",
@@ -4307,26 +4484,43 @@
   "isNational": false,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Scottish Gaelic is taken as a degree in its own right, as BA (Hons) Gaelic\nThe degree is at Sabhal Mòr Ostaig, whose undergraduate courses are all Gaelic-medium",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Scottish Gaelic",
+    "level": "bachelor",
+    "institutions": "",
+    "year": "",
+    "note": "Sabhal Mòr Ostaig (UHI), Isle of Skye: BA (Hons) Gaelic; one college, so not a count for Scotland as a whole"
+   }
+  ],
+  "mediumOfInstruction": "Sabhal Mòr Ostaig teaches its undergraduate degrees entirely through the medium of Gaelic",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    3
+   ],
+   "mediumOfInstruction": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "GB",
@@ -4947,26 +5141,32 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Central Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "The state must ensure Hungarian-language provision exists in every field of training\nA nationality student may study in their mother tongue, in Hungarian, or in both",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "ID",
@@ -6424,26 +6624,32 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Southern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "The Free University of Bozen-Bolzano teaches in Italian, German and English\nAdmission there needs evidence of specific language levels on the CEFR scale",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "JE",
@@ -7634,26 +7840,45 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Southern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Malta's guidelines name a Diploma in Maltese Sign Language Interpreting",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Maltese Sign Language",
+    "level": "diploma",
+    "institutions": "1",
+    "year": "2021",
+    "note": "University of Malta, named in its 2021 Senate-adopted language guidelines as a recently opened postgraduate diploma in interpreting"
+   }
+  ],
+  "mediumOfInstruction": "English is the language of instruction and assessment in some 95% of study-units at UM\nThe strategic plan advocates the primacy of English as the language of instruction\nWith certain well-defined exceptions the language of instruction and assessment is English\nThe guidelines were proposed for discussion and adopted at the University of Malta",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "MU",
@@ -8010,26 +8235,32 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "The language of instruction must be Norwegian or Sami\nInstitutions may make an exception where there is an academic justification for it",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "NP",
@@ -8621,26 +8852,33 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Southeast Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Final, master and doctoral theses may be in a national minority or a foreign language\nA whole study programme may run in a minority or foreign language if it is accredited\nStudies, or parts of them, may be delivered in sign language for disabled students",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    2,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "RU",
@@ -8827,26 +9065,61 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Northern Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Uppsala has courses in Estonian, Finnish, Saami and Hungarian at first and second cycle\nThat is Uppsala's Department of Modern Languages, not a count for Sweden as a whole",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Estonian",
+    "level": "module",
+    "institutions": "",
+    "year": "",
+    "note": "Uppsala University, Department of Modern Languages; courses at first and second cycle level"
+   },
+   {
+    "language": "Finnish",
+    "level": "module",
+    "institutions": "",
+    "year": "",
+    "note": "Uppsala University, Department of Modern Languages; courses at first and second cycle level"
+   },
+   {
+    "language": "Sami",
+    "level": "module",
+    "institutions": "",
+    "year": "",
+    "note": "Uppsala University, Department of Modern Languages, which writes Saami; first and second cycle courses"
+   },
+   {
+    "language": "Hungarian",
+    "level": "module",
+    "institutions": "",
+    "year": "",
+    "note": "Uppsala University, Department of Modern Languages; courses at first and second cycle level"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "SG",
@@ -9797,12 +10070,18 @@
   "degreeSubjects": "Institutions must enable study of a minority language as a subject on request",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Formal education at all levels, higher education included, is guaranteed in the state language\nSubjects may be taught in two or more languages: state language, English, official EU languages",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "UG",

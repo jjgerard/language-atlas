@@ -114,6 +114,26 @@ function apply(domain, spec) {
         if (r && r.wals && !/^[a-z0-9-]{2,20}$/.test(r.wals)) problems.push(`${domain} ${key}/${f}: "${r.wals}" is not a WALS code`);
       });
     }
+    // Offerings are the language-keyed rows: one per language, naming the
+    // institution where that is known and linking the programme. `level` is
+    // checked against a fixed vocabulary because the whole value of the field
+    // is that a certificate is not a bachelor; a free-text level would make
+    // 'is this a degree' unanswerable again.
+    const LEVELS = new Set(['bachelor','master','doctorate','degree','diploma','certificate','minor','module']);
+    for (const [f, arr] of Object.entries(s.offerings || {})) {
+      if (!Object.prototype.hasOwnProperty.call(e, f)) problems.push(`${domain} ${key}: no field ${f}`);
+      if (Array.isArray(e[f]) && e[f].length) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      if (!Array.isArray(arr)) { problems.push(`${domain} ${key}/${f}: offerings must be an array`); continue; }
+      arr.forEach(r => {
+        if (!r || !r.language) { problems.push(`${domain} ${key}/${f}: a row has no language`); return; }
+        if (r.level && !LEVELS.has(String(r.level).toLowerCase()))
+          problems.push(`${domain} ${key}/${f}: "${r.level}" is not a level`);
+        if (r.institutions && !/^[0-9]+$/.test(String(r.institutions)))
+          problems.push(`${domain} ${key}/${f}: institutions "${r.institutions}" is not a count`);
+        if (r.url && !/^https?:[/][/]/i.test(r.url))
+          problems.push(`${domain} ${key}/${f}: url is not http(s)`);
+      });
+    }
 
     const sup = new Set((e.supportLinks || []).map(l => l.url));
     [...(s.docLinks || []), ...(s.addDocLinks || [])]
@@ -153,6 +173,7 @@ function apply(domain, spec) {
     }
     for (const [f, arr] of Object.entries(s.series || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
     for (const [f, arr] of Object.entries(s.languages || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
+    for (const [f, arr] of Object.entries(s.offerings || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
     for (const [f, prose] of Object.entries(s.notEstablished || {})) {
       if (Array.isArray(e[f])) { e.notEstablished = e.notEstablished || {}; e.notEstablished[f] = prose; }
       else e[f] = prose;

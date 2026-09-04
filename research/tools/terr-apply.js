@@ -43,6 +43,7 @@ for (const [key, v] of Object.entries(verified)) {
   const s = { confidence: "official-document" };
   if (v.fields && Object.keys(v.fields).length) s.fields = v.fields;
   if (v.series && Object.keys(v.series).length) s.series = v.series;
+  if (v.offerings && v.offerings.length) s.offerings = { offerings: v.offerings };
   if (v.notEstablished && Object.keys(v.notEstablished).length) s.notEstablished = v.notEstablished;
   // Slot numbers describe PARTICULAR bullets, so they have to be re-aligned to
   // whatever survived the gate. A field drafted with slots [1,2,4] whose middle
@@ -66,7 +67,7 @@ for (const [key, v] of Object.entries(verified)) {
   if (v.sources && v.sources.length) {
     s.addDocLinks = v.sources.map(x => ({ label: x.label, url: x.url }));
   }
-  if (!s.fields && !s.series && !s.notEstablished) continue;
+  if (!s.fields && !s.series && !s.notEstablished && !s.offerings) continue;
   spec[key] = s;
   if (v.history && v.history.length) history[key] = v.history;
 }
