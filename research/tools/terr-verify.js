@@ -412,13 +412,52 @@ function quoteOn(quote, page) {
     }
     keptHist.sort((a, b) => a.year - b.year);
 
+    // `languages` rows go through the gate on the same terms, and were not
+    // handled here at all -- a spec carrying them lost every row, silently,
+    // the same way history rows were lost.
+    //
+    // Evidence is keyed by the language NAME, which is the whole claim: this
+    // system engages with THIS language. A name is exactly the kind of thing
+    // that looks equally plausible whatever the truth is, and the cost of a
+    // wrong one is high, because the point of the typed field is that a reader
+    // can click a language and see everywhere it is taught. One misfiled name
+    // puts a place on a language's page that has nothing to do with it.
+    //
+    // The CODES are not checked here. A quote proves the source names the
+    // language; it does not prove `mri` is the right ISO code for it, and the
+    // drafting brief already says to leave a code blank rather than guess.
+    const keptLangs = {};
+    for (const [field, rows3] of Object.entries(s.languages || {})) {
+      const good = [];
+      for (const r of (rows3 || [])) {
+        const nm = r && String(r.name || "").trim();
+        if (!nm) { dropped.push(field + ": row with no name"); continue; }
+        const e = ev.get(nm);
+        if (!e) { dropped.push(field + ": no evidence entry for " + nm); continue; }
+        const p = page.get(e.url);
+        if (!p || p.status !== 200) { dropped.push(field + ": source returned " + (p ? p.status : "?") + " for " + nm); continue; }
+        if (!p.text) { dropped.push(field + ": no text extracted from the source of " + nm); continue; }
+        if (!quoteOn(e.quote, p.text)) { dropped.push(field + ": quote not found on the page for " + nm); continue; }
+        good.push({
+          name: nm,
+          wals: String(r.wals || ""), iso: String(r.iso || ""),
+          family: String(r.family || ""), genus: String(r.genus || ""),
+          typology: String(r.typology || ""),
+        });
+      }
+      if (good.length) keptLangs[field] = good;
+    }
+
     const ns = Object.values(keptSeries).reduce((a, b) => a + b.length, 0);
     const nb = Object.values(kept).reduce((a, b) => a + b.length, 0);
+    const nl = Object.values(keptLangs).reduce((a, b) => a + b.length, 0);
     const nh = keptHist.length;
-    console.log(NL + key + ": " + Object.keys(kept).length + " fields, " + nb + " bullets, " + ns + " series rows, " + nh + " history rows verified, " + dropped.length + " dropped");
+    console.log(NL + key + ": " + Object.keys(kept).length + " fields, " + nb + " bullets, " + ns + " series rows, " +
+                nh + " history rows, " + nl + " language rows verified, " + dropped.length + " dropped");
     if (nn) console.log("    " + nn + " notEstablished finding" + (nn === 1 ? "" : "s") + " passed through UNGATED (a claim of absence is not quote-checked)");
     dropped.forEach(d => console.log("    - " + d));
-    if (nb || ns || nn || nh) out[key] = { fields: kept, series: keptSeries, notEstablished: notEst, history: keptHist, sources: s.sources || [] };
+    if (nb || ns || nn || nh || nl)
+      out[key] = { fields: kept, series: keptSeries, notEstablished: notEst, history: keptHist, languages: keptLangs, sources: s.sources || [] };
   }
 
   fs.writeFileSync(path.join(specDir, OUT), JSON.stringify(out, null, 1) + NL);

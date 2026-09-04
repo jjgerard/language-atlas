@@ -164,11 +164,43 @@ function notEstablishedFor(domain, body, fields) {
   return out;
 }
 
+// How many rows a typed field may hold. This was a flat 50 for every shape,
+// and 50 is the wrong number for two of them by an order of magnitude.
+//
+// The cap exists to bound what the public submission form can post. It is not
+// a claim about how much a place can legitimately have, and it was silently
+// acting as one: seedIfEmpty() runs every row through sanitize() on boot, so
+// the cap applied to the COMMITTED data too, on every deploy, with nothing
+// logged. Mexico's entry held 68 languages in data/indigenous.json and the
+// live map served 50 of them. Australia's 104 Aboriginal and Torres Strait
+// Islander languages would have lost 54 the moment they were pushed.
+//
+// Two entry-fields, 72 rows. A first count put it at 5,167 rows across the
+// repo, which was wrong and wrong in an instructive way: it measured `.length`
+// on every typed field without checking the field was an ARRAY, and a field
+// holding the prose sentinel "Not established from the sources consulted."
+// answers 396 to that. Every one of the alarming dld.identifiedPrevalence
+// numbers was a character count of that sentence.
+//
+// The numbers below are per shape, each set from what the data can legitimately
+// need rather than from a round number:
+//
+//   languages  "which languages does this system engage with" has a real
+//              answer in the hundreds for Australia, Mexico or Nigeria
+//   series     one row per age band per year, long by nature
+//   history    a policy history is a handful of dated changes; the longest
+//              here is 21
+//   offering   one row per language per level per institution
+//
+// Every cell is still capped at 500 characters by records(), so the worst
+// case a submission can post stays bounded.
+const MAX_ROWS = { series: 500, languages: 500, offering: 200, history: 100 };
+
 /** Pull the domain's declared fields out of a submitted body, typed and capped. */
 function fieldsFor(domain, body) {
   const out = {};
   for (const [k, , type] of domain.fields) {
-    if (SHAPES[type]) out[k] = records(body[k], 50, SHAPES[type]);
+    if (SHAPES[type]) out[k] = records(body[k], MAX_ROWS[type] || 50, SHAPES[type]);
     else out[k] = str(body[k], 4000);
   }
   const ne = notEstablishedFor(domain, body, out);

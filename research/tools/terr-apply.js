@@ -44,6 +44,10 @@ for (const [key, v] of Object.entries(verified)) {
   if (v.fields && Object.keys(v.fields).length) s.fields = v.fields;
   if (v.series && Object.keys(v.series).length) s.series = v.series;
   if (v.offerings && v.offerings.length) s.offerings = { offerings: v.offerings };
+  // The gate emits `languages` keyed by field, the way it emits series, so it
+  // is passed straight to apply.js -- which already knows the shape and clears
+  // any not-established flag the field carried.
+  if (v.languages && Object.keys(v.languages).length) s.languages = v.languages;
   if (v.notEstablished && Object.keys(v.notEstablished).length) s.notEstablished = v.notEstablished;
   // Slot numbers describe PARTICULAR bullets, so they have to be re-aligned to
   // whatever survived the gate. A field drafted with slots [1,2,4] whose middle
@@ -80,7 +84,7 @@ for (const [key, v] of Object.entries(verified)) {
   // and entries elsewhere already carry rows from the Indigenous pass.
   const hasHistory = !!(v.history && v.history.length);
   if (hasHistory) history[key] = v.history;
-  if (!s.fields && !s.series && !s.notEstablished && !s.offerings && !hasHistory) continue;
+  if (!s.fields && !s.series && !s.notEstablished && !s.offerings && !s.languages && !hasHistory) continue;
   spec[key] = s;
 }
 

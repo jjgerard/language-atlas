@@ -299,26 +299,31 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": "",
+  "linguistics": "At UNLP the Licenciatura en Letras has three orientations, one of them Lingüística",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "linguistics": [
+    4
+   ]
+  }
  },
  {
   "countryCode": "AS",
@@ -1831,7 +1836,7 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Libras is a full degree subject: a licenciatura plena in Letras: Libras\nIt runs either alone or combined with Portuguese as a second language",
-  "linguistics": "",
+  "linguistics": "Unicamp's Instituto de Estudos da Linguagem teaches and researches the domains of language\nIEL supplies 8 Linguística disciplines inside another Unicamp degree's curriculum",
   "offerings": [],
   "mediumOfInstruction": "Federal higher education institutions must provide Libras interpreters in the classroom\nThe duty falls on federal institutions of basic and higher education\nIt is set by decree, and staffing duties run to all levels and modalities",
   "requiredStudy": "",
@@ -1846,6 +1851,10 @@
    ],
    "mediumOfInstruction": [
     2,
+    3,
+    4
+   ],
+   "linguistics": [
     3,
     4
    ]
@@ -2356,13 +2365,16 @@
   "mediumOfInstruction": "CCNB is the only public institution offering college-level education in French in the province\nUniversité de Moncton's three campuses serve Francophone and Acadian New Brunswick",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Université de Moncton has trained New Brunswick's francophone teachers since 1973",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
    "mediumOfInstruction": [
     1,
     3
+   ],
+   "teacherPipeline": [
+    1
    ]
   }
  },
@@ -2770,14 +2782,27 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": "",
+  "linguistics": "UQAM's Département de linguistique covers the main fields of the discipline\nProgrammes run at all three cycles: fundamental, experimental and descriptive linguistics\nThe department has its own internationally recognised professoriate\nIt is the only department in Québec offering training in visual interpreting",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "Bill 96 (2022 c.14): every college is classed francophone or anglophone\nEnglish-college DEC students must pass at least three courses given in French\nLanguage-of-instruction, second-language and PE courses do not count toward those three",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "The baccalauréat trains English second-language teaching professionals for primary and secondary\nUQAM's linguistics department assesses the oral competence of future teachers\nPassing the French written test conditions graduation and the brevet d'enseignement",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "linguistics": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -4734,13 +4759,21 @@
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Every programme must set conditions favouring the development of a second language",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2019,
+    "description": "Decreto 1330 requires each higher education programme to foster the development of a second language"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
+    1
+   ],
+   "requiredStudy": [
     1
    ]
   }
@@ -5309,7 +5342,7 @@
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "A second language is a graduation requirement for every third-level carrera\nAncestral languages and sign language may count as that second language\nThird-level grado requires at least level B1\nTécnico requires at least A1 and tecnológico at least A2\nEach IES decides whether to build the second language into the curriculum",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -5318,6 +5351,13 @@
    "degreeSubjects": [
     1,
     2
+   ],
+   "requiredStudy": [
+    1,
+    2,
+    3,
+    3,
+    4
    ]
   }
  },
@@ -6908,12 +6948,12 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Languages can be taken as a licenciatura degree at USAC's linguistics school\nThe USAC school's remit covers national and foreign languages\nIts licenciatura specialises in Spanish-English translation and interpreting",
-  "linguistics": "",
+  "linguistics": "USAC's Escuela de Ciencias Lingüísticas trains professionals in the linguistic sciences\nIts Licenciatura specialises in Spanish-English translation and interpreting",
   "offerings": [],
   "mediumOfInstruction": "Decreto 19-2003 binds the national education system, public and private, on language use\nThe languages it names are Mayan, Garífuna and Xinka, per each linguistic community\nThis is a statutory duty on the education system, not a university-specific rule",
   "requiredStudy": "",
   "entryRequirements": "The Ciclo Basico English CNB was written with the English Department of Universidad del Valle\nNo university language entry requirement was located",
-  "teacherPipeline": "",
+  "teacherPipeline": "USAC's EFPEM offers profesorados and licenciaturas in teaching different areas of knowledge",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -6926,6 +6966,13 @@
     2,
     2,
     4
+   ],
+   "linguistics": [
+    1,
+    2
+   ],
+   "teacherPipeline": [
+    1
    ]
   }
  },
@@ -8883,16 +8930,30 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "UWI Mona's DLLP offers a range of majors in Linguistics\nCaribbean Sign Language interpreting is offered there as a diploma, not a degree",
-  "linguistics": "",
+  "linguistics": "UWI Mona runs programmes in linguistics at both undergraduate and graduate levels\nThe MPhil in Linguistics is for students wanting a Master's in the discipline\nThe MPhil is the main entry point to the PhD in Linguistics for first-degree linguists",
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
-  "teacherPipeline": "",
+  "entryRequirements": "English Language is compulsory for admission to all programmes of UWI\nFive CSEC or GCE O'Level passes must include English Language\nApplicants without the qualification take an English Language Proficiency Test on entry",
+  "teacherPipeline": "The Joint Board of Teacher Education at Mona has assured teacher education since 1965\nJBTE has contributed significantly to developing the colleges that train teachers",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
    "degreeSubjects": [
+    1,
+    2
+   ],
+   "linguistics": [
+    1,
+    2,
+    2
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    3
+   ],
+   "teacherPipeline": [
     1,
     2
    ]
@@ -11125,15 +11186,15 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Central America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -11142,9 +11203,15 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "UNAN-Managua's inglés carrera takes the teaching and learning of English as its object\nIts Francés carrera does the same for French as a foreign language",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    1
+   ]
+  }
  },
  {
   "countryCode": "NL",
@@ -12771,7 +12838,7 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "IOL has been officially an hbo programme since 2020, making students classroom-ready\nIts programmes cover Nederlands and Spaans alongside geography, history and the sciences\nPG-extern is for people with expertise gained outside IOL who want to learn to teach it",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -12779,6 +12846,11 @@
     1,
     2,
     2
+   ],
+   "teacherPipeline": [
+    1,
+    3,
+    3
    ]
   }
  },
@@ -14133,15 +14205,15 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -14149,10 +14221,17 @@
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "Two years of the same language other than English are required for UC entry\nASL, classical languages such as Latin and Greek, and Native American languages all count\nTwo years means through the second level of high school instruction",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "entryRequirements": [
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -15080,26 +15159,33 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "SUNY students must complete a minimum of three of six knowledge and skills areas\nWorld Languages sits among those six areas, beside US History and World History\nA World Languages course asks for basic proficiency in understanding and using the language",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "requiredStudy": [
+    1,
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -15819,15 +15905,15 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -15836,9 +15922,17 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Teacher training runs through the Community College's Division of Teacher Education\nAdjunct staff there teach Foreign Language among other disciplines\nAll full-time programmes last two years and reward an Associate Degree in Education\nUWI has accepted that Associate Degree in Education since 2005",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "VE",
