@@ -95,11 +95,24 @@ for (const e of rows) {
       let m;
       RUN.lastIndex = 0;
       while ((m = RUN.exec(line))) {
-        const phrase = m[1];
+        // Trailing quotes ride along from the surrounding prose: Northern
+        // Ireland's "Ulster Scots'" was captured with its closing quote.
+        const phrase = m[1].replace(/^['‘’"]+|['‘’"]+$/g, "");
         const words = phrase.split(/\s+/);
-        // longest first: "Manx Gaelic" before "Manx"
-        for (let n = words.length; n >= 1; n--) {
-          const cand = words.slice(0, n).join(" ");
+        // Longest first -- "Manx Gaelic" before "Manx" -- but PREFIXES ONLY was
+        // not enough, and Northern Ireland is the case that showed it. Its
+        // statute says "Irish-medium education" and "Ulster Scots", and the
+        // entry's languages field was empty while Scotland and Wales were
+        // filled. Three things were wrong: the hyphenated compound hides the
+        // language in FRONT of the hyphen, a qualified name hides it at the
+        // END ("Ulster Scots" reduced to "Ulster" and never reached Scots),
+        // and the closing quote was part of the string. Same shape as Swiss
+        // German or Cypriot Maronite Arabic.
+        const tries = [];
+        for (let n = words.length; n >= 1; n--) tries.push(words.slice(0, n).join(" "));
+        for (let i = 1; i < words.length; i++) tries.push(words.slice(i).join(" "));
+        if (phrase.includes("-")) tries.push(phrase.split("-")[0]);
+        for (const cand of tries) {
           const key = norm(cand);
           if (!names.has(key)) continue;
           const disp = names.get(key);

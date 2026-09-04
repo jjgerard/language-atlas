@@ -5256,6 +5256,10 @@
    {
     "label": "COST Action IS1406, Language Surveys and Definition Documents, English version pp. 209-234",
     "url": "https://ndownloader.figshare.com/files/17588786"
+   },
+   {
+    "label": "PISA 2022 National Report for Northern Ireland, Department of Education NI, 5 December 2023 — section 6.4.4 immigrant background and language",
+    "url": "https://www.education-ni.gov.uk/sites/default/files/publications/education/PISA%202022%20Northern%20Ireland%20National%20Report.pdf"
    }
   ],
   "supportLinks": [],
@@ -5273,7 +5277,7 @@
     "note": "% of school population (approx.)"
    }
   ],
-  "achievementGap": "PISA 2022 reading, UK-wide — not reported separately by nation\nImmigrant pupils scored 8 points below their non-immigrant peers\n1 point below after accounting for socio-economic profile\n7 points above once home language is accounted for as well\nSmall on all three measures",
+  "achievementGap": "PISA 2022 reading, from Northern Ireland's own national report, not the UK figure\nFirst-generation immigrant pupils scored 449 against 492 for non-immigrant pupils\nSecond-generation immigrant pupils scored 492, the same as non-immigrant pupils\n11% of pupils had an immigrant background in 2022, against 10% in 2018",
   "l2Support": "Funding per Newcomer",
   "l1Support": "The retrieved page is a service landing page and describes no home-language teaching\nSupport is organised centrally by the Education Authority rather than school by school\nThe service is the Intercultural Education Service",
   "l3Support": "",
@@ -5291,7 +5295,15 @@
     "year": 2025,
     "description": "Briefing on Languages in Primary School"
    }
-  ]
+  ],
+  "slots": {
+   "achievementGap": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GB",
