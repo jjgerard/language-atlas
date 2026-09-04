@@ -1431,26 +1431,66 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Universite Joseph Ki-Zerbo's WHED record lists English Studies and Germanic Studies\nEnglish, German, Linguistics and Literature are named in the same WHED record\nIts master fields include African Studies, American Studies and Applied Linguistics",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institution": "Universite Joseph Ki-Zerbo",
+    "url": "https://whed.net/institutions/IAU-019634",
+    "institutions": "",
+    "year": "",
+    "note": "Listed as a Licence field of study in IAU's WHED record; English Studies also under the letters and arts faculty"
+   },
+   {
+    "language": "German",
+    "level": "bachelor",
+    "institution": "Universite Joseph Ki-Zerbo",
+    "url": "https://whed.net/institutions/IAU-019634",
+    "institutions": "",
+    "year": "",
+    "note": "Listed as a Licence field of study in IAU's WHED record; Germanic Studies also a faculty field"
+   },
+   {
+    "language": "English",
+    "level": "master",
+    "institution": "Universite Joseph Ki-Zerbo",
+    "url": "https://whed.net/institutions/IAU-019634",
+    "institutions": "",
+    "year": "",
+    "note": "WHED lists English and English Studies among Master fields of study"
+   }
+  ],
+  "mediumOfInstruction": "Universite Laval's AXL says the language of teaching is French in Burkina's universities\nThe same passage names four public universities, Ouagadougou and Ouaga II among them\nA 2007 education law names French and the national languages as languages of teaching",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BG",
@@ -1548,26 +1588,74 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Abomey-Calavi has a faculty of letters, languages, arts and communications\nIts departments include Germanic studies, Hispanic studies and English\nWHED lists English, German, Literature and Spanish as that faculty's fields of study",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "English",
+    "level": "degree",
+    "institution": "Universite d'Abomey-Calavi",
+    "url": "https://www.uac.bj/ufr-entites-facultes-instituts-centres-uac/",
+    "institutions": "",
+    "year": "",
+    "note": "Departement de l'anglais in the Faculte des lettres, langues, arts et communications; level not stated"
+   },
+   {
+    "language": "German",
+    "level": "degree",
+    "institution": "Universite d'Abomey-Calavi",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RVLSMoYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Etudes germaniques department; German listed as a faculty field of study in IAU's WHED record"
+   },
+   {
+    "language": "Spanish",
+    "level": "degree",
+    "institution": "Universite d'Abomey-Calavi",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RVLSMoYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Etudes hispaniques department; Spanish listed as a faculty field of study in IAU's WHED record"
+   },
+   {
+    "language": "French",
+    "level": "degree",
+    "institution": "Universite d'Abomey-Calavi",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RVLSMoYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "WHED lists French and French Studies as fields of study at the university"
+   }
+  ],
+  "mediumOfInstruction": "AXL says the real policy is exclusive use of French, the sole language of teaching\nIt frames this as observed policy, singling out Cotonou",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BN",
@@ -2738,26 +2826,57 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Middle Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "UNIKIN's letters faculty runs its teaching under the Licence Master Doctorat system\nIts departments include Lettres et Civilisation Anglaises, Africaines and Francaises\nThe faculty teaches through ten departments in all\nIts Ecole des Langues Vivantes offers English, French, Portuguese and Mandarin learning",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "English",
+    "level": "degree",
+    "institution": "Universite de Kinshasa",
+    "url": "https://www.unikin.ac.cd/en/faculte-des-lettres-et-sciences-humaines/",
+    "institutions": "",
+    "year": "2023",
+    "note": "Departement de Lettres et Civilisation Anglaises, FLSH; page describes the 2022-2023 move to LMD"
+   },
+   {
+    "language": "French",
+    "level": "degree",
+    "institution": "Universite de Kinshasa",
+    "url": "https://www.unikin.ac.cd/en/faculte-des-lettres-et-sciences-humaines/",
+    "institutions": "",
+    "year": "2023",
+    "note": "Departement de Lettres et Civilisation Francaises, FLSH"
+   }
+  ],
+  "mediumOfInstruction": "AXL says study begins in a national language and continues in French\nIt adds that a university may also require knowledge of English",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "mediumOfInstruction": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "CF",
@@ -2792,26 +2911,57 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Middle Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Universite Marien Ngouabi's letters faculty lists English, Linguistics and Literature\nAfrican Languages head its master's field list\nEnglish, English Studies, French and French Studies are named in the same record",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "English",
+    "level": "degree",
+    "institution": "Universite Marien Ngouabi",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RXLVMkYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Field of the Faculty of Letters, Arts and Humanities in IAU's WHED record; also a Licence and Master field"
+   },
+   {
+    "language": "French",
+    "level": "master",
+    "institution": "Universite Marien Ngouabi",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RXLVMkYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "French and French Studies listed among Master fields of study"
+   }
+  ],
+  "mediumOfInstruction": "AXL says all of Congo's higher education is given in French\nIt names Marien Ngouabi and the Universite libre du Congo among those institutions\nFrench stayed the sole teaching language across school and university programmes",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CH",
@@ -2977,26 +3127,96 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Middle Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Universite de Yaounde I's WHED record lists English, French and German among its fields\nAfrican Languages, Linguistics, Literature and Modern Languages are in the same list\nMaster fields there include African Languages, English and German\nAfrican Languages also head its doctorate field list",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "English",
+    "level": "degree",
+    "institution": "Universite de Yaounde I",
+    "url": "https://whed.net/institutions/IAU-019665",
+    "institutions": "",
+    "year": "",
+    "note": "Field of the Faculty of Arts, Letters and Humanities in IAU's WHED record; also a Bachelor's Degree/Licence field"
+   },
+   {
+    "language": "English",
+    "level": "master",
+    "institution": "Universite de Yaounde I",
+    "url": "https://whed.net/institutions/IAU-019665",
+    "institutions": "",
+    "year": "",
+    "note": "Listed among Master fields of study"
+   },
+   {
+    "language": "French",
+    "level": "degree",
+    "institution": "Universite de Yaounde I",
+    "url": "https://whed.net/institutions/IAU-019665",
+    "institutions": "",
+    "year": "",
+    "note": "Field of the Faculty of Arts, Letters and Humanities; also listed among doctorate fields"
+   },
+   {
+    "language": "German",
+    "level": "degree",
+    "institution": "Universite de Yaounde I",
+    "url": "https://whed.net/institutions/IAU-019665",
+    "institutions": "",
+    "year": "",
+    "note": "Field of the Faculty of Arts, Letters and Humanities; also a Bachelor's Degree/Licence field"
+   },
+   {
+    "language": "German",
+    "level": "master",
+    "institution": "Universite de Yaounde I",
+    "url": "https://whed.net/institutions/IAU-019665",
+    "institutions": "",
+    "year": "",
+    "note": "Listed among Master fields of study"
+   },
+   {
+    "language": "Spanish",
+    "level": "degree",
+    "institution": "Universite de Yaounde I",
+    "url": "https://whed.net/institutions/IAU-019665",
+    "institutions": "",
+    "year": "",
+    "note": "Listed as an arts faculty field and as a Bachelor's Degree/Licence, Master and Doctorat field"
+   }
+  ],
+  "mediumOfInstruction": "AXL says Cameroon's English universities give courses exclusively in English in principle\nBilingual universities should teach in both, but in fact do so almost wholly in French\nIt counts bilingual universities in francophone regions and English ones in anglophone regions\nA 2001 law makes bilingualism a principle of higher education for national unity\nIn practice students are taught in whichever language the lecturer commands best",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CN",
@@ -4614,26 +4834,53 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "A 2007 arrete fixes the list of training streams of the University of Djibouti\nThey include modern letters, English and applied foreign languages\nOne stream is applied foreign languages in the Arabic language\nThese sit under the faculty of letters, languages and human sciences",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "English",
+    "level": "degree",
+    "institution": "Universite de Djibouti",
+    "url": "https://www.journalofficiel.dj/texte-juridique/arrete-n2007-0771-pr-menesup-fixant-la-liste-des-filieres-de-formation-de-luniversite-de-djibouti/",
+    "institutions": "",
+    "year": "2007",
+    "note": "Filiere de formation anglais, faculte des lettres, langues et sciences humaines; the arrete does not state a degree level"
+   },
+   {
+    "language": "Arabic",
+    "level": "degree",
+    "institution": "Universite de Djibouti",
+    "url": "https://www.journalofficiel.dj/texte-juridique/arrete-n2007-0771-pr-menesup-fixant-la-liste-des-filieres-de-formation-de-luniversite-de-djibouti/",
+    "institutions": "",
+    "year": "2007",
+    "note": "Filiere langues etrangeres appliquees en langue arabe; a separate stream in Arabic exists in management too"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "DK",
@@ -4961,26 +5208,46 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Adi-Keih College's WHED record lists English, Literature and Native Language as fields\nIts bachelor's degree fields are given only as Arts and Humanities and Social Sciences\nThat record was last updated on 7 March 2017",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "English",
+    "level": "degree",
+    "institution": "Adi-Keih College of Arts and Social Sciences",
+    "url": "https://whed.net/institutions/IAU-003001",
+    "institutions": "",
+    "year": "2017",
+    "note": "Listed as a field of study; the record's only degree entry is a broad Bachelor's Degree in Arts and Humanities"
+   }
+  ],
+  "mediumOfInstruction": "AXL says only Tigrinya and Arabic are commonly used in cultural and university circles",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3
+   ],
+   "mediumOfInstruction": [
+    3
+   ]
+  }
  },
  {
   "countryCode": "ES",
@@ -5412,26 +5679,76 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Middle Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Universite Omar Bongo's WHED record lists English, English Studies and German as fields\nGermanic Studies, Hispanic American Studies, Latin American Studies and Linguistics follow\nEnglish, English Studies, French Studies and Germanic Studies are also listed\nEnglish Studies, Linguistics and Literature appear together in another of its lists",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institution": "Universite Omar Bongo",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RXLjMoYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "English and English Studies both listed among Licence fields of study in IAU's WHED record"
+   },
+   {
+    "language": "German",
+    "level": "bachelor",
+    "institution": "Universite Omar Bongo",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RXLjMoYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "German an arts faculty field; Germanic Studies listed among Licence fields"
+   },
+   {
+    "language": "Portuguese",
+    "level": "degree",
+    "institution": "Universite Omar Bongo",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RXLjMoYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts and Humanities field of study; the record does not tie it to one degree level"
+   },
+   {
+    "language": "Spanish",
+    "level": "degree",
+    "institution": "Universite Omar Bongo",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RXLjMoYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts and Humanities field of study, alongside Hispanic American Studies"
+   }
+  ],
+  "mediumOfInstruction": "AXL says Gabon's higher education is massively given in French\nThe same sentence allows that it is sometimes given in English\nIt counts three universities and six autonomous institutions for about 9,000 students",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "GB",
@@ -5943,26 +6260,73 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of The Gambia's School of Arts and Sciences lists English and French\nEnglish and French are also among its master's degree fields",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institution": "University of The Gambia",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sQ2BVLTM8YApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Listed as a Bachelor's Degree field and as a School of Arts and Sciences field in IAU's WHED record"
+   },
+   {
+    "language": "English",
+    "level": "master",
+    "institution": "University of The Gambia",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sQ2BVLTM8YApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Listed among Master's Degree fields of study"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institution": "University of The Gambia",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sQ2BVLTM8YApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Listed as a Bachelor's Degree field and as a School of Arts and Sciences field"
+   },
+   {
+    "language": "French",
+    "level": "master",
+    "institution": "University of The Gambia",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sQ2BVLTM8YApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Listed among Master's Degree fields of study"
+   }
+  ],
+  "mediumOfInstruction": "AXL says English is the teaching language in every sector of education in the Gambia\nIt excepts the Koranic schools, where the language taught is Arabic",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "GN",
@@ -5997,26 +6361,46 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Middle Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "UNGE's arts and social sciences faculty lists Philology and Spanish among its fields\nIts school of educational sciences at Bata lists foreign languages education",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Spanish",
+    "level": "degree",
+    "institution": "Universidad Nacional de Guinea Ecuatorial",
+    "url": "https://whed.net/institutions/IAU-018033",
+    "institutions": "",
+    "year": "",
+    "note": "Field of the Faculty of Arts and Social Sciences; the record's Licenciatura list names only Environmental Studies, Medicine and Nursing"
+   }
+  ],
+  "mediumOfInstruction": "AXL says Spanish became the language of teaching and of culture again\nCourses are given only in Spanish, from primary to the end of secondary",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    3
+   ],
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "GR",
@@ -8056,26 +8440,68 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Nairobi's Department of Kiswahili offers an M.A degree in Swahili Studies\nThe same department runs a PhD in Kiswahili Studies\nAn MA in Intercultural German Studies sits in the Linguistics and Languages department\nThat department also runs a B.A degree programme in Linguistics\nBA degrees there are fields within one Bachelor of Arts spread across 11 departments",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Swahili",
+    "level": "master",
+    "institution": "University of Nairobi",
+    "url": "https://www.uonbi.ac.ke/arts-and-social-science-programmes",
+    "institutions": "",
+    "year": "",
+    "note": "M.A in Swahili Studies, Department of Kiswahili; local name Kiswahili"
+   },
+   {
+    "language": "Swahili",
+    "level": "doctorate",
+    "institution": "University of Nairobi",
+    "url": "https://www.uonbi.ac.ke/arts-and-social-science-programmes",
+    "institutions": "",
+    "year": "",
+    "note": "PhD in Kiswahili Studies; local name Kiswahili"
+   },
+   {
+    "language": "German",
+    "level": "master",
+    "institution": "University of Nairobi",
+    "url": "https://linguistics.uonbi.ac.ke/admission-content-type/master-arts-german-studies",
+    "institutions": "",
+    "year": "",
+    "note": "MA in Intercultural German Studies, Department of Linguistics and Languages"
+   }
+  ],
+  "mediumOfInstruction": "Universite Laval's AXL says the teaching language in Kenya's universities is generally English\nIt adds that courses may be given in Swahili\nThe same page counts five universities, Nairobi and Kenyatta among them",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2,
+    4
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "KG",
@@ -8574,26 +9000,51 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Liberia awards bachelor's degrees in English and French\nBoth sit in its College of Social Sciences and Humanities",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institution": "University of Liberia",
+    "url": "https://whed.net/institutions/IAU-020227",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor's Degree field of study in IAU's WHED record; also a College of Social Sciences and Humanities field"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institution": "University of Liberia",
+    "url": "https://whed.net/institutions/IAU-020227",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor's Degree field of study; also a College of Social Sciences and Humanities field"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "LS",
@@ -8760,26 +9211,86 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Northern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Alasmarya Islamic University awards a bachelor's degree in Arabic\nIts Faculty of Arts lists English and Linguistics among its fields\nArabic and Applied Linguistics head its master's field list\nArabic and Literature are among its doctorate fields",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Arabic",
+    "level": "bachelor",
+    "institution": "Alasmarya Islamic University",
+    "url": "https://whed.net/institutions/IAU-000836",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor's Degree field of study in IAU's WHED record; one named university, not a country count"
+   },
+   {
+    "language": "Arabic",
+    "level": "master",
+    "institution": "Alasmarya Islamic University",
+    "url": "https://whed.net/institutions/IAU-000836",
+    "institutions": "",
+    "year": "",
+    "note": "Master's Degree field of study, alongside Applied Linguistics"
+   },
+   {
+    "language": "Arabic",
+    "level": "doctorate",
+    "institution": "Alasmarya Islamic University",
+    "url": "https://whed.net/institutions/IAU-000836",
+    "institutions": "",
+    "year": "",
+    "note": "Doctorate field of study, with Islamic Studies, Literature and Religion"
+   },
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institution": "Alasmarya Islamic University",
+    "url": "https://whed.net/institutions/IAU-000836",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts field; English also appears in the Bachelor's Degree field list"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institution": "Alasmarya Islamic University",
+    "url": "https://whed.net/institutions/IAU-000836",
+    "institutions": "",
+    "year": "",
+    "note": "French appears in the Bachelor's Degree field list and in the Foreign Languages Center"
+   }
+  ],
+  "mediumOfInstruction": "Libya's 2018 universities law makes Arabic the language of teaching at university\nThe university council may authorise other languages on the faculty council's recommendation\nAn earlier article puts Arabic as the teaching language of technical institutions\nAXL adds that from primary to university public teaching is in modern standard Arabic",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "MA",
@@ -9008,26 +9519,33 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "AXL says the main language of instruction at university in Mali remains French\nIt calls French the preferred teaching language, for reasons of social mobility\nBambara, it says, stayed the favoured vehicular language",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "MM",
@@ -9226,15 +9744,87 @@
   "by": "",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Universite de Nouakchott Al Aasriya's FLSH runs a master's in English studies\nIAU's WHED lists Arabic, Chinese and English among the university's licence fields\nFrench, Linguistics and Modern Languages appear in the same WHED list\nSpanish and Turkish close that same list",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "English",
+    "level": "master",
+    "institution": "Universite de Nouakchott Al Aasriya",
+    "url": "https://www.univ-nkc.mr/images/MASTER%20EN%20%C3%89TUDES%20ANGLAISES_1770649353.pdf",
+    "institutions": "",
+    "year": "",
+    "note": "Master en Etudes Anglaises, Faculte des Lettres et des Sciences Humaines, Departement Anglais; four semesters"
+   },
+   {
+    "language": "Arabic",
+    "level": "bachelor",
+    "institution": "Universite de Nouakchott Al Aasriya",
+    "url": "https://whed.net/institutions/IAU-019633",
+    "institutions": "",
+    "year": "",
+    "note": "Licence field listed by IAU's WHED, not a named programme page"
+   },
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institution": "Universite de Nouakchott Al Aasriya",
+    "url": "https://whed.net/institutions/IAU-019633",
+    "institutions": "",
+    "year": "",
+    "note": "Licence field listed by IAU's WHED"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institution": "Universite de Nouakchott Al Aasriya",
+    "url": "https://whed.net/institutions/IAU-019633",
+    "institutions": "",
+    "year": "",
+    "note": "Licence field listed by IAU's WHED"
+   },
+   {
+    "language": "Chinese",
+    "level": "bachelor",
+    "institution": "Universite de Nouakchott Al Aasriya",
+    "url": "https://whed.net/institutions/IAU-019633",
+    "institutions": "",
+    "year": "",
+    "note": "Licence field listed by IAU's WHED"
+   },
+   {
+    "language": "Spanish",
+    "level": "bachelor",
+    "institution": "Universite de Nouakchott Al Aasriya",
+    "url": "https://whed.net/institutions/IAU-019633",
+    "institutions": "",
+    "year": "",
+    "note": "Licence field listed by IAU's WHED"
+   },
+   {
+    "language": "Turkish",
+    "level": "bachelor",
+    "institution": "Universite de Nouakchott Al Aasriya",
+    "url": "https://whed.net/institutions/IAU-019633",
+    "institutions": "",
+    "year": "",
+    "note": "Licence field listed by IAU's WHED"
+   }
+  ],
   "mediumOfInstruction": "Arabic is a fundamental principle of higher education, per UNESCO PEER\nTeaching in foreign languages is permitted 'if needed'",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "MT",
@@ -9423,26 +10013,39 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Malawi's languages department offers a BA in Linguistics\nIt also runs MAs in pure and applied linguistics and translation, and two PhDs\nIt was formed by merging the African Languages, Classics and French departments\nIts courses can also be taken inside a BA in Humanities or a BEd in language education",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Malawi's education act makes English the language of teaching in schools and colleges\nAXL says a 2014 policy imposed English as the sole language of teaching\nIt notes education language policy has shifted over time though English is official",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "MX",
@@ -9578,26 +10181,68 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Southern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "IAU's WHED gives UNAM a Language Centre with African Languages and English fields\nIts postgraduate studies centre lists English, German and Modern Languages\nEnglish is also among the university's doctorate fields\nIt lists an advanced diploma in translation and interpretation, updated February 2024",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "English",
+    "level": "doctorate",
+    "institution": "University of Namibia",
+    "url": "https://whed.net/institutions/IAU-020320",
+    "institutions": "",
+    "year": "2024",
+    "note": "Listed among Doctorate fields of study; WHED record updated 26-02-2024"
+   },
+   {
+    "language": "English",
+    "level": "degree",
+    "institution": "University of Namibia",
+    "url": "https://whed.net/institutions/IAU-020320",
+    "institutions": "",
+    "year": "2024",
+    "note": "Field of the Language Centre and of the Centre for Postgraduate Studies; level not stated for those"
+   },
+   {
+    "language": "German",
+    "level": "degree",
+    "institution": "University of Namibia",
+    "url": "https://whed.net/institutions/IAU-020320",
+    "institutions": "",
+    "year": "2024",
+    "note": "Field of the Centre for Postgraduate Studies; level not stated"
+   }
+  ],
+  "mediumOfInstruction": "AXL says courses at Namibia's two universities are given in Afrikaans or English\nIt adds that Afrikaans is often used more than English, given students' weaker English\nThe Higher Education Act of 2003 does not deal with language\nThe two institutions are UNAM and the university of science and technology",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "NC",
@@ -9707,26 +10352,56 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Ibadan's Department of Linguistics has three units: Linguistics, Yoruba and Igbo\nEach unit runs undergraduate and graduate programmes, except Igbo at graduate level",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Yoruba",
+    "level": "bachelor",
+    "institution": "University of Ibadan",
+    "url": "https://www.facultyofartsui.org/department/linguistics%20&%20african%20languages",
+    "institutions": "",
+    "year": "",
+    "note": "One of three units of the Department of Linguistics and African Languages; runs at graduate level too"
+   },
+   {
+    "language": "Igbo",
+    "level": "bachelor",
+    "institution": "University of Ibadan",
+    "url": "https://www.facultyofartsui.org/department/linguistics%20&%20african%20languages",
+    "institutions": "",
+    "year": "",
+    "note": "A unit of the same department; the page excepts Igbo at graduate level"
+   }
+  ],
+  "mediumOfInstruction": "AXL says English keeps a privileged place in Nigeria's education system\nIt is to be taught at secondary level and throughout higher education\nThe reference text is the National Policy on Education, of 2004 and 2013",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    4
+   ],
+   "mediumOfInstruction": [
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "NI",
@@ -10745,26 +11420,68 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Seychelles runs a Trilingual Master of Arts over two years\nIt perfects skills in French, Creole and English\nAcademic direction is shared with Aix-Marseille University, at the Anse Royale campus\nStudents develop advanced proficiency in all three national languages in one programme",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Seychellois Creole",
+    "level": "master",
+    "institution": "University of Seychelles",
+    "url": "https://unisey.ac.sc/course/master-trileng-mastri-kreol-angle-franse/",
+    "institutions": "",
+    "year": "2026",
+    "note": "Master Trileng (MASTRI) Kreol, Angle, Franse; 2 years, 174.5 credits; registration deadline July 2026"
+   },
+   {
+    "language": "English",
+    "level": "master",
+    "institution": "University of Seychelles",
+    "url": "https://unisey.ac.sc/course/master-trileng-mastri-kreol-angle-franse/",
+    "institutions": "",
+    "year": "2026",
+    "note": "One of the three languages of the Trilingual Master of Arts, not a separate degree"
+   },
+   {
+    "language": "French",
+    "level": "master",
+    "institution": "University of Seychelles",
+    "url": "https://unisey.ac.sc/course/master-trileng-mastri-kreol-angle-franse/",
+    "institutions": "",
+    "year": "2026",
+    "note": "One of the three languages of the Trilingual Master of Arts; includes mobility at Aix-Marseille"
+   }
+  ],
+  "mediumOfInstruction": "The Tertiary Education Act 2011 makes English, Creole or French the language of teaching\nOther languages may be used, in line with the institution's charter\nOne condition is that a programme, unit or module is tied to that other language\nAXL presents this as article 7 of the 2011 statute, not as practice",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "SD",
@@ -10788,15 +11505,49 @@
   "by": "",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Al-Neelain University in Khartoum awards a bachelor honours degree in Arabic\nIts Faculty of Arts lists Arabic, English and French among its fields of study",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Arabic",
+    "level": "bachelor",
+    "institution": "Al-Neelain University",
+    "url": "https://whed.net/institutions/IAU-009770",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor Honours Degree field, Khartoum; from IAU's WHED record, one named university not a country count"
+   },
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institution": "Al-Neelain University",
+    "url": "https://whed.net/institutions/IAU-009770",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts field of study; WHED lists English under Bachelor Honours Degree as well"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institution": "Al-Neelain University",
+    "url": "https://whed.net/institutions/IAU-009770",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts field of study; WHED lists French under Bachelor Honours Degree as well"
+   }
+  ],
   "mediumOfInstruction": "Cites the 2005 Interim Constitution; its status after 2019 is unverified here\nArt. 8 makes Arabic and English languages of instruction for higher education\nEnglish is widely used as a medium especially at postgraduate level",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "SE",
@@ -11025,26 +11776,111 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "UCAD's WHED record lists Arabic, English, French and German as fields of study\nAfrican Languages and Ancient Languages open the same list\nItalian, Portuguese, Romance Languages, Russian and Spanish are listed there too\nArabic and Ancient Languages appear among UCAD's licence fields",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Arabic",
+    "level": "bachelor",
+    "institution": "Universite Cheikh Anta Diop de Dakar",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RVLFMsYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Listed under Licence fields of study in IAU's WHED record, and as an arts faculty field"
+   },
+   {
+    "language": "English",
+    "level": "degree",
+    "institution": "Universite Cheikh Anta Diop de Dakar",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RVLFMsYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts and Humanities field of study; the record does not tie it to one degree level"
+   },
+   {
+    "language": "French",
+    "level": "degree",
+    "institution": "Universite Cheikh Anta Diop de Dakar",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RVLFMsYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts and Humanities field of study"
+   },
+   {
+    "language": "German",
+    "level": "degree",
+    "institution": "Universite Cheikh Anta Diop de Dakar",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RVLFMsYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts and Humanities field of study; Germanic Studies also listed at licence level"
+   },
+   {
+    "language": "Italian",
+    "level": "degree",
+    "institution": "Universite Cheikh Anta Diop de Dakar",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RVLFMsYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts and Humanities field of study; Italian also listed at licence level"
+   },
+   {
+    "language": "Portuguese",
+    "level": "degree",
+    "institution": "Universite Cheikh Anta Diop de Dakar",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RVLFMsYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts and Humanities field of study"
+   },
+   {
+    "language": "Russian",
+    "level": "degree",
+    "institution": "Universite Cheikh Anta Diop de Dakar",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RVLFMsYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts and Humanities field of study"
+   },
+   {
+    "language": "Spanish",
+    "level": "degree",
+    "institution": "Universite Cheikh Anta Diop de Dakar",
+    "url": "https://whed.net/detail_institution.php?KDo2MF0sM0RVLFMsYApgCg=%3D",
+    "institutions": "",
+    "year": "",
+    "note": "Faculty of Arts and Humanities field of study; Spanish also listed at licence level"
+   }
+  ],
+  "mediumOfInstruction": "AXL reports French remains the general language of teaching in Senegal's universities\nIt notes Wolof is common in cafeterias, corridors and administrative offices",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "SO",
@@ -11113,20 +11949,48 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Middle Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Arabic",
+    "level": "bachelor",
+    "institution": "University of Juba",
+    "url": "https://www.juba-university.com/undergraduate-programs",
+    "institutions": "",
+    "year": "",
+    "note": "B.A (Hon.) Arabic Language, School of Arts and Humanities, listed at 4-5 years"
+   },
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institution": "University of Juba",
+    "url": "https://www.juba-university.com/school-of-arts-and-humanities/departments/english-language",
+    "institutions": "",
+    "year": "",
+    "note": "B.A (Hon.) English Language, School of Arts and Humanities, listed at 4-5 years"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institution": "University of Juba",
+    "url": "https://www.juba-university.com/undergraduate-programs",
+    "institutions": "",
+    "year": "",
+    "note": "B.A (Hon.) French Language, School of Arts and Humanities, listed at 4-5 years"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
@@ -11261,26 +12125,47 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Southern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Eswatini's B.A Humanities is built from two subject majors\nAfrican Languages and Literature and English Language and Literature are two of them\nAfrican Languages counts as a teaching subject for its postgraduate certificate in education\nAt level one students take three subjects from a range of four",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institution": "University of Eswatini",
+    "url": "https://www.ide.uneswa.ac.sz/programmes/",
+    "institutions": "",
+    "year": "",
+    "note": "English Language and Literature is one of the subject majors of the B.A Humanities; taught by its own department"
+   }
+  ],
+  "mediumOfInstruction": "AXL says good English is needed to pursue university study in Eswatini",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "mediumOfInstruction": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "TD",
@@ -11315,26 +12200,81 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Western Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Universite de Lome's FLLA trains from licence to doctorate in named language mentions\nLicence mentions include English, Spanish and French in the LLA domain\nGerman runs as two licence specialities, literature and civilisation\nIts research master's list includes one in English linguistics\nThe FLLA dates from a 2014 decree and holds five departments",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "English",
+    "level": "bachelor",
+    "institution": "Universite de Lome",
+    "url": "https://univ-lome.tg/faculte-des-lettres-langues-et-arts-flla/",
+    "institutions": "",
+    "year": "2014",
+    "note": "Licence Fondamentale LLA, Mention Anglais; Faculte des Lettres, Langues et Arts; year is the faculty's founding decree"
+   },
+   {
+    "language": "Spanish",
+    "level": "bachelor",
+    "institution": "Universite de Lome",
+    "url": "https://univ-lome.tg/faculte-des-lettres-langues-et-arts-flla/",
+    "institutions": "",
+    "year": "",
+    "note": "Licence Fondamentale LLA, Mention Espagnol; taught by the Departement des Etudes Iberiques"
+   },
+   {
+    "language": "French",
+    "level": "bachelor",
+    "institution": "Universite de Lome",
+    "url": "https://univ-lome.tg/faculte-des-lettres-langues-et-arts-flla/",
+    "institutions": "",
+    "year": "",
+    "note": "Licence Fondamentale LLA, Mention Francais"
+   },
+   {
+    "language": "German",
+    "level": "bachelor",
+    "institution": "Universite de Lome",
+    "url": "https://univ-lome.tg/faculte-des-lettres-langues-et-arts-flla/",
+    "institutions": "",
+    "year": "",
+    "note": "Licence Fondamentale LLA, Mention Allemand, in a literature and a civilisation speciality"
+   },
+   {
+    "language": "English",
+    "level": "master",
+    "institution": "Universite de Lome",
+    "url": "https://univ-lome.tg/faculte-des-lettres-langues-et-arts-flla/",
+    "institutions": "",
+    "year": "",
+    "note": "Master de recherche de linguistique anglaise, one of two specialities of the linguistics master"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "TH",
@@ -11825,26 +12765,65 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Dar es Salaam teaches undergraduate programmes for BA Kiswahili degrees\nThe same department carries a master's and a PhD linguistics programme\nIt prepares experts for teaching and research in Kiswahili and other Bantu languages",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Swahili",
+    "level": "bachelor",
+    "institution": "University of Dar es Salaam",
+    "url": "https://www.udsm.ac.tz/programme/bachelor-arts-kiswahili",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Arts in Kiswahili; local name Kiswahili; Institute of Kiswahili Studies"
+   },
+   {
+    "language": "Swahili",
+    "level": "master",
+    "institution": "University of Dar es Salaam",
+    "url": "https://www.udsm.ac.tz/institute-kiswahili-studies/department-swahili-language-and-linguistics",
+    "institutions": "",
+    "year": "",
+    "note": "Masters linguistics programme of the Department of Swahili Language and Linguistics"
+   },
+   {
+    "language": "Swahili",
+    "level": "doctorate",
+    "institution": "University of Dar es Salaam",
+    "url": "https://www.udsm.ac.tz/institute-kiswahili-studies/department-swahili-language-and-linguistics",
+    "institutions": "",
+    "year": "",
+    "note": "PhD linguistic programme of the Department of Swahili Language and Linguistics"
+   }
+  ],
+  "mediumOfInstruction": "Universite Laval's AXL says only English carries knowledge at Tanzanian universities\nIt reports Kiswahili never spread to the higher cycles, though considered from 1967",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "UA",
@@ -14034,26 +15013,122 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Southern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Unisa awards a Bachelor of Arts in African Languages and Linguistics at NQF level 7\nIts African Languages department names Sesotho sa Leboa, Sesotho and Setswana\nTshivenda, Xitsonga, isiXhosa, isiZulu, Siswati and isiNdebele complete that list\nThe qualification is presented using both online and distance learning modes",
   "linguistics": "",
-  "offerings": [],
-  "mediumOfInstruction": "",
+  "offerings": [
+   {
+    "language": "Zulu",
+    "level": "bachelor",
+    "institution": "University of South Africa",
+    "url": "https://www.unisa.ac.za/sites/corporate/default/Register-to-study-through-Unisa/Undergraduate-&-honours-qualifications/Find-your-qualification-&-choose-your-modules/All-qualifications/Bachelor-of-Arts-African-Languages-and-Linguistics-(99311-%E2%80%93-ALL)",
+    "institutions": "",
+    "year": "2026",
+    "note": "Local name isiZulu; a compulsory major stream of BA African Languages and Linguistics (99311), 360 credits"
+   },
+   {
+    "language": "Xhosa",
+    "level": "bachelor",
+    "institution": "University of South Africa",
+    "url": "https://www.unisa.ac.za/sites/corporate/default/Register-to-study-through-Unisa/Undergraduate-&-honours-qualifications/Find-your-qualification-&-choose-your-modules/All-qualifications/Bachelor-of-Arts-African-Languages-and-Linguistics-(99311-%E2%80%93-ALL)",
+    "institutions": "",
+    "year": "2026",
+    "note": "Local name isiXhosa; major stream of the same BA"
+   },
+   {
+    "language": "Ndebele",
+    "level": "bachelor",
+    "institution": "University of South Africa",
+    "url": "https://www.unisa.ac.za/sites/corporate/default/Register-to-study-through-Unisa/Undergraduate-&-honours-qualifications/Find-your-qualification-&-choose-your-modules/All-qualifications/Bachelor-of-Arts-African-Languages-and-Linguistics-(99311-%E2%80%93-ALL)",
+    "institutions": "",
+    "year": "2026",
+    "note": "Local name isiNdebele, the South African variety; major stream of the same BA"
+   },
+   {
+    "language": "Swati",
+    "level": "bachelor",
+    "institution": "University of South Africa",
+    "url": "https://www.unisa.ac.za/sites/corporate/default/Register-to-study-through-Unisa/Undergraduate-&-honours-qualifications/Find-your-qualification-&-choose-your-modules/All-qualifications/Bachelor-of-Arts-African-Languages-and-Linguistics-(99311-%E2%80%93-ALL)",
+    "institutions": "",
+    "year": "2026",
+    "note": "Local name siSwati, written IsiSwati in the module list; major stream of the same BA"
+   },
+   {
+    "language": "Northern Sotho",
+    "level": "bachelor",
+    "institution": "University of South Africa",
+    "url": "https://www.unisa.ac.za/sites/corporate/default/Register-to-study-through-Unisa/Undergraduate-&-honours-qualifications/Find-your-qualification-&-choose-your-modules/All-qualifications/Bachelor-of-Arts-African-Languages-and-Linguistics-(99311-%E2%80%93-ALL)",
+    "institutions": "",
+    "year": "2026",
+    "note": "Local names Sepedi and Sesotho sa Leboa; major stream of the same BA"
+   },
+   {
+    "language": "Southern Sotho",
+    "level": "bachelor",
+    "institution": "University of South Africa",
+    "url": "https://www.unisa.ac.za/sites/corporate/default/Register-to-study-through-Unisa/Undergraduate-&-honours-qualifications/Find-your-qualification-&-choose-your-modules/All-qualifications/Bachelor-of-Arts-African-Languages-and-Linguistics-(99311-%E2%80%93-ALL)",
+    "institutions": "",
+    "year": "2026",
+    "note": "Local name Sesotho; major stream of the same BA"
+   },
+   {
+    "language": "Tswana",
+    "level": "bachelor",
+    "institution": "University of South Africa",
+    "url": "https://www.unisa.ac.za/sites/corporate/default/Register-to-study-through-Unisa/Undergraduate-&-honours-qualifications/Find-your-qualification-&-choose-your-modules/All-qualifications/Bachelor-of-Arts-African-Languages-and-Linguistics-(99311-%E2%80%93-ALL)",
+    "institutions": "",
+    "year": "2026",
+    "note": "Local name Setswana; major stream of the same BA"
+   },
+   {
+    "language": "Venda",
+    "level": "bachelor",
+    "institution": "University of South Africa",
+    "url": "https://www.unisa.ac.za/sites/corporate/default/Register-to-study-through-Unisa/Undergraduate-&-honours-qualifications/Find-your-qualification-&-choose-your-modules/All-qualifications/Bachelor-of-Arts-African-Languages-and-Linguistics-(99311-%E2%80%93-ALL)",
+    "institutions": "",
+    "year": "2026",
+    "note": "Local name Tshivenda; major stream of the same BA"
+   },
+   {
+    "language": "Tsonga",
+    "level": "bachelor",
+    "institution": "University of South Africa",
+    "url": "https://www.unisa.ac.za/sites/corporate/default/Register-to-study-through-Unisa/Undergraduate-&-honours-qualifications/Find-your-qualification-&-choose-your-modules/All-qualifications/Bachelor-of-Arts-African-Languages-and-Linguistics-(99311-%E2%80%93-ALL)",
+    "institutions": "",
+    "year": "2026",
+    "note": "Local name Xitsonga; major stream of the same BA"
+   }
+  ],
+  "mediumOfInstruction": "The 2020 national framework covers the language of teaching and learning at public universities\nPlans must name at least two official languages other than the medium of instruction\nInstitutions must develop indigenous African languages as centres of research and scholarship\nAll institutions must develop strategies and plans for promoting multilingualism",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "ZM",
@@ -14088,25 +15163,71 @@
   "isNational": true,
   "region": "Africa",
   "subregion": "Eastern Africa",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Zimbabwe offers language majors in Kiswahili, Ndebele, Shona and Tonga\nNdebele has a Bachelor of Arts Honours Degree in Language and Cultural Studies\nShona has the same honours degree in Language and Cultural Studies\nKiswahili comes as a dual honours degree paired with Linguistics\nTonga also comes as a dual honours degree with History",
   "linguistics": "",
-  "offerings": [],
+  "offerings": [
+   {
+    "language": "Shona",
+    "level": "bachelor",
+    "institution": "University of Zimbabwe",
+    "url": "https://www.uz.ac.zw/index.php/programmes-offered-african",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Arts Honours Degree in Shona Language and Cultural Studies, four years; dual honours also offered with Linguistics, History and Religious Studies"
+   },
+   {
+    "language": "Ndebele",
+    "level": "bachelor",
+    "institution": "University of Zimbabwe",
+    "url": "https://www.uz.ac.zw/index.php/programmes-offered-african",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Arts Honours Degree in Ndebele Language and Cultural Studies, four years"
+   },
+   {
+    "language": "Tonga",
+    "level": "bachelor",
+    "institution": "University of Zimbabwe",
+    "url": "https://www.uz.ac.zw/index.php/programmes-offered-african",
+    "institutions": "",
+    "year": "",
+    "note": "Bachelor of Arts Honours Degree in Tonga Language and Cultural Studies; applicants must be Tonga first language speakers"
+   },
+   {
+    "language": "Swahili",
+    "level": "bachelor",
+    "institution": "University of Zimbabwe",
+    "url": "https://www.uz.ac.zw/index.php/programmes-offered-african",
+    "institutions": "",
+    "year": "",
+    "note": "Local name Kiswahili; offered as Bachelor of Arts Dual Honours Degree in Linguistics and Kiswahili"
+   }
+  ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    4,
+    4
+   ]
+  }
  }
 ]
