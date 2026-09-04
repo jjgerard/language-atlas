@@ -5377,6 +5377,10 @@
    {
     "label": "COST Action IS1406, Language Surveys and Definition Documents, English version pp. 209-234",
     "url": "https://ndownloader.figshare.com/files/17588786"
+   },
+   {
+    "label": "Programme for International Student Assessment (PISA) 2022: highlights from Scotland's results, Scottish Government — reports by gender and socio-economic status, not by immigrant background",
+    "url": "https://www.gov.scot/publications/programme-international-student-assessment-pisa-2022-highlights-scotlands-results/"
    }
   ],
   "supportLinks": [],
@@ -5394,7 +5398,7 @@
     "note": "of 702,428 total pupils recorded with EAL (Figure 23, Summary Statistics for Schools in Scotland 2024)"
    }
   ],
-  "achievementGap": "PISA 2022 reading, UK-wide — not reported separately by nation\nImmigrant pupils scored 8 points below their non-immigrant peers\n1 point below after accounting for socio-economic profile\n7 points above once home language is accounted for as well\nSmall on all three measures",
+  "achievementGap": "PISA 2022 reading, OECD figures for the UK as a whole, not for Scotland\nScotland publishes its own PISA 2022 report but it carries no immigrant breakdown\nUK-wide, immigrant pupils scored 8 points below their non-immigrant peers\n1 point below after accounting for socio-economic profile\n7 points above once home language is accounted for as well",
   "l2Support": "Delivered by local-authority EAL teams under the general additional-support-needs duty\nNo national per-pupil EAL funding formula\nUnder 1+2, English is explicitly the required first additional language for EAL pupils\nThat framework has an 'enhanced role for EAL teaching' built into it",
   "l1Support": "The 1+2 policy tells schools to build strategies for community and home languages\nAs part of language provision for EAL learners",
   "l3Support": "",
@@ -5412,7 +5416,16 @@
     "year": 2026,
     "description": "'Supporting Children's Learning' statutory Code of Practice, 4th edition, includes EAL as an ASL example."
    }
-  ]
+  ],
+  "slots": {
+   "achievementGap": [
+    1,
+    1,
+    2,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "GB",
@@ -5444,6 +5457,10 @@
    {
     "label": "PISA 2022 Results (Volume I), Table I.B1.7.57: reading performance by immigrant background (OECD, 2023)",
     "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html"
+   },
+   {
+    "label": "PISA 2022: National Report for Wales, Welsh Government, December 2023 — tables 6.6 immigration background and 6.7 language spoken at home",
+    "url": "https://www.gov.wales/sites/default/files/statistics-and-research/2023-12/pisa-2022-national-report-wales-059.pdf"
    }
   ],
   "supportLinks": [],
@@ -5455,7 +5472,7 @@
   "newcomerCriteria": "'English and/or Welsh' is one combined category, bilingual provision being a given\nThe purpose is identifying pupils whose first language is neither\nFirst-language data mandatory in the school census since January 2012, Circular 001/2011",
   "removalCriteria": "Stage E, 'Fluent' — operates without EAL support across the curriculum — is the de facto exit\nOngoing teacher assessment across speaking and listening, reading, and writing\nNot a fixed window, under the Five Stage Model of EAL Acquisition, Stages A–E",
   "newcomerProportion": [],
-  "achievementGap": "PISA 2022 reading, UK-wide — not reported separately by nation\nImmigrant pupils scored 8 points below their non-immigrant peers\n1 point below after accounting for socio-economic profile\n7 points above once home language is accounted for as well\nSmall on all three measures",
+  "achievementGap": "PISA 2022, from Wales's own national report, not the UK-wide figure\nMeasured on 15-year-olds only, so it says nothing about primary\nIn reading, immigrant learners scored 484 and 483 against 469 for non-immigrant\nLearners speaking another language at home scored 460 reading against 469\n9% had an immigrant background, with status unavailable for a further 16%",
   "l2Support": "The Five Stage Model, plus Hwb's language-acquisition-needs assessment toolkit\nHistorically funded by the Minority Ethnic Achievement Grant\nMEAG was discontinued in 2017/18, folded into the Education Improvement Grant\nThat grant has no EAL-specific ring-fenced per-pupil rate",
   "l1Support": "No dedicated mother-tongue instruction programme was found\nCircular 001/2011 frames first-language data as enabling family-language support\nAnd interpreting and translation provision\nAnd 'encouraging home language use, and bilingualism in all languages'",
   "l3Support": "",
@@ -5477,7 +5494,16 @@
     "year": 2023,
     "description": "Review of ESOL policy for Wales published (predominantly adult-focused; flags a pre-16 provision gap)."
    }
-  ]
+  ],
+  "slots": {
+   "achievementGap": [
+    1,
+    1,
+    2,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "GD",
