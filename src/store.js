@@ -97,6 +97,34 @@ const SHAPES = {
 };
 
 const NOT_ESTABLISHED_RE = /^Not established from the sources consulted/i;
+const { slotCount, validSlots } = require('./slots');
+
+// Which question each bullet answers. A field's hint lists its four questions
+// in the order they must be answered, and drafters compose bullet by bullet
+// against that list -- but the convention omits any question that cannot be
+// answered, so a bullet's POSITION does not identify its question. Only 38% of
+// filled fields carry as many bullets as slots. Recording the mapping at
+// drafting time costs one integer per bullet; recovering it later means
+// re-reading the prose of every entry.
+//
+// Kept strict, because a wrong slot number is worse than none: it would file a
+// sentence under a question it does not answer, and the whole point of the
+// number is that slot one means the same thing on all 353 units.
+function slotsFor(domain, body, fields) {
+  const src = body && body.slots;
+  const out = {};
+  if (!src || typeof src !== 'object' || Array.isArray(src)) return out;
+  for (const [k, , type] of domain.fields) {
+    if (type !== 'text') continue;
+    const text = String(fields[k] == null ? '' : fields[k]).trim();
+    if (!text || NOT_ESTABLISHED_RE.test(text) || /^Not applicable/i.test(text)) continue;
+    const bullets = text.split(String.fromCharCode(10)).filter(l => l.trim()).length;
+    const list = Array.isArray(src[k]) ? src[k].map(Number) : null;
+    if (!validSlots(list, bullets, slotCount(domain, k))) continue;
+    out[k] = list;
+  }
+  return out;
+}
 
 // "Looked and found nothing" for a TYPED field. A prose field carries that as
 // the sentinel phrase in its own text; an array cannot, so it is carried here,
@@ -131,6 +159,8 @@ function fieldsFor(domain, body) {
   }
   const ne = notEstablishedFor(domain, body, out);
   if (Object.keys(ne).length) out.notEstablished = ne;
+  const sl = slotsFor(domain, body, out);
+  if (Object.keys(sl).length) out.slots = sl;
   return out;
 }
 
@@ -168,6 +198,9 @@ function rowToEntry(row) {
   // Re-checked on the way out as well as on the way in, so a blob written by
   // an older build cannot flag a prose field or a field that has since gained rows.
   entry.notEstablished = domain ? notEstablishedFor(domain, blob, entry) : {};
+  // Re-validated on the way out as well as in, so a blob written by an older
+  // build cannot carry a slot list that no longer fits its field's bullets.
+  entry.slots = domain ? slotsFor(domain, blob, entry) : {};
   return entry;
 }
 
@@ -260,6 +293,12 @@ function mergeEntries(domain, rows) {
   for (const r of rows) for (const [k, v] of Object.entries(r.notEstablished || {})) {
     if (!(Array.isArray(out[k]) && out[k].length)) out.notEstablished[k] = out.notEstablished[k] || v;
   }
+  // A slot list belongs to a particular text, so it survives the merge only for
+  // the contribution whose text won. Anything else would number the wrong
+  // bullets.
+  out.slots = {};
+  for (const r of rows) for (const [k, v] of Object.entries(r.slots || {}))
+    if (String(out[k] || '') === String(r[k] || '')) out.slots[k] = v;
 
   // Everyone who wrote part of this place is a contributor to it.
   const names = new Set(out.collaborators.map(c => c.name).filter(Boolean));

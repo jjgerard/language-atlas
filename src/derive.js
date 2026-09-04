@@ -129,6 +129,15 @@ function deriveUnits(domain, entries, sharedMatcher) {
       else if (Array.isArray(e[k])) { const ne = typedNotEstablished(e, k); if (ne) values[k] = ne; }
     }
 
+    // Which question each bullet answers, passed through so a field view or a
+    // coding pass can use it without re-reading the prose. Only for fields this
+    // unit actually has text in.
+    const slots = {};
+    for (const [k] of domain.fields) {
+      const list = e.slots && e.slots[k];
+      if (Array.isArray(list) && list.length && values[k]) slots[k] = list;
+    }
+
     const docLinks = cleanLinks(e.docLinks);
     const history = (Array.isArray(e.policyHistory) ? e.policyHistory : []).map(h => {
       historyRows++;
@@ -154,6 +163,7 @@ function deriveUnits(domain, entries, sharedMatcher) {
       lastVerified: e.lastVerified || '',
       coverage: filled.length ? 'has' : (looked.length ? 'looked' : 'none'),
       fieldStates,
+      slots,
       filled,
       looked,
       // Labels of fields this unit has nothing of its own for that ARE answered

@@ -33,7 +33,7 @@ function apply(domain, spec) {
   const FILE = path.join(ATLAS, "data", FILES[domain]);
   const rows = JSON.parse(fs.readFileSync(FILE, "utf8"));
   const problems = [];
-  let touched = 0, filled = 0, bullets = 0, hist = 0, rows_ = 0, notEst = 0;
+  let touched = 0, filled = 0, bullets = 0, hist = 0, rows_ = 0, notEst = 0, slotted = 0;
   const upgrades = [];
 
   for (const [key, s] of Object.entries(spec)) {
@@ -137,6 +137,20 @@ function apply(domain, spec) {
     // carried, the same way documented prose upgrades a prose sentinel.
     const unflag = f => { if (e.notEstablished && e.notEstablished[f]) delete e.notEstablished[f]; };
     for (const [f, set] of Object.entries(s.fields || {})) { e[f] = set.join("\n"); filled++; bullets += set.length; }
+    // Slot numbers arrive alongside the bullets they describe, one per bullet.
+    // Written only for a field this spec actually filled, so a stale list can
+    // never number another field's text; store.js re-validates on the way in.
+    for (const [f, list] of Object.entries(s.slots || {})) {
+      if (!s.fields || !s.fields[f] || !Array.isArray(list)) continue;
+      if (list.length !== s.fields[f].length) {
+        console.log('  ' + domain + ' ' + key + '/' + f + ': ' + list.length +
+          ' slot(s) for ' + s.fields[f].length + ' bullet(s), dropped');
+        continue;
+      }
+      e.slots = e.slots || {};
+      e.slots[f] = list.map(Number);
+      slotted++;
+    }
     for (const [f, arr] of Object.entries(s.series || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
     for (const [f, arr] of Object.entries(s.languages || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
     for (const [f, prose] of Object.entries(s.notEstablished || {})) {
@@ -186,7 +200,7 @@ function apply(domain, spec) {
     }
     touched++;
   }
-  console.log(`${domain}: ${touched} entries, ${filled} fields, ${bullets} bullets, ${rows_} series rows, ${hist} history rows, ${notEst} marked not established`);
+  console.log(`${domain}: ${touched} entries, ${filled} fields, ${bullets} bullets, ${rows_} series rows, ${hist} history rows, ${notEst} marked not established, ${slotted} slot-tagged`);
   return { FILE, rows };
 }
 
