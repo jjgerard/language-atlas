@@ -19,12 +19,47 @@ const file = process.argv[3];
 if (!domain || !file) { console.log("usage: node terr-apply.js <domain> <verified.json> [--write]"); process.exit(1); }
 
 const verified = JSON.parse(fs.readFileSync(file, "utf8"));
+
+// The gate keeps bullets, not slot numbers, so the numbers are read back from
+// the drafters' output directory when one is given as a third argument.
+const slotsBySpec = new Map();
+const specDir = process.argv[4] && !process.argv[4].startsWith("--") ? process.argv[4] : null;
+if (specDir && fs.existsSync(specDir)) {
+  for (const f of fs.readdirSync(specDir).filter(x => /^out-\d+\.json$/.test(x))) {
+    const batch = JSON.parse(fs.readFileSync(path.join(specDir, f), "utf8"));
+    for (const [k, spec] of Object.entries(batch)) {
+      for (const [fld, list] of Object.entries(spec.slots || {})) {
+        const bullets = (spec.fields || {})[fld] || [];
+        if (!Array.isArray(list) || list.length !== bullets.length) continue;
+        const m = new Map();
+        bullets.forEach((b, i) => m.set(b, Number(list[i])));
+        slotsBySpec.set(k + "\u0000" + fld, m);
+      }
+    }
+  }
+}
 const spec = {}, history = {};
 for (const [key, v] of Object.entries(verified)) {
   const s = { confidence: "official-document" };
   if (v.fields && Object.keys(v.fields).length) s.fields = v.fields;
   if (v.series && Object.keys(v.series).length) s.series = v.series;
   if (v.notEstablished && Object.keys(v.notEstablished).length) s.notEstablished = v.notEstablished;
+  // Slot numbers describe PARTICULAR bullets, so they have to be re-aligned to
+  // whatever survived the gate. A field drafted with slots [1,2,4] whose middle
+  // bullet was dropped needs [1,4]: carrying the list over unchanged would
+  // attach every number after the gap to the wrong sentence, which is worse
+  // than having no numbers at all. `slotsBySpec` is keyed by bullet text for
+  // exactly this reason.
+  if (v.fields && slotsBySpec.size) {
+    const out = {};
+    for (const [f, kept] of Object.entries(v.fields)) {
+      const map = slotsBySpec.get(key + "\u0000" + f);
+      if (!map) continue;
+      const list = kept.map(b => map.get(b)).filter(n => Number.isInteger(n));
+      if (list.length === kept.length) out[f] = list;
+    }
+    if (Object.keys(out).length) s.slots = out;
+  }
   // fl/apply.js validates the sentinel phrase and writes this. Without the line
   // below it never arrived, so an absence finding died between the gate and the
   // store with nothing logged either side.

@@ -573,26 +573,32 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "University of Aruba social work courses are taught in English, Dutch and Papiamento\nSpanish is used at conversational level on that same social work programme",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "AZ",
@@ -679,18 +685,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "At UWI Cave Hill, French and Spanish are each available as a single BA major\nCave Hill also lists BA Literatures in English and BA Linguistics as majors\nChinese is offered only as a minor at Cave Hill, not as a BA major\nFrench and Spanish may be taken singly, jointly, or with Management Studies",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -698,7 +704,15 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BD",
@@ -922,26 +936,40 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Language is taken inside UMSA's Lingüística e Idiomas licenciatura, as a mención\nUMSA runs an Área de Aymara aimed at teaching and researching that language\nA parallel Área de Quechua trains specialists in Quechua\nA third mención covers Spanish, and another covers foreign languages",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "The UNIBOL indigenous universities teach every degree course in Aymara, Quechua or Guaraní\nSpanish and a foreign language are learned alongside, under the same decree\nTheses must be written and defended orally in that university's native language\nThis is a rule of Decreto Supremo 29664 of 2008, binding on teaching staff too",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BR",
@@ -949,26 +977,37 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Libras is a full degree subject: a licenciatura plena in Letras: Libras\nIt runs either alone or combined with Portuguese as a second language",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Federal higher education institutions must provide Libras interpreters in the classroom\nThe duty falls on federal institutions of basic and higher education\nIt is set by decree, and staffing duties run to all levels and modalities",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    4
+   ],
+   "mediumOfInstruction": [
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BS",
@@ -976,18 +1015,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "English and Spanish are BA majors at the University of The Bahamas\nThe BA in Spanish covers Spanish language, culture and literature\nFrench and Linguistics are offered as minors at the University of The Bahamas",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -995,7 +1034,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BT",
@@ -1151,12 +1197,18 @@
   "degreeSubjects": "OLA s 43(1)(e): Canadian Heritage may help P/Ts create chances to learn both languages\nCCMEC administers the Explore, Destination Clic and Odyssey bursary and monitor programs\nThese run under separate contribution agreements, not the Protocol budget",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Canada's 2024-28 education funding is framed as a choice to study in English or French\nCanada's French-language colleges and universities are grouped in the ACUFC network",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1164,7 +1216,7 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
+  "status": "partial",
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
@@ -1201,18 +1253,24 @@
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "Not established from the sources consulted. Not documented from an Alberta source this session.",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "The University of Alberta's Campus Saint-Jean teaches its degrees in French\nCampus Saint-Jean has nine undergraduate programs and two master's programs",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1220,7 +1278,7 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
+  "status": "partial",
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
@@ -1249,18 +1307,26 @@
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "Not established from the sources consulted. Not documented from a BC government source this session.",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "UBC Okanagan's Nsyilxcn Language Fluency degree is language-specific and immersion-based\nStudents there take intensive immersion language courses and language-informed culture courses\nUBC Okanagan also lists a Bachelor of Secwépemc Language Fluency\nThe UBC Okanagan Calendar states the curricula are highly structured and language specific",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1268,26 +1334,37 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Universite de Saint-Boniface offers a first-cycle programme in traduction\nIts graduate programmes are in education and Canadian studies, not in a language",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Universite de Saint-Boniface is described as Manitoba's French-language university\nIt is open to anyone able to pursue postsecondary studies in French\nSome of its programmes also require English, and those entrants are profiled in English",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1295,26 +1372,32 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "CCNB is the only public institution offering college-level education in French in the province\nUniversité de Moncton's three campuses serve Francophone and Acadian New Brunswick",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1322,18 +1405,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "French can be taken as a degree in its own right at Memorial University\nMemorial offers French major, minor, honours and joint honours, plus a Spanish minor\nFrench is available as single honours and as joint honours with another subject",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -1341,7 +1424,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1460,12 +1550,18 @@
   "degreeSubjects": "Official Languages Act s.26(2)(c) tasks the Minister with post-secondary promotion\nIndigenous Language Revitalization Scholarship pays up to $5,000 a year\n61 such scholarships awarded between 2018 and 2023\nCollège Nordique francophone named the GNWT's French post-secondary partner",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Collège Nordique in Yellowknife is the territory's accredited French post-secondary institution\nStudents there may pursue post-secondary study and professional development in French",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1473,7 +1569,7 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
+  "status": "partial",
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
@@ -1494,18 +1590,24 @@
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "Not established from the sources consulted. Not documented from a Nova Scotia source this session.",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Université Sainte-Anne is Nova Scotia's only French-language post-secondary institution\nIt also runs French immersion and French second-language training courses",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1549,15 +1651,24 @@
   "by": "",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Nunavut Arctic College's Inuit Studies is a two-year diploma, not a degree\nThe college's Interpreter/Translator diploma covers the technical aspects of Inuktitut",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Most Inuit Studies courses at Nunavut Arctic College are taught in Inuktitut",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "Nunavut Arctic College runs the territory's Inuktut teacher education programmes",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ],
+   "mediumOfInstruction": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1565,7 +1676,7 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
+  "status": "partial",
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
@@ -1594,18 +1705,24 @@
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "Not established from the sources consulted. Not documented from an Ontario government source this session.",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "At Universite de l'Ontario francais teaching is in French, in anglophone Toronto\nIts programmes are described as running in a 100 per cent francophone environment",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1613,18 +1730,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "French can be taken as a major at the University of Prince Edward Island\nSpanish is offered there only as a minor, not as a major\nA UPEI French major runs to at least 42 semester hours of French",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -1632,7 +1749,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1764,15 +1888,27 @@
   "by": "",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "At U of S, Indigenous languages come as a two-year certificate, not a degree\nStudents take either a Cree stream or a Michif stream\nThe Cree stream covers the three dialects of Cree spoken on the Prairies\nTen courses over two years, part time, at the University of Saskatchewan",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "One U of S certificate course, the final teaching placement, is taught entirely in Cree\nCourses teach writing and teaching Cree in both syllabics and the English alphabet",
   "requiredStudy": "",
   "entryRequirements": "Ministry notes some post-secondary programmes need high school French\nSchools urged to steer immersion pupils towards French university majors\nLa Cite universitaire francophone (Regina) and U of S rate French proficiency",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -1971,18 +2107,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Mapuche language and culture is a degree in its own right at UC Temuco\nThe language is mapunzugun, taught towards its revitalisation\nIt is a teaching degree: the academic grade is Licenciado/a en Educacion",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -1990,7 +2126,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CM",
@@ -3002,18 +3145,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Ministry rules name licenciaturas in Español e Inglés, Lenguas Modernas and Lenguas Extranjeras",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -3021,7 +3164,12 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "CR",
@@ -3040,7 +3188,7 @@
   "by": "",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "At the Universidad de Costa Rica, English is a Bachillerato degree in its own right\nFrench is likewise a UCR Bachillerato in language, culture and literature",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -3048,7 +3196,13 @@
   "entryRequirements": "",
   "teacherPipeline": "UCR's PELEX delivers the national school English test under a MEP agreement\nUCR's Escuela de Lenguas Modernas administers the TEYL\nDedicated bilingual teaching degrees were still only a proposal in 2024",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "CU",
@@ -3123,26 +3277,40 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "At the University of Curaçao a language can be the degree itself, in teacher education\nPapiamentu has its own Bachelor of Teacher Education there\nDutch likewise has a Bachelor of Teacher Education at the University of Curaçao\nEnglish likewise has a Bachelor of Teacher Education at the University of Curaçao",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Each University of Curaçao bachelor is listed with the language it is taught in\nIts Bachelor of Laws is listed as three academic years, in Dutch\nIts Engineering and Sustainable Technology bachelor is listed as Dutch and English\nA teacher-education bachelor is listed as English, Dutch, Papiamentu",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    3,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "CY",
@@ -3375,18 +3543,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Ecuador's academic regime rules name a category of 'carreras de idiomas', language degrees\nIntercultural bilingual education degrees must include one ancestral language",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -3394,7 +3562,13 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "EE",
@@ -4021,7 +4195,7 @@
   "by": "",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Ilisimatusarfik's Sprog, Litteratur & Medier degree pairs language with literature and media\nA separate Oversættelse & Tolkning bachelor is a language degree in its own right\nGreenlandic is the language taught, within general language theory\nThe translation bachelor works on the Greenlandic-Danish pair, with English added\nSprog, Litteratur & Medier can be a hovedfag or a bifag in the teaching degree",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -4029,7 +4203,16 @@
   "entryRequirements": "Study rules must state the degree title in Greenlandic, Danish and English, s 17(2)\nCertificates in Greenlandic, Danish, a Nordic language or English need no translation\nSpecific admission requirements are pitched at gymnasial A, B or C level, act 18/2023",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GM",
@@ -4161,15 +4344,27 @@
   "by": "",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Languages can be taken as a licenciatura degree at USAC's linguistics school\nThe USAC school's remit covers national and foreign languages\nIts licenciatura specialises in Spanish-English translation and interpreting",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Decreto 19-2003 binds the national education system, public and private, on language use\nThe languages it names are Mayan, Garífuna and Xinka, per each linguistic community\nThis is a statutory duty on the education system, not a university-specific rule",
   "requiredStudy": "",
   "entryRequirements": "The Ciclo Basico English CNB was written with the English Department of Universidad del Valle\nNo university language entry requirement was located",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2
+   ],
+   "mediumOfInstruction": [
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GU",
@@ -4247,7 +4442,7 @@
   "by": "",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "English and Spanish can be taken as degrees in their own right at the University of Guyana",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -4255,7 +4450,12 @@
   "entryRequirements": "",
   "teacherPipeline": "Teacher training routes are University of Guyana, CPCE and the GOAL online programme\nNo university language entry requirement was found",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "HK",
@@ -4290,18 +4490,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Central America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "UNAH's Carrera de Letras leads to a Licenciado en Letras in its own right\nIts Carrera de Lenguas Extranjeras runs in English and in French, both at licenciatura level\nLetras is taken with an orientation in Lingüística or in Literatura",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -4309,7 +4509,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "HR",
@@ -4344,18 +4551,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The UEH degree is in applied linguistics, not in a single named language\nCreole and French are the languages: many of its graduates teach both\nThe faculty's origin was making teaching tools in Creole and for Creole\nStudies run four years to a licence at the Faculte de Linguistique Appliquee",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -4363,7 +4570,15 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "HU",
@@ -5631,18 +5846,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "UWI Mona's DLLP offers a range of majors in Linguistics\nCaribbean Sign Language interpreting is offered there as a diploma, not a degree",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -5650,7 +5865,13 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "JO",
@@ -6070,18 +6291,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "French and Spanish are each an Associate Degree in their own right at SALCC\nKwéyòl and Mandarin appear there only as certificates, not as degrees\nBoth language associate degrees are listed at SALCC's Morne Campus",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -6089,7 +6310,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "LI",
@@ -6763,18 +6991,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Central America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "At UNAM each modern language is its own licenciatura, with its own intake\nThe languages are German, French, English, Italian and Portuguese\nDemand and places were counted for the 2023-2024 admissions cycle at UNAM",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -6782,7 +7010,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "MY",
@@ -7157,7 +7392,7 @@
   "by": "",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "A language is a degree in its own right at the Universidad de Panamá\nIts Facultad de Humanidades lists Licenciatura en Inglés among its licenciaturas\nThe same faculty lists Licenciatura en Español and Licenciatura en Francés",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -7165,7 +7400,14 @@
   "entryRequirements": "",
   "teacherPipeline": "MEDUCA selects internationally accredited national universities to deliver local training\nContracts are formalised through memoranda of understanding",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "PE",
@@ -7173,18 +7415,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Linguistics is a degree in its own right at Universidad Nacional Mayor de San Marcos\nSan Marcos also has an Escuela Profesional de Lenguas, Traducción e Interpretación",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -7192,7 +7434,13 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "PF",
@@ -7335,18 +7583,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Estudios Hispánicos is a bachillerato in its own right at UPR Mayagüez\nIts Departamento de Estudios Hispánicos offers three routes into that bachillerato\nOne route is the degree alone, for students wanting only the bachiller en artes\nAnother combines it with the Programa de Preparación de Maestros\nA third combines it with curricular sequences in other disciplines",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -7354,7 +7602,16 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    4,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "PS",
@@ -7443,26 +7700,37 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Guaraní can be taken as a licenciatura in its own right at UNA's Facultad de Filosofía\nThe degree trains fluency and Spanish-Guaraní translation both ways",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Both official languages are the medium of teaching at every level, higher education included\nGuaraní and Spanish are the two official languages the Ley de Lenguas names\nUse is scaled to the competence each level requires, under Ley 4251 article 29",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "QA",
@@ -7934,18 +8202,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Anton de Kom University's language department lists two bachelors, Dutch and English\nOnly the Dutch bachelor is running; English is not yet operational\nIts Bachelor Nederlands covers Dutch language and literature",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -7953,7 +8221,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "SS",
@@ -8015,18 +8290,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Central America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The Universidad de El Salvador offers a Licenciatura en Lenguas Modernas in English and French\nIt replaces UES's Licenciatura en Enseñanza del Inglés and Licenciatura en Lenguas Modernas",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -8034,7 +8309,13 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "SX",
@@ -8387,18 +8668,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "UWI St Augustine's language department spans linguistics, foreign languages and literature\nOfferings include Conference Interpreting and Caribbean Sign Language Interpreting",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -8406,7 +8687,13 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "TV",
@@ -8742,18 +9029,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Yup'ik can be taken as a B.A. in its own right at UA Fairbanks\nIñupiaq is likewise available as a B.A. at UA Fairbanks\nNo other US university offers a B.A. in Yup'ik, the centre states\nUAF calls its Yup'ik language and culture BA the only program of its kind in the world",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -8761,7 +9048,15 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -8850,26 +9145,34 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "French is a 30-credit BA major at CU Boulder",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "CU Boulder's French major allows two FREN classes taught in English, at 1000 and 3000 level",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1
+   ],
+   "mediumOfInstruction": [
+    2
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -8877,26 +9180,36 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Italian is a major in its own right at UConn's Literatures, Cultures and Languages\nUConn also offers Comparative Literary and Cultural Studies for those wanting no single language\nThat CLCS major pairs 12 credits in CLCS with 12 in one national literature",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "A dedicated CLCS course at UConn is taught in English most semesters",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    4
+   ],
+   "mediumOfInstruction": [
+    3
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -8958,26 +9271,35 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Spanish and Portuguese are studied in a UF BA in Hispanic and Latin American Languages\nStudents take Spanish, Portuguese, or Spanish and Portuguese together",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "A graduation requirement is an oral presentation delivered in Spanish or Portuguese",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ],
+   "mediumOfInstruction": [
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -8985,18 +9307,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Georgia Tech offers a B.S. in Applied Languages and Intercultural Studies\nIt also lists B.S. degrees pairing Modern Languages with International Affairs or Economics\nApplied Languages and Intercultural Studies can also be taken there as a double major",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9004,7 +9326,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9012,26 +9341,38 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Hawaiian is studied as a degree subject at undergraduate and graduate level, by state mandate\nUH Hilo runs the first doctorate in the world in Indigenous language revitalization\nDoctoral students may take another indigenous language as their language of focus",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "UH Hilo's College of Hawaiian Language works through the medium of Hawaiian, since 1998\nHilo holds a preschool-to-graduate-school Hawaiian medium system, not just one course\nPhD outcomes require advancement in spoken and written Hawaiian in all educational contexts",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    1,
+    2
+   ],
+   "mediumOfInstruction": [
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9066,26 +9407,34 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Spanish can be taken as a degree in its own right at Illinois Urbana-Champaign",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Up to two SPAN courses taught in another language may count, with adviser permission",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1
+   ],
+   "mediumOfInstruction": [
+    2
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9093,18 +9442,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "French is a major in its own right at Indiana University Bloomington\nItalian is likewise a major in the same IU department\nMinors and a certificate are listed there alongside the two majors",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9112,7 +9461,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9174,18 +9530,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Spanish is a 42-credit BA major at the University of Kentucky\nThe BA includes three courses outside Spanish at 200+ level that complement the major",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9193,7 +9549,13 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9201,18 +9563,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "UL Lafayette offers a B.A. in French as an undergraduate degree in its own right\nFrench and Spanish are its two language majors in Modern Languages\nLatin American Studies and Spanish are also available there as minors\nModern Languages at UL Lafayette also lists double majors and dual degrees",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9220,7 +9582,15 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9282,26 +9652,35 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Spanish is a major at UMass Amherst, requiring 11 courses",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Only two courses may be taken in English within the UMass Spanish major\nThe two-course English limit needs the advisor's approval, per the department's requirements",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1
+   ],
+   "mediumOfInstruction": [
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9309,18 +9688,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "German is a major in its own right at Michigan State University\nJapanese is likewise a major in MSU's Linguistics, Languages and Cultures\nKorean is offered there as a major or a minor",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9328,7 +9707,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9390,18 +9776,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Romance Languages is a BA in its own right at the University of Missouri\nMizzou students must pick a French or Spanish emphasis within that BA\nNo BA in Romance Languages is offered without an emphasis, the catalog says",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9409,7 +9795,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9417,18 +9810,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Japanese and Russian are each a B.A. in their own right at the University of Montana\nLatin and Latin American Studies appear there only as minors\nIts World Languages and Cultures B.A. requires a two-year sequence in one language\nThat language may be Arabic, Chinese, French, German, Greek, Japanese, Latin, Spanish or Russian",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9436,7 +9829,15 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9498,18 +9899,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "UNH offers undergraduate majors in French, German, Russian and Spanish\nArabic and Chinese are available only as minors at UNH",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9517,7 +9918,13 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9525,18 +9932,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Montclair State's Global Cultural Studies lists Arabic, Chinese, French, German and Italian\nIt also lists Portuguese Studies, Russian and Spanish Studies among its programmes\nThe department invites students to double major or minor in a language",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9544,7 +9951,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9552,18 +9966,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "At UNM, Navajo is offered as a minor rather than a degree of its own\nThe language is Navajo, taught with its linguistics, history and culture\nThe minor takes 18 hours of Navajo language courses above the 200 level",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9571,7 +9985,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9606,26 +10027,35 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "UNC-Chapel Hill's BA in Romance Languages has a French and Francophone Studies major",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "At least four courses in UNC's French major must be taught in French\nTwo of those must cover French and Francophone contexts before and after 1789",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1
+   ],
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9633,18 +10063,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Turtle Mountain College offers a Bachelor of Arts in Ojibwe Language, Culture and History\nThe same subject is also listed there as an Associate of Arts\nAnishinaabe Language is one of the college's listed fields of study",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9652,7 +10082,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9714,18 +10151,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "The University of Oregon offers BAs in French and Francophone Studies, Italian and Spanish\nA combined Romance languages BA is also available at the University of Oregon",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9733,7 +10170,13 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9741,18 +10184,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Penn State's College of the Liberal Arts lists Chinese as a B.A. in its own right\nFrench and Francophone Studies and German are each a B.A. and a B.S. there\nRussian and Spanish are also listed as baccalaureate degrees in that college\nArabic Language is listed there only as a minor\nPortuguese is likewise listed there only as a minor",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9760,7 +10203,16 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9822,18 +10274,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Lakota can be studied for a degree at Oglala Lakota College's BA in Lakota Studies\nLakota Language is one of four emphasis areas within that BA, not a standalone degree",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9841,7 +10293,13 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9849,18 +10307,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "At UT Knoxville a language is a concentration inside one World Languages and Cultures BA\nFrench and Francophone Studies is a 30-hour concentration there\nGerman is likewise a concentration, at least 30 hours above the 300 level\nUTK lists Major, Honors Major and Language and World Business as French routes",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9868,7 +10326,15 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9930,26 +10396,35 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Spanish can be taken as a BA in its own right at the University of Vermont",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "UVM's Spanish major courses are all conducted in Spanish\nThis covers advanced language plus literature and culture courses in the major and minor",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1
+   ],
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -9957,18 +10432,18 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "French is a major in its own right at the University of Virginia\nThe same department offers a Minor in French alongside the major\nUVA lets students majoring in two disciplines count up to 6 credit hours twice",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -9976,7 +10451,14 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -10038,26 +10520,35 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "French can be taken as a BA in its own right at UW-Madison",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "UW-Madison's French BA is taught in French apart from one permitted English course\nThe one-course English cap is a stated requirement in the university's Guide",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1
+   ],
+   "mediumOfInstruction": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "US",
@@ -10065,26 +10556,37 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "Spanish is a B.A. in its own right at the University of Wyoming\nChinese, German, French, Japanese, Latin and Classical Civilizations are minors only\nThe B.A. in European Languages, Literature and Film specialises in French, German or Spanish\nThat B.A. combines 30 credit hours of language study with other, flexible course options",
   "linguistics": "",
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Some courses in the University of Wyoming's European Languages B.A. are offered bilingually",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "mediumOfInstruction": [
+    3
+   ]
+  }
  },
  {
   "countryCode": "UY",
@@ -10092,18 +10594,18 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
   "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
-  "degreeSubjects": "",
+  "degreeSubjects": "UdelaR's FHCE lists Lingüística and Letras among its Montevideo licenciaturas\nFHCE runs nine licenciaturas in all, in Montevideo and the interior",
   "linguistics": "",
   "offerings": [],
   "mediumOfInstruction": "",
@@ -10111,7 +10613,13 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "degreeSubjects": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "UZ",
