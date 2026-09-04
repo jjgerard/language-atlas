@@ -84,7 +84,11 @@ for (const [key, v] of Object.entries(verified)) {
   // and entries elsewhere already carry rows from the Indigenous pass.
   const hasHistory = !!(v.history && v.history.length);
   if (hasHistory) history[key] = v.history;
-  if (!s.fields && !s.series && !s.notEstablished && !s.offerings && !s.languages && !hasHistory) continue;
+  // `addDocLinks` alone is a legitimate spec. A pass that recovers the sources
+  // for rows already written adds nothing else, and this guard used to drop it
+  // -- the same "nothing but X is nothing" mistake made for history and for
+  // languages, three times in one file.
+  if (!s.fields && !s.series && !s.notEstablished && !s.offerings && !s.languages && !s.addDocLinks && !hasHistory) continue;
   spec[key] = s;
 }
 

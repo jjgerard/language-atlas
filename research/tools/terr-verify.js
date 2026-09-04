@@ -469,7 +469,19 @@ function quoteOn(quote, page) {
     if (nn) console.log("    " + nn + " notEstablished finding" + (nn === 1 ? "" : "s") + " passed through UNGATED (a claim of absence is not quote-checked)");
     dropped.forEach(d => console.log("    - " + d));
     if (nb || ns || nn || nh || nl)
-      out[key] = { fields: kept, series: keptSeries, notEstablished: notEst, history: keptHist, languages: keptLangs, sources: s.sources || [] };
+      // `sources` and `addDocLinks` are the same thing under two names. The
+      // drafting briefs have asked for `addDocLinks` all session, because that
+      // is what apply.js calls the field; this file only ever read `sources`,
+      // so every source a drafter cited was dropped here without a word.
+      //
+      // It cost more than tidiness. The repo's first rule is that every claim
+      // traces to a docLink ON THE SAME ENTRY, and 179 verified history rows
+      // had just been written with their 103 documents discarded in transit --
+      // which is also why only 16 of 225 he history rows could be matched to
+      // the document they name. Accept both spellings rather than pick one:
+      // the batches already drafted are not going to be rewritten.
+      out[key] = { fields: kept, series: keptSeries, notEstablished: notEst, history: keptHist, languages: keptLangs,
+                   sources: (s.sources && s.sources.length ? s.sources : s.addDocLinks) || [] };
   }
 
   fs.writeFileSync(path.join(specDir, OUT), JSON.stringify(out, null, 1) + NL);
