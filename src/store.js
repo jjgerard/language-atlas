@@ -67,6 +67,11 @@ const CONTENT_STATUS = new Set(['stub', 'partial', 'complete']);
 const str = (v, n) => String(v == null ? '' : v).trim().slice(0, n);
 const parse = (s, fallback) => { try { return JSON.parse(s); } catch { return fallback; } };
 
+// A `url` on a typed row becomes a link in the panel, so it is held to the
+// same standard as docLinks: http(s) or dropped. A row is never discarded for
+// a bad url -- the offering is still true without a link to it.
+const URL_OK = /^https?:///i;
+
 function records(value, maxItems, keys) {
   if (!Array.isArray(value)) return [];
   return value
@@ -74,6 +79,7 @@ function records(value, maxItems, keys) {
     .map(item => {
       const out = {};
       for (const k of keys) if (item && item[k] != null) out[k] = str(item[k], 500);
+      if (out.url && !URL_OK.test(out.url)) delete out.url;
       return out;
     })
     // A row the contributor started and left blank is noise, not data.
@@ -88,12 +94,20 @@ const SHAPES = {
   // in ISO 639-3, and `mri` is Moraori in WALS. A row with no `wals` gets no
   // link rather than a plausible wrong one.
   languages: ['name', 'wals', 'iso', 'family', 'genus', 'typology'],
-  // What a system offers, in a shape that can be counted. Prose could say
-  // "several universities teach Japanese" and the trends page could do nothing
-  // with it; this keeps the language, how far it goes, how many institutions
-  // and WHEN that was true. `year` is what makes it comparable -- an offering
-  // count with no date cannot be set against a school-level one.
-  offering: ['language', 'level', 'institutions', 'year', 'note'],
+  // What a system offers, in a shape that can be counted AND followed. Prose
+  // could say "several universities teach Japanese" and the trends page could
+  // do nothing with it. A count alone is barely better: knowing twelve
+  // institutions teach Basque does not tell you which twelve, or let a reader
+  // reach one. So a row names ONE institution where that is known, carries a
+  // url to the programme itself, and keeps `institutions` for a total the
+  // source states without enumerating.
+  //
+  // That makes the count derivable where institutions are named, and still
+  // recordable where only a total is published -- a row with institution blank
+  // and institutions set is a legitimate row, not a half-filled one. `year` is
+  // what makes any of it comparable: an offering count with no date cannot be
+  // set against a school-level one.
+  offering: ['language', 'level', 'institution', 'url', 'institutions', 'year', 'note'],
 };
 
 const NOT_ESTABLISHED_RE = /^Not established from the sources consulted/i;

@@ -44,8 +44,12 @@ function asText(v) {
         // through to the series one and flattened to "2021 — the note",
         // dropping the language and the level, which are the whole point of it.
         if (r.language) {
+          // `institution` names one; `institutions` is a total the source
+          // stated without naming them. Both can be present, and a row may
+          // carry either alone.
           const count = r.institutions ? r.institutions + ' institutions' : '';
-          return [r.language, r.level, count, r.year, r.note].filter(Boolean).join(' — ');
+          return [r.language, r.level, r.institution, count, r.year, r.note]
+            .filter(Boolean).join(' — ');
         }
         return [r.year, r.value, r.description || r.note].filter(Boolean).join(' — ');
       })
