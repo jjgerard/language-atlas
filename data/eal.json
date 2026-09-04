@@ -5184,6 +5184,10 @@
    {
     "label": "PISA 2022 Results (Volume I), Table I.B1.7.57: reading performance by immigrant background (OECD, 2023)",
     "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html"
+   },
+   {
+    "label": "PISA 2022: National Report for England, Department for Education, 5 December 2023 — section 6.6 immigration background and language",
+    "url": "https://assets.publishing.service.gov.uk/media/656dc3321104cf0013fa742f/PISA_2022_England_National_Report.pdf"
    }
   ],
   "supportLinks": [],
@@ -5201,7 +5205,7 @@
     "note": "of pupils had a first language other than English (Jan 2025 census), up from 18.0% in 2015/16; ranges 7.6% (alternative provision) to 30.2% (nursery)"
    }
   ],
-  "achievementGap": "PISA 2022 reading, UK-wide — not reported separately by nation\nImmigrant pupils scored 8 points below their non-immigrant peers\n1 point below after accounting for socio-economic profile\n7 points above once home language is accounted for as well\nSmall on all three measures",
+  "achievementGap": "PISA 2022 reading, from England's own national report, not the UK-wide figure\nPupils speaking another language at home scored 482 against 504 for English speakers\nFirst-generation immigrant pupils scored 482 against 506 for non-immigrant pupils\nSecond-generation immigrant pupils scored 503, not significantly different\n16% had an immigrant background, with status unavailable for a further 23%",
   "l2Support": "EAL is a compulsory factor in the schools block National Funding Formula\n£590 per primary pupil and £1,585 per secondary pupil, for each of the first 3 years\n2024/25 rates, with a 2.11% uplift for 2026–27\nUnringfenced and added to general budgets — no instructional model is mandated",
   "l1Support": "No national policy on home-language maintenance — a confirmed gap, not a search miss",
   "l3Support": "",
@@ -5219,7 +5223,16 @@
     "year": 2026,
     "description": "2026-27 national funding formula sets the EAL factor at 610 pounds primary and 1,630 pounds secondary, on a three-year eligibility window"
    }
-  ]
+  ],
+  "slots": {
+   "achievementGap": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GB",
