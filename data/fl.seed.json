@@ -78,6 +78,10 @@
    {
     "label": "OECD, PISA 2022 Results (Volume I) - publication landing page (the cited Table I.B1.7.57 is NOT on this page)",
     "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education, 7th edition 2010/11: United Arab Emirates (Internet Archive copy)",
+    "url": "https://web.archive.org/web/20211223012310/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/United_Arab_Emirates.pdf"
    }
   ],
   "supportLinks": [],
@@ -90,7 +94,7 @@
   "secondaryRequirement": "Selective Cycle 1-3 streams also teach maths and science in English\nEnglish-medium subjects include technical and health science subjects\nPrivate schools are free on curriculum except Arabic and social studies",
   "upperSecondary": "Cycle 3, the secondary stage, runs Grades 9 to 12\nEmSAT Achieve is sat in twelfth grade at the end of general education\nEmSAT measures Arabic and English alongside mathematics and science\nPrivate schools remain bound to the MOE Arabic curriculum at every stage",
   "languagesOffered": "English is the main additional language across public schooling\nPrivate schools run Arabic as a second language for non-Arabic speakers",
-  "curriculumTime": "",
+  "curriculumTime": "English: 6 weekly periods in every grade, 2010 Abu Dhabi timetable\nEach teaching period lasts 45 minutes\nApplies to grades 1-9, basic education in government schools\nGiven as a prescribed weekly lesson timetable, not hours observed\nSource given as the Abu Dhabi Education Council, 2010",
   "assessment": "EmSAT assesses core areas of language (English, Arabic), science and mathematics\nEnglish curriculum outcomes are benchmarked to the CEFR",
   "teacherSupply": "",
   "uptake": [],
@@ -107,7 +111,16 @@
     "year": 2018,
     "description": "New national English curriculum framework implemented"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AF",
@@ -131,6 +144,10 @@
    {
     "label": "UNESCO Global Education Monitoring Report, Profiles Enhancing Education Reviews (PEER), Afghanistan — Inclusion profile, 'Ethnic and linguistic groups', summarising Art. 43 of the Constitution, Art. 32 of the 2008 Education Law and the 2014 Inclusive and Child Friendly Education Policy",
     "url": "https://education-profiles.org/central-and-southern-asia/afghanistan/~inclusion"
+   },
+   {
+    "label": "Ministry of Education, Curriculum Framework Afghanistan, Volume I, 1382 (2003), Study plan for primary and secondary education",
+    "url": "https://www.ibe.unesco.org/curricula/afghanistan/af_alfw_2003_eng.pdf"
    }
   ],
   "supportLinks": [],
@@ -143,7 +160,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "Neither cited source reaches upper secondary\n'upper secondary', 'grade 11' and 'grade 9' each return 0 hits in Jhingran 2019\n'primary' returns 181 hits in the same text, so the zero is real\nThe ROSA profile is about disability inclusion and says nothing on language subjects",
   "languagesOffered": "Pashto and Dari are the media; the other is studied as the second language\nUzbeki, Turkmani, Pachaie, Baluchi or Pamiri become official where a majority speak them\nEnglish is introduced as a subject in Grade 4\nArticle 43 obliges the state to teach native languages where they are spoken",
-  "curriculumTime": "",
+  "curriculumTime": "2003 framework: foreign language 3 hours a week in grades 4-6, 4 hours in 7-12\nRuns through primary, intermediate school and upper secondary school\nA unified, centralised study plan of common requirements, not hours taught\nWhich language it is, is chosen by the school with Ministry of Education approval",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [],
@@ -152,7 +169,15 @@
     "year": 2008,
     "description": "However, Article 32 of the 2008 Education Law states that teaching in “public educational institutions, ..."
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AG",
@@ -266,6 +291,10 @@
    {
     "label": "Japan Foundation, 日本語教育 国・地域別情報 — Armenia (2025 edition), higher education section",
     "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/armenia_2.pdf"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education, 7th edition 2010/11: Armenia (Internet Archive copy)",
+    "url": "https://web.archive.org/web/20211222222514/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Armenia.pdf"
    }
   ],
   "supportLinks": [],
@@ -278,7 +307,7 @@
   "secondaryRequirement": "Two foreign languages run through the whole of grades 3 to 12",
   "upperSecondary": "Grades 10 to 12 must teach at least two foreign languages",
   "languagesOffered": "A third foreign language may be added from the school's own component\nAvailable in grades 5 to 9, and in grades 10 to 12",
-  "curriculumTime": "",
+  "curriculumTime": "Foreign languages: 5 weekly periods in each of grades 10-12 in high school\nSpecialized-stream high schools give 4 weekly periods in grades 10-12\nEach teaching period lasts 45 minutes\nTeaching begins in grade 2, with only one foreign language that year\nFrom the Ministry of Education and Science national curriculum, 2010",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [
@@ -288,7 +317,16 @@
     "note": "Students learning Japanese at the Russian-Armenian University, where Japanese is taught as a first foreign language; the other two universities teaching it report 25 students each. Japan Foundation country profile for Armenia (2025 edition)"
    }
   ],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AO",
@@ -304,6 +342,10 @@
    {
     "label": "The impact of language policy and practice on children's learning: Angola (2016): Trudell, UNICEF Eastern and Southern Africa",
     "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2016-Language-and-Learning-Angola.pdf"
+   },
+   {
+    "label": "UNESCO-BIE, Données mondiales de l'éducation, 7e édition 2010/11: Angola (Internet Archive copy)",
+    "url": "https://web.archive.org/web/20211222222222/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Angola.pdf"
    }
   ],
   "supportLinks": [],
@@ -316,11 +358,20 @@
   "secondaryRequirement": "",
   "upperSecondary": "Not addressed: the review's education section stops at the primary curriculum\nConstitutional wording reaches only as far as promoting study of international languages",
   "languagesOffered": "Review names no foreign language taught as a school subject in Angola\nEnglish is discussed only as a rising language of economic opportunity, not as a subject\nConstitution promotes Angolan languages alongside main international languages\nSeven Angolan languages plus Portuguese were covered by the 2008 Pearson textbook project",
-  "curriculumTime": "",
+  "curriculumTime": "Foreign language (English or French): 3 weekly periods, grades 7 to 12\nA class period lasts 45 minutes\nThe 2005 primary timetable, grades 1-6, carries no foreign language\nCurriculum-reform timetables of 2004, prescribed rather than observed\nSet by the Ministry of Education with INIDE",
   "assessment": "",
   "teacherSupply": "A Pearson project announced in 2008, with the government and the Molteno Institute\nIt was to produce textbooks in seven Angolan languages plus Portuguese\nMolteno's 2011 annual report indicates the books were being sold in Angola then",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AR",
@@ -1187,6 +1238,10 @@
    {
     "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Bangladesh",
     "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/bangladesh_2.pdf"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education, 7th edition 2010/11: Bangladesh (Internet Archive copy)",
+    "url": "https://web.archive.org/web/20211222222646/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Bangladesh.pdf"
    }
   ],
   "supportLinks": [],
@@ -1199,7 +1254,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "English continues to Class XII, the policy secondary level being Classes IX to XII\nCompulsory in all three streams, with Bangla, Bangladesh Studies, Maths and IT (NEP 2010)\nClass XII ends in the Higher Secondary Certificate examination, the school-leaving exam\nDoes not differ by stream: each compulsory subject has identical question papers",
   "languagesOffered": "Two languages are taught as subjects: Bangla and English\nEnglish is a subject from Grade 1 in Bangla-medium schools\nBangla is the sole medium of instruction in the government sector\nEthnic languages appear as pre-primary materials, not as curriculum subjects",
-  "curriculumTime": "",
+  "curriculumTime": "Primary average: 2.5 weekly hours for each subject other than Bangla and maths\nGrades 1-2 receive 24 periods of 30 minutes a week across all subjects\nEnglish has its own textbook from grade 1, alongside Bangla and mathematics\nPrescribed hours; actual contact hours are far less, per the same profile\nPrimary curriculum is established by the government",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [
@@ -1224,7 +1279,16 @@
     "note": "All learners of Japanese in Bangladesh, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
    }
   ],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BE",
@@ -1313,6 +1377,10 @@
    {
     "label": "Japan Foundation, 日本語教育 国・地域別情報 — Burkina Faso (2025 edition), 沿革 and 最新動向 sections",
     "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/burkina_2.pdf"
+   },
+   {
+    "label": "UNESCO-BIE, Donnees mondiales de l'education, 7e edition 2010/11: Burkina Faso, version revisee decembre 2010 (Internet Archive copy)",
+    "url": "https://web.archive.org/web/20211222223201/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Burkina_Faso.pdf"
    }
   ],
   "supportLinks": [],
@@ -1325,7 +1393,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "No language requirement for upper secondary or for leaving school is stated\nSome graduates of bilingual primary schools go on to traditional secondary schools\nCMS multilingual middle schools teach national languages plus traditional subjects\nThe study follows the bilingual continuum only into post-primary CMS colleges",
   "languagesOffered": "Eight national languages are used in bilingual education alongside French\nSix are named in the passage quoted: Moore, Dioula, Fulfulde, lyele, Gulmancema, Dagara\nFrench is the country's official language, so it is not offered as a foreign language\nEnglish is never mentioned: 'anglais' 0 in 240,495 chars of the ADEA study",
-  "curriculumTime": "",
+  "curriculumTime": "English: 5 weekly hours in 6e and 5e, 3 in each later class, 2010 profile\nIntroduced in the first year of secondary, collège and lycée\nOfficial hours; the basic-education volume is not always respected\nAll subjects are decided nationally and applied across the whole territory",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [
@@ -1335,7 +1403,15 @@
     "note": "Students taught on the Japanese course run by the non-profit AFAJAPS in Ouagadougou from January 2025, by three teachers; the profile states there is no Japanese-language education institution in the country. Japan Foundation country profile for Burkina Faso (2025 edition)"
    }
   ],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "curriculumTime": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BG",
@@ -1471,6 +1547,10 @@
    {
     "label": "Mulwafu, W., Ensink, R., Kuper, H. & Fagan, J., 'Survey of ENT services in sub-Saharan Africa: little progress between 2009 and 2015', Global Health Action 10(1), 1289736, Tables 1 and 3",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/"
+   },
+   {
+    "label": "UNESCO-BIE, Donnees mondiales de l'education, 7e edition 2010/11: Burundi (Internet Archive copy)",
+    "url": "https://web.archive.org/web/20211222223217/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Burundi.pdf"
    }
   ],
   "supportLinks": [],
@@ -1483,11 +1563,24 @@
   "secondaryRequirement": "",
   "upperSecondary": "The review does not address upper secondary\nReform merges basic and early secondary into a 9-year fundamental education\nFour languages from Grade 1 is called political rather than pedagogical by the review\nNational exams are stated to include Kirundi",
   "languagesOffered": "English and Swahili were introduced as early as Grade 1 on East African Community grounds\nBoth are spoken by under 5 per cent of Burundians and unsupported in teacher training\nFrench and Kirundi are media of instruction, not foreign languages, in this system\nPrimary teachers' college curriculum covers French, Kirundi and English",
-  "curriculumTime": "",
+  "curriculumTime": "Source gives lesson length only, not per-subject totals: 50 minutes at secondary\nPrimary sessions run 30 minutes in years 1-4, 30 or 45 minutes in years 5-6\nEnglish entered the primary programme in years 1 and 2 from the 2006 reform\nSome schools cut the secondary period to 45 minutes after Saturdays were dropped",
   "assessment": "",
   "teacherSupply": "A lack of subject terminology in Kirundi is given as a reason the programme stopped at Grade 4\nWorld Vision and Save the Children run Literacy Boost in two regions\nDeveloping Kirundi reading materials is part of it",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2006,
+    "description": "Primary curriculum reform introduces English, Kiswahili and civics in years 1 and 2"
+   }
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "BJ",
@@ -6047,6 +6140,10 @@
    {
     "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Egypt",
     "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/egypt_2.pdf"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education, 7th edition 2010/11: Egypt (weekly lesson timetables, NCERD 2001)",
+    "url": "https://web.archive.org/web/20211222224651/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Egypt.pdf"
    }
   ],
   "supportLinks": [],
@@ -6059,7 +6156,7 @@
   "secondaryRequirement": "Per PEER, not the school law: a foreign language is compulsory from the first secondary cycle\nThat first language is English or French; a second is chosen in the second cycle",
   "upperSecondary": "Second cycle of secondary requires pupils to choose a second foreign language\nFirst foreign language, English or French, starts in the first secondary cycle\nPEER gives no exemption or opt-out and no leaving-certificate language rule",
   "languagesOffered": "Source is UNESCO PEER inclusion profile 2021, archived and no longer updated\nPublic primary schools obliged by school law to teach only standard Arabic\nPrivate schools may teach other languages in addition to official Arabic\nSecondary pupils take English or French from the first cycle",
-  "curriculumTime": "",
+  "curriculumTime": "Figures are the 2001 national timetable; each teaching period lasts 45 minutes\nForeign language: 5 weekly periods\nApplies to preparatory education, the second cycle of basic education\nMinisterial Decree No. 99 of 8 June 2003 set English to begin in grade 1",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [
@@ -6074,7 +6171,20 @@
     "note": "All learners of Japanese in Egypt, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
    }
   ],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2003,
+    "description": "Ministerial Decree No. 99 of 8 June 2003 brought English teaching forward to grade 1"
+   }
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "ER",
@@ -6698,7 +6808,7 @@
   "secondaryRequirement": "Grades 7 and 8 subjects include Amharic and English alongside Mother Tongue\nMost regions start using English as a medium of instruction from Grade 7\nIn Grades 9 and 10 English is timetabled at four periods a week, Amharic at two\nAll students will be obliged to take Amharic as a federal working language in Grades 9 and 10",
   "upperSecondary": "Not addressed: 'upper secondary' 0 in the retrieved review body\nReview reports public pressure on regional bureaux to use English earlier\nPolitical elites are said to send children to English or French medium schools\nHeugh et al call eight years of mother-tongue medium one of the best policies on the continent",
   "languagesOffered": "More than 30 languages are used as media of instruction or taught as subjects in primary\nThree of them are taught as subjects beyond primary school\nEnglish is the one language the review names as a subject from Grade 1 nationwide\nModern schools began teaching French and Arabic from 1908, on Ambatchew's account",
-  "curriculumTime": "",
+  "curriculumTime": "May 2009 framework: English 6 periods a week in grades 1-2, 5 in grades 3-4\nEnglish 5 periods a week in grades 5-8\nEach period is 40 minutes, with 30 periods in the school week\nEnglish is offered as a subject into secondary as well as being the medium\nSet by the Ministry of Education in its Curriculum Framework for Ethiopian Education",
   "assessment": "",
   "teacherSupply": "READ, from 2012, is a five-year USAID and Ministry of Education programme\nAiming at the reading and writing of 15 million children in Grades 1 to 8\nIn seven of the most widely spoken languages\nPrompted by a 2010 assessment finding 40% of Grade 2 and 3 children could not read at all",
   "uptake": [],
@@ -6710,6 +6820,10 @@
    {
     "year": 2007,
     "description": "Heugh, Bogale, Benson and Gebre Yohannes study of language-in-education commissioned by the Ministry of Education"
+   },
+   {
+    "year": 2009,
+    "description": "Curriculum Framework for Ethiopian Education, KG to grade 12, issued"
    }
   ],
   "slots": {
@@ -6717,6 +6831,13 @@
     1,
     1,
     3,
+    4
+   ],
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    2,
     4
    ]
   }
@@ -7309,6 +7430,10 @@
    {
     "label": "CONFEMEN/PASEC, PASEC2019 — Qualité des systèmes éducatifs en Afrique subsaharienne francophone, rapport international (revised 2022)",
     "url": "https://www.confemen.org/wp-content/uploads/2022/07/RapportPasec2019_Rev2022_WebOK.pdf"
+   },
+   {
+    "label": "Info241 (Libreville), 'Réforme éducative : Le Gabon expérimente cette année l'Approche par compétences au secondaire', 10 October 2024, reporting circulaire n°003/MENFPFC du 7 octobre",
+    "url": "https://info241.com/reforme-educative-le-gabon-experimente-cette-annee-l-approche,9516"
    }
   ],
   "supportLinks": [],
@@ -7321,7 +7446,7 @@
   "secondaryRequirement": "The 2010 National Forum proposed introducing a second foreign language in grade 6\nIt is a recommendation, not a regulation, and not said to be adopted\nGrade 6 is the first year of secondary school in Gabon\nThe source does not name the first foreign language it implies already exists",
   "upperSecondary": "PEER profile states no language rule at upper secondary or for leaving school",
   "languagesOffered": "PEER names no language taught as a school subject in Gabon\n2010 National Forum recommended a second foreign language from grade 6\nAct No. 21/2011 art 5 requires local languages at the various levels",
-  "curriculumTime": "",
+  "curriculumTime": "News report of circulaire n°003/MENFPFC du 7 octobre; the circular itself not seen\nLangue vivante 1 (anglais): 2 hours a week\nLangue vivante 2 (Spanish or option): 2 hours a week\nApplies to the 6e and 5e classes piloting the competency-based approach in 2024-25\nSet by the Ministère de l'Éducation nationale in that circular",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [],
@@ -7334,7 +7459,16 @@
     "year": 2011,
     "description": "Act No. 21/2011 art 5 requires local languages at the various levels"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GB",
@@ -7688,6 +7822,10 @@
    {
     "label": "შეფასებისა და გამოცდების ეროვნული ცენტრი (NAEC), როგორ მოვემზადოთ ერთიანი ეროვნული გამოცდებისათვის — ინგლისური ენა, თბილისი 2025 [NAEC, How to prepare for the Unified National Examinations: English, 2025], შესავალი",
     "url": "https://naec.ge/uploads/postData/20-25/%E1%83%90%E1%83%91%E1%83%98%E1%83%A2%E1%83%A3%E1%83%A0%E1%83%98%E1%83%94%E1%83%9C%E1%83%A2%E1%83%94%E1%83%91%E1%83%98-%E1%83%99%E1%83%A0%E1%83%94%E1%83%91%E1%83%A3%E1%83%9A%E1%83%94%E1%83%91%E1%83%98/%E1%83%98%E1%83%9C%E1%83%92%E1%83%9A%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%98.pdf"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education, 7th edition 2010/11: Georgia (weekly lesson timetables, National study plans for general basic education 2010-2011)",
+    "url": "https://web.archive.org/web/20220108024022/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Georgia.pdf"
    }
   ],
   "supportLinks": [],
@@ -7700,7 +7838,7 @@
   "secondaryRequirement": "A second foreign language is compulsory from grade V\nThe National Curriculum does not fix which language that must be",
   "upperSecondary": "A third foreign language is an elective in grades X to XII",
   "languagesOffered": "The Law names no specific foreign language anywhere\nA foreign language may be the medium under an international agreement\nOtherwise foreign-medium teaching needs the Ministry's agreement\nCited matsne links are document records, not the curriculum annex text",
-  "curriculumTime": "",
+  "curriculumTime": "Grades 7-9 in 2010: first foreign language 3 weekly periods, second foreign language 4\nGrades 10-12 in 2010: 2-3 weekly periods each for first and second foreign language\nEach teaching period lasts 45 minutes\nApplies to basic secondary (lower) and general secondary (upper) education\nSet by the Ministry of Education and Science in its national study plans",
   "assessment": "English is examined as a subject of the Unified National Examinations, set by NAEC\nThe paper tests listening, reading and writing plus lexical and grammatical competence\nDifficulty of the test material is set at B1, called adequate to the national curriculum",
   "teacherSupply": "",
   "uptake": [
@@ -7732,6 +7870,13 @@
    "assessment": [
     1,
     1,
+    4
+   ],
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    2,
     4
    ]
   }
@@ -7791,6 +7936,14 @@
    {
     "label": "UNESCO IBE, World Data on Education, 7th edition 2010/11, Ghana — junior high school teaching subjects and the BECE",
     "url": "https://web.archive.org/web/20181125070328/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Ghana.pdf"
+   },
+   {
+    "label": "NaCCA, Ministry of Education, Ghana, French Language Common Core Programme Curriculum for B7/JHS1-B9/JHS3, September 2020",
+    "url": "https://nacca.gov.gh/wp-content/uploads/2022/10/FRENCH-LANGUAGE.pdf"
+   },
+   {
+    "label": "Ghana Education Service / NaCCA, French Curriculum for Primary Schools (Basic 4-6), September 2019",
+    "url": "https://nacca.gov.gh/wp-content/uploads/2019/06/FRENCH-B4-B6.pdf"
    }
   ],
   "supportLinks": [],
@@ -7803,7 +7956,7 @@
   "secondaryRequirement": "French is a compulsory subject at the basic level, which includes Junior High School\nIt features as one of nine subjects of the BECE taken at Junior High School\nCompulsion ends there: at Senior High School French is an elective subject in the WASSCE",
   "upperSecondary": "French is an elective subject in the WASSCE at Senior High School level\nIt is compulsory at basic level and one of nine BECE subjects at Junior High School\nEnglish is not foreign here but a credit in it is required to progress between levels\nSwahili, Spanish, Chinese, Arabic and Russian are studied at university, not at school",
   "languagesOffered": "The 2002 English-only turn also encouraged the learning of French\nA Ghanaian language was to be taught as a subject from P1 under that model",
-  "curriculumTime": "",
+  "curriculumTime": "French: 3 periods a week of 50 minutes each in the 2020 JHS common core curriculum\nUpper primary B4-B6: 2 periods a week of 30 minutes each, 2019 curriculum\nApplies to B7/JHS1 to B9/JHS3 and, for the shorter periods, to Basic 4-6\nBoth figures are headed SUGGESTED TIME ALLOCATION\nSet by the National Council for Curriculum and Assessment, Ministry of Education",
   "assessment": "English is a core subject in both the BECE and the WASSCE\nFrench is compulsory at basic level and is one of nine BECE subjects\nAt Senior High School French becomes an elective subject in the WASSCE\nA credit grade in English in both examinations is needed to move up a level",
   "teacherSupply": "",
   "uptake": [],
@@ -7835,6 +7988,14 @@
    {
     "year": 2009,
     "description": "The National Literacy Acceleration Programme (NALAP) is introduced by GES and the Ministry of Education — the first policy in Ghana devoted exclusively to language-in-education rather than folded into a general reform."
+   },
+   {
+    "year": 2019,
+    "description": "NaCCA French curriculum for primary Basic 4-6 issued"
+   },
+   {
+    "year": 2020,
+    "description": "NaCCA Common Core Programme French curriculum for B7-B9 issued"
    }
   ],
   "slots": {
@@ -7848,6 +8009,13 @@
     1,
     2,
     3
+   ],
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -7979,6 +8147,10 @@
    {
     "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Gambia: Inclusion",
     "url": "https://education-profiles.org/sub-saharan-africa/gambia/~inclusion"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education, 7th edition 2010/11: Gambia (on the draft Curriculum Framework for Basic Education, 15 March 2010)",
+    "url": "https://web.archive.org/web/20211222231528/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Gambia.pdf"
    }
   ],
   "supportLinks": [],
@@ -7991,7 +8163,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "PEER profile states no language rule at upper secondary or for leaving school",
   "languagesOffered": "PEER gives a count, not names: \"the five most commonly used languages\"\nMoBSE validated training manuals on orthographies of the five languages\nAbout 10 indigenous languages used informally, not as school subjects\nArabic taught in the madrasa sector, which the state continues to support",
-  "curriculumTime": "",
+  "curriculumTime": "French sits in the core block given 75% of teaching periods at upper primary, grades 4-6\nBasic-level schools run 44 weeks a year with 28 hours of schooling a week\nUpper basic, grades 7-9, has French in the same 75% core block\nWording is that core subjects should be allocated 75%, a stipulation not measured time\nTeaching time and periods decided by regional directorates, supervised by the ministry",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [],
@@ -7999,8 +8171,21 @@
    {
     "year": 2004,
     "description": "It becomes a school subject from year four under the 2004-15 education policy"
+   },
+   {
+    "year": 2010,
+    "description": "Draft Curriculum Framework for Basic Education of 15 March 2010 redefines the curriculum"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GN",

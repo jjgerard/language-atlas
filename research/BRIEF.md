@@ -141,3 +141,20 @@ sitting in the citation you just wrote.
 The same rules apply as to any other field: the year must come from the source,
 never from inference, and a description you cannot quote support for does not go
 in.
+
+**A history row needs its own `evidence` entry, exactly as a bullet does.** This
+is the single most common way good rows are lost: two waves of drafters proposed
+history rows off documents they had already read and quoted, gave no evidence
+entry for the rows themselves, and the gate dropped every one of them. Key the
+entry by the row's description, or by the year and description together —
+`"2006 Primary curriculum reform introduces English in years 1 and 2"` — and
+either form is accepted.
+
+And the quote has to support the CHANGE, not merely the figure. A row saying
+"the 2010 study plans set foreign language at 3 periods" whose only support is a
+table's source line reading *National study plans 2010-2011* is not a dated
+change; it is the field's own content with the document's date attached, and it
+was dropped for that. What belongs here is what the source says HAPPENED: a
+decree bringing English forward to grade 1, a curriculum issued, a department
+closed. If the document states a figure but never says anything changed, the
+honest answer is no history row.

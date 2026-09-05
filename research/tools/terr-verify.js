@@ -497,7 +497,14 @@ function quoteOn(quote, page) {
       const label = "policyHistory " + (r && r.year);
       if (!r || !r.description) { dropped.push(label + ": row missing a description"); continue; }
       if (!Number.isInteger(Number(r.year))) { dropped.push(label + ": year is not a number"); continue; }
-      const e = ev.get(r.description);
+      // Keyed by the bare description, or by the year and description together.
+      // Both spellings are in use because both are natural: the description
+      // alone is what this file has always asked for, and "2006 <description>"
+      // is what a drafter writes when a unit has two rows whose descriptions
+      // could be confused -- the year is the thing that tells them apart. The
+      // second form carries strictly more information than the first, so
+      // refusing it threw away good rows to enforce a preference.
+      const e = ev.get(r.description) || ev.get(r.year + " " + r.description);
       if (!e) { dropped.push(label + ": no evidence entry - " + String(r.description).slice(0, 48)); continue; }
       const p = page.get(e.url);
       if (!p || p.status !== 200) { dropped.push(label + ": source returned " + (p ? p.status : "?")); continue; }
