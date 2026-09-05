@@ -460,15 +460,63 @@ function quoteOn(quote, page) {
       if (good.length) keptLangs[field] = good;
     }
 
+    // `programme` rows. Same gate, but the evidence key cannot be a single
+    // fixed formula the way it can for a language name.
+    //
+    // The brief asks drafters to key evidence by `institution + " " + level`,
+    // and that formula COLLIDES the moment one institution has two master's
+    // programmes -- UBC's MA and its MDS Computational Linguistics -- so
+    // drafters correctly disambiguate by working the subject into the key.
+    // Demanding an exact string here would drop those rows for being
+    // well-disambiguated, which is precisely backwards.
+    //
+    // So a row matches an evidence entry whose bullet names its institution
+    // (or its subject, where no institution is named) and, when the row states
+    // a level, that level too. The quote check is unchanged and still does the
+    // real work: this only decides WHICH quote a row is claiming.
+    const keptProg = {};
+    const norm = s2 => String(s2 || "").toLowerCase().replace(/\s+/g, " ").trim();
+    for (const [field, rows4] of Object.entries(s.programme || {})) {
+      const good = [];
+      for (const r of (rows4 || [])) {
+        const who = norm(r && (r.institution || r.subject));
+        if (!who) { dropped.push(field + ": row names neither an institution nor a subject"); continue; }
+        const lvl = norm(r.level);
+        let e = ev.get(r.institution ? r.institution + " " + (r.level || "") : "");
+        if (!e) {
+          for (const cand of ev.values()) {
+            const b = norm(cand.bullet);
+            if (!b.includes(who)) continue;
+            if (lvl && !b.includes(lvl)) continue;
+            e = cand; break;
+          }
+        }
+        const label = field + " " + (r.institution || r.subject) + (r.level ? " " + r.level : "");
+        if (!e) { dropped.push(label + ": no evidence entry"); continue; }
+        const p = page.get(e.url);
+        if (!p || p.status !== 200) { dropped.push(label + ": source returned " + (p ? p.status : "?")); continue; }
+        if (!p.text) { dropped.push(label + ": no text extracted from the source"); continue; }
+        if (!quoteOn(e.quote, p.text)) { dropped.push(label + ": quote not found on the page"); continue; }
+        good.push({
+          subject: String(r.subject || ""), level: String(r.level || ""),
+          institution: String(r.institution || ""), url: String(r.url || ""),
+          institutions: String(r.institutions || ""), orientation: String(r.orientation || ""),
+          year: String(r.year || ""), note: String(r.note || ""),
+        });
+      }
+      if (good.length) keptProg[field] = good;
+    }
+
     const ns = Object.values(keptSeries).reduce((a, b) => a + b.length, 0);
     const nb = Object.values(kept).reduce((a, b) => a + b.length, 0);
     const nl = Object.values(keptLangs).reduce((a, b) => a + b.length, 0);
+    const np = Object.values(keptProg).reduce((a, b) => a + b.length, 0);
     const nh = keptHist.length;
     console.log(NL + key + ": " + Object.keys(kept).length + " fields, " + nb + " bullets, " + ns + " series rows, " +
-                nh + " history rows, " + nl + " language rows verified, " + dropped.length + " dropped");
+                nh + " history rows, " + nl + " language rows, " + np + " programme rows verified, " + dropped.length + " dropped");
     if (nn) console.log("    " + nn + " notEstablished finding" + (nn === 1 ? "" : "s") + " passed through UNGATED (a claim of absence is not quote-checked)");
     dropped.forEach(d => console.log("    - " + d));
-    if (nb || ns || nn || nh || nl)
+    if (nb || ns || nn || nh || nl || np)
       // `sources` and `addDocLinks` are the same thing under two names. The
       // drafting briefs have asked for `addDocLinks` all session, because that
       // is what apply.js calls the field; this file only ever read `sources`,
@@ -480,7 +528,7 @@ function quoteOn(quote, page) {
       // which is also why only 16 of 225 he history rows could be matched to
       // the document they name. Accept both spellings rather than pick one:
       // the batches already drafted are not going to be rewritten.
-      out[key] = { fields: kept, series: keptSeries, notEstablished: notEst, history: keptHist, languages: keptLangs,
+      out[key] = { fields: kept, series: keptSeries, notEstablished: notEst, history: keptHist, languages: keptLangs, programme: keptProg,
                    sources: (s.sources && s.sources.length ? s.sources : s.addDocLinks) || [] };
   }
 

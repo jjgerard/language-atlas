@@ -146,6 +146,36 @@ function apply(domain, spec) {
       });
     }
 
+    // Programme rows: the same checks as offerings, keyed by subject rather
+    // than language, plus the one field offerings has no analogue for.
+    // `orientation` is a CLOSED vocabulary on purpose. It is the field most
+    // open to being filled from impression -- a reader can always form a view
+    // of which way a department leans -- and the whole value of it is that it
+    // records the department's own words. Anything outside the vocabulary is
+    // a judgement, and a judgement does not belong in a typed cell.
+    const ORIENT = new Set(['generative', 'usage-based', 'usage based', 'functional', 'formal']);
+    for (const [f, arr] of Object.entries(s.programme || {})) {
+      if (!Object.prototype.hasOwnProperty.call(e, f)) problems.push(`${domain} ${key}: no field ${f}`);
+      if (Array.isArray(e[f]) && e[f].length) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      if (!Array.isArray(arr)) { problems.push(`${domain} ${key}/${f}: programme must be an array`); continue; }
+      arr.forEach(r => {
+        if (!r || !r.subject) { problems.push(`${domain} ${key}/${f}: a row has no subject`); return; }
+        if (r.level && !LEVELS.has(String(r.level).toLowerCase()))
+          problems.push(`${domain} ${key}/${f}: "${r.level}" is not a level`);
+        if (r.institutions && !/^[0-9]+$/.test(String(r.institutions)))
+          problems.push(`${domain} ${key}/${f}: institutions "${r.institutions}" is not a count`);
+        if (r.url && !/^https?:[/][/]/i.test(r.url))
+          problems.push(`${domain} ${key}/${f}: url is not http(s)`);
+        if (r.orientation && !ORIENT.has(String(r.orientation).toLowerCase()))
+          problems.push(`${domain} ${key}/${f}: "${r.orientation}" is not an orientation`);
+        // A row with neither an institution nor a count answers neither
+        // "which institutions" nor "how many", which are the two questions
+        // this field exists for.
+        if (!r.institution && !r.institutions)
+          problems.push(`${domain} ${key}/${f}: a row names neither an institution nor a count`);
+      });
+    }
+
     const sup = new Set((e.supportLinks || []).map(l => l.url));
     [...(s.docLinks || []), ...(s.addDocLinks || [])]
       .forEach(l => { if (sup.has(l.url)) problems.push(`${domain} ${key}: ${l.url} is a supportLink`); });
@@ -185,6 +215,7 @@ function apply(domain, spec) {
     for (const [f, arr] of Object.entries(s.series || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
     for (const [f, arr] of Object.entries(s.languages || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
     for (const [f, arr] of Object.entries(s.offerings || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
+    for (const [f, arr] of Object.entries(s.programme || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
     for (const [f, prose] of Object.entries(s.notEstablished || {})) {
       if (Array.isArray(e[f])) { e.notEstablished = e.notEstablished || {}; e.notEstablished[f] = prose; }
       else e[f] = prose;

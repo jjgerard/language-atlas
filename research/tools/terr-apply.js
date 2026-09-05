@@ -48,6 +48,7 @@ for (const [key, v] of Object.entries(verified)) {
   // is passed straight to apply.js -- which already knows the shape and clears
   // any not-established flag the field carried.
   if (v.languages && Object.keys(v.languages).length) s.languages = v.languages;
+  if (v.programme && Object.keys(v.programme).length) s.programme = v.programme;
   if (v.notEstablished && Object.keys(v.notEstablished).length) s.notEstablished = v.notEstablished;
   // Slot numbers describe PARTICULAR bullets, so they have to be re-aligned to
   // whatever survived the gate. A field drafted with slots [1,2,4] whose middle
@@ -88,7 +89,7 @@ for (const [key, v] of Object.entries(verified)) {
   // for rows already written adds nothing else, and this guard used to drop it
   // -- the same "nothing but X is nothing" mistake made for history and for
   // languages, three times in one file.
-  if (!s.fields && !s.series && !s.notEstablished && !s.offerings && !s.languages && !s.addDocLinks && !hasHistory) continue;
+  if (!s.fields && !s.series && !s.notEstablished && !s.offerings && !s.languages && !s.programme && !s.addDocLinks && !hasHistory) continue;
   spec[key] = s;
 }
 
