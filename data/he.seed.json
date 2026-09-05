@@ -2413,7 +2413,12 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of The Bahamas, School of English Studies — programme options (BA in English; minors including Linguistics)",
+    "url": "https://www.ub.edu.bs/academics/colleges/english/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -2421,7 +2426,18 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "English and Spanish are BA majors at the University of The Bahamas\nThe BA in Spanish covers Spanish language, culture and literature\nFrench and Linguistics are offered as minors at the University of The Bahamas",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of The Bahamas",
+    "url": "https://www.ub.edu.bs/academics/colleges/english/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -2493,7 +2509,16 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Botswana, Communication and Study Skills Unit (CSSU) — mandate of the unit (archived 5 July 2022)",
+    "url": "https://web.archive.org/web/20220705232506/https://www.ub.bw/administration-and-support/academic-affairs/centre-academic-development/communication-and-study-skills-cssu"
+   },
+   {
+    "label": "University of Botswana, Department of Languages and Social Sciences Education (DLSSE) — Education subjects and levels offered (archived 2024)",
+    "url": "https://web.archive.org/web/2024/https://www.ub.bw/faculties-and-departments/education/languages-and-social-sciences-education"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -2577,9 +2602,9 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Academic communication skills are offered to all first-year students",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "The Department of Languages and Social Sciences Education offers secondary teacher education\nIts Education subjects run from Business Education through English Language\nIt teaches at undergraduate, postgraduate diploma and graduate level",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -2589,6 +2614,14 @@
     2,
     3,
     4
+   ],
+   "requiredStudy": [
+    1
+   ],
+   "teacherPipeline": [
+    1,
+    1,
+    3
    ]
   }
  },
@@ -2732,6 +2765,26 @@
    {
     "label": "Action Plan for Official Languages 2023-2028: Protection-Promotion-Collaboration (post-secondary funding measure)",
     "url": "https://www.canada.ca/en/canadian-heritage/services/official-languages-bilingualism/official-languages-action-plan/2023-2028.html"
+   },
+   {
+    "label": "University of British Columbia, Department of Linguistics — department home page (BA, minor, MA, MDS in computational linguistics, PhD)",
+    "url": "https://linguistics.ubc.ca/"
+   },
+   {
+    "label": "McGill University, Department of Linguistics — Undergraduate programs (Major and Minor Concentration in Linguistics, B.A.)",
+    "url": "https://www.mcgill.ca/linguistics/undergraduate"
+   },
+   {
+    "label": "McGill University, Department of Linguistics — Graduate programs (M.A. Thesis and Ph.D. in Linguistics)",
+    "url": "https://www.mcgill.ca/linguistics/graduate"
+   },
+   {
+    "label": "UQAM, Département de linguistique — Programmes de premier cycle (baccalauréat, majeure et mineure en linguistique)",
+    "url": "https://linguistique.uqam.ca/programmes-et-cours/premier-cycle/"
+   },
+   {
+    "label": "UQAM, Département de linguistique — Programmes de cycles supérieurs (maîtrise et doctorat en linguistique)",
+    "url": "https://linguistique.uqam.ca/programmes-et-cours/cycles-superieurs/"
    }
   ],
   "supportLinks": [],
@@ -2741,7 +2794,138 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "OLA s 43(1)(e): Canadian Heritage may help P/Ts create chances to learn both languages\nCCMEC administers the Explore, Destination Clic and Odyssey bursary and monitor programs\nThese run under separate contribution agreements, not the Protocol budget",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of British Columbia",
+    "url": "https://linguistics.ubc.ca/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of British Columbia",
+    "url": "https://linguistics.ubc.ca/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of British Columbia",
+    "url": "https://linguistics.ubc.ca/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Computational Linguistics",
+    "level": "master",
+    "institution": "University of British Columbia",
+    "url": "https://linguistics.ubc.ca/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of British Columbia",
+    "url": "https://linguistics.ubc.ca/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "McGill University",
+    "url": "https://www.mcgill.ca/linguistics/undergraduate",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "McGill University",
+    "url": "https://www.mcgill.ca/linguistics/undergraduate",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "McGill University",
+    "url": "https://www.mcgill.ca/linguistics/graduate",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "McGill University",
+    "url": "https://www.mcgill.ca/linguistics/graduate",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistique",
+    "level": "bachelor",
+    "institution": "Université du Québec à Montréal",
+    "url": "https://linguistique.uqam.ca/programmes-et-cours/premier-cycle/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistique",
+    "level": "minor",
+    "institution": "Université du Québec à Montréal",
+    "url": "https://linguistique.uqam.ca/programmes-et-cours/premier-cycle/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistique",
+    "level": "master",
+    "institution": "Université du Québec à Montréal",
+    "url": "https://linguistique.uqam.ca/programmes-et-cours/cycles-superieurs/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistique",
+    "level": "doctorate",
+    "institution": "Université du Québec à Montréal",
+    "url": "https://linguistique.uqam.ca/programmes-et-cours/cycles-superieurs/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "Canada's 2024-28 education funding is framed as a choice to study in English or French\nCanada's French-language colleges and universities are grouped in the ACUFC network",
   "requiredStudy": "",
@@ -2803,6 +2987,18 @@
    {
     "label": "CMEC / Government of Canada, Protocol for Agreements for Minority-Language Education and Second-Language Instruction 2019–2023, cl. 5.1.1",
     "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   },
+   {
+    "label": "University of Alberta, Department of Linguistics — academic programs (BA, MSc, PhD)",
+    "url": "https://www.ualberta.ca/en/linguistics/index.html"
+   },
+   {
+    "label": "UCalgary Calendar, Bachelor of Arts (BA) in Linguistics, School of Languages, Linguistics, Literatures and Cultures",
+    "url": "https://calendar.ucalgary.ca/programs/LINGBA"
+   },
+   {
+    "label": "University of Calgary, School of Languages, Linguistics, Literatures and Cultures — Linguistics graduate degree programs (MA, PhD)",
+    "url": "https://arts.ucalgary.ca/languages-linguistics-literatures-cultures/future-students/graduate/degree-programs/linguistics"
    }
   ],
   "supportLinks": [],
@@ -2812,7 +3008,68 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Not established from the sources consulted. Not documented from an Alberta source this session.",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Alberta",
+    "url": "https://www.ualberta.ca/en/linguistics/index.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of Alberta",
+    "url": "https://www.ualberta.ca/en/linguistics/index.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of Alberta",
+    "url": "https://www.ualberta.ca/en/linguistics/index.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Calgary",
+    "url": "https://calendar.ucalgary.ca/programs/LINGBA",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of Calgary",
+    "url": "https://arts.ucalgary.ca/languages-linguistics-literatures-cultures/future-students/graduate/degree-programs/linguistics",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of Calgary",
+    "url": "https://arts.ucalgary.ca/languages-linguistics-literatures-cultures/future-students/graduate/degree-programs/linguistics",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "The University of Alberta's Campus Saint-Jean teaches its degrees in French\nCampus Saint-Jean has nine undergraduate programs and two master's programs",
   "requiredStudy": "",
@@ -3083,6 +3340,10 @@
    {
     "label": "Université de Moncton, Historique (1963 incorporation on the recommendations of the Commission royale d'enquête sur l'enseignement supérieur au Nouveau-Brunswick)",
     "url": "https://www.umoncton.ca/notreumoncton/historique"
+   },
+   {
+    "label": "University of New Brunswick, Linguistics (Faculty of Arts, Saint John campus) — Bachelor of Arts",
+    "url": "https://www.unb.ca/academics/programs/arts/linguistics.html"
    }
   ],
   "supportLinks": [],
@@ -3092,7 +3353,18 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of New Brunswick, Saint John",
+    "url": "https://www.unb.ca/academics/programs/arts/linguistics.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "CCNB is the only public institution offering college-level education in French in the province\nUniversité de Moncton's three campuses serve Francophone and Acadian New Brunswick",
   "requiredStudy": "",
@@ -3381,6 +3653,10 @@
    {
     "label": "Université Sainte-Anne, '125 années d'histoire(s)' - La fondation (1890 opening; charter of 30 April 1892)",
     "url": "https://www.usainteanne.ca/notre-universite/125/125-la-fondation"
+   },
+   {
+    "label": "Saint Mary's University, Undergraduate Academic Calendar — Linguistics (major, honours, concentration, minor and Certificate in Linguistics)",
+    "url": "https://smu-ca-public.courseleaf.com/undergraduate/programs/linguistics/"
    }
   ],
   "supportLinks": [],
@@ -3390,7 +3666,38 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Not established from the sources consulted. Not documented from a Nova Scotia source this session.",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "Saint Mary's University",
+    "url": "https://smu-ca-public.courseleaf.com/undergraduate/programs/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "Saint Mary's University",
+    "url": "https://smu-ca-public.courseleaf.com/undergraduate/programs/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "certificate",
+    "institution": "Saint Mary's University",
+    "url": "https://smu-ca-public.courseleaf.com/undergraduate/programs/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "students majoring in Linguistics at Saint Mary's are not eligible for the certificate"
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "Université Sainte-Anne is Nova Scotia's only French-language post-secondary institution\nIt also runs French immersion and French second-language training courses",
   "requiredStudy": "",
@@ -7377,6 +7684,18 @@
    {
     "label": "Decreto 1330 de 2019, art. 2.5.3.2.3.2.4, componentes de interacción (condiciones de calidad del programa para el registro calificado)",
     "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=98270"
+   },
+   {
+    "label": "Universidad Nacional de Colombia, Facultad de Ciencias Humanas — Departamento de Lingüística (dos pregrados y la Maestría en Lingüística)",
+    "url": "https://www.humanas.unal.edu.co/2026/unidades-academicas/departamentos/linguistica/"
+   },
+   {
+    "label": "Universidad de Antioquia, Facultad de Comunicaciones y Filología — Posgrados (Maestría en Lingüística, Doctorado en Lingüística)",
+    "url": "https://www.udea.edu.co/wps/portal/udea/web/inicio/unidades-academicas/comunicaciones/estudiar-facultad/posgrados"
+   },
+   {
+    "label": "Universidad de Antioquia — Doctorado en Lingüística, plan de estudios",
+    "url": "https://www.udea.edu.co/wps/portal/udea/web/inicio/unidades-academicas/comunicaciones/estudiar-facultad/posgrados/doctorado-linguistica"
    }
   ],
   "supportLinks": [],
@@ -7386,7 +7705,48 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Ministry rules name licenciaturas in Español e Inglés, Lenguas Modernas and Lenguas Extranjeras",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Lingüística",
+    "level": "bachelor",
+    "institution": "Universidad Nacional de Colombia",
+    "url": "https://www.humanas.unal.edu.co/2026/unidades-academicas/departamentos/linguistica/programas/pregrados/linguistica",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Lingüística",
+    "level": "master",
+    "institution": "Universidad Nacional de Colombia",
+    "url": "https://www.humanas.unal.edu.co/2026/unidades-academicas/departamentos/linguistica/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Lingüística",
+    "level": "master",
+    "institution": "Universidad de Antioquia",
+    "url": "https://www.udea.edu.co/wps/portal/udea/web/inicio/unidades-academicas/comunicaciones/estudiar-facultad/posgrados",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Lingüística",
+    "level": "doctorate",
+    "institution": "Universidad de Antioquia",
+    "url": "https://www.udea.edu.co/wps/portal/udea/web/inicio/unidades-academicas/comunicaciones/estudiar-facultad/posgrados/doctorado-linguistica",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "Every programme must set conditions favouring the development of a second language",
@@ -7422,6 +7782,10 @@
    {
     "label": "Universidad de Costa Rica, Escuela de Lenguas Modernas — Historia (Escuela de Temporada 1950, cursos de inglés y francés 1954, acuerdo del Consejo Universitario 1962, planes de estudio 1964)",
     "url": "https://lenguasmodernas.ucr.ac.cr/historia/"
+   },
+   {
+    "label": "Universidad de Costa Rica, Sistema de Estudios de Posgrado — Programa de Posgrado en Lingüística (Maestría Académica en Lingüística)",
+    "url": "https://www.sep.ucr.ac.cr/posgrado-linguistica-inicio"
    }
   ],
   "supportLinks": [],
@@ -7431,7 +7795,18 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "At the Universidad de Costa Rica, English is a Bachillerato degree in its own right\nFrench is likewise a UCR Bachillerato in language, culture and literature",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Lingüística",
+    "level": "master",
+    "institution": "Universidad de Costa Rica",
+    "url": "https://www.sep.ucr.ac.cr/posgrado-linguistica-inicio",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -7555,7 +7930,16 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Universidade de Cabo Verde — Licenciatura em Linguas, Literaturas e Culturas (Estudos Franceses, EF-Ensino): objectivos, disciplinas nucleares e perfil de entrada",
+    "url": "https://unicv.edu.cv/pt/ensino/cursos/licenciaturas/91-linguas-literaturas-e-culturas-estudos-franceses"
+   },
+   {
+    "label": "Universidade de Cabo Verde — Mestrado em Ensino do Frances Lingua Estrangeira (MEFLE): objectivos e condicoes de candidatura",
+    "url": "https://www.unicv.edu.cv/en/ensino/cursos/mestrados/2874-ensino-do-frances-lingua-estrangeira"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -7608,8 +7992,8 @@
   ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
-  "teacherPipeline": "",
+  "entryRequirements": "The core entry subjects are Lingua Portuguesa or Comunicacao e Expressao, and French\nThe entry profile is the 12th year in the Humanistic or Economic and Social streams\nOther profiles enter on a Baccalaureat equivalence from francophone countries",
+  "teacherPipeline": "The licenciatura aims to form future teachers of French as a foreign language\nIt forms qualified teachers able to meet on the ground the objectives set by the Ministry\nA master's in teaching French as a foreign language is open to licenciatura holders\nThat master's deepens knowledge of French and skills in teaching it as a foreign language",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -7618,6 +8002,17 @@
     2,
     2,
     4
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2
+   ],
+   "teacherPipeline": [
+    1,
+    1,
+    3,
+    3
    ]
   }
  },
@@ -8209,6 +8604,10 @@
    {
     "label": "Resolución RPC-SE-08-No.023-2022 del Consejo de Educación Superior, que expide el Reglamento de Régimen Académico, publicada en el Segundo Suplemento del Registro Oficial 124 de 10 de agosto de 2022",
     "url": "https://boletin.novedadesjuridicas.com.ec/rpc2322/"
+   },
+   {
+    "label": "Pontificia Universidad Católica del Ecuador, Licenciatura en Lingüística — programme page",
+    "url": "https://www.puce.edu.ec/landing-linguistica/"
    }
   ],
   "supportLinks": [],
@@ -8218,7 +8617,18 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Ecuador's academic regime rules name a category of 'carreras de idiomas', language degrees\nIntercultural bilingual education degrees must include one ancestral language",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Lingüística",
+    "level": "bachelor",
+    "institution": "Pontificia Universidad Católica del Ecuador",
+    "url": "https://www.puce.edu.ec/landing-linguistica/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "A second language is a graduation requirement for every third-level carrera\nAncestral languages and sign language may count as that second language\nThird-level grado requires at least level B1\nTécnico requires at least A1 and tecnológico at least A2\nEach IES decides whether to build the second language into the curriculum",
@@ -9659,7 +10069,20 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Ghana, Undergraduate Entry Requirements — Ghanaian applicants with WASSCE/SSSCE, general entry requirements into full-time degree programmes",
+    "url": "https://admissions.ug.edu.gh/undergraduate/entry-requirements"
+   },
+   {
+    "label": "University of Ghana Language Centre, Programmes — UGRC 110 Academic Writing I and UGRC 210 Academic Writing II (archived 20 July 2024)",
+    "url": "https://web.archive.org/web/20240720231618/https://lc.ug.edu.gh/node/27"
+   },
+   {
+    "label": "University of Education, Winneba, Department of French Education — History of the department and its programmes",
+    "url": "https://uew.edu.gh/french/history"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -9775,9 +10198,9 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
-  "entryRequirements": "",
-  "teacherPipeline": "",
+  "requiredStudy": "The Language Centre teaches Academic Writing I in all programmes in Level 100\nAcademic Writing II runs in all Level 200 programmes, except Basic and Applied Sciences",
+  "entryRequirements": "Credits are required of every applicant to an undergraduate degree at the University of Ghana\nThe four core subjects are English, Core Mathematics, Integrated Science and Social Studies\nThe credit band is A1 to C6 in WASSCE, or A to D in SSSCE\nA B.Ed. in French needs a credit pass in French among the three electives",
+  "teacherPipeline": "A four-year B.A. French Education produces graduate teachers of French for pre-tertiary levels\nThe Department of French Education at the University of Education, Winneba started in 1985\nIt has run a Diploma, a B.Ed. and now the B.A. in French Education\nAn M.Ed. in Teaching of French targets teachers working as inspectors and in-service organisers",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -9787,6 +10210,22 @@
     2,
     2,
     2
+   ],
+   "requiredStudy": [
+    1,
+    3
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3
    ]
   }
  },
@@ -15128,7 +15567,12 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "National University of Lesotho, Faculty of Education — mandate since 26 January 1967, departments and pre-service and in-service training",
+    "url": "https://nul.ls/faculty-of-education/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -15158,7 +15602,7 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "The Faculty of Education produces qualified teachers for primary, secondary and tertiary\nThe Faculty of Education was first established on 26 January 1967\nOne of its departments is Languages and Social Education, headed by Dr Makhulu Makumane\nIt trains both pre-service and in-service teacher trainees\nIn-service, part-time and distance learning programmes are put in place to address needs",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -15166,6 +15610,13 @@
     2,
     3,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    2,
+    3,
+    3
    ]
   }
  },
@@ -15451,6 +15902,14 @@
    {
     "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Morocco: Inclusion",
     "url": "https://education-profiles.org/northern-africa-and-western-asia/morocco/~inclusion"
+   },
+   {
+    "label": "Ecole Superieure de l'Education et de la Formation d'Agadir (ESEFA), Universite Ibn Zohr — Licence d'education, specialite Enseignement secondaire, Langue francaise: objectifs, admission et debouches",
+    "url": "https://esef.uiz.ac.ma/en/education-license-secondary-teaching-french-language/"
+   },
+   {
+    "label": "Faculte des Sciences de l'Education, Universite Mohammed V de Rabat — Liste des candidats preselectionnes pour le concours d'acces a la Licence d'education, annee universitaire 2026-2027",
+    "url": "https://fse.um5.ac.ma/fr/node/527"
    }
   ],
   "supportLinks": [],
@@ -15502,7 +15961,7 @@
   "mediumOfInstruction": "Art. 32 opens pathways in Arabic, French, English and Spanish\nWithin the framework of university autonomy\nForeign-language streams must include one module taught in Arabic",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "The licence d'education aims to shape a teacher familiar with learning theories and methods\nGraduates are oriented towards teaching professions in the public or private sectors\nThe Faculte des Sciences de l'Education at Rabat runs a licence d'education of its own\nBeyond the licence, study continues into master's and doctoral programmes in education sciences\nEntry is by application review and an entrance exam, with an age limit of 21",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -15510,6 +15969,13 @@
     1,
     2,
     3
+   ],
+   "teacherPipeline": [
+    1,
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -15614,7 +16080,12 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Annuaire de Madagascar — Ecole Normale Superieure (ENS) de l'Universite d'Antananarivo: missions, concours d'entree post-bacc et diplomes (CAPEN)",
+    "url": "https://annuaire.mg/ens/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -15644,11 +16115,18 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Initial formation of secondary teachers and education supervisors is one of the ENS missions\nThe school is open to future teachers of the schools, lycees or universities of Madagascar\nThe ENS sits at Ampefiloha and is attached to the University of Antananarivo\nA certificate exists in each discipline taught at the ENS and gives the right to teach\nEntry is by post-baccalaureate concours, open to bacheliers of any filiere without distinction",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
    "degreeSubjects": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "teacherPipeline": [
+    1,
     1,
     2,
     3,
@@ -16217,7 +16695,16 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Mauritius Institute of Education, Teacher Education — Mandates of the MIE and the history of its teacher training programmes",
+    "url": "http://web.mie.ac.mu/teacher-education/"
+   },
+   {
+    "label": "Mauritius Institute of Education, Post Graduate Certificate in Education (PGCE) part-time — programme structure and teaching practice",
+    "url": "https://web.mie.ac.mu/post-graduate-certificate-in-education-pgce-pt/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -16303,7 +16790,7 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "The local universities have no faculty of education and act merely as the awarding bodies\nThe University of Mauritius awards the part-time degrees, UTM the full-time one\nThe MIE began undergraduate degree provision in 1989 with its first B.Ed. programme\nTrainees have supervised teaching practice in the school, where they are observed and assessed\nWhether the course is a diploma or a degree depends on Government policy",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -16312,6 +16799,13 @@
     2,
     2,
     2
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    4
    ]
   }
  },
@@ -16585,7 +17079,16 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Universidade Pedagogica de Maputo — Licenciatura em Ensino de Frances: objectivos, acesso (Lei 5/2003 e Lei 18/2018) e duracao",
+    "url": "https://up.ac.mz/ensino-aprendizagem/cursos/graduacao?view=article&id=551%3Alicenciatura-em-ensino-de-frances&catid=231"
+   },
+   {
+    "label": "Universidade Pedagogica de Maputo — Licenciatura em Ensino de Lingua Inglesa: objectivos, acesso e tarefas ocupacionais",
+    "url": "https://up.ac.mz/ensino-aprendizagem/cursos/graduacao?view=article&id=554%3Alicenciatura-em-ensino-de-lingua-inglesa&catid=231"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -16622,8 +17125,8 @@
   ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
-  "teacherPipeline": "",
+  "entryRequirements": "Entry needs the 12th class of the SNE completed, or an equivalent level\nAccess follows the Lei do Ensino Superior 5/2003 and Lei 18/2018",
+  "teacherPipeline": "The English degree forms teachers of English for the education subsystems in Mozambique\nThe French graduate's first task is to teach French in those same subsystems\nThe Universidade Pedagogica de Maputo runs both licenciaturas\nThe route is a four-year licenciatura of eight semesters and 240 credits",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -16633,6 +17136,16 @@
     2,
     2,
     4
+   ],
+   "entryRequirements": [
+    2,
+    4
+   ],
+   "teacherPipeline": [
+    1,
+    1,
+    2,
+    3
    ]
   }
  },
@@ -19486,7 +19999,16 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Somali National University — Admission Requirements for undergraduate study",
+    "url": "https://snu.edu.so/admission/admission-requirements/"
+   },
+   {
+    "label": "Somali National University — Faculty of Education: history since the 1963 Lafoole College of Education and the Bachelor of Education in English Language",
+    "url": "https://snu.edu.so/academics/undergraduate/faculty-of-education/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -19526,8 +20048,8 @@
   ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
-  "teacherPipeline": "",
+  "entryRequirements": "Applicants hold a recognised Somali Secondary School Certificate or an equivalent qualification\nMinimum entry requirements are set by the Ministry of Education and the university together",
+  "teacherPipeline": "A Bachelor of Education in English Language prepares English teachers for secondary schools\nIt runs in a faculty founded in 1963 as the Lafoole College of Education\nThe Faculty was re-established in 2014 with the reopening of Somali National University\nThe four-year degree was reinstated in 1983, pairing study with supervised teaching practice",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -19536,6 +20058,16 @@
     1,
     2,
     3,
+    3
+   ],
+   "entryRequirements": [
+    2,
+    4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    2,
     3
    ]
   }
@@ -21136,6 +21668,22 @@
    {
     "label": "NAICU Issue Brief, International Education (origins of Title VI in the NDEA of 1958 and the Fulbright-Hays Act of 1961)",
     "url": "https://www.naicu.edu/policy-advocacy/issue-briefs/international-education/"
+   },
+   {
+    "label": "MIT Department of Linguistics and Philosophy — Undergraduate Program (Linguistics Track of Program 2, Minor Program in Linguistics)",
+    "url": "https://linguistics.mit.edu/undergraduate/"
+   },
+   {
+    "label": "MIT Department of Linguistics and Philosophy — Graduate Program in Linguistics (founded 1961, first PhDs 1965)",
+    "url": "https://linguistics.mit.edu/graduate/"
+   },
+   {
+    "label": "University of Pennsylvania, Department of Linguistics — Undergraduate Program (major and two minors)",
+    "url": "https://www.ling.upenn.edu/undergraduate"
+   },
+   {
+    "label": "University of Pennsylvania, Graduate Group in Linguistics — Graduate Program (M.A. and Ph.D.; 'the core of our program is the formal generative tradition')",
+    "url": "https://www.ling.upenn.edu/graduate"
    }
   ],
   "supportLinks": [],
@@ -21145,7 +21693,68 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "A census of 2,455 institutions and 258 languages, autumn 2021\nEnrolments fell 16.6 per cent between autumn 2016 and autumn 2021\nOf the fifteen largest languages only ASL, Biblical Hebrew and Korean gained\nProgrammes reporting enrolments fell from 11,734 to 10,773\nThe MLA cautions this counts reporting institutions, not closed departments",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "Massachusetts Institute of Technology",
+    "url": "https://linguistics.mit.edu/undergraduate/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "Massachusetts Institute of Technology",
+    "url": "https://linguistics.mit.edu/graduate/",
+    "institutions": "",
+    "orientation": "",
+    "year": "1961",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Pennsylvania",
+    "url": "https://www.ling.upenn.edu/undergraduate",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Pennsylvania",
+    "url": "https://www.ling.upenn.edu/undergraduate",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of Pennsylvania",
+    "url": "https://www.ling.upenn.edu/graduate",
+    "institutions": "",
+    "orientation": "generative",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of Pennsylvania",
+    "url": "https://www.ling.upenn.edu/graduate",
+    "institutions": "",
+    "orientation": "generative",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -21228,6 +21837,22 @@
    {
     "label": "University of Alaska Fairbanks, About ANLC — Alaska Native Language Center established by state legislation in 1972",
     "url": "https://www.uaf.edu/anlc/about-anlc/"
+   },
+   {
+    "label": "UAF Catalog, Linguistics B.A. (College of Liberal Arts)",
+    "url": "https://catalog.uaf.edu/bachelors/linguistics-ba/"
+   },
+   {
+    "label": "UAF Catalog, Linguistics Minor",
+    "url": "https://catalog.uaf.edu/minors/linguistics/"
+   },
+   {
+    "label": "UAF Catalog, Linguistics, Applied M.A. (30 credits, two concentrations)",
+    "url": "https://catalog.uaf.edu/masters/linguistics-applied/"
+   },
+   {
+    "label": "UAF Catalog, Academic Departments — Linguistics department overview",
+    "url": "https://catalog.uaf.edu/academic-departments/linguistics/"
    }
   ],
   "supportLinks": [],
@@ -21237,7 +21862,38 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Yup'ik can be taken as a B.A. in its own right at UA Fairbanks\nIñupiaq is likewise available as a B.A. at UA Fairbanks\nNo other US university offers a B.A. in Yup'ik, the centre states\nUAF calls its Yup'ik language and culture BA the only program of its kind in the world",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Alaska Fairbanks",
+    "url": "https://catalog.uaf.edu/bachelors/linguistics-ba/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Alaska Fairbanks",
+    "url": "https://catalog.uaf.edu/minors/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Applied Linguistics",
+    "level": "master",
+    "institution": "University of Alaska Fairbanks",
+    "url": "https://catalog.uaf.edu/masters/linguistics-applied/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -21369,19 +22025,45 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Central Arkansas, School of Language and Literature — Linguistics Program (major in four tracks, Linguistics minor)",
+    "url": "https://uca.edu/sll/linguistics/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Central Arkansas",
+    "url": "https://uca.edu/sll/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Central Arkansas",
+    "url": "https://uca.edu/sll/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -21408,6 +22090,34 @@
    {
     "label": "UC Office of the President, A-G Course Criteria Guide, Subject Area E: Language Other Than English",
     "url": "https://hs-articulation.ucop.edu/guide/a-g-subject-requirements/e-language-other-than-english/"
+   },
+   {
+    "label": "University of California, Berkeley, Department of Linguistics — Undergraduate Program",
+    "url": "https://lx.berkeley.edu/ugrad/program"
+   },
+   {
+    "label": "University of California, Berkeley, Department of Linguistics — Applying to the Graduate Program (Ph.D.)",
+    "url": "https://lx.berkeley.edu/grad/apply"
+   },
+   {
+    "label": "UCLA Department of Linguistics — About the Graduate Program (nine undergraduate majors, minor, M.A. and Ph.D.)",
+    "url": "https://linguistics.ucla.edu/graduate/"
+   },
+   {
+    "label": "UC San Diego, Department of Linguistics — Undergraduate Majors requirements",
+    "url": "https://linguistics.ucsd.edu/undergrad/majors.html"
+   },
+   {
+    "label": "UC San Diego, Department of Linguistics — Graduate Program Requirements (Ph.D. only)",
+    "url": "https://linguistics.ucsd.edu/grad/requirements.html"
+   },
+   {
+    "label": "UC Santa Cruz, Department of Linguistics — department home page (B.A., minor, M.A. and Ph.D.)",
+    "url": "https://linguistics.ucsc.edu/"
+   },
+   {
+    "label": "Stanford University, Department of Linguistics — department home page (undergraduate major and PhD)",
+    "url": "https://linguistics.stanford.edu/"
    }
   ],
   "supportLinks": [],
@@ -21417,7 +22127,158 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of California, Berkeley",
+    "url": "https://lx.berkeley.edu/ugrad/program",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of California, Berkeley",
+    "url": "https://lx.berkeley.edu/grad/apply",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of California, Los Angeles",
+    "url": "https://linguistics.ucla.edu/graduate/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Applied Linguistics",
+    "level": "bachelor",
+    "institution": "University of California, Los Angeles",
+    "url": "https://linguistics.ucla.edu/graduate/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of California, Los Angeles",
+    "url": "https://linguistics.ucla.edu/graduate/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of California, Los Angeles",
+    "url": "https://linguistics.ucla.edu/graduate/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of California, Los Angeles",
+    "url": "https://linguistics.ucla.edu/graduate/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of California, San Diego",
+    "url": "https://linguistics.ucsd.edu/undergrad/majors.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of California, San Diego",
+    "url": "https://linguistics.ucsd.edu/grad/requirements.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of California, Santa Cruz",
+    "url": "https://linguistics.ucsc.edu/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of California, Santa Cruz",
+    "url": "https://linguistics.ucsc.edu/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of California, Santa Cruz",
+    "url": "https://linguistics.ucsc.edu/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of California, Santa Cruz",
+    "url": "https://linguistics.ucsc.edu/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "Stanford University",
+    "url": "https://linguistics.stanford.edu/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "Stanford University",
+    "url": "https://linguistics.stanford.edu/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -21455,6 +22316,10 @@
    {
     "label": "CU Boulder Catalog 2026-2027, Higher Education Admission Recommendations (HEAR), world language row",
     "url": "https://catalog.colorado.edu/undergraduate/admissions/higher-education-admission-recommendations"
+   },
+   {
+    "label": "CU Boulder Catalog 2026-2027, Linguistics graduate programs (MA, CLASIC MS, PhD), College of Arts and Sciences",
+    "url": "https://catalog.colorado.edu/graduate/colleges-schools/arts-sciences/programs-study/linguistics/"
    }
   ],
   "supportLinks": [],
@@ -21464,7 +22329,58 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "French is a 30-credit BA major at CU Boulder",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Colorado Boulder",
+    "url": "https://catalog.colorado.edu/undergraduate/colleges-schools/arts-sciences/programs-study/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Colorado Boulder",
+    "url": "https://catalog.colorado.edu/undergraduate/colleges-schools/arts-sciences/programs-study/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of Colorado Boulder",
+    "url": "https://catalog.colorado.edu/graduate/colleges-schools/arts-sciences/programs-study/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Computational Linguistics, Analytics, Search and Informatics",
+    "level": "master",
+    "institution": "University of Colorado Boulder",
+    "url": "https://catalog.colorado.edu/graduate/colleges-schools/arts-sciences/programs-study/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of Colorado Boulder",
+    "url": "https://catalog.colorado.edu/graduate/colleges-schools/arts-sciences/programs-study/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "CU Boulder's French major allows two FREN classes taught in English, at 1000 and 3000 level",
   "requiredStudy": "Some CU Boulder schools and majors require several semesters of the same world language\nEach college and programme within the university sets its own language requirement",
@@ -21633,19 +22549,107 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Georgetown University, Department of Linguistics — Undergraduate (major and minor in Linguistics)",
+    "url": "https://linguistics.georgetown.edu/undergraduate/"
+   },
+   {
+    "label": "Georgetown University, Department of Linguistics — Master of Science in Linguistics, four concentrations",
+    "url": "https://linguistics.georgetown.edu/programs/master-degree-programs/master-of-sciences/"
+   },
+   {
+    "label": "Georgetown University, Department of Linguistics — Ph.D. in Linguistics and Computational Linguistics",
+    "url": "https://linguistics.georgetown.edu/programs/phd-programs/"
+   },
+   {
+    "label": "Gallaudet University, Linguistics — Areas of Study (Minor, M.A., Ph.D. in Linguistics)",
+    "url": "https://gallaudet.edu/linguistics/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "Georgetown University",
+    "url": "https://linguistics.georgetown.edu/undergraduate/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "Georgetown University",
+    "url": "https://linguistics.georgetown.edu/undergraduate/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "Georgetown University",
+    "url": "https://linguistics.georgetown.edu/programs/master-degree-programs/master-of-sciences/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics and Computational Linguistics",
+    "level": "doctorate",
+    "institution": "Georgetown University",
+    "url": "https://linguistics.georgetown.edu/programs/phd-programs/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "Gallaudet University",
+    "url": "https://gallaudet.edu/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "Gallaudet University",
+    "url": "https://gallaudet.edu/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "Gallaudet University",
+    "url": "https://gallaudet.edu/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -21867,6 +22871,10 @@
    {
     "label": "Hawaii State Legislature, S.C.R. No. 90 (Regular Session of 2011) — recites Act 315, Session Laws of Hawaii 1997, establishing the Hawaiian language college at UH Hilo",
     "url": "https://data.capitol.hawaii.gov/sessions/session2011/bills/SCR90_.HTM"
+   },
+   {
+    "label": "University of Hawaii at Manoa, Department of Linguistics — degree programmes (BA, minor, MA, PhD)",
+    "url": "https://manoa.hawaii.edu/linguistics/"
    }
   ],
   "supportLinks": [],
@@ -21876,7 +22884,48 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Hawaiian is studied as a degree subject at undergraduate and graduate level, by state mandate\nUH Hilo runs the first doctorate in the world in Indigenous language revitalization\nDoctoral students may take another indigenous language as their language of focus",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Hawaii at Manoa",
+    "url": "https://manoa.hawaii.edu/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Hawaii at Manoa",
+    "url": "https://manoa.hawaii.edu/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of Hawaii at Manoa",
+    "url": "https://manoa.hawaii.edu/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of Hawaii at Manoa",
+    "url": "https://manoa.hawaii.edu/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "UH Hilo's College of Hawaiian Language works through the medium of Hawaiian, since 1998\nHilo holds a preschool-to-graduate-school Hawaiian medium system, not just one course\nPhD outcomes require advancement in spoken and written Hawaiian in all educational contexts",
   "requiredStudy": "The Hawaiian or Second Language requirement varies by UH Manoa college or school\nBefore graduation students must show competence at the 202 level, usually four semesters\nWaivers may be given to students who are native speakers of a language other than English\nEight schools and colleges have had the requirement modified or waived",
@@ -22209,19 +23258,101 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Iowa, Department of Languages, Linguistics, Literatures and Cultures — BA in Linguistics",
+    "url": "https://lllc.uiowa.edu/undergraduate/ba-linguistics"
+   },
+   {
+    "label": "University of Iowa, Department of Languages, Linguistics, Literatures and Cultures — MA in Linguistics",
+    "url": "https://lllc.uiowa.edu/graduate/ma-linguistics"
+   },
+   {
+    "label": "University of Iowa, Department of Languages, Linguistics, Literatures and Cultures — PhD in Linguistics",
+    "url": "https://lllc.uiowa.edu/graduate/phd-linguistics"
+   },
+   {
+    "label": "Iowa State University, Department of English — TESL/Applied Linguistics MA",
+    "url": "https://engl.iastate.edu/academics/graduate-studies/tesl-applied-linguistics-m-a/"
+   },
+   {
+    "label": "Iowa State University, Department of English — Applied Linguistics and Technology PhD",
+    "url": "https://engl.iastate.edu/academics/graduate-studies/applied-linguistics-and-technology-phd/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Iowa",
+    "url": "https://lllc.uiowa.edu/undergraduate/ba-linguistics",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Iowa",
+    "url": "https://lllc.uiowa.edu/undergraduate/minor-linguistics",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of Iowa",
+    "url": "https://lllc.uiowa.edu/graduate/ma-linguistics",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of Iowa",
+    "url": "https://lllc.uiowa.edu/graduate/phd-linguistics",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "TESL/Applied Linguistics",
+    "level": "master",
+    "institution": "Iowa State University",
+    "url": "https://engl.iastate.edu/academics/graduate-studies/tesl-applied-linguistics-m-a/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Applied Linguistics and Technology",
+    "level": "doctorate",
+    "institution": "Iowa State University",
+    "url": "https://engl.iastate.edu/academics/graduate-studies/applied-linguistics-and-technology-phd/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -22236,19 +23367,69 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Kansas, Department of Linguistics — Undergraduate Programs (B.A., B.G.S., General Minor)",
+    "url": "https://linguistics.ku.edu/undergraduate-programs"
+   },
+   {
+    "label": "University of Kansas, Department of Linguistics — Graduate Programs (M.A. and Ph.D. in Linguistics)",
+    "url": "https://linguistics.ku.edu/graduate-programs"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Kansas",
+    "url": "https://linguistics.ku.edu/undergraduate-programs",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Kansas",
+    "url": "https://linguistics.ku.edu/undergraduate-programs",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of Kansas",
+    "url": "https://linguistics.ku.edu/graduate-programs",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of Kansas",
+    "url": "https://linguistics.ku.edu/graduate-programs",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -22480,19 +23661,63 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Maryland, Department of Linguistics — Bachelor of Arts in Linguistics",
+    "url": "https://linguistics.umd.edu/academic-programs/undergraduate/linguistics-ba"
+   },
+   {
+    "label": "University of Maryland, Department of Linguistics — Linguistics Minor requirements",
+    "url": "https://linguistics.umd.edu/academic-programs/undergraduate/linguistics-minor"
+   },
+   {
+    "label": "University of Maryland, Department of Linguistics — Ph.D. Program in Linguistics",
+    "url": "https://linguistics.umd.edu/academic-programs/graduate/phd-program"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Maryland, College Park",
+    "url": "https://linguistics.umd.edu/academic-programs/undergraduate/linguistics-ba",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Maryland, College Park",
+    "url": "https://linguistics.umd.edu/academic-programs/undergraduate/linguistics-minor",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of Maryland, College Park",
+    "url": "https://linguistics.umd.edu/academic-programs/graduate/phd-program",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -22511,7 +23736,24 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Massachusetts Amherst, Department of Linguistics — Undergraduate Program (major and minor)",
+    "url": "https://www.umass.edu/linguistics/academics/undergraduate-program"
+   },
+   {
+    "label": "University of Massachusetts Amherst, Department of Linguistics — Graduate Program (PhD in Linguistics)",
+    "url": "https://www.umass.edu/linguistics/academics/graduate-program"
+   },
+   {
+    "label": "MIT Department of Linguistics and Philosophy — Undergraduate Program (major, minor, HASS concentration)",
+    "url": "https://linguistics.mit.edu/undergraduate-program/"
+   },
+   {
+    "label": "MIT Department of Linguistics and Philosophy — Graduate Program in Linguistics, Research Objectives",
+    "url": "https://linguistics.mit.edu/graduate/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -22519,7 +23761,68 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Spanish is a major at UMass Amherst, requiring 11 courses",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Massachusetts Amherst",
+    "url": "https://www.umass.edu/linguistics/academics/undergraduate-program",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Massachusetts Amherst",
+    "url": "https://www.umass.edu/linguistics/academics/undergraduate-program",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of Massachusetts Amherst",
+    "url": "https://www.umass.edu/linguistics/academics/graduate-program",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "Massachusetts Institute of Technology",
+    "url": "https://linguistics.mit.edu/undergraduate-program/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "Massachusetts Institute of Technology",
+    "url": "https://linguistics.mit.edu/undergraduate-program/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "Massachusetts Institute of Technology",
+    "url": "https://linguistics.mit.edu/graduate/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "Only two courses may be taken in English within the UMass Spanish major\nThe two-course English limit needs the advisor's approval, per the department's requirements",
   "requiredStudy": "",
@@ -22887,6 +24190,14 @@
    {
     "label": "Mont. Admin. R. 10.57.436, Class 7 American Indian Language and Culture Specialist",
     "url": "https://rules.mt.gov/gateway/ruleno.asp?RN=10.57.436"
+   },
+   {
+    "label": "University of Montana, Linguistics Program — Undergraduate Program (BA in Linguistics; sole degree-granting linguistics unit in Montana)",
+    "url": "https://www.umt.edu/linguistics/undergraduate/default.php"
+   },
+   {
+    "label": "University of Montana, Linguistics Program — Master of Arts in Linguistics",
+    "url": "https://www.umt.edu/linguistics/graduate/default.php"
    }
   ],
   "supportLinks": [],
@@ -22896,7 +24207,38 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Japanese and Russian are each a B.A. in their own right at the University of Montana\nLatin and Latin American Studies appear there only as minors\nIts World Languages and Cultures B.A. requires a two-year sequence in one language\nThat language may be Arabic, Chinese, French, German, Greek, Japanese, Latin, Spanish or Russian",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Montana",
+    "url": "https://www.umt.edu/linguistics/undergraduate/default.php",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Montana",
+    "url": "https://www.umt.edu/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of Montana",
+    "url": "https://www.umt.edu/linguistics/graduate/default.php",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -22955,19 +24297,35 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Nevada, Reno — Bachelor of Science in Computational Linguistics (Computer Science, English and World Languages and Literatures)",
+    "url": "https://www.unr.edu/degrees/majors/computational-linguistics"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Computational Linguistics",
+    "level": "bachelor",
+    "institution": "University of Nevada, Reno",
+    "url": "https://www.unr.edu/degrees/majors/computational-linguistics",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -22986,7 +24344,20 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of New Hampshire Academic Catalog, Linguistics Major (B.A.), College of Liberal Arts",
+    "url": "https://catalog.unh.edu/undergraduate/liberal-arts/programs-study/linguistics/linguistics-major-ba/"
+   },
+   {
+    "label": "University of New Hampshire Academic Catalog, Linguistics Minor",
+    "url": "https://catalog.unh.edu/undergraduate/liberal-arts/programs-study/linguistics/linguistics-minor/"
+   },
+   {
+    "label": "Dartmouth College, Department of Linguistics — Major/Minor (Linguistics Major, Linguistics Minor, Computational Linguistics Major)",
+    "url": "https://linguistics.dartmouth.edu/undergraduate/majorminor"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -22994,7 +24365,58 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "UNH offers undergraduate majors in French, German, Russian and Spanish\nArabic and Chinese are available only as minors at UNH",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of New Hampshire",
+    "url": "https://catalog.unh.edu/undergraduate/liberal-arts/programs-study/linguistics/linguistics-major-ba/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of New Hampshire",
+    "url": "https://catalog.unh.edu/undergraduate/liberal-arts/programs-study/linguistics/linguistics-minor/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "Dartmouth College",
+    "url": "https://linguistics.dartmouth.edu/undergraduate/majorminor",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Computational Linguistics",
+    "level": "bachelor",
+    "institution": "Dartmouth College",
+    "url": "https://linguistics.dartmouth.edu/undergraduate/majorminor/computational-linguistics-major",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "Dartmouth College",
+    "url": "https://linguistics.dartmouth.edu/undergraduate/majorminor/minor",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -23257,6 +24679,38 @@
    {
     "label": "Wikipedia, 'Hostos Community College' — bilingual education college at opening and the narrowing of that policy after 1997",
     "url": "https://en.wikipedia.org/wiki/Hostos_Community_College"
+   },
+   {
+    "label": "University at Buffalo, Department of Linguistics — BA in Linguistics",
+    "url": "https://arts-sciences.buffalo.edu/linguistics/undergraduate/ba.html"
+   },
+   {
+    "label": "University at Buffalo, Department of Linguistics — MA in Linguistics (three MA degrees)",
+    "url": "https://arts-sciences.buffalo.edu/linguistics/graduate/ma.html"
+   },
+   {
+    "label": "University at Buffalo, Department of Linguistics — PhD in Linguistics",
+    "url": "https://arts-sciences.buffalo.edu/linguistics/graduate/phd.html"
+   },
+   {
+    "label": "Stony Brook University, Department of Linguistics — Undergraduate programs (major, minor, TESOL certification)",
+    "url": "https://www.stonybrook.edu/commcms/linguistics/academics/Undergraduate/index.php"
+   },
+   {
+    "label": "Stony Brook University, Department of Linguistics — M.A. Linguistics program",
+    "url": "https://www.stonybrook.edu/commcms/linguistics/academics/Graduate/MA_Linguistics/index.php"
+   },
+   {
+    "label": "Stony Brook University, Department of Linguistics — M.A. Computational Linguistics program",
+    "url": "https://www.stonybrook.edu/commcms/linguistics/academics/Graduate/MA_Comp_Ling/index.php"
+   },
+   {
+    "label": "Stony Brook University, Department of Linguistics — Ph.D. program",
+    "url": "https://www.stonybrook.edu/commcms/linguistics/academics/Graduate/PhD/index.php"
+   },
+   {
+    "label": "Cornell University Graduate School, Linguistics (Graduate Field) — Ph.D.",
+    "url": "https://gradschool.cornell.edu/academics/fields-of-study/subject/linguistics/"
    }
   ],
   "supportLinks": [],
@@ -23266,7 +24720,98 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University at Buffalo",
+    "url": "https://arts-sciences.buffalo.edu/linguistics/undergraduate/ba.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University at Buffalo",
+    "url": "https://arts-sciences.buffalo.edu/linguistics/graduate/ma.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University at Buffalo",
+    "url": "https://arts-sciences.buffalo.edu/linguistics/graduate/phd.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "Stony Brook University",
+    "url": "https://www.stonybrook.edu/commcms/linguistics/academics/Undergraduate/index.php",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "Stony Brook University",
+    "url": "https://www.stonybrook.edu/commcms/linguistics/academics/Undergraduate/index.php",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "Stony Brook University",
+    "url": "https://www.stonybrook.edu/commcms/linguistics/academics/Graduate/MA_Linguistics/index.php",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Computational Linguistics",
+    "level": "master",
+    "institution": "Stony Brook University",
+    "url": "https://www.stonybrook.edu/commcms/linguistics/academics/Graduate/MA_Comp_Ling/index.php",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "Stony Brook University",
+    "url": "https://www.stonybrook.edu/commcms/linguistics/academics/Graduate/PhD/index.php",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "Cornell University",
+    "url": "https://gradschool.cornell.edu/academics/fields-of-study/subject/linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "SUNY students must complete a minimum of three of six knowledge and skills areas\nWorld Languages sits among those six areas, beside US History and World History\nA World Languages course asks for basic proficiency in understanding and using the language",
@@ -23464,19 +25009,97 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Ohio State University, Department of Linguistics — Linguistics Major (BA), two tracks",
+    "url": "https://linguistics.osu.edu/undergrad/major"
+   },
+   {
+    "label": "Ohio State University, Department of Linguistics — General Information about the Graduate Program (PhD and MA in linguistics)",
+    "url": "https://linguistics.osu.edu/graduate/about"
+   },
+   {
+    "label": "Ohio University, Department of Linguistics — Linguistics Bachelor's Degrees",
+    "url": "https://www.ohio.edu/cas/linguistics/undergraduate"
+   },
+   {
+    "label": "Ohio University, Department of Linguistics — Linguistics Graduate Degrees (MA in Applied Linguistics)",
+    "url": "https://www.ohio.edu/cas/linguistics/graduate"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "The Ohio State University",
+    "url": "https://linguistics.osu.edu/undergrad/major",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "The Ohio State University",
+    "url": "https://linguistics.osu.edu/undergrad/minor",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "The Ohio State University",
+    "url": "https://linguistics.osu.edu/graduate/about",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "no open admission; only for students already admitted to another Ohio State graduate program"
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "The Ohio State University",
+    "url": "https://linguistics.osu.edu/graduate/about",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "Ohio University",
+    "url": "https://www.ohio.edu/cas/linguistics/undergraduate",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Applied Linguistics",
+    "level": "master",
+    "institution": "Ohio University",
+    "url": "https://www.ohio.edu/cas/linguistics/graduate",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -23491,19 +25114,49 @@
   "isNational": false,
   "region": "Americas",
   "subregion": "Northern America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Oklahoma Catalog, Linguistics, B.A. (Department of Modern Languages, Literatures, and Linguistics)",
+    "url": "https://ou-public.courseleaf.com/dodge-arts-sciences/modern-languages-literatures-linguistics/linguistics-bachelor-arts/"
+   },
+   {
+    "label": "University of Oklahoma Catalog, Department of Modern Languages, Literatures, and Linguistics — degrees offered",
+    "url": "https://ou-public.courseleaf.com/dodge-arts-sciences/modern-languages-literatures-linguistics/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Oklahoma",
+    "url": "https://ou-public.courseleaf.com/dodge-arts-sciences/modern-languages-literatures-linguistics/linguistics-bachelor-arts/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Oklahoma",
+    "url": "https://ou-public.courseleaf.com/dodge-arts-sciences/modern-languages-literatures-linguistics/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -23981,7 +25634,16 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Memphis, Department of English — MA in Applied Linguistics",
+    "url": "https://www.memphis.edu/english/graduate/ma/linguistics.php"
+   },
+   {
+    "label": "University of Memphis, Department of English — TESOL & Applied Linguistics (MA and PhD in Applied Linguistics)",
+    "url": "https://www.memphis.edu/english/graduate/appliedlinguistics.php"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -23989,7 +25651,28 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "At UT Knoxville a language is a concentration inside one World Languages and Cultures BA\nFrench and Francophone Studies is a 30-hour concentration there\nGerman is likewise a concentration, at least 30 hours above the 300 level\nUTK lists Major, Honors Major and Language and World Business as French routes",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Applied Linguistics",
+    "level": "master",
+    "institution": "University of Memphis",
+    "url": "https://www.memphis.edu/english/graduate/ma/linguistics.php",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Applied Linguistics",
+    "level": "doctorate",
+    "institution": "University of Memphis",
+    "url": "https://www.memphis.edu/english/graduate/appliedlinguistics.php",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -24353,6 +26036,30 @@
    {
     "label": "University of Virginia College of Arts & Sciences, World Language Requirement Frequently Asked Questions",
     "url": "https://college.as.virginia.edu/world-language-requirement-faqs"
+   },
+   {
+    "label": "University of Virginia, Linguistics Program — BA Program (requirements for the B.A. and the Minor in Linguistics)",
+    "url": "https://linguistics.virginia.edu/ba-program"
+   },
+   {
+    "label": "University of Virginia, Linguistics Program — MA Program (requirements for the M.A. in Linguistics)",
+    "url": "https://linguistics.virginia.edu/ma-program"
+   },
+   {
+    "label": "University of Virginia — Graduate Certificate in Hispanic Linguistics",
+    "url": "https://linguistics.virginia.edu/graduate-certificate-hispanic-linguistics"
+   },
+   {
+    "label": "William & Mary, Linguistics Program — Undergraduate Program (B.A. in Linguistics, major or minor)",
+    "url": "https://www.wm.edu/as/linguistics/undergrad/"
+   },
+   {
+    "label": "George Mason University, Linguistics Program — PhD in Linguistics",
+    "url": "https://linguistics.gmu.edu/programs/la-phd-ling"
+   },
+   {
+    "label": "George Mason University, Linguistics Program — Minor in Linguistics, catalog year 2026-2027 (LA-MINOR-LA-LING)",
+    "url": "https://linguistics.gmu.edu/programs/LA-MINOR-LA-LING/requirements/"
    }
   ],
   "supportLinks": [],
@@ -24362,7 +26069,88 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "French is a major in its own right at the University of Virginia\nThe same department offers a Minor in French alongside the major\nUVA lets students majoring in two disciplines count up to 6 credit hours twice",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Virginia",
+    "url": "https://linguistics.virginia.edu/ba-program",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "University of Virginia",
+    "url": "https://linguistics.virginia.edu/ba-program",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of Virginia",
+    "url": "https://linguistics.virginia.edu/ma-program",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Hispanic Linguistics",
+    "level": "certificate",
+    "institution": "University of Virginia",
+    "url": "https://linguistics.virginia.edu/graduate-certificate-hispanic-linguistics",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "taken alongside an existing masters or doctoral degree at UVA, not on its own"
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "William & Mary",
+    "url": "https://www.wm.edu/as/linguistics/undergrad/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "William & Mary",
+    "url": "https://www.wm.edu/as/linguistics/undergrad/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "minor",
+    "institution": "George Mason University",
+    "url": "https://linguistics.gmu.edu/programs/LA-MINOR-LA-LING/requirements/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "George Mason University",
+    "url": "https://linguistics.gmu.edu/programs/la-phd-ling",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "All students in UVA's College must satisfy the World Language Requirement\nThey must reach the 2020, advanced intermediate, level or its equivalent\nIt can be met by test credits, UVA courses, or placing above 2020 on a placement test\nNative-speaker mastery of a language not taught at UVA may be grounds for exemption",
@@ -24578,6 +26366,26 @@
    {
     "label": "UW-Madison Mary T. Kellner Teacher Education Center, Applying for Your Wisconsin License (DPI endorsement via ELO)",
     "url": "https://tec.education.wisc.edu/current-students/applying-for-your-wisconsin-license/"
+   },
+   {
+    "label": "UW-Madison Guide 2026-2027, Linguistics MA (Language Sciences), non-admitting degree",
+    "url": "https://guide.wisc.edu/graduate/language-sciences/linguistics-ma/"
+   },
+   {
+    "label": "UW-Madison Guide 2026-2027, Linguistics PhD (Language Sciences)",
+    "url": "https://guide.wisc.edu/graduate/language-sciences/linguistics-phd/"
+   },
+   {
+    "label": "UW-Milwaukee Academic Catalog, Linguistics BA (College of Letters & Science)",
+    "url": "https://catalog.uwm.edu/letters-science/linguistics/linguistics-ba/"
+   },
+   {
+    "label": "UW-Milwaukee Academic Catalog, Linguistics MA (Department of Linguistics)",
+    "url": "https://catalog.uwm.edu/letters-science/linguistics/linguistics-ma/"
+   },
+   {
+    "label": "UW-Milwaukee Academic Catalog, Linguistics PhD (Department of Linguistics)",
+    "url": "https://catalog.uwm.edu/letters-science/linguistics/linguistics-phd/"
    }
   ],
   "supportLinks": [],
@@ -24587,7 +26395,68 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "French can be taken as a BA in its own right at UW-Madison",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Wisconsin-Madison",
+    "url": "https://guide.wisc.edu/undergraduate/letters-science/language-sciences/linguistics-bs/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of Wisconsin-Madison",
+    "url": "https://guide.wisc.edu/graduate/language-sciences/linguistics-ma/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "exists only inside the PhD; students may not apply directly for the MA"
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of Wisconsin-Madison",
+    "url": "https://guide.wisc.edu/graduate/language-sciences/linguistics-phd/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "University of Wisconsin-Milwaukee",
+    "url": "https://catalog.uwm.edu/letters-science/linguistics/linguistics-ba/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "master",
+    "institution": "University of Wisconsin-Milwaukee",
+    "url": "https://catalog.uwm.edu/letters-science/linguistics/linguistics-ma/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   },
+   {
+    "subject": "Linguistics",
+    "level": "doctorate",
+    "institution": "University of Wisconsin-Milwaukee",
+    "url": "https://catalog.uwm.edu/letters-science/linguistics/linguistics-phd/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "UW-Madison's French BA is taught in French apart from one permitted English course\nThe one-course English cap is a stated requirement in the university's Guide",
   "requiredStudy": "In the College of Letters & Science both the BA and the BS require a non-English language\nThe BA needs four units of one language or the 2/3 option, the BS three units",
@@ -24925,19 +26794,35 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "South America",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Universidad de Los Andes, Facultad de Humanidades y Educación — Maestría en Lingüística (Magíster Scientiae), archived 17 August 2022",
+    "url": "https://web.archive.org/web/20220817225033/http://www.human.ula.ve/maestrialinguistica/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Lingüística",
+    "level": "master",
+    "institution": "Universidad de Los Andes",
+    "url": "https://web.archive.org/web/20220817225033/http://www.human.ula.ve/maestrialinguistica/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": ""
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -25424,7 +27309,16 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Zambia, General Entry Requirements for Admission (Undergraduates), by School",
+    "url": "https://www.unza.zm/academics/undergraduate/requirements"
+   },
+   {
+    "label": "University of Zambia, Bachelor of Arts with Education — Admission Requirements",
+    "url": "https://www.unza.zm/undergraduate/school-of-education/educational-administration-and-policy-studies/bachelor-of-arts-education"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -25473,7 +27367,7 @@
   ],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "A credit in English Language is required among the five O-Levels for entry\nThe School of Law asks a credit in five O-Levels which must include English Language\nHumanities and Social Sciences asks English Language and four subjects, one of them an Art\nThe BA with Education takes English Language plus four, French and a Zambian Language among them",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [],
@@ -25482,6 +27376,12 @@
     1,
     1,
     1,
+    2
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2,
     2
    ]
   }
