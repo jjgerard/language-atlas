@@ -7711,6 +7711,10 @@
    {
     "label": "Fiji Ministry of Education, Addressing Teacher Shortage in Schools (statement of the Minister for Education, Hon. Aseri Radrodro), Internet Archive copy of education.gov.fj",
     "url": "https://web.archive.org/web/20250316130946/https://www.education.gov.fj/?p=14111"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education, 7th edition 2010/11: Fiji (Internet Archive snapshot of ibe.unesco.org)",
+    "url": "https://web.archive.org/web/20190330113120/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Fiji.pdf"
    }
   ],
   "supportLinks": [],
@@ -7723,7 +7727,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "No upper-secondary requirement is stated in the source, a 2019 review not a curriculum order\n2000 Commission urged compulsory conversational Fijian and Hindi only up to Form 5\nEnglish has been medium of instruction from Grade 4 since independence, per 1969 Commission\nArticle states no national language policy has been made since 1926",
   "languagesOffered": "No foreign language is named in the 2007 national curriculum framework\nThe named school languages are English, iTaukei and Fiji Hindi",
-  "curriculumTime": "",
+  "curriculumTime": "From the 2010/11 UNESCO-IBE profile, which gives no per-subject time allocation\nFrench and Mandarin sit inside the language learning area in grades 1-6 and Forms 1-2\nAt Form 3 a vernacular option list including French can be taken instead of other subjects\nLearning areas set by the Ministry of Education 2007 National Curriculum Framework",
   "assessment": "",
   "teacherSupply": "Route is registration with the Fiji Teachers Registration Authority, plus induction\nNo language-specific shortage documented; Ministry reports a general one, teachers going abroad\nFinal-year education students may be recruited on a one-year limited authority to teach",
   "uptake": [],
@@ -7733,6 +7737,10 @@
     "description": "Education Act regulates provision so every school-aged child attends school"
    },
    {
+    "year": 2008,
+    "description": "Compulsory Fijian and Hindi language programme starts at class 5 and Form 3"
+   },
+   {
     "year": 2024,
     "description": "Ministry begins recruiting final-year education students on a limited authority to teach"
    }
@@ -7740,6 +7748,12 @@
   "slots": {
    "teacherSupply": [
     1,
+    2,
+    4
+   ],
+   "curriculumTime": [
+    1,
+    2,
     2,
     4
    ]
@@ -8992,6 +9006,10 @@
    {
     "label": "Guam Commission for Educator Certification, Certification Table (update of 16 February 2026), under Guam Public Laws 31-50, 32-220 and 38-91",
     "url": "https://gcec.guam.gov/sites/default/files/Certification%20Table%20Update%202026.pdf"
+   },
+   {
+    "label": "Guam Department of Education, High School Course Catalog / Course Directory (Curriculum and Instructional Improvement), graduation requirements and World Language course descriptions (copy hosted outside gdoe.net)",
+    "url": "https://geckomath.weebly.com/uploads/3/8/9/4/38946421/high_school_course_catalog_2015.pdf"
    }
   ],
   "supportLinks": [],
@@ -9002,7 +9020,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "",
   "languagesOffered": "",
-  "curriculumTime": "",
+  "curriculumTime": "From the GDOE high school course directory, pilot courses listed for SY 2014-15\nWorld language courses run two semesters, 0.5 credit per semester\nHigh school only; Japanese, French, Spanish and German offered as world languages\nElective: no world language credit is required to graduate, only 1 credit of Chamorro\nSet by Guam Education Board Policy 351.4 on high school graduation requirements",
   "assessment": "",
   "teacherSupply": "Certification table carries a CHamoru Language and Culture route and no other language route\nOther subjects run through Initial Educator: degree, Praxis Core, PLT and a Praxis subject test",
   "uptake": [
@@ -9017,11 +9035,23 @@
     "note": "Middle-school students taking Japanese, a half-year elective, across 5 to 7 public and private schools in 2025-26. Japan Foundation country profile for Guam (2025 edition)"
    }
   ],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2000,
+    "description": "Guam Education Board adopts Board Policy 351.4 fixing high school graduation requirements"
+   }
+  ],
   "slots": {
    "teacherSupply": [
     1,
     1
+   ],
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -12318,7 +12348,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "Senior Secondary is Years 10-13; time splits 20% Te Kiribati and 80% English\n5 hours a week Te Kiribati against 20 hours a week English\nTe Kiribati continues as a subject integrated with Kiribati Studies to the end\nThe framework calls English a foreign rather than a second language on outer islands",
   "languagesOffered": "The language learning area lists Te Kiribati and English at every stage\nOther foreign languages are listed only at senior secondary, and are unnamed",
-  "curriculumTime": "",
+  "curriculumTime": "Ministry describes English as a foreign language rather than a second language here\nEnglish 2.5 h a week in Years 1-2, 4 h in Years 3-4, 5 h in Years 5-6 and in Years 7-9\nOther foreign languages, e.g. Japanese, appear only in the senior secondary years\nMinimum hours of instruction; school management may elect to increase them\nSet by the Ministry of Education and approved by the Minister for Education",
   "assessment": "Kiribati junior and senior secondary certificates at Years 9 and 12\nYear 13 sits the regional South Pacific Form 7 Secondary Certificate",
   "teacherSupply": "",
   "uptake": [],
@@ -12331,7 +12361,16 @@
     "year": 2012,
     "description": "A new language policy was adopted in 2012 to transitions from Te-Kiribati to English in year 3."
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "KM",
@@ -14077,6 +14116,10 @@
    {
     "label": "CNMI Public School System, Classroom Teachers Certification Flowchart",
     "url": "https://www.cnmipss.org/classroom-teachers-certification-flowchart"
+   },
+   {
+    "label": "CNMI Public School System, School Policies Summary for all CNMI PSS K-12 Schools (5 July 2020), NMIAC 60-20-434 Promotion and Graduation Requirements",
+    "url": "https://www.cnmipss.org/sites/default/files/Updated_07-05-2020_PSS_Student_Policies.pdf"
    }
   ],
   "supportLinks": [],
@@ -14087,15 +14130,27 @@
   "secondaryRequirement": "",
   "upperSecondary": "",
   "languagesOffered": "",
-  "curriculumTime": "",
+  "curriculumTime": "One credit in a language other than English required, within 28 credits to graduate\nPSS foreign language strand is Chamorro and Carolinian language heritage studies\nApplies at high school, for graduation from the 12th grade\nA graduation minimum in credits, not a count of hours actually taught\nSet by CNMI PSS under NMIAC 60-20-434, promotion and graduation requirements",
   "assessment": "",
   "teacherSupply": "Secondary route is Praxis II in the content area plus three content-area courses\nThe only language-specific endorsement listed is Chamorro/Carolinian Language and Heritage",
   "uptake": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2005,
+    "description": "Amended high school graduation requirements take effect for students entering ninth grade"
+   }
+  ],
   "slots": {
    "teacherSupply": [
     1,
     1
+   ],
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -14661,6 +14716,14 @@
    {
     "label": "Note de service MENH2504339N du 8-4-2025, Mise a disposition de la Nouvelle-Caledonie des personnels enseignants du second degre, d'education et psychologues de l'education nationale - rentree scolaire de fevrier 2026, BOENJS n. 17 du 24 avril 2025",
     "url": "https://www.education.gouv.fr/bo/2025/Hebdo17/MENH2504339N"
+   },
+   {
+    "label": "Nouvelle-Calédonie, Délibération n° 127 du 13 janvier 2021 portant organisation de l'enseignement primaire de la Nouvelle-Calédonie (art. 37)",
+    "url": "https://denc.gouv.nc/sites/default/files/documents/gouv-deliberation-doc127.pdf"
+   },
+   {
+    "label": "Nouvelle-Calédonie, Annexe 2 à la délibération n° 127 du 13 janvier 2021, Programmes scolaires de l'enseignement primaire (horaires d'enseignement, cycles 2 et 3)",
+    "url": "https://denc.gouv.nc/sites/default/files/documents/gouv-_annexe_2_v3.pdf"
    }
   ],
   "supportLinks": [],
@@ -14671,7 +14734,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "",
   "languagesOffered": "",
-  "curriculumTime": "",
+  "curriculumTime": "English 1 h 30 a week under New Caledonia's own primary timetable\nApplies at cycles 2 and 3, from CP through CM2\nEnglish begins in the first year of cycle 2 (CP)\nA prescribed base allocation, not a measure of time actually taught\nSet by the Congress of New Caledonia, not by the metropolitan grid",
   "assessment": "",
   "teacherSupply": "Secondary staff are tenured French national teachers put at New Caledonia's disposal\nThey apply through the national Siat platform; the vice-rectorat selects, not the territory\nThe 2026 note names no language among the disciplines whose candidatures are most sought",
   "uptake": [
@@ -14681,12 +14744,24 @@
     "note": "Learners of Japanese in New Caledonia, down from 3,400 in 2021; Japanese is taught almost entirely as a second foreign language. Japan Foundation country profile for New Caledonia (2025 edition)"
    }
   ],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2021,
+    "description": "Deliberation 127 replaces the 2012 primary organisation from the 2021 school year"
+   }
+  ],
   "slots": {
    "teacherSupply": [
     1,
     1,
     2
+   ],
+   "curriculumTime": [
+    1,
+    2,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -15348,6 +15423,18 @@
    {
     "label": "Japan Foundation, Japanese-Language Education Country and Region Information: French Polynesia (FY2025)",
     "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/f_polynesia_2.pdf"
+   },
+   {
+    "label": "Lexpol (Polynésie française), Arrêté n° 797 CM du 24 juillet 1996 fixant la durée hebdomadaire de la scolarité dans les écoles maternelles et élémentaires et la répartition des horaires par discipline dans les écoles élémentaires — texte abrogé par l'arrêté n° 1069 CM du 18 juillet 2024 (Internet Archive copy; lexpol.cloud.pf was unreachable)",
+    "url": "https://web.archive.org/web/20241214003037/https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=158152&idr=551&np=1"
+   },
+   {
+    "label": "Polynésie française, Charte de l'éducation de la Polynésie française 2017 (Loi du Pays n° 2017-15 du 13 juillet 2017), objectif 2 du premier degré",
+    "url": "https://www.education.pf/wp-content/uploads/2019/06/Ebook-v6-CharteEducation2017-171122-validee.pdf"
+   },
+   {
+    "label": "Polynésie française, Ministère de l'Éducation, Programmes 2020 ajustés et adaptés à la Polynésie française, Cycle 3 — textes officiels",
+    "url": "https://www.education.pf/wp-content/uploads/2020/07/Livret-C3.pdf"
    }
   ],
   "supportLinks": [],
@@ -15358,7 +15445,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "",
   "languagesOffered": "",
-  "curriculumTime": "",
+  "curriculumTime": "No per-discipline hours currently published: the 1996 timetable arrete was repealed in 2024\nEnglish is taught towards CECRL level A1 by the end of CM2\nCharte extends English teaching to cycle 1 (grande section) and cycle 2\nFrench Polynesia sets its own programmes, arrete 1026 CM of 27 July 2016\nCharte de l'education, Loi du Pays 2017-15 of 13 July 2017, sets the language targets",
   "assessment": "",
   "teacherSupply": "Secondary posts filled by tenured French state teachers seconded to French Polynesia\nSecondment is to a named post for two years, renewable once\nNo Japanese-teacher training institution or programme in the territory\nJapanese is taught in one secondary school, Lycee La Mennais\nIts one native-speaker teacher covers both the Japanese and the English classes",
   "uptake": [],
@@ -15366,6 +15453,18 @@
    {
     "year": 1990,
     "description": "Japanese introduced as an option at Lycee La Mennais"
+   },
+   {
+    "year": 2016,
+    "description": "Arrete 1026 CM fixes the Cycle 1, 2 and 3 programmes for Polynesian schools and colleges"
+   },
+   {
+    "year": 2017,
+    "description": "Charte de l'education enacted as Loi du Pays 2017-15, setting A1 English by end of CM2"
+   },
+   {
+    "year": 2024,
+    "description": "Arrete 1069 CM repeals the 1996 arrete fixing weekly hours and subject time in schools"
    }
   ],
   "slots": {
@@ -15375,6 +15474,13 @@
     2,
     3,
     3
+   ],
+   "curriculumTime": [
+    1,
+    2,
+    2,
+    4,
+    4
    ]
   }
  },
@@ -15865,6 +15971,10 @@
    {
     "label": "Japan Foundation, 日本語教育 国・地域別情報 — Palau (2025 edition), including the 2024 Survey of Japanese-Language Education Abroad results",
     "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/palau_2.pdf"
+   },
+   {
+    "label": "Republic of Palau Ministry of Education, Palau High School Introductory Profile (undated; copy hosted by Kuroshio Town, Japan)",
+    "url": "https://www.town.kuroshio.lg.jp/img/files/summit/%E5%8F%82%E5%8A%A0%E6%A0%A1/PHS%20Introductory%20Profile.pdf"
    }
   ],
   "supportLinks": [],
@@ -15877,7 +15987,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "Written Palauan is a mandatory core subject from first through twelfth grade\nThe duty binds every school chartered in the Republic or funded by public funds\nThe Minister must encourage Palauan customs and culture at secondary level too\nA 2026 bill on K-3 Palauan medium is before the Senate and is not yet law",
   "languagesOffered": "Palauan traditional languages are national; Palauan and English are official\nThe Minister must provide for the teaching of both Palauan and English in all schools\nEvery chartered or publicly funded school must teach reading and writing in Palauan\nInstruction must follow the Palauan Orthography set by the Language Commission",
-  "curriculumTime": "",
+  "curriculumTime": "From an undated Palau High School profile, not a ministry-issued timetable\nNo foreign language among the academic courses the school lists\nEach course is taught daily in a one and a half hour block, on a semester basis\nHigh school; 27 credits are required to graduate\nPalau High School, the only public high school, under the Ministry of Education",
   "assessment": "",
   "teacherSupply": "Secondary Japanese teachers need an associate degree or above plus a year of teaching\nChinese classes in Palau's schools spread with Taiwan government support\nNo Palauan Japanese teachers, classes are taught by locally hired Japanese nationals\nNo Japanese-teacher training institution or programme in Palau\nOne teacher each at Palau High, Mizenti High and Palau Community College",
   "uptake": [
@@ -15904,6 +16014,13 @@
     2,
     2,
     3
+   ],
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    2,
+    4
    ]
   }
  },
@@ -16401,7 +16518,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "The Senior Secondary curriculum is recorded as still under review\nSenior Secondary is Years 10-12, with a decision on Year 13 still to come\nThe medium of instruction in all schools is whatever the Minister prescribes\nEnglish is named the official language and the main language for education",
   "languagesOffered": "No foreign language appears in the national curriculum statement",
-  "curriculumTime": "",
+  "curriculumTime": "No foreign language appears on the primary or junior secondary timetable\nJunior secondary is 40 periods of 40 minutes a week, all compulsory, none a foreign language\nApplies across primary Years 1-6 and junior secondary\nFigures are the recommended allocation approved by the National Curriculum Advisory Board\nCurricula in all schools are approved by the Minister of Education",
   "assessment": "",
   "teacherSupply": "Japan Foundation country report: no specific provision on foreign-language education\nJunior secondary subjects are taught by specialist teachers under the national curriculum\nDocumented shortage is of qualified teachers for practical subjects, not for languages\nNo Japanese teaching confirmed at primary or secondary level",
   "uptake": [],
@@ -16412,6 +16529,13 @@
     1,
     2,
     3
+   ],
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -17736,6 +17860,10 @@
    {
     "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Tonga",
     "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/tonga_2.pdf"
+   },
+   {
+    "label": "Tonga Ministry of Education and Training, Curriculum Framework for Core Subjects at Class Levels 1-8, January 2023 (cabinet approved)",
+    "url": "https://www.education.gov.to/media/attachments/2025/06/09/curriculum-framework_2023_final_final_cabinet-approved1.pdf"
    }
   ],
   "supportLinks": [],
@@ -17748,7 +17876,7 @@
   "secondaryRequirement": "The four core subjects are English, mathematics, science and Tongan language\nThe Education Act 2013 names only Tongan and English",
   "upperSecondary": "Both languages run to the end of school, Years 1 to 13, that is Class 1 to Form 7\nTongan Language and culture is taught in all schools\nEnglish-medium schools must still teach Tongan Language in every year\nCompetence in oral and written English is the target by end of secondary",
   "languagesOffered": "Tongan and English for all, with optional French, Japanese and Mandarin\nTongan is the main medium to end of Year 3; bilingual in Years 4-6\nEnglish becomes the main medium from Year 7 (Form 1) onwards\nEducation Act 2013 s. 48(f) makes promoting both languages a curriculum principle",
-  "curriculumTime": "",
+  "curriculumTime": "No foreign language among the core subjects: English, maths, science, Tongan language\nAbout 825 hours a year in total, 5-6 periods a day and 25-30 periods a week\nFramework covers the primary phase, Class Levels 1-8\nA notional planning total for the year, not hours observed in class\nSet by the Ministry of Education and Training curriculum framework of January 2023",
   "assessment": "Under the 2004 framework Year 11 leads to the Tonga School Certificate\nYear 12 follows a regional curriculum leading to the Pacific Senior Secondary Certificate\nForm 7 was to follow the new regional qualification or Cambridge International Examinations",
   "teacherSupply": "Usual route: major in Japanese at the teachers college, now Tonga National University\nJapan-trained graduates without a teaching qualification may teach as assistant teachers\nTonga National University suspended Japanese, citing a shortage of teachers able to teach it\n12 Tongan Japanese teachers taught at 7 institutions as of November 2025\nSt Andrew's High suspended Japanese when no teacher could be secured, resuming 2017",
   "uptake": [
@@ -17778,6 +17906,10 @@
     "description": "The Education Act 2013 names only Tongan and English"
    },
    {
+    "year": 2022,
+    "description": "Primary phase extended from six years to eight, moving the entrance exam to Class 8"
+   },
+   {
     "year": 2023,
     "description": "Tonga Institute of Education absorbed into Tonga National University"
    }
@@ -17789,6 +17921,13 @@
     1
    ],
    "teacherSupply": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "curriculumTime": [
     1,
     1,
     2,
@@ -17942,7 +18081,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "No third or foreign language is named anywhere in the framework\nTuvaluan and English are both taught from early primary up to Form 7\nThe secondary stage table lists Tuvaluan Language and English for Years 9-13\nThe framework names a separate Tuvalu Language Policy that governs implementation",
   "languagesOffered": "Only Tuvaluan and English are offered in all schools\nThe framework names no third or foreign language anywhere",
-  "curriculumTime": "",
+  "curriculumTime": "No foreign language offered: the language learning area is Tuvaluan and English only\nEnglish is taught from the early primary years up to form 7\nLanguage runs across Years 1-8 in primary and Years 9-13 in secondary\nThe framework sets learning areas but publishes no per-subject time allocation\nSet by the Tuvalu National Curriculum Policy Framework, Ministry of Education Youth and Sports",
   "assessment": "",
   "teacherSupply": "Curriculum's Language area offers only Tuvaluan and English in all schools\nTuvaluan and English are taught from the early primary years up to form 7\nJapan Foundation records no Japanese-language education in Tuvalu",
   "uptake": [],
@@ -17961,6 +18100,13 @@
     1,
     1,
     3
+   ],
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -22055,6 +22201,18 @@
    {
     "label": "Vacance de poste (NOR MENH2616056V), Poste specifique d'enseignant du second degre a pourvoir a Wallis-et-Futuna pour la rentree scolaire de fevrier 2027, Bulletin officiel n. 27 du 2 juillet 2026",
     "url": "https://www.education.gouv.fr/bo/2026/Hebdo27/MENH2616056V"
+   },
+   {
+    "label": "Arrêté du 9 novembre 2015 fixant les horaires d'enseignement des écoles maternelles et élémentaires, Bulletin officiel n° 44 du 26 novembre 2015 (NOR MENE1526553A)",
+    "url": "https://www.education.gouv.fr/bo/15/Hebdo44/MENE1526553A.htm"
+   },
+   {
+    "label": "Arrêté du 12 juin 2026 modifiant l'arrêté du 9 novembre 2015 fixant les horaires d'enseignement des écoles maternelles et élémentaires, JORF du 11 juillet 2026 (Légifrance; blocks scripted requests, read in session)",
+    "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054415270"
+   },
+   {
+    "label": "Comparison of the 2015 and 2026 cycle 2 timetables, with the applicability clause for Wallis and Futuna (teacher's reproduction of the arrêté)",
+    "url": "https://sophiebriquetduhaze.fr/wp-content/uploads/2026/07/nouveaux-horaires-de-2026.pdf"
    }
   ],
   "supportLinks": [],
@@ -22065,17 +22223,33 @@
   "secondaryRequirement": "",
   "upperSecondary": "",
   "languagesOffered": "",
-  "curriculumTime": "",
+  "curriculumTime": "Cycle 2 grid amended by the arrete of 12 June 2026, in force for CP from that school year\nLiving languages, foreign or regional, 54 h a year and 1 h 30 a week\nCycle 2 is CP, CE1 and CE2; cycle 3, CM1 and CM2, carries the same 54 h\nThe regional option means those 54 h may go to Wallisian or Futunian, not a foreign one\nThe arrete states it applies in the islands of Wallis and Futuna",
   "assessment": "",
   "teacherSupply": "Second-degree posts go to tenured French education nationale staff, all subjects alike\nPostings run two years on one post, renewable, with no internal transfer\nA 2027 lycee history-geography post taught in English requires DNL anglais certification\nLow teaching hours in some subjects mean service split across two or more schools\nTeachers may be required to teach part of their service in another subject",
   "uptake": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2015,
+    "description": "Arrete of 9 November 2015 repeals the 2008 primary timetable and sets a new one"
+   },
+   {
+    "year": 2026,
+    "description": "Cycle 2 hours redistributed, splitting Questionner le monde into two separate blocks"
+   }
+  ],
   "slots": {
    "teacherSupply": [
     1,
     1,
     1,
     4,
+    4
+   ],
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
     4
    ]
   }
