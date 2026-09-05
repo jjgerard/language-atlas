@@ -149,6 +149,32 @@ because it is foreign to you: French in Senegal is the medium of instruction,
 Arabic in Chad is a medium, and Russian in Kazakhstan is a second state
 language. Record the category the SOURCE puts it in.
 
+## The French Pacific territories do not share one legal status
+
+This is written down because a brief of mine got it wrong and three agents were
+sent out with it. I told them "New Caledonia has held education competence
+since the Noumea Accord". That is too broad, and an agent checked it rather
+than taking it:
+
+- **Article 21 II 7 of loi organique 99-209 lists "Enseignement superieur et
+  recherche" among the competences the STATE exercises in New Caledonia.**
+  Article 27 only allows the congress to resolve that it be transferred later.
+  What New Caledonia holds is primary education; higher education is not its.
+- **French Polynesia's statute changed in 2004 and the change is exactly the
+  kind this atlas records.** The 1996 statute reached only *ecoles maternelles
+  et primaires* and *etablissements du second degre*; the 2004 statute added
+  *et dans les etablissements d'enseignement superieur*. A row written off the
+  1996 text as though it covered universities would have been wrong.
+- **Wallis and Futuna has no higher-education institution of its own,** and its
+  primary teachers train at the IFM in New Caledonia for a University of New
+  Caledonia diploma, with New Caledonia funding the training.
+
+So: read the SCOPE article of any French instrument before using it, for the
+level you are writing about, and do not carry a finding from one territory to
+another. The same applies to metropolitan France: its *horaires* and its
+Education Code do not reach these territories unmodified, and whether they
+reach a given one at a given level is a question with a published answer.
+
 ## Depth rule: every dated instrument is also a policyHistory row
 
 `policyHistory` is a list of `{year, description}` and it is the sole input to

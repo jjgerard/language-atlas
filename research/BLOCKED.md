@@ -1079,3 +1079,31 @@ Wayback HTML wrapper rather than the file, under both the plain and the `if_`
 snapshot forms. The document-url mismatch fallback in terr-verify.js handles
 the ordinary case of this; this one is a genuinely missing file behind a
 working page, which is different, and it yielded nothing.
+
+## 15. PacLII, and the archive as the working door
+
+**PacLII (paclii.org) is the single best source for Pacific legislation**, and
+the live site cannot be used: its table-of-contents pages return 200, but every
+DOCUMENT page is behind a Cloudflare JS challenge and returns 403 to curl, to
+Node and to WebFetch alike. **Internet Archive copies of PacLII documents work
+perfectly.** Every Pacific statute cited in this pass is an archive url for that
+reason, and a future Pacific batch should go straight there rather than
+rediscovering the block.
+
+The same is true of **legifrance.gouv.fr**: Cloudflare on the live site,
+archive copies fine.
+
+**legislation.govt.nz** is a different block — an AWS WAF challenge that answers
+HTTP 202 with an empty body, which reads as a success and yields nothing.
+**NZLII works directly via curl, including its full-text search CGI**
+(`sinosrch.cgi`), and is the better New Zealand tool for this reason.
+
+Serving directly, no workaround needed: `cnmilaw.gov` and `col.guamcourts.gov`
+both hand over section PDFs.
+
+Also blocked in this pass: NESA's Subject Content Knowledge PDFs 302-redirect
+to a generic nsw.gov.au landing page, including from the legacy
+`educationstandards.nsw.edu.au` portal urls; `education.gov.au` times out
+repeatedly, and the Commonwealth Teaching Scholarships figures were taken from
+the NSW Department of Education mirror instead. `unigoroka.ac.pg` and `cmi.edu`
+403 curl.

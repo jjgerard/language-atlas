@@ -495,7 +495,20 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "American Samoa Community College, Teacher Education Department",
+    "url": "https://www.amsamoa.edu/Departments_Offices/education.html"
+   },
+   {
+    "label": "American Samoa Community College, Bachelor of Education in Elementary Education",
+    "url": "https://www.amsamoa.edu/academicprograms/baeducation.html"
+   },
+   {
+    "label": "American Samoa Community College, Certificate of Proficiency with Certification to Teach Samoan Language",
+    "url": "https://www.amsamoa.edu/academicprograms/cpsamoanstudies.html"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -527,7 +540,7 @@
   "mediumOfInstruction": "Certificate holders should deliver instruction and communicate using the Samoan language",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "American Samoa Community College trains the territory's pre- and in-service teachers\nASCC Teacher Education Department names Teaching Samoan Language and Culture as one of its areas\nRoute is a Bachelor of Education in Elementary Education at ASCC\nIts programme includes a Samoan Language Methods/Field Practicum\nAlso a one-year Certificate of Proficiency with Certification to Teach Samoan Language",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -539,6 +552,13 @@
    ],
    "mediumOfInstruction": [
     1
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
    ]
   }
  },
@@ -734,6 +754,18 @@
    {
     "label": "University of New England, Master of Applied Linguistics",
     "url": "https://www.une.edu.au/study/courses/master-of-applied-linguistics"
+   },
+   {
+    "label": "AITSL, Accreditation of initial teacher education programs in Australia: Standards and Procedures",
+    "url": "https://www.aitsl.edu.au/deliver-ite-programs/ite-resources/standards-and-procedures"
+   },
+   {
+    "label": "University of Sydney Handbook 2026, Indigenous Languages Education: Overview",
+    "url": "https://www.sydney.edu.au/handbooks/arts-pg/coursework-areas/indigenous-languages-education/overview.html"
+   },
+   {
+    "label": "NSW Department of Education, Commonwealth Teaching Scholarships",
+    "url": "https://education.nsw.gov.au/teach-nsw/get-paid-to-study/commonwealth-teaching-scholarships"
    }
   ],
   "supportLinks": [],
@@ -873,9 +905,13 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Teacher training runs through initial teacher education programmes AITSL accredits nationally\nSydney's Master of Indigenous Languages Education is open to Indigenous teachers\nNSW accepts it as training for qualified Aboriginal teachers seeking to teach a language\nIt is a one-year postgraduate add-on, not a substitute for a standard teaching qualification\nCommonwealth Teaching Scholarships: up to $40,000 undergraduate, up to $20,000 postgraduate",
   "enrolment": [],
   "policyHistory": [
+   {
+    "year": 2011,
+    "description": "National accreditation standards for initial teacher education programs first developed"
+   },
    {
     "year": 2020,
     "description": "Job-ready Graduates Act sets the student contribution for Foreign Languages at $3,950"
@@ -887,8 +923,21 @@
    {
     "year": 2021,
     "description": "La Trobe University decides to close its Indonesian language program"
+   },
+   {
+    "year": 2025,
+    "description": "AITSL accreditation standards updated, absorbing the 2023 addendum and cutting Program Standard descriptors"
    }
-  ]
+  ],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -11495,6 +11544,14 @@
    {
     "label": "University of the South Pacific, Lautoka Campus, “USP Lautoka Campus to Reintroduce Conversational Vernacular Language Courses”, 13 October 2020",
     "url": "https://www.usp.ac.fj/usp-lautoka/news/usp-lautoka-campus-to-reintroduce-conversational-vernacular-language-courses/"
+   },
+   {
+    "label": "Fiji National University, Semester 1 Higher Education Programme List 2023",
+    "url": "https://www.fnu.ac.fj/wp-content/uploads/2023/01/2022-PROGRAMME-LISTING-1.pdf"
+   },
+   {
+    "label": "Fiji National University, Teachers can enrol for FNU's Bachelor of Education Secondary (In-service) programme to upgrade qualifications (2021)",
+    "url": "https://www.fnu.ac.fj/blog/news/teachers-can-enrol-for-fnus-bachelor-of-education-secondary-in-service-programme-to-upgrade-qualifications/"
    }
   ],
   "supportLinks": [],
@@ -11596,7 +11653,7 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Fiji National University offers Bachelor of Education (Secondary) (English & Hindi)\nFNU also offers Bachelor of Education (Secondary) (English & iTaukei)\nPostgraduate route: FNU Postgraduate Diploma in Teaching English as a Second Language\nFNU also lists a Postgraduate Diploma in Education and a Graduate Certificate in Education\nAn in-service BEd (Secondary) lets serving teachers upgrade their qualifications",
   "enrolment": [],
   "policyHistory": [
    {
@@ -11610,6 +11667,13 @@
     1,
     2,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
    ]
   }
  },
@@ -11631,6 +11695,14 @@
    {
     "label": "Vernacular Language Arts, National Curriculum Standards and Benchmarks, Grades ECE to 12, FSM Department of Education (2023)",
     "url": "https://www.national.doe.fm/wp-content/uploads/2024/03/Vernacular-Language-Arts-Student-Learning-Outcomes.pdf"
+   },
+   {
+    "label": "College of Micronesia-FSM, Program Review: Pre-Teacher Preparation (review cycle Fall 2012-Spring 2014)",
+    "url": "https://www.comfsm.edu.fm/program-review-pre-teacher-preparation/"
+   },
+   {
+    "label": "College of Micronesia-FSM, Teacher Preparation-Elementary (3rd Year) Certificate, programme learning outcomes",
+    "url": "http://www.comfsm.fm/?q=teacher-prep-2020"
    }
   ],
   "supportLinks": [],
@@ -11673,9 +11745,30 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Trainee elementary teachers plan reading lessons in both English and the heritage language\nCollege of Micronesia-FSM originated as a teacher training institution and still trains teachers\nRoute: Associate of Arts in Pre-Teacher Preparation-Elementary at COM-FSM\nFourth year is a University of Guam Partnership BA in Elementary Education, on the FSM campus",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 1963,
+    "description": "Micronesian Teacher Education Center created to provide in-service teacher training"
+   },
+   {
+    "year": 1969,
+    "description": "MTEC adds a pre-service associate of science degree in teacher education"
+   },
+   {
+    "year": 2009,
+    "description": "Associate of Science in Teacher Education-Elementary phased out for an Associate of Arts"
+   }
+  ],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "FO",
@@ -13409,7 +13502,16 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Guam Catalog, CHamoru Studies programs, College of Liberal Arts and Social Sciences",
+    "url": "https://catalog.uog.edu/current/programs/college-of-liberal-arts-and-social-sciences/chamoru-studies"
+   },
+   {
+    "label": "University of Guam, A new concentration at UOG is training future CHamoru teachers (29 March 2022)",
+    "url": "https://www.uog.edu/news-announcements/2021-2022/2022-a-track-gaining-traction-a-new-concentration-at-uog-is-training-future-chamoru-teachers"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -13450,9 +13552,26 @@
   "mediumOfInstruction": "All capstone projects in CHamoru Studies are delivered in the CHamoru language\nGraduates must express ideas in written and oral forms in both CHamoru and English",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "University of Guam prepares CHamoru language and culture teachers for the public school system\nThe track was reviewed by the UOG School of Education and the Guam Department of Education\nRoute is a BA track, CHamoru Studies for Education, launched in 2020\nIt follows the Initial CHamoru Certification requirements set in Public Law 31-50\nGraduates gain full certification to teach in accordance with Guam Public Law 31-50",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2010,
+    "description": "CHamoru Studies begins as a minor at the University of Guam, later a full degree"
+   },
+   {
+    "year": 2010,
+    "description": "University of Guam opens a CHamoru Studies minor, later a Bachelor of Arts"
+   },
+   {
+    "year": 2020,
+    "description": "UOG launches a CHamoru Studies for Education track to prepare future CHamoru teachers"
+   },
+   {
+    "year": 2020,
+    "description": "University of Guam adds a CHamoru Studies track for future CHamoru language teachers"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -13463,6 +13582,13 @@
    "mediumOfInstruction": [
     1,
     2
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
    ]
   }
  },
@@ -17562,15 +17688,28 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Kiribati Teachers College, About KTC (mission, goals and policies)",
+    "url": "https://ktc.edu.ki/about-ktc/"
+   },
+   {
+    "label": "Kiribati Teachers College, Students: Advanced Diploma of Teaching (primary or JSS)",
+    "url": "https://ktc.edu.ki/students/"
+   },
+   {
+    "label": "Kiribati Teachers College, Teachers & Leaders: qualifications upgrade and TELPA",
+    "url": "https://ktc.edu.ki/teachers-and-leaders/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -17579,9 +17718,18 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Kiribati Teachers College trains the country's primary and junior secondary teachers\nRoute is a three-year Advanced Diploma of Teaching plus a one-year school internship\nIts courses include PCP520 Te-Kiribati language curriculum and pedagogy for primary\nTELPA B2 English is required for registration of all teachers and leaders in Kiribati\nUpgrade route: Advanced Diploma of Teaching (Inservice) for certificate or diploma holders",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    3,
+    3,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "KM",
@@ -18968,15 +19116,24 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "College of the Marshall Islands, Certificate of Completion in Marshallese Language Arts (Internet Archive copy, 8 March 2022; cmi.edu blocks direct retrieval)",
+    "url": "https://web.archive.org/web/20220308023231/https://cmi.edu/college_programs/certificate-of-completion-in-marshallese-language-arts/"
+   },
+   {
+    "label": "College of the Marshall Islands, Bachelor of Arts in Elementary Education (Internet Archive copy, 9 March 2022)",
+    "url": "https://web.archive.org/web/20220309054027/https://cmi.edu/college_programs/bachelor-of-arts-in-elementary-education/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -18985,9 +19142,22 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "College of the Marshall Islands runs a Certificate of Completion in Marshallese Language Arts\nGraduates teach Marshallese writing, reading, listening and speaking by evidence-based methods\nThe 24-credit certificate carries Language Arts Methods and Marshallese Orthography\nCMI also runs a Bachelor of Arts in Elementary Education, approved November 23, 2016",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2016,
+    "description": "CMI's Bachelor of Arts in Elementary Education approved, building on the associate degree"
+   }
+  ],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    1,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "MK",
@@ -19269,7 +19439,20 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Northern Marianas College, School of Education",
+    "url": "https://www.marianas.edu/schoolofed"
+   },
+   {
+    "label": "CNMI Public School System, Chamorro Carolinian Language and Heritage Studies Certification Flowchart",
+    "url": "https://www.cnmipss.org/chamorro-carolinian-language-heritage-studies-certification-flowchart"
+   },
+   {
+    "label": "3 CMC § 13102, Chamorro and/or Carolinian Language and Culture Certificates (enacted by PL 24-29, the Chamorro and Carolinian Language Education Act of 2025)",
+    "url": "https://cnmilaw.gov/docs/cmc_section/T3/13102.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -19346,13 +19529,25 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Northern Marianas College School of Education trains the Commonwealth's teachers\nRoute is an NMC Bachelor of Science in Education, Elementary Education concentration\nSpecialized certification needs a transcript or completion certificate for specified courses\nOne is Instruction in Chamorro/Carolinian Language Arts, another is orthography\nAn alternative route needs only a high school diploma and 3-24 college credits",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2026,
+    "description": "Language Education Act gives Northern Marianas College a Chamorro-Carolinian teacher programme"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     2,
     2,
+    3,
+    3
+   ],
+   "teacherPipeline": [
+    1,
+    3,
+    3,
     3,
     3
    ]
@@ -20124,7 +20319,24 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Universite de la Nouvelle-Caledonie, Primary Teacher Training (ESPE)",
+    "url": "https://unc.nc/en/formations/primary-teacher-training/"
+   },
+   {
+    "label": "Universite de la Nouvelle-Caledonie, Inscrivez-vous en Master MEEF et devenez professeur du second degre",
+    "url": "https://www.unc.nc/inscrivez-vous-en-master-meef-et-devenez-professeur-du-second-degre/"
+   },
+   {
+    "label": "Accord sur la Nouvelle-Calédonie signé à Nouméa le 5 mai 1998, JORF (Légifrance, Internet Archive snapshot 12 Apr 2023)",
+    "url": "https://web.archive.org/web/20230412190833/https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000555817"
+   },
+   {
+    "label": "Loi organique n° 99-209 du 19 mars 1999 relative à la Nouvelle-Calédonie, art. 215 (Légifrance, Internet Archive snapshot 24 Feb 2024)",
+    "url": "https://web.archive.org/web/20240224220922/https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000393606"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -20174,9 +20386,22 @@
   "mediumOfInstruction": "Kanak languages are, with French, languages of instruction and culture in New Caledonia\nThe university sets its degree inside that Noumea Agreement policy",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Primary teachers train in the MEEF master run by UNC's teacher institute\nSince 2020 the primary MEEF has three paths, one of them Kanak languages\nSecond-degree MEEF admissions have covered Spanish, physics-chemistry and Kanak language",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1998,
+    "description": "Nouméa Accord requires university teaching and research on Kanak languages in the territory"
+   },
+   {
+    "year": 1999,
+    "description": "Organic law recognises Kanak languages as languages of teaching and culture, no level stated"
+   },
+   {
+    "year": 2020,
+    "description": "Primary MEEF master reorganised into three paths, including a Kanak languages path"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -20186,6 +20411,11 @@
    "mediumOfInstruction": [
     1,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    3,
+    3
    ]
   }
  },
@@ -20730,15 +20960,20 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of New England, Important lessons from Nauru (6 February 2018)",
+    "url": "https://www.une.edu.au/about-une/news-and-events/news/2018/02/important-lessons-from-nauru"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -20747,9 +20982,23 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "University of New England, Australia runs the Nauru Teacher Education Project\nAlmost all of the training is delivered on Nauru, not in Australia\nRoutes are a two-year Associate Degree in Teaching and a Bachelor of Education, Pacific focus\nThey provide pre- and in-service training for teachers from early childhood to secondary\nUnits are tailored to schools that commonly include multi-lingual students",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2013,
+    "description": "UNE Nauru Teacher Education Project begins taking Nauruans to a degree-level qualification"
+   }
+  ],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "NZ",
@@ -20821,6 +21070,38 @@
    {
     "label": "Massey University, Master of Applied Linguistics - MAppLing",
     "url": "https://www.massey.ac.nz/study/all-qualifications-and-degrees/master-of-applied-linguistics-PMAPL/"
+   },
+   {
+    "label": "Teaching Council of Aotearoa New Zealand, Language competency requirements",
+    "url": "https://teachingcouncil.nz/en/become-a-teacher/overseas-trained-teacher-coming-to-Aotearoa/language-competency-requirements"
+   },
+   {
+    "label": "Teaching Council of Aotearoa New Zealand, ITE Programme Requirements",
+    "url": "https://teachingcouncil.nz/en/for-teacher-education-providers/setting-up-an-ite-programme/ite-programme-requirements"
+   },
+   {
+    "label": "University of Auckland, Huarahi Maori study option",
+    "url": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/huarahi-maori.html"
+   },
+   {
+    "label": "Education Workforce (Ministry of Education), Te Tipu Whakarito Scholarship",
+    "url": "https://workforce.education.govt.nz/becoming-teacher-new-zealand/become-teacher-scholarships/te-tipu-whakarito-scholarship"
+   },
+   {
+    "label": "Education and Training Amendment Act 2023 (NZ), s 10 'New Part 4A inserted', NZLII",
+    "url": "https://www.nzlii.org/cgi-bin/viewdoc/nz/legis/consol_act/eataa2023284/s10.html"
+   },
+   {
+    "label": "Education and Training Act 2020 (NZ), s 398D 'What wānanga are (characteristics)', NZLII",
+    "url": "https://www.nzlii.org/cgi-bin/viewdoc/nz/legis/consol_act/eata2020204/s398d.html"
+   },
+   {
+    "label": "RNZ, 'Universities' proposed language cuts threaten New Zealand's interests, academics warn', 12 July 2023",
+    "url": "https://www.rnz.co.nz/news/education/493602/universities-proposed-language-cuts-threaten-new-zealand-s-interests-academics-warn"
+   },
+   {
+    "label": "Wellington.Scoop, 'VUW cutting six courses (including Latin and Greek) and axing 299 jobs', 21 September 2023",
+    "url": "https://wellington.scoop.co.nz/?p=155326"
    }
   ],
   "supportLinks": [],
@@ -21061,9 +21342,26 @@
   "mediumOfInstruction": "Te Wananga o Raukawa teaches its Bachelor of Te Reo Maori in te reo Maori\nWaikato's Te Tohu Paetahi is taught predominantly in te reo Maori",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Teachers must be competent in English or te reo Maori, the languages of the curriculum\nInitial teacher education programmes are approved against Teaching Council requirements\nUniversity of Auckland runs a Graduate Diploma in Teaching (Maori-Medium)\nTe Tipu Whakarito funds 130 places a year for Maori-medium or te reo Maori teaching\nIt pays course fees plus an NZD$10,000 allowance, and recipients are bonded",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2023,
+    "description": "Education and Training Amendment Act inserts Part 4A, wānanga as kaitiaki of te reo Māori"
+   },
+   {
+    "year": 2023,
+    "description": "University of Otago decides to cut its German programme"
+   },
+   {
+    "year": 2023,
+    "description": "Victoria University of Wellington ends Greek, Latin and Italian teaching"
+   },
+   {
+    "year": 2024,
+    "description": "Second part of the ITE Programme Requirements revised and reissued as its own policy"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -21074,6 +21372,13 @@
    "mediumOfInstruction": [
     1,
     3
+   ],
+   "teacherPipeline": [
+    1,
+    1,
+    3,
+    4,
+    4
    ]
   }
  },
@@ -21306,7 +21611,20 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Universite de la Polynesie francaise, L'INSPE (Formation ESPE)",
+    "url": "https://www.upf.pf/fr/linspe"
+   },
+   {
+    "label": "Universite de la Polynesie francaise, Carte des formations de l'INSPE",
+    "url": "https://www.upf.pf/fr/carte-des-formations-de-linspe"
+   },
+   {
+    "label": "Loi organique n° 2004-192 du 27 février 2004 portant statut d'autonomie de la Polynésie française, art. 57 (Légifrance, Internet Archive snapshot 5 Nov 2021)",
+    "url": "https://web.archive.org/web/20211105111828/https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006399388"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -21338,13 +21656,25 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Teacher training runs in the ESPE/INSPE of the Universite de la Polynesie francaise\nIt also runs the continuing training of primary and secondary teachers\nPrimary route: MEEF 1, where master 1 prepares the CRPE recruitment competition\nSecondary route: MEEF 2 master, with a PLC - Tahitien-Lettres pathway\nTraining is set against local specificities including the Polynesian languages",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2004,
+    "description": "Statute of autonomy extends Tahitian as a taught subject to higher-education establishments"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
     2,
+    3
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
     3
    ]
   }
@@ -21363,6 +21693,14 @@
    {
     "label": "University of Papua New Guinea, Linguistic & Modern Languages Strand, School of Humanities & Social Sciences",
     "url": "https://www.upng.ac.pg/index.php/lml-shss"
+   },
+   {
+    "label": "University of Goroka, School of Education",
+    "url": "https://www.unigoroka.ac.pg/soe"
+   },
+   {
+    "label": "University of Goroka, School of Humanities",
+    "url": "https://www.unigoroka.ac.pg/soh"
    }
   ],
   "supportLinks": [],
@@ -21388,9 +21726,17 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "University of Goroka's School of Education trains secondary school teachers\nIt runs specific content based programs, so subject teachers train by subject\nIt also upgrades teacher qualifications through specialized in-service programs\nThe School of Humanities offers a Bachelor of Arts Education",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "PH",
@@ -22015,7 +22361,24 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Palau Community College, Teaching English to Speakers of Other Languages (TESOL)",
+    "url": "https://pcc.palau.edu/course/teaching-english-to-speakers-of-other-language-tesol/"
+   },
+   {
+    "label": "Palau Community College, EN200 Teaching English Effectively",
+    "url": "https://pcc.palau.edu/course/en200/"
+   },
+   {
+    "label": "Palau Community College, Education (ED) Program course outlines",
+    "url": "https://pcc.palau.edu/education-ed-program/"
+   },
+   {
+    "label": "Palau Community College, Other Language Department",
+    "url": "https://pcc.palau.edu/other-language-department/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -22038,12 +22401,19 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Palau Community College runs a TESOL course for pre-service and in-service teachers\nThe 14-module course covers teaching reading, writing, listening and speaking of English\nEN200 gives teachers the fundamentals of basic English grammar for their own classrooms\nThe ED programme runs from Introduction to Teaching to Student Teaching Elementary Education\nAdvanced Palauan Grammar is taught in the college's Other Language Department",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
    "degreeSubjects": [
     2,
+    3,
+    3
+   ],
+   "teacherPipeline": [
+    1,
+    3,
+    3,
     3,
     3
    ]
@@ -22613,15 +22983,28 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Melanesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Solomon Islands National University, Faculty of Education and Humanities 2024 Course Information brochure",
+    "url": "https://www.sinu.edu.sb/wp-content/uploads/2024/08/FEH-Updated-Brochure-2024.pdf"
+   },
+   {
+    "label": "Solomon Islands National University, School of Education",
+    "url": "https://www.sinu.edu.sb/feh/soe/"
+   },
+   {
+    "label": "Solomon Islands National University Act 2012 (No. 9 of 2012), ss 5(5)(d), 6(b)(i), 48, PacLII (Internet Archive snapshot 2 Nov 2022)",
+    "url": "https://web.archive.org/web/20221102113252/http://www.paclii.org/sb/legis/num_act/sinua2012418/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -22630,9 +23013,23 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "SINU's School of Education is the premier teacher education institution in the country\nIts purpose is to train teachers of ECE, Primary and Secondary for Solomon Islands schools\nThe language route is a Diploma of Teaching (Secondary) English (EDEN)\nDegree route is the Bachelor of Teaching (Secondary) (EBTS)\nGraduate route is the Graduate Diploma in Education (Secondary) (EGDES)",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2012,
+    "description": "National University Act establishes SINU, barring discrimination on primary language"
+   }
+  ],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "SC",
@@ -24368,7 +24765,20 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Tonga National University, School of Education",
+    "url": "https://www.tnu.edu.to/school-of-education/"
+   },
+   {
+    "label": "Tonga National University, Faculty of Education, Arts and Humanities",
+    "url": "https://www.tnu.edu.to/faculty-of-education-art-and-humanities/"
+   },
+   {
+    "label": "Tonga National University Act 2021 (Act 13 of 2021), s 8 Objectives, Attorney General's Office of Tonga (Internet Archive snapshot 20 Sep 2023)",
+    "url": "https://web.archive.org/web/20230920134815/https://ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/2021/2021-0202/TongaNationalUniversityAct2021_1.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -24418,9 +24828,18 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Tonga National University's School of Education is the major teacher education provider\nIt is the former Tonga Institute of Education, now a school of the university\nA School of Tongan Language and Culture joined the same faculty in May 2024\nRoutes run from Initial Teacher Certificate to Bachelor of Education (Secondary Teaching)\nThe certificate route is designed for untrained teachers at secondary school level",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2021,
+    "description": "Tonga National University Act requires dual use of the Tongan and English languages"
+   },
+   {
+    "year": 2024,
+    "description": "School of Tongan Language and Culture established in the Faculty of Education, Arts and Humanities"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -24428,6 +24847,13 @@
     1,
     2,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    2,
+    3,
+    3
    ]
   }
  },
@@ -24654,15 +25080,20 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNICEF Pacific, Building teaching skills to improve learning across classrooms in Tuvalu (press release)",
+    "url": "https://www.unicef.org/pacificislands/press-releases/building-teaching-skills-improve-learning-across-classrooms-tuvalu"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -24671,9 +25102,18 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Education reforms now require all teachers to have at least a Bachelor of Education\nDelivery is supported by the University of the South Pacific's Institute of Education\nA cohort of primary teachers will complete or continue their Bachelor of Education\nTeachers with no formal training receive Foundational Training modules instead\nThe US$2.5 million programme is funded by the Global Partnership for Education",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "TW",
@@ -30446,7 +30886,20 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Vanuatu Ministry of Education and Training, Tertiary Education",
+    "url": "https://education.gov.vu/index.php?id=tertiary-education"
+   },
+   {
+    "label": "Vanuatu Institute of Teacher Education, Training",
+    "url": "http://www.ifev.edu.vu/en/training/training.html"
+   },
+   {
+    "label": "National University of Vanuatu Act No. 34 of 2019 (Vanuatu), s 3 Purpose of the University, PacLII (Internet Archive snapshot 27 Oct 2024)",
+    "url": "https://web.archive.org/web/20241027082714/http://www.paclii.org/vu/legis/num_act/nuova2019363/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -30478,14 +30931,34 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Vanuatu Institute of Teacher Education is the country's only teacher training institution\nIt trains in both English and French, for primary and for secondary teaching\nSecondary BEd major pairs include Language Foreign-Language Second and Language Second-History\nPrimary route is the Bachelor of Education Primary Teaching\nIts in-service unit also runs an In-Service Diploma in Education for primary teachers",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1962,
+    "description": "Kawenu Teacher Training College founded as a trainer of English primary teachers"
+   },
+   {
+    "year": 2009,
+    "description": "VITE begins Harmonization, a three-year reform merging its English and French programmes"
+   },
+   {
+    "year": 2019,
+    "description": "National University of Vanuatu Act sets teaching in both English and French official languages"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
     1,
     2
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
    ]
   }
  },
@@ -30495,15 +30968,20 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Gouvernement de la Nouvelle-Caledonie, Les instituteurs de Wallis-et-Futuna formes en Caledonie (5 February 2020)",
+    "url": "https://gouv.nc/actualites/05-02-2020/les-instituteurs-de-wallis-et-futuna-formes-en-caledonie"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -30512,9 +30990,27 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Primary teachers from Wallis-et-Futuna train in New Caledonia under a cooperation convention\nTraining runs at the Institut de formation des maitres de Nouvelle-Caledonie (IFM)\nTrainees then sit the concours de recrutement des instituteurs\nNew Caledonia pays for the training itself\nWallis-et-Futuna funds internship support during the training",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2019,
+    "description": "Reform of initial training for primary teachers takes effect, and the convention is aligned to it"
+   },
+   {
+    "year": 2020,
+    "description": "New five-year conventions signed for recruiting and training Wallis-et-Futuna primary teachers"
+   }
+  ],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "WS",
@@ -30526,7 +31022,24 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Journal of Pacific Studies, Higher Education and the Indigenous Language and Culture: Samoanisation of the National University of Samoa",
+    "url": "https://www.usp.ac.fj/journal-of-pacific-studies/wp-content/uploads/sites/162/2023/05/Higher-Education-and-the-Indigenous-Language-and-Culture-Samoanisation-of-the-National-University-of-Samoa.pdf"
+   },
+   {
+    "label": "National University of Samoa, Faculty of Education course list",
+    "url": "https://nus.edu.ws/foe-courses/"
+   },
+   {
+    "label": "National University of Samoa Act 1997 (Samoa), s 5(a) functions, PacLII (Internet Archive snapshot 25 Jan 2022)",
+    "url": "https://web.archive.org/web/20220125054617/http://www.paclii.org/ws/legis/num_act/nuosa1997314/"
+   },
+   {
+    "label": "National University of Samoa Act 2006 (Samoa), s 5(b) functions, PacLII (Internet Archive snapshot 5 Nov 2022)",
+    "url": "https://web.archive.org/web/20221105051512/http://www.paclii.org/ws/legis/num_act/nuosa2006314/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -30576,9 +31089,22 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "National University of Samoa's Faculty of Education carries Gagana Samoa teaching courses\nIt was formed when NUS merged with the Western Samoa Teachers College\nThat college taught courses in the Samoan language and culture for prospective teachers\nThe merger was meant to strengthen delivery of the Samoan language and culture courses\nCourses include GAGANA SAMOA MO AOGA AMATA, Samoan language for early schooling",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1997,
+    "description": "National University of Samoa absorbs the Western Samoa Teachers College as its Faculty of Education"
+   },
+   {
+    "year": 1997,
+    "description": "National University of Samoa Act repeals the 1984 Act and redefines the university's functions"
+   },
+   {
+    "year": 2006,
+    "description": "Act merges National University of Samoa with Samoa Polytechnic as one institution"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
@@ -30586,6 +31112,13 @@
     2,
     4,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    2,
+    3,
+    3
    ]
   }
  },
