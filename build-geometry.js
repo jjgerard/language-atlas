@@ -356,13 +356,21 @@ async function main() {
   // One path, no interactivity, simplified far harder than the map itself:
   // the home page should not pay 352 KB for a background.
   {
-    const RX = [1,.9986,.9954,.99,.9822,.973,.96,.9427,.9216,.8962,.8679,.835,.7986,.7597,.7186,.6732,.6213,.5722,.5322];
-    const RY = [0,.062,.124,.186,.248,.31,.372,.434,.4958,.5571,.6176,.6769,.7346,.7903,.8435,.8936,.9394,.9761,1];
+    // Equal Earth (Šavrič, Patterson & Jenny 2018), the same projection the
+    // map itself uses. This silhouette had its OWN copy of Robinson, so the
+    // home page and the maps behind it disagreed about the shape of the world
+    // until this was changed too -- the hazard of a formula living in two
+    // files. It is decoration, but it is decoration of the same thing.
+    const A1 = 1.340264, A2 = -0.081106, A3 = 0.000893, A4 = 0.003796;
+    const M = Math.sqrt(3) / 2, K = 985;
     const project = (lon, lat) => {
-      const a = Math.min(Math.abs(lat), 90);
-      const i = Math.min(Math.floor(a / 5), 17), t = (a - i * 5) / 5;
-      const x = RX[i] + (RX[i + 1] - RX[i]) * t, y = RY[i] + (RY[i + 1] - RY[i]) * t;
-      return [0.8487 * x * lon * Math.PI / 180 * 1000, -1.3523 * y * (lat < 0 ? -1 : 1) * 1000];
+      const phi = Math.max(-90, Math.min(90, lat)) * Math.PI / 180;
+      const l = Math.asin(M * Math.sin(phi));
+      const l2 = l * l, l6 = l2 * l2 * l2;
+      const x = lon * Math.PI / 180 * Math.cos(l) /
+                (M * (A1 + 3 * A2 * l2 + l6 * (7 * A3 + 9 * A4 * l2)));
+      const y = l * (A1 + A2 * l2 + l6 * (A3 + A4 * l2));
+      return [x * K, -y * K];
     };
     let d = '';
     let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
