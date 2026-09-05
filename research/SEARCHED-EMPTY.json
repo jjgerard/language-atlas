@@ -1,0 +1,27 @@
+{
+  "_note": "Units a researcher has already worked and found nothing for, per field. Not a claim that nothing exists -- a record that a search was made and came back empty, so the next worklist does not spend an agent on it again. `gaps.js` excludes these from the worklists it builds; they still count as MISSING in the coverage figures, because they are. Remove an entry when a new source appears that the earlier search could not have seen.",
+  "fl.curriculumTime": {
+    "BJ|Benin": "IBE 7th and 6th ed. horaire tables are images; ministry site and INFRE repository carry no horaire document (2026-09)",
+    "BW|Botswana": "both IBE editions contain no mention of any foreign language; BEC French JCE syllabus is assessment-only, no time allocation (2026-09)",
+    "ER|Eritrea": "IBE gives only a whole-curriculum language share covering mother tongue and English together, not a foreign-language figure (2026-09)",
+    "GN|Guinea": "IBE primary hours list contains no foreign language; college and lycee hour tables are images (2026-09)"
+  },
+  "fl.teacherSupply": {
+    "BT|Bhutan": "English is the medium of instruction and Dzongkha the national language, so neither is a foreign language here; no foreign-language teacher source found (2026-09)"
+  },
+  "he.linguistics": {
+    "AO|Angola": "UAN Faculdade de Humanidades, ISCED-Luanda and ISCED-Huila all checked; no degree named Linguistica, only language and literature degrees (2026-09)",
+    "AS|American Samoa": "ASCC is the only institution and its full 2024-2026 catalogue has no linguistics programme (2026-09)",
+    "BI|Burundi": "Universite du Burundi FLSH is five departments, none linguistics; Universite Lumiere offers none (2026-09)",
+    "BW|Botswana": "UB has no standalone linguistics degree; linguistics exists only as a named stream inside English and African Languages degrees (2026-09)",
+    "CD|DR Congo": "UNIKIN's 12 Lettres departments and UNILU's 9 are all languages, literature or communication; linguistics appears only as course titles (2026-09)",
+    "CF|Central African Republic": "Universite de Bangui's Institut de Linguistique Appliquee is a research and training body that names no degree and no level (2026-09)",
+    "DJ|Djibouti": "Universite de Djibouti FLLSH publishes its full offer as an image; no linguistics or sciences du langage degree in it (2026-09)",
+    "ER|Eritrea": "Adi-Keih offers Eritrean Languages and Literature, a language degree; EIT Mai Nefhi is science and engineering (2026-09)"
+  },
+  "he.policyHistory": {
+    "AS|American Samoa": "ASCC catalogue, accreditation history and about page carry no dated language event; the Samoan Studies Institute has no founding date on record (2026-09)",
+    "CF|Central African Republic": "CAR's dated language instruments are national language planning, not higher education; Loi 97/014 has no language article (2026-09)",
+    "CG|Congo": "Loi 25/95 has no language-of-instruction article; the sgg.cg and unicongo copies are scans with no text layer (2026-09)"
+  }
+}

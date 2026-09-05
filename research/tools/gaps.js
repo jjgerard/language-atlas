@@ -29,7 +29,16 @@ const answered = v => Array.isArray(v) ? v.length > 0 : !!String(v || "").trim()
 const content = v => Array.isArray(v) ? v.length > 0
   : !!String(v || "").trim() && !isNotEstablished(v) && !isNotApplicable(v);
 
+// Units a researcher has already worked and found nothing for. They still
+// count as MISSING in the coverage figures, because they are -- but a worklist
+// that keeps reoffering them spends an agent rediscovering that Botswana's
+// only university has no linguistics degree. Six of the nine units on one
+// freshly generated list had been searched and reported empty the same day.
 const NL = String.fromCharCode(10);
+let EMPTY = {};
+try { EMPTY = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "SEARCHED-EMPTY.json"), "utf8")); }
+catch { /* the ledger is optional */ }
+
 const [domId, field, regionArg, sizeArg] = process.argv.slice(2);
 const load = d => JSON.parse(fs.readFileSync(pathFor(d.id), "utf8"))
   .filter(r => r.isNational !== false);
@@ -45,9 +54,13 @@ if (domId && field) {
   }
   const regions = regionArg && regionArg !== "all" ? regionArg.split(",") : null;
   const size = Number(sizeArg || 8);
-  const miss = load(d).filter(e => !content(e[field]) && (!regions || regions.includes(e.region)));
+  const searched = EMPTY[domId + "." + field] || {};
+  const all = load(d).filter(e => !content(e[field]) && (!regions || regions.includes(e.region)));
+  const miss = all.filter(e => !searched[e.countryCode + "|" + e.unitName]);
   console.log(domId + "." + field + ": " + miss.length + " countries"
-    + (regions ? " in " + regions.join(", ") : "") + ", in batches of " + size);
+    + (regions ? " in " + regions.join(", ") : "") + ", in batches of " + size
+    + (all.length > miss.length ? "  (" + (all.length - miss.length)
+        + " skipped: already searched and empty)" : ""));
   for (let i = 0; i < miss.length; i += size)
     console.log("  " + String(i / size + 1).padStart(2, "0") + "  " +
       miss.slice(i, i + size).map(e => e.countryCode + "|" + e.unitName).join(", "));
