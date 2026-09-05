@@ -209,6 +209,10 @@
    {
     "label": "Universiteti i Tiranës, Fakulteti i Historisë dhe i Filologjisë — Master i Shkencave Gjuhësi, cikli i dytë",
     "url": "https://www.fhf.edu.al/cikli-i-dyte-master-shkencor/"
+   },
+   {
+    "label": "Ligj Nr. 80/2015 “Për arsimin e lartë dhe kërkimin shkencor në institucionet e arsimit të lartë në Republikën e Shqipërisë”, neni 88 Gjuha e studimeve and neni 142 Shfuqizime — text as approved 22.7.2015, later amendments not reflected",
+    "url": "https://qsha.gov.al/wp-content/uploads/2025/11/ligj-2015-07-22-80.pdf"
    }
   ],
   "supportLinks": [],
@@ -236,7 +240,24 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2007,
+    "description": "Higher education was governed by law nr. 9741 of 21 May 2007, as later amended"
+   },
+   {
+    "year": 2015,
+    "description": "Law 80/2015 makes Albanian the normal language of higher education study programmes"
+   },
+   {
+    "year": 2015,
+    "description": "Programmes may also be offered in an EU official language approved in the opening act"
+   },
+   {
+    "year": 2015,
+    "description": "Law 80/2015 enters into force fifteen days after publication in the Official Journal"
+   }
+  ],
   "slots": {
    "mediumOfInstruction": [
     1,
@@ -427,14 +448,14 @@
   "degreeSubjects": "",
   "linguistics": [
    {
-    "subject": "Letras (orientación Lingüística)",
-    "level": "bachelor",
+    "subject": "Maestría en Lingüística",
+    "level": "master",
     "institution": "Universidad Nacional de La Plata",
-    "url": "https://www.fahce.unlp.edu.ar/facultad/secretarias-y-prosecretarias/academica/deptos/letras/carreras/licenciatura-en-letras",
+    "url": "https://www.fahce.unlp.edu.ar/facultad/secretarias-y-prosecretarias/posgrado/maestria/maestria-en-linguistica",
     "institutions": "",
     "orientation": "",
     "year": "",
-    "note": "Lingüística is one of three orientations inside the Licenciatura en Letras, not a degree of its own"
+    "note": "Facultad de Humanidades y Ciencias de la Educación; runs in two-year cohorts"
    }
   ],
   "offerings": [],
@@ -4538,7 +4559,48 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "At Fribourg both French and German language and literature studies run at native level\nIts bilingualism bachelor combines German and French studies as minor fields of study",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Sciences du langage",
+    "level": "bachelor",
+    "institution": "Université de Neuchâtel",
+    "url": "https://www.unine.ch/formation/sciences-du-langage",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Taken as a pilier of 30 to 120 ECTS inside the Bachelor of Arts en lettres et sciences humaines"
+   },
+   {
+    "subject": "Linguistique",
+    "level": "bachelor",
+    "institution": "Université de Genève",
+    "url": "https://www.unige.ch/lettres/linguistique/program/bachelor/linguistique",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Département de linguistique, Faculté des lettres; a joint BA Linguistique et psychologie (BULP) is also offered"
+   },
+   {
+    "subject": "Linguistique",
+    "level": "master",
+    "institution": "Université de Genève",
+    "url": "https://www.unige.ch/lettres/linguistique/program/master/linguistique",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Maîtrise Universitaire de Linguistique; the department describes itself as situating language analysis in approches dites formelles"
+   },
+   {
+    "subject": "Sprachwissenschaft (Linguistics)",
+    "level": "master",
+    "institution": "Universität Zürich",
+    "url": "https://www.degrees.uzh.ch/de/master/50000007/50896638/50896642",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Master of Arts, Mono 120 programme, Philosophische Fakultät, Linguistik Zentrum Zürich"
+   }
+  ],
   "offerings": [
    {
     "language": "French",
@@ -7876,6 +7938,10 @@
    {
     "label": "Universidad de La Habana, Facultad de Artes y Letras — carrera de Letras",
     "url": "https://fayl.uh.cu/carrera-2/"
+   },
+   {
+    "label": "Gaceta Oficial de la República de Cuba No. 129 Ordinaria de 19 de diciembre de 2022, Resolución 47/2022 (GOC-2022-1133-O129)",
+    "url": "https://www.gacetaoficial.gob.cu/sites/default/files/goc-2022-o129.pdf"
    }
   ],
   "supportLinks": [],
@@ -9026,7 +9092,28 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Lingüística y Lenguas Aplicadas",
+    "level": "bachelor",
+    "institution": "Universidad Complutense de Madrid",
+    "url": "https://www.ucm.es/linguistica/objetivo-y-competencias",
+    "institutions": "",
+    "orientation": "",
+    "year": "2010",
+    "note": "240 ECTS, 50 places; two final-year itineraries, applied linguistics for teaching and computational linguistics"
+   },
+   {
+    "subject": "Lingüística Teórica y Aplicada",
+    "level": "doctorate",
+    "institution": "Universidad Complutense de Madrid",
+    "url": "https://www.ucm.es/doctorado/doctoradolinguistica/presentacion-1",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Run by the Área de Lingüística General, Facultad de Filología; accredited by ANECA"
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "Universities must promote their territories' own official languages as teaching languages\nThe law leaves the detail to each university's statutes and regional rules",
   "requiredStudy": "",
@@ -9166,7 +9253,12 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Education Sector Development Programme VI (ESDP VI) 2020/21–2024/25, Federal Ministry of Education, Addis Ababa, 2021 — sub-component 1.1 Mother tongue and English language education development",
+    "url": "https://moe.gov.et/storage/Books/Ethiopian%20Education%20Sector%20Development%20Program%206%20(ESDP%20VI).pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -9204,7 +9296,7 @@
   "mediumOfInstruction": "The medium of instruction in any institution shall be English\nLanguage studies other than English are the one exception the proclamation allows\nShort-term training and primary-teacher preparation may be given in any appropriate languages\nStudents with complete hearing impairment are taught in or through sign language\nThis is statute: article 19, Language of Instruction, of the 2019 Higher Education Proclamation",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "More than 189,139 primary mother-tongue teachers have been trained, 100% of the target\n79,698 English teachers were trained on the English Language Teaching Improvement Programme\nA few English language courses have been provided in ELIC centres of teacher training colleges\nNeeds-based proficiency training is to go to pre-service and in-service language teachers\nGeneral education teacher qualifications range from college diplomas to masters",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -9221,6 +9313,13 @@
     2,
     2,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    1,
+    2,
+    3,
+    3
    ]
   }
  },
@@ -9534,7 +9633,118 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Inalco in Paris teaches languages from the licence through to the doctorate\nAbout a hundred languages and civilisations are taught there to over 9,000 students",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Sciences du langage",
+    "level": "bachelor",
+    "institution": "Université Sorbonne Nouvelle",
+    "url": "https://www.sorbonne-nouvelle.fr/licence-sciences-du-langage-243229.kjsp",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Major in Sciences du langage with a minor chosen from English, Lettres, DFLES, informatics or none"
+   },
+   {
+    "subject": "Sciences du langage",
+    "level": "master",
+    "institution": "Université Sorbonne Nouvelle",
+    "url": "https://www.sorbonne-nouvelle.fr/master-langage-langues-textes-societes-llts--280557.kjsp",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Five parcours from M1; run with INALCO and Université Paris Cité"
+   },
+   {
+    "subject": "Sciences du langage",
+    "level": "bachelor",
+    "institution": "Université Paris Cité",
+    "url": "https://odf.u-paris.fr/fr/offre-de-formation/licence-XA/sciences-humaines-et-sociales-SHS/sciences-du-langage-K2VO6CVX.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Parcours: Expertise linguistique, Enseignement, FLE, and LTEI from L3"
+   },
+   {
+    "subject": "Sciences du langage",
+    "level": "doctorate",
+    "institution": "Université Paris Cité",
+    "url": "https://u-paris.fr/linguistique/ecole-doctorale-sciences-du-langage-ed-622/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Ecole doctorale Sciences du langage ED 622; also awards doctorats in Linguistique and Linguistique anglaise"
+   },
+   {
+    "subject": "Sciences du langage",
+    "level": "bachelor",
+    "institution": "Université de Lille",
+    "url": "https://formation.univ-lille.fr/fr/offre-de-formation/licence-lmd-XA/licence-sciences-du-langage-MG002185.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Five parcours including Linguistique générale et outillée and Langue des signes française"
+   },
+   {
+    "subject": "Sciences du langage",
+    "level": "master",
+    "institution": "Université de Lille",
+    "url": "https://formation.univ-lille.fr/fr/offre-de-formation/master-lmd-XB/master-sciences-du-langage-MG002189.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Four parcours: LiTEC, LIIAN, Interprétariat LSF/français, DFLES"
+   },
+   {
+    "subject": "Sciences du langage",
+    "level": "bachelor",
+    "institution": "Université de Tours",
+    "url": "https://www.univ-tours.fr/formations/licence-arts-lettres-langues-mention-sciences-du-langage",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "UFR de Lettres et Langues; RNCP 24467"
+   },
+   {
+    "subject": "Sciences du langage",
+    "level": "bachelor",
+    "institution": "Université Bordeaux Montaigne",
+    "url": "https://formations.u-bordeaux-montaigne.fr/fr/catalogue-des-formations/licence-XA/licence-sciences-du-langage-KQMC9UI5.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "UFR Langues et Civilisations, Département Sciences du Langage"
+   },
+   {
+    "subject": "Sciences du langage",
+    "level": "master",
+    "institution": "Université Bordeaux Montaigne",
+    "url": "https://formations.u-bordeaux-montaigne.fr/fr/catalogue-des-formations/master-XB/master-sciences-du-langage-L0CA8CCK.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Two M2 parcours; department also runs a separate master in FLE/S didactics"
+   },
+   {
+    "subject": "Sciences du langage",
+    "level": "bachelor",
+    "institution": "Sorbonne Université",
+    "url": "https://formations-lettres.sorbonne-universite.fr/fr/index/licence-XA/arts-lettres-langues-ALL/licence-lettres-sciences-du-langage-LILUWCHM.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Catalogued as LICENCE Lettres ; Sciences du langage, the page calls it the Licence Sciences du langage (SDL)"
+   },
+   {
+    "subject": "Sciences du langage",
+    "level": "master",
+    "institution": "Sorbonne Université",
+    "url": "https://formations-lettres.sorbonne-universite.fr/fr/index/master-XB/arts-lettres-langues-ALL/master-sciences-du-langage-linguistique-francaise-generale-lfg-MSCLA1L_614.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Mention Sciences du langage; parcours LFG, Langue et Informatique and FLE also offered"
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -11320,6 +11530,10 @@
    {
     "label": "Universitas Indonesia, FIB — Program Doktor Linguistik, Visi, Misi dan Tujuan pendidikan (kurikulum SK Rektor Nomor 1725/R/UI/2024)",
     "url": "https://fib.ui.ac.id/program-doktor-linguistik/"
+   },
+   {
+    "label": "Undang-Undang Republik Indonesia Nomor 12 Tahun 2012 tentang Pendidikan Tinggi, Pasal 35 ayat (3) dan ayat (5)",
+    "url": "https://akademik.ugm.ac.id/wp-content/uploads/sites/35/2018/10/UU-No-12-Tahun-2012-Pendidikan-Tinggi.pdf"
    }
   ],
   "supportLinks": [],
@@ -11353,7 +11567,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "Indonesian is by law the compulsory language of instruction in higher education\nA foreign language may also be used as a language of instruction there\nRegional languages may be the medium in regional language and literature programmes\nThese are rules of Law 12 of 2012 on Higher Education, not local practice",
-  "requiredStudy": "",
+  "requiredStudy": "Curricula must carry courses in religion, Pancasila, citizenship and bahasa Indonesia\nThese courses are delivered for sarjana programmes and diploma programmes\nThe compulsory language course is bahasa Indonesia",
   "entryRequirements": "",
   "teacherPipeline": "A teacher's academic qualification comes from a higher education sarjana or diploma-four course\nCertifying is done by institutions with an accredited teacher-supply programme set by government\nTeacher competence is acquired through pendidikan profesi, professional education",
   "enrolment": [],
@@ -11387,6 +11601,11 @@
     1,
     2,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    2
    ]
   }
  },
@@ -16648,7 +16867,12 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Comprehensive Guidelines for the Use of Language at the University of Malta, adopted by UM Senate June 2021, section 7 UM Language Policy as at 2021",
+    "url": "https://www.um.edu.mt/media/um/docs/languageuseguidelines.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -16672,7 +16896,24 @@
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2011,
+    "description": "At the Senate meeting of 17 February 2011 the Rector reminded members instruction is in English"
+   },
+   {
+    "year": 2019,
+    "description": "Senate decided to encourage PhD candidates to supply an elaborated thesis abstract in Maltese"
+   },
+   {
+    "year": 2020,
+    "description": "Senate adopted a document outlining good practice in the use of inclusive language"
+   },
+   {
+    "year": 2021,
+    "description": "The University Senate adopted comprehensive guidelines on the use of language in June 2021"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     2
@@ -18318,6 +18559,10 @@
    {
     "label": "HEC Revised Teacher Education Roadmap, notified to universities 2 January 2023",
     "url": "https://www.hec.gov.pk/english/news/news/Pages/Revised-Teacher-Roadmap.aspx"
+   },
+   {
+    "label": "HEC Undergraduate Education Policy (Version 1.1), effective from Fall 2023, Table 1 List of Courses in General Education Cluster",
+    "url": "https://www.hec.gov.pk/english/services/students/UEP/Documents/UGE-Policy.pdf"
    }
   ],
   "supportLinks": [],
@@ -18391,7 +18636,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Every undergraduate and associate degree needs at least 30 credits of general education\nFunctional English is a general education course, covering grammar and vocabulary\nExpository Writing is a further course aimed at improving student writing",
   "entryRequirements": "",
   "teacherPipeline": "The Higher Education Commission set a revised Teacher Education Roadmap in January 2023\nIt is for all public and private universities and degree awarding institutes\nAn Associate Degree in Education admits a candidate to the third year of a four-year B.Ed.\nA holder of a sixteen-year qualification in another discipline may enrol in B.Ed. 1.5\nFrom Fall 2023 the only degree name is Bachelor of Education, strands shown on transcripts",
   "enrolment": [],
@@ -18434,6 +18679,11 @@
     3,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    2,
+    2
    ]
   }
  },
@@ -18728,6 +18978,36 @@
     "orientation": "",
     "year": "",
     "note": ""
+   },
+   {
+    "subject": "Ciências da Linguagem",
+    "level": "bachelor",
+    "institution": "Universidade NOVA de Lisboa (NOVA FCSH)",
+    "url": "https://www.fcsh.unl.pt/cursos/licenciatura_em_ciencias_da_linguagem/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Run by the Departamento de Linguística; 20 places, DGES course code 9040"
+   },
+   {
+    "subject": "Ciências da Linguagem",
+    "level": "master",
+    "institution": "Universidade NOVA de Lisboa (NOVA FCSH)",
+    "url": "https://www.fcsh.unl.pt/cursos/mestrado_em_ciencias_da_linguagem/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Several areas of specialisation; the Desenvolvimento e Perturbações da Linguagem area does not open in 2026-2027"
+   },
+   {
+    "subject": "Ciências da Linguagem",
+    "level": "master",
+    "institution": "Universidade do Algarve",
+    "url": "https://www.ualg.pt/curso/1509",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Faculdade de Ciências Humanas e Sociais; curriculum revised by Aviso n.º 17685/2023"
    }
   ],
   "offerings": [],
@@ -18927,7 +19207,18 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Lingvistică teoretică și aplicată",
+    "level": "master",
+    "institution": "Universitatea din București",
+    "url": "https://litere.ro/studii/master/prezentare-lta/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Facultatea de Litere; students do a placement at the Institutul de Lingvistică"
+   }
+  ],
   "offerings": [
    {
     "language": "Romanian",
@@ -20681,6 +20972,14 @@
    {
     "label": "Government of Timor-Leste, National Parliament approves Higher Education Framework Law (plenary vote 24 June 2024)",
     "url": "https://timor-leste.gov.tl/?p=38052&lang=en&n=1"
+   },
+   {
+    "label": "Lei n.º 14/2008, de 29 de outubro, Lei de Bases da Educação, artigo 8.º Línguas do sistema educativo",
+    "url": "https://indmo.gov.tl/wp-content/uploads/2021/02/Lei-de-Bases-da-Educacao.pdf"
+   },
+   {
+    "label": "Decreto-Lei n.º 68/2022, de 14 de Setembro, Regime jurídico dos estabelecimentos de ensino superior (Jornal da República Série I, N.º 37)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2022/serie_1/SERIE_I_NO_37.pdf"
    }
   ],
   "supportLinks": [],
@@ -20698,6 +20997,26 @@
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [
+   {
+    "year": 2008,
+    "description": "Lei 14/2008 makes tétum and português the languages of instruction of the education system"
+   },
+   {
+    "year": 2010,
+    "description": "Decreto-Lei 8/2010 of 19 May set the legal regime for higher education establishments"
+   },
+   {
+    "year": 2022,
+    "description": "Decreto-Lei 3/2022 brought a national standard curriculum into force for higher education"
+   },
+   {
+    "year": 2022,
+    "description": "Decreto-Lei 68/2022 requires establishments to be named in Portuguese or in tétum"
+   },
+   {
+    "year": 2022,
+    "description": "Decreto-Lei 68/2022 revoked the 2010 regime for higher education establishments"
+   },
    {
     "year": 2024,
     "description": "Higher Education Framework Law approved, making Portuguese the main teaching language"

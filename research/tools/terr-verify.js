@@ -420,8 +420,18 @@ function quoteOn(quote, page) {
     // brief asks for. A row with no evidence entry is dropped like a bullet
     // with none: the year is the part most worth checking and the part that
     // looks equally plausible whatever the truth is.
+    // `history` arrives either as a bare array or keyed by field name. The
+    // brief asks for the array, but EVERY other typed shape in this file --
+    // series, languages, programme -- is keyed by field, so a drafter writing
+    // `history: { policyHistory: [...] }` is reading the pattern correctly,
+    // not making a mistake. This used to throw "object is not iterable" and
+    // take the whole batch down with it.
+    const histRows = Array.isArray(s.history) ? s.history
+      : (s.history && typeof s.history === "object"
+          ? Object.values(s.history).flatMap(v => (Array.isArray(v) ? v : []))
+          : []);
     const keptHist = [];
-    for (const r of (s.history || [])) {
+    for (const r of histRows) {
       const label = "policyHistory " + (r && r.year);
       if (!r || !r.description) { dropped.push(label + ": row missing a description"); continue; }
       if (!Number.isInteger(Number(r.year))) { dropped.push(label + ": year is not a number"); continue; }
