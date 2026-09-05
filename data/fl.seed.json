@@ -476,24 +476,35 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "American Samoa Code Annotated 16.1001, Classification-Certification, American Samoa Bar Association code annotated",
+    "url": "https://asbar.org/code-annotated/16-1001-classification-certification/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "primaryRequirement": "",
   "secondaryRequirement": "",
   "upperSecondary": "",
   "languagesOffered": "",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Certification classes under A.S.C.A. 16.1001 are set by degree level, from diploma to doctorate\nThe only language the certification section names is Samoan, whose degrees ASDOE reviews alone",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1
+   ]
+  }
  },
  {
   "countryCode": "AT",
@@ -599,6 +610,10 @@
    {
     "label": "ACARA, Year 12 tertiary-recognised language enrolments by language, Australia: 2010-2023 — the two ACARA tables (counts and percentages), as published by ACICIS, 29 July 2025",
     "url": "https://www.acicis.edu.au/wp-content/uploads/2025/07/20250729_ACARA_Year-12-Languages-Enrolments_NATIONAL.pdf"
+   },
+   {
+    "label": "Australian Government Department of Education, Teacher Workforce Shortages: Issues Paper (2022), p. 8, Internet Archive copy of ministers.education.gov.au",
+    "url": "https://web.archive.org/web/20220809084959/https://ministers.education.gov.au/sites/default/files/documents/Teacher%20Workforce%20Shortages%20-%20Issues%20paper.pdf"
    }
   ],
   "supportLinks": [],
@@ -613,7 +628,7 @@
   "languagesOffered": "Sixteen language-specific curricula, from Arabic and Auslan to Turkish and Vietnamese\nPlus a Framework for Aboriginal and Torres Strait Islander Languages\nPlus a Framework for Classical Languages",
   "curriculumTime": "ACARA indicative allocation: 350 hours Foundation-Year 6, 160 for each of Years 7-8 and 9-10\nACARA states these are not designed to establish time allocations in schools\nActual time is set by each state authority or by the school",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Federal issues paper names languages a subject area where schools struggle to recruit",
   "uptake": [
    {
     "year": "2023",
@@ -636,7 +651,12 @@
     "year": 2017,
     "description": "The 2017 national review: no national language education policy at federal level"
    }
-  ]
+  ],
+  "slots": {
+   "teacherSupply": [
+    2
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -7687,6 +7707,10 @@
    {
     "label": "Goundar, P. R., 'Outlining the Language Policy and Planning in Fiji', English Language Teaching 12(7) (2019)",
     "url": "https://files.eric.ed.gov/fulltext/EJ1218740.pdf"
+   },
+   {
+    "label": "Fiji Ministry of Education, Addressing Teacher Shortage in Schools (statement of the Minister for Education, Hon. Aseri Radrodro), Internet Archive copy of education.gov.fj",
+    "url": "https://web.archive.org/web/20250316130946/https://www.education.gov.fj/?p=14111"
    }
   ],
   "supportLinks": [],
@@ -7701,14 +7725,25 @@
   "languagesOffered": "No foreign language is named in the 2007 national curriculum framework\nThe named school languages are English, iTaukei and Fiji Hindi",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Route is registration with the Fiji Teachers Registration Authority, plus induction\nNo language-specific shortage documented; Ministry reports a general one, teachers going abroad\nFinal-year education students may be recruited on a one-year limited authority to teach",
   "uptake": [],
   "policyHistory": [
    {
     "year": 1978,
     "description": "Education Act regulates provision so every school-aged child attends school"
+   },
+   {
+    "year": 2024,
+    "description": "Ministry begins recruiting final-year education students on a limited authority to teach"
    }
-  ]
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "FM",
@@ -8953,6 +8988,10 @@
    {
     "label": "Japan Foundation, 日本語教育 国・地域別情報 — Guam (2025 edition), including the 2024 Survey of Japanese-Language Education Abroad results",
     "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/guam_2.pdf"
+   },
+   {
+    "label": "Guam Commission for Educator Certification, Certification Table (update of 16 February 2026), under Guam Public Laws 31-50, 32-220 and 38-91",
+    "url": "https://gcec.guam.gov/sites/default/files/Certification%20Table%20Update%202026.pdf"
    }
   ],
   "supportLinks": [],
@@ -8965,7 +9004,7 @@
   "languagesOffered": "",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Certification table carries a CHamoru Language and Culture route and no other language route\nOther subjects run through Initial Educator: degree, Praxis Core, PLT and a Praxis subject test",
   "uptake": [
    {
     "year": "2025",
@@ -8978,7 +9017,13 @@
     "note": "Middle-school students taking Japanese, a half-year elective, across 5 to 7 public and private schools in 2025-26. Japan Foundation country profile for Guam (2025 edition)"
    }
   ],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1
+   ]
+  }
  },
  {
   "countryCode": "GW",
@@ -14024,24 +14069,35 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Micronesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "CNMI Public School System, Classroom Teachers Certification Flowchart",
+    "url": "https://www.cnmipss.org/classroom-teachers-certification-flowchart"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "primaryRequirement": "",
   "secondaryRequirement": "",
   "upperSecondary": "",
   "languagesOffered": "",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Secondary route is Praxis II in the content area plus three content-area courses\nThe only language-specific endorsement listed is Chamorro/Carolinian Language and Heritage",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1
+   ]
+  }
  },
  {
   "countryCode": "MR",
@@ -14601,6 +14657,10 @@
    {
     "label": "Japan Foundation, 日本語教育 国・地域別情報 — New Caledonia (2025 edition), including the 2024 Survey of Japanese-Language Education Abroad results",
     "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/newcaledonia_2.pdf"
+   },
+   {
+    "label": "Note de service MENH2504339N du 8-4-2025, Mise a disposition de la Nouvelle-Caledonie des personnels enseignants du second degre, d'education et psychologues de l'education nationale - rentree scolaire de fevrier 2026, BOENJS n. 17 du 24 avril 2025",
+    "url": "https://www.education.gouv.fr/bo/2025/Hebdo17/MENH2504339N"
    }
   ],
   "supportLinks": [],
@@ -14613,7 +14673,7 @@
   "languagesOffered": "",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Secondary staff are tenured French national teachers put at New Caledonia's disposal\nThey apply through the national Siat platform; the vice-rectorat selects, not the territory\nThe 2026 note names no language among the disciplines whose candidatures are most sought",
   "uptake": [
    {
     "year": "2024",
@@ -14621,7 +14681,14 @@
     "note": "Learners of Japanese in New Caledonia, down from 3,400 in 2021; Japanese is taught almost entirely as a second foreign language. Japan Foundation country profile for New Caledonia (2025 edition)"
    }
   ],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "NE",
@@ -15055,6 +15122,18 @@
    {
     "label": "NZQA, NCEA subjects",
     "url": "https://www2.nzqa.govt.nz/ncea/subjects/select-subject/"
+   },
+   {
+    "label": "New Zealand Ministry of Education, Employing someone on a Limited Authority to Teach, Education Workforce site",
+    "url": "https://workforce.education.govt.nz/principals-and-schools/local-employment-and-recruitment-support/employing-someone-limited-authority-teach"
+   },
+   {
+    "label": "Teaching Council of Aotearoa New Zealand, Step into a LAT role",
+    "url": "https://teachingcouncil.nz/en/become-a-teacher/For-Limited-authority-to-teach-holders/step-into-a-lat-role"
+   },
+   {
+    "label": "New Zealand Ministry of Education, Education Report: Teacher Demand and Supply, METIS No 1267138, 27 October 2021",
+    "url": "https://web-assets.education.govt.nz/s3fs-public/2025-03/1.-signed-ER-Teacher-Demand-and-Supply-1267138.pdf?VersionId=9C4h3xRAk0GcmnMXxPzS.dYmTLA2fpDB"
    }
   ],
   "supportLinks": [],
@@ -15069,7 +15148,7 @@
   "languagesOffered": "NCEA languages include Mandarin, French, German, Japanese, Korean, Latin and Spanish\nPacific languages include Gagana Samoa, Gagana Tokelau, Lea Faka-Tonga, Vagahau Niue\nTe reo Māori and NZ Sign Language are also NCEA subjects but are official languages",
   "curriculumTime": "The curriculum sets no hours for learning languages\nSchools design their own curriculum within the eight learning areas",
   "assessment": "National Certificate of Educational Achievement, administered by NZQA",
-  "teacherSupply": "",
+  "teacherSupply": "A Limited Authority to Teach lets a school employ an unqualified person; it is not a certificate\nTeaching Council names language a specialist skill a Limited Authority to Teach can cover\nMinistry made Pacific language teachers one of five priority supply segments in October 2021\nA LAT also covers a skill in short supply, where no qualified teacher can fill the position",
   "uptake": [
    {
     "year": "2025",
@@ -15082,7 +15161,20 @@
     "note": "enrolled in Māori-medium education, where instruction is at least 51% in te reo — Education Counts"
    }
   ],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2021,
+    "description": "Ministry of Education adds Pacific language teachers to its priority teacher-supply segments"
+   }
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "OM",

@@ -1044,3 +1044,38 @@ of the state's text rather than the state's own publication.
 They are kept, and they are recorded here, so that a later pass can upgrade
 the url without redoing the research. The alternative was leaving Serbia,
 Bosnia, Hungary and Austria blank.
+
+## 14. The Oceania pass, and a source that is only reachable second-hand
+
+Two government hosts refuse this machine outright, and both have a working
+Internet Archive substitute of the same file:
+
+- `ministers.education.gov.au` — TCP timeout on every attempt, every client.
+  The Australian Department of Education's 2022 *Teacher Workforce Shortages*
+  issues paper is served from the archive copy instead: 200, 362 KB, extracts
+  cleanly in all three pdftotext modes.
+- `www.education.gov.fj` — connection refused on 443. Fiji's ministry pages
+  come from the archive.
+
+Neither is a block on the document, only on the door, so the rows stand and
+the archive url is what is cited. Recorded here so a later pass can upgrade
+the url rather than redo the research.
+
+Also settled, in one call, and worth reusing rather than guessing filename
+variants: the Wayback CDX API lists everything under a prefix.
+
+    https://web.archive.org/cdx/search/cdx?url=ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/*&output=json&fl=original&collapse=urlkey
+
+It settles the recurring "does an IBE profile exist for this country" question
+outright. For Oceania the answer is that the *World Data on Education* 7th
+edition covers only **Australia, Fiji, New Zealand, Cook Islands, Papua New
+Guinea and Samoa**. There is no profile for American Samoa, Guam, Kiribati,
+the Marshall Islands, the Northern Mariana Islands, New Caledonia or Nauru,
+and no amount of name-variant hunting will produce one. The API 504s on an
+unfiltered listing, so always pass a filter or a prefix.
+
+One more archive quirk found here: the archived Fiji IBE PDF returns the
+Wayback HTML wrapper rather than the file, under both the plain and the `if_`
+snapshot forms. The document-url mismatch fallback in terr-verify.js handles
+the ordinary case of this; this one is a genuinely missing file behind a
+working page, which is different, and it yielded nothing.
