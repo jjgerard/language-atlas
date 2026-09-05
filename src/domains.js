@@ -48,23 +48,6 @@
 // them in was a data move rather than a rewrite.
 const DOMAINS = [
   {
-    id: 'eal',
-    label: 'Majority language acquisition',
-    blurb: 'Support for children who arrive at school without the language it teaches in — called EAL where that language is English.',
-    live: true,
-    fields: [
-      ['newcomerCriteria', 'Newcomer criteria', 'text', 'In this order, omitting any you cannot answer: who counts as a newcomer or second-language pupil · on what evidence · at what point it is decided · who decides.'],
-      ['removalCriteria', 'Removal criteria', 'text', 'In this order, omitting any you cannot answer: what ends the designation · who decides · any time limit · whether a pupil can be designated again.'],
-      ['newcomerProportion', 'Newcomer proportion', 'series', 'Share of pupils designated, by year, with the source of each figure.'],
-      ['achievementGap', 'Education outcomes', 'text', 'In this order, omitting any you cannot answer: what is measured · what the gap is · who they are compared against · whether it is tracked over time.'],
-      ['l2Support', 'L2 support', 'text', 'In this order, omitting any you cannot answer: who delivers it · where, in the ordinary class, by withdrawal, or in a separate setting · how much of it and for how long · what qualification the teacher needs.'],
-      ['l1Support', 'L1 support', 'text', 'In this order, omitting any you cannot answer: whether the home language is taught at all · who provides it, the school, the state or the community · at which stages · whether it can be examined.'],
-      ['l3Support', 'L3 support', 'text', 'In this order, omitting any you cannot answer: whether these pupils are also taught a further language · whether they may be exempted · who decides an exemption · what replaces the time.'],
-      ['bilingualEducationNotes', 'Bilingual education', 'text', 'In this order, omitting any you cannot answer: whether content is taught through two languages · which languages · at which stages or in which schools · whether it is an entitlement or a pilot.'],
-      ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, circular or funding decision, one per row.'],
-    ],
-  },
-  {
     id: 'dld',
     label: 'Language disorder support',
     blurb: 'Children with a lasting difficulty learning and using language: how it is identified, and what they are entitled to. Known in research as DLD.',
@@ -83,6 +66,50 @@ const DOMAINS = [
       ['outcomesEvidence', 'Outcomes evidence', 'text', 'In this order, omitting any you cannot answer: what was measured · by whom and when · what it found · whether it is repeated.'],
       ['identifiedPrevalence', 'Identified prevalence', 'series', 'Rates identified by the system, by year, with the source of each figure.'],
       ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, guidance or funding decision, one per row.'],
+    ],
+  },
+  {
+    id: 'eal',
+    label: 'Majority language acquisition',
+    blurb: 'Support for children who arrive at school without the language it teaches in — called EAL where that language is English.',
+    live: true,
+    fields: [
+      ['newcomerCriteria', 'Newcomer criteria', 'text', 'In this order, omitting any you cannot answer: who counts as a newcomer or second-language pupil · on what evidence · at what point it is decided · who decides.'],
+      ['removalCriteria', 'Removal criteria', 'text', 'In this order, omitting any you cannot answer: what ends the designation · who decides · any time limit · whether a pupil can be designated again.'],
+      ['newcomerProportion', 'Newcomer proportion', 'series', 'Share of pupils designated, by year, with the source of each figure.'],
+      ['achievementGap', 'Education outcomes', 'text', 'In this order, omitting any you cannot answer: what is measured · what the gap is · who they are compared against · whether it is tracked over time.'],
+      ['l2Support', 'L2 support', 'text', 'In this order, omitting any you cannot answer: who delivers it · where, in the ordinary class, by withdrawal, or in a separate setting · how much of it and for how long · what qualification the teacher needs.'],
+      ['l1Support', 'L1 support', 'text', 'In this order, omitting any you cannot answer: whether the home language is taught at all · who provides it, the school, the state or the community · at which stages · whether it can be examined.'],
+      ['l3Support', 'L3 support', 'text', 'In this order, omitting any you cannot answer: whether these pupils are also taught a further language · whether they may be exempted · who decides an exemption · what replaces the time.'],
+      ['bilingualEducationNotes', 'Bilingual education', 'text', 'In this order, omitting any you cannot answer: whether content is taught through two languages · which languages · at which stages or in which schools · whether it is an entitlement or a pilot.'],
+      ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, circular or funding decision, one per row.'],
+    ],
+  },
+  {
+    id: 'indigenous',
+    label: 'Indigenous and regional languages',
+    blurb: 'Languages already spoken where the school stands, and what school does with them: teaches in them, teaches them, recognises them, or not.',
+    // Signposted on the map because the NAME of this map is a compromise, and a
+    // reader is owed that. There is no globally common policy term: counted
+    // across the sources this atlas has retrieved, "minority language" leads
+    // only because India's Commissioner for Linguistic Minorities supplies 973
+    // of its hits, while Canada's sources say Indigenous 606 times and Africa's
+    // say national languages. Every available term of art is a regional loan.
+    // See the README section "Why this map is called what it is".
+    note: 'No single term for these languages is used worldwide: the same languages are "national languages" in Senegal, "linguistic minorities" in India and "Indigenous" in Canada. This map keeps one name for navigation, and every entry uses the word its own sources use — recorded in the Local term field.',
+    live: true,
+    fields: [
+      ['inventory', 'How many languages', 'text', 'In this order, omitting any you cannot answer: how many languages the place has · who counted them, and when · how many the school system engages with · whether the count is disputed.'],
+      ['languages', 'The languages', 'languages', 'The languages the SYSTEM engages with, which is nearly always far fewer than the place has. Name, family and typology come from WALS; leave the WALS code blank rather than guess one.'],
+      ['localTerm', 'Local term', 'text', 'In this order, omitting any you cannot answer: the term the system uses, in its own language · what it covers · where it is fixed, in statute, in guidance, or in practice only · whether the system rejects the minority framing.'],
+      ['standing', 'Standing', 'text', 'In this order, omitting any you cannot answer: the standing given, official, co-official, recognised or none · the instrument that says so · where it applies, nationally or in named areas · what the standing obliges anyone to do.'],
+      ['mediumOfInstruction', 'Medium of instruction', 'text', 'In this order, omitting any you cannot answer: whether school is taught in the language at all · at which stages · in which schools or areas · whether it is a right, a permission or an observed practice.'],
+      ['taughtAsSubject', 'Taught as a subject', 'text', 'In this order, omitting any you cannot answer: whether it is taught as a subject · compulsory or optional · at which stages · whether the curriculum teaches ABOUT the community rather than the language.'],
+      ['materials', 'Curriculum and materials', 'text', 'In this order, omitting any you cannot answer: whether a curriculum exists · whether textbooks or teaching materials exist · whether an agreed orthography exists · who is charged with producing them.'],
+      ['assessment', 'Assessment', 'text', 'In this order, omitting any you cannot answer: whether the language can be examined · at which stage, and in what qualification · whether a subject can be examined IN it · whether a pass counts toward leaving or entry.'],
+      ['revitalisation', 'Revitalisation', 'text', 'In this order, omitting any you cannot answer: what is being done to reverse language shift · who runs it · since when · whether it is funded, and by whom.'],
+      ['speakers', 'Speakers', 'series', 'Speaker numbers or shares, by year, with the source of each figure and who it counted.'],
+      ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, order or funding decision, one per row.'],
     ],
   },
   {
@@ -138,33 +165,6 @@ const DOMAINS = [
       ['teacherPipeline', 'Teacher pipeline', 'text', 'In this order, omitting any you cannot answer: whether higher education trains the school system\'s language teachers · at which institutions · by what route, a degree, a postgraduate qualification or in service · whether places are capped, funded or bursaried.'],
       ['enrolment', 'Enrolment', 'series', 'Students, enrolments or degrees awarded, by year, with the source of each figure and what it counted. Say whether it counts students or course enrolments — they are not the same number.'],
       ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, funding decision, or a department opening or closing, one per row.'],
-    ],
-  },
-  {
-    id: 'indigenous',
-    label: 'Indigenous and regional languages',
-    blurb: 'Languages already spoken where the school stands, and what school does with them: teaches in them, teaches them, recognises them, or not.',
-    // Signposted on the map because the NAME of this map is a compromise, and a
-    // reader is owed that. There is no globally common policy term: counted
-    // across the sources this atlas has retrieved, "minority language" leads
-    // only because India's Commissioner for Linguistic Minorities supplies 973
-    // of its hits, while Canada's sources say Indigenous 606 times and Africa's
-    // say national languages. Every available term of art is a regional loan.
-    // See the README section "Why this map is called what it is".
-    note: 'No single term for these languages is used worldwide: the same languages are "national languages" in Senegal, "linguistic minorities" in India and "Indigenous" in Canada. This map keeps one name for navigation, and every entry uses the word its own sources use — recorded in the Local term field.',
-    live: true,
-    fields: [
-      ['inventory', 'How many languages', 'text', 'In this order, omitting any you cannot answer: how many languages the place has · who counted them, and when · how many the school system engages with · whether the count is disputed.'],
-      ['languages', 'The languages', 'languages', 'The languages the SYSTEM engages with, which is nearly always far fewer than the place has. Name, family and typology come from WALS; leave the WALS code blank rather than guess one.'],
-      ['localTerm', 'Local term', 'text', 'In this order, omitting any you cannot answer: the term the system uses, in its own language · what it covers · where it is fixed, in statute, in guidance, or in practice only · whether the system rejects the minority framing.'],
-      ['standing', 'Standing', 'text', 'In this order, omitting any you cannot answer: the standing given, official, co-official, recognised or none · the instrument that says so · where it applies, nationally or in named areas · what the standing obliges anyone to do.'],
-      ['mediumOfInstruction', 'Medium of instruction', 'text', 'In this order, omitting any you cannot answer: whether school is taught in the language at all · at which stages · in which schools or areas · whether it is a right, a permission or an observed practice.'],
-      ['taughtAsSubject', 'Taught as a subject', 'text', 'In this order, omitting any you cannot answer: whether it is taught as a subject · compulsory or optional · at which stages · whether the curriculum teaches ABOUT the community rather than the language.'],
-      ['materials', 'Curriculum and materials', 'text', 'In this order, omitting any you cannot answer: whether a curriculum exists · whether textbooks or teaching materials exist · whether an agreed orthography exists · who is charged with producing them.'],
-      ['assessment', 'Assessment', 'text', 'In this order, omitting any you cannot answer: whether the language can be examined · at which stage, and in what qualification · whether a subject can be examined IN it · whether a pass counts toward leaving or entry.'],
-      ['revitalisation', 'Revitalisation', 'text', 'In this order, omitting any you cannot answer: what is being done to reverse language shift · who runs it · since when · whether it is funded, and by whom.'],
-      ['speakers', 'Speakers', 'series', 'Speaker numbers or shares, by year, with the source of each figure and who it counted.'],
-      ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, order or funding decision, one per row.'],
     ],
   },
   { id: 'adult', label: 'Majority language for adults', blurb: 'Classes and entitlements for adults who move to a country, rather than children in its schools.', live: false, planned: true },

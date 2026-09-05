@@ -196,9 +196,14 @@ try {
   // findings. Deliberately NOT four steps of the coverage ramp: that puts cov-2
   // on one card, and cov-2 measures 1.98 against the bar track — an edge and a
   // bar nobody can see. Every region colour clears 3:1 in both themes.
+  // In the order the cards are shown. `he` was missing and fell through to
+  // var(--cov-4), the same omission that left it off the About page's list of
+  // maps -- both dating from when that map launched. --r-africa was the one
+  // region colour nothing else was using.
   const EDGE = {
-    eal: 'var(--r-europe)', dld: 'var(--r-asia)',
-    fl: 'var(--r-americas)', indigenous: 'var(--r-oceania)',
+    dld: 'var(--r-asia)', eal: 'var(--r-europe)',
+    indigenous: 'var(--r-oceania)', fl: 'var(--r-americas)',
+    he: 'var(--r-africa)',
   };
   document.getElementById('cards').innerHTML = live.map(d => {
     // No coverage figure here. A share on the front page is a claim about the
@@ -214,10 +219,10 @@ try {
 } catch (err) {
   // Never leave the page with no way in: fall back to plain links.
   document.getElementById('cards').innerHTML = `
-    <a class="card" href="/eal"><h3>Majority language acquisition</h3></a>
     <a class="card" href="/dld"><h3>Language disorder support</h3></a>
+    <a class="card" href="/eal"><h3>Majority language acquisition</h3></a>
+    <a class="card" href="/indigenous"><h3>Indigenous and regional languages</h3></a>
     <a class="card" href="/fl"><h3>Foreign languages in school</h3></a>
-    <a class="card" href="/he"><h3>Languages and linguistics in higher education</h3></a>
-    <a class="card" href="/indigenous"><h3>Indigenous and regional languages</h3></a>`;
+    <a class="card" href="/he"><h3>Languages and linguistics in higher education</h3></a>`;
 }
 </script>
