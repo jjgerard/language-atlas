@@ -51,7 +51,10 @@
    divisions inside one are drawn lighter and in a softer colour, so Spain
    still reads as Spain with regions in it. */
 .unit { stroke: var(--ground-deep); stroke-width: .9px; vector-effect: non-scaling-stroke; }
-.unit.sub { stroke: var(--hair-strong); stroke-width: .45px; }
+/* The SAME grey at half the weight. It was --hair-strong, which is darker than
+   the country line, so a region border was the more prominent of the two and
+   the hierarchy read backwards. One colour, two weights. */
+.unit.sub { stroke-width: .45px; }
 .unit.hit { cursor: pointer; }
 .unit.base { pointer-events: none; }
 
@@ -68,16 +71,23 @@
    intended and would spill over the border into the neighbour. */
 .edgehit { fill: none; stroke: transparent; stroke-width: 12px;
            vector-effect: non-scaling-stroke; pointer-events: stroke; cursor: pointer; }
-.edge.sel { stroke: var(--ink); stroke-width: 2.4px; }
-.edge.hov { stroke: var(--ink); stroke-width: 1.9px; }
-/* Inherited: same fill as the country it follows, with its border kept as a
-   hairline so you can still see there is something clickable there. */
-.unit.inherited { stroke: var(--surface); stroke-width: .75px; stroke-dasharray: 3 2.5; opacity: .96; }
+.edge.sel { stroke: var(--surface); stroke-width: 2.4px; }
+.edge.hov { stroke: var(--surface); stroke-width: 1.9px; }
+/* Inherited: dashed rather than solid, but in the same grey as any other
+   border. It was white, which read as a different KIND of line rather than a
+   different state of one. The dash has to stay: an inherited unit is painted
+   at --cov-1, the palest coverage step, so without it "follows its country"
+   and "a fifth of the questions answered" are the same picture. */
+.unit.inherited { stroke-dasharray: 3 2.5; opacity: .96; }
 .dot.inherited { stroke-dasharray: 2 2; }
-.unit.sel { stroke: var(--ink); stroke-width: 2px; }
-.unit.hov { stroke: var(--ink); stroke-width: 1.5px; }
+
+/* Resting borders are grey and differ only in weight. Pointing at something
+   turns its border WHITE, which reads on every fill in the ramp -- black
+   disappeared into the dark end of it. */
+.unit.sel { stroke: var(--surface); stroke-width: 2px; }
+.unit.hov { stroke: var(--surface); stroke-width: 1.5px; }
 .dot { stroke: var(--ground-deep); stroke-width: 1px; vector-effect: non-scaling-stroke; cursor: pointer; }
-.dot.sel, .dot.hov { stroke: var(--ink); stroke-width: 2px; }
+.dot.sel, .dot.hov { stroke: var(--surface); stroke-width: 2px; }
 .leader { stroke: var(--hair-strong); stroke-width: .75px; vector-effect: non-scaling-stroke; fill: none; }
 
 /* floating panels over the map */
