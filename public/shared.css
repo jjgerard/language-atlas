@@ -18,6 +18,9 @@
   --hair:        #C3CDD6;
   --hair-strong: #9DAAB6;
   --focus:       #3F5BA9;
+  /* Map highlight: the border of whatever the pointer is on. Light in BOTH
+     schemes, unlike --surface, which is the page and goes dark. */
+  --pick:        #FBFCFD;
 
   --nodata:      #A1A6AB;   /* nothing recorded — 14 dE from --cov-1 under
                                simulated protanopia and deuteranopia, where the
@@ -70,6 +73,7 @@
     --hair:        #2A3640;
     --hair-strong: #3E4E5A;
     --focus:       #8AA3E8;
+    --pick:        #E7EEF4;
 
     --nodata:      #282D30;   /* darker than --cov-1, not merely greyer */
     --hatch-bg:    #2B3742;
@@ -102,6 +106,7 @@
   --ink-soft:    #AEBCC7;
   --ink-faint:   #9AA8B3;
   --hair:        #2A3640;
+  --pick:        #E7EEF4;
   --hair-strong: #3E4E5A;
   --focus:       #8AA3E8;
 

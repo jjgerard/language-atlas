@@ -50,7 +50,13 @@
    as though its parts were countries. Countries keep the heavier line; the
    divisions inside one are drawn lighter and in a softer colour, so Spain
    still reads as Spain with regions in it. */
-.unit { stroke: var(--ground-deep); stroke-width: .9px; vector-effect: non-scaling-stroke; }
+/* --hair-strong rather than --ground-deep, which was too pale to be the thing
+   the hover highlight contrasts WITH. Measured against the hover white:
+   --ground-deep 1.33:1, --hair 1.57:1, --hair-strong 2.31:1. And on the palest
+   coverage fill --ground-deep scored 1.01:1 against the fill itself -- an
+   invisible line, which is why the hover looked hidden on some borders: there
+   was nothing there to change. --hair-strong reads at 1.74:1 on that fill. */
+.unit { stroke: var(--hair-strong); stroke-width: .9px; vector-effect: non-scaling-stroke; }
 /* The SAME grey at half the weight. It was --hair-strong, which is darker than
    the country line, so a region border was the more prominent of the two and
    the hierarchy read backwards. One colour, two weights. */
@@ -64,15 +70,15 @@
    Before this the only way to reach Spain was to find a piece of it that no
    region covered; now its edge is a target. Non-scaling so the band stays the
    same handful of screen pixels at every zoom. */
-.edge { fill: none; stroke: var(--ground-deep); stroke-width: 1.4px;
+.edge { fill: none; stroke: var(--hair-strong); stroke-width: 1.4px;
         vector-effect: non-scaling-stroke; pointer-events: none; }
 /* 12px of stroke, clipped to the country, so about 6 fall inside it -- the
    band a reader actually gets. Unclipped this would be twice as wide as
    intended and would spill over the border into the neighbour. */
 .edgehit { fill: none; stroke: transparent; stroke-width: 12px;
            vector-effect: non-scaling-stroke; pointer-events: stroke; cursor: pointer; }
-.edge.sel { stroke: var(--surface); stroke-width: 2.4px; }
-.edge.hov { stroke: var(--surface); stroke-width: 1.9px; }
+.edge.sel { stroke: var(--pick); stroke-width: 2.4px; }
+.edge.hov { stroke: var(--pick); stroke-width: 1.9px; }
 /* Inherited: dashed rather than solid, but in the same grey as any other
    border. It was white, which read as a different KIND of line rather than a
    different state of one. The dash has to stay: an inherited unit is painted
@@ -84,10 +90,10 @@
 /* Resting borders are grey and differ only in weight. Pointing at something
    turns its border WHITE, which reads on every fill in the ramp -- black
    disappeared into the dark end of it. */
-.unit.sel { stroke: var(--surface); stroke-width: 2px; }
-.unit.hov { stroke: var(--surface); stroke-width: 1.5px; }
-.dot { stroke: var(--ground-deep); stroke-width: 1px; vector-effect: non-scaling-stroke; cursor: pointer; }
-.dot.sel, .dot.hov { stroke: var(--surface); stroke-width: 2px; }
+.unit.sel { stroke: var(--pick); stroke-width: 2px; }
+.unit.hov { stroke: var(--pick); stroke-width: 1.5px; }
+.dot { stroke: var(--hair-strong); stroke-width: 1px; vector-effect: non-scaling-stroke; cursor: pointer; }
+.dot.sel, .dot.hov { stroke: var(--pick); stroke-width: 2px; }
 .leader { stroke: var(--hair-strong); stroke-width: .75px; vector-effect: non-scaling-stroke; fill: none; }
 
 /* floating panels over the map */
