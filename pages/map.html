@@ -721,18 +721,40 @@ try {
   throw err;
 }
 
-/* ---------- Robinson projection ----------
-   A world thematic map wants Robinson: it keeps mid-latitude shapes
-   recognisable without Mercator's absurd polar inflation. */
-const RX = [1,.9986,.9954,.99,.9822,.973,.96,.9427,.9216,.8962,.8679,.835,.7986,.7597,.7186,.6732,.6213,.5722,.5322];
-const RY = [0,.062,.124,.186,.248,.31,.372,.434,.4958,.5571,.6176,.6769,.7346,.7903,.8435,.8936,.9394,.9761,1];
-const K = 1000;
+/* ---------- Equal Earth projection ----------
+   Šavrič, Patterson & Jenny (2018). This map was Robinson, which is already a
+   long way better than Mercator, but Robinson is a COMPROMISE projection: it
+   is neither equal-area nor conformal, and it still runs about 1.5x too large
+   at 60 degrees relative to the equator.
+
+   That matters here more than it would on most maps. The one thing this map
+   is for is comparing how much is recorded from place to place, and its
+   coverage is not evenly distributed: on `fl`, uptake and assessment are
+   filled for nearly every unit in Europe and Northern America and for almost
+   none anywhere else. A projection that inflates the high latitudes gives the
+   well-documented half of the world extra pixels, which is exactly the wrong
+   thumb on the scale for a map whose subject is its own gaps.
+
+   Equal Earth is equal-area, so a country's share of the ink is its share of
+   the land. Geometry is stored as raw lon/lat and projected here, and the
+   viewBox is computed from the projected extent, so this is a drop-in: no
+   rebuild, nothing downstream re-tuned.
+
+   K is set so the horizontal extent matches what Robinson produced at
+   K=1000, because marker radii, the padding and the zoom ceiling are all
+   authored in viewBox units against that scale. */
+const EE_A1 = 1.340264, EE_A2 = -0.081106, EE_A3 = 0.000893, EE_A4 = 0.003796;
+const EE_M = Math.sqrt(3) / 2;
+const K = 985;
 function project(lon, lat) {
-  const a = Math.min(Math.abs(lat), 90);
-  const i = Math.min(Math.floor(a / 5), 17), t = (a - i * 5) / 5;
-  const x = RX[i] + (RX[i + 1] - RX[i]) * t;
-  const y = RY[i] + (RY[i + 1] - RY[i]) * t;
-  return [0.8487 * x * lon * Math.PI / 180 * K, -1.3523 * y * (lat < 0 ? -1 : 1) * K];
+  const phi = Math.max(-90, Math.min(90, lat)) * Math.PI / 180;
+  const l = Math.asin(EE_M * Math.sin(phi));
+  const l2 = l * l, l6 = l2 * l2 * l2;
+  const x = lon * Math.PI / 180 * Math.cos(l) /
+            (EE_M * (EE_A1 + 3 * EE_A2 * l2 + l6 * (7 * EE_A3 + 9 * EE_A4 * l2)));
+  const y = l * (EE_A1 + EE_A2 * l2 + l6 * (EE_A3 + EE_A4 * l2));
+  // Negated because SVG's y axis points down.
+  return [x * K, -y * K];
 }
 
 
