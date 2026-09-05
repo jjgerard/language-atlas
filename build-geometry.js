@@ -312,14 +312,42 @@ async function main() {
     subunits['GB:' + nation] = { polys, bbox: bboxOf(polys), area: totalArea(polys) };
   }
 
-  // ES: Catalonia = union of its four provinces.
+  // ES: every autonomous community, each the union of its provinces.
+  //
+  // This was Catalonia alone, which was the wrong shape of decision: the
+  // Basque Country, Galicia, Valencia, the Balearics and Navarre all have a
+  // co-official language and their own education competence, and a map that
+  // splits out Catalonia and not them says something about Spain that is not
+  // true. Natural Earth carries the community in each province's `region`, so
+  // taking all of them costs one loop rather than one special case.
+  //
+  // Ceuta and Melilla come along as their own units. They are autonomous
+  // CITIES rather than communities, but they run their own schooling and the
+  // atlas's test is whether a place is a school system, not what it is called.
+  const ES_NAME = {
+    'Andalucía': 'Andalusia', 'Aragón': 'Aragon', 'Canary Is.': 'Canary Islands',
+    'Castilla y León': 'Castile and León', 'Castilla-La Mancha': 'Castile-La Mancha',
+    'Cataluña': 'Catalonia', 'Foral de Navarra': 'Navarre',
+    'Islas Baleares': 'Balearic Islands', 'País Vasco': 'Basque Country',
+    'Valenciana': 'Valencian Community',
+  };
   {
-    const parts = a10.features
-      .filter(f => f.properties.iso_a2 === 'ES' && /catal/i.test(f.properties.region || ''))
-      .flatMap(f => geojsonPolys(f.geometry));
-    console.log('  ES Catalonia', parts.length, 'parts');
-    const polys = simplify(dissolve(parts), 2, 0.004);
-    subunits['ES:Catalonia'] = { polys, bbox: bboxOf(polys), area: totalArea(polys) };
+    const byRegion = {};
+    for (const f of a10.features) {
+      if (f.properties.iso_a2 !== 'ES') continue;
+      const r = f.properties.region;
+      if (!r) continue;
+      (byRegion[r] = byRegion[r] || []).push(...geojsonPolys(f.geometry));
+    }
+    let n = 0;
+    for (const [region, parts] of Object.entries(byRegion)) {
+      const name = ES_NAME[region] || region;
+      const polys = simplify(dissolve(parts), 2, 0.004);
+      if (!polys.length) { console.warn('  ES: nothing left after simplify:', name); continue; }
+      subunits['ES:' + name] = { polys, bbox: bboxOf(polys), area: totalArea(polys) };
+      n++;
+    }
+    console.log('  ES', n, 'autonomous communities and cities');
   }
 
   // ---------- centroids (for dots on units with no usable polygon) ----------

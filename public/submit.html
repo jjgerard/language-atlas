@@ -91,10 +91,11 @@ footer.foot {
           <datalist id="country-list"></datalist>
         </div>
         <div class="field">
-          <label for="f-unit">State, province or region</label>
-          <input type="text" id="f-unit" autocomplete="off" placeholder="Leave blank for the whole country" list="unit-list">
-          <datalist id="unit-list"></datalist>
-          <p class="hint" id="unit-hint"></p>
+          <label for="f-region">Which part of it? *</label>
+          <select id="f-region"><option value="">The whole country</option></select>
+          <span class="hint" id="unit-hint"></span>
+          <input type="text" id="f-unit" autocomplete="off" hidden
+                 placeholder="Name the state, province or region">
         </div>
       </div>
     </div>
@@ -332,18 +333,41 @@ function fillUnits() {
   fillRegions();
 }
 
-// The region list is filtered to the chosen country, so it can no longer offer
-// a province of somewhere else. A country the atlas does not split shows none,
-// and says so rather than leaving an empty box the contributor has to guess at.
+// The country comes first and the parts follow from it, so the list can never
+// offer a province of somewhere else. "The whole country" is always there and
+// is the only option where the atlas does not split that country -- which
+// makes the common case a single click rather than a decision about what to
+// leave blank.
+//
+// OTHER is kept because the map's splits are not a closed list. A contributor
+// who works in a region the atlas has not split yet -- Oaxaca, Sindh, South
+// Tyrol -- should be able to say so, and the entry goes to review like any
+// other rather than being turned away by a dropdown.
+const OTHER = '__other__';   // cannot collide with a real region name
 function fillRegions() {
   const cc = ccFor($('f-country').value);
   const subs = UNITS_ALL.filter(u => u.cc === cc && !u.nat)
-    .map(u => u.name).filter((n, i, a) => a.indexOf(n) === i).sort();
-  $('unit-list').innerHTML = subs.map(n => `<option value="${esc(n)}">`).join('');
+    .map(u => u.name).filter((n, i, a) => a.indexOf(n) === i)
+    .sort((a, b) => a.localeCompare(b));
+  const sel = $('f-region');
+  const keep = sel.value;
+  sel.innerHTML = '<option value="">The whole country</option>'
+    + subs.map(n => `<option value="${esc(n)}">${esc(n)}</option>`).join('')
+    + `<option value="${OTHER}">Another region, not listed…</option>`;
+  if ([...sel.options].some(o => o.value === keep)) sel.value = keep;
   const hint = $('unit-hint');
   if (!cc) hint.textContent = '';
-  else if (!subs.length) hint.textContent = 'This country is mapped as a single unit. Leave this blank, or name a region the map should split for the first time.';
-  else hint.textContent = subs.length + ' already mapped separately: ' + subs.slice(0, 4).join(', ') + (subs.length > 4 ? '…' : '');
+  else if (!subs.length) hint.textContent = 'The atlas maps this country as one unit. Choose the last option if a region of it runs its own policy.';
+  else hint.textContent = subs.length + ' mapped separately so far.';
+  syncOther();
+}
+
+// The free-text box appears only when "Another region" is chosen, so it is
+// never a second place to type the same answer.
+function syncOther() {
+  const other = $('f-region').value === OTHER;
+  $('f-unit').hidden = !other;
+  if (!other) $('f-unit').value = '';
 }
 
 function regionFor(cc) {
@@ -360,14 +384,23 @@ if (params.get('cc')) {
   const want = params.get('cc').toUpperCase();
   for (const [n, cc] of COUNTRIES) if (cc === want) { $('f-country').value = n; break; }
 }
-if (params.get('unit')) $('f-unit').value = params.get('unit');
+const wantUnit = params.get('unit');
 
 // The region list follows the country, so it can never offer a province of
 // somewhere else.
 $('f-country').addEventListener('input', fillRegions);
+$('f-region').addEventListener('change', syncOther);
 
 setDomain(domain || live[0]);
 fillRegions();
+// A region arriving from the map link is selected if the atlas already has
+// it, and typed into the free-text box if it does not.
+if (wantUnit) {
+  const sel = $('f-region');
+  if ([...sel.options].some(o => o.value === wantUnit)) sel.value = wantUnit;
+  else { sel.value = OTHER; $('f-unit').value = wantUnit; }
+  syncOther();
+}
 
 // ---- send ------------------------------------------------------------
 function say(text, kind) {
@@ -387,7 +420,10 @@ $('send').addEventListener('click', async () => {
   // A named region means a sub-national unit; blank means the country itself.
   // That is the same fact the checkbox used to carry, without the chance to
   // state it and then contradict it by picking a province from the same list.
-  const region = $('f-unit').value.trim();
+  // Either a region picked from the list, or one typed after choosing "another
+  // region". "The whole country" is the empty string in both cases.
+  const picked = $('f-region').value;
+  const region = (picked === OTHER ? $('f-unit').value.trim() : picked).trim();
   const body = {
     countryCode: cc,
     unitName: region || $('f-country').value.trim(),
