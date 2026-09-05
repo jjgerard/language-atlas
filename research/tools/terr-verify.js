@@ -387,6 +387,19 @@ function quoteOn(quote, page) {
           }
         }
       } catch { /* utf8 alone */ }
+      // Modern single-page apps put their real content in an ATTRIBUTE, not
+      // between tags. Addis Ababa University's admissions portal is an
+      // Inertia.js page whose entire programme list lives HTML-escaped inside
+      // one `data-page` attribute -- so strip(), which keeps what is between
+      // tags, threw the page's only content away, and two real master's
+      // degrees read as invented.
+      //
+      // So the entity-decoded markup goes in as a LAST haystack, after every
+      // stripped decoding has had its turn. A quote still has to appear
+      // verbatim; this only widens where the gate is willing to look, on pages
+      // whose text is not where HTML has traditionally put it.
+      const decoded = unescapeEntities(unescapeEntities(r.body || ""));
+      if (decoded && !parts.includes(decoded)) parts.push(decoded);
       // Joined by the seam sentinel, which survives fold(), so no quote can
       // match across the join between two decodings.
       text = parts.join(SEAM);
@@ -577,6 +590,11 @@ function quoteOn(quote, page) {
     const keptProg = {};
     const norm = s2 => String(s2 || "").toLowerCase().replace(/\s+/g, " ").trim();
     const wordsOf = s2 => new Set(norm(s2).split(" ").filter(w => w.length > 2));
+    // Split on anything that is not a letter or a digit, in any script, so a
+    // name carrying punctuation -- an Arabic comma in "الإسكندرية، كلية" --
+    // still yields its words rather than one unmatchable token.
+    const instWords = s2 => new Set(String(s2 || "").toLowerCase()
+      .split(/[^\p{L}\p{N}]+/u).filter(w => w.length > 2));
     for (const [field, rows4] of Object.entries(s.programme || {})) {
       const good = [];
       const used = new Set();
@@ -589,7 +607,28 @@ function quoteOn(quote, page) {
         for (const cand of evAll) {
           if (used.has(cand)) continue;
           const b = norm(cand.bullet);
-          if (!b.includes(who)) continue;
+          // The institution is matched on SHARED WORDS, not on one string
+          // containing the other. A drafter names it at full length in the row
+          // and briefly in the evidence key -- Algeria's rows read
+          // "جامعة الجزائر 2 أبو القاسم سعد الله" against evidence keyed
+          // "جامعة الجزائر 2", Egypt's read "جامعة الإسكندرية، كلية الآداب"
+          // against "جامعة الإسكندرية" -- and neither string contains the
+          // other, because the evidence key also carries the level and the
+          // subject. A containment test dropped eight real programmes across
+          // two countries for having no evidence when the evidence was there.
+          //
+          // Safe to loosen, because the institution was never what tells these
+          // rows apart: the level still has to match, the subject words still
+          // decide WHICH row an entry belongs to, and each entry is still
+          // consumed once. Five master's at one university map one to one on
+          // their subjects exactly as before. Two shared words is the floor, so
+          // a single generic word -- "University", "جامعة" -- cannot marry a
+          // row to another institution's evidence.
+          const iw = instWords(r.institution || r.subject);
+          const bw = instWords(cand.bullet);
+          let shared = 0;
+          for (const w of iw) if (bw.has(w)) shared++;
+          if (shared < Math.min(2, iw.size) || !shared) continue;
           if (lvl && !b.includes(lvl)) continue;
           let score = 0;
           for (const w of wordsOf(cand.bullet)) if (want.has(w)) score++;

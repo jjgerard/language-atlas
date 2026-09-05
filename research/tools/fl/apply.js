@@ -35,8 +35,13 @@ const LIMIT = 96;
 // repo works to.
 const { DOMAINS } = require(path.join(ATLAS, "src", "domains"));
 const { SHAPES } = require(path.join(ATLAS, "src", "store"));
+// \p{L}\p{N}, not [a-z0-9]. Stripping to ASCII deletes a non-Latin name
+// ENTIRELY: every one of Algeria's five master's in لسانيات normalised to the
+// empty string, so they shared an identity and four of the five were discarded
+// as duplicates of the first. A dedupe key that erases the thing it is meant
+// to tell apart silently destroys rows, which is worse than not deduping.
 const norm = x => String(x == null ? "" : x).toLowerCase().normalize("NFD")
-  .replace(/[^a-z0-9]/g, "");
+  .replace(/[^\p{L}\p{N}]/gu, "").replace(/[̀-ͯ]/g, "");
 
 // Two passes over the same country describe the same degree differently. The
 // Complutense bachelor arrived once as "Universidad Complutense de Madrid" /
