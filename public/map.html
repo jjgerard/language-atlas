@@ -92,6 +92,13 @@
    disappeared into the dark end of it. */
 .unit.sel { stroke: var(--pick); stroke-width: 2px; }
 .unit.hov { stroke: var(--pick); stroke-width: 1.5px; }
+/* The same two rules, on the copy that sits above every other shape. No fill:
+   this is an outline over the real shape, not a second shape covering it, so
+   the coverage colour underneath still shows through. */
+.halo { fill: none; stroke: var(--pick); vector-effect: non-scaling-stroke; pointer-events: none; }
+.halo.sel { stroke-width: 2px; }
+.halo.hov { stroke-width: 1.5px; }
+.halo.inherited { stroke-dasharray: 3 2.5; }
 .dot { stroke: var(--hair-strong); stroke-width: 1px; vector-effect: non-scaling-stroke; cursor: pointer; }
 .dot.sel, .dot.hov { stroke: var(--pick); stroke-width: 2px; }
 .leader { stroke: var(--hair-strong); stroke-width: .75px; vector-effect: non-scaling-stroke; fill: none; }
@@ -927,8 +934,24 @@ const scene = el('g');
 svg.appendChild(scene);
 // gEdge sits above the regions so a split country's own outline is drawn last
 // and cannot be covered by the regions inside it.
-const gBase = el('g'), gSub = el('g'), gEdge = el('g'), gDot = el('g');
-scene.append(gBase, gSub, gEdge, gDot);
+const gBase = el('g'), gSub = el('g'), gEdge = el('g'), gDot = el('g'), gTop = el('g');
+scene.append(gBase, gSub, gEdge, gDot, gTop);
+// The highlight is redrawn HERE rather than left on the shape itself.
+//
+// A shape's stroke is painted before its later siblings' fills, so a country
+// only keeps the parts of its outline that no neighbour drawn after it covers.
+// Belarus hovered showed white on the south and east, where it happens to come
+// after its neighbours, and grey on the north and west, where it does not --
+// three quarters of a highlight, and no way to tell from the map that the
+// missing quarter was a drawing order rather than a border.
+//
+// Selection worked around this by moving the selected node to the end of its
+// parent, which is a real fix for one shape but permanently reorders the
+// document and cannot run on every pointer move. A copy of the outline, on top
+// of everything, is the same effect for both states and costs one attribute.
+const haloSel = el('path', { class: 'halo sel', d: '' });
+const haloHov = el('path', { class: 'halo hov', d: '' });
+gTop.append(haloSel, haloHov);
 
 // One record per drawable shape. `key` links it back to a unit per domain.
 const SHAPES = [];   // {node, cc, name|null, box}
@@ -1110,6 +1133,9 @@ function paint() {
 }
 
 function markSelection() {
+  // Territories are drawn into gSub alongside the regions, so they are
+  // overdrawn by exactly the same rule and need the same treatment.
+  const ALL = SHAPES.concat(TERR.map(x => ({ node: x.node })));
   for (const s of SHAPES) {
     if (s.node.classList.contains('base')) continue;
     s.node.classList.toggle('sel', !!selected && s.node.dataset.key === selected);
@@ -1128,8 +1154,18 @@ function markSelection() {
     line.classList.toggle('sel', !!k && k === selected);
     line.classList.toggle('hov', !!k && k === hovered && hovered !== selected);
   }
-  // Selected shapes last so their outline is never overdrawn by a neighbour.
-  for (const s of SHAPES) if (s.node.classList.contains('sel')) s.node.parentNode.appendChild(s.node);
+  // The outline of whatever is highlighted, redrawn on top. `inherited` comes
+  // with it so a dashed border stays dashed when you point at it -- otherwise
+  // hovering an inherited unit changes what KIND of line it has, not just its
+  // colour.
+  const paint = (halo, key, state) => {
+    const s = key && ALL.find(x => x.node.dataset.key === key);
+    halo.setAttribute('d', s ? s.node.getAttribute('d') : '');
+    halo.setAttribute('class', 'halo ' + state +
+      (s && s.node.classList.contains('inherited') ? ' inherited' : ''));
+  };
+  paint(haloSel, selected, 'sel');
+  paint(haloHov, hovered && hovered !== selected ? hovered : null, 'hov');
 }
 
 
