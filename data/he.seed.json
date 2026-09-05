@@ -2527,7 +2527,20 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Memorial University Calendar 2026-2027, St. John's Campus, s.15.16 Linguistics (Faculty of Humanities and Social Sciences)",
+    "url": "https://www.mun.ca/university-calendar/st-johns-campus/faculty-of-humanities-and-social-sciences/15/16/"
+   },
+   {
+    "label": "Memorial University, Faculty of Humanities and Social Sciences, Language Study (LS) Course Guidelines (BA Language Study requirement)",
+    "url": "https://www.mun.ca/hss/language-study-course-guidelines/"
+   },
+   {
+    "label": "Memorial University, Bachelor of Education (Intermediate/Secondary), 51 credit hour second degree programme page",
+    "url": "https://www.mun.ca/undergrad/programs/education/bed-intermediatesecondary/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -2538,15 +2551,25 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "The Memorial BA has a Language Study requirement in a language other than English\nIt takes a minimum of six credit hours of university courses in the same language\nLS courses are offered at any level, in recognition of diverse background preparation",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Memorial prepares teachers of grades 7-12 through a 51 credit hour second degree\nThe route runs over three consecutive semesters, after an approved first bachelor's degree\nPlaces are capped, with a limited number allocated to each academic discipline",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
    "degreeSubjects": [
     1,
     2,
+    4
+   ],
+   "requiredStudy": [
+    1,
+    3,
+    3
+   ],
+   "teacherPipeline": [
+    1,
+    3,
     4
    ]
   }
@@ -7960,6 +7983,10 @@
    {
     "label": "UNESCO PEER, Guyana — Inclusion profile",
     "url": "https://education-profiles.org/latin-america-and-the-caribbean/guyana/~inclusion"
+   },
+   {
+    "label": "University of Guyana, Bachelor of Arts (English) - Literature/Linguistics, programme 0201C, entry requirements and course list",
+    "url": "https://uog.edu.gy/srms/departments/4/programmes/568/details"
    }
   ],
   "supportLinks": [],
@@ -7973,13 +8000,18 @@
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "Entry to the BA English needs five CXC/CSEC General Proficiency subjects at Grades I to III\nApplicants aged 21 and over may enter through the University of Guyana Entrance Examination\nThe University sets the bar, accepting any qualification it considers equivalent",
   "teacherPipeline": "Teacher training routes are University of Guyana, CPCE and the GOAL online programme\nNo university language entry requirement was found",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
    "degreeSubjects": [
     1
+   ],
+   "entryRequirements": [
+    1,
+    3,
+    4
    ]
   }
  },
@@ -16160,7 +16192,20 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Colorado Boulder Catalog 2026-2027, Linguistics (Arts & Sciences programs of study)",
+    "url": "https://catalog.colorado.edu/undergraduate/colleges-schools/arts-sciences/programs-study/linguistics/"
+   },
+   {
+    "label": "CU Boulder Anderson Language and Technology Center (ALTEC), Language Requirements and Testing (graduation, HEAR and MAPS)",
+    "url": "https://colorado.edu/center/altec/resources/students/language-requirements-and-testing"
+   },
+   {
+    "label": "CU Boulder Catalog 2026-2027, Higher Education Admission Recommendations (HEAR), world language row",
+    "url": "https://catalog.colorado.edu/undergraduate/admissions/higher-education-admission-recommendations"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -16171,8 +16216,8 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "CU Boulder's French major allows two FREN classes taught in English, at 1000 and 3000 level",
-  "requiredStudy": "",
-  "entryRequirements": "",
+  "requiredStudy": "Some CU Boulder schools and majors require several semesters of the same world language\nEach college and programme within the university sets its own language requirement",
+  "entryRequirements": "Applicants are strongly encouraged to meet the state's admission recommendations\nA student beginning a new language needs no placement exam, just the introductory class",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [],
@@ -16182,6 +16227,14 @@
    ],
    "mediumOfInstruction": [
     2
+   ],
+   "requiredStudy": [
+    1,
+    4
+   ],
+   "entryRequirements": [
+    1,
+    3
    ]
   }
  },
@@ -16889,7 +16942,16 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Missouri Academic Catalog, College of Arts and Science — Second language Requirement (foundation requirements)",
+    "url": "https://catalog.missouri.edu/collegeofartsandscience/"
+   },
+   {
+    "label": "University of Missouri Academic Catalog, College of Arts and Science — Linguistics",
+    "url": "https://catalog.missouri.edu/collegeofartsandscience/linguistics/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -16900,7 +16962,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "BA, BS and BM degrees carry it, with named majors and Music Education excepted\nProficiency equal to at least 12 hours of college work in one language is needed\nFour years of one language in high school, recorded on the transcript, can meet it\nFour categories of student may meet it by demonstrating proficiency outside coursework",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -16909,6 +16971,12 @@
    "degreeSubjects": [
     1,
     2,
+    4
+   ],
+   "requiredStudy": [
+    1,
+    3,
+    4,
     4
    ]
   }
@@ -17182,7 +17250,16 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNC-Chapel Hill 2026-2027 Academic Catalog, IDEAs in Action Curriculum — Global Language (GLBL-LANG), through level 3",
+    "url": "https://catalog.unc.edu/undergraduate/ideas-in-action/global-language/"
+   },
+   {
+    "label": "UNC-Chapel Hill 2026-2027 Academic Catalog, Department of Linguistics",
+    "url": "https://catalog.unc.edu/undergraduate/departments/linguistics/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -17193,7 +17270,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "At least four courses in UNC's French major must be taught in French\nTwo of those must cover French and Francophone contexts before and after 1789",
-  "requiredStudy": "",
+  "requiredStudy": "Every UNC undergraduate must reach level 3 in a foreign language, or show proficiency\nGlobal language is a required First-Year Foundations course in the IDEAs in Action curriculum\nStudents are strongly encouraged to begin it in their first or second semester",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -17204,6 +17281,11 @@
    ],
    "mediumOfInstruction": [
     1,
+    3
+   ],
+   "requiredStudy": [
+    1,
+    3,
     3
    ]
   }
@@ -17310,6 +17392,18 @@
    {
     "label": "ORS 342.144, American Indian languages teaching license, subsection (6), enacted by Oregon Laws 2001 c.653 §2",
     "url": "https://oregon.public.law/statutes/ors_342.144"
+   },
+   {
+    "label": "University of Oregon 2026-2027 Catalog, Bachelor's Degree Requirements — Bachelor of Arts second-language requirement",
+    "url": "https://catalog.uoregon.edu/admissiontograduation/bachelorrequirements/"
+   },
+   {
+    "label": "University of Oregon 2026-2027 Catalog, Admissions — second-language proficiency subject requirement",
+    "url": "https://catalog.uoregon.edu/admissiontograduation/admissions/"
+   },
+   {
+    "label": "University of Oregon 2026-2027 Catalog, Linguistics (BA/BS), Department of Linguistics, College of Arts and Sciences",
+    "url": "https://catalog.uoregon.edu/arts-sciences/humanities/linguistics/ug-linguistics"
    }
   ],
   "supportLinks": [],
@@ -17322,8 +17416,8 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
-  "entryRequirements": "",
+  "requiredStudy": "The bachelor of arts degree at Oregon requires proficiency in a second language\nIt is met by the third term of second-year language study taught in the language\nA departmental examination showing equivalent proficiency also satisfies it\nStudents whose native language is not English may use a final high school transcript",
+  "entryRequirements": "Two years of the same second language in high school demonstrates the proficiency\nCollege work may be used to complete courses missed in high school\nExceptions are only considered for students from schools offering no second language",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [
@@ -17336,6 +17430,17 @@
    "degreeSubjects": [
     1,
     2
+   ],
+   "requiredStudy": [
+    1,
+    3,
+    4,
+    4
+   ],
+   "entryRequirements": [
+    2,
+    3,
+    4
    ]
   }
  },
@@ -17585,7 +17690,12 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Vermont 2026-2027 Undergraduate Catalogue, Minimum Entrance Requirements",
+    "url": "https://catalogue.uvm.edu/undergraduate/admissioninfo/minimumentrancerequirements/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -17597,7 +17707,7 @@
   "offerings": [],
   "mediumOfInstruction": "UVM's Spanish major courses are all conducted in Spanish\nThis covers advanced language plus literature and culture courses in the major and minor",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "Candidates for all UVM majors are expected to meet minimum entrance requirements\nTwo years of the same foreign language is required, and ASL meets it\nHigh school gaps may be filled with equivalent college-level academic work\nAny exceptions to these requirements are made on a case-by-case basis",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [],
@@ -17608,6 +17718,12 @@
    "mediumOfInstruction": [
     1,
     3
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -17741,7 +17857,28 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "University of Wisconsin-Madison Guide 2026-2027, Linguistics, BS (Language Sciences, College of Letters & Science)",
+    "url": "https://guide.wisc.edu/undergraduate/letters-science/language-sciences/linguistics-bs/"
+   },
+   {
+    "label": "UW-Madison KnowledgeBase, L&S BA/BS Language Requirement, KB id 126745",
+    "url": "https://kb.wisc.edu/ls/page.php?id=126745"
+   },
+   {
+    "label": "UW-Madison Office of Admissions and Recruitment, Academic Requirements for First-Year Applicants",
+    "url": "https://admissions.wisc.edu/first-year-academic-requirements/"
+   },
+   {
+    "label": "UW-Madison Guide 2026-2027, Curriculum and Instruction: World Language Education, MS",
+    "url": "https://guide.wisc.edu/graduate/curriculum-instruction/curriculum-instruction-ms/curriculum-instruction-world-language-education-ms/"
+   },
+   {
+    "label": "UW-Madison Mary T. Kellner Teacher Education Center, Applying for Your Wisconsin License (DPI endorsement via ELO)",
+    "url": "https://tec.education.wisc.edu/current-students/applying-for-your-wisconsin-license/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -17752,9 +17889,9 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "UW-Madison's French BA is taught in French apart from one permitted English course\nThe one-course English cap is a stated requirement in the university's Guide",
-  "requiredStudy": "",
-  "entryRequirements": "",
-  "teacherPipeline": "",
+  "requiredStudy": "In the College of Letters & Science both the BA and the BS require a non-English language\nThe BA needs four units of one language or the 2/3 option, the BS three units",
+  "entryRequirements": "Two years of the same world language in high school is highly recommended\nOnline language programmes such as Rosetta Stone are not accepted for that credit\nStudents who do not meet it at school must complete the requirement at the university",
+  "teacherPipeline": "A graduate-level programme prepares students for an initial teaching licence by content area\nThe route spans one summer semester and one full academic year, four semesters in all\nThe School of Education must notify DPI of the endorsement before the licence application\nAll students are currently eligible for the Teacher Pledge loan forgiveness programme\nCompetitive scholarship awards range from $2,000 to $15,000",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -17763,6 +17900,22 @@
    ],
    "mediumOfInstruction": [
     1,
+    4
+   ],
+   "requiredStudy": [
+    1,
+    3
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    3
+   ],
+   "teacherPipeline": [
+    1,
+    3,
+    3,
+    4,
     4
    ]
   }
