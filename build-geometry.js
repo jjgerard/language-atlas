@@ -312,34 +312,42 @@ async function main() {
     subunits['GB:' + nation] = { polys, bbox: bboxOf(polys), area: totalArea(polys) };
   }
 
-  // ES: the autonomous communities that have a CO-OFFICIAL LANGUAGE.
+  // ES: the seventeen autonomous communities, which run their own schools.
   //
-  // This was Catalonia alone, which is the wrong shape of decision -- a map
-  // that splits out Catalonia and not the Basque Country says something about
-  // Spain that is not true. But all nineteen communities is the opposite
-  // error: Madrid, Murcia and Extremadura run the same language regime as the
-  // state, so splitting them adds units without adding a distinction.
+  // This went through two wrong answers before the right one. Catalonia alone
+  // said something untrue about Spain. Then the six communities with a
+  // co-official language -- better, but it was answering the wrong question,
+  // because it tested LANGUAGE regime when the atlas asks five questions and
+  // only one of them is about which languages a place recognises.
   //
-  // The rule is a language regime, not an administrative tier: a community
-  // appears here when a language other than Castilian is co-official in it and
-  // schooling is conducted in that language. That is a rule rather than a
-  // selection, which is what makes the boundary defensible -- Asturias and
-  // Aragon are out because Asturian and Aragonese are recognised but not
-  // co-official, and if that changes they come in.
-  const ES_BILINGUAL = {
-    'Cataluña': 'Catalonia',
-    'País Vasco': 'Basque Country',
-    'Galicia': 'Galicia',
+  // The test that matches what this map already does is whether the EDUCATION
+  // SYSTEM is run below the national level, and in Spain it is: education is
+  // fully devolved to all seventeen communities. Madrid and Murcia have no
+  // co-official language and still set their own foreign-language sequence,
+  // their own newcomer provision, and their own special-education criteria --
+  // three of the five maps, before language status is reached at all. That is
+  // the same reason the United States, Canada, Australia, India, China and the
+  // United Kingdom are split, and none of those is about a minority language.
+  //
+  // Ceuta and Melilla are excluded, and their exclusion is the proof the rule
+  // is doing work rather than being drawn around an answer: they are the only
+  // two Spanish territories whose schools the Ministry still runs directly, so
+  // they have no education system of their own to record.
+  const ES_NAME = {
+    'Andalucía': 'Andalusia', 'Aragón': 'Aragon', 'Canary Is.': 'Canary Islands',
+    'Castilla y León': 'Castile and León', 'Castilla-La Mancha': 'Castile-La Mancha',
+    'Cataluña': 'Catalonia', 'Foral de Navarra': 'Navarre',
+    'Islas Baleares': 'Balearic Islands', 'País Vasco': 'Basque Country',
     'Valenciana': 'Valencian Community',
-    'Islas Baleares': 'Balearic Islands',
-    'Foral de Navarra': 'Navarre',
   };
+  const ES_MINISTRY_RUN = new Set(['Ceuta', 'Melilla']);
   {
     const byRegion = {};
     for (const f of a10.features) {
       if (f.properties.iso_a2 !== 'ES') continue;
-      const name = ES_BILINGUAL[f.properties.region];
-      if (!name) continue;
+      const r = f.properties.region;
+      if (!r || ES_MINISTRY_RUN.has(r)) continue;
+      const name = ES_NAME[r] || r;
       (byRegion[name] = byRegion[name] || []).push(...geojsonPolys(f.geometry));
     }
     for (const [name, parts] of Object.entries(byRegion)) {
@@ -347,9 +355,21 @@ async function main() {
       if (!polys.length) { console.warn('  ES: nothing left after simplify:', name); continue; }
       subunits['ES:' + name] = { polys, bbox: bboxOf(polys), area: totalArea(polys) };
     }
-    console.log('  ES', Object.keys(byRegion).length, 'communities with a co-official language');
-    for (const want of Object.values(ES_BILINGUAL))
-      if (!byRegion[want]) console.warn('  ES: NOT FOUND in source:', want);
+    console.log('  ES', Object.keys(byRegion).length, 'autonomous communities');
+  }
+
+  // DE: the sixteen Länder, which hold education outright.
+  //
+  // The clearest case in Europe for the same rule. Schooling is a Land matter
+  // in full -- which foreign language is taught first and from which year, what
+  // a newly arrived child is entitled to, how special educational need is
+  // assessed, what a Land's universities require -- and the Kultusminister-
+  // konferenz exists precisely because there is no federal answer to
+  // coordinate around.
+  {
+    const before = Object.keys(subunits).length;
+    addSubunits(a10.features.filter(x => x.properties.iso_a2 === 'DE'), 'DE', 2, 0.002);
+    console.log('  DE', Object.keys(subunits).length - before, 'Länder');
   }
 
   // ET: the regional states, which choose their own medium of instruction.

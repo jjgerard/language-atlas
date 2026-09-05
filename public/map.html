@@ -63,7 +63,10 @@
    same handful of screen pixels at every zoom. */
 .edge { fill: none; stroke: var(--ground-deep); stroke-width: 1.4px;
         vector-effect: non-scaling-stroke; pointer-events: none; }
-.edgehit { fill: none; stroke: transparent; stroke-width: 7px;
+/* 12px of stroke, clipped to the country, so about 6 fall inside it -- the
+   band a reader actually gets. Unclipped this would be twice as wide as
+   intended and would spill over the border into the neighbour. */
+.edgehit { fill: none; stroke: transparent; stroke-width: 12px;
            vector-effect: non-scaling-stroke; pointer-events: stroke; cursor: pointer; }
 .edge.sel { stroke: var(--ink); stroke-width: 2.4px; }
 .edge.hov { stroke: var(--ink); stroke-width: 1.9px; }
@@ -712,7 +715,7 @@ async function loadAtlas() {
     // ?v= is the content hash, stamped in by assemble.js. geometry.json is
     // cached for a day, so without it a rebuild would not reach anyone who had
     // already loaded the map until that day was up.
-    fetch('geometry.json?v=21ae109526').then(r => { if (!r.ok) throw new Error('geometry ' + r.status); return r.json(); }),
+    fetch('geometry.json?v=96db35ea00').then(r => { if (!r.ok) throw new Error('geometry ' + r.status); return r.json(); }),
     fetch('api/atlas').then(r => { if (!r.ok) throw new Error('data ' + r.status); return r.json(); }),
   ]);
 
@@ -943,7 +946,18 @@ const EDGES = [];   // {hit, line, cc}
 for (const [cc, c] of Object.entries(B.countries)) {
   if (!Object.keys(B.subunits).some(k => k.startsWith(cc + ':'))) continue;
   const d = pathFor(c.polys, { x0: 0, y0: 0, x1: 0, y1: 0 });
-  const hit = el('path', { d, class: 'edgehit' });
+  // The band is CLIPPED TO ITS OWN COUNTRY, so it reaches inward only.
+  // Unclipped, a 7px stroke straddles the line and spills across it, and on a
+  // shared border the two countries' bands sit on top of each other -- so
+  // whichever happened to be drawn later took the whole border. On the
+  // United States/Canada line that meant Canada could not be selected at all.
+  // Clipped, three pixels inside Canada is Canada and three inside the US is
+  // the US, which is also what a reader would expect of a border.
+  const clipId = 'edgeclip-' + cc;
+  const clip = el('clipPath', { id: clipId });
+  clip.appendChild(el('path', { d }));
+  defs.appendChild(clip);
+  const hit = el('path', { d, class: 'edgehit', 'clip-path': 'url(#' + clipId + ')' });
   const line = el('path', { d, class: 'edge' });
   hit.dataset.cc = cc;
   gEdge.append(hit, line);
