@@ -6225,6 +6225,14 @@
    {
     "label": "UNESCO IBE, Données mondiales de l'éducation, 7e édition 2010/11: Algérie (country profile)",
     "url": "https://web.archive.org/web/20211222222206/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Algeria.pdf"
+   },
+   {
+    "label": "Algerie Presse Service, Minister of National Education on the introduction of English in primary, 23 August 2022 (Internet Archive)",
+    "url": "https://web.archive.org/web/20221003061314/https://www.aps.dz/ar/algerie/130710-2022-08-23-12-48-59"
+   },
+   {
+    "label": "Algerie Presse Service, More than 5,000 contract teachers to be recruited for English in primary, 1 September 2022 (Internet Archive)",
+    "url": "https://web.archive.org/web/20220902171747/https://www.aps.dz/ar/sante-science-technologie/131021-5000"
    }
   ],
   "supportLinks": [],
@@ -6239,9 +6247,18 @@
   "languagesOffered": "PEER names only Tamazight and Amazigh, and names no foreign language at all\nAmazigh is included in school curricula and textbooks\nGifted pupils in excellence pathways get \"advanced teaching in foreign languages\"\nArabic, the language of schooling, is never named in this profile",
   "curriculumTime": "MEN 2004 grid: French 3 hours a week and English 3 hours a week\nSecondary tronc commun: langue étrangère 1 at 3+1 hours, langue étrangère 2 at 2+1\nApplies across enseignement moyen, the four grades 6e to 9e\nMinistry hours readjusted from the 2006-07 school year, so the 2004 grid is superseded\nSet by the education minister, who fixes programmes, methods and timetables",
   "assessment": "Primary ends in a final examination giving the right to an attestation de succès\nMiddle school ends in a final examination for the brevet d'enseignement moyen\nGeneral and technological secondary ends in the baccalauréat de l'enseignement secondaire\nPrivate-school pupils sit the same publicly organised examinations on the same terms",
-  "teacherSupply": "",
+  "teacherSupply": "Secondary teachers recruited from ENS graduates with the secondary-teaching professeur diploma\nPrimary English staffed on contract, needing a licence in English or a translation diploma\nOver 5,000 contract English teachers for primary in 2022-23, from over 60,000 applicants\nOne contract English teacher covers more than one primary school under a timed rota",
   "uptake": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1998,
+    "description": "Initial teacher training moves off the two-year ITE course"
+   },
+   {
+    "year": 2022,
+    "description": "English introduced in year 3 of primary from the 2022-23 school year"
+   }
+  ],
   "slots": {
    "assessment": [
     1,
@@ -6256,6 +6273,12 @@
     1,
     1,
     2,
+    3,
+    4
+   ],
+   "teacherSupply": [
+    1,
+    1,
     3,
     4
    ]
@@ -6420,7 +6443,7 @@
   "languagesOffered": "Source is UNESCO PEER inclusion profile 2021, archived and no longer updated\nPublic primary schools obliged by school law to teach only standard Arabic\nPrivate schools may teach other languages in addition to official Arabic\nSecondary pupils take English or French from the first cycle",
   "curriculumTime": "Figures are the 2001 national timetable; each teaching period lasts 45 minutes\nForeign language: 5 weekly periods\nApplies to preparatory education, the second cycle of basic education\nMinisterial Decree No. 99 of 8 June 2003 set English to begin in grade 1",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "A 1989 policy requires primary teachers to hold a university degree specialising in education\nSecondary teachers trained at faculties of education, four-year programme\nEnglish and French department graduates appointed at once, due to a shortage in those subjects",
   "uptake": [
    {
     "year": "2024",
@@ -6435,6 +6458,10 @@
   ],
   "policyHistory": [
    {
+    "year": 1989,
+    "description": "Policy requires all primary education teachers to hold a university degree in education"
+   },
+   {
     "year": 2003,
     "description": "Ministerial Decree No. 99 of 8 June 2003 brought English teaching forward to grade 1"
    }
@@ -6445,6 +6472,11 @@
     1,
     2,
     4
+   ],
+   "teacherSupply": [
+    1,
+    1,
+    2
    ]
   }
  },
@@ -7696,6 +7728,10 @@
    {
     "label": "Info241 (Libreville), 'Réforme éducative : Le Gabon expérimente cette année l'Approche par compétences au secondaire', 10 October 2024, reporting circulaire n°003/MENFPFC du 7 octobre",
     "url": "https://info241.com/reforme-educative-le-gabon-experimente-cette-annee-l-approche,9516"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education / Donnees mondiales de l’education, 7th ed. 2010/11, Gabon",
+    "url": "https://web.archive.org/web/20211225204313/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Gabon.pdf"
    }
   ],
   "supportLinks": [],
@@ -7710,7 +7746,7 @@
   "languagesOffered": "PEER names no language taught as a school subject in Gabon\n2010 National Forum recommended a second foreign language from grade 6\nAct No. 21/2011 art 5 requires local languages at the various levels",
   "curriculumTime": "News report of circulaire n°003/MENFPFC du 7 octobre; the circular itself not seen\nLangue vivante 1 (anglais): 2 hours a week\nLangue vivante 2 (Spanish or option): 2 hours a week\nApplies to the 6e and 5e classes piloting the competency-based approach in 2024-25\nSet by the Ministère de l'Éducation nationale in that circular",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "ENS trains secondary teachers, pedagogical advisers and inspectors\nEntry to the ecoles normales at all levels is by concours\nReported secondary teacher deficit is in science subjects, with no language subject named\nPublic secondary staff counted at 1,758 teachers, 52.5 per cent of Gabonese nationality",
   "uptake": [],
   "policyHistory": [
    {
@@ -7729,6 +7765,12 @@
     1,
     2,
     4
+   ],
+   "teacherSupply": [
+    1,
+    1,
+    2,
+    3
    ]
   }
  },
@@ -8088,6 +8130,14 @@
    {
     "label": "UNESCO-IBE, World Data on Education, 7th edition 2010/11: Georgia (weekly lesson timetables, National study plans for general basic education 2010-2011)",
     "url": "https://web.archive.org/web/20220108024022/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Georgia.pdf"
+   },
+   {
+    "label": "Teach and Learn with Georgia (TLG), programme administered under the Ministry of Education and Science of Georgia, home page",
+    "url": "http://tlg.gov.ge/"
+   },
+   {
+    "label": "Ministry of Education and Science of Georgia, Volunteer Native English Speaker Teachers Arrived in Georgia, 28 April 2010",
+    "url": "https://mes.gov.ge/content.php?id=804&lang=eng"
    }
   ],
   "supportLinks": [],
@@ -8102,7 +8152,7 @@
   "languagesOffered": "The Law names no specific foreign language anywhere\nA foreign language may be the medium under an international agreement\nOtherwise foreign-medium teaching needs the Ministry's agreement\nCited matsne links are document records, not the curriculum annex text",
   "curriculumTime": "Grades 7-9 in 2010: first foreign language 3 weekly periods, second foreign language 4\nGrades 10-12 in 2010: 2-3 weekly periods each for first and second foreign language\nEach teaching period lasts 45 minutes\nApplies to basic secondary (lower) and general secondary (upper) education\nSet by the Ministry of Education and Science in its national study plans",
   "assessment": "English is examined as a subject of the Unified National Examinations, set by NAEC\nThe paper tests listening, reading and writing plus lexical and grammatical competence\nDifficulty of the test material is set at B1, called adequate to the national curriculum",
-  "teacherSupply": "",
+  "teacherSupply": "Teachers need a relevant academic qualification, an induction period and a certification exam\nTrainees qualify as teachers while graduating in their main specialty, philology included\nTLG recruits native English, French, Italian and German speakers to co-teach in schools\nTLG was announced in 2010 envisaging the recruitment of 1,000 native English speakers",
   "uptake": [
    {
     "year": "2025",
@@ -8114,6 +8164,10 @@
    {
     "year": 2006,
     "description": "National Curriculum starts the first foreign language in grade 3 and the second in grade 7, and does not recommend foreign language teaching in grades 1 and 2"
+   },
+   {
+    "year": 2010,
+    "description": "Ministry announces Teach and Learn With Georgia, recruiting native English speakers for schools"
    },
    {
     "year": 2011,
@@ -8139,6 +8193,12 @@
     1,
     1,
     2,
+    4
+   ],
+   "teacherSupply": [
+    1,
+    1,
+    4,
     4
    ]
   }
@@ -8206,6 +8266,14 @@
    {
     "label": "Ghana Education Service / NaCCA, French Curriculum for Primary Schools (Basic 4-6), September 2019",
     "url": "https://nacca.gov.gh/wp-content/uploads/2019/06/FRENCH-B4-B6.pdf"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education / Donnees mondiales de l’education, 7th ed. 2010/11, Ghana",
+    "url": "https://web.archive.org/web/20211222231557/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Ghana.pdf"
+   },
+   {
+    "label": "Associates for Change, The Status of French Language Teaching and Learning across Ghana’s Public Education System, final report to the French Embassy, Accra, 15 November 2010",
+    "url": "https://www.associatesforchange.org/download3/Education%20Research/French%20Study%20Report/Final%20French%20Study%20Report%20November%2015.pdf"
    }
   ],
   "supportLinks": [],
@@ -8220,12 +8288,20 @@
   "languagesOffered": "The 2002 English-only turn also encouraged the learning of French\nA Ghanaian language was to be taught as a subject from P1 under that model",
   "curriculumTime": "French: 3 periods a week of 50 minutes each in the 2020 JHS common core curriculum\nUpper primary B4-B6: 2 periods a week of 30 minutes each, 2019 curriculum\nApplies to B7/JHS1 to B9/JHS3 and, for the shorter periods, to Basic 4-6\nBoth figures are headed SUGGESTED TIME ALLOCATION\nSet by the National Council for Curriculum and Assessment, Ministry of Education",
   "assessment": "English is a core subject in both the BECE and the WASSCE\nFrench is compulsory at basic level and is one of nine BECE subjects\nAt Senior High School French becomes an elective subject in the WASSCE\nA credit grade in English in both examinations is needed to move up a level",
-  "teacherSupply": "",
+  "teacherSupply": "French figures here are from a 2010 report to the French Embassy by Associates for Change\nGroup II training colleges teach English language, French and Ghanaian languages\nThree colleges of education offered French, with 828 French teacher trainees in 2009/10\nFieldwork found a shortage of French teachers at junior high school level\nOnly 170 French teachers emerge each year from the three training colleges",
   "uptake": [],
   "policyHistory": [
    {
     "year": 1925,
     "description": "Education Ordinance carries a language-in-education statement, per the Phelps Stokes Commission report"
+   },
+   {
+    "year": 1988,
+    "description": "Teacher training college admission set to a three-year course for O-level and SSSC holders"
+   },
+   {
+    "year": 2000,
+    "description": "Teacher sponsorship scheme starts, binding sponsored teachers to three years in the district"
    },
    {
     "year": 2001,
@@ -8278,6 +8354,13 @@
     2,
     3,
     4
+   ],
+   "teacherSupply": [
+    1,
+    1,
+    1,
+    2,
+    3
    ]
   }
  },
@@ -8413,6 +8496,10 @@
    {
     "label": "UNESCO-IBE, World Data on Education, 7th edition 2010/11: Gambia (on the draft Curriculum Framework for Basic Education, 15 March 2010)",
     "url": "https://web.archive.org/web/20211222231528/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Gambia.pdf"
+   },
+   {
+    "label": "Republic of The Gambia, Ministry of Basic and Secondary Education, Education Statistics Summary Report 2025 (Internet Archive)",
+    "url": "https://web.archive.org/web/20260429205056/https://mobse.gov.gm/wp-content/uploads/2025/10/The-Gambia-Education-Statistics-Summary-Report-ESSR-2025.pdf"
    }
   ],
   "supportLinks": [],
@@ -8427,7 +8514,7 @@
   "languagesOffered": "PEER gives a count, not names: \"the five most commonly used languages\"\nMoBSE validated training manuals on orthographies of the five languages\nAbout 10 indigenous languages used informally, not as school subjects\nArabic taught in the madrasa sector, which the state continues to support",
   "curriculumTime": "French sits in the core block given 75% of teaching periods at upper primary, grades 4-6\nBasic-level schools run 44 weeks a year with 28 hours of schooling a week\nUpper basic, grades 7-9, has French in the same 75% core block\nWording is that core subjects should be allocated 75%, a stipulation not measured time\nTeaching time and periods decided by regional directorates, supervised by the ministry",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Policy sets no minimum academic qualification for teaching at primary level\nEntry to the PTC programme needs four GCE O-Level passes and a college entrance examination\nHTC and graduate teachers staff the junior and senior secondary schools\nShortage named is of technical-subject staff, with no language subject named\n97.8 per cent of senior secondary teachers counted as qualified in the 2025 school census",
   "uptake": [],
   "policyHistory": [
    {
@@ -8446,6 +8533,13 @@
     2,
     3,
     4
+   ],
+   "teacherSupply": [
+    1,
+    1,
+    1,
+    2,
+    3
    ]
   }
  },
@@ -8495,6 +8589,10 @@
    {
     "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Equatorial Guinea: Inclusion",
     "url": "https://education-profiles.org/sub-saharan-africa/equatorial-guinea/~inclusion"
+   },
+   {
+    "label": "Ley Num. 5/2007, de 30 de octubre, por la que se modifican ciertos articulos de la Ley N 14/1995 sobre Educacion General en Guinea Ecuatorial (Boletin Oficial del Estado)",
+    "url": "https://boe.gob.gq/files/Ley%20General%20de%20Educaci%C3%B3n.pdf"
    }
   ],
   "supportLinks": [],
@@ -8509,14 +8607,22 @@
   "languagesOffered": "The Constitution lists Spanish and French as official, plus others set by law\nThe profile does not name Portuguese despite its later official status\nWhat is actually taught in schools was not established",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Law 5/2007 art 130 sets required teacher titles by level, with no language-specific rule\nLower-secondary (ESBA) teachers must hold a Diplomado Universitario title\nArt 136 makes adequate pedagogical training a necessary requirement at every level\nLacking qualified nationals, foreigners may be appointed under cooperation agreements",
   "uptake": [],
   "policyHistory": [
    {
     "year": 2007,
     "description": "2007 law set a two-grade baccalaureate with study options, no language condition"
    }
-  ]
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GR",
@@ -8699,6 +8805,10 @@
    {
     "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Guinea-Bissau: Inclusion",
     "url": "https://education-profiles.org/sub-saharan-africa/guinea-bissau/~inclusion"
+   },
+   {
+    "label": "Republique de Guinee-Bissau, Ministere de l’Education Nationale, Rapport d’etat du systeme educatif (RESEN), aout 2015",
+    "url": "https://www.stat-guinebissau.com/Menu_principal/Pubica%C3%A7%C3%B5es/anuario/educacao/resen_2015.pdf"
    }
   ],
   "supportLinks": [],
@@ -8713,9 +8823,26 @@
   "languagesOffered": "PEER records Guinea-Bissau as still seeking to develop a language policy document\nPortuguese, Creole and national languages named as intended languages of education\nFive ethnic groups named, Fula, Balanta, Mandinga, Manjaco and Papel, languages not named\nNo foreign-language subject named anywhere in the profile",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "The ecole normale superieure trains the secondary teachers\nEntry by concours, open to those who have completed at least year 11\nThe course has run four years since 2004-05\nTeaching body is civil servants, contract teachers and community teachers",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2004,
+    "description": "Secondary teacher training at Tchico Te lengthened to a four-year course"
+   },
+   {
+    "year": 2010,
+    "description": "The Ecole normale superieure de Tchico Te becomes the Ecole superieure d education"
+   }
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    1,
+    1
+   ]
+  }
  },
  {
   "countryCode": "GY",
