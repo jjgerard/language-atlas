@@ -844,24 +844,60 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Landsbesluit dagscholen v.w.o., h.a.v.o., m.a.v.o. (Aruba, AB 1999 no. 62, as amended by AB 2015 no. 28), arts. 4, 16-20b and Bijlagen A-G",
+    "url": "https://www.ea.aw/pages/wp-content/uploads/pdf/ley/vo/1303ab99.062.pdf"
+   },
+   {
+    "label": "Departamento di Enseñansa Aruba, 'Aruba's onderwijsbeleid richt zich op meertaligheid, niet alleen Papiaments' (9 January 2025), on the Integraal Taalbeleid Onderwijs of May 2023",
+    "url": "https://www.ea.aw/pages/arubas-onderwijsbeleid-richt-zich-op-meertaligheid-niet-alleen-papiaments/"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
-  "primaryRequirement": "",
-  "secondaryRequirement": "",
-  "upperSecondary": "",
-  "languagesOffered": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
+  "primaryRequirement": "English and Spanish are offered under the Integraal Taalbeleid Onderwijs adopted May 2023\nBoth are given attention as a school subject from the first kindergarten year\nFour languages are implemented: Papiamento, Dutch, English and Spanish\nDutch is offered as a foreign language, not as a mother tongue as until recently",
+  "secondaryRequirement": "The basiscyclus subject list carries Engelse taal and Spaanse taal alongside Papiamentse taal\nV.w.o., h.a.v.o. and m.a.v.o. all open with a two-year basiscyclus\nPupils follow the Bijlage A subjects at the stated weekly lesson hours for two years\nYear 3 m.a.v.o. keeps both Engelse and Spaanse taal in the gemeenschappelijk deel",
+  "upperSecondary": "Engelse taal en literatuur sits in the gemeenschappelijk deel of v.w.o. years 4, 5 and 6\nH.a.v.o. years 4 and 5 carry Engelse taal en literatuur in their common part too\nThe three-year h.a.v.o. leertraject makes Spaanse taal en literatuur a verplicht profieldeel vak\nV.w.o. adds an Extra taal chosen from Papiamento, Spanish or French",
+  "languagesOffered": "The Bijlagen name Dutch, English, Spanish, Papiamento and French as school languages\nThe v.w.o. Extra taal is a choice of Pap/Spa/Fra\nEnglish recurs in every listed cycle, from the basiscyclus to the h.a.v.o. common part\nFrench appears only as a keuzevak, offered under art. 6(4) of the Landsbesluit examens\nLandsbesluit dagscholen v.w.o., h.a.v.o., m.a.v.o. is what fixes these subject lists",
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "primaryRequirement": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "secondaryRequirement": [
+    1,
+    3,
+    3,
+    4
+   ],
+   "upperSecondary": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "languagesOffered": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AZ",
@@ -1388,9 +1424,9 @@
   "secondaryRequirement": "",
   "upperSecondary": "English Language stays a core subject through Year 10/11 and is taken at 'O' Level\nArabic, French and Mandarin remain optional on both the general and applied tracks\nAt Years 7-8 a learner may pick only one optional subject in total, languages included\nOptional languages are examined externally by Cambridge 'O' Level or IGCSE",
   "languagesOffered": "Optional languages from Year 7: Arabic, French and Mandarin, each taught in itself\nAt Years 9-11 the list adds Literature in English, Kesusasteraan Melayu and \"Other languages\"\nFrench is listed for IGCSE only; Arabic and Mandarin for both 'O' Level and IGCSE\n\"Other languages\" is an open row in the table with no language named",
-  "curriculumTime": "",
+  "curriculumTime": "SPN21 sets recommended time allocation for all learning areas, not per language subject\nOne period is 25 or 30 minutes, subject to the particular condition of each school\nA minimum of two periods, 50 or 60 minutes, is set for each lesson",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "A critical shortage of teachers persisted after the 1956 teacher training centre opened\nEnglish Language was named among the short subjects, with Maths, Science, Home Crafts\nShort supply of qualified local teachers led to the recruitment of foreign teachers\nForeign teachers came from Malaysia, the UK, the Indian sub-continent, Australia\nIn 1963 the college made provision for training teachers for English medium subjects",
   "uptake": [],
   "policyHistory": [
    {
@@ -1413,7 +1449,21 @@
     "year": 2013,
     "description": "Revised SPN21 framework published, setting core, general and optional subjects with their media of instruction"
    }
-  ]
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    2,
+    3,
+    3,
+    3
+   ],
+   "curriculumTime": [
+    3,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "BO",
@@ -7162,11 +7212,25 @@
   "secondaryRequirement": "",
   "upperSecondary": "Language study continues: at least two languages are studied in Grades 11 and 12\nAt least one of the two must be native to India; the second may be a foreign language\nFrench, German, Japanese and Korean are among the languages offered at this stage\nTwo of a student's subjects must come from the Language Education group, Group 1",
   "languagesOffered": "Counts are for primary schooling; the source does not cover secondary\n28 languages used as media of instruction at the primary stage\nAt least 42 languages taught as language subjects\nOnly six non-scheduled languages serve as MoI, all in the north-east",
-  "curriculumTime": "",
+  "curriculumTime": "Class time for all subjects is 40 minutes, with 80-minute block periods where needed\nA third language R3 is introduced at the Middle Stage under NCF 2023\nAll three languages R1, R2 and R3 continue through the Secondary Stage\nNCF 2023 calls its time allocations illustrative; schools set the actual allocation\nR3 is given more time than R2 and R1, being a third unfamiliar language",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "NCF 2023 records a severe scarcity of skilled Language teachers in India\nThe scarcity persists despite various measures being taken, the framework says\nToo often it is assumed anyone can teach Language without adequate training in the subject",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherSupply": [
+    1,
+    3,
+    4
+   ],
+   "curriculumTime": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IN",
