@@ -3294,7 +3294,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Promotion of national and local indigenous languages is addressed in strategic programmes\nThe dialect-mapping programme is implemented by the Dzongkha Development Commission",
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 33 living languages for this country",
@@ -3307,7 +3307,13 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "BW",
@@ -6624,11 +6630,20 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Culture departments survey, collect, edit, publish and research the heritage, then archive it\nEndangered items of important value are rescued with the ethnic affairs departments\nPrefecture and county culture administrative departments are in charge of the work\nThe regulation was passed on 29 March 2006 by the prefecture people's congress\nA special fund is required, made of government appropriation and lawful social donations",
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CN",
@@ -7356,7 +7371,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "The regional language body must strengthen basic theory research on minority languages\nIt sets standard language, orthography and pronunciation rules, and manages dictionaries\nGovernments promote minority-language publishing, broadcasting, film and old-book collation\nA regional terminology committee forms expert groups by language, discipline and field\nGovernments at county level and above must guarantee language and translation work funds",
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
@@ -7369,7 +7384,16 @@
     "genus": "Turkic",
     "typology": "Word order SOV; Adjective-Noun; Strongly suffixing"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CN",
@@ -12049,6 +12073,10 @@
    {
     "label": "Early Literacy and Multilingual Education in South Asia (2019): Jhingran, UNICEF ROSA — archived copy",
     "url": "https://web.archive.org/web/20240512101037/https://www.unicef.org/rosa/media/3036/file/Early%20literacy%20and%20multilingual%20education%20in%20South%20Asia.pdf"
+   },
+   {
+    "label": "Press Information Bureau, Ministry of Culture (Government of India), 'Scheme for Protection and Preservation of Endangered Languages of India (SPPEL) to promote all Indian Languages including endangered languages', 2 December 2021, PRID 1777333",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1777333"
    }
   ],
   "supportLinks": [],
@@ -12062,7 +12090,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "CIIL Mysore documents mother tongues spoken by fewer than 10,000 people\nPhase one chose 117 endangered languages or mother tongues for study and documentation\nThe UGC runs two further schemes for protection of endangered languages\nUGC and CIIL released Rs.45.89 crores under their schemes for endangered languages",
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 518 living languages for this country",
@@ -12243,7 +12271,15 @@
     "genus": "Indic",
     "typology": "Word order SOV; Adjective-Noun; Strongly suffixing"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IN",
@@ -15279,6 +15315,10 @@
    {
     "label": "52nd Report of the Commissioner for Linguistic Minorities in India (July 2014 to June 2015), No. CLM REPORT/52/2016 — Chapter 7, Punjab, para 7.3 (state did not reply)",
     "url": "https://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+   },
+   {
+    "label": "Language Department, Punjab (Bhasha Vibhag Punjab) — departmental history and statement of objectives, official website homepage",
+    "url": "https://bhashavibhagpunjab.org/"
    }
   ],
   "supportLinks": [],
@@ -15292,7 +15332,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Aim is to enforce the Official Language Act in offices and courts, and to make schemes\nAim is to make Punjabi the language of education, government, employment and family\nPunjabi is to be readied for artificial intelligence and its word database built up\nThe Punjabi section began as a part of the education department\nIt started on 1 January 1948 in Patiala state as a Punjabi section",
   "speakers": [],
   "policyHistory": [
    {
@@ -15366,7 +15406,16 @@
     "genus": "Indic",
     "typology": "Word order SOV; Adjective-Noun; Strongly suffixing; No tones"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "IN",
@@ -17493,6 +17542,10 @@
    {
     "label": "Закон Республики Казахстан от 9 апреля 2016 года № 501-V ЗРК «О внесении изменений и дополнений в некоторые законодательные акты РК по вопросам защиты прав ребенка» — изменение пункта 4 статьи 9 Закона «Об образовании», ИПС Аділет",
     "url": "https://adilet.zan.kz/rus/docs/Z1600000501"
+   },
+   {
+    "label": "Концепция развития языковой политики в Республике Казахстан на 2023-2029 годы, section 9 on creating conditions for preserving the languages of representatives of ethnoses — draft text published for public discussion on the Open NPA portal (legalacts.egov.kz), consultation closed 25 April 2023",
+    "url": "https://legalacts.egov.kz/npa/view?id=14488704"
    }
   ],
   "supportLinks": [],
@@ -17506,7 +17559,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Course taught among German, Ukrainian, Uyghur, Korean, Azerbaijani and Dungan ethnoses\nOnline lessons in the other ethnos languages are to be developed and the reach widened\nAcross 15 regions 2,890 people studied their native languages, covering 18 ethnoses\nSunday schools popularising them in the regions are said not to be at the proper level\nThe course was moved to an online format from 2022",
   "speakers": [],
   "policyHistory": [
    {
@@ -17564,7 +17617,16 @@
     "genus": "Iranian",
     "typology": "Word order SOV; Noun-Adjective; Weakly suffixing"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    1,
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "LA",
@@ -18966,11 +19028,19 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "The strategic plan envisages a local curriculum that includes ethnic languages\nLocal curriculum runs five classes a week at primary, four at middle and high school\nIt calls for a programme training teacher education institutions on ethnic issues\nThe lead body on ethnic languages works partly through the design of local curricula",
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 150 living languages for this country",
-  "languages": []
+  "languages": [],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "MN",
@@ -22078,6 +22148,10 @@
    {
     "label": "Republic Act No. 8371 of 1997, the Indigenous Peoples' Rights Act of 1997, sec. 30 (Educational Systems), Philippines",
     "url": "https://lawphil.net/statutes/repacts/ra1997/ra_8371_1997.html"
+   },
+   {
+    "label": "Republic Act No. 7104 (1991), the Commission on the Filipino Language Act, secs. 4, 5, 14(a) and 17 (Philippines)",
+    "url": "https://lawphil.net/statutes/repacts/ra1991/ra_7104_1991.html"
    }
   ],
   "supportLinks": [],
@@ -22091,7 +22165,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "The commission researches development, propagation and preservation of Philippine languages\nIt must formulate policies, plans and programs for their development and preservation\nMembers represent various ethnolinguistic groups and different disciplines\nEleven commissioners represent the major Philippine languages as the Act defines them\nFunding was first charged to appropriations of the Institute of Philippine Languages",
   "speakers": [],
   "policyHistory": [
    {
@@ -22213,7 +22287,16 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "PK",
@@ -30000,7 +30083,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "The 2005 Education Law gives the right to learn the languages, to keep ethnic identity\nBoarding and semi-boarding general schools and pre-university schools were established\nNamed alongside the bilingual pilots is the Friendship Primary Education Project\nThe Ministry of Education and Training rolled the activities out at provincial levels",
   "speakers": [],
   "policyHistory": [],
   "inventory": "Glottolog counts 120 living languages for this country",
@@ -30053,7 +30136,15 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "VU",
