@@ -23,6 +23,18 @@ const zlib = require("zlib");
 const { pdfText, SEAM } = require("./pdftext");
 const { execFileSync } = require("child_process");
 const os = require("os");
+const ATLAS_ROOT = path.join(__dirname, "..", "..");
+const { DOMAINS } = require(path.join(ATLAS_ROOT, "src", "domains"));
+const { SHAPES } = require(path.join(ATLAS_ROOT, "src", "store"));
+
+// Which declared fields hold typed ROWS rather than prose bullets, derived from
+// the domain declarations rather than listed here -- the same source of truth
+// apply.js uses. A hardcoded list is how six units got strings written into a
+// typed field: the list was written when four fields were typed and never grew.
+const TYPED = {};
+for (const d of DOMAINS)
+  for (const [k, , type] of d.fields)
+    if (SHAPES[type]) TYPED[k] = type;
 
 const NL = String.fromCharCode(10);
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
@@ -177,6 +189,36 @@ function quoteOn(quote, page) {
     Object.assign(specs, batch);
   }
 
+  // A typed field filed under `fields`. The drafters are told the schema and
+  // most of them follow it, but a spec that puts programme rows under
+  // `fields.linguistics` used to crash the whole run on `b.slice is not a
+  // function` -- one misfiled batch taking twenty good units down with it.
+  //
+  // The shape is unambiguous, so route it instead of refusing it: rows are
+  // objects, bullets are strings, and TYPED says which bucket a field belongs
+  // in. Nothing is waved through -- the rows still face the same evidence and
+  // quote check in their own verifier, and a string sitting in a typed field is
+  // still dropped, because that is the case where the drafter meant prose and
+  // the field cannot hold it.
+  for (const [key, s] of Object.entries(specs)) {
+    for (const f of Object.keys(s.fields || {})) {
+      const t = TYPED[f];
+      if (!t) continue;
+      const v = s.fields[f];
+      const rows = (Array.isArray(v) ? v : []).filter(r => r && typeof r === "object" && !Array.isArray(r));
+      const lost = (Array.isArray(v) ? v.length : 0) - rows.length;
+      delete s.fields[f];
+      if (rows.length) {
+        s[t] = s[t] || {};
+        s[t][f] = (s[t][f] || []).concat(rows);
+        console.log("moved " + key + "/" + f + ": " + rows.length + " row(s) from `fields` to `" + t + "`"
+          + (lost ? " (" + lost + " non-row value(s) dropped)" : ""));
+      } else if (lost) {
+        console.log("dropped " + key + "/" + f + ": " + lost + " prose bullet(s) in a `" + t + "` field");
+      }
+    }
+  }
+
   // one fetch per distinct url
   const urls = new Set();
   for (const s of Object.values(specs)) for (const e of (s.evidence || [])) if (e && e.url) urls.add(e.url);
@@ -219,6 +261,26 @@ function quoteOn(quote, page) {
             r = plain;
           }
         }
+      }
+    }
+    // A refusal too BIG for the size test above. web.archive.org hands Node an
+    // 11,249-byte "Wayback Machine" page at HTTP 200 text/html for a url ending
+    // .pdf, and hands curl the real 209,446-byte PDF on the same second. It
+    // sails past TINY, so the interstitial went to the HTML extractor and every
+    // quote on it read as invented -- one batch of six units lost ALL of its
+    // work to this, on six separate archive snapshots.
+    //
+    // Size cannot catch that one, but the mismatch can: the url asks for a
+    // document and the answer is a web page. Ask curl, and take its answer only
+    // if the bytes are actually the document that was asked for -- so a url
+    // that genuinely redirects to an HTML landing page is left alone.
+    const wantsDoc = /\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])/i.test(u);
+    const gotHtml = /html/i.test(r.type || "") || (r.raw && r.raw.indexOf("%PDF-", 0, "latin1") < 0 && /^\s*<(?:!doctype|html)/i.test(r.body || ""));
+    if (r.status === 200 && wantsDoc && gotHtml) {
+      const c = getViaCurl(u);
+      if (c && c.status === 200 && c.raw && c.raw.indexOf("%PDF-", 0, "latin1") >= 0) {
+        console.log("       (served a web page for a document url; curl got the document)");
+        r = c;
       }
     }
     // A PDF is not "binary, give up": most of the instruments these drafters

@@ -35,6 +35,27 @@ const LIMIT = 96;
 // repo works to.
 const { DOMAINS } = require(path.join(ATLAS, "src", "domains"));
 const { SHAPES } = require(path.join(ATLAS, "src", "store"));
+const norm = x => String(x == null ? "" : x).toLowerCase().normalize("NFD")
+  .replace(/[^a-z0-9]/g, "");
+
+// Two passes over the same country describe the same degree differently. The
+// Complutense bachelor arrived once as "Universidad Complutense de Madrid" /
+// "Linguistica y Lenguas Aplicadas" and again as "Universidad Complutense de
+// Madrid, Area de Linguistica General" / "Grado en Linguistica y Lenguas
+// Aplicadas" -- one programme, and a raw string comparison calls them two.
+//
+// So identity drops what varies between descriptions and keeps what does not:
+// the institution up to its first comma, which is the university rather than
+// the faculty or department inside it, and the subject with its leading award
+// word removed, which is carried by `level` anyway.
+const instKey = x => norm(String(x == null ? "" : x).split(/,| with | and /i)[0]);
+const AWARD = /^(?:grado|licenciatura|master|maestria|magister|doctorado|diplom|bachelor|masters?|doctorate|phd|ba|bs|ma|msc|mphil)\s*(?:universitario|interuniversitario|of arts|of science|in|en|de|em|di|i)?\s+/i;
+const subjKey = x => {
+  let t = String(x == null ? "" : x).normalize("NFD").replace(/[̀-ͯ]/g, "");
+  for (let i = 0; i < 2 && AWARD.test(t); i++) t = t.replace(AWARD, "");
+  return norm(t);
+};
+
 const TYPED = {};
 for (const d of DOMAINS)
   for (const [k, , type] of d.fields)
@@ -169,7 +190,6 @@ function apply(domain, spec) {
     const ORIENT = new Set(['generative', 'usage-based', 'usage based', 'functional', 'formal']);
     for (const [f, arr] of Object.entries(s.programme || {})) {
       if (!Object.prototype.hasOwnProperty.call(e, f)) problems.push(`${domain} ${key}: no field ${f}`);
-      if (Array.isArray(e[f]) && e[f].length) problems.push(`${domain} ${key}/${f}: would overwrite`);
       if (!Array.isArray(arr)) { problems.push(`${domain} ${key}/${f}: programme must be an array`); continue; }
       arr.forEach(r => {
         if (!r || !r.subject) { problems.push(`${domain} ${key}/${f}: a row has no subject`); return; }
@@ -228,7 +248,28 @@ function apply(domain, spec) {
     for (const [f, arr] of Object.entries(s.series || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
     for (const [f, arr] of Object.entries(s.languages || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
     for (const [f, arr] of Object.entries(s.offerings || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
-    for (const [f, arr] of Object.entries(s.programme || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
+    // A programme list is a CATALOGUE, not a statement: it is never complete,
+    // and the next pass over a country finds the degrees the last one missed.
+    // Replacing it wholesale is how Spain's two Complutense rows would have
+    // been thrown away to write four; refusing the write, which is what the
+    // old guard did, is how the two new ones -- an interuniversity master's
+    // and a Barcelona degree -- would have been thrown away to keep the two.
+    //
+    // So merge, exactly as policyHistory already merges: existing rows are
+    // never touched, and a new row is added only if nothing with its identity
+    // is there already. Identity is the institution, level and subject
+    // together, because one institution can run a bachelor and a doctorate in
+    // the same subject and two different master's in different ones.
+    for (const [f, arr] of Object.entries(s.programme || {})) {
+      const sig = r => [instKey(r.institution), norm(r.level), subjKey(r.subject)].join("|");
+      const have = new Set((Array.isArray(e[f]) ? e[f] : []).map(sig));
+      const fresh = arr.filter(r => { const k = sig(r); if (have.has(k)) return false; have.add(k); return true; });
+      const dupes = arr.length - fresh.length;
+      if (dupes) console.log(`  ${domain} ${key}/${f}: ${dupes} row(s) already present`);
+      if (!fresh.length) continue;
+      e[f] = [...(Array.isArray(e[f]) ? e[f] : []), ...fresh];
+      unflag(f); filled++; rows_ += fresh.length;
+    }
     for (const [f, prose] of Object.entries(s.notEstablished || {})) {
       if (Array.isArray(e[f])) { e.notEstablished = e.notEstablished || {}; e.notEstablished[f] = prose; }
       else e[f] = prose;

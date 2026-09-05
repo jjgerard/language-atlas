@@ -344,6 +344,10 @@
    {
     "label": "OECD, PISA 2022 Results (Volume I) publication landing page - the URL these entries cite for 'Table I.B1.7.57'",
     "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Argentina",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/argentina_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -359,7 +363,28 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "350",
+    "note": "Learners of Japanese in primary education in Argentina, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "170",
+    "note": "Learners of Japanese in secondary education in Argentina, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "220",
+    "note": "Learners of Japanese in higher education in Argentina, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "5,093",
+    "note": "All learners of Japanese in Argentina, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2006,
@@ -969,6 +994,10 @@
    {
     "label": "Japan Foundation, 日本語教育 国・地域別情報 — Azerbaijan (2025 edition), including the 2024 Survey of Japanese-Language Education Abroad results",
     "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/azerbaidjan_2.pdf"
+   },
+   {
+    "label": "UNESCO IBE, World Data on Education 7th edition (2010/11), Azerbaijan country profile — weekly lesson timetables for the three stages of general secondary education, Ministry of Education, April 2002",
+    "url": "https://web.archive.org/web/20210322232915/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Azerbaijan.pdf"
    }
   ],
   "supportLinks": [],
@@ -981,7 +1010,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "Neither cited source states a foreign-language requirement at upper secondary (0 hits)\nGrade 11 centralised final exams cover mother tongue and mathematics only\nGrade 9 centralised state exams were added from 2009-2010",
   "languagesOffered": "These are media of instruction, not foreign-language subjects; PEER names no foreign language\nSecondary education is delivered in Azerbaijani, Russian, Georgian and Armenian\n1992 Decree provides conditions for teaching ethnic languages at secondary schools\nAzerbaijani is the official medium of instruction, 2009 Law on Education Art 7.1",
-  "curriculumTime": "",
+  "curriculumTime": "Foreign language runs 4 weekly periods at grade 5, 3 at grades 6-8 and 2 at grade 9\nThe 2002 timetable applies to schools using the Azeri language as a medium of instruction\nEach teaching period lasts 45 minutes, the school year about thirty-one working weeks\nGrades 10 and 11 carry 2 weekly periods of foreign language\nTotals are given as a maximum, with 4 facultative lessons a week on top at grades 5-9",
   "assessment": "National assessment covers mother tongue (language) and mathematics\nAzerbaijani is assessed as a taught subject in public secondary schools",
   "teacherSupply": "",
   "uptake": [
@@ -1008,7 +1037,16 @@
     "year": 2009,
     "description": "Law on Education Art. 7.1 makes Azerbaijani the official medium"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "BA",
@@ -1145,6 +1183,10 @@
    {
     "label": "National Education Policy 2010, Ministry of Education, Government of the People's Republic of Bangladesh (English text) - archived copy, the ministry's own host serves an untrusted TLS chain",
     "url": "https://web.archive.org/web/20240514050847id_/https://moedu.portal.gov.bd/sites/default/files/files/moedu.portal.gov.bd/page/ad5cfca5_9b1e_4c0c_a4eb_fb1ded9e2fe5/National%20Education%20Policy-English%20corrected%20_2_.pdf"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Bangladesh",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/bangladesh_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -1160,7 +1202,28 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "500",
+    "note": "Learners of Japanese in primary education in Bangladesh, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "28",
+    "note": "Learners of Japanese in secondary education in Bangladesh, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "898",
+    "note": "Learners of Japanese in higher education in Bangladesh, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "14,918",
+    "note": "All learners of Japanese in Bangladesh, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -1563,6 +1626,10 @@
    {
     "label": "Constitución Política del Estado Plurinacional de Bolivia (2009)",
     "url": "https://www.lexivox.org/norms/BO-CPE-20090207.html"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Bolivia",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/bolivia_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -1578,7 +1645,18 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "A ministerial resolution bars hiring English teachers in primary as outside the plan\nRural teachers may fill their timetable with foreign language instead\nThat suggests English is not separately staffed at primary despite the mandate",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "150",
+    "note": "Learners of Japanese in primary education in Bolivia, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "470",
+    "note": "All learners of Japanese in Bolivia, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -1599,6 +1677,10 @@
    {
     "label": "Lei 13.415/2017, reforma do ensino médio (Planalto)",
     "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13415.htm"
+   },
+   {
+    "label": "INEP, Edital nº 52, de 23 de maio de 2025 — Exame Nacional do Ensino Médio (Enem) 2025, itens 3.3 e 5.2.5 (versão para leitor de tela)",
+    "url": "https://download.inep.gov.br/enem/edital_2025_leitor_de_tela.txt"
    }
   ],
   "supportLinks": [],
@@ -1612,7 +1694,7 @@
   "upperSecondary": "English is compulsory in ensino médio (LDB art. 35-A § 4)\nLei 14.945/2024 places it inside 'linguagens e suas tecnologias'\nPart of the formação geral básica, alongside Portuguese, arts and PE\nOther foreign languages may be offered, preferably Spanish, subject to availability",
   "languagesOffered": "English is the only language named as compulsory\nSpanish is the named preference among the optional ones\nAvailability, place and timetable are left to each teaching system",
   "curriculumTime": "",
-  "assessment": "",
+  "assessment": "The foreign language paper sits inside the Exame Nacional do Ensino Médio, run by Inep\nIt is part of the day-one Linguagens, Códigos e suas Tecnologias block with the redação\nOnly two languages can be examined: English or Spanish\nThe candidate answers only the language chosen at the moment of enrolment",
   "teacherSupply": "",
   "uptake": [],
   "policyHistory": [
@@ -1632,7 +1714,15 @@
     "year": 2024,
     "description": "Lei 14.945 restructures ensino médio; English sits inside 'linguagens e suas tecnologias' in the common core."
    }
-  ]
+  ],
+  "slots": {
+   "assessment": [
+    1,
+    1,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "BS",
@@ -1721,6 +1811,14 @@
    {
     "label": "Bhutan Council for School Examinations and Assessment (Ministry of Education and Skills Development), Operational Guidelines for Examinations and Assessment (OGEA), 2025 edition, chapter 2.5 Key Stage V (Classes XI-XII) and 9.6.1",
     "url": "https://bcsea.gov.bt/publication/board-examination/2/download"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education 7th edition 2010/11, Bhutan — weekly lesson timetables for primary, secondary (key stage 3) and higher secondary education (Internet Archive copy)",
+    "url": "https://web.archive.org/web/20210225081845/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Bhutan.pdf"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Bhutan",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/bhutan_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -1733,16 +1831,29 @@
   "secondaryRequirement": "",
   "upperSecondary": "It continues: Key Stage V is Classes XI and XII, examined in the medium of English\nEnglish and Dzongkha are compulsory, sat with four or five elective subjects\nPassing both English and Dzongkha is mandatory for the Class XII BHSEC examination\nA second, foreign language paper is optional for a non-Bhutanese candidate, Hindi or Tamil\nA transfer from a board with no second language must register one in XI and sit it in XII",
   "languagesOffered": "Two languages in play: English as medium and Dzongkha as compulsory subject\nEnglish is introduced in pre-primary grades\nDzongkha carries much less timetable time than English\nNo other language of Bhutan is used in primary education",
-  "curriculumTime": "",
+  "curriculumTime": "Grades 7 and 8: Dzongkha and English each get 7 weekly periods\nGrades 9-10 are given in hours: Dzongkha 4h10 a week, English 5h\nGrades 11 and 12: Dzongkha 5 weekly periods, English 6\nDuration of periods may vary from school to school, though allocation should stay close\nAt grades 9-10 English matches Mathematics at 5h a week while Dzongkha gets 4h10",
   "assessment": "Class X leads to the Bhutan Certificate of Secondary Education, examined by BCSEA\nClass XII leads to the Bhutan Higher Secondary Education Certificate\nEnglish and Dzongkha are the compulsory subjects every candidate registers for\nPromotion needs a pass in five or more subjects, which must include English and Dzongkha\nForeign second language papers are assessed externally as per CISCE syllabus",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "156",
+    "note": "All learners of Japanese in Bhutan, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [],
   "slots": {
    "assessment": [
     1,
     1,
     2,
+    3,
+    4
+   ],
+   "curriculumTime": [
+    1,
+    1,
+    1,
     3,
     4
    ]
@@ -3424,6 +3535,10 @@
    {
     "label": "DPFC, index of programmes éducatifs et guides d'exécution for secondary education",
     "url": "https://dpfc-ci.net/?page_id=283"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Cote d'Ivoire",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/cote_d_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -3439,7 +3554,23 @@
   "curriculumTime": "6ème English: 3 hours a week and 96 hours a year\nLower secondary English totals 384 hours across the four levels\nEnglish is 13.63 per cent of annual teaching time in 6ème",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "491",
+    "note": "Learners of Japanese in secondary education in Cote d'Ivoire, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "742",
+    "note": "Learners of Japanese in higher education in Cote d'Ivoire, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "1,359",
+    "note": "All learners of Japanese in Cote d'Ivoire, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -3640,7 +3771,7 @@
   "upperSecondary": "Foreign language is compulsory in senior secondary: 6 of the 88 compulsory credits\nPassing the 学业水平合格性考试 on compulsory courses is a key basis for graduating\nForeign language is one of the three gaokao subjects with Chinese and maths, 国发〔2014〕35号\nThe gaokao foreign-language paper offers two sittings, 国发〔2014〕35号",
   "languagesOffered": "Six languages on paper at senior secondary, only three in compulsory education\nCompulsory education: English, Japanese, Russian only, 义务教育课程方案 2022\nSenior secondary adds German, French and Spanish, 普通高中课程方案 2017/2020\nGaokao foreign-language paper: one of English, Russian, Japanese, French, German, Spanish\nSchools pick their own first foreign language; a second is encouraged, not required",
   "curriculumTime": "",
-  "assessment": "",
+  "assessment": "Foreign language is one of the three unified gaokao subjects counted in the total score\n国发〔2014〕35号 keeps its weight unchanged and gives the paper two sittings\nSix languages: English, Russian, Japanese, French, German, Spanish, one chosen by the candidate\nCandidates for foreign-language degrees also sit an oral test organised by the province\nNon-language degrees may not restrict which gaokao foreign language a candidate took",
   "teacherSupply": "",
   "uptake": [],
   "policyHistory": [
@@ -3664,7 +3795,16 @@
     "year": 2022,
     "description": "Compulsory education curriculum plan and 16 standards (教材〔2022〕2号) take effect autumn 2022"
    }
-  ]
+  ],
+  "slots": {
+   "assessment": [
+    1,
+    1,
+    2,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "CN",
@@ -4671,7 +4811,12 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Costa Rica",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/costarica_2.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -4685,7 +4830,18 @@
   "curriculumTime": "25 to 60 per cent of lessons in the foreign language (public bilingual liceos only)\nThe minimum rises from 14 lessons a week to at least 32 by the highest level\nThe total is reached by teaching maths or science through the foreign language",
   "assessment": "A Prueba de Dominio Linguistico has run since 2019\nDecreto Ejecutivo 41686 of 28 February 2019 replaced the exam in force from 1985\nThat national English exam tested reading comprehension only",
   "teacherSupply": "Bilingual secondary teachers must reach at least CEFR B2 in their subject\nResolucion DG072-2018 rewrote the English specialty in the civil service manual\nTeacher supply is the binding constraint on expanding bilingual provision\nSome schools have English teachers teach maths or science instead",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "217",
+    "note": "Learners of Japanese in higher education in Costa Rica, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "786",
+    "note": "All learners of Japanese in Costa Rica, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1985,
@@ -5650,6 +5806,10 @@
    {
     "label": "MINERD (Viceministerio de Servicios Técnicos y Pedagógicos, Proceso de Revisión y Actualización Curricular), Diseño Curricular Nivel Primario, Primer Ciclo (1ro., 2do. y 3ro.), Versión Preliminar, Santo Domingo D.N., 2013, 428 pp. Copy served by the Biblioteca of INTEC (Instituto Tecnológico de Santo Domingo) in its electronic-resources collection",
     "url": "https://opacbiblioteca.intec.edu.do/opac-tmpl/files/recursoselectronicos/MINERD-DisenoCurricularNivelPrimarioPrimerCiclo.pdf"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Dominican Republic",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/dominican_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -5665,7 +5825,13 @@
   "curriculumTime": "Jornada Extendida, 40h week: English 4h and French 2h in each of 4to, 5to, 6to\nJornada Regular, 30h week: English 3h and French 1h in each of 4to, 5to, 6to\nA teaching hour is defined as 45 minutes, Ordenanza 22-2017 Art. 9 Párrafo II\nBy comparison Lengua Española gets 6h extended and 5h regular",
   "assessment": "Curriculum is aligned to the Common European Framework of Reference\nMINERD cites the Council of Europe 2002 Spanish edition as its reference\nProficiency levels set from CEFR descriptors for oral and written production",
   "teacherSupply": "Not established: no teacher-supply or vacancy data retrieved\nMINERD maintains a Coordinadora del Área de Lenguas Extranjeras",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "151",
+    "note": "All learners of Japanese in Dominican Republic, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1997,
@@ -5877,6 +6043,10 @@
    {
     "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Egypt: Inclusion",
     "url": "https://education-profiles.org/northern-africa-and-western-asia/egypt/~inclusion"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Egypt",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/egypt_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -5892,7 +6062,18 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "3,212",
+    "note": "Learners of Japanese in higher education in Egypt, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "3,661",
+    "note": "All learners of Japanese in Egypt, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -7503,6 +7684,10 @@
    {
     "label": "Japan Foundation, 日本語教育 国・地域別情報 — Georgia (2025 edition), including the 2024 Survey of Japanese-Language Education Abroad results",
     "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/georgia_2.pdf"
+   },
+   {
+    "label": "შეფასებისა და გამოცდების ეროვნული ცენტრი (NAEC), როგორ მოვემზადოთ ერთიანი ეროვნული გამოცდებისათვის — ინგლისური ენა, თბილისი 2025 [NAEC, How to prepare for the Unified National Examinations: English, 2025], შესავალი",
+    "url": "https://naec.ge/uploads/postData/20-25/%E1%83%90%E1%83%91%E1%83%98%E1%83%A2%E1%83%A3%E1%83%A0%E1%83%98%E1%83%94%E1%83%9C%E1%83%A2%E1%83%94%E1%83%91%E1%83%98-%E1%83%99%E1%83%A0%E1%83%94%E1%83%91%E1%83%A3%E1%83%9A%E1%83%94%E1%83%91%E1%83%98/%E1%83%98%E1%83%9C%E1%83%92%E1%83%9A%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%98.pdf"
    }
   ],
   "supportLinks": [],
@@ -7516,7 +7701,7 @@
   "upperSecondary": "A third foreign language is an elective in grades X to XII",
   "languagesOffered": "The Law names no specific foreign language anywhere\nA foreign language may be the medium under an international agreement\nOtherwise foreign-medium teaching needs the Ministry's agreement\nCited matsne links are document records, not the curriculum annex text",
   "curriculumTime": "",
-  "assessment": "",
+  "assessment": "English is examined as a subject of the Unified National Examinations, set by NAEC\nThe paper tests listening, reading and writing plus lexical and grammatical competence\nDifficulty of the test material is set at B1, called adequate to the national curriculum",
   "teacherSupply": "",
   "uptake": [
    {
@@ -7542,7 +7727,14 @@
     "year": 2017,
     "description": "the quality of state language teaching and the compliance of non-Georgian learning with the national curriculum…"
    }
-  ]
+  ],
+  "slots": {
+   "assessment": [
+    1,
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GG",
@@ -7967,6 +8159,10 @@
    {
     "label": "OECD, PISA 2022 Results (Volume I) publication landing page - the URL these entries cite for 'Table I.B1.7.57'",
     "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Guatemala",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/guatemala_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -7982,7 +8178,18 @@
   "curriculumTime": "The curriculum states no weekly hour allocation for the foreign language\nThe school year is organised as four planning periods of about eight weeks\nUse of the periods is expressly flexible, adapted to group learning rates",
   "assessment": "Assessment is criterion-referenced against area and grade competences\nNo CEFR anchoring: Marco Comun does not appear in the foreign-language curriculum",
   "teacherSupply": "No national directorate or certification scheme for foreign-language teachers was found\nDIGEBI and a Viceministerio cover bilingual intercultural teaching, not foreign languages",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "35",
+    "note": "Learners of Japanese in higher education in Guatemala, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "280",
+    "note": "All learners of Japanese in Guatemala, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2023,
@@ -8653,10 +8860,6 @@
    {
     "label": "NCERT, National Curriculum Framework for School Education 2023 (August 2023), Grades 11 and 12 language requirement",
     "url": "https://ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf"
-   },
-   {
-    "label": "NCERT, National Curriculum Framework for School Education 2023 — §3.4.11 and §3.4.12, Board examinations at Grades 10 and 12",
-    "url": "https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf"
    }
   ],
   "supportLinks": [],
@@ -8784,7 +8987,16 @@
     "year": 2015,
     "description": "CLM 52nd Report records no Andhra Pradesh or Telangana reply"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IN",
@@ -8800,10 +9012,6 @@
    {
     "label": "52nd Report of the Commissioner for Linguistic Minorities in India (July 2014 to June 2015), Ministry of Minority Affairs, No. CLM REPORT/52/2016, dated 29.03.2016 — Chapter 15, ARUNACHAL PRADESH, paras 15.1-15.16 — INTERNET ARCHIVE COPY (live host minorityaffairs.gov.in is unreachable from this machine)",
     "url": "http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
-   },
-   {
-    "label": "NCERT, National Curriculum Framework for School Education 2023 — national R1/R2/R3 rule",
-    "url": "https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf"
    }
   ],
   "supportLinks": [],
@@ -8829,7 +9037,16 @@
     "year": 2014,
     "description": "CBSE letter of 29-09-2014 adds mother-tongue and language-preference columns to admission forms (national)"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IN",
@@ -9200,12 +9417,7 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [
-   {
-    "label": "NCERT, National Curriculum Framework for School Education 2023 — §2.2, Box 2.2i",
-    "url": "https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf"
-   }
-  ],
+  "docLinks": [],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -9237,7 +9449,16 @@
     "year": 2023,
     "description": "NATIONAL: NCERT's NCF 2023 required at least two of a student's three school languages to be native to India, with the state choosing which"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IN",
@@ -9616,7 +9837,16 @@
     "year": 2015,
     "description": "Commissioner visited Bhopal, 8-10 October, on linguistic safeguards"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IN",
@@ -10030,7 +10260,7 @@
   "languagesOffered": "State furnished no language list to the Commissioner for 2014-15\nFormula limb 1: the regional language, and the mother tongue where it differs\nFormula limb 2: Hindi, or in Hindi-speaking areas another Indian language\nFormula limb 3: English or any other modern European language\nMother tongue may be studied as one of the three languages at secondary stage",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Student-Teacher ratio in regard to Urdu is very alarming, the Commissioner observed\nUrdu speakers: several posts of Urdu Teachers abolished due to non-availability of teachers\nAt Ajmer the Gujarati post in the Regional College was vacant, and a Sindhi post too\nThe State Government is urged to fill up the vacant posts\nCLM asks the State to furnish details of posts sanctioned for minority languages",
   "uptake": [],
   "policyHistory": [
    {
@@ -10049,7 +10279,23 @@
     "year": 2015,
     "description": "Commissioner visited Jaipur and Ajmer, 11-14 October, on safeguards"
    }
-  ]
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    2,
+    2,
+    3,
+    3
+   ],
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IN",
@@ -10232,10 +10478,6 @@
    {
     "label": "52nd Report of the Commissioner for Linguistic Minorities in India (July 2014 to June 2015), Ministry of Minority Affairs, No. CLM REPORT/52/2016, dated 29.03.2016 — Chapter 14, UTTAR PRADESH, paras 14.1-14.16 — INTERNET ARCHIVE COPY (live host minorityaffairs.gov.in is unreachable from this machine)",
     "url": "http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
-   },
-   {
-    "label": "NCERT, National Curriculum Framework for School Education 2023 — national R1/R2/R3 rule",
-    "url": "https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf"
    }
   ],
   "supportLinks": [],
@@ -10285,7 +10527,16 @@
     "year": 1998,
     "description": "U.P. Punjabi Academy established 17-3-1998"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IN",
@@ -10399,6 +10650,10 @@
    {
     "label": "TIMSS 2023 Encyclopedia, Iraq country chapter",
     "url": "https://timss2023.org/wp-content/uploads/2024/11/Iraq.pdf"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Iraq",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/iraq_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -10414,7 +10669,28 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "490",
+    "note": "Learners of Japanese in primary education in Iraq, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "252",
+    "note": "Learners of Japanese in secondary education in Iraq, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "20",
+    "note": "Learners of Japanese in higher education in Iraq, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "762",
+    "note": "All learners of Japanese in Iraq, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2011,
@@ -10723,6 +10999,10 @@
    {
     "label": "OECD, PISA 2022 Results (Volume I) - publication landing page (the cited Table I.B1.7.57 is NOT on this page)",
     "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Jordan",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/jordan_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -10738,7 +11018,18 @@
   "curriculumTime": "",
   "assessment": "Language is a promotion gate: Arabic sits alongside mathematics\nGrades 4 to 10 pupils are not promoted if they fail mathematics and Arabic\nProgression with parental consent is the documented exception",
   "teacherSupply": "Arabic and English language teachers are named as a distinct national cadre",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "72",
+    "note": "Learners of Japanese in higher education in Jordan, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "183",
+    "note": "All learners of Japanese in Jordan, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -10775,6 +11066,14 @@
    {
     "label": "MEXT 総合教育政策局国際教育課, 高等学校等における国際交流等の状況について (令和5年度調査, released 28 March 2025), section 8 高等学校等における英語以外の外国語科目の開設状況",
     "url": "https://www.mext.go.jp/a_menu/koutou/ryugaku/koukousei/20250331-mext_kyokoku_01.pdf"
+   },
+   {
+    "label": "MEXT 初等中等教育局教育課程課外国語教育推進室, 令和5年度「英語教育実施状況調査」集計結果（小学校）, survey date 1 December 2023 — items 2 (英語教育担当者の状況) and 4 (小学校教師の英語力)",
+    "url": "https://www.mext.go.jp/content/20240509-mxt_kyoiku01-000035833_2.pdf"
+   },
+   {
+    "label": "独立行政法人大学入試センター, 令和８年度大学入学者選抜に係る大学入学共通テスト出題教科・科目の出題方法等 及び 問題作成方針 (プレス発表資料, 令和6年6月7日), 外国語の項",
+    "url": "https://www.dnc.ac.jp/news/albums/abm.php?d=355&f=abm00004500.pdf&n=a.pdf"
    }
   ],
   "supportLinks": [],
@@ -10787,9 +11086,9 @@
   "secondaryRequirement": "",
   "upperSecondary": "Continues unbroken: 外国語 is 140 hours a year in each of grades 7, 8 and 9\nUpper secondary: 英語コミュニケーションⅠ is the only 必履修 language subject, 3 credits\nSchools may cut it to 2 credits; the other five 外国語 subjects are elective\nMEXT: \"In principle, have students take English in Foreign Languages lessons\"",
   "languagesOffered": "Figures are a MEXT survey of upper secondary in 2023-24, not a curriculum entitlement\nCourse of Study permits \"other foreign languages\" on the English objectives\nOnly 603 upper-secondary schools offer any non-English language, over 16 languages\nChinese 449 schools, Korean 344, French 188, Spanish 107, German 98; Thai 1, Mongolian 1",
-  "curriculumTime": "",
-  "assessment": "",
-  "teacherSupply": "",
+  "curriculumTime": "別表第一 gives 外国語活動 35 hours a year in grades 3-4 and 外国語 70 in grades 5-6\n別表第二 gives 外国語 140 class hours in each of the three junior high years\nIn the junior high table one unit hour of these 授業時数 is 50 minutes\nGrades 5-6: 国語 runs 175 hours a year, two and a half times 外国語's 70\nJunior high: 外国語 140 every year, while 国語 falls from 140 to 105 by year three",
+  "assessment": "Foreign language is an examined subject of the 大学入学共通テスト, the common university entrance test\nFive papers are set: 英語, ドイツ語, フランス語, 中国語 and 韓国語, one chosen by the candidate\nTaking a non-English paper means no listening test is sat\nEnglish is set with CEFR roughly A1 to B1 as the guide for texts, vocabulary and tasks\nThe other four follow the Course of Study aims and are written with reference to CEFR",
+  "teacherSupply": "MEXT 2023 survey: 25,040 of 349,240 primary teachers hold an English teaching licence\nOf 85,847 primary teachers teaching English, 3,683 hold CEFR B2 or above\nHomeroom teachers cover 88,439 of the 163,475 English-teaching assignments counted\n専科教師等, teachers not acting as homeroom teachers, cover 37,419 of them",
   "uptake": [
    {
     "year": "2023",
@@ -10830,7 +11129,29 @@
     "year": 2025,
     "description": "MEXT reports 603 upper-secondary schools teaching a language other than English, across 16 languages"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    4,
+    4
+   ],
+   "teacherSupply": [
+    1,
+    1,
+    4,
+    4
+   ],
+   "assessment": [
+    1,
+    2,
+    2,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "KE",
@@ -10908,6 +11229,14 @@
    {
     "label": "UNESCO GEM Report PEER, Kyrgyzstan — Inclusion profile (archived platform), section 'Ethnic and linguistic groups'",
     "url": "https://education-profiles.org/central-and-southern-asia/kyrgyzstan/~inclusion"
+   },
+   {
+    "label": "UNESCO IBE, World Data on Education 7th edition (2010/11), Kyrgyzstan country profile — Teaching staff chapter, citing the 2003 UNICEF study and ADB 2005 on teacher shortages",
+    "url": "https://web.archive.org/web/20210122040914/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Kyrgyzstan.pdf"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Kyrgyzstan",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/kyrgyz_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -10922,14 +11251,43 @@
   "languagesOffered": "Not established from the sources consulted. The sources on this entry are Order No. 969/1 of the Ministry of Education of the Kyrgyz Republic of 9 July 2026, base curricula for 2026-27 for classes moving to 12-year schooling, appendix 1 (Kyrgyz-medium schools) and UNESCO GEM Report PEER, Kyrgyzstan. The entry's only cited link downloads but its Cyrillic text does not extract. pdftotext -layout, -raw and -table all drop every Cyrillic glyph. The stamp '969/1, 09.07.2026' is legible, so it is the right document. No subject or hour allocation can be quoted without OCR.",
   "curriculumTime": "Foreign language 2 hours a week in each of grades 3, 5, 7 and 8",
   "assessment": "",
-  "teacherSupply": "",
-  "uptake": [],
+  "teacherSupply": "Recruiting qualified new teachers to replace retirees is proving difficult, mainly low salaries\nShortages arise from inability to compete with the private sector for personnel with such skills\nUNICEF 2003: half the needed classes, foreign languages included, went unheld in rural areas\nTeacher salaries were raised 15% in April 2004 and almost 15% again in October 2004",
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "131",
+    "note": "Learners of Japanese in primary education in Kyrgyzstan, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "280",
+    "note": "Learners of Japanese in secondary education in Kyrgyzstan, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "557",
+    "note": "Learners of Japanese in higher education in Kyrgyzstan, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "1,708",
+    "note": "All learners of Japanese in Kyrgyzstan, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2010,
     "description": "10.2), as established in the 2010 Constitution ."
    }
-  ]
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "KH",
@@ -10961,7 +11319,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "Continues and doubles: 6 hours a week in Grades 7-9 and in every year of Grades 10-12\nSplit as 4 hours for Living Language 1 and 2 hours for Living Language 2\nIdentical 6 hours on both the Science and the Social Science upper-secondary strands\nOnly compulsory subject whose weight does not shift between the two strands",
   "languagesOffered": "Only two languages exist in the framework: English and French, with no third permitted\nBoth are compulsory: whichever is not taken first becomes Living Language 2\nPupil's primary choice fixes the order, English first then French, or the reverse\nFramework gives no leave for a school to substitute another language",
-  "curriculumTime": "",
+  "curriculumTime": "Foreign Languages takes 2 study hours a week in each of Grades 1 to 6\nSix study hours a week in each of Grades 7, 8 and 9\nThe six splits as 4 hours for Living Language 1 and 2 for Living Language 2\nGrades 10-12 Science strand: 6 hours, above Khmer Literature's 5, level with Mathematics",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [
@@ -10996,7 +11354,15 @@
     "year": 2015,
     "description": "MoEYS Department of Curriculum Development issues the Curriculum Framework of General Education and Technical Education, with foreign languages from Grade 1"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "KI",
@@ -11216,6 +11582,18 @@
    {
     "label": "The National Framework for the Elementary and Secondary Curriculum (MOE Proclamation 2022-33), Republic of Korea",
     "url": "http://koreaneducentreinuk.org/wp-content/uploads/2025/04/2022%EA%B0%9C%EC%A0%95%EA%B5%90%EC%9C%A1%EA%B3%BC%EC%A0%95%EC%B4%9D%EB%A1%A0%EC%98%81%EB%AC%B8%ED%8C%90TheNationalFrameworkfortheElementaryandSecondaryCu.pdf"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Republic of Korea",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/korea_2.pdf"
+   },
+   {
+    "label": "교육부 보도자료, 2027학년도 대학수학능력시험 시행기본계획 발표 (2026-03-31), 한국교육과정평가원",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=105756&lev=0&m=020402&s=moe"
+   },
+   {
+    "label": "한국교육과정평가원 대학수학능력시험 홈페이지, 시험시간 및 영역별 문항수 (시험 안내)",
+    "url": "https://www.suneung.re.kr/sub/info.do?m=0101&s=suneung"
    }
   ],
   "supportLinks": [],
@@ -11229,10 +11607,39 @@
   "upperSecondary": "English is a general high school subject cluster in its own right\nSecond Foreign Language sits in a cluster with Classical Chinese and Liberal Arts\nSchools offering a second foreign language should offer two or more at once\nKorean, Mathematics and English together may not exceed 81 credits",
   "languagesOffered": "A second foreign language is elective at middle school, from a named list\nGerman, French, Spanish, Chinese, Japanese, Russian, Arabic and Vietnamese\nClassical Chinese is a separate elective alongside them",
   "curriculumTime": "High school caps the combined credits for Korean, maths and English at 81\nWhere total credits exceed 174, those three must not exceed half the additional credits\nAn explicit ceiling on how much of the timetable language and maths may take",
-  "assessment": "",
+  "assessment": "Languages are examined in the 대학수학능력시험, the national university admission test\nEnglish is period 3, 70 minutes and 45 questions, with 17 listening items\nA second foreign language and Chinese classics paper is period 5, with no listening test\nEnglish and that paper are reported on absolute grading, not against other candidates",
   "teacherSupply": "",
-  "uptake": [],
-  "policyHistory": []
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "651",
+    "note": "Learners of Japanese in primary education in Republic of Korea, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "385,439",
+    "note": "Learners of Japanese in secondary education in Republic of Korea, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "51,955",
+    "note": "Learners of Japanese in higher education in Republic of Korea, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "555,396",
+    "note": "All learners of Japanese in Republic of Korea, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
+  "policyHistory": [],
+  "slots": {
+   "assessment": [
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "KW",
@@ -11256,6 +11663,10 @@
    {
     "label": "TIMSS 2023 Encyclopedia, Kuwait country chapter",
     "url": "https://timss2023.org/wp-content/uploads/2024/10/Kuwait.pdf"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education 7th edition 2010/11, Kuwait — section on the teaching of English and French in all public education schools (Internet Archive copy)",
+    "url": "https://web.archive.org/web/20210323011257/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Kuwait.pdf"
    }
   ],
   "supportLinks": [],
@@ -11270,7 +11681,7 @@
   "languagesOffered": "Public and Arabic private schools run English throughout, French in the arts stream\nForeign private schools teach maths and science in English or the affiliate language",
   "curriculumTime": "No per-subject language hours are published in the retrieved sources\nThe school year is 28 weeks in primary and 30 in intermediate and secondary",
   "assessment": "In Grades 10 to 12 final examinations are carried out at Ministry level\nThe Center for Education Development assesses mathematics, English, science and Arabic\nAt intermediate and secondary level students must pass examinations to be promoted",
-  "teacherSupply": "",
+  "teacherSupply": "The appropriate curricula were devised and the necessary teachers were trained by the Ministry",
   "uptake": [],
   "policyHistory": [
    {
@@ -11294,6 +11705,9 @@
    "assessment": [
     1,
     2,
+    3
+   ],
+   "teacherSupply": [
     3
    ]
   }
@@ -11365,6 +11779,10 @@
    {
     "label": "UNESCO GEM Report PEER, Lao People's Democratic Republic — Inclusion profile (archived platform), sections 'Ethnic and language groups and indigenous groups', 'Laws, Plans, Policies and Programmes', 'Curricula and learning materials'",
     "url": "https://education-profiles.org/eastern-and-south-eastern-asia/lao-peoples-democratic-republic/~inclusion"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Laos",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/laos_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -11380,7 +11798,28 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "527",
+    "note": "Learners of Japanese in primary education in Laos, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "2,214",
+    "note": "Learners of Japanese in secondary education in Laos, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "240",
+    "note": "Learners of Japanese in higher education in Laos, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "4,431",
+    "note": "All learners of Japanese in Laos, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2003,
@@ -11620,6 +12059,14 @@
    {
     "label": "UNICEF ROSA, Mapping of Disability-Inclusive Education Practices in South Asia (2021), country profile: Sri Lanka (Internet Archive copy)",
     "url": "http://web.archive.org/web/20221128164602id_/https://www.unicef.org/rosa/media/17016/file/Country%20Profile%20-%20Sri%20Lanka.pdf"
+   },
+   {
+    "label": "UNESCO IBE, World Data on Education 7th edition (2010/11), Sri Lanka country profile — weekly lesson timetables for primary and for junior and senior secondary education, and the Teaching staff chapter",
+    "url": "https://web.archive.org/web/20210323023215/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Sri_Lanka.pdf"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Sri Lanka",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/srilanka_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -11632,11 +12079,44 @@
   "secondaryRequirement": "",
   "upperSecondary": "Constitution art. 21(2) reaches state-financed universities, not schools\nThere it requires the other national language be made a medium too",
   "languagesOffered": "Sinhala and Tamil are the national languages; English is the link language\nEvery pupil takes the other national language as a subject from Grade 3\nEnglish is the third language for all\nBilingual streams teach a few subjects in English and the rest in Sinhala or Tamil",
-  "curriculumTime": "",
+  "curriculumTime": "English 3h a week at grades 3-5, the second national language 1h a week at the same grades\nAt grades 6-11 English is 5 weekly periods, the second national language 2 at grades 6-9\nBoth are the timetables in force before the introduction of the curriculum reform\nAt grades 3-5 English 3h sits inside 24h of total teaching-learning time\nAt grades 6-11 English matches the first language at 5 periods a week",
   "assessment": "",
-  "teacherSupply": "",
-  "uptake": [],
-  "policyHistory": []
+  "teacherSupply": "30 Regional English Support Centres run in-service teacher education for English teachers",
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "1,239",
+    "note": "Learners of Japanese in primary education in Sri Lanka, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "16,702",
+    "note": "Learners of Japanese in secondary education in Sri Lanka, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "3,350",
+    "note": "Learners of Japanese in higher education in Sri Lanka, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "34,650",
+    "note": "All learners of Japanese in Sri Lanka, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
+  "policyHistory": [],
+  "slots": {
+   "curriculumTime": [
+    1,
+    2,
+    3,
+    4,
+    4
+   ],
+   "teacherSupply": [
+    3
+   ]
+  }
  },
  {
   "countryCode": "LR",
@@ -12280,6 +12760,10 @@
    {
     "label": "UNESCO GEM Report PEER, Marshall Islands country profile, INCLUSION (section 3 Laws, Plans, Policies and Programmes, incl. Ethnic and linguistic groups)",
     "url": "https://education-profiles.org/oceania/marshall-islands/~inclusion"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Marshall Islands",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/marshall_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -12295,7 +12779,13 @@
   "curriculumTime": "Equal time to both language subjects: 90 minutes a day each in grades K-8, 60 in 9-12",
   "assessment": "Each language subject is assessed in its own language",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "20",
+    "note": "Learners of Japanese in higher education in Marshall Islands, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1979,
@@ -12487,6 +12977,10 @@
    {
     "label": "Засгийн газрын 2021 оны 372 дугаар тогтоолын хавсралт: 'Бүх нийтийн англи хэлний суралцахуйг дэмжих арга хэмжээ (2022-2025)' (Annex to Government Resolution No. 372 of 2021, Measures to support universal English language learning 2022-2025)",
     "url": "https://legalinfo.mn/mn/detail?lawId=16389842551831"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Mongolia",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/mongolia_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -12502,7 +12996,28 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "1,659",
+    "note": "Learners of Japanese in primary education in Mongolia, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "7,270",
+    "note": "Learners of Japanese in secondary education in Mongolia, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "2,734",
+    "note": "Learners of Japanese in higher education in Mongolia, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "16,123",
+    "note": "All learners of Japanese in Mongolia, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2021,
@@ -12752,6 +13267,10 @@
    {
     "label": "National Institute of Education (Maldives), The National Curriculum Framework, April 2014, 70 pp. — Table 2 Phases and Key Stages, Table 3 Organisation of learning across the key stages, the Language and Communication key learning area, and the Medium of Instruction chapter. Copy served from UNESCO's media repository.",
     "url": "https://media.unesco.org/sites/default/files/webform/r2e002/2cda5a0a236191e565a7e98f824f23c08b5dad32.pdf"
+   },
+   {
+    "label": "UNESCO IBE, World Data on Education 7th edition (2010/11), Maldives country profile — suggested weekly lesson timetable for lower secondary education (around 2000), Educational Development Centre",
+    "url": "https://web.archive.org/web/20210323014038/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Maldives.pdf"
    }
   ],
   "supportLinks": [],
@@ -12764,7 +13283,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "Named foreign languages appear only at Key Stage 4, grades 9-10, as one elective among many\nKey Stage 4 pupils choose any 4 electives from at least two learning areas\nAt Key Stage 5, grades 11-12, the only core language subjects are Islam and Dhivehi\nNo foreign language is listed in the Key Stage 5 elective column; even English is elective there",
   "languagesOffered": "Table 3 is marked \"DRAFT, 09 Apr 2014\" inside the published framework\nGrades 1 to 8 offer one optional language only: Arabic\nGrades 9-10 name three: \"Foreign Lang (Arabic, French, Mandarin)\"\nArabic is also a medium of instruction in specialist schools, not only a taught language",
-  "curriculumTime": "",
+  "curriculumTime": "An elective subject runs 5 weekly periods at grades 8 to 10, out of a 40-period week\nEach period lasts 35 minutes, per the Educational Development Centre site retrieved July 2011\nArabic sits on the lower-secondary elective list for grades 8, 9 and 10\nSome schools limit the range of elective subjects as per available resources\nSome schools can offer additional subjects in consultation with the Ministry of Education",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [],
@@ -12773,7 +13292,16 @@
     "year": 2014,
     "description": "National Institute of Education issues the National Curriculum Framework, setting English as medium of instruction from primary and foreign languages from Key Stage 1"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "MW",
@@ -12842,6 +13370,10 @@
    {
     "label": "OECD, PISA 2022 Results (Volume I) publication landing page - the URL these entries cite for 'Table I.B1.7.57'",
     "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Mexico",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/mexico_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -12857,7 +13389,28 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "1,205",
+    "note": "Learners of Japanese in primary education in Mexico, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "1,348",
+    "note": "Learners of Japanese in secondary education in Mexico, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "2,126",
+    "note": "Learners of Japanese in higher education in Mexico, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "15,151",
+    "note": "All learners of Japanese in Mexico, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -13135,6 +13688,10 @@
    {
     "label": "UNESCO IBE, World Data on Education, 7th edition 2010/11, Nigeria — junior secondary school core curriculum and electives (grades 7-9)",
     "url": "https://web.archive.org/web/20181125081343/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Nigeria.pdf"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Nigeria",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/nigeria_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -13150,7 +13707,18 @@
   "curriculumTime": "",
   "assessment": "Candidates enter a minimum of eight and a maximum of nine WASSCE subjects\nHumanities electives include one Nigerian Language (Hausa, Igbo or Yoruba), French and Arabic\nWAEC sets texts for WASSCE Arabic, Edo, Efik, Hausa, Ibibio, Igbo and Yoruba\nEnglish Language is among the core subjects every candidate must include\nFor 2026 and 2027 only two core subjects are sat: English Language and Mathematics",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "388",
+    "note": "Learners of Japanese in higher education in Nigeria, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "588",
+    "note": "All learners of Japanese in Nigeria, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2022,
@@ -13630,6 +14198,10 @@
    {
     "label": "Ministerio de Educación (Perú), Currículo Nacional de la Educación Básica, section V, plan de estudios and weekly time tables 4, 8 and 9",
     "url": "https://www.minedu.gob.pe/curriculo/pdf/curriculo-nacional-de-la-educacion-basica.pdf"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Peru",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/peru_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -13645,7 +14217,23 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "MINEDU's Dirección de Educación Intercultural y Bilingüe sets the writing rules\nIt gives technical assistance and officialises uniform orthographies (art. 21)\nPublic bodies must then use those versions in official documents",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "1,416",
+    "note": "Learners of Japanese in primary education in Peru, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "768",
+    "note": "Learners of Japanese in secondary education in Peru, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "3,551",
+    "note": "All learners of Japanese in Peru, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2011,
@@ -13757,6 +14345,10 @@
    {
     "label": "Professional Regulation Commission, Professional Regulatory Board of Speech-Language Pathology",
     "url": "https://prc.gov.ph/Pages/PRBv4/SpeechLanguagePathology.htm"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Philippines",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/philippines_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -13772,7 +14364,28 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "853",
+    "note": "Learners of Japanese in primary education in Philippines, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "8,856",
+    "note": "Learners of Japanese in secondary education in Philippines, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "17,948",
+    "note": "Learners of Japanese in higher education in Philippines, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "42,677",
+    "note": "All learners of Japanese in Philippines, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2012,
@@ -13971,6 +14584,10 @@
    {
     "label": "TIMSS 2023 Encyclopedia, Palestinian National Authority country chapter",
     "url": "https://timss2023.org/wp-content/uploads/2024/10/Palestinian-National-Authority.pdf"
+   },
+   {
+    "label": "UNESCO-IBE, World Data on Education 7th edition 2010/11, Palestine — weekly lesson timetables for the lower (grades 1-4) and upper (grades 5-9) stages of basic education under the new curriculum (Internet Archive copy)",
+    "url": "https://web.archive.org/web/20210323022522/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Palestine.pdf"
    }
   ],
   "supportLinks": [],
@@ -13983,7 +14600,7 @@
   "secondaryRequirement": "English is added as a third language for Arabic-speaking pupils",
   "upperSecondary": "Source gives start grades only and states no upper-secondary requirement\nHebrew from grade 3 as second language, English added as a third language\nArabic is the official language and therefore the language of instruction",
   "languagesOffered": "Arabic, Hebrew and English, each given a distinct stated purpose\nHebrew framed for social mobility, higher education and shared citizenship\nEnglish framed as a global language and a window on the wider world",
-  "curriculumTime": "",
+  "curriculumTime": "Grades 1-4 under the new curriculum: English gets 3 weekly periods\nGrades 5-9: English gets 4 weekly periods\nEach teaching period lasts 45 minutes\nAn elective third language appears at grades 7 to 9, 2 periods a week\nAt grades 5-9 English's 4 periods sit against Arabic's 7 and Mathematics' 5",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [],
@@ -13996,7 +14613,16 @@
     "year": 2017,
     "description": "Education Law assigns MEHE duties on gifted and talented pupils"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "PT",
@@ -14214,6 +14840,10 @@
    {
     "label": "OECD, PISA 2022 Results (Volume I) - publication landing page (the cited Table I.B1.7.57 is NOT on this page)",
     "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Qatar",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/qatar_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -14229,7 +14859,23 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "150",
+    "note": "Learners of Japanese in secondary education in Qatar, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "40",
+    "note": "Learners of Japanese in higher education in Qatar, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "217",
+    "note": "All learners of Japanese in Qatar, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2001,
@@ -14812,6 +15458,10 @@
    {
     "label": "Learning a Mother Tongue Language in primary school (Ministry of Education, Singapore)",
     "url": "https://www.moe.gov.sg/primary/curriculum/mother-tongue-languages/learning-in-school"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Singapore",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/singapore_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -14827,7 +15477,28 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "80",
+    "note": "Learners of Japanese in primary education in Singapore, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "1,335",
+    "note": "Learners of Japanese in secondary education in Singapore, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "2,446",
+    "note": "Learners of Japanese in higher education in Singapore, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "8,532",
+    "note": "All learners of Japanese in Singapore, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -15414,6 +16085,10 @@
    {
     "label": "UNESCO GEM Report PEER, Syrian Arab Republic — INCLUSION profile (retrieved and read; contains no foreign-language material — recorded here as a checked negative)",
     "url": "https://education-profiles.org/northern-africa-and-western-asia/syrian-arab-republic/~inclusion"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Syria",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/syria_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -15429,7 +16104,13 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "157",
+    "note": "All learners of Japanese in Syria, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2001,
@@ -15608,7 +16289,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "Continues as a basic learning area at Grades 10-12, worth 6 of the 41 basic credits\n240 hours across the three upper-secondary years, against 120 a year in Grades 7-9\nIndicators are set for the whole Grade 10-12 interval, not grade by grade\nSchools may add further courses \"depending on their readiness and priorities\"",
   "languagesOffered": "English is the only language the national core curriculum prescribes\nOthers named as examples: French, German, Chinese, Japanese, Arabic, Pali\nCurriculum also names \"languages of neighbouring countries\" without listing them\nAll non-English languages are left \"to the discretion of educational institutions\"",
-  "curriculumTime": "",
+  "curriculumTime": "The curriculum prescribes a structure of minimum time to be allotted to each subject area\nSchools may increase the allotment of time, depending on their readiness and priorities",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [
@@ -15642,7 +16323,13 @@
     "year": 2012,
     "description": "Basic Education Core Curriculum B.E. 2551 applies to all grades in schools generally"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "TJ",
@@ -15702,6 +16389,10 @@
    {
     "label": "UNESCO GEM Report PEER country profile, Timor-Leste — Inclusion (page states 'Validated by the country: No'; last modified 05/07/2021)",
     "url": "https://education-profiles.org/eastern-and-south-eastern-asia/timor-leste/~inclusion"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Timor-Leste",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/e_timor_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -15717,7 +16408,13 @@
   "curriculumTime": "",
   "assessment": "Completing basic education with a pass carries the right to a diploma\nCompleting secondary education with a pass carries the right to a certifying diploma",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "609",
+    "note": "All learners of Japanese in Timor-Leste, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2008,
@@ -15877,6 +16574,10 @@
    {
     "label": "Pacific Disability Forum and UNICEF Pacific, Pacific Regional Inclusive Education Review (2022; data collected 2020-2021), country profiles and Findings",
     "url": "https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Tonga",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/tonga_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -15892,7 +16593,23 @@
   "curriculumTime": "",
   "assessment": "Under the 2004 framework Year 11 leads to the Tonga School Certificate\nYear 12 follows a regional curriculum leading to the Pacific Senior Secondary Certificate\nForm 7 was to follow the new regional qualification or Cambridge International Examinations",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "149",
+    "note": "Learners of Japanese in secondary education in Tonga, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "6",
+    "note": "Learners of Japanese in higher education in Tonga, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   },
+   {
+    "year": "2024",
+    "value": "155",
+    "note": "All learners of Japanese in Tonga, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2013,
@@ -16318,6 +17035,10 @@
    {
     "label": "Grimes, P. et al., 'Mapping and Recommendations on Disability-Inclusive Education in Eastern and Southern Africa', UNICEF ESARO, March 2023",
     "url": "https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Uganda",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/uganda_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -16333,7 +17054,13 @@
   "curriculumTime": "",
   "assessment": "A 2012 UNEB report compared Grade 3 pupils in English language literacy and in numeracy",
   "teacherSupply": "The School Health and Reading Program has run orthography review since 2012\nIt develops reading materials in 12 Ugandan languages as well as English\nExtensive teacher training and supervision support\nImplemented by RTI, SIL and World Education with the Ministry of Education",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "23",
+    "note": "All learners of Japanese in Uganda, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2007,
@@ -20202,6 +20929,10 @@
    {
     "label": "UNESCO PEER, Yemen — Inclusion profile",
     "url": "https://education-profiles.org/northern-africa-and-western-asia/yemen/~inclusion"
+   },
+   {
+    "label": "UNESCO IBE, World Data on Education 7th edition (2010/11), Yemen country profile — weekly lesson timetable for basic education, 2004, supplied by GASERC",
+    "url": "https://web.archive.org/web/20210323024302/http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Yemen.pdf"
    }
   ],
   "supportLinks": [],
@@ -20214,7 +20945,7 @@
   "secondaryRequirement": "",
   "upperSecondary": "English prescribed as a second language from primary school onwards\nNo second foreign language named anywhere in the profile\nSource states the start point only, not any upper-secondary requirement",
   "languagesOffered": "English is the only foreign language named in the retrieved source\nNon-Muslim pupils are largely taught in private schools as foreigners",
-  "curriculumTime": "",
+  "curriculumTime": "English 5 weekly periods in each of grades 7, 8 and 9 in the 2004 basic-education timetable\nEach teaching period lasts 40 minutes, on information supplied by GASERC in November 2004\nThat is 5 periods against 6 for Arabic and 6 for mathematics at grades 7 to 9\nThe whole week is 36 periods at grades 5 to 9",
   "assessment": "",
   "teacherSupply": "",
   "uptake": [],
@@ -20223,7 +20954,15 @@
     "year": 2013,
     "description": "Mid Term Results Framework (2013-15) of the Yemen Education Sector Plan"
    }
-  ]
+  ],
+  "slots": {
+   "curriculumTime": [
+    1,
+    1,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "ZA",
@@ -20239,6 +20978,10 @@
    {
     "label": "The impact of language policy and practice on children's learning: South Africa (2017): Trudell, UNICEF Eastern and Southern Africa",
     "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-South-Africa.pdf"
+   },
+   {
+    "label": "Department of Education (South Africa), The National Senior Certificate: A Qualification at Level 4 on the National Qualifications Framework (2005, ISBN 1-77018-050-8), para. 9 and Annexure B Tables A1 and B4",
+    "url": "https://www.ecexams.co.za/39.00National%20Senior%20Certificate.pdf"
    }
   ],
   "supportLinks": [],
@@ -20252,7 +20995,7 @@
   "upperSecondary": "Western Cape Language Transformation Plan targets Xhosa, English and Afrikaans fluency\nThat plan promotes six years of mother-tongue-based bilingual education\nTaylor and Coetzee: 14.3 per cent were in schools switching from English to an African language",
   "languagesOffered": "Choice of language of learning is confined to the 11 official languages\nSepedi, Sesotho, Setswana, siSwati, Tshivenda, Xitsonga are six of the eleven\nThe review names no language outside that list as offered in schools\nSanity check on the same text: English 26, mother tongue 8, bilingual 4",
   "curriculumTime": "",
-  "assessment": "",
+  "assessment": "Examined as NSC subjects: a qualification at level 4 on the National Qualifications Framework\nTable B4 covers official languages at Second Additional level, and non-official languages\nArabic, French and German are among the non-official languages listed in that table\nItalian, Latin and Portuguese also appear there, at Home or Second Additional level\nTwo official languages are required, one of them offered at Home Language level",
   "teacherSupply": "PRAESA, founded by Neville Alexander in 1992, is affiliated to the University of Cape Town\nIts work spans language planning, in-service teacher education and materials\nFrom 2012 it ran Nal'ibali, a national reading-for-enjoyment campaign",
   "uptake": [],
   "policyHistory": [
@@ -20272,7 +21015,16 @@
     "year": 1997,
     "description": "Language in Education Policy vests the choice of language of learning and teaching in the individual"
    }
-  ]
+  ],
+  "slots": {
+   "assessment": [
+    1,
+    2,
+    2,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "ZM",
@@ -20364,6 +21116,10 @@
    {
     "label": "University of Zimbabwe, Rehabilitation Unit programmes page",
     "url": "https://www.uz.ac.zw/index.php/2-uncategorised/1561-rehabilitation-unit-progs"
+   },
+   {
+    "label": "Japan Foundation, 2024年度日本語教育機関調査結果 (Survey of Japanese-Language Education Abroad 2024), country report: Zimbabwe",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/zimbabwe_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -20379,7 +21135,13 @@
   "curriculumTime": "",
   "assessment": "",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": "2024",
+    "value": "60",
+    "note": "All learners of Japanese in Zimbabwe, school and non-school settings combined, Japan Foundation Survey of Japanese-Language Education Abroad 2024"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1987,
