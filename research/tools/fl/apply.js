@@ -76,7 +76,20 @@ function apply(domain, spec) {
       else if (prior) upgrades.push(`${domain} ${key}/${f}`);
       set.forEach(b => {
         if (b.length > LIMIT) problems.push(`${domain} ${key}/${f}: ${b.length} chars — "${b.slice(0, 55)}…"`);
-        if (/[.;]$/.test(b)) problems.push(`${domain} ${key}/${f}: ends with punctuation`);
+        // A bullet must not end in sentence punctuation -- but an ABBREVIATION
+        // that happens to fall last legitimately ends in a full stop, and the
+        // flat test could not tell the two apart. "By 2030 the minimum degree
+        // qualification for teaching will be a four-year integrated B.Ed." was
+        // rejected for the period in B.Ed., and the only ways to satisfy the
+        // rule were to misspell the qualification or to reword a sourced
+        // bullet away from what its evidence says.
+        //
+        // So a trailing stop is allowed only where it closes a dotted
+        // abbreviation -- B.Ed., Ph.D., M.A., B.A. -- and nothing else changes:
+        // a sentence-final stop, and any trailing semicolon, still fail.
+        const endsAbbrev = /\b[A-Za-z](?:\.[A-Za-z]{1,4})+\.$/.test(b);
+        if (/;$/.test(b) || (/\.$/.test(b) && !endsAbbrev))
+          problems.push(`${domain} ${key}/${f}: ends with punctuation`);
       });
       if (set.length > 5) problems.push(`${domain} ${key}/${f}: ${set.length} bullets`);
     }

@@ -2368,7 +2368,12 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Fast Facts: milestones of Paro College of Education, 1975 to 2021",
+    "url": "https://www.pce.edu.bt/?page_id=3902"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -2381,13 +2386,20 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "An 18-month teaching certificate programme for Dzongkha teachers was launched in 1993\nIt runs at Paro College, a constituent college of the Royal University of Bhutan since 2003\nA Bachelor of Primary Education Studies (Dzongkha) runs as a four-year programme\nA Postgraduate Diploma in Education (Dzongkha) runs as an 18-month programme with practicum\nA part-time Master of Education for Dzongkha teachers was launched in 2014",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
    "degreeSubjects": [
     1,
     2,
+    3
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
     3
    ]
   }
@@ -4717,6 +4729,14 @@
    {
     "label": "西南大学外国语学院《学科建设概况》— 二级学科博士学位授权点 (Southwest University School of Foreign Languages, discipline overview)",
     "url": "http://foreign.swu.edu.cn/info/1012/2740.htm"
+   },
+   {
+    "label": "重庆市深化普通高等学校考试招生综合改革实施方案（渝府发〔2019〕11号，2019年4月22日）",
+    "url": "https://www.cq.gov.cn/zwgk/zfxxgkml/szfwj/xzgfxwj/szf/201904/t20190423_8837041.html"
+   },
+   {
+    "label": "关于办理公共英语免修免考的通知（西南大学外国语学院、本科生院，2025年3月4日），依《西南大学本科课程成绩评定与管理办法》西校〔2024〕214号",
+    "url": "https://ugs.swu.edu.cn/info/1012/3657.htm"
    }
   ],
   "supportLinks": [],
@@ -4740,8 +4760,8 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "National law makes standard Chinese the basic language of instruction in all institutions\nA rule in Article 12 of the Education Law of the People's Republic of China",
-  "requiredStudy": "",
-  "entryRequirements": "",
+  "requiredStudy": "Public College English is the common English course carried across later semesters\nA student may apply once for exemption from the later Public College English courses\nArt, sport and minority-area minority students may use the Chongqing English A-level test\nThe rule rests on the university's 2024 course assessment and management measures\nAfter a successful exemption the later English courses are not chosen, taken or examined",
+  "entryRequirements": "Every candidate sits a foreign language paper in the June national unified examination\nThe paper may be taken in English, Russian, Japanese, French, German or Spanish\nChinese, mathematics and the foreign language are each marked out of 150\nThe city examinations institute sets and marks the school foreign language pass paper",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [
@@ -4774,6 +4794,19 @@
    ],
    "mediumOfInstruction": [
     1,
+    4
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "requiredStudy": [
+    2,
+    4,
+    4,
+    4,
     4
    ]
   }
@@ -5102,6 +5135,10 @@
    {
     "label": "广西深化普通高等学校考试招生制度综合改革实施方案（广西壮族自治区人民政府，2021年9月15日印发），新华社报道",
     "url": "http://www.news.cn/2021-09/16/c_1127866647.htm"
+   },
+   {
+    "label": "广西2026年普通高等学校招生工作实施细则",
+    "url": "https://gaokao.eol.cn/guang_xi/dongtai/202605/t20260515_2734835.shtml"
    }
   ],
   "supportLinks": [],
@@ -5136,7 +5173,7 @@
   "offerings": [],
   "mediumOfInstruction": "National law makes standard Chinese the basic language of instruction in all institutions\nIn ethnic autonomous areas, schools mainly of minority students give bilingual education\nA rule in Article 12 of the Education Law of the People's Republic of China",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "A foreign language is one of the three national unified subjects in the 3+1+2 model\nOne of English, Japanese, Russian, German, French or Spanish is chosen\nThe foreign language paper has a listening part and a written part\nThe Ministry of Education sets the national foreign language paper\nProgrammes may require the region's foreign language oral test as an admission reference",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [
@@ -5174,6 +5211,13 @@
    "mediumOfInstruction": [
     1,
     2,
+    4
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2,
+    4,
     4
    ]
   }
@@ -5419,6 +5463,10 @@
    {
     "label": "黑龙江大学文学院 学院简介 — 一、历史沿革与二、学科建设 (Heilongjiang University School of Liberal Arts, profile: disciplines and doctoral directions)",
     "url": "http://wxy.hlju.edu.cn/xygk/xyjj.htm"
+   },
+   {
+    "label": "黑龙江省2024年普通高校招生考试安排和录取工作实施方案（省招生考试委员会办公室，2024年1月29日）",
+    "url": "https://www.suihua.gov.cn/sh/jylm/202402/c12_177475.shtml"
    }
   ],
   "supportLinks": [],
@@ -5443,7 +5491,7 @@
   "offerings": [],
   "mediumOfInstruction": "National law makes standard Chinese the basic language of instruction in all institutions\nA rule in Article 12 of the Education Law of the People's Republic of China",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "A foreign language is one of the three national unified examination subjects\nOne of English, Japanese, Russian, German, French or Spanish is chosen\nEach national unified subject, the foreign language among them, is marked out of 150\nThe Ministry of Education sets the national foreign language paper",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [
@@ -5468,6 +5516,12 @@
    ],
    "mediumOfInstruction": [
     1,
+    4
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2,
     4
    ]
   }
@@ -5732,6 +5786,10 @@
    {
     "label": "内蒙古大学蒙古学学院 — 语言学及应用语言学（硕士生培养，学科、专业及研究方向简介）",
     "url": "https://mgx.imu.edu.cn/rcpy/ssspy1/yyxjyyyyx.htm"
+   },
+   {
+    "label": "内蒙古自治区深化普通高等学校考试招生综合改革实施方案（内政发〔2022〕18号，2022年6月22日）",
+    "url": "https://www.nmxhq.gov.cn/nmxhq/zwgk/xxgk/zfxxgkml/zdlyxxgk/ywjy/e7b2c1b0ac5241789fa2cf05f05c4f93/index.html"
    }
   ],
   "supportLinks": [],
@@ -5756,7 +5814,7 @@
   "offerings": [],
   "mediumOfInstruction": "National law makes standard Chinese the basic language of instruction in all institutions\nIn ethnic autonomous areas, schools mainly of minority students give bilingual education\nInner Mongolia University added a Chinese-taught Mongolian Language and Literature class in 2021\nThe first two are rules in Article 12 of the Education Law, the third a department record",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "From 2025 a foreign language is one of the three national unified examination subjects\nIt may be taken in English, Japanese, Russian, French, Spanish or German\nChinese, mathematics and the foreign language are each marked out of 150\nThe autonomous region sets and marks the school foreign language pass paper\nAdmission rules for minority-language-taught programmes are issued by the universities",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [
@@ -5791,6 +5849,13 @@
     1,
     2,
     3,
+    4
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2,
+    4,
     4
    ]
   }
@@ -6560,6 +6625,14 @@
    {
     "label": "上海外国语大学研究生院《语言学及应用语言学》 — 1986年上海高校唯一的语言学和应用语言学博士点",
     "url": "https://graduate.shisu.edu.cn/9c/82/c3195a40066/page.htm"
+   },
+   {
+    "label": "上海市深化高等学校考试招生综合改革实施方案（沪府发〔2014〕57号，2014年9月18日）",
+    "url": "https://www.shanghai.gov.cn/nw32612/20200821/0001-32612_40379.html"
+   },
+   {
+    "label": "2024年基于社会性英语考试成绩认定免修上海交通大学《大学英语》课程的通知（上海交通大学外国语学院，2024年4月）",
+    "url": "https://www.jwc.sjtu.edu.cn/info/1285/114271.htm"
    }
   ],
   "supportLinks": [],
@@ -6623,8 +6696,8 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "National law makes standard Chinese the basic language of instruction in all institutions\nA rule in Article 12 of the Education Law of the People's Republic of China",
-  "requiredStudy": "",
-  "entryRequirements": "",
+  "requiredStudy": "The common English requirement is College English, in stages three and four\nTOEFL, IELTS and the national CET-6 count as proof of a student's English level\nThe score must have been obtained within two years of the application\nThe School of Foreign Languages decides and reports the exemption to the registry",
+  "entryRequirements": "From 2017 the unified examination subjects are Chinese, mathematics and a foreign language\nA candidate may use the unified paper in place of the school leaving pass paper\nChinese, mathematics and the foreign language are each marked out of 150\nThe foreign language test has a written part and a speaking and listening part\nA candidate may sit the foreign language twice and count the better score",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [
@@ -6661,6 +6734,19 @@
    ],
    "mediumOfInstruction": [
     1,
+    4
+   ],
+   "entryRequirements": [
+    1,
+    1,
+    2,
+    2,
+    2
+   ],
+   "requiredStudy": [
+    2,
+    4,
+    4,
     4
    ]
   }
@@ -6908,6 +6994,10 @@
    {
     "label": "西藏大学文学院 — 语言学及应用语言学（二级学科，学科代码050102）学科介绍",
     "url": "https://wxy.utibet.edu.cn/info/1072/1163.htm"
+   },
+   {
+    "label": "西藏自治区2026年普通高等学校招生规定",
+    "url": "https://gaokao.eol.cn/xi_zang/dongtai/202606/t20260607_2742067_1.shtml"
    }
   ],
   "supportLinks": [],
@@ -6942,7 +7032,7 @@
   "offerings": [],
   "mediumOfInstruction": "National law makes standard Chinese the basic language of instruction in all institutions\nIn ethnic autonomous areas, schools mainly of minority students give bilingual education\nA rule in Article 12 of the Education Law of the People's Republic of China",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "The unified examination is three subjects plus a combined paper, the three including a language\nThe foreign language may be English, Russian, Japanese, French, German or Spanish\nChinese, mathematics and the foreign language are each marked out of 150\nCandidates for colleges and majors requiring Tibetan sit a 150-mark Tibetan supplementary paper\nThe unified examination papers are set nationally by the state",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [],
@@ -6954,6 +7044,13 @@
    ],
    "mediumOfInstruction": [
     1,
+    2,
+    4
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2,
     2,
     4
    ]
@@ -9072,6 +9169,14 @@
    {
     "label": "Ilia State University, Faculty of Arts and Sciences — MA programme Applied Linguistics (qualification: MA in Linguistics)",
     "url": "https://iliauni.edu.ge/en/iliauni/AcademicDepartments/mecnierebata-da-xelovnebis-fakulteti-269/programebi-303/mecnierebata-da-xelovnebis-fakulteti-samagistro-programebi/gamoyenebiti-enatmecniereba"
+   },
+   {
+    "label": "Common National Entrance Examinations, Ministry of Education, Science and Youth of Georgia",
+    "url": "https://www.mes.gov.ge/content.php?id=7057&lang=eng"
+   },
+   {
+    "label": "Georgian Language Preparatory Educational Program: Summary of Interim Evaluation Report (NCER, 17 January 2025)",
+    "url": "https://www.ncer.gov.ge/en/post/georgian-language-preparatory-educational-program"
    }
   ],
   "supportLinks": [],
@@ -9096,7 +9201,7 @@
   "offerings": [],
   "mediumOfInstruction": "Georgian is the language of instruction at higher education institutions\nIn the Autonomous Republic of Abkhazia the language of instruction is Abkhazian as well\nOther languages allowed where an international agreement or the ministry so determines\nA rule stated in the Law of Georgia on Higher Education, not observed practice",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "Art and sport programme entrants pass three mandatory exams, a foreign language among them\nA graduate who studied Russian as the main school language may choose it as the foreign language\nAn Abkhazia-educated entrant may sit Abkhazian instead of Georgian language and literature\nA forty-credit one-year Georgian language preparatory programme runs at all institutions\nIts beneficiaries then enrol in their chosen programmes without entrance exams",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [
@@ -9111,6 +9216,13 @@
     1,
     2,
     4
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2,
+    3,
+    3
    ]
   }
  },
@@ -10644,6 +10756,10 @@
    {
     "label": "University of Delhi, Department of Linguistics — About the Department (started 1963; M.A. and doctoral programmes from 1966; UGC Centre for Advanced Studies from 2010-11)",
     "url": "https://du.ac.in/index.php?page=department-of-linguistics"
+   },
+   {
+    "label": "Integrated Teacher Education Programme (ITEP) under NEP 2020, Central Institute of Higher Tibetan Studies",
+    "url": "https://cihts.ac.in/about-itep/"
    }
   ],
   "supportLinks": [],
@@ -10699,7 +10815,7 @@
   "mediumOfInstruction": "AICTE started technical education in Indian languages in 2021-22, in line with NEP 2020\nEight engineering disciplines were offered in regional languages in 2022-23\nStated by the Minister of State for Education in a written Lok Sabha reply of August 2022",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "A four-year Integrated Teacher Education Programme trains undergraduates for a teaching career\nBy 2030 the minimum degree qualification for teaching will be a four-year integrated B.Ed.\nIt is being rolled out across selected central and state universities\nIt integrates general education with professional teacher education in one degree\nIt includes field-based training and internships in schools",
   "enrolment": [],
   "policyHistory": [
    {
@@ -10720,6 +10836,13 @@
     2,
     3,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    1,
+    2,
+    3,
+    3
    ]
   }
  },
@@ -10899,6 +11022,14 @@
    {
     "label": "Assam University Silchar, Department of Linguistics (established 1995) — courses offered: M.A. by course work and Ph.D.",
     "url": "http://www.aus.ac.in/linguistics-department/"
+   },
+   {
+    "label": "Gauhati University FYUGP syllabus: Ability Enhancement Courses (AEC), 2-credit each",
+    "url": "https://syllabus.gauhati.ac.in/fyugp/common/aec"
+   },
+   {
+    "label": "Gauhati University NEP Credit Framework for the Four-Year Undergraduate Programme",
+    "url": "https://web.gauhati.ac.in/nep/course-ug/credit-framework"
    }
   ],
   "supportLinks": [],
@@ -10962,7 +11093,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "All students take four Ability Enhancement Courses from two groups\nThe groups are English Communication and a Modern Indian Language, in semesters 1, 2, 5 and 6\nEnglish Communication is a compulsory course for everyone\nA student with a major or minor in an MIL subject may not take Ability MIL in it\nThe Ability Enhancement block is 8 credits covering MIL and English Usage",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -10972,6 +11103,13 @@
     1,
     2,
     3,
+    3
+   ],
+   "requiredStudy": [
+    1,
+    2,
+    2,
+    2,
     3
    ]
   }
@@ -12177,6 +12315,14 @@
    {
     "label": "Nagaland University, Kohima Campus, Department of Linguistics — Brief Introduction and Vision, and Course offered",
     "url": "https://kohima.nagalanduniversity.ac.in/lin"
+   },
+   {
+    "label": "Department of Teacher Education, Nagaland University Kohima Campus: aims, objectives and courses offered",
+    "url": "https://kohima.nagalanduniversity.ac.in/teach"
+   },
+   {
+    "label": "NCTE disclosures of the Department of Teacher Education, Nagaland University (M.Ed. recognition order)",
+    "url": "https://kohima.nagalanduniversity.ac.in/teach_ncte"
    }
   ],
   "supportLinks": [],
@@ -12222,7 +12368,7 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "The department aims to provide quality teacher training and research to the teaching profession\nIt prepares teacher educators to work in colleges of teacher education and schools\nThe department sits at Nagaland University's Kohima Campus, Meriema\nIts M.Ed. course holds a National Council for Teacher Education recognition order\nStudent teachers are acquainted with different methods of teaching",
   "enrolment": [],
   "policyHistory": [
    {
@@ -12236,6 +12382,13 @@
     2,
     3,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    1,
+    2,
+    3,
+    3
    ]
   }
  },
@@ -13384,6 +13537,10 @@
    {
     "label": "Sophia University — Master's (Doctoral) Program in Linguistics, Graduate School of Languages and Linguistics",
     "url": "https://www.sophia.ac.jp/eng/academics/g/g_fs/g_fs_ling/"
+   },
+   {
+    "label": "教員免許状に関するQ&A（文部科学省）: 教育職員免許法に基づく普通免許状・特別免許状の取得要件",
+    "url": "https://www.mext.go.jp/a_menu/shotou/kyoin/main13_a2.htm"
    }
   ],
   "supportLinks": [],
@@ -13429,7 +13586,7 @@
   "mediumOfInstruction": "Some universities run programmes where a degree can be earned in classes only in English\nNo such English-only degree programmes exist at colleges of technology or training colleges\nDescribed as an emerging practice by the government-approved Study in Japan site",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "No one may teach in a Japanese school without a teaching licence\nThe licence is earned at a university or junior college holding a teacher training course\nA first-class licence needs a bachelor's degree, a specialist licence a master's\nSixty-seven or more credits are generally needed for primary and secondary licences\nA special licence needs no university credits and is awarded after a prefectural review",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -13442,6 +13599,13 @@
     2,
     3,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
    ]
   }
  },
@@ -13959,6 +14123,10 @@
    {
     "label": "Kuwait University, جامعة الكويت.. منارة العلم — founding under Law 29 of 1966 and opening 27 November 1966",
     "url": "https://www.ku.edu.kw/ar/media-center/news/kuw272917"
+   },
+   {
+    "label": "Aptitude Test Guide & FAQs, Office of the Assistant Vice President for Evaluation and Measurement, Kuwait University",
+    "url": "https://cem.ku.edu.kw/faqs"
    }
   ],
   "supportLinks": [],
@@ -13972,7 +14140,7 @@
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "The Academic Aptitude Test is mandatory for all colleges except Science and Law\nTest subjects are mathematics, English and Arabic, with French twice a year\nThe passing grade for the English test is 60 per cent, for Arabic and French 50\nA student who has not taken it can only enrol in the College of Science or the College of Law\nMost Kuwait University colleges count the aptitude tests as one of the admissions criteria",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [
@@ -13998,6 +14166,13 @@
     1,
     2,
     3
+   ],
+   "entryRequirements": [
+    1,
+    2,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -14307,6 +14482,10 @@
    {
     "label": "University of Kelaniya, Department of Linguistics — MA in Linguistics, programme page (one-year and two-year formats, SLQF-aligned)",
     "url": "https://linguistics.kln.ac.lk/courses/postgraduate-programmes/ma-in-linguistics"
+   },
+   {
+    "label": "Postgraduate Diploma in Education (Teaching of English as a Second Language), Faculty of Education, University of Colombo",
+    "url": "https://edu.cmb.ac.lk/postgraduate/postgraduate-diploma-in-education-tesl/"
    }
   ],
   "supportLinks": [],
@@ -14362,7 +14541,7 @@
   "mediumOfInstruction": "At Peradeniya the Bachelor of Commerce may be followed in Sinhala, Tamil or English medium\nIts Faculty of Agriculture teaches in English and runs an English Language Teaching Unit\nIts five-year Bachelor of Dental Surgery is taught in English medium\nRecorded faculty by faculty in the UGC's handbook of courses of study, not one rule",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "A Postgraduate Diploma in Education for teaching English as a second language runs full time\nIt is run by the Faculty of Education of the University of Colombo\nThe course runs 12 months on weekdays\nA student must engage in supervised practical teaching over a 10-week period\nEntry needs a bachelor's degree with at least 30 credits of English language or literature",
   "enrolment": [],
   "policyHistory": [],
   "slots": {
@@ -14377,6 +14556,13 @@
     3,
     3,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
    ]
   }
  },
@@ -15791,6 +15977,14 @@
    {
     "label": "Universiti Malaya, Faculty of Languages and Linguistics — Master of Arts (Linguistics), General Programme Information and Course Structure",
     "url": "https://fll.um.edu.my/master-of-arts-linguistics"
+   },
+   {
+    "label": "Private Higher Educational Institutions Act 1996 (Act 555) s 43(3): Mata Pelajaran Umum (MPU) units, Swinburne Sarawak",
+    "url": "https://www.swinburne.edu.my/study/admission/general-studies-mata-pelajaran-umum-mpu/"
+   },
+   {
+    "label": "Malaysian Compulsory and General Studies (MPU) Modules, Taylor's University",
+    "url": "https://university.taylors.edu.my/en/student-life/manage-your-studies/malaysian-compulsory-and-general-studies-modules.html"
    }
   ],
   "supportLinks": [],
@@ -15824,7 +16018,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "Private higher educational institutions must teach their courses in the national language\nWith the Minister's approval a course may instead be taught in English\nIslamic religion may be taught in Arabic, again with the Minister's approval\nWhere English or Arabic is used the national language becomes a compulsory subject\nA rule in section 41 of the Private Higher Educational Institutions Act 1996",
-  "requiredStudy": "",
+  "requiredStudy": "Act 555 requires every private higher education institution to offer general studies units\nThose units must be taken and passed by both international and Malaysian students to graduate\nMalaysian students without a credit in SPM Bahasa Melayu take Bahasa Kebangsaan A\nThose who passed Bahasa Kebangsaan A at pre-university, foundation or diploma level are exempt\nAn exempt student must substitute another U2 module to meet graduation requirements",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -15835,6 +16029,13 @@
     2,
     3,
     3,
+    4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    2,
+    4,
     4
    ]
   }
@@ -16976,6 +17177,10 @@
    {
     "label": "Kinnaird College for Women Lahore, BS Applied Linguistics — four-year programme, 130 credit hours",
     "url": "https://kinnaird.edu.pk/bs-applied-linguistics/"
+   },
+   {
+    "label": "HEC Revised Teacher Education Roadmap, notified to universities 2 January 2023",
+    "url": "https://www.hec.gov.pk/english/news/news/Pages/Revised-Teacher-Roadmap.aspx"
    }
   ],
   "supportLinks": [],
@@ -17051,7 +17256,7 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "The Higher Education Commission set a revised Teacher Education Roadmap in January 2023\nIt is for all public and private universities and degree awarding institutes\nAn Associate Degree in Education admits a candidate to the third year of a four-year B.Ed.\nA holder of a sixteen-year qualification in another discipline may enrol in B.Ed. 1.5\nFrom Fall 2023 the only degree name is Bachelor of Education, strands shown on transcripts",
   "enrolment": [],
   "policyHistory": [
    {
@@ -17084,6 +17289,13 @@
     1,
     2,
     2,
+    3
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
     3
    ]
   }
@@ -18113,6 +18325,10 @@
    {
     "label": "NUS Department of English, Linguistics and Theatre Studies — Undergraduate Degrees in English Language and Linguistics",
     "url": "https://fass.nus.edu.sg/elts/ug_el/"
+   },
+   {
+    "label": "NTU General A Level Entry Requirements: Mother Tongue Language requirement (Singapore-Cambridge GCE A-Level)",
+    "url": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/singapore-cambridge-gce-a-level"
    }
   ],
   "supportLinks": [],
@@ -18207,7 +18423,7 @@
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
-  "entryRequirements": "",
+  "entryRequirements": "An A-level applicant must meet one of the Mother Tongue Language requirements\nA minimum D7 in Higher Mother Tongue taken at O level meets it\nA non-Tamil Indian language or French, German or Japanese may be offered in lieu\nThose who do not satisfy it may still apply and be admitted on a provisional basis\nAn exemption approved by the Ministry of Education also satisfies the requirement",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [
@@ -18231,6 +18447,13 @@
   "slots": {
    "degreeSubjects": [
     1,
+    2,
+    3,
+    4
+   ],
+   "entryRequirements": [
+    1,
+    2,
     2,
     3,
     4
