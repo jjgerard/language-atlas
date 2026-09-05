@@ -393,6 +393,23 @@ async function main() {
     console.log('  public/world.svg', (fs.statSync(sp).size / 1024).toFixed(0), 'KB');
   }
 
+  // ---------- country names, on their own, for pages that need only those ----
+  // The submission form asks for a country by NAME and derives its code, so a
+  // contributor never has to know that Sweden is SE. geometry.json carries the
+  // names but is 909 KB, which is not a reasonable price for a form; and the
+  // atlas API cannot supply them either, because it only knows places that are
+  // ENTRIES. The United Kingdom is the case that proves it: it is on the map
+  // as four nations and has no national entry, so a form built from entries
+  // alone could not offer it at all.
+  {
+    const names = {};
+    for (const [cc, c] of Object.entries(countries)) if (c.name) names[cc] = c.name;
+    const cp = path.join(__dirname, 'public', 'countries.json');
+    fs.writeFileSync(cp, JSON.stringify(names) + String.fromCharCode(10));
+    console.log('  public/countries.json', Object.keys(names).length, 'names,',
+                (fs.statSync(cp).size / 1024).toFixed(0), 'KB');
+  }
+
   const geometry = { countries, subunits, territories, anchors, areaMin: AREA_MIN };
   const out = path.join(__dirname, 'public', 'geometry.json');
   fs.mkdirSync(path.dirname(out), { recursive: true });

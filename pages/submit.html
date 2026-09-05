@@ -83,19 +83,16 @@ footer.foot {
       <h3>The place</h3>
       <div class="grid2">
         <div class="field">
-          <label for="f-cc">Country code (ISO 3166-1 alpha-2) *</label>
-          <input type="text" id="f-cc" maxlength="2" autocomplete="off" placeholder="e.g. SE, AU, NG" list="cc-list">
-          <datalist id="cc-list"></datalist>
+          <label for="f-country">Country *</label>
+          <input type="text" id="f-country" autocomplete="off" placeholder="e.g. Sweden, Australia, Nigeria" list="country-list">
+          <datalist id="country-list"></datalist>
         </div>
         <div class="field">
-          <label for="f-unit">Place name *</label>
-          <input type="text" id="f-unit" autocomplete="off" placeholder="e.g. Sweden — or Northern Ireland, Quebec, South Australia" list="unit-list">
+          <label for="f-unit">State, province or region</label>
+          <input type="text" id="f-unit" autocomplete="off" placeholder="Leave blank for the whole country" list="unit-list">
           <datalist id="unit-list"></datalist>
+          <p class="hint" id="unit-hint"></p>
         </div>
-      </div>
-      <div class="field">
-        <label class="check"><input type="checkbox" id="f-national" checked>
-          <span>This applies to the whole country. Uncheck it if the policy belongs to one nation, state or province — those are mapped separately.</span></label>
       </div>
     </div>
 
@@ -287,11 +284,63 @@ $('forwhich').addEventListener('click', e => {
 // Not a closed list — a contributor may be adding a place the map splits for
 // the first time — but knowing the names already used keeps the same system
 // from being entered twice under two spellings.
+// The country code used to be its own required field, asking a contributor to
+// know that Sweden is SE. It is derivable: every unit on the map carries its
+// code, and a country's name resolves to one.
+//
+// Removing it also removed the need for the "this applies to the whole country"
+// checkbox, which was ambiguous for a reason no wording would have fixed --
+// the place-name list offered Quebec and Sweden together, so a contributor
+// could tick "whole country" and pick a province. The two facts are now one
+// field each: a country, and optionally a region INSIDE it. Blank region means
+// the whole country, which is the same statement the checkbox was making
+// without the chance to contradict it.
+const UNITS_ALL = Object.values(atlas.units).flat();
+
+/** Every country, by name -> code. */
+async function countryIndex() {
+  const byName = new Map();
+  // The names come from the geometry build rather than from the entries,
+  // because a country can be on the map without having a national ENTRY: the
+  // United Kingdom is four nations and no national row, so an index built from
+  // entries alone could not offer "United Kingdom" at all.
+  try {
+    const names = await fetch('/countries.json').then(r => r.json());
+    for (const [cc, n] of Object.entries(names)) if (!byName.has(n)) byName.set(n, cc);
+  } catch { /* fall back to whatever the entries themselves name */ }
+  for (const u of UNITS_ALL) if (u.nat && !byName.has(u.name)) byName.set(u.name, u.cc);
+  return byName;
+}
+const COUNTRIES = await countryIndex();
+
+function ccFor(name) {
+  const t = String(name || '').trim();
+  if (!t) return '';
+  const exact = COUNTRIES.get(t);
+  if (exact) return exact;
+  const lower = t.toLowerCase();
+  for (const [n, cc] of COUNTRIES) if (n.toLowerCase() === lower) return cc;
+  return '';
+}
+
 function fillUnits() {
-  const units = (atlas.units[domain.id] || []);
-  $('cc-list').innerHTML = [...new Set(units.map(u => u.cc))].sort()
-    .map(cc => `<option value="${esc(cc)}">`).join('');
-  $('unit-list').innerHTML = units.map(u => `<option value="${esc(u.name)}">`).join('');
+  $('country-list').innerHTML = [...COUNTRIES.keys()].sort()
+    .map(n => `<option value="${esc(n)}">`).join('');
+  fillRegions();
+}
+
+// The region list is filtered to the chosen country, so it can no longer offer
+// a province of somewhere else. A country the atlas does not split shows none,
+// and says so rather than leaving an empty box the contributor has to guess at.
+function fillRegions() {
+  const cc = ccFor($('f-country').value);
+  const subs = UNITS_ALL.filter(u => u.cc === cc && !u.nat)
+    .map(u => u.name).filter((n, i, a) => a.indexOf(n) === i).sort();
+  $('unit-list').innerHTML = subs.map(n => `<option value="${esc(n)}">`).join('');
+  const hint = $('unit-hint');
+  if (!cc) hint.textContent = '';
+  else if (!subs.length) hint.textContent = 'This country is mapped as a single unit. Leave this blank, or name a region the map should split for the first time.';
+  else hint.textContent = subs.length + ' already mapped separately: ' + subs.slice(0, 4).join(', ') + (subs.length > 4 ? '…' : '');
 }
 
 function regionFor(cc) {
@@ -302,11 +351,20 @@ function regionFor(cc) {
 
 // Prefill from the map: the "I know this" button on an undocumented place
 // links straight here with the place already filled in.
-if (params.get('cc')) $('f-cc').value = params.get('cc').toUpperCase();
+// The map links here with a CODE, so it is turned back into the country's
+// name for the field that now asks for one.
+if (params.get('cc')) {
+  const want = params.get('cc').toUpperCase();
+  for (const [n, cc] of COUNTRIES) if (cc === want) { $('f-country').value = n; break; }
+}
 if (params.get('unit')) $('f-unit').value = params.get('unit');
-if (params.get('national') === '0') $('f-national').checked = false;
+
+// The region list follows the country, so it can never offer a province of
+// somewhere else.
+$('f-country').addEventListener('input', fillRegions);
 
 setDomain(domain || live[0]);
+fillRegions();
 
 // ---- send ------------------------------------------------------------
 function say(text, kind) {
@@ -315,18 +373,22 @@ function say(text, kind) {
 
 const ERRORS = {
   attestation_required: 'Please tick both boxes at the end before sending.',
-  missing_fields: 'A country code, a place name and your name are needed.',
+  missing_fields: 'A country the map recognises, and your name, are needed.',
   unknown_domain: 'That map is not accepting entries.',
   upstream_unavailable: 'The service holding this map did not respond. Nothing was lost — please try again shortly.',
   not_accepting_yet: 'This map is not taking entries just yet — it would have no safe way to keep yours. Please try again shortly, or email the maintainer.',
 };
 
 $('send').addEventListener('click', async () => {
-  const cc = $('f-cc').value.trim().toUpperCase();
+  const cc = ccFor($('f-country').value);
+  // A named region means a sub-national unit; blank means the country itself.
+  // That is the same fact the checkbox used to carry, without the chance to
+  // state it and then contradict it by picking a province from the same list.
+  const region = $('f-unit').value.trim();
   const body = {
     countryCode: cc,
-    unitName: $('f-unit').value.trim(),
-    isNational: $('f-national').checked,
+    unitName: region || $('f-country').value.trim(),
+    isNational: !region,
     region: regionFor(cc),
     by: $('f-by').value.trim(),
     inst: $('f-inst').value.trim(),
