@@ -15336,24 +15336,47 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Note de service du 11-10-2023 (NOR MENH2323436N), Mise a disposition aupres de la Polynesie francaise des personnels enseignants, d'education et des psychologues de l'education nationale - rentree 2024, Bulletin officiel n. 41 du 2 novembre 2023",
+    "url": "https://www.education.gouv.fr/bo/2023/Hebdo41/MENH2323436N"
+   },
+   {
+    "label": "Japan Foundation, Japanese-Language Education Country and Region Information: French Polynesia (FY2025)",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/f_polynesia_2.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "primaryRequirement": "",
   "secondaryRequirement": "",
   "upperSecondary": "",
   "languagesOffered": "",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Secondary posts filled by tenured French state teachers seconded to French Polynesia\nSecondment is to a named post for two years, renewable once\nNo Japanese-teacher training institution or programme in the territory\nJapanese is taught in one secondary school, Lycee La Mennais\nIts one native-speaker teacher covers both the Japanese and the English classes",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 1990,
+    "description": "Japanese introduced as an option at Lycee La Mennais"
+   }
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "PG",
@@ -15377,6 +15400,10 @@
    {
     "label": "Frost, Litteral, Acton et al., RISE PNG Vernacular Language Mapping Report, SIL PNG and Save the Children (November 2018)",
     "url": "https://www.pngpie.org/wp-content/uploads/2024/08/RISE-Vernacular-Language-Mapping-Report-2018.pdf"
+   },
+   {
+    "label": "Japan Foundation, Japanese-Language Education Country and Region Information: Papua New Guinea (FY2025)",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/papua_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -15391,7 +15418,7 @@
   "languagesOffered": "Four official languages: English, Tok Pisin, Hiri Motu and sign language\nElementary vernacular can be any of about 850 tokples, Tok Pisin or Hiri Motu included\nOral English enters in the second half of Elementary 2\nSince 2015 schools are to teach both a vernacular and an English elementary syllabus",
   "curriculumTime": "The 2003 elementary syllabus timetabled Language at 360 minutes per week\nOral English was introduced in the second half of Elementary 2",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Foreign languages are not set as taught subjects in the primary or secondary curriculum\nNo qualification rule for Japanese teachers, as Japanese is not a secondary subject\nSogeri National High's local Japanese teacher was hired for having studied in Japan\nNo Japanese-teacher training institution exists in the country\nUniversity of Goroka's Japanese course is suspended for want of a JICA volunteer",
   "uptake": [],
   "policyHistory": [
    {
@@ -15401,8 +15428,25 @@
    {
     "year": 1995,
     "description": "Education Act amendment No. 13 of 1995 defines elementary education as being in a language spoken by the student"
+   },
+   {
+    "year": 2008,
+    "description": "Japanese course at Port Moresby National High School suspended"
+   },
+   {
+    "year": 2017,
+    "description": "Japanese restarted at Sogeri National High with a teacher sent by its Japanese sister school"
    }
-  ]
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "PH",
@@ -15835,7 +15879,7 @@
   "languagesOffered": "Palauan traditional languages are national; Palauan and English are official\nThe Minister must provide for the teaching of both Palauan and English in all schools\nEvery chartered or publicly funded school must teach reading and writing in Palauan\nInstruction must follow the Palauan Orthography set by the Language Commission",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Secondary Japanese teachers need an associate degree or above plus a year of teaching\nChinese classes in Palau's schools spread with Taiwan government support\nNo Palauan Japanese teachers, classes are taught by locally hired Japanese nationals\nNo Japanese-teacher training institution or programme in Palau\nOne teacher each at Palau High, Mizenti High and Palau Community College",
   "uptake": [
    {
     "year": "2025",
@@ -15845,10 +15889,23 @@
   ],
   "policyHistory": [
    {
+    "year": 2016,
+    "description": "Chinese introduced as an elective for grades 11 and 12 at Palau High School"
+   },
+   {
     "year": 2026,
     "description": "A 2026 bill on K-3 Palauan medium is before the Senate and is not yet law"
    }
-  ]
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    2,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "PY",
@@ -16328,6 +16385,10 @@
    {
     "label": "Ministry of Education and Human Resources Development (Solomon Islands), annual report 2023",
     "url": "https://www.mehrd.gov.sb/documents?view=download&format=raw&fileId=5406"
+   },
+   {
+    "label": "Japan Foundation, Japanese-Language Education Country and Region Information: Solomon Islands (FY2025)",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/solomon_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -16342,9 +16403,17 @@
   "languagesOffered": "No foreign language appears in the national curriculum statement",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Japan Foundation country report: no specific provision on foreign-language education\nJunior secondary subjects are taught by specialist teachers under the national curriculum\nDocumented shortage is of qualified teachers for practical subjects, not for languages\nNo Japanese teaching confirmed at primary or secondary level",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "SC",
@@ -17681,7 +17750,7 @@
   "languagesOffered": "Tongan and English for all, with optional French, Japanese and Mandarin\nTongan is the main medium to end of Year 3; bilingual in Years 4-6\nEnglish becomes the main medium from Year 7 (Form 1) onwards\nEducation Act 2013 s. 48(f) makes promoting both languages a curriculum principle",
   "curriculumTime": "",
   "assessment": "Under the 2004 framework Year 11 leads to the Tonga School Certificate\nYear 12 follows a regional curriculum leading to the Pacific Senior Secondary Certificate\nForm 7 was to follow the new regional qualification or Cambridge International Examinations",
-  "teacherSupply": "",
+  "teacherSupply": "Usual route: major in Japanese at the teachers college, now Tonga National University\nJapan-trained graduates without a teaching qualification may teach as assistant teachers\nTonga National University suspended Japanese, citing a shortage of teachers able to teach it\n12 Tongan Japanese teachers taught at 7 institutions as of November 2025\nSt Andrew's High suspended Japanese when no teacher could be secured, resuming 2017",
   "uptake": [
    {
     "year": "2024",
@@ -17701,8 +17770,16 @@
   ],
   "policyHistory": [
    {
+    "year": 2002,
+    "description": "Course to train Tongan teachers of Japanese starts at the teachers college"
+   },
+   {
     "year": 2013,
     "description": "The Education Act 2013 names only Tongan and English"
+   },
+   {
+    "year": 2023,
+    "description": "Tonga Institute of Education absorbed into Tonga National University"
    }
   ],
   "slots": {
@@ -17710,6 +17787,13 @@
     1,
     1,
     1
+   ],
+   "teacherSupply": [
+    1,
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -17842,6 +17926,10 @@
    {
     "label": "Tuvalu National Curriculum Policy Framework, Ministry of Education, Youth and Sports (2013)",
     "url": "https://meys.gov.tv/images/curriculum/1._Revised_Tuvaulu_National_Curriculum_Policy_Framework_TNCPF.pdf"
+   },
+   {
+    "label": "Japan Foundation, Japanese-Language Education Country and Region Information: Tuvalu (FY2025)",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/toval_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -17856,7 +17944,7 @@
   "languagesOffered": "Only Tuvaluan and English are offered in all schools\nThe framework names no third or foreign language anywhere",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Curriculum's Language area offers only Tuvaluan and English in all schools\nTuvaluan and English are taught from the early primary years up to form 7\nJapan Foundation records no Japanese-language education in Tuvalu",
   "uptake": [],
   "policyHistory": [
    {
@@ -17867,7 +17955,14 @@
     "year": 2016,
     "description": "Education Sector Plan III 2016-20 names four cross-cutting issues"
    }
-  ]
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "TW",
@@ -21903,6 +21998,10 @@
    {
     "label": "The National Language Policy of the Republic of Vanuatu, Language Services Department (2020)",
     "url": "https://lsd.gov.vu/images/Legislation/policies/the-national-language-policy-of-the-republic-of-vanuatu.pdf"
+   },
+   {
+    "label": "Vanuatu Ministry of Education and Training, 2021 Annual Report",
+    "url": "https://moet.gov.vu/docs/annual-reports/MoET%20Annual%20Report%202021_2021.pdf"
    }
   ],
   "supportLinks": [],
@@ -21917,14 +22016,26 @@
   "languagesOffered": "Senior secondary may offer Mandarin, Japanese and Spanish where syllabuses exist\nOffered only to students with demonstrated ability in languages",
   "curriculumTime": "Year 4: 30 per cent of language time to the non-medium language, 70 to the medium\nYear 7: 40 per cent to the non-medium language, 60 to the medium",
   "assessment": "Year 12 examinations in both French and English, as a third or second language",
-  "teacherSupply": "",
+  "teacherSupply": "In English-medium schools pupils learn French as a foreign language, and the reverse\nTeacher training is parallel: every School of Education programme runs in English and French\nSecondary BEd subject pairs include Language Second and Foreign Language\nPolicy phased in as trained language teachers and pre-service training are developed",
   "uptake": [],
   "policyHistory": [
    {
     "year": 2001,
     "description": "National Education Act targets disadvantage by gender, ethnicity and status"
+   },
+   {
+    "year": 2019,
+    "description": "National University of Vanuatu Act No. 34 makes teachers college VITE the School of Education"
    }
-  ]
+  ],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "WF",
@@ -21932,24 +22043,42 @@
   "isNational": true,
   "region": "Oceania",
   "subregion": "Polynesia",
-  "status": "stub",
-  "confidence": "unverified-submission",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Note de service du 8-4-2025 (NOR MENH2505347N), Affectation a Wallis-et-Futuna des personnels enseignants du second degre, d'education et psychologues de l'education nationale - Rentree scolaire de fevrier 2026, Bulletin officiel n. 17 du 24 avril 2025",
+    "url": "https://www.education.gouv.fr/bo/2025/Hebdo24/MENH2505347N"
+   },
+   {
+    "label": "Vacance de poste (NOR MENH2616056V), Poste specifique d'enseignant du second degre a pourvoir a Wallis-et-Futuna pour la rentree scolaire de fevrier 2027, Bulletin officiel n. 27 du 2 juillet 2026",
+    "url": "https://www.education.gouv.fr/bo/2026/Hebdo27/MENH2616056V"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
-  "stubNote": "Not yet documented for this question. This place was added to the atlas from research on the Indigenous and regional languages map, which is where its distinctive language policy sits. If you teach, plan or research language provision here, please add what you know.",
-  "by": "",
+  "stubNote": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "primaryRequirement": "",
   "secondaryRequirement": "",
   "upperSecondary": "",
   "languagesOffered": "",
   "curriculumTime": "",
   "assessment": "",
-  "teacherSupply": "",
+  "teacherSupply": "Second-degree posts go to tenured French education nationale staff, all subjects alike\nPostings run two years on one post, renewable, with no internal transfer\nA 2027 lycee history-geography post taught in English requires DNL anglais certification\nLow teaching hours in some subjects mean service split across two or more schools\nTeachers may be required to teach part of their service in another subject",
   "uptake": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "teacherSupply": [
+    1,
+    1,
+    1,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "WS",
@@ -21969,6 +22098,10 @@
    {
     "label": "Constitution of the Independent State of Samoa, Art. 54",
     "url": "https://www.constituteproject.org/constitution/Samoa_2017"
+   },
+   {
+    "label": "Japan Foundation, Japanese-Language Education Country and Region Information: Samoa (FY2025)",
+    "url": "https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/samoa_2.pdf"
    }
   ],
   "supportLinks": [],
@@ -21983,7 +22116,7 @@
   "languagesOffered": "The Year 12-13 subject list contains only English and Samoan as languages\nNo foreign language appears anywhere in the national curriculum framework",
   "curriculumTime": "Year 1 units are 90 per cent Samoan and 10 per cent English\nYear 6 units are 50-50\nYears 7-8 are 40 per cent Samoan and 60 per cent English",
   "assessment": "Year 12 leads to the Samoan School Certificate, Year 13 to the Pacific Senior School Certificate\nSPELL tests Samoan, Mathematics and English in Years 4 and 6\nThe Year 12 certificate recognises those who choose to leave school at that point\nNational examinations assess whether a student has met performance standards for a year level",
-  "teacherSupply": "",
+  "teacherSupply": "Japan Foundation records no Japanese teaching at Samoan primary or secondary level\nNo qualification requirement is set for teachers of Japanese in Samoa\nAt the National University of Samoa the second foreign language is Chinese\nUniversity Japanese courses were suspended to end-2024 for want of a lecturer\nWhether the university runs Japanese from 2026 is undecided",
   "uptake": [],
   "policyHistory": [
    {
@@ -21993,6 +22126,10 @@
    {
     "year": 2009,
     "description": "Education Act makes education compulsory for all school-aged children, Art 4"
+   },
+   {
+    "year": 2024,
+    "description": "All Japanese courses at the National University of Samoa suspended for lack of a lecturer"
    }
   ],
   "slots": {
@@ -22000,6 +22137,13 @@
     1,
     2,
     3,
+    4
+   ],
+   "teacherSupply": [
+    1,
+    1,
+    1,
+    4,
     4
    ]
   }

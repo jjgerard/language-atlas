@@ -102,6 +102,30 @@ is a commercial index with no method published" are all useful results.
 
 Where a task below already names a candidate leverage source, test that FIRST.
 
+### Two that keep earning their keep
+
+**The Japan Foundation's per-country reports.** One PDF per country, at
+`https://www.jpf.go.jp/j/project/japanese/survey/area/country/2025/<name>_2.pdf`,
+and they carry this atlas's questions in named sections: 資格要件 (the
+qualification route), teacher counts with the month they were taken, why a
+course lapsed, and a 外国語教育 section describing the whole system's
+foreign-language provision rather than only Japanese. They exist for far more
+countries than you would guess -- eight of nine Pacific states in one batch --
+and they are often the ONLY published source for a small state.
+
+They are in Japanese. Quote the Japanese verbatim; the bullet may be English.
+And scope every bullet to what the source actually covers: a JF report speaks
+for Japanese, so "no training programme" from one means no JAPANESE training
+programme, and the bullet has to say so. Only the 外国語教育 section speaks for
+foreign languages generally.
+
+**The Wayback CDX API**, for settling whether an archived document exists at
+all instead of guessing filename variants one 404 at a time:
+
+    https://web.archive.org/cdx/search/cdx?url=<host>/<path prefix>/*&output=json&fl=original&collapse=urlkey
+
+It 504s on an unfiltered listing, so always pass a prefix or a filter.
+
 ## "EAL" is a word about English, so use it only where English is the school language
 
 The map id is `eal`, but its label is **Majority language acquisition**, and the
