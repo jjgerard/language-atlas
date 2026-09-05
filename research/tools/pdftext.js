@@ -164,9 +164,34 @@ function pdfText(buf) {
 const SEAM = String.fromCharCode(10) + "XSEAMX" + String.fromCharCode(10);
 const RUN = { encoding: "utf8", maxBuffer: 256 * 1024 * 1024, timeout: 120000, stdio: ["ignore", "pipe", "ignore"] };
 
+// pdftotext has three layout modes and they disagree about TABLES, which is
+// where most of the numbers in this atlas live. Default reflows, `-layout`
+// preserves the columns, `-raw` emits content-stream order. A table row that
+// reads "Japanese 16,936" under one mode can come out with the cells in a
+// different order under another, so a drafter quoting a figure from a
+// statistical yearbook could have a real, correctly transcribed quote that
+// this gate could not find.
+//
+// It cost real data. A drafter working the Japan Foundation's 2024 survey
+// extracted the learner table for 47 countries and filed only the ones whose
+// number also appeared in a PROSE sentence, because the table rows did not
+// survive all three modes -- leaving roughly fifteen units of already-located
+// data unwritten.
+//
+// So all three are run and the union is searched, which is this file's
+// existing principle: do not pick an extraction, search every one. It cannot
+// admit a fabricated quote, because every mode is a rendering of the same
+// bytes of the same file.
+const PDFTOTEXT_MODES = [[], ["-layout"], ["-raw"]];
 function viaPdftotext(file) {
-  try { return execFileSync("pdftotext", ["-enc", "UTF-8", file, "-"], RUN); }
-  catch { return ""; }
+  const out = [];
+  for (const mode of PDFTOTEXT_MODES) {
+    try {
+      const t = execFileSync("pdftotext", ["-enc", "UTF-8", ...mode, file, "-"], RUN);
+      if (t && t.trim().length > 40 && !out.includes(t)) out.push(t);
+    } catch { /* this mode is unavailable or failed; the others stand */ }
+  }
+  return out.join(SEAM);
 }
 
 function viaPyMuPDF(file) {
