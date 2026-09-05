@@ -84,8 +84,7 @@ footer.foot {
       <div class="grid2">
         <div class="field">
           <label for="f-country">Country *</label>
-          <input type="text" id="f-country" autocomplete="off" placeholder="e.g. Sweden, Australia, Nigeria" list="country-list">
-          <datalist id="country-list"></datalist>
+          <select id="f-country"><option value="">Choose a country</option></select>
         </div>
         <div class="field">
           <label for="f-region">Which part of it? *</label>
@@ -336,9 +335,49 @@ function ccFor(name) {
   return '';
 }
 
+// A <datalist> is not a dropdown on a phone. iOS Safari renders it as a
+// cramped strip of suggestions above the keyboard, Android Chrome shows
+// nothing at all until enough has been typed, and neither offers any way to
+// BROWSE 215 countries -- which is what someone who does not already know how
+// the atlas spells their country needs to do.
+//
+// A native <select> gets the platform's own full-screen picker on both, which
+// is the best control either OS has for a long list, and on a desktop it keeps
+// the type-ahead that a select has had since forever: typing "nig" jumps to
+// Niger. It also matches the region field directly beneath it, which was
+// already a select, so the two halves of one question stop looking like two
+// different kinds of question.
+//
+// And it removes the reopen problem outright. A select always reopens on the
+// next tap, so the focus-clears/blur-restores workaround that a datalist
+// needed -- and which on touch read as the field silently losing its answer --
+// is gone with it.
 function fillUnits() {
-  $('country-list').innerHTML = [...COUNTRIES.keys()].sort()
-    .map(n => `<option value="${esc(n)}">`).join('');
+  // Grouped by region, because an alphabetical list of 215 is a scroll and a
+  // list of five groups is a choice. Regions come from the atlas's own units
+  // so the grouping cannot drift from the map's.
+  // The national row first where there is one, and ANY unit of the country
+  // otherwise. Reading only national rows put the United Kingdom and Belgium
+  // under "Elsewhere": the UK is four nations with no national row and Belgium
+  // is one community with no national row, so neither has a national region to
+  // read -- and a contributor looking for the United Kingdom under Europe
+  // would have concluded it was not on the list.
+  const region = {};
+  for (const u of UNITS_ALL) if (u.region && !region[u.cc]) region[u.cc] = u.region;
+  for (const u of UNITS_ALL) if (u.nat && u.region) region[u.cc] = u.region;
+  const groups = new Map();
+  for (const [n, cc] of COUNTRIES) {
+    const r = region[cc] || 'Elsewhere';
+    if (!groups.has(r)) groups.set(r, []);
+    groups.get(r).push(n);
+  }
+  const order = [...groups.keys()].sort((a, b) =>
+    (a === 'Elsewhere') - (b === 'Elsewhere') || a.localeCompare(b));
+  $('f-country').innerHTML = '<option value="">Choose a country</option>'
+    + order.map(r => `<optgroup label="${esc(r)}">`
+        + groups.get(r).sort((a, b) => a.localeCompare(b))
+            .map(n => `<option value="${esc(n)}">${esc(n)}</option>`).join('')
+      + '</optgroup>').join('');
   fillRegions();
 }
 
@@ -389,38 +428,23 @@ function regionFor(cc) {
 // links straight here with the place already filled in.
 // The map links here with a CODE, so it is turned back into the country's
 // name for the field that now asks for one.
-if (params.get('cc')) {
-  const want = params.get('cc').toUpperCase();
-  for (const [n, cc] of COUNTRIES) if (cc === want) { $('f-country').value = n; break; }
-}
+const wantCC = (params.get('cc') || '').toUpperCase();
 const wantUnit = params.get('unit');
 
 // The region list follows the country, so it can never offer a province of
 // somewhere else.
-$('f-country').addEventListener('input', fillRegions);
-
-// Clicking the country box once a country is in it should offer the list
-// again. A datalist filters itself against what is typed, so a complete
-// country name matches only itself and the dropdown looks broken -- the only
-// way back to the full list was to delete the text by hand.
-//
-// So the field empties itself when you click into a settled value, and puts it
-// back if you leave without choosing anything. Nothing is lost by clicking.
-{
-  const box = $('f-country');
-  let stashed = '';
-  box.addEventListener('focus', () => {
-    if (box.value && COUNTRIES.has(box.value)) { stashed = box.value; box.value = ''; }
-  });
-  box.addEventListener('blur', () => {
-    if (!box.value && stashed) { box.value = stashed; }
-    stashed = '';
-    fillRegions();
-  });
-}
+$('f-country').addEventListener('change', fillRegions);
 $('f-region').addEventListener('change', syncOther);
 
+// setDomain builds the country options, and a <select> cannot hold a value
+// whose option does not exist yet -- so the prefill has to come after it.
+// It used to sit above, which a text input did not mind and a select drops on
+// the floor: every "I know this" link from the map would have arrived with an
+// empty country.
 setDomain(domain || live[0]);
+if (wantCC) {
+  for (const [n, cc] of COUNTRIES) if (cc === wantCC) { $('f-country').value = n; break; }
+}
 fillRegions();
 // A region arriving from the map link is selected if the atlas already has
 // it, and typed into the free-text box if it does not.
