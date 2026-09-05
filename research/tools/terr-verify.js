@@ -340,6 +340,17 @@ function quoteOn(quote, page) {
     if (s.insufficient) { console.log(NL + key + ": drafter reported nothing verifiable"); continue; }
     const ev = new Map();
     for (const e of (s.evidence || [])) if (e && e.bullet) ev.set(e.bullet, e);
+    // Bullets are unique, so keying evidence by bullet is right for them. Rows
+    // are not: a drafter keys programme evidence by institution and level, and
+    // Arizona's M.S. in Human Language Technology and M.A. in Native American
+    // Languages are both "University of Arizona master". They supplied a
+    // distinct quote and url for each, and the Map silently kept only the
+    // second -- so one real programme lost the evidence written for it and
+    // was dropped as unevidenced.
+    //
+    // The row matcher below therefore searches this LIST, which keeps every
+    // entry, rather than the Map's deduplicated values.
+    const evAll = (s.evidence || []).filter(e => e && e.bullet);
 
     const kept = {}, dropped = [];
     for (const [field, bullets] of Object.entries(s.fields || {})) {
@@ -474,23 +485,38 @@ function quoteOn(quote, page) {
     // (or its subject, where no institution is named) and, when the row states
     // a level, that level too. The quote check is unchanged and still does the
     // real work: this only decides WHICH quote a row is claiming.
+    // One evidence entry backs at most ONE row. Arizona runs an M.S. in Human
+    // Language Technology and an M.A. in Native American Languages; both are
+    // master's at the same institution, so "names the institution and the
+    // level" matches both rows to whichever entry came first, and the second
+    // programme would be gated by the first one's quote -- verified against a
+    // page about a different degree.
+    //
+    // So candidates are SCORED on how much of the row they actually name,
+    // subject included, and a chosen entry is consumed. Best match first,
+    // rather than first match wins.
     const keptProg = {};
     const norm = s2 => String(s2 || "").toLowerCase().replace(/\s+/g, " ").trim();
+    const wordsOf = s2 => new Set(norm(s2).split(" ").filter(w => w.length > 2));
     for (const [field, rows4] of Object.entries(s.programme || {})) {
       const good = [];
+      const used = new Set();
       for (const r of (rows4 || [])) {
         const who = norm(r && (r.institution || r.subject));
         if (!who) { dropped.push(field + ": row names neither an institution nor a subject"); continue; }
         const lvl = norm(r.level);
-        let e = ev.get(r.institution ? r.institution + " " + (r.level || "") : "");
-        if (!e) {
-          for (const cand of ev.values()) {
-            const b = norm(cand.bullet);
-            if (!b.includes(who)) continue;
-            if (lvl && !b.includes(lvl)) continue;
-            e = cand; break;
-          }
+        const want = wordsOf([r.institution, r.subject, r.level].filter(Boolean).join(" "));
+        let e = null, best = -1;
+        for (const cand of evAll) {
+          if (used.has(cand)) continue;
+          const b = norm(cand.bullet);
+          if (!b.includes(who)) continue;
+          if (lvl && !b.includes(lvl)) continue;
+          let score = 0;
+          for (const w of wordsOf(cand.bullet)) if (want.has(w)) score++;
+          if (score > best) { best = score; e = cand; }
         }
+        if (e) used.add(e);
         const label = field + " " + (r.institution || r.subject) + (r.level ? " " + r.level : "");
         if (!e) { dropped.push(label + ": no evidence entry"); continue; }
         const p = page.get(e.url);
