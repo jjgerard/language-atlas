@@ -450,7 +450,15 @@ function quoteOn(quote, page) {
       const good = [];
       for (const r of (rows2 || [])) {
         if (!r || !r.year || !r.value || !r.note) { dropped.push(field + ": row missing year, value or note"); continue; }
-        const e = ev.get(String(r.value));
+        // Keyed by the bare figure, or by the year and figure together. Both
+        // are in use and both are reasonable: the figure alone is what this
+        // file has always asked for, and "2024 178110" is what a drafter
+        // writes when a unit carries the same figure for two years, or two
+        // figures in one year, and the number alone cannot say which row it
+        // belongs to. A batch of 21 verified figures was lost to this --
+        // Cameroon's enrolment by second-language stream, read off two
+        // ministry yearbooks and checked against their printed totals.
+        const e = ev.get(String(r.value)) || ev.get(r.year + " " + r.value);
         if (!e) { dropped.push(field + ": no evidence for the figure " + r.value); continue; }
         const p = page.get(e.url);
         if (!p || p.status !== 200) { dropped.push(field + ": source returned " + (p ? p.status : "?") + " for " + r.value); continue; }

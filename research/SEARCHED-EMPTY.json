@@ -8,7 +8,8 @@
     "KM|Comoros": "IBE timetable pages are scanned images with no text layer; French is a langue d'enseignement there, so not a foreign-language time question either (2026-09)",
     "LB|Lebanon": "IBE lesson-timetable pages are scanned images with no text layer (2026-09)",
     "MG|Madagascar": "IBE gives no hours; French is a medium from year 3 and English only prospective (2026-09)",
-    "MZ|Mozambique": "IBE gives the stage English enters but no hours; timetable pages are scanned images (2026-09)"
+    "MZ|Mozambique": "IBE gives the stage English enters but no hours; timetable pages are scanned images (2026-09)",
+    "IR|Iran": "every timetable in the IBE profile is an image; the National Curriculum gives total hours per grade but no per-learning-area breakdown (2026-09)"
   },
   "fl.teacherSupply": {
     "BT|Bhutan": "English is the medium of instruction and Dzongkha the national language, so neither is a foreign language here; no foreign-language teacher source found (2026-09)"
@@ -32,5 +33,10 @@
     "CF|Central African Republic": "CAR's dated language instruments are national language planning, not higher education; Loi 97/014 has no language article (2026-09)",
     "CG|Congo": "Loi 25/95 has no language-of-instruction article; the sgg.cg and unicongo copies are scans with no text layer (2026-09)",
     "FM|Micronesia": "FSM Code Title 40 ch. 1 and ch. 7 carry no language provision; COM-FSM's Micronesian Studies is history, geography, government and culture, not language (2026-09)"
+  },
+  "fl.uptake": {
+    "AO|Angola": "Anuario Estatistico da Educacao 2022/23 has no subject or language breakdown at all; Cervantes documents 19 Spanish learners in 2011, all informal private classes, which is not school uptake (2026-09)",
+    "CG|Congo": "meppsa.cg returns 402 and the other ministry hosts do not resolve; the IBE profile names the LV2 options but carries no counts (2026-09)",
+    "CV|Cape Verde": "Anuario da Educacao 2021/22 breaks pupils down by curricular area, never by language; Cervantes' 250 Spanish learners are explicitly all adults (2026-09)"
   }
 }
