@@ -312,42 +312,54 @@ async function main() {
     subunits['GB:' + nation] = { polys, bbox: bboxOf(polys), area: totalArea(polys) };
   }
 
-  // ES: every autonomous community, each the union of its provinces.
+  // ES: the autonomous communities that have a CO-OFFICIAL LANGUAGE.
   //
-  // This was Catalonia alone, which was the wrong shape of decision: the
-  // Basque Country, Galicia, Valencia, the Balearics and Navarre all have a
-  // co-official language and their own education competence, and a map that
-  // splits out Catalonia and not them says something about Spain that is not
-  // true. Natural Earth carries the community in each province's `region`, so
-  // taking all of them costs one loop rather than one special case.
+  // This was Catalonia alone, which is the wrong shape of decision -- a map
+  // that splits out Catalonia and not the Basque Country says something about
+  // Spain that is not true. But all nineteen communities is the opposite
+  // error: Madrid, Murcia and Extremadura run the same language regime as the
+  // state, so splitting them adds units without adding a distinction.
   //
-  // Ceuta and Melilla come along as their own units. They are autonomous
-  // CITIES rather than communities, but they run their own schooling and the
-  // atlas's test is whether a place is a school system, not what it is called.
-  const ES_NAME = {
-    'Andalucía': 'Andalusia', 'Aragón': 'Aragon', 'Canary Is.': 'Canary Islands',
-    'Castilla y León': 'Castile and León', 'Castilla-La Mancha': 'Castile-La Mancha',
-    'Cataluña': 'Catalonia', 'Foral de Navarra': 'Navarre',
-    'Islas Baleares': 'Balearic Islands', 'País Vasco': 'Basque Country',
+  // The rule is a language regime, not an administrative tier: a community
+  // appears here when a language other than Castilian is co-official in it and
+  // schooling is conducted in that language. That is a rule rather than a
+  // selection, which is what makes the boundary defensible -- Asturias and
+  // Aragon are out because Asturian and Aragonese are recognised but not
+  // co-official, and if that changes they come in.
+  const ES_BILINGUAL = {
+    'Cataluña': 'Catalonia',
+    'País Vasco': 'Basque Country',
+    'Galicia': 'Galicia',
     'Valenciana': 'Valencian Community',
+    'Islas Baleares': 'Balearic Islands',
+    'Foral de Navarra': 'Navarre',
   };
   {
     const byRegion = {};
     for (const f of a10.features) {
       if (f.properties.iso_a2 !== 'ES') continue;
-      const r = f.properties.region;
-      if (!r) continue;
-      (byRegion[r] = byRegion[r] || []).push(...geojsonPolys(f.geometry));
+      const name = ES_BILINGUAL[f.properties.region];
+      if (!name) continue;
+      (byRegion[name] = byRegion[name] || []).push(...geojsonPolys(f.geometry));
     }
-    let n = 0;
-    for (const [region, parts] of Object.entries(byRegion)) {
-      const name = ES_NAME[region] || region;
+    for (const [name, parts] of Object.entries(byRegion)) {
       const polys = simplify(dissolve(parts), 2, 0.004);
       if (!polys.length) { console.warn('  ES: nothing left after simplify:', name); continue; }
       subunits['ES:' + name] = { polys, bbox: bboxOf(polys), area: totalArea(polys) };
-      n++;
     }
-    console.log('  ES', n, 'autonomous communities and cities');
+    console.log('  ES', Object.keys(byRegion).length, 'communities with a co-official language');
+    for (const want of Object.values(ES_BILINGUAL))
+      if (!byRegion[want]) console.warn('  ES: NOT FOUND in source:', want);
+  }
+
+  // ET: the regional states, which choose their own medium of instruction.
+  // Eleven units, already coarse, and the variation is as radical as anywhere
+  // in the atlas -- Oromiya schools in Afaan Oromo, Tigray in Tigrinya, the
+  // Southern Nations region in dozens of languages.
+  {
+    const before = Object.keys(subunits).length;
+    addSubunits(a10.features.filter(x => x.properties.iso_a2 === 'ET'), 'ET', 2, 0.004);
+    console.log('  ET', Object.keys(subunits).length - before, 'regional states');
   }
 
   // ---------- centroids (for dots on units with no usable polygon) ----------

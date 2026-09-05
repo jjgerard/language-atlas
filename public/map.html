@@ -693,7 +693,7 @@ async function loadAtlas() {
     // ?v= is the content hash, stamped in by assemble.js. geometry.json is
     // cached for a day, so without it a rebuild would not reach anyone who had
     // already loaded the map until that day was up.
-    fetch('geometry.json?v=ed4c0ac1f1').then(r => { if (!r.ok) throw new Error('geometry ' + r.status); return r.json(); }),
+    fetch('geometry.json?v=21ae109526').then(r => { if (!r.ok) throw new Error('geometry ' + r.status); return r.json(); }),
     fetch('api/atlas').then(r => { if (!r.ok) throw new Error('data ' + r.status); return r.json(); }),
   ]);
 

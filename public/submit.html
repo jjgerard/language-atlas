@@ -301,18 +301,30 @@ $('forwhich').addEventListener('click', e => {
 // without the chance to contradict it.
 const UNITS_ALL = Object.values(atlas.units).flat();
 
-/** Every country, by name -> code. */
+/** Every country, by name -> code. One name per country. */
 async function countryIndex() {
-  const byName = new Map();
-  // The names come from the geometry build rather than from the entries,
-  // because a country can be on the map without having a national ENTRY: the
-  // United Kingdom is four nations and no national row, so an index built from
-  // entries alone could not offer "United Kingdom" at all.
+  // Keyed by CODE while building, because the two name sources disagree for
+  // twelve countries and merging them by name offered both -- "United States"
+  // and "United States of America" in the same list.
+  //
+  // The ENTRY's name wins wherever there is one. That is not a matter of
+  // taste: a submission for a whole country uses this string as its unitName,
+  // so taking the geometry's name would have created a second United States
+  // beside the real one. It also reads better, since the geometry names are
+  // Natural Earth's abbreviations -- "Dominican Rep.", "Eq. Guinea", "S.
+  // Sudan".
+  const byCC = new Map();
+  // Geometry first, as the fallback layer: a country can be on the map with no
+  // national ENTRY at all. The United Kingdom is four nations and no national
+  // row, and Belgium is one community and no national row, so an index built
+  // from entries alone could not offer either.
   try {
     const names = await fetch('/countries.json').then(r => r.json());
-    for (const [cc, n] of Object.entries(names)) if (!byName.has(n)) byName.set(n, cc);
-  } catch { /* fall back to whatever the entries themselves name */ }
-  for (const u of UNITS_ALL) if (u.nat && !byName.has(u.name)) byName.set(u.name, u.cc);
+    for (const [cc, n] of Object.entries(names)) byCC.set(cc, n);
+  } catch { /* the entries alone will have to do */ }
+  for (const u of UNITS_ALL) if (u.nat) byCC.set(u.cc, u.name);
+  const byName = new Map();
+  for (const [cc, n] of byCC) if (!byName.has(n)) byName.set(n, cc);
   return byName;
 }
 const COUNTRIES = await countryIndex();
@@ -389,6 +401,26 @@ const wantUnit = params.get('unit');
 // The region list follows the country, so it can never offer a province of
 // somewhere else.
 $('f-country').addEventListener('input', fillRegions);
+
+// Clicking the country box once a country is in it should offer the list
+// again. A datalist filters itself against what is typed, so a complete
+// country name matches only itself and the dropdown looks broken -- the only
+// way back to the full list was to delete the text by hand.
+//
+// So the field empties itself when you click into a settled value, and puts it
+// back if you leave without choosing anything. Nothing is lost by clicking.
+{
+  const box = $('f-country');
+  let stashed = '';
+  box.addEventListener('focus', () => {
+    if (box.value && COUNTRIES.has(box.value)) { stashed = box.value; box.value = ''; }
+  });
+  box.addEventListener('blur', () => {
+    if (!box.value && stashed) { box.value = stashed; }
+    stashed = '';
+    fillRegions();
+  });
+}
 $('f-region').addEventListener('change', syncOther);
 
 setDomain(domain || live[0]);
