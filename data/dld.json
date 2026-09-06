@@ -410,7 +410,13 @@
   "workforce": "1,668 teachers trained in special education under the Angola-Brazil cooperation agreement\nThe same decree notes little technical and professional preparation of most educational agents",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
-  "identifiedPrevalence": "2015 data, reported in Presidential Decree 187/17\n28,467 pupils identified with special education needs\nThe breakdown names intellectual, hearing, physical and visual only\nThat omission is itself evidence no speech category is counted",
+  "identifiedPrevalence": [
+   {
+    "year": 2015,
+    "value": "28467",
+    "note": "Students reported with special education needs, under the Ministry of Education; data from 2015 as collected for the National Policy for Special Education oriented towards School Inclusion (Presidential Decree No. 187/17). The published breakdown names intellectual disability, hearing impairment, physical disability and visual impairment only -- there is no speech or language category, so this figure does not count language disorder"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2012,
