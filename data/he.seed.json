@@ -13,6 +13,18 @@
    {
     "label": "Llei d'universitats, del 30 de juliol de 1997, art. 7 (Oficialitat i us de la llengua) — consolidated text",
     "url": "https://portaljuridicandorra.ad/L19970730A_1"
+   },
+   {
+    "label": "Universitat d'Andorra, Bachelor of Teaching and Learning (batxelor en ciencies de l'educacio), programme page",
+    "url": "https://www.uda.ad/en/bachelor-of-teaching-and-learning/"
+   },
+   {
+    "label": "Universitat d'Andorra, Batxelor en Llengua catalana, programme leaflet (March 2023)",
+    "url": "https://www.uda.ad/wp-content/uploads/2023/03/BLCatalana.pdf"
+   },
+   {
+    "label": "Llei 17/2018, del 26 de juliol, d'ordenament del sistema educatiu andorra (consolidated text, Portal Juridic del Principat d'Andorra)",
+    "url": "https://portaljuridicandorra.ad/L2018017_1"
    }
   ],
   "supportLinks": [],
@@ -36,12 +48,16 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "Universitat d'Andorra bachelor trains early childhood and primary teachers for Andorra\nBatxelor en Llengua catalana lists teaching Catalan in maternal and primary as an outlet\nTeaching degree is multi-lingual: a language of mention, English or French, beside Catalan\nForeign-language teaching in primary needs enabling training in that speciality\nSegona ensenyanca teachers need a second-cycle degree in the corresponding speciality",
   "enrolment": [],
   "policyHistory": [
    {
     "year": 1997,
     "description": "Llei d'universitats makes Catalan the official language of higher education centres"
+   },
+   {
+    "year": 2008,
+    "description": "Llei 12/2008 changes the structure of university qualifications, prompting a review of entry to the teaching profession"
    }
   ],
   "slots": {
@@ -49,6 +65,13 @@
     1,
     3,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
    ]
   }
  },
@@ -213,6 +236,22 @@
    {
     "label": "Ligj Nr. 80/2015 “Për arsimin e lartë dhe kërkimin shkencor në institucionet e arsimit të lartë në Republikën e Shqipërisë”, neni 88 Gjuha e studimeve and neni 142 Shfuqizime — text as approved 22.7.2015, later amendments not reflected",
     "url": "https://qsha.gov.al/wp-content/uploads/2025/11/ligj-2015-07-22-80.pdf"
+   },
+   {
+    "label": "Eurydice, Albania: Initial education for teachers working in early childhood and school education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/albania/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Albania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AL&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Albania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AL&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Albania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AL&time=2023"
    }
   ],
   "supportLinks": [],
@@ -238,8 +277,24 @@
   "mediumOfInstruction": "Study programmes are normally offered in the Albanian language\nA programme may also run in an official EU language if approved when it opens\nJoint programmes offered with foreign higher education institutions are exempt\nSo are programmes whose object is the teaching of foreign languages",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Initial teacher education is provided by public and private higher education institutions\nUpper secondary teachers prepared at the universities of Tirana, Gjirokastër, Korça, Shkodër\nLower secondary teachers trained at Elbasan, Gjirokastër, Korça, Shkodër and Vlora\nLower and upper secondary teachers take a 120-credit second-cycle master\nA quarter of second-cycle credits must be general psycho-pedagogical education",
+  "enrolment": [
+   {
+    "year": 2021,
+    "value": "7171",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "5801",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "4355",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2007,
@@ -261,6 +316,13 @@
   "slots": {
    "mediumOfInstruction": [
     1,
+    2,
+    3,
+    3
+   ],
+   "teacherPipeline": [
+    1,
+    2,
     2,
     3,
     3
@@ -600,6 +662,26 @@
    {
     "label": "Paris Lodron Universität Salzburg — Bachelorstudium Linguistik, programme page",
     "url": "https://www.plus.ac.at/studium/studienangebot/bachelorstudien/linguistik-2/"
+   },
+   {
+    "label": "Eurydice, Austria: Initial education for teachers working in early childhood and school education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/austria/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Austria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AT&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Austria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AT&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Austria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AT&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Austria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AT&time=2023"
    }
   ],
   "supportLinks": [],
@@ -684,18 +766,54 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Higher education trains all school teachers since the 2013 New Teacher Training Act\nSecondary-general route held by universities and university colleges of teacher education\nOne-year induction with a personal mentor follows the degree\nEvery teaching degree carries 3-6 ECTS German as a second language and language education\nStudy places are allocated on points, not open entry",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "15780",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "15095",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "14148",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "12779",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
+   {
+    "year": 2013,
+    "description": "Federal Act on the New Teacher Training Scheme moves all teacher training into tertiary bachelor and master programmes"
+   },
    {
     "year": 2025,
     "description": "The Austrian Sign Language certificate is extended with three specialist strands"
+   },
+   {
+    "year": 2025,
+    "description": "Structural reform of Austrian teacher training starts, shortening the teaching bachelor to six semesters"
    }
   ],
   "slots": {
    "degreeSubjects": [
     2,
     4,
+    4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
     4
    ]
   }
@@ -1762,6 +1880,26 @@
    {
     "label": "Okvirni zakon o visokom obrazovanju u Bosni i Hercegovini (\"Sl. glasnik BiH\" 59/2007, 59/2009), član 22 — consolidated to 59/2009",
     "url": "https://www.paragraf.ba/propisi/bih/okvirni-zakon-o-visokom-obrazovanju-u-bosni-i-hercegovini.html"
+   },
+   {
+    "label": "Eurydice, Bosnia and Herzegovina: Initial education for teachers working in early childhood and school education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/bosnia-and-herzegovina/initial-education-teachers-working-early-childhood-and-school"
+   },
+   {
+    "label": "European Commission/EACEA/Eurydice, Key Data on Teaching Languages at School in Europe - 2023 Edition, Chapter D (Teachers), Section I: Qualifications and training",
+    "url": "https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Bosnia and Herzegovina, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BA&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Bosnia and Herzegovina, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BA&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Bosnia and Herzegovina, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BA&time=2023"
    }
   ],
   "supportLinks": [],
@@ -1776,14 +1914,39 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Eurydice chapter details only ECEC teacher training, not subject teacher training\nTeachers educated through undergraduate and graduate university study programmes\nForeign languages are the only primary subject area taught by specialist teachers\nEvery one of the eight public universities runs preschool education programmes\nEach canton or entity ministry sets the number of students enrolled",
+  "enrolment": [
+   {
+    "year": 2021,
+    "value": "808",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "736",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "749",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2007,
     "description": "The Framework Law lets institutions set one or more constituent peoples' languages as official"
    }
-  ]
+  ],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BB",
@@ -2161,15 +2324,40 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Southeast Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Eurydice, Bulgaria: Initial education for teachers working in early childhood and school education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/bulgaria/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "European Commission/EACEA/Eurydice, Key Data on Teaching Languages at School in Europe - 2023 Edition, Chapter D (Teachers), Section I: Qualifications and training",
+    "url": "https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Bulgaria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BG&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Bulgaria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BG&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Bulgaria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BG&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Bulgaria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BG&time=2023"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -2178,9 +2366,39 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
-  "policyHistory": []
+  "teacherPipeline": "Teachers hold higher education plus the professional qualification teacher\nQualification acquired at higher schools accredited in Pedagogical Sciences or the field\nForeign language teachers must have graduated higher education in that professional direction\nLanguages beyond English, Spanish, Italian, German, Russian and French need no teacher award\nPrimary generalists need a supplementary language programme to teach a foreign language",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "6915",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "6963",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "7185",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "6876",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
+  "policyHistory": [],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "BH",
@@ -3046,6 +3264,14 @@
    {
     "label": "Belarusian State University, Faculty of Philology — магистратура по специальности 7-06-0232-01 Языкознание",
     "url": "https://ums.bsu.by/ru/faculty-of-philology/linguistics-masters"
+   },
+   {
+    "label": "Minsk State Linguistic University, Historyja (history page), Internet Archive capture of 25 July 2024",
+    "url": "https://web.archive.org/web/20240725044400/https://mslu.by/university/general-information/text_history.php"
+   },
+   {
+    "label": "Minsk State Linguistic University, MGLU segodnya (MSLU today), Internet Archive capture of 20 July 2024",
+    "url": "https://web.archive.org/web/20240720003755/https://mslu.by/university/general-information/text_MSLU_today.php"
    }
   ],
   "supportLinks": [],
@@ -3071,9 +3297,25 @@
   "mediumOfInstruction": "The state languages of Belarus are the main languages of instruction and upbringing\nTeaching in a foreign language needs suitable conditions and Ministry agreement\nThe founder of each institution determines the language of instruction",
   "requiredStudy": "Study of Belarusian is compulsory in vocational and higher education",
   "entryRequirements": "",
-  "teacherPipeline": "",
+  "teacherPipeline": "MSLU has trained foreign language teachers for secondary schools since its founding\nMinsk State Linguistic University, to 1993 the Pedagogical Institute of Foreign Languages\nTraining now covers 24 foreign languages\nQualification awarded is Linguist, teacher of two foreign languages\nGraduate first workplace is set by distribution, run by the state education institution",
   "enrolment": [],
   "policyHistory": [
+   {
+    "year": 1948,
+    "description": "Minsk State Pedagogical Institute of Foreign Languages begins work as a separate higher education institution"
+   },
+   {
+    "year": 1956,
+    "description": "Five-year training introduced, preparing specialists in a foreign language plus Russian or Belarusian"
+   },
+   {
+    "year": 1964,
+    "description": "Preparation switches to two foreign languages instead of a foreign plus a national language"
+   },
+   {
+    "year": 1993,
+    "description": "Institute of Foreign Languages renamed Minsk State Linguistic University"
+   },
    {
     "year": 2011,
     "description": "Education Code No. 243-Z is signed, having passed the House of Representatives in 2010"
@@ -3083,6 +3325,13 @@
    "mediumOfInstruction": [
     1,
     2,
+    4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    2,
+    3,
     4
    ]
   }
@@ -4983,7 +5232,32 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Eurydice, Switzerland: Initial education for teachers working in early childhood and school education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/switzerland/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "European Commission/EACEA/Eurydice, Key Data on Teaching Languages at School in Europe - 2023 Edition, Chapter D (Teachers), Section I: Qualifications and training",
+    "url": "https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Switzerland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CH&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Switzerland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CH&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Switzerland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CH&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Switzerland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CH&time=2023"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -5054,8 +5328,29 @@
   "mediumOfInstruction": "Fribourg is the only Swiss university with a full course range in each of two languages\nIn most cases students choose French or German as their sole language of study\nSome programmes are partly French and partly German, as the study plan sets out\nWhere parallel courses run in both, students may follow either language",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Teacher training for every school level is carried out at institutions of higher education\nMainly universities of teacher education, also cantonal universities and the federal institutes\nCantons maintain and fund the universities of teacher education, not the Confederation\nLower secondary degree runs to 270-300 ECTS and covers three or four subjects\nCantons must ensure adequate qualifications for foreign languages and CLIL methodology",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "7535",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "7456",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "7394",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "7636",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [],
   "slots": {
    "degreeSubjects": [
@@ -5067,6 +5362,13 @@
     2,
     3,
     4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    2,
+    3,
+    3
    ]
   }
  },
@@ -8748,6 +9050,26 @@
    {
     "label": "Open University of Cyprus — MA in Greek Linguistics and Literature, programme page",
     "url": "https://www.ouc.ac.cy/index.php/en/studies/master/studies-degrees-master-egl-2"
+   },
+   {
+    "label": "Eurydice, Cyprus: Initial education for teachers working in early childhood and school education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/cyprus/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Cyprus, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CY&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Cyprus, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CY&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Cyprus, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CY&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Cyprus, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CY&time=2023"
    }
   ],
   "supportLinks": [],
@@ -8783,14 +9105,56 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Secondary teachers need a bachelor in a subject taught in Cypriot secondary schools\nNine-month pre-service course delivered by the University of Cyprus Department of Education\nPrimary and pre-primary degrees come from the University of Cyprus Department of Education\nPre-service course is 48 ECTS of theory and practice taken after the subject degree\nTwelve scholarships a year on the in-service course for expatriate teachers of Greek",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "1063",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1201",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1078",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "986",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1989,
     "description": "Law 144/1989 sets the University's languages of instruction as Greek and Turkish"
+   },
+   {
+    "year": 1992,
+    "description": "Cyprus Pedagogical Academy abolished on the establishment of the University of Cyprus"
+   },
+   {
+    "year": 2000,
+    "description": "Pedagogical Institute begins a training programme for expatriate teachers who teach the Greek language"
+   },
+   {
+    "year": 2007,
+    "description": "Nine-month pre-service course for secondary teachers moved to the University of Cyprus Department of Education"
    }
-  ]
+  ],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CZ",
@@ -8826,6 +9190,26 @@
    {
     "label": "Masarykova univerzita FF — Obecná jazykověda (N0232A090004), navazující magisterské studium",
     "url": "https://www.phil.muni.cz/pro-uchazece/navazujici-magisterske-studium/24125-obecna-jazykoveda"
+   },
+   {
+    "label": "Eurydice, Czechia: Initial education for teachers working in early childhood and school education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/czechia/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Czechia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CZ&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Czechia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CZ&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Czechia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CZ&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Czechia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CZ&time=2023"
    }
   ],
   "supportLinks": [],
@@ -8891,8 +9275,29 @@
   "mediumOfInstruction": "A public university running a study programme in a foreign language may charge fees",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Language teachers are among those qualified for a single subject at secondary level\nInitial training for foreign language teachers follows the same rules as other teachers\nAlso qualified via teacher training for language schools running state language exams\nSince 2015 a native speaker with any higher education degree counts as fully qualified\nExtra subject added through a lifelong learning programme at a higher education institution",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "8085",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "8843",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "9256",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "9643",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1882,
@@ -8901,11 +9306,22 @@
    {
     "year": 1939,
     "description": "All Czech higher education institutions are closed on 17 November 1939"
+   },
+   {
+    "year": 2015,
+    "description": "Native speakers of a foreign language holding any higher education degree recognised as fully qualified to teach it"
    }
   ],
   "slots": {
    "mediumOfInstruction": [
     2
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
    ]
   }
  },
@@ -8931,6 +9347,30 @@
    {
     "label": "Universität Potsdam: Ein-Fach-Bachelor Linguistik, Studieninhalte und Leistungsumfang",
     "url": "https://www.uni-potsdam.de/de/studium/studienangebot/bachelor/ein-fach-bachelor/linguistik-ein-fach"
+   },
+   {
+    "label": "Eurydice, Germany: Initial education for teachers working in early childhood and school education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/germany/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Kultusministerkonferenz, Laendergemeinsame inhaltliche Anforderungen fuer die Fachwissenschaften und Fachdidaktiken in der Lehrerbildung (Beschluss vom 16.10.2008 i. d. F. vom 08.02.2024), section 12 Neue Fremdsprachen",
+    "url": "https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2008/2008_10_16-Fachprofile-Lehrerbildung.pdf"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Germany, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DE&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Germany, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DE&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Germany, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DE&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Germany, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DE&time=2023"
    }
   ],
   "supportLinks": [],
@@ -9039,8 +9479,29 @@
   "mediumOfInstruction": "Language training at Leipzig's Sorabistik institute is predominantly in Upper or Lower Sorbian",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Teacher training is a higher education course plus practical training in a school setting\nIn all Laender the course is at a university or equivalent higher education institution\nDegree covers two subject areas and their didactics at bachelor and master level\nLaender decide between the Staatsexamen and a consecutive bachelor and master structure\nKMK subject profile Neue Fremdsprachen sets content for modern language teacher degrees",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "194078",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "186239",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "180806",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "175701",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1716,
@@ -9061,6 +9522,14 @@
    {
     "year": 1968,
     "description": "The second GDR higher-education reform renames it the Institut fuer Sorabistik"
+   },
+   {
+    "year": 2004,
+    "description": "Standing Conference adopts Standards for teacher training: Educational sciences, defining requirements for teaching staff"
+   },
+   {
+    "year": 2008,
+    "description": "Standing Conference resolves country-wide content requirements for subject studies and subject didactics in teacher training"
    }
   ],
   "slots": {
@@ -9070,6 +9539,13 @@
    ],
    "mediumOfInstruction": [
     1
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
    ]
   }
  },
@@ -9583,6 +10059,26 @@
    {
     "label": "Aarhus University — Kandidatuddannelsen i Lingvistik, programme page",
     "url": "https://kandidat.au.dk/lingvistik"
+   },
+   {
+    "label": "Eurydice, Denmark: Initial education for teachers working in early childhood and school education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/denmark/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Denmark, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DK&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Denmark, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DK&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Denmark, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DK&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Denmark, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DK&time=2023"
    }
   ],
   "supportLinks": [],
@@ -9647,8 +10143,29 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Primary and lower secondary language teachers train on the bachelor degree in education\nUniversity colleges offer that four-year, 240 ECTS programme\nUpper secondary teachers take a university subject master plus a one-year postgraduate course\nStudents can also choose Danish as a second language as a school subject\nQuota 1 entry needs an upper secondary average of 7 or above",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "11394",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "9721",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "8939",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "8026",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2021,
@@ -9659,6 +10176,13 @@
    "degreeSubjects": [
     1,
     2
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -10013,6 +10537,34 @@
    {
     "label": "History of the University of Tartu (official university history page)",
     "url": "https://ut.ee/en/content/history-university-tartu"
+   },
+   {
+    "label": "Eurydice, Estonia: Initial education for teachers working in early childhood and school education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/estonia/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "European Commission/EACEA/Eurydice, Key Data on Teaching Languages at School in Europe - 2023 Edition, Chapter D (Teachers), Section I: Qualifications and training",
+    "url": "https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf"
+   },
+   {
+    "label": "Eurydice, Estonia: National reforms in general school education (transition to Estonian-language education)",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/estonia/national-reforms-general-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Estonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EE&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Estonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EE&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Estonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EE&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Estonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EE&time=2023"
    }
   ],
   "supportLinks": [],
@@ -10085,8 +10637,29 @@
   "mediumOfInstruction": "The Tartu master's in Estonian and Finno-Ugric Languages is English-based in its linguistics",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Initial teacher training is carried out at higher education level in universities\nNo top-level rule on whether primary foreign language teachers are generalists or specialists\nSubject and class teachers of general education schools are trained at master level\nUniversities running teacher education give in-service training for Estonian-medium teaching\nAdmission on merit: earlier grades plus a teacher professional aptitude test",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "1617",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1569",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1585",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1594",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1802,
@@ -10107,6 +10680,10 @@
    {
     "year": 1942,
     "description": "The planned German-medium Ostland-Universitaet opens instead with instruction in Estonian"
+   },
+   {
+    "year": 2025,
+    "description": "Second year of the transition to Estonian-language education reaches all kindergartens and grades 1, 2, 4 and 5"
    }
   ],
   "slots": {
@@ -10117,6 +10694,13 @@
    ],
    "mediumOfInstruction": [
     1
+   ],
+   "teacherPipeline": [
+    1,
+    1,
+    3,
+    3,
+    4
    ]
   }
  },
@@ -10457,6 +11041,30 @@
    {
     "label": "UCM Área de Lingüística General: Grado en Lingüística y Lenguas Aplicadas, plan 2019",
     "url": "https://www.ucm.es/linguistica/grado-linguistica"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Spain - Initial education for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/spain/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Spain - Conditions of service for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/spain/conditions-service-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Spain, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=ES&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Spain, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=ES&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Spain, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=ES&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Spain, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=ES&time=2023"
    }
   ],
   "supportLinks": [],
@@ -10512,9 +11120,34 @@
   "mediumOfInstruction": "Universities must promote their territories' own official languages as teaching languages\nThe law leaves the detail to each university's statutes and regional rules",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Master's Degree in Teacher Training required for secondary, VET and language teaching\nUniversities autonomously set the study programmes within State minimum requirements\nPrimary degree offers specialisations in foreign language and in hearing and language\nIn communities with a co-official language, entry needs proficiency in it and in Spanish\nSelected candidates never exceed the number of posts advertised in the teaching competition",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "63106",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "63878",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "62839",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "60760",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
+   {
+    "year": 2020,
+    "description": "Organic Law 3/2020 (LOMLOE) amends the 2006 Education Act governing teaching qualifications"
+   },
    {
     "year": 2023,
     "description": "Ley Organica 2/2023 has universities promote their territories' own official languages"
@@ -10523,6 +11156,13 @@
   "slots": {
    "mediumOfInstruction": [
     1,
+    4
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
     4
    ]
   }
@@ -11458,6 +12098,34 @@
    {
     "label": "Giellagas Institute, University of Oulu — History of Giellagas Institute (1970, 2001, 2004)",
     "url": "https://www.oulu.fi/en/university/faculties-and-units/faculty-humanities/giellagas-institute"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Finland - Initial education for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/finland/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Abo Akademi University, Amneslarare (subject teacher education programme), abo.fi",
+    "url": "https://www.abo.fi/utbildningsprogram/utbildningslinjen-for-amneslarare/"
+   },
+   {
+    "label": "Asetus opetustoimen henkiloston kelpoisuusvaatimuksista 986/1998, Finlex consolidated text (Internet Archive snapshot 2 July 2024)",
+    "url": "https://web.archive.org/web/20240702145223/https://www.finlex.fi/fi/laki/ajantasa/1998/19980986"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Finland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FI&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Finland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FI&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Finland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FI&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Finland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FI&time=2023"
    }
   ],
   "supportLinks": [],
@@ -11489,8 +12157,29 @@
   "mediumOfInstruction": "On the minor, teaching moves gradually into North Sami after the first year",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "All teacher education is provided by higher education institutions\nAbo Akademi subject-teacher practice takes place in a Swedish-language school in Finland\nAbo Akademi subject-teacher subjects include engelska, finska and franska\nSubject teachers need at least 60 credits of subject studies in each subject they teach\nBasic-education teachers need excellent oral and written command of the school's language",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "11832",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "11156",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "10619",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "10337",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1970,
@@ -11515,6 +12204,13 @@
    ],
    "mediumOfInstruction": [
     2
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    2,
+    3,
+    3
    ]
   }
  },
@@ -11852,6 +12548,38 @@
    {
     "label": "Loi Fioraso art. 2, amending Code de l'education art. L121-3 (langue de l'enseignement)",
     "url": "https://avenir-langue-francaise.org/legislation/la-langue-denseignement/"
+   },
+   {
+    "label": "Eurydice, National Education Systems: France - Initial education for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/france/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Ministere de l'Education nationale, devenirenseignant.gouv.fr, Enseigner au college ou au lycee general : le Capes",
+    "url": "https://www.devenirenseignant.gouv.fr/enseigner-au-college-ou-au-lycee-general-le-capes-1394"
+   },
+   {
+    "label": "Arrete du 20-5-2026, Annexe 9 : Referentiel de formation professorat du second degre langues vivantes (Capes), Ministere de l'Education nationale (PDF)",
+    "url": "https://www.education.gouv.fr/sites/default/files/document/annexe-9-referentiel-de-formation-professorat-du-second-degre-langues-vivantes-capes-516692.pdf"
+   },
+   {
+    "label": "Arrete du 20-5-2026 fixant les referentiels de formation des professeurs des ecoles et des professeurs certifies, Bulletin officiel special n. 1 de 2026, ESRS2610301A (Internet Archive snapshot 17 July 2026)",
+    "url": "https://web.archive.org/web/20260717221910/https://www.education.gouv.fr/bo/2026/Special1/ESRS2610301A"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — France, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FR&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — France, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FR&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — France, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FR&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — France, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FR&time=2023"
    }
   ],
   "supportLinks": [],
@@ -11977,8 +12705,29 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Universities provide initial teacher training, through higher schools of teaching and education\nM2E (formerly MEEF) master taken at a National Higher Institute for Teaching and Education\nRecruitment needs both a pass in the competitive examination and a master's degree\nCAPES modern-language training framework has a block on teaching in a regional language\nCapes posts capped per section, published in the Journal Officiel before the first test",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "132769",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "135406",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "132084",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "126846",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1795,
@@ -11995,12 +12744,27 @@
    {
     "year": 2013,
     "description": "Loi Fioraso rewrites Code de l'education L121-3, widening foreign-language exceptions"
+   },
+   {
+    "year": 2026,
+    "description": "Capes external competition opened at bac+3 instead of only bac+5"
+   },
+   {
+    "year": 2026,
+    "description": "Ministerial order of 20 May 2026 sets a CAPES modern-language teacher training framework"
    }
   ],
   "slots": {
    "degreeSubjects": [
     1,
     2
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    4
    ]
   }
  },
@@ -13376,6 +14140,26 @@
    {
     "label": "Νόμος 4957/2022 (ΦΕΚ 141/Α/21-7-2022), Κεφάλαιο ΙΑ', άρθρα 101-111 — codified text, so article wording may post-date 2022",
     "url": "https://www.e-nomothesia.gr/index.php/tritobathmia-ekpaideuse/nomos-4957-2022-phek-141a-21-7-2022.html"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Greece - Initial education for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/greece/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Greece, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EL&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Greece, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EL&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Greece, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EL&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Greece, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EL&time=2023"
    }
   ],
   "supportLinks": [],
@@ -13390,14 +14174,48 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Pre-primary and primary teachers hold degrees from university Pedagogical Departments\nSecondary teachers train in the university departments matching school curriculum subjects\nLanguage specialisms PE06 English, PE05 French, PE07 German, PE034 Italian, PE040 Spanish\nInitial teacher education for pre-primary, primary and secondary level lasts four years\nForeign-language teachers may serve in both primary and secondary education",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "31253",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "31161",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "29579",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "30596",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
+   {
+    "year": 2019,
+    "description": "Law 4589 makes pedagogical and teaching competence an additional, not a necessary, qualification for appointment"
+   },
    {
     "year": 2022,
     "description": "Law 4957/2022 creates a regime for founding foreign-language study programmes at HEIs"
    }
-  ]
+  ],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    2,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "GT",
@@ -13935,6 +14753,26 @@
    {
     "label": "Postgraduate doctoral study programme in Linguistics (PDSL), Faculty of Humanities and Social Sciences, University of Zagreb, revised 2014",
     "url": "https://web2020.ffzg.unizg.hr/pds/wp-content/uploads/sites/12/2022/02/Postgraduate-doctoral-study-programme-in-Linguistics.pdf"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Croatia - Initial education for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/croatia/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Croatia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HR&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Croatia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HR&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Croatia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HR&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Croatia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HR&time=2023"
    }
   ],
   "supportLinks": [],
@@ -13980,14 +14818,43 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Primary teachers: integrated undergraduate and graduate university programme, 5 years, 300 ECTS\nPrimary programme modules include foreign languages and Croatian language\nNon-teaching graduates add a pedagogical-psychological and didactic-methodological programme\nIntake capped: ministry and higher education institutions set a numerus clausus jointly",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "6077",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "5424",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "5520",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "5163",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2022,
     "description": "Law 119/22 art. 50 provides for lectors of Croatian at institutions abroad"
    }
-  ]
+  ],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "HT",
@@ -14094,6 +14961,26 @@
    {
     "label": "Eötvös Loránd University, Faculty of Humanities — Alkalmazott nyelvészet MA, programme page",
     "url": "https://btk.elte.hu/mesterszakok/alkalmazottnyelveszet"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Hungary - Initial education for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/hungary/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Hungary, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HU&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Hungary, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HU&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Hungary, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HU&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Hungary, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HU&time=2023"
    }
   ],
   "supportLinks": [],
@@ -14129,8 +15016,29 @@
   "mediumOfInstruction": "The state must ensure Hungarian-language provision exists in every field of training\nA nationality student may study in their mother tongue, in Hungarian, or in both",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Act CCIV of 2011 defines teacher training in undivided form in the general phase of schooling\nLower secondary teacher training: one-tier 10-semester programme with 2-semester traineeship\nWould-be teachers are typically trained to teach two subjects\nLanguage teacher majors require an advanced C1 language examination\nPrimary teacher training allows specialisation in minority education",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "8205",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "8482",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "8343",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "8338",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2011,
@@ -14141,6 +15049,13 @@
    "mediumOfInstruction": [
     1,
     2
+   ],
+   "teacherPipeline": [
+    1,
+    3,
+    3,
+    3,
+    3
    ]
   }
  },
@@ -14275,6 +15190,26 @@
    {
     "label": "University of Galway, An Ghaeilge (Official Languages Act 2003 scheme; UCG (Amendment) Act 2006)",
     "url": "https://www.universityofgalway.ie/registrar/an-ghaeilge/"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Ireland - Initial education for teachers working in early childhood and school education (last update 27 November 2023), European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/ireland/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Ireland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IE&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Ireland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IE&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Ireland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IE&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Ireland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IE&time=2023"
    }
   ],
   "supportLinks": [],
@@ -14298,12 +15233,41 @@
   "mediumOfInstruction": "The Galway BA in Cumarsaid agus Gaeilge is taught entirely through Irish",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "All teacher education leading to registration must be accredited by the Teaching Council\nPrimary: five denominational colleges of education, grant-funded, students pay no fees\nConsecutive route: primary degree then a two-year Professional Diploma in Education\nLanguages are among the subjects where teachers may qualify through either route\nSince 1961 up to 10% of primary places reserved for Gaeltacht students",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "4636",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "4210",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "4401",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "4461",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1929,
     "description": "University College Galway Act adds an obligation to appoint Irish speakers"
+   },
+   {
+    "year": 1961,
+    "description": "Up to 10% of primary teacher education places reserved for Gaeltacht students"
+   },
+   {
+    "year": 1994,
+    "description": "Higher Education Authority imposes a national quota on entry to the postgraduate teaching diploma"
    },
    {
     "year": 2003,
@@ -14312,6 +15276,14 @@
    {
     "year": 2006,
     "description": "Amendment Act restates education through Irish as a principal aim of the university"
+   },
+   {
+    "year": 2012,
+    "description": "Primary Bachelor of Education extended from three years to four"
+   },
+   {
+    "year": 2014,
+    "description": "All postgraduate teacher education programmes extended to two years"
    },
    {
     "year": 2019,
@@ -14325,6 +15297,13 @@
    ],
    "mediumOfInstruction": [
     1
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    4
    ]
   }
  },
@@ -16997,6 +17976,26 @@
    {
     "label": "University of Iceland, School of Humanities — Almenn málvísindi MA, 120 einingar",
     "url": "https://hi.is/framhaldsnam/almenn_malvisindi"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Iceland - Initial education for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/iceland/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Iceland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IS&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Iceland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IS&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Iceland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IS&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Iceland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IS&time=2023"
    }
   ],
   "supportLinks": [],
@@ -17041,9 +18040,38 @@
   "mediumOfInstruction": "The BA is meant to equip students for further programmes taught in Icelandic",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Four university institutions provide courses towards the teacher's certificate\nUniversity of Iceland and University of Akureyri provide general teacher education\nLicence needs a 180-credit bachelor's degree plus a 120-credit master's degree\nUpper secondary certificate: 60 ECTS education studies plus 90 ECTS in the subject area",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "1277",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1353",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1365",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1264",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
+   {
+    "year": 1971,
+    "description": "Compulsory school teacher education upgraded to university level"
+   },
+   {
+    "year": 1998,
+    "description": "Pre-primary school teacher education upgraded to university level"
+   },
    {
     "year": 2006,
     "description": "Act 40/2006 of 12 June creates the Arni Magnusson Institute for Icelandic Studies"
@@ -17060,6 +18088,12 @@
    ],
    "mediumOfInstruction": [
     1
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3
    ]
   }
  },
@@ -17081,6 +18115,30 @@
    {
     "label": "Freie Universität Bozen — Profil (founded 1997, teaching in German, Italian, English, Ladin)",
     "url": "https://www.unibz.it/de/home/profile"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Italy - Initial education for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/italy/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "D.P.R. 14 febbraio 2016 n. 19, Tabella A - Nuove classi di concorso, Gazzetta Ufficiale Serie generale n. 43, Supplemento ordinario n. 5/L (PDF)",
+    "url": "https://www.istruzione.it/allegati/2016/D.P.R.14_febbraio_2016_n.19_Tabella_A.pdf"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Italy, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IT&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Italy, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IT&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Italy, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IT&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Italy, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IT&time=2023"
    }
   ],
   "supportLinks": [],
@@ -17095,8 +18153,29 @@
   "mediumOfInstruction": "The Free University of Bozen-Bolzano teaches in Italian, German and English\nAdmission there needs evidence of specific language levels on the CEFR scale",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Universities and AFAM institutions run initial teacher education for secondary teachers\nSecondary route: subject master's, then a 60-credit university qualifying programme\nThe diploma must state the foreign language for which the qualification was obtained\nSlovene-medium school competitions in Friuli Venezia Giulia reserved to Slovene mother tongue\nPrimary teaching degree admission planned and limited at national level",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "153006",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "163306",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "162321",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "163181",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1997,
@@ -17113,12 +18192,23 @@
    {
     "year": 2017,
     "description": "Constitutional Court 42/2017: English-only courses need an equivalent Italian offer"
+   },
+   {
+    "year": 2022,
+    "description": "Law 79/2022 reforms the requirements to teach at secondary level"
    }
   ],
   "slots": {
    "mediumOfInstruction": [
     1,
     3
+   ],
+   "teacherPipeline": [
+    1,
+    3,
+    3,
+    3,
+    4
    ]
   }
  },
@@ -18318,15 +19408,28 @@
   "isNational": true,
   "region": "Europe",
   "subregion": "Western Europe",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Liechtenstein, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LI&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Liechtenstein, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LI&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Liechtenstein, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LI&time=2022"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
@@ -18336,7 +19439,23 @@
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "0",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "0",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "0",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -18581,6 +19700,26 @@
    {
     "label": "Vilnius University — History (chronology: 1919, 1922, 1939, 1941)",
     "url": "https://www.vu.lt/en/about-vu/history"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Lithuania - Initial education for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/lithuania/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Lithuania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LT&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Lithuania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LT&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Lithuania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LT&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Lithuania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LT&time=2023"
    }
   ],
   "supportLinks": [],
@@ -18612,8 +19751,29 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Teachers are trained in higher education institutions: universities and colleges\nSince 2018 designated Teacher Training Centres and partner HEIs provide initial training\nForeign-language teachers: training in that language, or philology, linguistics or translation\nMinority mother-tongue teachers train in the relevant language and literature\nNo additional language assessment when applying for language teacher training",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "3251",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "3136",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "3027",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "2858",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1919,
@@ -18630,12 +19790,23 @@
    {
     "year": 1941,
     "description": "Vilnius University is re-Lithuanianised, then closed again in 1943"
+   },
+   {
+    "year": 2018,
+    "description": "Initial teacher education concentrated in designated Teacher Training Centres and their partner institutions"
    }
   ],
   "slots": {
    "degreeSubjects": [
     1,
     2
+   ],
+   "teacherPipeline": [
+    1,
+    2,
+    3,
+    3,
+    3
    ]
   }
  },
@@ -18653,6 +19824,26 @@
    {
     "label": "Loi du 12 août 2003 portant création de l'Université du Luxembourg, art. 3(2)(e)",
     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2003/08/12/n17/jo/fr/html"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Luxembourg - Initial education for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/luxembourg/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Luxembourg, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LU&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Luxembourg, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LU&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Luxembourg, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LU&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Luxembourg, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LU&time=2023"
    }
   ],
   "supportLinks": [],
@@ -18667,14 +19858,44 @@
   "mediumOfInstruction": "",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "Elementary teachers trained at the University of Luxembourg for a BSc in Education\nSecondary route is consecutive: ministry entry exam, then two-year training at IFEN\nLanguage teachers follow the same initial training as other secondary teachers\nLanguage teachers need two academic years in a country where the target language is spoken\nAll candidates must prove skills in Luxembourgish, French and German",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "358",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "310",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "284",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "277",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2003,
     "description": "The founding law bases the University of Luxembourg on multilingual teaching"
    }
-  ]
+  ],
+  "slots": {
+   "teacherPipeline": [
+    1,
+    3,
+    3,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "LV",
@@ -18694,6 +19915,26 @@
    {
     "label": "Latvijas Universitāte, Humanitāro zinātņu fakultāte — maģistra studiju programma “Valodniecība, literatūrzinātne un reģionu kultūrstudijas”",
     "url": "https://www.lu.lv/studijas/studiju-programmas/magistra-limena-studijas/valodnieciba-literaturzinatne-un-regionu-kulturstudijas/"
+   },
+   {
+    "label": "Eurydice, National Education Systems: Latvia - Initial education for teachers working in early childhood and school education, European Commission EACEA",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/latvia/initial-education-teachers-working-early-childhood-and-school-education"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Latvia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LV&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Latvia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LV&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Latvia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LV&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Latvia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LV&time=2023"
    }
   ],
   "supportLinks": [],
@@ -18719,8 +19960,29 @@
   "mediumOfInstruction": "Higher education study programmes are delivered in the state language\nPart may run in another EU official language, but not state exams or theses\nForeign students staying over six months must take state-language courses\nA whole programme may be foreign-language where it studies that language and its culture",
   "requiredStudy": "",
   "entryRequirements": "",
-  "teacherPipeline": "",
-  "enrolment": [],
+  "teacherPipeline": "School teachers trained at tertiary level, by the concurrent or the consecutive model\nConcurrent route: professional programme integrated into a 4 or 5 year bachelor degree\nForeign language and Latvian language teachers may teach at all levels of education\nState-financed study places allocated on centralized secondary-leaving examination results",
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "1603",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1520",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1623",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1649",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2018,
@@ -18741,6 +20003,12 @@
     2,
     2,
     3
+   ],
+   "teacherPipeline": [
+    1,
+    3,
+    3,
+    4
    ]
   }
  },
@@ -19173,6 +20441,22 @@
    {
     "label": "RFE/RL Balkan Report, 30 January 2004 — Macedonia's Albanian-language university is legalized",
     "url": "https://www.rferl.org/a/1340965.html"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — North Macedonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MK&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — North Macedonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MK&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — North Macedonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MK&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — North Macedonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MK&time=2023"
    }
   ],
   "supportLinks": [],
@@ -19188,7 +20472,28 @@
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "4306",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "3298",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "3177",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "2822",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2001,
@@ -19679,6 +20984,22 @@
    {
     "label": "University of Malta, Institute of Linguistics and Language Technology: Linguistics programmes",
     "url": "https://www.um.edu.mt/linguistics/study/linguistics/"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Malta, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MT&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Malta, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MT&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Malta, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MT&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Malta, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MT&time=2023"
    }
   ],
   "supportLinks": [],
@@ -19734,7 +21055,28 @@
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "615",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "489",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "439",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "457",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2011,
@@ -20782,6 +22124,22 @@
    {
     "label": "UiT — Institutt for språk og kultur, Utdanning (study provision incl. PhD in språkvitenskap)",
     "url": "https://uit.no/enhet/isk/utdanning"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Norway, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=NO&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Norway, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=NO&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Norway, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=NO&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Norway, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=NO&time=2023"
    }
   ],
   "supportLinks": [],
@@ -20838,7 +22196,28 @@
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "7063",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "6818",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "6652",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "6616",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2009,
@@ -22034,6 +23413,22 @@
    {
     "label": "Uchwala Senatu UG nr 122/12 z dnia 20 grudnia 2012 (etnofilologia kaszubska), as cited by the University of Gdansk",
     "url": "https://old.ug.edu.pl/20479/etnofilologia_kaszubska"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Poland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PL&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Poland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PL&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Poland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PL&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Poland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PL&time=2023"
    }
   ],
   "supportLinks": [],
@@ -22058,7 +23453,28 @@
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "68284",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "63323",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "62160",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "60349",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2012,
@@ -22262,6 +23678,22 @@
    {
     "label": "Universidade de Coimbra, Faculdade de Letras — Doutoramento em Linguística do Português, ficha do curso",
     "url": "https://apps.uc.pt/courses/pt/course/7361"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Portugal, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PT&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Portugal, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PT&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Portugal, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PT&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Portugal, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PT&time=2023"
    }
   ],
   "supportLinks": [],
@@ -22348,7 +23780,28 @@
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "8131",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "9049",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "9265",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "10108",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -22555,6 +24008,22 @@
    {
     "label": "Babes-Bolyai University — short history (laws XIX and XX of 1872; decree no. 4090 of 12 September 1919; 1945, 1959, 1995)",
     "url": "https://www.ubbcluj.ro/en/despre/prezentare/istoric"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Romania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RO&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Romania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RO&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Romania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RO&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Romania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RO&time=2023"
    }
   ],
   "supportLinks": [],
@@ -22617,7 +24086,28 @@
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "21138",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "22114",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "21970",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "20592",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1872,
@@ -22662,6 +24152,22 @@
    {
     "label": "Zakon o visokom obrazovanju (\"Sl. glasnik RS\", br. 88/2017 …19/2025), čl. 95 Jezik studija — consolidated text, so the present art. 95 wording may not be the 2017 original",
     "url": "https://www.paragraf.rs/propisi/zakon_o_visokom_obrazovanju.html"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Serbia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RS&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Serbia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RS&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Serbia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RS&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Serbia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RS&time=2023"
    }
   ],
   "supportLinks": [],
@@ -22677,7 +24183,28 @@
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "13256",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "12234",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "11945",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "11529",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2017,
@@ -23192,6 +24719,22 @@
    {
     "label": "Lunds universitet — Språk och språkvetenskap, Lingvistik, Masterprogram (HASPV-LING)",
     "url": "https://www.lu.se/lubas/i-uoh-lu-HASPV-LING"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Sweden, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SE&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Sweden, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SE&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Sweden, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SE&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Sweden, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SE&time=2023"
    }
   ],
   "supportLinks": [],
@@ -23281,7 +24824,28 @@
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "24000",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "28489",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "27738",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "27919",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [],
   "slots": {
    "degreeSubjects": [
@@ -23473,6 +25037,22 @@
    {
     "label": "Univerza v Ljubljani, Oddelek za primerjalno in splošno jezikoslovje: dvopredmetni univerzitetni študijski program prve stopnje Splošno jezikoslovje",
     "url": "https://psj.ff.uni-lj.si/dodiplomski-studij-spj/dvopredmetni-univerzitetni-studijski-program-prve-stopnje-splosno-jezikoslovje"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Slovenia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SI&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Slovenia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SI&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Slovenia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SI&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Slovenia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SI&time=2023"
    }
   ],
   "supportLinks": [],
@@ -23538,7 +25118,28 @@
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "1989",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "2043",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1681",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1578",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1919,
@@ -23576,6 +25177,22 @@
    {
     "label": "Univerzita Komenského v Bratislave, Filozofická fakulta — Všeobecná jazykoveda, doktorandský študijný program",
     "url": "https://fphil.uniba.sk/studium/studijne-programy/doktorandske-studium/vseobecna-jazykoveda/"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Slovakia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SK&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Slovakia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SK&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Slovakia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SK&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Slovakia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SK&time=2023"
    }
   ],
   "supportLinks": [],
@@ -23602,7 +25219,28 @@
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "4034",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "4190",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "3947",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "3977",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": []
  },
  {
@@ -24899,6 +26537,22 @@
    {
     "label": "Yükseköğretim Kurumlarında Yabancı Dil Öğretimi ve Yabancı Dille Öğretim Yapılmasında Uyulacak Esaslara İlişkin Yönetmelik, RG 23/3/2016 sayı 29662, MADDE 10 (mevzuat.gov.tr)",
     "url": "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=21475&MevzuatTertip=5"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Türkiye, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=TR&time=2019"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Türkiye, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=TR&time=2021"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Türkiye, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=TR&time=2022"
+   },
+   {
+    "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Türkiye, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=TR&time=2023"
    }
   ],
   "supportLinks": [],
@@ -24945,7 +26599,28 @@
   "requiredStudy": "Turkish and a foreign language are compulsory courses in all higher education institutions\nCompulsory alongside Ataturk's Principles and History of the Revolution\nAll these courses are programmed over at least two semesters",
   "entryRequirements": "Language degrees admit on the DIL score type, requiring the AYT and/or YDT sessions\nYDT is sat in German, Arabic, French, English or Russian, one booklet per language\nAnkara's linguistics degree admits on the candidate's OSYM foreign-language score",
   "teacherPipeline": "Appointment requires general culture, subject-field education and pedagogical formation\nEnglish posts also open to translation and English linguistics graduates\nWhere teachers are short, candidates without pedagogical formation may be appointed",
-  "enrolment": [],
+  "enrolment": [
+   {
+    "year": 2019,
+    "value": "212465",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "222629",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "219658",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "185837",
+    "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   }
+  ],
   "policyHistory": [
    {
     "year": 1981,
