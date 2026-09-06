@@ -1107,3 +1107,26 @@ to a generic nsw.gov.au landing page, including from the legacy
 repeatedly, and the Commonwealth Teaching Scholarships figures were taken from
 the NSW Department of Education mirror instead. `unigoroka.ac.pg` and `cmi.edu`
 403 curl.
+
+## 16. Four national law portals that are JavaScript to a script
+
+Found in the Europe higher-education pass. All four defeat curl AND WebFetch,
+and all four have a working way in:
+
+- **Fedlex (Switzerland)** — use the archived pre-2021 host,
+  `admin.ch/opc/de/classified-compilation/...`
+- **RIS (Austria)** — JS, and it also 503s. Dated Wayback snapshots work.
+- **Riigi Teataja (Estonia)** — JS. Dated Wayback snapshots work.
+- **Retsinformation (Denmark)** — the `/api/document/...` path returns the SPA
+  shell; `.../eli/lta/YYYY/NNNN/pdf` returns the actual PDF.
+
+**Finlex (Finland)** is JS too but does not need a workaround: its Next.js RSC
+payload carries the statute text verbatim and contiguous, so a quote taken from
+it survives a refetch.
+
+And the finding that matters more than any of these: **quote contiguity, not
+url health, is the real gate risk on modern government sites.** Six first-choice
+quotes in that pass were broken by `<strong>`, `<em>` or `&nbsp;` inside a
+sentence, or by PDF column wrapping. The fix is to pick a run that is
+contiguous in the raw bytes, which is usually a shorter span than the sentence
+you want. Eurydice in particular bolds words mid-sentence.

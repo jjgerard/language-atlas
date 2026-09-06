@@ -682,6 +682,10 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Austria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AT&time=2023"
+   },
+   {
+    "label": "Universitätsgesetz 2002 (UG), BGBl. I Nr. 120/2002, consolidated text, RIS, Fassung vom 28.12.2024, Internet Archive snapshot",
+    "url": "https://web.archive.org/web/20241228084424/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20002128"
    }
   ],
   "supportLinks": [],
@@ -764,7 +768,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "UG 2002 sets no language study requirement; foreign-language use is left to the statute\nAct's language rules are admission ones: German, or English where a degree is taught in it",
   "entryRequirements": "",
   "teacherPipeline": "Higher education trains all school teachers since the 2013 New Teacher Training Act\nSecondary-general route held by universities and university colleges of teacher education\nOne-year induction with a personal mentor follows the degree\nEvery teaching degree carries 3-6 ECTS German as a second language and language education\nStudy places are allocated on points, not open entry",
   "enrolment": [
@@ -815,6 +819,10 @@
     3,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
   }
  },
@@ -2352,6 +2360,10 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Bulgaria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BG&time=2023"
+   },
+   {
+    "label": "Закон за висшето образование, обн. ДВ бр. 112/1995, consolidated text, чл. 42 and чл. 48, lex.bg",
+    "url": "https://lex.bg/laws/ldoc/2133647361"
    }
   ],
   "supportLinks": [],
@@ -2364,7 +2376,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Higher Education Act defines each degree by credits and years, with no language component\nIts only curricular language provision is a teaching post for non-specialist language tuition",
   "entryRequirements": "",
   "teacherPipeline": "Teachers hold higher education plus the professional qualification teacher\nQualification acquired at higher schools accredited in Pedagogical Sciences or the field\nForeign language teachers must have graduated higher education in that professional direction\nLanguages beyond English, Spanish, Italian, German, Russian and French need no teacher award\nPrimary generalists need a supplementary language programme to teach a foreign language",
   "enrolment": [
@@ -2397,6 +2409,10 @@
     2,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
   }
  },
@@ -5256,6 +5272,14 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Switzerland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CH&time=2023"
+   },
+   {
+    "label": "Bundesgesetz über die Förderung der Hochschulen und die Koordination im schweizerischen Hochschulbereich (HFKG), SR 414.20, Art. 3, admin.ch, Internet Archive snapshot",
+    "url": "https://web.archive.org/web/20210119024936/https://www.admin.ch/opc/de/classified-compilation/20070429/index.html"
+   },
+   {
+    "label": "Eurydice, Switzerland: Bachelor (higher education chapter)",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/switzerland/bachelor"
    }
   ],
   "supportLinks": [],
@@ -5326,7 +5350,7 @@
    }
   ],
   "mediumOfInstruction": "Fribourg is the only Swiss university with a full course range in each of two languages\nIn most cases students choose French or German as their sole language of study\nSome programmes are partly French and partly German, as the study plan sets out\nWhere parallel courses run in both, students may follow either language",
-  "requiredStudy": "",
+  "requiredStudy": "Federal HFKG names promoting multilingualism a coordination aim, but sets no student rule\nEurydice: the language rule is an admission one, in the university's language of instruction\nLatin is required by most universities only for language, literature and history degrees",
   "entryRequirements": "",
   "teacherPipeline": "Teacher training for every school level is carried out at institutions of higher education\nMainly universities of teacher education, also cantonal universities and the federal institutes\nCantons maintain and fund the universities of teacher education, not the Confederation\nLower secondary degree runs to 270-300 ECTS and covers three or four subjects\nCantons must ensure adequate qualifications for foreign languages and CLIL methodology",
   "enrolment": [
@@ -5369,6 +5393,11 @@
     2,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    2,
+    2
    ]
   }
  },
@@ -9210,6 +9239,14 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Czechia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CZ&time=2023"
+   },
+   {
+    "label": "Nařízení vlády č. 274/2016 Sb., o standardech pro akreditace ve vysokém školství, Zákony pro lidi",
+    "url": "https://www.zakonyprolidi.cz/cs/2016-274"
+   },
+   {
+    "label": "Eurydice, Czechia: Bachelor (higher education chapter)",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/czechia/bachelor"
    }
   ],
   "supportLinks": [],
@@ -9273,7 +9310,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "A public university running a study programme in a foreign language may charge fees",
-  "requiredStudy": "",
+  "requiredStudy": "Not statutory: the accreditation standards name foreign language only as a medium of study\nEurydice reports that all study programmes include study of one or more foreign languages",
   "entryRequirements": "",
   "teacherPipeline": "Language teachers are among those qualified for a single subject at secondary level\nInitial training for foreign language teachers follows the same rules as other teachers\nAlso qualified via teacher training for language schools running state language exams\nSince 2015 a native speaker with any higher education degree counts as fully qualified\nExtra subject added through a lifelong learning programme at a higher education institution",
   "enrolment": [
@@ -9322,6 +9359,10 @@
     3,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
   }
  },
@@ -9371,6 +9412,14 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Germany, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DE&time=2023"
+   },
+   {
+    "label": "Eurydice, Germany: Bachelor (tertiary education chapter)",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/germany/bachelor"
+   },
+   {
+    "label": "Hochschulrahmengesetz (HRG), § 27, consolidated text, gesetze-im-internet.de",
+    "url": "https://www.gesetze-im-internet.de/hrg/BJNR001850976.html"
    }
   ],
   "supportLinks": [],
@@ -9477,7 +9526,7 @@
    }
   ],
   "mediumOfInstruction": "Language training at Leipzig's Sorabistik institute is predominantly in Upper or Lower Sorbian",
-  "requiredStudy": "",
+  "requiredStudy": "No nationwide requirement: at universities foreign language training is optional\nSome HAW/FH degrees carry foreign language classes as a compulsory subject, others elective\nFederal framework act HRG names language only as an admission condition for EU nationals",
   "entryRequirements": "",
   "teacherPipeline": "Teacher training is a higher education course plus practical training in a school setting\nIn all Laender the course is at a university or equivalent higher education institution\nDegree covers two subject areas and their didactics at bachelor and master level\nLaender decide between the Staatsexamen and a consecutive bachelor and master structure\nKMK subject profile Neue Fremdsprachen sets content for modern language teacher degrees",
   "enrolment": [
@@ -9546,6 +9595,11 @@
     3,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
   }
  },
@@ -10079,6 +10133,10 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Denmark, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DK&time=2023"
+   },
+   {
+    "label": "Bekendtgørelse nr. 2285 af 1. december 2021 om universitetsuddannelser tilrettelagt på heltid, §§ 24 og 61, Retsinformation (PDF)",
+    "url": "https://www.retsinformation.dk/eli/lta/2021/2285/pdf"
    }
   ],
   "supportLinks": [],
@@ -10141,7 +10199,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Degree order 2285 of 2021 leaves any foreign-language reading requirement to each programme\nEvery bachelor project, thesis and master project needs a summary in a foreign language",
   "entryRequirements": "",
   "teacherPipeline": "Primary and lower secondary language teachers train on the bachelor degree in education\nUniversity colleges offer that four-year, 240 ECTS programme\nUpper secondary teachers take a university subject master plus a one-year postgraduate course\nStudents can also choose Danish as a second language as a school subject\nQuota 1 entry needs an upper secondary average of 7 or above",
   "enrolment": [
@@ -10183,6 +10241,10 @@
     2,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    3
    ]
   }
  },
@@ -10565,6 +10627,10 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Estonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EE&time=2023"
+   },
+   {
+    "label": "Higher Education Act (Kõrgharidusseadus), English translation, §§ 3 and 14, Riigi Teataja, Internet Archive snapshot",
+    "url": "https://web.archive.org/web/20240511103722/https://www.riigiteataja.ee/en/eli/529082019022/consolide/"
    }
   ],
   "supportLinks": [],
@@ -10635,7 +10701,7 @@
    }
   ],
   "mediumOfInstruction": "The Tartu master's in Estonian and Finno-Ugric Languages is English-based in its linguistics",
-  "requiredStudy": "",
+  "requiredStudy": "Higher Education Act fixes the language of instruction, not a language a student must study\nA student weak in Estonian may extend studies by up to one academic year to learn it",
   "entryRequirements": "",
   "teacherPipeline": "Initial teacher training is carried out at higher education level in universities\nNo top-level rule on whether primary foreign language teachers are generalists or specialists\nSubject and class teachers of general education schools are trained at master level\nUniversities running teacher education give in-service training for Estonian-medium teaching\nAdmission on merit: earlier grades plus a teacher professional aptitude test",
   "enrolment": [
@@ -10701,6 +10767,10 @@
     3,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
   }
  },
@@ -11065,6 +11135,14 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Spain, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=ES&time=2023"
+   },
+   {
+    "label": "Real Decreto 822/2021, de 28 de septiembre, por el que se establece la organización de las enseñanzas universitarias, art. 14, BOE",
+    "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-15781"
+   },
+   {
+    "label": "Eurydice, Spain: Second cycle programmes (masters)",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/spain/second-cycle-programmes-masters"
    }
   ],
   "supportLinks": [],
@@ -11118,7 +11196,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "Universities must promote their territories' own official languages as teaching languages\nThe law leaves the detail to each university's statutes and regional rules",
-  "requiredStudy": "",
+  "requiredStudy": "LOSU 2023 treats foreign languages as an option to encourage, not as a requirement\nRD 822/2021 fixes the Grado at 240 ECTS and names no language component\nSome universities do set a foreign-language level as a condition of the degree",
   "entryRequirements": "",
   "teacherPipeline": "Master's Degree in Teacher Training required for secondary, VET and language teaching\nUniversities autonomously set the study programmes within State minimum requirements\nPrimary degree offers specialisations in foreign language and in hearing and language\nIn communities with a co-official language, entry needs proficiency in it and in Spanish\nSelected candidates never exceed the number of posts advertised in the teaching competition",
   "enrolment": [
@@ -11164,6 +11242,11 @@
     3,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
   }
  },
@@ -12126,6 +12209,14 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Finland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FI&time=2023"
+   },
+   {
+    "label": "Valtioneuvoston asetus yliopistojen tutkinnoista ja erikoistumiskoulutuksista 794/2004, 6 §, Finlex",
+    "url": "https://www.finlex.fi/fi/lainsaadanto/2004/794"
+   },
+   {
+    "label": "Valtioneuvoston asetus ammattikorkeakouluista 1129/2014, 7 §, Finlex",
+    "url": "https://www.finlex.fi/fi/lainsaadanto/2014/1129"
    }
   ],
   "supportLinks": [],
@@ -12155,7 +12246,7 @@
    }
   ],
   "mediumOfInstruction": "On the minor, teaching moves gradually into North Sami after the first year",
-  "requiredStudy": "",
+  "requiredStudy": "Decree 794/2004 s.6: every university student must show set language skills, any degree\nFinnish and Swedish, at the level state staff need in a bilingual authority\nPlus one foreign language at a level allowing work in an international environment\nPolytechnics: decree 1129/2014 s.7 sets one or two foreign languages, written and spoken\nUniversity may exempt a student partly or wholly from these skills for a special reason",
   "entryRequirements": "",
   "teacherPipeline": "All teacher education is provided by higher education institutions\nAbo Akademi subject-teacher practice takes place in a Swedish-language school in Finland\nAbo Akademi subject-teacher subjects include engelska, finska and franska\nSubject teachers need at least 60 credits of subject studies in each subject they teach\nBasic-education teachers need excellent oral and written command of the school's language",
   "enrolment": [
@@ -12211,6 +12302,13 @@
     2,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    2,
+    2,
+    2,
+    4
    ]
   }
  },
@@ -12580,6 +12678,10 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — France, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FR&time=2023"
+   },
+   {
+    "label": "Arrêté du 22 janvier 2014 fixant le cadre national des formations conduisant à la délivrance des diplômes nationaux de licence, de licence professionnelle et de master, art. 3 et 16, Légifrance, Internet Archive snapshot",
+    "url": "https://web.archive.org/web/20230831142040/https://www.legifrance.gouv.fr/loda/id/JORFTEXT000028543525/"
    }
   ],
   "supportLinks": [],
@@ -12703,7 +12805,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Arrete of 22 January 2014 art. 3: every licence and master course integrates a foreign language\nLevel referenced to the Common European Framework; each diploma's rules set how it applies\nMaster language teaching runs preferably over both years and carries ECTS credits\nMaster art. 16: degree awarded only after aptitude in one modern foreign language is validated",
   "entryRequirements": "",
   "teacherPipeline": "Universities provide initial teacher training, through higher schools of teaching and education\nM2E (formerly MEEF) master taken at a National Higher Institute for Teaching and Education\nRecruitment needs both a pass in the competitive examination and a master's degree\nCAPES modern-language training framework has a block on teaching in a regional language\nCapes posts capped per section, published in the Journal Officiel before the first test",
   "enrolment": [
@@ -12765,6 +12867,12 @@
     3,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    2,
+    3,
+    3
    ]
   }
  },
@@ -14160,6 +14268,14 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Greece, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EL&time=2023"
+   },
+   {
+    "label": "Eurydice, Greece: Bachelor (higher education chapter)",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/greece/bachelor"
+   },
+   {
+    "label": "Eurydice, Greece: Support measures for learners in higher education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/greece/support-measures-learners-higher-education"
    }
   ],
   "supportLinks": [],
@@ -14172,7 +14288,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Sources conflict: the bachelor chapter says programmes may include language courses\nSupport chapter names a compulsory foreign language required for being awarded a degree",
   "entryRequirements": "",
   "teacherPipeline": "Pre-primary and primary teachers hold degrees from university Pedagogical Departments\nSecondary teachers train in the university departments matching school curriculum subjects\nLanguage specialisms PE06 English, PE05 French, PE07 German, PE034 Italian, PE040 Spanish\nInitial teacher education for pre-primary, primary and secondary level lasts four years\nForeign-language teachers may serve in both primary and secondary education",
   "enrolment": [
@@ -14214,6 +14330,10 @@
     2,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
   }
  },

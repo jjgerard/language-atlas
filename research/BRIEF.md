@@ -149,6 +149,33 @@ because it is foreign to you: French in Senegal is the medium of instruction,
 Arabic in Chad is a medium, and Russian in Kazakhstan is a second state
 language. Record the category the SOURCE puts it in.
 
+## A documented "there is no such rule" IS the answer, and it belongs in the field
+
+Some fields ask about a rule that most systems simply do not have. `he`'s
+`requiredStudy` asks whether every student must study a language whatever their
+degree; roughly one system in six does. It sat at 1 filled out of 48 in Europe
+for a long time, and a batch that finally worked it found the reason: every one
+of twelve countries HAD an answer, and earlier drafters had found no rule and
+written nothing rather than writing the absence.
+
+So, plainly: if you read the framework act or the degree decree and it imposes
+no such requirement, **write that, with the quote**. "Austria's UG 2002
+mentions language only as an admission condition and as a permission for a
+university's own statute" is a finding. "Germany's tertiary chapter says
+foreign language training is optional" is a finding. Both are worth more than a
+blank, and a field where only positives are ever written will read as a
+backlog forever.
+
+This is NOT the same as the not-established sentinel, which says nobody has
+looked. A read instrument that is silent is a source, and its silence is
+content.
+
+Where two sources disagree, write the disagreement rather than choosing. One
+batch found Eurydice's Greek chapters contradicting each other about a
+compulsory degree language, read the whole of framework law 4957/2022, found it
+silent, and recorded the conflict. That is the right answer, and picking a side
+would have been worse.
+
 ## The French Pacific territories do not share one legal status
 
 This is written down because a brief of mine got it wrong and three agents were
