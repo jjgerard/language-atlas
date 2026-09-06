@@ -37,10 +37,10 @@
   "identificationCriteria": "Conava must recognise the disability before specialised school support is assigned\nA medical report and a parish social worker's valuation go with the application\nThe barems language chapter wants a diagnosis giving prognosis and skills preserved\nFunctional dislalia is not treated as a cause of permanent language disability",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "At each year's end the inspector tells the centre next year's specialised staffing\nA centre needing more school-life accompaniment sends a justified demand to its inspector\nThe inspector issues a resolution within ten working days of receiving the demand",
+  "referralPathway": "A centre needing more school-life accompaniment sends a justified demand to its inspector\nAt each year's end the inspector tells the centre next year's specialised staffing\nThe inspector issues a resolution within ten working days of receiving the demand",
   "serviceModel": "Organised from the educational environment, not tied exclusively to the individual pupil\nSpecialised support now runs on universal design principles",
   "legalEntitlement": "A new specialised-support regulation was approved on 8 July 2026\nIt replaces the model in force since 2008\nThe education Act obliges the government to run diversity plans",
-  "funding": "Specialised materials come from the ministry through a loan service run by its areas\nCentres themselves bear the cost of the ordinary materials their activity needs\nThe department maintains, repairs and replaces the material lent to the centre\nThe parents' association organises and manages the school meals service",
+  "funding": "Specialised materials come from the ministry through a loan service run by its areas\nCentres themselves bear the cost of the ordinary materials their activity needs\nThe department maintains, repairs and replaces the material lent to the centre",
   "workforce": "A reference ratio of one specialised professional per five pupils with disability\nA separate ratio of one school-life companion per five pupils",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -54,7 +54,43 @@
     "year": 2026,
     "description": "The 2026 regulation is framed around pupils with disability, not disorder types"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "referralPathway": [
+    1,
+    3,
+    4
+   ],
+   "serviceModel": [
+    1,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    1,
+    2
+   ],
+   "funding": [
+    1,
+    1,
+    2
+   ],
+   "workforce": [
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "AE",
@@ -302,7 +338,51 @@
     "year": 2023,
     "description": "Law 44/2023 amends the education act to create Resource Centres for children with disabilities"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    2
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "assessments": [
+    1,
+    1,
+    1,
+    4
+   ],
+   "referralPathway": [
+    2,
+    4,
+    4
+   ],
+   "serviceModel": [
+    2,
+    2,
+    3
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "funding": [
+    1,
+    2,
+    4
+   ],
+   "workforce": [
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "AM",
@@ -644,14 +724,14 @@
   "inst": "",
   "source": "seed",
   "terminology": "\"Sprachstörung\" (German) — \"language impairment\" (COST survey, 2017)\nHighest band — 65% or more had heard of it\nAcross the 18 systems, ~60% for language impairment against over 90% for autism",
-  "identificationCriteria": "Bildungsdirektion establishes special educational need by formal decision (Bescheid)\nTest in words: cannot follow mainstream lessons without special support, due to disability\nThe impairment must be expected to last more than six months to count\nA child may be admitted to a school of the type applied for, for observation",
+  "identificationCriteria": "Bildungsdirektion establishes special educational need by formal decision (Bescheid)\nA child may be admitted to a school of the type applied for, for observation\nTest in words: cannot follow mainstream lessons without special support, due to disability\nThe impairment must be expected to last more than six months to count",
   "assessments": "",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 102 (Law et al., 2020)\nAssessment: mainstream only 77%, both 10%\nIntervention: mainstream only 83%\nInterpreters sometimes used — assessment 77%, intervention 55%, counselling 83%\nPractitioner training: optional 45%, none 28%, unsure 25% (n = 113)",
   "referralPathway": "The Bildungsdirektion acts on an application or of its own motion\nIt must advise parents on the options in special and in mainstream schools\nIf parents want a mainstream place it names the nearest school that can meet it\nThe finding is lifted once the child can follow the general curriculum",
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 204 from Austria (Law et al., 2020)\nSettings: private practice 55%, hospital 22%, mainstream school 18%\nSector: private 54%, public health 36%, public education 30%\nDirect intervention most often weekly — 81%\nAccess shaped by: urban/rural 67%, social position 67%, cost to parents 64%",
-  "legalEntitlement": "The right holds only where such schools or classes exist and the journey is reasonable\nSchulpflichtgesetz 1985 para 8a entitles the child to a special or a mainstream school\nWhere no reachable mainstream school can meet the need, the Bildungsdirektion must act\nA child not in such a mainstream school attends a special school matching the disability",
+  "legalEntitlement": "Schulpflichtgesetz 1985 para 8a entitles the child to a special or a mainstream school\nThe right holds only where such schools or classes exist and the journey is reasonable\nA child not in such a mainstream school attends a special school matching the disability\nWhere no reachable mainstream school can meet the need, the Bildungsdirektion must act",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 204\nFunders: health insurance 70%, state education 23%, family 23%, state health 18%\n14% said a maximum number of sessions applied (n = 204)",
-  "workforce": "2,427 registered in Logopädie in the federal health professions register\nThat register was counted at 31 December 2023, 41,184 people across the MTD professions\n34% of them work exclusively freelance, the second highest share of the MTD professions\nDensity runs from 0.21 per 1,000 inhabitants in Burgenland to 0.39 in Tirol",
+  "workforce": "2,427 registered in Logopädie in the federal health professions register\nThat register was counted at 31 December 2023, 41,184 people across the MTD professions\nDensity runs from 0.21 per 1,000 inhabitants in Burgenland to 0.39 in Tirol\n34% of them work exclusively freelance, the second highest share of the MTD professions",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -664,7 +744,57 @@
     "year": 1985,
     "description": "Schulpflichtgesetz 1985 para 8 bases schooling on a formal finding of sonderpaedagogischer Foerderbedarf"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -1385,8 +1515,8 @@
   "identificationCriteria": "No single state-level criteria: identification is set by entity and canton regulations\nThe enrolment procedure itself does not distinguish pupils with special needs",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "First professional observation usually happens before primary enrolment\nCategorisation is done by the centre for social work\nEnrolment follows a professional team that includes speech therapists",
-  "serviceModel": "Preschool inclusion covers children with mild speech-voice communication disorders\nSpeech therapists sit on the school-entry team with pedagogues and psychologists\nFirst professional observation is usually before primary enrolment, by the social work centre\nThat centre performs the categorization and assessment of abilities",
+  "referralPathway": "Categorisation is done by the centre for social work\nEnrolment follows a professional team that includes speech therapists\nFirst professional observation usually happens before primary enrolment",
+  "serviceModel": "Preschool inclusion covers children with mild speech-voice communication disorders\nSpeech therapists sit on the school-entry team with pedagogues and psychologists\nThat centre performs the categorization and assessment of abilities",
   "legalEntitlement": "A framework law gives a right to education in regular schools\nProvision is by a programme adapted to individual needs",
   "funding": "Schools educating these pupils receive earmarked budget funds\nFunds cover the special programme, transport, accommodation and adaptation",
   "workforce": "In one entity's laws no right to a teaching assistant is established\nIn the other the question is not defined at all\nProvision is uneven because lower levels of government differ",
@@ -1406,7 +1536,40 @@
     "year": 2022,
     "description": "Republika Srpska primary education law defines the individual educational programme and repeals the 2017 act"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    3
+   ],
+   "referralPathway": [
+    2,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    2
+   ],
+   "legalEntitlement": [
+    1,
+    2
+   ],
+   "funding": [
+    2,
+    4
+   ],
+   "workforce": [
+    4,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BB",
@@ -1736,7 +1899,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 50 (Law et al., 2020)\nAssessment: mainstream only 64%, both 23%, mother tongue if different 21%\nIntervention: mainstream only 65%, mother tongue 23%\nInterpreters sometimes used — assessment 61%, intervention 54%, counselling 67%\nPractitioner training: optional 17%, none 33%, unsure 50% (n = 60)",
   "referralPathway": "The teachers working with the child discuss the evidence and tell the parent\nThat discussion decides which children go forward for an individual-needs assessment\nFor the assessment the parent files an application to the head of the institution\nThe head issues an order setting up the support team for that named child",
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 99 from Bulgaria (Law et al., 2020)\nSettings: nursery/kindergarten 45%, private practice 41%, mainstream school 29%\nSector: public education 60%, private 51%\nDirect intervention most often twice weekly — 60%\nAccess shaped by: urban/rural 64%, linguistic/cultural community 53%, cost to parents 51%",
-  "legalEntitlement": "Preschool and School Education Act lists logopedic work as general support\nGeneral support is provided by kindergartens, schools and personal-development centres\nAdditional support includes rehabilitation of communicative disorders\nSupport is delivered where the child is, and at home or in hospital in named cases",
+  "legalEntitlement": "Preschool and School Education Act lists logopedic work as general support\nAdditional support includes rehabilitation of communicative disorders\nSupport is delivered where the child is, and at home or in hospital in named cases\nGeneral support is provided by kindergartens, schools and personal-development centres",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 99\nFunders: family 51%, state education 45%, state social services 12%, pro bono 10%\n11% said a maximum number of sessions applied (n = 98)",
   "workforce": "A logoped works in kindergartens and schools to deliver general and additional support\nRegional inclusive-education centres also carry logopeds on their support teams",
   "dischargeCriteria": "",
@@ -1755,7 +1918,55 @@
     "year": 2017,
     "description": "Decree 232 adopts a new Inclusive Education Regulation and repeals the 2016 one, setting rules for logopedic work"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BH",
@@ -2352,7 +2563,38 @@
     "year": 2025,
     "description": "Decree No. 81 approves new rules for correctional-developmental education and rehabilitation centres"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    3
+   ],
+   "referralPathway": [
+    2,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    1
+   ],
+   "legalEntitlement": [
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    2,
+    3
+   ],
+   "workforce": [
+    2,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "BZ",
@@ -3439,7 +3681,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "No Swiss term can be drawn from the sources this entry cites, and none is invented here\nThe IS1406 volume has no Swiss version: its German version names the German and Austrian team\nIts French version is the France version; neither is attributed to Swiss representatives\nThe book chapter cited, doi 10.4324/9780429455308-40, is not open access and returned no text",
-  "identificationCriteria": "Acceding cantons name the authority that orders special-education measures\nIndividual need is determined within a standardised assessment procedure\nAssessment bodies must not be the same bodies as the service providers\nThreshold in words: cannot follow mainstream lessons without specific support",
+  "identificationCriteria": "Acceding cantons name the authority that orders special-education measures\nAssessment bodies must not be the same bodies as the service providers\nIndividual need is determined within a standardised assessment procedure\nThreshold in words: cannot follow mainstream lessons without specific support",
   "assessments": "",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 208 (Law et al., 2020)\nAssessment: mainstream only 44%, both 18%, mother tongue if different 13%\nIntervention: mainstream only 73%, two+ languages 11%\nInterpreters sometimes used — assessment 76%, intervention 22%, counselling 90%\nPractitioner training: obligatory 6%, optional 57%, none 23%, unsure 11% (n = 218)",
   "referralPathway": "Parents must be brought into the process of ordering special-education measures\nThe authority that orders the measures also determines the service providers\nTrigger: measures taken before school or in the mainstream prove insufficient\nAge gate: birth to the completed twentieth year, and resident in Switzerland",
@@ -3463,7 +3705,56 @@
     "year": 2008,
     "description": "Constitutional amendment Art. 62 para 3 transfers Sonderschulung wholly to the cantons"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    3
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "CI",
@@ -5326,7 +5617,63 @@
     "year": 2025,
     "description": "Amending Law 131(I)/2025 rewrites section 15(4) to let special education continue yearly up to age 22"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    3,
+    3
+   ],
+   "assessments": [
+    1,
+    1,
+    1,
+    2,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    2,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    3,
+    4,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    3,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "CZ",
