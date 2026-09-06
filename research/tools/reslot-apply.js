@@ -41,6 +41,7 @@ const rows = JSON.parse(fs.readFileSync(p, "utf8"));
 const store = new Map(rows.map(e => [e.countryCode + "|" + e.unitName, e]));
 
 let changed = 0, skipped = 0, units = 0, before = 0, after = 0;
+let slotted = 0;
 for (const [key, s] of Object.entries(verified)) {
   const e = store.get(key);
   if (!e) { console.log("  not on the map: " + key); skipped++; continue; }
@@ -56,7 +57,20 @@ for (const [key, s] of Object.entries(verified)) {
     const nb = String(expected).split(NL).filter(Boolean).length;
     before += nb;
     after += bullets.length;
-    if (write) e[field] = bullets.join(NL);
+    if (write) {
+      e[field] = bullets.join(NL);
+      // Record WHICH question each bullet answers, alongside the reordering
+      // itself. A re-slot that leaves no slot list has done the work and not
+      // written it down -- the bullets come out in the right order and nothing
+      // on the entry says so, which is why the first pass's 285 entries still
+      // measure as untagged in progress.js.
+      const sl = (s.slots || {})[field];
+      if (Array.isArray(sl) && sl.length === bullets.length) {
+        e.slots = e.slots || {};
+        e.slots[field] = sl.map(Number);
+        slotted++;
+      }
+    }
     changed++;
     touched++;
   }
@@ -67,4 +81,5 @@ if (write && changed) fs.writeFileSync(p, JSON.stringify(rows, null, 1) + NL);
 console.log(NL + (write ? "WROTE " : "DRY RUN ") + changed + " field(s) on " + units + " unit(s), " +
   skipped + " skipped");
 console.log("bullets: " + before + " -> " + after + (before ? "  (" + (after - before) + ")" : ""));
+console.log("slot lists written: " + slotted);
 if (!write) console.log("re-run with --write to apply");

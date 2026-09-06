@@ -35,35 +35,54 @@ for (const d of LIVE) {
 console.log(NL + "  ALL        " + Math.round(100 * gFill / gCap) + "%   "
   + gWhole + " of " + gUnits + " country-entries complete on their map");
 
-// --- uniformity -------------------------------------------------------------
-// Every text field's hint lists exactly four questions, answered in order. A
-// bullet records WHICH question it answers as a slot number. So uniformity is
-// answerable precisely: of the entries that say something, how many say which
-// question they are answering, and do they answer the same ones?
-console.log(NL + NL + "UNIFORMITY — do filled fields answer the same questions, in order?" + NL);
+// --- depth ------------------------------------------------------------------
+// The first version of this measured how many filled fields TAGGED their
+// bullets, and reported 85% for `he`. That number was answering the wrong
+// question. Tagging says a field records WHICH of its four questions each
+// bullet answers; it says nothing about how many it answers. Of the 126 `he`
+// text fields carrying only one or two bullets -- the "BAs in Arabic and in
+// English Literature at UAE University" kind, which names a language and stops
+// -- 103 were TAGGED, and so sat inside that 85%.
+//
+// So depth is measured directly: how many bullets a filled field carries, and,
+// where it is tagged, how many of the four questions it actually reaches. A
+// field answering one of four is thin whether or not it says so.
+console.log(NL + NL + "DEPTH — how much a filled field actually says" + NL);
 for (const d of LIVE) {
   const rows = JSON.parse(fs.readFileSync(pathFor(d.id), "utf8")).filter(r => r.isNational !== false);
   const textFields = d.fields.filter(([, , t]) => !t || t === "text").map(([k]) => k);
-  let filled = 0, tagged = 0;
-  const slotHits = {};      // field -> {1..4: count}
-  for (const e of rows) {
-    for (const k of textFields) {
-      if (!content(e[k])) continue;
-      filled++;
-      const list = e.slots && e.slots[k];
-      if (!Array.isArray(list) || !list.length) continue;
-      tagged++;
-      slotHits[k] = slotHits[k] || { 1: 0, 2: 0, 3: 0, 4: 0 };
-      for (const n of new Set(list)) if (slotHits[k][n] != null) slotHits[k][n]++;
-    }
+  let filled = 0, thin = 0, tagged = 0, full = 0;
+  for (const e of rows) for (const k of textFields) {
+    if (!content(e[k])) continue;
+    filled++;
+    if (String(e[k]).split(NL).filter(Boolean).length <= 2) thin++;
+    const sl = e.slots && e.slots[k];
+    if (Array.isArray(sl) && sl.length) { tagged++; if (new Set(sl).size === 4) full++; }
   }
-  console.log("  " + d.id.padEnd(11) + String(Math.round(100 * tagged / (filled || 1))).padStart(3)
-    + "% of filled text fields say which question each bullet answers  (" + tagged + "/" + filled + ")");
-  // Which of the four questions actually get answered, where we can tell.
-  for (const k of textFields) {
-    const h = slotHits[k]; if (!h) continue;
-    const base = Math.max(h[1], h[2], h[3], h[4]) || 1;
-    const bar = [1, 2, 3, 4].map(n => String(Math.round(100 * h[n] / base)).padStart(3) + "%").join(" ");
-    console.log("      " + k.padEnd(22) + bar + "   (q1 q2 q3 q4, share of the entries that tag this field)");
+  if (!filled) continue;
+  console.log("  " + d.id.padEnd(11)
+    + String(Math.round(100 * thin / filled)).padStart(3) + "% thin (1-2 bullets)   "
+    + String(Math.round(100 * tagged / filled)).padStart(3) + "% tagged   "
+    + (tagged ? String(Math.round(100 * full / tagged)).padStart(3) + "% of tagged answer all four" : "")
+    + "   (" + filled + " filled)");
+}
+
+// --- typed rows -------------------------------------------------------------
+// A row field has its own thinness. `offerings` exists to answer WHICH
+// institutions teach a language, and its own hint says a row with no year is
+// worth less than no row -- so the share of rows carrying one is the measure
+// that matters, not the row count.
+console.log(NL + NL + "TYPED ROWS — what the rows carry" + NL);
+for (const d of LIVE) {
+  const rowFields = d.fields.filter(([, , t]) => t === "offering" || t === "programme").map(([k]) => k);
+  if (!rowFields.length) continue;
+  const rows = JSON.parse(fs.readFileSync(pathFor(d.id), "utf8")).filter(r => r.isNational !== false);
+  for (const k of rowFields) {
+    let tot = 0, y = 0, u = 0;
+    for (const e of rows) for (const r of (e[k] || [])) { tot++; if (String(r.year || "").trim()) y++; if (String(r.url || "").trim()) u++; }
+    if (!tot) continue;
+    console.log("  " + (d.id + "." + k).padEnd(24) + String(tot).padStart(4) + " rows   "
+      + String(Math.round(100 * y / tot)).padStart(3) + "% dated   "
+      + String(Math.round(100 * u / tot)).padStart(3) + "% linked");
   }
 }

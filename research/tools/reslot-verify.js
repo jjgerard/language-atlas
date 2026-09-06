@@ -127,7 +127,7 @@ for (const [key, s] of Object.entries(specs)) {
   const e = store.get(key);
   if (!e) { console.log(NL + key + ": not a unit on the " + domain + " map"); dropU++; continue; }
 
-  const keptFields = {}, reslotOf = {}, problems = [];
+  const keptFields = {}, reslotOf = {}, keptSlots = {}, problems = [];
   for (const [field, bullets] of Object.entries(s.fields || {})) {
     const old = String(e[field] || "");
     const p = [];
@@ -142,6 +142,20 @@ for (const [key, s] of Object.entries(specs)) {
     if (NOT_DOCUMENTED_RE.test(old.trim())) p.push("this field is a not-established finding, not prose to re-slot");
     if (!Array.isArray(bullets) || !bullets.length) p.push("no bullets offered");
     if (bullets && bullets.length > 5) p.push(bullets.length + " bullets");
+    // The WHOLE POINT of a re-slot is that the bullets answer the field's four
+    // questions in order, and the slot list is the only record that they do.
+    // Without it the work is done and not written down: the bullets come out
+    // in the right order and nothing on the entry says so, which is why the
+    // 285 entries of the first re-slotting pass still measure as untagged.
+    const sl = (s.slots || {})[field];
+    if (!Array.isArray(sl) || !sl.length) p.push("no slots offered - a re-slot must say which question each bullet answers");
+    else if (Array.isArray(bullets) && sl.length !== bullets.length) p.push(sl.length + " slot(s) for " + bullets.length + " bullet(s)");
+    else {
+      if (sl.some(n => !Number.isInteger(n) || n < 1 || n > 4)) p.push("a slot is not an integer 1-4");
+      // Non-decreasing, because "in this order" is the convention: a bullet
+      // answering question 2 cannot come after one answering question 3.
+      for (let i = 1; i < sl.length; i++) if (sl[i] < sl[i - 1]) { p.push("slots are not in order: " + sl.join(",")); break; }
+    }
     for (const b of (bullets || [])) {
       if (typeof b !== "string") { p.push("a bullet is not a string"); continue; }
       if (b.length > LIMIT) p.push(b.length + " chars - " + b.slice(0, 46));
@@ -183,12 +197,12 @@ for (const [key, s] of Object.entries(specs)) {
     }
 
     if (p.length) { problems.push(field + ": " + p.slice(0, 4).join("; ")); dropF++; }
-    else { keptFields[field] = bullets; reslotOf[field] = old; keptF++; }
+    else { keptFields[field] = bullets; reslotOf[field] = old; keptSlots[field] = (s.slots || {})[field]; keptF++; }
   }
 
   console.log(NL + key + ": " + Object.keys(keptFields).length + " field(s) kept, " + problems.length + " dropped");
   problems.forEach(x => console.log("    - " + x));
-  if (Object.keys(keptFields).length) { out[key] = { fields: keptFields, reslotOf }; keptU++; }
+  if (Object.keys(keptFields).length) { out[key] = { fields: keptFields, reslotOf, slots: keptSlots }; keptU++; }
   else dropU++;
 }
 
