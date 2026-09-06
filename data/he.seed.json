@@ -2091,6 +2091,14 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Bosnia and Herzegovina, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BA&time=2023"
+   },
+   {
+    "label": "Univerzitet u Tuzli, Studijski programi II ciklusa studija",
+    "url": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/"
+   },
+   {
+    "label": "Univerzitet u Zenici, Konkurs za upis u prvu godinu trećeg ciklusa, studijski program Doktorski studij iz Lingvistike, akademska 2026/2027",
+    "url": "https://unze.ba/konkurs-natjecaj-za-upis-studenata-u-prvu-godinu-studija-treceg-ciklusa-studijski-program-doktorski-studij-iz-lingvistike-na-filozofskom-fakultetu-univerziteta-u-zenici-u-akademskoj-2026-2027-godini/"
    }
   ],
   "supportLinks": [],
@@ -2100,7 +2108,38 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Lingvistika bosanskog jezika",
+    "level": "master",
+    "institution": "Univerzitet u Tuzli",
+    "url": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Second-cycle study programme at the Filozofski fakultet; curriculum in force from 2012/13"
+   },
+   {
+    "subject": "Lingvistika engleskog jezika",
+    "level": "master",
+    "institution": "Univerzitet u Tuzli",
+    "url": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Second-cycle programme; curricula listed for 2011/12, 2014/15 and 2023/24"
+   },
+   {
+    "subject": "Doktorski studij iz Lingvistike",
+    "level": "doctorate",
+    "institution": "Univerzitet u Zenici",
+    "url": "https://unze.ba/konkurs-natjecaj-za-upis-studenata-u-prvu-godinu-studija-treceg-ciklusa-studijski-program-doktorski-studij-iz-lingvistike-na-filozofskom-fakultetu-univerziteta-u-zenici-u-akademskoj-2026-2027-godini/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Third-cycle programme at the Filozofski fakultet; cited page is the 2026/2027 admission competition"
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "",
@@ -2601,6 +2640,18 @@
    {
     "label": "Закон за предучилищното и училищното образование, чл. 132 and чл. 134 (compulsory state matriculation examinations), consolidated text on lex.bg",
     "url": "https://lex.bg/bg/laws/ldoc/2136641509"
+   },
+   {
+    "label": "Софийски университет \"Св. Климент Охридски\", Факултет по математика и информатика, магистърска програма Компютърна лингвистика",
+    "url": "https://www.fmi.uni-sofia.bg/bg/kompyutrna-lingvistika"
+   },
+   {
+    "label": "Софийски университет \"Св. Климент Охридски\", Факултет по славянски филологии, магистърска програма Компютърна лингвистика. Интернет технологии в хуманитаристиката",
+    "url": "https://slav.uni-sofia.bg/magistarska-programa-kompiutierna-lin/"
+   },
+   {
+    "label": "Софийски университет \"Св. Климент Охридски\", Факултет по славянски филологии, магистърска програма Лингвистика - езикова система и речеви практики",
+    "url": "https://slav.uni-sofia.bg/magistarska-programa-lingvistika-ez/"
    }
   ],
   "supportLinks": [],
@@ -2610,7 +2661,38 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Компютърна лингвистика",
+    "level": "master",
+    "institution": "Софийски университет \"Св. Климент Охридски\" (Факултет по математика и информатика)",
+    "url": "https://www.fmi.uni-sofia.bg/bg/kompyutrna-lingvistika",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Three semesters, taught in Bulgarian; entry from mathematics or informatics bachelor degrees"
+   },
+   {
+    "subject": "Компютърна лингвистика. Интернет технологии в хуманитаристиката",
+    "level": "master",
+    "institution": "Софийски университет \"Св. Климент Охридски\" (Факултет по славянски филологии)",
+    "url": "https://slav.uni-sofia.bg/magistarska-programa-kompiutierna-lin/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Separate from the mathematics faculty programme of the same name"
+   },
+   {
+    "subject": "Лингвистика - езикова система и речеви практики",
+    "level": "master",
+    "institution": "Софийски университет \"Св. Климент Охридски\" (Факултет по славянски филологии)",
+    "url": "https://slav.uni-sofia.bg/magistarska-programa-lingvistika-ez/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Two semesters for philology graduates, three for entrants from other fields"
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "Higher Education Act defines each degree by credits and years, with no language component\nIts only curricular language provision is a teaching post for non-specialist language tuition",
@@ -11879,6 +11961,22 @@
    {
     "label": "Eurostat, ESMS reference metadata: Pupils and students - enrolments (educ_uoe_enr), statistical unit and unit of measure",
     "url": "https://ec.europa.eu/eurostat/cache/metadata/en/educ_uoe_enr_esms.htm"
+   },
+   {
+    "label": "Tartu Ülikool, Eesti ja soome-ugri keeleteadus, bakalaureuseõppe õppekava",
+    "url": "https://ut.ee/et/oppekavad/eesti-ja-soome-ugri-keeleteadus-0"
+   },
+   {
+    "label": "Tartu Ülikool, Keeleteadus, magistriõppe õppekava",
+    "url": "https://ut.ee/et/oppekavad/keeleteadus"
+   },
+   {
+    "label": "Tallinna Ülikool, Keeleteadus ja keeletoimetamine, magistriõpe",
+    "url": "https://www.tlu.ee/ht/keeleteadus-ja-keeletoimetamine"
+   },
+   {
+    "label": "Tallinna Ülikool, Lingvistika, doktoriõpe",
+    "url": "https://www.tlu.ee/ht/lingvistika"
    }
   ],
   "supportLinks": [],
@@ -11888,7 +11986,48 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Estonian and Finno-Ugric Languages is a degree in its own right at the University of Tartu\nCourses run in Finnish, Hungarian, Komi, Livonian, Erzya, Saami varieties and Kamas\nIt is a two-year master's with a specialisation in either Estonian or Finno-Ugric languages",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Eesti ja soome-ugri keeleteadus",
+    "level": "bachelor",
+    "institution": "Tartu Ülikool",
+    "url": "https://ut.ee/et/oppekavad/eesti-ja-soome-ugri-keeleteadus-0",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Bakalaureuseõpe, 180 EAP; seven specialisation choices, focus on Estonian and related Finno-Ugric languages"
+   },
+   {
+    "subject": "Keeleteadus",
+    "level": "master",
+    "institution": "Tartu Ülikool",
+    "url": "https://ut.ee/et/oppekavad/keeleteadus",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Magistriõpe, 120 EAP, taught by the Institute of Estonian and General Linguistics"
+   },
+   {
+    "subject": "Keeleteadus ja keeletoimetamine",
+    "level": "master",
+    "institution": "Tallinna Ülikool",
+    "url": "https://www.tlu.ee/ht/keeleteadus-ja-keeletoimetamine",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Electives let students lean towards theoretical linguistics or practical language editing"
+   },
+   {
+    "subject": "Lingvistika",
+    "level": "doctorate",
+    "institution": "Tallinna Ülikool",
+    "url": "https://www.tlu.ee/ht/lingvistika",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Doktoriõpe in the School of Humanities"
+   }
+  ],
   "offerings": [
    {
     "language": "Estonian",
@@ -13543,6 +13682,14 @@
    {
     "label": "Eurostat, ESMS reference metadata: Pupils and students - enrolments (educ_uoe_enr), statistical unit and unit of measure",
     "url": "https://ec.europa.eu/eurostat/cache/metadata/en/educ_uoe_enr_esms.htm"
+   },
+   {
+    "label": "Itä-Suomen yliopisto, Yleinen kielitiede ja kieliteknologia, koulutussivu",
+    "url": "https://www.uef.fi/fi/koulutus/yleinen-kielitiede-ja-kieliteknologia"
+   },
+   {
+    "label": "University of Helsinki, Master's Programme in Linguistic Diversity and Digital Humanities, degree programme page",
+    "url": "https://www.helsinki.fi/en/degree-programmes/linguistic-diversity-and-digital-humanities-masters-programme"
    }
   ],
   "supportLinks": [],
@@ -13552,7 +13699,28 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "It can also be taken there as a free minor subject",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Yleinen kielitiede ja kieliteknologia",
+    "level": "master",
+    "institution": "Itä-Suomen yliopisto",
+    "url": "https://www.uef.fi/fi/koulutus/yleinen-kielitiede-ja-kieliteknologia",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Master's level only; pairs general linguistics with language technology"
+   },
+   {
+    "subject": "Kielellinen diversiteetti ja digitaaliset ihmistieteet -maisteriohjelma",
+    "level": "master",
+    "institution": "Helsingin yliopisto",
+    "url": "https://www.helsinki.fi/en/degree-programmes/linguistic-diversity-and-digital-humanities-masters-programme",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Cited page is the English version, Master's Programme in Linguistic Diversity and Digital Humanities"
+   }
+  ],
   "offerings": [
    {
     "language": "North Sami",
@@ -15677,6 +15845,22 @@
    {
     "label": "Υπουργική απόφαση Φ.253/154481/Α5, Ορισμός των Σχολών, των Τμημάτων και των Εισαγωγικών Κατευθύνσεων για την εισαγωγή στα οποία απαιτείται εξέταση σε ειδικά μαθήματα, ΦΕΚ Β 7261/2024, on minedu.gov.gr",
     "url": "https://www.minedu.gov.gr/publications/docs2023/10._%CE%A6%CE%95%CE%9A_7261_2024__%CE%95%CE%99%CE%94%CE%99%CE%9A%CE%91_%CE%9C%CE%91%CE%98%CE%97%CE%9C%CE%91%CE%A4%CE%91.pdf"
+   },
+   {
+    "label": "Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, ΠΜΣ «Γλωσσολογία», Τομέας Γλωσσολογίας, Τμήμα Φιλολογίας",
+    "url": "https://linguistics.phil.uoa.gr/pms_glossologia/"
+   },
+   {
+    "label": "Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης, MA Programme in Linguistics, School of Philology",
+    "url": "https://lit.auth.gr/en/studies-en/postgraduate-en/ma-linguistics-en/"
+   },
+   {
+    "label": "Πανεπιστήμιο Πατρών, ΠΜΣ «Γλωσσολογία: Γλώσσα και Επικοινωνία», Τμήμα Φιλολογίας",
+    "url": "https://philology.upatras.gr/programma-metaptychiakon-spoudon-p-m-s-sti-glossologia-glossa-kai-epikoinonia/"
+   },
+   {
+    "label": "Πανεπιστήμιο Κρήτης, ΠΜΣ «Γλωσσολογία», Τμήμα Φιλολογίας",
+    "url": "https://www.philology.uoc.gr/spoudes/metaptixiakes-spoudes/pms-glossologia"
    }
   ],
   "supportLinks": [],
@@ -15686,7 +15870,48 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Γλωσσολογία",
+    "level": "master",
+    "institution": "Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών",
+    "url": "https://linguistics.phil.uoa.gr/pms_glossologia/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Run by the Department of Philology; certified by ETHAAE to 19-12-2028"
+   },
+   {
+    "subject": "Γλωσσολογία",
+    "level": "master",
+    "institution": "Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης",
+    "url": "https://lit.auth.gr/en/studies-en/postgraduate-en/ma-linguistics-en/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Two specialisations: Theoretical and Applied Linguistics, and Historical and Balkan Linguistics"
+   },
+   {
+    "subject": "Γλωσσολογία: Γλώσσα και Επικοινωνία",
+    "level": "master",
+    "institution": "Πανεπιστήμιο Πατρών",
+    "url": "https://philology.upatras.gr/programma-metaptychiakon-spoudon-p-m-s-sti-glossologia-glossa-kai-epikoinonia/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Department of Philology; established by FEK 1715/17.05.2018 v. B under Law 4485/2017"
+   },
+   {
+    "subject": "Γλωσσολογία",
+    "level": "master",
+    "institution": "Πανεπιστήμιο Κρήτης",
+    "url": "https://www.philology.uoc.gr/spoudes/metaptixiakes-spoudes/pms-glossologia",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Regulations published in FEK v. B 1877/26-3-2024; covers theoretical, computational and experimental linguistics"
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "",
   "requiredStudy": "Sources conflict: the bachelor chapter says programmes may include language courses\nSupport chapter names a compulsory foreign language required for being awarded a degree",
@@ -16769,6 +16994,38 @@
    {
     "label": "Eurostat, ESMS reference metadata: Pupils and students - enrolments (educ_uoe_enr), statistical unit and unit of measure",
     "url": "https://ec.europa.eu/eurostat/cache/metadata/en/educ_uoe_enr_esms.htm"
+   },
+   {
+    "label": "Trinity College Dublin, Linguistics (JH) undergraduate course page, School of Linguistic, Speech and Communication Sciences",
+    "url": "https://www.tcd.ie/courses/undergraduate/courses/linguistics-jh/"
+   },
+   {
+    "label": "Trinity College Dublin, Computer Science, Linguistics and a Language (CSLL) undergraduate course page",
+    "url": "https://www.tcd.ie/courses/undergraduate/courses/computer-science-linguistics-and-a-language/"
+   },
+   {
+    "label": "Trinity College Dublin, Linguistics (M.Phil. / P.Grad.Dip.) postgraduate course page",
+    "url": "https://www.tcd.ie/courses/postgraduate/courses/linguistics-mphil--pgraddip/"
+   },
+   {
+    "label": "Trinity College Dublin, Applied Linguistics (M.Phil. / P.Grad.Dip.) postgraduate course page",
+    "url": "https://www.tcd.ie/courses/postgraduate/courses/applied-linguistics-mphil--pgraddip/"
+   },
+   {
+    "label": "University College Cork, MA Applied Linguistics (CKE01) course page, School of Languages, Literatures and Cultures",
+    "url": "https://www.ucc.ie/en/cke01/"
+   },
+   {
+    "label": "Maynooth University, MA Applied Linguistics and Intercultural Studies course page",
+    "url": "https://www.maynoothuniversity.ie/study-maynooth/postgraduate-studies/courses/ma-applied-linguistics-intercultural-studies"
+   },
+   {
+    "label": "Maynooth University, PhD Applied Linguistics and Intercultural Studies course page",
+    "url": "https://www.maynoothuniversity.ie/study-maynooth/postgraduate-studies/courses/phd-applied-linguistics-intercultural-studies"
+   },
+   {
+    "label": "University of Limerick, MA Applied Linguistics (International) course page",
+    "url": "https://www.ul.ie/study/postgraduate/applied-linguistics-international-ma"
    }
   ],
   "supportLinks": [],
@@ -16778,7 +17035,88 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Galway's BA Cumarsaid agus Gaeilge is a four-year degree in media and Irish\nThird year opens with a semester at the Gaeltacht campus in An Cheathru Rua",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistics",
+    "level": "bachelor",
+    "institution": "Trinity College Dublin",
+    "url": "https://www.tcd.ie/courses/undergraduate/courses/linguistics-jh/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Taken as Joint Honours or Major-with-Minor, not as a stream inside a language degree"
+   },
+   {
+    "subject": "Computer Science, Linguistics and a Language",
+    "level": "bachelor",
+    "institution": "Trinity College Dublin",
+    "url": "https://www.tcd.ie/courses/undergraduate/courses/computer-science-linguistics-and-a-language/",
+    "institutions": "",
+    "orientation": "",
+    "year": "1985",
+    "note": "Joint degree; linguistics is one of three named streams alongside computer science and a language"
+   },
+   {
+    "subject": "Linguistics (M.Phil. / P.Grad.Dip.)",
+    "level": "master",
+    "institution": "Trinity College Dublin",
+    "url": "https://www.tcd.ie/courses/postgraduate/courses/linguistics-mphil--pgraddip/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "One year full-time or two part-time; four core modules, two electives, 15,000-word dissertation"
+   },
+   {
+    "subject": "Applied Linguistics (M.Phil. / P.Grad.Dip.)",
+    "level": "master",
+    "institution": "Trinity College Dublin",
+    "url": "https://www.tcd.ie/courses/postgraduate/courses/applied-linguistics-mphil--pgraddip/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Centre for Language and Communication Studies; focus on second and foreign language education"
+   },
+   {
+    "subject": "Applied Linguistics (MA)",
+    "level": "master",
+    "institution": "University College Cork",
+    "url": "https://www.ucc.ie/en/cke01/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Run by the School of Languages, Literatures and Cultures"
+   },
+   {
+    "subject": "Applied Linguistics and Intercultural Studies (MA)",
+    "level": "master",
+    "institution": "Maynooth University",
+    "url": "https://www.maynoothuniversity.ie/study-maynooth/postgraduate-studies/courses/ma-applied-linguistics-intercultural-studies",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "One year full-time or two part-time; 30 ECTS core, 30 ECTS elective, 30 ECTS minor thesis"
+   },
+   {
+    "subject": "Applied Linguistics and Intercultural Studies (PhD)",
+    "level": "doctorate",
+    "institution": "Maynooth University",
+    "url": "https://www.maynoothuniversity.ie/study-maynooth/postgraduate-studies/courses/phd-applied-linguistics-intercultural-studies",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Research degree in the School of Modern Languages, Literatures and Cultures"
+   },
+   {
+    "subject": "Applied Linguistics (International) - MA",
+    "level": "master",
+    "institution": "University of Limerick",
+    "url": "https://www.ul.ie/study/postgraduate/applied-linguistics-international-ma",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "One year full-time; includes an overseas semester and a 12-week international internship"
+   }
+  ],
   "offerings": [
    {
     "language": "Irish",
@@ -19720,6 +20058,38 @@
    {
     "label": "Eurostat, ESMS reference metadata: Pupils and students - enrolments (educ_uoe_enr), statistical unit and unit of measure",
     "url": "https://ec.europa.eu/eurostat/cache/metadata/en/educ_uoe_enr_esms.htm"
+   },
+   {
+    "label": "Università di Pisa, Corso di laurea magistrale in Linguistica e traduzione (LM-39), Dipartimento di Filologia, Letteratura e Linguistica",
+    "url": "https://www.fileli.unipi.it/linguistica-e-traduzione/"
+   },
+   {
+    "label": "Università di Bologna, Dati, metodi e modelli per le scienze linguistiche (Laurea Magistrale, LM-39), Esplora il corso",
+    "url": "https://corsi.unibo.it/magistrale/DatiMetodiModelliScienzeLinguistiche/esplora-il-corso"
+   },
+   {
+    "label": "Università Ca' Foscari Venezia, Corso di Laurea Magistrale in Scienze del linguaggio (LM-39), Presentazione",
+    "url": "https://www.unive.it/web/it/3799/presentazione"
+   },
+   {
+    "label": "Università degli Studi di Torino, Scheda corso, Corso di laurea magistrale in Scienze linguistiche (LM-39)",
+    "url": "https://linguistica.campusnet.unito.it/do/home.pl/View?doc=/Il_Corso/scheda_corso.html"
+   },
+   {
+    "label": "Sapienza Università di Roma, PhD in Linguistics, doctoral programme page",
+    "url": "https://phd.uniroma1.it/web/LINGUISTICS_nD3559_EN.aspx"
+   },
+   {
+    "label": "Università di Pavia, Corso di Dottorato in Linguistica, Dottorati di Ricerca",
+    "url": "https://phd.unipv.it/corso-di-dottorato-in-linguistica/"
+   },
+   {
+    "label": "Università degli Studi di Verona, Ph.D. in Linguistics (Verona e Bolzano), course page",
+    "url": "https://www.corsi.univr.it/?ent=cs&id=1007&lang=en"
+   },
+   {
+    "label": "Libera Università di Bolzano, Dottorato di ricerca in Linguistica, Faculty of Education",
+    "url": "https://www.unibz.it/it/faculties/education/phd-linguistics"
    }
   ],
   "supportLinks": [],
@@ -19729,7 +20099,88 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Linguistica e traduzione",
+    "level": "master",
+    "institution": "Università di Pisa",
+    "url": "https://www.fileli.unipi.it/linguistica-e-traduzione/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Degree class LM-39; Dipartimento di Filologia, Letteratura e Linguistica"
+   },
+   {
+    "subject": "Dati, metodi e modelli per le scienze linguistiche",
+    "level": "master",
+    "institution": "Alma Mater Studiorum - Università di Bologna",
+    "url": "https://corsi.unibo.it/magistrale/DatiMetodiModelliScienzeLinguistiche/esplora-il-corso",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Degree class LM-39 Linguistica; two years, taught in Italian"
+   },
+   {
+    "subject": "Scienze del linguaggio",
+    "level": "master",
+    "institution": "Università Ca' Foscari Venezia",
+    "url": "https://www.unive.it/web/it/3799/presentazione",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Degree class LM-39 (Linguistica); tracks include theoretical linguistics and linguistics for deafness and language disorders"
+   },
+   {
+    "subject": "Scienze linguistiche",
+    "level": "master",
+    "institution": "Università degli Studi di Torino",
+    "url": "https://linguistica.campusnet.unito.it/do/home.pl/View?doc=/Il_Corso/scheda_corso.html",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Course code 2707M21, degree class LM-39 Linguistica, taught at Palazzo Nuovo, Turin"
+   },
+   {
+    "subject": "Linguistics (PhD)",
+    "level": "doctorate",
+    "institution": "Sapienza Università di Roma",
+    "url": "https://phd.uniroma1.it/web/LINGUISTICS_nD3559_EN.aspx",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Curricula in historical linguistics, Italian linguistics, and general and applied linguistics"
+   },
+   {
+    "subject": "Dottorato in Linguistica",
+    "level": "doctorate",
+    "institution": "Università di Pavia",
+    "url": "https://phd.unipv.it/corso-di-dottorato-in-linguistica/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Four curricula; 15 CFU of doctorate-specific courses"
+   },
+   {
+    "subject": "Ph.D. in Linguistics (Verona e Bolzano)",
+    "level": "doctorate",
+    "institution": "Università degli Studi di Verona",
+    "url": "https://www.corsi.univr.it/?ent=cs&id=1007&lang=en",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Run jointly with the Free University of Bozen-Bolzano"
+   },
+   {
+    "subject": "Dottorato di ricerca in Linguistica",
+    "level": "doctorate",
+    "institution": "Libera Università di Bolzano",
+    "url": "https://www.unibz.it/it/faculties/education/phd-linguistics",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Same joint programme as Verona's, based in the Faculty of Education"
+   }
+  ],
   "offerings": [],
   "mediumOfInstruction": "The Free University of Bozen-Bolzano teaches in Italian, German and English\nAdmission there needs evidence of specific language levels on the CEFR scale",
   "requiredStudy": "",
