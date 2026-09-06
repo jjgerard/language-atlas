@@ -659,16 +659,63 @@ function quoteOn(quote, page) {
       if (good.length) keptProg[field] = good;
     }
 
+    // `offerings` rows -- which LANGUAGE is taught where -- were not handled
+    // here at all, so a batch carrying them lost every row without a word, the
+    // same way history rows and `languages` rows once did. This is the fifth
+    // typed shape to be supported at one layer of the pipeline and not the
+    // next, so it is written to the same pattern as `programme` above rather
+    // than as its own special case.
+    //
+    // The discriminator is the LANGUAGE, not the institution: one faculty
+    // teaches English, French, German and Italian, all at bachelor level, and
+    // those four rows are told apart only by which language they name.
+    const keptOff = {};
+    for (const [field, rows5] of Object.entries(s.offerings || {})) {
+      const good = [];
+      const used = new Set();
+      for (const r of (rows5 || [])) {
+        const what = norm(r && (r.language || r.subject));
+        if (!what) { dropped.push(field + ": a row names no language"); continue; }
+        const lvl = norm(r.level);
+        const want = wordsOf([r.language, r.institution, r.level].filter(Boolean).join(" "));
+        let e = null, best = -1;
+        for (const cand of evAll) {
+          if (used.has(cand)) continue;
+          const b = norm(cand.bullet);
+          if (!b.includes(what)) continue;
+          if (lvl && !b.includes(lvl)) continue;
+          let score = 0;
+          for (const w of wordsOf(cand.bullet)) if (want.has(w)) score++;
+          if (score > best) { best = score; e = cand; }
+        }
+        if (e) used.add(e);
+        const label = field + " " + (r.language || "?") + (r.institution ? " at " + r.institution : "") + (r.level ? " " + r.level : "");
+        if (!e) { dropped.push(label + ": no evidence entry"); continue; }
+        const p2 = page.get(e.url);
+        if (!p2 || p2.status !== 200) { dropped.push(label + ": source returned " + (p2 ? p2.status : "?")); continue; }
+        if (!p2.text) { dropped.push(label + ": no text extracted from the source"); continue; }
+        if (!quoteOn(e.quote, p2.text)) { dropped.push(label + ": quote not found on the page"); continue; }
+        good.push({
+          language: String(r.language || ""), level: String(r.level || ""),
+          institution: String(r.institution || ""), url: String(r.url || ""),
+          institutions: String(r.institutions || ""),
+          year: String(r.year || ""), note: String(r.note || ""),
+        });
+      }
+      if (good.length) keptOff[field] = good;
+    }
+
     const ns = Object.values(keptSeries).reduce((a, b) => a + b.length, 0);
     const nb = Object.values(kept).reduce((a, b) => a + b.length, 0);
     const nl = Object.values(keptLangs).reduce((a, b) => a + b.length, 0);
     const np = Object.values(keptProg).reduce((a, b) => a + b.length, 0);
+    const no = Object.values(keptOff).reduce((a, b) => a + b.length, 0);
     const nh = keptHist.length;
     console.log(NL + key + ": " + Object.keys(kept).length + " fields, " + nb + " bullets, " + ns + " series rows, " +
-                nh + " history rows, " + nl + " language rows, " + np + " programme rows verified, " + dropped.length + " dropped");
+                nh + " history rows, " + nl + " language rows, " + np + " programme rows, " + no + " offering rows verified, " + dropped.length + " dropped");
     if (nn) console.log("    " + nn + " notEstablished finding" + (nn === 1 ? "" : "s") + " passed through UNGATED (a claim of absence is not quote-checked)");
     dropped.forEach(d => console.log("    - " + d));
-    if (nb || ns || nn || nh || nl || np)
+    if (nb || ns || nn || nh || nl || np || no)
       // `sources` and `addDocLinks` are the same thing under two names. The
       // drafting briefs have asked for `addDocLinks` all session, because that
       // is what apply.js calls the field; this file only ever read `sources`,
@@ -680,7 +727,7 @@ function quoteOn(quote, page) {
       // which is also why only 16 of 225 he history rows could be matched to
       // the document they name. Accept both spellings rather than pick one:
       // the batches already drafted are not going to be rewritten.
-      out[key] = { fields: kept, series: keptSeries, notEstablished: notEst, history: keptHist, languages: keptLangs, programme: keptProg,
+      out[key] = { fields: kept, series: keptSeries, notEstablished: notEst, history: keptHist, languages: keptLangs, programme: keptProg, offerings: keptOff,
                    sources: (s.sources && s.sources.length ? s.sources : s.addDocLinks) || [] };
   }
 

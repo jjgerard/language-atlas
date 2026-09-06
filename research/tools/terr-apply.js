@@ -43,7 +43,15 @@ for (const [key, v] of Object.entries(verified)) {
   const s = { confidence: "official-document" };
   if (v.fields && Object.keys(v.fields).length) s.fields = v.fields;
   if (v.series && Object.keys(v.series).length) s.series = v.series;
-  if (v.offerings && v.offerings.length) s.offerings = { offerings: v.offerings };
+  // Two shapes, because the gate emits one and this file was written for the
+  // other. `offerings` used to arrive as a bare ARRAY and be wrapped here; now
+  // that the gate verifies it, it arrives keyed by field name like series,
+  // languages and programme do. Reading only the array shape meant a freshly
+  // verified batch reported "0 fields, 0 bullets" and wrote nothing at all --
+  // 68 rows across thirteen countries, gated and passed, dropped in the last
+  // step without a word. Accept both.
+  if (Array.isArray(v.offerings) && v.offerings.length) s.offerings = { offerings: v.offerings };
+  else if (v.offerings && !Array.isArray(v.offerings) && Object.keys(v.offerings).length) s.offerings = v.offerings;
   // The gate emits `languages` keyed by field, the way it emits series, so it
   // is passed straight to apply.js -- which already knows the shape and clears
   // any not-established flag the field carried.

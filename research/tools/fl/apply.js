@@ -142,7 +142,7 @@ function apply(domain, spec) {
     // they are validated and assigned separately rather than shoehorned in.
     for (const [f, arr] of Object.entries(s.series || {})) {
       if (!Object.prototype.hasOwnProperty.call(e, f)) problems.push(`${domain} ${key}: no field ${f}`);
-      if (Array.isArray(e[f]) && e[f].length) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      // No overwrite guard: a series MERGES on year and note, below.
       if (!Array.isArray(arr)) { problems.push(`${domain} ${key}/${f}: series must be an array`); continue; }
       arr.forEach(r => {
         if (!r || !r.year || !r.value) problems.push(`${domain} ${key}/${f}: row needs year and value`);
@@ -172,7 +172,9 @@ function apply(domain, spec) {
     const LEVELS = new Set(['bachelor','master','doctorate','degree','diploma','certificate','minor','module']);
     for (const [f, arr] of Object.entries(s.offerings || {})) {
       if (!Object.prototype.hasOwnProperty.call(e, f)) problems.push(`${domain} ${key}: no field ${f}`);
-      if (Array.isArray(e[f]) && e[f].length) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      // No overwrite guard: offerings is a CATALOGUE and merges, below, on the
+      // same terms as programme. A later pass finding two more languages at a
+      // university should not have to discard the four already recorded there.
       if (!Array.isArray(arr)) { problems.push(`${domain} ${key}/${f}: offerings must be an array`); continue; }
       arr.forEach(r => {
         if (!r || !r.language) { problems.push(`${domain} ${key}/${f}: a row has no language`); return; }
@@ -250,9 +252,43 @@ function apply(domain, spec) {
       e.slots[f] = list.map(Number);
       slotted++;
     }
-    for (const [f, arr] of Object.entries(s.series || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
+    // A series is a TIME SERIES: it grows as later passes find earlier years,
+    // later years, or a second measure for a year already held. Replacing it
+    // wholesale is how one pass's four years for thirty-four countries would
+    // have been thrown away by a second pass carrying three years and a finer
+    // ISCED field for twelve of them. Merge, as policyHistory and programme do.
+    //
+    // Identity is the year AND the note, not the year alone, because one year
+    // legitimately carries several rows -- ISCED-F 023 and 0231 for the same
+    // country and year are two different measures, and the note is what says
+    // which is which.
+    for (const [f, arr] of Object.entries(s.series || {})) {
+      // Year and VALUE, not year and note. Two passes reporting the same
+      // Eurostat figure word it differently, so a note-based key let Germany
+      // hold 2019 = 194,078 twice -- one measurement, printed twice, which
+      // reads on the map as two findings. Two genuinely different measures for
+      // one year differ in their value (ISCED-F 023 against 0231), so the
+      // value is what tells a real second row from a restatement.
+      const sig = r => r.year + "|" + String(r.value).replace(/[^0-9.-]/g, "");
+      const have = new Set((Array.isArray(e[f]) ? e[f] : []).map(sig));
+      const fresh = arr.filter(r => { const k = sig(r); if (have.has(k)) return false; have.add(k); return true; });
+      const dupes = arr.length - fresh.length;
+      if (dupes) console.log(`  ${domain} ${key}/${f}: ${dupes} figure(s) already present`);
+      if (!fresh.length) continue;
+      e[f] = [...(Array.isArray(e[f]) ? e[f] : []), ...fresh].sort((a, b) => a.year - b.year);
+      unflag(f); filled++; rows_ += fresh.length;
+    }
     for (const [f, arr] of Object.entries(s.languages || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
-    for (const [f, arr] of Object.entries(s.offerings || {})) { e[f] = arr; unflag(f); filled++; rows_ += arr.length; }
+    for (const [f, arr] of Object.entries(s.offerings || {})) {
+      const sig = r => [instKey(r.institution), norm(r.level), norm(r.language)].join("|");
+      const have = new Set((Array.isArray(e[f]) ? e[f] : []).map(sig));
+      const fresh = arr.filter(r => { const k = sig(r); if (have.has(k)) return false; have.add(k); return true; });
+      const dupes = arr.length - fresh.length;
+      if (dupes) console.log(`  ${domain} ${key}/${f}: ${dupes} offering(s) already present`);
+      if (!fresh.length) continue;
+      e[f] = [...(Array.isArray(e[f]) ? e[f] : []), ...fresh];
+      unflag(f); filled++; rows_ += fresh.length;
+    }
     // A programme list is a CATALOGUE, not a statement: it is never complete,
     // and the next pass over a country finds the degrees the last one missed.
     // Replacing it wholesale is how Spain's two Complutense rows would have
