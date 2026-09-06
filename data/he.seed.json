@@ -197,26 +197,49 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Antigua and Barbuda, The Education Act, 2008, No. 21 of 2008, ss 91 and 151",
+    "url": "https://laws.gov.ag/wp-content/uploads/2019/02/a2008-21.pdf"
+   },
+   {
+    "label": "Antigua and Barbuda, College of Advanced Studies (ABCAS) Act, 2025, No. 11 of 2025",
+    "url": "https://laws.gov.ag/wp-content/uploads/2025/09/No.-11-of-2025-Antigua-and-Barbuda-College-of-Advanced-Studies-ABCAS-Act-2025.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": [],
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Education Act 2008 reaches tertiary instruction but fixes no language of instruction\nIts only language clause is a curriculum goal about the language of Antigua and Barbuda\nIsland Scholarship eligibility needs CXC passes in five subjects including English Language\nABCAS Act 2025 leaves instruction at the merged national college to what its Board decides\nNo rule: absence read off the Education Act 2008 and the 2025 college act themselves",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2025,
+    "description": "ABCAS Act merges the Antigua State College, ABIIT, ABHTI and the Harrison Centre into one college"
+   }
+  ],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AL",
@@ -537,6 +560,14 @@
    {
     "label": "Universidad Nacional de Córdoba, Facultad de Lenguas — Profesor/a en Español Lengua Materna y Lengua Extranjera",
     "url": "https://lenguas.unc.edu.ar/carreras-de-grado/prof-espanol-maternaextranjera"
+   },
+   {
+    "label": "Argentina, Ley 24.521 de Educación Superior (1995), texto actualizado, InfoLEG",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25394/texact.htm"
+   },
+   {
+    "label": "Argentina, Ley 26.206 de Educación Nacional (2006), arts 52-54, InfoLEG",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/120000-124999/123542/texact.htm"
    }
   ],
   "supportLinks": [],
@@ -614,7 +645,7 @@
     "note": "Profesorado (teaching degree), 5 years, on-campus; Resolución Ministerial 1106/02"
    }
   ],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Ley de Educacion Superior 24.521 fixes no language of instruction for degrees\nArt 29 leaves study plans to each university's own academic autonomy\nLey 26.206 confines intercultural bilingual education to initial, primary and secondary\nNo rule: the absence is read off the higher education act itself, not from practice",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
@@ -623,8 +654,24 @@
    {
     "year": 1973,
     "description": "Ley 20.305 of 25 April 1973 restricted sworn translation to university degree holders"
+   },
+   {
+    "year": 1995,
+    "description": "Ley de Educacion Superior 24.521 enacted, vesting academic autonomy over study plans in universities"
+   },
+   {
+    "year": 2006,
+    "description": "Ley 26.206 makes intercultural bilingual education a modality of the initial, primary and secondary levels only"
    }
-  ]
+  ],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AS",
@@ -2130,6 +2177,10 @@
    {
     "label": "The University of the West Indies, Cave Hill — Department of Language, Linguistics and Literature, Minor in Chinese",
     "url": "https://www.cavehill.uwi.edu/fhe-lll/programme/minor-in-chinese/"
+   },
+   {
+    "label": "The University of the West Indies at Cave Hill, Barbados, Department of Language, Linguistics and Literature, English Language Proficiency Test",
+    "url": "https://www.cavehill.uwi.edu/fhe-lll/programmes/academic-literacies-programme/english-language-proficiency-test/"
    }
   ],
   "supportLinks": [],
@@ -2200,7 +2251,7 @@
     "note": "Minor or elective within the BA only, not a major; Cave Hill campus (Barbados)"
    }
   ],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "UWI Cave Hill in Barbados teaches in English: all applicants sit a proficiency test in English\nExemption only on top grades in CXC English A, GCE O-Level English or CAPE Communication\nThose not exempt or failing must pass FOUN 0100 Fundamentals of Written English first\nRegional university rule, not a Barbadian statute: it reaches non-campus countries too",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
@@ -2211,6 +2262,12 @@
     1,
     2,
     2,
+    4
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
     4
    ]
   }
@@ -3503,6 +3560,14 @@
    {
     "label": "University of The Bahamas, Academic Catalogue AY 2024-2025 (PDF)",
     "url": "https://www.ub.edu.bs/wp-content/uploads/Academic-Catalogue-AY-2024-2025-FINALc.pdf"
+   },
+   {
+    "label": "University of The Bahamas, Undergraduate Admission Requirements, Proficiency in English",
+    "url": "https://www.ub.edu.bs/admissions/undergraduate-admission/requirements/"
+   },
+   {
+    "label": "University of The Bahamas Act, 2016, full text with Statutes and Bye-Laws, University of The Bahamas",
+    "url": "https://www.ub.edu.bs/about-ub/ub-act-charter-statutes/"
    }
   ],
   "supportLinks": [],
@@ -3553,16 +3618,27 @@
     "note": "BEd Secondary Certification: English Language and Literature, 134 credit hours (teaching degree); Academic Catalogue AY 2024-2025"
    }
   ],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "English: the University of The Bahamas requires proof of English from non-native applicants\nNo other language is provided for; freshman entry needs BGCSE passes including English\nThe requirement runs on undergraduate admission to the national university as a whole\nInstitutional admissions rule: the University of The Bahamas Act 2016 fixes no medium",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2016,
+    "description": "University of The Bahamas Act comes into force, continuing the College of The Bahamas as a university"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
     1,
     2,
+    4
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
     4
    ]
   }
@@ -3879,6 +3955,14 @@
    {
     "label": "University of Belize, Academic Catalog 2025-2026 (PDF)",
     "url": "https://ub.edu.bz/wp-content/uploads/2026/04/UB-ACADEMIC-CATALOG-2025-2026-0.pdf"
+   },
+   {
+    "label": "Belize, Education and Training Act, Cap. 36:01, Revised Edition 2011, ss 48, 73 and 91",
+    "url": "https://www.ruraltransformation.gov.bz/docs/28/Cap_36.01_Education_and_Training_Act.pdf"
+   },
+   {
+    "label": "University of Belize, International Students, English Language Proficiency",
+    "url": "https://ub.edu.bz/international-students/"
    }
   ],
   "supportLinks": [],
@@ -3920,12 +4004,25 @@
     "note": "BA in Spanish Education, a teaching degree for primary and high school; Academic Catalog 2025-2026"
    }
   ],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Education and Training Act reaches tertiary institutions but fixes no medium of instruction\nIts only language clause bars refusing school admission on account of language\nUniversity of Belize asks applicants from non-English-official countries to prove English\nEnglish is an institutional admissions rule at the national university, not a statutory medium",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2010,
+    "description": "Education and Training Act repeals the Education Act Cap. 36 and the 2005 technical and vocational training act"
+   }
+  ],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -6238,6 +6335,14 @@
    {
     "label": "Pontificia Universidad Católica de Chile, Facultad de Letras — Licenciatura en Letras Hispánicas",
     "url": "https://letras.uc.cl/pregrado/licenciatura-en-letras-hispanicas/"
+   },
+   {
+    "label": "Chile, Ley 21.091 sobre Educación Superior (2018), texto XML, BCN Ley Chile",
+    "url": "https://www.bcn.cl/leychile/Consulta/obtxml?opt=7&idNorma=1118991"
+   },
+   {
+    "label": "Chile, Ley 19.253 sobre protección, fomento y desarrollo de los indígenas (1993), art 28, BCN Ley Chile",
+    "url": "https://www.bcn.cl/leychile/Consulta/obtxml?opt=7&idNorma=30620"
    }
   ],
   "supportLinks": [],
@@ -6298,14 +6403,24 @@
     "note": "Licenciatura en Letras Hispánicas, mención Lingüística or Literatura; 60 places offered for 2022 admission"
    }
   ],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Ley 21.091 de 2018 fixes no language of instruction for higher education\nLey 19.253 art 28 reaches higher education only as chairs on indigenous languages\nNo rule: absence read off Ley 21.091, whose sole language mention is an entrance test",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1993,
+    "description": "Ley 19.253 requires chairs of indigenous history, culture and languages to be established in higher education"
+   }
+  ],
   "slots": {
    "degreeSubjects": [
+    1,
+    2,
+    4
+   ],
+   "mediumOfInstruction": [
     1,
     2,
     4
@@ -9374,6 +9489,14 @@
    {
     "label": "Universidad Nacional de Colombia, Facultad de Ciencias Humanas — Departamento de Lenguas Extranjeras",
     "url": "https://www.humanas.unal.edu.co/2026/unidades-academicas/departamentos/lenguas/"
+   },
+   {
+    "label": "Colombia, Ley 30 de 1992, por la cual se organiza el servicio público de la Educación Superior, art 28, Gestor Normativo",
+    "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=253"
+   },
+   {
+    "label": "Colombia, Ley 1381 de 2010 de lenguas nativas, art 20, Gestor Normativo",
+    "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=38741"
    }
   ],
   "supportLinks": [],
@@ -9454,12 +9577,20 @@
     "note": "Licenciatura en Filología e Idiomas, Área Curricular de Ciencias del Lenguaje; a teaching degree; first accredited 2008, renewed 2015, Acreditación de Alta Calidad renewed 2024 by MEN Resolución 004948 of 16 April 2024"
    }
   ],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Ley 30 de 1992 fixes no language of instruction for higher education\nUniversity autonomy covers creating and organising each institution's own programmes\nLey 1381 de 2010 makes native-language teaching compulsory only in community schools\nNo rule: the absence is read off Ley 30 de 1992 itself, which never names a language",
   "requiredStudy": "Every programme must set conditions favouring the development of a second language",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
   "policyHistory": [
+   {
+    "year": 1992,
+    "description": "Ley 30 organises the public higher education service and vests programme design in university autonomy"
+   },
+   {
+    "year": 2010,
+    "description": "Ley 1381 makes teaching of native languages compulsory in the schools of the communities that speak them"
+   },
    {
     "year": 2019,
     "description": "Decreto 1330 requires each higher education programme to foster the development of a second language"
@@ -9471,6 +9602,12 @@
    ],
    "requiredStudy": [
     1
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -9504,6 +9641,10 @@
    {
     "label": "Universidad de Costa Rica, Escuela de Filología, Lingüística y Literatura — Bachillerato y Licenciatura en Filología Española (plan nuevo)",
     "url": "https://filologia.ucr.ac.cr/carreras/bachillerato-y-licenciatura-en-filologia-espanola-plan-nuevo/"
+   },
+   {
+    "label": "Costa Rica, Constitución Política, arts 76, 84 and 87, Tribunal Supremo de Elecciones",
+    "url": "https://www.tse.go.cr/pdf/normativa/constitucion.pdf"
    }
   ],
   "supportLinks": [],
@@ -9554,7 +9695,7 @@
     "note": "Bachillerato y Licenciatura en Filología Española, new study plan; no start year stated on the page"
    }
   ],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Constitution art 76 makes Spanish the official language of the Nation, not of teaching\nSame article binds the State to maintain and cultivate national indigenous languages\nArt 84 gives state universities their own organisation and government\nNo statutory medium: art 87 makes libertad de catedra the founding principle of teaching",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "UCR's PELEX delivers the national school English test under a MEP agreement\nUCR's Escuela de Lenguas Modernas administers the TEYL\nDedicated bilingual teaching degrees were still only a proposal in 2024",
@@ -9571,12 +9712,26 @@
    {
     "year": 1964,
     "description": "Study plans for training English and French teachers and bachilleres come into force"
+   },
+   {
+    "year": 1975,
+    "description": "Article 76 added to the Constitution, declaring Spanish the official language of the Nation"
+   },
+   {
+    "year": 1999,
+    "description": "Article 76 wholly reformed, adding the State duty to maintain and cultivate indigenous languages"
    }
   ],
   "slots": {
    "degreeSubjects": [
     1,
     2
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -9634,6 +9789,10 @@
    {
     "label": "Universidad de La Habana — Acerca de: Facultades (FLEX description)",
     "url": "https://www.uh.cu/acerca-de/facultades/"
+   },
+   {
+    "label": "Cuba, Constitución de la República (2019), art 2, Gaceta Oficial No. 5 Extraordinaria de 10 de abril de 2019",
+    "url": "https://www.gacetaoficial.gob.cu/sites/default/files/goc-2019-ex5.pdf"
    }
   ],
   "supportLinks": [],
@@ -9702,7 +9861,7 @@
     "note": "Taught only as a second foreign language within the FLEX degrees, not as a degree of its own"
    }
   ],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Constitution art 2 makes Spanish the official language of the State, not of teaching\nMES 2022 teaching reglamento assumes Spanish: foreign diplomas must be translated into it\nStudy plans must build correct use of the mother tongue and communication in English\nRectors may exempt deaf students from the Idioma Ingles discipline of their degree\nNo rule fixes a medium: neither the Constitution nor the MES teaching reglamento does",
   "requiredStudy": "Idioma Inglés is a discipline within degree study plans, MES Res. 47/2022\nEnglish communication is a compulsory cross-curricular strategy in all degrees\nRectors may exceptionally exempt deaf students from the English discipline",
   "entryRequirements": "Access to Cuban higher education runs through entrance exams that include Español\nThe Español exam sits alongside Matemática and Historia in that round",
   "teacherPipeline": "",
@@ -9713,6 +9872,10 @@
     "description": "Cuba announced degree plans would first require proof of English before graduating, phased in"
    },
    {
+    "year": 2022,
+    "description": "MES Resolucion 47 replaces the 2017 teaching-organisation and 2018 methodological regulations for higher education"
+   },
+   {
     "year": 2025,
     "description": "MES Resolución 17/2025 grants academic credits for levels of English competence attained"
    }
@@ -9721,6 +9884,13 @@
    "entryRequirements": [
     1,
     2
+   ],
+   "mediumOfInstruction": [
+    1,
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -11206,26 +11376,43 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Commonwealth of Dominica, Dominica State College Act, Act No. 4 of 2002, ss 3, 5 and 33",
+    "url": "https://www.dominica.gov.dm/laws/2002/act4-2002.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": [],
   "offerings": [],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Dominica State College Act 2002 fixes no language of instruction for the national college\nNo other language is provided for; the Board prescribes the subjects of instruction\nNo rule: absence read off the college's own founding act, which never names a language",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2002,
+    "description": "Dominica State College Act establishes the Dominica State College as a body corporate"
+   }
+  ],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "DO",
@@ -11257,6 +11444,10 @@
    {
     "label": "Universidad Autónoma de Santo Domingo — Planes de Estudio de Grado (register of undergraduate programmes)",
     "url": "https://app.uasd.edu.do/PlanesGrado/"
+   },
+   {
+    "label": "República Dominicana, Ley No. 139-01 de Educación Superior, Ciencia y Tecnología (2001), arts 33 and 48",
+    "url": "https://www.aduanas.gob.do/media/fzrdqj2a/139-01_de_educacion_ciencia_y_tecnologia.pdf"
    }
   ],
   "supportLinks": [],
@@ -11327,12 +11518,25 @@
     "note": "Licenciatura en Letras, Escuela de Letras (plan code P-LET); no start year given in the register"
    }
   ],
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Ley 139-01 de Educacion Superior fixes no language of instruction for degrees\nInstitutions hold academic, administrative and institutional autonomy over teaching\nFull autonomy after evaluation lets an institution offer programmes without CONESCT leave\nNo rule: the absence is read off Ley 139-01 itself, the framework act for the system",
   "requiredStudy": "",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2001,
+    "description": "Ley 139-01 creates the National System of Higher Education, Science and Technology"
+   }
+  ],
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "DZ",
