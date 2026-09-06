@@ -267,6 +267,22 @@
    {
     "label": "Ligj nr. 69/2012 “Për sistemin arsimor parauniversitar në Republikën e Shqipërisë”, i ndryshuar",
     "url": "https://arsimiparauniversitar.gov.al/wp-content/uploads/2021/04/LIGJI-69-2012-I-NDRYSHUAR.pdf"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Albania, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=AL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Albania, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=AL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Albania, Italian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=AL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Albania, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=AL&time=2022"
    }
   ],
   "supportLinks": [],
@@ -282,7 +298,28 @@
   "curriculumTime": "Primary: 42 h per notional year\nCompulsory general secondary: 79 h per notional year\nFirst language 58 h per notional year; none for a second\nMinimum recommended hours, 2020/21 collection — not hours actually taught",
   "assessment": "No minimum attainment level is set for the first compulsory language\nThere is no second compulsory language",
   "teacherSupply": "",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": 2022,
+    "value": "122099",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure definition differs (d)"
+   },
+   {
+    "year": 2022,
+    "value": "42264",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure definition differs (d)"
+   },
+   {
+    "year": 2022,
+    "value": "35647",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure definition differs (d)"
+   },
+   {
+    "year": 2022,
+    "value": "8388",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure definition differs (d)"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2012,
@@ -536,6 +573,38 @@
    {
     "label": "Lehrplan der Volksschule, Anlage A (BGBl. II Nr. 1/2023)",
     "url": "https://rundschreiben.bmbwf.gv.at/media/2023-09_anlagen_0001_vs_bds.pdf"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Austria, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=AT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Austria, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=AT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Austria, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=AT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Austria, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=AT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Austria, Italian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=AT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Austria, Italian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=AT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Austria, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=AT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Austria, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=AT&time=2022"
    }
   ],
   "supportLinks": [],
@@ -558,19 +627,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "99.8%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "9.7%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "324351",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "13387",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "6888",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "3801",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "99.8%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "7.9%",
     "note": "lower secondary learning ≥2; English 99.8%"
+   },
+   {
+    "year": 2022,
+    "value": "329403",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "12011",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "6856",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "4756",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -1180,6 +1289,22 @@
    {
     "label": "Zakon o osnovnom vaspitanju i obrazovanju Republike Srpske",
     "url": "https://natlex.ilo.org/dyn/natlex2/natlex2/files/download/113574/BIH-113574.pdf"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bosnia and Herzegovina, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=BA&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bosnia and Herzegovina, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=BA&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bosnia and Herzegovina, Russian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=BA&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bosnia and Herzegovina, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=BA&time=2022"
    }
   ],
   "supportLinks": [],
@@ -1205,6 +1330,26 @@
     "year": "2020",
     "value": "94.9%",
     "note": "lower secondary learning ≥2; English 100%, German 76.5%"
+   },
+   {
+    "year": 2022,
+    "value": "119959",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "96417",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "7415",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2848",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -1512,6 +1657,38 @@
    {
     "label": "Eurostat — pupils learning foreign languages (educ_uoe_lang02)",
     "url": "https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bulgaria, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=BG&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bulgaria, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=BG&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bulgaria, Russian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=BG&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bulgaria, Russian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=BG&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bulgaria, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=BG&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bulgaria, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=BG&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bulgaria, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=BG&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bulgaria, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=BG&time=2022"
    }
   ],
   "supportLinks": [],
@@ -1534,19 +1711,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "83.6%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "17.4%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "171417",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "24960",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "11817",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "3577",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "83.6%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "12%",
     "note": "lower secondary learning ≥2; English 91.2%"
+   },
+   {
+    "year": 2022,
+    "value": "175131",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "16759",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "9055",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "4064",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -5533,6 +5750,38 @@
    {
     "label": "Eurostat — pupils learning foreign languages (educ_uoe_lang02)",
     "url": "https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Cyprus, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=CY&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Cyprus, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=CY&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Cyprus, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=CY&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Cyprus, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=CY&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Cyprus, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=CY&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Cyprus, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=CY&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Cyprus, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=CY&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Cyprus, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=CY&time=2022"
    }
   ],
   "supportLinks": [],
@@ -5555,19 +5804,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "100%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "91.6%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "26825",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "22724",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "577",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "115",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "100%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "83.7%",
     "note": "lower secondary learning ≥2; English 100%, French 82.7%"
+   },
+   {
+    "year": 2022,
+    "value": "29114",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "23883",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "849",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "327",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": []
@@ -5594,6 +5883,38 @@
    {
     "label": "Eurypedia — Czechia: teaching and learning in single-structure education",
     "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/czechia/teaching-and-learning-single-structure-education"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Czechia, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=CZ&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Czechia, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=CZ&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Czechia, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=CZ&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Czechia, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=CZ&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Czechia, Russian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=CZ&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Czechia, Russian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=CZ&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Czechia, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=CZ&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Czechia, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=CZ&time=2022"
    }
   ],
   "supportLinks": [],
@@ -5616,19 +5937,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "79.8%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "43.1%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "390412",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "191364",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "53833",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "10179",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "79.8%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "65.5%",
     "note": "lower secondary learning ≥2; English 98.2%, German 47.6%"
+   },
+   {
+    "year": 2022,
+    "value": "461318",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "226701",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "62661",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "17801",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -5676,6 +6037,38 @@
    {
     "label": "KMK, Bildungsstandards fuer die fortgefuehrte Fremdsprache, Allgemeine Hochschulreife (2012)",
     "url": "https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2012/2012_10_18-Bildungsstandards-Fortgef-FS-Abi.pdf"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Germany, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=DE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Germany, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=DE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Germany, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=DE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Germany, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=DE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Germany, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=DE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Germany, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=DE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Germany, Russian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=DE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Germany, Russian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=DE&time=2022"
    }
   ],
   "supportLinks": [],
@@ -5698,19 +6091,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "54.1%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "37.1%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "4493029.2",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "1050409.3",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "237357.9",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "66367.9",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "54.1%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "36.9%",
     "note": "lower secondary learning ≥2; English 100%, French 23.1%"
+   },
+   {
+    "year": 2022,
+    "value": "4438657.7",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure definition differs (d)"
+   },
+   {
+    "year": 2022,
+    "value": "950033.1",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure definition differs (d)"
+   },
+   {
+    "year": 2022,
+    "value": "273659.7",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure definition differs (d)"
+   },
+   {
+    "year": 2022,
+    "value": "58611.3",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure definition differs (d)"
    }
   ],
   "policyHistory": [
@@ -6211,6 +6644,30 @@
    {
     "label": "Retsinformation: Folkeskoleloven, LBK 989/2024",
     "url": "https://www.retsinformation.dk/eli/lta/2024/989/xml"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Denmark, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=DK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Denmark, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=DK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Denmark, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=DK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Denmark, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=DK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Denmark, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=DK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Denmark, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=DK&time=2022"
    }
   ],
   "supportLinks": [],
@@ -6233,19 +6690,49 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "86.9%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "81.7%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "240450",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "184714",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "23693",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "86.9%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "85.1%",
     "note": "lower secondary learning ≥2; English 100%, German 76.5%"
+   },
+   {
+    "year": 2022,
+    "value": "244531",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "185549",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "22272",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -6551,6 +7038,38 @@
    {
     "label": "Gumnaasiumi riiklik oppekava, VV maarus nr 2 (RT I, 14.01.2011, 2)",
     "url": "https://www.riigiteataja.ee/public-api/api/v1/akt/114012011002/blob-html"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Estonia, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=EE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Estonia, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=EE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Estonia, Russian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=EE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Estonia, Russian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=EE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Estonia, Estonian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=EST&geo=EE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Estonia, Estonian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=EST&geo=EE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Estonia, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=EE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Estonia, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=EE&time=2022"
    }
   ],
   "supportLinks": [],
@@ -6573,19 +7092,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "79.7%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "95.6%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "36560",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "24381",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "8544",
+    "note": "Estonian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "4002",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "79.7%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "95.2%",
     "note": "lower secondary learning ≥2; English 95.7%"
+   },
+   {
+    "year": 2022,
+    "value": "43280",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "29198",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "9798",
+    "note": "Estonian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "4336",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -6771,6 +7330,38 @@
    {
     "label": "Real Decreto 217/2022, ensenanzas minimas de Educacion Secundaria Obligatoria (BOE)",
     "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2022-4975"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Spain, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=ES&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Spain, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=ES&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Spain, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=ES&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Spain, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=ES&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Spain, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=ES&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Spain, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=ES&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Spain, Portuguese, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=POR&geo=ES&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Spain, Portuguese, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=POR&geo=ES&time=2022"
    }
   ],
   "supportLinks": [],
@@ -6793,19 +7384,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "100%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "41.6%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "1509939",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "626030",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "70428",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "7112",
+    "note": "Portuguese at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "100%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "45%",
     "note": "lower secondary learning ≥2; English 99.2%, French 41.3%"
+   },
+   {
+    "year": 2022,
+    "value": "1574838",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "610142",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "73997",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "10178",
+    "note": "Portuguese at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -7633,6 +8264,38 @@
    {
     "label": "Finlex open data: Perusopetuslaki 628/1998",
     "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/1998/628"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Finland, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=FI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Finland, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=FI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Finland, Swedish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SWE&geo=FI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Finland, Swedish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SWE&geo=FI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Finland, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=FI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Finland, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=FI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Finland, Finnish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FIN&geo=FI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Finland, Finnish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FIN&geo=FI&time=2022"
    }
   ],
   "supportLinks": [],
@@ -7655,19 +8318,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "86.7%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "98.3%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "176743",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "164364",
+    "note": "Swedish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "18829",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "10410",
+    "note": "Finnish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "86.7%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "98.7%",
     "note": "lower secondary learning ≥2; English 99.5%"
+   },
+   {
+    "year": 2022,
+    "value": "178089",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "166781",
+    "note": "Swedish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "16794",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "9964",
+    "note": "Finnish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -7883,6 +8586,38 @@
    {
     "label": "Arrete du 17 janvier 2019, programmes de langues vivantes au lycee (BO special n° 1)",
     "url": "https://www.education.gouv.fr/bo/19/Special1/MENE1901585A.htm"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — France, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=FR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — France, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=FR&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — France, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=FR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — France, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=FR&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — France, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=FR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — France, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=FR&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — France, Italian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=FR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — France, Italian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=FR&time=2022"
    }
   ],
   "supportLinks": [],
@@ -7905,19 +8640,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "100%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "54%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "3347438",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "1814357",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "531299",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "140848",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "100%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "75.5%",
     "note": "lower secondary learning ≥2; English 99.4%, German 15.2%"
+   },
+   {
+    "year": 2022,
+    "value": "3435438",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1928219",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "481910",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "154814",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -8888,6 +9663,38 @@
    {
     "label": "Ν. 4692/2020 Αναβάθμιση του Σχολείου (ΦΕΚ Α΄111)",
     "url": "https://www.minedu.gov.gr/publications/docs2022/kpp/4692_2020%20(%CE%A6%CE%95%CE%9A%20%CE%91%CE%84111_12.6.2020)%20(%CE%86%CF%81%CE%B8%CF%81%CE%BF%2059).pdf"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Greece, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=EL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Greece, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=EL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Greece, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=EL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Greece, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=EL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Greece, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=EL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Greece, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=EL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Greece, Italian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=EL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Greece, Italian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=EL&time=2022"
    }
   ],
   "supportLinks": [],
@@ -8910,19 +9717,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "98.3%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "95%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "315196",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "151097",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "151298",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "2147",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "98.3%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "95.7%",
     "note": "lower secondary learning ≥2; English 99.2%, French 47.8%, German 46.6%"
+   },
+   {
+    "year": 2022,
+    "value": "334678",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "160536",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "159378",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "4118",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -9366,6 +10213,38 @@
    {
     "label": "Odluka o donosenju kurikuluma za nastavni predmet Engleski jezik, NN 7/2019",
     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_01_7_139.html"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Croatia, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=HR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Croatia, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=HR&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Croatia, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=HR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Croatia, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=HR&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Croatia, Italian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=HR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Croatia, Italian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=HR&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Croatia, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=HR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Croatia, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=HR&time=2022"
    }
   ],
   "supportLinks": [],
@@ -9388,19 +10267,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "100%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "52.4%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "151468",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "70835",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "17004",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "1974",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "100%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "54.6%",
     "note": "lower secondary learning ≥2; English 98%, German 44.1%"
+   },
+   {
+    "year": 2022,
+    "value": "154372",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "62820",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "15384",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1762",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -9481,6 +10400,38 @@
    {
     "label": "20/2012. (VIII. 31.) EMMI rendelet a nevelesi-oktatasi intezmenyek mukodeserol",
     "url": "https://net.jogtar.hu/jogszabaly?docid=a1200020.emm"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Hungary, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=HU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Hungary, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=HU&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Hungary, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=HU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Hungary, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=HU&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Hungary, Slovak, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SLO&geo=HU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Hungary, Slovak, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SLO&geo=HU&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Hungary, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=HU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Hungary, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=HU&time=2022"
    }
   ],
   "supportLinks": [],
@@ -9503,19 +10454,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "62.4%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "6%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "282795",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "116267",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "1704",
+    "note": "Slovak at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "2058",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "62.4%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "7.4%",
     "note": "lower secondary learning ≥2; English 74.6%, German 29.1%"
+   },
+   {
+    "year": 2022,
+    "value": "286638",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "100456",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1686",
+    "note": "Slovak at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1407",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -9616,6 +10607,38 @@
    {
     "label": "Circular 0052/2019 — Exemptions from the study of Irish (Department of Education, Ireland)",
     "url": "https://assets.gov.ie/27471/6add2a93f75e40c19233c552f226bcac.pdf"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Ireland, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=IE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Ireland, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=IE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Ireland, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=IE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Ireland, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=IE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Ireland, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=IE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Ireland, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=IE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Ireland, Italian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=IE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Ireland, Italian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=IE&time=2022"
    }
   ],
   "supportLinks": [],
@@ -9638,9 +10661,49 @@
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "104948",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "36055",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "43210",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "1269",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
     "year": "2020",
     "value": "7.8%",
     "note": "lower secondary learning ≥2; French 49.2%, German 19.3%"
+   },
+   {
+    "year": 2022,
+    "value": "97125",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "49451",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "37032",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1041",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -11688,6 +12751,38 @@
    {
     "label": "Althingi lagasafn: Log um grunnskola 91/2008",
     "url": "https://www.althingi.is/lagas/157b/2008091.html"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Iceland, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=IS&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Iceland, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=IS&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Iceland, Danish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=DAN&geo=IS&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Iceland, Danish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=DAN&geo=IS&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Iceland, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=IS&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Iceland, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=IS&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Iceland, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=IS&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Iceland, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=IS&time=2022"
    }
   ],
   "supportLinks": [],
@@ -11705,19 +12800,59 @@
   "teacherSupply": "No top-level rule on specialisation in primary\nGeneralist class teachers usually teach languages",
   "uptake": [
    {
-    "year": "2020",
-    "value": "75.4%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "97.5%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "12716",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "12139",
+    "note": "Danish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "174",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "422",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "75.4%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "97.1%",
     "note": "lower secondary learning ≥2; English 99.4%"
+   },
+   {
+    "year": 2022,
+    "value": "14032",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "13613",
+    "note": "Danish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "275",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "229",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -11757,6 +12892,38 @@
    {
     "label": "Legge 107/2015 (Normattiva)",
     "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2015-07-13;107"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Italy, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=IT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Italy, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=IT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Italy, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=IT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Italy, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=IT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Italy, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=IT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Italy, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=IT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Italy, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=IT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Italy, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=IT&time=2022"
    }
   ],
   "supportLinks": [],
@@ -11779,19 +12946,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "96.1%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "98.5%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "1730334",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "1110757",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "421178",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "165751",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "96.1%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "97%",
     "note": "lower secondary learning ≥2; English 100%, French 60.4%"
+   },
+   {
+    "year": 2022,
+    "value": "1729347",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1022234",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "452503",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "163808",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -13002,6 +14209,22 @@
    {
     "label": "Schulorganisationsverordnung (SchulOV), LR 411.021",
     "url": "https://www.gesetze.li/konso/pdf/2004154000"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Liechtenstein, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=LI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Liechtenstein, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=LI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Liechtenstein, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=LI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Liechtenstein, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=LI&time=2022"
    }
   ],
   "supportLinks": [],
@@ -13024,19 +14247,29 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "100%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "97.2%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "1504",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "100%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "lower secondary learning ≥2; English 100%, French 100%"
+   },
+   {
+    "year": 2022,
+    "value": "1561",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -13270,6 +14503,38 @@
    {
     "label": "Isakymas V-570 del ugdymo programu apraso (2023)",
     "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/338cd100dfb311eda305cb3bdf2af4d8/"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Lithuania, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=LT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Lithuania, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=LT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Lithuania, Russian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=LT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Lithuania, Russian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=LT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Lithuania, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=LT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Lithuania, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=LT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Lithuania, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=LT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Lithuania, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=LT&time=2022"
    }
   ],
   "supportLinks": [],
@@ -13292,19 +14557,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "72.7%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "81%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "156848",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "101130",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "20055",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "6492",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "72.7%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "77.4%",
     "note": "lower secondary learning ≥2; English 97.8%, German 13.8%"
+   },
+   {
+    "year": 2022,
+    "value": "165201",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "98603",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "22664",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "9039",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -13340,6 +14645,38 @@
    {
     "label": "Eurostat — pupils learning foreign languages (educ_uoe_lang02)",
     "url": "https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Luxembourg, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=LU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Luxembourg, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=LU&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Luxembourg, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=LU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Luxembourg, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=LU&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Luxembourg, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=LU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Luxembourg, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=LU&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Luxembourg, Chinese, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=CHI&geo=LU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Luxembourg, Chinese, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=CHI&geo=LU&time=2022"
    }
   ],
   "supportLinks": [],
@@ -13362,19 +14699,54 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "100%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "100%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "17594",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "10212",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "0",
+    "note": "Chinese at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "100%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "lower secondary learning ≥2; French 100%, German 100%, English 54.3%"
+   },
+   {
+    "year": 2022,
+    "value": "17580",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "15607",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "10328",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "78",
+    "note": "Chinese at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -13414,6 +14786,38 @@
    {
     "label": "Ministru kabineta noteikumi Nr. 416 (03.09.2019)",
     "url": "https://likumi.lv/doc.php?id=309597&version_date=21.09.2019"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Latvia, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=LV&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Latvia, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=LV&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Latvia, Russian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=LV&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Latvia, Russian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=LV&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Latvia, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=LV&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Latvia, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=LV&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Latvia, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=LV&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Latvia, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=LV&time=2022"
    }
   ],
   "supportLinks": [],
@@ -13436,19 +14840,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "98.2%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "71.8%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "54893",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "33134",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "7428",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "1149",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "98.2%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "73%",
     "note": "lower secondary learning ≥2; English 97.5%, German 13.2%"
+   },
+   {
+    "year": 2022,
+    "value": "61399",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "37100",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "8630",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "977",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -13876,6 +15320,38 @@
    {
     "label": "Sluzben vesnik na RM 18/2011, amendments to the primary and secondary education acts",
     "url": "https://slvesnik.com.mk/Issues/E29D9B62CE93B7449685D78E717162B7.pdf"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — North Macedonia, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=MK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — North Macedonia, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=MK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — North Macedonia, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=MK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — North Macedonia, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=MK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — North Macedonia, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=MK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — North Macedonia, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=MK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — North Macedonia, Russian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=MK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — North Macedonia, Russian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=MK&time=2022"
    }
   ],
   "supportLinks": [],
@@ -13898,19 +15374,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "100%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "98.1%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "83206",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "46451",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "35699",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "649",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "100%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "lower secondary learning ≥2; English 100%, German 59.6%, French 38.7%"
+   },
+   {
+    "year": 2022,
+    "value": "80766",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "51456",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "27650",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "376",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -14216,6 +15732,38 @@
    {
     "label": "Legal Notice 69 of 2013, National Curriculum Framework Regulations 2013",
     "url": "https://legislation.mt/getpdf/60225c3cbc8272018c13dd4d"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Malta, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=MT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Malta, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=MT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Malta, Italian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=MT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Malta, Italian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=MT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Malta, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=MT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Malta, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=MT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Malta, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=MT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Malta, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=MT&time=2022"
    }
   ],
   "supportLinks": [],
@@ -14238,19 +15786,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "100%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "96.5%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "12616",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "7017",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "3647",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "1620",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "100%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "95%",
     "note": "lower secondary learning ≥2; English 100%, French 28.1%, German 13.7%"
+   },
+   {
+    "year": 2022,
+    "value": "13516",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "7715",
+    "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "3608",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1990",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -14944,6 +16532,38 @@
    {
     "label": "Wet voortgezet onderwijs 2020, Stb. 2020, 379",
     "url": "https://zoek.officielebekendmakingen.nl/stb-2020-379.html"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Netherlands, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=NL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Netherlands, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=NL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Netherlands, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=NL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Netherlands, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=NL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Netherlands, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=NL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Netherlands, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=NL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Netherlands, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=NL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Netherlands, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=NL&time=2022"
    }
   ],
   "supportLinks": [],
@@ -14966,19 +16586,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "44.6%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "73.7%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "735882",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "415579",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "373935",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "14042",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "44.6%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "71.1%",
     "note": "lower secondary learning ≥2; English 97.4%, French 55.3%, German 49.4%"
+   },
+   {
+    "year": 2022,
+    "value": "681945",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "393824",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "346162",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "13825",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -15026,6 +16686,38 @@
    {
     "label": "Lovdata: Opplaeringslova 2023",
     "url": "https://lovdata.no/dokument/NL/lov/2023-06-09-30"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Norway, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=NO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Norway, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=NO&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Norway, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=NO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Norway, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=NO&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Norway, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=NO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Norway, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=NO&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Norway, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=NO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Norway, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=NO&time=2022"
    }
   ],
   "supportLinks": [],
@@ -15048,19 +16740,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "100%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "69.9%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "185674",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "59002",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "51791",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "21067",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "100%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "66.1%",
     "note": "lower secondary learning ≥2; English 94.7%, German 24%, French 10.7%"
+   },
+   {
+    "year": 2022,
+    "value": "195030",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "66013",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "43398",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "21933",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -15728,6 +17460,38 @@
    {
     "label": "Rozporzadzenie MEN o ramowych planach nauczania (Dz.U. 2019 poz. 639)",
     "url": "https://dziennikustaw.gov.pl/D2019000063901.pdf"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Poland, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=PL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Poland, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=PL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Poland, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=PL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Poland, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=PL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Poland, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=PL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Poland, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=PL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Poland, Russian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=PL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Poland, Russian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=PL&time=2022"
    }
   ],
   "supportLinks": [],
@@ -15750,19 +17514,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "99.9%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "93.6%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "1043443",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure estimated (e)"
+   },
+   {
+    "year": 2018,
+    "value": "722445",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure estimated (e)"
+   },
+   {
+    "year": 2018,
+    "value": "43929",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure estimated (e)"
+   },
+   {
+    "year": 2018,
+    "value": "60267",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure estimated (e)"
+   },
+   {
+    "year": "2020",
+    "value": "99.9%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "46.7%",
     "note": "lower secondary learning ≥2; English 98.8%, German 40.6%"
+   },
+   {
+    "year": 2022,
+    "value": "1536869",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "846920",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "81180",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "62758",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -15893,6 +17697,38 @@
    {
     "label": "Decreto-Lei 55/2018, curriculo dos ensinos basico e secundario (DR 1.a serie n.o 129, 2018)",
     "url": "https://files.diariodarepublica.pt/1s/2018/07/12900/0292802943.pdf"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Portugal, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=PT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Portugal, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=PT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Portugal, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=PT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Portugal, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=PT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Portugal, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=PT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Portugal, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=PT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Portugal, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=PT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Portugal, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=PT&time=2022"
    }
   ],
   "supportLinks": [],
@@ -15915,19 +17751,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "68.7%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "86.8%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "326782",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "243373",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "65369",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "4421",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "68.7%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "92.7%",
     "note": "lower secondary learning ≥2; English 97.3%, French 71.2%"
+   },
+   {
+    "year": 2022,
+    "value": "313143",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "234075",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "64967",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "4296",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -16188,6 +18064,38 @@
    {
     "label": "Legea nr. 198/2023 a învăţământului preuniversitar",
     "url": "https://www.isjialomita.ro/files/legi/Legea%20nr.%20198%20din%202023%20a%20%C3%AEnv%C4%83%C8%9B%C4%83m%C3%A2ntului%20preuniversitar.pdf"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Romania, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=RO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Romania, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=RO&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Romania, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=RO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Romania, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=RO&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Romania, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=RO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Romania, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=RO&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Romania, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=RO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Romania, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=RO&time=2022"
    }
   ],
   "supportLinks": [],
@@ -16210,19 +18118,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "99.8%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "95.6%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "719465",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "591736",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "90092",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "3846",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "99.8%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "94.6%",
     "note": "lower secondary learning ≥2; English 100%, French 80.3%, German 13.6%"
+   },
+   {
+    "year": 2022,
+    "value": "733188",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "588051",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "100581",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "4681",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -16266,6 +18214,38 @@
    {
     "label": "Zakon o srednjem obrazovanju i vaspitanju",
     "url": "https://www.paragraf.rs/propisi/zakon_o_srednjem_obrazovanju_i_vaspitanju.html"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Serbia, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=RS&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Serbia, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=RS&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Serbia, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=RS&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Serbia, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=RS&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Serbia, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=RS&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Serbia, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=RS&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Serbia, Russian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=RS&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Serbia, Russian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=RS&time=2022"
    }
   ],
   "supportLinks": [],
@@ -16281,7 +18261,48 @@
   "curriculumTime": "Primary: 54 h per notional year\nCompulsory general secondary: 107 h per notional year\nFirst language 54 h per notional year; second 27 h\nMinimum recommended hours, 2020/21 collection — not hours actually taught",
   "assessment": "CEFR used at end of upper secondary, where first and second are set at the same level",
   "teacherSupply": "Specialists teach languages in primary — the only subject there that they do",
-  "uptake": [],
+  "uptake": [
+   {
+    "year": 2018,
+    "value": "273921",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "130126",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "74529",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "50934",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "253158",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "129216",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "64307",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "44691",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   }
+  ],
   "policyHistory": [
    {
     "year": 2013,
@@ -16674,6 +18695,38 @@
    {
     "label": "Riksdagen: Skolforordning 2011:185",
     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skolforordning-2011185_sfs-2011-185/"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Sweden, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=SE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Sweden, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=SE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Sweden, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=SE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Sweden, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=SE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Sweden, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=SE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Sweden, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=SE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Sweden, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=SE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Sweden, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=SE&time=2022"
    }
   ],
   "supportLinks": [],
@@ -16696,19 +18749,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "94.6%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "78.2%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "335857",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "147568",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "65613",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "49513",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "94.6%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "78.6%",
     "note": "lower secondary learning ≥2; English 100%, German 18.4%, French 14.4%"
+   },
+   {
+    "year": 2022,
+    "value": "363764",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "167261",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "64644",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "54676",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -16813,6 +18906,38 @@
    {
     "label": "Zakon o spremembah in dopolnitvah Zakona o osnovni soli (ZOsn-I), Uradni list RS 63/2013",
     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2013-01-2519"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovenia, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=SI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovenia, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=SI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovenia, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=SI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovenia, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=SI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovenia, Spanish, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=SI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovenia, Spanish, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SPA&geo=SI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovenia, French, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=SI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovenia, French, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=FRE&geo=SI&time=2022"
    }
   ],
   "supportLinks": [],
@@ -16835,19 +18960,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "81.2%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "53.9%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "54324",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "13371",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "1402",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "792",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "81.2%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "25.6%",
     "note": "lower secondary learning ≥2; English 99.8%, German 21.3%"
+   },
+   {
+    "year": 2022,
+    "value": "64920",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "11698",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1587",
+    "note": "Spanish at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "888",
+    "note": "French at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [
@@ -16883,6 +19048,38 @@
    {
     "label": "Eurostat — pupils learning foreign languages (educ_uoe_lang02)",
     "url": "https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovakia, English, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=SK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovakia, English, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ENG&geo=SK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovakia, German, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=SK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovakia, German, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=GER&geo=SK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovakia, Russian, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=SK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovakia, Russian, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=RUS&geo=SK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovakia, Slovak, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SLO&geo=SK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovakia, Slovak, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=SLO&geo=SK&time=2022"
    }
   ],
   "supportLinks": [],
@@ -16905,19 +19102,59 @@
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
    },
    {
-    "year": "2020",
-    "value": "87.6%",
-    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
-   },
-   {
     "year": "2013",
     "value": "79.8%",
     "note": "lower secondary (ISCED 2) learning ≥2 foreign languages"
    },
    {
+    "year": 2018,
+    "value": "233605",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "95136",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "36919",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "15187",
+    "note": "Slovak at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": "2020",
+    "value": "87.6%",
+    "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
+   },
+   {
     "year": "2020",
     "value": "52.6%",
     "note": "lower secondary learning ≥2; English 97%, German 32.3%"
+   },
+   {
+    "year": 2022,
+    "value": "248681",
+    "note": "English at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "83451",
+    "note": "German at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "34902",
+    "note": "Russian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "15455",
+    "note": "Slovak at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    }
   ],
   "policyHistory": [

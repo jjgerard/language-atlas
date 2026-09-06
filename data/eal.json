@@ -33,7 +33,29 @@
   "l1Support": "Neither source names any provision for a pupil's home language other than these four\nEscola Andorrana runs on two vehicular languages, Catalan and French, from primary\nEvery classroom has both a Catalan tutor teacher and a French tutor teacher\nSpanish enters in the third cycle, taught by a Spanish specialist",
   "l3Support": "",
   "bilingualEducationNotes": "The Andorran system's primary is dual-medium Catalan and French from the start\nSecondary vehiculates subjects in Catalan, Spanish or French, fixed for the level\nThree public systems coexist, recognised by the 1993 education law",
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    4
+   ],
+   "l2Support": [
+    1,
+    2
+   ],
+   "l1Support": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "bilingualEducationNotes": [
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AE",
@@ -227,11 +249,47 @@
    }
   ],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 52 points below their non-immigrant peers\n60 points below after accounting for socio-economic profile\n58 points below once home language is accounted for as well\nThe gap is no smaller after either adjustment",
-  "l2Support": "No additional classes in the school language, in or out of hours\nNo adapted curriculum, no mother tongue classes, no teaching assistants\nNo bilingual subject teaching\nThe only European system reporting none of the support measures surveyed",
-  "l1Support": "Albanian is the only official language, so this is a minority-language entitlement\nIn Macedonian and Greek minority areas pupils may study their home language\nThat entitlement runs across primary and secondary education\nIt rests on steering documents, not on the legal framework",
+  "l2Support": "The only European system reporting none of the support measures surveyed\nNo adapted curriculum, no mother tongue classes, no teaching assistants\nNo additional classes in the school language, in or out of hours\nNo bilingual subject teaching",
+  "l1Support": "Albanian is the only official language, so this is a minority-language entitlement\nIn Macedonian and Greek minority areas pupils may study their home language\nIt rests on steering documents, not on the legal framework\nThat entitlement runs across primary and secondary education",
   "l3Support": "A foreign language is compulsory for all at some point in schooling\nNo second foreign language is ever compulsory for all",
   "bilingualEducationNotes": "CLIL: Albanian + Italian (ISCED 3)\nAlbanian + Greek, Macedonian (ISCED 3)\nSeparate from mother-tongue teaching for pupils not yet fluent in the school language",
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "l1Support": [
+    1,
+    1,
+    2,
+    3
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AM",
@@ -496,7 +554,40 @@
     "year": 2018,
     "description": "Deutschförderklassen/-kurse system introduced via § 8h SchOG amendment, from school year 2018/19."
    }
-  ]
+  ],
+  "slots": {
+   "removalCriteria": [
+    1,
+    3,
+    3
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "l1Support": [
+    1,
+    1,
+    1
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    1
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -1120,7 +1211,31 @@
   "l1Support": "Neither Eurypedia page describes any home-language provision at all\n'Children with special needs' is the working category and it is not legally defined\nNational minorities, returnees and refugees fall under it only rarely\nSo the country's support architecture is a disability one, not a language one",
   "l3Support": "",
   "bilingualEducationNotes": "No CLIL programmes at any level\nOne of only four European systems without them, with Greece, Iceland and Türkiye",
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "l2Support": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "l1Support": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    1
+   ]
+  }
  },
  {
   "countryCode": "BB",
@@ -1386,7 +1501,7 @@
    }
   ],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 36 points below their non-immigrant peers\n44 points below after accounting for socio-economic profile\n26 points below once home language is accounted for as well\nA gap that narrows but survives both adjustments",
-  "l2Support": "Free Bulgarian training on parental request, individually or in groups\nIntegrated individual instruction for grades I–VII; preparatory classes for beginners\nClasses run outside school hours — one of eight European systems not providing them during\nOrdinance No. 3 of 19 June 2009; curricula approved by the ministry",
+  "l2Support": "Free Bulgarian training on parental request, individually or in groups\nIntegrated individual instruction for grades I–VII; preparatory classes for beginners\nOne of eight European systems not providing classes during school hours\nOrdinance No. 3 of 19 June 2009; curricula approved by the ministry",
   "l1Support": "Pre-school and School Education Act, in force since 1 August 2016\nIt gives pupils whose native language is not Bulgarian the right to study it\nMother-tongue and home-culture instruction on parental request\nAt the pupil's school, or a venue arranged through the origin country's diplomatic mission",
   "l3Support": "A foreign language is compulsory for all at some point in schooling\nA second becomes compulsory for all only at upper secondary",
   "bilingualEducationNotes": "No integrated bilingual model for migrants found — support is parallel, not dual-medium\nThe 2004 Strategy for Educational Integration of Children of Ethnic Minorities runs separately",
@@ -1403,7 +1518,46 @@
     "year": 2016,
     "description": "Pre-school and School Education Act enters into force (1 Aug); Ordinance on Inclusive Education (Council of Ministers Decree No. 286) follows (4 Nov)."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "removalCriteria": [
+    3,
+    3
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "l1Support": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    1
+   ]
+  }
  },
  {
   "countryCode": "BH",
@@ -1799,7 +1953,26 @@
   "l1Support": "Minority-language groups and classes may be created on request\nThat requires a local executive decision agreed with the ministry",
   "l3Support": "",
   "bilingualEducationNotes": "The language of instruction is chosen by the founder of the institution\nPupils' and parents' wishes are weighed only where such a possibility exists",
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1
+   ],
+   "l2Support": [
+    1,
+    1
+   ],
+   "l1Support": [
+    1,
+    2
+   ],
+   "bilingualEducationNotes": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BZ",
@@ -2744,7 +2917,43 @@
     "year": 2004,
     "description": "EDK national Sprachenstrategie (foreign-language curriculum + HSK promotion)."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "removalCriteria": [
+    2,
+    3
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    2,
+    2
+   ],
+   "l1Support": [
+    1,
+    2,
+    4
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "CI",
@@ -4102,7 +4311,7 @@
   "by": "",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Framed around 'bilingual children' — returnees, foreigners and migrant workers' children\nIdentification appears to run through placement testing at the start of schooling\nNo formal legal definition, threshold or codified status was located",
+  "newcomerCriteria": "Framed around 'bilingual children' — returnees, foreigners and migrant workers' children\nNo formal legal definition, threshold or codified status was located\nIdentification appears to run through placement testing at the start of schooling",
   "removalCriteria": "",
   "newcomerProportion": [
    {
@@ -4116,7 +4325,41 @@
   "l1Support": "Greek is the school language, so the term in play is Greek as a second language\nPolicy is to recognise the language and cultural traditions of the different groups\nEvery named measure is Greek-acquisition: parallel classes, teacher training, placement tests\nThe only home-language artefact named is an induction guide produced in eight languages",
   "l3Support": "A foreign language is compulsory for all pupils from age 5",
   "bilingualEducationNotes": "Intercultural elements built into curricula and textbooks\nMaterials produced for pupils whose home language is not Greek\nAn induction guide for foreign pupils and parents exists in eight languages",
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    2
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    2,
+    2,
+    2,
+    4
+   ],
+   "l1Support": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "l3Support": [
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "CZ",
@@ -4168,9 +4411,9 @@
   ],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 46 points below their non-immigrant peers\n34 points below after accounting for socio-economic profile\n14 points above once home language is accounted for as well\nThe difference reverses once background is allowed for — an advantage, not a deficit",
   "l2Support": "Pre-primary: mandatory language groups where 4+ foreign children need them, max 8, 1 h/week\nBasic: free preparation at designated schools, groups of 2–10, 100–400 h over max 20 months\nUpper secondary from 2022/23: groups of 5–15, 100–400 h over max 30 months\n§ 20 Education Act 561/2004 Sb; decrees 48/2005 and 14/2005 Sb",
-  "l1Support": "Regional authorities are to support study of the mother tongue and culture 'if possible'\nIn cooperation with the country of origin\nLimited and aspirational, for EU-national children — not a robust programme",
+  "l1Support": "Limited and aspirational, for EU-national children — not a robust programme\nRegional authorities are to support study of the mother tongue and culture 'if possible'\nCooperation with the country of origin",
   "l3Support": "From 1 September 2023, schools may substitute the second foreign language\nAt the school leader's discretion, where in the pupil's best interest\nReplaced with additional Czech as a second language",
-  "bilingualEducationNotes": "Bilingual Czech/minority-language subject teaching where pupil thresholds are met\nPolish-language minority schools in Silesia — 22 nursery, 20 basic, 1 upper secondary in 2025/26\nMinority provision, not migrant-specific",
+  "bilingualEducationNotes": "Minority provision, not migrant-specific\nBilingual Czech/minority-language subject teaching where pupil thresholds are met\nPolish-language minority schools in Silesia — 22 nursery, 20 basic, 1 upper secondary in 2025/26",
   "policyHistory": [
    {
     "year": 2004,
@@ -4188,7 +4431,49 @@
     "year": 2025,
     "description": "Eligibility for free language preparation extended to Czech citizens with foreigner-equivalent needs (Sept)."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "removalCriteria": [
+    1,
+    3,
+    3,
+    3
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    2,
+    2,
+    3,
+    3
+   ],
+   "l1Support": [
+    1,
+    1,
+    2
+   ],
+   "l3Support": [
+    2,
+    3,
+    4
+   ],
+   "bilingualEducationNotes": [
+    1,
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "DE",
@@ -4243,7 +4528,7 @@
    }
   ],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 65 points below their non-immigrant peers\n40 points below after accounting for socio-economic profile\n12 points below once home language is accounted for as well\nA gap that narrows but survives both adjustments",
-  "l2Support": "Preparatory classes under various Länder names — Sprachlernklassen, Übergangsklassen\nIntensive German-as-a-second-language instruction; DSD I certification available\nKMK-level coordinating programmes FörMig and BISS\nOne of only three European systems funding bilingual subject teaching, with Sweden and Norway",
+  "l2Support": "KMK-level coordinating programmes FörMig and BISS\nOne of only three European systems funding bilingual subject teaching, with Sweden and Norway\nPreparatory classes under various Länder names — Sprachlernklassen, Übergangsklassen\nIntensive German-as-a-second-language instruction; DSD I certification available",
   "l1Support": "Supplementary native-language instruction in some Länder, not standardised federally\nUp to 5 periods a week, covering the geography, history and culture of the country of origin\n140 000 pupils studying home languages in 2021/22, per a Mediendienst Integration survey",
   "l3Support": "A foreign language is compulsory for all pupils, from age 6 in six Länder\nNo second foreign language is ever compulsory for all",
   "bilingualEducationNotes": "Bilingual classes pairing native language and German in some Länder, not federally standardised",
@@ -4264,7 +4549,44 @@
     "year": 2025,
     "description": "KMK 'Integration als Chance — gemeinsam für mehr Chancengerechtigkeit' update/self-commitment paper, alongside a revised diversity-conscious/intercultural education paper."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "removalCriteria": [
+    1,
+    2
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "l1Support": [
+    1,
+    1,
+    1
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "DE",
