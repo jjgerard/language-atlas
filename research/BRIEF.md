@@ -149,6 +149,32 @@ because it is foreign to you: French in Senegal is the medium of instruction,
 Arabic in Chad is a medium, and Russian in Kazakhstan is a second state
 language. Record the category the SOURCE puts it in.
 
+## A `year` on a row means the programme STARTED, or the figure was COUNTED
+
+Nothing else. Two consecutive batches offered 78 years between them and 60 had
+to be cleared, because they were answering a different question:
+
+- a CATALOGUE edition — "Undergraduate Catalogue 2023-24"
+- a CURRICULUM revision — "the 2568 BE (2025) revision", "培养方案（2021年版）"
+- a set of internal REGULATIONS — "internal regulations dated 9 September 2021"
+- a programme-specification version — "programme start year 2026/2027", on a
+  faculty founded generations earlier
+- and, worst, the date of the INTERNET ARCHIVE CAPTURE the page was read from,
+  which says nothing at all about the programme
+
+Every one of those was honestly described in its note, which is the only reason
+they were catchable. But a reader scans the year column before the note, and a
+year there reads as "this began then" whatever the note says.
+
+So: **put a year in the field only when the source says the programme began,
+was first offered, was first approved, or was added — or, for a figure, when it
+was counted. Make the note say which.** "Honours degrees in English offered
+since 1976" earns its year. "Listed among the 16 majors of the 2018 curriculum"
+does not, and the fact belongs in the note instead.
+
+A missing year is a small loss. A wrong one is a claim, and it is the kind a
+reader trusts without checking.
+
 ## A documented "there is no such rule" IS the answer, and it belongs in the field
 
 Some fields ask about a rule that most systems simply do not have. `he`'s
