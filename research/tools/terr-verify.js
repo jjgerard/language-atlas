@@ -36,6 +36,15 @@ for (const d of DOMAINS)
   for (const [k, , type] of d.fields)
     if (SHAPES[type]) TYPED[k] = type;
 
+// The name of the top-level bucket each SHAPES type is read from below. It is
+// the type's own name for four of the five and NOT for the fifth: offering
+// rows are read from `offerings`. The router used to write to the type name
+// unconditionally, so a spec that filed offering rows under `fields.offerings`
+// was moved to `s.offering`, which nothing reads, and every row vanished
+// without a line of output. One table, used by the router and the readers, is
+// the only way that stays fixed.
+const BUCKET = { history: "history", series: "series", languages: "languages", programme: "programme", offering: "offerings" };
+
 const NL = String.fromCharCode(10);
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 const specDir = process.argv[2];
@@ -274,13 +283,53 @@ function quoteOn(quote, page) {
       const lost = (Array.isArray(v) ? v.length : 0) - rows.length;
       delete s.fields[f];
       if (rows.length) {
-        s[t] = s[t] || {};
-        s[t][f] = (s[t][f] || []).concat(rows);
-        console.log("moved " + key + "/" + f + ": " + rows.length + " row(s) from `fields` to `" + t + "`"
+        const bkt = BUCKET[t];
+        s[bkt] = s[bkt] || {};
+        s[bkt][f] = (s[bkt][f] || []).concat(rows);
+        console.log("moved " + key + "/" + f + ": " + rows.length + " row(s) from `fields` to `" + bkt + "`"
           + (lost ? " (" + lost + " non-row value(s) dropped)" : ""));
       } else if (lost) {
         console.log("dropped " + key + "/" + f + ": " + lost + " prose bullet(s) in a `" + t + "` field");
       }
+    }
+  }
+
+  // A typed field written at the TOP LEVEL of the unit -- `"offerings": [ ... ]`
+  // or `"linguistics": [ ... ]` -- rather than under `fields` or under its
+  // bucket. This is what the drafting briefs' own examples show, so it is the
+  // shape that arrives most often, and until now the gate crashed on it: it ran
+  // Object.entries over the array, got a row object where it expected a list,
+  // and died with "(rows5 || []) is not iterable", taking the whole batch with
+  // it. 369 verified rows were sitting in that file.
+  //
+  // Note that `languages` and `offerings` are each BOTH a field name and a
+  // bucket name, so only an array is treated as a field; an object is the
+  // bucket it appears to be.
+  for (const [key, s2] of Object.entries(specs)) {
+    for (const [f, t] of Object.entries(TYPED)) {
+      const v = s2[f];
+      if (!Array.isArray(v) || !v.length) continue;
+      if (!v.every(r => r && typeof r === "object" && !Array.isArray(r))) continue;
+      const bkt = BUCKET[t];
+      // `offerings` and `languages` name a field AND the bucket that field's
+      // rows are read from, so the array IS the bucket's contents for its own
+      // field -- it just needs wrapping. This is the case that crashed.
+      if (bkt === f) {
+        s2[f] = { [f]: v };
+        console.log("wrapped " + key + "/" + f + ": " + v.length + " row(s) given as a bare list");
+        continue;
+      }
+      s2[bkt] = s2[bkt] || {};
+      // A drafter hedging against a gate it could not read sent the same rows
+      // twice, once at the top level and once under the bucket. Concatenating
+      // would double every row, so the bucket wins and the duplicate is named.
+      if (Array.isArray(s2[bkt][f]) && s2[bkt][f].length) {
+        console.log("ignored " + key + "/" + f + ": " + v.length + " top-level row(s); the same field is already under `" + bkt + "`");
+      } else {
+        s2[bkt][f] = v;
+        console.log("moved " + key + "/" + f + ": " + v.length + " row(s) from the top level to `" + bkt + "`");
+      }
+      delete s2[f];
     }
   }
 

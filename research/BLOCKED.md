@@ -1289,3 +1289,35 @@ extraction is glyph-substituted nonsense, and Comoros' `com_HEEdLawLi` is a
 newspaper op-ed about the loi d'orientation rather than the law. Liberia's
 `lbr_HEEdLawLi` is a 29 MB OCR whose text is shredded ("Languageof Instruction",
 "iustntction", "Englis]r") and is not quotable.
+
+**Two silent-failure cases from the African linguistics pass, both worth
+knowing because neither looks like a failure.** `flsh.univ-antananarivo.mg`,
+Madagascar's faculty of letters, **has been defaced**: HTTP 200, 2,274 bytes,
+and a title reading HACKED BY AndrielSec. And `www.unza.zm` returns big-404s of
+155 KB on its department paths while `unza.zm/humanities/about` serves
+normally, so a drafter reading for content sees a full page of navigation and
+no error.
+
+`www.univ-antananarivo.mg` is a React SPA with no text. `courses.mak.ac.ug`
+redirects to `cgi-sys/suspendedpage.cgi` and `llc.mak.ac.ug` is NXDOMAIN --
+use `chuss.mak.ac.ug`. `cohu.udsm.ac.tz`, `ulshb.edu.ml` and `univ-comores.km`
+connect-timeout. `univ-bangui.org` fails TLS with SEC_E_WRONG_PRINCIPAL and
+404s over http. `ungecampus.com` 403s its root, `utg.edu.gm` 403s every path
+with a 75 KB block page, and `shabait.com` 403s live.
+
+**A correction to the Mauritania entry above: `una.mr` is not simply dead.**
+`flsh.una.mr` is alive on a valid certificate and is the working door to the
+faculty of letters.
+
+**`arts.ukzn.ac.za` is intermittent, not blocked** -- 200 with 84 KB once, then
+connect timeouts on three retries. Rows citing it stand.
+
+**From the European offerings pass.** `cien.gouv.mc` 403s with the same
+245-byte BIG-IP "Request Rejected" page as the rest of the estate, so treat all
+of `gouv.mc` except `journaldemonaco.gouv.mc` as refusing. `uni.lu` confirmed
+returning 202 with zero bytes on `/fr/formations/`, which is why Luxembourg is
+unfilled for access rather than absence. NXDOMAIN: `www.mathe.gov.gr`,
+`www.study.gov.gr`, `philology.spbu.ru`, `www.thegi.education`,
+`www.filoloskifakultet.ucg.ac.me`. `www.unistrasi.it` returns HTTP 500.
+`highlands.ac.uk`'s course list (Jersey) is Craft/Vue -- its "all courses" page
+is 541 KB of furniture with zero course entries.

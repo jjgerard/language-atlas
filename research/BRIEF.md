@@ -239,6 +239,55 @@ does not, and the fact belongs in the note instead.
 A missing year is a small loss. A wrong one is a claim, and it is the kind a
 reader trusts without checking.
 
+## Programme registers: prefer the one that answers a GET
+
+`offerings` and `linguistics` are row fields, and the only economical way to
+fill them is a register that lists programmes rather than a university site you
+walk page by page. Two passes over 57 countries settled which kind works.
+
+**What works is a register whose results are in the HTML of a GET url.** The
+ones that earned their keep:
+
+- **Tanzania, TCU.** Not the admission guidebook -- its programme titles wrap
+  across four PDF lines and no quote survives extraction. The web register
+  takes query parameters and returns the whole country in one fetch:
+  `tcu.go.tz/services/accreditation/academic-programmes-offered-universities-tanzania?title=Linguistics&field_award_level_value=All&university_institution_id=All`
+- **Uganda, NCHE.** `unche.or.ug/all-academic-programs/` is 1.3 MB carrying
+  every accredited programme as inline JSON. It surfaced programmes at Kabale,
+  Gulu and KIU that no institutional search found.
+- **Portugal, DGES.** `guias/indcurso.asp?letra=X` then
+  `guias/detcursopi.asp?codc=&code=` -- a real per-course-per-institution
+  register carrying the cycle and the CNAEF area. It is windows-1252.
+- **Czechia, Charles University.** `is.cuni.cz/studium/prijimacky/index.php?do=obory&zobraz=Zobrazit`
+  returns ~1,700 programmes as one flat list. The `fakulta=` parameter is
+  ignored -- every query returns the whole university.
+- **Guinea-Bissau, QUANEF-GB.** A national qualifications register mapping
+  course to institution to ISCED field to award.
+- **INALCO's `licences-llcer` page** is the single most productive page in
+  Europe for this field: 57 languages with a Licence, all enumerated.
+
+**What does not work is a register that renders its results in JavaScript**, and
+most of the famous ones do. Confirmed dead to a fetcher: Universitaly (Nuxt),
+Spain's RUCT (AJAX), Ukraine's EDBO (Next.js), felvi.hu, Croatia's
+postani-student.hr, Norway's Samordna opptak, South Africa's SAQA (POST-only,
+no citable per-qualification GET). Italy's `offf.miur.it` is server-rendered but
+groups by DEGREE CLASS, which by design never names a language.
+
+Do not spend a pass fighting these. Note them and go to the faculty's own
+programme list, which is usually server-rendered because it is old.
+
+## Check the status code, not the page size
+
+Two hosts in one pass served **HTTP 404 with 38-110 KB of full site
+navigation** -- `unistrapg.it` and `ff.unsa.ba`. A drafter reading for content
+saw a populated page with a degree list on it and nearly quoted a degree
+programme off a 404. The same shape is already recorded for
+`repository.uneca.org` and IBE's World Data on Education, which serves a
+1.79 MB 404.
+
+So the size of the response tells you nothing. `curl -w "%{http_code}"` and
+read it.
+
 ## A documented "there is no such rule" IS the answer, and it belongs in the field
 
 Some fields ask about a rule that most systems simply do not have. `he`'s

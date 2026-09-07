@@ -367,7 +367,7 @@ function apply(domain, spec) {
     }
     touched++;
   }
-  console.log(`${domain}: ${touched} entries, ${filled} fields, ${bullets} bullets, ${rows_} series rows, ${hist} history rows, ${notEst} marked not established, ${slotted} slot-tagged`);
+  console.log(`${domain}: ${touched} entries, ${filled} fields, ${bullets} bullets, ${rows_} typed rows, ${hist} history rows, ${notEst} marked not established, ${slotted} slot-tagged`);
   return { FILE, rows };
 }
 
