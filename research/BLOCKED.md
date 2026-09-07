@@ -1186,3 +1186,26 @@ evidence. An outage is not a block, and neither is a bad afternoon.
 on some pages and not others — the Bosnian framework-law page does not, the
 Republika Srpska page does. `logir.fo` and Belarus's `pravo.by` carry
 non-breaking spaces mid-sentence. Choose a quote span that avoids them.
+
+## 19. Belarus's two law portals, and the Charter's real index
+
+- **`world_of_law.pravo.by`** serves the Law on Languages over **HTTP only** —
+  HTTPS resets the connection — and in **windows-1251**, so a Cyrillic quote
+  taken from it needs the legacy-charset decode the gate already does. Reachable
+  but awkward; the Education Code on the main `pravo.by` host is the easier door
+  and carries the education provisions.
+- **`etalonline.by`** returns a 528 KB shell with no act body at all.
+
+**The Charter index, which is worth more than either.** Per-country pages under
+`coe.int/en/web/european-charter-regional-or-minority-languages/<country>` all
+404. The working index is
+
+    coe.int/en/web/european-charter-regional-or-minority-languages/reports-and-recommendations
+
+which returns 200 and carries **415 distinct rm.coe.int links** — every state
+periodical report and every Committee of Experts evaluation, which is the
+single best source for `indigenous.revitalisation` in Europe. Scrape that page
+for the url rather than guessing it; the report urls are not patterned.
+
+`rm.coe.int` itself answers curl with a browser UA and a Google referer exactly
+as section 4 records, and refuses Node on identical headers.

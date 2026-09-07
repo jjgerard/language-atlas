@@ -17,6 +17,14 @@
    {
     "label": "Llei 17/2018 d'ordenament del sistema educatiu andorrà",
     "url": "https://portaljuridicandorra.ad/L2018017_1"
+   },
+   {
+    "label": "Govern d'Andorra, Llengua: normativa, promocio i Pla d'accio nacional per la llengua 2026-2028",
+    "url": "https://www.govern.ad/ca/tematiques/cultura-i-esports/llengua"
+   },
+   {
+    "label": "Govern d'Andorra, Drets linguistics i Servei de Politica Linguistica (Llei 6/2024, del 25 d'abril, de la llengua propia i oficial)",
+    "url": "https://www.govern.ad/ca/tematiques/cultura-i-esports/llengua/parla-catala/drets-linguistics"
    }
   ],
   "supportLinks": [],
@@ -30,9 +38,14 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Catalan here is the llengua propia i oficial, so promotion targets the state language\nPla d'accio nacional per la llengua 2026-2028 is the standing national language plan\nServei de Politica Linguistica takes language queries and complaints about Catalan rights\nThe plan was approved by the Consell Nacional per la Llengua on 1 December 2025",
   "speakers": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2025,
+    "description": "Pla d'accio nacional per la llengua 2026-2028 approved by the Consell Nacional per la Llengua on 1 December 2025"
+   }
+  ],
   "inventory": "Glottolog counts 5 living languages for this country",
   "languages": [
    {
@@ -43,7 +56,15 @@
     "genus": "Romance",
     "typology": "Word order SVO; Noun-Adjective; No tones"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "AE",
@@ -339,7 +360,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Minority language education is effectively absent outside Pustec, Dropull and Finiq\nNo formal education in Serbian, Montenegrin, Romani or Vlach anywhere in Albania\nBosnian is now taught in a school in Boraka, so private financing is no longer required\nLocal self-government units may open classes in the language of national minorities\nSince August 2022 grades 1-9 minority classes no longer need a 15-pupil minimum",
   "speakers": [],
   "policyHistory": [
    {
@@ -389,7 +410,16 @@
     "genus": "Slavic",
     "typology": "Word order SVO; Adjective-Noun"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "AM",
@@ -741,6 +771,10 @@
    {
     "label": "Bildungsdirektion für Kärnten, Minderheitenschulwesen – Historische Entwicklung / Zgodovinski razvoj",
     "url": "https://www.bildung-ktn.gv.at/Minderheitenschulwesen/Historische-Entwicklung.html"
+   },
+   {
+    "label": "Committee of Experts of the European Charter for Regional or Minority Languages, Fifth evaluation report on Austria",
+    "url": "https://rm.coe.int/austriaecrml5-en/1680ac5045"
    }
   ],
   "supportLinks": [],
@@ -754,9 +788,18 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Charter covers Burgenland-Croatian, Czech, Hungarian, Romani, Slovak and Slovenian\nMinority language promotion is written into the new Article 15A pre-school agreement\nCultural activities are run by the minority organisations themselves\nThe Charter entered into force in Austria in 2001\nEthnic groups funding rose from 3,9 million euro in 2020 to 7,9 million in 2021",
   "speakers": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2001,
+    "description": "European Charter for Regional or Minority Languages enters into force in Austria, applying to Burgenland-Croatian, Czech, Hungarian, Romani, Slovak and Slovenian"
+   },
+   {
+    "year": 2021,
+    "description": "Federal funding for Austria's ethnic groups rises from 3,9 million euro in 2020 to 7,9 million euro in 2021"
+   }
+  ],
   "inventory": "Glottolog counts 17 living languages for this country",
   "languages": [
    {
@@ -791,7 +834,16 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -2436,6 +2488,10 @@
    {
     "label": "European Commission/EACEA/Eurydice, Key data on teaching languages at school in Europe – 2023 edition, Figures A1 and B9 (copy hosted by Eurydice Bosnia and Herzegovina; the op.europa.eu DOI is behind an Azure WAF)",
     "url": "https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf"
+   },
+   {
+    "label": "Committee of Experts of the European Charter for Regional or Minority Languages, Fourth evaluation report on Bosnia and Herzegovina, MIN-LANG (2026) 2, adopted 25 March 2026",
+    "url": "https://rm.coe.int/min-lang-2026-2-4th-ecrml-evaluation-repoort-on-bosnia-and-herzegovina/48802c7561"
    }
   ],
   "supportLinks": [],
@@ -2449,11 +2505,25 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Teaching of most regional or minority languages is absent from public education\nNo structured policy and no medium-term Charter strategy has been drawn up\nNational Minority Councils sit at state, entity, cantonal and local level, advisory only\nThe Charter entered into force in 2011 and applies to 15 languages\nMinority activities are financed by the authorities mainly through grants",
   "speakers": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2011,
+    "description": "European Charter for Regional or Minority Languages enters into force in Bosnia and Herzegovina, applying to 15 languages including Ladino, Romani, Ruthenian and Yiddish"
+   }
+  ],
   "inventory": "Glottolog counts 6 living languages for this country",
-  "languages": []
+  "languages": [],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BB",
@@ -2818,7 +2888,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "No preschool offer, and minority languages are not taught at all in grades 8-12\nArmenian, Hebrew, Romani and Turkish are studied only as 'mother tongue' in grades 1-7\nNo pupils have studied Romani as a mother tongue in recent years\nNational Council for Co-operation on Ethnic and Integration Issues carries the culture funding\nMother tongue textbooks are not funded by the state, Turkish interlocutors reported",
   "speakers": [],
   "policyHistory": [
    {
@@ -2868,7 +2938,16 @@
     "genus": "Turkic",
     "typology": "Word order SOV; Adjective-Noun; Strongly suffixing; No tones"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BH",
@@ -3482,7 +3561,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Education Code sets out no revitalisation programme, only optional minority classes\nPreschool groups may study a minority language, school classes its language and literature\nLocal executive and administrative bodies decide, agreed with the Ministry of Education\nCreation depends on the wishes of pupils and their legal representatives",
   "speakers": [],
   "policyHistory": [
    {
@@ -3508,7 +3587,15 @@
     "genus": "Slavic",
     "typology": "Word order No dominant order; Adjective-Noun; Strongly suffixing"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "BZ",
@@ -5882,7 +5969,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Yenish speakers oppose public promotion, so its promotion is kept inside the group\nA Yenish children's dictionary and a fairy tale book were published with federal support\nRadgenossenschaft der Landstrasse, the Yenish umbrella body, runs the learning activities\nLia Rumantscha and Pro Grigioni Italiano promote Romansh and Italian in Graubunden\nInstitutional funding to those two organisations is guaranteed by law",
   "speakers": [],
   "policyHistory": [
    {
@@ -5920,7 +6007,16 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CI",
@@ -8233,7 +8329,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Action Plan for the Revitalisation and Empowerment of Cypriot Maronite Arabic (Sanna)\nResearch under the plan is now in its eleventh phase\nA national Committee of Experts makes recommendations for the language\nCyprus recognised Cypriot Maronite Arabic and set up that committee in 2008\nThe education ministry allocates about 25 000 euro a year to the researchers' work",
   "speakers": [],
   "policyHistory": [
    {
@@ -8271,7 +8367,16 @@
     "genus": "Armenian",
     "typology": "Word order No dominant order; Adjective-Noun; Strongly suffixing; No tones"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "CZ",
@@ -8312,7 +8417,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Pre-school, primary and secondary education is available in Polish\nRoma Integration Strategy 2021-2030 has a chapter on preserving the Romani language\nPedagogical Centre for Polish National Schools trains the Polish-language teachers\nGovernment Council for National Minorities is the consultation body\nCharter undertakings are delegated to minority associations through grant programmes",
   "speakers": [],
   "policyHistory": [
    {
@@ -8362,7 +8467,16 @@
     "genus": "Slavic",
     "typology": ""
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "DE",
@@ -8382,6 +8496,10 @@
    {
     "label": "Gesetz über die Ausgestaltung der Rechte der Sorben/Wenden im Land Brandenburg (Sorben/Wenden-Gesetz), § 10 Bildung",
     "url": "https://bravors.brandenburg.de/gesetze/swg"
+   },
+   {
+    "label": "Committee of Experts of the European Charter for Regional or Minority Languages, Seventh evaluation report on Germany, MIN-LANG (2022) 7",
+    "url": "https://rm.coe.int/min-lang-2022-7-germany-7th-er-en-final-public-en/1680a84130"
    }
   ],
   "supportLinks": [],
@@ -8395,9 +8513,18 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Witaj kindergartens give immersion in Upper and Lower Sorbian, one teacher one language\n2plus model teaches subjects bilingually: three in primary, five from the fifth grade\nThe Laender hold the main competence; the federal authorities co-ordinate and part-fund\nFriisk Stifting for the Frisian ethnic group had its constituent meeting in August 2020\nFoundation for the Sorbian People gets about 24 million euro a year for 2021-2025",
   "speakers": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2020,
+    "description": "Foundation for the Frisian Ethnic Group in Land Schleswig-Holstein, Friisk Stifting, is established and holds its constituent meeting in August 2020"
+   },
+   {
+    "year": 2021,
+    "description": "Fourth funding agreement of the Foundation for the Sorbian People for 2021-2025 raises its funding to approximately 24 million euros a year"
+   }
+  ],
   "inventory": "Glottolog counts 38 living languages for this country",
   "languages": [
    {
@@ -8432,7 +8559,16 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "DE",
@@ -8964,12 +9100,16 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "German is the only regional or minority language protected under the Charter here\nThe state funds German minority schools to the same level as other public schools\nA Contact Committee for the German Minority sits within the Ministry of Culture\nGreenlandic is the official language in Greenland under the 2009 Self-Government Act\nAbout DKK 0,25 million a year goes to German audio content on local radio",
   "speakers": [],
   "policyHistory": [
    {
     "year": 2000,
     "description": "\"Denmark deposits its instrument of ratification on 8 September 2000 (in force 1 January 2001), applying Part III only to German in Southern Jutland and expressly excluding Faroese and Greenlandic under Article 4(2)\""
+   },
+   {
+    "year": 2009,
+    "description": "Act on Greenland Self-Government enters into force on 21 June 2009, making Greenlandic the official language in Greenland"
    }
   ],
   "inventory": "Glottolog counts 11 living languages for this country",
@@ -8998,7 +9138,16 @@
     "genus": "Germanic",
     "typology": "Word order No dominant order; Adjective-Noun; Strongly suffixing; No tones"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "DM",
@@ -9371,6 +9520,18 @@
    {
     "label": "Eurostat — pupils learning foreign languages (educ_uoe_lang02)",
     "url": "https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table"
+   },
+   {
+    "label": "Voru Instituut, Instituudist (about the institute)",
+    "url": "https://wi.ee/et/instituudist/"
+   },
+   {
+    "label": "Voru Instituut, Voru keele ja kultuuri opetamine (teaching of Voro language and culture)",
+    "url": "https://wi.ee/et/voru-keele-ja-kultuuri-opetamine/"
+   },
+   {
+    "label": "Haridus- ja Teadusministeerium, tulemusvaldkonna 'Eesti keel ja eestlus' 2024. aasta tulemusaruanne",
+    "url": "https://hm.ee/sites/default/files/documents/2025-06/TUA24_keeleprogramm_2025_v2.pdf"
    }
   ],
   "supportLinks": [],
@@ -9384,9 +9545,18 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Voru Institute organises the teaching of Voro language and culture in Vorumaa schools\nIt is a state research and development body set up alongside the Ministry of Culture\nTeaching has been one of its work strands since the institute was founded in 1995\nThe state programme 'Lounaeesti keel ja kultuur' has backed Voro teaching since 2000\nThe ministry's language programme also funds work on Estonian's regional varieties",
   "speakers": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1995,
+    "description": "Voru Institute established as a state research and development institution alongside the Ministry of Culture"
+   },
+   {
+    "year": 2000,
+    "description": "State programme 'Lounaeesti keel ja kultuur' begins supporting the teaching of Voro"
+   }
+  ],
   "inventory": "Glottolog counts 13 living languages for this country",
   "languages": [
    {
@@ -9397,7 +9567,16 @@
     "genus": "Slavic",
     "typology": "Word order SVO; Adjective-Noun; Strongly suffixing; No tones"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    2,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "EG",

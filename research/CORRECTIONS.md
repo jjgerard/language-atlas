@@ -348,3 +348,30 @@ statement that it currently offers none, and the observation that the rule is a
 **Why:** the replaced bullet asserts the same fact without its source, and every
 part of it is carried by the new four — the language by the first, the
 institution by the third. Nothing was lost and the rule is now attributable.
+
+# Contradictions found and NOT resolved
+
+Recorded here rather than fixed, because resolving them means choosing between
+two sourced statements and that is the maintainer's call.
+
+## BA|Bosnia and Herzegovina, indigenous.localTerm vs indigenous.revitalisation
+
+**`localTerm` says**, from Eurydice Figure A1: "No regional or minority language
+category is in use" · "Bosnian, Croatian and Serbian are all three state
+languages".
+
+**The Council of Europe's Committee of Experts says**, in its 4th evaluation
+report adopted 25 March 2026, that the European Charter for Regional or
+Minority Languages entered into force in Bosnia and Herzegovina in 2011 and
+applies to FIFTEEN languages: Albanian, Czech, German, Hungarian, Italian,
+Ladino, Polish, Romani, Romanian, Ruthenian, Slovak, Slovenian, Turkish,
+Ukrainian and Yiddish.
+
+Both are sourced and both may be narrowly true — Eurydice may be describing the
+education system's own category vocabulary while the Charter is an
+international instrument with its own list. But as the entry reads, a
+ratification covering fifteen named languages sits beside a statement that no
+such category is in use, and a reader cannot hold both.
+
+`localTerm` was left untouched by the pass that found this. Someone with both
+documents open should decide whether Eurydice's figure is being over-read.
