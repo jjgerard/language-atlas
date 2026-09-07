@@ -60,6 +60,32 @@ too many forms to match. So the depth figures should be read as an upper bound
 on question 1, and the honest fix is a slot 0 for "this qualifies the whole
 field", which the non-decreasing rule would then place first automatically.
 
+## The convention again: a documented ABSENCE collapses to slot 1
+
+Questions 2, 3 and 4 of most fields presuppose that the answer to question 1 is
+yes. `requiredStudy` asks: is there a rule · which language · how much · who may
+exempt. Where a researcher reads the act and finds NO rule, there is no
+language, no amount and no exempting authority to report -- so every bullet,
+however substantial, answers question 1.
+
+Norway and Luxembourg both came back `[1,1,1,1]` on four bullets each, and both
+are thorough: Norway's name UH-loven 2024 imposing no such duty, section 2-3
+binding institutions rather than students, the teaching-language clause
+identified as medium of instruction, and section 11-5 as a student RIGHT to
+bokmal or nynorsk papers rather than a duty. That is four instruments read and
+four distinctions drawn. It is not a thin entry.
+
+But `progress.js` counts it as answering one question of four, identically to a
+field with a single vague sentence in it. So the depth measure understates every
+documented absence, exactly as the hedge problem overstates question 1 -- the
+two distortions run in opposite directions and neither is visible in the
+aggregate.
+
+There is no clean fix inside the current convention. Recording it because the
+depth numbers should not be read as a quality score until it is settled: a map
+whose researchers correctly find and document many absences will score WORSE
+than one whose researchers left those fields blank.
+
 ## eal
 
 **`bilingualEducationNotes` has no question for "is this aimed at these pupils

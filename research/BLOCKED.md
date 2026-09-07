@@ -1130,3 +1130,15 @@ quotes in that pass were broken by `<strong>`, `<em>` or `&nbsp;` inside a
 sentence, or by PDF column wrapping. The fix is to pick a run that is
 contiguous in the raw bytes, which is usually a shorter span than the sentence
 you want. Eurydice in particular bolds words mid-sentence.
+
+## 17. Four more doors, from the European higher-education pass
+
+- **Legilux (Luxembourg)** is an SPA, but has a plain-GET side door serving the
+  full act text:
+  `data.legilux.public.lu/file/eli-etat-leg-loi-YYYY-MM-DD-aNNN-jo-fr-html.html`
+- **e-Seimas (Lithuania)**: `/portal/legalAct/.../asr` returns only a table of
+  contents. The consolidated body is at `/rs/actualedition/{TAIS id}/{token}/`.
+- **dziennikustaw.gov.pl (Poland)** needs the ZERO-PADDED filename:
+  `D2018000221801.pdf`, not `D2018221801.pdf`. The unpadded form 404s.
+- `vlkk.lt` 403s outright.
+
