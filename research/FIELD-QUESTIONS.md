@@ -40,6 +40,55 @@ general curriculum", which is discharge content. `dischargeCriteria` and
 fills, whose content turns up in its neighbours, is the signature of a question
 asked in the wrong place.
 
+## eal
+
+**`bilingualEducationNotes` has no question for "is this aimed at these pupils
+at all?" — and this is the largest of the findings here.** Seven of eleven
+European units END the field with exactly that disclaimer: Denmark "No
+dual-medium programme for migrants", Spain "A separate framework, not aimed at
+migrant pupils", Greece "Not migrant-specific", Croatia "Minority- rather than
+migrant-oriented", and a shared line on Finland, France, Ireland and Italy
+separating it from mother-tongue teaching for pupils not yet fluent.
+
+The field's four questions all assume the bilingual programme IS the answer to
+this map's question. In most European systems it is CLIL or minority-language
+schooling and is not. Everywhere it appears the disclaimer gets tagged 4 for
+want of anywhere better, and 4 is "entitlement or pilot", which it plainly is
+not. This wants a fifth question or a reworded first, and it touches more
+entries than anything else in this file.
+
+**`l1Support` has no slot for eligibility, uptake or a base rate.** Denmark's
+field is EU/EEA-only eligibility extended to Iceland, Liechtenstein and Norway;
+Finland's carries 42,636 pupils across 57 languages in 2020; Estonia's a
+ten-pupil request threshold; Spain's "third in Europe on pupils speaking
+another language at home, at 20.6 per cent". Four different countries, four
+facts, no question that asks for any of them.
+
+**`newcomerCriteria` and `l2Support` have no slot for the naming instrument,**
+though many entries carry one under the cite-inside-the-bullet convention —
+LOMLOE arts. 78-79 and Madrid's Decreto 23/2023 on Spain, decrees or acts
+opening or closing `l2Support` on Denmark, Spain, Finland and Croatia. `dld`'s
+`terminology` HAS a "where it is fixed" question; these do not, so the citation
+is tagged 1 or 4 by proximity.
+
+**`l2Support` has no slot for how progress is assessed or what good practice
+looks like,** and the same content then appears twice on one entry: Ireland's
+2024 inspectorate findings on CEFR-aligned assessment and whole-school
+target-setting sit in BOTH `l2Support` and `removalCriteria`, because neither
+field has a home for them. A fact appearing twice on one entry is the signature
+this file exists to catch.
+
+**Confirmed from the dld findings, now on a second map:** `removalCriteria`
+slot 4 is answered by 2 of 9 units (Greece and Ireland, both squarely), and
+`l2Support` slot 4 -- what qualification the teacher needs -- by 1 of 11. Two
+fields with a question that is nearly never answerable is a pattern, not an
+accident.
+
+`l3Support` collapses to two bullets both at slot 1 on nine of eleven units,
+usually a compulsory-language fact carried over from the `fl` map's territory
+rather than anything about newcomers. Ireland is the only unit whose
+`l3Support` answers questions 1, 2 and 3 together.
+
 ## Related
 
 `fields-must-be-countable` in the maintainer's notes: a field that can only
