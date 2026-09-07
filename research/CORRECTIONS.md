@@ -433,3 +433,20 @@ voluntary and a pupil can graduate without sitting it, and CEFR B1 for general
 and B2 for advanced English.
 
 In both cases nothing in the replaced text is absent from the replacement.
+
+## GB|England, dld.dischargeCriteria (2026-09-07) — merged, two bullets displaced
+
+England runs TWO designations and the stored and new bullets each described one:
+speech-and-language-therapy caseload discharge, which has no national rule, and
+EHC plan cessation under the SEND regulations, which does. Keeping one set and
+dropping the other would have made the entry say something false either way.
+
+**Kept:** the stored "No national rule — set service by service" and
+"Re-referral stays open", plus three new bullets giving the statutory cessation
+test, the deciding authority, and the age limit.
+
+**Displaced, for the five-bullet cap:** "Typically episode-of-care: a block of
+intervention, review, then school-delivered support" and "Unlike EAL status,
+DLD is persistent — discharge ends an episode, not the condition". The second
+is a real conceptual point and its loss is the cost of the cap; it is recorded
+here so it can be restored if the cap is ever revisited.

@@ -430,6 +430,15 @@ function quoteOn(quote, page) {
       // whose text is not where HTML has traditionally put it.
       const decoded = unescapeEntities(unescapeEntities(r.body || ""));
       if (decoded && !parts.includes(decoded)) parts.push(decoded);
+      // And once more with JavaScript's own escapes resolved. A release page
+      // that stores its body inside a JSON blob writes te reo Maori as
+      // "te reo Māori", so a quote carrying the macron can never match --
+      // the bytes on the page are backslash-u-0-1-0-1 and not the letter. Stats
+      // NZ does exactly this. The numbers still match, so a drafter sees some
+      // rows verify and others not, with no visible reason.
+      const jsUnescaped = String(r.body || "").replace(/\u([0-9a-fA-F]{4})/g,
+        (m, h) => String.fromCharCode(parseInt(h, 16)));
+      if (jsUnescaped !== r.body && !parts.includes(jsUnescaped)) parts.push(unescapeEntities(jsUnescaped));
       // Joined by the seam sentinel, which survives fold(), so no quote can
       // match across the join between two decodings.
       text = parts.join(SEAM);
