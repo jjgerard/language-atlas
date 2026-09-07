@@ -1502,3 +1502,80 @@ read off UKIM's own faculty index rather than guessed.
 **More big-404s**: `uog.edu/...linguistics/index.php` (167 KB), `marianas.edu/programs/`
 (57 KB), `usp.ac.fj/...linguistics/` (106 KB). `unc.nc/formations/` returns 500
 and `upf.pf/fr/formations` 403s with 68 KB.
+
+### The sixteen countries HEPO could not serve, and the doors that did
+
+Same pass. These are the routes that answered where every HEPO slot was a
+404 or a scan, and they are worth more than the blocks.
+
+| Door | What it serves |
+|---|---|
+| `natlex.ilo.org/dyn/natlex2/natlex2/files/download/<isn>/<CODE-isn>.pdf` | **200 even though every NATLEX *detail* page 403s.** Gave Burkina Faso's 2008 higher-education decree and Chad's loi 06-016 with clean text layers |
+| `commons.laws.africa/akn/<cc>/act/<year>/<n>/eng@<date>.pdf` | Laws.Africa consolidations; both Lesotho acts came from here |
+| `media.malawilii.org/files/legislation/akn-mw-act-<year>-<n>-eng-<date>.pdf` | Malawi's statutes as real PDFs. **`lesotholii.org` and `malawilii.org` both answered 200** `[checked here]` -- section 20 records lesotholii as a 403, and that is now stale |
+| `liziba.cg/wp-content/uploads/` | Congo-Brazzaville's own legal portal, serving the CEMAC LMD directive and the 2022 private-HEI decree |
+| `boe.gob.gq/files/` | Equatorial Guinea's Boletín Oficial; the consolidated Ley General de Educación has a clean text layer |
+| `gov.za/sites/default/files/gcis_document/<YYYYMM>/<gazette><notice>.pdf` | South African Government Notices |
+| `media.unesco.org/sites/default/files/webform/r2e002/<hash>.pdf` | UNESCO's Right to Education document store; the only readable copy of São Tomé's Lei 2/2003 |
+
+**Newly observed refusals and traps.**
+
+- **`gazette.sc` (Seychelles) needs its own host as the Referer.** With
+  `-e https://www.google.com/` it 403s; with `-e https://www.gazette.sc/` the
+  same path returns 200. This is the inverse of the usual advice in section 4
+  and it will look like a block to any client sending a search-engine referer.
+- **`seylii.org` now redirects to a Decisia portal that serves no legislation**,
+  and `gambialii.org` is **NXDOMAIN**. Neither is a route to those statutes.
+- `naqaa.gm` serves at 200 but its copies of the **Tertiary and Higher
+  Education Act 2016** (17.9 MB) and the NAQAA Act 2021 (6.6 MB) are image-only
+  -- 51 and 38 bytes of text. Its **GNQF Policy Document extracts cleanly**, and
+  is what The Gambia rests on. `moherst.gov.gm` serves a parked Virtualmin page.
+- `repositoriodigital.me.gov.st` still presents a **self-signed certificate**
+  `[checked here]`; only `curl -k` gets São Tomé's Lei 4/2018 out, so the 2018
+  law is not citable by this pipeline and the entry rests on the 2003 law it
+  replaced. Wayback has no copy and `planipolis.iiep.unesco.org` served the
+  **3,143-byte Anubis challenge at 200** again, exactly as section 10 records.
+- **Image-only statutes, the recurring blocker.** Burundi's loi 1/07 of 2020
+  reorganising higher education (5.0 MB → 40 bytes, and the Assemblée nationale
+  bulletin copy is the same scan), Congo's loi 25-95 (857,662 bytes → 6 bytes,
+  byte-identical on `liziba.cg` and `unicongo.cg`), and the two Gambian acts
+  above. This environment has `pdftotext` but no `pdftoppm`, `pdfimages` or
+  `tesseract`, so a scan cannot be read here at all -- not merely not quoted.
+  Installing poppler's rasteriser or an OCR tool would decide four of these
+  units.
+- CAR and Guinea have no retrievable framework act at all: `miniduc-rca.net` is
+  NXDOMAIN, `univ-bangui.org` fails TLS on principal mismatch, `sgg.gov.gn` and
+  `cnt.gov.gn` 403, and `mesrs.gov.gn` answers 200 with an empty `/lois/`.
+  Université Laval says outright of Guinea that the 1997 orientation law and its
+  decree "ne sont pas disponibles".
+- Eritrea: the Library of Congress *Gazette of Eritrean Laws* collection 403s
+  behind a bot interstitial, and Wayback CDX for `moe.gov.er`, `www.moe.gov.er`
+  and `nbhe.gov.er` all return **empty sets**. There is no located Eritrean
+  education act; UNESCO's PEER profile says the country has none.
+
+**Arabic PDFs that extract into presentation forms, and why a correct quote
+reads as invented.** Egypt's, Libya's and Sudan's higher-education instruments
+extract into the Arabic Presentation Forms block (U+FB50-FEFF) rather than the
+standard Arabic block. A quote typed in ordinary Arabic is therefore not a
+substring of the extracted text, and a checker sees a correct quote as
+fabricated. The way through is to search under NFKC but to QUOTE THE RAW
+SUBSTRING, kept inside a single U+202B directional run, which is what the
+surviving Egyptian, Libyan and Sudanese rows do.
+
+**Two doors that turned out to be open.** NATLEX's file-download path serves
+200 while its detail pages 403, so the instrument is reachable even when its
+record is not. And `gazette.sc` (Seychelles) requires ITS OWN HOST as the
+Referer -- the inverse of the usual google.com trick, and worth trying whenever
+a government host refuses a request that looks otherwise correct.
+
+**One record above is now stale**: `lesotholii.org`'s 403 no longer reproduces.
+
+**`joradp.dz` again, with a number.** Algeria's 1999 gazette issue is a 1.3 MB
+PDF with a 24-byte text layer. The register serves, and cannot be quoted.
+
+**IESALC HEPO, third pass, and a variant BRIEF.md did not name.**
+`_HELawLi` plus `_HEEdLawLi` gave extractable text for 34 of 50 African units,
+matching the previous pass exactly. **`_HEEdPlanLi` opened twelve more** -- but
+it is a sector PLAN, not an instrument, so it is orientation and must not carry
+an absence claim about a law. The country-graph page lists eight further slot
+names and several of them serve byte-identical files.

@@ -33,6 +33,23 @@ const LIMIT = 96;
 // declared type has a SHAPE is typed, on every domain, forever. Adding a
 // domain or retyping a field stays a domains.js edit, which is the rule this
 // repo works to.
+const unitKey = n => String(n).normalize("NFKD").replace(/[̀-ͯ]/g, "")
+  .toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+// Find the entry a spec key names. The country code must match exactly; the
+// unit NAME is matched with accents folded away, because it was an exact
+// string compare and "Sao Tome and Principe" did not find the same name
+// written with its diacritics. That aborted a whole run -- 43 verified units
+// held up by one name a drafter can only get right by luck, and which the
+// gate cannot check because it never reads the data file. An ambiguous fold
+// is not resolved: a person should look at that.
+function findEntry(rows, cc, name) {
+  const exact = rows.find(r => r.countryCode === cc && r.unitName === name);
+  if (exact) return exact;
+  const want = unitKey(name);
+  const near = rows.filter(r => r.countryCode === cc && unitKey(r.unitName) === want);
+  return near.length === 1 ? near[0] : null;
+}
 const { DOMAINS } = require(path.join(ATLAS, "src", "domains"));
 const { SHAPES } = require(path.join(ATLAS, "src", "store"));
 // \p{L}\p{N}, not [a-z0-9]. Stripping to ASCII deletes a non-Latin name
@@ -75,7 +92,15 @@ function apply(domain, spec) {
 
   for (const [key, s] of Object.entries(spec)) {
     const [cc, name] = key.split("|");
-    const e = rows.find(r => r.countryCode === cc && r.unitName === name);
+    // Match the unit name with accents folded away. It was an exact string
+    // compare, so "Sao Tome and Principe" did not find "Sao Tome and Principe"
+    // written with its diacritics, and the whole run aborted -- 43 verified
+    // units held up by one name a drafter can only get right by luck, and
+    // which the gate cannot check because it never reads the data file. The
+    // country code still has to match exactly, so this loosens nothing that
+    // identifies a place; it only stops a keyboard from deciding whether a
+    // batch lands.
+    const e = findEntry(rows, cc, name);
     if (!e) { problems.push(`${domain} ${key}: no such entry`); continue; }
     for (const [f, set] of Object.entries(s.fields || {})) {
       // A typed field written as bullets is silently destructive: `fields`
@@ -242,7 +267,7 @@ function apply(domain, spec) {
 
   for (const [key, s] of Object.entries(spec)) {
     const [cc, name] = key.split("|");
-    const e = rows.find(r => r.countryCode === cc && r.unitName === name);
+    const e = findEntry(rows, cc, name);
     // Rows arriving on a typed field UPGRADE any not-established flag it
     // carried, the same way documented prose upgrades a prose sentinel.
     const unflag = f => { if (e.notEstablished && e.notEstablished[f]) delete e.notEstablished[f]; };
