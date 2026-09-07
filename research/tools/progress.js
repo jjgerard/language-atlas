@@ -5,6 +5,18 @@
 // Two different questions, answered separately because they move independently:
 // a map can be 70% filled and still have every entry answering a different
 // subset of its questions.
+//
+// FILL counts national entries only: a sub-national unit inherits its country,
+// so counting them would report the same gap twice and make a country with many
+// regions look emptier than one without.
+//
+// DEPTH counts them, and the difference matters more than it looks. Every
+// re-slotting worklist was built with the same `isNational !== false` filter as
+// the fill count, so 186 sub-national units per map were silently never offered
+// to any pass -- 2,543 filled text fields, 90% of all sub-national prose,
+// untagged while whole regions were reported as finished. An Australian state's
+// EAL entry is not inherited from Australia's: it is separate prose answering
+// the same questions and needs tagging on its own.
 const fs = require("fs");
 const path = require("path");
 const ATLAS = path.join(__dirname, "..", "..");
@@ -49,22 +61,25 @@ console.log(NL + "  ALL        " + Math.round(100 * gFill / gCap) + "%   "
 // field answering one of four is thin whether or not it says so.
 console.log(NL + NL + "DEPTH — how much a filled field actually says" + NL);
 for (const d of LIVE) {
-  const rows = JSON.parse(fs.readFileSync(pathFor(d.id), "utf8")).filter(r => r.isNational !== false);
+  // Sub-national units INCLUDED here, unlike the fill count above.
+  const rows = JSON.parse(fs.readFileSync(pathFor(d.id), "utf8"));
   const textFields = d.fields.filter(([, , t]) => !t || t === "text").map(([k]) => k);
-  let filled = 0, thin = 0, tagged = 0, full = 0;
+  let filled = 0, thin = 0, tagged = 0, full = 0, subUntagged = 0;
   for (const e of rows) for (const k of textFields) {
     if (!content(e[k])) continue;
     filled++;
     if (String(e[k]).split(NL).filter(Boolean).length <= 2) thin++;
     const sl = e.slots && e.slots[k];
     if (Array.isArray(sl) && sl.length) { tagged++; if (new Set(sl).size === 4) full++; }
+    else if (e.isNational === false) subUntagged++;
   }
   if (!filled) continue;
   console.log("  " + d.id.padEnd(11)
     + String(Math.round(100 * thin / filled)).padStart(3) + "% thin (1-2 bullets)   "
     + String(Math.round(100 * tagged / filled)).padStart(3) + "% tagged   "
     + (tagged ? String(Math.round(100 * full / tagged)).padStart(3) + "% of tagged answer all four" : "")
-    + "   (" + filled + " filled)");
+    + "   (" + filled + " filled"
+    + (subUntagged ? ", " + subUntagged + " of them sub-national and untagged" : "") + ")");
 }
 
 // --- typed rows -------------------------------------------------------------
