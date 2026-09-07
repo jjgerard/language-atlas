@@ -216,6 +216,81 @@ whether the instrument is USED, which is q4's territory, and that 4 also leaves
 it last where the stored text puts it. Both readings are defensible, which is
 itself evidence the field's questions do not partition its content cleanly.
 
+## The deepest one: a field can presuppose the wrong THING, not just the wrong question
+
+`eal.newcomerCriteria` asks who counts as a newcomer, on what evidence, when it
+is decided, and by whom. All four presuppose that the designation OPENS
+support.
+
+Russia's does the opposite, and its own bullets say so twice: "A test to
+exclude, not to support", and "The statute defines a gate into school, not an
+exit from support". A child who fails it is not admitted. That is a designation
+the four questions can be asked of and still completely misdescribe, because
+they assume the answer to "what happens next" is help.
+
+This is different from every other item in this file. The others are questions
+that go unanswered, or content with nowhere to sit. This is a field whose
+questions fit the prose and produce a wrong reading of it.
+
+## eal has no funding field
+
+Three of eleven units in one batch put funding facts into `l2Support` for want
+of anywhere else: Poland's subvention weights P44 1.5 and P45 0.3, Slovakia's
+adjustable per-pupil financing, and Sweden's "one of only three European
+systems funding bilingual subject teaching, with Germany and Norway". `dld` has
+a `funding` field and `eal` does not, though the question is equally live on
+both.
+
+## The counter-examples, and what they change
+
+A question almost nobody answers might be a bad question, or it might be a good
+question whose answer lives in a source type we rarely reach. The difference
+matters, and three units have now settled it for two of the fields here.
+
+**`dld.multilingualProvision` q4 is 0% across the atlas — and Luxembourg
+answers it.** It answers all four, in fact: q3 explicitly ("They separate
+difficulties tied to the pupil's language profile from specific disorders") and
+q4 explicitly ("Before these, tests built for German-first children had to be
+used" — that is, no norms existed for these children until the new batteries
+were built).
+
+And Luxembourg is the only unit whose source for that field is neither the COST
+practitioner survey nor a bare statute. It is a TEST BATTERY. That confirms the
+source-split finding and sharpens it: the field's four questions are answerable,
+but each source type can answer only part. A survey reaches q1 and q2, a statute
+reaches q3, and only a test-battery source reaches q4. Nobody answers all four
+because almost nobody consults all three kinds of source.
+
+**`dld.referralPathway` q4 is answered cleanly by Poland** ("A special-education
+ruling is due within 30 days of the application") **and Malta** ("The Early
+Intervention Service covers children from birth to five years"). Referral q4 is
+answerable more often than the other near-never questions in this file.
+
+**`dld.workforce` q2 is answered by Italy** ("France, same population, has three
+times as many") **and by Sweden** ("20 logopeds per 100,000 inhabitants
+nationally, November 2022", with a county range) — two units across six
+batches, and Sweden's entry answers q1, q2 and q4 together.
+
+**`eal.removalCriteria` q4 is answered by Slovakia** ("Adaptation classes capped
+at one school year and cannot be repeated"), and **`eal.l2Support` q4 by
+Serbia** ("'Serbian as a Foreign Language' standards were in development; 350+
+staff trained in 2017").
+
+**And the largest pattern in this file has clean counter-examples.** Sweden and
+San Marino carry NO `bilingualEducationNotes` disclaimer: Sweden's
+Swedish/Arabic and Swedish/Finnish programmes and San Marino's Italian-plus-
+English vehicular arrangement are systems where the field's four questions
+apply exactly as written. The disclaimer is not universal; it marks the
+systems whose bilingual provision is for historic minorities rather than for
+newcomers, which is most of Europe but not all of it.
+
+So the file's list should not be read as "these questions are wrong". Some are
+— `eal.achievementGap` q3 asks for what q2 has necessarily already said, and
+that is a defect in the question. But others are questions whose answers exist
+in sources the research has not routinely gone to, which is a research finding
+rather than a design one, and the remedy is different: brief for the source
+rather than change the field.
+
 ## Measured, not noticed: which questions nobody answers
 
 Everything above came from a drafter noticing something while working. This is

@@ -14572,7 +14572,60 @@
     "year": 2011,
     "description": "Order V-1775 sets how pedagogical-psychological services assess a pupil's special educational needs"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    3,
+    3
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "LU",
@@ -14604,9 +14657,9 @@
   "identificationCriteria": "The statutory test is inability to reach primary core skills in the regular time span\nGrounds listed are mental, character, sensorial or motor characteristics",
   "assessments": "",
   "multilingualProvision": "New standardised tests carry an instruction language adapting to each pupil's language profile\nThe batteries assess reading, written expression and maths, not spoken language\nGiven by qualified psychologists, pedagogues and orthophonists in ESEB support teams\nThey separate difficulties tied to the pupil's language profile from specific disorders\nBefore these, tests built for German-first children had to be used",
-  "referralPathway": "Three tiers since the 2018 reform: local, then regional, then national\nSpecialised school teachers detect need and monitor schooling locally\nRegional support teams make the first diagnosis with the school\nNational competence centres take over only where local support is insufficient",
+  "referralPathway": "Specialised school teachers detect need and monitor schooling locally\nThree tiers since the 2018 reform: local, then regional, then national\nRegional support teams make the first diagnosis with the school\nNational competence centres take over only where local support is insufficient",
   "serviceModel": "One of eight national competence centres is dedicated to language and communication\nA separate centre covers dyslexia, dyspraxia and dyscalculia\nCentres also serve young people over 18 where education or training needs it",
-  "legalEntitlement": "Pupils are under the same compulsory schooling duty, ages 4 to 16\nA 2011 law entitles them to reasonable arrangements in programmes and assessments\nAn individual support plan may be set by the school inclusion commission",
+  "legalEntitlement": "A 2011 law entitles pupils to reasonable arrangements in programmes and assessments\nPupils are under the same compulsory schooling duty, ages 4 to 16\nAn individual support plan may be set by the school inclusion commission",
   "funding": "Placement elsewhere: schooling, lodging, stay and travel costs are borne by the State",
   "workforce": "Entry is a bachelor in orthophonie or an equivalent higher-education qualification\nThe profession is regulated: practising needs a Ministry of Health authorisation\nPosts sit in fundamental and secondary education and in childcare services",
   "dischargeCriteria": "",
@@ -14621,7 +14674,49 @@
     "year": 2018,
     "description": "A 2018 law created specialised psycho-pedagogical competence centres"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    4
+   ],
+   "identificationCriteria": [
+    3,
+    3
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3
+   ],
+   "funding": [
+    1
+   ],
+   "workforce": [
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "LV",
@@ -14702,7 +14797,52 @@
     "year": 2019,
     "description": "Cabinet Regulation 556 lets school speech therapists assess and support pupils without a commission opinion"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "LY",
@@ -14889,7 +15029,41 @@
     "year": 2008,
     "description": "Its basis is an ordinance of 11 December 2008"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    3,
+    3
+   ],
+   "referralPathway": [
+    1,
+    2
+   ],
+   "serviceModel": [
+    1,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    1
+   ],
+   "funding": [
+    1,
+    2
+   ],
+   "workforce": [
+    3,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "MD",
@@ -14926,7 +15100,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "The statutory term is cerinţe educaţionale speciale (mirror, official register 403s)\nIt turns on schooling adapted to a disability or learning disorder\nDifficulties of learning, communication and interaction are named targets",
-  "identificationCriteria": "The logoped identifies and evaluates children's language and communication disorders\nThreshold is disorder of language and communication relative to age and school demands\nHow many need help follows an initial or complex evaluation under ministry methodology\nThe logoped selects the evaluation methods, probes and techniques used",
+  "identificationCriteria": "The logoped identifies and evaluates children's language and communication disorders\nHow many need help follows an initial or complex evaluation under ministry methodology\nThe logoped selects the evaluation methods, probes and techniques used\nThreshold is disorder of language and communication relative to age and school demands",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "Complex examination is run by central and local authorised structures\nThe methodology is approved by the education ministry\nParents may require that determination happens in their presence",
@@ -14950,7 +15124,43 @@
     "year": 2019,
     "description": "Ministry order No. 683 approves the framework rules for the school multidisciplinary commission on SEN"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    2
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "referralPathway": [
+    2,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    4
+   ],
+   "legalEntitlement": [
+    2,
+    2
+   ],
+   "funding": [
+    2,
+    2,
+    3
+   ],
+   "workforce": [
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "ME",
@@ -14979,14 +15189,14 @@
   "inst": "",
   "source": "seed",
   "terminology": "The statutory category is children with special educational needs\nA sub-category covers difficulties caused by linguistic and cultural obstacles\nNo separate statutory label for developmental language disorder was found",
-  "identificationCriteria": "An individual development and education programme is due within 30 days of enrolment\nIt starts from an assessment of the child's present level and preserved potential\nA professional team including parents prepares and adapts it",
+  "identificationCriteria": "A professional team including parents prepares and adapts the programme\nAn individual development and education programme is due within 30 days of enrolment\nIt starts from an assessment of the child's present level and preserved potential",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "Wording is the consolidation to Sl. list 047/17; later changes are not in it\nUsmjeravanje, the directing procedure, starts on a zahtjev, a request\nParent, primary health institution, school, social work centre or municipality may ask\nThe request is lodged with the competent local government body\nA named commission proposes; the municipal education body does the directing",
   "serviceModel": "Mainstream inclusion is stated as the first option and an imperative\nResource centres deliver advisory work, teacher training and materials\nClass size is cut by 10 per cent where such a pupil is enrolled",
   "legalEntitlement": "The basis is a 2025 Law on Education of Children with Special Educational Needs\nTheir education is defined as a public interest activity",
   "funding": "Consolidation to 047/17: this education is financed from the budget of Montenegro",
-  "workforce": "Speech therapists sit on the state mobile support teams alongside psychologists\n752 teaching assistants were engaged in 2025/2026",
+  "workforce": "752 teaching assistants were engaged in 2025/2026\nSpeech therapists sit on the state mobile support teams alongside psychologists",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -14995,7 +15205,42 @@
     "year": 2025,
     "description": "The basis is a 2025 Law on Education of Children with Special Educational Needs"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    3
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3
+   ],
+   "legalEntitlement": [
+    1,
+    2
+   ],
+   "funding": [
+    1
+   ],
+   "workforce": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "MG",
@@ -15163,7 +15408,7 @@
   "serviceModel": "SLTs work across health, education, hearing and speech centres, and private practice\nThe same four-way split as neighbouring Slovenia (Novšak Brce et al., 2023)\nNo source consulted establishes how a child moves between them, or who funds it",
   "legalEntitlement": "Adaptation stops short of a disproportionate or unnecessary burden on the school\nZakon za osnovnoto obrazovanie art 11: schooling organised to include all children\nInfrastructure, individualised support and the curriculum are adapted to the pupil\nPupils with disability must have access to buildings, transport and information",
   "funding": "Every child has a right to free and quality primary education\nPupils with disability and escorts get free accessible transport regardless of distance\nAffirmative measures include fee exemption for foreign certificates and free transport",
-  "workforce": "Organised services date from 1950, university training from the mid-1980s\nA few years later than Slovenia; students also train at the Slovenian university\nOf 110 therapists surveyed across the two countries, 48 practised in North Macedonia\n95.8% of them female (Novšak Brce et al., 2023)",
+  "workforce": "Of 110 therapists surveyed across the two countries, 48 practised in North Macedonia\n95.8% of therapists surveyed were female (Novšak Brce et al., 2023)\nOrganised services date from 1950, university training from the mid-1980s\nA few years later than Slovenia; students also train at the Slovenian university",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -15176,7 +15421,48 @@
     "year": 2019,
     "description": "Primary Education Act requires every school to form an inclusive team and individual education plans"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    3
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "serviceModel": [
+    1,
+    1,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    2,
+    3
+   ],
+   "workforce": [
+    1,
+    1,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "ML",
@@ -15592,10 +15878,10 @@
   "identificationCriteria": "Country policy review: the statementing panel discusses the assessments with parents\nSame review: parents consent before an expert assessment and before special education\nThe Education Act leaves statementing and multi-disciplinary assessment to regulations",
   "assessments": "LITMUS sentence repetition (SRep) task for Maltese\nDeveloped by Helen Grech (University of Malta, Communication Therapy)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nListed on the LITMUS site as created before LITMUS rather than within it\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Not established from the sources consulted — a language-appropriate LITMUS sentence repetition instrument exists for this system (see assessments above), but whether any service, clinical guideline or funder requires, supports or reimburses assessment in all of a child's languages was not determined. That gap between an available research instrument and routine clinical practice is the single most useful thing a contributor here could resolve.",
-  "referralPathway": "Country policy review: the family doctor refers the child to the CDAU\nReferrals may also be made directly by the family\nThe Early Intervention Service covers children from birth to five years\nIn school, educational psychologists assess learners referred by schools in the college",
-  "serviceModel": "Clients not receiving the required number of therapy sessions (Sant and Black, 2024)\nDemand outstrips supply — human-resource and environmental factors, not eligibility rules\nRead from the published abstract and results summary, not the full text",
+  "referralPathway": "Country policy review: the family doctor refers the child to the CDAU\nReferrals may also be made directly by the family\nIn school, educational psychologists assess learners referred by schools in the college\nThe Early Intervention Service covers children from birth to five years",
+  "serviceModel": "Read from the published abstract and results summary, not the full text\nClients not receiving the required number of therapy sessions (Sant and Black, 2024)\nDemand outstrips supply — human-resource and environmental factors, not eligibility rules",
   "legalEntitlement": "Unjustifiable hardship on the institution is a lawful ground to refuse admission\nEqual Opportunities (Persons with Disability) Act, Cap. 413, art. 11 bars discrimination\nIt covers refusing admission and limiting access to any benefit, facility or service\nThe duty falls on the educational authority, the body administering the institution\nRedress: a written complaint to the Commissioner by the aggrieved person or a parent",
-  "funding": "Country policy review: funds go to schools by population, heads decide how they are spent\nPart of the education budget is dedicated to learning support assistants in schools\nThe Student Services Department is funded to invest in inclusive resources for the ACTU\nSchools get imprest funds to invest in educational and inclusive resources",
+  "funding": "Country policy review: funds go to schools by population, heads decide how they are spent\nThe Student Services Department is funded to invest in inclusive resources for the ACTU\nSchools get imprest funds to invest in educational and inclusive resources\nPart of the education budget is dedicated to learning support assistants in schools",
   "workforce": "No one may practise a profession complementary to medicine unless on the register\nSpeech Language Pathology is one of the professions that schedule lists",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -15613,7 +15899,53 @@
     "year": 2019,
     "description": "Education Act (Act XXIX of 2019) defines individual needs and inclusive education for Maltese schools"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    3,
+    4
+   ],
+   "referralPathway": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    2,
+    2,
+    2,
+    4
+   ],
+   "workforce": [
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "MU",
@@ -16423,7 +16755,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "TOS — taalontwikkelingsstoornis — standard across health, education and advocacy\nLargely displaced the older ESM (ernstige spraak- en taalmoeilijkheden)\nClinicians, schools and parent bodies all use the same term\nHighest band in the COST Action 2017 awareness survey — 65% or more",
-  "identificationCriteria": "Validated instruments map communication and speech-language development\nMultidisciplinary input excludes hearing loss or intellectual disability\nCluster-2 access under Siméa's 'Richtlijn toelaatbaarheid', applied by all four bodies\nSeverity alone is not enough — education and support needs count too\nThe guideline's own score thresholds are not reproduced here",
+  "identificationCriteria": "Cluster-2 access under Siméa's 'Richtlijn toelaatbaarheid', applied by all four bodies\nValidated instruments map communication and speech-language development\nSeverity alone is not enough — education and support needs count too\nThe guideline's own score thresholds are not reproduced here\nMultidisciplinary input excludes hearing loss or intellectual disability",
   "assessments": "Standardised, Dutch-normed instruments\nApplied under the NVLF clinical guideline for speech and language therapy in TOS\nAudiological centres carry out the more complex diagnostic work\nA LITMUS Dutch SRep task exists (Blom, de Jong) — no evidence found of routine use",
   "multilingualProvision": "One of the most explicitly worked-out multilingual protocols in this catalog\nSiméa, 'Handreiking meertaligheid en TOS' (2016) — national guidance on exactly this\nRequires examination and observation data in both languages, interpreter where needed\nSupplies a diagnostic decision tree and a multilingual case-history form",
   "referralPathway": "Entry is usually through a first-line speech therapy practice (eerstelijns logopedie)\nWhere persistent difficulties have not responded sufficiently to ordinary therapy\nReferral on to early treatment groups, or specialist assessment at an audiological centre",
@@ -16447,7 +16779,64 @@
     "year": 2024,
     "description": "NVLF publishes the clinical guideline 'Richtlijn Logopedie bij taalontwikkelingsstoornissen'."
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    3,
+    3,
+    4
+   ],
+   "assessments": [
+    1,
+    1,
+    1,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    3
+   ],
+   "referralPathway": [
+    2,
+    3,
+    3
+   ],
+   "serviceModel": [
+    1,
+    1,
+    1,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "workforce": [
+    1,
+    1,
+    1,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "NO",
@@ -16512,7 +16901,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "“språkvansker (SV)”, language difficulties, not a disorder word\nTitle frames the topic as “muntlige språkferdigheter”, oral language skills\nHeading is “Hva er språkvansker?” and SV is carried through the whole survey\nThe Norwegian COST IS1406 survey translation, not a statutory label",
-  "identificationCriteria": "Threshold is need, not diagnosis: satisfactory benefit from the teaching\nThe municipality decides, and must first obtain the expert assessment\nThe assessment must say why the pupil cannot get satisfactory benefit",
+  "identificationCriteria": "The municipality decides, and must first obtain the expert assessment\nThe assessment must say why the pupil cannot get satisfactory benefit\nThreshold is need, not diagnosis: satisfactory benefit from the teaching",
   "assessments": "LITMUS sentence repetition (SRep) task for Norwegian\nDeveloped by Jan de Jong (University of Bergen)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nPiloted in a Bergen master's thesis (2017) — a thinner base than French or German\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 34 (Law et al., 2020)\nIntervention: mother tongue 54%\nInterpreters sometimes used — assessment 73%, intervention 50%, counselling 85%\nPractitioner training: optional 38%, none 8%, unsure 54% (n = 39)",
   "referralPathway": "Through the Educational Psychological Service (pedagogisk-psykologisk tjeneste)\nIt writes the expert assessment; the setting implements an individual development plan\nJoner et al. (2022), 71 documents for four children: objectives general or missing\nResponsibilities divided between institutions, leaving provision fragmented",
@@ -16532,7 +16921,60 @@
     "year": 2023,
     "description": "Education Act 2023 replaces special education with a right to individually adapted teaching"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    3
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    2,
+    2,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "NP",
@@ -17319,7 +17761,7 @@
   "serviceModel": "Nursery/kindergarten 42%, mainstream school 37%, private practice 32%\nPublic education 82%, private 38%, public health 18% (practitioner survey, COST IS1406)\nDirect intervention most often weekly — 60%\nAccess shaped by urban/rural 85%, cost to parents 57%, social position 54%",
   "legalEntitlement": "Prawo oswiatowe art. 127 covers pupils needing special organisation of learning\nCurriculum is adapted through an individual educational-therapeutic programme\nPreschools, schools and centres must carry out what the ruling recommends\nAppeal lies to the kurator oswiaty within 14 days of the ruling being served",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 223\nFunders: state education 72%, family 41%, state health 14%, health insurance 13%\n21% said a maximum number of sessions applied (n = 222)",
-  "workforce": "Logopedists are among the specialists giving psychological-pedagogical help in schools\nNauczyciel logopeda post needs higher studies in logopedics and pedagogical preparation\nOr a degree plus first-cycle or postgraduate studies in logopedics",
+  "workforce": "Nauczyciel logopeda post needs higher studies in logopedics and pedagogical preparation\nA degree plus first-cycle or postgraduate studies in logopedics\nLogopedists are among the specialists giving psychological-pedagogical help in schools",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -17340,7 +17782,62 @@
     "year": 2017,
     "description": "Regulation governs rulings and opinions issued by adjudicating teams in public counselling centres"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "PR",
@@ -17578,10 +18075,10 @@
   "inst": "",
   "source": "seed",
   "terminology": "“perturbação da linguagem (PL)” (COST IS1406 survey translation, not statutory)\nIt keeps the primary and secondary split: “primária ou secundária”\nTitle renders the study as “Compreendendo as perturbações da linguagem”",
-  "identificationCriteria": "Categorising in order to intervene is expressly abandoned, so no label is required\nEach school has a multidisciplinary team for inclusive education\nThreshold: marked, persistent difficulty of communication, interaction, cognition, learning\nAdditional measures need proof that universal and selective ones fell short",
+  "identificationCriteria": "Categorising in order to intervene is expressly abandoned, so no label is required\nEach school has a multidisciplinary team for inclusive education\nAdditional measures need proof that universal and selective ones fell short\nThreshold: marked, persistent difficulty of communication, interaction, cognition, learning",
   "assessments": "LITMUS sentence repetition (SRep) task for Portuguese\nDeveloped by Maria Lobo (Nova de Lisboa) and Liliana Correia (Minho)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Not established from the sources consulted — a language-appropriate LITMUS sentence repetition instrument exists for this system (see assessments above), but whether any service, clinical guideline or funder requires, supports or reimburses assessment in all of a child's languages was not determined. That gap between an available research instrument and routine clinical practice is the single most useful thing a contributor here could resolve.",
-  "referralPathway": "The referral route differs by diagnosis (Pereira et al., 2024, 351 SLPs surveyed)\nDLD and pragmatic difficulties most often referred by preschool teachers\n90.3% of those DLD referrals came between the ages of three and six\nAutism most often referred by paediatricians, half of those between two and three",
+  "referralPathway": "The referral route differs by diagnosis (Pereira et al., 2024, 351 SLPs surveyed)\nDLD and pragmatic difficulties most often referred by preschool teachers\nAutism most often referred by paediatricians, half of those between two and three\n90.3% of DLD referrals came between the ages of three and six",
   "serviceModel": "Private practice 67%, mainstream school 45%, nursery/kindergarten 37%\nPrivate 68%, public education 28%, charitable 21% (practitioner survey, COST IS1406)\nDirect intervention most often weekly — 60%\nAccess shaped by urban/rural 67%, cost to parents 62%, income level 57%",
   "legalEntitlement": "Decreto-Lei 54/2018 lays down the norms that guarantee inclusion\nImplementing the measures depends on the parents' agreement\nThe school director has 10 working days to homologate the report\nParents who withhold agreement have their grounds annexed to the report",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 75\nFunders: family 37%, state social services 25%, state health 21%, state education 15%\n12% said a maximum number of sessions applied (n = 75)",
@@ -17602,7 +18099,55 @@
     "year": 2019,
     "description": "Lei 116/2019 makes the first parliamentary amendment to the inclusive education regime"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    3
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    4
+   ],
+   "referralPathway": [
+    1,
+    1,
+    1,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    3,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "PW",
@@ -17883,7 +18428,7 @@
   "identificationCriteria": "County commissions named through CJRAE set the level of support a child needs\nThe decision rests on a specialist evaluation using standardised tests, under a protocol\nThe evaluation is matched to the child's age and stage of schooling",
   "assessments": "",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 91 (Law et al., 2020)\nAssessment: mother tongue if different 48%, mainstream only 36%, mother tongue only 32%\nIntervention: mother tongue 55%, mainstream only 39%\nInterpreters sometimes used — assessment 26%, intervention 18%, counselling 26%\nPractitioner training: optional 24%, none 27%, unsure 45% (n = 143)",
-  "referralPathway": "A teacher who has worked with the child may propose a change of support level\nThe level is set at the start of compulsory schooling, or whenever it is needed\nCounty multidisciplinary teams do detection, evaluation and early intervention\nSteering a child into special education abusively is a disciplinary offence",
+  "referralPathway": "A teacher who has worked with the child may propose a change of support level\nCounty multidisciplinary teams do detection, evaluation and early intervention\nThe level is set at the start of compulsory schooling, or whenever it is needed\nSteering a child into special education abusively is a disciplinary offence",
   "serviceModel": "Mainstream school 57%, nursery/kindergarten 35%, private practice 24%\nPublic education 81%, private 26% (practitioner-reported, COST IS1406 survey 2017)\nDirect intervention most often weekly — 51%\nAccess shaped by urban/rural 68%, parental education 52%, cost to parents 46%",
   "legalEntitlement": "Legea 198/2023 gives a right to free speech-therapy help in school or state units\nEvery school unit must run and equip speech-therapy and specific-therapy rooms\nEach school must set up a resource room within one school year of the law\nA personalised education plan is drawn up by the county commission",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 288\nFunders: state education 61%, family 40%\n23% said a maximum number of sessions applied (n = 288)",
@@ -17900,7 +18445,54 @@
     "year": 2023,
     "description": "Pre-university Education Act 198/2023 requires a support resource room in every school"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    2,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "RS",
@@ -17973,7 +18565,53 @@
     "year": 2018,
     "description": "Rulebook sets who qualifies for an individual education plan and how it is applied and evaluated"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "referralPathway": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    4,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "RU",
@@ -18034,7 +18672,7 @@
   "assessments": "LITMUS sentence repetition (SRep) task for Russian\nDeveloped by Natalia Meir and Sharon Armon-Lotem (Bar-Ilan University)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nStrongest diagnostic-accuracy evidence in the set, with Hebrew — Armon-Lotem & Meir (2016)\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Not established from the sources consulted — a language-appropriate LITMUS sentence repetition instrument exists for this system (see assessments above), but whether any service, clinical guideline or funder requires, supports or reimburses assessment in all of a child's languages was not determined. That gap between an available research instrument and routine clinical practice is the single most useful thing a contributor here could resolve.",
   "referralPathway": "Logopedic help rests on a parent's own written application or their consent\nEnrolment and discharge run by administrative act of the head of the organisation\nEnrolment onto logopedic lessons may be made at any point in the school year\nChildren attending no preschool at all may also be enrolled, on a medical card",
-  "serviceModel": "Delivered inside school and preschool by the uchitel-logoped, an education-service post\nEntry via a PMPK or school PPk panel, or logopedist screening, with parental consent\nHealth sector has a separate meditsinskiy logoped post in child rehabilitation units\nMinistry model regulation R-75 of 2020 governs logopedic help in education organisations",
+  "serviceModel": "Delivered inside school and preschool by the uchitel-logoped, an education-service post\nHealth sector has a separate meditsinskiy logoped post in child rehabilitation units\nEntry via a PMPK or school PPk panel, or logopedist screening, with parental consent\nMinistry model regulation R-75 of 2020 governs logopedic help in education organisations",
   "legalEntitlement": "Federal Law 273-FZ art 79: conditions are set in the PMPK's recommendations\nSpecial conditions must include group and individual corrective lessons\nRegions set up separate schools for pupils with severe speech disorders\nProviding those staff and aids is an expenditure obligation of the region",
   "funding": "Special textbooks, teaching aids and materials are provided free under 273-FZ art 79\nWhere the child is funded from the federal budget the cost falls to the Federation\nPupils with health limitations living in the school are on full state support\nThose not living there get free twice-daily meals from the organisation's founder",
   "workforce": "Recommended staffing norms in a 2020 ministry model regulation, not a count of posts\n1 logopedist post per 6 to 12 pupils with a PMPK adapted-programme recommendation\n1 post per 25 pupils recommended corrective lessons by the PPk or the PMPK\nHow many posts there are is fixed by the organisation's own local act",
@@ -18046,7 +18684,58 @@
     "year": 2020,
     "description": "Ministry model regulation R-75 of 2020 governs logopedic help in education organisations"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    3,
+    4
+   ],
+   "referralPathway": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "funding": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "workforce": [
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "RW",
@@ -18526,7 +19215,7 @@
   "terminology": "'Språkstörning' is the established Swedish term\n'DLD' and 'utvecklingsrelaterad språkstörning (DLD)' increasingly used alongside\nBoth appear in current clinical and school sources\nHighest band in the COST Action's 2017 awareness survey — 65% or more",
   "identificationCriteria": "Assessed by a speech and language pathologist (logoped)\nVocabulary, grammar, narrative, phonology, pronunciation and pragmatics\nStandardised and normed tests alongside a detailed case history\nThe rule that does most work: difficulties in all of the child's languages",
   "assessments": "Standardised, Swedish-normed instruments, administered by a logoped\nCombined with case history and functional observation\nNo single nationally mandated battery identified in the sources consulted",
-  "multilingualProvision": "The criterion is stated explicitly — difficulties must show in all the child's languages\nAssessment maps every language the child uses regularly\nThe logoped decides: disorder, or insufficient exposure to that language\nSchools' grasp of multilingualism and språkstörning is a reported weak point",
+  "multilingualProvision": "Assessment maps every language the child uses regularly\nThe logoped decides: disorder, or insufficient exposure to that language\nThe criterion is stated explicitly — difficulties must show in all the child's languages\nSchools' grasp of multilingualism and språkstörning is a reported weak point",
   "referralPathway": "Concern from a guardian, teacher or child health centre opens the history-taking\nClinical overview: referral is sent to a logopedmottagning for fuller assessment\nTrigger is reported difficulty with spoken or written language and communication\nA state specialskola place needs both a logoped and a psychologist assessment",
   "serviceModel": "Logopedi services run by the regions, with habilitering for complex needs\nEducational adaptation sits with schools, curriculum-wide rather than therapy alone\nSPSM advises municipalities, funds materials, and runs ten state specialskolor\nSplit between the regions and the schools",
   "legalEntitlement": "Educational entitlement runs through the Education Act right to särskilt stöd\nTriggered by assessed need rather than by a diagnosis\nA child does not need a språkstörning diagnosis to receive support\nAnd having one does not automatically produce it",
@@ -18546,7 +19235,61 @@
     "year": 2010,
     "description": "Education Act 2010:800 requires special support once an investigation shows a pupil needs it"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "assessments": [
+    1,
+    1,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "referralPathway": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "SG",
@@ -18668,14 +19411,14 @@
   "inst": "",
   "source": "seed",
   "terminology": "“jezikovna motnja (JM)”, language disorder (COST IS1406 survey translation, not statutory)\nTreatment is “obravnava”, not intervencija, throughout the Slovenian instrument\nSlovenian header renders the study title loosely as “DOGOVOR SLABITVE JEZIKA”",
-  "identificationCriteria": "Otroci z govorno-jezikovnimi motnjami is one of the statutory special-needs categories\nA placement commission gives the expert opinion, and may find no placement is needed\nThe opinion states the type and degree of the deficit, obstacle or disorder\nThe national education institute, not the commission, issues the placement decision",
+  "identificationCriteria": "Otroci z govorno-jezikovnimi motnjami is one of the statutory special-needs categories\nA placement commission gives the expert opinion, and may find no placement is needed\nThe national education institute, not the commission, issues the placement decision\nThe opinion states the type and degree of the deficit, obstacle or disorder",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "The usmerjanje procedure begins on a written request from the parents\nA person over 15 may lodge the written request for themselves\nThe setting must lodge it when the child's current programme looks unsuitable\nLodged at the regional unit of the Zavod Republike Slovenije za solstvo",
+  "referralPathway": "The usmerjanje procedure begins on a written request from the parents\nA person over 15 may lodge the written request for themselves\nLodged at the regional unit of the Zavod Republike Slovenije za solstvo\nThe setting must lodge the request when the child's current programme looks unsuitable",
   "serviceModel": "Health clinic/centre 38%, nursery/kindergarten 26%, special school 26%\nPublic education 54%, public health 48% (practitioner-reported, COST IS1406 survey 2017)\nDirect intervention most often fortnightly — 24%\nAccess shaped by urban/rural 86%, linguistic/cultural community 64%, social position 62%",
   "legalEntitlement": "ZUOPP-1 regulates usmerjanje of children with special educational needs\nAdditional professional help caps at five hours weekly, one of them advisory\nPre-school children get advice, at most two hours monthly, before placement\nParents or a minor over 15 appeal within 15 days; the minister decides",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 50\nFunders: state education 56%, state health 48%, health insurance 20%, family 10%\n28% said a maximum number of sessions applied (n = 50)",
-  "workforce": "Speech and language therapists work across four settings\nHealth institutions, education, hearing and speech rehabilitation centres, private practice\nOrganised services date from 1942, university training from the mid-1980s\nThe 62 Slovenian respondents rated attitudes to involving parents above 48 Macedonian ones",
+  "workforce": "Organised services date from 1942, university training from the mid-1980s\nSpeech and language therapists work across four settings\nHealth institutions, education, hearing and speech rehabilitation centres, private practice\nThe 62 Slovenian respondents rated attitudes to involving parents above 48 Macedonian ones",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -18692,7 +19435,49 @@
     "year": 2011,
     "description": "ZUOPP-1 replaced the 2000 Act and restated the categories, keeping speech-language disorders"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    2,
+    3
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    3,
+    4,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "SK",
@@ -18748,7 +19533,7 @@
   "by": "",
   "inst": "",
   "source": "seed",
-  "terminology": "“narušený vývin reči (NVR)”, disturbed development of speech\nNVR is the abbreviation carried through every question of the Slovak instrument\nSlovak wording is about reč, speech, where the Czech version says jazykové schopnosti\nThe Slovak COST IS1406 survey translation, not a statutory label",
+  "terminology": "“narušený vývin reči (NVR)”, disturbed development of speech\nSlovak wording is about reč, speech, where the Czech version says jazykové schopnosti\nNVR is the abbreviation carried through every question of the Slovak instrument\nThe Slovak COST IS1406 survey translation, not a statutory label",
   "identificationCriteria": "A counselling and prevention centre must have diagnosed the special educational need\nNarusena komunikacna schopnost sits among the health-disability types, not on its own\nThe statute grades it, naming a mild degree of narusena komunikacna schopnost",
   "assessments": "",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 17 (Law et al., 2020)\nAssessment: mainstream only 71%, mother tongue if different 29%, mother tongue only 20%\nIntervention: mother tongue 28%, mainstream only 21%\nInterpreters sometimes used — assessment 21%, intervention 9%, counselling 14%\nPractitioner training: optional 40%, none 19%, unsure 38% (n = 42)",
@@ -18756,7 +19541,7 @@
   "serviceModel": "Health clinic/centre 31%, private rehab centre 31%, special school 25%\nPublic education 58%, public health 27%, private 23% (practitioner survey, COST IS1406)\nDirect intervention most often fortnightly — 47%\nAccess shaped by urban/rural 31%",
   "legalEntitlement": "Skolsky zakon 245/2008 § 144: right to forms and methods matching the child's needs\nThe same right covers creating the conditions that make that education possible\nChildren with narusena komunikacna schopnost get alternative means of communication\nSpecial textbooks and compensatory aids are part of the same statutory right",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 64\nFunders: state education 55%, family 39%, state health 27%, health insurance 9%\n8% said a maximum number of sessions applied (n = 64)",
-  "workforce": "Zakon 138/2019 makes logoped and skolsky logoped a category of specialist staff\nA specialist staff member needs at least second-cycle university education\nA counselling centre's department must have at least three specialist staff",
+  "workforce": "A counselling centre's department must have at least three specialist staff\nZakon 138/2019 makes logoped and skolsky logoped a category of specialist staff\nA specialist staff member needs at least second-cycle university education",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -18777,7 +19562,55 @@
     "year": 2023,
     "description": "Act 182/2023 Z. z. amended the Education Act to introduce a statutory system of support measures"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    3
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "SL",
@@ -18930,7 +19763,7 @@
   "identificationCriteria": "Adequate cognitive capacity is required for the disorder to count\nSo is the absence of neurological pathology and of sensory deficits\nDefinitions are to be read in light of evolving scientific knowledge",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "The school must run early identification in the first years of schooling\nIt must notify families where difficulties persist despite targeted work\nDiagnosis is by the state health and social-health services, at the family's request\nPrivate diagnoses count only if validated by those services",
+  "referralPathway": "The school must run early identification in the first years of schooling\nDiagnosis is by the state health and social-health services, at the family's request\nThe school must notify families where difficulties persist despite targeted work\nPrivate diagnoses count only if validated by those services",
   "serviceModel": "Class teachers draft an individual teaching plan with specialist services and the family\nCompulsory within the first two months\nCompensatory tools and dispensative measures are both statutory entitlements",
   "legalEntitlement": "Only in cases of particular severity may a pupil be exonerated from the third language\nPupils so exonerated can still sit the lower secondary examination",
   "funding": "The inclusion commission was set up with no new or greater charge on public finance",
@@ -18951,7 +19784,41 @@
     "year": 2014,
     "description": "Legge 142 recognises specific developmental disorders including language disorder and sets school duties"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "identificationCriteria": [
+    3,
+    4,
+    4
+   ],
+   "referralPathway": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "serviceModel": [
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    2,
+    2
+   ],
+   "funding": [
+    1
+   ],
+   "workforce": [
+    3
+   ]
+  }
  },
  {
   "countryCode": "SN",
@@ -20548,7 +21415,7 @@
   "multilingualProvision": "Assessors are required to take account of the person's language of communication\nNo separate bilingual assessment protocol appears in the regulation",
   "referralPathway": "Local self-government bodies must set up inclusive resource centres\nParental participation in the comprehensive assessment is compulsory",
   "serviceModel": "A school must open an inclusive class on the request of the pupil or parents\nIt organises psychological-pedagogical and corrective-developmental services",
-  "legalEntitlement": "Zakon Pro osvitu art 19 obliges conditions for education on a par with other people\nThe duty falls on state bodies, local self-government and the education institutions\nDischarged through funding, staffing, materials and reasonable accommodation\nNeeds are those set out in the person's individual development programme",
+  "legalEntitlement": "Zakon Pro osvitu art 19 obliges conditions for education on a par with other people\nDischarged through funding, staffing, materials and reasonable accommodation\nNeeds are set out in the person's individual development programme\nThe duty falls on state bodies, local self-government and the education institutions",
   "funding": "Funded from state and local budgets across preschool and general secondary",
   "workforce": "Centre staffing is set in regulation and names a speech and language teacher\nAlso practical psychologists and other defectologists",
   "dischargeCriteria": "",
@@ -20579,7 +21446,50 @@
     "year": 2021,
     "description": "Cabinet resolution No. 957 replaces the 2011 procedure for organising inclusive schooling in secondary schools"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    2
+   ],
+   "identificationCriteria": [
+    3,
+    3,
+    4
+   ],
+   "assessments": [
+    1,
+    1,
+    1,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    3
+   ],
+   "referralPathway": [
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "funding": [
+    1
+   ],
+   "workforce": [
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "UG",
@@ -24327,13 +25237,46 @@
   "multilingualProvision": "",
   "referralPathway": "Prescription from a doctor outside the fund needs approval by a DSI polyclinic doctor\nGynaecology, paediatric, eye, dental and dermatology visits need no prior authorisation\nThe prescribing doctor sets the priority band that governs access\nIf a deferrable service cannot be booked in 30 days an outside centre may be used",
   "serviceModel": "The DSI polyclinic's own service list has paediatrics and ENT but no logopedia\nTherapy is bought in: FAS contracts named logopedia providers, all at Rome addresses\nEach episode needs prior authorisation from a DSI or FAS-contracted doctor\nCovers clergy, Vatican citizens and residents, and Holy See staff insured by the FAS fund",
-  "legalEntitlement": "There is no national school system, so no support framework exists to record\nThe Holy See's own report to the UN says children attend schools elsewhere\nAny entitlement therefore arises under the law of the State running the school\nThe report names no health or education service inside the territory",
-  "funding": "The FAS health fund pays, via the DSI polyclinic or providers contracted to the fund\nThe patient's share of the cost is paid at the counter before the service is given\nChoosing an outside contracted provider over a DSI clinic leaves the tariff difference to pay\nIndirect route: the family pays first and claims a pre-authorised reimbursement\nReimbursement uses the DSI tariff for anything its own polyclinic could have provided",
+  "legalEntitlement": "There is no national school system, so no support framework exists to record\nThe Holy See's own report to the UN says children attend schools elsewhere\nThe report names no health or education service inside the territory\nAny entitlement therefore arises under the law of the State running the school",
+  "funding": "The FAS health fund pays, via the DSI polyclinic or providers contracted to the fund\nIndirect route: the family pays first and claims a pre-authorised reimbursement\nReimbursement uses the DSI tariff for anything its own polyclinic could have provided\nThe patient's share of the cost is paid at the counter before the service is given\nChoosing an outside contracted provider over a DSI clinic leaves the tariff difference to pay",
   "workforce": "Not established from the sources consulted. Neither the Direzione di Sanita e Igiene nor the Fondo Assistenza Sanitaria publishes any count of speech and language therapists. The FAS names six contracted logopedia providers by name, street address and telephone number, and the DSI's own list of services provided at its polyclinic runs from angiologia to medicina dei viaggi without naming logopedia.",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "terminology": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "referralPathway": [
+    1,
+    4,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    1,
+    1,
+    3
+   ],
+   "funding": [
+    1,
+    2,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "VC",
