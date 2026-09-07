@@ -119,6 +119,27 @@ for Japanese, so "no training programme" from one means no JAPANESE training
 programme, and the bullet has to say so. Only the 外国語教育 section speaks for
 foreign languages generally.
 
+**UNESCO IESALC's Higher Education Policy Observatory**, for African and Latin
+American higher-education statutes. It hosts each country's framework law as a
+plain-GET PDF at a predictable path:
+
+    https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/<iso3>/<iso3>_HELawLi.pdf
+
+and the same pattern with `_HEEdLawLi` (the general education law), `_QALegLi`
+(quality assurance), `_HEEdPlanLi` and `_RecAutoLi`. The country page at
+`/pc/policy/countrygraph/cp/<ISO3>/` names which instruments it holds.
+
+On one 26-country African pass, 25 countries had at least one document and 20
+of those had a text layer. That is the best single route to these statutes
+there is, now that `whed.net` and `droit-afrique.com` both 403.
+
+Two cautions, both found the hard way. **Several of the PDFs are image scans**
+yielding nothing extractable -- Angola, Burundi, CAR, Guinea, Lesotho and
+Togo among them -- so test the text layer before planning around it. And
+**check that the document is the instrument it is filed as**: Algeria's slot
+holds a 2000-2022 index of ministry texts rather than a law, and the Comoros
+slot holds a newspaper op-ed about the orientation law rather than the law.
+
 **The Wayback CDX API**, for settling whether an archived document exists at
 all instead of guessing filename variants one 404 at a time:
 
@@ -170,6 +191,27 @@ would carry that answer before concluding the question is wrong. A survey tells
 you who and how many; a statute tells you what is owed; an association's
 analysis tells you how many there are per head; an inspectorate tells you
 whether any of it happens.
+
+## Read the act's SCOPE clause before quoting its language clause
+
+Zambia is the clearest case in the atlas. The Education Act 2011 s.98(1) says
+"the language of instruction at any level of the education system shall be
+English" -- and s.3 says "This Act does not apply to- (a) a university
+established or registered under the University Act, 1999". The Higher Education
+Act 2013 is silent. A pass that quoted s.98 alone would have filed a national
+rule about university teaching that does not exist, and it would have quoted
+verbatim from the statute while doing it, so no gate could catch it.
+
+It is not rare. Zimbabwe's Education Act s.62 names a medium only up to grade
+four. South Sudan's applies to schools. Somalia's 2017 language article covers
+grades 1-8 and secondary, and the higher-education part of the same law has
+none. In every one of those the sentence you want to quote exists and says the
+wrong thing about the level you are writing about.
+
+So: find the article that says what the instrument applies to, and the article
+that says which levels or bodies are excluded, and read them before the clause
+you came for. This is the same rule as the French Pacific one below, arrived
+at from a different continent.
 
 ## A `year` on a row means the programme STARTED, or the figure was COUNTED
 

@@ -1253,3 +1253,39 @@ latin-1 when the UTF-8 decode produces replacement characters. Worth knowing
 before anyone "simplifies" that decode: the Universite Laval mirror is the only
 readable full text for several Francophone and Hispanophone language laws in
 this data, Venezuela's Ley de Idiomas Indigenas among them.
+
+**Two comparative sources that would answer language-of-instruction directly,
+and both are closed.** `whed.net` (the IAU World Higher Education Database)
+403s a full browser UA on every path, root and results alike; it carries a
+"languages of instruction" field per institution and is the obvious source for
+this question. `droit-afrique.com`, the standard route to Francophone African
+statutes, 403s on root and country paths alike.
+
+**Laws.Africa estate**: `lesotholii.org` and `zimlii.org` both 403 to curl with
+a browser UA, for HTML and `source.pdf` alike.
+
+**`www.elaws.gov.bw`** (Botswana) times out on connect at 443, so the Tertiary
+Education Act has no located text copy. **`iset-oneworld.ac.mz`** 403s.
+
+**`repositoriodigital.me.gov.st`** (Sao Tome and Principe, Ministry of
+Education legislation repository) serves a SELF-SIGNED certificate, refused by
+curl and Node alike. Not worked around, per the standing rule that the bar does
+not get lowered for a certificate; no publisher's copy of the instrument was
+found elsewhere.
+
+**`joradp.dz`, the Algerian Journal officiel, serves 200 and real PDFs and is
+still unusable for the instruments that matter here.** The 1991, 1996 and 1999
+issues are image scans with no text layer -- 254 KB of PDF yielding five bytes
+of text. Algeria's own register cannot be quoted for Law 91-05 or Ordonnance
+96-30, which is why those rest on the Universite Laval transcriptions.
+
+**hepo.iesalc.unesco.org is the best route to African higher-education statutes
+and it has two traps.** Many of its PDFs are image scans yielding nothing:
+Angola (both slots), Burundi (both), Botswana HE, CAR, Guinea, Guinea-Bissau
+education law, Lesotho (both), Madagascar HE, Mozambique education law, Sierra
+Leone HE, Togo. And two slots hold something other than what they are filed as
+-- Algeria's `dza_HELawLi` is a 2000-2022 index of ministry texts whose Arabic
+extraction is glyph-substituted nonsense, and Comoros' `com_HEEdLawLi` is a
+newspaper op-ed about the loi d'orientation rather than the law. Liberia's
+`lbr_HEEdLawLi` is a 29 MB OCR whose text is shredded ("Languageof Instruction",
+"iustntction", "Englis]r") and is not quotable.

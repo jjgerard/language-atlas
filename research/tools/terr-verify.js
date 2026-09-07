@@ -506,8 +506,17 @@ function quoteOn(quote, page) {
   const out = {};
   for (const [key, s] of Object.entries(specs)) {
     if (s.insufficient) { console.log(NL + key + ": drafter reported nothing verifiable"); continue; }
+    // `key` is accepted as a name for `bullet`. The gate only ever read
+    // `bullet`, but the briefs sent to drafters say `key`, and a batch that
+    // followed its own brief exactly would have had every bullet dropped as
+    // unevidenced. One agent noticed and emitted both names; the next one to
+    // follow the brief literally would have lost the lot. Normalising here is
+    // right rather than correcting the brief, because both names are already
+    // out in the world in drafted output.
+    const evList = (s.evidence || []).filter(e => e && (e.bullet || e.key))
+      .map(e => (e.bullet ? e : Object.assign({}, e, { bullet: e.key })));
     const ev = new Map();
-    for (const e of (s.evidence || [])) if (e && e.bullet) ev.set(e.bullet, e);
+    for (const e of evList) ev.set(e.bullet, e);
     // Bullets are unique, so keying evidence by bullet is right for them. Rows
     // are not: a drafter keys programme evidence by institution and level, and
     // Arizona's M.S. in Human Language Technology and M.A. in Native American
@@ -518,7 +527,7 @@ function quoteOn(quote, page) {
     //
     // The row matcher below therefore searches this LIST, which keeps every
     // entry, rather than the Map's deduplicated values.
-    const evAll = (s.evidence || []).filter(e => e && e.bullet);
+    const evAll = evList;
 
     const kept = {}, dropped = [];
     for (const [field, bullets] of Object.entries(s.fields || {})) {
