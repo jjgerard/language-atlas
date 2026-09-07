@@ -2593,6 +2593,10 @@
     2,
     2,
     2
+   ],
+   "identificationCriteria": [
+    3,
+    4
    ]
   }
  },
@@ -8705,7 +8709,46 @@
     "year": 2016,
     "description": "Amending Act 47/2016 amends the Faroese Special School Act 50/2005"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    2,
+    2,
+    2,
+    3
+   ],
+   "referralPathway": [
+    1,
+    1,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    2
+   ],
+   "workforce": [
+    1,
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "FR",
@@ -9643,7 +9686,7 @@
   "identificationCriteria": "Intervention is clinician-set on individual need, not diagnosis-led or a set quota\nA SEND Identification Toolkit summarises the child's SLCN profile before assessment\nTargeted caseload runs up to three terms, then specialist caseload or discharge\nSLCN below the threshold for direct SLT input is met at Universal and Targeted T1",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "School referral needs at least one term of IEP/PLP targets on SLCN as evidence\nPre-school concerns go to a Let's Talk drop-in assessment clinic\nSchool-age concerns go first to the school Additional Learning Needs Co-ordinator\nOutcome may be advice for the school rather than the child being seen",
+  "referralPathway": "Pre-school concerns go to a Let's Talk drop-in assessment clinic\nSchool-age concerns go first to the school Additional Learning Needs Co-ordinator\nSchool referral needs at least one term of IEP/PLP targets on SLCN as evidence\nOutcome may be advice for the school rather than the child being seen",
   "serviceModel": "Clinic at Les Marais plus home, preschools, schools, hospital, centres, library\nIntervention usually happens in the child's own educational environment\nTargeted Tier 2 needs direct SLT assessment, then delivery by staff or parents\nBalanced System Framework - a fluid three-tier approach across five strands",
   "legalEntitlement": "A 2017 States resolution names the Education (Guernsey) Law, 1970, as amended\nThe States resolved that that Law be repealed and replaced\nReplacement is to set out the powers and duties expected of a government",
   "funding": "The team provides regular free drop-in assessment clinics",
@@ -9656,7 +9699,45 @@
     "year": 2017,
     "description": "States of Guernsey resolution designates two schools as special schools and orders the 1970 Education Law replaced"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "referralPathway": [
+    2,
+    2,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2
+   ],
+   "funding": [
+    3
+   ],
+   "workforce": [
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GH",
@@ -9796,7 +9877,7 @@
   "stubNote": "",
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "terminology": "",
-  "identificationCriteria": "A Special Needs Assessment Panel receives, examines and assesses each child referred\nPanel is drawn from education, social services and the Gibraltar Health Authority\nThreshold: significantly greater difficulty in learning than most children of the age\nNot a learning difficulty solely because the teaching language differs from home\nPanel need not act unless satisfied the parents have been consulted",
+  "identificationCriteria": "A Special Needs Assessment Panel receives, examines and assesses each child referred\nPanel is drawn from education, social services and the Gibraltar Health Authority\nPanel need not act unless satisfied the parents have been consulted\nThreshold: significantly greater difficulty in learning than most children of the age\nNot a learning difficulty solely because the teaching language differs from home",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "A Department officer may serve written notice requiring a child be examined\nA parent may ask the Director to have the child medically examined\nParental consent is not needed for a child to be referred to the panel\nParent must be given notice of the examination and may attend it",
@@ -9836,7 +9917,39 @@
     "year": 2024,
     "description": "Education and Training (Amendment) Act 2024 changed SEND from Special to Supported Educational Needs and Disabilities"
    }
-  ]
+  ],
+  "slots": {
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "referralPathway": [
+    1,
+    1,
+    4,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "funding": [
+    1,
+    2
+   ],
+   "workforce": [
+    1,
+    1,
+    4,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GL",
@@ -10828,7 +10941,53 @@
     "year": 2013,
     "description": "Decree 15/2013 EMMI set logopedic provision and speech and language screening at ages three and five"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    3,
+    3
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "ID",
@@ -10959,10 +11118,10 @@
   "inst": "",
   "source": "seed",
   "terminology": "'Developmental language disorder' is now the term in education policy\nSpecial-class entry now reads 'Developmental Language Disorder – Speech Sound Disorder'\nCATALISE terminology reaching a statutory instrument: Circular 0024/2025 retires SSLD",
-  "identificationCriteria": "Set for special-class entry by Circular 0024/2025, revising the 2007 criteria\nIQ removed as an entry criterion — the 2007 SSLD framework used cognitive referencing\n2007 defined it narrowly: severe impairment, no co-morbid learning disability or deafness\nBoth SLT and psychological assessment; the SLT nominates, with parental consent",
-  "assessments": "LITMUS sentence repetition (SRep) task for Irish\nDeveloped by Stanislava Antonijevic (Galway) with Ruth Durham and Íde Ní Chonghaile (HSE)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nBuilt with practising HSE clinicians, and an Irish-English task exists alongside it\nRecords that the instrument exists — not that any service here uses it",
+  "identificationCriteria": "Set for special-class entry by Circular 0024/2025, revising the 2007 criteria\nSLT and psychological assessment; the SLT nominates, with parental consent\n2007 defined it narrowly: severe impairment, no co-morbid learning disability or deafness\nIQ removed as an entry criterion — the 2007 SSLD framework used cognitive referencing",
+  "assessments": "LITMUS sentence repetition (SRep) task for Irish\nDeveloped by Stanislava Antonijevic (Galway) with Ruth Durham and Íde Ní Chonghaile (HSE)\nBuilt with practising HSE clinicians, and an Irish-English task exists alongside it\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 45 (Law et al., 2020)\nAssessment: mainstream only 31%, mother tongue if different 25%, both 23%\nIntervention: mainstream only 52%, two+ languages 22%\nInterpreters sometimes used — assessment 87%, intervention 52%, counselling 45%\nPractitioner training: optional 57%, none 19%, unsure 23% (n = 47)",
-  "referralPathway": "Speech and language therapy referral is to the HSE Primary Care children's service\nSpecial-class placement is a separate route\nAn HSE or NCSE speech and language therapist puts a child forward as a candidate\nEnrolment is decided by the school under the circular criteria",
+  "referralPathway": "An HSE or NCSE speech and language therapist puts a child forward as a candidate\nSpeech and language therapy referral is to the HSE Primary Care children's service\nSpecial-class placement is a separate route\nEnrolment is decided by the school under the circular criteria",
   "serviceModel": "Health clinics 84%, mainstream school 34% (practitioners reporting, COST survey 2017)\nHSE therapy through Primary Care and Children's Disability Network Teams\nDE-funded DLD/SSD classes in mainstream primary, capped at 7 (Circular 0038/2007)\nSplit between health and education",
   "legalEntitlement": "Weak, relative to the clarity of the criteria\nThe EPSEN Act 2004, which would have created enforceable entitlements, is part-commenced\nA DLD/SSD diagnosis does not entitle a child to a special-class place — availability decides\nCircular 0052/2019 exempts persistent difficulty from Irish, on need rather than diagnosis",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 88\nFunders: state health 85%, state education 15%, family 14%\n47% said a maximum number of sessions applied (n = 86)",
@@ -10987,7 +11146,68 @@
     "year": 2025,
     "description": "Circular 0024/2025 replaces the SSLD criteria: the category is renamed Developmental Language Disorder / Speech Sound Disorder (DLD/SSD), and the IQ entry criterion is removed. Developed with the NCSE speech and language therapy service, IASLT and HSE speech and language therapists."
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "assessments": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    1,
+    3
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "IL",
@@ -11115,7 +11335,24 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "identificationCriteria": [
+    3,
+    3
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IN",
@@ -12592,14 +12829,14 @@
   "inst": "",
   "source": "seed",
   "terminology": "\"málhömlun / málþroskaröskun barna\" (Icelandic)\nRoughly \"language impairment / disorder of language development in children\"\n2017 public term — COST Action awareness survey highest band, 65% or more had heard of it",
-  "identificationCriteria": "Screening and observation run from the start of schooling, before any diagnosis\nParents, the head teacher, teachers or health staff may all ask for an assessment\nThe school service arranges the assessment and proposes to the head what to do\nRefusal of a parent's request for assessment can be appealed",
+  "identificationCriteria": "Parents, the head teacher, teachers or health staff may all ask for an assessment\nThe school service arranges the assessment and proposes to the head what to do\nScreening and observation run from the start of schooling, before any diagnosis\nRefusal of a parent's request for assessment can be appealed",
   "assessments": "",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 18 (Law et al., 2020)\nAssessment: mainstream only 83%\nIntervention: mainstream only 72%\nInterpreters sometimes used — assessment 53%, intervention 28%, counselling 89%\nPractitioner training: optional 26%, none 32%, unsure 37% (n = 19)",
   "referralPathway": "Each school forms a nemendaverndarrad to coordinate staff handling individual pupils\nThe municipality also links the school service to specialised state assessment services\nParents themselves apply for a place in a special unit or a special school\nSchool assessments need parental consent, and no fee may be charged for them",
   "serviceModel": "Private practice 66%, nursery/kindergarten 42%, mainstream school 37%\nPublic health 55%, public education 45%, private 29% (practitioner survey, COST IS1406)\nDirect intervention most often weekly — 76%\nAccess shaped by regional variation 83%, urban/rural 78%, linguistic/cultural community 50%",
   "legalEntitlement": "Compulsory School Act 91/2008 art 17: a right to support matched to assessed need\nPupils have a right to have their learning needs met in a general school, unsegregated\nMunicipalities must ensure the school service is provided in compulsory schools\nThe ministry may rule that a named pupil is to be given an assessment",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 38\nFunders: health insurance 58%, state education 47%, state health 34%, family 8%\n59% said a maximum number of sessions applied (n = 37)",
-  "workforce": "Just under 70 self-employed therapists serve children, uncontracted since 2022\nThe minister calls the shortage of therapists one of the biggest challenges\nMasters intake runs every second year, recently raised from 15 to 18 students\nAbout 100 have met the prerequisites but cannot get a place on the masters",
+  "workforce": "Just under 70 self-employed therapists serve children, uncontracted since 2022\nMasters intake runs every second year, recently raised from 15 to 18 students\nAbout 100 have met the prerequisites but cannot get a place on the masters\nThe minister calls the shortage of therapists one of the biggest challenges",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -12612,7 +12849,56 @@
     "year": 2010,
     "description": "Regulation 585/2010 on support for compulsory-school pupils with assessed special needs"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    1,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    2,
+    2,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IT",
@@ -12709,7 +12995,61 @@
     "year": 2017,
     "description": "Decreto Legislativo 66 restates school inclusion as an answer to differing educational needs"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "JE",
@@ -12756,13 +13096,13 @@
   "stubNote": "",
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "terminology": "SLCN, speech language and communication needs, is the Code of Practice category\nDevelopmental language disorder (DLD) is named on the SALT service page\nHealth service brands itself Children's Speech and Language Therapy, shortened to SALT\nCode of Practice marked under review, February 2024, by the department",
-  "identificationCriteria": "SEN means a learning difficulty calling for special educational provision to be made\nLearning difficulty is significantly greater difficulty learning than most children that age\nHome language difference alone is not a learning difficulty under the 1999 Law\nA Record of Need follows an exceptional action assessment that indicates one is needed",
+  "identificationCriteria": "A Record of Need follows an exceptional action assessment that indicates one is needed\nSEN means a learning difficulty calling for special educational provision to be made\nLearning difficulty is significantly greater difficulty learning than most children that age\nHome language difference alone is not a learning difficulty under the 1999 Law",
   "assessments": "",
   "multilingualProvision": "Difficulties related solely to limitations in English as an additional language are not SEN\nSchools must establish whether lack of progress is command of English or SEN\nAnnual review timing must account for a family whose first language is not English",
-  "referralPathway": "Anyone can refer a child to the children's SALT service\nParental consent is required before a SALT referral is accepted\nIn school, a continuing concern goes from the class teacher to the school's SENCo\nHealth staff suspecting SEN below school age must notify the Pre-School Forum",
+  "referralPathway": "Anyone can refer a child to the children's SALT service\nIn school, a continuing concern goes from the class teacher to the school's SENCo\nHealth staff suspecting SEN below school age must notify the Pre-School Forum\nParental consent is required before a SALT referral is accepted",
   "serviceModel": "SALT works in its own clinic, nurseries, schools, the hospital, the home and community clinics\nTeam is based at the Child Development and Therapy Centre, Enid Quenault centre\nSEN Code of Practice defines speech and language therapy as a health care profession\nService also trains families, education staff and other professionals in communication",
-  "legalEntitlement": "Minister must ensure every child with SEN has the special educational provision required\nMinister must ensure every child with SEN is identified and their provision assessed\nParents have a right to request an assessment of whether their child has SEN\nThe 1999 Law carries a general presumption in law of mainstream education",
-  "funding": "SEN resources are set by a funding formula reviewed at least annually\nDelegated SEN funding is expected to be used exclusively to address SEN needs\nA Record of Need brings extra funding where cost exceeds ordinarily available support\nEarly years states providers get additional banded funding for children with SEN",
+  "legalEntitlement": "The 1999 Law carries a general presumption in law of mainstream education\nMinister must ensure every child with SEN has the special educational provision required\nMinister must ensure every child with SEN is identified and their provision assessed\nParents have a right to request an assessment of whether their child has SEN",
+  "funding": "SEN resources are set by a funding formula reviewed at least annually\nA Record of Need brings extra funding where cost exceeds ordinarily available support\nEarly years states providers get additional banded funding for children with SEN\nDelegated SEN funding is expected to be used exclusively to address SEN needs",
   "workforce": "",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -12780,7 +13120,50 @@
     "year": 2018,
     "description": "Discrimination (Disability) (Jersey) Regulations 2018 add disability as a protected characteristic"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    2,
+    3,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    3,
+    3,
+    3
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "funding": [
+    2,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "JM",
@@ -13789,13 +14172,13 @@
   "inst": "",
   "source": "seed",
   "terminology": "No distinct language-disorder category: speech therapy sits inside a generic frame\nNeed is defined by impairment of educational, developmental and learning opportunities",
-  "identificationCriteria": "Ordinary measures come first, without a formal assessment gate\nEnhanced measures require a standardised assessment process\nThey are authorised by the competent school authority",
+  "identificationCriteria": "Enhanced measures are authorised by the competent school authority\nEnhanced measures require a standardised assessment process\nOrdinary measures come first, without a formal assessment gate",
   "assessments": "",
   "multilingualProvision": "Remedial school measures may also be used for children with a different mother tongue\nSeparate German-as-a-second-language provision exists alongside them",
   "referralPathway": "Early remedial education covers birth to school start, run centrally\nSupplementary teaching is the in-school first line",
   "serviceModel": "Speech therapy is delivered by specialists cooperating with in-school teachers\nFive named strands including a school psychological service and gifted support",
   "legalEntitlement": "Entitlement runs from birth to age 20, and to 22 in certain circumstances\nThe stated aim is that the child stays in or returns to the regular class",
-  "funding": "Special schooling is free of charge, and so are the measures added to it\nBoarding special school: parents may be charged 15 francs a day for meals\nParents bear the extra cost if they ask for costlier special schooling than needed\nTravel over 30 km to the provider is reimbursed to parents at the cheapest rate\nTransport costs are covered where they relate directly to the school journey",
+  "funding": "Special schooling is free of charge, and so are the measures added to it\nTravel over 30 km to the provider is reimbursed to parents at the cheapest rate\nTransport costs are covered where they relate directly to the school journey\nBoarding special school: parents may be charged 15 francs a day for meals\nParents bear the extra cost if they ask for costlier special schooling than needed",
   "workforce": "Delivery goes to qualified individuals or private institutions with qualified staff\nQualified means a diploma of a recognised special-needs university or Fachhochschule\nThe state must ensure domestic providers cover the need for these measures\nWhere a contracted provider cannot, the Schulamt may commission specialised bodies",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -13809,7 +14192,47 @@
     "year": 2001,
     "description": "Verordnung ueber die schulischen Foerdermassnahmen regulates support measures including logopedic ones"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    3
+   ],
+   "multilingualProvision": [
+    3,
+    3
+   ],
+   "referralPathway": [
+    2,
+    2
+   ],
+   "serviceModel": [
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    2,
+    2,
+    3,
+    3
+   ],
+   "workforce": [
+    3,
+    3,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "LK",

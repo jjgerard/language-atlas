@@ -171,6 +171,51 @@ to population, and `dischargeCriteria` and `outcomesEvidence` empty on all nine.
 Four patterns found on eight countries and confirmed on nine more is no longer a
 sample.
 
+## dld, third batch: five new patterns, and one honest counter-example
+
+**`terminology` is being filled with the name of the PROFESSION or the SERVICE,
+not of the disorder.** The Faroes give two of three bullets to what the
+clinician is called — audiologopedur, logopedur, taliradgevi, talupedagogur;
+Jersey's third bullet is the health service branding itself SALT; Guernsey's
+first is the service's own name. In a small jurisdiction with no statutory
+category, the only FIXED term is the job title — and `workforce` q3 asks for
+the qualification route rather than the title, so it has nowhere else to go.
+
+**`funding` has no question for "is it free".** Free at the point of use is the
+commonest single funding fact on this map, and it is not q1 (who pays), q2 (how
+the money reaches a child), q3 (co-payment) or q4 (ring-fenced) — only a
+negative answer to q3. Three of the seven filled `funding` fields in one batch
+OPEN with it. Guernsey's entire field is "The team provides regular free
+drop-in assessment clinics".
+
+**`identificationCriteria` has no slot for what the finding LEADS TO** — the
+placement finding appearing one field to the left of `referralPathway`.
+
+**Where `serviceModel` is empty, its content migrates into `referralPathway`.**
+The Isle of Man's referral field says where the team is based; Liechtenstein's
+is entirely provision tiers with no referrer and no recipient. Both have an
+empty `serviceModel`, and both are among the smallest units in the batch.
+
+**`multilingualProvision` splits into two disjoint kinds of entry that never
+overlap.** The COST-survey units answer q1 and q2 and never q3 or q4; the
+law-derived units answer q3 only and never q1 or q2. No unit answers both
+halves. The field is effectively two different questions depending on whether
+its source is a practitioner survey or a statute — which is a stronger
+statement of the problem than "q3 and q4 go unanswered".
+
+**A counter-example, recorded because it is one.** `workforce` q2 asks for a
+ratio to population and almost never gets one — but Italy answers it exactly:
+"France, same population, has three times as many". One unit in eleven, and the
+only one across four batches. The question is answerable; it is just very
+rarely answered.
+
+**A divergence between drafters worth noting.** The LITMUS hedge — "Records
+that the instrument exists, not that any service here uses it" — was tagged 1
+by one batch and 4 by another, the second arguing it is specifically about
+whether the instrument is USED, which is q4's territory, and that 4 also leaves
+it last where the stored text puts it. Both readings are defensible, which is
+itself evidence the field's questions do not partition its content cleanly.
+
 ## Measured, not noticed: which questions nobody answers
 
 Everything above came from a drafter noticing something while working. This is
