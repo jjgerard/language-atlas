@@ -1321,3 +1321,27 @@ unfilled for access rather than absence. NXDOMAIN: `www.mathe.gov.gr`,
 `www.filoloskifakultet.ucg.ac.me`. `www.unistrasi.it` returns HTTP 500.
 `highlands.ac.uk`'s course list (Jersey) is Craft/Vue -- its "all courses" page
 is 541 KB of furniture with zero course entries.
+
+**From the African entry-requirements pass.** `uneb.ac.ug` — the Uganda
+National Examinations Board — **302-redirects to a spam domain**
+(`goaltap.snaring.click`). That is a compromised or lapsed domain, not an
+outage, and nothing served from it should be cited. `necta.go.tz` has an
+expired TLS certificate. `dnea.gov.na` connect-times-out. `kuccps.ac.ke` is
+NXDOMAIN; the live Kenyan hosts are `kuccps.net` and `students.kuccps.ac.ke`.
+
+`unisey.ac.sc` (Seychelles) serves **HTTP 404 with 329-408 KB bodies** on
+`/entry-requirements/`, `/courses/` and every course slug — another big-404 of
+the kind that reads as a populated page. `usl.edu.sl/entry-requirements/` 404s
+while `admissions.usl.edu.sl` serves the same text.
+
+New NXDOMAINs: `ustp.st`, `mohere.gov.gm`, `unge.gq`, `quanef-gb.org`,
+`mesrs.gouv.tg`, `mesrs-td.org`, `univ-ndjamena.td`, `eit.edu.er`, `enssup.ma`.
+`enssup.gov.ma` connect-times-out. `admission.gov.sd` answers 200 with an 8.8 KB
+stub carrying only a ministry title.
+
+**More HEPO slots that are image scans**, to add to the list above:
+`gab_HEEdLawLi` (8.6 MB yielding 17 bytes of text), `mdg_HELawLi`,
+`sen_HELawLi`, `sle_HELawLi`, `gin_HELawLi`, `mwi_HEEdLawLi`, `tcd_RecAutoLi`,
+`gmb_QALegLi`, `tgo_HELawLi`, `gnb_HEEdLawLi`. And the HEPO **country-graph page
+500s** — rather than 404s — for ERI, GNQ, STP and SYC, which is how you can tell
+those four have no HEPO entry at all rather than a missing document.

@@ -20,6 +20,7 @@ const PAGES = {
   'map.html': 'map.html',
   'about.html': 'about.html',
   'patterns.html': 'patterns.html',
+  'views.html': 'views.html',
   'sources.html': 'sources.html',
   'submit.html': 'submit.html',
   'admin.html': 'admin.html',

@@ -1,0 +1,387 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>One field, every country — Language Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/shared.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+/* The maps answer one place at a time. This page turns the same data ninety
+   degrees: one question, every place, so the answers can be read against each
+   other. Wider than /about, because the answers are the content. */
+body { display: flex; flex-direction: column; min-height: 100dvh; }
+main { flex: 1; width: min(104ch, 100%); margin: 0 auto; padding: 40px 22px 72px; }
+
+main h2 {
+  font-size: clamp(27px, 4.4vw, 36px); font-weight: 500; line-height: 1.15;
+  letter-spacing: -.015em; margin: 0 0 6px; text-wrap: balance;
+}
+main .standfirst { margin: 0 0 26px; font-size: 16px; color: var(--ink-soft); line-height: 1.6; max-width: 68ch; }
+main p { font-size: 15px; line-height: 1.65; margin: 0 0 14px; max-width: 70ch; }
+main a { color: var(--focus); }
+
+/* ---- the picker ---- */
+.pick { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); margin: 0 0 16px; }
+.pick label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--ink-faint); margin-bottom: 4px; font-weight: 600; }
+.pick select, .pick input {
+  width: 100%; font: inherit; font-size: 14px; padding: 8px 10px;
+  border: 1px solid var(--hair-strong); border-radius: 7px; background: var(--surface); color: var(--ink);
+}
+.opts { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 0 0 18px; font-size: 13px; color: var(--ink-soft); }
+.opts label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+.opts button {
+  font: inherit; font-size: 12.5px; padding: 6px 11px; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--hair-strong); background: var(--surface); color: var(--ink-soft);
+}
+.opts button:hover { color: var(--ink); border-color: var(--focus); }
+
+/* ---- what the field asks ---- */
+.asks { background: var(--surface); border: 1px solid var(--hair); border-radius: 10px; padding: 14px 16px; margin: 0 0 16px; }
+.asks h3 { margin: 0 0 8px; font-size: 11px; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--ink-faint); font-weight: 600; }
+.asks ol { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
+.asks ol li { margin-bottom: 2px; }
+.asks .plain { margin: 0; font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
+
+/* ---- the four states, as a bar and a legend ---- */
+.states { margin: 0 0 6px; }
+.statebar { display: flex; height: 15px; border-radius: 3px; overflow: hidden; background: var(--surface-2); }
+.statebar i { display: block; height: 100%; }
+.s-has    { background: var(--cov-4); }
+.s-looked { background: var(--hatch-line); }
+.s-na     { background: var(--hair-strong); }
+.s-none   { background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--hair); }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 8px 0 22px; font-size: 12.5px; color: var(--ink-soft); }
+.legend span { display: inline-flex; gap: 6px; align-items: center; }
+.legend i { width: 11px; height: 11px; border-radius: 2px; display: inline-block; }
+.legend b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* ---- the answers ---- */
+.region-head {
+  margin: 26px 0 8px; padding-top: 12px; border-top: 1px solid var(--hair);
+  font-size: 12px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-faint);
+}
+.region-head .n { font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--ink-faint); }
+.ans { display: grid; grid-template-columns: 210px 1fr; gap: 0 18px; padding: 11px 0; border-bottom: 1px solid var(--hair); }
+.ans:last-child { border-bottom: 0; }
+.ans .who { font-size: 14px; line-height: 1.35; }
+.ans .who .nm { font-weight: 500; }
+.ans .who .sub { display: block; font-size: 11.5px; color: var(--ink-faint); margin-top: 2px; }
+.ans .body { font-size: 14px; line-height: 1.55; }
+.ans ul { margin: 0; padding-left: 17px; }
+.ans ul li { margin-bottom: 3px; }
+.ans ul li::marker { color: var(--hair-strong); }
+.ans .slot { color: var(--ink-faint); font-size: 11px; font-variant-numeric: tabular-nums; }
+.ans .quiet { color: var(--ink-faint); font-style: italic; margin: 0; }
+.ans .rows { margin: 0 0 3px; font-size: 13px; color: var(--ink-faint); }
+.chip {
+  display: inline-block; font-size: 10px; letter-spacing: .07em; text-transform: uppercase;
+  padding: 2px 6px; border-radius: 4px; background: var(--surface-2); color: var(--ink-soft);
+  white-space: nowrap; margin-top: 4px;
+}
+.chip.looked { background: var(--hatch-bg); }
+.empty { padding: 30px; text-align: center; color: var(--ink-faint); font-size: 14px; }
+
+blockquote.note {
+  margin: 0 0 18px; padding: 12px 15px; font-size: 14px; line-height: 1.6;
+  color: var(--ink-soft); background: var(--surface-2); max-width: 70ch;
+  border-left: 2px solid var(--hair-strong); border-radius: 0 4px 4px 0;
+}
+footer.foot {
+  flex: none; padding: 14px 18px; background: var(--surface);
+  border-top: 1px solid var(--hair); font-size: 12px; color: var(--ink-faint);
+}
+footer.foot a { color: var(--ink-soft); }
+
+@media (max-width: 720px) {
+  main { padding: 26px 16px 54px; }
+  .ans { grid-template-columns: 1fr; gap: 4px; }
+}
+</style>
+
+<header class="sitebar">
+  <a class="brand" href="/">
+    <span class="name">Language Atlas</span>
+    <span class="tagline">Provision and policy, by region</span>
+  </a>
+  <nav class="pills" id="pills"></nav>
+  <div class="navright">
+    <a class="aboutlink" href="/submit">Add an entry</a>
+    <a class="aboutlink" href="/views" aria-current="page">Field views</a>
+    <a class="aboutlink" href="/patterns">Patterns</a>
+    <a class="aboutlink" href="/sources">Sources</a>
+    <a class="aboutlink" href="/about">About</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="menu" id="menu">
+    <nav class="pills" id="menupills"></nav>
+      <a class="aboutlink" href="/views" aria-current="page">Field views</a>
+      <a class="aboutlink" href="/patterns">Patterns</a>
+      <a class="aboutlink" href="/sources">Sources</a>
+      <a class="aboutlink" href="/about">About</a>
+    </div>
+</header>
+
+<main>
+  <h2>One field, every country</h2>
+  <p class="standfirst">
+    A map answers one question about one place. This page turns that ninety degrees: pick a
+    question and read every country's answer to it in one column, so the answers can be
+    compared rather than visited one at a time.
+  </p>
+
+  <blockquote class="note">
+    <b>A blank is not a nil.</b> Four things can be in a cell here and they mean different
+    things: an answer; <b>looked and found nothing</b>, where somebody read the instrument and
+    recorded its silence; <b>not applicable</b>; and blank, which means only that nobody has
+    looked yet. They are drawn separately below and counted separately, because reading a blank
+    as a zero would measure which countries got attention rather than what they do.
+  </blockquote>
+
+  <div class="pick">
+    <div><label for="map">Map</label><select id="map"></select></div>
+    <div><label for="field">Question</label><select id="field"></select></div>
+    <div><label for="region">Region</label><select id="region"><option value="">Everywhere</option></select></div>
+    <div><label for="q">Find in the answers</label><input id="q" type="search" autocomplete="off" placeholder="a word or phrase"></div>
+  </div>
+
+  <div class="opts">
+    <label><input type="checkbox" id="subs"> Include sub-national units</label>
+    <label><input type="checkbox" id="onlyAns"> Only where there is an answer</label>
+    <button id="csv">Download CSV</button>
+  </div>
+
+  <div class="asks" id="asks"></div>
+
+  <div class="states"><div class="statebar" id="statebar"></div></div>
+  <div class="legend" id="legend"></div>
+
+  <div id="out"></div>
+</main>
+
+<footer class="foot">
+  Entry text CC BY 4.0 · code <a href="https://github.com/jjgerard/language-atlas">open source</a>
+</footer>
+
+<script type="module">
+import { mountNav } from '/nav.js';
+
+const esc = s => String(s == null ? '' : s)
+  .replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const $ = id => document.getElementById(id);
+const NL = String.fromCharCode(10);
+
+// Four states, in the order the bar draws them. `looked` sits next to `has`
+// rather than next to `none` on purpose: it is a finding about a system, and
+// putting it beside the blanks would file it as an absence of work.
+const STATES = [
+  ['has',    'answered',              's-has'],
+  ['looked', 'looked, found nothing', 's-looked'],
+  ['na',     'not applicable',        's-na'],
+  ['none',   'nobody has looked yet', 's-none'],
+];
+const REGIONS = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+
+const payload = await (await fetch('/api/atlas')).json();
+await mountNav(null, payload.domains);
+
+const live = payload.domains.filter(d => d.live);
+let domain = live[0], field = null;
+
+const unitsOf = id => (payload.units[id] || []);
+
+/** The four-state count for one field of one map, over the units in view. */
+function tally(dom, key, units) {
+  const i = dom.fields.findIndex(f => f.k === key);
+  const t = { has: 0, looked: 0, na: 0, none: 0 };
+  for (const u of units) t[stateOf(u, i)]++;
+  return t;
+}
+
+function stateOf(u, i) {
+  const c = (u.fieldStates || '')[i];
+  return c === 'h' ? 'has' : c === 'l' ? 'looked' : c === 'x' ? 'na' : 'none';
+}
+
+// ---- the pickers -------------------------------------------------------
+
+$('map').innerHTML = live.map(d => `<option value="${esc(d.id)}">${esc(d.label)}</option>`).join('');
+$('region').innerHTML += REGIONS.map(r => `<option value="${esc(r)}">${esc(r)}</option>`).join('');
+
+function fillFields() {
+  const d = live.find(x => x.id === $('map').value) || live[0];
+  const nat = unitsOf(d.id).filter(u => u.nat);
+  // Ordered by how much of the world actually answers them, because that is
+  // what decides whether a column is worth reading side by side, and the share
+  // goes in the option itself: choosing a field at 3% and finding it empty is
+  // a wasted click that the number prevents.
+  const opts = d.fields.map(f => {
+    const t = tally(d, f.k, nat);
+    return { f, pct: nat.length ? Math.round(100 * t.has / nat.length) : 0 };
+  }).sort((a, b) => b.pct - a.pct);
+  $('field').innerHTML = opts.map(({ f, pct }) =>
+    `<option value="${esc(f.k)}">${esc(f.label)} — ${pct}%</option>`).join('');
+}
+
+// ---- rendering ---------------------------------------------------------
+
+/** A prose field's hint is its four questions, separated by " · ". */
+function renderAsks(f) {
+  const hint = String(f.hint || '');
+  let parts = hint.split(' · ').map(s => s.trim()).filter(Boolean);
+  if (parts.length) parts[0] = parts[0].replace(/^In this order[^:]*:\s*/i, '');
+  if (f.type !== 'text' || parts.length < 2) {
+    $('asks').innerHTML = `<h3>What this field records</h3><p class="plain">${esc(hint)}</p>`;
+    return;
+  }
+  $('asks').innerHTML = '<h3>What it asks, in order</h3><ol>'
+    + parts.map(p => `<li>${esc(p)}</li>`).join('') + '</ol>';
+}
+
+function renderStates(t, n) {
+  const bar = STATES.map(([k, , cls]) => {
+    const w = n ? (100 * t[k] / n) : 0;
+    return w > 0 ? `<i class="${cls}" style="width:${w}%"></i>` : '';
+  }).join('');
+  $('statebar').innerHTML = bar || '<i class="s-none" style="width:100%"></i>';
+  $('legend').innerHTML = STATES.map(([k, label, cls]) =>
+    `<span><i class="${cls}"></i>${esc(label)} <b>${t[k]}</b></span>`).join('');
+}
+
+/** Typed fields hold rows, not prose, so say how many there are as well. */
+function renderBody(u, f) {
+  const rows = (u.records || {})[f.k];
+  if (Array.isArray(rows) && rows.length) {
+    // A row names an institution, or gives a count and no name -- the field's
+    // own convention for a source that reports a total. Printing nothing for
+    // the second kind made Algeria's three Tamazight rows read as though the
+    // institution had been left out.
+    const where = r => r.institution
+      || (r.institutions ? r.institutions + ' institutions' : '')
+      || r.description || '';
+    const line = r => [r.language || r.subject || r.year, r.level, where(r)]
+      .filter(Boolean).join(' · ');
+    return `<p class="rows">${rows.length} row${rows.length === 1 ? '' : 's'}</p><ul>`
+      + rows.slice(0, 4).map(r => `<li>${esc(line(r))}</li>`).join('') + '</ul>'
+      + (rows.length > 4 ? `<p class="rows">and ${rows.length - 4} more</p>` : '');
+  }
+  const txt = String((u.values || {})[f.k] || '').trim();
+  if (!txt) return '';
+  return '<ul>' + txt.split(NL).filter(Boolean).map(l => `<li>${esc(l)}</li>`).join('') + '</ul>';
+}
+
+function draw() {
+  const d = live.find(x => x.id === $('map').value) || live[0];
+  const f = d.fields.find(x => x.k === $('field').value) || d.fields[0];
+  const i = d.fields.findIndex(x => x.k === f.k);
+  domain = d; field = f;
+  renderAsks(f);
+
+  let units = unitsOf(d.id).filter(u => $('subs').checked || u.nat);
+  if ($('region').value) units = units.filter(u => (u.region || '') === $('region').value);
+
+  // The tally is of everything in scope BEFORE the text search, because the
+  // point of the four counts is what the atlas holds, not what a search found.
+  renderStates(tally(d, f.k, units), units.length);
+
+  const q = $('q').value.trim().toLowerCase();
+  let shown = units;
+  if ($('onlyAns').checked) shown = shown.filter(u => stateOf(u, i) === 'has');
+  if (q) shown = shown.filter(u =>
+    String((u.values || {})[f.k] || '').toLowerCase().includes(q)
+    || String(u.name || '').toLowerCase().includes(q));
+
+  if (!shown.length) {
+    $('out').innerHTML = '<p class="empty">Nothing to show here. '
+      + ($('onlyAns').checked ? 'No unit in this scope answers this question.' : 'Try a wider scope.')
+      + '</p>';
+    return;
+  }
+
+  const byRegion = {};
+  for (const u of shown) {
+    const r = u.region || 'Elsewhere';
+    (byRegion[r] = byRegion[r] || []).push(u);
+  }
+  const order = REGIONS.filter(r => byRegion[r])
+    .concat(Object.keys(byRegion).filter(r => !REGIONS.includes(r)));
+
+  $('out').innerHTML = order.map(r => {
+    const list = byRegion[r].sort((a, b) => String(a.name).localeCompare(String(b.name)));
+    return `<h3 class="region-head">${esc(r)} <span class="n">${list.length}</span></h3>`
+      + list.map(u => {
+        const st = stateOf(u, i);
+        const slots = (u.slots || {})[f.k];
+        let body;
+        if (st === 'has') {
+          body = renderBody(u, f)
+            + (Array.isArray(slots) && slots.length
+              ? `<span class="slot">answers question ${slots.join(', ')}</span>` : '');
+        } else if (st === 'looked') {
+          body = '<p class="quiet">Somebody looked and recorded finding nothing</p>'
+            + (u.stubNote ? `<p class="rows">${esc(u.stubNote)}</p>` : '');
+        } else if (st === 'na') {
+          body = '<p class="quiet">Not applicable here</p>';
+        } else {
+          body = '<p class="quiet">Nobody has looked yet</p>';
+        }
+        return '<div class="ans"><div class="who">'
+          + `<span class="nm">${esc(u.name)}</span>`
+          + (u.nat ? '' : `<span class="sub">${esc(u.subregion || '')} · sub-national</span>`)
+          + `<br><span class="chip${st === 'looked' ? ' looked' : ''}">${esc(u.cc)}</span>`
+          + `</div><div class="body">${body}</div></div>`;
+      }).join('');
+  }).join('');
+}
+
+// ---- CSV ---------------------------------------------------------------
+
+$('csv').addEventListener('click', () => {
+  const i = domain.fields.findIndex(x => x.k === field.k);
+  const units = unitsOf(domain.id)
+    .filter(u => $('subs').checked || u.nat)
+    .filter(u => !$('region').value || u.region === $('region').value);
+  const cell = s => '"' + String(s == null ? '' : s).replace(/"/g, '""').replace(/\r?\n/g, ' | ') + '"';
+  const lines = [['code', 'unit', 'national', 'region', 'state', field.k].map(cell).join(',')];
+  for (const u of units) lines.push([
+    u.cc, u.name, u.nat ? 'yes' : 'no', u.region, stateOf(u, i), (u.values || {})[field.k] || '',
+  ].map(cell).join(','));
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([lines.join(NL)], { type: 'text/csv' }));
+  a.download = domain.id + '-' + field.k + '.csv';
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+
+// ---- wiring ------------------------------------------------------------
+
+// The map and the field go in the url, so a view of one question across the
+// world is a thing that can be sent to somebody.
+function syncUrl() {
+  const u = new URL(location.href);
+  u.searchParams.set('map', $('map').value);
+  u.searchParams.set('field', $('field').value);
+  history.replaceState(null, '', u);
+}
+
+$('map').addEventListener('change', () => { fillFields(); draw(); syncUrl(); });
+$('field').addEventListener('change', () => { draw(); syncUrl(); });
+for (const id of ['region', 'subs', 'onlyAns']) $(id).addEventListener('change', draw);
+let t = null;
+$('q').addEventListener('input', () => { clearTimeout(t); t = setTimeout(draw, 160); });
+
+const params = new URLSearchParams(location.search);
+if (params.get('map') && live.some(d => d.id === params.get('map'))) $('map').value = params.get('map');
+fillFields();
+if (params.get('field')) {
+  const opt = [...$('field').options].find(o => o.value === params.get('field'));
+  if (opt) $('field').value = opt.value;
+}
+draw();
+</script>

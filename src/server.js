@@ -401,6 +401,7 @@ const page = name => (req, res) => res.sendFile(path.join(__dirname, '..', 'publ
 app.get('/', page('index.html'));
 app.get('/about', page('about.html'));
 app.get('/patterns', page('patterns.html'));
+app.get('/views', page('views.html'));
 app.get('/sources', page('sources.html'));
 // /explore was folded into /patterns. Redirect rather than 404: the URL was
 // live and may have been shared or bookmarked.

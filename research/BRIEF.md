@@ -125,6 +125,12 @@ plain-GET PDF at a predictable path:
 
     https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/<iso3>/<iso3>_HELawLi.pdf
 
+**The iso3 must be LOWERCASE.** `.../2025/KEN/KEN_HELawLi.pdf` returns a
+269-byte 404 for every country in the world, which reads exactly like the host
+being dead; `.../2025/ken/ken_HELawLi.pdf` returns 306 KB. A pass that tries
+the uppercase form once will conclude the whole source is gone and go and do
+thirty-two country hunts by hand.
+
 and the same pattern with `_HEEdLawLi` (the general education law), `_QALegLi`
 (quality assurance), `_HEEdPlanLi` and `_RecAutoLi`. The country page at
 `/pc/policy/countrygraph/cp/<ISO3>/` names which instruments it holds.
@@ -191,6 +197,42 @@ would carry that answer before concluding the question is wrong. A survey tells
 you who and how many; a statute tells you what is owed; an association's
 analysis tells you how many there are per head; an inspectorate tells you
 whether any of it happens.
+
+## A documented absence is now the priority, not a consolation
+
+Count the whole atlas and it is 10,291 cells with content, 9,626 blank, and
+**135 that say somebody looked and found nothing**. That last number is 1.4% of
+the empty space, and it is the single thing stopping this data being scored.
+
+An indicator has to read a cell. If a blank and a real nil look the same, then
+scoring a blank as zero measures which countries got attention, and refusing to
+score it throws away every country nobody has reached. The atlas already has
+the machinery to tell them apart -- the sentinel phrase "Not established from
+the sources consulted" is a distinct state that the map paints differently and
+the coverage counts exclude. It is barely used because drafters have treated a
+negative as a failed search rather than as a finding.
+
+So, as a standing instruction on every task from here:
+
+**When you read an instrument and it does not contain the provision the field
+asks about, that is the answer, and it goes in the field with the quote.** Not
+a note in your report. Not a blank. The bullet says which document you read,
+and what it does not say.
+
+The Americas requiredStudy pass is the worked example: twelve countries, and
+nine of them were absences. Argentina's Ley 24.521, Chile's Ley 21.091,
+Colombia's Ley 30 and the Dominican Republic's Ley 139-01 were each read end to
+end and the words *idioma* and *lengua* occur in none of them. Four blanks
+became four findings, and the reason -- a constitutional university-autonomy
+tradition that parks curriculum with the institution -- only became visible
+because the absences were written down next to each other.
+
+Two things this is NOT. It is not the sentinel, which says nobody has looked;
+a read instrument's silence is a source and its silence is content. And it is
+not a licence to write an absence you have not established: "I could not find
+anything" is a blank, and "art. 7 of the framework law lists the compulsory
+content and no language is among it" is a finding. The difference is whether
+you can quote the silence.
 
 ## Read the act's SCOPE clause before quoting its language clause
 
