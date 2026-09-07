@@ -705,6 +705,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Austria, Russian, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=RUS&geo=AT&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Austria, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=AT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Austria, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=AT&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Austria, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=AT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Austria, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=AT&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Austria, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=AT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Austria, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=AT&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Austria, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=AT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Austria, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=AT&time=2022"
    }
   ],
   "supportLinks": [],
@@ -792,6 +824,26 @@
     "note": "Russian at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.1",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "7.9%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.4",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "36%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "99.8%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -860,6 +912,26 @@
     "year": 2022,
     "value": "606",
     "note": "Russian at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.1",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "7.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.3",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "32.4%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -1517,6 +1589,22 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bosnia and Herzegovina, French, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=FRE&geo=BA&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Bosnia and Herzegovina, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=BA&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Bosnia and Herzegovina, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=BA&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Bosnia and Herzegovina, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=BA&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Bosnia and Herzegovina, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=BA&time=2022"
    }
   ],
   "supportLinks": [],
@@ -1602,6 +1690,26 @@
     "year": 2022,
     "value": "199",
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.9",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "95%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.4",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "42.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -2011,6 +2119,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Bulgaria, French, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=FRE&geo=BG&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Bulgaria, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=BG&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Bulgaria, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=BG&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Bulgaria, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=BG&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Bulgaria, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=BG&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Bulgaria, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=BG&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Bulgaria, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=BG&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Bulgaria, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=BG&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Bulgaria, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=BG&time=2022"
    }
   ],
   "supportLinks": [],
@@ -2098,6 +2238,26 @@
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.1",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "14.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.6",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "57.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "83.6%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -2166,6 +2326,26 @@
     "year": 2022,
     "value": "1615",
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.1",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "10.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.6",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "61.2%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -6248,6 +6428,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Cyprus, German, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=GER&geo=CY&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Cyprus, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=CY&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Cyprus, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=CY&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Cyprus, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=CY&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Cyprus, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=CY&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Cyprus, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=CY&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Cyprus, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=CY&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Cyprus, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=CY&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Cyprus, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=CY&time=2022"
    }
   ],
   "supportLinks": [],
@@ -6335,6 +6547,26 @@
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.9",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "85.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.4",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "35%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -6403,6 +6635,26 @@
     "year": 2022,
     "value": "338",
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.9",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "85.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.4",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "39.3%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": []
@@ -6525,6 +6777,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Czechia, French, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=FRE&geo=CZ&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Czechia, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=CZ&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Czechia, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=CZ&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Czechia, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=CZ&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Czechia, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=CZ&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Czechia, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=CZ&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Czechia, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=CZ&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Czechia, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=CZ&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Czechia, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=CZ&time=2022"
    }
   ],
   "supportLinks": [],
@@ -6612,6 +6896,26 @@
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.6",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "65.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.5",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "52.2%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "79.8%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -6680,6 +6984,26 @@
     "year": 2022,
     "value": "618",
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.7",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "67.2%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.5",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "51%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -6823,6 +7147,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Germany, Spanish, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=SPA&geo=DE&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Germany, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=DE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Germany, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=DE&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Germany, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=DE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Germany, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=DE&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Germany, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=DE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Germany, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=DE&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Germany, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=DE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Germany, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=DE&time=2022"
    }
   ],
   "supportLinks": [],
@@ -6910,6 +7266,26 @@
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.3",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "36.5%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "33.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "54.1%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -6978,6 +7354,26 @@
     "year": 2022,
     "value": "1713",
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.3",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice; Eurostat flags this figure definition differs (d)"
+   },
+   {
+    "year": 2022,
+    "value": "38.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "30.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -7550,6 +7946,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Denmark, French, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=FRE&geo=DK&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Denmark, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=DK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Denmark, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=DK&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Denmark, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=DK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Denmark, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=DK&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Denmark, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=DK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Denmark, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=DK&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Denmark, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=DK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Denmark, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=DK&time=2022"
    }
   ],
   "supportLinks": [],
@@ -7617,6 +8045,26 @@
     "note": "English at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.9",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "85.5%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "0.9",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "31%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "86.9%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -7675,6 +8123,26 @@
     "year": 2022,
     "value": "14664",
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.8",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "84.5%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "0.8",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "26.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -8076,6 +8544,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Estonia, German, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=GER&geo=EE&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Estonia, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=EE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Estonia, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=EE&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Estonia, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=EE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Estonia, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=EE&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Estonia, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=EE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Estonia, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=EE&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Estonia, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=EE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Estonia, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=EE&time=2022"
    }
   ],
   "supportLinks": [],
@@ -8163,6 +8663,26 @@
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "95%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.5",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice; Eurostat flags this figure definition differs (d)"
+   },
+   {
+    "year": 2018,
+    "value": "67.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments; Eurostat flags this figure definition differs (d)"
+   },
+   {
     "year": "2020",
     "value": "79.7%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -8231,6 +8751,26 @@
     "year": 2022,
     "value": "2956",
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "94.5%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.6",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "65.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments; Eurostat flags this figure definition differs (d)"
    }
   ],
   "policyHistory": [
@@ -8512,6 +9052,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Spain, Portuguese, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=POR&geo=ES&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Spain, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=ES&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Spain, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=ES&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Spain, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=ES&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Spain, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=ES&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Spain, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=ES&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Spain, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=ES&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Spain, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=ES&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Spain, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=ES&time=2022"
    }
   ],
   "supportLinks": [],
@@ -8599,6 +9171,26 @@
     "note": "Portuguese at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.5",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "46.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "20.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -8667,6 +9259,26 @@
     "year": 2022,
     "value": "3399",
     "note": "Portuguese at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.4",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "42.3%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "18.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -9590,6 +10202,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Finland, German, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=GER&geo=FI&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Finland, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=FI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Finland, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=FI&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Finland, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=FI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Finland, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=FI&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Finland, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=FI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Finland, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=FI&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Finland, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=FI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Finland, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=FI&time=2022"
    }
   ],
   "supportLinks": [],
@@ -9677,6 +10321,21 @@
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "2.2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "98.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "94.4%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "86.7%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -9745,6 +10404,26 @@
     "year": 2022,
     "value": "14518",
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2.2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "98%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "2.1",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "89.9%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -10056,6 +10735,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — France, Italian, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=ITA&geo=FR&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — France, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=FR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — France, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=FR&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — France, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=FR&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — France, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=FR&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — France, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=FR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — France, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=FR&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — France, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=FR&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — France, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=FR&time=2022"
    }
   ],
   "supportLinks": [],
@@ -10143,6 +10854,26 @@
     "note": "Italian at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure estimated (e)"
    },
    {
+    "year": 2018,
+    "value": "1.7",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "74.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.8",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "78.3%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -10211,6 +10942,21 @@
     "year": 2022,
     "value": "14640",
     "note": "Italian at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.8",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "75.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "79.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -11269,6 +12015,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Greece, German, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=GER&geo=EL&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Greece, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=EL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Greece, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=EL&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Greece, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=EL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Greece, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=EL&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Greece, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=EL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Greece, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=EL&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Greece, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=EL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Greece, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=EL&time=2022"
    }
   ],
   "supportLinks": [],
@@ -11351,6 +12129,21 @@
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.9",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "95.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "0.9",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
     "year": "2020",
     "value": "98.3%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -11414,6 +12207,26 @@
     "year": 2022,
     "value": "85882",
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "96.2%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.4",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "43.3%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -11953,6 +12766,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Croatia, French, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=FRE&geo=HR&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Croatia, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=HR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Croatia, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=HR&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Croatia, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=HR&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Croatia, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=HR&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Croatia, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=HR&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Croatia, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=HR&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Croatia, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=HR&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Croatia, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=HR&time=2022"
    }
   ],
   "supportLinks": [],
@@ -12040,6 +12885,26 @@
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.6",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "56.9%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.5",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "50.4%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -12108,6 +12973,21 @@
     "year": 2022,
     "value": "858",
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.5",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "48.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "48.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -12284,6 +13164,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Hungary, Croatian, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=HRV&geo=HU&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Hungary, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=HU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Hungary, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=HU&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Hungary, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=HU&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Hungary, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=HU&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Hungary, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=HU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Hungary, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=HU&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Hungary, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=HU&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Hungary, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=HU&time=2022"
    }
   ],
   "supportLinks": [],
@@ -12371,6 +13283,26 @@
     "note": "Croatian at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "6.5%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.3",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "38.5%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "62.4%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -12439,6 +13371,26 @@
     "year": 2022,
     "value": "1362",
     "note": "Croatian at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.1",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "6.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.3",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "41.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -12575,6 +13527,22 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Ireland, Italian, lower secondary (ISCED 2), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED2&language=ITA&geo=IE&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Ireland, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=IE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Ireland, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=IE&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Ireland, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=IE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Ireland, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=IE&time=2022"
    }
   ],
   "supportLinks": [],
@@ -12617,6 +13585,16 @@
     "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "11.4%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "7.8%",
     "note": "lower secondary learning ≥2; French 49.2%, German 19.3%"
@@ -12640,6 +13618,16 @@
     "year": 2022,
     "value": "1041",
     "note": "Italian at lower secondary (ISCED 2); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "0.9",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "6.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -14764,6 +15752,30 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Iceland, Spanish, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=SPA&geo=IS&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Iceland, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=IS&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Iceland, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=IS&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Iceland, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=IS&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Iceland, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=IS&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Iceland, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=IS&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Iceland, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=IS&time=2018"
    }
   ],
   "supportLinks": [],
@@ -14826,6 +15838,26 @@
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "96.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.3",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "45.2%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "75.4%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -14874,6 +15906,16 @@
     "year": 2022,
     "value": "200",
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "97.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -15009,6 +16051,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Italy, Spanish, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=SPA&geo=IT&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Italy, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=IT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Italy, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=IT&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Italy, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=IT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Italy, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=IT&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Italy, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=IT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Italy, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=IT&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Italy, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=IT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Italy, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=IT&time=2022"
    }
   ],
   "supportLinks": [],
@@ -15096,6 +16170,26 @@
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.9",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "95.5%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.4",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "35.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "96.1%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -15164,6 +16258,26 @@
     "year": 2022,
     "value": "14900",
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "96.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.3",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "32.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -16469,6 +17583,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Liechtenstein, English, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=ENG&geo=LI&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Liechtenstein, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=LI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Liechtenstein, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=LI&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Liechtenstein, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=LI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Liechtenstein, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=LI&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Liechtenstein, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=LI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Liechtenstein, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=LI&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Liechtenstein, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=LI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Liechtenstein, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=LI&time=2022"
    }
   ],
   "supportLinks": [],
@@ -16516,6 +17662,26 @@
     "note": "English at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "100%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.9",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "88.9%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -16544,6 +17710,26 @@
     "year": 2022,
     "value": "1929",
     "note": "English at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "100%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.9",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "90%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -16873,6 +18059,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Lithuania, French, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=FRE&geo=LT&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Lithuania, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=LT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Lithuania, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=LT&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Lithuania, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=LT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Lithuania, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=LT&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Lithuania, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=LT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Lithuania, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=LT&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Lithuania, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=LT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Lithuania, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=LT&time=2022"
    }
   ],
   "supportLinks": [],
@@ -16960,6 +18178,26 @@
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.8",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "78.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.2",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "31.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "72.7%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -17028,6 +18266,26 @@
     "year": 2022,
     "value": "205",
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.8",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "77.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.1",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "28.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -17143,6 +18401,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Luxembourg, French, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=FRE&geo=LU&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Luxembourg, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=LU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Luxembourg, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=LU&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Luxembourg, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=LU&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Luxembourg, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=LU&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Luxembourg, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=LU&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Luxembourg, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=LU&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Luxembourg, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=LU&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Luxembourg, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=LU&time=2022"
    }
   ],
   "supportLinks": [],
@@ -17215,6 +18505,26 @@
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "2.6",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "100%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "2.4",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "81.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -17273,6 +18583,21 @@
     "year": 2022,
     "value": "29327",
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2.3",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "93.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "81.3%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -17408,6 +18733,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Latvia, French, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=FRE&geo=LV&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Latvia, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=LV&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Latvia, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=LV&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Latvia, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=LV&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Latvia, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=LV&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Latvia, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=LV&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Latvia, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=LV&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Latvia, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=LV&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Latvia, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=LV&time=2022"
    }
   ],
   "supportLinks": [],
@@ -17495,6 +18852,21 @@
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.7",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "72.2%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "69.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "98.2%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -17563,6 +18935,21 @@
     "year": 2022,
     "value": "1289",
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.7",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "74.2%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "72.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -18062,6 +19449,30 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — North Macedonia, English, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=ENG&geo=MK&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — North Macedonia, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=MK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — North Macedonia, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=MK&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — North Macedonia, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=MK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — North Macedonia, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=MK&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — North Macedonia, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=MK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — North Macedonia, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=MK&time=2018"
    }
   ],
   "supportLinks": [],
@@ -18134,6 +19545,26 @@
     "note": "English at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "100%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.6",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "55.2%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -18187,6 +19618,16 @@
     "year": 2022,
     "value": "105883",
     "note": "English at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "100%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -18588,6 +20029,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Malta, Spanish, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=SPA&geo=MT&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Malta, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=MT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Malta, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=MT&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Malta, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=MT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Malta, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=MT&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Malta, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=MT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Malta, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=MT&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Malta, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=MT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Malta, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=MT&time=2022"
    }
   ],
   "supportLinks": [],
@@ -18675,6 +20148,26 @@
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "2.1",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "94.3%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.5",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "47.9%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -18743,6 +20236,26 @@
     "year": 2022,
     "value": "450",
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2.1",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "95.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.5",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "48.5%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -19524,6 +21037,30 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Netherlands, Spanish, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=SPA&geo=NL&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Netherlands, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=NL&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Netherlands, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=NL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Netherlands, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=NL&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Netherlands, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=NL&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Netherlands, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=NL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Netherlands, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=NL&time=2022"
    }
   ],
   "supportLinks": [],
@@ -19606,6 +21143,16 @@
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "1.2",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
     "year": "2020",
     "value": "44.6%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -19669,6 +21216,26 @@
     "year": 2022,
     "value": "5272",
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2.1",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "71.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.2",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "30.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -19788,6 +21355,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Norway, English, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=ENG&geo=NO&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Norway, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=NO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Norway, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=NO&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Norway, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=NO&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Norway, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=NO&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Norway, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=NO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Norway, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=NO&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Norway, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=NO&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Norway, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=NO&time=2022"
    }
   ],
   "supportLinks": [],
@@ -19860,6 +21459,26 @@
     "note": "English at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.6",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "68%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "0.7",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "50.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "100%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -19913,6 +21532,26 @@
     "year": 2022,
     "value": "439644",
     "note": "English at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.7",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice; Eurostat flags this figure definition differs (d)"
+   },
+   {
+    "year": 2022,
+    "value": "67.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments; Eurostat flags this figure definition differs (d)"
+   },
+   {
+    "year": 2022,
+    "value": "0.6",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "47.9%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -20676,6 +22315,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Poland, French, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=FRE&geo=PL&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Poland, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=PL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Poland, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=PL&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Poland, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=PL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Poland, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=PL&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Poland, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=PL&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Poland, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=PL&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Poland, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=PL&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Poland, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=PL&time=2022"
    }
   ],
   "supportLinks": [],
@@ -20763,6 +22434,26 @@
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice; Eurostat flags this figure estimated (e)"
    },
    {
+    "year": 2018,
+    "value": "1.8",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice; Eurostat flags this figure estimated (e)"
+   },
+   {
+    "year": 2018,
+    "value": "93.5%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments; Eurostat flags this figure estimated (e)"
+   },
+   {
+    "year": 2018,
+    "value": "1.7",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "72.9%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "99.9%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -20831,6 +22522,26 @@
     "year": 2022,
     "value": "4962",
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.6",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "61.9%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.9",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "78.5%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -21057,6 +22768,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Portugal, German, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=GER&geo=PT&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Portugal, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=PT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Portugal, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=PT&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Portugal, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=PT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Portugal, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=PT&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Portugal, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=PT&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Portugal, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=PT&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Portugal, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=PT&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Portugal, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=PT&time=2022"
    }
   ],
   "supportLinks": [],
@@ -21144,6 +22887,26 @@
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.8",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "89.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "0.8",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "6.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "68.7%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -21212,6 +22975,26 @@
     "year": 2022,
     "value": "1373",
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.9",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "92.9%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "0.8",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "7.3%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -21568,6 +23351,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Romania, Spanish, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=SPA&geo=RO&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Romania, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=RO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Romania, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=RO&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Romania, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=RO&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Romania, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=RO&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Romania, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=RO&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Romania, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=RO&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Romania, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=RO&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Romania, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=RO&time=2022"
    }
   ],
   "supportLinks": [],
@@ -21655,6 +23470,21 @@
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "95.2%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "97.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "99.8%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -21723,6 +23553,21 @@
     "year": 2022,
     "value": "2246",
     "note": "Spanish at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "94.5%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "97.9%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -21862,6 +23707,14 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Serbia, Russian, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=RUS&geo=RS&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Serbia, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=RS&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Serbia, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=RS&time=2022"
    }
   ],
   "supportLinks": [],
@@ -21997,6 +23850,16 @@
     "year": 2022,
     "value": "740",
     "note": "Russian at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.3",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
    }
   ],
   "policyHistory": [
@@ -22487,6 +24350,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Sweden, French, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=FRE&geo=SE&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Sweden, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=SE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Sweden, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=SE&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Sweden, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=SE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Sweden, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=SE&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Sweden, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=SE&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Sweden, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=SE&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Sweden, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=SE&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Sweden, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=SE&time=2022"
    }
   ],
   "supportLinks": [],
@@ -22574,6 +24469,26 @@
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.8",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "77.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.6",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "56%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "94.6%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -22642,6 +24557,26 @@
     "year": 2022,
     "value": "23193",
     "note": "French at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.8",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "78.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.6",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "55.3%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -22826,6 +24761,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovenia, German, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=GER&geo=SI&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Slovenia, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=SI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Slovenia, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=SI&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Slovenia, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=SI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Slovenia, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=SI&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Slovenia, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=SI&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Slovenia, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=SI&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Slovenia, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=SI&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Slovenia, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=SI&time=2022"
    }
   ],
   "supportLinks": [],
@@ -22903,6 +24870,26 @@
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.3",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "28.8%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "1.5",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "48.7%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "81.2%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -22961,6 +24948,26 @@
     "year": 2022,
     "value": "2687",
     "note": "German at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.2",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "22.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "1.5",
+    "note": "Average number of foreign languages studied per pupil at upper secondary (ISCED 3); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "49.1%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
@@ -23092,6 +25099,38 @@
    {
     "label": "Eurostat, Pupils by education level and modern foreign language studied (educ_uoe_lang01) — Slovakia, Russian, primary (ISCED 1), 2022",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang01?format=JSON&lang=EN&unit=NR&isced11=ED1&language=RUS&geo=SK&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Slovakia, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=SK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Slovakia, two or more languages, lower secondary (ISCED 2), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=SK&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Slovakia, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED2&geo=SK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Slovakia, two or more languages, lower secondary (ISCED 2), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED2&geo=SK&time=2022"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Slovakia, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=SK&time=2018"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Slovakia, two or more languages, upper secondary (ISCED 3), 2018",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=SK&time=2018"
+   },
+   {
+    "label": "Eurostat, Average number of foreign languages studied per pupil by education level (educ_uoe_lang03) — Slovakia, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang03?format=JSON&lang=EN&unit=NR&isced11=ED3&geo=SK&time=2022"
+   },
+   {
+    "label": "Eurostat, Pupils by education level, age and number of modern foreign languages studied (educ_uoe_lang02) — Slovakia, two or more languages, upper secondary (ISCED 3), 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_lang02?format=JSON&lang=EN&unit=PC&n_lang=GE2&age=TOTAL&isced11=ED3&geo=SK&time=2022"
    }
   ],
   "supportLinks": [],
@@ -23179,6 +25218,21 @@
     "note": "Russian at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
    },
    {
+    "year": 2018,
+    "value": "1.6",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2018,
+    "value": "58.2%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2018,
+    "value": "57.2%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
     "year": "2020",
     "value": "87.6%",
     "note": "primary (ISCED 1) pupils learning ≥1 foreign language"
@@ -23247,6 +25301,21 @@
     "year": 2022,
     "value": "568",
     "note": "Russian at primary (ISCED 1); Eurostat educ_uoe_lang01. Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "1.5",
+    "note": "Average number of foreign languages studied per pupil at lower secondary (ISCED 2); Eurostat educ_uoe_lang03. Derived from enrolments in the study of a language, so a pupil taking two is counted twice"
+   },
+   {
+    "year": 2022,
+    "value": "52.9%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at lower secondary (ISCED 2); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
+   },
+   {
+    "year": 2022,
+    "value": "54.6%",
+    "note": "Share of pupils studying TWO OR MORE foreign languages at upper secondary (ISCED 3); Eurostat educ_uoe_lang02. A percentage of pupils, not of enrolments"
    }
   ],
   "policyHistory": [
