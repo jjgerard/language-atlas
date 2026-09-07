@@ -44,11 +44,16 @@ main a { color: var(--focus); }
 .asks ol li { margin-bottom: 2px; }
 .asks .plain { margin: 0; font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
 
-/* ---- the four states, as a bar and a legend ---- */
+/* ---- the five states, as a bar and a legend ---- */
 .states { margin: 0 0 6px; }
 .statebar { display: flex; height: 15px; border-radius: 3px; overflow: hidden; background: var(--surface-2); }
 .statebar i { display: block; height: 100%; }
 .s-has    { background: var(--cov-4); }
+/* A documented absence is an ANSWER, so it is drawn in the answered colour
+   rather than the blank one -- outlined, because it is a different answer.
+   Colouring it like a gap would repeat in the interface the mistake the
+   flag exists to correct. */
+.s-absent { background: var(--cov-4); opacity: .45; box-shadow: inset 0 0 0 1px var(--cov-4); }
 .s-looked { background: var(--hatch-line); }
 .s-na     { background: var(--hair-strong); }
 .s-none   { background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--hair); }
@@ -58,6 +63,8 @@ main a { color: var(--focus); }
 .legend b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
 
 /* ---- the answers ---- */
+.found { margin: 0 0 6px; font-size: 12.5px; font-weight: 600; color: var(--ink-soft);
+  border-left: 3px solid var(--cov-4); padding-left: 8px; }
 .region-head {
   margin: 26px 0 8px; padding-top: 12px; border-top: 1px solid var(--hair);
   font-size: 12px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-faint);
@@ -134,11 +141,14 @@ footer.foot a { color: var(--ink-soft); }
   </p>
 
   <blockquote class="note">
-    <b>A blank is not a nil.</b> Four things can be in a cell here and they mean different
-    things: an answer; <b>looked and found nothing</b>, where somebody read the instrument and
-    recorded its silence; <b>not applicable</b>; and blank, which means only that nobody has
-    looked yet. They are drawn separately below and counted separately, because reading a blank
-    as a zero would measure which countries got attention rather than what they do.
+    <b>A blank is not a nil.</b> Five things can be in a cell here and they mean different
+    things: an answer; <b>no such rule here</b>, where the instruments were read and there is
+    nothing to find because there is nothing there; <b>looked and found nothing</b>, where
+    somebody read the record and could not establish what it says; <b>not applicable</b>; and
+    blank, which means only that nobody has looked yet. They are drawn separately and counted
+    separately, because reading a blank as a zero would measure which countries got attention
+    rather than what they do — and because the second of them is the hardest of the five to
+    establish and, until it had somewhere of its own to go, was the easiest to mistake for a gap.
   </blockquote>
 
   <div class="pick">
@@ -174,11 +184,17 @@ const esc = s => String(s == null ? '' : s)
 const $ = id => document.getElementById(id);
 const NL = String.fromCharCode(10);
 
-// Four states, in the order the bar draws them. `looked` sits next to `has`
+// Five states, in the order the bar draws them. `looked` sits next to `has`
 // rather than next to `none` on purpose: it is a finding about a system, and
 // putting it beside the blanks would file it as an absence of work.
+//
+// `absent` is the same argument one step further. It reads "the sources were
+// read and there is no such rule here", which is a harder thing to establish
+// than a rule and was, until the flag existed, indistinguishable from a
+// description of one. It counts as coverage everywhere `has` does.
 const STATES = [
   ['has',    'answered',              's-has'],
+  ['absent', 'answered: no such rule here', 's-absent'],
   ['looked', 'looked, found nothing', 's-looked'],
   ['na',     'not applicable',        's-na'],
   ['none',   'nobody has looked yet', 's-none'],
@@ -196,14 +212,15 @@ const unitsOf = id => (payload.units[id] || []);
 /** The four-state count for one field of one map, over the units in view. */
 function tally(dom, key, units) {
   const i = dom.fields.findIndex(f => f.k === key);
-  const t = { has: 0, looked: 0, na: 0, none: 0 };
-  for (const u of units) t[stateOf(u, i)]++;
+  const t = { has: 0, absent: 0, looked: 0, na: 0, none: 0 };
+  for (const u of units) t[stateOf(u, i, key)]++;
   return t;
 }
 
-function stateOf(u, i) {
+function stateOf(u, i, key) {
   const c = (u.fieldStates || '')[i];
-  return c === 'h' ? 'has' : c === 'l' ? 'looked' : c === 'x' ? 'na' : 'none';
+  if (c === 'h') return (key && u.absences && u.absences[key]) ? 'absent' : 'has';
+  return c === 'l' ? 'looked' : c === 'x' ? 'na' : 'none';
 }
 
 // ---- the pickers -------------------------------------------------------
@@ -220,7 +237,9 @@ function fillFields() {
   // a wasted click that the number prevents.
   const opts = d.fields.map(f => {
     const t = tally(d, f.k, nat);
-    return { f, pct: nat.length ? Math.round(100 * t.has / nat.length) : 0 };
+    // An absence is coverage. Counting only `has` here would make the field
+    // picker punish exactly the research the map now asks for.
+    return { f, pct: nat.length ? Math.round(100 * (t.has + t.absent) / nat.length) : 0 };
   }).sort((a, b) => b.pct - a.pct);
   $('field').innerHTML = opts.map(({ f, pct }) =>
     `<option value="${esc(f.k)}">${esc(f.label)} — ${pct}%</option>`).join('');
@@ -289,7 +308,9 @@ function draw() {
 
   const q = $('q').value.trim().toLowerCase();
   let shown = units;
-  if ($('onlyAns').checked) shown = shown.filter(u => stateOf(u, i) === 'has');
+  // An absence is an answer, so it stays under this filter. The whole reason
+  // the flag exists is that it was being read as the lack of one.
+  if ($('onlyAns').checked) shown = shown.filter(u => ['has', 'absent'].includes(stateOf(u, i, f.k)));
   if (q) shown = shown.filter(u =>
     String((u.values || {})[f.k] || '').toLowerCase().includes(q)
     || String(u.name || '').toLowerCase().includes(q));
@@ -313,11 +334,14 @@ function draw() {
     const list = byRegion[r].sort((a, b) => String(a.name).localeCompare(String(b.name)));
     return `<h3 class="region-head">${esc(r)} <span class="n">${list.length}</span></h3>`
       + list.map(u => {
-        const st = stateOf(u, i);
+        const st = stateOf(u, i, f.k);
         const slots = (u.slots || {})[f.k];
         let body;
-        if (st === 'has') {
-          body = renderBody(u, f)
+        if (st === 'has' || st === 'absent') {
+          body = (st === 'absent'
+              ? '<p class="found">Established as an absence: the instruments cited on this entry set no such rule</p>'
+              : '')
+            + renderBody(u, f)
             + (Array.isArray(slots) && slots.length
               ? `<span class="slot">answers question ${slots.join(', ')}</span>` : '');
         } else if (st === 'looked') {
@@ -347,7 +371,7 @@ $('csv').addEventListener('click', () => {
   const cell = s => '"' + String(s == null ? '' : s).replace(/"/g, '""').replace(/\r?\n/g, ' | ') + '"';
   const lines = [['code', 'unit', 'national', 'region', 'state', field.k].map(cell).join(',')];
   for (const u of units) lines.push([
-    u.cc, u.name, u.nat ? 'yes' : 'no', u.region, stateOf(u, i), (u.values || {})[field.k] || '',
+    u.cc, u.name, u.nat ? 'yes' : 'no', u.region, stateOf(u, i, field.k), (u.values || {})[field.k] || '',
   ].map(cell).join(','));
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([lines.join(NL)], { type: 'text/csv' }));

@@ -87,7 +87,7 @@ function apply(domain, spec) {
   const FILE = path.join(ATLAS, "data", FILES[domain]);
   const rows = JSON.parse(fs.readFileSync(FILE, "utf8"));
   const problems = [];
-  let touched = 0, filled = 0, bullets = 0, hist = 0, rows_ = 0, notEst = 0, slotted = 0;
+  let touched = 0, filled = 0, bullets = 0, hist = 0, rows_ = 0, notEst = 0, slotted = 0, absent = 0;
   const upgrades = [], reruns = [];
 
   for (const [key, s] of Object.entries(spec)) {
@@ -286,6 +286,17 @@ function apply(domain, spec) {
       e.slots[f] = list.map(Number);
       slotted++;
     }
+    // A documented absence: the field says, from the sources cited on this
+    // entry, that there is no such rule here. Not the not-established
+    // sentinel, which says nobody found anything -- one is a finding about
+    // the world, the other a gap in the record, and only the drafter can tell
+    // them apart. Written only for a field this spec filled, as slots are.
+    for (const f of Object.keys(s.absences || {})) {
+      if (!s.fields || !s.fields[f]) continue;
+      e.absences = e.absences || {};
+      e.absences[f] = true;
+      absent++;
+    }
     // A series is a TIME SERIES: it grows as later passes find earlier years,
     // later years, or a second measure for a year already held. Replacing it
     // wholesale is how one pass's four years for thirty-four countries would
@@ -392,7 +403,7 @@ function apply(domain, spec) {
     }
     touched++;
   }
-  console.log(`${domain}: ${touched} entries, ${filled} fields, ${bullets} bullets, ${rows_} typed rows, ${hist} history rows, ${notEst} marked not established, ${slotted} slot-tagged`);
+  console.log(`${domain}: ${touched} entries, ${filled} fields, ${bullets} bullets, ${rows_} typed rows, ${hist} history rows, ${notEst} marked not established, ${slotted} slot-tagged, ${absent} documented absences`);
   return { FILE, rows };
 }
 

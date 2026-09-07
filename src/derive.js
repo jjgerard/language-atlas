@@ -152,6 +152,17 @@ function deriveUnits(domain, entries, sharedMatcher) {
       if (Array.isArray(list) && list.length && values[k]) slots[k] = list;
     }
 
+    // Which filled fields are documented ABSENCES rather than descriptions:
+    // the sources were read and say there is no such rule here. Carried beside
+    // slots, and for the same reason -- it is knowledge the drafter had and the
+    // prose does not preserve. A negation detector run over the whole corpus
+    // recovers 2 of the 33 African he.requiredStudy absences, so it cannot be
+    // inferred downstream; it has to be passed through.
+    const absences = {};
+    for (const [k] of domain.fields) {
+      if (e.absences && e.absences[k] === true && values[k]) absences[k] = true;
+    }
+
     const docLinks = cleanLinks(e.docLinks);
     const history = (Array.isArray(e.policyHistory) ? e.policyHistory : []).map(h => {
       historyRows++;
@@ -178,6 +189,7 @@ function deriveUnits(domain, entries, sharedMatcher) {
       coverage: filled.length ? 'has' : (looked.length ? 'looked' : 'none'),
       fieldStates,
       slots,
+      absences,
       filled,
       looked,
       // Labels of fields this unit has nothing of its own for that ARE answered

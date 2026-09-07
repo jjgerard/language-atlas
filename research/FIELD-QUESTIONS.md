@@ -86,6 +86,41 @@ depth numbers should not be read as a quality score until it is settled: a map
 whose researchers correctly find and document many absences will score WORSE
 than one whose researchers left those fields blank.
 
+**Half-answered, 2026-09-07.** There is now somewhere to put it. An entry may
+carry `absences: { requiredStudy: true }` beside its slots, written by the
+drafter and passed through `terr-apply.js`, `store.js` and `derive.js` to the
+payload; `/views` draws it as a fifth state and counts it as coverage. The two
+absence-first waves are backfilled -- 40 of 47 African `he.requiredStudy`
+entries and 17 of 46 `he.entryRequirements` ones.
+
+That fixes the recording. It does not fix the scoring, and the scoring is
+still yours to decide. Two questions, and they are separable:
+
+1. **Does an absence answer the field, or only question one of it?** Norway on
+   `requiredStudy` reads four instruments to establish that no duty exists.
+   Questions 2, 3 and 4 -- which language, how much, who exempts -- are not
+   unanswered there; they cannot arise. If an absence answers the field, its
+   depth is 4 of 4 and `progress.js` stops penalising thoroughness. If it
+   answers question one only, the honest depth is 1 of 1 and the denominator
+   has to shrink rather than the numerator grow.
+2. **May an indicator score an absence as a real zero?** This is the question
+   the flag was built for and the one it does not answer. A blank abstains
+   because nobody looked. An absence is a measured nil. Scoring it as zero is
+   what makes "no country in this region requires it" sayable -- and it also
+   means a country that was researched carefully can rank below one that was
+   not researched at all, which is the same distortion in a new coat.
+
+Both are cheap to implement once decided and neither should be decided by
+whoever happens to write the indicator.
+
+One boundary the backfill did settle, because it had to be settled to do the
+work: **the absence is an absence of the FIELD'S question, not of the topic.**
+`entryRequirements` on Mauritius names an English pass and is not an absence,
+though nothing in it answers question three. `entryRequirements` on Uganda
+names no language subject and is one, though Makerere's entry rules are
+described at length. The field asks whether a language qualification is
+needed; the flag answers that and nothing else.
+
 ## eal
 
 **`bilingualEducationNotes` has no question for "is this aimed at these pupils

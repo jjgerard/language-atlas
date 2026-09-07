@@ -30,6 +30,13 @@ const verified = JSON.parse(fs.readFileSync(file, "utf8"));
 // Two layers disagreeing about which files count is not a naming convention,
 // it is a silent loss.
 const slotsBySpec = new Map();
+// Which drafted fields assert a documented absence, keyed unit+field, holding
+// the bullets it was asserted over. The flag is a claim about a whole field --
+// "the sources were read and there is no such rule here" -- so if the gate
+// drops a bullet the surviving prose may no longer carry it. Passed on only
+// when every drafted bullet survived, which is the same strictness the slot
+// map needs and for the same reason.
+const absenceBySpec = new Map();
 const specDir = process.argv[4] && !process.argv[4].startsWith("--") ? process.argv[4] : null;
 if (specDir && fs.existsSync(specDir)) {
   for (const f of fs.readdirSync(specDir).filter(x => x.endsWith(".json") && x !== "verified.json")) {
@@ -53,6 +60,13 @@ if (specDir && fs.existsSync(specDir)) {
         const m = new Map();
         bullets.forEach((b, i) => m.set(b, Number(list[i])));
         slotsBySpec.set(k + "\u0000" + fld, m);
+      }
+      const abs = spec.absences || spec.absence;
+      const flagged = Array.isArray(abs) ? abs : Object.keys(abs || {}).filter(f => abs[f] === true);
+      for (const fld of flagged) {
+        const bullets = (spec.fields || {})[fld] || [];
+        if (bullets.length) absenceBySpec.set(k + "\u0000" + fld, bullets);
+        else console.log("  " + k + "/" + fld + ": flagged an absence with no bullets, so nothing asserts it");
       }
     }
   }
@@ -92,6 +106,20 @@ for (const [key, v] of Object.entries(verified)) {
       if (list.length === kept.length) out[f] = list;
     }
     if (Object.keys(out).length) s.slots = out;
+  }
+  if (v.fields && absenceBySpec.size) {
+    const out = {};
+    for (const [f, kept] of Object.entries(v.fields)) {
+      const drafted = absenceBySpec.get(key + "\u0000" + f);
+      if (!drafted) continue;
+      if (drafted.length !== kept.length) {
+        console.log("  " + key + "/" + f + ": " + (drafted.length - kept.length) +
+          " of " + drafted.length + " bullets did not survive the gate, so the absence is not asserted");
+        continue;
+      }
+      out[f] = true;
+    }
+    if (Object.keys(out).length) s.absences = out;
   }
   // fl/apply.js validates the sentinel phrase and writes this. Without the line
   // below it never arrived, so an absence finding died between the gate and the

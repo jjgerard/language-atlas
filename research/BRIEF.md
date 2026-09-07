@@ -234,6 +234,65 @@ anything" is a blank, and "art. 7 of the framework law lists the compulsory
 content and no language is among it" is a finding. The difference is whether
 you can quote the silence.
 
+## Say so in the spec when a field is an absence
+
+The prose above is necessary and it is not sufficient, because nothing in the
+data can see it. Forty of the forty-seven African `he.requiredStudy` entries
+are sourced negatives and every one of them landed as ordinary text, filed
+beside Ghana's Academic Writing requirement and Morocco's *langue et
+terminologie* module as though they were the same kind of statement. Trying to
+recover it afterwards does not work: a negation matcher run over the whole
+corpus finds 2 of the 40. "Never uses the word *langue*", "sets no student
+language duty" and "lists the aims of ensino superior, none of them a
+language" share no pattern a machine can hold, and the ones it does catch it
+catches next to "applicants with only a grade E in English may be considered",
+which is a requirement and not the lack of one.
+
+So mark it where you know it. Alongside `fields` and `slots`, a unit may carry
+`absences`:
+
+```json
+"ZM|Zambia": {
+  "fields": {
+    "requiredStudy": [
+      "Higher Education Act 2013 carries no language provision and no language-study duty",
+      "Education Act 2011 s.3 excludes universities, so its English rule does not reach them"
+    ]
+  },
+  "slots": { "requiredStudy": [1, 1] },
+  "absences": { "requiredStudy": true }
+}
+```
+
+The test is question one of the field's own hint, and nothing wider. For
+`requiredStudy` that question is "whether every student must study a language
+whatever their degree", so an absence means no such duty exists -- not that
+the entry is thin, not that some part of the field is unanswered. Zambia is an
+absence. Rwanda, whose Law 010/2021 art. 20 teaches the official languages as
+subjects across the cycles, is not, however much else about it is unrecorded.
+
+Three refusals worth knowing about in advance:
+
+- **A field that describes something real is not an absence, even if a bullet
+  in it is negative.** `entryRequirements` on Botswana says English shall be a
+  qualifying subject and then that additional requirements sit with the
+  programme. Real rule, one negative clause. Seventeen of the African
+  `entryRequirements` entries do assert the absence -- "no language paper is
+  named", "sets no language condition" -- and they are the ones marked.
+- **An absence read off a repealed instrument is not established.** Cameroon's
+  loi 005/2001 named no language among the entry qualifications and was
+  repealed by loi 2023/007 in July 2023, which nobody has read. The prose says
+  so; the flag stays off until the current act is read.
+- **The gate does not check this.** It verifies quotes, and a flag is not a
+  quote. `terr-apply.js` will refuse to carry the flag if the gate dropped any
+  of the field's bullets, on the ground that the surviving prose may no longer
+  assert what the whole field asserted -- but a flag on prose that never
+  asserted an absence at all will go straight through. It is a claim you are
+  making. Make it only where you could point at the silence.
+
+For prose that predates the flag there is `research/tools/mark-absence.js`,
+which takes a domain, a field and an explicit list of country codes. It has no
+detector in it, deliberately.
 ## Read the act's SCOPE clause before quoting its language clause
 
 Zambia is the clearest case in the atlas. The Education Act 2011 s.98(1) says

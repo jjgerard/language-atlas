@@ -197,6 +197,51 @@ function notEstablishedFor(domain, body, fields) {
   return out;
 }
 
+// A documented absence: the sources say there is no such rule here.
+//
+// This is NOT `notEstablished`, and conflating the two would destroy the
+// distinction the whole map is built on. "Not established" is a fact about the
+// RECORD -- somebody looked and found nothing, so the cell is empty of
+// evidence. An absence is a fact about the WORLD, and the prose in the field IS
+// the evidence: twelve African framework laws read end to end, each with zero
+// occurrences of langue, is not a gap. It is a finding, and a harder one to
+// establish than a rule.
+//
+// Nothing in the data said so. The absence-first instruction in research/BRIEF.md
+// turned 33 of 47 African he.requiredStudy entries into sourced negatives, and
+// every one of them landed as ordinary prose, indistinguishable from a
+// description of a rule except by reading the English. Worse, the depth measure
+// in progress.js counts a four-bullet absence as answering one question of four,
+// so a researcher who correctly documents an absence scores BELOW one who left
+// the field blank -- recorded in research/FIELD-QUESTIONS.md as having no clean
+// fix inside the convention. This is the fix: mark it at drafting time, where
+// the drafter knows, rather than trying to recover it from the prose later.
+// Recovering it later does not work. A negation detector over the whole corpus
+// finds 2 of the 33.
+//
+// Deliberately a bare flag and not a scale. Whether an indicator may then score
+// an absence as a real zero while a blank abstains is the maintainer's
+// decision, still open; this only makes the question answerable.
+function absencesFor(domain, body, fields) {
+  const src = body && body.absences;
+  const out = {};
+  if (!src || typeof src !== 'object') return out;
+  for (const [k, , type] of domain.fields) {
+    // Prose only. A typed field's absence is its emptiness plus the
+    // notEstablished flag; there is no row that says "no rows".
+    if (type !== 'text') continue;
+    const flag = Array.isArray(src) ? src.includes(k) : src[k];
+    if (flag !== true && flag !== 'true' && flag !== 1) continue;
+    // The flag belongs to text. A field that is blank, sentinel or
+    // inapplicable cannot assert anything, and carrying the flag there would
+    // let it be read as a finding when nobody has looked.
+    const text = String(fields[k] == null ? '' : fields[k]).trim();
+    if (!text || NOT_ESTABLISHED_RE.test(text) || /^Not applicable/i.test(text)) continue;
+    out[k] = true;
+  }
+  return out;
+}
+
 // How many rows a typed field may hold. This was a flat 50 for every shape,
 // and 50 is the wrong number for two of them by an order of magnitude.
 //
@@ -240,6 +285,8 @@ function fieldsFor(domain, body) {
   if (Object.keys(ne).length) out.notEstablished = ne;
   const sl = slotsFor(domain, body, out);
   if (Object.keys(sl).length) out.slots = sl;
+  const ab = absencesFor(domain, body, out);
+  if (Object.keys(ab).length) out.absences = ab;
   return out;
 }
 
@@ -280,6 +327,9 @@ function rowToEntry(row) {
   // Re-validated on the way out as well as in, so a blob written by an older
   // build cannot carry a slot list that no longer fits its field's bullets.
   entry.slots = domain ? slotsFor(domain, blob, entry) : {};
+  // Same re-check: a flag written against text since emptied or replaced by a
+  // sentinel would otherwise read as a finding nobody made.
+  entry.absences = domain ? absencesFor(domain, blob, entry) : {};
   return entry;
 }
 
@@ -378,6 +428,12 @@ function mergeEntries(domain, rows) {
   out.slots = {};
   for (const r of rows) for (const [k, v] of Object.entries(r.slots || {}))
     if (String(out[k] || '') === String(r[k] || '')) out.slots[k] = v;
+
+  // Same rule, same reason: the flag is a claim ABOUT a particular text, so it
+  // travels only with the text that won the merge.
+  out.absences = {};
+  for (const r of rows) for (const [k, v] of Object.entries(r.absences || {}))
+    if (String(out[k] || "") === String(r[k] || "")) out.absences[k] = v;
 
   // Everyone who wrote part of this place is a contributor to it.
   const names = new Set(out.collaborators.map(c => c.name).filter(Boolean));
