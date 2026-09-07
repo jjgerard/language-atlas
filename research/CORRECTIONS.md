@@ -333,3 +333,18 @@ entry still matches its source.
 - **was** 1987 | Education Act sets Shona or Ndebele with English in all primary schools and English medium from Grade 4
 - **now** 1987 | Education Act s.62 as enacted set Shona or Ndebele with English in primary schools and English medium from Grade 4; Act 2 of 2006 substituted it
 
+
+## FO|Faroe Islands, he.mediumOfInstruction (2026-09-07)
+
+**Was:** "Faroese is the primary language of instruction at the University of
+the Faroe Islands" — one bullet, no instrument named.
+
+**Now:** four bullets from Kunngerð nr. 98/2021 § 4 ("the language of
+instruction is in principle Faroese", defined to cover teaching and materials),
+§ 8 (which provides for English-medium programmes), the university's own
+statement that it currently offers none, and the observation that the rule is a
+2021 ministerial regulation while Løgtingslóg 58/2008 sets no language at all.
+
+**Why:** the replaced bullet asserts the same fact without its source, and every
+part of it is carried by the new four — the language by the first, the
+institution by the third. Nothing was lost and the rule is now attributable.

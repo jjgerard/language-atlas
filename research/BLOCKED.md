@@ -1142,3 +1142,47 @@ you want. Eurydice in particular bolds words mid-sentence.
   `D2018000221801.pdf`, not `D2018221801.pdf`. The unpadded form 404s.
 - `vlkk.lt` 403s outright.
 
+
+## 18. The European higher-education pass: doors, and one block withdrawn
+
+**Withdrawn.** `mon.gov.mk` is recorded above as a 403. It answered **200 with
+full article text** on this pass and supplied the North Macedonia matura
+evidence. An outage is not a block, and neither is a bad afternoon.
+
+**New blocks.**
+- `uni.lu` answers **202 with zero bytes** to every path, and has no Wayback
+  copies of its current admission pages. Luxembourg's entry rests on Eurydice
+  alone for that reason.
+- `legilux.public.lu` is an Angular SPA; `/fr/pdf`, `/fr/html` and the
+  `data.legilux.public.lu/file/...` paths all return the shell or 404. (Note
+  this CONTRADICTS the side door recorded in section 17, which worked for a
+  different act — try it, but do not rely on it.)
+- `unigib.edu.gi` 403s a full browser header set — UA, Accept, Accept-Language,
+  every Sec-Fetch-* and Upgrade-Insecure-Requests — with a 75 KB block page on
+  every path. Wayback has it, and the exact-timestamp form works.
+- `smsm.lrv.lt` and `vlkk.lt` both 403.
+- `una.mr` has an expired certificate and 404s behind it.
+- `www.uiz.ac.ma` (Ibn Zohr, Morocco) presents a certificate this environment
+  reports as **revoked**: curl refuses it, WebFetch retrieves it fine. Rows
+  citing it are at risk from any strict-TLS client.
+
+**Doors that work.**
+- `gesetze.li/konso/pdf/<lgblId>` serves Liechtenstein law and takes
+  `?version=N`. Adjacent ids return HTTP 500, so ids are not guessable by
+  increment.
+- `logir.fo` serves full Faroese act and regulation text server-side at
+  `/Logtingslog/<n>-fra-<dd-mm-yyyy>-um-<slug>` and `/Kunngerd/...`; its
+  `/Search?query=` 404s, so the slug has to come from elsewhere.
+- `riigiteataja.ee/public-api/api/v1/akt/<id>/blob-html` serves consolidated
+  Estonian text. Without `/blob-html` it returns JSON metadata; `/redaktsioonid`
+  returns an empty list and is NOT a route to the current version.
+- Confirmed working: `narodne-novine.nn.hr`, `likumi.lv` (including its
+  `/ta/en/en/` English translations), `althingi.is`, `wetten.overheid.nl`,
+  `normattiva.it` with the `~artN` fragment, `ance.gov.md`, `nui.ie`,
+  `lamabpo.lt`.
+
+**Two whitespace hazards that cost quotes rather than pages.**
+`paragraf.ba` hard-wraps with DOUBLE SPACES inside sentences in the raw HTML,
+on some pages and not others — the Bosnian framework-law page does not, the
+Republika Srpska page does. `logir.fo` and Belarus's `pravo.by` carry
+non-breaking spaces mid-sentence. Choose a quote span that avoids them.

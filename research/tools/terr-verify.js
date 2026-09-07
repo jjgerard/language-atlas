@@ -139,7 +139,18 @@ const CJK = "㐀-䶿一-鿿豈-﫿぀-ヿ";
 // p{N} fix the general case, so the next script does not have to be found
 // by losing a country first.
 const FOLD_RE = /[^\p{L}\p{N}]+/gu;   // a regex LITERAL: inside new RegExp("...") the backslash-p collapses to p
-const fold = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "")
+// NFKD, not NFD. NFD separates a letter from its accent, which is what lets
+// "Linguistica" match "Lingüística" -- but it leaves a TYPOGRAPHIC LIGATURE
+// alone, so U+FB01 stays one character and "Certiﬁcate" can never match
+// "Certificate" however the rest is normalised. Eurydice's pages are full of
+// them, and a drafter who quotes across one loses the row with no way to see
+// why. NFKD decomposes the ligature into its letters and folds the accents
+// exactly as before.
+//
+// The other compatibility decompositions it brings are wanted too: full-width
+// digits in a CJK document now match half-width ones, and superscripts match
+// their plain form. Checked against CJK and Arabic, which it leaves untouched.
+const fold = s => String(s).normalize("NFKD").replace(/[̀-ͯ]/g, "")
   .toLowerCase().replace(FOLD_RE, " ").trim();
 const hasCJK = s => new RegExp("[" + CJK + "]").test(String(s));
 
