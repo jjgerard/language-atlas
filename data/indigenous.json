@@ -9790,6 +9790,10 @@
    {
     "label": "Ley Orgánica 2/2006, de 3 de mayo, de Educación, texto consolidado (arts. 17, 24, 25, 34, disposición adicional trigésima octava)",
     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899"
+   },
+   {
+    "label": "Council of Europe, Committee of Experts on the ECRML, Sixth evaluation report on Spain, MIN-LANG(2024)17",
+    "url": "https://rm.coe.int/spainecrml6-en/1680b1b32d"
    }
   ],
   "supportLinks": [],
@@ -9803,11 +9807,33 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Asturias runs the Falamos Project, non-formal adult education in Asturian\nAranese Occitan Language Policy Council joins the Generalitat and the General Council of Aran\nInstitute of Aranese Studies is the linguistic authority standardising Aranese\nAsturias created the Rede de Normalización Llingüística in 2022\nSpeakers say all funding for promoting Aragonese was cut as of 2023",
   "speakers": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2022,
+    "description": "Asturian Government creates the Rede de Normalización Llingüística, coordinating Asturian and local administrations on linguistic normalisation"
+   },
+   {
+    "year": 2023,
+    "description": "Directorate-General of Language Policy of the Government of Aragon closed down by the new regional authorities"
+   },
+   {
+    "year": 2023,
+    "description": "Aragonese Academy of Language adopts an official orthography of Aragonese"
+   }
+  ],
   "inventory": "Glottolog counts 28 living languages for this country",
-  "languages": []
+  "languages": [],
+  "slots": {
+   "revitalisation": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "ES",
@@ -10711,7 +10737,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "12 Sami language nests: three in Inari Sami, seven in North Sami and two in Skolt Sami\nMunicipalities operate the nests; the Sami Parliament distributes the funding to them\nUniversity of Eastern Finland now runs the Karelian language revitalisation programme\nAction plan to promote and revitalise Inari, North and Skolt Sami adopted in 2014\nMinistry nest funding 1.2m euro in 2020, 1.4m in 2021 and 1.520m in 2022",
   "speakers": [],
   "policyHistory": [
    {
@@ -10719,12 +10745,28 @@
     "description": "\"Minimum number of pupils needed to organise Romani language education lowered from four to two\""
    },
    {
+    "year": 2014,
+    "description": "Action plan for the promotion and revitalisation of Inari Sami, North Sami and Skolt Sami adopted"
+   },
+   {
     "year": 2015,
     "description": "\"Funding of the Romani language nests discontinued\""
    },
    {
+    "year": 2015,
+    "description": "Sami Parliament launches the Giellagáldu language planning body, funded by the EU Interreg V Nord programme"
+   },
+   {
+    "year": 2017,
+    "description": "National authorities grant an initial budget of 100 000 euro to the Action Plan for the Revival of the Karelian Language"
+   },
+   {
     "year": 2019,
     "description": "\"Ministry of Education and Culture launches a distance-education pilot for Sámi outside the Sámi Homeland, run by Utsjoki municipality and coordinated by the Sámi Parliament\""
+   },
+   {
+    "year": 2020,
+    "description": "Finnish National Agency for Education appoints an expert group to launch a programme for the revitalisation of Romani"
    },
    {
     "year": 2022,
@@ -10749,7 +10791,16 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "FJ",
@@ -10987,6 +11038,10 @@
    {
     "label": "Kunngerð nr. 144 frá 6. oktober 2020 um undirvísing í føroyskum sum annaðmál og móðurmálsundirvísing — logir.fo",
     "url": "https://logir.fo/Kunngerd/144-fra-06-10-2020-um-undirvising-i-foroyskum-sum-annadmal-og-modurmalsundirvising"
+   },
+   {
+    "label": "Løgtingslóg nr. 59 frá 15. mai 2012 um málráð, sum broytt við løgtingslóg nr. 104 frá 13. juli 2017, §§ 1, 2, 9 og 10 — logir.fo",
+    "url": "https://www.logir.fo/Logtingslog/59-fra-15-05-2012-fra-malrad"
    }
   ],
   "supportLinks": [],
@@ -11011,7 +11066,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Málráðið's purpose is to nurture, develop and defend the Faroese language\nIt must also specially nurture, develop and defend Faroese sign language\nMálráðið sits under the landsstýri and is independent of the political system\nLøgtingslóg 59/2012 brought Málráðið into force on 1 January 2013\nThe Landskassin pays the costs of Málráðið's activity, including members' fees",
   "speakers": [],
   "policyHistory": [
    {
@@ -11023,14 +11078,31 @@
     "description": "Fólkaskúli Act sets Faroese as a subject in all nine school years"
    },
    {
+    "year": 2012,
+    "description": "Løgtingslóg 59 sets up Málráðið from 1 January 2013 and repeals the 1985 regulation for the Føroyska málnevndin"
+   },
+   {
     "year": 2013,
     "description": "Regulation 9 makes Faroese the main language of upper-secondary teaching"
+   },
+   {
+    "year": 2017,
+    "description": "Løgtingslóg 104 of 13 July amends the Málráð act, seating a representative nominated by Deyvafelag Føroya and Felagnum fyri hoyribrekað from 1 August 2017"
    },
    {
     "year": 2020,
     "description": "Regulation 144 governs Faroese as a second language and mother-tongue teaching"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "FR",
@@ -11075,7 +11147,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Cned distance courses in basque, breton, corse and occitan-langue d'oc from 2021\nConseil académique des langues régionales helps set the carte académique des langues\nOffices publics de langue régionale are tied in through the same conventions\nCollectivités may pay outside speakers to work in schools during class time\nLoi 2021-641 art. 6 makes communes without bilingual schools pay pupils' fees elsewhere",
   "speakers": [],
   "policyHistory": [
    {
@@ -11091,6 +11163,10 @@
     "description": "\"Constitutional law 2008-724 of 23 July 2008 inserts article 75-1 into the Constitution: regional languages belong to the heritage of France\""
    },
    {
+    "year": 2015,
+    "description": "Loi 2015-991 NOTRe amends article L. 212-8 so pupils can enrol in another commune's school that teaches a regional language"
+   },
+   {
     "year": 2019,
     "description": "\"Article 34 of loi 2019-791 of 26 July 2019 pour une Ecole de la confiance amends article L442-5-1 on funding pupils schooled in private contract schools teaching a regional language\""
    },
@@ -11101,6 +11177,14 @@
    {
     "year": 2021,
     "description": "\"Circulaire of 14 December 2021 (NOR MENE2136384C) restates the framework for regional languages and lists the languages to which it applies\""
+   },
+   {
+    "year": 2021,
+    "description": "Article 5 of the law of 21 May repeals article L. 372-1 of the Education Code, admitting kibushi and shimaore to regional-language teaching"
+   },
+   {
+    "year": 2021,
+    "description": "Cned opens distance LVC courses in Basque, Breton, Corsican and Occitan-langue d'oc"
    }
   ],
   "inventory": "Glottolog counts 37 living languages for this country",
@@ -11241,7 +11325,16 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    2,
+    2,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GA",
@@ -12002,6 +12095,14 @@
    {
     "label": "HM Government of Gibraltar, Department of Education, 'Education System'",
     "url": "https://www.gibraltar.gov.gi/education/education-system"
+   },
+   {
+    "label": "HM Government of Gibraltar, press release 69/2023, 'Llanito Story now included into the Gibraltar Spring Short Story Competition 2023', 8 February 2023",
+    "url": "https://www.gibraltar.gov.gi/press-releases/llanito-story-now-included-into-the-gibraltar-spring-short-story-competition-2023-692023-8616"
+   },
+   {
+    "label": "HM Government of Gibraltar, press release 771/2025, 'Heritage Project to Install Gibraltarian Street Names in a Celebration of Multilingualism and Cultural Identity', 20 October 2025",
+    "url": "https://www.gibraltar.gov.gi/press-releases/heritage-project-to-install-gibraltarian-street-names-in-a-celebration-of-multilingualism-and-cultural-identity-7712025-11343"
    }
   ],
   "supportLinks": [],
@@ -12026,9 +12127,27 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Gibraltarian street names installed to revive names lost as Spanish and Llanito declined\nA Llanito story category added to the Gibraltar Spring Short Story Competition in 2023\nMinistry for Heritage runs the street-name project with Multilingual Gibraltar\nGibraltar Cultural Services launched the Spring Short Story Competition\nFirst prize for a Llanito story is 500 pounds",
   "speakers": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2023,
+    "description": "Llanito added as a category of the Gibraltar Spring Short Story Competition, to help promote and safeguard the language"
+   },
+   {
+    "year": 2025,
+    "description": "Ministry for Heritage and Multilingual Gibraltar begin installing Gibraltarian street names to revive names lost as Spanish and Llanito declined"
+   }
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GL",
@@ -13170,7 +13289,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Ministry of Science and Education does not organise teaching of minority languages to adults\nIstro-Romanian survives as an extracurricular activity at Čepic and Šušnjevica primary schools\nRENA, a repository of national minority languages, is run by two Croatian research institutes\nSummer schools financed for Czech, Hungarian, Ruthenian, Ukrainian and Serbian\nItalian associations run adult courses free or for a small fee on Croatian state funding",
   "speakers": [],
   "policyHistory": [
    {
@@ -13178,8 +13297,16 @@
     "description": "\"European Charter for Regional or Minority Languages enters into force for Croatia (01/03/1998), with Article 8.1.a.iii, b.iv, c.iv, d.iv, e.ii, f.ii, g and h accepted for Italian, Serbian, Hungarian, Czech, Slovak, Ruthenian and Ukrainian\""
    },
    {
+    "year": 2019,
+    "description": "Ministry of Science and Education adopts new Czech and Serbian curricula for Models A and C, and Italian curricula for Model A"
+   },
+   {
     "year": 2020,
     "description": "\"Ministry of Science and Education adopts the curriculum for the subject 'Language and Culture of the Roma National Minority', with modules for Romani and for Boyash Romanian\""
+   },
+   {
+    "year": 2020,
+    "description": "Curricula adopted for Hungarian under Model A and for Slovak language and culture under Model C"
    },
    {
     "year": 2022,
@@ -13308,7 +13435,16 @@
     "genus": "Slavic",
     "typology": "Word order SVO; Adjective-Noun; Strongly suffixing"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "HT",
@@ -13424,16 +13560,32 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "No structured long-term strategy for education in all minority languages is in place\nNational Minority Teacher Programme pays allowances to teachers who use minority languages\nIt was set up in 2017 with the involvement of the Committee on National Minorities\nPart III protection extended to Boyash and Romani in 2008\nFive universities hold five-year minority training contracts worth HUF 210 025 000 a year",
   "speakers": [],
   "policyHistory": [
+   {
+    "year": 2008,
+    "description": "Hungary extends the protection of Part III of the Charter to Boyash and Romani"
+   },
+   {
+    "year": 2017,
+    "description": "National Minority Teacher Programme set up after a review found a shortage of 550 kindergarten teachers for the seven minority languages"
+   },
    {
     "year": 2020,
     "description": "\"Amendment of the Act on the Rights of Nationalities allows kindergarten minority-language education as supplementary education, on the initiative of the Bulgarian, Greek and Polish national minority self-governments\""
    },
    {
+    "year": 2020,
+    "description": "Teachers working in a minority language more than half the time gain an allowance of 40 per cent of the allowance base"
+   },
+   {
     "year": 2021,
     "description": "\"Supplementary kindergarten education using Greek and Polish starts at two national-minority-run schools in the 2021/2022 school year\""
+   },
+   {
+    "year": 2021,
+    "description": "Bachelor in Infant and Early Childhood Education requirements amended to add an optional specialisation in minority languages"
    },
    {
     "year": 2025,
@@ -13546,7 +13698,16 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "ID",
@@ -13637,6 +13798,26 @@
    {
     "label": "Education Act 1998 (No. 51 of 1998), sections 6 and 31, as enacted",
     "url": "https://www.irishstatutebook.ie/eli/1998/act/51/enacted/en/print.html"
+   },
+   {
+    "label": "Department of Education and Skills, 20-Year Strategy for the Irish Language 2010-2030 (departmental actions and vision)",
+    "url": "https://assets.gov.ie/24380/865cef555ba845af8c1e71088f9a6e9d.pdf"
+   },
+   {
+    "label": "Department of Rural and Community Development and the Gaeltacht, policy information: 20-Year Strategy for the Irish Language",
+    "url": "https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/policy-information/20-year-strategy-for-the-irish-language/"
+   },
+   {
+    "label": "Údarás na Gaeltachta, 'What is Language Planning?' — the Gaeltacht Act 2012 language planning process",
+    "url": "https://udaras.ie/en/our-language-the-gaeltacht/language-planning/what-is-language-planning/"
+   },
+   {
+    "label": "Údarás na Gaeltachta, 2022 End of Year Statement",
+    "url": "https://udaras.ie/en/news/2022-end-of-year-statement/"
+   },
+   {
+    "label": "Official Languages (Amendment) Act 2021 (No. 49 of 2021), section 18D, as enacted",
+    "url": "https://www.irishstatutebook.ie/eli/2021/act/49/enacted/en/print.html"
    }
   ],
   "supportLinks": [],
@@ -13650,12 +13831,24 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "20-Year Strategy 2010-2030 targets 250,000 daily speakers of Irish outside education\nCommunity language plans aim to strengthen Irish as a family and community language\nÚdarás na Gaeltachta coordinates the language planning process in the Gaeltacht\nGaeltacht Act 2012 divided the Gaeltacht into 26 Language Planning Areas\nApproved language plans involve a total annual investment of 3.2 million euro",
   "speakers": [],
   "policyHistory": [
    {
     "year": 1998,
     "description": "\"Education Act 1998 sets among the objects of the Act contributing to the maintenance of Irish as the primary community language in Gaeltacht areas and to greater use of Irish at school and in the community\""
+   },
+   {
+    "year": 2006,
+    "description": "Government Statement on the Irish Language published in December, setting out 13 policy objectives"
+   },
+   {
+    "year": 2010,
+    "description": "20-Year Strategy for the Irish Language 2010-2030 published on 21 December, following cross-party support in the Oireachtas"
+   },
+   {
+    "year": 2012,
+    "description": "Gaeltacht Act divides the Gaeltacht into 26 Gaeltacht Language Planning Areas, each of which must prepare a language plan"
    },
    {
     "year": 2017,
@@ -13664,6 +13857,10 @@
    {
     "year": 2019,
     "description": "\"Circular 0052/2019 sets arrangements for exemption from the study of Irish; it is later withdrawn\""
+   },
+   {
+    "year": 2021,
+    "description": "Official Languages (Amendment) Act requires 20 per cent of staff recruited to public bodies to be competent in Irish by 31 December 2030"
    },
    {
     "year": 2022,
@@ -13680,7 +13877,16 @@
     "genus": "Celtic",
     "typology": "Word order VSO; Noun-Adjective; Equal prefixing and suffixing"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IL",
@@ -13799,9 +14005,43 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Manx Gaelic Strategy 2022-2032 sets a target of 5,000 speakers by 2032\nBunscoill Ghaelgagh, the only Manx-medium primary school, had 54 pupils in 2022\nCulture Vannin runs nine weekly adult classes plus taster and weekend courses\nIsle of Man authorities took full control of the Bunscoill Ghaelgagh in 2020\nAll nurseries are private, but parents may receive financial support from the government",
   "speakers": [],
-  "policyHistory": []
+  "policyHistory": [
+   {
+    "year": 2019,
+    "description": "Manx National Heritage adopts its Manx Language Policy and Plan, committing for the first time to promote Manx Gaelic"
+   },
+   {
+    "year": 2020,
+    "description": "Isle of Man authorities take full control of the Bunscoill Ghaelgagh, the only Manx Gaelic-medium primary school on the island"
+   },
+   {
+    "year": 2020,
+    "description": "Application of the European Charter under Part III extended to Manx Gaelic in December"
+   },
+   {
+    "year": 2022,
+    "description": "Isle of Man launches the Manx Gaelic Strategy for 2022-2032, targeting 5,000 speakers by 2032"
+   },
+   {
+    "year": 2022,
+    "description": "The longest running Manx Gaelic nursery closes, leaving one nursery on the whole island"
+   },
+   {
+    "year": 2023,
+    "description": "Culture Vannin launches a Manx Gaelic Summer School, to become an annual event"
+   }
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "IN",
@@ -18215,6 +18455,10 @@
    {
     "label": "Key data on teaching languages at school in Europe, 2023 edition (Eurydice) — Publications Office file",
     "url": "https://publications.europa.eu/resource/cellar/e0f69418-d915-11ed-a05c-01aa75ed71a1.0001.01/DOC_1"
+   },
+   {
+    "label": "Lög nr. 61/2011 um stöðu íslenskrar tungu og íslensks táknmáls, 3., 5., 7. og 13. gr., consolidated text — Alþingi Lagasafn",
+    "url": "https://www.althingi.is/lagas/nuna/2011061.html"
    }
   ],
   "supportLinks": [],
@@ -18228,11 +18472,29 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "Iceland's status act reaches Icelandic and íslenskt táknmál, not a regional or minority language\nÍslenskt táknmál is the first language of those who must rely on it, and of their children\nState and municipalities must preserve íslenskt táknmál, develop it and promote its use\nMálnefnd um íslenskt táknmál advises government and works to strengthen the language\nThe act took effect on 15 June 2011",
   "speakers": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2011,
+    "description": "Act 61/2011 makes íslenskt táknmál the first language of those who rely on it and obliges the authorities to nurture and support it"
+   },
+   {
+    "year": 2011,
+    "description": "Act 61/2011 sets up a Málnefnd um íslenskt táknmál with its office at Stofnun Árna Magnússonar í íslenskum fræðum"
+   }
+  ],
   "inventory": "Glottolog counts 3 living languages for this country",
-  "languages": []
+  "languages": [],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "IT",
@@ -18309,12 +18571,20 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "",
+  "revitalisation": "ARLeF's campaign Dîs di sì al furlan a scuele par to fi promotes Friulian at school\nEducation Minister may run national and local projects on the recognised minority languages\nFriuli-V.G. keeps a regional list of over 1,500 accredited teachers of Friulian\nFondo nazionale per la tutela delle minoranze linguistiche: 9.8 billion lire a year from 1999\nRegions and provinces may create institutes for these languages from their own budgets",
   "speakers": [],
   "policyHistory": [
    {
     "year": 1999,
     "description": "Law 482/1999 protects twelve \"minoranze linguistiche storiche\" in a closed list"
+   },
+   {
+    "year": 1999,
+    "description": "Law 482 sets up a Fondo nazionale per la tutela delle minoranze linguistiche at the Presidenza del Consiglio, funded from that year"
+   },
+   {
+    "year": 1999,
+    "description": "Law 482 art. 5 authorises 2 billion lire a year for national and local minority-language projects"
    },
    {
     "year": 2000,
@@ -18471,7 +18741,16 @@
     "genus": "Romance",
     "typology": "Word order SVO; Noun-Adjective; Strongly suffixing"
    }
-  ]
+  ],
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "JE",

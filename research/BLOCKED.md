@@ -1209,3 +1209,33 @@ for the url rather than guessing it; the report urls are not patterned.
 
 `rm.coe.int` itself answers curl with a browser UA and a Google referer exactly
 as section 4 records, and refuses Node on identical headers.
+
+## 20. A font that corrupts its own text, and a hazard in how a verifier caches
+
+**`desc.gov.im`'s Manx Language Strategy PDF is a SILENT quote hazard.** It
+fetches cleanly, 1.4 MB with a real text layer, and its font mangles every
+`ti` and `tt` ligature into a semicolon: `organisations` extracts as
+`organisa;ons`, `Education` as `Educa;on`, `communities` as `communi;es`. All
+three pdftotext modes agree, so the union does not save it, and NFKD does not
+either -- this is not a Unicode ligature but a broken font mapping, and no
+normalisation reaches it.
+
+The effect is the worst kind: a drafter quoting most sentences in that document
+would have correct text rejected, and would look as though they invented it.
+**The UK's Charter evaluation report is the usable route to Manx content** and
+extracts cleanly.
+
+**`coe.int`'s ratification tables are JavaScript.** Both
+`full-list?module=signatures-by-treaty&treatynum=148` and the `cets-number`
+variant return 200 with the table rendered client-side; `grep -c Greece` on
+87 KB returns 0. Signature and ratification status cannot be verified from
+there, and any existing row citing that url may not be reprovable.
+
+**A hazard worth recording even though this gate does not have it.** A pass
+built its own verifier with a cache keyed on `hex(url).slice(0, 60)` -- 30 bytes
+-- and two press releases from the same register collided, so one page was
+checked against the other's text and reported four false misses. Checked:
+`terr-verify.js` keys its page cache on the FULL url and names temp files by
+process id, so it is not exposed. But a 30-byte prefix collides for any two
+documents from one register, which describes most sources in this pipeline, and
+anything written against this data should key on the whole url or a real hash.
