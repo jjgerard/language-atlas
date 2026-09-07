@@ -241,6 +241,70 @@ systems funding bilingual subject teaching, with Germany and Norway". `dld` has
 a `funding` field and `eal` does not, though the question is equally live on
 both.
 
+## Oceania breaks the biggest pattern, and explains it
+
+`bilingualEducationNotes`' disclaimer -- "is this provision aimed at these
+pupils at all?" -- was on 18 of 23 European units and looked close to universal.
+It is not. **Seven of fifteen Oceanian units are clean counter-examples**, where
+the field's four questions apply exactly as written because the bilingual
+programme IS this map's answer:
+
+- Samoa, a Samoan/English bilingual system for the whole cohort, no disclaimer
+- Kiribati, early-exit transitional, Te Kiribati to English at year 3
+- Solomon Islands, Sa'a and Arosi alongside English in eight schools from 2014
+- Papua New Guinea's vernacular pre-schools across 400+ languages
+- Guam, the Northern Marianas and the Marshall Islands, statutory
+  bilingual-bicultural provision in the vernacular
+
+Only two carry the European-style disclaimer, and neither in the
+migrant-versus-minority form.
+
+**The reason is structural and it is a better diagnosis than "question 1 is
+wrong".** In Europe the school language is the majority language and bilingual
+education is for someone else, so the field's premise fails. In the Pacific the
+school language is frequently NOT the child's language, and the bilingual
+programme is the mechanism for exactly that gap, so the premise holds.
+
+**The disclaimer marks systems where the medium of instruction is uncontested.**
+Where it is contested, the field works as written. That is a fact about the
+world the field is describing rather than a defect in the field, and it changes
+what any fix should be: not a new question, but a way of recording which of the
+two situations a system is in.
+
+## Three more, from Oceania
+
+**`newcomerCriteria` has no slot for the language a REGIONAL TEST is sat in --
+9 of 15 units.** "X did not have PILNA translated, so its pupils were assessed
+in English" is neither who counts, nor evidence, nor timing, nor decider. It is
+a fact about what language a child meets a test in, which is squarely this
+map's question and has no home anywhere on the map. Nine units is larger than
+most patterns in this file.
+
+**`l1Support` has no slot for whether the rule is REAL** -- four of fifteen end
+the field with exactly that: "That policy sits outside the statute, which is
+silent on language"; "No evidence was retrieved that it was adopted"; "The
+wording is permissive, and creates no entitlement a pupil could claim";
+"Sources point opposite ways, and no amending instrument reconciling the two
+was found". It is the most useful sentence in each of those fields and it
+answers none of taught/provider/stage/examinable.
+
+**The eal funding gap, confirmed from a second region.** "Title III-A can be
+folded into the Consolidated Grant for the Insular Areas" appears at the end of
+`bilingualEducationNotes` on American Samoa, Guam and the Northern Marianas --
+the same sentence, three units, tagged 4 by proximity on all three because
+there is nowhere else. New Zealand's per-pupil figures and application rounds
+sit in `l2Support` at slot 3, which is about time rather than money.
+
+## The first `achievementGap` q3 answer in the atlas
+
+Solomon Islands: "No comparison of results by home language is published for
+Solomon Islands". It does not overturn the 0%-of-26 diagnosis -- q3 IS
+redundant wherever a gap is actually measured, because q2's bullet has already
+named the comparison group -- but it shows the question is reachable when the
+answer is that no comparison group was used. Micronesia gives the same shape
+from the other side: "The whole cohort is in the majority-language condition,
+so no gap is measured".
+
 ## The counter-examples, and what they change
 
 A question almost nobody answers might be a bad question, or it might be a good

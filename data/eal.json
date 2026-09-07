@@ -482,7 +482,31 @@
     "year": 2022,
     "description": "Governor signed the Samoan Language Commission law amending languages of instruction"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "removalCriteria": [
+    1,
+    1
+   ],
+   "l2Support": [
+    1,
+    4
+   ],
+   "l1Support": [
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AT",
@@ -641,11 +665,46 @@
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 14 points above their non-immigrant peers\n16 points above after accounting for socio-economic profile\n20 points above once home language is accounted for as well\nAn advantage that survives both adjustments",
-  "l2Support": "Delivered by the class teacher, with specialist EAL/D teachers advising where available\nPupils may move from an Intensive English progression to a mainstream class\nSpecific language instruction continues in the mainstream class as pupils develop and consolidate\nACARA's national resource is written for teachers who may have no EAL/D training at all\nIt does not replace the state and territory resources that set the actual programmes",
+  "l2Support": "Delivered by the class teacher, with specialist EAL/D teachers advising where available\nPupils may move from an Intensive English progression to a mainstream class\nSpecific language instruction continues in the mainstream as pupils develop and consolidate\nACARA's national resource is written for teachers who may have no EAL/D training at all\nIt does not replace the state and territory resources that set the actual programmes",
   "l1Support": "Home languages are taught: background-language learners are a named national learner group\nFirst-language learners use the language as their mother tongue and for literacy\nDelivered in schools under the national curriculum, and in community-run organisations\nFoundation to Year 10, with an alternative Year 7 to Year 10 entry sequence\nExternally examined at senior secondary through the national CCAFL framework",
   "l3Support": "",
   "bilingualEducationNotes": "NT schools teach the Australian Curriculum through an Aboriginal language and English\nOffered where an Aboriginal language, Kriol included, is the main language spoken at home\nVictoria's Designated Bilingual Program takes primary schools only\nNew Victorian entrants need Ministerial approval on a targeted expression of interest",
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    2,
+    2,
+    4,
+    4
+   ],
+   "l1Support": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "bilingualEducationNotes": [
+    1,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -6523,7 +6582,33 @@
     "year": 2026,
     "description": "The Education Act 2026 has no medium-of-instruction or vernacular provision at all"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1
+   ],
+   "l2Support": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "l1Support": [
+    1,
+    1,
+    1
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "FM",
@@ -6568,7 +6653,35 @@
     "year": 1979,
     "description": "Constitution, effective 10 May 1979, bars discrimination on grounds of language, Art IV s4"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "achievementGap": [
+    1,
+    2
+   ],
+   "l2Support": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "l1Support": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "FO",
@@ -7721,7 +7834,35 @@
     "year": 2015,
     "description": "ESSA replaced 'limited English proficient' with 'English learner' throughout the ESEA"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "removalCriteria": [
+    1,
+    2
+   ],
+   "l2Support": [
+    1,
+    2
+   ],
+   "l1Support": [
+    1
+   ],
+   "l3Support": [
+    1,
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GW",
@@ -10637,7 +10778,29 @@
     "year": 2016,
     "description": "Teachers' College TESOL curriculum reviewed in 2016 for inclusion"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1
+   ],
+   "l2Support": [
+    1,
+    4
+   ],
+   "l1Support": [
+    1,
+    3,
+    4
+   ],
+   "bilingualEducationNotes": [
+    1,
+    3,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "KM",
@@ -11913,7 +12076,34 @@
     "year": 1991,
     "description": "Article 317 of the 1991 Education Act states that the Department of Education must develop a course on the…"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1
+   ],
+   "removalCriteria": [
+    1,
+    1,
+    3
+   ],
+   "l2Support": [
+    1,
+    1,
+    3,
+    3
+   ],
+   "l1Support": [
+    1,
+    3,
+    4
+   ],
+   "bilingualEducationNotes": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "MK",
@@ -12220,7 +12410,37 @@
     "year": 2015,
     "description": "ESSA replaced 'limited English proficient' with 'English learner' throughout the ESEA"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "removalCriteria": [
+    1,
+    1,
+    1
+   ],
+   "achievementGap": [
+    1
+   ],
+   "l2Support": [
+    1,
+    1,
+    1
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "MR",
@@ -13184,7 +13404,30 @@
     "year": 2011,
     "description": "The Education Act 2011 never uses 'language' or 'medium of instruction'"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "l2Support": [
+    1,
+    1,
+    1
+   ],
+   "l1Support": [
+    1,
+    3,
+    4
+   ],
+   "bilingualEducationNotes": [
+    1,
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "NZ",
@@ -13247,7 +13490,48 @@
     "year": 2019,
     "description": "Further NZ$13.2m funding boost announced (16 August), bringing combined new funding to $47.7m."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "removalCriteria": [
+    1,
+    3,
+    3,
+    3
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    3,
+    3
+   ],
+   "l1Support": [
+    1,
+    1,
+    2
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "OM",
@@ -13442,7 +13726,34 @@
     "year": 1995,
     "description": "Education Act amendment No. 13 of 1995 defines elementary education as being in a language spoken by the student"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    4,
+    4
+   ],
+   "l2Support": [
+    1,
+    1,
+    3,
+    3
+   ],
+   "l1Support": [
+    1,
+    1,
+    1
+   ],
+   "l3Support": [
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "PH",
@@ -13935,7 +14246,29 @@
     "year": 2006,
     "description": "2006-16 Education Master Plan backs literacy work to raise English proficiency"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1
+   ],
+   "l2Support": [
+    1,
+    1,
+    1
+   ],
+   "l1Support": [
+    1,
+    2,
+    2
+   ],
+   "bilingualEducationNotes": [
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "PY",
@@ -14449,7 +14782,34 @@
     "year": 2023,
     "description": "The Education Act 2023 uses neither 'additional language' nor 'second language'"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "achievementGap": [
+    1,
+    2,
+    3
+   ],
+   "l2Support": [
+    1,
+    3,
+    3
+   ],
+   "l1Support": [
+    1,
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "SC",
@@ -15819,7 +16179,28 @@
     "year": 2012,
     "description": "The 2012 language policy excepts children whose mother tongue is not Tongan"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    3,
+    3
+   ],
+   "l1Support": [
+    1,
+    1,
+    2
+   ],
+   "bilingualEducationNotes": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "TR",
@@ -19609,7 +19990,28 @@
     "year": 2009,
     "description": "Education Act makes education compulsory for all school-aged children, Art 4"
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1
+   ],
+   "l2Support": [
+    1,
+    1,
+    1
+   ],
+   "l1Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "YE",
