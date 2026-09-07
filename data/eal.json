@@ -569,7 +569,7 @@
     2
    ],
    "l2Support": [
-    1,
+    2,
     2,
     3,
     3
@@ -586,6 +586,12 @@
    "bilingualEducationNotes": [
     1,
     1
+   ],
+   "newcomerCriteria": [
+    1,
+    2,
+    2,
+    2
    ]
   }
  },
@@ -11055,7 +11061,7 @@
   "removalCriteria": "Exit from broader DaZ support is proficiency-based rather than a fixed test\nIntensivkurs capped at 1 year, then integration into regular classes\nDaZ supplementary support has a maximum period of 7 years",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "Intensivkurs — max 1 year, ages 8+, combining German with general schooling\nDaZ supplementary lessons 1–4 times a week, in groups of 3–6\nOn a national DaZ curriculum framework, free of charge",
+  "l2Support": "National DaZ curriculum framework, free of charge\nIntensivkurs — max 1 year, ages 8+, combining German with general schooling\nDaZ supplementary lessons 1–4 times a week, in groups of 3–6",
   "l1Support": "Voluntary 'Heimatliche Sprache und Kultur' instruction in the native language and culture\nUnder the 1995 ordinance on migrant workers' children",
   "l3Support": "A foreign language is compulsory for all at some point in schooling\nA second becomes compulsory for all only at upper secondary",
   "bilingualEducationNotes": "CLIL: German + English (ISCED 1–3)\nSeparate from mother-tongue teaching for pupils not yet fluent in the school language",
@@ -11072,7 +11078,35 @@
     "year": 2004,
     "description": "Schulorganisationsverordnung (School Organisation Ordinance)."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1
+   ],
+   "removalCriteria": [
+    1,
+    3,
+    3
+   ],
+   "l2Support": [
+    1,
+    2,
+    3
+   ],
+   "l1Support": [
+    1,
+    1
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "LK",
@@ -11264,7 +11298,39 @@
     "year": 2023,
     "description": "Implementation recommendations for the leveled (A1-B2) Lithuanian-language program."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    2,
+    3
+   ],
+   "removalCriteria": [
+    1,
+    1,
+    3
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    2,
+    2
+   ],
+   "l1Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "LU",
@@ -11313,7 +11379,7 @@
   "l2Support": "Since 2022 the SIA service coordinates support\nIntercultural mediators for parents and teachers\nCours d'accueil — intensive German and/or French, plus an introduction to Luxembourgish\nWelcome classes extended into secondary and new integration classes created in primary",
   "l1Support": "'Cours de Langue et Culture d'Origine' — optional and extracurricular\nOrganised and funded by origin-country institutions or non-profit associations\nMostly outside school hours, and religiously and politically neutral",
   "l3Support": "The mainstream system is trilingual — Luxembourgish, German and French\nNo distinct migrant-specific provision found beyond home-language courses",
-  "bilingualEducationNotes": "No separate bilingual provision beyond home-language courses and the welcome structure\nThe whole system is multilingual by design",
+  "bilingualEducationNotes": "The whole system is multilingual by design\nNo separate bilingual provision beyond home-language courses and the welcome structure",
   "policyHistory": [
    {
     "year": 2009,
@@ -11323,7 +11389,39 @@
     "year": 2022,
     "description": "Projet de loi 8069 creates SIA, extends welcome classes to secondary, adds primary integration classes."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    2
+   ],
+   "removalCriteria": [
+    1,
+    1,
+    3,
+    3
+   ],
+   "l2Support": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "l1Support": [
+    1,
+    2,
+    2
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "LV",
@@ -11391,7 +11489,38 @@
     "year": 2022,
     "description": "Further amendments (7 June) mandate full transition by 2025; Cabinet regulation (13 Jan) on admission/assessment procedures for newcomer/returnee pupils."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2
+   ],
+   "removalCriteria": [
+    1,
+    3
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    2,
+    2,
+    4
+   ],
+   "l1Support": [
+    1,
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "LY",
@@ -11512,7 +11641,30 @@
   "l1Support": "Not retrieved, which is different from absent\nBoth cited monservicepublic.gouv.mc URLs return http 403 with a 244-byte body\nTried with a desktop user-agent, a Google referer and a same-site referer",
   "l3Support": "",
   "bilingualEducationNotes": "One non-contracted international school teaches in French and English\nAll state and contracted private teaching is in French",
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    3
+   ],
+   "removalCriteria": [
+    1
+   ],
+   "l2Support": [
+    2,
+    2
+   ],
+   "l1Support": [
+    1,
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "MD",
@@ -11548,7 +11700,40 @@
   "l1Support": "Romanian is the language of instruction in the main plans; the term used is limba maternă\nSeparate framework plans exist for instruction in Russian, Ukrainian, Gagauz and Bulgarian\nEach of those three minority languages appears 42 times, Russian 118 times\nRomanian language and literature runs 8 then 7 lessons a week in the first grades",
   "l3Support": "",
   "bilingualEducationNotes": "The plan has a dedicated bilingual variant for grades I-IX with Romanian instruction\nThere is also an alternative 'Pas cu Pas' programme plan for grades I-IV\nMinority-language instruction is organised as its own set of framework plans, not as support\nNo transitional or immersion model is described in the plan itself",
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "l1Support": [
+    1,
+    1,
+    1,
+    3
+   ],
+   "bilingualEducationNotes": [
+    1,
+    1,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "ME",
@@ -11603,7 +11788,38 @@
   "l1Support": "Montenegrin is the school language; the statutory category is minority language, not EAL\nSchools teaching Montenegrin as a non-mother-tongue get two extra lessons a week\nEnd-of-cycle testing is in Montenegrin or in the mother tongue, whichever applies\nRoma and Egyptian pupils have literacy guidelines and a Roma-Montenegrin picture dictionary",
   "l3Support": "",
   "bilingualEducationNotes": "Albanian instruction in 12 primary schools, in Bar, Plav, Podgorica, Rožaje and Ulcinj\nNational-minority provision, not aimed at newcomers",
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "l1Support": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "bilingualEducationNotes": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "MG",
@@ -11751,11 +11967,47 @@
    }
   ],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 42 points below their non-immigrant peers\n45 points below after accounting for socio-economic profile\n40 points below once home language is accounted for as well\nA gap that narrows but survives both adjustments",
-  "l2Support": "Remedial Macedonian and subject support, from Bureau for Development of Education programmes\nClasses run outside school hours, for at least one school year\nOne of eight European systems that do not provide them during school hours\nMother tongue classes depend on the origin country and bilateral agreements",
+  "l2Support": "Remedial Macedonian and subject support, from Bureau for Development of Education programmes\nMother tongue classes depend on the origin country and bilateral agreements\nClasses run outside school hours, for at least one school year\nOne of eight European systems that do not provide them during school hours",
   "l1Support": "The statutory word is 'мајчин јазик', mother tongue, and instruction runs in several languages\nReturning pupils must be helped with mother tongue and language of instruction\nSchools organise individual and group supplementary teaching for exactly those two\nForeign or stateless children get remedial Macedonian and subject support for at least a year",
   "l3Support": "",
   "bilingualEducationNotes": "Extensive minority-language instruction — Albanian, Turkish and others\nRoma-inclusion projects exist, including an EU-funded primary-education programme\nMinority and Roma provision, not aimed at newcomers",
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "removalCriteria": [
+    1,
+    3
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "l1Support": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "bilingualEducationNotes": [
+    1,
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "ML",
@@ -12060,7 +12312,7 @@
    }
   ],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 6 points above their non-immigrant peers\n5 points above after accounting for socio-economic profile\n2 points above once home language is accounted for as well\nSmall on all three measures",
-  "l2Support": "Centralised induction through the Migrant Learners Unit\nBoth separate and integrated models, depending on the school\n'Language to Go' runs over the summer for newly arrived pupils and those struggling\nAll textbooks free to all pupils; psychosocial and material support provided centrally",
+  "l2Support": "Centralised induction through the Migrant Learners Unit\nAll textbooks free to all pupils; psychosocial and material support provided centrally\nBoth separate and integrated models, depending on the school\n'Language to Go' runs over the summer for newly arrived pupils and those struggling",
   "l1Support": "Not established from the sources consulted. Not retrieved, which is different from absent. migrantlearnersunit.gov.mt does not resolve from this network (curl exit 6, two attempts). meae.gov.mt does not resolve either, so the national policy PDF could not be read.",
   "l3Support": "Training for cultural mediation, University of Malta",
   "bilingualEducationNotes": "CLIL: Maltese + English (ISCED 1–3)\nSeparate from mother-tongue teaching for pupils not yet fluent in the school language",
@@ -12077,7 +12329,34 @@
     "year": 2020,
     "description": "Training for cultural mediation introduced (University of Malta)."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    4
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    1,
+    2,
+    3
+   ],
+   "l3Support": [
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "MU",
@@ -12656,7 +12935,44 @@
     "year": 2024,
     "description": "Temporary Ukraine-specific provisions ended (summer)."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "removalCriteria": [
+    1,
+    3
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    1,
+    3
+   ],
+   "l1Support": [
+    1,
+    1,
+    1
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "NO",
@@ -12729,7 +13045,44 @@
     "year": 2019,
     "description": "Core curriculum revision strengthens intercultural awareness as part of citizenship development."
    }
-  ]
+  ],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    4,
+    4
+   ],
+   "removalCriteria": [
+    1,
+    2
+   ],
+   "achievementGap": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "l2Support": [
+    1,
+    2,
+    2
+   ],
+   "l1Support": [
+    1,
+    1,
+    1
+   ],
+   "l3Support": [
+    1,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "NP",

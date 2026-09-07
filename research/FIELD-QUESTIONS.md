@@ -89,7 +89,11 @@ than one whose researchers left those fields blank.
 ## eal
 
 **`bilingualEducationNotes` has no question for "is this aimed at these pupils
-at all?" — and this is the largest of the findings here.** Seven of eleven
+at all?" — and this is the largest of the findings here.** Now **18 of 23**
+European units carry that disclaimer, after a second batch found it on 11 of
+its 12 and 10 of those ended the field with it. Montenegro carries two.
+Slot 4 absorbs it everywhere, and slot 4 is "entitlement or pilot".
+Originally: seven of eleven
 European units END the field with exactly that disclaimer: Denmark "No
 dual-medium programme for migrants", Spain "A separate framework, not aimed at
 migrant pupils", Greece "Not migrant-specific", Croatia "Minority- rather than
@@ -166,6 +170,45 @@ two more, `workforce` giving a within-service staffing ratio rather than a ratio
 to population, and `dischargeCriteria` and `outcomesEvidence` empty on all nine.
 Four patterns found on eight countries and confirmed on nine more is no longer a
 sample.
+
+## Measured, not noticed: which questions nobody answers
+
+Everything above came from a drafter noticing something while working. This is
+the same enquiry run over the data, by `research/tools/slot-answered.js`, now
+that enough entries carry slot lists to count. A question no entry anywhere
+answers is a question worth re-examining.
+
+    0%  of  26   eal.achievementGap         q3: who they are compared against
+    0%  of  26   eal.achievementGap         q4: whether it is tracked over time
+    0%  of  13   dld.multilingualProvision  q4: whether norms exist for them
+    5%  of  21   eal.l3Support              q4: what replaces the time
+    8%  of  13   dld.multilingualProvision  q3: what the rule says about bilingual children
+    9%  of  22   eal.removalCriteria        q4: whether a pupil can be designated again
+   10%  of  31   eal.l1Support              q4: whether it can be examined
+   10%  of  21   eal.l3Support              q2: whether they may be exempted
+   10%  of  21   eal.l3Support              q3: who decides an exemption
+
+**`eal.achievementGap` is the clearest case in the atlas.** Questions 3 and 4
+have never been answered once, across 26 tagged entries, and the reason is
+visible in the prose: the comparison group is already inside question 2's
+bullet — "X points below their non-immigrant peers" — so question 3 asks for
+something question 2 has necessarily already said. Every one of those 26 comes
+out `[1,2,2,2,2]`. Two questions, one of them structurally redundant and the
+other never available, on a field that is otherwise well filled.
+
+**`eal.l3Support` collapses to question 1**, at 95% / 10% / 10% / 5%. On five of
+six filled fields in one batch it was `[1,1]`, carrying a compulsory-language
+fact borrowed from the `fl` map rather than anything about newcomers.
+
+**`dld.multilingualProvision` fails at both ends.** Questions 3 and 4 are 8% and
+0%, while 9 of 9 units in one batch carried an intervention-language bullet the
+field has no question for at all. It asks two things nobody can answer and does
+not ask the one thing everybody records.
+
+Read the percentages as a floor. `dld` and `eal` counts cover only the
+re-slotted subset, and two known distortions push opposite ways: a whole-field
+hedge can only be tagged 1, and a documented absence collapses to `[1,1,1,1]`
+because questions 2-4 presuppose the answer to 1 was yes.
 
 ## Related
 
