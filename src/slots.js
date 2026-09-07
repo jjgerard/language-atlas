@@ -66,4 +66,54 @@ function validSlots(list, bulletCount, count) {
   return true;
 }
 
-module.exports = { slotsOf, slotCount, validSlots };
+/**
+ * Put bullets into slot order, when they arrived out of it.
+ *
+ * A slot list that goes backwards -- [1, 3, 2] -- used to be REFUSED: the gate
+ * dropped the field and store.js dropped the tagging silently. But the slot
+ * numbers are not merely a claim about the order, they ARE the order: a bullet
+ * tagged 2 belongs between the ones tagged 1 and 3, and where to put it is
+ * fully determined by the data. Refusing threw away a correct answer for
+ * presenting it in the wrong sequence, and it is what stopped a drafter
+ * appending a slot-3 finding to a field already answering 1, 2 and 4.
+ *
+ * The sort is STABLE, so two bullets sharing a slot keep the order the drafter
+ * chose between them.
+ *
+ * It refuses in one case, and the case is real. A bullet whose sense depends on
+ * the one before it -- "Under it a speech class needed a diagnosis", "And to
+ * providing free public special education" -- stops meaning anything when its
+ * antecedent moves. One re-slotting pass hit exactly that and had to reword the
+ * bullet by hand. So if any bullet that WOULD move opens with a pronoun or a
+ * conjunction, the reordering is refused and the caller decides.
+ *
+ * Returns { bullets, slots, moved } or null when it will not reorder.
+ */
+// The referring word is not always the first one: "Under IT a speech class
+// needed a diagnosis" leans on the previous bullet from second position. So the
+// test reads the opening few words rather than only the first.
+const LEANS = /\b(it|its|they|them|their|this|that|these|those|such|he|she|his|her|the same)\b/i;
+const OPENS_WITH_CONJUNCTION = /^(and|or|but|also|plus|both|either|neither|so are|so is)\b/i;
+const leansOnPrevious = b => {
+  const t = String(b).trim();
+  if (OPENS_WITH_CONJUNCTION.test(t)) return true;
+  return LEANS.test(t.split(/\s+/).slice(0, 4).join(" "));
+};
+
+function orderBySlot(bullets, slots) {
+  if (!Array.isArray(bullets) || !Array.isArray(slots)) return null;
+  if (bullets.length !== slots.length || !bullets.length) return null;
+  const idx = bullets.map((b, i) => i);
+  // Stable: Array.prototype.sort is stable in Node, and the index tie-break
+  // makes it so regardless.
+  idx.sort((a, b) => (Number(slots[a]) - Number(slots[b])) || (a - b));
+  const moved = idx.some((from, to) => from !== to);
+  if (!moved) return { bullets, slots, moved: false };
+  for (let to = 0; to < idx.length; to++) {
+    const from = idx[to];
+    if (from !== to && leansOnPrevious(bullets[from])) return null;
+  }
+  return { bullets: idx.map(i => bullets[i]), slots: idx.map(i => Number(slots[i])), moved: true };
+}
+
+module.exports = { slotsOf, slotCount, validSlots, orderBySlot };

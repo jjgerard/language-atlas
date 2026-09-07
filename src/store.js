@@ -134,7 +134,7 @@ const SHAPES = {
 };
 
 const NOT_ESTABLISHED_RE = /^Not established from the sources consulted/i;
-const { slotCount, validSlots } = require('./slots');
+const { slotCount, validSlots, orderBySlot } = require('./slots');
 
 // Which question each bullet answers. A field's hint lists its four questions
 // in the order they must be answered, and drafters compose bullet by bullet
@@ -156,7 +156,17 @@ function slotsFor(domain, body, fields) {
     const text = String(fields[k] == null ? '' : fields[k]).trim();
     if (!text || NOT_ESTABLISHED_RE.test(text) || /^Not applicable/i.test(text)) continue;
     const bullets = text.split(String.fromCharCode(10)).filter(l => l.trim()).length;
-    const list = Array.isArray(src[k]) ? src[k].map(Number) : null;
+    let list = Array.isArray(src[k]) ? src[k].map(Number) : null;
+    // A list that goes backwards used to be dropped here without a word, and a
+    // submitter who answered every question but presented them out of sequence
+    // lost their tagging entirely. The slot numbers say where each bullet
+    // belongs, so the order can be recovered from them -- and the prose is
+    // reordered with them, or nothing is, so text and tags never disagree.
+    if (list && !validSlots(list, bullets, slotCount(domain, k))) {
+      const lines = text.split(String.fromCharCode(10)).filter(l => l.trim());
+      const fixed = orderBySlot(lines, list);
+      if (fixed && fixed.moved) { fields[k] = fixed.bullets.join(String.fromCharCode(10)); list = fixed.slots; }
+    }
     if (!validSlots(list, bullets, slotCount(domain, k))) continue;
     out[k] = list;
   }

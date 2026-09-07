@@ -44,6 +44,8 @@
 const fs = require("fs");
 const path = require("path");
 const { NOT_DOCUMENTED_RE } = require(path.join(__dirname, "..", "..", "src", "derive"));
+const { orderBySlot } = require(path.join(__dirname, "..", "..", "src", "slots"));
+let reordered = 0;
 
 const ATLAS = path.join(__dirname, "..", "..");
 const FILES = { eal: "eal.json", dld: "dld.json", fl: "fl.seed.json", indigenous: "indigenous.json" };
@@ -128,7 +130,8 @@ for (const [key, s] of Object.entries(specs)) {
   if (!e) { console.log(NL + key + ": not a unit on the " + domain + " map"); dropU++; continue; }
 
   const keptFields = {}, reslotOf = {}, keptSlots = {}, problems = [];
-  for (const [field, bullets] of Object.entries(s.fields || {})) {
+  for (const [field, offered] of Object.entries(s.fields || {})) {
+    let bullets = offered;
     const old = String(e[field] || "");
     const p = [];
 
@@ -154,7 +157,18 @@ for (const [key, s] of Object.entries(specs)) {
       if (sl.some(n => !Number.isInteger(n) || n < 1 || n > 4)) p.push("a slot is not an integer 1-4");
       // Non-decreasing, because "in this order" is the convention: a bullet
       // answering question 2 cannot come after one answering question 3.
-      for (let i = 1; i < sl.length; i++) if (sl[i] < sl[i - 1]) { p.push("slots are not in order: " + sl.join(",")); break; }
+      // Out of order is not a refusal any more. The slot numbers ARE the
+      // order, so a bullet tagged 2 belongs between those tagged 1 and 3 and
+      // where it goes is fully determined -- refusing threw away a right answer
+      // for presenting it in the wrong sequence. Reordered here, bullets and
+      // slots together, unless a moved bullet leans on the one before it.
+      let out = sl;
+      if (sl.some((n, i) => i && n < sl[i - 1])) {
+        const fixed = orderBySlot(bullets, sl);
+        if (!fixed) p.push("slots are out of order and a moved bullet refers back to its neighbour: " + sl.join(","));
+        else { bullets = fixed.bullets; out = fixed.slots; reordered++; }
+      }
+      s.slots[field] = out;
     }
     for (const b of (bullets || [])) {
       if (typeof b !== "string") { p.push("a bullet is not a string"); continue; }
@@ -207,5 +221,6 @@ for (const [key, s] of Object.entries(specs)) {
 }
 
 fs.writeFileSync(path.join(specDir, "reslot-verified.json"), JSON.stringify(out, null, 1) + NL);
+if (reordered) console.log(NL + reordered + " field(s) put into slot order rather than refused");
 console.log(NL + keptU + " units with " + keptF + " field(s) survived (" + dropF +
   " field(s) dropped, " + dropU + " units left with nothing), written to reslot-verified.json");
