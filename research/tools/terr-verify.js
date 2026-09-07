@@ -194,6 +194,19 @@ const words = s => fold(s).split(" ").filter(Boolean);
 
 /** Does `quote` appear in `page`, allowing for mangled extraction? */
 function quoteOn(quote, page) {
+  // A drafter reading raw HTML with curl quotes what they SEE, entities and
+  // all -- "Anglais &#8211; Flsh" off a <title>. The page has been entity-
+  // decoded by then, so the quote carries a token ("8211") the haystack cannot
+  // have, and two real programme rows were dropped for it. The decoding was
+  // applied to one side and not the other, which is the same fault as the
+  // `bullet`/`key` mismatch and the offering-bucket name: a transformation
+  // that has to be symmetric and was not.
+  const dec = unescapeEntities(quote);
+  if (dec !== String(quote) && quoteOnce(dec, page)) return true;
+  return quoteOnce(quote, page);
+}
+
+function quoteOnce(quote, page) {
   const q = words(quote), p = " " + fold(page) + " ";
   if (!q.length) return false;
   if (p.includes(" " + q.join(" ") + " ")) return true;
@@ -676,7 +689,16 @@ function quoteOn(quote, page) {
       // could be confused -- the year is the thing that tells them apart. The
       // second form carries strictly more information than the first, so
       // refusing it threw away good rows to enforce a preference.
-      const e = ev.get(r.description) || ev.get(r.year + " " + r.description);
+      // `evidenceKey` FIRST. It is the field the drafting brief tells writers
+      // to put on a history row, it names the evidence entry outright, and the
+      // gate did not read it -- so a row whose description was worded slightly
+      // differently from its key was dropped as unevidenced even though the
+      // evidence was sitting right there under the name the row gave. Peru's
+      // 1974 founding of the Ricardo Palma translation programme and UH Hilo's
+      // 1982 Hawaiian Studies approval both went that way in one batch.
+      const e = (r.evidenceKey && ev.get(r.evidenceKey))
+        || (r.bullet && ev.get(r.bullet))
+        || ev.get(r.description) || ev.get(r.year + " " + r.description);
       if (!e) { dropped.push(label + ": no evidence entry - " + String(r.description).slice(0, 48)); continue; }
       const p = page.get(e.url);
       if (!p || p.status !== 200) { dropped.push(label + ": source returned " + (p ? p.status : "?")); continue; }

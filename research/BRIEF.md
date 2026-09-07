@@ -308,6 +308,24 @@ ones that earned their keep:
 - **INALCO's `licences-llcer` page** is the single most productive page in
   Europe for this field: 57 languages with a Licence, all enumerated.
 
+Four more that earned their keep in the Americas:
+
+- **Paraguay, CONES.** `cones.gov.py/<university-slug>/` is one server-rendered
+  page per institution carrying every programme as a table row -- name, nivel,
+  sede, the habilitation resolution number, and an INACTIVO flag. 712 KB, no
+  pagination, no JavaScript, and there are around 132 university pages plus 40
+  institute pages on the same pattern. It is the best register found anywhere
+  so far, and it gave Paraguay a Lengua Guarani licenciatura with its
+  resolution number.
+- **Guyana, University of Guyana Registry.** `registry.uog.edu.gy/srms/departments`
+  indexes departments and each `/srms/departments/<id>/programmes/` page lists
+  the programmes server-side, annotated with when one was added. Note that
+  `uog.edu.gy/srms/...` 404s -- only the `registry.` host serves.
+- **Puerto Rico, `upr.edu/academico/`** puts all eleven campuses in one 479 KB
+  table with a campus column and a level column: a whole system in one fetch.
+- **Mexico, `oferta.unam.mx`** is an alphabetical index plus one static page
+  per licenciatura carrying the award title and the faculties offering it.
+
 **What does not work is a register that renders its results in JavaScript**, and
 most of the famous ones do. Confirmed dead to a fetcher: Universitaly (Nuxt),
 Spain's RUCT (AJAX), Ukraine's EDBO (Next.js), felvi.hu, Croatia's
@@ -317,6 +335,19 @@ groups by DEGREE CLASS, which by design never names a language.
 
 Do not spend a pass fighting these. Note them and go to the faculty's own
 programme list, which is usually server-rendered because it is old.
+
+## A meta-description is not a body quote
+
+A pass drafted two UWI St Augustine rows off the text in
+`<meta name="description">`. Both failed the gate, and correctly: it strips
+tags, so it never sees attribute text, and neither does a reader. The quote has
+to come from what is rendered on the page.
+
+The same applies to a `<title>`, with a twist worth knowing. Quoting a title
+straight out of raw HTML gives you the ENTITY form -- `Anglais &#8211; Flsh` --
+and the gate compares against decoded text. It now decodes the quote too, so
+this no longer costs you the row, but the readable body text is still the
+better quote: a title tells you a page exists and not what it says.
 
 ## Check the status code, not the page size
 

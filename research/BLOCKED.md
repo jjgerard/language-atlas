@@ -1345,3 +1345,36 @@ stub carrying only a ministry title.
 `gmb_QALegLi`, `tgo_HELawLi`, `gnb_HEEdLawLi`. And the HEPO **country-graph page
 500s** — rather than 404s — for ERI, GNQ, STP and SYC, which is how you can tell
 those four have no HEPO entry at all rather than a missing document.
+
+**From the Americas offerings pass.** `www.ueh.edu.ht` and `fla.ueh.edu.ht`
+(Universite d'Etat d'Haiti) 403 with a 732-byte body; the working door is
+**`anciensite.ueh.edu.ht`**, the university's own retired-but-live site, which
+serves the full faculty pages. Beware that `anciensite.ueh.edu.ht/ecoles/`
+returns **HTTP 200 with a body reading "404 Error - Page not Found"** -- the
+inverse of a big-404 and just as silent.
+
+`www.ucv.ve` and `ucv.ve` refuse the connection on 443; Venezuela rests on
+`www.ula.ve`. `www.uprrp.edu` connect-times-out while `www.upr.edu` serves.
+`www.fil.una.py` connect-times-out and `isl.una.py` is NXDOMAIN. Further
+NXDOMAINs: `www.dsc.dm` (use `dsc.edu.dm`), `ipa.aw`, `sibe.sunedu.gob.pe`.
+
+**`catalog.manoa.hawaii.edu` answers 202 with a zero-byte body** on every
+`content.php` path -- the same AWS-WAF shape already recorded for
+`sso.agc.gov.sg` and `uni.lu`.
+
+**More big-404s**, and the largest yet: `unan.edu.ni/index.php/carreras`
+returns 404 with **1,035,463 bytes**. Also `una.py/oferta-academica` (226 KB),
+`mona.uwi.edu/dmll/` (30 KB), `sunedu.gob.pe` (131 KB), `urp.edu.pe` (354 KB)
+and `nau.edu` (123 KB).
+
+**`fachumanidades.up.ac.pa/licenciaturas` is mixed-encoding**: mostly UTF-8
+with a stray 0xED byte at offset 3040. A strict UTF-8 decode raises, a latin-1
+decode mojibakes the accents, and only a replace-errors decode or the gate's
+union of both finds the quotes. The gate copes; a hand-rolled checker will not.
+
+**The MLA Language Enrollment Database cannot be cited.** Its results CGI
+(`apps.mla.org/cgi-shl/docstudio/docs.pl?flsurvey_results`) is POST-only and
+the same parameters as a GET return a page with no rows. It also counts
+enrolments rather than degree programmes, so it answers `he.enrolment` and not
+`offerings`. No plain-GET IPEDS completions query was found either, which is
+why the United States is filled by named institution rather than by total.
