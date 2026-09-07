@@ -149,6 +149,28 @@ because it is foreign to you: French in Senegal is the medium of instruction,
 Arabic in Chad is a medium, and Russian in Kazakhstan is a second state
 language. Record the category the SOURCE puts it in.
 
+## Some questions need a particular KIND of source, not more searching
+
+A question that almost nobody answers is sometimes a bad question and sometimes
+a good one asked of the wrong documents. Three cases are now settled and they
+all point the same way:
+
+- **A ratio to POPULATION** -- "18 speech pathologists per 100,000 inhabitants"
+  -- is answered by a PROFESSIONAL ASSOCIATION'S workforce analysis, and almost
+  never by a statute, a ministry page or a practitioner survey. Five units in
+  the whole atlas answer it and two of those come from that one source type.
+- **Whether norms exist for bilingual children** is answered by a TEST BATTERY'S
+  own documentation. It is 0% across the atlas except Luxembourg, whose source
+  for that field is a battery rather than a survey or a law.
+- **Whether a rule is really in force** -- as against merely published -- comes
+  from an evaluation or inspection report, not from the instrument itself.
+
+So when a field's later questions come back empty, ask what KIND of document
+would carry that answer before concluding the question is wrong. A survey tells
+you who and how many; a statute tells you what is owed; an association's
+analysis tells you how many there are per head; an inspectorate tells you
+whether any of it happens.
+
 ## A `year` on a row means the programme STARTED, or the figure was COUNTED
 
 Nothing else. Two consecutive batches offered 78 years between them and 60 had

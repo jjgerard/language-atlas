@@ -626,13 +626,13 @@
   "stubNote": "",
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "terminology": "Speech or language impairments, among the qualifying disabilities\nListed in ASCA 16.1603, wording following IDEA, with no term set by the territory",
-  "identificationCriteria": "Statute covers persons three through 21 who need special education for the disability\nNo local criteria in statute; identification follows federal mandates",
+  "identificationCriteria": "No local criteria in statute; identification follows federal mandates\nStatute covers persons three through 21 who need special education for the disability",
   "assessments": "",
   "multilingualProvision": "ASDOE publishes the procedural safeguards notice in Samoan as well as English",
   "referralPathway": "Director sets identification policy with other agencies; statute fixes no timeline",
   "serviceModel": "One Division of Special Education inside ASDOE supervises all programmes\nSpeech language pathology may be counted as special education, not a related service\nRelated services take their meaning from federal rules, not territorial ones",
   "legalEntitlement": "American Samoa Special Education Act of 2000 is the territorial entitlement\nFAPE rests on the territory's own constitutional duty as well as IDEA\nSuspended or expelled children keep the entitlement",
-  "funding": "ASCA 16.1606 requires at least the per-child amount budgeted for non-disabled children\nDepartment may apply for, administer, receive and expend federal aid for the programme",
+  "funding": "Department may apply for, administer, receive and expend federal aid for the programme\nASCA 16.1606 requires at least the per-child amount budgeted for non-disabled children",
   "workforce": "Health licensing rule 31.0421 lists licensed professions; speech-language pathology is absent\nDirector of Special Education must be qualified by education, training and experience",
   "dischargeCriteria": "",
   "outcomesEvidence": "Director must report enrolment, location, programmes and funding to the Legislature yearly",
@@ -671,7 +671,44 @@
     "year": 2000,
     "description": "PL 26-33 recasts it as the American Samoa Special Education Act of 2000"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    3
+   ],
+   "multilingualProvision": [
+    1
+   ],
+   "referralPathway": [
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    2
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    2
+   ],
+   "workforce": [
+    3,
+    3
+   ],
+   "outcomesEvidence": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "AT",
@@ -878,7 +915,50 @@
     "year": 2014,
     "description": "Senate Community Affairs References Committee reports on the prevalence of speech, language and communication disorders and the availability and adequacy of speech pathology services in Australia."
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    3,
+    3
+   ],
+   "referralPathway": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "serviceModel": [
+    2,
+    2,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "workforce": [
+    3,
+    4,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -914,7 +994,7 @@
   "identificationCriteria": "Requires a DSM-5 or ICD-10 diagnosis, not teacher judgement\nPlus evidence of impairment in functioning that affects school participation\nPlus a need for significant or extensive adjustments",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "An application may be made at any time during the school year\nFor a student already enrolled in an ACT public school, the school psychologist is contacted\nFor a student not previously enrolled in an ACT public school, the Directorate is contacted\nEndorsement by the principal, an allied health professional and the school psychologist\nSupporting evidence must be supplied with the application form",
+  "referralPathway": "Endorsement by the principal, an allied health professional and the school psychologist\nFor a student already enrolled in an ACT public school, the school psychologist is contacted\nFor a student not previously enrolled in an ACT public school, the Directorate is contacted\nAn application may be made at any time during the school year\nSupporting evidence must be supplied with the application form",
   "serviceModel": "A split system: the Education Directorate and ACT Health run separately\nThe health-side Child Development Service is under-7s and non-NDIS only",
   "legalEntitlement": "Education Act 2004 principle: every child has a right to a high-quality education\nSchool education should make appropriate provision for children with disabilities\nThat provision duty yields to unjustifiable hardship on the education provider\nOn suspension the principal must review the reasonable adjustments in place",
   "funding": "The Student Resource Allocation is the needs-based funding model, in place since 2016\nThe loading allocation for students with disability supports disability education programs\nAllocation turns on the educational setting and on individual student need, per the SCAN\nSchool budgets from the Students with Disability loading are not attached to individual students\nSchools do not have visibility of funding allocations at an individual student level",
@@ -931,7 +1011,57 @@
     "year": 2022,
     "description": "Education Amendment Act 2022 (ACT) inserts s 17N, making principals review a suspended pupil reasonable adjustments"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    2,
+    2,
+    3
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    4,
+    4
+   ],
+   "serviceModel": [
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "funding": [
+    2,
+    2,
+    2,
+    4,
+    4
+   ],
+   "workforce": [
+    1,
+    3,
+    4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    1
+   ],
+   "outcomesEvidence": [
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -986,8 +1116,8 @@
   "referralPathway": "If a child has moderate to high needs, the school may apply for specialist supports\nThe school, not the parent, manages the application process\nThe school submits the application to a group of experts in its local area\nIn South Western Sydney LHD, referrals to the speech pathology service may be made by anyone",
   "serviceModel": "Health-side child speech pathology runs through Local Health Districts, not statewide\nSouth Western Sydney limits the service to children up to Term 2 of kindergarten\nIllawarra Shoalhaven sets no age ceiling but calls its therapy short term\nCriteria differ by district, so one district's rule is not NSW policy",
   "legalEntitlement": "A sharp limit: the language criteria mainly determine Support Class Early Intervention\nMeeting the Language criterion is not a general school-age entitlement",
-  "funding": "Integration funding support pays for extra staff such as teachers or learning support officers\nEligibility names intellectual, physical, mental health, autism, hearing, vision - not language\nA successful access request application means funding may become available for the child",
-  "workforce": "788 headcount in the NSW Health speech pathology workforce in 2021, public sector only\n436 headcount in metropolitan Sydney against 360 outside it, in the same 2021 count\nThe data covers only staff employed under the relevant health professional award",
+  "funding": "Integration funding support pays for extra staff such as teachers or learning support officers\nA successful access request application means funding may become available for the child\nEligibility names intellectual, physical, mental health, autism, hearing, vision - not language",
+  "workforce": "The data covers only staff employed under the relevant health professional award\n788 headcount in the NSW Health speech pathology workforce in 2021, public sector only\n436 headcount in metropolitan Sydney against 360 outside it, in the same 2021 count",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -1004,7 +1134,56 @@
     "year": 2014,
     "description": "Disability Inclusion Act 2014 (NSW) makes every public authority prepare a disability inclusion action plan"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "identificationCriteria": [
+    2,
+    3,
+    4
+   ],
+   "assessments": [
+    1,
+    4,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "serviceModel": [
+    1,
+    3,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    2,
+    2
+   ],
+   "funding": [
+    2,
+    2,
+    4
+   ],
+   "workforce": [
+    1,
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -1041,7 +1220,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "NT policy names 'language/communication disability' as a recognised type\nListed beside intellectual/cognitive, sensory, physical and social/emotional\nBroader than the four NCCD categories used to drive funding",
-  "identificationCriteria": "Coverage needs a disability, or progress likely to suffer without special arrangements\nThe CEO decides a request for special arrangements, within 30 days of receiving it\nThe CEO may seek advice from an officer with specialist knowledge of learning needs\nThe CEO must consult the child and parents and have regard to their expressed wishes",
+  "identificationCriteria": "The CEO decides a request for special arrangements, within 30 days of receiving it\nThe CEO may seek advice from an officer with specialist knowledge of learning needs\nThe CEO must consult the child and parents and have regard to their expressed wishes\nCoverage needs a disability, or progress likely to suffer without special arrangements",
   "assessments": "",
   "multilingualProvision": "Both policy and guidelines were read in full; the finding is absence\nNo provision for speech-language assessment in any Aboriginal language\nThe only interpreter provision in the guidelines concerns sign language\nThis in a jurisdiction where most remote pupils speak an Aboriginal language first",
   "referralPathway": "The family may refer, and others may refer only with the family's consent\nAlice Springs runs a weekly drop-in for occupational therapy, physiotherapy and speech pathology\nThe Darwin Children's Development Team is based in Darwin and does not travel remotely",
@@ -1057,7 +1236,48 @@
     "year": 2015,
     "description": "Education Act 2015 (NT) Part 4 Div 4 creates special arrangements for children with special learning needs"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    3
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "referralPathway": [
+    1,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "funding": [
+    1,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -1101,9 +1321,9 @@
   "serviceModel": "Speech language pathologists are teacher-facing, not a guaranteed therapy service\nThey advise on individual students or build whole-school strategies",
   "legalEntitlement": "Education (General Provisions) Act 2006 requires a ministerial policy defining disability\nSpecial school entry needs the chief executive satisfied the school can cater\nA refusal must come with an information notice given to the applicant\nA dissatisfied recipient may apply to the chief executive for review of the decision",
   "funding": "In 2015, 25% of mainstream disability resourcing followed enrolments weighted by disadvantage\nThe other 75% in 2015 rested on FTE enrolments of students with a verified disability\nSpecial schools got classroom teacher FTE on a fixed ratio, per the 2017 review\nThe 2017 review lists special education services for pupils without a special education program\nSix EAP disability categories were supported at the time of the 2017 review",
-  "workforce": "The 2017 review found delivery mainly through staff allocated to schools and to SEPs\nConsultees pointed to pre-service training as inadequate for the task, in that review\nVerified disability is diagnosed by a medical or other specialist, in the reviewed EAP",
+  "workforce": "Consultees pointed to pre-service training as inadequate for the task, in the 2017 review\nVerified disability is diagnosed by a medical or other specialist, in the reviewed EAP\nThe 2017 review found delivery mainly through staff allocated to schools and to SEPs",
   "dischargeCriteria": "",
-  "outcomesEvidence": "2017 review: pupils with speech-language impairment show no higher absenteeism\nCompared against students without disability, in the same review",
+  "outcomesEvidence": "2017 review: pupils with speech-language impairment show no higher absenteeism\nThe comparison is against students without disability, in the same review",
   "identifiedPrevalence": [],
   "policyHistory": [
    {
@@ -1114,7 +1334,51 @@
     "year": 2022,
     "description": "EAP verification retained only for intellectual disability; Speech-Language Impairment ceases as a verified category"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    4
+   ],
+   "identificationCriteria": [
+    3,
+    3,
+    4
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "serviceModel": [
+    2,
+    2
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "funding": [
+    2,
+    2,
+    2,
+    2,
+    4
+   ],
+   "workforce": [
+    3,
+    3,
+    4
+   ],
+   "outcomesEvidence": [
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -1158,7 +1422,7 @@
   "identificationCriteria": "Entry needs a speech pathologist diagnosis of severe speech or language impairment\nNon-verbal intelligence must be within or above the average range\nExcluded if diagnosed with a significant additional disability or syndrome",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "Talk to your preschool or school; they can arrange access to support services\nA referral may need supporting documents, for example reports from earlier services\nA speech pathologist can refer a child to a preschool speech and language programme\nFor a junior primary class, a departmental speech pathologist and psychologist must recommend\nBefore school, families can mostly self-refer to the local speech pathology service",
+  "referralPathway": "Talk to your preschool or school; they can arrange access to support services\nA speech pathologist can refer a child to a preschool speech and language programme\nBefore school, families can mostly self-refer to the local speech pathology service\nA referral may need supporting documents, for example reports from earlier services\nFor a junior primary class, a departmental speech pathologist and psychologist must recommend",
   "serviceModel": "SA Health and the Department for Education jointly cover children under 18\nEducation typically offers assessment, with limited access to ongoing therapy",
   "legalEntitlement": "Education and Children's Services Act 2019: every child has a right to education\nIts disability definition covers a disorder that makes a person learn differently\nEnrolment may be refused for disability only on unjustifiable hardship to the school\nPrincipals must report disability enrolment refusals to the Minister by 31 May yearly",
   "funding": "Speech and language classes are staffed at one teacher to eight students\nThey also attract 15 support-officer hours a week for those eight",
@@ -1175,7 +1439,47 @@
     "year": 2019,
     "description": "Education and Children's Services Act 2019 (SA) bars refusing school enrolment because a child has a disability"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    2,
+    3,
+    4
+   ],
+   "referralPathway": [
+    1,
+    1,
+    1,
+    4,
+    4
+   ],
+   "serviceModel": [
+    2,
+    3
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "funding": [
+    2,
+    2
+   ],
+   "workforce": [
+    2,
+    2,
+    2,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -1230,7 +1534,7 @@
   "referralPathway": "Referrals to the school speech and language pathologist may come from teachers, staff or parents\nForms come from the school and a parent or guardian must sign the consent form\nIn the south, health-service referral for children is limited to significant feeding needs",
   "serviceModel": "In government schools the department employs speech and language pathologists\nIn the south, publicly funded child therapy comes from St Giles and the department\nPrivate-school pupils in the north west cannot get it through their school",
   "legalEntitlement": "Education Act 2016 principle: every child has a right to education to Year 12\nA principle: administrators will make reasonable provision for children with disabilities\nStatutory disability needs a permanent impairment reducing capacity for communication\nA further principle is State provision of universal access to education",
-  "funding": "Every school gets a base allocation for each NCCD student from Supplementary to Extensive\nAt the Substantial level there are two resource allocation levels, Substantial High and Low\nAt the Extensive level there are three, Extensive High, Extensive Mid and Extensive Low\nThe money follows the student to a new Tasmanian government school if they move\nA Disability Educational Adjustment Moderator works with each government school every year",
+  "funding": "Every school gets a base allocation for each NCCD student from Supplementary to Extensive\nAt the Substantial level there are two resource allocation levels, Substantial High and Low\nAt the Extensive level there are three, Extensive High, Extensive Mid and Extensive Low\nA Disability Educational Adjustment Moderator works with each government school every year\nThe money follows the student to a new Tasmanian government school if they move",
   "workforce": "A national analysis, using modelled ratios rather than a headcount\nTasmania had the lowest ratio of speech pathologists to population in Australia",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -1240,7 +1544,47 @@
     "year": 1992,
     "description": "The model uses the Disability Discrimination Act 1992 definition of disability"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    3,
+    3
+   ],
+   "referralPathway": [
+    1,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "funding": [
+    2,
+    2,
+    2,
+    2,
+    4
+   ],
+   "workforce": [
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -1291,7 +1635,7 @@
   "referralPathway": "The school, with the Student Support Group, decides whether to undertake a profile\nThe initial registration form captures basic student and school information, with no documents\nThe profile is not limited to students eligible for Tier 3 student-level funding\nSupporting information should be existing school documentation showing the adjustments in place\nSchools are recommended to upload a maximum of 15 documents before the meeting",
   "serviceModel": "Speech pathologists sit in multidisciplinary Student Support Services area teams\nThey advise on adjustments and run the Language and Learning Disability Support Program\nFormal assessment for severe language disorder was outsourced to Assessments Australia",
   "legalEntitlement": "Equal Opportunity Act 2010 obliges an educational authority to make reasonable adjustments\nIts disability definition covers a disorder making a person learn more slowly\nUnder the Education and Training Reform Act 2006 parents pay nothing for extra support\nRedress is an application to VCAT, with or without conciliation by the Commission first",
-  "funding": "Tier 3 student-level funding is provided via the school's Student Resource Package\nA profile determines tier 3 allocations for students with complex and high needs\nThe profile is not compulsory and requires consent from the student's parents or carers\nWhere a student attends two schools, one tier 3 allocation is split pro-rata\nThe school receives a School Resource Notification setting out any tier 3 allocation",
+  "funding": "Tier 3 student-level funding is provided via the school's Student Resource Package\nA profile determines tier 3 allocations for students with complex and high needs\nThe profile is not compulsory and requires consent from the student's parents or carers\nThe school receives a School Resource Notification setting out any tier 3 allocation\nWhere a student attends two schools, one tier 3 allocation is split pro-rata",
   "workforce": "Education-funded speech pathologists sit in area-based Student Support Services teams\nThose teams also carry psychologists, social workers and occupational therapists",
   "dischargeCriteria": "",
   "outcomesEvidence": "Severe language disorder was the most frequently rejected PSD category\nAlmost half of all applications in that category were unsuccessful",
@@ -1315,7 +1659,52 @@
     "year": 2025,
     "description": "All Victorian government schools transitioned to Disability Inclusion by Term 1"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    4,
+    4,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    2
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "funding": [
+    2,
+    2,
+    2,
+    2,
+    4
+   ],
+   "workforce": [
+    4,
+    4
+   ],
+   "outcomesEvidence": [
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "AU",
@@ -1380,7 +1769,45 @@
     "year": 2004,
     "description": "Disability Services Amendment Act 2004 (WA) inserts s 28, requiring public authority access and inclusion plans"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    3,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    3,
+    3
+   ],
+   "referralPathway": [
+    1,
+    1,
+    4,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    1
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    2,
+    2
+   ]
+  }
  },
  {
   "countryCode": "AW",
@@ -8526,7 +8953,7 @@
   "terminology": "The 2016 policy defines speech and language impairments as communication disorders\nThe 2018 disability Act never uses the word 'speech' at all\nIts statutory impairment list runs sight, hearing, developmental, learning, mental health",
   "identificationCriteria": "Teachers complete a Student Learning Profile from functional observations\nThat yields an Educational Support Need category informing resourcing levels\nThe FEMIS Disability Disaggregation Toolkit is a general screen, not a language one",
   "assessments": "Source describes special-needs provision generally, never language disorder\nAssessment of special needs is carried out at school level\n2016 policy seeks teacher training in screening and referral of disabilities",
-  "multilingualProvision": "Named provision is sign language and Braille, not spoken language disorder\n2013 Constitution bars discrimination on grounds of primary language (Art. 26.3[a])\nSpecial schools let students learn key skills such as sign language or braille\nBraille and sign language courses are provided by specialist Fiji organizations",
+  "multilingualProvision": "Named provision is sign language and Braille, not spoken language disorder\nSpecial schools let students learn key skills such as sign language or braille\nBraille and sign language courses are provided by specialist Fiji organizations\n2013 Constitution bars discrimination on grounds of primary language (Art. 26.3[a])",
   "referralPathway": "Source describes special-needs provision generally, never language disorder\nKindergarten teachers were to be trained on early identification and referral mechanisms\n2008-18 disability policy links education, health and community rehabilitation staff\nPartnerships between regular and special schools are expected, for referral support\nA protocol for those services to target children with disabilities is to be developed",
   "serviceModel": "The Frank Hilton Organisation runs a speech pathology unit in Suva\nIt serves children with moderate to severe communication and speech delays\nThe regional review records early intervention as a priority but limited in practice",
   "legalEntitlement": "The Act gives a right to early identification and intervention as appropriate\nIt contains no speech, language or communication impairment category",
@@ -8572,7 +8999,61 @@
     "year": 2018,
     "description": "The 2018 disability Act never uses the word 'speech' at all"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    3
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2
+   ],
+   "assessments": [
+    1,
+    1,
+    1
+   ],
+   "multilingualProvision": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "referralPathway": [
+    1,
+    1,
+    2,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    4,
+    4
+   ],
+   "legalEntitlement": [
+    2,
+    2
+   ],
+   "funding": [
+    2,
+    2
+   ],
+   "workforce": [
+    1,
+    3,
+    4
+   ],
+   "outcomesEvidence": [
+    1,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "FM",
@@ -8679,7 +9160,55 @@
     "year": 2016,
     "description": "Ratified the 2006 UN Convention on the Rights of Persons with Disabilities"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    2
+   ],
+   "identificationCriteria": [
+    3,
+    3,
+    4
+   ],
+   "assessments": [
+    1,
+    1,
+    1
+   ],
+   "multilingualProvision": [
+    1
+   ],
+   "referralPathway": [
+    1,
+    1
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    1
+   ],
+   "funding": [
+    1,
+    1,
+    1
+   ],
+   "workforce": [
+    1,
+    1
+   ],
+   "dischargeCriteria": [
+    1,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "FO",
@@ -10497,7 +11026,7 @@
   "referralPathway": "Child Find must identify, locate and evaluate all such children residing on Guam\nIt reaches private-school pupils, whatever the severity of their disabilities\nChildren suspected of a disability and needing services are referred for evaluation\nReferral, evaluation and eligibility policy is set by the Guam Education Board",
   "serviceModel": "Instruction is to be in the least restrictive environment for identified children\nDiagnostic speech and hearing services may be given in the non-public school attended\nSpeech and hearing services are auxiliary services the education department may supply\nSpecial classes only where regular class with supplementary aids cannot work",
   "legalEntitlement": "Free appropriate public education is due to children with disabilities aged three to 21\nEarly intervention services are to be made available from birth through age two\n18 to 21s in adult custody never identified and without an IEP are excepted",
-  "funding": "The Board prescribes the standards under which facilities are furnished or services purchased\nThe chapter requires appropriate special education teachers and aides to be ensured\nThe department must ensure appropriate educational materials and supplies\nEducational agencies are authorized to accept gifts, donations or aid from private agencies",
+  "funding": "Educational agencies are authorized to accept gifts, donations or aid from private agencies\nThe Board prescribes the standards under which facilities are furnished or services purchased\nThe chapter requires appropriate special education teachers and aides to be ensured\nThe department must ensure appropriate educational materials and supplies",
   "workforce": "10 GCA 121802 requires a current ASHA Certificate of Clinical Competence to be licensed\nOne licensed SLP may supervise no more than five assistants at a time",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -10540,7 +11069,43 @@
     "year": 2020,
     "description": "P.L. 35-080 amends the supervisor filing rules for SLP assistants"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1
+   ],
+   "identificationCriteria": [
+    3,
+    3
+   ],
+   "referralPathway": [
+    1,
+    1,
+    3,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    2,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "workforce": [
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "GW",
@@ -13669,7 +14234,56 @@
     "year": 2018,
     "description": "2018-21 National Disability Policy and Action Plan aims to strengthen the special needs school"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "multilingualProvision": [
+    1,
+    1
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "serviceModel": [
+    1,
+    4
+   ],
+   "legalEntitlement": [
+    2,
+    3
+   ],
+   "funding": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "workforce": [
+    1,
+    3,
+    3
+   ],
+   "outcomesEvidence": [
+    1,
+    1,
+    1,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "KM",
@@ -15424,7 +16038,7 @@
   "identificationCriteria": "Source describes special-needs provision generally, never language disorder\nSpecial Education Program aims to identify, locate and evaluate children with disabilities",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "Source describes special-needs provision generally, never language disorder\nHealth ministry treats disability while schools run special education support\nMinistry of Health services cover children and young people aged 0 to 21\nMinistry also provides visits to sick children in their home\nSpecial Education Program sits under the Ministry of Education, Sports and Training",
+  "referralPathway": "Source describes special-needs provision generally, never language disorder\nHealth ministry treats disability while schools run special education support\nMinistry also provides visits to sick children in their home\nSpecial Education Program sits under the Ministry of Education, Sports and Training\nMinistry of Health services cover children and young people aged 0 to 21",
   "serviceModel": "Manual options: part-time direct instruction in the regular class, or a pull-out programme\nGiven by a speech and language therapist; audiology through the Health Ministry\nZero speech-language pathologists reported to IDEA Part B personnel, 2023-24\nSet by the PSS procedures manual, not by the 2013 Act; speech therapy is a related service",
   "legalEntitlement": "IDEA Part B grant on State-like terms, 20 USC 1411(b)(1)\nThe statute requires eligibility to be established as a State would",
   "funding": "Source describes special-needs provision generally, never language disorder\nDisability Coordination Office helps the disabled persons organization access funding",
@@ -15443,7 +16057,49 @@
     "year": 2013,
     "description": "Marshall Islands Public School System Act 2013 (14 MIRC Ch.3) defines special education and related services for children with disabilities"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    3
+   ],
+   "identificationCriteria": [
+    1,
+    1
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2
+   ],
+   "funding": [
+    1,
+    2
+   ],
+   "workforce": [
+    1,
+    1
+   ],
+   "outcomesEvidence": [
+    1,
+    2,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "MK",
@@ -15814,10 +16470,10 @@
   "identificationCriteria": "Disorder must adversely affect educational performance and need special education\nCommunication development is one of the delay areas CNMI counts",
   "assessments": "No instrument is named in regulation; tests must be valid, reliable, non-discriminatory\nAssessment must cover communicative status where that is a suspected area",
   "multilingualProvision": "Assessments given in the native language unless clearly not feasible\nMaterials for limited English proficient children must not measure English skill\nPSS improvement plan names Chamorro and Carolinian family language needs",
-  "referralPathway": "A parent of a child or the school system may request an initial evaluation\nThe evaluation must be completed within 60 days of receipt of parental consent\nThe referral packet carries speech and language screenings and RtI data",
+  "referralPathway": "A parent of a child or the school system may request an initial evaluation\nThe referral packet carries speech and language screenings and RtI data\nThe evaluation must be completed within 60 days of receipt of parental consent",
   "serviceModel": "SLP services may count as special education rather than a related service\nServices plans cover parentally placed private school children too",
   "legalEntitlement": "Entitlement is NMIAC chapter 60-50 read with IDEA Part B, not a separate CNMI act",
-  "funding": "FAPE is provided at public expense, under public supervision and direction, without charge\nAt no cost means without charge, though fees normally charged to all pupils may still apply\nA necessary residential placement, room and board included, is at no cost to parents\nState and local funds may supplement, but never supplant, the proportionate federal amount\nFor Part C, CNMI has no system of payments and does not bill parents' private insurance",
+  "funding": "FAPE is provided at public expense, under public supervision and direction, without charge\nAt no cost means without charge, though fees normally charged to all pupils may still apply\nA necessary residential placement, room and board included, is at no cost to parents\nFor Part C, CNMI has no system of payments and does not bill parents' private insurance\nState and local funds may supplement, but never supplant, the proportionate federal amount",
   "workforce": "Related services staff must hold CNMI-recognised licences for their discipline\nLicences may not be waived on an emergency, temporary or provisional basis\nAssistant grade needs a bachelor's with 24 semester hours in speech and language",
   "dischargeCriteria": "",
   "outcomesEvidence": "PSS reports preschool outcome B on early language and communication to OSEP",
@@ -15852,7 +16508,54 @@
     "year": 2023,
     "description": "Speech-language pathologist and audiologist licensing rules adopted under Title 185-10"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    3
+   ],
+   "identificationCriteria": [
+    3,
+    3
+   ],
+   "assessments": [
+    1,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    3,
+    3
+   ],
+   "referralPathway": [
+    1,
+    3,
+    4
+   ],
+   "serviceModel": [
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1
+   ],
+   "funding": [
+    1,
+    3,
+    3,
+    3,
+    4
+   ],
+   "workforce": [
+    3,
+    3,
+    3
+   ],
+   "outcomesEvidence": [
+    1
+   ]
+  }
  },
  {
   "countryCode": "MR",
@@ -16553,14 +17256,14 @@
   "stubNote": "",
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "terminology": "Troubles du langage is the term used in New Caledonia's own school deliberations\nDysphasie is named a trouble du neurodeveloppement in the territorial health nomenclature\nThat nomenclature keeps dyslexie and dysorthographie with written, not oral, language",
-  "identificationCriteria": "Cover turns on a substantial, lasting alteration of one or more functions\nThe CEJH-NC fixes an incapacity rate against a government-set guide bareme\nCommission decisions rest on multidisciplinary evaluations by the education teams",
+  "identificationCriteria": "The CEJH-NC fixes an incapacity rate against a government-set guide bareme\nCommission decisions rest on multidisciplinary evaluations by the education teams\nCover turns on a substantial, lasting alteration of one or more functions",
   "assessments": "",
   "multilingualProvision": "",
-  "referralPathway": "The head of the school the child attends may refer the case to the commission\nThe commission file holds medical, social, school and psychological information\nThe CCEP proposes, the territorial CEJH-NC decides in last resort\nFor therapy the prescriber receives the orthophoniste's report and proposals",
+  "referralPathway": "The head of the school the child attends may refer the case to the commission\nThe CCEP proposes, the territorial CEJH-NC decides in last resort\nFor therapy the prescriber receives the orthophoniste's report and proposals\nThe commission file holds medical, social, school and psychological information",
   "serviceModel": "In school, enseignants specialises give aid, expressly for pupils with troubles du langage\nOrthophonie is a nomenclature act of its own in New Caledonia, keyed AMO\nA bilan orthophonique requires a medical prescription before any reeducation\nOrdinary class first, under a projet personnalise d'education et de scolarisation amenagee",
   "legalEntitlement": "No child is to be left without a schooling and educational solution\nEvery child in a handicap situation has a right to assessment of skills and needs",
-  "funding": "CAFAT reimburses orthophonie acts at 50% under the moyen risque (délibération 280 of 2001)\nThe rate rises to 100% only under Longue Maladie or sick leave beyond three months\nReimbursement runs on the convention tariffs and the conditions set out in the convention\nThe insured must advance the fees and then present the paid invoice for reimbursement",
-  "workforce": "About 110 orthophonistes in New Caledonia, per the union representing them (July 2024)\nThe union president said the territory would soon lose more than 10% of them (July 2024)\nIn some districts the wait for an orthophoniste appointment can reach a year (2024)\nThe diploma must first be registered with the DASS-NC before conventionnement",
+  "funding": "CAFAT reimburses orthophonie acts at 50% under the moyen risque (délibération 280 of 2001)\nThe insured must advance the fees and then present the paid invoice for reimbursement\nThe rate rises to 100% only under Longue Maladie or sick leave beyond three months\nReimbursement runs on the convention tariffs and the conditions set out in the convention",
+  "workforce": "About 110 orthophonistes in New Caledonia, per the union representing them (July 2024)\nThe union president said the territory would soon lose more than 10% of them (July 2024)\nThe diploma must first be registered with the DASS-NC before conventionnement\nIn some districts the wait for an orthophoniste appointment can reach a year (2024)",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -16589,7 +17292,47 @@
     "year": 2021,
     "description": "Deliberation 127 of 13 January 2021 reorganises primary education and seats specialist teachers on school councils"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    3
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    3
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    3
+   ],
+   "serviceModel": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "legalEntitlement": [
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    2,
+    3,
+    3
+   ],
+   "workforce": [
+    1,
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "NE",
@@ -17182,12 +17925,12 @@
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "The word 'speech' appears nowhere in the policy or the Education Act\nCommunication difficulties are folded into intellectual, only where the result is neurological\nThe policy's four categories are physical, mental, intellectual and sensory",
+  "terminology": "The word 'speech' appears nowhere in the policy or the Education Act\nThe policy's four categories are physical, mental, intellectual and sensory\nCommunication difficulties are folded into intellectual, only where the result is neurological",
   "identificationCriteria": "Source describes special-needs provision generally, never language disorder\nHealth practitioners notify a child's disability to parents under Education Act Art. 31\nWith parent consent, notice passes to director of medical services and the principal\nMany children go unidentified: parental resistance, insufficient resources and equipment",
   "assessments": "Source describes special-needs provision generally, never language disorder\n2017 Inclusive Education Policy and Guidelines cover screening, referral and assessment\nDelivered through teacher training and assistance programmes defining roles\n2008-13 strategic plan prioritised training in disability assessment",
   "multilingualProvision": "",
   "referralPathway": "A multi-disciplinary approach using health, education and other professionals\nThe policy seeks a memorandum between Education and Health on shared personnel",
-  "serviceModel": "No speech and language service is named in any cited Nauru source\nShared specialists listed are psychologists, OTs, physios, audiologists and doctors\n'speech' returns 0 hits in the Act, the inclusive education policy and the PDF review\nCommunication difficulties appear only as a sub-item under Intellectual needs",
+  "serviceModel": "No speech and language service is named in any cited Nauru source\n'speech' returns 0 hits in the Act, the inclusive education policy and the PDF review\nShared specialists listed are psychologists, OTs, physios, audiologists and doctors\nCommunication difficulties appear only as a sub-item under Intellectual needs",
   "legalEntitlement": "Inclusive education is mandated by Part 11 of the Education Act 2011\nThe Act requires teachers trained in augmentative and alternative communication\nThe Minister must establish a special education centre — mandatory, unlike Kiribati",
   "funding": "",
   "workforce": "Speech pathologists are absent from the policy's list of shared specialists\nIt lists psychologists, occupational therapists, physiotherapists and audiologists",
@@ -17223,7 +17966,50 @@
     "year": 2017,
     "description": "Inclusive Education Policy and Guidelines cover screening, referral, assessment and individual plans"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    3
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "assessments": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "referralPathway": [
+    2,
+    2
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3
+   ],
+   "workforce": [
+    1,
+    1
+   ],
+   "outcomesEvidence": [
+    1,
+    1,
+    2
+   ]
+  }
  },
  {
   "countryCode": "NZ",
@@ -17281,12 +18067,12 @@
   "assessments": "Source describes special-needs provision generally, never language disorder\n2016-20 education plan aimed to strengthen data use to improve individual assessment",
   "multilingualProvision": "Not established from the sources consulted for this entry — no protocol for assessing children who speak more than one language was identified in the Ministry of Education material reviewed. How this interacts with te reo Māori, Māori-medium education and Pasifika languages is the obvious question for a contributor to answer. If you work in this system, this is exactly the field to fill in.",
   "referralPathway": "Through the Ministry of Education's learning support pathway\nORS applications can be made at any time from age 4 years 8 months\nThe Communication Service covers children aged roughly five to eight",
-  "serviceModel": "Education-led: SLTs are employed by the Ministry of Education\nWorking with pupils with severe communication needs\nAcross speech, fluency, voice, resonance and language\nORS resourcing can buy in SLT, psychology, occupational therapy or physiotherapy",
+  "serviceModel": "Education-led: SLTs are employed by the Ministry of Education\nORS resourcing can buy in SLT, psychology, occupational therapy or physiotherapy\nPupils with severe communication needs across speech, fluency, voice, resonance and language",
   "legalEntitlement": "ORS is a resourcing scheme with eligibility criteria\nNot an individually enforceable right to a named quantum of therapy\nIt provides resources to the school for pupils with high and very high needs\nAcross learning, vision, hearing, mobility, language and social communication",
   "funding": "Publicly funded through the education system\nORS is the principal vehicle for pupils with the highest needs",
   "workforce": "Source describes special-needs provision generally, never language disorder\nInitial teacher education programmes were to be reviewed and monitored by end of 2020\nTeachers Council reported willing to add inclusive education focus to future ITE\nLate 2015: expert advisory group recommended revising professional learning provision",
   "dischargeCriteria": "",
-  "outcomesEvidence": "Source describes special-needs provision generally, never language disorder\nERO reviews and reports on quality in all schools and publishes national reports\nERO outcome indicators cover students' confidence in identity, language and culture\n2011 Independent Monitoring Mechanism qualitatively monitors CRPD implementation\n2017 Diversity and Inclusion framework sets quarterly diversity targets",
+  "outcomesEvidence": "Source describes special-needs provision generally, never language disorder\nERO outcome indicators cover students' confidence in identity, language and culture\nERO reviews and reports on quality in all schools and publishes national reports\n2011 Independent Monitoring Mechanism qualitatively monitors CRPD implementation\n2017 Diversity and Inclusion framework sets quarterly diversity targets",
   "identifiedPrevalence": [],
   "policyHistory": [
    {
@@ -17313,7 +18099,58 @@
     "year": 2020,
     "description": "Education and Training Act entitles domestic students to free education and special education under 21"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    3,
+    3,
+    3,
+    3
+   ],
+   "assessments": [
+    1,
+    1
+   ],
+   "referralPathway": [
+    2,
+    4,
+    4
+   ],
+   "serviceModel": [
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    2
+   ],
+   "workforce": [
+    1,
+    3,
+    3,
+    3
+   ],
+   "outcomesEvidence": [
+    1,
+    1,
+    2,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "OM",
@@ -17531,7 +18368,46 @@
     "year": 2017,
     "description": "Loi du pays 2017-15 of 13 July 2017 enacts the education charter, which commits to admitting disabled children"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    2,
+    2,
+    3
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2
+   ],
+   "serviceModel": [
+    1,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    2
+   ],
+   "funding": [
+    1,
+    2,
+    3,
+    3,
+    3
+   ],
+   "workforce": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "PG",
@@ -17606,7 +18482,53 @@
     "year": 2015,
     "description": "2015-19 National Education Plan reaffirms the goal of inclusive education for all"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    4,
+    4
+   ],
+   "assessments": [
+    1,
+    1
+   ],
+   "multilingualProvision": [
+    3,
+    3
+   ],
+   "referralPathway": [
+    1,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    2
+   ],
+   "legalEntitlement": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    2
+   ],
+   "workforce": [
+    1,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "PH",
@@ -18290,13 +19212,13 @@
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "terminology": "The statute counts speech pathology as special education\nRPPL 3-9 includes speech pathological services within the definition itself\nUS federal law instead treats it as a related service",
-  "identificationCriteria": "The procedural manual sets out no eligibility criteria for any disability category\nEligibility rests on the school team applying the policy category list",
+  "terminology": "The statute counts speech pathology as special education\nUS federal law instead treats it as a related service\nRPPL 3-9 includes speech pathological services within the definition itself",
+  "identificationCriteria": "Eligibility rests on the school team applying the policy category list\nThe procedural manual sets out no eligibility criteria for any disability category",
   "assessments": "Source describes special-needs provision generally, never language disorder\nSchools implement protocols to identify, locate and evaluate children in need\nSpecial education programme of the Ministry of Education coordinates identification\nAnnual IEP developed and approved by a team of parents, teachers and principal",
   "multilingualProvision": "Source describes special-needs provision generally, never language disorder\nConstitution: Palauan, Sonsorolese and Tobian are national languages\nPalauan and English are official; Congress determines use of each, Art. 13 s.1\n2006-16 Education Master Plan: local languages in curriculum, English literacy",
   "referralPathway": "Source describes special-needs provision generally, never language disorder\nInter-agency task force led by Ministry of Health coordinates children's services\nTask force spans special education, counselling, health and Palau Parents Network\nServices sited within the school the child would attend if not disabled",
   "serviceModel": "Statute puts services in regular classrooms and regular schools, 22 PNCA s 402\nZero speech-language pathologists reported to IDEA Part B personnel, 2023-24 (grantee filing)\nOne school-age child in the speech or language impairment category, 2024-25\nSpeech pathological services sit inside the definition of special education, s 403(s)",
-  "legalEntitlement": "RPPL 3-9 of 1989, Programs and Services for Handicapped Children Act\nFree appropriate public education from birth through 21\nIDEA Part B grant on State-like terms, 20 USC 1411(b)(1)",
+  "legalEntitlement": "RPPL 3-9 of 1989, Programs and Services for Handicapped Children Act\nIDEA Part B grant on State-like terms, 20 USC 1411(b)(1)\nFree appropriate public education from birth through 21",
   "funding": "RPPL 3-9 pegs funding to the last year of eligibility under the 1975 US Act",
   "workforce": "An official US federal return, not a survey estimate\nZero speech-language pathologists reported for 2023-24\nSpeech is excluded from the services special education teachers provide",
   "dischargeCriteria": "",
@@ -18357,7 +19279,60 @@
     "year": 2015,
     "description": "2015-20 National Disability Inclusive Policy drafted to implement CRPD commitments"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    3
+   ],
+   "assessments": [
+    1,
+    1,
+    1,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    3,
+    3,
+    3
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    1,
+    2
+   ],
+   "funding": [
+    2
+   ],
+   "workforce": [
+    1,
+    1,
+    4
+   ],
+   "outcomesEvidence": [
+    1,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "PY",
@@ -19010,7 +19985,7 @@
   "referralPathway": "Source describes special-needs provision generally, never language disorder\nCommunity-based rehabilitation used across a widespread rural population\nNational learning support resource centres back regular schools, set up in 2014\nNLSRC committee spans education, health, disabled people's org and school authorities",
   "serviceModel": "Health ministry community-based rehabilitation assesses children in the community",
   "legalEntitlement": "Education Act 2023 passed 12 October 2023 and assented 3 November 2023\nIt repeals the Education Act, Cap. 69\nThe Act contains no definition of disability or special needs\nIts equity clause covers economic, social, physical and mental disadvantage",
-  "funding": "Source describes special-needs provision generally, never language disorder\nBethesda Vocational Training Centre funded by Ministry of Health and Medical Services\nBethesda covers fees and transport for students residing outside the capital\n2012 grants guidelines base allocation on the data schools report",
+  "funding": "Source describes special-needs provision generally, never language disorder\nBethesda Vocational Training Centre funded by Ministry of Health and Medical Services\n2012 grants guidelines base allocation on the data schools report\nBethesda covers fees and transport for students residing outside the capital",
   "workforce": "Source describes special-needs provision generally, never language disorder\nSINU offers community-based rehabilitation degree and special education programmes\nDistance and flexible learning modes used to widen access to those courses\nRed Cross and Bethesda also train teachers, including in sign language",
   "dischargeCriteria": "",
   "outcomesEvidence": "Source describes special-needs provision generally, never language disorder\nUNICEF barrier to Education Study reports education for disabled children is limited\nMost rural children with disabilities out of school through limited accessibility",
@@ -19072,7 +20047,64 @@
     "year": 2023,
     "description": "The Education Act 2023 sealed copy is an image-only scan with no text layer"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    3,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    3,
+    3
+   ],
+   "assessments": [
+    1,
+    1,
+    1
+   ],
+   "multilingualProvision": [
+    3,
+    3,
+    3,
+    3
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "serviceModel": [
+    1
+   ],
+   "legalEntitlement": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    1,
+    2,
+    3
+   ],
+   "workforce": [
+    1,
+    3,
+    3,
+    3
+   ],
+   "outcomesEvidence": [
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "SC",
@@ -21028,7 +22060,53 @@
     "year": 2019,
     "description": "Ministry of Education and Training Corporate Plan and Budget 2019/20-2021/22, aiming at an M and E system"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "assessments": [
+    1,
+    1,
+    1
+   ],
+   "referralPathway": [
+    2
+   ],
+   "serviceModel": [
+    2,
+    2,
+    2,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2
+   ],
+   "funding": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "workforce": [
+    1
+   ],
+   "outcomesEvidence": [
+    1,
+    3,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "TR",
@@ -21275,7 +22353,57 @@
     "year": 2016,
     "description": "2016-20 Tuvalu National Human Rights Action Plan on curriculum and education budget allocation"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "assessments": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "serviceModel": [
+    1,
+    1
+   ],
+   "legalEntitlement": [
+    1,
+    1
+   ],
+   "funding": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "workforce": [
+    1,
+    1,
+    3
+   ],
+   "outcomesEvidence": [
+    1,
+    1,
+    2,
+    3
+   ]
+  }
  },
  {
   "countryCode": "TW",
@@ -25655,7 +26783,65 @@
     "year": 2025,
     "description": "Inclusive Education and Training Policy 2025–2030 launched, directing the ministry to lead development of a Sign Language of Vanuatu; the policy text itself could not be retrieved and this rests on a peer-reviewed account"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    3,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    4
+   ],
+   "assessments": [
+    1,
+    1,
+    1,
+    4,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    3,
+    3,
+    3,
+    3
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "serviceModel": [
+    2,
+    4,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "funding": [
+    4
+   ],
+   "workforce": [
+    1,
+    3,
+    3
+   ],
+   "outcomesEvidence": [
+    1,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "WF",
@@ -25689,7 +26875,38 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "identificationCriteria": [
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2
+   ],
+   "serviceModel": [
+    1,
+    1,
+    4
+   ],
+   "legalEntitlement": [
+    1
+   ],
+   "funding": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "workforce": [
+    1,
+    4,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "WS",
@@ -25770,7 +26987,57 @@
     "year": 2016,
     "description": "2016/17-2019/20 development strategy names quality education and training a main priority"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    2,
+    2,
+    2,
+    4
+   ],
+   "assessments": [
+    1,
+    1,
+    1
+   ],
+   "referralPathway": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "serviceModel": [
+    2,
+    2
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    1
+   ],
+   "workforce": [
+    1,
+    1,
+    3
+   ],
+   "outcomesEvidence": [
+    1,
+    2,
+    3,
+    3
+   ]
+  }
  },
  {
   "countryCode": "YE",

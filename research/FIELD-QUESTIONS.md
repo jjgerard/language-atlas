@@ -305,6 +305,66 @@ answer is that no comparison group was used. Micronesia gives the same shape
 from the other side: "The whole cohort is in the majority-language condition,
 so no gap is measured".
 
+## The source decides, not the country — now shown twice
+
+`dld.workforce` q2 asks for a ratio to POPULATION and had been answered twice in
+six batches, by Italy and Sweden. Oceania adds THREE at once: French Polynesia
+("18 practitioners per 100,000 inhabitants"), South Australia ("48-54 speech
+pathologists per 100,000") and Tasmania ("the lowest ratio of speech
+pathologists to population in Australia").
+
+Two of the three come from the same kind of source — a professional
+association's modelled national analysis — and that is the point. It is the
+same lesson Luxembourg taught on `multilingualProvision`, where the only unit
+answering q4 was the only one whose source was a test battery rather than a
+survey or a statute.
+
+**So for several of these near-never questions the defect is not in the
+question. It is that the research has not routinely gone to the one source type
+that can answer it.** A survey of practitioners answers who and how many; a
+statute answers what is owed; only a professional association's workforce
+analysis answers a ratio to population, and only a test battery answers whether
+norms exist. The remedy is to brief for the source, and that is a cheaper fix
+than changing a field.
+
+## Oceania, dld: two more, and a field that is 0% twice over
+
+**`assessments` q2 and q3 are 0% of 13 Oceanian units.** Not one says which
+languages an instrument exists in, or whether its norms are local. q1 reads
+100% but is largely filled with WHO assesses and WHERE rather than a named
+instrument — and two units say why in their own words: New South Wales "names no
+instrument, only a required property of the test", and the Northern Marianas
+record that "No instrument is named in regulation". A field whose first question
+is answered by describing something else is not really answered at all.
+
+**`multilingualProvision` picks up two more kinds of content it does not ask
+for.** American Samoa's only bullet is the procedural-safeguards notice
+published in Samoan — parent-facing documentation, not assessment. Palau's and
+Solomon Islands' fields are national language-and-medium-of-instruction law.
+Neither is about a child being assessed, which is what the field asks.
+
+**And the placement finding reaches a third field.** `identificationCriteria`
+carries placement content on Papua New Guinea and Tonga, as it did on Belarus
+and the Isle of Man — so placement now has no home in `referralPathway`,
+`identificationCriteria` or `serviceModel`, while turning up in all three.
+
+## Counter-examples worth as much as the patterns
+
+`dld.referralPathway` q4 is answered by half the Oceanian units — the Northern
+Marianas "within 60 days of receipt of parental consent", New Zealand "from age
+4 years 8 months", Western Australia's annual closing dates. Well above the
+near-never fields, and a reminder that this file's list is not uniform.
+
+`legalEntitlement` q4, redress, gets a clean four: the Northern Territory's
+tribunal review where the parent bears no costs, Queensland's information notice
+and chief-executive review, Victoria's VCAT, Western Australia's written
+application to the CEO.
+
+And the Australian Capital Territory is only the SECOND unit anywhere with a
+real `dischargeCriteria` — a mandatory two-yearly review for language disorder
+specifically, plus a review on entry to high school. On a field filled for 2 of
+28 units here and 17 of 210 overall.
+
 ## The counter-examples, and what they change
 
 A question almost nobody answers might be a bad question, or it might be a good
