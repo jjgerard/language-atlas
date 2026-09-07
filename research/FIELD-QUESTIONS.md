@@ -40,6 +40,26 @@ general curriculum", which is discharge content. `dischargeCriteria` and
 fills, whose content turns up in its neighbours, is the signature of a question
 asked in the wrong place.
 
+## The convention itself: a hedge has nowhere to go
+
+Slots must be NON-DECREASING, and the brief asks for a qualifying hedge FIRST
+where dropping it would mislead. Those two rules collide: a whole-field hedge
+answers none of the four questions, but the only slot it can occupy is 1.
+
+One dld batch of nine countries put **25 bullets** in slot 1 that way -- the
+COST IS1406 survey line ("Practitioner perceptions, not policy"), the funding
+equivalent, and the LITMUS line ("Records that the instrument exists — not that
+any service here uses it"). Every one is doing exactly what the brief asks and
+none of them answers question 1.
+
+This matters beyond tidiness, because it is the reason `progress.js` reports
+that question 1 is answered nearly always. Some unknown share of slot 1 is
+hedges. A regex over the whole atlas finds only 16 of them, which says the
+pattern is undetectable programmatically rather than rare -- the hedges take
+too many forms to match. So the depth figures should be read as an upper bound
+on question 1, and the honest fix is a slot 0 for "this qualifies the whole
+field", which the non-decreasing rule would then place first automatically.
+
 ## eal
 
 **`bilingualEducationNotes` has no question for "is this aimed at these pupils
@@ -88,6 +108,38 @@ accident.
 usually a compulsory-language fact carried over from the `fl` map's territory
 rather than anything about newcomers. Ireland is the only unit whose
 `l3Support` answers questions 1, 2 and 3 together.
+
+## dld, second batch
+
+**`multilingualProvision` has no question about the language of INTERVENTION,
+and this is the most systematic mismatch found so far -- 9 of 9 units.**
+Question 1 asks only whether a child can be ASSESSED in a language they speak,
+yet every unit carries a paired "Intervention: mainstream only X%" bullet.
+Tagged 1 on all nine for want of anywhere else. Question 4, about norms for
+bilingual children, is unanswered everywhere.
+
+**`serviceModel` question 4 asks "tiered or universal" and gets inequality of
+ACCESS instead** -- 7 units carry "Access shaped by: cost to parents 82%,
+income level 64%, urban/rural 62%", which is about who gets served rather than
+how provision is structured.
+
+**`workforce` has no question about composition or caseload.** Spain's
+"logopedas were the most female of the health professions, at 93.0%", Croatia's
+"97.7% female" and "Preschool children aged 3-7 the main caseload for 63.2%" are
+none of them a headcount, a ratio, a route or a location.
+
+**`assessments` question 1 asks for ROUTINE USE and the LITMUS entries cannot
+answer it.** All five carry "Records that the instrument exists — not that any
+service here uses it". Question 3, whether the norms are local, is answered only
+by Spain; the others offer sensitivity and specificity, which is a different
+property of an instrument.
+
+And all four patterns from the first dld batch recurred exactly: `terminology`
+recognition figures on three more units, `referralPathway` placement content on
+two more, `workforce` giving a within-service staffing ratio rather than a ratio
+to population, and `dischargeCriteria` and `outcomesEvidence` empty on all nine.
+Four patterns found on eight countries and confirmed on nine more is no longer a
+sample.
 
 ## Related
 

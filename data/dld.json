@@ -5729,15 +5729,15 @@
   "by": "",
   "inst": "",
   "source": "seed",
-  "terminology": "“narušení jazykových schopností”, impairment of language abilities (IS1406 survey translation)\nCzech version asks “Co je porucha jazykových schopností (language impairment)?”\nEnglish “language impairment” is kept in brackets beside the Czech heading\nPrimary/secondary split retained: “primární, nebo sekundární”",
+  "terminology": "“narušení jazykových schopností”, impairment of language abilities (IS1406 survey translation)\nCzech version asks “Co je porucha jazykových schopností (language impairment)?”\nPrimary/secondary split retained: “primární, nebo sekundární”\nEnglish “language impairment” is kept in brackets beside the Czech heading",
   "identificationCriteria": "School counselling facility issues report and recommendation after assessing needs\nRecommendation rests mainly on the examination conclusions set out in that report\nResults are normally not to be older than six months on the day of the request",
   "assessments": "",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 53 (Law et al., 2020)\nAssessment: mainstream only 70%, mother tongue only 19%, mother tongue if different 10%\nIntervention: mainstream only 74%, mother tongue 14%\nInterpreters sometimes used — assessment 69%, intervention 68%, counselling 72%\nPractitioner training: optional 29%, none 14%, unsure 52% (n = 63)",
-  "referralPathway": "School reviews first-degree support after three months against the goals set\nPupil or legal guardian may approach the counselling facility on their own initiative\nReport and recommendation due 30 days after assessment, 3 months from the request\nSecond to fifth degree measures need the recommendation and informed consent",
+  "referralPathway": "Pupil or legal guardian may approach the counselling facility on their own initiative\nSchool reviews first-degree support after three months against the goals set\nReport and recommendation due 30 days after assessment, 3 months from the request\nSecond to fifth degree measures need the recommendation and informed consent",
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 134 from Czechia (Law et al., 2020)\nSettings: health clinic/centre 40%, hospital 32%, private practice 16%\nSector: public health 77%, state-funded private 21%, private 19%\nDirect intervention most often fortnightly — 55%\nAccess shaped by: linguistic/cultural community 58%, parental education 51%, urban/rural 41%",
   "legalEntitlement": "Skolsky zakon 561/2004: free support measures are a right of pupils with SEN\nSupport measures are the necessary adjustments in education and school services\nSchool must provide the measure without delay once the recommendation arrives\nPupil or guardian may ask for a revision within 30 days of the recommendation",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 134\nFunders: health insurance 65%, state health 46%, family 15%, state education 14%\n10% said a maximum number of sessions applied (n = 133)",
-  "workforce": "Health-sector care is given by a logoped ve zdravotnictvi or a klinicky logoped\nSchool logopeds are employed in schools, school facilities or social service bodies\nSchool logoped route is a master's in special education with state exams in logopedics\nSince 1 July 2019 logopedic services cannot be provided under the trades act",
+  "workforce": "Health-sector care is given by a logoped ve zdravotnictvi or a klinicky logoped\nSchool logoped route is a master's in special education with state exams in logopedics\nSince 1 July 2019 logopedic services cannot be provided under the trades act\nSchool logopeds are employed in schools, school facilities or social service bodies",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -5762,7 +5762,57 @@
     "year": 2016,
     "description": "Decree 27/2016 Sb. set graded levels of support measures and replaced the 2005 special-education decree"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    1,
+    2,
+    3
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    3,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    3,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "DE",
@@ -5855,7 +5905,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "“Sprachentwicklungsstörung (SES)”, abbreviated SES throughout (IS1406 survey translation)\nFor the primary form it gives the German-specific gloss “umschriebene” SES\nSecondary SES is SES mit Komorbiditäten, co-occurring with other conditions\nTranslated by the joint German and Austrian team, Buchmann and Kauschke for Germany",
-  "identificationCriteria": "The procedure for establishing special educational need differs from Land to Land\nParents, the school or other responsible services may apply to start it\nEvidence rests on a child-and-environment analysis of language competence\nSchool and school supervisory authority then decide, with parents involved\nInterdisciplinary work may draw in ENT, phoniatrics, neurology and paediatrics",
+  "identificationCriteria": "The procedure for establishing special educational need differs from Land to Land\nParents, the school or other responsible services may apply to start it\nSchool and school supervisory authority then decide, with parents involved\nEvidence rests on a child-and-environment analysis of language competence\nInterdisciplinary work may draw in ENT, phoniatrics, neurology and paediatrics",
   "assessments": "LITMUS sentence repetition (SRep) task for German\nDeveloped by Cornelia Hamann and Lina Abed Ibrahim (Oldenburg), with Chilla and Ruigendijk\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nExtensively published — Hamann & Abed Ibrahim (2017), and on Arabic- and Turkish-German\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 137 (Law et al., 2020)\nAssessment: mainstream only 77%\nIntervention: mainstream only 83%, two+ languages 10%\nInterpreters sometimes used — assessment 59%, intervention 31%, counselling 74%\nAccess runs through a medical prescription (Scharff Rethfeldt, 2019, on Bremen)",
   "referralPathway": "Speech therapy on the sick funds requires a prescription by a contract doctor\nIndication comes from overall functioning and context, not from the diagnosis alone\nTreatment must begin within 28 calendar days of the prescription\nAuditory processing disorder needs neuropsychological and central hearing diagnostics first",
@@ -5895,7 +5945,66 @@
     "year": 2020,
     "description": "KMK Laendervereinbarung, Art. 12, commits the Laender to inclusion in schooling"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    2,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ],
+   "referralPathway": [
+    1,
+    3,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    3,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "DE",
@@ -6449,7 +6558,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "“sprogforstyrrelse (SF)”, abbreviated SF throughout (IS1406 survey translation)\nHeading reads “Hvad er en sprogforstyrrelse?”, what is a language disturbance\nTitle renders the study as “At forstå sprogforstyrrelser”, understanding language disturbances\nPrepared and piloted by the two Danish representatives of the Action",
-  "identificationCriteria": "Threshold: children whose development requires special consideration or support\nAlso where ordinary-class teaching needs at least nine support lessons weekly\nReferral that is not provisional follows educational-psychological advice\nThe pupil and the parents are consulted before that referral is made",
+  "identificationCriteria": "Referral that is not provisional follows educational-psychological advice\nThe pupil and the parents are consulted before that referral is made\nThreshold: children whose development requires special consideration or support\nAlso where ordinary-class teaching needs at least nine support lessons weekly",
   "assessments": "",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 29 (Law et al., 2020)\nAssessment: mainstream only 59%, both 20%, mother tongue if different 20%\nIntervention: mainstream only 74%, two+ languages 25%\nInterpreters sometimes used — assessment 61%, intervention 13%, counselling 87%\nPractitioner training: optional 34%, none 22%, unsure 34% (n = 32)",
   "referralPathway": "School leader submits the referral to educational-psychological advice\nMunicipal health service may prompt it where it knows of language difficulties\nParents and the pupil may themselves ask for an educational-psychological assessment\nIf parents object, referral only where the school leader finds it absolutely required",
@@ -6473,7 +6582,57 @@
     "year": 2024,
     "description": "Consolidating Order 989/2024 restates the Folkeskole Act duty to give special educational assistance"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    1,
+    1,
+    4
+   ],
+   "identificationCriteria": [
+    2,
+    2,
+    3,
+    3
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    1,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    3,
+    3,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "DM",
@@ -6838,7 +6997,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "\"Arenguline keelepuue\" (Estonian) — \"developmental language disorder\" (COST survey, 2017)\nLowest band — under 35% had heard of it\nAcross the 18 systems, ~60% for language impairment against over 90% for autism",
-  "identificationCriteria": "The 2014 speech-class regulation's wording ran only to 31 January 2018\nUnder it a speech class needed a primary severe speech impairment, diagnosed\nExternal counselling team gives the recommendation, not the school alone\nEnhanced or special support follows that recommendation and written parental consent",
+  "identificationCriteria": "The 2014 speech-class regulation's wording ran only to 31 January 2018\nExternal counselling team gives the recommendation, not the school alone\nEnhanced or special support follows that recommendation and written parental consent\nUnder the 2014 regulation a speech class needed a primary severe speech impairment, diagnosed",
   "assessments": "",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 19 (Law et al., 2020)\nAssessment: mainstream only 42%, mother tongue if different 33%, mother tongue only 24%\nIntervention: mainstream only 50%, two+ languages 33%\nPractitioner training: optional 57%, none 19%, unsure 24% (n = 21)",
   "referralPathway": "Parent or authorised person applies in writing to the external counselling team\nTrigger: general support given by the school did not bring the results wanted\nDecision on the recommendation falls within 30 working days of the application\nInside school, asking to see a support specialist must be met within a week",
@@ -6866,7 +7025,56 @@
     "year": 2018,
     "description": "Minister's Regulation 2 sets the procedure for external counselling team recommendations on support services"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    3
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "referralPathway": [
+    1,
+    3,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    3,
+    3,
+    3
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    3,
+    3,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "EG",
@@ -7109,7 +7317,64 @@
     "year": 2020,
     "description": "Ley Organica 3/2020 (LOMLOE) names developmental language and communication disorders as a support category"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    1,
+    1,
+    3
+   ]
+  }
  },
  {
   "countryCode": "ES",
@@ -8102,7 +8367,7 @@
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 144 from Finland (Law et al., 2020)\nSettings: nursery/kindergarten 42%, mainstream school 38%, health clinic/centre 36%\nSector: private 54%, public health 47%\nDirect intervention most often weekly — 70%\nAccess shaped by: regional variation 71%, urban/rural 61%",
   "legalEntitlement": "Basic Education Act s.30: right to sufficient support as soon as the need appears\nPupils with learning or schooling difficulties may claim part-time special teaching\nIf a non-municipal provider will not arrange it, the home municipality decides\nAppeal against a special support decision goes to the regional state agency",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 144\nFunders: state health 65%\n76% said a maximum number of sessions applied (n = 143)",
-  "workforce": "2,069 on the SLT association's own membership roll, 275 of them students, undated\nOf those members 547 work in wellbeing counties, 372 private, 452 self-employed\nAssociation reports marked regional differences; small places may have no service\nQualification is a university MA in logopedics plus a Valvira licence",
+  "workforce": "2,069 on the SLT association's own membership roll, 275 of them students, undated\nOf those members 547 work in wellbeing counties, 372 private, 452 self-employed\nQualification is a university MA in logopedics plus a Valvira licence\nAssociation reports marked regional differences; small places may have no service",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -8115,7 +8380,57 @@
     "year": 2010,
     "description": "Act 642/2010 rebuilds school support as general, intensified and special support from 2011"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    3,
+    3
+   ],
+   "identificationCriteria": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    1,
+    3
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    1,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "FJ",
@@ -8459,14 +8774,14 @@
   "inst": "",
   "source": "seed",
   "terminology": "“trouble du langage (TL)” used throughout (COST IS1406 survey translation, not statutory)\n“primaire” where the origin is unexplained; “secondaire” when tied to a wider condition",
-  "identificationCriteria": "The diagnosis is a current state, to be confirmed as the child develops\nFirst-line examination separates a simple disorder from associated disorders\nSpeech therapy after age 3 if the bilan confirms a specific oral language disorder\nEach kind of rehabilitation is envisaged on medical prescription\nLevel 2 synthesis is written by the doctor after a multidisciplinary meeting",
+  "identificationCriteria": "The diagnosis is a current state, to be confirmed as the child develops\nEach kind of rehabilitation is envisaged on medical prescription\nFirst-line examination separates a simple disorder from associated disorders\nLevel 2 synthesis is written by the doctor after a multidisciplinary meeting\nSpeech therapy after age 3 if the bilan confirms a specific oral language disorder",
   "assessments": "LITMUS sentence repetition (SRep) task for French\nDeveloped by Philippe Prévost, Laurie Tuller and Racha Zebib (Tours)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nBest-evidenced task in the set — de Almeida (2017), Fleckstein (2018), Tuller (2018)\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 66 (Law et al., 2020)\nAssessment: mainstream only 82%, mother tongue if different 10%, mother tongue only 10%\nIntervention: mainstream only 85%\nInterpreters sometimes used — assessment 26%, intervention 21%, counselling 34%\nPractitioner training: optional 51%, none 23%, unsure 26% (n = 78)",
-  "referralPathway": "Teachers, Education nationale staff, PMI and health professionals may raise the alert\nFirst-line care links the child's doctor with school and PMI doctors and therapists\nReferral to a level 2 team where difficulties remain significant\nFamily may open a file with the departmental disability house, the MDPH",
+  "referralPathway": "Teachers, Education nationale staff, PMI and health professionals may raise the alert\nFamily may open a file with the departmental disability house, the MDPH\nFirst-line care links the child's doctor with school and PMI doctors and therapists\nReferral to a level 2 team where difficulties remain significant",
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 197 from France (Law et al., 2020)\nSettings: private practice 84%\nSector: private 58%, public health 30%\nDirect intervention most often twice weekly — 55%\nAccess shaped by: social position 63%, urban/rural 54%, parental education 51%",
-  "legalEntitlement": "Any child with a disabling health condition is enrolled in the nearest school\nThe CDAPH takes the decisions in its competence on the basis of the PPS\nFamily has 15 days to comment on the draft PPS before the commission is informed\nCode de l'education L.112-4 allows adjusted exam arrangements for disabled candidates",
+  "legalEntitlement": "Code de l'education L.112-4 allows adjusted exam arrangements for disabled candidates\nAny child with a disabling health condition is enrolled in the nearest school\nThe CDAPH takes the decisions in its competence on the basis of the PPS\nFamily has 15 days to comment on the draft PPS before the commission is informed",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 197\nFunders: state health 90%, private health insurance 20%, family 8%\n10% said a maximum number of sessions applied (n = 195)",
-  "workforce": "23,500 orthophonistes practised in the community in France at 1 January 2024\nCounted from the Adeli register, under-62s only; hospital-only staff are excluded\n91 per cent of them work in liberal or mixed practice\nNumbers grew 1.8 per cent a year on average between 2018 and 2024",
+  "workforce": "23,500 orthophonistes practised in the community in France at 1 January 2024\nCounted from the Adeli register, under-62s only; hospital-only staff are excluded\nNumbers grew 1.8 per cent a year on average between 2018 and 2024\n91 per cent of them work in liberal or mixed practice",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -8483,7 +8798,64 @@
     "year": 2015,
     "description": "Arrete of 6 February 2015 introduces the GEVA-Sco form for assessing a pupil's schooling support needs"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    2,
+    3
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    2,
+    3
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    1,
+    1,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GA",
@@ -9743,12 +10115,12 @@
   "inst": "",
   "source": "seed",
   "terminology": "“Γλωσσική Διαταραχή”, glossiki diatarachi, language disorder (IS1406 survey translation)\nPlural “γλωσσικές διαταραχές” names the caseload the survey asks about\nGreek preamble states plainly that terminology varies from country to country",
-  "identificationCriteria": "Threshold: significant learning difficulties affecting school adaptation and learning\nSpeech and language disorders are named among the listed categories\nRuled out where low attainment traces to outside linguistic or cultural factors\nAssessment centres alone draw up individual assessment reports for their area",
+  "identificationCriteria": "Assessment centres alone draw up individual assessment reports for their area\nThreshold: significant learning difficulties affecting school adaptation and learning\nSpeech and language disorders are named among the listed categories\nRuled out where low attainment traces to outside linguistic or cultural factors",
   "assessments": "LITMUS sentence repetition (SRep) task for Standard Greek\nDeveloped by Chondrogianni (Edinburgh), Tsimpli (Cambridge) and Andreou (Cologne)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 39 (Law et al., 2020)\nAssessment: mainstream only 90%, mother tongue if different 21%, both 16%\nIntervention: mainstream only 78%, mother tongue 15%\nInterpreters sometimes used — assessment 54%, intervention 40%, counselling 46%\nPractitioner training: optional 40%, none 30%, unsure 28% (n = 40)",
   "referralPathway": "Parents may apply directly to the KEDASY assessment centre for an assessment\nOr the school's interdisciplinary committee sends a documented recommendation\nTrigger: difficulties persisting despite the support given at the pupil's school\nWritten parental consent is required where the school makes the recommendation",
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 82 from Greece (Law et al., 2020)\nSettings: private rehab centre 56%, private practice 54%\nSector: private 95%\nDirect intervention most often twice weekly — 77%\nAccess shaped by: cost to parents 82%, income level 64%, urban/rural 62%",
-  "legalEntitlement": "N. 3699/2008: the State binds itself to special education's compulsory character\nAnd to providing free public special education to disabled people of all ages\nKEDASY alone may recommend placement in the appropriate school unit\nParents may appeal to the EDEA within 30 days; the EDEA report is final",
+  "legalEntitlement": "N. 3699/2008: the State binds itself to special education's compulsory character\nThe State also binds itself to free public special education for disabled people of all ages\nKEDASY alone may recommend placement in the appropriate school unit\nParents may appeal to the EDEA within 30 days; the EDEA report is final",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 82\nFunders: family 39%, health insurance 38%, state health 35%\n41% said a maximum number of sessions applied (n = 82)",
   "workforce": "Establishment posts created by N. 4823/2021, not a count of therapists in post\n71 speech therapist (PE21) posts among the 1,120 KEDASY staff posts\nAgainst 223 psychologist and 223 social worker posts in the same centres\nTwo PE21 speech therapist Education Adviser posts exist nationally",
   "dischargeCriteria": "",
@@ -9767,7 +10139,63 @@
     "year": 2021,
     "description": "Law 4823/2021 creates KEDASY and school-based Interdisciplinary Support Committees (EDY) for educational assessment"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    2,
+    3
+   ],
+   "identificationCriteria": [
+    1,
+    3,
+    3,
+    4
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    1,
+    3,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    1,
+    2,
+    4
+   ]
+  }
  },
  {
   "countryCode": "GT",
@@ -10195,11 +10623,11 @@
   "identificationCriteria": "The type of difficulty is determined by the county office expert committee\nThe school's own committee proposes a case to the office committee when it sees need\nThreshold: speech communication impeded or absent from organic or functional damage\nLanguage difficulties sit in group 3 of the official orientation list of difficulty types",
   "assessments": "LITMUS sentence repetition (SRep) task for Croatian\nDeveloped by Gordana Hržica and Jelena Kuvač Kraljević (Zagreb), with Lana Kologranić\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 28 (Law et al., 2020)\nAssessment: mainstream only 61%, mother tongue only 24%, mother tongue if different 12%\nIntervention: mainstream only 72%, mother tongue 11%\nInterpreters sometimes used — assessment 40%, intervention 33%, counselling 40%\nPractitioner training: optional 12%, none 24%, unsure 64% (n = 42)",
-  "referralPathway": "Psychophysical state is determined before enrolment in the first grade of primary school\nIt is also determined for early entry, deferral, or an appropriate schooling programme\nChildren with difficulties already established attend that assessment before enrolling\nThe county office decides by rjesenje on the proposal of the expert committee",
+  "referralPathway": "The county office decides by rjesenje on the proposal of the expert committee\nPsychophysical state is determined before enrolment in the first grade of primary school\nIt is also determined for early entry, deferral, or an appropriate schooling programme\nChildren with difficulties already established attend that assessment before enrolling",
   "serviceModel": "Health clinic/centre 30%, nursery/kindergarten 23%, hospital 19%\nPublic health 51%, public education 40% (practitioner-reported, COST IS1406 survey 2017)\nDirect intervention most often weekly — 48%\nAccess shaped by urban/rural 76%, cost to parents 48%, income level 38%",
   "legalEntitlement": "Article 65 of the 2008 school act carries a right to appropriate programmes and help\nThe minister sets which difficulty types carry that right — Pravilnik NN 24/2015\nThe school must provide the pedagogic-didactic adaptation the pupil needs, at once\nA parent may appeal the office's decision to the Ministry",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 84\nFunders: state health 55%, state education 36%, family 23%, health insurance 14%\n20% said a maximum number of sessions applied (n = 83)",
-  "workforce": "A national survey of 255 speech-language pathologists (Kuvač Kraljević et al., 2020)\nHealth care 37.6%, education 35.3%, private practice or NGO 18.8%, social care 8.2%\nYoung — 69% under 41, 49.8% with under ten years' experience; 97.7% female\nPreschool children aged 3–7 the main caseload for 63.2% of respondents",
+  "workforce": "A national survey of 255 speech-language pathologists (Kuvač Kraljević et al., 2020)\nYoung — 69% under 41, 49.8% with under ten years' experience; 97.7% female\nHealth care 37.6%, education 35.3%, private practice or NGO 18.8%, social care 8.2%\nPreschool children aged 3–7 the main caseload for 63.2% of respondents",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -10212,7 +10640,61 @@
     "year": 2015,
     "description": "Ordinance NN 24/2015 set the types of difficulty and the appropriate schooling programmes and supports"
    }
-  ]
+  ],
+  "slots": {
+   "terminology": [
+    1,
+    4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    3,
+    3
+   ],
+   "assessments": [
+    1,
+    1,
+    3,
+    4
+   ],
+   "multilingualProvision": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "referralPathway": [
+    1,
+    3,
+    3,
+    3
+   ],
+   "serviceModel": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "legalEntitlement": [
+    1,
+    1,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    3
+   ],
+   "workforce": [
+    1,
+    1,
+    4,
+    4
+   ]
+  }
  },
  {
   "countryCode": "HT",
