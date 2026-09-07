@@ -454,6 +454,43 @@ re-slotted subset, and two known distortions push opposite ways: a whole-field
 hedge can only be tagged 1, and a documented absence collapses to `[1,1,1,1]`
 because questions 2-4 presuppose the answer to 1 was yes.
 
+## Bullet count is not a proxy for questions answered, and it is not close
+
+This was worth testing because if it held it would clear the whole re-slotting
+backlog for free. The convention says bullets answer the questions in order,
+omitting any that cannot be answered -- so a field with exactly four bullets
+against four questions should, on that reading, be tagged [1,2,3,4] and could
+be tagged mechanically without anyone reading it.
+
+Across the five maps there are 606 tagged fields whose bullet count equals
+their question count. **95 of them are [1,2,3,4]. That is 15.7%.**
+
+    [1,2,3,4]   95   15.7%
+    [1,2,2,4]   63   10.4%
+    [1,2,2,3]   45    7.4%
+    [1,1,2,2]   40    6.6%
+    [1,2,2,2]   40    6.6%
+    [1,1,1,1]   38    6.3%
+    [1,1,2,3]   36    5.9%
+    [1,2,3,3]   35    5.8%
+
+33 distinct patterns in 606 fields. So the shortcut is dead, and the ~6,000
+unslotted fields have to be read by someone. But the distribution says more
+than that.
+
+**The second most common shape doubles up on question 2 and skips question 3.**
+[1,2,2,4] and [1,2,2,3] together are 18% -- more than [1,2,3,4] on its own.
+Drafters given four bullets spend two of them on the second question rather
+than reaching the third. That is the same finding as the q3 percentages in the
+section above, seen from the other side: question 3 is not being skipped for
+lack of room.
+
+**[1,1,1,1] is 6.3%, 38 fields.** Four bullets, all answering the first
+question. Some of those are the documented-absence collapse already recorded
+above, where questions 2-4 presuppose a yes. The rest are fields where the
+first question is the only one the available documents speak to, and a drafter
+with more to say about it kept saying it.
+
 ## Related
 
 `fields-must-be-countable` in the maintainer's notes: a field that can only
