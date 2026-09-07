@@ -375,3 +375,26 @@ such category is in use, and a reader cannot hold both.
 
 `localTerm` was left untouched by the pass that found this. Someone with both
 documents open should decide whether Eurydice's figure is being over-read.
+
+## JO|Jordan, fl.assessment (2026-09-07)
+
+**Was:** three bullets on ARABIC as a promotion gate — "Language is a promotion
+gate: Arabic sits alongside mathematics" · "Grades 4 to 10 pupils are not
+promoted if they fail mathematics and Arabic" · "Progression with parental
+consent is the documented exception".
+
+**Now:** four bullets on the national secondary examination, the NCCD's English
+standards and performance indicators framework for kindergarten to grade 12,
+the requirement that assessment align with that framework, and the finding that
+the 2020 framework makes NO reference to the CEFR.
+
+**Why:** Arabic is the MEDIUM of instruction in Jordan, not a foreign language.
+On a map whose question is "languages from outside the country, taught as
+school subjects", a promotion rule about Arabic answers the right question
+about the wrong language — the category error BRIEF.md warns against in both
+directions. The replaced bullets are sourced and true; they belong to a
+different map's territory, and they were the only thing standing in this field.
+
+The replacement also carries a documented absence worth keeping: the whole
+NCCD framework was read and contains zero references to the CEFR, the single
+grep hit being "eviden**cefr**om", a word-join artefact.
