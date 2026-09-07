@@ -338,6 +338,18 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Albania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AL&time=2023"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Albania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AL&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Albania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AL&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Albania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AL&time=2023"
    }
   ],
   "supportLinks": [],
@@ -371,14 +383,29 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2021,
+    "value": "1553",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2022,
     "value": "5801",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "1301",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "4355",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "927",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -1024,6 +1051,22 @@
    {
     "label": "Eurostat, ESMS reference metadata: Pupils and students - enrolments (educ_uoe_enr), statistical unit and unit of measure",
     "url": "https://ec.europa.eu/eurostat/cache/metadata/en/educ_uoe_enr_esms.htm"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Austria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AT&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Austria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AT&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Austria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AT&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Austria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=AT&time=2023"
    }
   ],
   "supportLinks": [],
@@ -1116,9 +1159,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "1835",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "15095",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1908",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -1126,9 +1179,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "1578",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "12779",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1520",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2024,
@@ -2351,6 +2414,18 @@
    {
     "label": "Zakon o visokom obrazovanju („Sl. glasnik RS“, br. 67/2020 i 107/2024), član 19 — consolidated text on paragraf.ba",
     "url": "https://www.paragraf.ba/propisi/republika-srpska/zakon-o-visokom-obrazovanju.html"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Bosnia and Herzegovina, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BA&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Bosnia and Herzegovina, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BA&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Bosnia and Herzegovina, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BA&time=2023"
    }
   ],
   "supportLinks": [],
@@ -2404,14 +2479,29 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2021,
+    "value": "0",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2022,
     "value": "736",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "132",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "749",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "466",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -3058,6 +3148,22 @@
    {
     "label": "Софийски университет \"Св. Климент Охридски\", Факултет по славянски филологии, магистърска програма Лингвистика - езикова система и речеви практики",
     "url": "https://slav.uni-sofia.bg/magistarska-programa-lingvistika-ez/"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Bulgaria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BG&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Bulgaria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BG&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Bulgaria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BG&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Bulgaria, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=BG&time=2023"
    }
   ],
   "supportLinks": [],
@@ -3111,9 +3217,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "1308",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "6963",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1233",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -3121,9 +3237,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "1358",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "6876",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1088",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [],
@@ -6718,6 +6844,22 @@
    {
     "label": "Eurostat, ESMS reference metadata: Pupils and students - enrolments (educ_uoe_enr), statistical unit and unit of measure",
     "url": "https://ec.europa.eu/eurostat/cache/metadata/en/educ_uoe_enr_esms.htm"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Switzerland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CH&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Switzerland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CH&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Switzerland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CH&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Switzerland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CH&time=2023"
    }
   ],
   "supportLinks": [],
@@ -6798,9 +6940,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "1574",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "7456",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1603",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -6808,9 +6960,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "1670",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "7636",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1942",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2024,
@@ -11117,6 +11279,22 @@
    {
     "label": "Ο περί Πανεπιστημίου Κύπρου Νόμος του 1989 (N. 144/89), άρθρο 4 — gazette text as amended to 2006, copy published by KYSOA",
     "url": "https://www.kysoa.org.cy/uploads/16_2006.pdf"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Cyprus, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CY&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Cyprus, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CY&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Cyprus, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CY&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Cyprus, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CY&time=2023"
    }
   ],
   "supportLinks": [],
@@ -11160,9 +11338,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "237",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "1201",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "424",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -11170,9 +11358,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "376",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "986",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "287",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -11300,6 +11498,22 @@
    {
     "label": "Eurostat, ESMS reference metadata: Pupils and students - enrolments (educ_uoe_enr), statistical unit and unit of measure",
     "url": "https://ec.europa.eu/eurostat/cache/metadata/en/educ_uoe_enr_esms.htm"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Czechia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CZ&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Czechia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CZ&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Czechia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CZ&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Czechia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=CZ&time=2023"
    }
   ],
   "supportLinks": [],
@@ -11373,9 +11587,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "1636",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "8843",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1543",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -11383,9 +11607,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "1614",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "9643",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1699",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2024,
@@ -11505,6 +11739,22 @@
    {
     "label": "Eurostat, ESMS reference metadata: Pupils and students - enrolments (educ_uoe_enr), statistical unit and unit of measure",
     "url": "https://ec.europa.eu/eurostat/cache/metadata/en/educ_uoe_enr_esms.htm"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Germany, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DE&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Germany, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DE&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Germany, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DE&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Germany, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DE&time=2023"
    }
   ],
   "supportLinks": [],
@@ -11621,9 +11871,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "31456",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "186239",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "31087",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -11631,9 +11891,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "28750",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "175701",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "27711",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2024,
@@ -12296,6 +12566,22 @@
    {
     "label": "Eurostat, ESMS reference metadata: Pupils and students - enrolments (educ_uoe_enr), statistical unit and unit of measure",
     "url": "https://ec.europa.eu/eurostat/cache/metadata/en/educ_uoe_enr_esms.htm"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Denmark, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DK&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Denmark, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DK&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Denmark, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DK&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Denmark, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=DK&time=2023"
    }
   ],
   "supportLinks": [],
@@ -12368,9 +12654,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "3135",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "9721",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "2696",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -12378,9 +12674,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "2406",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "8026",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "2315",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2024,
@@ -12991,6 +13297,22 @@
    {
     "label": "Tallinna Ülikool, Lingvistika, doktoriõpe",
     "url": "https://www.tlu.ee/ht/lingvistika"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Estonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EE&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Estonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EE&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Estonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EE&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Estonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EE&time=2023"
    }
   ],
   "supportLinks": [],
@@ -13112,9 +13434,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "328",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "1569",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "287",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -13122,9 +13454,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "245",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "1594",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "280",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2024,
@@ -13633,6 +13975,22 @@
    {
     "label": "Eurostat, ESMS reference metadata: Pupils and students - enrolments (educ_uoe_enr), statistical unit and unit of measure",
     "url": "https://ec.europa.eu/eurostat/cache/metadata/en/educ_uoe_enr_esms.htm"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Spain, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=ES&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Spain, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=ES&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Spain, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=ES&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Spain, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=ES&time=2023"
    }
   ],
   "supportLinks": [],
@@ -13696,9 +14054,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "10503",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "63878",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "11417",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -13706,9 +14074,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "10899",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "60760",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "11057",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2024,
@@ -14756,6 +15134,22 @@
    {
     "label": "University of Helsinki, Master's Programme in Linguistic Diversity and Digital Humanities, degree programme page",
     "url": "https://www.helsinki.fi/en/degree-programmes/linguistic-diversity-and-digital-humanities-masters-programme"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Finland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FI&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Finland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FI&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Finland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FI&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Finland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FI&time=2023"
    }
   ],
   "supportLinks": [],
@@ -14816,9 +15210,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "2298",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "11156",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "2079",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -14826,9 +15230,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "1919",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "10337",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1868",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2024,
@@ -15285,6 +15699,22 @@
    {
     "label": "Ministere de l'Enseignement superieur et de la Recherche (MESR), open data: 'Effectifs d'etudiants inscrits dans les etablissements publics sous tutelle du ministere en charge de l'Enseignement superieur' (SISE), students by secteur disciplinaire, academic years 2019-20 and 2024-25",
     "url": "https://data.enseignementsup-recherche.gouv.fr/api/explore/v2.1/catalog/datasets/fr-esr-sise-effectifs-d-etudiants-inscrits-esr-public/records?select=annee_universitaire%2Csect_disciplinaire%2Csect_disciplinaire_lib%2Csum%28effectif%29+as+etudiants_inscriptions_principales%2Csum%28effectif_total%29+as+inscriptions_principales_et_secondes&group_by=annee_universitaire%2Csect_disciplinaire%2Csect_disciplinaire_lib&where=sect_disciplinaire+in+%28%2722%27%2C%2723%27%2C%2724%27%2C%2725%27%29+and+annee_universitaire+in+%28%272019-20%27%2C%272024-25%27%29&order_by=annee_universitaire%2Csect_disciplinaire&limit=40"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — France, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FR&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — France, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FR&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — France, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FR&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — France, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=FR&time=2023"
    }
   ],
   "supportLinks": [],
@@ -15418,9 +15848,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "28867",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "135406",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "27411",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -15428,9 +15868,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "24361",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "126846",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "24486",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2024,
@@ -17211,6 +17661,22 @@
    {
     "label": "Πανεπιστήμιο Κρήτης, ΠΜΣ «Γλωσσολογία», Τμήμα Φιλολογίας",
     "url": "https://www.philology.uoc.gr/spoudes/metaptixiakes-spoudes/pms-glossologia"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Greece, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EL&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Greece, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EL&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Greece, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EL&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Greece, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=EL&time=2023"
    }
   ],
   "supportLinks": [],
@@ -17274,9 +17740,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "2813",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "31161",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "3343",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -17284,9 +17760,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "2918",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "30596",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "2786",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -17901,6 +18387,22 @@
    {
     "label": "Pravilnik o polaganju državne mature, NN 56/2026, čl. 3",
     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_05_56_700.html"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Croatia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HR&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Croatia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HR&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Croatia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HR&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Croatia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HR&time=2023"
    }
   ],
   "supportLinks": [],
@@ -17954,9 +18456,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "1244",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "5424",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1135",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -17964,9 +18476,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "965",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "5163",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1141",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -18140,6 +18662,22 @@
    {
     "label": "423/2012. (XII. 29.) Korm. rendelet a felsőoktatási felvételi eljárásról, 16. § (calculation of study points), consolidated text on net.jogtar.hu",
     "url": "https://net.jogtar.hu/jogszabaly?docid=a1200423.kor"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Hungary, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HU&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Hungary, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HU&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Hungary, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HU&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Hungary, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=HU&time=2023"
    }
   ],
   "supportLinks": [],
@@ -18183,9 +18721,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "2208",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "8482",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "2275",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -18193,9 +18741,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "2178",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "8338",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "2287",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -18533,6 +19091,22 @@
    {
     "label": "NUI Matriculation Regulations 2024-2025, English version",
     "url": "https://www.nui.ie/app/uploads/2025/08/matricRegs_2024_2025_ENG.pdf"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Ireland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IE&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Ireland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IE&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Ireland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IE&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Ireland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IE&time=2023"
    }
   ],
   "supportLinks": [],
@@ -18645,9 +19219,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "1575",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "4210",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1709",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -18655,9 +19239,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "1478",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "4461",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1802",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2024,
@@ -21660,6 +22254,22 @@
    {
     "label": "Lög nr. 46/2021 um breytingu á lögum um háskóla (inntökuskilyrði)",
     "url": "https://www.althingi.is/altext/stjt/2021.046.html"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Iceland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IS&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Iceland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IS&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Iceland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IS&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Iceland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IS&time=2023"
    }
   ],
   "supportLinks": [],
@@ -21712,9 +22322,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "153",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "1353",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "179",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -21722,9 +22342,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "156",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "1264",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "166",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -21882,6 +22512,22 @@
    {
     "label": "Eurydice, Italy: Bachelor (chapter 6.2.1, admission requirements)",
     "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/italy/bachelor"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Italy, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IT&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Italy, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IT&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Italy, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IT&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Italy, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=IT&time=2023"
    }
   ],
   "supportLinks": [],
@@ -21985,9 +22631,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "31938",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "163306",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "33706",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -21995,9 +22651,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "33245",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "163181",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "39239",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2024,
@@ -24043,6 +24709,18 @@
    {
     "label": "Gesetz vom 25. November 2004 über die Universität Liechtenstein (LUG), LGBl. 2005 Nr. 3, LR 414.2, Art. 1 und 41 — consolidated text, Lilex",
     "url": "https://www.gesetze.li/konso/pdf/2005003000?version=5"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Liechtenstein, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LI&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Liechtenstein, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LI&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Liechtenstein, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LI&time=2022"
    }
   ],
   "supportLinks": [],
@@ -24485,6 +25163,22 @@
    {
     "label": "LAMA BPO, Reikalavimai stojantiesiems: pirmosios pakopos ir vientisosios studijos",
     "url": "https://lamabpo.lt/?faq-group=reikalavimai-stojantiesiems-lt-pirmosios-pakopos-ir-vientisosios-studijos"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Lithuania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LT&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Lithuania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LT&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Lithuania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LT&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Lithuania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LT&time=2023"
    }
   ],
   "supportLinks": [],
@@ -24524,9 +25218,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "640",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "3136",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "620",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -24534,9 +25238,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "608",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "2858",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "605",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -24641,6 +25355,22 @@
    {
     "label": "Eurydice, Luxembourg: Bachelor (chapter 6.2.1, admission requirements)",
     "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/luxembourg/bachelor"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Luxembourg, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LU&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Luxembourg, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LU&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Luxembourg, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LU&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Luxembourg, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LU&time=2023"
    }
   ],
   "supportLinks": [],
@@ -24663,9 +25393,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "74",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "310",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "67",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -24673,9 +25413,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "59",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "277",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "60",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -24756,6 +25506,22 @@
    {
     "label": "MK noteikumi Nr. 416, Noteikumi par valsts vispārējās vidējās izglītības standartu, 21. punkts",
     "url": "https://likumi.lv/ta/id/309597"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Latvia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LV&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Latvia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LV&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Latvia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LV&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Latvia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LV&time=2023"
    }
   ],
   "supportLinks": [],
@@ -24789,9 +25555,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "287",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "1520",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "288",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -24799,9 +25575,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "278",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "1649",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "293",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -25503,6 +26289,22 @@
    {
     "label": "Ministry of Education and Science, Started the state matura for 2025-2026, new concept",
     "url": "https://mon.gov.mk/mk-MK/odnosi-so-javnost/soopstenija/zapocna-polaganjeto-na-drzavnata-matura-za-2025-2026-godina"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — North Macedonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MK&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — North Macedonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MK&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — North Macedonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MK&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — North Macedonia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MK&time=2023"
    }
   ],
   "supportLinks": [],
@@ -25525,9 +26327,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "682",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "3298",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "815",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -25535,9 +26347,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "519",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "2822",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "563",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -26361,6 +27183,22 @@
    {
     "label": "Eurydice, Malta: Bachelor (chapter 6.2.1, admission requirements)",
     "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/malta/bachelor"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Malta, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MT&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Malta, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MT&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Malta, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MT&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Malta, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=MT&time=2023"
    }
   ],
   "supportLinks": [],
@@ -26423,9 +27261,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "167",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "489",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "113",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -26433,9 +27281,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "113",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "457",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "113",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -28014,6 +28872,22 @@
    {
     "label": "Norway, Lov om universiteter og hoyskoler (universitets- og hoyskoleloven), LOV-2024-03-08-9, sections 2-3 and 11-5, Lovdata",
     "url": "https://lovdata.no/dokument/NL/lov/2024-03-08-9"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Norway, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=NO&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Norway, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=NO&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Norway, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=NO&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Norway, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=NO&time=2023"
    }
   ],
   "supportLinks": [],
@@ -28077,9 +28951,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "607",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "6818",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "753",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -28087,9 +28971,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "730",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "6616",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "703",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -29748,6 +30642,22 @@
    {
     "label": "Poland, Ustawa z dnia 20 lipca 2018 r. - Prawo o szkolnictwie wyzszym i nauce, art. 67 (Dz.U. 2018 poz. 1668)",
     "url": "https://dziennikustaw.gov.pl/D2018000166801.pdf"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Poland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PL&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Poland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PL&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Poland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PL&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Poland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PL&time=2023"
    }
   ],
   "supportLinks": [],
@@ -29779,9 +30689,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "15247",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "63323",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "15913",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -29789,9 +30709,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "15337",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "60349",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "15376",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -30019,6 +30949,22 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Portugal, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PT&time=2023"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Portugal, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PT&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Portugal, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PT&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Portugal, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PT&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Portugal, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PT&time=2023"
    }
   ],
   "supportLinks": [],
@@ -30112,9 +31058,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "1652",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "9049",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1896",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -30122,9 +31078,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "1717",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "10108",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1975",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": []
@@ -30349,6 +31315,22 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Romania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RO&time=2023"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Romania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RO&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Romania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RO&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Romania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RO&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Romania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RO&time=2023"
    }
   ],
   "supportLinks": [],
@@ -30418,9 +31400,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "4691",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "22114",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "5179",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -30428,9 +31420,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "4820",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "20592",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "4568",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -30493,6 +31495,22 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Serbia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RS&time=2023"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Serbia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RS&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Serbia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RS&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Serbia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RS&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Serbia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=RS&time=2023"
    }
   ],
   "supportLinks": [],
@@ -30515,9 +31533,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "2010",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "12234",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "2082",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -30525,9 +31553,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "1612",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "11529",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1511",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -31239,6 +32277,22 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Sweden, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SE&time=2023"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Sweden, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SE&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Sweden, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SE&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Sweden, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SE&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Sweden, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SE&time=2023"
    }
   ],
   "supportLinks": [],
@@ -31335,9 +32389,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "1007",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "28489",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1004",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -31345,9 +32409,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "1019",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "27919",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1052",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [],
@@ -31623,6 +32697,22 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Slovenia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SI&time=2023"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Slovenia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SI&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Slovenia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SI&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Slovenia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SI&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Slovenia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SI&time=2023"
    }
   ],
   "supportLinks": [],
@@ -31695,9 +32785,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "448",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "2043",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "363",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -31705,9 +32805,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "276",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "1578",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "329",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [
@@ -31763,6 +32873,22 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Slovakia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SK&time=2023"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Slovakia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SK&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Slovakia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SK&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Slovakia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SK&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Slovakia, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=SK&time=2023"
    }
   ],
   "supportLinks": [],
@@ -31796,9 +32922,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "1227",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "4190",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "1165",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -31806,9 +32942,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "1088",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "3977",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "1003",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": []
@@ -33554,6 +34700,22 @@
    {
     "label": "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (educ_uoe_enrt03) — Türkiye, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_enrt03?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=TR&time=2023"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Türkiye, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2019",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=TR&time=2019"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Türkiye, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2021",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=TR&time=2021"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Türkiye, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2022",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=TR&time=2022"
+   },
+   {
+    "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Türkiye, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=TR&time=2023"
    }
   ],
   "supportLinks": [],
@@ -33607,9 +34769,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2019,
+    "value": "23033",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2021,
     "value": "222629",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2021,
+    "value": "23891",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    },
    {
     "year": 2022,
@@ -33617,9 +34789,19 @@
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
    },
    {
+    "year": 2022,
+    "value": "22576",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
+   },
+   {
     "year": 2023,
     "value": "185837",
     "note": "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_enrt03. Counts students, not course enrolments"
+   },
+   {
+    "year": 2023,
+    "value": "14652",
+    "note": "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat educ_uoe_grad02. Counts degrees AWARDED in the year, not students enrolled"
    }
   ],
   "policyHistory": [

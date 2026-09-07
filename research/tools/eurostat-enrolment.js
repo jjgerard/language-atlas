@@ -32,7 +32,19 @@ const NL = String.fromCharCode(10);
 const outDir = process.argv[2];
 if (!outDir) { console.log("usage: node eurostat-enrolment.js <outdir>"); process.exit(1); }
 
-const DATASET = "educ_uoe_enrt03";
+// Two tables, same shape and same ISCED-F code. enrt03 counts students
+// ENROLLED, grad02 counts DEGREES AWARDED -- and this field's own hint asks for
+// "students, enrolments or degrees awarded", so both belong in it PROVIDED
+// each row's note says which it is. They are not two measurements of one thing
+// and must never be read as one series.
+const DATASET = process.env.DATASET || "educ_uoe_enrt03";
+const GRAD = DATASET === "educ_uoe_grad02";
+const COUNTS = GRAD
+  ? "Graduates from tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes"
+  : "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes";
+const UNITNOTE = GRAD
+  ? ". Counts degrees AWARDED in the year, not students enrolled"
+  : ". Counts students, not course enrolments";
 const YEARS = [2019, 2021, 2022, 2023];
 const BASE = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/" + DATASET;
 const url = (geo, y) => BASE + "?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR"
@@ -79,13 +91,13 @@ const get = u => new Promise(res => {
       spec[key] = spec[key] || { series: { enrolment: [] }, evidence: [], addDocLinks: [] };
       spec[key].series.enrolment.push({
         year: y, value: String(v),
-        note: "Students enrolled in tertiary education, ISCED 5-8, in the field Languages (ISCED-F 023), both sexes; Eurostat " + DATASET + ". Counts students, not course enrolments",
+        note: COUNTS + "; Eurostat " + DATASET + UNITNOTE,
       });
       // The whole response for one country and one year is a single number, so
       // this quote cannot match the wrong row.
       spec[key].evidence.push({ bullet: y + " " + v, url: u, quote: '"value":{"0":' + v + "}" });
       spec[key].addDocLinks.push({
-        label: "Eurostat, Students enrolled in tertiary education by education level, programme orientation, sex and field of education (" + DATASET + ") — "
+        label: "Eurostat, " + (GRAD ? "Graduates" : "Students enrolled") + " by education level, programme orientation, sex and field of education (" + DATASET + ") — "
           + label + ", ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, " + y,
         url: u,
       });
