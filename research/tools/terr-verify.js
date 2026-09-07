@@ -287,12 +287,31 @@ function quoteOn(quote, page) {
     // that genuinely redirects to an HTML landing page is left alone.
     const wantsDoc = /\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])/i.test(u);
     const gotHtml = /html/i.test(r.type || "") || (r.raw && r.raw.indexOf("%PDF-", 0, "latin1") < 0 && /^\s*<(?:!doctype|html)/i.test(r.body || ""));
+    // Retried, because one attempt is not enough against a rate limiter. A run
+    // fetching fifteen archive.org urls in sequence had ONE of them -- Egypt's
+    // IBE profile -- come back as the interstitial with curl refused too, and
+    // all five of its bullets were then reported as "quote not found on the
+    // page". They were on the page: the same spec passed cleanly when run
+    // alone a minute later. A transient throttle read as five invented quotes,
+    // which is the worst way for this gate to be wrong.
+    let notTheDocument = false;
     if (r.status === 200 && wantsDoc && gotHtml) {
-      const c = getViaCurl(u);
-      if (c && c.status === 200 && c.raw && c.raw.indexOf("%PDF-", 0, "latin1") >= 0) {
-        console.log("       (served a web page for a document url; curl got the document)");
-        r = c;
+      const WAITS = [0, 2000, 6000];
+      for (const w of WAITS) {
+        if (w) await new Promise(r2 => setTimeout(r2, w));
+        const c = getViaCurl(u);
+        if (c && c.status === 200 && c.raw && c.raw.indexOf("%PDF-", 0, "latin1") >= 0) {
+          console.log("       (served a web page for a document url; curl got the document"
+            + (w ? " after waiting " + (w / 1000) + "s" : "") + ")");
+          r = c;
+          break;
+        }
       }
+      // Still not the document. Say THAT, rather than letting every quote on it
+      // report as missing -- a failed fetch and an invented quote are different
+      // findings and a reader of this log must be able to tell them apart.
+      notTheDocument = !(r.raw && r.raw.indexOf("%PDF-", 0, "latin1") >= 0);
+      if (notTheDocument) console.log("       (COULD NOT FETCH THE DOCUMENT: served a web page for a document url, three times)");
     }
     // A PDF is not "binary, give up": most of the instruments these drafters
     // worked from are PDFs, and skipping them threw away correct work. The
@@ -415,7 +434,7 @@ function quoteOn(quote, page) {
       // match across the join between two decodings.
       text = parts.join(SEAM);
     }
-    page.set(u, { status: r.status, text, type: r.type, bytes: r.body.length });
+    page.set(u, { status: r.status, text, type: r.type, bytes: r.body.length, notTheDocument });
     console.log("  " + String(r.status).padStart(3) + "  " + String(r.body.length).padStart(7) + "b  " + (/pdf/i.test(r.type||"")?"pdf ":"    ") + u.slice(0, 88));
     await new Promise(r2 => setTimeout(r2, 400));
   }
@@ -447,7 +466,7 @@ function quoteOn(quote, page) {
         const p = page.get(e.url);
         if (!p || p.status !== 200) { dropped.push(field + ": source returned " + (p ? p.status : "?") + " - " + b.slice(0, 48)); continue; }
         if (!p.text) { dropped.push(field + ": no text could be extracted from the source - " + b.slice(0, 44)); continue; }
-        if (!quoteOn(e.quote, p.text)) { dropped.push(field + ": quote not found on the page - " + b.slice(0, 48)); continue; }
+        if (!quoteOn(e.quote, p.text)) { dropped.push(field + (p.notTheDocument ? ": the source never served its document - " : ": quote not found on the page - ") + b.slice(0, 48)); continue; }
         good.push(b);
       }
       if (good.length) kept[field] = good;
@@ -541,7 +560,7 @@ function quoteOn(quote, page) {
       const p = page.get(e.url);
       if (!p || p.status !== 200) { dropped.push(label + ": source returned " + (p ? p.status : "?")); continue; }
       if (!p.text) { dropped.push(label + ": no text could be extracted from the source"); continue; }
-      if (!quoteOn(e.quote, p.text)) { dropped.push(label + ": quote not found on the page - " + String(r.description).slice(0, 40)); continue; }
+      if (!quoteOn(e.quote, p.text)) { dropped.push(label + (p.notTheDocument ? ": the source never served its document" : ": quote not found on the page - " + String(r.description).slice(0, 40))); continue; }
       keptHist.push({ year: Number(r.year), description: String(r.description) });
     }
     keptHist.sort((a, b) => a.year - b.year);
