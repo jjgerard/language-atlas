@@ -22,15 +22,34 @@ const verified = JSON.parse(fs.readFileSync(file, "utf8"));
 
 // The gate keeps bullets, not slot numbers, so the numbers are read back from
 // the drafters' output directory when one is given as a third argument.
+//
+// It reads the same files the gate reads: any .json that is not the gate's own
+// output. It used to insist on out-<digits>.json, which the gate never
+// required, so a directory holding out-rq.json and out-er.json passed the gate
+// with every slot number intact and then applied 81 bullets with none of them.
+// Two layers disagreeing about which files count is not a naming convention,
+// it is a silent loss.
 const slotsBySpec = new Map();
 const specDir = process.argv[4] && !process.argv[4].startsWith("--") ? process.argv[4] : null;
 if (specDir && fs.existsSync(specDir)) {
-  for (const f of fs.readdirSync(specDir).filter(x => /^out-\d+\.json$/.test(x))) {
+  for (const f of fs.readdirSync(specDir).filter(x => x.endsWith(".json") && x !== "verified.json")) {
     const batch = JSON.parse(fs.readFileSync(path.join(specDir, f), "utf8"));
     for (const [k, spec] of Object.entries(batch)) {
       for (const [fld, list] of Object.entries(spec.slots || {})) {
         const bullets = (spec.fields || {})[fld] || [];
-        if (!Array.isArray(list) || list.length !== bullets.length) continue;
+        // One integer PER BULLET. A pass over twelve Americas countries sent
+        // one number per FIELD instead -- `requiredStudy: [1]` against three
+        // bullets -- and every one was dropped here without a word, so the
+        // run reported 81 bullets applied and 12 tagged and nothing said why.
+        // Which bullet answers which question cannot be recovered from a
+        // single number, so these still cannot be used; they are announced
+        // instead, because a drafter who gets the convention wrong will get it
+        // wrong for the whole batch and needs to be told once.
+        if (!Array.isArray(list) || list.length !== bullets.length) {
+          console.log("  " + k + "/" + fld + ": " + (Array.isArray(list) ? list.length : 0) +
+            " slot number(s) for " + bullets.length + " bullets; the convention is one per bullet, so untagged");
+          continue;
+        }
         const m = new Map();
         bullets.forEach((b, i) => m.set(b, Number(list[i])));
         slotsBySpec.set(k + "\u0000" + fld, m);

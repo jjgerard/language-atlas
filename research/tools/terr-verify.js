@@ -224,7 +224,34 @@ function quoteOn(quote, page) {
     let batch;
     try { batch = JSON.parse(fs.readFileSync(path.join(specDir, f), "utf8")); }
     catch (e) { console.log(f + ": not valid JSON - " + e.message); continue; }
-    Object.assign(specs, batch);
+    // MERGE, do not replace. Two spec files in one directory that both name a
+    // unit used to leave only whichever sorted last: an entryRequirements pass
+    // and a requiredStudy pass over the same twelve Americas countries came in
+    // together and eight units silently lost a whole field, 32 bullets and 7
+    // history rows, with the run reporting "16 units survived" and no warning.
+    // Nothing here relaxes the gate -- every merged bullet and row still faces
+    // its own evidence and quote check -- it only stops one batch from
+    // deleting another before the checking starts.
+    for (const [key, unit] of Object.entries(batch)) {
+      const prev = specs[key];
+      if (!prev || !unit || typeof unit !== "object") { specs[key] = unit; continue; }
+      for (const [k, v] of Object.entries(unit)) {
+        const p0 = prev[k];
+        if (p0 === undefined) { prev[k] = v; continue; }
+        if (Array.isArray(p0) && Array.isArray(v)) { prev[k] = p0.concat(v); continue; }
+        if (p0 && v && typeof p0 === "object" && typeof v === "object") {
+          for (const [fk, fv] of Object.entries(v)) {
+            // A genuine collision: both files answer the same field of the same
+            // unit. Keeping the first is arbitrary, so say so rather than pick
+            // silently -- this is the case a caller has to look at.
+            if (fk in p0) console.log(f + ": " + key + " " + k + "." + fk + " is in an earlier file too; kept the earlier one");
+            else p0[fk] = fv;
+          }
+          continue;
+        }
+        console.log(f + ": " + key + " " + k + " is in an earlier file too; kept the earlier one");
+      }
+    }
   }
 
   // A typed field filed under `fields`. The drafters are told the schema and

@@ -283,3 +283,24 @@ was dropped for that. What belongs here is what the source says HAPPENED: a
 decree bringing English forward to grade 1, a curriculum issued, a department
 closed. If the document states a figure but never says anything changed, the
 honest answer is no history row.
+
+## `slots` is one integer PER BULLET, not one per field
+
+A field's hint lists four questions. The bullets answer them in order, omitting
+any that cannot be answered, and `slots` records which question each bullet
+answers — so a four-bullet field needs four numbers, and a three-bullet field
+that answers questions 1, 3 and 4 gets `[1, 3, 4]`.
+
+`"requiredStudy": [1]` against three bullets is the mistake, and a whole batch
+of twelve made it. It cannot be repaired afterwards: which bullet answers which
+question is not recoverable from one number, and guessing would file a sentence
+under a question it does not answer. The applier now says so per field rather
+than dropping them silently, but the numbers still have to be right when they
+arrive.
+
+The list must not go backwards for its own sake, but you no longer have to
+reorder your bullets to make it non-decreasing — if you write bullets answering
+questions 1, 3 and 2 in that order, tag them `[1, 3, 2]` honestly and the store
+puts them in order, moving the prose with the numbers so the two never
+disagree. It only refuses when a bullet leans on the one before it ("it", "such
+a rule", "and also"), which cannot be moved without breaking the sense.

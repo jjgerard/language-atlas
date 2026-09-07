@@ -71,7 +71,7 @@ function apply(domain, spec) {
   const rows = JSON.parse(fs.readFileSync(FILE, "utf8"));
   const problems = [];
   let touched = 0, filled = 0, bullets = 0, hist = 0, rows_ = 0, notEst = 0, slotted = 0;
-  const upgrades = [];
+  const upgrades = [], reruns = [];
 
   for (const [key, s] of Object.entries(spec)) {
     const [cc, name] = key.split("|");
@@ -98,7 +98,14 @@ function apply(domain, spec) {
       // still may not be overwritten -- that needs a person, because it means
       // someone's sourced work is wrong rather than merely missing.
       const prior = String(e[f] || "").trim();
-      if (prior && !NOT_DOCUMENTED_RE.test(prior)) problems.push(`${domain} ${key}/${f}: would overwrite`);
+      // Writing exactly what is already there is not an overwrite, it is a
+      // no-op, and refusing it made the tool un-rerunnable. A first pass that
+      // wrote 81 bullets but lost their slot numbers could not simply be run
+      // again with the numbers, because its own output now blocked it -- the
+      // only routes left were reverting the data file or hand-editing it.
+      const same = prior && prior === set.join("\n").trim();
+      if (same) reruns.push(`${domain} ${key}/${f}`);
+      else if (prior && !NOT_DOCUMENTED_RE.test(prior)) problems.push(`${domain} ${key}/${f}: would overwrite`);
       else if (prior) upgrades.push(`${domain} ${key}/${f}`);
       set.forEach(b => {
         if (b.length > LIMIT) problems.push(`${domain} ${key}/${f}: ${b.length} chars — "${b.slice(0, 55)}…"`);
@@ -220,6 +227,8 @@ function apply(domain, spec) {
     [...(s.docLinks || []), ...(s.addDocLinks || [])]
       .forEach(l => { if (sup.has(l.url)) problems.push(`${domain} ${key}: ${l.url} is a supportLink`); });
   }
+  // A rerun wrote nothing because the stored text is already exactly this.
+  if (reruns.length) console.log(`${domain}: ${reruns.length} field(s) already hold exactly this text; left alone`);
   // An upgrade replaces a published statement that nothing was found. Say so.
   if (upgrades.length) {
     console.log(`${domain}: ${upgrades.length} field(s) UPGRADED from not-established to documented`);
