@@ -398,3 +398,38 @@ different map's territory, and they were the only thing standing in this field.
 The replacement also carries a documented absence worth keeping: the whole
 NCCD framework was read and contains zero references to the CEFR, the single
 grep hit being "eviden**cefr**om", a word-join artefact.
+
+## BT|Bhutan, fl.assessment — a contradiction, NOT resolved
+
+**The stored field says:** "Foreign second language papers are assessed
+externally as per CISCE syllabus."
+
+**A Japan Foundation 2025 country report says:** ブータンでは、学校教育においては
+英語以外の外国語教育は行われていない — no foreign language other than English is
+taught in school education. Corroborated by the BHSEC syllabus, which lists
+only English and Dzongkha as common subjects.
+
+Those cannot both be read plainly. Either the CISCE second-language papers are
+available but not taught, or one of the two statements is about a narrower
+scope than it appears. Both are sourced.
+
+The stored field was LEFT IN PLACE: it already answers all four of the field's
+questions and is the more specific of the two. The new bullets were not
+written. Someone with the BCSEA regulations and the JF report side by side
+should decide which scope each statement really has.
+
+## KW|Kuwait and ID|Indonesia, fl.assessment (2026-09-07) — replaced
+
+Kuwait's stored three bullets said exams happen at ministry level, that a body
+assesses four subjects, and that pupils must pass to be promoted. Replaced by
+five that name the general secondary certificate, English as THE examined
+foreign language taught in every grade, the 50% pass threshold, and the CEFR
+ladder — B2 by grade 12, A2 by grade 5, B1 by grade 9.
+
+Indonesia's single stored bullet — "a diploma is awarded on completing a level
+of education after passing an examination" — was replaced by five naming the
+Tes Kemampuan Akademik, its compulsory papers by stage, the fact that it is
+voluntary and a pupil can graduate without sitting it, and CEFR B1 for general
+and B2 for advanced English.
+
+In both cases nothing in the replaced text is absent from the replacement.
