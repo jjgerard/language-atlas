@@ -29,8 +29,9 @@ if (!outDir) { console.log("usage: node eurostat-uptake.js <outdir>"); process.e
 const DATASET = "educ_uoe_lang01";
 const BASE = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/" + DATASET;
 const YEARS = [2018, 2022];
-const LEVEL = "ED2";          // lower secondary: where a foreign language is compulsory in most systems
+const LEVEL = process.env.ISCED || "ED2";
 const TOPN = 4;
+const LEVELNAME = { ED1: "primary (ISCED 1)", ED2: "lower secondary (ISCED 2)", ED3: "upper secondary (ISCED 3)" }[LEVEL] || LEVEL;
 const ISO = { EL: "GR", UK: "GB" };
 
 const get = u => new Promise(res => {
@@ -90,14 +91,14 @@ const url = (geo, lang, y) => BASE + "?format=JSON&lang=EN&unit=NR&isced11=" + L
         spec[key] = spec[key] || { series: { uptake: [] }, evidence: [], addDocLinks: [] };
         spec[key].series.uptake.push({
           year: y, value: String(v),
-          note: ll[lc] + " at lower secondary (ISCED 2); Eurostat " + DATASET
+          note: ll[lc] + " at " + LEVELNAME + "; Eurostat " + DATASET
             + ". Counts ENROLMENTS in the study of a language, not pupils -- a pupil taking two languages is counted twice"
             + flag,
         });
         spec[key].evidence.push({ bullet: y + " " + v, url: u, quote: '"value":{"0":' + v + "}" });
         spec[key].addDocLinks.push({
           label: "Eurostat, Pupils by education level and modern foreign language studied (" + DATASET + ") — "
-            + (gl[geo] || geo) + ", " + ll[lc] + ", lower secondary (ISCED 2), " + y,
+            + (gl[geo] || geo) + ", " + ll[lc] + ", " + LEVELNAME + ", " + y,
           url: u,
         });
         figures++;
