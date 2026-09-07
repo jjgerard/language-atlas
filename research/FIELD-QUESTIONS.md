@@ -491,6 +491,33 @@ above, where questions 2-4 presuppose a yes. The rest are fields where the
 first question is the only one the available documents speak to, and a drafter
 with more to say about it kept saying it.
 
+## A decision that changes what counts as an absence, and it is the maintainer's
+
+`he.linguistics` and `he.offerings` between them have a boundary, and where it
+sits decides whether a country reads as empty or full. A pass over Europe and
+Oceania read `linguistics` as covering programmes whose TITLE names the study
+of language -- lingvistika, kalbotyra, jezykoznawstwo, keeleteadus, sciences du
+langage -- and as excluding a degree in one named language, which goes to
+`offerings`.
+
+That is what the filled entries already do, so the pass was right to follow it.
+But it is worth seeing what it costs. Montenegro's Filoloski fakultet offers
+programmes at all five levels and every one is named for a single language, so
+Montenegro is recorded as HAVING NO linguistics programme. So are Andorra,
+whose only language item is a Batxelor en Llengua catalana, and the Faroes,
+which teach Foroyskt at bachelor and master under a department of Faroese.
+
+Three units full of language provision, filed as absences. That is defensible
+-- a philology degree is not a linguistics degree, and a reader asking where to
+study linguistics is not served by being told about Faroese literature. It is
+also the kind of line that a reader will read as a claim about the discipline
+rather than about titles, which is a different thing.
+
+The alternative would be to record programme titles as the source writes them
+and let the reader sort them, which is what the typed rows already permit. The
+question is only whether the absence is asserted or left to the reader.
+Recorded here because it is a decision, not a finding.
+
 ## Related
 
 `fields-must-be-countable` in the maintainer's notes: a field that can only

@@ -20146,6 +20146,14 @@
    {
     "label": "University of Guam, A new concentration at UOG is training future CHamoru teachers (29 March 2022)",
     "url": "https://www.uog.edu/news-announcements/2021-2022/2022-a-track-gaining-traction-a-new-concentration-at-uog-is-training-future-chamoru-teachers"
+   },
+   {
+    "label": "University of Guam Catalog - English (undergraduate)",
+    "url": "https://catalog.uog.edu/current/programs/college-of-liberal-arts-and-social-sciences/english"
+   },
+   {
+    "label": "University of Guam Graduate Bulletin - English",
+    "url": "https://catalog.uog.edu/current/graduate-bulletin/programs/college-of-liberal-arts-and-social-sciences/english"
    }
   ],
   "supportLinks": [],
@@ -20155,7 +20163,28 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "The University of Guam runs a CHamoru Studies Program to sustain a CHamoru-literate community\nIt draws on courses such as CHamoru Language, Anthropology, Biology, Literature and Geography\nA track called CHamoru Studies for Education prepares public school CHamoru teachers\nA Certificate in CHamoru Language and Culture Research is also offered",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "English (Linguistics/ESL Emphasis)",
+    "level": "bachelor",
+    "institution": "University of Guam",
+    "url": "https://catalog.uog.edu/current/programs/college-of-liberal-arts-and-social-sciences/english",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "one of the three emphases of the BA in English; the university lists it as a named degree option and has no free-standing linguistics major"
+   },
+   {
+    "subject": "Master of Arts in English (Linguistics Track)",
+    "level": "master",
+    "institution": "University of Guam",
+    "url": "https://catalog.uog.edu/current/graduate-bulletin/programs/college-of-liberal-arts-and-social-sciences/english",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "one of the two tracks of the MA in English, 30 credit hours, taught with the LN course prefix"
+   }
+  ],
   "offerings": [
    {
     "language": "Chamorro",
@@ -28333,6 +28362,10 @@
    {
     "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Lithuania, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=LT&time=2023"
+   },
+   {
+    "label": "Vilniaus universitetas, list of master's programmes by faculty",
+    "url": "https://www.vu.lt/stojantiesiems/magistranturos"
    }
   ],
   "supportLinks": [],
@@ -28342,7 +28375,48 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Vilnius University runs a Lithuanian philology bachelor joining language and literature\nStudents there can branch into Lithuanian Sign Language and sign studies",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Kalbotyra: Bendroji kalbotyra",
+    "level": "master",
+    "institution": "Vilniaus universitetas",
+    "url": "https://www.vu.lt/stojantiesiems/magistranturos/bendroji-kalbotyra",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "one of four specialisations of the Kalbotyra master's programme, run by the Faculty of Philology"
+   },
+   {
+    "subject": "Kalbotyra: Baltu kalbotyra",
+    "level": "master",
+    "institution": "Vilniaus universitetas",
+    "url": "https://www.vu.lt/stojantiesiems/magistranturos/baltu-kalbotyra",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "120 credits; Baltic-linguistics specialisation of the Kalbotyra master's programme"
+   },
+   {
+    "subject": "Kalbotyra: Taikomoji kalbotyra",
+    "level": "master",
+    "institution": "Vilniaus universitetas",
+    "url": "https://www.vu.lt/stojantiesiems/magistranturos/taikomoji-kalbotyra",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "applied-linguistics specialisation of the same four-track Kalbotyra master's programme"
+   },
+   {
+    "subject": "Viesojo diskurso lingvistika: mediju retorika ir komunikacija",
+    "level": "master",
+    "institution": "Vilniaus universitetas",
+    "url": "https://www.vu.lt/stojantiesiems/magistranturos/viesojo-diskurso-lingvistika-mediju-retorika-ir-komunikacija",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "taught at VU's Kaunas faculty, listed separately from the Faculty of Philology programmes"
+   }
+  ],
   "offerings": [
    {
     "language": "Lithuanian",
@@ -29292,6 +29366,14 @@
    {
     "label": "Moldova State University, Faculty of Letters - bachelor (licenta) programmes",
     "url": "https://litere.usm.md/?page_id=61"
+   },
+   {
+    "label": "USM, Scoala Doctorala Stiinte Umaniste si ale Educatiei - specialities",
+    "url": "https://doctorat.usm.md/umanistice"
+   },
+   {
+    "label": "USM, Facultatea de Litere - studii de licenta, master si doctorat",
+    "url": "https://usm.md/?page_id=511"
    }
   ],
   "supportLinks": [],
@@ -29301,7 +29383,18 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Lingvistică generală; filosofia limbajului; psiholingvistică; lingvistică informatizată",
+    "level": "doctorate",
+    "institution": "Universitatea de Stat din Moldova, Școala Doctorală Științe Umaniste și ale Educației",
+    "url": "https://doctorat.usm.md/umanistice",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "doctoral speciality 621.01 within the scientific branch 62. Filologie; the source adds cu specificarea limbii după caz"
+   }
+  ],
   "offerings": [
    {
     "language": "Romanian",
@@ -29891,6 +29984,10 @@
    {
     "label": "Blaze Koneski Faculty of Philology, Skopje - first-cycle study programmes",
     "url": "https://flf.ukim.mk/studii/prv-ciklus/"
+   },
+   {
+    "label": "Filoloski fakultet Blaze Koneski, UKIM - tret ciklus studii",
+    "url": "https://flf.ukim.mk/studii/tret-ciklus/"
    }
   ],
   "supportLinks": [],
@@ -29900,7 +29997,28 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Македонистика – Македонски јазик и лингвистика",
+    "level": "doctorate",
+    "institution": "Универзитет „Св. Кирил и Методиј“, Филолошки факултет „Блаже Конески“",
+    "url": "https://flf.ukim.mk/studii/tret-ciklus/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "three-year third-cycle doctoral programme; the faculty publishes its accreditation decision under this title"
+   },
+   {
+    "subject": "Наука за јазик",
+    "level": "doctorate",
+    "institution": "Универзитет „Св. Кирил и Методиј“, Филолошки факултет „Блаже Конески“",
+    "url": "https://flf.ukim.mk/studii/tret-ciklus/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "third-cycle doctoral programme, named as such in the faculty's own admission lists"
+   }
+  ],
   "offerings": [
    {
     "language": "Macedonian",
@@ -35082,6 +35200,14 @@
    {
     "label": "Eurostat, Graduates by education level, programme orientation, sex and field of education (educ_uoe_grad02) — Poland, ISCED 5-8, field of education Languages (ISCED-F 023), both sexes, 2023",
     "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_grad02?format=JSON&lang=EN&iscedf13=F023&isced11=ED5-8&sex=T&unit=NR&geo=PL&time=2023"
+   },
+   {
+    "label": "Uniwersytet Warszawski, Internetowa Rekrutacja Kandydatow, oferta 2026/2027",
+    "url": "https://irk.uw.edu.pl/pl/offer/PELNE2026/"
+   },
+   {
+    "label": "Uniwersytet Jagiellonski, IRK, oferta studiow I i JM 2026",
+    "url": "https://irk.uj.edu.pl/pl/offer/IiJM_P_26/"
    }
   ],
   "supportLinks": [],
@@ -35091,7 +35217,48 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Gdansk's etnofilologia kaszubska centres on fluent spoken and written Kashubian\nIt is a first-cycle licencjat, from which graduates go on to second-cycle study",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Lingwistyka stosowana",
+    "level": "bachelor",
+    "institution": "Uniwersytet Warszawski",
+    "url": "https://irk.uw.edu.pl/pl/offer/PELNE2026/field/P_LS/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "studia stacjonarne pierwszego stopnia; listed in the university's own admissions register (IRK) for 2026/2027"
+   },
+   {
+    "subject": "Lingwistyka stosowana",
+    "level": "master",
+    "institution": "Uniwersytet Warszawski",
+    "url": "https://irk.uw.edu.pl/pl/offer/PELNE2026/field/P_LS/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "studia stacjonarne drugiego stopnia; same IRK entry as the first-cycle programme"
+   },
+   {
+    "subject": "Filologia angielska - jezykoznawstwo",
+    "level": "master",
+    "institution": "Uniwersytet Warszawski",
+    "url": "https://irk.uw.edu.pl/pl/offer/PELNE2026/field/P_FLAJ/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "the register gives its own English title as English Studies - Linguistics; offered stacjonarne and niestacjonarne (zaoczne)"
+   },
+   {
+    "subject": "lingwistyka i technologie jezykowe",
+    "level": "bachelor",
+    "institution": "Uniwersytet Jagiellonski",
+    "url": "https://irk.uj.edu.pl/pl/offer/IiJM_P_26/programme/lingwi.tech.jezy_s1s_P/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "Wydzial Filologiczny; stacjonarne, pierwszego stopnia, 3 lata (6 semestrow); the faculty writes the programme name in lower case"
+   }
+  ],
   "offerings": [
    {
     "language": "Kashubian",
@@ -36224,6 +36391,14 @@
    {
     "label": "University of Belgrade, Faculty of Philology - undergraduate academic studies",
     "url": "https://fil.bg.ac.rs/sr/studije/osnovne-akademske-studije"
+   },
+   {
+    "label": "Univerzitet u Beogradu, Filoloski fakultet - Katedra za opstu lingvistiku",
+    "url": "https://www.fil.bg.ac.rs/sr/katedre/opsta-lingvistika"
+   },
+   {
+    "label": "Univerzitet u Beogradu, Filoloski fakultet - osnovne akademske studije",
+    "url": "https://www.fil.bg.ac.rs/sr/studije/osnovne-akademske-studije"
    }
   ],
   "supportLinks": [],
@@ -36233,7 +36408,28 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Општа лингвистика са страним језиком",
+    "level": "bachelor",
+    "institution": "Универзитет у Београду, Филолошки факултет",
+    "url": "https://www.fil.bg.ac.rs/sr/katedre/opsta-lingvistika/opsta-lingvistika-sa-stranim-jezikom",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "a four-year study module of the Језик, књижевност, култура bachelor programme, run by the Катедра за општу лингвистику; general linguistics is always combined with one foreign language"
+   },
+   {
+    "subject": "Језик и лингвистика",
+    "level": "master",
+    "institution": "Универзитет у Београду, Филолошки факултет",
+    "url": "https://www.fil.bg.ac.rs/sr/katedre/opsta-lingvistika/opsta-lingvistika-sa-stranim-jezikom",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "one of the four modules of the master's programme Језик, књижевност, култура, described by the department as general and applied linguistics"
+   }
+  ],
   "offerings": [
    {
     "language": "English",
@@ -41068,6 +41264,10 @@
    {
     "label": "Ivan Franko National University of Lviv, Faculty of Foreign Languages - bachelor specialisations",
     "url": "https://lingua.lnu.edu.ua/academics/bachelor"
+   },
+   {
+    "label": "KNU Institute of Philology, educational programmes index",
+    "url": "https://philology.knu.ua/osvitni-prohramy/"
    }
   ],
   "supportLinks": [],
@@ -41077,7 +41277,38 @@
   "inst": "",
   "source": "",
   "degreeSubjects": "Institutions must enable study of a minority language as a subject on request",
-  "linguistics": [],
+  "linguistics": [
+   {
+    "subject": "Прикладна (комп’ютерна) лінгвістика та англійська мова",
+    "level": "bachelor",
+    "institution": "Київський національний університет імені Тараса Шевченка, Навчально-науковий інститут філології",
+    "url": "https://philology.knu.ua/osvitni-prohramy/bak-opysy-op-ta-proh-nd/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "programme code B11.10 in the institute's own list of bachelor educational programmes"
+   },
+   {
+    "subject": "Прикладна лінгвістика (редакторсько-перекладацька та експертна діяльність)",
+    "level": "master",
+    "institution": "Київський національний університет імені Тараса Шевченка, Навчально-науковий інститут філології",
+    "url": "https://philology.knu.ua/osvitni-prohramy/mahistra-oop-pnd-den/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "programme code B11.10 in the institute's list of master's educational programmes (full-time)"
+   },
+   {
+    "subject": "Юрислінгвістика та переклад",
+    "level": "master",
+    "institution": "Київський національний університет імені Тараса Шевченка, Навчально-науковий інститут філології",
+    "url": "https://philology.knu.ua/osvitni-prohramy/mahistra-oop-pnd-den/",
+    "institutions": "",
+    "orientation": "",
+    "year": "",
+    "note": "programme code В11.01 in the same master's list"
+   }
+  ],
   "offerings": [
    {
     "language": "English",

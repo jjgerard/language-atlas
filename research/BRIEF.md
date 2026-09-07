@@ -326,6 +326,25 @@ Four more that earned their keep in the Americas:
 - **Mexico, `oferta.unam.mx`** is an alphabetical index plus one static page
   per licenciatura carrying the award title and the faculties offering it.
 
+Three more, from Europe, and one of them overturns the obvious candidate:
+
+- **Poland: the university's own IRK, not POL-on.** `polon.nauka.gov.pl` 404s
+  on the programme paths, `radon.nauka.gov.pl/dane/studia-i-studenci` is a
+  1,152-byte SPA shell, and `studia.gov.pl` redirects into a JavaScript search
+  app. What serves is the MUCI admissions register each university runs:
+  `irk.uw.edu.pl/pl/offer/PELNE2026/` is an A-Z index of every programme and
+  `/field/<CODE>/` gives each one with its mode and cycle;
+  `irk.uj.edu.pl/pl/offer/<REG>/programme/<code>/` is a full detail page with
+  the organisational unit, the kierunek, the level and the duration. Every
+  Polish university runs one, which makes this a national register in practice.
+- **Lithuania: `vu.lt/stojantiesiems/magistranturos`**, one 361 KB fetch
+  listing every master's programme grouped by faculty. AIKOS serves 200 but
+  its registry search is SharePoint plus JavaScript and says so in Lithuanian;
+  `bakalauras.lamabpo.lt` fails TLS SNI.
+- **Ukraine: KNU's Institute of Philology**, at
+  `philology.knu.ua/osvitni-prohramy/...`, flat server-rendered lists of every
+  educational programme with its official code.
+
 **What does not work is a register that renders its results in JavaScript**, and
 most of the famous ones do. Confirmed dead to a fetcher: Universitaly (Nuxt),
 Spain's RUCT (AJAX), Ukraine's EDBO (Next.js), felvi.hu, Croatia's
@@ -335,6 +354,24 @@ groups by DEGREE CLASS, which by design never names a language.
 
 Do not spend a pass fighting these. Note them and go to the faculty's own
 programme list, which is usually server-rendered because it is old.
+
+## `linguistics` means the science of language, not a language
+
+The field is for a programme whose own title names the study of language as a
+subject -- Lingvistika, Kalbotyra, Jezykoznawstwo, Obecna lingvistika,
+Keeleteadus, Ciencias da Linguagem, Sciences du langage. It is NOT for a
+degree in one language: "Crnogorski jezik i knjizevnost" is a philology
+degree and belongs to `offerings`, which is exactly the field that asks which
+languages an institution teaches.
+
+This is what the 261 filled entries already do, and it is worth stating because
+it is what turns three units into documented absences rather than long lists.
+Montenegro's Filoloski fakultet offers programmes at all five levels and every
+one is named for a single language. Andorra's only language item is a Batxelor
+en Llengua catalana. The Faroes teach Foroyskt at bachelor and master under a
+Foroyamalsdeildin. All three are full of language provision and none of them
+has a linguistics programme, and a pass that blurred the two would have
+reported the opposite.
 
 ## A meta-description is not a body quote
 

@@ -1378,3 +1378,127 @@ the same parameters as a GET return a page with no rows. It also counts
 enrolments rather than degree programmes, so it answers `he.enrolment` and not
 `offerings`. No plain-GET IPEDS completions query was found either, which is
 why the United States is filled by named institution rather than by total.
+
+## 21. The African `he.requiredStudy` pass: HEPO's other slots, and Arabic presentation forms
+
+Added 7 September 2026 filling `requiredStudy` for 50 African units. Every
+observation here is from a direct probe on this machine.
+
+### `_HEEdPlanLi` is the slot that opens the countries whose law slots are scans
+
+Section 20 records that many HEPO law PDFs are image scans. It is worth adding
+what to reach for when they are. Across the 50 units, `_HELawLi` plus
+`_HEEdLawLi` gave a text layer for **34**; adding `_HEEdPlanLi` recovered
+**12 more** -- Angola, Burkina Faso, Burundi, CAR, Congo-Brazzaville, Gambia,
+Guinea, Guinea-Bissau, Lesotho, Malawi, Chad and Togo, each 150 KB-1.3 MB of
+clean text.
+
+**But it is a sector PLAN, not a statute**, so its silence is weak evidence
+about a legal duty. Use it to find out what the law is called and what the
+system does; do not file "the framework law contains no such provision" off it.
+
+### The country-graph page lists more slots than the five that are documented
+
+`/pc/policy/countrygraph/cp/<ISO3>/` returns ~1 MB and names every file it
+holds. Beyond `HELawLi`, `HEEdLawLi`, `QALegLi`, `HEEdPlanLi` and `RecAutoLi`,
+these exist: **`HEPlanLi`, `RecQualLi`, `RecPrivLi`, `RecAcFreeLi`,
+`AccModNSTLi`, `AccQuoLi`, `ConLi`, `FinAgLegLi`**. Read the names off the page
+rather than guessing -- and note that **several slots serve the same file**:
+`ago_HELawLi`, `ago_RecAutoLi`, `ago_RecPrivLi` and `ago_RecAcFreeLi` are all
+4,095,421 bytes, so a second slot is often not a second document. A file linked
+from a country page can still 404: `mwi/che_act.pdf` does.
+
+### More HEPO slots with no text layer, to add to section 20's list
+
+Whole-country scans (every slot tried yields under 60 bytes): **Angola**
+(HELawLi, HEEdLawLi, QALegLi, RecAutoLi, RecQualLi, RecPrivLi, RecAcFreeLi),
+**Burundi** (HELawLi, RecAutoLi, RecQualLi, RecPrivLi, AccModNSTLi -- but
+`bdi_QALegLi` DOES extract, 35 KB), **Guinea** (HELawLi, QALegLi, RecAutoLi,
+RecPrivLi, RecAcFreeLi, AccQuoLi, AccModNSTLi).
+
+Single slots: `civ_HELawLi`, `cmr_HELawLi` (57 MB yielding 843 bytes),
+`caf_RecPrivLi`, `caf_AccModNSTLi`, `bfa_RecPrivLi`, `bfa_RecAcFreeLi`,
+`gab_HEEdLawLi`, `gmb_QALegLi`, `gnb_HEEdLawLi`, `lso_RecPrivLi`,
+`moz_HEEdLawLi`, `mwi_RecPrivLi`, `mwi_FinAgLegLi`, `nam_HEEdLawLi`,
+`tcd_RecPrivLi`, `tcd_RecAcFreeLi`, `tgo_RecPrivLi`, `tgo_RecAcFreeLi`,
+`tgo_FinAgLegLi`. `tgo_QALegLi` extracts (20 KB) where `tgo_HELawLi` does not.
+
+Confirmed again: **ERI, GNQ, SYC and STP have no HEPO document at all** -- every
+slot 404s and the country-graph page 500s.
+
+### Arabic presentation forms: a silent quote failure with a known remedy
+
+Four of the Arabic PDFs extract into the **Arabic Presentation Forms blocks
+(U+FB50-U+FEFF)** rather than the standard Arabic block, and pdftotext also
+interleaves U+202B/U+202C directional marks between runs:
+
+```
+egy_HELawLi   1,344 standard-block chars vs 74,629 presentation forms
+sdn_HELawLi     225                          9,536
+lby_HELawLi   1,160                          3,942
+lby_HEEdLawLi   ---                          presentation forms throughout
+```
+
+A quote typed in ordinary Arabic -- `اللغة العربية` -- is **not a substring of
+that text**, so a perfectly correct quote reads as invented. NFKC (or NFKD)
+normalisation maps the presentation forms back and the quote is then found.
+Two practical consequences: **search under NFKC, but quote the RAW extracted
+substring**, because the raw form matches whether or not the reader normalises;
+and **keep the quote inside one directional run**, since a span crossing a
+U+202B boundary cannot be reproduced.
+
+`dza_HELawLi` and `dza_HEEdLawLi` are the other Arabic failure mode: standard
+block, but glyph-substituted -- ي extracted as ً, ق as ل, ، as `q`, and ي as `X`
+mid-word, so `رقم` comes out `رلم`. Section 20 records this for `dza_HELawLi`;
+it applies to the education-law slot too.
+
+`mrt_HELawLi` and `egy_HEEdLawLi` are clean standard-block Arabic and quote
+normally. And `mrt_HEEdLawLi` is **not Arabic at all** -- it is the French
+Journal Officiel text of Mauritania's loi d'orientation 2022-023, which is the
+easier door to that instrument.
+
+### Algeria stays unreadable, and this narrows why
+
+`joradp.dz` served the 1999 French Journal Officiel issue at **200 and
+1,312,819 bytes with a 24-byte text layer** `[checked here]`, confirming
+section 20's record that the 1990s issues are image scans. `www.mesrs.dz`
+(200, 1.4 MB), `www.education.gov.dz` (200) and `www.univ-alger.dz` (200) all
+serve but carry no statute text; `services.mesrs.dz` answers **200 with zero
+bytes**. With `dza_HELawLi` holding an index rather than a law, Algeria has no
+readable higher-education instrument by any door tried, and its `requiredStudy`
+is `insufficient` for access rather than for absence.
+
+### The door that worked for South Africa
+
+`www.gov.za/sites/default/files/gcis_document/<YYYYMM>/<gazette><notice>.pdf`
+serves South African Government Notices as real PDFs with clean text layers --
+605,816 bytes and 34,497 characters for the 2020 Language Policy Framework for
+Public Higher Education Institutions. This matters because the university hosts
+do not: `ulwazi.ukzn.ac.za` is NXDOMAIN, `ukzn.ac.za` and `www.ukzn.ac.za`
+return 404 with a 16-byte body on their language-policy paths, and
+**`www.up.ac.za/language-policy` is another big-404 -- HTTP 404 with 54,515
+bytes** of full site furniture. `dhet.gov.za` 404s the same document that
+`gov.za` serves.
+
+**A REVERSE user-agent case, which the fallback chain exists for.**
+`nus.edu.ws`, the National University of Samoa, returns 403 with a 75,193-byte
+block page to the full Chrome user-agent and **200 with 265,684 bytes to a bare
+`Mozilla/5.0` or to no user-agent at all**. That is the same shape as
+`education.gov.gy` above, and it is the reason the gate tries a short UA after
+the Chrome one rather than treating a 403 as final. A drafter who only ever
+sends the Chrome UA will record this host as blocked when it is not.
+
+`palau.edu` fails with an untrusted root on 443 and times out on 80, so Palau
+Community College is unreachable. `highlands.ac.je` (University College Jersey)
+and `thegi.ac.gg` (The Guernsey Institute) do not connect on 443.
+`admitere.usm.md` 503s on every path while the main `usm.md` host serves the
+same lists.
+
+**Two host corrections.** `filoloskifakultet.ucg.ac.me` is now NXDOMAIN on the
+bare host as well as `www.`; the working door is `www.ucg.ac.me/fil`. And
+`flf.ukim.edu.mk` is NXDOMAIN — the faculty has moved to **`flf.ukim.mk`**,
+read off UKIM's own faculty index rather than guessed.
+
+**More big-404s**: `uog.edu/...linguistics/index.php` (167 KB), `marianas.edu/programs/`
+(57 KB), `usp.ac.fj/...linguistics/` (106 KB). `unc.nc/formations/` returns 500
+and `upf.pf/fr/formations` 403s with 68 KB.
