@@ -450,3 +450,24 @@ intervention, review, then school-delivered support" and "Unlike EAL status,
 DLD is persistent — discharge ends an episode, not the condition". The second
 is a real conceptual point and its loss is the cost of the cap; it is recorded
 here so it can be restored if the cap is ever revisited.
+
+## CM|Cameroon, indigenous.revitalisation: integrated into the curriculum, or never brought into force
+
+**PEER (IIEP-UNESCO) says** native languages "have increasingly been integrated
+into the official curricula".
+
+**`axl.cefan.ulaval.ca` says**, of the 1998 orientation law's language clause,
+"Cette partie de la loi ... n'a jamais ete mise en vigueur" -- that part of the
+law was never brought into force.
+
+Both are on the entry, attributed, because they are not the same claim made
+twice: one describes curriculum documents, the other the legal instrument
+behind them, and a country can plausibly have the first without the second.
+But they cannot both be the summary of what Cameroon does, and choosing which
+one leads is the maintainer's call.
+
+## CV|Cape Verde, indigenous.revitalisation: the Boletim Oficial cites a decree number that does not exist
+
+Decreto-Lei 8/2009's sumario cites "67/78" where the decree it is amending is
+67/98. The entry records the sumario's own wording and asserts none of the
+three candidate dates, because guessing which digit is the typo is inference.

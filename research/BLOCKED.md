@@ -1239,3 +1239,17 @@ checked against the other's text and reported four false misses. Checked:
 process id, so it is not exposed. But a 30-byte prefix collides for any two
 documents from one register, which describes most sources in this pipeline, and
 anything written against this data should key on the whole url or a real hash.
+
+**Three African government hosts, indigenous.revitalisation pass.**
+`mincultur.gov.ao` (Angola, Ministry of Culture) fails at TCP -- no connection,
+not a 404. `angop.ao` (Angop, the state news agency) resets the connection
+mid-response. `assemblee.bi` (Burundi, National Assembly) returns 404 for its
+own 2014 language-law article, including from search-result urls that carry its
+own article ids. None has a usable Wayback copy of the pages needed.
+
+**`axl.cefan.ulaval.ca` serves windows-1252, not UTF-8**, and declares nothing.
+Its French quotes survive the gate only because the fallback chain decodes
+latin-1 when the UTF-8 decode produces replacement characters. Worth knowing
+before anyone "simplifies" that decode: the Universite Laval mirror is the only
+readable full text for several Francophone and Hispanophone language laws in
+this data, Venezuela's Ley de Idiomas Indigenas among them.

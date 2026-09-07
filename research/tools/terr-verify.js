@@ -150,8 +150,35 @@ const FOLD_RE = /[^\p{L}\p{N}]+/gu;   // a regex LITERAL: inside new RegExp("...
 // The other compatibility decompositions it brings are wanted too: full-width
 // digits in a CJK document now match half-width ones, and superscripts match
 // their plain form. Checked against CJK and Arabic, which it leaves untouched.
-const fold = s => String(s).normalize("NFKD").replace(/[̀-ͯ]/g, "")
+const MARKS = /[̀-ͯ]/g;
+const foldOnce = s => s.normalize("NFKD").replace(MARKS, "")
   .toLowerCase().replace(FOLD_RE, " ").trim();
+
+// Fold in slices. V8 collects every match of a global regex before it builds
+// the result, and a policy PDF whose text layer is mostly punctuation and
+// line noise has enough of them to overflow the stack -- Tanzania is 100
+// pages and killed the whole run at the eighth unit. Slices break only where
+// a letter or digit does not sit, so no word is ever cut in half, and never
+// between the halves of a surrogate pair.
+const CHUNK = 100000;
+const ALNUM = /[\p{L}\p{N}]/u;
+const fold = s => {
+  const str = String(s);
+  if (str.length <= CHUNK) return foldOnce(str);
+  const out = [];
+  for (let i = 0; i < str.length; ) {
+    let end = Math.min(i + CHUNK, str.length);
+    if (end < str.length) {
+      let j = end;
+      while (j > i && (ALNUM.test(str[j]) || (str.charCodeAt(j) >= 0xd800 && str.charCodeAt(j) <= 0xdfff))) j--;
+      if (j > i) end = j;
+    }
+    const piece = foldOnce(str.slice(i, end));
+    if (piece) out.push(piece);
+    i = end;
+  }
+  return out.join(" ");
+};
 const hasCJK = s => new RegExp("[" + CJK + "]").test(String(s));
 
 const words = s => fold(s).split(" ").filter(Boolean);
