@@ -401,6 +401,9 @@ const page = name => (req, res) => res.sendFile(path.join(__dirname, '..', 'publ
 app.get('/', page('index.html'));
 app.get('/about', page('about.html'));
 app.get('/patterns', page('patterns.html'));
+// Kept reachable but deliberately absent from the nav: the old patterns content,
+// parked when /patterns became the criteria analysis.
+app.get('/patterns-archive', page('patterns-archive.html'));
 app.get('/views', page('views.html'));
 app.get('/sources', page('sources.html'));
 // /explore was folded into /patterns. Redirect rather than 404: the URL was

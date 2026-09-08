@@ -1,13 +1,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Patterns — Language Atlas</title>
+<title>Patterns (archived) — Language Atlas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/shared.css">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
 /* Wider than /about: the tables below the findings need the room, and every one
    of them scrolls inside its own box rather than pushing the page sideways. */
@@ -215,73 +212,68 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
 </header>
 
 <main>
-  <h2>Who gets in, and who gets out</h2>
+  <h2>What the entries have in common <span class="count">archived</span></h2>
+  <blockquote class="note">
+    <b>This page is kept, not linked.</b> Its content was replaced on /patterns by the analysis of
+    classification and discharge criteria. Nothing here is wrong; it answers a different question,
+    and it is parked in case any of it is wanted again.
+  </blockquote>
   <p class="standfirst">
-    Two maps put a child in a category: <b>language disorder</b> and <b>additional language</b>.
-    Both ask who enters it and who leaves it. Almost every system answers the first question.
-    Almost none answers the second.
+    The maps answer what one place does. This page answers what the places have in common — and,
+    just as often, what none of them record. Everything here is counted from the entries as they
+    stand, so it changes when they do.
   </p>
-
-  <div id="crit"></div>
 
   <p class="lead">
-    Counted live from the entries. <b>Cannot arise</b> means no such category exists there, so
-    nothing can end it — 65 systems have no newcomer designation at all.
-  </p>
-  <p class="lead">
-    <b>The third column is empty, and that is the point.</b> About fifteen of the 42 do establish
-    that no rule exists — France, the US, Spain — but only one field in the atlas is marked up
-    that way yet.
+    Ask it something. Pick two things the atlas records and it counts them against each other
+    across every map at once — or describe what you want and let it choose the two. The
+    findings, the timeline and the coverage tables are below.
   </p>
 
-  <h3>A clock or a test, and systems say which they are not using</h3>
-  <p>
-    Where an exit rule exists it is one of two things, and they are mutually exclusive by design.
-    New Zealand: <i>“no proficiency-based exit test — capped by duration instead”</i>. Czechia:
-    <i>“capped by prior time in Czech education, not by proficiency”</i>.
-  </p>
-  <p>
-    Austria runs its twelve months out <i>“regardless of remaining German gaps”</i>. Against that,
-    Puerto Rico and the Northern Mariana Islands exit on a proficiency assessment, and Germany on
-    an assessment of German sometimes referencing a language diploma.
-  </p>
-
-  <h3>A decision point with nothing behind it</h3>
-  <p>
-    Denmark, Sweden and Finland each fix a review and set no standard for it. Denmark states it
-    outright: the order <i>“sets that decision point but states no criterion for ceasing”</i>.
-  </p>
-  <p>
-    Three high-capacity systems arrived there independently. That is not the absence of a rule,
-    and it is not a deficiency of context — it is what the exemplars do.
-  </p>
-
-  <h3>Same context, opposite policy</h3>
-  <p>
-    Austria and Germany are adjacent, share a language of instruction, and have comparable wealth
-    and migrant share. Austria runs a clock that expires whether or not the child’s German is
-    adequate. Germany assesses proficiency and sets no clock.
-  </p>
-  <p>
-    Whatever decides that, it is not context. The pair is worth more than any correlation over
-    forty-two cases, and it is the reason this page counts rather than scores.
-  </p>
-
-  <h3>How bilingualism enters the criterion</h3>
-  <p>
-    Sweden requires difficulty in <b>all</b> of a child’s languages, which is what separates a
-    disorder from second-language learning. It is the rule that does the most work.
-  </p>
-  <p>
-    Greece rules a child out where low attainment <i>“traces to outside linguistic or cultural
-    factors”</i>; Chile excludes for <i>“features of a social or ethnic setting”</i>. Same clause,
-    opposite effect: the bilingual child is screened away rather than assessed.
-  </p>
+  <div class="xask">
+    <label for="xq" id="xasklabel">Describe what you want to see</label>
+    <div class="xaskrow">
+      <input id="xq" type="text" autocomplete="off" spellcheck="false"
+             placeholder="coverage by region">
+      <button class="xbtn" id="xgo">Show</button>
+    </div>
+    <p class="xsaid" id="xsaid"></p>
+    <p class="xleft" id="xleft"></p>
+    <p class="xegs" id="xegs"></p>
+  </div>
 
   <blockquote class="note">
-    The typology above is a reading of the entries, not yet a coded pass — the counts are live,
-    the categories are not. Vocabularies for all four fields are in <code>src/coding.js</code>.
+    <span id="xasknote"></span>
+    Nothing here is read out of entry text — the wording is deliberately hedged, and a classifier
+    over it fails hardest where the answer is interesting. A question the atlas cannot answer is
+    told so rather than answered with the nearest thing that fits.
   </blockquote>
+
+  <div class="xcontrols">
+    <div class="xctl"><label for="x">Rows</label><select id="x"></select></div>
+    <div class="xctl"><label for="y">Columns</label><select id="y"></select></div>
+    <div class="xctl"><label for="scope">Limited to</label><select id="scope"></select></div>
+  </div>
+
+  <div class="xmodes">
+    <button class="xmode" id="xm-cross" aria-pressed="true">Cross-tabulate</button>
+    <button class="xmode" id="xm-bars" aria-pressed="false">Distribution</button>
+    <button class="xmode" id="xm-units" aria-pressed="false">List the units</button>
+  </div>
+
+  <div class="xout" id="xout"></div>
+  <p class="xsummary" id="xsummary"></p>
+
+  <div class="xreading hidden" id="xreading">
+    <h4>Reading of the table above</h4>
+    <p id="xreadingtext"></p>
+    <p class="prov" id="xreadingprov"></p>
+  </div>
+
+
+  <h3>Findings</h3>
+  <div id="findings"></div>
+  <p class="withdrawn" id="withdrawn" hidden></p>
 
   <h3>When policy changed <span class="count" id="tl-count"></span></h3>
   <p>
@@ -289,9 +281,10 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
     ones are ranges and qualifications; the sort uses the first four-digit year in each.
   </p>
   <p>
-    <b>Read the decades as a fact about sources too.</b> More than a third of these rows fall in
-    the 2010s. Some of that is real; some is that a ministry's website goes back about fifteen
-    years, and a 1974 act reaches this table only if somebody republished it.
+    <b>Read the shape of the decades as a fact about sources as well as about policy.</b> More
+    than a third of these rows fall in the 2010s and the curve drops away sharply before the
+    1990s. Some of that is real. Some of it is that a ministry's website goes back about fifteen
+    years, and an act from 1974 reaches this table only if somebody republished it.
   </p>
   <div class="decades" id="decades"></div>
   <div class="tools">
@@ -305,6 +298,30 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
     <th data-k="region">Region</th><th data-k="domainLabel">Map</th><th data-k="description">Change</th>
   </tr></thead><tbody></tbody></table></div>
 
+  <h3>What nobody records <span class="count" id="cov-count"></span></h3>
+  <p>
+    Field by field, across every entry. The rows at the top are the ones worth reading: a question
+    almost nobody answers is a fact about what these systems publish, not only about how far the
+    atlas has got. <b>Looked</b> counts the places where somebody searched and recorded finding
+    nothing, which is why the two can be told apart at all.
+  </p>
+  <div class="tools">
+    <select id="cov-domain" aria-label="Filter by map"></select>
+    <button data-csv="coverage">Download CSV</button>
+  </div>
+  <div class="twrap"><table id="cov"><thead><tr>
+    <th data-k="label">Field</th><th data-k="has" data-num="1">Documented</th>
+    <th data-k="looked" data-num="1">Looked</th><th data-k="none" data-num="1">Blank</th><th>Share</th>
+  </tr></thead><tbody></tbody></table></div>
+
+  <h3>Taking this away</h3>
+  <p>
+    Every number here comes from <a href="/api/trends">/api/trends</a>, which returns the whole
+    computation as JSON — findings, timeline, sources and coverage — from the same live data as
+    the maps. Each table above also downloads as CSV. The entry text is
+    <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; if you use these counts,
+    please say when you took them, because they move.
+  </p>
 </main>
 
 <footer class="foot">
@@ -313,6 +330,7 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
 
 <script type="module">
 import { mountNav } from '/nav.js';
+import { mountExplore } from '/explore-panel.js';
 
 const esc = s => String(s == null ? '' : s)
   .replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -373,50 +391,24 @@ function fillSelect(sel, values, label) {
   if (label) el.selectedIndex = 0;
 }
 
-// The four fields that ask who enters a category and who leaves it, counted
-// from the atlas rather than written down here. A number typed into a page is
-// wrong the first time somebody fills a field.
-//
-// The states come from fieldStates plus the absence flag: `h` with a flag is a
-// system that established there is no rule, `h` without one describes a rule,
-// `x` is a question that cannot arise, `l` and `n` are both "not checked" for
-// this purpose -- one of them looked and could not establish anything, and
-// neither tells you what the system does.
-const PAIRS = [
-  ['dld', 'identificationCriteria', 'Language disorder', 'who is identified'],
-  ['dld', 'dischargeCriteria', 'Language disorder', 'who is discharged'],
-  ['eal', 'newcomerCriteria', 'Additional language', 'who counts as a newcomer'],
-  ['eal', 'removalCriteria', 'Additional language', 'what ends the designation'],
-];
-
-function renderCriteria(atlas) {
-  const doms = Object.fromEntries(atlas.domains.map(d => [d.id, d]));
-  const rows = PAIRS.map(([id, key, map, asks]) => {
-    const d = doms[id];
-    if (!d) return null;
-    const i = d.fields.findIndex(f => f.k === key);
-    const units = (atlas.units[id] || []).filter(u => u.nat);
-    let rule = 0, absent = 0, na = 0, unchecked = 0;
-    for (const u of units) {
-      const c = (u.fieldStates || '')[i];
-      if (c === 'h') { if (u.absences && u.absences[key]) absent++; else rule++; }
-      else if (c === 'x') na++;
-      else unchecked++;
-    }
-    return { map, asks, rule, absent, na, unchecked, n: units.length };
-  }).filter(Boolean);
-
-  $('#crit').innerHTML = '<div class="twrap"><table class="xtab"><thead><tr>'
-    + '<th>Map</th><th>Question</th><th class="num">Defines it</th>'
-    + '<th class="num">No rule, established</th><th class="num">Cannot arise</th>'
-    + '<th class="num">Not checked</th></tr></thead><tbody>'
-    + rows.map(r => `<tr><td class="unit">${esc(r.map)}</td><td>${esc(r.asks)}</td>
-        <td class="num">${r.rule}</td><td class="num">${r.absent}</td>
-        <td class="num">${r.na}</td><td class="num">${r.unchecked}</td></tr>`).join('')
-    + '</tbody></table></div>';
-}
-
 function render() {
+  // ---- findings ----
+  $('#findings').innerHTML = T.findings.held.map(f => `
+    <div class="finding ${esc(f.scope)}">
+      <div class="scope">${f.scope === 'all' ? 'Across every map' : esc(scopeLabel(f.scope))}</div>
+      <p class="claim">${esc(f.text)}</p>
+      <p class="why">${esc(f.note)}</p>
+    </div>`).join('');
+
+  // A claim whose guard stopped holding is withdrawn rather than quietly
+  // reworded, and saying so is the point of having the guard.
+  const w = T.findings.withdrawn;
+  if (w.length) {
+    $('#withdrawn').hidden = false;
+    $('#withdrawn').textContent =
+      `${w.length} further ${w.length === 1 ? 'finding is' : 'findings are'} not shown because the data no longer supports ${w.length === 1 ? 'it' : 'them'}.`;
+  }
+
   // ---- decades ----
   const dec = T.timeline.byDecade;
   const max = Math.max(...Object.values(dec), 1);
@@ -448,11 +440,38 @@ function render() {
   ['#tl-q', '#tl-domain', '#tl-region'].forEach(s => $(s).addEventListener('input', drawTL));
   drawTL();
 
+  // ---- coverage table ----
+  const covSel = $('#cov-domain');
+  for (const [id, d] of Object.entries(T.coverage)) {
+    const o = document.createElement('option');
+    o.value = id; o.textContent = d.label;
+    covSel.appendChild(o);
+  }
+  const covRows = () => T.coverage[covSel.value].fields;
+  const drawCov = table('#cov', {
+    rows: covRows,
+    sort: { k: 'has', dir: 'ascending', num: true },
+    filter: () => true,
+    render: f => `<tr><td class="unit">${esc(f.label)}</td>
+      <td class="num">${f.has}</td><td class="num">${f.looked}</td><td class="num">${f.none}</td>
+      <td><span class="bar-thin"><i style="width:${f.share}%"></i></span></td></tr>`,
+  });
+  covSel.addEventListener('change', () => { drawCov(); setCovCount(); });
+  const setCovCount = () => { $('#cov-count').textContent = `${T.coverage[covSel.value].entries} entries`; };
+  drawCov(); setCovCount();
+
   // ---- exports ----
-  document.querySelectorAll('[data-csv]').forEach(b => b.addEventListener('click', () =>
-    csv('changes', ['year', 'place', 'region', 'map', 'change'],
-      T.timeline.rows.map(r => [r.year, r.unit, r.region, r.domainLabel, r.description]))));
+  document.querySelectorAll('[data-csv]').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.csv === 'timeline')
+      csv('changes', ['year', 'place', 'region', 'map', 'change'],
+        T.timeline.rows.map(r => [r.year, r.unit, r.region, r.domainLabel, r.description]));
+    if (b.dataset.csv === 'coverage')
+      csv('coverage-' + covSel.value, ['field', 'documented', 'looked', 'blank', 'entries'],
+        covRows().map(f => [f.label, f.has, f.looked, f.none, T.coverage[covSel.value].entries]));
+  }));
 }
+
+const scopeLabel = id => (T.coverage[id] && T.coverage[id].label) || id;
 
 // The cross-tabulation panel reads /api/atlas, not /api/trends, so it stands up
 // on its own and a failure in either does not take the other down with it.
@@ -461,13 +480,16 @@ function render() {
 // panel each fetched their own copy before this — so the page pulled it twice
 // on every load, for data neither of them changes.
 const atlas = fetch('/api/atlas').then(r => r.ok ? r.json() : Promise.reject(new Error('atlas ' + r.status)));
-atlas.then(a => { mountNav(null, a.domains); renderCriteria(a); }).catch(() => mountNav(null));
-
+atlas.then(a => mountNav(null, a.domains)).catch(() => mountNav(null));
+atlas.then(a => mountExplore(a)).catch(err => {
+  document.getElementById('xout').innerHTML =
+    `<p class="xempty">The entries could not be loaded (${esc(err.message)}).</p>`;
+});
 
 fetch('/api/trends')
   .then(r => r.ok ? r.json() : Promise.reject(new Error('trends ' + r.status)))
   .then(d => { T = d; render(); })
   .catch(err => {
-    $('#crit').innerHTML = `<p class="why">The timeline could not be loaded (${esc(err.message)}). The maps themselves are unaffected.</p>`;
+    $('#findings').innerHTML = `<p class="why">The summaries could not be loaded (${esc(err.message)}). The maps themselves are unaffected.</p>`;
   });
 </script>
