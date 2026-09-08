@@ -1,0 +1,529 @@
+{
+ "KE|Kenya": {
+  "fields": {
+   "assessments": [
+    "From a survey of 46 practising speech-language therapists, not a ministry document",
+    "Practitioners report a lack of culturally and linguistically appropriate tools",
+    "A research battery adapted PPVT, TROG, Renfrew Action Picture Test and Test of Word Finding",
+    "Records that the instrument exists - not that any service here uses it",
+    "Built for children whose first language was KiGiryama, a Bantu language"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    1,
+    2
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "From a survey of 46 practising speech-language therapists, not a ministry document",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13443386/",
+    "quote": "An electronic survey was completed by 46 SLTs across Kenya"
+   },
+   {
+    "bullet": "Practitioners report a lack of culturally and linguistically appropriate tools",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13443386/",
+    "quote": "Challenges SLTs face are the lack of culturally and linguistically appropriate tools for service provision"
+   },
+   {
+    "bullet": "A research battery adapted PPVT, TROG, Renfrew Action Picture Test and Test of Word Finding",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3841812/",
+    "quote": "the adapted versions of the Peabody Picture Vocabulary Test, Test for the Reception of Grammar, Renfrew Action Picture Test"
+   },
+   {
+    "bullet": "Records that the instrument exists - not that any service here uses it",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3841812/",
+    "quote": "This study sought to adapt a battery of Western speech and language assessment tools to a rural Kenyan setting"
+   },
+   {
+    "bullet": "Built for children whose first language was KiGiryama, a Bantu language",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3841812/",
+    "quote": "The tool was developed for children whose first language was KiGiryama, a Bantu language"
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "Shah, Kruger & Pillay, 'Speech-language therapy in Kenya: An overview of practitioners, practices and professional needs', African Journal of Disability (survey of 46 SLTs)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13443386/"
+   },
+   {
+    "label": "Carter, Murira, Gona, Tumaini, Lees & Neville, 'Speech and Language Disorders in Kenyan Children: Adapting Tools For Regions With Few Assessment Resources', Journal of Psychology in Africa 22(2), 155-170 (2012)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3841812/"
+   }
+  ]
+ },
+ "TZ|Tanzania": {
+  "fields": {
+   "assessments": [
+    "A 2015 speech study; its no-materials finding is about East Africa, not Tanzania alone",
+    "No culturally and linguistically appropriate materials exist for therapists in the region",
+    "Tanzania adopted and validated the Malawi Development Assessment Tool in its own context",
+    "Preliminary Swahili speech normative data from typically developing pre-school children",
+    "Records that the instrument exists - not that any service here uses it"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    3,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "A 2015 speech study; its no-materials finding is about East Africa, not Tanzania alone",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25134791/",
+    "quote": "Swahili is widely spoken in East Africa, but to date there are no culturally and linguistically appropriate materials available"
+   },
+   {
+    "bullet": "No culturally and linguistically appropriate materials exist for therapists in the region",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25134791/",
+    "quote": "to date there are no culturally and linguistically appropriate materials available for speech-language therapists working in the region"
+   },
+   {
+    "bullet": "Tanzania adopted and validated the Malawi Development Assessment Tool in its own context",
+    "url": "https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf",
+    "quote": "led other countries, such as Uganda,82 Tanzania,83 and Zimbabwe,84 to adopt and validate the tool in their contexts"
+   },
+   {
+    "bullet": "Preliminary Swahili speech normative data from typically developing pre-school children",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25134791/",
+    "quote": "Swahili speech development: preliminary normative data from typically developing pre-school children in Tanzania"
+   },
+   {
+    "bullet": "Records that the instrument exists - not that any service here uses it",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25134791/",
+    "quote": "The challenges are further exacerbated by the limited research available on the typical acquisition of Swahili phonology"
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "Gangji, Pascoe & Smouse, 'Swahili speech development: preliminary normative data from typically developing pre-school children in Tanzania', International Journal of Language & Communication Disorders 50(2) (2015), PubMed abstract",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25134791/"
+   }
+  ]
+ },
+ "ET|Ethiopia": {
+  "fields": {
+   "assessments": [
+    "From an account of building the Addis Ababa training programme, not a ministry document",
+    "Not sufficient assessments and therapy materials in Ethiopian languages and cultures",
+    "Creating such materials is left to the newly educated Ethiopian speech-language pathologists",
+    "Teaching is in English while treatment is in Amharic or another local language"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    2
+   ]
+  },
+  "absences": {
+   "assessments": true
+  },
+  "evidence": [
+   {
+    "bullet": "From an account of building the Addis Ababa training programme, not a ministry document",
+    "url": "https://brocku.scholaris.ca/bitstreams/dddf16b4-c799-49f4-9a2c-706f7a699932/download",
+    "quote": "sharing the experience of establishing speech-language pathology as a profession and the first speech-language pathology training program in Ethiopia"
+   },
+   {
+    "bullet": "Not sufficient assessments and therapy materials in Ethiopian languages and cultures",
+    "url": "https://brocku.scholaris.ca/bitstreams/dddf16b4-c799-49f4-9a2c-706f7a699932/download",
+    "quote": "there were not sufficient assessments and therapy materials in Ethiopian languages and cultures"
+   },
+   {
+    "bullet": "Creating such materials is left to the newly educated Ethiopian speech-language pathologists",
+    "url": "https://brocku.scholaris.ca/bitstreams/dddf16b4-c799-49f4-9a2c-706f7a699932/download",
+    "quote": "It will be the responsibility of these newly educated Ethiopian speechlanguage pathologists to create such materials"
+   },
+   {
+    "bullet": "Teaching is in English while treatment is in Amharic or another local language",
+    "url": "https://brocku.scholaris.ca/bitstreams/dddf16b4-c799-49f4-9a2c-706f7a699932/download",
+    "quote": "while instruction occurred in English, treatment was conducted in Amharic or another local language"
+   }
+  ]
+ },
+ "DZ|Algeria": {
+  "fields": {
+   "assessments": [
+    "MTA 2002, adapted at the University of Algiers with the Laboratoire J. Lordat, from 1993",
+    "A battery of tests of oral and written expression and comprehension for aphasic patients",
+    "Extended to children from the mid-1990s: dysphasies, retards de parole, dyslexies",
+    "The lab also lists a MacArthur adaptation to oral Arabic for deaf implanted children",
+    "MTA is an adaptation to the Algerian context, not an Arabic or Berber translation"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "MTA 2002, adapted at the University of Algiers with the Laboratoire J. Lordat, from 1993",
+    "url": "https://urnop-alger2.com/tests-logiciels/",
+    "quote": "dans le cadre de l’Accord Programme de coopération algéro-française (CMEP 91 MDU 177) co-signé par l’Université d’Alger et le Laboratoire J. Lordat"
+   },
+   {
+    "bullet": "A battery of tests of oral and written expression and comprehension for aphasic patients",
+    "url": "https://urnop-alger2.com/tests-logiciels/",
+    "quote": "C’est une batterie d’épreuves d’examen de l’expression et de la compréhension orale et écrite en direction des patients qui présentent des syndromes aphasiques"
+   },
+   {
+    "bullet": "Extended to children from the mid-1990s: dysphasies, retards de parole, dyslexies",
+    "url": "https://urnop-alger2.com/tests-logiciels/",
+    "quote": "son extension à l’exploration des troubles chez l’enfant (dysphasies, IMC, retards de parole, surdités, dyslexies-dysorthographies)"
+   },
+   {
+    "bullet": "The lab also lists a MacArthur adaptation to oral Arabic for deaf implanted children",
+    "url": "https://urnop-alger2.com/tests-logiciels/",
+    "quote": "Adaptation du Mac ARTHUR à l’arabe oral pour évaluer les capacités perceptives de l’enfant sourd porteur d’un implant cochléaire"
+   },
+   {
+    "bullet": "MTA is an adaptation to the Algerian context, not an Arabic or Berber translation",
+    "url": "https://urnop-alger2.com/tests-logiciels/",
+    "quote": "l’adaptation du bilan d’origine au contexte psycho-socio-linguistique algérien n’est point une traduction en langue arabe ou berbère, des items d’origine"
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "Université d'Alger 2, Unité de Recherche URNOP, 'Tests / Logiciels' — the MTA 2002 battery and other Algerian adaptations, by Nacira Zellal",
+    "url": "https://urnop-alger2.com/tests-logiciels/"
+   }
+  ]
+ },
+ "CM|Cameroon": {
+  "fields": {
+   "assessments": [
+    "BATEDA, a research battery from a doctoral thesis, not a ministry programme",
+    "Records that the instrument exists - not that any service here uses it",
+    "Eleven tests in three sub-batteries: modalities, language components and verbal memory",
+    "Built for French-speaking preschoolers, called the first normalized test of its kind",
+    "Normalized on 159 Cameroonian French-speaking four-to-five-year-old children"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "BATEDA, a research battery from a doctoral thesis, not a ministry programme",
+    "url": "https://umontreal.scholaris.ca/items/f7460f3b-017c-4361-9100-eb1b3b88a8cf",
+    "quote": "on a construit un outil appelé Batterie de tests de dépistage approfondi (BATEDA) qui compte onze tests répartis en trois sous-batteries"
+   },
+   {
+    "bullet": "Records that the instrument exists - not that any service here uses it",
+    "url": "https://umontreal.scholaris.ca/items/f7460f3b-017c-4361-9100-eb1b3b88a8cf",
+    "quote": "Les stratégies d’application de la BATEDA visent à favoriser la pratique du dépistage systématique et la prise en charge des retards de langage au Cameroun"
+   },
+   {
+    "bullet": "Eleven tests in three sub-batteries: modalities, language components and verbal memory",
+    "url": "https://umontreal.scholaris.ca/items/f7460f3b-017c-4361-9100-eb1b3b88a8cf",
+    "quote": "eleven tests organized in three batteries assessing respectively modalities (BATEM), language components (BATEL) and memory (TMV)"
+   },
+   {
+    "bullet": "Built for French-speaking preschoolers, called the first normalized test of its kind",
+    "url": "https://umontreal.scholaris.ca/items/f7460f3b-017c-4361-9100-eb1b3b88a8cf",
+    "quote": "the building of the first normalized language assessment test intended for French-speaking preschoolers living in African countries"
+   },
+   {
+    "bullet": "Normalized on 159 Cameroonian French-speaking four-to-five-year-old children",
+    "url": "https://umontreal.scholaris.ca/items/f7460f3b-017c-4361-9100-eb1b3b88a8cf",
+    "quote": "From a sample of 159 Cameroonian French-speaking four-to-five-years old children, the tool has been normalized"
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "Takam Taguemné, A., 'Vers un outil d'évaluation du langage préscolaire et détecteur de préalables pour l'éducation de base au Cameroun en cas de retard de langage', thèse, Université de Montréal (2010) — the BATEDA battery",
+    "url": "https://umontreal.scholaris.ca/items/f7460f3b-017c-4361-9100-eb1b3b88a8cf"
+   }
+  ]
+ },
+ "MU|Mauritius": {
+  "fields": {
+   "assessments": [
+    "The SEN Strategy 2017 names one instrument, PPVT, and only as a glossary abbreviation",
+    "The same glossary lists SAT and PSAT, which are American school tests",
+    "The strategy still sets out to develop and standardize tools for assessment of learning needs",
+    "Procuring age and level appropriate assessment tools is a listed function, none named",
+    "The 2022 therapist regulations impose a duty to assess but name no instrument"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    1,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "The SEN Strategy 2017 names one instrument, PPVT, and only as a glossary abbreviation",
+    "url": "https://education.govmu.org/Documents/educationsector/Documents/Special%20Education%20Needs/SEN_Strategy_2017_Final.pdf",
+    "quote": "PPVT: Peabody Picture Vocabulary Test Present level of academic achievement and functional performance"
+   },
+   {
+    "bullet": "The same glossary lists SAT and PSAT, which are American school tests",
+    "url": "https://education.govmu.org/Documents/educationsector/Documents/Special%20Education%20Needs/SEN_Strategy_2017_Final.pdf",
+    "quote": "SAT: Scholastic Aptitude Test School Reform: Describes efforts to improve schools by making fundamental or sweeping changes"
+   },
+   {
+    "bullet": "The strategy still sets out to develop and standardize tools for assessment of learning needs",
+    "url": "https://education.govmu.org/Documents/educationsector/Documents/Special%20Education%20Needs/SEN_Strategy_2017_Final.pdf",
+    "quote": "Develop and standardize tools for assessment of learning needs 8.3 Strategy Goal 3: Screening, Identification and Assessment of Learning Needs"
+   },
+   {
+    "bullet": "Procuring age and level appropriate assessment tools is a listed function, none named",
+    "url": "https://education.govmu.org/Documents/educationsector/Documents/Special%20Education%20Needs/SEN_Strategy_2017_Final.pdf",
+    "quote": "Selection and procurement of age and level appropriate assessment tools"
+   },
+   {
+    "bullet": "The 2022 therapist regulations impose a duty to assess but name no instrument",
+    "url": "https://health.govmu.org/health/wp-content/uploads/2023/03/Allied-Health-Professionals-Council-Speech-and-Language-Therapist-Regulations-2022.pdf",
+    "quote": "Speech and Language therapists shall assess or provide the necessary services promptly and shall provide the client with information regarding other appropriate sources of assistance"
+   }
+  ]
+ },
+ "MW|Malawi": {
+  "fields": {
+   "assessments": [
+    "MDAT, a culturally relevant developmental assessment tool created for African settings",
+    "Language is one of four domains, with gross motor, fine motor and social",
+    "Western tools were said to give misleading findings where some items are unfamiliar",
+    "Instruction manual published in English and Chichewa",
+    "Age-standardized norms derived from 1,426 rural Malawian children aged 0-6"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "MDAT, a culturally relevant developmental assessment tool created for African settings",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2876049/",
+    "quote": "A culturally relevant developmental assessment tool, the MDAT, has been created for use in African settings"
+   },
+   {
+    "bullet": "Language is one of four domains, with gross motor, fine motor and social",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2876049/",
+    "quote": "one or no failures in any one domain (gross motor, fine motor, language, social) for the age of the child"
+   },
+   {
+    "bullet": "Western tools were said to give misleading findings where some items are unfamiliar",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2876049/",
+    "quote": "Often tools from the West provide misleading findings in different cultural settings, where some items are unfamiliar"
+   },
+   {
+    "bullet": "Instruction manual published in English and Chichewa",
+    "url": "https://journals.plos.org/plosmedicine/article/file?id=10.1371%2Fjournal.pmed.1000273&type=printable",
+    "quote": "Text S1 MDAT instruction manual (in English and Chichewa). Found at: doi:10.1371/journal.pmed.1000273.s008"
+   },
+   {
+    "bullet": "Age-standardized norms derived from 1,426 rural Malawian children aged 0-6",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2876049/",
+    "quote": "We then assessed 1,426 normal rural children aged 0–6 y from rural Malawi and derived age-standardized norms for all items"
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "Gladstone et al., 'The Malawi Developmental Assessment Tool (MDAT): The Creation, Validation, and Reliability of a Tool to Assess Child Development in Rural African Settings', PLoS Medicine 7(5):e1000273 (2010)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2876049/"
+   }
+  ]
+ },
+ "UG|Uganda": {
+  "fields": {
+   "assessments": [
+    "UNICEF's 2023 regional mapping describes disability screening, never language disorder",
+    "Uganda adopted and validated the Malawi Development Assessment Tool in its own context",
+    "A National Identification Tool and a Learning Needs Identification tool were developed",
+    "Those had not been rolled out due to a lack of funds"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "UNICEF's 2023 regional mapping describes disability screening, never language disorder",
+    "url": "https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf",
+    "quote": "Across the region, early identification happens through varied screening and assessment tools"
+   },
+   {
+    "bullet": "Uganda adopted and validated the Malawi Development Assessment Tool in its own context",
+    "url": "https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf",
+    "quote": "the development of the Malawi Development Assessment Tool (MDAT) led other countries, such as Uganda"
+   },
+   {
+    "bullet": "A National Identification Tool and a Learning Needs Identification tool were developed",
+    "url": "https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf",
+    "quote": "the Ministry of Education and Sports has developed a National Identification Tool and Learning Needs Identification tool in Uganda"
+   },
+   {
+    "bullet": "Those had not been rolled out due to a lack of funds",
+    "url": "https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf",
+    "quote": "However, these had not been rolled out due to a lack of funds"
+   }
+  ]
+ },
+ "BI|Burundi": {
+  "fields": {
+   "assessments": [
+    "From UNICEF's 2023 regional mapping of disability screening, not a language source",
+    "Ten Questions Screening Tool, pilot tested in a study of low-birth-weight infants",
+    "It screens functional difficulties in speech, motor, hearing, vision, cognition and seizure",
+    "Judged good for severe motor and cognitive disability, weak on vision and hearing"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "From UNICEF's 2023 regional mapping of disability screening, not a language source",
+    "url": "https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf",
+    "quote": "Across the region, early identification happens through varied screening and assessment tools"
+   },
+   {
+    "bullet": "Ten Questions Screening Tool, pilot tested in a study of low-birth-weight infants",
+    "url": "https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf",
+    "quote": "In Burundi, the Ten Questions Screening (TQS) tool was pilot tested as part of a study conducted in Kabezi, Bujumbura, and Rural Burundi"
+   },
+   {
+    "bullet": "It screens functional difficulties in speech, motor, hearing, vision, cognition and seizure",
+    "url": "https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf",
+    "quote": "The TQS tool screens for functional difficulties in speech, motor, hearing, vision, cognition, and seizure"
+   },
+   {
+    "bullet": "Judged good for severe motor and cognitive disability, weak on vision and hearing",
+    "url": "https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf",
+    "quote": "Although the tool is good at assessing severe motor and cognitive disabilities, it does not adequately identify visual and hearing disabilities"
+   }
+  ],
+  "addDocLinks": []
+ },
+ "KM|Comoros": {
+  "fields": {
+   "assessments": [
+    "Loi 20-034/AU names no instrument; art. 107 screens only situations pathologiques",
+    "The words langage, handicap and trouble occur nowhere in that law"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "assessments": true
+  },
+  "evidence": [
+   {
+    "bullet": "Loi 20-034/AU names no instrument; art. 107 screens only situations pathologiques",
+    "url": "https://justice.gouv.km/wp-content/uploads/2025/03/decret-n-21-005pr-portant-promulgation-de-la-loi-n-20-034au-du-29-decembre-2020-portant-revision-de-la-loi-n-94-035af-relative-a-lorientation-et-a-leducation.pdf",
+    "quote": "Le repérage, le dépistage, le diagnostic, et d'évaluation des situations pathologiques"
+   },
+   {
+    "bullet": "The words langage, handicap and trouble occur nowhere in that law",
+    "url": "https://justice.gouv.km/wp-content/uploads/2025/03/decret-n-21-005pr-portant-promulgation-de-la-loi-n-20-034au-du-29-decembre-2020-portant-revision-de-la-loi-n-94-035af-relative-a-lorientation-et-a-leducation.pdf",
+    "quote": "L'Education inclusive est un processus qui implique la participation dans les écoles et autres centres d'apprentissage de tous les enfants sans aucune discrimination"
+   }
+  ]
+ },
+ "CV|Cape Verde": {
+  "fields": {
+   "assessments": [
+    "The 2010 Lei de Bases names no instrument: diagnostico occurs 0 times in it",
+    "Its art. 48 defines educacao especial by setting, not by any assessment"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "assessments": true
+  },
+  "evidence": [
+   {
+    "bullet": "The 2010 Lei de Bases names no instrument: diagnostico occurs 0 times in it",
+    "url": "https://www.ares.cv/assets/documentos/enquadramento/Lei%20de%20Bases%20do%20Sistema%20Educativo.pdf",
+    "quote": "Entende-se por educação especial, para os efeitos do presente diploma, a modalidade de educação escolar ministrada preferencialmente em"
+   },
+   {
+    "bullet": "Its art. 48 defines educacao especial by setting, not by any assessment",
+    "url": "https://www.ares.cv/assets/documentos/enquadramento/Lei%20de%20Bases%20do%20Sistema%20Educativo.pdf",
+    "quote": "a modalidade de educação escolar ministrada preferencialmente em estabelecimentos regulares de ensino a favor de alunos portadores de"
+   }
+  ]
+ },
+ "ML|Mali": {
+  "fields": {
+   "assessments": [
+    "PRODEC 2 2019-2028 names no assessment instrument; the word langage is absent from it",
+    "Screening techniques are among what the plan sets out to develop"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "assessments": true
+  },
+  "evidence": [
+   {
+    "bullet": "PRODEC 2 2019-2028 names no assessment instrument; the word langage is absent from it",
+    "url": "https://www.gpekix.org/sites/default/files/Media%20Document/PRODEC-2-Mali2019-2028.pdf",
+    "quote": "le développement de techniques d’évaluation, de dépistage précoce et de remédiation des difficultés d’apprentissage chez les élèves"
+   },
+   {
+    "bullet": "Screening techniques are among what the plan sets out to develop",
+    "url": "https://www.gpekix.org/sites/default/files/Media%20Document/PRODEC-2-Mali2019-2028.pdf",
+    "quote": "Ces stratégies seront mises en œuvre, à travers principalement le développement de techniques d’évaluation, de dépistage précoce"
+   }
+  ]
+ }
+}

@@ -1,0 +1,585 @@
+{
+ "AS|American Samoa": {
+  "fields": {
+   "assessments": [
+    "ASCA 16.1605 names no instrument, requiring identification in accordance with federal mandates",
+    "Chapter 16's definitions list speech or language impairments among the covered disabilities"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "assessments": true
+  },
+  "evidence": [
+   {
+    "bullet": "ASCA 16.1605 names no instrument, requiring identification in accordance with federal mandates",
+    "url": "https://asbar.org/code-annotated/16-1605-identification/",
+    "quote": "policies and procedures to ensure that all children with disabilities in the Territory are identified, located and evaluated in accordance with federal mandates"
+   },
+   {
+    "bullet": "Chapter 16's definitions list speech or language impairments among the covered disabilities",
+    "url": "https://asbar.org/code-annotated/16-1603-definitions/",
+    "quote": "hearing impairments including deafness, speech or language impairments, visual impairments including blindness, serious emotional disturbance"
+   }
+  ]
+ },
+ "AT|Austria": {
+  "fields": {
+   "assessments": [
+    "BESK (DaZ) kompakt is the bundesweit verpflichtende Sprachstandsinstrument in kindergartens",
+    "MIKA-D, compulsory in school since 1 April 2019, is a zuweisungsdiagnostisches Screening",
+    "In Oberösterreich alone, a logopedic screening covers every 4- to 5-year-old in kindergarten",
+    "That screening, LogiK-S, came from the Institut für Sinnes- und Sprachneurologie in 2014",
+    "Both national instruments concern the Bildungssprache Deutsch, BESK in a DaZ version"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    1,
+    2
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "BESK (DaZ) kompakt is the bundesweit verpflichtende Sprachstandsinstrument in kindergartens",
+    "url": "https://www.bmb.gv.at/dam/jcr:f2533a27-30bb-4aa2-b6dc-914c10d3d1ad/Erlass_Uebergabeblatt.pdf",
+    "quote": "kommt entsprechend Artikel 10 das bundesweit verpflichtende Sprachstandsinstrument „BESK (DaZ) kompakt“ (Beobachtungsbogen zur Erfassung der Sprachkompetenz – Deutsch als Zweitsprache) zur Anwendung"
+   },
+   {
+    "bullet": "MIKA-D, compulsory in school since 1 April 2019, is a zuweisungsdiagnostisches Screening",
+    "url": "https://www.bmb.gv.at/dam/jcr:f2533a27-30bb-4aa2-b6dc-914c10d3d1ad/Erlass_Uebergabeblatt.pdf",
+    "quote": "dem seit 1. April 2019 verpflichtenden Messinstrument „MIKA-D“ für die Schule, das ein zuweisungsdiagnostisches Screening-Instrument darstellt"
+   },
+   {
+    "bullet": "In Oberösterreich alone, a logopedic screening covers every 4- to 5-year-old in kindergarten",
+    "url": "https://www.kindersprache.org/unit/kindersprache/diagnostik/sprachscreenings",
+    "quote": "werden in Oberösterreich alle 4- bis 5-jährigen Kinder im Kindergarten von einem logopädischen Screening erfasst"
+   },
+   {
+    "bullet": "That screening, LogiK-S, came from the Institut für Sinnes- und Sprachneurologie in 2014",
+    "url": "https://www.kindersprache.org/unit/kindersprache/diagnostik/sprachscreenings",
+    "quote": "Das Verfahren mit dem Namen LogiK-S (Logopädie im Kindergarten – Screening) wurde vom Institut für Sinnes- und Sprachneurologie in Zusammenarbeit mit LogopädInnen entwickelt"
+   },
+   {
+    "bullet": "Both national instruments concern the Bildungssprache Deutsch, BESK in a DaZ version",
+    "url": "https://www.bmb.gv.at/dam/jcr:f2533a27-30bb-4aa2-b6dc-914c10d3d1ad/Erlass_Uebergabeblatt.pdf",
+    "quote": "somit auch bei einem nicht vorliegenden spezifischen Förderbedarf in der Bildungssprache Deutsch"
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "BMB, Erlass GZ 16.051/0015-I/4/2019 betreffend die Umsetzung der fruehen sprachlichen Foerderung gemaess dem Sprachstandsinstrument BESK (DaZ) kompakt",
+    "url": "https://www.bmb.gv.at/dam/jcr:f2533a27-30bb-4aa2-b6dc-914c10d3d1ad/Erlass_Uebergabeblatt.pdf"
+   },
+   {
+    "label": "Kindersprache.org (Institut fuer Sinnes- und Sprachneurologie, Linz), 'Sprachscreenings und -beobachtungen'",
+    "url": "https://www.kindersprache.org/unit/kindersprache/diagnostik/sprachscreenings"
+   }
+  ]
+ },
+ "AU|Australia": {
+  "fields": {
+   "assessments": [
+    "Pearson's Australian catalogue lists CELF-5 A&NZ, a locally standardised edition",
+    "Also listed: CELF-Preschool 3 A&NZ and the PLS-5 A&NZ Language Adapted Edition",
+    "SPA says existing tools rest on monolingual English speakers and Western cultural norms",
+    "A scoping review finds norm-referenced tests under-represent Indigenous children in norms"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    3,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Pearson's Australian catalogue lists CELF-5 A&NZ, a locally standardised edition",
+    "url": "https://www.pearsonclinical.com.au/products/speech-language.html",
+    "quote": "CELF-5 A&NZ (Clinical Evaluation of Language Fundamentals Australian and New Zealand Fifth Edition)"
+   },
+   {
+    "bullet": "Also listed: CELF-Preschool 3 A&NZ and the PLS-5 A&NZ Language Adapted Edition",
+    "url": "https://www.pearsonclinical.com.au/products/speech-language.html",
+    "quote": "(Preschool Language Scales, Fifth Edition - Australian and New Zealand Language Adapted Edition)"
+   },
+   {
+    "bullet": "SPA says existing tools rest on monolingual English speakers and Western cultural norms",
+    "url": "https://www.speechpathologyaustralia.org.au/Common/Uploaded%20files/Smart%20Suite/Smart%20Library/e0f18c12-a0d6-4a44-a9c3-2bbd9436e37f/2025_Culturally-responsive-speech-pathology-practice.pdf",
+    "quote": "and are based on monolingual English-speaking populations and Western cultural norms (Hyter et al., 2019)."
+   },
+   {
+    "bullet": "A scoping review finds norm-referenced tests under-represent Indigenous children in norms",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11640213/",
+    "quote": "norm‐referenced assessments often lack sufficient representation of Indigenous children in their normative samples"
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "Speech Pathology Australia, position statement 'Culturally responsive speech pathology practice' (2025)",
+    "url": "https://www.speechpathologyaustralia.org.au/Common/Uploaded%20files/Smart%20Suite/Smart%20Library/e0f18c12-a0d6-4a44-a9c3-2bbd9436e37f/2025_Culturally-responsive-speech-pathology-practice.pdf"
+   },
+   {
+    "label": "Pearson Clinical Assessment AU&NZ, Speech & Language assessments catalogue (read 2026)",
+    "url": "https://www.pearsonclinical.com.au/products/speech-language.html"
+   },
+   {
+    "label": "Features of culturally and linguistically relevant speech-language assessments for Indigenous children: a scoping review, Australian Journal of Rural Health (2024), PMC11640213",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11640213/"
+   }
+  ]
+ },
+ "CH|Switzerland": {
+  "fields": {
+   "assessments": [
+    "Whether a logopedic Reihenuntersuchung happens at all is settled region by region and canton",
+    "DLV, the Deutschschweiz association, proposes a Logopädische Erfassung im Kindergarten",
+    "That LEK screening is expressly not a normed test procedure - nicht ein normiertes Testverfahren",
+    "DLV gives no recommendation on how the screening of flagged children should be done",
+    "Parents may co-decide whether their child takes part in the kindergarten Erfassung"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    1,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Whether a logopedic Reihenuntersuchung happens at all is settled region by region and canton",
+    "url": "https://www.logopaedie.ch/sites/default/files/u802/Posi-Papiere/DLVD_positionspapier.LEK.2.pdf",
+    "quote": "Ob und in welcher Form logopädische Reihenuntersuchungen durchgeführt werden, ist in der Schweiz regional und kantonal unterschiedlich geregelt."
+   },
+   {
+    "bullet": "DLV, the Deutschschweiz association, proposes a Logopädische Erfassung im Kindergarten",
+    "url": "https://www.logopaedie.ch/sites/default/files/u802/Posi-Papiere/DLVD_positionspapier.LEK.2.pdf",
+    "quote": "Er empfiehlt, die systematische und flächendeckende logopädische Reihenuntersuchung durch eine Logopädische Erfassung im Kindergarten (LEK) zu ersetzen."
+   },
+   {
+    "bullet": "That LEK screening is expressly not a normed test procedure - nicht ein normiertes Testverfahren",
+    "url": "https://www.logopaedie.ch/sites/default/files/u802/Posi-Papiere/DLVD_positionspapier.LEK.2.pdf",
+    "quote": "Das Screening kann unterschiedliche Form haben; es handelt sich nicht um ein normiertes Testverfahren."
+   },
+   {
+    "bullet": "DLV gives no recommendation on how the screening of flagged children should be done",
+    "url": "https://www.logopaedie.ch/sites/default/files/u802/Posi-Papiere/DLVD_positionspapier.LEK.2.pdf",
+    "quote": "Der DLV gibt keine Empfehlung ab, wie dieses Screening mit den auffälligen Kindern durchgeführt werden soll."
+   },
+   {
+    "bullet": "Parents may co-decide whether their child takes part in the kindergarten Erfassung",
+    "url": "https://www.logopaedie.ch/sites/default/files/u802/Posi-Papiere/DLVD_positionspapier.LEK.2.pdf",
+    "quote": "Die Eltern erhalten auch die Möglichkeit mitzubestimmen, ob ihr Kind an der logopädischen Erfassung im Kindergarten teilnimmt."
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "DLV (Deutschschweizer Logopaedinnen- und Logopaedenverband), Positionspapier 'Logopaedische Erfassung im Kindergarten (LEK)', Schraepler, adopted March 2018",
+    "url": "https://www.logopaedie.ch/sites/default/files/u802/Posi-Papiere/DLVD_positionspapier.LEK.2.pdf"
+   }
+  ]
+ },
+ "CZ|Czechia": {
+  "fields": {
+   "assessments": [
+    "AKL journal 2019: the supply of standardised Czech child language tests is very limited",
+    "No comprehensive standardised tool for preschool and early-school language then existed",
+    "Diagnostika jazykového vývoje (Seidlová Málková & Smolík 2014) answers more to a screen",
+    "AKL later announced the new TEPO sentence-comprehension test for children aged 3 to 8",
+    "A TAČR grant funded standardisation of a fuller battery over 2019-2021"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    1,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "AKL journal 2019: the supply of standardised Czech child language tests is very limited",
+    "url": "http://casopis.aklcr.cz/pdfs/lkl/2019/01/09.pdf",
+    "quote": "Nabídka standardizovaných diagnostických testů pro posuzování jazykových schopností dětské populace je v České republice velmi omezená."
+   },
+   {
+    "bullet": "No comprehensive standardised tool for preschool and early-school language then existed",
+    "url": "http://casopis.aklcr.cz/pdfs/lkl/2019/01/09.pdf",
+    "quote": "doposud nemáme k dispozici komplexní standardizovaný diagnostický nástroj pro posouzení jazykových schopností dětí předškolního a raně školního věku"
+   },
+   {
+    "bullet": "Diagnostika jazykového vývoje (Seidlová Málková & Smolík 2014) answers more to a screen",
+    "url": "http://casopis.aklcr.cz/pdfs/lkl/2019/01/09.pdf",
+    "quote": "Obsah této baterie, její psychometrické vlastnosti i dostupné normativní údaje proto spíše odpovídají screeningovému nástroji."
+   },
+   {
+    "bullet": "AKL later announced the new TEPO sentence-comprehension test for children aged 3 to 8",
+    "url": "https://klinickalogopedie.cz/index.php?aid=2114&pg=aktuality",
+    "quote": "Validační studie a představení nového testu porozumění větám TEPO pro děti ve věku"
+   },
+   {
+    "bullet": "A TAČR grant funded standardisation of a fuller battery over 2019-2021",
+    "url": "http://casopis.aklcr.cz/pdfs/lkl/2019/01/09.pdf",
+    "quote": "byla přiznána týmu doc. Seidlové Málkové a doc. Smolíka grantová podpora TAČR pro období 2019–2021"
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "Seidlova Malkova, 'Vznika nova diagnosticka baterie pro posuzovani jazykovych znalosti a dovednosti deti predskolniho a raneho skolniho veku', Listy klinicke logopedie 2019;3(1):43-44",
+    "url": "http://casopis.aklcr.cz/pdfs/lkl/2019/01/09.pdf"
+   },
+   {
+    "label": "Asociace klinickych logopedu CR, Aktuality: 'Vyvojova dysfazie - doporuceni, Validacni studie - test TEPO', 17 January 2023",
+    "url": "https://klinickalogopedie.cz/index.php?aid=2114&pg=aktuality"
+   }
+  ]
+ },
+ "DK|Denmark": {
+  "fields": {
+   "assessments": [
+    "Sprogvurdering 3-6 is the ministry's tool for the lovpligtige sprogvurdering at around 3",
+    "A municipality cannot use it unless an IT supplier supports the ministry's material",
+    "For DLD itself NVOL publishes three logopædisk udredning schemas with instructions",
+    "Those schemas were translated and adapted to Danish practice from Archibald's DLD Toolbox",
+    "The same 3-6 tool also serves the statutory language assessment of children in 0. klasse"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    2,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Sprogvurdering 3-6 is the ministry's tool for the lovpligtige sprogvurdering at around 3",
+    "url": "https://baebm.dk/arbejdsomraader/dagtilbud/laeringsmiljoe-sprog-og-stoette/ministeriets-sprogvurderingsvaerktoejer",
+    "quote": "Sprogvurdering 3-6 er udviklet for ministeriet med henblik på at understøtte den lovpligtige sprogvurdering af børn i alderen omkring 3 år."
+   },
+   {
+    "bullet": "A municipality cannot use it unless an IT supplier supports the ministry's material",
+    "url": "https://baebm.dk/arbejdsomraader/dagtilbud/laeringsmiljoe-sprog-og-stoette/ministeriets-sprogvurderingsvaerktoejer",
+    "quote": "Ministeriets sprogvurderingsværktøjer skal it-understøttes for at kunne anvendes af kommunerne."
+   },
+   {
+    "bullet": "For DLD itself NVOL publishes three logopædisk udredning schemas with instructions",
+    "url": "https://nvol.dk/vidensomraader/sprogforstyrrelsen-dld/udredning-af-dld/",
+    "quote": "et materiale til logopædisk udredning af sprogforstyrrelsen DLD, som består af tre skemaer med instruktion henvendt til logopæder"
+   },
+   {
+    "bullet": "Those schemas were translated and adapted to Danish practice from Archibald's DLD Toolbox",
+    "url": "https://nvol.dk/vidensomraader/sprogforstyrrelsen-dld/udredning-af-dld/",
+    "quote": "Med professor Lisa Archibalds tilladelse er det oversat og tilpasset til dansk logopædisk praksis af Anke Elisabeth Stage Wolffhechel"
+   },
+   {
+    "bullet": "The same 3-6 tool also serves the statutory language assessment of children in 0. klasse",
+    "url": "https://baebm.dk/arbejdsomraader/dagtilbud/laeringsmiljoe-sprog-og-stoette/ministeriets-sprogvurderingsvaerktoejer",
+    "quote": "Værktøjet kan også anvendes til sprogvurdering af børn i alderen omkring 4 og 5 år samt til den lovpligtige sprogvurdering af børn i 0. klasse."
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "Boerne- og Undervisningsministeriet (now Boerne-, Aeldre- og Boligministeriet), Ministeriets sprogvurderingsvaerktoejer",
+    "url": "https://baebm.dk/arbejdsomraader/dagtilbud/laeringsmiljoe-sprog-og-stoette/ministeriets-sprogvurderingsvaerktoejer"
+   },
+   {
+    "label": "NVOL (Nationalt Videncenter for Ordblindhed og andre Laesevanskeligheder), Logopaedisk udredning af DLD - schemas adapted with Audiologopaedisk Forening",
+    "url": "https://nvol.dk/vidensomraader/sprogforstyrrelsen-dld/udredning-af-dld/"
+   },
+   {
+    "label": "Audiologopaedisk Forening, 'Skemaer til logopaedisk udredning af DLD', 6 October 2025",
+    "url": "https://alf.dk/2025/10/06/skemaer-til-logopaedisk-udredning-af-dld/"
+   }
+  ]
+ },
+ "EE|Estonia": {
+  "fields": {
+   "assessments": [
+    "Estonian Logopedists' Union lists the 5-6-aastaste laste kõne test, Padrik et al. 2013",
+    "Jänku-test, the 3-4-aastaste laste kõne test, Hallap, Padrik & Raudik 2019, TÜ Kirjastus",
+    "Made in a ministry (HTM) and Logopedists' Union (ELÜ) project, published by Kirjastus Studium",
+    "Sample drawn across Estonia bar Saaremaa and Hiiumaa, covering all speech domains"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Estonian Logopedists' Union lists the 5-6-aastaste laste kõne test, Padrik et al. 2013",
+    "url": "https://elu.ee/publikatsioonid-oppe-ja-toovahendid/",
+    "quote": "5–6-aastaste laste kõne test. Kirjastus Studium. Padrik, M., Hallap, M., Aid, M., Mäll, R. (2013)"
+   },
+   {
+    "bullet": "Jänku-test, the 3-4-aastaste laste kõne test, Hallap, Padrik & Raudik 2019, TÜ Kirjastus",
+    "url": "https://elu.ee/publikatsioonid-oppe-ja-toovahendid/",
+    "quote": "Jänku-test : 3-4-aastaste laste kõne test. Kirjastaja Tartu Ülikool. Hallap, M., Padrik, M., Raudik, S. (2019)."
+   },
+   {
+    "bullet": "Made in a ministry (HTM) and Logopedists' Union (ELÜ) project, published by Kirjastus Studium",
+    "url": "https://www.etag.ee/wp-content/uploads/2014/03/Padrik.pdf",
+    "quote": "Koostajad: Marika Padrik Merit Hallap Margit Aid Raili Mäll Valminud HTM ja ELÜ koostöös Kirjastus Studium"
+   },
+   {
+    "bullet": "Sample drawn across Estonia bar Saaremaa and Hiiumaa, covering all speech domains",
+    "url": "https://www.etag.ee/wp-content/uploads/2014/03/Padrik.pdf",
+    "quote": "Valim üle kogu Eesti (va Saaremaa, Hiiumaa) • Ülevaade kõigist kõne valdkondadest: hääldamine, sõnavara, grammatika, sõnamoodustus."
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "Eesti Logopeedide Ühing, Publikatsioonid, õppe- ja töövahendid - the association's own list of tests and scales",
+    "url": "https://elu.ee/publikatsioonid-oppe-ja-toovahendid/"
+   },
+   {
+    "label": "Padrik, Hallap, Aid & Mäll, '5-6-a. laste kõne test' - project presentation, Eesti Teadusagentuur",
+    "url": "https://www.etag.ee/wp-content/uploads/2014/03/Padrik.pdf"
+   }
+  ]
+ },
+ "FI|Finland": {
+  "fields": {
+   "assessments": [
+    "Kaypa hoito guideline lists the Finnish-language standardised tests in clinical use here",
+    "Named among them: Lausetesti, Fonologiatesti, Morfologiatesti, Pragma-testi, Kissatarina",
+    "Many are Finnish adaptations of foreign tests - the New Reynell scales, Boehm, Token Test",
+    "Tests normed on monolinguals can give a multilingual child a disorder-like result",
+    "Recommended rather than mandated - Suositus 11 asks for tests plus interview and observation"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Kaypa hoito guideline lists the Finnish-language standardised tests in clinical use here",
+    "url": "https://www.kaypahoito.fi/nix02635",
+    "quote": "Tyypillisimmät kehityksellisen kielihäiriön riskin arvioinnissa ja diagnosoinnissa Suomessa kliinisessä käytössä olevat suomenkieliset standardoidut testit ja muut arviointimenetelmät"
+   },
+   {
+    "bullet": "Named among them: Lausetesti, Fonologiatesti, Morfologiatesti, Pragma-testi, Kissatarina",
+    "url": "https://www.kaypahoito.fi/nix02635",
+    "quote": "Fonologiatesti, Lasten äänteellisen kehityksen arviointimenetelmä. Kunnari S, Savinainen-Makkonen T, Saaristo-Helin K. Niilo Mäki Instituutti 2012"
+   },
+   {
+    "bullet": "Many are Finnish adaptations of foreign tests - the New Reynell scales, Boehm, Token Test",
+    "url": "https://www.kaypahoito.fi/nix02635",
+    "quote": "The New Reynell Developmental Language Scales (NRDLS). Edwards S, Letts C, Sinka I. GL Assessment Ltd, UK. Suom. Kunnari S"
+   },
+   {
+    "bullet": "Tests normed on monolinguals can give a multilingual child a disorder-like result",
+    "url": "https://www.kaypahoito.fi/hoi50085",
+    "quote": "Yksikielisille normitetut testit voivat antaa monikielisessä ympäristössä kasvaville lapsille kielihäiriöisen lapsen kaltaisen tuloksen."
+   },
+   {
+    "bullet": "Recommended rather than mandated - Suositus 11 asks for tests plus interview and observation",
+    "url": "https://www.kaypahoito.fi/hoi50085",
+    "quote": "Kehityksellisten kielellisten ongelmien arvioinnissa suositellaan käytettäväksi kielen eri osa-alueita mittaavia testejä ja arviointivälineitä, vanhempien haastattelua"
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "Kaypa hoito -suositus: Kehityksellinen kielihairio (kielellinen erityisvaikeus, lapset ja nuoret), Suomalainen Laakariseura Duodecim, updated 24 August 2026",
+    "url": "https://www.kaypahoito.fi/hoi50085"
+   },
+   {
+    "label": "Kaypa hoito, lisatietoaineisto: Kielenkehityksen arviointimenetelmat, Ervast & Levanen, 24 August 2026",
+    "url": "https://www.kaypahoito.fi/nix02635"
+   }
+  ]
+ },
+ "GU|Guam": {
+  "fields": {
+   "assessments": [
+    "17 GCA ch. 9 names no instrument, only appropriate diagnostic instruments and procedures",
+    "Delay is measured in physical, cognitive, communication, social/emotional or adaptive areas",
+    "Referral, evaluation and eligibility rules are set by the Board under IDEA Part B"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    4
+   ]
+  },
+  "absences": {
+   "assessments": true
+  },
+  "evidence": [
+   {
+    "bullet": "17 GCA ch. 9 names no instrument, only appropriate diagnostic instruments and procedures",
+    "url": "https://col.guamcourts.gov/sites/default/files/17gc009.pdf",
+    "quote": "as measured by appropriate diagnostic instruments and procedures, in one (1) or more of the following areas: physical development, cognitive development, communication development"
+   },
+   {
+    "bullet": "Delay is measured in physical, cognitive, communication, social/emotional or adaptive areas",
+    "url": "https://col.guamcourts.gov/sites/default/files/17gc009.pdf",
+    "quote": "as measured by appropriate diagnostic instruments and procedures, in one (1) or more of the following areas: physical development, cognitive development, communication development"
+   },
+   {
+    "bullet": "Referral, evaluation and eligibility rules are set by the Board under IDEA Part B",
+    "url": "https://col.guamcourts.gov/sites/default/files/17gc009.pdf",
+    "quote": "The policies and procedures for referral, evaluation, eligibility, or placement and the provision of FAPE shall be established by the Board"
+   }
+  ]
+ },
+ "HU|Hungary": {
+  "fields": {
+   "assessments": [
+    "Budapest's pedagogical service names KOFA-3 as the tool for the three-year screen",
+    "It names SZÓL-E?, the óvodáskori logopédiai szűrőeljárás, for the five-year screen",
+    "Three-year screen targets receptive and expressive language, five-year mainly articulation",
+    "15/2013 EMMI rendelet 25.§ requires screening of children who turn three and five",
+    "Taking up logopedic care is otherwise voluntary - these screenings are the exception"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Budapest's pedagogical service names KOFA-3 as the tool for the three-year screen",
+    "url": "https://18.fpsz.hu/wp-content/uploads/sites/31/2024/08/Logopediai-szuresek-vizsgalatok-az-ovodaban.pdf",
+    "quote": "A szűrés eszköze a KOFA-3 teszt (Kommunikatív Fejlődési Adattár), melyet a szülők töltenek ki online formában."
+   },
+   {
+    "bullet": "It names SZÓL-E?, the óvodáskori logopédiai szűrőeljárás, for the five-year screen",
+    "url": "https://18.fpsz.hu/wp-content/uploads/sites/31/2024/08/Logopediai-szuresek-vizsgalatok-az-ovodaban.pdf",
+    "quote": "A szűrés eszköze a SZÓL-E? szűrőeljárás az óvodáskori logopédiai ellátáshoz."
+   },
+   {
+    "bullet": "Three-year screen targets receptive and expressive language, five-year mainly articulation",
+    "url": "https://njt.jog.gov.hu/jogszabaly/2013-15-20-5H",
+    "quote": "A hároméveskori logopédiai szűrés a nyelvi fejlettségre (receptív és expresszív nyelv), az ötéveskori szűrés elsősorban a beszédartikulációra"
+   },
+   {
+    "bullet": "15/2013 EMMI rendelet 25.§ requires screening of children who turn three and five",
+    "url": "https://njt.jog.gov.hu/jogszabaly/2013-15-20-5H",
+    "quote": "A logopédiai ellátás keretében el kell végezni a harmadik és ötödik életévüket betöltött gyermekek beszéd- és nyelvi fejlettségének szűrését."
+   },
+   {
+    "bullet": "Taking up logopedic care is otherwise voluntary - these screenings are the exception",
+    "url": "https://njt.jog.gov.hu/jogszabaly/2013-15-20-5H",
+    "quote": "A logopédiai ellátás igénybevétele – a (3) bekezdésben foglalt vizsgálatokon és (4) bekezdésben foglalt ellátáson való részvétel kivételével – önkéntes alapon történik."
+   }
+  ],
+  "addDocLinks": [
+   {
+    "label": "15/2013. (II. 26.) EMMI rendelet a pedagogiai szakszolgalati intezmenyek mukodeserol, 25. § (logopediai ellatas), Nemzeti Jogszabalytar",
+    "url": "https://njt.jog.gov.hu/jogszabaly/2013-15-20-5H"
+   },
+   {
+    "label": "Fovarosi Pedagogiai Szakszolgalat XVIII. keruleti tagintezmenye, 'Logopediai szuresek, vizsgalatok az ovodaban' (2024)",
+    "url": "https://18.fpsz.hu/wp-content/uploads/sites/31/2024/08/Logopediai-szuresek-vizsgalatok-az-ovodaban.pdf"
+   }
+  ]
+ },
+ "KI|Kiribati": {
+  "fields": {
+   "assessments": [
+    "The 2015 Inclusive Education Policy names no instrument, only assessing learning needs",
+    "Very few mainstream schools visited could identify any children with disabilities at all",
+    "Exam access arrangements, not language assessment: Word-format papers, screen reader, extra time"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "assessments": true
+  },
+  "evidence": [
+   {
+    "bullet": "The 2015 Inclusive Education Policy names no instrument, only assessing learning needs",
+    "url": "https://www.pacificdata.org/data/dataset/f3620dd2-33a5-494a-83e5-567d35de2c6b/resource/e7fbbb2a-69d6-4c82-b5d2-0227852e0144/download/Kiribati%20-%20Inclusive%20Education%20Policy_2015",
+    "quote": "To identify all school age children who are not attending school and assess their learning needs and reasons for non-school attendance"
+   },
+   {
+    "bullet": "Very few mainstream schools visited could identify any children with disabilities at all",
+    "url": "https://education-profiles.org/oceania/kiribati/~inclusion",
+    "quote": "very few of the mainstream schools visited were able to identify any children with disabilities in their school system"
+   },
+   {
+    "bullet": "Exam access arrangements, not language assessment: Word-format papers, screen reader, extra time",
+    "url": "https://education-profiles.org/oceania/kiribati/~inclusion",
+    "quote": "the provision of Word-format exams, the use of a computer with a screen reader, large-print exams or additional reading and writing time"
+   }
+  ]
+ },
+ "MH|Marshall Islands": {
+  "fields": {
+   "assessments": [
+    "2015 PSS rules name no instrument - appropriate assessments are done by a child study team",
+    "Referral is by the Request for Special Education Assistance Form, MOE FORM 013-26/SE3A",
+    "The procedures sit in the Special Education Procedure Handbook, not in the rules"
+   ]
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "assessments": true
+  },
+  "evidence": [
+   {
+    "bullet": "2015 PSS rules name no instrument - appropriate assessments are done by a child study team",
+    "url": "https://pacificdata.org/data/dataset/aad9ce43-0f09-4b43-8cb4-391c46ffd7bd/resource/21d89637-dd38-4bf8-9b1a-e8d9115bdfb5/download/school-system-rules-and-regulations-2015.pdf",
+    "quote": "Appropriate assessments are to be conducted by a child study team after parents consent to testing."
+   },
+   {
+    "bullet": "Referral is by the Request for Special Education Assistance Form, MOE FORM 013-26/SE3A",
+    "url": "https://pacificdata.org/data/dataset/aad9ce43-0f09-4b43-8cb4-391c46ffd7bd/resource/21d89637-dd38-4bf8-9b1a-e8d9115bdfb5/download/school-system-rules-and-regulations-2015.pdf",
+    "quote": "may refer the child for an evaluation by completing the Request for Special Education Assistance Form (MOE FORM 013-26 /SE3A*)"
+   },
+   {
+    "bullet": "The procedures sit in the Special Education Procedure Handbook, not in the rules",
+    "url": "https://pacificdata.org/data/dataset/aad9ce43-0f09-4b43-8cb4-391c46ffd7bd/resource/21d89637-dd38-4bf8-9b1a-e8d9115bdfb5/download/school-system-rules-and-regulations-2015.pdf",
+    "quote": "in accordance with the established special education procedures found in the Special Education Procedure Handbook relating to the following"
+   }
+  ]
+ }
+}
