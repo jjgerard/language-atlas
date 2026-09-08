@@ -135,6 +135,7 @@ const SHAPES = {
 
 const NOT_ESTABLISHED_RE = /^Not established from the sources consulted/i;
 const { slotCount, validSlots, orderBySlot } = require('./slots');
+const { SCHEMES } = require('./coding');
 
 // Which question each bullet answers. A field's hint lists its four questions
 // in the order they must be answered, and drafters compose bullet by bullet
@@ -257,6 +258,63 @@ function absencesFor(domain, body, fields) {
   return out;
 }
 
+// A CODING: what a reader made of the prose, as values from a fixed list.
+//
+// The layer above `absences`. That one answers "is there a rule here"; this
+// answers "what kind of rule". Both are readings rather than sources, which is
+// why neither lives in the field itself -- a coding can be revised, argued with
+// or thrown away without touching a single sourced claim, and two codings of
+// the same corpus can be compared. The prose is the record.
+//
+// Shape, keyed by field then by column:
+//
+//     coding: { removalCriteria: { exit_mechanism: "clock", exit_period_months: 12 } }
+//
+// Validated against src/coding.js, which holds the vocabularies and the
+// evidence for each value. A value not on the list is DROPPED rather than
+// kept, because the whole point of a controlled vocabulary is that a reader
+// can trust the set of values is the set of values. A coder who cannot fit an
+// entry is expected to say so in their report, not to invent a value here.
+//
+// Columns whose spec is a string rather than a list are free text or a number
+// -- an instrument name, a period in months -- and are kept as given, capped.
+// A column may hold a list where the scheme means one (a battery covers
+// several language domains, a system takes several triggers at once), so an
+// array is validated element by element and empties are dropped.
+function codingFor(domain, body, fields) {
+  const src = body && body.coding;
+  const out = {};
+  if (!src || typeof src !== "object" || Array.isArray(src)) return out;
+  for (const [k, , type] of domain.fields) {
+    if (type !== "text") continue;
+    const scheme = SCHEMES[domain.id + "." + k];
+    if (!scheme) continue;
+    const given = src[k];
+    if (!given || typeof given !== "object" || Array.isArray(given)) continue;
+    // A coding describes a text. Where there is no text there is nothing to
+    // have read, and a coding surviving on an emptied field would assert one.
+    const text = String(fields[k] == null ? "" : fields[k]).trim();
+    if (!text || NOT_ESTABLISHED_RE.test(text) || /^Not applicable/i.test(text)) continue;
+    const row = {};
+    for (const [col, spec] of Object.entries(scheme.columns)) {
+      const v = given[col];
+      if (v == null || v === "") continue;
+      if (typeof spec === "string") {
+        // free text or a number, per the scheme
+        row[col] = typeof v === "number" ? v : str(v, 300);
+        continue;
+      }
+      const ok = x => Object.prototype.hasOwnProperty.call(spec, String(x));
+      if (Array.isArray(v)) {
+        const kept = v.filter(ok);
+        if (kept.length) row[col] = kept;
+      } else if (ok(v)) row[col] = v;
+    }
+    if (Object.keys(row).length) out[k] = row;
+  }
+  return out;
+}
+
 // How many rows a typed field may hold. This was a flat 50 for every shape,
 // and 50 is the wrong number for two of them by an order of magnitude.
 //
@@ -302,6 +360,8 @@ function fieldsFor(domain, body) {
   if (Object.keys(sl).length) out.slots = sl;
   const ab = absencesFor(domain, body, out);
   if (Object.keys(ab).length) out.absences = ab;
+  const cd = codingFor(domain, body, out);
+  if (Object.keys(cd).length) out.coding = cd;
   return out;
 }
 
@@ -345,6 +405,7 @@ function rowToEntry(row) {
   // Same re-check: a flag written against text since emptied or replaced by a
   // sentinel would otherwise read as a finding nobody made.
   entry.absences = domain ? absencesFor(domain, blob, entry) : {};
+  entry.coding = domain ? codingFor(domain, blob, entry) : {};
   return entry;
 }
 
@@ -449,6 +510,12 @@ function mergeEntries(domain, rows) {
   out.absences = {};
   for (const r of rows) for (const [k, v] of Object.entries(r.absences || {}))
     if (String(out[k] || "") === String(r[k] || "")) out.absences[k] = v;
+
+  // Same rule again: a coding is a reading OF a particular text, so it travels
+  // only with the text that won the merge.
+  out.coding = {};
+  for (const r of rows) for (const [k, v] of Object.entries(r.coding || {}))
+    if (String(out[k] || "") === String(r[k] || "")) out.coding[k] = v;
 
   // Everyone who wrote part of this place is a contributor to it.
   const names = new Set(out.collaborators.map(c => c.name).filter(Boolean));

@@ -163,6 +163,16 @@ function deriveUnits(domain, entries, sharedMatcher) {
       if (e.absences && e.absences[k] === true && values[k]) absences[k] = true;
     }
 
+    // What a reader made of each filled field, as values from a fixed list.
+    // Passed through for the same reason slots are: it is knowledge somebody
+    // had and the prose does not preserve, and re-deriving it downstream would
+    // mean re-reading every entry.
+    const coding = {};
+    for (const [k] of domain.fields) {
+      const c = e.coding && e.coding[k];
+      if (c && typeof c === "object" && Object.keys(c).length && values[k]) coding[k] = c;
+    }
+
     const docLinks = cleanLinks(e.docLinks);
     const history = (Array.isArray(e.policyHistory) ? e.policyHistory : []).map(h => {
       historyRows++;
@@ -190,6 +200,7 @@ function deriveUnits(domain, entries, sharedMatcher) {
       fieldStates,
       slots,
       absences,
+      coding,
       filled,
       looked,
       // Labels of fields this unit has nothing of its own for that ARE answered
