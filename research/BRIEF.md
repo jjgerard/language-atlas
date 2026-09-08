@@ -119,8 +119,9 @@ for Japanese, so "no training programme" from one means no JAPANESE training
 programme, and the bullet has to say so. Only the 外国語教育 section speaks for
 foreign languages generally.
 
-**UNESCO IESALC's Higher Education Policy Observatory**, for African and Latin
-American higher-education statutes. It hosts each country's framework law as a
+**UNESCO IESALC's Higher Education Policy Observatory**, for higher-education
+statutes worldwide. This entry said "African and Latin American" for six weeks
+and it was wrong; see the coverage note below. It hosts each country's framework law as a
 plain-GET PDF at a predictable path:
 
     https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/<iso3>/<iso3>_HELawLi.pdf
@@ -139,12 +140,34 @@ On one 26-country African pass, 25 countries had at least one document and 20
 of those had a text layer. That is the best single route to these statutes
 there is, now that `whed.net` and `droit-afrique.com` both 403.
 
-Two cautions, both found the hard way. **Several of the PDFs are image scans**
+**It covers Asia too, and this brief said otherwise for six weeks.** A
+31-unit Asian pass got the national higher-education law with a clean text
+layer from `_HELawLi` for 14 of its units and from `_HEEdLawLi` for 5 more --
+**19 of 31 from one url pattern**, across Georgia, Korea, Mongolia, Sri Lanka,
+Uzbekistan, Myanmar, Cambodia, Timor-Leste, Iraq, Syria and the Gulf. Test it
+first on ANY region, not only the two this entry used to name.
+
+One of those 19 is the reason to take this seriously: **Brunei's Education
+Order 2003, which `BLOCKED.md` records as unreachable** because `agc.gov.bn`
+lost its certificate. The document was available the whole time under a
+different roof. A blocked-host note is a note about a HOST, never about a
+document -- before believing an instrument is unreachable, try the aggregators
+that republish it.
+
+Three cautions, all found the hard way. **Several of the PDFs are image scans**
 yielding nothing extractable -- Angola, Burundi, CAR, Guinea, Lesotho and
 Togo among them -- so test the text layer before planning around it. And
 **check that the document is the instrument it is filed as**: Algeria's slot
 holds a 2000-2022 index of ministry texts rather than a law, and the Comoros
 slot holds a newspaper op-ed about the orientation law rather than the law.
+
+And **the Arabic PDFs carry U+202A/B/C bidi controls between every run**, so a
+quote that spans two runs can never match however correct it is. Worse, Syria's
+copy writes ی (U+06CC) and ھ (U+06BE) where the law has ي and ه: an NFKC-folded
+search on correctly typed Arabic returns zero hits, which reads exactly like the
+law having no language clause. It has one, at art. 20. This is the sharpest
+argument there is for why an absence must be QUOTED and never inferred from a
+search that found nothing -- the search failing is not the law being silent.
 
 **The Wayback CDX API**, for settling whether an archived document exists at
 all instead of guessing filename variants one 404 at a time:

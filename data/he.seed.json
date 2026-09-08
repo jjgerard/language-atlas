@@ -299,7 +299,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "Education Act 2008 reaches tertiary instruction but fixes no language of instruction\nIts only language clause is a curriculum goal about the language of Antigua and Barbuda\nIsland Scholarship eligibility needs CXC passes in five subjects including English Language\nABCAS Act 2025 leaves instruction at the merged national college to what its Board decides\nNo rule: absence read off the Education Act 2008 and the 2025 college act themselves",
-  "requiredStudy": "",
+  "requiredStudy": "Education Act 2008 reaches tertiary institutions but sets no language-study duty\nIts only curriculum language clause is a goal about the language of Antigua and Barbuda\nABCAS Act 2025 has the College determine the course of study, and names no language",
   "entryRequirements": "UWI Five Islands campus: five CSEC or GCE O-Level passes must include English Language\nCSEC grades I or II pre-1998, and I to III from June 1998, satisfy the subject rule\nThree-year route takes two CAPE or A-Level subjects in place of the five-subject set\nUWI's regional rule, not a national one: English Language is compulsory across UWI",
   "teacherPipeline": "",
   "enrolment": [],
@@ -322,7 +322,15 @@
     2,
     2,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -2433,7 +2441,12 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Aruba, Landsverordening Universiteit van Aruba (AB 1988 no. 100, as amended), arts. 29 and 30 (Centraal Wettenregister)",
+    "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/1304ab88.100.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -2444,7 +2457,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "University of Aruba social work courses are taught in English, Dutch and Papiamento\nSpanish is used at conversational level on that same social work programme",
-  "requiredStudy": "",
+  "requiredStudy": "Landsverordening Universiteit van Aruba, AB 1988 no. 100, carries no language provision\nArt. 29 leaves which subjects are taught to a landsbesluit, not to the Landsverordening\nArt. 30 fixes entry to examinations by landsbesluit too, and names no language",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -2453,7 +2466,15 @@
    "mediumOfInstruction": [
     1,
     2
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -2978,6 +2999,10 @@
    {
     "label": "The University of the West Indies, Cave Hill Campus (Barbados), Undergraduate Degree Programmes Entry Requirements Guide 2026/27 — matriculation and the English Language Proficiency Test",
     "url": "https://www.cavehill.uwi.edu/admissions/wp-content/uploads/sites/98/UWI_Cave_Hill_UG_Entry_Requirements_2026_27.pdf"
+   },
+   {
+    "label": "Barbados, Education Act, Cap. 41, ss. 2 and 27 (Consolidated Statutes, Parliament of Barbados)",
+    "url": "https://barbadosparliament-laws.com/uploads/Barbados-cs/Education.pdf"
    }
   ],
   "supportLinks": [],
@@ -3049,7 +3074,7 @@
    }
   ],
   "mediumOfInstruction": "UWI Cave Hill in Barbados teaches in English: all applicants sit a proficiency test in English\nExemption only on top grades in CXC English A, GCE O-Level English or CAPE Communication\nThose not exempt or failing must pass FOUN 0100 Fundamentals of Written English first\nRegional university rule, not a Barbadian statute: it reaches non-campus countries too",
-  "requiredStudy": "",
+  "requiredStudy": "Education Act Cap. 41 expressly excludes the University of the West Indies from its reach\nIts tertiary provisions are about establishing and maintaining institutions, not curriculum\nThe Minister's other tertiary power is examining pupils and awarding degrees",
   "entryRequirements": "UWI Cave Hill campus, Barbados: five CSEC I-III passes must include English Language\nEvery undergraduate must show English proficiency; CSEC English A Grade I exempts\nWithout an exempting grade, applicants sit the campus English Language Proficiency Test\nUWI's own matriculation rule, amendable by the University, not a Barbados state rule",
   "teacherPipeline": "",
   "enrolment": [],
@@ -3072,7 +3097,15 @@
     2,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -3117,6 +3150,14 @@
    {
     "label": "University of Dhaka, Department of Pali and Buddhist Studies: history and programmes",
     "url": "https://www.du.ac.bd/body/History/PBS"
+   },
+   {
+    "label": "বেসরকারী বিশ্ববিদ্যালয় আইন, ২০১০ (Private University Act 2010, Bangladesh), ধারা ২৪ পাঠক্রম কমিটি",
+    "url": "http://bdlaws.minlaw.gov.bd/act-1057/section-40805.html"
+   },
+   {
+    "label": "বেসরকারী বিশ্ববিদ্যালয় আইন, ২০১০ (Private University Act 2010, Bangladesh), ধারা ৩৫ শিক্ষা কার্যক্রম",
+    "url": "http://bdlaws.minlaw.gov.bd/act-1057/section-40816.html"
    }
   ],
   "supportLinks": [],
@@ -3251,7 +3292,7 @@
    }
   ],
   "mediumOfInstruction": "All classes in the University of Dhaka's Department of English are conducted in English",
-  "requiredStudy": "",
+  "requiredStudy": "Private University Act 2010 s. 24 sends every subject and course to the UGC for approval\nAct s. 35 makes each university get the Commission's written approval for its programmes\nNo language is named in either: curriculum sits with the Commission, not the statute",
   "entryRequirements": "",
   "teacherPipeline": "The University of Dhaka's Institute of Education and Research was established in 1959",
   "enrolment": [],
@@ -3267,6 +3308,11 @@
    ],
    "teacherPipeline": [
     2
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
   }
  },
@@ -3874,6 +3920,10 @@
    {
     "label": "University of Bahrain, College of Arts: Doctor of Philosophy in Arabic Language and Literature",
     "url": "https://arts.uob.edu.bh/graduate/doctor-of-philosophy-in-arabic-language-and-literature/"
+   },
+   {
+    "label": "قانون رقم (3) لسنة 2005 بشأن التعليم العالي (Bahrain), أهداف التعليم العالي — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/bhr/bhr_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -3944,7 +3994,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Law 3 of 2005 on higher education never uses the Arabic word for language\nThe Act's aims run to culture, research and university ties, with no language among them",
   "entryRequirements": "",
   "teacherPipeline": "One college is responsible for all teacher preparation in the Kingdom of Bahrain\nIt is the Mohammed Jaber Al Ansari College for Teachers, affiliated to the University of Bahrain\nInitial preparation runs by Bachelor of Education or Post-Graduate Diploma in Education",
   "enrolment": [],
@@ -3961,7 +4011,14 @@
     1,
     2,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -4332,6 +4389,10 @@
    {
     "label": "Universiti Brunei Darussalam, FASS — English Language & Linguistics major, Overview and Skills",
     "url": "https://fass.ubd.edu.bn/majors/ellinguistics.html"
+   },
+   {
+    "label": "Laws of Brunei, Chapter 210 Education (Education Order 2003, S 59/03, rev. ed. 2011), ss. 2, 19 and 58 — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/brn/brn_HEEdLawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -4385,7 +4446,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "English is the main medium of instruction at Universiti Brunei Darussalam\nAt UNISSA the Faculty of Arabic Language teaches its courses in Arabic\nUBD's own wording is main medium, so it is stated as practice not absolute rule",
-  "requiredStudy": "",
+  "requiredStudy": "Education Order 2003 s. 19 sets the medium of instruction and binds no student to a language\nThe Order's only compulsory post-secondary subject is Malay Islamic Monarchy, not a language\nHigher educational institutions are inside the Order, so the silence covers universities",
   "entryRequirements": "Undergraduate applicants must show English proficiency to enter Universiti Brunei Darussalam\nTOEFL 550 or Band B2 in UBD's own English Proficiency Test satisfies it",
   "teacherPipeline": "",
   "enrolment": [],
@@ -4426,7 +4487,15 @@
    "entryRequirements": [
     1,
     2
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -5023,7 +5092,7 @@
    }
   ],
   "mediumOfInstruction": "English: the University of The Bahamas requires proof of English from non-native applicants\nNo other language is provided for; freshman entry needs BGCSE passes including English\nThe requirement runs on undergraduate admission to the national university as a whole\nInstitutional admissions rule: the University of The Bahamas Act 2016 fixes no medium",
-  "requiredStudy": "",
+  "requiredStudy": "University of The Bahamas Act 2016 and its Statutes carry no language provision\nCourses of study are approved by the Senate, which prescribes the requirements\nNo national duty: the Act leaves the whole academic programme to the University",
   "entryRequirements": "University of The Bahamas: five BGCSE passes at C or above must include English\nA four-pass route is allowed with a deficiency in either English or Mathematics\nSeparate claim: those whose first language is not English must also show TOEFL or equivalent\nGPA route instead needs placement at Writing and Rhetoric I on UB's placement examination",
   "teacherPipeline": "",
   "enrolment": [],
@@ -5050,7 +5119,15 @@
     2,
     2,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -5067,6 +5144,10 @@
    {
     "label": "Fast Facts: milestones of Paro College of Education, 1975 to 2021",
     "url": "https://www.pce.edu.bt/?page_id=3902"
+   },
+   {
+    "label": "Tertiary Education Policy of the Kingdom of Bhutan, 2010, Ministry of Education — graduate attributes — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/btn/btn_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -5079,7 +5160,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Tertiary Education Policy 2010 sets a graduate language standard rather than a course\nEach graduate should be required to possess minimum standards in Dzongkha and English\nThe institution determines and assesses the minimum standards",
   "entryRequirements": "",
   "teacherPipeline": "An 18-month teaching certificate programme for Dzongkha teachers was launched in 1993\nIt runs at Paro College, a constituent college of the Royal University of Bhutan since 2003\nA Bachelor of Primary Education Studies (Dzongkha) runs as a four-year programme\nA Postgraduate Diploma in Education (Dzongkha) runs as an 18-month programme with practicum\nA part-time Master of Education for Dzongkha teachers was launched in 2014",
   "enrolment": [],
@@ -5096,6 +5177,11 @@
     3,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    2,
+    4
    ]
   }
  },
@@ -5513,7 +5599,7 @@
    }
   ],
   "mediumOfInstruction": "Education and Training Act reaches tertiary institutions but fixes no medium of instruction\nIts only language clause bars refusing school admission on account of language\nUniversity of Belize asks applicants from non-English-official countries to prove English\nEnglish is an institutional admissions rule at the national university, not a statutory medium",
-  "requiredStudy": "",
+  "requiredStudy": "Education and Training Act Cap. 36:01 reaches tertiary but sets no language-study duty\ns 53 lets the Ministry issue curriculum guidelines, and names no language among them\nNo national duty: what a University of Belize student studies is set by the institution",
   "entryRequirements": "University of Belize entry rests on the ATLIB general test, which has an English component\nFour CXC passes including English and Mathematics accepted in place of the ATLIB test\nScoring 59 or below in ATLIB English may mean enrolling in developmental courses\nSet by the institution: UB programmes may add requirements beyond general admission",
   "teacherPipeline": "",
   "enrolment": [],
@@ -5535,7 +5621,15 @@
     2,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -12261,6 +12355,10 @@
    {
     "label": "University of Curacao, Bachelor Programs",
     "url": "https://uoc.cw/students/bachelor-programs/"
+   },
+   {
+    "label": "Curacao, Landsverordening Universiteit Nederlandse Antillen (P.B. 1979 no. 27; P.B. 1985 no. 43), CVDR143808, arts. 24 and 33",
+    "url": "https://repository.officiele-overheidspublicaties.nl/CVDR/143808/1/html/143808_1.html"
    }
   ],
   "supportLinks": [],
@@ -12301,7 +12399,7 @@
    }
   ],
   "mediumOfInstruction": "Each University of Curaçao bachelor is listed with the language it is taught in\nIts Bachelor of Laws is listed as three academic years, in Dutch\nIts Engineering and Sustainable Technology bachelor is listed as Dutch and English\nA teacher-education bachelor is listed as English, Dutch, Papiamentu",
-  "requiredStudy": "",
+  "requiredStudy": "Landsverordening Universiteit Nederlandse Antillen sets no language-study duty\nWhich subjects each studierichting teaches is fixed by landsbesluit, not by the act\nIts only taal clause names the language in a B.Ed. or M.Ed. degree title\nThat is a naming rule for someone who chose a language programme, not a duty",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -12318,7 +12416,16 @@
     3,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -14170,7 +14277,7 @@
    }
   ],
   "mediumOfInstruction": "Dominica State College Act 2002 fixes no language of instruction for the national college\nNo other language is provided for; the Board prescribes the subjects of instruction\nNo rule: absence read off the college's own founding act, which never names a language",
-  "requiredStudy": "",
+  "requiredStudy": "Dominica State College Act 2002 sets no language-study duty on any student\ns 5 has the College teach the Liberal and Creative Arts, Business, Sciences and more\nNo language is named among the branches of learning the Act lists",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -14185,7 +14292,15 @@
     1,
     2,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -18736,26 +18851,41 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Grenada, Education Act, Cap. 86 (Act No. 21 of 2002), ss. 3 and 104 (via IESALC HEPO)",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/grd/grd_HEEdLawLi.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Education Act 2002 reaches public tertiary institutions but sets no language-study duty\ns 104 lets the Minister provide by order for the curriculum of such an institution\nIts only curriculum language clause is a goal about the language of Grenadians",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "requiredStudy": [
+    1,
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "requiredStudy": true
+  }
  },
  {
   "countryCode": "GE",
@@ -18851,6 +18981,10 @@
    {
     "label": "Ivane Javakhishvili Tbilisi State University, educational programme: MA Program in Turkish Philology",
     "url": "https://www.tsu.ge/en/programs/437"
+   },
+   {
+    "label": "Law of Georgia on Higher Education, arts. 2 and 4 (Language of higher education) — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/geo/geo_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -19019,7 +19153,7 @@
    }
   ],
   "mediumOfInstruction": "Georgian is the language of instruction at higher education institutions\nIn the Autonomous Republic of Abkhazia the language of instruction is Abkhazian as well\nOther languages allowed where an international agreement or the ministry so determines\nA rule stated in the Law of Georgia on Higher Education, not observed practice",
-  "requiredStudy": "",
+  "requiredStudy": "Law on Higher Education art. 4 sets the language of teaching and binds no student to study one\nThe Act's Georgian-language preparation programme is for named persons, not every student\nThe ministry's other language power is to set the rules for an English certification exam",
   "entryRequirements": "Art and sport programme entrants pass three mandatory exams, a foreign language among them\nA graduate who studied Russian as the main school language may choose it as the foreign language\nAn Abkhazia-educated entrant may sit Abkhazian instead of Georgian language and literature\nA forty-credit one-year Georgian language preparatory programme runs at all institutions\nIts beneficiaries then enrol in their chosen programmes without entrance exams",
   "teacherPipeline": "",
   "enrolment": [],
@@ -19042,7 +19176,15 @@
     2,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -19532,7 +19674,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Inatsisartutlov 12/2019 om Ilisimatusarfik sets no language-study duty on any student\ns 2 puts its task as research and research-based teaching, with no language named\nIts only language clause has the board's statut lay down Ilisimatusarfik's sprogpolitik",
   "entryRequirements": "Study rules must state the degree title in Greenlandic, Danish and English, s 17(2)\nCertificates in Greenlandic, Danish, a Nordic language or English need no translation\nSpecific admission requirements are pitched at gymnasial A, B or C level, act 18/2023",
   "teacherPipeline": "",
   "enrolment": [],
@@ -19565,7 +19707,15 @@
     2,
     2,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -20625,6 +20775,10 @@
    {
     "label": "University of Guyana Registry, Find Your Major (department programme register)",
     "url": "https://registry.uog.edu.gy/srms/departments"
+   },
+   {
+    "label": "Guyana, University of Guyana Act, Cap. 39:02, ss. 13 and 17 (Laws of Guyana, Ministry of Legal Affairs)",
+    "url": "https://mola.gov.gy/laws/Volume%209%20Cap.%2036.02%20-%2046.071696884504.pdf"
    }
   ],
   "supportLinks": [],
@@ -20656,7 +20810,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "University of Guyana Act Cap. 39:02 carries no language provision at all\ns 17 lets the University provide instruction in such branches of learning as it thinks fit\nNo national duty: courses of study are approved by the University itself",
   "entryRequirements": "Entry to the BA English needs five CXC/CSEC General Proficiency subjects at Grades I to III\nApplicants aged 21 and over may enter through the University of Guyana Entrance Examination\nThe University sets the bar, accepting any qualification it considers equivalent",
   "teacherPipeline": "Teacher training routes are University of Guyana, CPCE and the GOAL online programme\nNo university language entry requirement was found",
   "enrolment": [],
@@ -20669,7 +20823,15 @@
     1,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -21515,6 +21677,10 @@
    {
     "label": "Universite d'Etat d'Haiti, Faculte de Linguistique Appliquee (FLA)",
     "url": "https://anciensite.ueh.edu.ht/faculte-de-linguistique-appliquee-fla/"
+   },
+   {
+    "label": "Constitution of Haiti 1987 (rev. 2012), arts. 5, 208 and 212, English translation (Constitute Project)",
+    "url": "https://www.constituteproject.org/constitution/Haiti_2012.pdf?lang=fr"
    }
   ],
   "supportLinks": [],
@@ -21548,7 +21714,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Read from the Constitution: no organic law under art. 212 was located for universities\nThe 1987 Constitution sets no language-study duty on any higher-education student\nArt. 208 makes higher education free and the Universite d'Etat d'Haiti autonomous\nCreole and French are official under art. 5, which imposes no study duty on a student",
   "entryRequirements": "The FLA takes bacheliers, after a concours\nThe concours tests written production in Haitian Creole and in French\nEntry goes to the 160 candidates with the best results in the concours",
   "teacherPipeline": "",
   "enrolment": [],
@@ -21577,7 +21743,16 @@
     1,
     2,
     2
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -25278,6 +25453,10 @@
    {
     "label": "وزارة التعليم العالي والبحث العلمي، دائرة الدراسات والتخطيط والمتابعة، دليل اجراءات شؤون الطلبة وضوابط القبول وشروطه 2025-2026",
     "url": "https://dirasat.mohesr.gov.iq/assets/documents/Docs-2025/Guides/Procedures-Guide-2025-2026.pdf"
+   },
+   {
+    "label": "قانون وزارة التعليم العالي والبحث العلمي رقم (40) لسنة 1988 المعدل (Iraq) — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/irq/irq_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -25301,7 +25480,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Ministry of Higher Education Law 40 of 1988 as amended never uses the word for language\nThe Act lists the ministry's tasks, from scientific cooperation to evaluating foreign degrees",
   "entryRequirements": "Baghdad's language departments take preparatory leavers of the science and literature branches\nMinimum entry average there is 64 per cent morning study, 60 per cent evening\nEight per cent of the added foreign-language mark is added to a candidate's total\nFine-arts branch leavers may enter colleges of languages except the English department",
   "teacherPipeline": "Applying to the English department of education colleges is done by department, centrally",
   "enrolment": [],
@@ -25322,7 +25501,16 @@
     "year": 1987,
     "description": "In 1987-1988 European and Eastern Languages departments split from the College of Arts"
    }
-  ]
+  ],
+  "slots": {
+   "requiredStudy": [
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "requiredStudy": true
+  }
  },
  {
   "countryCode": "IR",
@@ -25342,6 +25530,14 @@
    {
     "label": "پژوهشگاه علوم انسانی و مطالعات فرهنگی، پژوهشکده زبان‌شناسی — گروه‌ها و برنامه‌های تحصیلی کارشناسی ارشد و دکتری",
     "url": "https://www.ihcs.ac.ir/linguistics/fa/page/1953"
+   },
+   {
+    "label": "سازمان سمت، کتاب «زبان عمومی» — منبع اصلی درس زبان عمومی/خارجی به ارزش ۳ واحد",
+    "url": "https://samt.ac.ir/fa/book/772/%D8%B2%D8%A8%D8%A7%D9%86-%D8%B9%D9%85%D9%88%D9%85%DB%8C"
+   },
+   {
+    "label": "خبرگزاری مهر، جدول و سرفصل دروس عمومی دانشگاه‌ها (مصوب شورای عالی انقلاب فرهنگی)",
+    "url": "https://www.mehrnews.com/news/4031494/%D8%AC%D8%AF%D9%88%D9%84-%D9%88-%D8%B3%D8%B1%D9%81%D8%B5%D9%84-%D8%AF%D8%B1%D9%88%D8%B3-%D8%B9%D9%85%D9%88%D9%85%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D9%87%D8%A7-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF"
    }
   ],
   "supportLinks": [],
@@ -25395,7 +25591,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "Allameh Tabataba'i admits non-Iranian fee-payers to English-taught master's places\nThose are international relations, cultural studies, and English language and literature\nThis follows a Ministry of Science regulation, for the 1405-1406 academic year\nIt also cites a 1402 Supreme Council of the Cultural Revolution resolution",
-  "requiredStudy": "",
+  "requiredStudy": "A general Foreign Language course is set for students of every university discipline\nThe Ministry of Science circulated the general-course table approved by the Supreme Council\nThe General/Foreign Language course is worth 3 units, per its state-published set text\nA ceiling of 22 general units is mandatory in the bachelor's across all disciplines",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -25413,6 +25609,12 @@
     3,
     4,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    3,
+    3
    ]
   }
  },
@@ -26034,6 +26236,14 @@
    {
     "label": "UWI Mona, Department of Modern Languages and Literatures, Programmes",
     "url": "https://www.mona.uwi.edu/modlang/programmes"
+   },
+   {
+    "label": "Jamaica, The University Council of Jamaica Act, s. 4 (Ministry of Justice, Laws of Jamaica)",
+    "url": "https://laws.moj.gov.jm/legislation/statutes/U/University%20Council%20of%20Jamaica.pdf"
+   },
+   {
+    "label": "Jamaica, The Education Act, ss. 4 and 7 (Ministry of Justice, Laws of Jamaica)",
+    "url": "https://laws.moj.gov.jm/library/statute/the-education-act/download"
    }
   ],
   "supportLinks": [],
@@ -26105,7 +26315,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "The Education Act carries no language provision and no language-study duty\nIts regulation power covers examinations and such other matters as the Minister thinks fit\nUniversity Council of Jamaica Act approves courses of study and names no language",
   "entryRequirements": "English Language is compulsory for admission to all programmes of UWI\nFive CSEC or GCE O'Level passes must include English Language\nApplicants without the qualification take an English Language Proficiency Test on entry",
   "teacherPipeline": "The Joint Board of Teacher Education at Mona has assured teacher education since 1965\nJBTE has contributed significantly to developing the colleges that train teachers",
   "enrolment": [],
@@ -26136,7 +26346,15 @@
    "teacherPipeline": [
     1,
     2
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -26285,6 +26503,14 @@
    {
     "label": "東京外国語大学 言語文化学部, 専攻言語案内 (27 major languages)",
     "url": "https://www.tufs.ac.jp/education/lc/languages/index.html"
+   },
+   {
+    "label": "大学設置基準（昭和三十一年文部省令第二十八号）第十九条 教育課程の編成方針 — e-Gov 法令 API",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/331M50000080028"
+   },
+   {
+    "label": "学校教育法（昭和二十二年法律第二十六号）第九章 大学、第八十三条 — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/jpn/jpn_HEEdLawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -26572,7 +26798,7 @@
    }
   ],
   "mediumOfInstruction": "Some universities run programmes where a degree can be earned in classes only in English\nNo such English-only degree programmes exist at colleges of technology or training colleges\nDescribed as an emerging practice by the government-approved Study in Japan site",
-  "requiredStudy": "",
+  "requiredStudy": "Standards for Establishment of Universities never use the word for foreign language\nArt. 19 has each university open the subjects it needs and build its own curriculum\nThe School Education Act's university chapter names no subject either",
   "entryRequirements": "",
   "teacherPipeline": "No one may teach in a Japanese school without a teaching licence\nThe licence is earned at a university or junior college holding a teacher training course\nA first-class licence needs a bachelor's degree, a specialist licence a master's\nSixty-seven or more credits are generally needed for primary and secondary licences\nA special licence needs no university credits and is awarded after a prefectural review",
   "enrolment": [],
@@ -26594,7 +26820,15 @@
     3,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -26944,6 +27178,10 @@
    {
     "label": "Royal University of Phnom Penh — Master of Arts in Linguistics, programme introduction",
     "url": "https://mail.rupp.edu.kh/graduate/linguistics/introduction.html"
+   },
+   {
+    "label": "Education Law (Cambodia, NS/RKM/1207/032, 2007), art. 24 Languages of teaching and learning, unofficial translation — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/khm/khm_HEEdLawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -26977,7 +27215,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "When the Royal Khmer University opened in 1960 the language of instruction was French",
-  "requiredStudy": "",
+  "requiredStudy": "Education Law 2007 art. 24 makes Khmer a subject of the general-education curriculums\nArt. 24 also sets foreign languages as subjects of the fundamental programs of general education\nBoth clauses are scoped to general education and reach no higher-education student",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -27015,7 +27253,15 @@
    ],
    "mediumOfInstruction": [
     1
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -27229,26 +27475,41 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Saint Christopher and Nevis, The Education Act, 2005, ss. 3 and 73 (Ministry of Education)",
+    "url": "https://education.gov.kn/wp-content/uploads/2022/11/The-Education-Act-2005.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Education Act 2005 reaches tertiary institutions but sets no language-study duty\ns 73(3) lets the Minister provide by Order for an independent tertiary institution\nIts only curriculum language clause is a goal about the language of the Federation",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "requiredStudy": [
+    1,
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "requiredStudy": true
+  }
  },
  {
   "countryCode": "KP",
@@ -27342,6 +27603,10 @@
    {
     "label": "서울대학교 인문대학, 학과(부): 서어서문학과",
     "url": "https://humanities.snu.ac.kr/academics/department?deptidx=7"
+   },
+   {
+    "label": "고등교육법 (Higher Education Act, Republic of Korea), consolidated text — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/kor/kor_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -27485,7 +27750,7 @@
    }
   ],
   "mediumOfInstruction": "Most courses at Seoul National University are in Korean, its admissions FAQ says\nSNU offers courses in English; the Korean level a degree needs varies by programme\nSNU warns graduation credits may be unreachable without courses offered in Korean",
-  "requiredStudy": "",
+  "requiredStudy": "Higher Education Act names Korean only as a language test for overseas and foreign applicants\nThe Act prescribes no course in any language that a Korean degree student must take",
   "entryRequirements": "On the CSAT English is absolutely graded, the score report showing a band only",
   "teacherPipeline": "Teachers must meet Appendix 2 standards and hold a certificate from the Minister of Education",
   "enrolment": [],
@@ -27521,7 +27786,14 @@
    ],
    "teacherPipeline": [
     3
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -27550,6 +27822,14 @@
    {
     "label": "Aptitude Test Guide & FAQs, Office of the Assistant Vice President for Evaluation and Measurement, Kuwait University",
     "url": "https://cem.ku.edu.kw/faqs"
+   },
+   {
+    "label": "قانون رقم (76) لسنة 2019 في شأن الجامعات الحكومية (Kuwait), المادة 3 والمادة 41 — Kuwait University",
+    "url": "https://www.ku.edu.kw/sites/default/files/2025-10/%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%B1%D9%82%D9%85%2076%20%D9%84%D8%B3%D9%86%D8%A9%202019%20%D9%81%D9%8A%20%D8%B4%D8%A3%D9%86%20%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%83%D9%88%D9%85%D9%8A%D8%A9.pdf"
+   },
+   {
+    "label": "قانون رقم 29 لسنة 1966 في شأن تنظيم التعليم العالي (Kuwait), المادة 4 — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/kwt/kwt_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -27562,7 +27842,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Law 76 of 2019 on government universities repealed the 1966 higher education law\nThe 1966 law's art. 4 had made Arabic the language of education, with council exceptions\nLaw 76's art. 3 aims to enable Arabic and encourage foreign languages, binding no student",
   "entryRequirements": "The Academic Aptitude Test is mandatory for all colleges except Science and Law\nTest subjects are mathematics, English and Arabic, with French twice a year\nThe passing grade for the English test is 60 per cent, for Arabic and French 50\nA student who has not taken it can only enrol in the College of Science or the College of Law\nMost Kuwait University colleges count the aptitude tests as one of the admissions criteria",
   "teacherPipeline": "",
   "enrolment": [],
@@ -27582,6 +27862,10 @@
    {
     "year": 2019,
     "description": "That 2019 law put enabling and strengthening Arabic, and encouraging the acquisition and learning of foreign languages, among the aims it sets for government universities"
+   },
+   {
+    "year": 2019,
+    "description": "Law 76 of 2019 on government universities repeals whatever conflicts with it, the 1966 higher education law included"
    }
   ],
   "slots": {
@@ -27596,7 +27880,15 @@
     2,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -27742,7 +28034,12 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Education Law (Amended) No. 69/NA of 11 December 2024 (Lao PDR), arts. 44 and 45, English version — Lao Official Gazette",
+    "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/Education%20Law%20Eng%20version%2020250715.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -27753,7 +28050,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "Lao language and Lao script are the official language of teaching in education\nInternational or Lao-foreign bilingual curricula are set by separate regulations\nBoth are articles of the Education Law in its 2015 revision",
-  "requiredStudy": "",
+  "requiredStudy": "Education Law (Amended) art. 45 makes English compulsory from grade three of primary onwards\nArt. 45 is worded for educational institutions and names no level at which it stops\nArt. 44 makes Lao the official language of teaching in educational institutions",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -27766,6 +28063,11 @@
     1,
     2,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
   }
  },
@@ -28028,6 +28330,10 @@
    {
     "label": "Sir Arthur Lewis Community College, Associate Degree in Secondary Education (programme page, Morne Campus)",
     "url": "https://salcc.edu.lc/programmes/secondary-education.php"
+   },
+   {
+    "label": "Saint Lucia, Education Act, Cap. 18.01, ss. 3 and 74 (Revision date 31 December 2005, Ministry of Education)",
+    "url": "https://www.education.gov.lc/wp-content/uploads/2020/01/Education-Act-Cap.18.01.pdf"
    }
   ],
   "supportLinks": [],
@@ -28040,7 +28346,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Education Act Cap. 18.01 reaches tertiary institutions but sets no language-study duty\ns 74(3) lets the Minister provide by order for a tertiary institution's curriculum\nIts only curriculum language clause is a goal about the language of Saint Lucia",
   "entryRequirements": "",
   "teacherPipeline": "SALCC offers an Associate Degree in Secondary Education for those aspiring to teach\nOne specialist subject is taken as the teaching Major, made up of five courses",
   "enrolment": [],
@@ -28054,7 +28360,15 @@
    "teacherPipeline": [
     1,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -28200,6 +28514,10 @@
    {
     "label": "University of Jaffna, Department of Tamil: M.A in Tamil",
     "url": "https://www.tam.jfn.ac.lk/m-a-in-tamil/"
+   },
+   {
+    "label": "Universities Act, No. 16 of 1978 (Sri Lanka), s. 15 — University Grants Commission, UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/lka/lka_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -28317,7 +28635,7 @@
    }
   ],
   "mediumOfInstruction": "At Peradeniya the Bachelor of Commerce may be followed in Sinhala, Tamil or English medium\nIts Faculty of Agriculture teaches in English and runs an English Language Teaching Unit\nIts five-year Bachelor of Dental Surgery is taught in English medium\nRecorded faculty by faculty in the UGC's handbook of courses of study, not one rule",
-  "requiredStudy": "",
+  "requiredStudy": "Universities Act No. 16 of 1978 never uses the word language across its twenty parts\nAct s. 15 has the UGC determine the courses provided, in consultation with each institution",
   "entryRequirements": "",
   "teacherPipeline": "A Postgraduate Diploma in Education for teaching English as a second language runs full time\nIt is run by the Faculty of Education of the University of Colombo\nThe course runs 12 months on weekdays\nA student must engage in supervised practical teaching over a 10-week period\nEntry needs a bachelor's degree with at least 30 credits of English language or literature",
   "enrolment": [],
@@ -28341,7 +28659,14 @@
     3,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -30714,6 +31039,10 @@
    {
     "label": "Yangon University of Foreign Languages, Postgraduate admission and master's module lists (Internet Archive capture, 20 September 2024)",
     "url": "https://web.archive.org/web/20240920214102/https://www.yufl.edu.mm/ad-postgraduate/"
+   },
+   {
+    "label": "National Education Law 2014 (Pyidaungsu Hluttaw Law No. 41/2014, Myanmar), ss. 43 and 44, English text — AsianLII",
+    "url": "https://www.asianlii.org/mm/legis/laws/nel2014hn412014446.pdf"
    }
   ],
   "supportLinks": [],
@@ -30891,7 +31220,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "National Education Law 2014 s. 43 sets the medium: Myanmar, English or a combination\nThe Law's language articles reach the basic education level and bind no degree student",
   "entryRequirements": "Entrants must hold the High School Completion Certificate and pass the Matriculation Examination\nIn 1964 Burmese, English and mathematics were compulsory in the science combination\nSelection is on aggregate marks and on principles laid down by the University Council",
   "teacherPipeline": "Yangon University of Education's B.Ed covers educational theory, psychology and methodology\nA nine-month Diploma in English Language Teaching Methodology runs over three ten-week semesters",
   "enrolment": [],
@@ -30914,7 +31243,14 @@
    "teacherPipeline": [
     2,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -30975,6 +31311,10 @@
    {
     "label": "National University of Mongolia, Department of Asian Studies: Foreign language and area studies (Arabic) programme",
     "url": "https://dep.num.edu.mn/asia/?p=492"
+   },
+   {
+    "label": "Law of Mongolia on Higher Education (revised edition, 2023), unofficial English translation — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/mng/mng_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -31082,7 +31422,7 @@
    }
   ],
   "mediumOfInstruction": "Mongolian is by law the language of teaching at educational bodies of every level\nBodies licensed by the state to teach in a foreign language are excepted\nScientific terms are to be rendered in Mongolian in teaching and research throughout\nThese are statutory, from the Law on the Mongolian Language",
-  "requiredStudy": "",
+  "requiredStudy": "Law on Higher Education 2023 never uses the word language and sets no student duty\nThe Law on the Mongolian Language reaches universities only through the entrance examination",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -31118,7 +31458,14 @@
     2,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -32057,6 +32404,10 @@
    {
     "label": "UNAM Oferta Academica, indice alfabetico de licenciaturas",
     "url": "https://oferta.unam.mx/indice-alfabetico.html"
+   },
+   {
+    "label": "Mexico, Ley General de Educacion Superior, art. 37 (DOF 20-04-2021; texto vigente, Camara de Diputados)",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/mex/mex_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -32173,7 +32524,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Ley General de Educacion Superior 2021 sets no language-study duty on any student\nArt. 37 has authorities and institutions promote teaching indigenous and foreign languages\nThat is a duty on the institutions to promote, not a requirement on the student",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -32185,6 +32536,10 @@
    {
     "year": 2017,
     "description": "ENALLT would teach two new licenciaturas, Traduccion and Linguistica Aplicada"
+   },
+   {
+    "year": 2021,
+    "description": "Ley General de Educacion Superior published in the Diario Oficial on 20 April 2021"
    }
   ],
   "slots": {
@@ -32192,7 +32547,15 @@
     1,
     2,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -33233,6 +33596,10 @@
    {
     "label": "UNAN-Managua, oferta educativa por areas de conocimiento",
     "url": "https://www.unan.edu.ni/index.php/oferta-educativa-areas-de-conocimiento"
+   },
+   {
+    "label": "Nicaragua, Ley N. 89, Ley de Autonomia de las Instituciones de Educacion Superior (Asamblea Nacional, via IESALC HEPO)",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/nic/nic_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -33273,7 +33640,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Ley 89 de Autonomia de las Instituciones de Educacion Superior names no language\nIt leaves each university to plan its own academic activity and internal rules\nLey 582's language clauses are school-level: idioma nacional in primaria and secundaria",
   "entryRequirements": "",
   "teacherPipeline": "UNAN-Managua's inglés carrera takes the teaching and learning of English as its object\nIts Francés carrera does the same for French as a foreign language",
   "enrolment": [],
@@ -33282,7 +33649,15 @@
    "teacherPipeline": [
     1,
     1
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -33958,6 +34333,10 @@
    {
     "label": "Tribhuvan University, Central Department of Nepal Bhasha: departmental home page and programmes",
     "url": "https://cdnb.tu.edu.np/"
+   },
+   {
+    "label": "Education Act, 2028 (1971) (Nepal), s. 7 Medium of Language — Nepal Law Commission, UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/npl/npl_HEEdLawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -34055,7 +34434,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "No national rule: the compulsory English here is Tribhuvan University's own\nEducation Act 2028 covers schooling only, and its s. 7 language rule is a school medium rule\nTribhuvan University's four-year BA carries compulsory English courses across its campuses",
   "entryRequirements": "",
   "teacherPipeline": "The four-year B.Ed combines theoretical courses in subject areas such as English and Nepali\nA four-year B.Ed with two areas of specialization has run since 2016",
   "enrolment": [],
@@ -34087,6 +34466,11 @@
    "teacherPipeline": [
     1,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
   }
  },
@@ -34592,6 +34976,10 @@
    {
     "label": "Universidad de Panama, Facultad de Humanidades, Licenciaturas",
     "url": "https://fachumanidades.up.ac.pa/licenciaturas"
+   },
+   {
+    "label": "Panama, Ley 30 de 20 de julio de 2006, que crea el Sistema Nacional de Evaluacion y Acreditacion para el Mejoramiento de la Calidad de la Educacion Superior Universitaria (LEGISPAN text)",
+    "url": "https://docs.panama.justia.com/federales/leyes/30-de-2006-jul-25-2006.pdf"
    }
   ],
   "supportLinks": [],
@@ -34643,7 +35031,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Ley 2 de 2003 makes English compulsory only at the first and second levels of teaching\nPanama Bilingue, Ley 18 de 2017, reaches Basica General, Premedia and Media centres\nLey 30 de 2006 on higher-education accreditation carries no language provision",
   "entryRequirements": "",
   "teacherPipeline": "MEDUCA selects internationally accredited national universities to deliver local training\nContracts are formalised through memoranda of understanding",
   "enrolment": [],
@@ -34651,6 +35039,10 @@
    {
     "year": 2017,
     "description": "Ley 18, sanctioned 10 May 2017, creates the Programa Panama Bilingue"
+   },
+   {
+    "year": 2017,
+    "description": "Ley 18 de 2017 created the Programa Panama Bilingue for English in official schools"
    }
   ],
   "slots": {
@@ -34658,7 +35050,15 @@
     1,
     2,
     2
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -34699,6 +35099,10 @@
    {
     "label": "Universidad Ricardo Palma, Facultad de Humanidades y Lenguas Modernas",
     "url": "https://www.urp.edu.pe/pregrado/facultad-de-humanidades-y-lenguas-modernas/"
+   },
+   {
+    "label": "Peru, Ley Universitaria, Ley N. 30220, arts. 40 and 45 (Primera Edicion Oficial, Ministerio de Justicia y Derechos Humanos, diciembre 2023)",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/per/per_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -34789,7 +35193,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Ley Universitaria 30220 art. 40 makes teaching a language compulsory in all pregrado study\nThe bachiller degree also needs knowledge of a foreign or native language, art. 45.1\nThe doctorate needs two foreign languages, one replaceable by a native one, art. 45.5\nA foreign language, English preferred, or a native one, Quechua or Aymara preferred\nHow much is not fixed nationally: each university determines its own curriculum design",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -34805,12 +35209,23 @@
    {
     "year": 2023,
     "description": "Ley 31803 rewrites art. 45, keeping the foreign or native language rule for bachiller"
+   },
+   {
+    "year": 2023,
+    "description": "Ley 31803 amended art. 45 of the Ley Universitaria on degree requirements"
    }
   ],
   "slots": {
    "degreeSubjects": [
     1,
     2
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1,
+    2,
+    3
    ]
   }
  },
@@ -34981,6 +35396,10 @@
    {
     "label": "University of the Philippines Diliman, Office of the University Registrar: College of Arts and Letters catalogue (undergraduate and graduate degree programs)",
     "url": "https://our.upd.edu.ph/files/catalogue/CAL.pdf"
+   },
+   {
+    "label": "Republic Act No. 7722, Higher Education Act of 1994 (Philippines), sec. 8 — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/phl/phl_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -35106,7 +35525,7 @@
    }
   ],
   "mediumOfInstruction": "The 1987 Constitution makes Filipino and English the official languages for instruction\nRegional languages serve as auxiliary media of instruction in their own regions",
-  "requiredStudy": "",
+  "requiredStudy": "CMO 57 of 2017 covers the offering of Filipino subjects in all higher education programmes\nCMO 57 sits inside the new General Education Curriculum set by CMO No. 20, s. 2013\nRA 7722, the Higher Education Act of 1994, carries no language provision of its own",
   "entryRequirements": "",
   "teacherPipeline": "Teaching needs a degree in education or its equivalent, with a major and a minor\nNo one may practise teaching without a certificate of registration and a professional licence",
   "enrolment": [],
@@ -35126,6 +35545,10 @@
    {
     "year": 2017,
     "description": "CMO 57 s. 2017 told HEIs to keep implementing the Filipino-units memoranda"
+   },
+   {
+    "year": 2017,
+    "description": "CHED Memorandum Order 57 of 2017 sets policy on offering Filipino subjects in all higher education programmes"
    }
   ],
   "slots": {
@@ -35142,6 +35565,11 @@
    "teacherPipeline": [
     1,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
   }
  },
@@ -35786,6 +36214,10 @@
    {
     "label": "Universidad de Puerto Rico, Ofrecimientos academicos (all campuses)",
     "url": "https://www.upr.edu/academico/"
+   },
+   {
+    "label": "Puerto Rico, Ley de la Universidad de Puerto Rico, Ley Num. 1 de 20 de enero de 1966, segun enmendada, arts. 1, 2 and 11 (compilation by the Secretario Ejecutivo de la Junta de Sindicos)",
+    "url": "https://docs.upra.edu/student-consummer-information-informacion-al-consumidor/pdf/Ley-UPR.pdf"
    }
   ],
   "supportLinks": [],
@@ -35883,7 +36315,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Ley 1 de 1966 of the Universidad de Puerto Rico carries no language provision\nEach campus Senado Academico sets the general admission, promotion and graduation rules\nThe act's stated purpose is to reaffirm and strengthen the University's autonomy",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -35912,7 +36344,15 @@
     4,
     4,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -35937,6 +36377,10 @@
    {
     "label": "An-Najah National University — Upper Preparatory Teacher in English Language, undergraduate programme info card",
     "url": "https://www.najah.edu/en/academic/undergraduate-programs/program/upper-prepartory-teacher-english-language/info-card/"
+   },
+   {
+    "label": "قرار بقانون رقم (6) لسنة 2018م بشأن التعليم العالي (Palestine), المادة 4 والمادة 22 — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/pse/pse_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -35970,7 +36414,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Decree-Law 6 of 2018 art. 22 makes Arabic the institution's official language of teaching\nStrengthening Arabic in teaching and research is an aim of the sector, not a student duty",
   "entryRequirements": "",
   "teacherPipeline": "An-Najah trains upper-preparatory English teachers in pedagogy and the language skills needed",
   "enrolment": [],
@@ -35989,7 +36433,14 @@
    ],
    "teacherPipeline": [
     1
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -36456,6 +36907,14 @@
    {
     "label": "CONES, Registro Nacional de Ofertas Academicas - Universidad Nacional de Asuncion",
     "url": "https://cones.gov.py/universidad-nacional-de-asuncion-una/"
+   },
+   {
+    "label": "Paraguay, Ley N. 4251/2010 de Lenguas, arts. 10, 28 and 29 (Biblioteca y Archivo Central del Congreso Nacional)",
+    "url": "https://www.bacn.gov.py/leyes-paraguayas/2895/ley-n-4251-de-lenguas"
+   },
+   {
+    "label": "Paraguay, Ley N. 4995 de Educacion Superior (IESALC HEPO copy of the Poder Legislativo text)",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/pry/pry_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -36514,7 +36973,7 @@
    }
   ],
   "mediumOfInstruction": "Both official languages are the medium of teaching at every level, higher education included\nGuaraní and Spanish are the two official languages the Ley de Lenguas names\nUse is scaled to the competence each level requires, under Ley 4251 article 29",
-  "requiredStudy": "",
+  "requiredStudy": "Ley de Lenguas 4251/2010 art. 28 has the official languages taught across the system\nArt. 10 makes a bilingual Guarani-Spanish plan a right, from initial education to superior\nArt. 28 names no level itself: art. 10 and art. 29 are the clauses that reach superior\nLey 4995 de Educacion Superior itself sets no language requirement on a student",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -36533,6 +36992,12 @@
     1,
     2,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1,
+    1
    ]
   }
  },
@@ -36558,6 +37023,10 @@
    {
     "label": "Qatar University, Department of English Literature and Linguistics — B.Arts in English Literature & Linguistics, programme objectives and degree requirements",
     "url": "https://www.qu.edu.qa/en-us/Colleges/ArtsSciences/departments/dell-home/Pages/english-major.aspx"
+   },
+   {
+    "label": "قانون رقم (7) لسنة 2019 بشأن حماية اللغة العربية (Qatar), المادتان 5 و 6 — الميزان، البوابة القانونية القطرية",
+    "url": "https://www.almeezan.qa/LawView.aspx?opt=&LawID=7912&language=ar"
    }
   ],
   "supportLinks": [],
@@ -36581,7 +37050,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "State universities are bound by law to teach in Arabic\nAnother language is allowed where the nature of an academic programme requires it\nThe university's board of trustees or the education ministry decides that exception\nThis is statute: Law 7 of 2019 on the protection of the Arabic language",
-  "requiredStudy": "",
+  "requiredStudy": "Law 7 of 2019 art. 6 binds state universities to teach in Arabic, not to teach a language\nArt. 5 makes private educational institutions teach Arabic as an independent core subject\nArt. 5's subject duty is not clearly a degree duty, universities having their own article",
   "entryRequirements": "Applicants to six listed colleges must demonstrate proficiency in English and Mathematics\nA candidate without the scores may instead pass the Foundation Program\nThe minimum competency requirements are set by the University itself",
   "teacherPipeline": "",
   "enrolment": [],
@@ -36589,6 +37058,10 @@
    {
     "year": 2019,
     "description": "The Amir issued Law No 7 of 2019, obliging universities to teach in Arabic"
+   },
+   {
+    "year": 2019,
+    "description": "Law 7 of 2019 on the protection of the Arabic language binds state universities to teach in Arabic"
    }
   ],
   "slots": {
@@ -36607,6 +37080,11 @@
     1,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
   }
  },
@@ -38353,6 +38831,10 @@
    {
     "label": "Nanyang Technological University, School of Humanities: Bachelor of Arts (Hons) in English",
     "url": "https://www.ntu.edu.sg/soh/admissions/undergraduate/english"
+   },
+   {
+    "label": "Education Act 1957 (Singapore), ss. 2 and 4 — Singapore Statutes Online, UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/sgp/sgp_HEEdLawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -38492,7 +38974,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Education Act 1957 never uses the word curriculum and sets no subject requirement\nThe Act's subject is the school, a place where 10 or more persons are habitually taught",
   "entryRequirements": "An A-level applicant must meet one of the Mother Tongue Language requirements\nA minimum D7 in Higher Mother Tongue taken at O level meets it\nA non-Tamil Indian language or French, German or Japanese may be offered in lieu\nThose who do not satisfy it may still apply and be admitted on a provisional basis\nAn exemption approved by the Ministry of Education also satisfies the requirement",
   "teacherPipeline": "",
   "enrolment": [],
@@ -38527,7 +39009,14 @@
     2,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -39781,6 +40270,10 @@
    {
     "label": "UES, oferta academica (Unidad de Ingreso Universitario)",
     "url": "https://eel.ues.edu.sv/ingreso/index/contenido/589"
+   },
+   {
+    "label": "El Salvador, Ley de Educacion Superior, Decreto N. 468, arts. 11 and 16 (Ministerio de Educacion, via IESALC HEPO)",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/slv/slv_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -39812,7 +40305,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Ley de Educacion Superior sets no language duty and never uses idioma or lengua\nIt fixes each degree by years and unidades valorativas, naming no subject, art. 11\nNo national duty: admission requirements are set by each institution, art. 16",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -39834,7 +40327,15 @@
    "degreeSubjects": [
     1,
     2
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -39843,26 +40344,41 @@
   "isNational": true,
   "region": "Americas",
   "subregion": "Caribbean",
-  "status": "stub",
-  "confidence": "",
-  "lastVerified": "",
+  "status": "partial",
+  "confidence": "official-document",
+  "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Sint Maarten, Landsverordening regelende het voortgezet onderwijs, arts. 10c and 12 (CVDR142635)",
+    "url": "https://lokaleregelgeving.overheid.nl/CVDR142635"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
-  "by": "",
+  "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "",
   "degreeSubjects": "",
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "No national rule: the only located language duty is a secondary-school instructietaal one\nThat rule binds the school's own choice, for the whole school or one leerweg\nHigher education appears there only as what a secondary profile prepares a pupil for",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "requiredStudy": [
+    1,
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "requiredStudy": true
+  }
  },
  {
   "countryCode": "SY",
@@ -39878,6 +40394,10 @@
    {
     "label": "الجامعة الافتراضية السورية — ماجستير التأهيل والتخصص في اللسانيات التطبيقية (MAL)",
     "url": "https://svuonline.org/ar/program/mal"
+   },
+   {
+    "label": "القانون رقم /6/ تنظيم الجامعات (Syria), المادة 20 — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/syr/syr_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -39901,7 +40421,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Law 6 organising universities art. 20 makes Arabic the language of teaching in universities\nArt. 20's only exception is foreign-language departments and foreign-language courses\nOne course a year may be taught in a foreign language at first-degree level",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -39911,7 +40431,15 @@
     1,
     2,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -40372,6 +40900,10 @@
    {
     "label": "Chulalongkorn University, Faculty of Arts: doctoral curricula (หลักสูตรปริญญาเอก)",
     "url": "https://www.arts.chula.ac.th/th/phd-education/"
+   },
+   {
+    "label": "พระราชบัญญัติการอุดมศึกษา พ.ศ. ๒๕๖๒ (Higher Education Act B.E. 2562, Thailand) — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/tha/tha_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -40614,7 +41146,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Higher Education Act B.E. 2562 uses the word language once, in its non-discrimination clause\nThe Act prescribes no course in any language that a Thai degree student must take",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -40645,7 +41177,14 @@
     1,
     4,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -40658,7 +41197,12 @@
   "confidence": "official-document",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Қонуни Ҷумҳурии Тоҷикистон дар бораи таҳсилоти олии касбӣ, моддаҳои 17 ва 18 — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/tjk/tjk_HELawLi.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
@@ -40669,7 +41213,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "Tajikistan's 2009 State Language Law has teaching conducted in the state language, Tajik\nHigher and postgraduate institutions may also operate in other languages\nIn foreign higher institutions in Tajikistan, study of the state language is compulsory",
-  "requiredStudy": "",
+  "requiredStudy": "Law on Higher Professional Education art. 17 sends the language of teaching to legislation\nArt. 18 puts course content under the state higher-education standards, naming no language",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -40684,6 +41228,10 @@
     1,
     2,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
   }
  },
@@ -40721,7 +41269,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "Portuguese is the main language of teaching, research and instruction in higher education\nTetum is used as a support language alongside Portuguese\nExceptions cover foreign-language teaching and international cooperation programmes\nSet by the Higher Education Framework Law, passed by the National Parliament in June 2024",
-  "requiredStudy": "",
+  "requiredStudy": "Lei de Bases art. 8 names Tetum and Portuguese as the system's languages of teaching\nPromoting Timorese languages is an aim of higher education, a duty on the system\nDecreto-Lei 68/2022 uses lingua only for institution names and international bodies",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -40757,7 +41305,15 @@
     2,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -40782,6 +41338,10 @@
    {
     "label": "Talyp-2022: Türkmenistanyň Oguz han adyndaky Inžener-tehnologiýalar uniwersiteti — admission announcement listing kompýuter lingwistikasy",
     "url": "https://atavatan-turkmenistan.com/talyp-2022-oguz-han-adyndaky-inzener-tehnologiyalar-uniwersiteti/"
+   },
+   {
+    "label": "Türkmenistanyň Kanuny «Bilim hakynda» (rejelenen görnüşi), 5-nji madda — Ministry of Education of Turkmenistan",
+    "url": "https://bilim.gov.tm/media/legal_documents/document_5.pdf"
    }
   ],
   "supportLinks": [],
@@ -40805,7 +41365,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "Turkmen, as the state language, is the main teaching language in all types of institution\nA foreign language may be the main medium in professional institutions, given the programme\nIn foreign or joint institutions in Turkmenistan the main medium is that foreign language\nWhere a foreign language is the medium, national-component subjects use the state language\nArticle 5 of the Law on Education sets this, rather than institutional practice",
-  "requiredStudy": "",
+  "requiredStudy": "Foreign-language study enters general and professional programmes as compulsory subjects\nArt. 5 has professional education institutions teach in the state language\nWhere a foreign language is the medium, the state language teaches national-component subjects\nA one-year language preparation course may be run for entrants to higher professional education",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -40841,6 +41401,12 @@
     3,
     3,
     4
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    2,
+    3
    ]
   }
  },
@@ -41382,6 +41948,10 @@
    {
     "label": "UWI St Augustine, Department of Modern Languages and Linguistics, Undergraduate Programmes",
     "url": "https://sta.uwi.edu/fhe/dmll/undergraduate-programmes"
+   },
+   {
+    "label": "Trinidad and Tobago, Education Act, Chap. 39:01, ss. 5 and 7 (Ministry of the Attorney General and Legal Affairs, updated to 31 December 2016)",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/tto/tto_HEEdLawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -41471,7 +42041,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Education Act Ch. 39:01 organises public education in three stages, none of them a degree\nThe Minister's curriculum power reaches all public schools, and stops there, s 5(e)\nIts only language clause bars refusing school admission on account of language, s 7",
   "entryRequirements": "",
   "teacherPipeline": "The BA Linguistics is a recognised pathway to Teacher III status for teachers of English",
   "enrolment": [],
@@ -41496,7 +42066,15 @@
    ],
    "teacherPipeline": [
     1
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -42382,6 +42960,10 @@
    {
     "label": "UAF Catalog, Alaska Native Languages department",
     "url": "https://catalog.uaf.edu/academic-departments/alaska-native-languages/"
+   },
+   {
+    "label": "General Education Provisions Act s. 438, 20 U.S.C. 1232a, Prohibition against Federal control of education (U.S. Code 2023 edition, GPO)",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap31-subchapIII-part2-sec1232a.htm"
    }
   ],
   "supportLinks": [],
@@ -42501,7 +43083,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "No federal requirement is possible: 20 USC 1232a bars federal control of curriculum\nUS Dept of Education: States and communities develop curricula and set graduation rules\nAny compulsory language study is a state or institutional rule, never a national one",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -42534,7 +43116,17 @@
     "year": 2008,
     "description": "Title VI was last comprehensively reauthorised, by the Higher Education Opportunity Act"
    }
-  ]
+  ],
+  "slots": {
+   "requiredStudy": [
+    1,
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "requiredStudy": true
+  }
  },
  {
   "countryCode": "US",
@@ -47302,6 +47894,14 @@
    {
     "label": "CFE-ANEP, planes vigentes para Profesorado",
     "url": "https://www.cfe.edu.uy/index.php/carreras/planes-y-programas2/planes-vigentes-para-profesorado"
+   },
+   {
+    "label": "Uruguay, Ley N. 12.549, Ley Organica de la Universidad de la Republica, art. 22 (IMPO)",
+    "url": "https://www.impo.com.uy/bases/leyes/12549-1958"
+   },
+   {
+    "label": "Uruguay, Ley N. 18.437, Ley General de Educacion, art. 40 (IMPO)",
+    "url": "https://www.impo.com.uy/bases/leyes/18437-2008"
    }
   ],
   "supportLinks": [],
@@ -47380,7 +47980,7 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Ley Organica 12.549 of the Universidad de la Republica carries no language provision\nStudy plans are drafted by each Faculty council and approved centrally, art. 22\nLey 18437 art. 40 sets transversal lines for the Sistema Nacional de Educacion\nEducacion linguistica appears there as a purpose, with no hours and no student duty",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
@@ -47389,7 +47989,16 @@
    "degreeSubjects": [
     1,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -47438,6 +48047,10 @@
    {
     "label": "Presidential Resolution PP-5117 of 19 May 2021 on popularising foreign language study, point 4 — Lex.uz",
     "url": "https://lex.uz/ru/docs/5426740"
+   },
+   {
+    "label": "Закон Республики Узбекистан «Об образовании» ЗРУ-637 от 23.09.2020, статья 33 (Язык обучения) — Lex.uz",
+    "url": "https://lex.uz/ru/docs/5013009"
    }
   ],
   "supportLinks": [],
@@ -47491,7 +48104,7 @@
   ],
   "offerings": [],
   "mediumOfInstruction": "Certain specialist university subjects are to be taught in foreign languages\nNamed as technical and international specialities",
-  "requiredStudy": "",
+  "requiredStudy": "Law on Education 2020 art. 33 sends the language of instruction to the State Language Law\nThe Act sets no language course that a higher-education student must take",
   "entryRequirements": "Where a foreign language is the first subject, entry needs at least a B1 certificate\nWhere it is only in the subject set, B1 gives 75 per cent of the maximum mark\nApplicants pick one of fifteen test languages at the first stage of registration\nSet by Cabinet of Ministers resolution 578 of 13 September 2025, in force 15 September",
   "teacherPipeline": "UzSWLU began in 1949 as the Tashkent foreign languages pedagogical institute\nFuture pedagogues train in its English, Romance-Germanic and Oriental philology faculties",
   "enrolment": [],
@@ -47520,7 +48133,16 @@
     "year": 2025,
     "description": "Cabinet Resolution 578 of 13 Sept 2025 makes admission to directions with a foreign language as first subject conditional on a B1 certificate"
    }
-  ]
+  ],
+  "slots": {
+   "requiredStudy": [
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "requiredStudy": true
+  }
  },
  {
   "countryCode": "VA",
@@ -47588,6 +48210,10 @@
    {
     "label": "St Vincent and the Grenadines Community College, Division of Teacher Education — Programmes (Associate Degree in Education, two years, 66 credits)",
     "url": "https://svgcc.vc/dte-programmes/"
+   },
+   {
+    "label": "Saint Vincent and the Grenadines, Education Act, Chapter 202 (Act of 2006), ss. 3 and 5 (Ministry of Education)",
+    "url": "https://education.gov.vc/education/images/PDF/education_act_2006.pdf"
    }
   ],
   "supportLinks": [],
@@ -47600,7 +48226,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Education Act Cap. 202 of 2006 sets no compulsory language study at tertiary level\nIts only curriculum language clause is a goal about the language of the country\nTertiary education is a stage of the system, but no subject is prescribed for it",
   "entryRequirements": "",
   "teacherPipeline": "Teacher training runs through the Community College's Division of Teacher Education\nAdjunct staff there teach Foreign Language among other disciplines\nAll full-time programmes last two years and reward an Associate Degree in Education\nUWI has accepted that Associate Degree in Education since 2005",
   "enrolment": [],
@@ -47611,7 +48237,15 @@
     2,
     3,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
@@ -47632,6 +48266,10 @@
    {
     "label": "Universidad de Los Andes, Facultad de Humanidades y Educacion",
     "url": "https://www.ula.ve/humanidades-educacion/es/"
+   },
+   {
+    "label": "Venezuela, Ley de Universidades, arts. 9 and 62 (via IESALC HEPO)",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/ven/ven_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -47683,11 +48321,21 @@
    }
   ],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Ley de Universidades carries no language provision and no language-study duty\nArt. 9 gives universities academic autonomy to plan and run their own programmes\nPlans and programmes of study are drawn up by each Escuela and approved internally",
   "entryRequirements": "",
   "teacherPipeline": "",
   "enrolment": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "requiredStudy": [
+    1,
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "requiredStudy": true
+  }
  },
  {
   "countryCode": "VN",
@@ -48081,6 +48729,10 @@
    {
     "label": "Sana'a University, Faculty of Education: English Studies Program specification, accredited 2022",
     "url": "https://su.edu.ye/fe/en/bachelor/english-studies-program/"
+   },
+   {
+    "label": "القانون رقم (13) لسنة 2010م بشأن التعليم العالي (Yemen), المادة 15 — UNESCO IESALC HEPO copy",
+    "url": "https://hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/yem/yem_HELawLi.pdf"
    }
   ],
   "supportLinks": [],
@@ -48093,7 +48745,7 @@
   "linguistics": [],
   "offerings": [],
   "mediumOfInstruction": "",
-  "requiredStudy": "",
+  "requiredStudy": "Law 13 of 2010 art. 15 makes Arabic the language of teaching in higher education institutions\nStrengthening Arabic in teaching and research is one of the sector's aims, not a student duty",
   "entryRequirements": "Entry to the English teaching degree needs a high school degree in any specialization\nThe bar is set by the University's own relevant Regulations and Bylaws",
   "teacherPipeline": "The programme aspires to prepare teachers who develop English skills for school pupils\nIt empowers student teacher candidates to teach English and practise the profession",
   "enrolment": [],
@@ -48124,7 +48776,14 @@
    "teacherPipeline": [
     1,
     3
+   ],
+   "requiredStudy": [
+    1,
+    1
    ]
+  },
+  "absences": {
+   "requiredStudy": true
   }
  },
  {
