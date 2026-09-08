@@ -396,6 +396,16 @@ const CSV_COLS = [
   'row_year', 'row_value', 'sources',
 ];
 
+/** Coded columns present on this field, discovered from the units. */
+function codingCols(units, key) {
+  const seen = new Set();
+  for (const u of units) {
+    const c = (u.coding || {})[key];
+    if (c) for (const col of Object.keys(c)) seen.add(col);
+  }
+  return [...seen].sort().map(c => 'coding_' + c);
+}
+
 /** A typed row as one string, the same shape the panel renders. */
 function flatRow(r) {
   if (!r || typeof r !== 'object') return String(r == null ? '' : r);
@@ -424,6 +434,12 @@ function csvRows() {
       state: st, is_absence: st === 'absent' ? 1 : 0,
       sources: (u.docLinks || []).length,
     };
+    // A coding belongs to the unit, not to a bullet, so it repeats down every
+    // row for that unit. A list joins with "; " -- a system running a clock and
+    // an age ceiling is doing both, and the cell has to say so.
+    for (const [col, v] of Object.entries((u.coding || {})[field.k] || {})) {
+      base['coding_' + col] = Array.isArray(v) ? v.join('; ') : v;
+    }
     const recs = (u.records || {})[field.k];
     const slots = (u.slots || {})[field.k] || [];
     // A typed field holds rows, not bullets. Year and value get their own
@@ -480,8 +496,11 @@ $('csv').addEventListener('click', () => {
     const t = String(v == null ? '' : v).replace(/\r?\n/g, ' ');
     return /[",]/.test(t) ? '"' + t.replace(/"/g, '""') + '"' : t;
   };
-  const lines = [CSV_COLS.join(',')];
-  for (const r of rows) lines.push(CSV_COLS.map(c => cell(r[c])).join(','));
+  const i = domain.fields.findIndex(x => x.k === field.k);
+  const extra = codingCols(unitsOf(domain.id).filter(u => $('subs').checked || u.nat), field.k);
+  const cols = CSV_COLS.concat(extra);
+  const lines = [cols.join(',')];
+  for (const r of rows) lines.push(cols.map(c => cell(r[c])).join(','));
   const a = document.createElement('a');
   // A BOM, because the first thing most people do with this file is open it in
   // Excel, and without one Excel reads UTF-8 as latin-1 and turns every Maori

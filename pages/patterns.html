@@ -43,6 +43,13 @@ main a { color: var(--focus); }
 
 /* ---- decade bars ---- */
 .decades { display: grid; gap: 5px; margin: 4px 0 18px; max-width: 60ch; }
+.codeblock { margin: 0 0 22px; }
+.codehead { margin: 0 0 10px; font-size: 13px; font-weight: 600; }
+.codehead .count { font-weight: 400; }
+.codecol { margin: 0 0 14px; max-width: 60ch; }
+.codecol h4 { margin: 0 0 5px; font-size: 10.5px; text-transform: uppercase;
+  letter-spacing: .09em; color: var(--ink-faint); font-weight: 600; }
+.codecol .decrow { display: grid; grid-template-columns: 17ch 1fr 3ch; gap: 8px; align-items: center; }
 .decrow { display: grid; grid-template-columns: 62px 1fr 44px; gap: 10px; align-items: center; font-size: 13px; }
 .decrow .bar { height: 13px; border-radius: 2px; background: var(--r-europe); min-width: 2px; }
 .decrow .n { text-align: right; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
@@ -231,6 +238,13 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
     that way yet.
   </p>
 
+  <h3>What kind of rule</h3>
+  <p>
+    Each coded field, by category. A system stating two rules at once is counted under both,
+    so these add up to more than the number of systems.
+  </p>
+  <div id="coding"></div>
+
   <h3>A clock or a test, and systems say which they are not using</h3>
   <p>
     Where an exit rule exists it is one of two things, and they are mutually exclusive by design.
@@ -386,6 +400,48 @@ const PAIRS = [
   ['eal', 'removalCriteria', 'Additional language', 'what ends the designation'],
 ];
 
+// The coded categories, counted from the payload. Reads `coding` the way the
+// table above reads `fieldStates`: whatever is there, nothing assumed. A
+// column holding a list is counted once per value, because a system running a
+// clock AND an age ceiling is doing both and picking one would be the
+// discarding this pass was revised to stop.
+//
+// Only columns with a controlled vocabulary are shown. A free-text or numeric
+// column has no categories to distribute and belongs in the CSV instead.
+function renderCoding(atlas) {
+  const doms = Object.fromEntries(atlas.domains.map(d => [d.id, d]));
+  const blocks = [];
+  for (const [id, key, map, asks] of PAIRS) {
+    const d = doms[id];
+    if (!d) continue;
+    const units = (atlas.units[id] || []).filter(u => u.nat && u.coding && u.coding[key]);
+    if (!units.length) continue;
+    const cols = {};
+    for (const u of units) {
+      for (const [col, v] of Object.entries(u.coding[key])) {
+        if (typeof v === 'number') continue;
+        const vals = Array.isArray(v) ? v : [v];
+        cols[col] = cols[col] || {};
+        for (const x of vals) cols[col][x] = (cols[col][x] || 0) + 1;
+      }
+    }
+    const inner = Object.entries(cols).map(([col, counts]) => {
+      const rows = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+      const top = rows.length ? rows[0][1] : 1;
+      return `<div class="codecol"><h4>${esc(col.replace(/_/g, " "))}</h4>`
+        + rows.map(([v, n]) => `<div class="decrow">
+            <span class="lab">${esc(v)}</span>
+            <span class="bar" style="width:${(n / top * 100).toFixed(1)}%"></span>
+            <span class="n">${n}</span></div>`).join('')
+        + '</div>';
+    }).join('');
+    blocks.push(`<div class="codeblock"><h4 class="codehead">${esc(map)} — ${esc(asks)}
+      <span class="count">${units.length} coded</span></h4>${inner}</div>`);
+  }
+  $('#coding').innerHTML = blocks.length ? blocks.join('')
+    : '<p class="why">No entry carries a coding yet. The vocabularies are in src/coding.js; nothing has been coded against them.</p>';
+}
+
 function renderCriteria(atlas) {
   const doms = Object.fromEntries(atlas.domains.map(d => [d.id, d]));
   const rows = PAIRS.map(([id, key, map, asks]) => {
@@ -458,7 +514,7 @@ function render() {
 // panel each fetched their own copy before this — so the page pulled it twice
 // on every load, for data neither of them changes.
 const atlas = fetch('/api/atlas').then(r => r.ok ? r.json() : Promise.reject(new Error('atlas ' + r.status)));
-atlas.then(a => { mountNav(null, a.domains); renderCriteria(a); }).catch(() => mountNav(null));
+atlas.then(a => { mountNav(null, a.domains); renderCriteria(a); renderCoding(a); }).catch(() => mountNav(null));
 
 
 fetch('/api/trends')
