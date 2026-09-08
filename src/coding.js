@@ -196,6 +196,8 @@ const DECIDED_BY = {
   municipality: 'Local government (Norway, where the Education Act lets municipalities choose the model)',
   'national authority': 'A ministry or national agency (Israel: the Ministry of Education allocates by a key in the Director-General circular)',
   automatic: 'No decision is taken about the individual: the designation follows from records already held (Israel: set from the school reported pupil roll, with no application by the school)',
+  'regional government': 'A state, province, canton or Land (Switzerland\'s cantons, Germany\'s Laender, United States states, Spain\'s regional decrees). DUTY_TYPES had this and this axis did not, which flattened every federal system',
+  'nobody, the period expires': 'No decision is taken about ending it: a clock runs out. All twelve clock systems in the first coding pass had no value for this, and `automatic` is not it -- that means a decision made without an application, which is not the same as no decision',
   'not stated': 'The entry does not establish who decides',
 };
 
@@ -205,6 +207,7 @@ const DECIDED_BY = {
 const RULE_LOCUS = {
   'national statute': 'Binding rule set nationally (Austria SchUG s.4, Poland MEN regulation, Spain LOMLOE arts. 78-79)',
   'national framework, sub-national rules': 'A national frame that coordinates without binding, with the operative rules made below it (Germany: KMK framework, the 16 Laender set terminology, thresholds and duration; Switzerland: EDK/CDIP with 26 cantons; United States: federal identification duty, states set the instrument)',
+  'national rule, local application': 'A binding national rule, carried out by a body below the national level. Distinct from the framework case above, where the national frame coordinates WITHOUT binding (Denmark, Greenland, Norway and Tuerkiye were all flattened into `national statute` before this value existed)',
   'sub-national only': 'No national instrument at all; the rule exists only below the national level (Canada, where education is provincial under the Constitution Act 1867)',
   'institutional': 'Left to individual schools or providers',
   'not stated': 'The entry does not establish where the rule is made',
@@ -217,12 +220,18 @@ const RULE_LOCUS = {
 // entitlement is capped in periods". Czechia: "Capped by prior time in Czech
 // education, not by proficiency". Austria runs its 12 months out "regardless of
 // remaining German gaps". Systems choose a clock or a test, and say so.
+// exit_mechanism IS A LIST. Eleven of the first 59 entries coded stated two or more
+// simultaneously operative rules, and coding one value threw the others away:
+// Chile runs an annual re-evaluation AND stops at 5;11, the United States a
+// triennial cycle AND a team decision AND an age limit, Ireland a two-year
+// school cap AND service-by-service discharge. Order them as the entry does.
 const EXIT_MECHANISM = {
   clock: 'A fixed period, expiring whether or not the pupil is proficient (Austria 12 months extendable by 12, Czechia 24, Netherlands 2 years, Sweden 4, New Zealand 5 and 3, Greece ZEP II 2-3 years)',
-  test: 'A proficiency assessment decides (Northern Mariana Islands WIDA ACCESS, Puerto Rico LAS Links level 4 or 5, Germany sometimes DSD I, Iceland competence level three)',
+  test: 'A NAMED instrument decides, with a stated level (Northern Mariana Islands WIDA ACCESS, Puerto Rico LAS Links level 4 or 5, Iceland competence level three)',
+  'proficiency judgement': 'Proficiency decides, but no instrument is named -- an assessment made by a school, service or clinician (France assessed at school or CASNAV level, Norway "sufficiently proficient", Germany an assessment of German sometimes referencing DSD I). Liechtenstein states the distinction outright: exit is "proficiency-based rather than a fixed test"',
   'assessed, no criterion': 'A review point is fixed and no standard for ceasing is set — the decision exists, the criterion does not (Denmark: "the order sets that decision point but states no criterion for ceasing"; Sweden and Finland the same in their school acts)',
-  'age ceiling': 'Entitlement ends at an age rather than on any judgement about the pupil (Israel 3 to 21, Micronesia to 21)',
-  'none established': 'Checked, and the system sets no exit rule of any kind (France "not time-boxed nationally", United States "no federal exit test", Spain "as soon as possible", Ireland, Italy, Lithuania, Monaco)',
+  'age ceiling': 'Entitlement ends at an age, with no judgement about the pupil. Unused across 42 eal entries in the first coding pass -- kept because the shape is real elsewhere, but it has no eal example yet, and the Israel and Micronesia cases that once glossed it are dld entries and belong to DISCHARGE_BASIS',
+  'none established': 'Checked, and the system sets no exit rule of any kind, at any level (Ireland, Lithuania, Monaco). NOT for a system that sets no NATIONAL rule and leaves it below -- France "not time-boxed nationally", the United States "no federal exit test" and Spain "as soon as possible" are all saying where the rule is made, which rule_locus carries. Leave exit_mechanism unset for those and let the locus say it',
   'not stated': 'The entry does not reach the question',
 };
 
@@ -268,6 +277,7 @@ const DECIDER_TYPES = {
   'educational psychology service': 'A school counselling or psychopedagogical body (Czechia\'s school counselling facility, Spain\'s guidance teams, Denmark\'s educational-psychological advice)',
   'school or authority': 'The school, or the authority that supervises it (Germany: school and school supervisory authority decide; Finland: the education provider makes a written decision)',
   municipality: 'Local government (Norway: the municipality decides, having first obtained the expert assessment)',
+  'regional government': 'A state, province, canton or Land, where the criterion is set or applied there',
   'not stated': 'The entry does not establish who decides',
 };
 
@@ -285,6 +295,11 @@ const EXCLUSIONS = {
 // HOW THE DESIGNATION ENDS, for a clinical category. Different values from the
 // eal pair: nothing here is a proficiency test, and the dominant mode is a
 // scheduled re-assessment of continuing need.
+// discharge_basis IS A LIST. Eleven of the first 59 entries coded stated two or more
+// simultaneously operative rules, and coding one value threw the others away:
+// Chile runs an annual re-evaluation AND stops at 5;11, the United States a
+// triennial cycle AND a team decision AND an age limit, Ireland a two-year
+// school cap AND service-by-service discharge. Order them as the entry does.
 const DISCHARGE_BASIS = {
   're-evaluation cycle': 'Reassessment on a fixed schedule decides continuation (Chile annually under art. 11, United States at least every three years, Taiwan across education stages, Georgia, Dominican Republic)',
   'decision on continuing need': 'A team decides the child no longer needs the provision (United States: services end when the team finds no eligibility or no need for specially designed instruction; Taiwan: cases not meeting the criteria return to the regular class)',
