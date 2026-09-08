@@ -227,6 +227,75 @@ const EXIT_MECHANISM = {
 };
 
 // ===========================================================================
+// dld.identificationCriteria and dld.dischargeCriteria
+// ===========================================================================
+//
+// The same pair as the eal one -- who enters the category, who leaves it --
+// asked of a category that is clinical rather than administrative. That
+// difference matters and is the reason these need their own vocabularies: a
+// newcomer designation exists only if a state creates one, but a child with a
+// language disorder is identified by somebody whether or not any statute says
+// how. There is no "no category exists" case here.
+
+// WHAT THE THRESHOLD TURNS ON. The axis this map exists to measure, because it
+// decides whether a child gets anything.
+const THRESHOLD_BASIS = {
+  'clinical diagnosis': 'A clinician judges the disorder present, and that is the criterion (Australia: "diagnosis made by speech pathologists on clinical grounds"; France: speech therapy after a bilan confirms a specific oral language disorder; Sweden: assessed by a logoped)',
+  'educational need': 'The test is whether the child can benefit from ordinary teaching, with no diagnosis required (Norway: "threshold is need, not diagnosis: satisfactory benefit from the teaching"; Finland\'s pedagogical statement; Denmark: development requiring special consideration; Japan: needing instruction matched to the disability)',
+  'diagnosis plus impact': 'Both: a qualifying impairment AND a demonstrated effect on schooling (United States IDEA -- "a qualifying impairment, an adverse effect on schooling, and a need for SDI")',
+  'service threshold': 'Access is set by how scarce the service is rather than by what the child has (New Zealand: "access is set by service thresholds, not by a diagnostic definition"; ORS extreme or severe difficulty)',
+  'administrative certification': 'A certificate or registered status, issued outside education, is what confers entitlement (India: "certification, not diagnosis" -- a disability certificate scoring not less than 40%; China: certification confers administrative disability status, not school eligibility)',
+  'cognitive referencing': 'Language ability is compared against measured cognitive ability, so a child whose difficulties match their IQ is excluded. Named separately because it is contested rather than merely different: CATALISE rejects it, Ireland removed IQ as an entry criterion in revising its 2007 framework, and the United States records it as "still permitted in some states, though CATALISE rejects it". South Korea\'s schedule requires language "markedly below cognitive ability"',
+  'not stated': 'The entry establishes that identification happens without establishing on what basis',
+};
+
+// HOW BILINGUALISM ENTERS THE CRITERION. Derived from the corpus and kept
+// separate from the exclusions list, because these three are not degrees of one
+// thing -- they are opposite policies, and this is the population the atlas is
+// about.
+const BILINGUAL_HANDLING = {
+  'required across languages': 'The criterion demands difficulty in ALL of the child\'s languages, which is what distinguishes disorder from second-language learning (Sweden: "the rule that does most work: difficulties in all of the child\'s languages")',
+  'culturally excluded': 'A child is ruled OUT where the difficulty can be attributed to linguistic or cultural background -- so the bilingual child is screened away from services rather than assessed properly (Greece: "ruled out where low attainment traces to outside linguistic or cultural factors"; Chile: excluded for "socio-affective deprivation, and features of a social or ethnic setting")',
+  silent: 'The criterion says nothing about the child\'s other languages either way',
+};
+
+// WHO DECIDES. Same purpose as the eal axis -- the same test applied by a
+// clinician, a commission or a school is three different systems.
+const DECIDER_TYPES = {
+  clinician: 'A speech and language therapist or logoped, alone or nominating (Sweden, Australia, Ireland where "the SLT nominates, with parental consent")',
+  'medical commission': 'A statutory medical panel (Italy: a forensic doctor as chair plus two doctors, one a paediatrician; India: a board with a medical superintendent, a neurologist and a certified SLP)',
+  'multidisciplinary team': 'A mixed professional team without medical primacy (Brazil\'s multiprofessional and interdisciplinary team, Kenya\'s EARC teams, Poland\'s adjudicating team, Tuerkiye\'s RAM kurul)',
+  'educational psychology service': 'A school counselling or psychopedagogical body (Czechia\'s school counselling facility, Spain\'s guidance teams, Denmark\'s educational-psychological advice)',
+  'school or authority': 'The school, or the authority that supervises it (Germany: school and school supervisory authority decide; Finland: the education provider makes a written decision)',
+  municipality: 'Local government (Norway: the municipality decides, having first obtained the expert assessment)',
+  'not stated': 'The entry does not establish who decides',
+};
+
+// WHAT RULES A CHILD OUT. A list: most systems name several.
+const EXCLUSIONS = {
+  'sensory impairment': 'Hearing or vision loss (Netherlands, Chile, Ireland\'s 2007 criteria)',
+  'intellectual disability': 'A general cognitive impairment (Netherlands, Chile, Ireland 2007)',
+  'motor or neurological': 'Motor deficit or brain lesion (Chile: expressly excluded)',
+  'socio-cultural factors': 'Deprivation, or the child\'s social, ethnic or linguistic background (Chile, Greece). See BILINGUAL_HANDLING -- this is the same exclusion seen from the other side',
+  'speech-only difficulty': 'Articulation or phonological difficulty alone is not the category (Chile: "dislalia and phonological disorder are expressly not indicators of TEL")',
+  'existing placement': 'Already receiving another form of provision (Japan: pupils in a special support class are excluded from the programme)',
+  'none stated': 'The entry establishes the threshold and names nothing that rules a child out',
+};
+
+// HOW THE DESIGNATION ENDS, for a clinical category. Different values from the
+// eal pair: nothing here is a proficiency test, and the dominant mode is a
+// scheduled re-assessment of continuing need.
+const DISCHARGE_BASIS = {
+  're-evaluation cycle': 'Reassessment on a fixed schedule decides continuation (Chile annually under art. 11, United States at least every three years, Taiwan across education stages, Georgia, Dominican Republic)',
+  'decision on continuing need': 'A team decides the child no longer needs the provision (United States: services end when the team finds no eligibility or no need for specially designed instruction; Taiwan: cases not meeting the criteria return to the regular class)',
+  'fixed time limit': 'A period set in advance (Ireland: special-class placement "time-limited by design", up to two years under Circular 0038/2007)',
+  'review without criterion': 'A review point is fixed and no standard governs the decision. Denmark states it outright -- "the order sets that decision point but states no criterion for ceasing" -- and Sweden and Finland say the same of their school acts. Three high-capacity systems independently built a decision with nothing behind it, which is why it is not folded into the none-established value',
+  'age ceiling': 'Entitlement ends at an age, with no judgement about the child (Israel three to twenty-one, Micronesia to twenty-one, Zimbabwe\'s Secretary\'s Circular P36 of 1990)',
+  'none established': 'Checked, and no discharge rule of any kind exists (Dominica, Saint Lucia and Saint Vincent, each having only an attendance exemption for a child "incapable of education by ordinary methods of instruction")',
+  'not stated': 'The entry does not reach the question',
+};
+
+// ===========================================================================
 
 /**
  * Which vocabularies apply to which field, and at what grain.
@@ -235,6 +304,25 @@ const EXIT_MECHANISM = {
  * in either case and a reader of the export needs to be told so.
  */
 const SCHEMES = {
+  'dld.identificationCriteria': {
+    row: 'one national or sub-national system',
+    columns: {
+      threshold_basis: THRESHOLD_BASIS,
+      bilingual_handling: BILINGUAL_HANDLING,
+      decider: DECIDER_TYPES,
+      exclusions: EXCLUSIONS,
+      rule_locus: RULE_LOCUS,
+    },
+  },
+  'dld.dischargeCriteria': {
+    row: 'one national or sub-national system',
+    columns: {
+      discharge_basis: DISCHARGE_BASIS,
+      review_interval_months: 'integer, where a cycle is set and a length is given',
+      decider: DECIDER_TYPES,
+      rule_locus: RULE_LOCUS,
+    },
+  },
   'dld.legalEntitlement': {
     row: 'one legal instrument named by the entry',
     columns: {
@@ -284,7 +372,13 @@ module.exports = {
   INSTRUMENT_TYPES, OBLIGES_LEVELS, DUTY_TYPES, REDRESS_TYPES,
   TEST_TYPES, BILINGUAL_FIT, MODALITY, LANGUAGE_DOMAINS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
+  THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
   SCHEMES,
+  isThresholdBasis: v => has(THRESHOLD_BASIS, v),
+  isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
+  isDecider: v => has(DECIDER_TYPES, v),
+  isExclusion: v => has(EXCLUSIONS, v),
+  isDischargeBasis: v => has(DISCHARGE_BASIS, v),
   isDesignationForm: v => has(DESIGNATION_FORMS, v),
   isNewcomerTrigger: v => has(NEWCOMER_TRIGGERS, v),
   isDecidedBy: v => has(DECIDED_BY, v),
