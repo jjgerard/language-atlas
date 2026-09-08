@@ -86,11 +86,20 @@ function get(url, redirects = 0, ua = UA) {
 // with curl. The gate is not weakened by this: same url, same verbatim quote,
 // same extraction. Only the client changes. If curl is not on the machine the
 // fallback returns null and the row drops exactly as it did before.
+//
+// --compressed is not optional. zakon.rada.gov.ua answers /print with
+// Content-Encoding: gzip WHETHER OR NOT the request asked for it, so curl
+// without this flag returns HTTP 200 and 16 KB of raw deflate stream, which
+// this function then hands on as a utf8 string. Every quote misses, the
+// fetch is recorded as a success, and Ukraine lost a verified 2024 statute
+// to what looked like a fabricated quote. A 200 that carries bytes nobody
+// decoded is the same failure as a 200 that carries a 404 page: the status
+// line is not the answer.
 function getViaCurl(url) {
   const tmp = path.join(os.tmpdir(), "hist-verify-" + process.pid + ".bin");
   try {
     const out = execFileSync("curl",
-      ["-sSL", "--max-time", "45", "-A", UA, "-o", tmp, "-w", "%{http_code}	%{content_type}", url],
+      ["-sSL", "--compressed", "--max-time", "45", "-A", UA, "-o", tmp, "-w", "%{http_code}	%{content_type}", url],
       { encoding: "utf8", timeout: 60000 });
     const parts = String(out).trim().split(String.fromCharCode(9));
     const raw = fs.readFileSync(tmp);

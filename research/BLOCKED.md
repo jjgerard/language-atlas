@@ -1579,3 +1579,354 @@ matching the previous pass exactly. **`_HEEdPlanLi` opened twelve more** -- but
 it is a sector PLAN, not an instrument, so it is orientation and must not carry
 an absence claim about a law. The country-graph page lists eight further slot
 names and several of them serve byte-identical files.
+
+## 22. The Americas `he.requiredStudy` pass: two reverse-UA hosts and a register worth keeping
+
+Added 8 September 2026 filling `requiredStudy` for 28 units in the Americas.
+Every observation here is from a direct probe on this machine, with both a full
+Chrome User-Agent and a bare `Mozilla/5.0`.
+
+### The reverse User-Agent case, twice more, and it decided two units
+
+Section 12 records `education.gov.gy` refusing the long UA and serving the short
+one. Two more hosts in this pass behave the same way, and in both the long UA is
+what a careful drafter sends:
+
+```
+laws.bahamas.gov.bs/            Chrome UA -> 403,  75,193 bytes (block page)
+                                Mozilla/5.0 -> 200
+barbadosparliament-laws.com/    Chrome UA -> curl error 47, 50 redirects
+                                Mozilla/5.0 -> 200, 137,401 bytes
+```
+
+The 75,193-byte block page is the same body already recorded for `nus.edu.ws`
+and `unigib.edu.gi`, so that number is now a reliable fingerprint for this WAF.
+
+**And the same pass met the OPPOSITE case in the same hour.** `www.ua.aw`,
+`www.ueh.edu.ht` and `anciensite.ueh.edu.ht` all return **HTTP 406** to a bare
+`Mozilla/5.0` and 200 to the full Chrome string. There is no safe default: probe
+both, which is what the gate's fallback chain does and what an agent must do by
+hand.
+
+### Two doors worth more than the blocks
+
+- **`barbadosparliament-laws.com/uploads/Barbados-cs/<Title_With_Underscores>.pdf`**
+  serves the consolidated statute as a real PDF with a clean text layer. The
+  `/en/showdoc/cs/<n>` landing page is a dFlip JavaScript viewer that renders
+  "Loading document..." and nothing else; the PDF path is in its inline script.
+  `Education.pdf` is the Education Act Cap. 41 — 1.76 MB, 86,845 characters.
+- **`mola.gov.gy/laws-of-guyana?page=N`** is the Laws of Guyana, and it works.
+  52 pages, about nine chapters each, every row carrying a
+  `mola.gov.gy/laws/Volume N Cap. X - Y.<digits>.pdf` link that serves a real
+  PDF. Chapter 039:02, the University of Guyana Act, is on page 23. Note that
+  the `search_text=` parameter is **ignored** — every query returns page 1 —
+  so page through rather than searching, and that
+  `mola.gov.gy/information/laws-of-guyana` is a **24,753-byte 404** while
+  `mola.gov.gy/laws-of-guyana` serves. `parliament.gov.gy/documents/acts` 403s
+  to both UAs while `parliament.gov.gy/` root serves.
+
+### Silent failures, the dangerous class again
+
+- **`gacetaoficial.gob.pa`** (Panama's Gaceta Oficial) returns **HTTP 200 with a
+  212-byte Incapsula `_Incapsula_Resource` stub** for every `pdfTemp/...` path,
+  to both UAs. Panama's entry cites this host for Ley 18 de 2017 and it does not
+  serve. `docs.panama.justia.com/federales/leyes/<n>-de-<yyyy>-<mon>-<d>-<yyyy>.pdf`
+  serves the LEGISPAN text at 200 with a clean text layer, while
+  `panama.justia.com` HTML 403s — the PDF host is open and the HTML host is not.
+- **`bacn.gov.py/descarga/<id>/<file>.pdf`** (Paraguay's Biblioteca y Archivo
+  Central del Congreso) returns the site's **own HTML at 200** in place of the
+  PDF, which `pdftotext` then reports as a damaged file. The law pages
+  themselves — `bacn.gov.py/leyes-paraguayas/<id>/<slug>` — carry the full act
+  text server-side and are the door to use.
+- **`ub.edu.bs/wp-content/uploads/UniversityofTheBahamasAct2016_1.pdf`** is a
+  **3.8 MB image scan yielding 274 characters**. The same site's
+  `about-ub/ub-act-charter-statutes/` page carries the Act with its Statutes and
+  Bye-Laws as 52 KB of server-rendered HTML and is what the Bahamas rests on.
+  Same shape at `senado.uprrp.edu`: its `Ley-UPR-Comp-2013.pdf` is 1.4 MB
+  yielding 315 characters, while **`docs.upra.edu`'s copy of the same 1966 UPR
+  act extracts cleanly** (55,934 characters).
+
+### A mixed-encoding page, the fifth encoding case
+
+`bacn.gov.py`'s law pages are **UTF-8 with a stray 0xe9 byte** — at offset
+89,292 in the Ley de Lenguas page. A strict UTF-8 decode raises; a latin-1
+decode mojibakes every accent; only a replace-errors decode or the gate's union
+finds the quotes. This is byte-for-byte the shape already recorded for
+`fachumanidades.up.ac.pa/licenciaturas`, so it is a class rather than a
+one-off: **a Latin American government page can be UTF-8 everywhere except one
+byte, and a hand-rolled checker will call every quote on it invented.**
+
+### IESALC HEPO in the Americas
+
+Tried `_HELawLi` and `_HEEdLawLi` for 22 Latin American and Caribbean iso3
+codes. **Eleven had at least one document**: per, mex, jam, tto, pan, pry, slv,
+ury, ven, nic, grd. The Anglophone Caribbean is largely absent — atg, bhs, blz,
+brb, dma, guy, kna, lca, sur, vct all 404 on both slots — so those units need
+their own ministry or attorney-general hosts, which mostly serve.
+
+Three of the eleven are not usable as filed:
+
+```
+jam_HELawLi     172,522 bytes ->      4 chars   (scan)
+pry_HEEdLawLi 1,960,765 bytes ->     28 chars   (scan)
+pan_HEEdLawLi 6,192,334 bytes ->  1,520 chars   (LEGISPAN cover sheet only)
+```
+
+And `pry_HELawLi` extracts (65,629 characters) but the **OCR is degraded** —
+"sistema educarivo nacional", "los Institulos", "EICentenario" — so a
+zero-occurrence absence claim off it is not safe on its own. `jam_HEEdLawLi` is
+byte-identical to `laws.moj.gov.jm/library/statute/the-education-act/download`,
+so HEPO's Jamaica slot is just the Ministry of Justice PDF; cite the ministry.
+
+### Newly observed, briefly
+
+- `uscode.house.gov` — connect timeout on 443. **`govinfo.gov/content/pkg/USCODE-<year>-title<NN>/html/USCODE-<year>-title<NN>-chap...-sec<N>.htm`
+  serves clean section text** and is the door to the US Code. Its section symbol
+  and en-dashes arrive as replacement characters, so keep a quote clear of them.
+- `www.attorneygeneral.gov.kn` — NXDOMAIN. `education.gov.kn` serves the
+  Education Act 2005.
+- `www.gov.vc` root serves, but `/index.php/documents-publications` is a
+  **45,561-byte 404**. `education.gov.vc/education/images/PDF/education_act_2006.pdf`
+  serves the Education Act Cap. 202.
+- `commonlii.org` — 403 with an identical 5,425-byte body on every path tried,
+  to both UAs. Section 13 records it as intermittent; it refused throughout this
+  pass.
+- `planipolis.iiep.unesco.org` — the **3,143-byte Anubis challenge at HTTP 200**
+  again, confirming section 10. It is the top search hit for several Caribbean
+  education acts and serves none of them.
+- `www.uprrp.edu` **and** `www.upr.edu` both connect-time out now. Section 20
+  records only `www.uprrp.edu`; `www.upr.edu` was serving then and is not now.
+- `bvirtual.ogp.pr.gov` — 404 on every Puerto Rico statute path tried.
+- `www.cones.gov.py` and `www.mec.gov.py` — **connect timeout on 443.** This
+  matters: `BRIEF.md` calls CONES "the best register found anywhere so far" for
+  programme listings. It is currently down, and a pass planning around it should
+  probe before planning.
+- `www.lexjuris.com/LEXMATE/educacion/lex66001.htm` serves Puerto Rico's UPR act
+  in **latin-1 with no declared charset**, the same shape as
+  `axl.cefan.ulaval.ca`.
+
+## 23. The European `he.requiredStudy` pass: doors to twenty-three statutes
+
+Added 8 September 2026 filling `requiredStudy` for 24 European units. Every
+observation is from a direct curl probe on this machine with the full browser
+UA and a google.com referer.
+
+### Doors that worked, and are worth reusing
+
+| Register | The door |
+|---|---|
+| **Portugal** | `files.diariodarepublica.pt/1s/<yyyy>/<mm>/<issue>/<startpage><endpage>.pdf` serves the whole gazette issue as a clean-text PDF. Lei 62/2007 (RJIES) is `.../1s/2007/09/17400/0635806389.pdf`; DL 74/2006 is `.../1s/2006/03/060a00/22422257.pdf` — note the 2006 Série I-A issue token is `060a00`. Pages are ZERO-PADDED to five digits each. This is the working route now that `dre.pt` is an OutSystems shell |
+| **Slovakia** | `slov-lex.sk/static/SK/ZZ/<year>/<num>/<YYYYMMDD>.html` returns the full consolidated act as server-rendered HTML — 1.7 MB for act 131/2002. It 302s to `static.slov-lex.sk`; both work. Better than the `static/pdf/` path already recorded |
+| **Slovenia** | `uradni-list.si/glasilo-uradni-list-rs/vsebina/2012-01-1406?sop=2012-01-1406` carries the whole consolidated ZViS-UPB7 (194 KB of text). The `urlurid=` form also serves; a wrong `vsebina/<id>` returns a real page for a DIFFERENT instrument, so check the title before quoting |
+| **North Macedonia** | `slvesnik.com.mk/Issues/<32-hex>.pdf` serves the gazette issue with a clean text layer — the 2018 Law on Higher Education is issue 82 at `e70eb6afb4a04960b76db298d126db17.pdf`. The hash is not derivable; take it off a search result |
+| **Isle of Man** | **`desc.gov.im` (no `www.`)** serves 200, and `desc.gov.im/corporate/corporate/legislation/` links a `/media/<hash>/` store: `educationact2001_9.pdf` is 907 KB with a clean text layer. `www.desc.gov.im` is **NXDOMAIN** — section 9's records are for the `www.` host and the bare host is the one that works |
+| **San Marino** | `unirsm.sm/ateneo/leggequadro-statuto/` links the 2023 framework law (`17139243L069-2023.pdf`), the Decreto Delegato 169/2023 and the Statuto as plain-GET PDFs. This matters because the Consiglio Grande e Generale's own law archive is a POST-only search form with no citable GET |
+| **Faroe Islands** | `logir.fo/Kunngerd/<n>-fra-<dd-mm-yyyy>-um-<slug>` serves regulations server-side exactly as `/Logtingslog/` does. `logir.fo/Logtingslog` (the bare index) 404s, so the slug still has to come from elsewhere |
+| **Russia** | `fgosvo.ru/uploadfiles/FGOS%20VO%203++/Bak/<code>_B_3_<ddmmyyyy>.pdf` serves the FGOS orders as clean PDFs. The portal's own `/fgosvo/index/24` listing is JavaScript, and the date suffix is per-standard and not guessable — a wrong filename 404s with a 179-byte body |
+| **Moldova** | `cpbmd.info/wp-content/uploads/2026/01/codul-educatiei-RM.pdf` was the ONLY readable copy of the Education Code found. `usmf.md` is NXDOMAIN, `social.utm.md` 403s, `legis.md` still Cloudflare-403s, and `mecc.gov.md`, `mec.gov.md`, `ance.gov.md` and `anacec.md` 404 every guessed path. cpbmd.info is already in section 8 as a host the gate's UA reads |
+| **Monaco** | `journaldemonaco.gouv.mc/Journaux/<year>/Journal-<n>/<slug>` serves full act text server-side; loi 1.334 of 2007 is Journal 7817. Confirms section 9 — this is the working door while the rest of `gouv.mc` refuses |
+| **Jersey** | `jerseylaw.je/laws/current/l_<num>_<year>` serves the consolidated law. **The number is not the one search results suggest**: the Education (Jersey) Law 1999 is `l_27_1999`, and `l_14_1999` is the Law Reform (Disclosure and Conduct before Action) Law — a wrong id returns a real, populated page for a different statute |
+
+### Newly observed refusals
+
+- **`arhiva.mon.gov.mk` and `www.pravdiko.mk` both present EXPIRED TLS
+  certificates** (`SEC_E_CERT_EXPIRED` to curl). `mon.gov.mk` itself serves but
+  `mon.gov.mk/stored/document/*.pdf` 404s on every filename tried.
+- **`sonk.org.mk/wp-content/uploads/...` returns 404 with a 23 KB body** while
+  `www.sonk.org.mk/documents/...` serves the real PDF. Same host, two paths.
+- **`www.gov.gg` returns 404 with a 21 KB body**, and its `article/<id>` ids are
+  not topic-stable — `article/152122`, returned by search as "Higher Education",
+  is a page about importing poultry. Both halves of that are traps.
+- `natlex.ilo.org/dyn/natlex2/r/natlex/fe/details?p3_isn=` 403s, confirming
+  section 21: the detail pages refuse and only the file-download path serves.
+- `usmf.md` NXDOMAIN. `social.utm.md` 403 with the 3,360-byte body that
+  `guernseylegalresources.gg` also returns.
+
+### Guernsey is unreadable, and this narrows why
+
+`guernseylegalresources.gg` still 403s every path with a 3,360-byte Cloudflare
+body. Its Wayback copies do not rescue it: the archived landing page for the
+Education (Guernsey) Law 1970 consolidated text (200, 5,430 bytes, snapshot
+20250822123348) carries **no document link at all** — the text is behind a
+"view printable version" JavaScript action, and the 2015 `article/94439`
+snapshot has only a `pdf_icon.gif`. The CDX listing confirms the law exists on
+the host under both the old `article/<id>` and the new
+`/laws/guernsey-bailiwick/e/education/` schemes; neither snapshot holds the
+body. **Guernsey is empty for access, not for absence**, and it is the only one
+of the 24 units in this pass that is.
+
+### riksdagen.se double-spaces, like paragraf.ba
+
+Section 18 records `paragraf.ba` hard-wrapping with DOUBLE SPACES inside
+sentences. `riksdagen.se`'s SFS pages do exactly the same: the
+Högskoleförordning's 7 kap. 5 a § reads `har lägst  betyget E i ämnena svenska`
+in the raw HTML, with the doubled space at each line wrap roughly every 50
+characters. The longest single-spaced run near a language clause there is 12
+words, which is under the 10-word floor only by luck. A normalised quote
+survives on the space-stripped comparison; a drafter checking by raw substring
+will think its own correct quote is wrong.
+
+### Two consolidators used, and flagged as such
+
+- **Romania**: `aracis.ro/wp-content/uploads/2024/10/legea-invatamantului-superior-nr-199-2023.pdf`
+  is a **Lege5/Indaco print** ("Document Lege5 - Copyright © 2024 Indaco
+  Systems", "Tipărit de Cristian Eni la 02.10.2024") hosted by ARACIS, the
+  national quality agency. Clean text, 553 KB, and the only readable copy found
+  while `legislatie.just.ro` still drops connections.
+- **Montenegro**: `paragraf.me` carries the consolidated Zakon o visokom
+  obrazovanju and **announces on the page that the site will no longer be
+  updated** — "sajt nadalje neće biti ažuriran usljed odluke kompanije Paragraf
+  Lex da se privremeno povuče sa tržišta Crne Gore". The text is stamped current
+  to 31 March 2021. Treat it as a frozen consolidator and expect it to go.
+
+## 21. The Asia `he.requiredStudy` pass
+
+Thirty-one Asian units on one field. The headline is a door, not a block.
+
+### IESALC HEPO covers Asia, not only Africa and Latin America
+
+`BRIEF.md` recommends HEPO "for African and Latin American higher-education
+statutes". It is much wider than that. On this pass the lowercase-iso3 path
+
+    hepo.iesalc.unesco.org/pc/static/countrydocs/cp/2025/<iso3>/<iso3>_HELawLi.pdf
+
+returned the national higher-education law with a clean text layer for
+**geo, kor, mng, lka, tjk, yem, btn, syr, phl, tha, bhr, irq, kwt, pse**, and
+`_HEEdLawLi` added **brn, khm, sgp, npl, jpn**. That is 19 of 31 units from one
+predictable url pattern, including the Brunei Education Order 2003 that section
+10 records as unreachable because `agc.gov.bn`'s certificate has expired, and
+the Syrian and Palestinian higher-education laws.
+
+404s (269 bytes) for afg, irn, mdv, mmr, prk, tkm, tls, uzb, lao (`lao` has a
+`_HEEdLawLi` but it is an image scan, 34 bytes of text). `qat_HEEdLawLi` is the
+2001 **compulsory-schooling** law, not a higher-education instrument — HEPO's
+slot labels are a guide, not a guarantee, exactly as the Algeria and Comoros
+cases in `BRIEF.md` say.
+
+### Two quote hazards in HEPO's Arabic PDFs, both silent
+
+Seven of the Arabic laws are **print-to-PDF captures of a web page**, and the
+extracted text carries **U+202A / U+202B / U+202C bidi controls between every
+run**. A quote that spans two runs can never match under any extractor. Choose
+a span that lies wholly inside one control-free run; the runs are usually a
+clause long, which is enough.
+
+Worse, **Syria's copy writes ی (U+06CC, Farsi yeh) and ھ (U+06BE, heh
+doachashmee) where the Arabic block has ي and ه**. `اللغة العربية` is simply
+not in that file; `اللغة العربیة` is. An NFKC fold does not touch this, so a
+folded search for correct Arabic returns zero occurrences and reads as the law
+having no language provision at all. It has one — art. 20. Kuwait's 1966 law
+and Syria's are additionally in **Arabic Presentation Forms**, so the raw
+extracted substring is the only safe quote.
+
+### `bdlaws.minlaw.gov.bd` is UTF-16BE — the fifth encoding case
+
+Section 14 records UTF-16**LE** on Andorra's BOPA. Bangladesh's official law
+site serves **UTF-16 big-endian with a BOM** on every page. Both gates detect
+UTF-16 by BOM or NUL density, so this is handled; a drafter decoding by hand
+gets a page of replacement characters and concludes the Bengali is corrupt.
+
+Also: `act-<id>.html` is only a table of contents. The section text lives at
+`/act-<id>/section-<n>.html`, and the section numbers are not derivable from
+the section number in the act — read them off the contents page.
+
+### Two live docLinks on this map that no longer serve
+
+- **`lawskw.com`** — **HTTP 404 with a 103,232-byte body**, the big-404 class
+  again. It is the Kuwait `he` entry's docLink for Law 76/2019. Kuwait
+  University's own copy serves the full act at 501 KB with a clean text layer:
+  `ku.edu.kw/sites/default/files/2025-10/<arabic-filename>.pdf`.
+- **`bulatlat.com`** — 200 with a **1,196-byte obfuscated-JavaScript cookie
+  challenge** (`/aes.js`, `TZTC=` cookie). It is the Philippines `he` entry's
+  docLink for CMO 57. `legacy.ched.gov.ph/2017-ched-memorandum-orders/` serves
+  the CMO index with the full order titles in body text and is the better
+  citation.
+
+### `asianlii.org` — the reverse User-Agent case again
+
+Section 12 records `education.gov.gy` refusing the full Chrome UA and serving a
+short one. AsianLII does the opposite, and the PDF is what matters:
+
+```
+full Chrome UA   -> 200, 157,014 bytes, %PDF-   (with or without a Referer)
+"Mozilla/5.0"    -> 403,   5,493 bytes
+```
+
+The gate tries the full UA first, so Myanmar's National Education Law verifies.
+`burmalibrary.org` 403s every client tried, and is not needed.
+
+### Newly observed refusals and stubs
+
+- **`qanoon.om`** — HTTP **525** (TLS handshake failed at origin), 16-byte
+  body, on the root and on document paths. **`oaaa.gov.om` is NXDOMAIN.** Oman
+  has no reachable higher-education instrument by any door tried, which is why
+  it is empty for access rather than for absence. HEPO's Oman slot holds Royal
+  Decree 67/2000, which is about fees.
+- **`minjust.gov.tm`** — 404 with a 57 KB body on `/ru/mejlis/law`.
+  **`bilim.gov.tm/media/legal_documents/document_5.pdf` is the working door**
+  to the Law of Turkmenistan on Education, 597 KB with a clean text layer, and
+  its art. 5 answers the compulsory-study question outright.
+- **`laoofficialgazette.gov.la`** — `index.php?r=site/displaylegal` resets the
+  connection, but the static `kcfinder/upload/files/` path serves. Note that
+  the English Education Law there is now the **2024 amended text (No. 69/NA,
+  11 December 2024)**, not the 2015 revision the atlas's Laos entries cite.
+- **`lex.uz`** — the leading-hyphen form `/ru/docs/-5013009` 404s; the same id
+  without the hyphen serves 738 KB. Both forms appear in existing docLinks.
+- **`ched.gov.ph`** 403s while `legacy.ched.gov.ph` serves — but the 2017 CMO
+  PDFs there are **image scans**: CMO 57 is 421,878 bytes yielding 2 bytes of
+  text. Quote the index page, not the order.
+- **`ffll.ut.ac.ir`** — 200 with a ~6 KB JavaScript "Transferring to the
+  website" stub on `asset_publisher` document paths.
+- **`cis-legislation.com`** — 200 with a 190-byte body.
+- **`lawcommission.gov.np/en/?cat=`** — 404 with a 23 KB body.
+- **`mohe.gov.mm`** does not resolve. **`moj.gov.af`** serves its root but its
+  official-gazette path 404s with 33 KB.
+- **`mqa.gov.mv`** serves the Maldives higher-education regulations fine, but
+  they are Thaana and section 8's finding stands: no span survives two
+  extractors, so nothing there is quotable.
+
+### An entity hazard mid-sentence
+
+`samt.ac.ir` (the Iranian ministry's university-textbook organisation) writes
+`&zwnj;`, `&laquo;` and `&raquo;` **inside** its body sentences, so a Persian
+quote spanning a compound word or a quoted course title needs the gate's
+entity decoding to match. Pick a span between the entities where you can.
+
+### The Dutch Caribbean and Suriname, from the same pass
+
+Four units that no comparative source covers, and the doors are worth keeping
+because each was found the hard way.
+
+| Territory | Instrument | The door that serves |
+|---|---|---|
+| Aruba | Landsverordening Universiteit van Aruba, AB 1988 no. 100 | **`cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/1304ab88.100.pdf`** — 200, 88 KB, clean text layer (29,647 chars), to BOTH user-agents. The index that carries the link is `gobierno.aw/1304-hoger-onderwijs`. This is the CDN door section 7 already records for Aruban gazettes, and it also serves the Centraal Wettenregister's consolidated chapters |
+| Curacao | Landsverordening Universiteit Nederlandse Antillen, P.B. 1979 no. 27 / 1985 no. 43 | **`repository.officiele-overheidspublicaties.nl/CVDR/143808/1/html/143808_1.html`** — 200, 86 KB, clean server-rendered HTML. Note the shape: `/CVDR/<id>/1/html/<id>_1.html`, **not** the `/CVDR/CVDR<id>/2/xml/...` form section 7 records for Sint Maarten. Version 2 404s for this record. `lokaleregelgeving.overheid.nl/CVDR<id>` serves the same text and is the fallback |
+| Sint Maarten | Landsverordening regelende het voortgezet onderwijs, CVDR142635 | **`lokaleregelgeving.overheid.nl/CVDR142635`** — 200, 249 KB. Here the repository form is what fails: `/CVDR/142635/1/html/...`, `/CVDR/CVDR142635/1/html/...` and the xml variant all **404**. So neither CVDR url shape works for both territories — try both |
+| Suriname | Universiteitswet, G.B. 1966 no. 78 | **`sris.sr/wp-content/uploads/2025/08/Universiteitswet-G.B.-1966-no.-78.pdf`** — 200, 527 KB, and an **image scan yielding 10 characters**. Same for `dna.sr/media/aoydme2y/sb-1993-no-36.pdf` (the 1993 titulatuur law), 210 KB yielding 4 |
+
+**Suriname is unquotable, not unknown.** The Universiteitswet was located, fetched
+and read page by page as images; it contains no language provision anywhere and
+delegates the whole curriculum to landsbesluiten by art. 6. None of that can be
+quoted, because this environment has `pdftotext` but no rasteriser and no OCR —
+the constraint section 21 records for Burundi, Congo and The Gambia. So Suriname
+is left blank rather than filled, and it would be decided by installing an OCR
+tool rather than by more searching. `dna.sr`'s consolidated-texts index carries
+only the Wet Lager Onderwijs and the Wet betreffende Universitaire Titulatuur
+under education; the Universiteitswet is not in it. `sris.sr/?s=` returns **406**
+to a bare `Mozilla/5.0`.
+
+**Two structural cautions for anyone working these four again.**
+
+- **CVDR is frozen at 10 October 2010** for Curacao and Sint Maarten — the
+  dissolution of the Netherlands Antilles. Country legislation enacted since is
+  simply not in it, so a CVDR sweep proving something does not exist proves only
+  that it did not exist in 2010.
+- **Sint Maarten appears to have no enacted higher-education ordinance at all.**
+  A CVDR SRU sweep (`zoekservice.overheid.nl/sru/Search?x-connection=cvdr`,
+  200) over all 1,552 Sint Maarten records returns zero with "universiteit" in
+  the title and, for "hoger", only a tax-appeals landsbesluit. That is a real
+  finding about the place and not about the network — but see the freeze above,
+  and note that `sxmparliament.org/national-ordinances/` returns 200 with its
+  ordinance table injected by JavaScript, so enactment status cannot be
+  confirmed there. `sintmaartengov.org/Documents/Forms/AllItems.aspx` returns
+  **401**.
