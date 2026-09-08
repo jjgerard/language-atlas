@@ -37,6 +37,12 @@ for (const d of LIVE) {
     for (const e of rows) {
       const sl = e.slots && e.slots[k];
       if (!content(e[k]) || !Array.isArray(sl) || !sl.length) continue;
+      // A documented absence is excluded from the denominator, not counted as
+      // a miss on questions 2 to 4. Zambia's Higher Education Act carries no
+      // language provision, so "which language" and "how much of it" do not go
+      // unanswered there -- they cannot arise. Counting them as misses is what
+      // made this report say the atlas neglects questions it has settled.
+      if (e.absences && e.absences[k] === true) continue;
       n++;
       for (const s of new Set(sl)) if (hit[s] != null) hit[s]++;
     }

@@ -96,13 +96,16 @@ entries and 17 of 46 `he.entryRequirements` ones.
 That fixes the recording. It does not fix the scoring, and the scoring is
 still yours to decide. Two questions, and they are separable:
 
-1. **Does an absence answer the field, or only question one of it?** Norway on
-   `requiredStudy` reads four instruments to establish that no duty exists.
-   Questions 2, 3 and 4 -- which language, how much, who exempts -- are not
-   unanswered there; they cannot arise. If an absence answers the field, its
-   depth is 4 of 4 and `progress.js` stops penalising thoroughness. If it
-   answers question one only, the honest depth is 1 of 1 and the denominator
-   has to shrink rather than the numerator grow.
+1. ~~**Does an absence answer the field, or only question one of it?**~~
+   **Answered 2026-09-08: it answers the field.** "If it looks and there's no
+   provision, then that is the answer and that can be marked complete."
+   Questions 2, 3 and 4 of a field whose first question is answered "no such
+   rule exists" are not unanswered; they cannot arise. Applied in
+   `progress.js`, which now counts an absence as complete and excludes it from
+   the thin count, and in `slot-answered.js`, which excludes it from the
+   denominator rather than recording it as a miss on questions 2 to 4. `he`
+   moved from 15% to 23% complete on that change and from 27% to 24% thin --
+   the same 867 fields, measured against what they were actually asked.
 2. **May an indicator score an absence as a real zero?** This is the question
    the flag was built for and the one it does not answer. A blank abstains
    because nobody looked. An absence is a measured nil. Scoring it as zero is

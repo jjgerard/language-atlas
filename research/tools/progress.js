@@ -59,15 +59,30 @@ console.log(NL + "  ALL        " + Math.round(100 * gFill / gCap) + "%   "
 // So depth is measured directly: how many bullets a filled field carries, and,
 // where it is tagged, how many of the four questions it actually reaches. A
 // field answering one of four is thin whether or not it says so.
+//
+// One exception, and it is the maintainer's ruling of 2026-09-08: if a
+// researcher read the instruments and there is no provision, that is the
+// answer and the field is COMPLETE. Questions 2 to 4 of a field whose first
+// question is answered "no such rule exists" are not unanswered -- which
+// language, how much, who exempts, cannot arise. Until this, the measure ran
+// the other way: Norway reads four instruments to establish no duty exists,
+// collapses to [1,1,1,1], and scored one question of four, BELOW a country
+// nobody had looked at. A depth measure that punishes the hardest finding in
+// the atlas is measuring the wrong thing.
 console.log(NL + NL + "DEPTH — how much a filled field actually says" + NL);
 for (const d of LIVE) {
   // Sub-national units INCLUDED here, unlike the fill count above.
   const rows = JSON.parse(fs.readFileSync(pathFor(d.id), "utf8"));
   const textFields = d.fields.filter(([, , t]) => !t || t === "text").map(([k]) => k);
-  let filled = 0, thin = 0, tagged = 0, full = 0, subUntagged = 0;
+  let filled = 0, thin = 0, tagged = 0, full = 0, subUntagged = 0, absent = 0;
   for (const e of rows) for (const k of textFields) {
     if (!content(e[k])) continue;
     filled++;
+    // Complete by the ruling above, and counted apart so the two kinds of
+    // completeness stay legible: a field that reaches all four questions and
+    // a field where three of them do not arise are both finished, and they
+    // are not the same thing.
+    if (e.absences && e.absences[k] === true) { absent++; continue; }
     if (String(e[k]).split(NL).filter(Boolean).length <= 2) thin++;
     const sl = e.slots && e.slots[k];
     if (Array.isArray(sl) && sl.length) { tagged++; if (new Set(sl).size === 4) full++; }
@@ -77,9 +92,15 @@ for (const d of LIVE) {
   console.log("  " + d.id.padEnd(11)
     + String(Math.round(100 * thin / filled)).padStart(3) + "% thin (1-2 bullets)   "
     + String(Math.round(100 * tagged / filled)).padStart(3) + "% tagged   "
-    + (tagged ? String(Math.round(100 * full / tagged)).padStart(3) + "% of tagged answer all four" : "")
+    // The judgeable denominator is the tagged fields plus the absences: an
+    // untagged field cannot be assessed for depth at all, and an absence needs
+    // no tags to be finished.
+    + (tagged + absent
+        ? String(Math.round(100 * (full + absent) / (tagged + absent))).padStart(3) + "% of those complete"
+        : "")
     + "   (" + filled + " filled"
-    + (subUntagged ? ", " + subUntagged + " of them sub-national and untagged" : "") + ")");
+    + (absent ? ", " + absent + " documented absences" : "")
+    + (subUntagged ? ", " + subUntagged + " sub-national and untagged" : "") + ")");
 }
 
 // --- typed rows -------------------------------------------------------------

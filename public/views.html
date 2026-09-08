@@ -345,7 +345,11 @@ function draw() {
               ? '<p class="found">Established as an absence: the instruments cited on this entry set no such rule</p>'
               : '')
             + renderBody(u, f)
-            + (Array.isArray(slots) && slots.length
+            // An absence carries no question line. Its bullets tag to question
+            // one three times over, and printing "answers question 1, 1, 1"
+            // under a finished field says the opposite of what is true: the
+            // rest of the questions are not missing, they cannot arise.
+            + (st !== 'absent' && Array.isArray(slots) && slots.length
               ? `<span class="slot">answers question ${slots.join(', ')}</span>` : '');
         } else if (st === 'looked') {
           body = '<p class="quiet">Somebody looked and recorded finding nothing</p>'
