@@ -18,12 +18,14 @@
  * ordinal into a number that can be averaged across countries is a separate
  * decision and it is not made here.
  *
- * Two fields are coded so far and they share a shape: the unit of a row is an
- * INSTRUMENT, not a country. A country naming three statutes gets three rows,
- * as does one naming three test batteries. That fell out of the data rather
- * than being designed — Ghana cites a constitution and a Children's Act, Chile
- * names TECAL, TEPROSIF and a screening test, and squeezing either into one row
- * loses the thing that makes them comparable.
+ * THE UNIT OF A ROW DIFFERS BY FIELD, and each scheme says which it is.
+ *
+ * For the two dld fields it is an INSTRUMENT, not a country: Ghana cites a
+ * constitution and a Children's Act, Chile names TECAL, TEPROSIF and a
+ * screening test, and squeezing either into one row loses the thing that makes
+ * them comparable. For the two eal fields it is the SYSTEM, because a system
+ * designates a pupil once however many documents say so — and because the
+ * question there is what the system does, not what each instrument contains.
  */
 
 // ===========================================================================
@@ -153,6 +155,78 @@ const LANGUAGE_DOMAINS = {
 };
 
 // ===========================================================================
+// eal.newcomerCriteria and eal.removalCriteria
+// ===========================================================================
+//
+// The pair that says who enters a category and who leaves it. Coded together
+// because they are one question asked twice, and because the corpus turns out
+// to answer the first almost everywhere (190 of 210) and the second almost
+// nowhere (42 of 210, once the 65 systems with no designation are set aside).
+
+// Whether a designation exists, and in what form. The absence case is NOT a
+// value here: a system with no category carries the absence flag on the field
+// and its removalCriteria is Not applicable, so it never reaches this coding.
+const DESIGNATION_FORMS = {
+  'named category': 'A term of art in law or regulation, with a definition attached (France EANA, Austria ausserordentlicher Schueler, Poland uczen przybywajacy z zagranicy, Denmark tosprogede boern, Spain alumnado de incorporacion tardia)',
+  functional: 'No formal label, but a stated test that decides who gets support (Estonia, Finland, Germany, Iceland: "no fixed statutory newcomer label", then a criterion)',
+  'proxy category': 'Pupils are grouped by something that is not their language or arrival, and support follows that grouping (Singapore assigns by ethnicity; Italy by non-Italian citizenship)',
+};
+
+// WHAT PUTS A PUPIL IN. A list, not one value: Czechia takes foreigner status
+// AND insufficient Czech; New Zealand takes arrival date, refugee documentation
+// and home language together. Coding a single "main" trigger would throw away
+// the combinations, which are the interesting part.
+const NEWCOMER_TRIGGERS = {
+  'arrival recency': 'How recently the child arrived, or how long they have been resident (New Zealand proof of entry date, Estonia under 3 years, Finland about 4, Israel date of aliyah relative to 1 January, France not schooled in France the previous year)',
+  'tested proficiency': 'A language assessment decides (Austria standardised testing, Denmark "a linguistic and functional test, not an arrival date or age cutoff", Czechia three levels, Spain initial assessment)',
+  'home language': 'The language spoken at home, or a mother tongue other than the language of instruction (Iceland, Switzerland fremdsprachige Kinder, Denmark, New Zealand)',
+  'immigration status': 'Citizenship, residence permit or migration status (Italy cittadinanza non italiana, Tuerkiye residence permit under Law 6458, Poland non-Polish citizens plus Poles schooled abroad, Czechia foreigner status)',
+  ethnicity: 'Assignment by ethnic or racial classification (Singapore, where mother-tongue assignment is by race and not by any language test)',
+  'demand threshold': 'A number of parents or pupils must ask before provision exists at all (Malaysia: fifteen parents; South Africa: 40 learners in Grades 1-6). Not a pupil-level designation, and the entries say so',
+  'prior schooling': 'Schooling history rather than language or arrival (Netherlands "never previously in a Dutch school", Estonia under 6 academic years of Estonian-medium schooling, Spain enrolling after the year normally starts)',
+  'not stated': 'A category exists and the entry does not establish what puts a pupil in it',
+};
+
+// WHO DECIDES. Kept separate from the trigger because the same test can be
+// applied by a teacher, a municipality or a national body, and that is the
+// difference between a rule and a discretion.
+const DECIDED_BY = {
+  school: 'The school, its leader or its teachers (Denmark: the school leader sets the support level; Iceland: hours allocated at individual-school level)',
+  'statutory body': 'A commission or panel constituted to decide (France CDAPH via the PPS, Greece KEDASY, Tuerkiye Provincial Placement/Transfer Commissions)',
+  municipality: 'Local government (Norway, where the Education Act lets municipalities choose the model)',
+  'national authority': 'A ministry or national agency (Israel: the Ministry of Education allocates by a key in the Director-General circular)',
+  automatic: 'No decision is taken about the individual: the designation follows from records already held (Israel: set from the school reported pupil roll, with no application by the school)',
+  'not stated': 'The entry does not establish who decides',
+};
+
+// WHERE THE BINDING RULE LIVES. This is the axis that a six-country European
+// study cannot see and a global one can, and it is the one that decides whether
+// "no national rule" means "no rule".
+const RULE_LOCUS = {
+  'national statute': 'Binding rule set nationally (Austria SchUG s.4, Poland MEN regulation, Spain LOMLOE arts. 78-79)',
+  'national framework, sub-national rules': 'A national frame that coordinates without binding, with the operative rules made below it (Germany: KMK framework, the 16 Laender set terminology, thresholds and duration; Switzerland: EDK/CDIP with 26 cantons; United States: federal identification duty, states set the instrument)',
+  'sub-national only': 'No national instrument at all; the rule exists only below the national level (Canada, where education is provincial under the Constitution Act 1867)',
+  'institutional': 'Left to individual schools or providers',
+  'not stated': 'The entry does not establish where the rule is made',
+};
+
+// HOW THE DESIGNATION ENDS. The typology the corpus volunteers, and the
+// striking thing about it is that the first two are mutually exclusive by
+// design rather than by accident. New Zealand: "No proficiency-based exit test
+// -- capped by duration instead". Taiwan: "No attainment exit test; the
+// entitlement is capped in periods". Czechia: "Capped by prior time in Czech
+// education, not by proficiency". Austria runs its 12 months out "regardless of
+// remaining German gaps". Systems choose a clock or a test, and say so.
+const EXIT_MECHANISM = {
+  clock: 'A fixed period, expiring whether or not the pupil is proficient (Austria 12 months extendable by 12, Czechia 24, Netherlands 2 years, Sweden 4, New Zealand 5 and 3, Greece ZEP II 2-3 years)',
+  test: 'A proficiency assessment decides (Northern Mariana Islands WIDA ACCESS, Puerto Rico LAS Links level 4 or 5, Germany sometimes DSD I, Iceland competence level three)',
+  'assessed, no criterion': 'A review point is fixed and no standard for ceasing is set — the decision exists, the criterion does not (Denmark: "the order sets that decision point but states no criterion for ceasing"; Sweden and Finland the same in their school acts)',
+  'age ceiling': 'Entitlement ends at an age rather than on any judgement about the pupil (Israel 3 to 21, Micronesia to 21)',
+  'none established': 'Checked, and the system sets no exit rule of any kind (France "not time-boxed nationally", United States "no federal exit test", Spain "as soon as possible", Ireland, Italy, Lithuania, Monaco)',
+  'not stated': 'The entry does not reach the question',
+};
+
+// ===========================================================================
 
 /**
  * Which vocabularies apply to which field, and at what grain.
@@ -173,6 +247,24 @@ const SCHEMES = {
       redress_type: REDRESS_TYPES,
     },
   },
+  'eal.newcomerCriteria': {
+    row: 'one national or sub-national system',
+    columns: {
+      designation: DESIGNATION_FORMS,
+      triggers: NEWCOMER_TRIGGERS,
+      decided_by: DECIDED_BY,
+      rule_locus: RULE_LOCUS,
+    },
+  },
+  'eal.removalCriteria': {
+    row: 'one national or sub-national system',
+    columns: {
+      exit_mechanism: EXIT_MECHANISM,
+      exit_period_months: 'integer, where a clock is set and a length is given',
+      decided_by: DECIDED_BY,
+      rule_locus: RULE_LOCUS,
+    },
+  },
   'dld.assessments': {
     row: 'one assessment instrument named by the entry',
     columns: {
@@ -191,7 +283,13 @@ const isObligesLevel = v => Number.isInteger(v) && v >= 0 && v <= 4;
 module.exports = {
   INSTRUMENT_TYPES, OBLIGES_LEVELS, DUTY_TYPES, REDRESS_TYPES,
   TEST_TYPES, BILINGUAL_FIT, MODALITY, LANGUAGE_DOMAINS,
+  DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   SCHEMES,
+  isDesignationForm: v => has(DESIGNATION_FORMS, v),
+  isNewcomerTrigger: v => has(NEWCOMER_TRIGGERS, v),
+  isDecidedBy: v => has(DECIDED_BY, v),
+  isRuleLocus: v => has(RULE_LOCUS, v),
+  isExitMechanism: v => has(EXIT_MECHANISM, v),
   isInstrumentType: v => has(INSTRUMENT_TYPES, v),
   isDutyType: v => has(DUTY_TYPES, v),
   isRedressType: v => has(REDRESS_TYPES, v),
