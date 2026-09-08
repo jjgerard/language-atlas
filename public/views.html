@@ -251,10 +251,16 @@ function fillFields() {
 // ---- rendering ---------------------------------------------------------
 
 /** A prose field's hint is its four questions, separated by " · ". */
+/** A field's hint is its questions, in order, separated by " · ". */
+function questionsOf(f) {
+  const parts = String(f.hint || '').split(' · ').map(x => x.trim()).filter(Boolean);
+  if (parts.length) parts[0] = parts[0].replace(/^In this order[^:]*:\s*/i, '');
+  return parts;
+}
+
 function renderAsks(f) {
   const hint = String(f.hint || '');
-  let parts = hint.split(' · ').map(s => s.trim()).filter(Boolean);
-  if (parts.length) parts[0] = parts[0].replace(/^In this order[^:]*:\s*/i, '');
+  const parts = questionsOf(f);
   if (f.type !== 'text' || parts.length < 2) {
     $('asks').innerHTML = `<h3>What this field records</h3><p class="plain">${esc(hint)}</p>`;
     return;
@@ -366,23 +372,131 @@ function draw() {
           + `</div><div class="body">${body}</div></div>`;
       }).join('');
   }).join('');
+
+  // The button says what it will produce, and the scope controls above it
+  // change what that is, so it is recomputed here rather than written once.
+  updateCsvLabel();
 }
 
 // ---- CSV ---------------------------------------------------------------
+//
+// LONG, one row per bullet, not one row per country.
+//
+// It used to be wide: the whole field in a single cell with its bullets joined
+// by " | ". That is readable and it is not analysable. Every bullet in this
+// atlas is tagged with WHICH of the field's questions it answers -- the
+// convention the whole slots machinery exists to record -- and joining them
+// into one string threw all of it away at the door. Anyone wanting to count
+// how many systems answer question 3 had to re-read the prose, which is the
+// exact work the tagging was done to avoid.
+//
+// So: one row per bullet, carrying its slot number AND the text of the
+// question that number means, because a bare 3 is not self-describing in a
+// file that has left this page. A unit with nothing in the field still gets
+// exactly one row, so the export stays a complete census of the scope on
+// screen rather than only of the answers -- reading a missing row as a zero is
+// the mistake this whole map is built to prevent.
 
-$('csv').addEventListener('click', () => {
+const CSV_COLS = [
+  'code', 'unit', 'level', 'region', 'subregion',
+  'domain', 'field', 'field_label',
+  'state', 'is_absence', 'n_bullets', 'bullet_no', 'slot', 'question', 'text',
+  'row_year', 'row_value', 'sources',
+];
+
+/** A typed row as one string, the same shape the panel renders. */
+function flatRow(r) {
+  if (!r || typeof r !== 'object') return String(r == null ? '' : r);
+  const count = r.institutions ? r.institutions + ' institutions' : '';
+  const parts = r.name ? [r.name, [r.family, r.genus].filter(Boolean).join(' > '), r.typology]
+    : r.subject ? [r.subject, r.level, r.institution, count, r.orientation, r.year, r.note]
+    : r.language ? [r.language, r.level, r.institution, count, r.url, r.year, r.note]
+    : [r.year, r.value, r.description, r.note];
+  return parts.filter(x => x != null && x !== '').join(' — ');
+}
+
+function csvRows() {
   const i = domain.fields.findIndex(x => x.k === field.k);
+  const qs = questionsOf(field);
   const units = unitsOf(domain.id)
     .filter(u => $('subs').checked || u.nat)
-    .filter(u => !$('region').value || u.region === $('region').value);
-  const cell = s => '"' + String(s == null ? '' : s).replace(/"/g, '""').replace(/\r?\n/g, ' | ') + '"';
-  const lines = [['code', 'unit', 'national', 'region', 'state', field.k].map(cell).join(',')];
-  for (const u of units) lines.push([
-    u.cc, u.name, u.nat ? 'yes' : 'no', u.region, stateOf(u, i, field.k), (u.values || {})[field.k] || '',
-  ].map(cell).join(','));
+    .filter(u => !$('region').value || u.region === $('region').value)
+    .filter(u => !$('onlyAns').checked || ['has', 'absent'].includes(stateOf(u, i, field.k)));
+  const out = [];
+  for (const u of units) {
+    const st = stateOf(u, i, field.k);
+    const base = {
+      code: u.cc, unit: u.name, level: u.nat ? 'national' : 'sub-national',
+      region: u.region || '', subregion: u.subregion || '',
+      domain: domain.id, field: field.k, field_label: field.label,
+      state: st, is_absence: st === 'absent' ? 1 : 0,
+      sources: (u.docLinks || []).length,
+    };
+    const recs = (u.records || {})[field.k];
+    const slots = (u.slots || {})[field.k] || [];
+    // A typed field holds rows, not bullets. Year and value get their own
+    // columns because those are the two things anyone exporting a series is
+    // exporting it FOR; the rest of the row still goes to `text`.
+    if (st === 'has' && Array.isArray(recs) && recs.length) {
+      recs.forEach((r, n) => out.push(Object.assign({}, base, {
+        n_bullets: recs.length, bullet_no: n + 1,
+        slot: '', question: '',
+        text: flatRow(r),
+        row_year: r.year == null ? '' : r.year,
+        row_value: r.value == null ? '' : r.value,
+      })));
+      continue;
+    }
+    const text = (u.values || {})[field.k] || '';
+    const lines = st === 'has' || st === 'absent'
+      ? text.split(NL).map(x => x.trim()).filter(Boolean) : [];
+    if (!lines.length) {
+      // One row, so the unit is still counted. `text` carries the sentinel for
+      // a looked/na cell and is empty for a blank one.
+      out.push(Object.assign({}, base, {
+        n_bullets: 0, bullet_no: '', slot: '', question: '',
+        text: st === 'looked' || st === 'na' ? text : '',
+        row_year: '', row_value: '',
+      }));
+      continue;
+    }
+    lines.forEach((b, n) => {
+      const sl = Number(slots[n]);
+      out.push(Object.assign({}, base, {
+        n_bullets: lines.length, bullet_no: n + 1,
+        slot: Number.isInteger(sl) ? sl : '',
+        question: Number.isInteger(sl) && qs[sl - 1] ? qs[sl - 1] : '',
+        text: b, row_year: '', row_value: '',
+      }));
+    });
+  }
+  return out;
+}
+
+function updateCsvLabel() {
+  // Say what the button will actually produce. The scope controls sit above it
+  // and it silently obeyed all three of them, so a download taken under a
+  // region filter looked like the whole world in the file name.
+  const rows = csvRows();
+  const units = new Set(rows.map(r => r.code + '|' + r.unit)).size;
+  $('csv').textContent = 'Download CSV — ' + rows.length + ' rows, ' + units + ' units';
+}
+
+$('csv').addEventListener('click', () => {
+  const rows = csvRows();
+  const cell = v => {
+    const t = String(v == null ? '' : v).replace(/\r?\n/g, ' ');
+    return /[",]/.test(t) ? '"' + t.replace(/"/g, '""') + '"' : t;
+  };
+  const lines = [CSV_COLS.join(',')];
+  for (const r of rows) lines.push(CSV_COLS.map(c => cell(r[c])).join(','));
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([lines.join(NL)], { type: 'text/csv' }));
-  a.download = domain.id + '-' + field.k + '.csv';
+  // A BOM, because the first thing most people do with this file is open it in
+  // Excel, and without one Excel reads UTF-8 as latin-1 and turns every Maori
+  // macron and every s-caron in the atlas into mojibake.
+  a.href = URL.createObjectURL(new Blob(['\ufeff' + lines.join(NL)], { type: 'text/csv;charset=utf-8' }));
+  const scope = ($('region').value || 'world').toLowerCase().replace(/\s+/g, '-');
+  a.download = [domain.id, field.k, scope].join('-') + '.csv';
   a.click();
   URL.revokeObjectURL(a.href);
 });

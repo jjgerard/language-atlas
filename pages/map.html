@@ -320,6 +320,21 @@
   margin-left: auto; letter-spacing: .04em; text-transform: none;
   font-weight: 500; font-size: 10px; color: var(--ink-faint); font-style: italic;
 }
+/* The way out to the same question asked everywhere. Quiet until the field is
+   hovered: it belongs to every heading, and thirteen of them shouting at once
+   would compete with the content the panel exists to show. `.from` also takes
+   margin-left:auto, so on an inherited field the two share the right edge and
+   this one sits after it. */
+.field h4 a.cmp {
+  margin-left: auto; letter-spacing: .04em; text-transform: none; white-space: nowrap;
+  font-weight: 500; font-size: 10px; color: var(--ink-faint); text-decoration: none;
+  opacity: 0; transition: opacity .12s, color .12s; flex: none;
+}
+.field h4 .from + a.cmp { margin-left: 7px; }
+.field:hover h4 a.cmp, .field h4 a.cmp:focus-visible { opacity: 1; }
+.field h4 a.cmp:hover { color: var(--ink); text-decoration: underline; }
+/* Touch and keyboard have no hover, so never hide it there. */
+@media (hover: none) { .field h4 a.cmp { opacity: 1; } }
 
 a.cite {
   color: inherit; text-decoration: underline; text-decoration-style: dotted;
@@ -1721,8 +1736,16 @@ function panelHTML(u, via) {
   // the unit's own work.
   const par = parentOf(u);
   let nInherited = 0;
-  const block = (cls, label, body, from) =>
-    `<div class="field ${cls}"><h4>${esc(label)}${from ? `<span class="from">inherited from ${esc(from)}</span>` : ''}</h4>${body}</div>`;
+  // Every field heading carries a way out to the same question asked of every
+  // country. Reading one place answers "what does Kenya do"; the comparison is
+  // a different question and it used to mean leaving the map, finding /views,
+  // and re-picking the map and the field by hand -- three steps to ask a
+  // question the panel already knows the answer to. The link is per FIELD
+  // because that is the unit the other page is organised by.
+  const cmp = key => `<a class="cmp" href="/views?map=${encodeURIComponent(d.id)}&field=${encodeURIComponent(key)}"
+     title="Read every country's answer to this question">every country<span aria-hidden="true"> →</span></a>`;
+  const block = (cls, label, body, from, key) =>
+    `<div class="field ${cls}"><h4>${esc(label)}${from ? `<span class="from">inherited from ${esc(from)}</span>` : ''}${key ? cmp(key) : ''}</h4>${body}</div>`;
   // A field is either a paragraph or a set of sub-bullets, one per line. Sources
   // are not repeated per field — every one is linked once under "Evidence for
   // this entry" at the foot of the panel. Prose fields hold no newline, so they
@@ -1748,17 +1771,17 @@ function panelHTML(u, via) {
       : isLangs ? languagesHTML(u.records[f.k])
       : rowKey ? rowsHTML(u.records[f.k], rowKey)
       : prose(u.values[f.k], u);
-    if (c === 'h') return block('on', f.label, renderOwn());
+    if (c === 'h') return block('on', f.label, renderOwn(), null, f.k);
     // "Not established from the sources consulted…" is a sentence explaining an
     // absence, not a list of facts, so it stays a paragraph even where the
     // domain's documented fields are bulleted.
-    if (c === 'l') return block('looked', f.label, `<p>${linkCitations(esc(u.values[f.k]), u)}</p>`);
+    if (c === 'l') return block('looked', f.label, `<p>${linkCitations(esc(u.values[f.k]), u)}</p>`, null, f.k);
     // The question does not apply here — not a gap, and not something a
     // contributor should be invited to fill. It must be shown BEFORE the
     // inheritance branch: a state has no language count of its own, but its
     // country does, and inheriting India's 518 onto Kerala would state the one
     // thing the field is careful not to say.
-    if (c === 'x') return block('na', f.label, `<p>${linkCitations(esc(u.values[f.k]), u)}</p>`);
+    if (c === 'x') return block('na', f.label, `<p>${linkCitations(esc(u.values[f.k]), u)}</p>`, null, f.k);
     const inheritable = par && (isHist ? (par.history || []).length
       : (isLangs || rowKey) ? (par.records[f.k] || []).length
       : par.values[f.k]);
@@ -1768,9 +1791,9 @@ function panelHTML(u, via) {
         isHist ? historyHTML(par.history, par)
           : isLangs ? languagesHTML(par.records[f.k])
           : rowKey ? rowsHTML(par.records[f.k], rowKey)
-          : prose(par.values[f.k], par), par.name);
+          : prose(par.values[f.k], par), par.name, f.k);
     }
-    return block('empty', f.label, '<p>Not recorded.</p>');
+    return block('empty', f.label, '<p>Not recorded.</p>', null, f.k);
   }).join('');
 
   const cross = LIVE.map(dd => {
