@@ -1930,3 +1930,112 @@ to a bare `Mozilla/5.0`.
   ordinance table injected by JavaScript, so enactment status cannot be
   confirmed there. `sintmaartengov.org/Documents/Forms/AllItems.aspx` returns
   **401**.
+
+## 25. The Oceania `he.requiredStudy` pass: PacLII is open again, and four territory registers
+
+Section 15 says PacLII's document pages are "behind a Cloudflare JS challenge
+and return 403 to curl, to Node and to WebFetch alike". **That is now stale.**
+On this pass every PacLII document tried served **HTTP 200 with the full act
+text to plain curl with a browser UA and no referer** — HTML documents, and
+the `/xx/legis/<db>/<slug>.pdf` files behind the ones PacLII holds only as PDF.
+Twelve jurisdictions' statutes came straight off the live site.
+
+**But it rate-limits, and the refusal is the Cloudflare challenge.** Fired in a
+rapid burst, two of about thirty requests came back as a **5.6–5.7 KB
+`cdn-cgi/challenge-platform` stub at HTTP 200** — the silent-success shape this
+file keeps meeting. Three immediate retries of the same two urls returned
+218,240 and 37,100 bytes. So: **pause between PacLII fetches, and retry a small
+body before concluding anything.** A gate that hammers it will drop good rows.
+
+One more PacLII quirk: a `/slug/` page is sometimes the full text and sometimes
+a two-link stub pointing at `../slug.pdf` and `../slug.rtf`. Read the stub and
+follow the PDF; **it also 403s intermittently, and sending the document's own
+directory as the Referer (`-e https://www.paclii.org/pg/legis/consol_act/`)
+recovered every one of them** — the same own-host-referer trick recorded for
+`gazette.sc` in section 21. `ws/legis/consol_act/nuosa2006314/` answers 200 with
+**zero bytes**; the `num_act` copy of the same Act serves fine.
+
+### Territory registers that serve, and are worth keeping
+
+| Door | What it serves |
+|---|---|
+| `cnmilaw.gov/docs/cmc_section/T<title>/<section>.pdf` | One clean-text PDF per Commonwealth Code section, plain GET. `T3/1301`–`1345` is the Postsecondary Education Act of 1984; `T3/13101` and `13102` are the 2026 Chamorro and Carolinian language sections. The code *browser* at `/commonwealth-code` builds its tree in JavaScript, so read section numbers off a section PDF's own cross-references rather than the tree |
+| `asbar.org/code-annotated/<slug>/` | American Samoa Code Annotated, one section per page, server-rendered. The index that gives the slugs is `asbar.org/legal-resources/code-annotated/code-annotated-by-title-and-chapter/`. Title 16 ch. 20 is the Community College |
+| `liberlii.org/lr/legis/acts/<slug>/` | Liberian acts as clean HTML — the Tubman University Act 2009, Cuttington University Act 2005 and the three 2011 county community college charters all extract perfectly. Its year TOCs (`/lr/legis/acts/toc-YYYY.html`) are the only index |
+| `legislation.gov.au/F<id>/asmade/<date>/text/original/pdf` | Australian legislative instruments as real PDFs with clean text layers; the Higher Education Standards Framework 2021 came from here |
+| `usp.ac.fj/handbookandcalendar2026/wp-content/uploads/sites/176/2026/08/2026-Handbook-Calendar_17.8.26.pdf` | **The single most useful higher-education document in the Pacific.** 7.7 MB, clean text, and it carries the degree regulations for the twelve USP member countries in one file — including that UU114 *English Language Skills for Tertiary Studies* is "a core course for all undergraduate students". The link is on `usp.ac.fj/handbook-and-calendar/`, which is the page to re-read each year |
+
+### Refusals and traps found here
+
+- **`rmiparliament.org` is a reverse-UA host that refuses BOTH ways.** The full
+  Chrome UA gets **403 with a 75,193-byte block page** — byte-identical in size
+  to the `nus.edu.ws` block page in section 21 — and a bare `Mozilla/5.0` or no
+  UA gets **404 with 1,527 bytes** on the same path, while the site root answers
+  200 with 321 bytes. The Marshall Islands Revised Code is not reachable there.
+  **PacLII's `mh/legis/num_act/` PDFs are the door**, and they are how the
+  Marshall Islands' compulsory-Marshallese rule was read.
+- **`catalog.uog.edu` is a big-404**: any wrong path returns **200-looking
+  167,056 bytes** of University of Guam site furniture whose `<title>` is
+  "404 | University of Guam". `/current/undergraduate-bulletin/` and
+  `/current/undergraduate-bulletin/general-education-program/` are both that
+  page. The real one is `/current/general-education-requirements/`, and the link
+  list at `/current/` is the only reliable way to the rest.
+- **`marianas.edu`** serves **HTTP 404 with 56,229 bytes** on
+  `/media/2016%20NMC%20Catalog/*.pdf` paths that its own `/catalog` page links.
+  Northern Marianas College's degree requirements are not obtainable; the CNMI
+  entry rests on the Commonwealth Code instead.
+- `cnes.bi` and `assemblee.bi` do not resolve. `univ-bangui.org` still fails TLS
+  on principal mismatch, as section 21 records.
+- **NZLII is fine but its markup breaks quotes.** `nzlii.org` serves every
+  section to plain curl, and its own full-text search CGI works — but the body
+  is **hard-wrapped at about 75 characters and every defined term is an `<a>`
+  mid-sentence** (`an <A>institution</A>'s <A>council</A> may determine`). Pick
+  a run with no tag in it; s. 260 of the Education and Training Act 2020 has
+  almost none available, s. 267 and s. 252 do.
+
+### HEPO, fourth pass: the slot labels are not reliable, and two are worth naming
+
+Section 21 says `_HEEdPlanLi` opened twelve more countries. Confirmed, and two
+corrections to what the slots contain:
+
+- **`com_HEEdLawLi` is the newspaper op-ed**, not `com_HELawLi` as BRIEF.md
+  says — `com_HELawLi` is a **404**. The op-ed is *"Loi d'orientation de
+  l'Éducation. Une loi bâclée, des erreurs énormes"* from MasiwaKomor. Neither
+  slot holds a Comorian law.
+- **`lbr_HEEdLawLi` really is the Education Reform Act of 2011** — 29.5 MB,
+  121,260 characters of text — **but the OCR is shredded** ("the primary
+  language of iustntction for all gracle let'els sh*li be Englis]r"). It is
+  readable enough to establish that Liberia's language rules sit in Chapter
+  Eight at Basic and secondary level and that s. 1.4.1 scopes the Act to
+  schools, and **not** quotable. That is why Liberia rests on LiberLII's
+  university charters instead.
+- Still scans, confirming section 21: `bdi_HELawLi` (40 bytes),
+  `bdi_RecAutoLi` (40), `gin_HELawLi` (9), `gin_QALegLi` (10),
+  `gin_RecAutoLi` (9), `caf_HEEdLawLi` (8), `caf_RecAutoLi` (8),
+  `dza_QALegLi` (4). `caf_HELawLi`, `eri_HELawLi`, `com_HELawLi` and
+  `lbr_HELawLi` are all 269-byte 404s.
+- `bdi_QALegLi` extracts 37 KB and is **a website capture of the CNES homepage**,
+  not an instrument. Check what a slot actually holds before resting an absence
+  on it.
+- `dza_HEEdLawLi` is the **Arabic Journal Officiel n° 04 of 27 January 2008**
+  carrying loi 08-04 — 265 KB of extractable Arabic, and subject to the
+  presentation-forms problem section 21 documents.
+
+**`joradp.dz`, confirmed again with the same number.** The 1999 gazette issue
+carrying loi 99-05, the higher-education orientation law, is
+`FTP/jo-francais/1999/F1999024.pdf`: 1,312,819 bytes, **24-byte text layer**.
+Algeria's higher-education framework law cannot be quoted from its own gazette,
+which is why the Algerian entry rests on a peer-reviewed study instead.
+
+### Five African units this pass could not fill, and why
+
+Recorded so the next pass does not re-probe them. **Burundi** (loi 1/07 of 2020
+is an image scan everywhere, and `cnes.bi` is NXDOMAIN), **Central African
+Republic** (no framework act anywhere; only the 2020-2029 sector plan, which is
+orientation and cannot carry an absence claim about a law), **Guinea** (Laval
+says outright the 1997 orientation law "ne sont pas disponibles"; every HEPO
+slot is a scan), **Comoros** (both HEPO slots hold the wrong document; the UDC's
+2018-2026 plan discusses enrolments only), **Eritrea** (no located education act
+at all, as section 21 records). None of these is a network failure that a better
+client fixes — four of the five are image-only documents, and this environment
+still has no rasteriser or OCR.

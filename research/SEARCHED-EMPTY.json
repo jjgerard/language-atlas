@@ -67,5 +67,19 @@
     "AO|Angola": "Anuario Estatistico da Educacao 2022/23 has no subject or language breakdown at all; Cervantes documents 19 Spanish learners in 2011, all informal private classes, which is not school uptake (2026-09)",
     "CG|Congo": "meppsa.cg returns 402 and the other ministry hosts do not resolve; the IBE profile names the LV2 options but carries no counts (2026-09)",
     "CV|Cape Verde": "Anuario da Educacao 2021/22 breaks pupils down by curricular area, never by language; Cervantes' 250 Spanish learners are explicitly all adults (2026-09)"
+  },
+  "he.requiredStudy": {
+    "AF|Afghanistan": "only a secondary analysis, which says chapter 3 covers language of teaching without saying what it says -- not enough for a rule or for an absence (2026-09)",
+    "BI|Burundi": "HEPO bdi_QALegLi is a capture of a website, not an instrument; no readable higher-education law located (2026-09)",
+    "CF|Central African Republic": "HEPO slot is an image-only scan with no text layer (2026-09)",
+    "ER|Eritrea": "no higher-education instrument located with a readable text layer (2026-09)",
+    "GG|Guernsey": "guernseylegalresources.gg 403s every path; the archived Education (Guernsey) Law 1970 landing pages carry no document link because the text sits behind a JS action (2026-09)",
+    "GN|Guinea": "HEPO slot is an image-only scan with no text layer (2026-09)",
+    "KM|Comoros": "com_HELawLi 404s and com_HEEdLawLi holds a newspaper op-ed about the orientation law rather than the law (2026-09)",
+    "KP|North Korea": "no higher-education instrument located at all, in any register (2026-09)",
+    "MV|Maldives": "MQA regulations serve fine but are in Thaana and no span survives two extractors, so nothing is quotable (2026-09)",
+    "OM|Oman": "every register door refused: qanoon.om HTTP 525, oaaa.gov.om NXDOMAIN (2026-09)",
+    "SR|Suriname": "Universiteitswet G.B. 1966 no. 78 located and fetched at 527 KB and is an image scan yielding 10 characters. Read visually it carries NO language provision and delegates curriculum to landsbesluiten by art. 6 -- so the answer is known and simply not quotable. This one needs OCR, not searching (2026-09)",
+    "WF|Wallis and Futuna": "no higher-education institution of its own; nothing located establishes the field either way (2026-09)"
   }
 }

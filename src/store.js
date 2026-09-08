@@ -167,7 +167,22 @@ function slotsFor(domain, body, fields) {
       const fixed = orderBySlot(lines, list);
       if (fixed && fixed.moved) { fields[k] = fixed.bullets.join(String.fromCharCode(10)); list = fixed.slots; }
     }
-    if (!validSlots(list, bullets, slotCount(domain, k))) continue;
+    // Say so when the tagging is thrown away. orderBySlot refuses to reorder
+    // when a bullet that would move leans on the one before it -- "It is
+    // taught within the normal timetable" means nothing once its antecedent
+    // moves -- and that refusal is right. What was wrong is that it happened
+    // in silence: French Polynesia arrived with [1,3,2], the guard fired, the
+    // tags vanished, and the apply run reported "21 slot-tagged" with a
+    // straight face. A guard nobody can see firing is indistinguishable from
+    // a bug, and this project has spent eight incidents on exactly that.
+    if (!validSlots(list, bullets, slotCount(domain, k))) {
+      if (Array.isArray(src[k]) && src[k].length) {
+        console.log("slot list refused: " + domain.id + " " + (body.countryCode || "?") + "/" + k
+          + " " + JSON.stringify(src[k]) + " for " + bullets + " bullet(s)"
+          + (bullets ? " -- out of order, and a bullet that would move leans on the one before it" : " -- field is empty"));
+      }
+      continue;
+    }
     out[k] = list;
   }
   return out;
