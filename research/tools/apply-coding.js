@@ -111,7 +111,7 @@ if (refused.length) {
 }
 console.log(String.fromCharCode(10) + domainId + ": " + units + " units, " + cells + " coded cells");
 if (write && units) {
-  fs.writeFileSync(dataFile, JSON.stringify(rows, null, 2) + String.fromCharCode(10));
+  fs.writeFileSync(dataFile, JSON.stringify(rows, null, 1) + String.fromCharCode(10));
   console.log("wrote " + path.relative(root, dataFile));
 } else if (units) {
   console.log("  (dry run - pass --write)");
