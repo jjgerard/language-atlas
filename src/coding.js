@@ -208,6 +208,21 @@ const RULE_LOCUS = {
   'national statute': 'Binding rule set nationally (Austria SchUG s.4, Poland MEN regulation, Spain LOMLOE arts. 78-79)',
   'national framework, sub-national rules': 'A national frame that coordinates without binding, with the operative rules made below it (Germany: KMK framework, the 16 Laender set terminology, thresholds and duration; Switzerland: EDK/CDIP with 26 cantons; United States: federal identification duty, states set the instrument)',
   'national rule, local application': 'A binding national rule, carried out by a body below the national level. Distinct from the framework case above, where the national frame coordinates WITHOUT binding (Denmark, Greenland, Norway and Tuerkiye were all flattened into `national statute` before this value existed)',
+  // The axis was never purely about LEVEL: `national statute` says "binding"
+  // as well as "national", and eight entries fell through the gap that leaves.
+  // Their only instrument is a donor-facing sector plan, and Mali says outright
+  // what the others imply -- PRODEC 2 "treats screening as a technique still to
+  // be developed, NOT A RULE IN FORCE". Coding those `national statute` would
+  // have asserted a binding rule none of them has, and `not stated` would have
+  // denied that the entry says where the rule lives, which it does. Both wrong
+  // in opposite directions, so the first coding pass left the cell unset and
+  // the count of unset cells is what argued this value into existence.
+  //
+  // This matters beyond tidiness: all eight are African or Pacific systems, and
+  // flattening them into `national statute` would have inflated that value --
+  // already 74% on dld.identificationCriteria -- with exactly the systems whose
+  // rules bind least.
+  'national, non-binding': 'A national instrument that states the rule without binding anyone — a sector plan, strategy or policy (Mali PRODEC 2, "a technique still to be developed, not a rule in force"; Burkina Faso PSEF 2017-2030; Djibouti Sector Plan 2010-2019; Gambia 2016-30 education sector policy; Madagascar 2018-2022; Benin, Togo, Papua New Guinea)',
   'sub-national only': 'No national instrument at all; the rule exists only below the national level (Canada, where education is provincial under the Constitution Act 1867)',
   'institutional': 'Left to individual schools or providers',
   'not stated': 'The entry does not establish where the rule is made',
@@ -278,6 +293,22 @@ const DECIDER_TYPES = {
   'school or authority': 'The school, or the authority that supervises it (Germany: school and school supervisory authority decide; Finland: the education provider makes a written decision)',
   municipality: 'Local government (Norway: the municipality decides, having first obtained the expert assessment)',
   'regional government': 'A state, province, canton or Land, where the criterion is set or applied there',
+  // The same repair DECIDED_BY's `regional government` records — "DUTY_TYPES
+  // had this and this axis did not, which flattened every federal system".
+  // Here it is a ministry: DECIDED_BY has `national authority` and this list
+  // did not, so six systems where a named ministry does the identifying had no
+  // value at all. `school or authority` is the education authority supervising
+  // a school, which is not what a Ministry of Social Affairs issuing disability
+  // cards is doing, and coding them there would have merged a health or welfare
+  // ministry with a school inspectorate.
+  //
+  // Six, not seven. Senegal's "departmental technical commissions" are a
+  // commission rather than a ministry and state no composition, which would
+  // want a `statutory body` value — but that value would overlap
+  // `medical commission`, `multidisciplinary team` and this one at once, and
+  // one entry is not an argument for a value that ambiguous. Senegal stays
+  // unset, and stays evidence.
+  'national authority': 'A named ministry or national agency does the identifying (Cameroon: the Ministry of Social Affairs assesses via regional offices and issues the disability cards; Oman: assessment vested in the Ministry of Health, with functional assessment by Ministry of Social Development social workers; Iran\'s Welfare Department; Malawi\'s Directorate of Special Needs Education; Equatorial Guinea; Lebanon)',
   'not stated': 'The entry does not establish who decides',
 };
 
