@@ -1,0 +1,22 @@
+[
+{"query":"ok newcomerCriteria is next on the list right? there's 190 national entries with prose sitting there. lets get them into the columns","should_trigger":true},
+{"query":"can you run apply-coding.js on eal for removalCriteria, i've got the json in my temp folder already from last night","should_trigger":true},
+{"query":"the dld map is all paragraphs. i need something i can actually count for the paper — start with dischargeCriteria even though its only 17 entries","should_trigger":true},
+{"query":"what does the threshold_basis distribution look like now that identificationCriteria is done","should_trigger":true},
+{"query":"i want to do assessments next. row is one instrument per the scheme, is that going to be a problem?","should_trigger":true},
+{"query":"make eal.newcomerCriteria comparable across countries so i can cross tab it against the dld side later","should_trigger":true},
+{"query":"we coded 193 systems but i think i rushed the european ones. can you redo rule_locus for the EU countries and check it against what i had","should_trigger":true},
+{"query":"/patterns still says nothing carries a coding yet for the eal pair. sort that out","should_trigger":true},
+{"query":"before you write anything — does the legalEntitlement scheme actually fit what store.js can hold? ghana names two instruments","should_trigger":true},
+{"query":"pull the identificationCriteria prose for asia only, i want to reread the ones we marked not stated","should_trigger":true},
+{"query":"THRESHOLD_BASIS has nothing for a system where the ground is just a listed impairment category. cape verde monaco mauritius all failed the same way. add a value","should_trigger":false},
+{"query":"culturally excluded is doing two jobs — chile excludes broadly on ethnic grounds, gibraltar has the not-solely-because-of-language clause. these need splitting","should_trigger":false},
+{"query":"dischargeCriteria is 7% filled which is hopeless. build me a worklist and lets go research the blanks, africa and asia first","should_trigger":false},
+{"query":"gate the pending dld-assessments drafts — done-af and done-as — and apply whatever survives terr-verify","should_trigger":false},
+{"query":"the coding block on /patterns renders an empty div when a column has no values, it reads like a bug. fix the render","should_trigger":false},
+{"query":"can the views csv export include the numeric coding columns too, exit_period_months and review_interval_months","should_trigger":false},
+{"query":"remind me what obliges level 3 means vs level 4, i keep mixing them up","should_trigger":false},
+{"query":"add a new domain to domains.js for adult majority-language classes, it's marked planned already","should_trigger":false},
+{"query":"the 16 german länder rows are completely empty and they're exactly where the operative rule lives. we should do something about that","should_trigger":false},
+{"query":"i need the 4 hedge lines out of the dld terminology fields, the ones starting 'Source describes special-needs provision generally'","should_trigger":false}
+]

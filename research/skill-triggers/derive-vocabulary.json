@@ -1,0 +1,22 @@
+[
+{"query":"culturally excluded is doing two jobs — chile excludes broadly on ethnic grounds, gibraltar has the not-solely-because-of-language clause. these need splitting","should_trigger":true},
+{"query":"THRESHOLD_BASIS has nothing for a system where the ground is just a listed impairment category. cape verde monaco mauritius all failed the same way","should_trigger":true},
+{"query":"DECIDER_TYPES has no value for a ministry but DECIDED_BY has national authority. why the asymmetry, and can we fix it","should_trigger":true},
+{"query":"multilingualProvision is 187 filled and its the field the whole atlas is about. can we make it codable","should_trigger":true},
+{"query":"8 entries got left with no rule_locus because their only instrument is a donor-facing sector plan. national statute says binding so i wouldnt force them. thoughts","should_trigger":true},
+{"query":"i want a column that records whether the instrument is actually in force — draft, superseded, ratified but not domesticated","should_trigger":true},
+{"query":"can you work out what categories indigenous.standing should have. official co-official recognised none is my guess but dont just take that","should_trigger":true},
+{"query":"micronesia says 'must not be the result of another disability' and saudi says 'no other impairment preventing benefit'. EXCLUSIONS has nothing generic like that","should_trigger":true},
+{"query":"if we split a coded value what happens to the 193 entries already coded against the old one","should_trigger":true},
+{"query":"outcomesEvidence and achievementGap are both prose describing what was measured by whom and whether its repeated. thats obviously columns. set it up","should_trigger":true},
+{"query":"right, newcomerCriteria — 190 entries, code them against the existing scheme","should_trigger":false},
+{"query":"run the distribution for identificationCriteria again now that i've fixed the two korean entries","should_trigger":false},
+{"query":"indigenous.materials is 6% filled and assessment is 2%. those are the two that say whether standing is real. lets fill them","should_trigger":false},
+{"query":"the hint text on dld.workforce asks for a ratio to population but andorra and belarus both gave staffing ratios per pupil. field questions issue?","should_trigger":false},
+{"query":"whats the actual difference between not established and not applicable in this repo","should_trigger":false},
+{"query":"rename the indigenous map, 'Indigenous and regional languages' is too long for the nav on mobile","should_trigger":false},
+{"query":"apply-coding refused 30 values on my json, all of them spelling variants of multidisciplinary team. just fix my file","should_trigger":false},
+{"query":"can you add an as_of year to the coding sidecar so we can do trends over time","should_trigger":false},
+{"query":"write the b2 cross tabs — threshold_basis by rule_locus, obliges by redress_type","should_trigger":false},
+{"query":"the series type is {year, value, note} and note is free prose. for quantitative use it needs a typed unit and denominator","should_trigger":false}
+]
