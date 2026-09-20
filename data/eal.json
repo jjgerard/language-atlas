@@ -10422,8 +10422,8 @@
   "region": "Asia",
   "subregion": "Western Asia",
   "status": "partial",
-  "confidence": "secondary-source",
-  "lastVerified": "2026-08",
+  "confidence": "official-document",
+  "lastVerified": "2026-09",
   "collaborators": [],
   "docLinks": [
    {
@@ -10458,7 +10458,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "Different bodies define the immigrant-pupil population differently (Knesset RIC 2023)\nBorn abroad and arrived under the Law of Return within ten years, 15 if Ethiopian-born\nSet from the school's reported pupil roll, with no application by the school\nEntitlement turns on the date of aliyah relative to 1 January of the school year\nThe Ministry of Education allocates, by a key set in the Director-General's circular",
-  "removalCriteria": "",
+  "removalCriteria": "Hebrew hours run for the first two school years mostly studied in Israel\nArriving before 1 January gives hours that year and the next; after it, that year and two\nUpper secondary then keeps one Hebrew hour across the following four years of study\nEthiopian and Bnei Menashe pupils get full hours three years longer, then partial hours\nSo no single length fits: the clock differs by arrival date, stage and country of origin\nBagrut accommodations are a separate rule, ten years from aliyah and twelve for Ethiopians\nThe ministry runs programmes aimed at pupils whose eligibility period has already ended",
   "newcomerProportion": [],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 22 points below their non-immigrant peers\n10 points below after accounting for socio-economic profile\n8 points above once home language is accounted for as well\nSmall on all three measures",
   "l2Support": "Rules are set by a detailed Ministry director-general circular, reissued every year\nThe head appoints a teacher from the school's own staff to the allocated Hebrew hours\nTaught in a group rather than individually, on the Ministry's view of language learning\nNo fewer than six weekly hours per pupil, scaled by age group and years since arrival\nThe teacher needs an academic background and training in Hebrew as a second language",
@@ -10474,6 +10474,13 @@
      "immigration status"
     ],
     "decided_by": "automatic",
+    "rule_locus": "national statute"
+   },
+   "removalCriteria": {
+    "exit_mechanism": [
+     "clock"
+    ],
+    "decided_by": "nobody, the period expires",
     "rule_locus": "national statute"
    }
   }
@@ -12833,13 +12840,17 @@
   "region": "Asia",
   "subregion": "Eastern Asia",
   "status": "partial",
-  "confidence": "secondary-source",
-  "lastVerified": "2026-08",
+  "confidence": "official-document",
+  "lastVerified": "2026-09",
   "collaborators": [],
   "docLinks": [
    {
     "label": "PISA 2022 Results (Volume I), Table I.B1.7.57: reading performance by immigrant background (OECD, 2023)",
     "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html"
+   },
+   {
+    "label": "MEXT CLARINET, 日本語指導の対象となる児童生徒 (pupils subject to Japanese language instruction), Q8 to Q10, issued with the notice amending the School Education Act Enforcement Regulation",
+    "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341927.htm"
    }
   ],
   "supportLinks": [],
@@ -12848,15 +12859,33 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Not established from the sources consulted. The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57. It resolves to an OECD catalogue page, not to Table I.B1.7.57. 'immigrant', 'bilingual' and 'newcomer' each return 0 hits on it.",
-  "removalCriteria": "",
+  "newcomerCriteria": "The category is pupils needing Japanese instruction, in primary and lower secondary\nListed circumstances are returnees, foreign pupils, and another language used at home\nThe criterion is ability: not enough everyday Japanese, OR everyday Japanese without\nthe grade-level academic language the pupil needs to take part in learning\nSpecial-curriculum instruction is for those needing teaching outside the enrolled class",
+  "removalCriteria": "Whether Japanese instruction is still needed is judged under the principal's responsibility\nSeveral staff should contribute: the Japanese teacher, class and subject teachers, assistants\nThey weigh Japanese ability, adaptation to school life, and attitude to learning together\nMEXT offers DLA, its dialogic assessment, as one objective measure alongside local methods\nReview is periodic: planning at year end, and revisiting at the end of terms\nNo instrument is named as deciding, and no fixed period runs out",
   "newcomerProportion": [],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 40 points below their non-immigrant peers\n37 points below after accounting for socio-economic profile\n7 points above once home language is accounted for as well\nClose to zero once language is allowed for — a language gap, not an immigrant one",
   "l2Support": "Not established from the sources consulted. The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57. It resolves to an OECD catalogue page, not to Table I.B1.7.57. 'immigrant', 'bilingual' and 'newcomer' each return 0 hits on it.",
   "l1Support": "Not established from the sources consulted. The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57. It resolves to an OECD catalogue page, not to Table I.B1.7.57. 'immigrant', 'bilingual' and 'newcomer' each return 0 hits on it.",
   "l3Support": "",
   "bilingualEducationNotes": "Not established from the sources consulted. The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57. It resolves to an OECD catalogue page, not to Table I.B1.7.57. 'immigrant', 'bilingual' and 'newcomer' each return 0 hits on it.",
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "newcomerCriteria": {
+    "designation": "named category",
+    "triggers": [
+     "tested proficiency",
+     "home language"
+    ],
+    "decided_by": "school",
+    "rule_locus": "national rule, local application"
+   },
+   "removalCriteria": {
+    "exit_mechanism": [
+     "proficiency judgement"
+    ],
+    "decided_by": "school",
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "KE",

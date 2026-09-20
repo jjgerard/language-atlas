@@ -132,6 +132,49 @@ national systems, 24 of them in the four-cycle PISA set, up from 36 and 22. The
 next tier — Israel, Japan, Singapore, Thailand — should be read before being
 promised, on this evidence.
 
+## The second tier, worked 2026-09-20: two of four
+
+**Japan — done, and it was a stub.** MEXT CLARINET, Q8 to Q10 of the notice
+issued with the amended School Education Act Enforcement Regulation. The entry
+held nothing before this: its only source was a PISA catalogue link that does
+not resolve to the table it names. Q8 defines the category — pupils needing
+Japanese instruction, reached by circumstances such as returning from abroad,
+foreign nationality or another language at home, on a criterion of ability:
+not enough everyday Japanese, or everyday Japanese without the grade-level
+academic language to take part in learning. Q9 puts the judgement under the
+**principal’s responsibility**, referring to several staff weighing ability,
+adaptation and attitude; MEXT offers DLA as one objective measure alongside
+locally devised methods rather than as the instrument that decides. Q10 makes
+the review periodic. So `proficiency judgement` on the gloss’s own test, and
+`newcomerCriteria` filled at the same time from the same source.
+
+**Israel — done, and it is a clock.** Knesset RIC, already cited on the entry.
+Hebrew hours run for the first two school years mostly studied in Israel;
+arriving before 1 January gives hours that year and the next, after it that year
+and two; upper secondary then keeps one hour across the following four years;
+Ethiopian and Bnei Menashe pupils get full hours three years longer and partial
+hours after. `exit_period_months` is deliberately unset — several lengths are
+given for different groups and picking one would misrepresent the rule.
+
+Israel also shows the entry’s own warning working. Its `newcomerCriteria` says
+different bodies define the population differently, and they do: matriculation
+accommodations run **ten years from aliyah and twelve for Ethiopian immigrants**
+on a Director-General circular, which is not the Hebrew-hours rule and not the
+“ten years, fifteen if Ethiopian-born” the entry records from another source. The
+removal bullets carry both and say they are separate.
+
+**Singapore — nothing to exit.** Mother-tongue assignment is by ethnicity and is
+a permanent allocation, not a support status with a threshold to cross.
+
+**Thailand — no category at all.** The National Education Act creates no
+newcomer or additional-language pupil category, so like Moldova and Montenegro
+the honest answer is an absence and it adds nothing to the cross.
+
+`exit_mechanism` now stands at 40 national systems, 26 in the four-cycle PISA
+set. `clock` 18 against `proficiency judgement` 11, where before this work began
+it was 17 against 5 — the two routes are close enough to compare for the first
+time.
+
 ## What it will not fix
 
 More countries will not repair a fragile finding, and this document should not

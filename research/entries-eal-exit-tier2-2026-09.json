@@ -1,0 +1,68 @@
+[
+ {
+  "domain": "eal",
+  "unit": "JP|Japan",
+  "fields": {
+   "newcomerCriteria": [
+    "The category is pupils needing Japanese instruction, in primary and lower secondary",
+    "Listed circumstances are returnees, foreign pupils, and another language used at home",
+    "The criterion is ability: not enough everyday Japanese, OR everyday Japanese without",
+    "the grade-level academic language the pupil needs to take part in learning",
+    "Special-curriculum instruction is for those needing teaching outside the enrolled class"
+   ],
+   "removalCriteria": [
+    "Whether Japanese instruction is still needed is judged under the principal's responsibility",
+    "Several staff should contribute: the Japanese teacher, class and subject teachers, assistants",
+    "They weigh Japanese ability, adaptation to school life, and attitude to learning together",
+    "MEXT offers DLA, its dialogic assessment, as one objective measure alongside local methods",
+    "Review is periodic: planning at year end, and revisiting at the end of terms",
+    "No instrument is named as deciding, and no fixed period runs out"
+   ]
+  },
+  "coding": {
+   "newcomerCriteria": {
+    "designation": "named category",
+    "triggers": ["tested proficiency", "home language"],
+    "decided_by": "school",
+    "rule_locus": "national rule, local application"
+   },
+   "removalCriteria": {
+    "exit_mechanism": ["proficiency judgement"],
+    "decided_by": "school",
+    "rule_locus": "national rule, local application"
+   }
+  },
+  "docLinks": [
+   {
+    "label": "MEXT CLARINET, 日本語指導の対象となる児童生徒 (pupils subject to Japanese language instruction), Q8 to Q10, issued with the notice amending the School Education Act Enforcement Regulation",
+    "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341927.htm"
+   }
+  ],
+  "lastVerified": "2026-09",
+  "confidence": "official-document"
+ },
+ {
+  "domain": "eal",
+  "unit": "IL|Israel",
+  "fields": {
+   "removalCriteria": [
+    "Hebrew hours run for the first two school years mostly studied in Israel",
+    "Arriving before 1 January gives hours that year and the next; after it, that year and two",
+    "Upper secondary then keeps one Hebrew hour across the following four years of study",
+    "Ethiopian and Bnei Menashe pupils get full hours three years longer, then partial hours",
+    "So no single length fits: the clock differs by arrival date, stage and country of origin",
+    "Bagrut accommodations are a separate rule, ten years from aliyah and twelve for Ethiopians",
+    "The ministry runs programmes aimed at pupils whose eligibility period has already ended"
+   ]
+  },
+  "coding": {
+   "removalCriteria": {
+    "exit_mechanism": ["clock"],
+    "decided_by": "nobody, the period expires",
+    "rule_locus": "national statute"
+   }
+  },
+  "lastVerified": "2026-09",
+  "confidence": "official-document"
+ }
+]
