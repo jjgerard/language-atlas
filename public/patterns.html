@@ -791,12 +791,16 @@ function renderOutcomes(atlas) {
     const spec = kind === 'trend' ? { cycles: cyclesFor(pisa, outcome) } : { cycle: $('#o-cyc').value };
     if (spec.cycles && spec.cycles.length < 2) return;
     const sel = $('#o-by');
+    // Disabled options grey out, but not by much, and most of this list is
+    // disabled — so the few that will draw something carry the weight instead.
+    // “nothing” stays plain: it is the default, not a recommendation.
     [...sel.options].forEach((o, i) => {
-      if (i === 0) return;
+      if (i === 0) { o.style.fontWeight = ''; return; }
       const cand = opts[Number(o.value)];
       const base = o.textContent.split('  — ')[0];
       if (cand === pick) {
         o.disabled = true;
+        o.style.fontWeight = '';
         o.textContent = base + '  — already the category';
         return;
       }
@@ -806,12 +810,14 @@ function renderOutcomes(atlas) {
       // research more countries, which would not help.
       if (cand.id !== pick.id) {
         o.disabled = true;
+        o.style.fontWeight = '';
         o.textContent = base + '  — a different map';
         return;
       }
       const { groups } = groupsFor(atlas, pick, outcome, cand, spec);
       const n = Object.values(groups).filter(g => g.length >= min).length;
       o.disabled = n === 0;
+      o.style.fontWeight = n === 0 ? '' : '500';
       o.textContent = base + (n === 0 ? '  — no combination reaches ' + min : '  — ' + n + ' combinations');
     });
     if (sel.selectedOptions[0] && sel.selectedOptions[0].disabled) sel.value = '';
