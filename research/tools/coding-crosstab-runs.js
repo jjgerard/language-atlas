@@ -60,3 +60,14 @@ run(11, () => {
   confound("naming an assessment instrument — is it just documentation depth?",
     "namesInstrument", s => s.threshold && s.threshold !== "not stated");
 });
+
+// 12. THE CATEGORIZATION x DISCHARGE TABLE. How a system decides who is in the
+// category, against how the category ends. `discharge_basis` is list-valued
+// and `tab` turned five mechanisms into fourteen combination columns, so this
+// uses tabSet and counts a system under every mechanism it runs.
+run(12, () => {
+  const { tabSet } = require("./coding-crosstab.js");
+  tabSet("12. dld THRESHOLD BASIS x DISCHARGE MECHANISM", "threshold", "discharge");
+  tabSet("12b. same table, Europe only", "threshold", "discharge",
+    { where: s => s.region === "Europe" });
+});

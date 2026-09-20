@@ -127,6 +127,58 @@ function tab(title, rowKey, colKey, opts = {}) {
   }
 }
 
+/**
+ * The same cross, for a column that IS A LIST.
+ *
+ * `tab` above pastes a list into one label, so a system running a re-evaluation
+ * cycle AND an age ceiling lands in a column of its own. On dld
+ * dischargeCriteria that turned five mechanisms into FOURTEEN combination
+ * columns, most of them holding one country, and the question the table exists
+ * to answer -- do systems that identify on clinical diagnosis discharge
+ * differently from systems that identify on educational need -- became
+ * unreadable.
+ *
+ * So this one counts a system under EVERY value it holds. Row totals therefore
+ * exceed the number of systems, and the header says so, because a reader who
+ * adds a row up and gets more than n is entitled to know why before concluding
+ * the table is broken. `systems` is the honest denominator and is printed
+ * beside every row.
+ */
+function tabSet(title, rowKey, colKey, opts = {}) {
+  const rows = SYS.filter(s => val(s[rowKey]) != null && s[colKey] != null)
+    .filter(opts.where || (() => true));
+  if (!rows.length) { console.log("\n" + title + "  -- no data"); return; }
+  const listOf = s => Array.isArray(s[colKey]) ? s[colKey] : [s[colKey]];
+  const R = [...new Set(rows.map(s => String(val(s[rowKey]))))].sort();
+  const C = [...new Set(rows.flatMap(listOf).map(String))].sort();
+  const cell = (r, c) => rows.filter(s =>
+    String(val(s[rowKey])) === r && listOf(s).map(String).includes(c));
+  console.log("\n" + title + "   n=" + rows.length
+    + " systems; a system is counted under EVERY mechanism it runs,"
+    + " so rows sum to more than n");
+  console.log("  rows = " + rowKey + "      columns = " + colKey + " (list-valued)");
+  C.forEach((c, i) => console.log("    [" + (i + 1) + "] " + c));
+  const w = Math.max(...R.map(x => x.length)) + 2;
+  console.log("");
+  console.log(" ".repeat(w) + C.map((_, i) => ("[" + (i + 1) + "]").padStart(6)).join("")
+    + "   systems");
+  for (const r of R) {
+    const n = rows.filter(s => String(val(s[rowKey])) === r).length;
+    console.log(r.padEnd(w) + C.map(c => String(cell(r, c).length).padStart(6)).join("")
+      + String(n).padStart(10));
+  }
+  if (opts.names !== false) {
+    console.log("  who is in each cell:");
+    for (const r of R) for (const c of C) {
+      const got = cell(r, c);
+      if (!got.length) continue;
+      console.log("    " + r + "  ->  " + c + "   (" + got.length + ")");
+      console.log("        " + got.slice(0, 10).map(s => s.unit).join(", ")
+        + (got.length > 10 ? ", +" + (got.length - 10) + " more" : ""));
+    }
+  }
+}
+
 /** Is an apparent difference just documentation depth, or does it hold inside regions? */
 function confound(title, splitKey, testFn) {
   const have = SYS.filter(s => val(s[splitKey]) != null);
@@ -149,5 +201,5 @@ function confound(title, splitKey, testFn) {
   }
 }
 
-module.exports = { SYS, tab, confound };
+module.exports = { SYS, tab, tabSet, confound };
 if (require.main === module) require("./coding-crosstab-runs.js");
