@@ -7541,7 +7541,7 @@
   "legalEntitlement": "Law 113(I)/1999: every child is entitled to free attendance at a public school\nThe Council of Ministers must recruit the scientific and other staff needed\nRedress: the parent may object in writing to the Central Committee\nThat committee may confirm, amend or replace the district committee's decision",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 46\nFunders: family 70%, state education 39%\n9% said a maximum number of sessions applied (n = 45)",
   "workforce": "Practice or charging as a logopathologist requires entry on the Register, Law 136(I)/2001\nEntry needs a speech-pathology degree recognised by the Cypriot qualifications council\nAn updated copy of the Register is published in the Official Gazette each January",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "The Επαρχιακή Επιτροπή re-assesses each child's needs ανά διετία ή συχνότερα (art. 15/1)\nA parent's request or the συνδετικός λειτουργός's suggestion brings a sooner re-assessment\nA parent may object to the Κεντρική Επιτροπή within thirty days (art. 16/1)\nFrom eighteen the Επιτροπή may extend year by year to twenty-two, as amended in 2025",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -7620,6 +7620,12 @@
     3,
     3,
     3
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    2,
+    4
    ]
   },
   "coding": {
@@ -7667,7 +7673,16 @@
       "morphosyntax"
      ]
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "age ceiling"
+    ],
+    "review_interval_months": 24,
+    "decider": "multidisciplinary team",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
@@ -25141,7 +25156,7 @@
   "legalEntitlement": "Zakon o osnovama art 3: a right to education that respects the person's needs\nIt carries individual or group additional support in teaching and learning\nInstitutions founded by the state, province or municipality provide it free",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 47\nFunders: family 47%, state health 30%, state education 26%\n26% said a maximum number of sessions applied (n = 47)",
   "workforce": "In a mainstream school a logoped is optional, employed as the school's needs require\nIn schools for pupils with developmental difficulties the logoped is a named associate\nA joint expert service may hold one logoped doing the work for several institutions",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Ends if further progress can be made with mere individualizacije alone (čl. 14)\nEvaluated tromesečno in the first year, then at the start of each polugodište (čl. 13)\nA prosvetni savetnik carries out the spoljašnje vrednovanje under supervision\nThe pedagoški kolegijum decides, with the inclusive education team's saglasnost (čl. 14)",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -25202,6 +25217,12 @@
     4,
     4,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    2
    ]
   },
   "coding": {
@@ -25228,7 +25249,16 @@
      "duty_type": "school",
      "redress_type": "not stated"
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "decision on continuing need",
+     "re-evaluation cycle"
+    ],
+    "review_interval_months": 6,
+    "decider": "school or authority",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
