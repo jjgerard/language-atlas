@@ -68,10 +68,9 @@ const RULES = [
   // the requirement Andorra's "It replaces the model in force since 2008" broke
   // by falling through to `instrument made`, so the noun list is wide and the
   // lookaround runs in both directions rather than forward only.
-  ["body or programme changed", /\b(replac|supersed|abolish|discontinu)\w*\b[\s\S]{0,40}\b(programme|program|scheme|classes|grant|unit|centre|center)\b|\b(programme|program|scheme|classes|grant|OETC|OALT|ELCO|MEAG|Tanoda)\b[\s\S]{0,60}\b(replaced|abolished|discontinued|ended|folded|integrated into)\b|\brenam(e|es|ed|ing)\b|\brestructur(e|es|ed|ing)\b|\bmerg(e|es|ed|ing)\b/i,
-   // Consolidating an act MERGES its amendments into one text; it does not merge
-   // two bodies. Greenland 2023, "Consolidated folkeskole act published, merging
-   // 2017 and 2021 amendments", is an amendment to an instrument.
+  ["body or programme changed", /\b(replac|supersed|abolish|discontinu)\w*\b[\s\S]{0,40}\b(programmes?|programs?|schemes?|classes|grants?|units?|centres?|centers?|services?)\b|\b(programmes?|programs?|schemes?|classes|grants?|OETC|OALT|ELCO|MEAG|Tanoda)\b[\s\S]{0,60}\b(replaced|abolished|discontinued|ended|folded|integrated into)\b/i,
+   // Only what the hoist was for. Everything else this value covers sits at its
+   // declared precedence further down, so an amendment beats a rename.
    /\bconsolidat\w*|\bmerg\w*[\s\S]{0,40}\bamendments?\b/i],
   ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*|\bnullif\w*|\bvoid\w*|\bannul\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|model)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)/i,
    // South Africa 1953: "Bantu Education Act reinforces apartheid through
@@ -84,7 +83,7 @@ const RULES = [
   // one value cost nothing -- first match wins either way -- and the alternative
   // was a single literal that quietly lost the flag.
   ["instrument replaced", /\b[A-Z]{3,6}\b\s+(repeal|supersed|replac|revok)\w*/],
-  ["instrument amended", /\bamend\w*\b|\brewrit(e|es|ing)\b|\b(act|law|constitution|code|ordinance|regulation|guidelines|guidance|policy|policies|rules|manual|chart|document|edition|plan)\b[\s\S]{0,20}\brevis(ed|ion|ions)\b|\binserts?\b|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i,
+  ["instrument amended", /\bamend\w*\b|\brewrit(e|es|ing)\b|\b(act|law|constitution|code|ordinance|regulation|guidelines|guidance|policy|policies|rules|manual|chart|document|edition|plan)\b[\s\S]{0,20}\brevis(ed|ion|ions)\b|\binsert\w*|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i,
    // A parenthetical or appositive amendment DATE is not an amendment: it dates
    // the instrument the row describes. Four UNESCO PEER rows read "Constitution
    // of Barbados, AMENDED 2007; does not enshrine the right to education" or
@@ -110,6 +109,12 @@ const RULES = [
    // that says outright the enactment is NOT VERIFIED is the one row in the
    // corpus that forbids this value in its own text.
    (d, h) => datedElsewhere(d, h) || /\bnot verified\b|\bbefore the\b[\s\S]{0,40}\badopt/i.test(d)],
+  // Renaming, restructuring, merging and closing, at the precedence
+  // HISTORY_OPERATION declares for them: below every operation on an instrument.
+  // Nunavut's "Inuit Language Protection Act RENAMED the Inuktut Protection Act"
+  // is the gloss's own example and still lands here, because nothing above it
+  // matches a bare rename.
+  ["body or programme changed", /\brenam(e|es|ed|ing)\b|\brestructur(e|es|ed|ing)\b|\bmerg(e|es|ed|ing)\b|\babolish(es|ed)?\b|\bclos(e|es|ed|ing)\b[\s\S]{0,30}\b(units?|centres?|centers?|programmes?|programs?|schools?)\b/i],
   // EIGHT of the twelve overrides in the first hand-coded region were the old
   // `establish` pattern firing on an abstract object: "establishes the
   // ausserordentlicher Schueler CATEGORY", "the individual educational needs
@@ -125,7 +130,12 @@ const RULES = [
    // Beginning to develop a plan is not issuing one. Dominica 2020, "Ministry of
    // Education BEGAN DEVELOPING a new education sector plan", started matching
    // only once `sector plan` was added to the pattern above.
-   /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b/i],
+   // Estonia 2018 "sets the PROCEDURE FOR external counselling team
+   // RECOMMENDATIONS on support services" and Great Britain 2002, the
+   // "Education (Disability STRATEGIES and Pupils' Educational Records)
+   // (Scotland) Act 2002", both carry a plan word as ordinary content: one
+   // inside the thing a regulation regulates, one inside an Act's own title.
+   /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b|\b(procedure|rules|process) for\b[\s\S]{0,40}\brecommendations?\b|\([^)]*[Ss]trateg/i],
   ["state of affairs recorded", /\bdoes not\b|\bno specific\b|\bomits\b|\bfound no\b|\bnever uses\b|\bis silent\b|\bno such\b|\bnothing\b|\bnames only\b|\bbut not\b|\bneither\b/i],
 ];
 

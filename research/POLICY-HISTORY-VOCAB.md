@@ -957,11 +957,105 @@ timelines — produced a shape it read confidently and wrongly. After every fix
 all five regions score 95% or better, which says nothing about the sixth.
 **Do not let the proposer write a region unread.**
 
+# dld
+
+## First region of a new domain: dld Europe, 172 rows
+
+52 entries, 93 rows carrying prior `fields_touched`, one left unset.
+
+```
+  provision described            101   59%
+  instrument amended              25   15%
+  instrument made                 18   11%
+  instrument replaced             14    8%
+  body or programme established    6    4%
+  state of affairs recorded        4    2%
+  plan or strategy issued          2    1%
+  body or programme changed        1    1%
+```
+
+**The proposer scored 36 of 41, 88%, on a domain it had never seen.** That is
+the transfer result and it is worth stating plainly: five hand passes on `eal`
+produced a proposer that arrives at `dld` performing about as well as it did on
+its second `eal` region. The vocabulary is not domain-specific and neither, it
+turns out, are most of the patterns.
+
+The residual at 59% is second only to Africa's 60%, and for the same reason:
+dld Europe's timeline is a statute recital. "Education Act 561/2004 Sb. sets the
+school system and duties towards pupils with special educational needs", "Ley
+Organica 2/2006 (LOE) defines pupils with special educational needs", "Law
+113(I)/1999 establishes special education as a right". Row after row dates an
+instrument and says what it provides.
+
+`plan or strategy issued` collapses to **1%** here against 12% across `eal`.
+Special-needs policy in Europe is made by statute and amended by statute; there
+is almost no soft-law layer in these timelines at all.
+
+### The structural fault this region exposed
+
+Three of the five errors came from one thing, and it was mine rather than the
+corpus's. `body or programme changed` had been **hoisted to the top of RULES**
+back in the Europe pass, so that France's ELCO and the Netherlands' OETC — two
+programmes being replaced — would not read as instruments being replaced. That
+hoist quietly overrode the precedence `HISTORY_OPERATION` itself declares, which
+puts every change-to-an-instrument above every change-to-a-body.
+
+dld Europe billed for it twice in one region:
+
+- Gibraltar 2009, "LN 2009/062 RENAMED the Handicapped Children (Assessment
+  Panel) REGULATIONS and INSERTED a special needs definition" — an amendment,
+  caught by a rename rule sitting above the amendment rule.
+- Ireland 2025, "Circular 0024/2025 REPLACES the SSLD criteria: the category is
+  RENAMED Developmental Language Disorder" — a replacement, caught the same way.
+
+The fix is a split rather than a reordering. The hoisted rule keeps **only what
+it was hoisted for** — a named programme, service or centre being replaced,
+closed or discontinued — and renaming, restructuring and merging drop back to
+their declared position below `instrument made`. Nunavut's "Inuit Language
+Protection Act renamed the Inuktut Protection Act", which is the gloss's own
+example for this value, still lands there, because nothing above it matches a
+bare rename.
+
+Greece 2018 is the row that proves the split is the right shape: "Law 4547/2018
+replaces the KEDDY assessment CENTRES with … (KESY)" is two bodies being
+swapped, and it needs the hoisted rule. It had been missing it because `centre`
+had no plural — the **fourth** time that exact class of miss has appeared, after
+`center`, `academy` and `programme`. Every noun list in the file now carries its
+plurals.
+
+### And two words appearing as content rather than as operations
+
+- Estonia 2018: "Minister's Regulation 2 sets the PROCEDURE FOR external
+  counselling team RECOMMENDATIONS on support services" — the recommendations
+  are what the regulation regulates.
+- Great Britain 2002: the "Education (Disability STRATEGIES and Pupils'
+  Educational Records) (Scotland) Act 2002" — the strategy word is inside the
+  Act's own title.
+
+Both were reading a vocabulary word out of ordinary prose, which is the failure
+mode `research/POLICY-HISTORY-VOCAB.md` warned about in its first paragraph when
+it said `/caps?/` had matched "Education Act (Cap 262)".
+
+### Where the proposer now stands
+
+```
+  eal Europe      30/30   100%
+  eal Oceania     23/23   100%
+  eal Asia        54/54   100%
+  eal Americas    41/43    95%
+  eal Africa      23/24    96%
+  dld Europe      39/39   100%
+                 210/213    99%
+```
+
+The three standing errors are judgement calls, not pattern faults, and are named
+in the sections above. **This table is not a licence.** Every one of these
+regions was hand-coded first and the proposer fixed afterwards; the number says
+what the patterns have learned from six regions, not what they will do on a
+seventh.
+
 ## Remaining
 
 ```
-  dld   Americas 316   Africa 292   Asia 124   Oceania 124   Europe  79   (1,135)
+  dld   Americas 391   Africa 296   Asia 143   Oceania 140   (970)
 ```
-
-All of `eal` is done. `dld` is next, and it is nearly twice the size — 1,135
-rows against eal's 604 — with 207 rows already carrying `fields_touched`.
