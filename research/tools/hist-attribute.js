@@ -58,7 +58,22 @@ const TOK = /\b(?:\d{1,4}\s?\([IVX]+\)\s?\/\s?\d{4}|\d{1,4}\/\d{2,4}|(?:No\.?|Nr
 const squash = s => String(s).replace(/\s+/g, "").toLowerCase();
 
 /** The key a coding row carries back to the history row it codes. */
-const matchKey = desc => norm(desc).slice(0, 30);
+const matchKey = desc => norm(desc).slice(0, 60).trim();
+
+// --coded-only keeps the entries that carry BOTH of a map's entry/exit codings,
+// because those are the only rows that can enter a cross-tab of the two. The
+// pair differs per map and there is no way to infer it from the schemes: dld
+// asks who is identified and who is discharged, eal asks who counts as a
+// newcomer and what ends the designation.
+const CODED_PAIR = {
+  dld: ["identificationCriteria", "dischargeCriteria"],
+  eal: ["newcomerCriteria", "removalCriteria"],
+};
+const PAIR = CODED_PAIR[domainId] || [];
+if (codedOnly && !PAIR.length) {
+  console.error("--coded-only has no criteria pair defined for " + domainId);
+  process.exit(2);
+}
 
 const rows = JSON.parse(fs.readFileSync(pathFor(domainId), "utf8"));
 const out = {};
@@ -69,7 +84,7 @@ for (const e of rows) {
   if (!hist.length) continue;
   if (codedOnly) {
     const c = e.coding || {};
-    if (!((c.identificationCriteria || {}).threshold_basis && c.dischargeCriteria)) continue;
+    if (!PAIR.every(f => c[f] && Object.keys(c[f]).length)) continue;
   }
   const text = {}, ntext = {};
   for (const k of fkeys) {

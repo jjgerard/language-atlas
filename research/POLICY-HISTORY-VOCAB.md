@@ -276,3 +276,79 @@ three rows out of 1,142 in the description probe. The history may simply not
 record much about discharge, in which case the answer to the original question
 is that the corpus cannot support it yet — and that is worth knowing for the
 price of one pass rather than five.
+
+---
+
+# The eal pass, and the one thing the attribution has produced
+
+Same method, same day: all 208 policyHistory rows on the 73 eal entries that
+carry both a `newcomerCriteria` and a `removalCriteria` coding, read and
+attributed by hand.
+
+    l2Support 86   system-wide 46   newcomerCriteria 42   l1Support 20
+    not determined 18   removalCriteria 13   bilingualEducationNotes 9
+    newcomerProportion 4   l3Support 4   achievementGap 1
+
+    tied to at least one real field  147  71%
+    system-wide only                  43  21%
+    left `not determined`             18   9%
+
+A little more residue than dld's 80/15/5, and the reason is visible in the
+rows: 20 of the 73 are sub-national United States entries whose history is a
+line of "ECS reading of statute and regulation as at May 2020, not a state
+publication" — a citation of a secondary survey, not a policy event, and
+`not determined` is the only honest answer to it.
+
+## The recurring judgement, written down so the next coder makes the same one
+
+`l2Support` is teaching the language of instruction. `l1Support` is the
+pupil's own language. `newcomerCriteria` is the CATEGORY or its boundary.
+
+So "ESSA replaced 'limited English proficient' with 'English learner'
+throughout the ESEA" — which appears on American Samoa, Guam, the Northern
+Mariana Islands and Puerto Rico — is `newcomerCriteria` on all four: the
+category was renamed, and nothing about support changed.
+
+## What the cross now says, on both maps
+
+    dld   34 years touch identificationCriteria
+           9 years touch dischargeCriteria, on 8 systems
+           3 co-occur on the same system in the same year
+
+    eal   42 years touch newcomerCriteria
+          13 years touch removalCriteria, on 12 systems
+           6 co-occur on the same system in the same year
+
+Nine and thirteen. The corpus still cannot answer whether exit rules move when
+entry rules do, and that is the honest headline.
+
+## But the eal co-occurrences are not random, and that IS worth recording
+
+Five of the six are the United States:
+
+  - United States 2015: "ESSA reauthorizes Title III, requires statewide
+    uniform EL entrance/exit procedures"
+  - Michigan 2023: "Revised Consolidated State Plan under ESSA restates
+    entrance and exit rules"
+  - New Jersey 2019 and 2020: entry-and-exit memo, then its replacement
+  - Rhode Island 2026: "Identification and Reclassification guidance"
+
+The sixth is Greenland's Order 21/1999, which "sets entry, review and exit"
+in one instrument.
+
+Check the obvious confound first. US entries are 32% of the attributed set and
+19% of the attributed rows — but **77% of the rows that touch
+removalCriteria**, four times their share. So this is not only
+over-representation.
+
+The mechanism is in the 2015 row: ESSA REQUIRES a state to publish uniform
+entrance and exit procedures, so one document governs both, and a revision to
+it necessarily changes both. Entry and exit co-occur in the United States
+because the statute makes them one document.
+
+That is a finding about how instruments are WRITTEN, not about policy
+converging — the same distinction the change-type axis turned on, and the
+second time this corpus has answered a question about policy with a fact about
+drafting. Worth carrying into the outcomes work: a year in which a system's
+entry and exit rules both changed may mean a reform, or it may mean the
+country files them on one form.
