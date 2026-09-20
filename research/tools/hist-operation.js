@@ -81,6 +81,22 @@ const describesAPlan = d =>
   || (/^[^.;]{0,60}\b(law|act|decree|ordinance|constitution)\b/i.test(d)
       && !/\b(plan|plans|strateg[a-z]*|policy|policies|framework|agenda|concept|recommendation[s]?|white paper)\b/i.test(d));
 
+// A Council of Europe monitoring opinion RECORDS what it found and RECOMMENDS
+// what should change. It adopts nothing, establishes nothing and amends
+// nothing, but its sentences are full of the words that say otherwise:
+//
+//   "Advisory Committee's Fifth Opinion on Portugal, ADOPTED 15 October 2025,
+//    RECORDS that Mirandese is taught only as an optional extra-curricular
+//    course ... and RECOMMENDS INTRODUCING it as a curricular SUBJECT"
+//
+// Four of these in indigenous Europe alone -- Albania, Bulgaria, Lithuania and
+// Portugal. They are dated observations, and a reader codes them as such; the
+// proposer's job here is to keep quiet, so this vetoes all three rules whose
+// vocabulary the sentences happen to use.
+const isMonitoringOpinion = d =>
+  /\bopinion\b/i.test(d)
+  && /\b(find|found|record|recommend|noting|note)\w*\b/i.test(d);
+
 const RULES = [
   // A PROGRAMME replaced is not an INSTRUMENT replaced. France's "ELCO formally
   // ended, replaced by EILE" and the Netherlands' "OETC replaced by OALT" both
@@ -98,7 +114,7 @@ const RULES = [
    // South Africa 1953: "Bantu Education Act reinforces apartheid through
    // segregated schooling, REPEALED IN 1979". The repeal is real and is not this
    // row's business; the row says what the Act did.
-   (d, h) => datedElsewhere(d, h) || /\bamend\w*\b[\s\S]{0,60}\b(replac|repeal)/i.test(d)],
+   (d, h) => datedElsewhere(d, h) || /\bamend\w*\b[\s\S]{0,60}\b(replac|repeal)|\brepeal\w*\b[\s\S]{0,40}\barticles?\b/i.test(d)],
   // A SEPARATE rule because the clause above needs /i for its noun list and this
   // one must not have it: an all-caps acronym is the instrument, and ESSA is the
   // row `instrument replaced` uses as its own gloss example. Two rules carrying
@@ -114,7 +130,7 @@ const RULES = [
    // shape and its coding is corrected alongside this. Laos 2003's "amended IN
    // 2003" is untouched: the word `in` marks a year that is the row's own.
    (d, h) => datedElsewhere(d, h) || /\bbeg(an|in|ins|un)\s+amend|\bamended since\b/i.test(d)],
-  ["international instrument accepted", /\bratif(y|ies|ied|ication)\b|\baccede(d|s)?\b|\baccession\b|\benters? into force for\b|\bdeclaration under\b/i,
+  ["international instrument accepted", /\bratif(y|ies|ied|ication)\b|\baccede(d|s)?\b|\baccession\b|\benters? into force for\b|\bdeclaration under\b|\bin force for\b|\bdeclaration takes effect\b|\bextends? the protection of\b/i,
    // Ratification DENIED is not ratification. Eritrea 1997 reads "Even if Eritrea
    // has NOT RATIFIED the Convention Against Discrimination in Education", which
    // is a dated record that nothing was accepted.
@@ -123,14 +139,14 @@ const RULES = [
   // made. Hungary 2013 and Slovenia 2007 both matched `adopt` here and were
   // hand-corrected to `plan or strategy issued`, so `adopt` now stands down when
   // the row's own subject is a plan, a strategy or a recommendation.
-  ["instrument made", /\benact(s|ed|ment)?\b|\bpromulgat(e|ed|es)\b|\bcomes? into force\b|\bin force\b|\b(takes?|took) effect\b|\beffective\b|\bpublished in the .{0,20}gazette\b|\bpass(es|ed)\b.{0,20}\b(act|law)\b|\b(act|law)s?\b.{0,30}\bpass(es|ed)\b|^(?![\s\S]*\b(strateg|recommendation|neither|never adopt|not adopt)\w*|[\s\S]*plan\w*)[\s\S]*\badopt(s|ed)\b/i,
+  ["instrument made", /\benact(s|ed|ment)?\b|\bpromulgat(e|ed|es)\b|\bcomes? into force\b|\bin force\b|\b(takes?|took) effect\b|\beffective\b|\bpublished in the .{0,20}gazette\b|\bpass(es|ed)\b.{0,20}\b(act|law)\b|\b(act|law)s?\b.{0,30}\bpass(es|ed)\b|^(?![\s\S]*\b(strateg|recommendation|neither|never adopt|not adopt)\w*|[\s\S]*(plan|action programme|programme for)\w*)[\s\S]*\badopt(s|ed)\b/i,
    // Two refusals. A PARENTHESISED "(in force 2019)" dates the instrument the
    // row describes -- Canada's "Education Act s 17 carries the
    // language-of-instruction power (in force 2019)" -- while China's unbracketed
    // "enacted, in force 1995-09-01" is a real making and must survive. And a row
    // that says outright the enactment is NOT VERIFIED is the one row in the
    // corpus that forbids this value in its own text.
-   (d, h) => datedElsewhere(d, h) || /\bnot verified\b|\bbefore the\b[\s\S]{0,40}\badopt|\bunder which\b|\bamended since\b|\badopted in\b[\s\S]{0,40}\btranslations?\b/i.test(d)],
+   (d, h) => datedElsewhere(d, h) || /\bnot verified\b|\bbefore the\b[\s\S]{0,40}\badopt|\bunder which\b|\bamended since\b|\badopted in\b[\s\S]{0,40}\btranslations?\b|\badopt\w*\s+[A-Z][a-z]+\s+for\b/i.test(d) || isMonitoringOpinion(d)],
   // Renaming, restructuring, merging and closing, at the precedence
   // HISTORY_OPERATION declares for them: below every operation on an instrument.
   // Nunavut's "Inuit Language Protection Act RENAMED the Inuktut Protection Act"
@@ -153,8 +169,8 @@ const RULES = [
   // thing established has to be a thing that can be walked into or enrolled on,
   // so the verb now needs a body-or-programme noun and the abstractions veto it.
   ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept|test|education|schooling)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programmes?|programs?|scheme|class|classes|committee|office|initiative|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training|groups?|task forces?|index|indexes|indices)\b/i,
-   /\b(requires?|requiring|makes?|obliges?|obliging|directs?|shall|must|will ensure|ensures?|ensuring)\b[\s\S]{0,60}\b(establishw*|maintain|creatw*|set up|provide|provision of)/i],
-  ["funding decided", /\bfunding agreement\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|£[\d,.]+|\bfunding formula\b|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
+   d => /\b(requires?|requiring|makes?|obliges?|obliging|directs?|shall|must|will ensure|ensures?|ensuring)\b[\s\S]{0,60}\b(establish\w*|maintain|creat\w*|set up|provide|provision of)|\bon the establishment of\b/i.test(d) || isMonitoringOpinion(d)],
+  ["funding decided", /\bfunding agreement\b|\bbudget of\b|\b\d[\d\s,.]*\s?(euros?|dollars?|pounds?)\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|£[\d,.]+|\bfunding formula\b|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
   ["plan or strategy issued", /\b(strategic|sector|master|implementation) plan\b|\bstrateg(y|ies)\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\bpledges?\b|\brecommendations?\b|\bwhite paper\b|\bframework document\b/i,
    // Beginning to develop a plan is not issuing one. Dominica 2020, "Ministry of
    // Education BEGAN DEVELOPING a new education sector plan", started matching
@@ -164,7 +180,7 @@ const RULES = [
    // "Education (Disability STRATEGIES and Pupils' Educational Records)
    // (Scotland) Act 2002", both carry a plan word as ordinary content: one
    // inside the thing a regulation regulates, one inside an Act's own title.
-   d => /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b|\b(procedure|rules|process) for\b[\s\S]{0,40}\brecommendations?\b|\([^)]*[Ss]trateg|\b(prepare|prepares|preparing|require|requires|requiring)\b[\s\S]{0,40}\bplans?\b/i.test(d) || describesAPlan(d) || /\b(include|includes|including|use|uses|using)\b[\s\S]{0,30}\bstrategies\b/i.test(d)],
+   d => /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b|\b(procedure|rules|process) for\b[\s\S]{0,40}\brecommendations?\b|\([^)]*[Ss]trateg|\b(prepare|prepares|preparing|require|requires|requiring)\b[\s\S]{0,40}\bplans?\b/i.test(d) || describesAPlan(d) || /\b(include|includes|including|use|uses|using)\b[\s\S]{0,30}\bstrategies\b/i.test(d) || isMonitoringOpinion(d)],
   ["state of affairs recorded", /\bdoes not\b|\bno specific\b|\bomits\b|\bfound no\b|\bnever uses\b|\bis silent\b|\bno such\b|\bnothing\b|\bnames only\b|\bbut not\b|\bneither\b/i],
 ];
 

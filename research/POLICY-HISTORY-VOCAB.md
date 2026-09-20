@@ -1637,3 +1637,105 @@ The residual swings 16 points across the three, the plan share swings 16, and th
 sum swings 9. That is the first out-of-sample evidence for it and it is consistent
 with the pattern — on **one region**, with a 47-row cell in it. Still not a
 finding. Four indigenous regions remain, and they will settle it properly.
+
+## indigenous Europe, 183 rows
+
+43 entries, one left unset.
+
+```
+  provision described               50   27%
+  international instrument accepted 29   16%
+  body or programme established     28   15%
+  instrument amended                26   14%
+  instrument made                   15    8%
+  plan or strategy issued           14    8%
+  state of affairs recorded          6    3%
+  funding decided                    5    3%
+  body or programme changed          5    3%
+  instrument replaced                4    2%
+```
+
+**The residual is 27% — by a wide margin the lowest cell in the whole project.**
+The previous low was `dld` Americas at 39%, and the high is `eal` Africa at 60%.
+Put the other way round: **73% of these rows record an operation**, against 34%
+in `eal` Africa.
+
+`international instrument accepted` at **16% is more than double its next-highest
+cell** (`dld` Africa, 7%). That is the European Charter for Regional or Minority
+Languages and the Framework Convention for the Protection of National Minorities,
+and the timeline is thick with their machinery: ratifications deposited,
+declarations notified, Part III extended to one more language, protection
+extended to Boyash and Romani. Twelve states do this, repeatedly, and it is an
+operation every time.
+
+`funding decided` appears five times here — as many as in the whole of `eal` —
+because the money is itemised: the Sorbian foundation's 24 million euros a year,
+Austria's ethnic-group funding doubling to 7,9 million, Law 482's two billion
+lire, Guernsey's £300,000 commission grant, German minority hours restored in
+Poland.
+
+The proposer scored **69 of 81, 85%**.
+
+### The defect this domain brought with it
+
+Four of the twelve errors were one shape that does not occur in `eal` or `dld` at
+all — the Council of Europe monitoring opinion:
+
+> "Advisory Committee's Fifth Opinion on Portugal, **adopted** 15 October 2025,
+> **records** that Mirandese is taught only as an optional extra-curricular
+> **course** … and **recommends introducing** it as a curricular **subject**"
+
+It adopts nothing, establishes nothing and amends nothing, but its sentences are
+full of the words that say otherwise. Vetoing `instrument made` was not enough:
+Portugal then fell through to `body or programme established` on "recommends
+introducing … subject". So the test is a named helper, `isMonitoringOpinion()`,
+and it vetoes all three rules whose vocabulary these sentences borrow. They
+abstain now, and a reader codes them `state of affairs recorded`.
+
+Two more were Charter operations in forms the pattern did not know — Serbia's
+"Charter … **in force for** Serbia from 1 June 2006" and Czechia's "extended
+**declaration takes effect**" — both read as instruments being made when they are
+acceptances.
+
+The rest were single shapes: a repeal of one **article** of a code is an
+amendment, not a break (France 2021, kept distinct from Wisconsin's "subsection
+(5) was repealed **and recreated**"); "States of Guernsey **adopted English** for
+ordinary business" adopts a language; a grant of "**100 000 euro**" is a sum with
+a space in it; and a law whose title is "**on the establishment of** classes"
+establishes nothing on the day the row is dated.
+
+Europe finished at **73/74, 99%**. The one error left standing is Guernsey 1737:
+"The same Act repealed the Administration of Justice (Language) Act (Ireland)
+1737" sits on a row dated 1737, and the only year in the sentence is the row's
+own, so `datedElsewhere` cannot see that the repeal happened in 2025. It is the
+Andorra shape — a sentence whose subject belongs to another row.
+
+### Repaired in passing
+
+An earlier edit to the duty veto had written `establishw*` and `creatw*` where
+`establish\\w*` and `creat\\w*` were meant. They still matched, by accident,
+through the bare stem — which is why nine regions of re-scoring never caught it.
+Fixed.
+
+### The post-hoc pattern fails its second test
+
+Oceania's three domains supported the idea that the residual and the plan share
+trade off and that their sum is the stable quantity. Europe's three do not:
+
+```
+domain        residual  plan   sum     n
+  eal            50%    16%    66%    123
+  dld            59%     1%    60%    171
+  indigenous     27%     8%    35%    182
+```
+
+The sum ranges 31 points across the three — worse than the plan share's 15, and
+no better than the residual's 32. **One region supported it and the next refuted
+it**, which is what a pattern found after the fact in ten cells should be
+expected to do. It stays in this file as a thing that was looked at and did not
+hold, not as a finding.
+
+What is left standing is simpler and stronger: **the operation-density of a cell
+is a property of that cell**, and it varies enormously — 27% residual in
+indigenous Europe against 60% in `eal` Africa. Neither the region nor the domain
+predicts it on its own.
