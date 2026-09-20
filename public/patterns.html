@@ -630,7 +630,11 @@ function changeOptions(cy) {
   return out;
 }
 
-function outcomeRows(atlas, pick, outcome, cycle) {
+// With a second category the groups become COMBINATIONS rather than a grid.
+// A 7 by 6 grid of these columns has 21 non-empty cells of which 13 hold fewer
+// than three countries, so a matrix is mostly holes; a flat list of the
+// combinations that clear the floor says the same thing and can be read.
+function outcomeRows(atlas, pick, outcome, cycle, split) {
   const by = (atlas.pisa && atlas.pisa.byCountry) || {};
   const groups = {};
   const seen = new Set();
@@ -640,16 +644,28 @@ function outcomeRows(atlas, pick, outcome, cycle) {
     if (!p) continue;
     const val = valueAt(p, outcome, cycle);
     if (val == null) continue;
-    const rows = Array.isArray(u.coding[pick.key]) ? u.coding[pick.key] : [u.coding[pick.key]];
-    const vals = new Set();
-    for (const r of rows) {
-      const v = (r || {})[pick.col];
-      if (v == null) continue;
-      for (const x of (Array.isArray(v) ? v : [v])) vals.add(x);
+    const valuesOf = q => {
+      if (!q || !u.coding[q.key]) return null;
+      const rows = Array.isArray(u.coding[q.key]) ? u.coding[q.key] : [u.coding[q.key]];
+      const out = new Set();
+      for (const r of rows) {
+        const v = (r || {})[q.col];
+        if (v == null) continue;
+        for (const x of (Array.isArray(v) ? v : [v])) out.add(x);
+      }
+      return out.size ? out : null;
+    };
+    const vals = valuesOf(pick);
+    if (!vals) continue;
+    let keys = [...vals];
+    if (split) {
+      const second = valuesOf(split);
+      if (!second) continue;
+      keys = [];
+      for (const a of vals) for (const b of second) keys.push(a + '  →  ' + b);
     }
-    if (!vals.size) continue;
     seen.add(u.cc);
-    for (const x of vals) (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, v: val });
+    for (const x of keys) (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, v: val });
   }
   return { groups, countries: seen.size };
 }
@@ -705,6 +721,8 @@ function renderOutcomes(atlas) {
     + '<label>Outcome <select id="o-out">' + OUT.map(k =>
         '<option value="' + esc(k) + '">' + esc((pisa.outcomes[k] || {}).label || k) + '</option>').join('') + '</select></label>'
     + '<label>Cycle <select id="o-cyc"></select></label>'
+    + '<label>Split by <select id="o-by"><option value="">nothing</option>' + opts.map((o, i) =>
+        '<option value="' + i + '">' + esc(o.map) + ' — ' + esc(o.field) + ': ' + esc(o.col.replace(/_/g, ' ')) + '</option>').join('') + '</select></label>'
     + '</div><div id="o-plot"></div><p class="why osrc" id="o-src"></p>';
 
   const fillCycles = () => {
@@ -723,7 +741,9 @@ function renderOutcomes(atlas) {
   const draw = () => {
     const pick = opts[Number($('#o-cat').value)];
     const outcome = $('#o-out').value;
-    $('#o-plot').innerHTML = plotOutcome(atlas, pick, outcome, $('#o-cyc').value);
+    const byIdx = $('#o-by').value;
+    const split = byIdx === '' ? null : opts[Number(byIdx)];
+    $('#o-plot').innerHTML = plotOutcome(atlas, pick, outcome, $('#o-cyc').value, split);
     const meta = pisa.outcomes[outcome] || {};
     const src = (pisa.sources || {})[meta.basis] || '';
     $('#o-src').innerHTML = esc(meta.note || '') + ' <span class="osrcline">' + esc(src) + '</span>'
@@ -735,22 +755,24 @@ function renderOutcomes(atlas) {
   $('#o-cat').addEventListener('change', draw);
   $('#o-out').addEventListener('change', () => { fillCycles(); draw(); });
   $('#o-cyc').addEventListener('change', draw);
+  $('#o-by').addEventListener('change', draw);
   fillCycles();
   draw();
 }
 
-function plotOutcome(atlas, pick, outcome, cycle) {
-  const { groups, countries } = outcomeRows(atlas, pick, outcome, cycle);
+function plotOutcome(atlas, pick, outcome, cycle, split) {
+  const { groups, countries } = outcomeRows(atlas, pick, outcome, cycle, split);
   const kept = Object.entries(groups).filter(([, g]) => g.length >= MIN_N)
     .sort((a, b) => omean(b[1].map(c => c.v)) - omean(a[1].map(c => c.v)));
   const dropped = Object.entries(groups).filter(([, g]) => g.length < MIN_N);
   if (!kept.length)
-    return '<p class="why">No category here reaches ' + MIN_N + ' countries with a value for this outcome and cycle.</p>';
+    return '<p class="why">No ' + (split ? 'combination' : 'category') + ' here reaches ' + MIN_N
+      + ' countries with a value for this outcome and cycle.</p>';
 
   const all = kept.flatMap(([, g]) => g.map(c => c.v));
   const lo = Math.min(...all), hi = Math.max(...all);
   const pad = Math.max(8, (hi - lo) * 0.06);
-  const X0 = 200, X1 = 660, RH = 48, TOP = 24;
+  const X0 = split ? 300 : 200, X1 = 660, RH = 48, TOP = 24;
   const H = TOP + RH * kept.length + 28;
   const sx = v => X0 + (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (X1 - X0);
   const f = n => n.toFixed(1);
@@ -796,7 +818,7 @@ function plotOutcome(atlas, pick, outcome, cycle) {
     + (String(cycle).startsWith('change:')
         ? ' with both ' + cycle.slice(7).split('-').join(' and ')
         : ' in ' + cycle)
-    + ', ' + kept.length + ' categories with ' + MIN_N + ' or more.'
+    + ', ' + kept.length + (split ? ' combinations' : ' categories') + ' with ' + MIN_N + ' or more.'
     + (dropped.length ? ' Not drawn: ' + dropped.map(([k, g]) => esc(k) + ' (' + g.length + ')').join(', ') + '.' : '')
     + ' Permutation p = ' + p.toFixed(3)
     + (gulf.length
@@ -805,7 +827,9 @@ function plotOutcome(atlas, pick, outcome, cycle) {
             : ', and ' + p2.toFixed(3) + ' without ' + gulf.length + ' Gulf '
               + (gulf.length === 1 ? 'system' : 'systems') + ' (' + gulf.map(esc).join(', ') + ').')
         : ', with no Gulf system in this comparison.')
-    + ' Read how far a category’s own countries spread before reading how far the boxes sit apart.</p>';
+    + ' Read how far a ' + (split ? 'combination' : 'category')
+    + '’s own countries spread before reading how far the boxes sit apart.'
+    + (split ? ' A country running several rules at once appears in several rows.' : '') + '</p>';
 }
 
 function renderCriteria(atlas) {
