@@ -1160,6 +1160,16 @@
     3,
     3
    ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle"
+    ],
+    "review_interval_months": 24,
+    "decider": "not stated",
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -4678,6 +4688,15 @@
      "speech-only difficulty"
     ],
     "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "age ceiling"
+    ],
+    "review_interval_months": 12,
+    "decider": "school or authority",
+    "rule_locus": "national statute"
    }
   }
  },
@@ -4893,6 +4912,15 @@
     4,
     4
    ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
+    "decider": "not stated",
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -5006,6 +5034,15 @@
    "dischargeCriteria": [
     4
    ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
+    "decider": "not stated",
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -5387,6 +5424,15 @@
    "dischargeCriteria": [
     4
    ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
+    "decider": "not stated",
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -5608,6 +5654,15 @@
    "dischargeCriteria": [
     4
    ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
+    "decider": "not stated",
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -5693,6 +5748,15 @@
    "dischargeCriteria": [
     4
    ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
+    "decider": "not stated",
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -5914,6 +5978,15 @@
    "dischargeCriteria": [
     4
    ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
+    "decider": "not stated",
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -6264,6 +6337,13 @@
     "exclusions": [
      "none stated"
     ],
+    "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "not stated"
+    ],
+    "decider": "not stated",
     "rule_locus": "national statute"
    }
   }
@@ -7580,6 +7660,14 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "review without criterion"
+    ],
+    "review_interval_months": 12,
+    "decider": "school or authority",
+    "rule_locus": "national rule, local application"
    }
   }
  },
@@ -7658,6 +7746,13 @@
     "exclusions": [
      "none stated"
     ],
+    "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "none established"
+    ],
+    "decider": "not stated",
     "rule_locus": "national statute"
    }
   }
@@ -7761,6 +7856,13 @@
     "exclusions": [
      "none stated"
     ],
+    "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle"
+    ],
+    "decider": "not stated",
     "rule_locus": "national statute"
    }
   }
@@ -9488,6 +9590,14 @@
      "none stated"
     ],
     "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "review without criterion"
+    ],
+    "review_interval_months": 12,
+    "decider": "school or authority",
+    "rule_locus": "national statute"
    }
   }
  },
@@ -9803,6 +9913,13 @@
    "identificationCriteria": {
     "threshold_basis": "clinical diagnosis",
     "bilingual_handling": "silent",
+    "decider": "not stated",
+    "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
     "decider": "not stated",
     "rule_locus": "national statute"
    }
@@ -10337,6 +10454,16 @@
     3,
     4
    ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "decision on continuing need",
+     "age ceiling"
+    ],
+    "decider": "municipality",
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -10923,6 +11050,14 @@
      "none stated"
     ],
     "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "decision on continuing need"
+    ],
+    "decider": "multidisciplinary team",
+    "rule_locus": "national statute"
    }
   }
  },
@@ -11326,6 +11461,15 @@
     "exclusions": [
      "none stated"
     ],
+    "rule_locus": "national rule, local application"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "decision on continuing need"
+    ],
+    "review_interval_months": 12,
+    "decider": "school or authority",
     "rule_locus": "national rule, local application"
    }
   }
@@ -12060,6 +12204,15 @@
     4,
     4
    ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
+    "decider": "not stated",
+    "rule_locus": "not stated"
+   }
   }
  },
  {
@@ -12702,6 +12855,14 @@
      "intellectual disability"
     ],
     "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "fixed time limit",
+     "decision on continuing need"
+    ],
+    "decider": "not stated",
+    "rule_locus": "national statute"
    }
   }
  },
@@ -12789,6 +12950,15 @@
    "dischargeCriteria": [
     4
    ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
+    "decider": "not stated",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
@@ -15933,6 +16103,13 @@
     "exclusions": [
      "none stated"
     ],
+    "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "none established"
+    ],
+    "decider": "not stated",
     "rule_locus": "national statute"
    }
   }
@@ -22127,6 +22304,13 @@
      "none stated"
     ],
     "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "review without criterion"
+    ],
+    "decider": "school or authority",
+    "rule_locus": "national statute"
    }
   }
  },
@@ -24471,6 +24655,14 @@
      "socio-cultural factors"
     ],
     "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "decision on continuing need"
+    ],
+    "decider": "not stated",
+    "rule_locus": "national statute"
    }
   }
  },
@@ -24942,6 +25134,16 @@
     "exclusions": [
      "none stated"
     ],
+    "rule_locus": "national framework, sub-national rules"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "decision on continuing need",
+     "age ceiling"
+    ],
+    "review_interval_months": 36,
+    "decider": "multidisciplinary team",
     "rule_locus": "national framework, sub-national rules"
    }
   }
@@ -28611,6 +28813,13 @@
      "none stated"
     ],
     "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "none established"
+    ],
+    "decider": "not stated",
+    "rule_locus": "national statute"
    }
   }
  },
@@ -29426,6 +29635,13 @@
      "none stated"
     ],
     "rule_locus": "not stated"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
+    "decider": "not stated",
+    "rule_locus": "national statute"
    }
   }
  }
