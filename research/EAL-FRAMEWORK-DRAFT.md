@@ -127,3 +127,77 @@ applies: one row here is one system, which storage can hold. And the existing 61
 `newcomerCriteria` codings do not move — this frame sits beside that one rather
 than replacing it, because "who is designated a newcomer" stays a real question
 for the systems that designate one.
+
+## How this compares with the coding already in the file
+
+They answer different questions, and the difference is clean enough to state in
+a line. **The existing schemes describe the CATEGORY; this draft describes the
+PROVISION.** `newcomerCriteria` and `removalCriteria` ask who is designated, by
+what test, who decides and how they leave. Axes 1, 2 and 4 here ask what exists,
+for whom, carried by what, and how much of it.
+
+### Reach
+
+```
+  eal.newcomerCriteria      coded on  66 national systems
+  eal.removalCriteria       coded on  43
+  dld.identificationCriteria coded on 193
+  dld.dischargeCriteria     coded on  49
+  this draft, axes 1, 2, 4   would reach ~189 (the l2Support/l1Support content)
+```
+
+### What each spends its capacity on
+
+Across the four system-grained schemes, 632 of 1562 coded values — **40%** —
+record that the entry does not answer:
+
+```
+  dld.identificationCriteria.bilingual_handling   193 values   97% silent
+  dld.identificationCriteria.exclusions           200         90%
+  eal.newcomerCriteria.decided_by                  64         55%
+  dld.identificationCriteria.threshold_basis      179         39%
+  dld.identificationCriteria.decider              192         38%
+  eal.removalCriteria.decided_by                   43         37%
+  eal.removalCriteria.exit_mechanism               43         23%
+  eal.newcomerCriteria.designation                 61          0%
+  eal.newcomerCriteria.triggers                   117          0%
+```
+
+That is not a failure — `not stated` is somebody having read the entry and found
+no answer, which is the distinction this project keeps everywhere. But it does
+locate the strain. The **who-decides** columns run 35 to 55% silent, because an
+entry can describe a rule at length without naming who applies it.
+
+And `designation` and `triggers` sit at **0%** for a reason worth seeing clearly:
+a system with no category carries an absence flag instead of a coding, so those
+columns never have to say `not stated`. The vocabulary is clean because it only
+speaks where the frame fits. The 117 systems it does not reach are not silence
+inside the column; they are outside it.
+
+### The one place they collide, and it is already documented
+
+`rule_locus` carries `national, non-binding` — a value about how hard a rule
+BINDS, on an axis about WHERE it is made. `src/coding.js` says so about itself:
+the axis “was never purely about LEVEL: `national statute` says ‘binding’ as
+well as ‘national’, and eight entries fell through the gap that leaves.”
+
+Axis 3 here is that separation done properly. It is not a new idea; it is the
+fix for a tension the file records and worked around by adding a value to the
+wrong axis. Three eal systems and eight dld ones currently sit on it.
+
+### Where this draft is weaker
+
+Axis 3 will be heavily `not stated`. Modal strength has to be read off verbs
+that are often simply absent, and the existing who-decides columns already show
+what that looks like at 35 to 55%. If it lands worse than those, the axis is
+wrong rather than incomplete.
+
+Axis 1 partly duplicates `triggers` for the 61 systems that carry both — a
+system triggered by `immigration status` is serving newly arrived migrants, and
+the new column would say so again. The duplication is the price of a column that
+also speaks for the 115 systems `triggers` cannot reach, and it is worth naming
+rather than discovering later.
+
+Nothing here replaces anything. “Who counts as a newcomer” stays a real question
+for the systems that designate one; this frame sits beside it and answers for
+the ones that do not.
