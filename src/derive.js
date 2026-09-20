@@ -61,7 +61,15 @@ function asText(v) {
           return [r.language, r.level, r.institution, count, r.year, r.note]
             .filter(Boolean).join(' — ');
         }
-        return [r.year, r.value, r.description || r.note].filter(Boolean).join(' — ');
+        // A series row flattens with its unit attached to the number, because
+        // "28467" and "4.0%" read identically once the structure is gone and
+        // the whole point of typing the row was to stop that. `counted` and
+        // `basis` follow, since a figure a reader cannot attribute to a
+        // population is a figure they cannot use.
+        const qty = [r.value, r.unit].filter(Boolean).join(' ');
+        const of = r.denominator ? 'of ' + r.denominator : '';
+        return [r.year, qty, of, r.counted, r.basis, r.description || r.note]
+          .filter(Boolean).join(' — ');
       })
       .join('\n');
   }

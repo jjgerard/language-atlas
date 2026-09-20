@@ -7,7 +7,18 @@
 // Each tuple is [key, label, type, hint]. `type` is one of:
 //   'text'    free prose (the default when omitted)
 //   'history' a dated list of [{year, description}]
-//   'series'  a dated list of [{year, value, note}]
+//   'series'  a dated list of [{year, value, unit, denominator, counted,
+//             basis, note}] -- see SHAPES in store.js for why the last four
+//             exist. `value` stays a STRING, because sources publish "28467",
+//             "4.0%" and "~7"; the added columns carry what kind of number it
+//             is and what it counted, which is what decides whether two
+//             figures can be set against each other at all.
+//               unit   count | percent | per 1,000
+//               basis  administrative count | survey | estimate
+//               denominator and counted are the source own words.
+//             All four stay BLANK rather than guessed. A blank says nobody
+//             has typed this row yet, which is true of every row written
+//             before the columns existed.
 // `hint` is the guidance shown under that field on the submission form.
 //
 // A 'text' field is written as sub-bullets, one per line: at most four points,
@@ -64,7 +75,7 @@ const DOMAINS = [
       ['workforce', 'Workforce', 'text', 'In this order, omitting any you cannot answer: how many there are and when they were counted · the ratio to population · the qualification route · where they are and are not.'],
       ['dischargeCriteria', 'Discharge criteria', 'text', 'In this order, omitting any you cannot answer: what ends support · who decides · whether a child can re-enter · any age ceiling.'],
       ['outcomesEvidence', 'Outcomes evidence', 'text', 'In this order, omitting any you cannot answer: what was measured · by whom and when · what it found · whether it is repeated.'],
-      ['identifiedPrevalence', 'Identified prevalence', 'series', 'Rates identified by the system, by year, with the source of each figure.'],
+      ['identifiedPrevalence', 'Identified prevalence', 'series', 'Rates identified by the system, by year, with the source of each figure. Give `unit` (count, percent, per 1,000) and `basis` (administrative count, survey, estimate) on every row, and `counted` in the words the source uses -- a figure for all special educational needs is not a figure for language disorder, and only `counted` can say so.'],
       ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, guidance or funding decision, one per row.'],
     ],
   },
@@ -76,7 +87,7 @@ const DOMAINS = [
     fields: [
       ['newcomerCriteria', 'Newcomer criteria', 'text', 'In this order, omitting any you cannot answer: who counts as a newcomer or second-language pupil · on what evidence · at what point it is decided · who decides.'],
       ['removalCriteria', 'Removal criteria', 'text', 'In this order, omitting any you cannot answer: what ends the designation · who decides · any time limit · whether a pupil can be designated again.'],
-      ['newcomerProportion', 'Newcomer proportion', 'series', 'Share of pupils designated, by year, with the source of each figure.'],
+      ['newcomerProportion', 'Newcomer proportion', 'series', 'Share of pupils designated, by year, with the source of each figure. Give `unit` and `basis` on every row, and `denominator` in the words the source uses -- a PISA share of 15-year-olds speaking another language at home is not a count of pupils the system designated, and only `denominator` and `counted` keep the two apart.'],
       ['achievementGap', 'Education outcomes', 'text', 'In this order, omitting any you cannot answer: what is measured · what the gap is · who they are compared against · whether it is tracked over time.'],
       ['l2Support', 'L2 support', 'text', 'In this order, omitting any you cannot answer: who delivers it · where, in the ordinary class, by withdrawal, or in a separate setting · how much of it and for how long · what qualification the teacher needs.'],
       ['l1Support', 'L1 support', 'text', 'In this order, omitting any you cannot answer: whether the home language is taught at all · who provides it, the school, the state or the community · at which stages · whether it can be examined.'],
@@ -108,7 +119,7 @@ const DOMAINS = [
       ['materials', 'Curriculum and materials', 'text', 'In this order, omitting any you cannot answer: whether a curriculum exists · whether textbooks or teaching materials exist · whether an agreed orthography exists · who is charged with producing them.'],
       ['assessment', 'Assessment', 'text', 'In this order, omitting any you cannot answer: whether the language can be examined · at which stage, and in what qualification · whether a subject can be examined IN it · whether a pass counts toward leaving or entry.'],
       ['revitalisation', 'Revitalisation', 'text', 'In this order, omitting any you cannot answer: what is being done to reverse language shift · who runs it · since when · whether it is funded, and by whom.'],
-      ['speakers', 'Speakers', 'series', 'Speaker numbers or shares, by year, with the source of each figure and who it counted.'],
+      ['speakers', 'Speakers', 'series', 'Speaker numbers or shares, by year, with the source of each figure. `counted` carries who it counted; give `unit` and `basis` on every row, since a census count and a community estimate are not the same kind of fact.'],
       ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, order or funding decision, one per row.'],
     ],
   },
@@ -125,7 +136,7 @@ const DOMAINS = [
       ['curriculumTime', 'Curriculum time', 'text', 'In this order, omitting any you cannot answer: how much time, in hours or periods · at which stage that applies · whether it is a minimum, a recommendation, or hours actually taught · who sets it.'],
       ['assessment', 'Assessment', 'text', 'In this order, omitting any you cannot answer: the qualification or exam it leads to · which languages can be examined · whether it is required to progress or to leave school · what standard it is set against, such as the CEFR.'],
       ['teacherSupply', 'Teacher supply', 'text', 'In this order, omitting any you cannot answer: the qualification route · whether there is a shortage, and of which languages · how many teachers there are, and when counted · what happens where a language cannot be staffed.'],
-      ['uptake', 'Uptake', 'series', 'Numbers or shares of pupils taking a language, by year, with the source of each figure.'],
+      ['uptake', 'Uptake', 'series', 'Numbers or shares of pupils taking a language, by year, with the source of each figure. Give `unit` and `basis` on every row. `counted` matters most here: Eurostat educ_uoe_lang01 counts ENROLMENTS in the study of a language, not pupils, so a pupil taking two languages is counted twice.'],
       ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, curriculum order or funding decision, one per row.'],
     ],
   },
@@ -163,7 +174,7 @@ const DOMAINS = [
       ['requiredStudy', 'Compulsory language study', 'text', 'In this order, omitting any you cannot answer: whether every student must study a language whatever their degree · which language · how much of it · who may exempt a student.'],
       ['entryRequirements', 'Entry requirements', 'text', 'In this order, omitting any you cannot answer: whether a school language qualification is needed to enter · which, and at what level · whether a beginners route exists for those without it · who sets the requirement, the state or each institution.'],
       ['teacherPipeline', 'Teacher pipeline', 'text', 'In this order, omitting any you cannot answer: whether higher education trains the school system\'s language teachers · at which institutions · by what route, a degree, a postgraduate qualification or in service · whether places are capped, funded or bursaried.'],
-      ['enrolment', 'Enrolment', 'series', 'Students, enrolments or degrees awarded, by year, with the source of each figure and what it counted. Say whether it counts students or course enrolments — they are not the same number.'],
+      ['enrolment', 'Enrolment', 'series', 'Students, enrolments or degrees awarded, by year, with the source of each figure. Whether it counts students or course enrolments belongs in `counted`, not in prose -- they are not the same number. Give `unit` and `basis` on every row.'],
       ['policyHistory', 'Policy history', 'history', 'Dated changes: the act, funding decision, or a department opening or closing, one per row.'],
     ],
   },

@@ -204,7 +204,10 @@ let domain = live.find(d => d.id === params.get('domain')) || null;
 // per field, because the field list comes from the server.
 const SHAPES = {
   history: [{ k: 'year', ph: 'Year or range', narrow: true }, { k: 'description', ph: 'What changed' }],
-  series: [{ k: 'year', ph: 'Year', narrow: true }, { k: 'value', ph: 'Value', narrow: true }, { k: 'note', ph: 'Source or note' }],
+  series: [{ k: 'year', ph: 'Year', narrow: true }, { k: 'value', ph: 'Value', narrow: true },
+           { k: 'unit', ph: 'count / percent', narrow: true }, { k: 'denominator', ph: 'of what (percent only)' },
+           { k: 'counted', ph: 'who or what was counted' }, { k: 'basis', ph: 'administrative count / survey / estimate', narrow: true },
+           { k: 'note', ph: 'Source or note' }],
   collaborators: [{ k: 'name', ph: 'Name' }, { k: 'inst', ph: 'Institution' }],
   docLinks: [{ k: 'label', ph: 'What it is' }, { k: 'url', ph: 'https://…' }],
 };

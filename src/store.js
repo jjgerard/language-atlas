@@ -88,7 +88,31 @@ function records(value, maxItems, keys) {
 
 const SHAPES = {
   history: ['year', 'description'],
-  series: ['year', 'value', 'note'],
+  // A dated figure, with the four things that decide whether two figures can
+  // be set against each other. It was [year, value, note], and `value` is a
+  // STRING because that is how sources publish -- "28467", "4.0%", "~7". The
+  // string is fine; what was missing is what kind of number it is and what it
+  // counted, and those were left to prose in `note`.
+  //
+  // What that cost, in one row: Angola's identifiedPrevalence carries 28467
+  // with a note explaining it is "Students reported with special education
+  // needs" and that the published breakdown "names intellectual disability,
+  // hearing impairment, physical disability and visual impairment only --
+  // there is no speech or language category, so this figure does not count
+  // language disorder". A reader who takes the 28467 and not the note has a
+  // language-disorder prevalence for Angola that is not one. In the same
+  // column sit an IDEA child count, a PISA home-language share and "1 in 14"
+  // from advocacy -- an administrative count, a survey and an epidemiological
+  // estimate, distinguishable only by reading.
+  //
+  //   unit         what kind of number: count, percent, per 1,000
+  //   denominator  what a percent is OF, in the source's words; blank for a count
+  //   counted      WHO or WHAT was counted, in the source's words
+  //   basis        how it was produced: administrative count, survey, estimate
+  //
+  // Values are stated in each field's hint rather than enforced here, which is
+  // the pattern `offering.level` and `programme.orientation` already use.
+  series: ['year', 'value', 'unit', 'denominator', 'counted', 'basis', 'note'],
   // A named language, with the identifiers that make it checkable. `wals` is
   // WALS's OWN code and is not the ISO code: Maori is `mao` in WALS and `mri`
   // in ISO 639-3, and `mri` is Moraori in WALS. A row with no `wals` gets no
