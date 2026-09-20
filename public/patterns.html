@@ -702,7 +702,7 @@ function renderOutcomes(atlas) {
       + '<option value="scatter">one cycle against another</option>'
       + '</select></label>'
     + '<label>Category <select id="o-cat">' + catOptions(0) + '</select></label>'
-    + '<label class="o-boxonly">Split by <select id="o-by"><option value="">nothing</option>' + catOptions(-1) + '</select></label>'
+    + '<label class="o-splitonly">Split by <select id="o-by"><option value="">nothing</option>' + catOptions(-1) + '</select></label>'
     + '<label>Outcome <select id="o-out">' + outOptions() + '</select></label>'
     + '<label class="o-cyconly">Cycle <select id="o-cyc"></select></label>'
     + '<label class="o-scatteronly">From <select id="o-x"></select></label>'
@@ -727,7 +727,9 @@ function renderOutcomes(atlas) {
   };
 
   const showFor = kind => {
-    host.querySelectorAll('.o-boxonly').forEach(e => e.style.display = kind === 'box' ? '' : 'none');
+    // Split by applies to the box plots and to the spread-across-cycles view;
+    // the scatter already spends both axes on cycles and has none left for it.
+    host.querySelectorAll('.o-splitonly').forEach(e => e.style.display = kind === 'scatter' ? 'none' : '');
     host.querySelectorAll('.o-cyconly').forEach(e => e.style.display = kind === 'scatter' ? 'none' : '');
     host.querySelectorAll('.o-scatteronly').forEach(e => e.style.display = kind === 'scatter' ? '' : 'none');
   };
@@ -740,12 +742,12 @@ function renderOutcomes(atlas) {
     const min = Math.max(MIN_FLOOR, Number($('#o-min').value) || MIN_FLOOR);
     const cy = cyclesFor(pisa, outcome);
     let html;
-    if (kind === 'trend') html = plotTrend(atlas, pick, outcome, cy, min);
+    const byIdx0 = $('#o-by').value;
+    const splitSel = byIdx0 === '' ? null : opts[Number(byIdx0)];
+    if (kind === 'trend') html = plotTrend(atlas, pick, outcome, cy, min, splitSel);
     else if (kind === 'scatter') html = plotScatter(atlas, pick, outcome, $('#o-x').value, $('#o-y').value, min);
     else {
-      const byIdx = $('#o-by').value;
-      const split = byIdx === '' ? null : opts[Number(byIdx)];
-      html = plotOutcome(atlas, pick, outcome, $('#o-cyc').value, split, min);
+      html = plotOutcome(atlas, pick, outcome, $('#o-cyc').value, splitSel, min);
     }
     $('#o-plot').innerHTML = html;
     const meta = pisa.outcomes[outcome] || {};
@@ -869,21 +871,21 @@ function plotOutcome(atlas, pick, outcome, cycle, split, min) {
 }
 
 // ---- category distributions across cycles ----------------------------------
-// One row per category, one box per cycle, on a shared scale.
+// One row per category, or per COMBINATION when a second column is chosen, and
+// one box per cycle on a shared scale.
 //
-// This started as five lines of category means and that was wrong. Everything
-// else on this panel says to read the spread before the difference between
-// categories, and a line of means throws the spread away -- five lines moving
-// roughly together look like structure when what they show is that all of them
-// dipped in 2022 and came back. A box per cycle keeps the thing worth reading
-// and adds the time axis to it.
+// This started as lines of category means and that was wrong. Everything else on
+// this panel says to read the spread before the difference between categories,
+// and a line of means throws the spread away -- lines moving roughly together
+// look like structure when what they show is that all of them dipped in 2022 and
+// came back. A box per cycle keeps the thing worth reading and adds time to it.
 //
 // Every box is drawn over the SAME countries at every cycle: a country missing
 // one cycle is out of the series entirely. Letting membership change between
 // cycles draws a trend that is partly the sample moving, which is the mistake
 // that made a 6.5-point widening from 2022 to 2025 look like a deterioration
 // when the fixed-set view showed 2022 as the anomaly instead.
-function plotTrend(atlas, pick, outcome, cycles, min) {
+function plotTrend(atlas, pick, outcome, cycles, min, split) {
   if (cycles.length < 2)
     return '<p class="why">This outcome carries one cycle, so there is no trend to draw. The science series runs 2015 to 2025.</p>';
   const by = (atlas.pisa && atlas.pisa.byCountry) || {};
@@ -897,24 +899,49 @@ function plotTrend(atlas, pick, outcome, cycles, min) {
     if (!v || !cycles.every(c => v[c] != null)) continue;
     const vals = valuesOf(u, pick);
     if (!vals) continue;
+    let keys = [...vals];
+    if (split) {
+      const second = valuesOf(u, split);
+      if (!second) continue;
+      keys = [];
+      for (const a of vals) for (const b of second) keys.push(a + PAIR + b);
+    }
     seen.add(u.cc);
-    for (const x of vals)
-      (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, series: cycles.map(c => v[c]) });
+    const series = cycles.map(c => v[c]);
+    for (const x of keys) (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, series });
   }
   const kept = Object.entries(groups).filter(([, g]) => g.length >= min)
     .sort((a, b) => b[1].length - a[1].length);
   const dropped = Object.entries(groups).filter(([, g]) => g.length < min);
   if (!kept.length)
-    return '<p class="why">No category reaches ' + min + ' countries present in all of ' + cycles.join(', ') + '.</p>';
+    return '<p class="why">No ' + (split ? 'combination' : 'category') + ' reaches ' + min
+      + ' countries present in all of ' + cycles.join(', ') + '.</p>';
+
+  // A value that clears the floor in NO combination is dropped whole rather than
+  // listed once per pair it fails in. What remains are pairs whose two ends each
+  // survive somewhere and only fail together -- a different fact.
+  const part = (k, i) => String(k).split(PAIR)[i];
+  const survA = new Set(kept.map(([k]) => part(k, 0)));
+  const survB = new Set(kept.map(([k]) => part(k, 1)));
+  const allKeys = Object.keys(groups);
+  const goneA = split ? [...new Set(allKeys.map(k => part(k, 0)))].filter(x => !survA.has(x)) : [];
+  const goneB = split ? [...new Set(allKeys.map(k => part(k, 1)))].filter(x => !survB.has(x)) : [];
+  const gonePairs = split
+    ? dropped.filter(([k]) => survA.has(part(k, 0)) && survB.has(part(k, 1)))
+    : dropped;
 
   const all = kept.flatMap(([, g]) => g.flatMap(x => x.series));
   const lo = Math.min(...all), hi = Math.max(...all);
   const pad = Math.max(6, (hi - lo) * 0.05);
-  const L = 152, CW = Math.min(126, (660 - L) / cycles.length), RH = 112, TOP = 30;
-  const H = TOP + RH * kept.length + 12;
-  const half = RH / 2 - 14;
+  // Rows get shorter as they multiply, so a split of eight combinations stays on
+  // one screen instead of becoming a scroll nobody reaches the bottom of.
+  const RH = kept.length > 7 ? 82 : kept.length > 5 ? 96 : 112;
+  const L = split ? 288 : 152;
+  const CW = Math.min(126, (660 - L) / cycles.length);
+  const TOP = 30, H = TOP + RH * kept.length + 12, half = RH / 2 - 14;
   const sy = (v, cy) => cy + half - (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (half * 2);
   const f = n => n.toFixed(1);
+  const bw = Math.min(26, CW * 0.24);
 
   let s = '<svg viewBox="0 0 684 ' + H + '" width="100%" role="img" aria-label="distribution of the outcome by '
     + esc(pick.col.replace(/_/g, ' ')) + ' across PISA cycles">';
@@ -927,7 +954,6 @@ function plotTrend(atlas, pick, outcome, cycles, min) {
     s += '<line x1="' + L + '" y1="' + (TOP + RH * i) + '" x2="660" y2="' + (TOP + RH * i) + '" stroke="var(--border)" stroke-width="1"/>'
       + '<text x="' + (L - 14) + '" y="' + (cy - 3) + '" text-anchor="end" class="olab">' + esc(lab) + '</text>'
       + '<text x="' + (L - 14) + '" y="' + (cy + 12) + '" text-anchor="end" class="on">' + g.length + ' countries</text>';
-    // A zero line where the scale crosses it, so "no gap" is visible per row.
     if (lo - pad < 0 && hi + pad > 0)
       s += '<line x1="' + L + '" y1="' + f(sy(0, cy)) + '" x2="660" y2="' + f(sy(0, cy)) + '" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="3 3"/>';
     cycles.forEach((c, j) => {
@@ -935,10 +961,10 @@ function plotTrend(atlas, pick, outcome, cycles, min) {
       const d = g.map(x => x.series[j]).sort((a, b) => a - b);
       const q1 = oquant(d, 0.25), q2 = oquant(d, 0.5), q3 = oquant(d, 0.75);
       s += '<line x1="' + bx + '" y1="' + f(sy(d[0], cy)) + '" x2="' + bx + '" y2="' + f(sy(d[d.length - 1], cy)) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
-        + '<line x1="' + (bx - 6) + '" y1="' + f(sy(d[0], cy)) + '" x2="' + (bx + 6) + '" y2="' + f(sy(d[0], cy)) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
-        + '<line x1="' + (bx - 6) + '" y1="' + f(sy(d[d.length - 1], cy)) + '" x2="' + (bx + 6) + '" y2="' + f(sy(d[d.length - 1], cy)) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
-        + '<rect x="' + (bx - 13) + '" y="' + f(sy(q3, cy)) + '" width="26" height="' + f(Math.max(1.5, sy(q1, cy) - sy(q3, cy))) + '" fill="var(--bg-accent)" stroke="var(--border-accent)" stroke-width="1.2"/>'
-        + '<line x1="' + (bx - 13) + '" y1="' + f(sy(q2, cy)) + '" x2="' + (bx + 13) + '" y2="' + f(sy(q2, cy)) + '" stroke="var(--text-accent)" stroke-width="2"/>';
+        + '<line x1="' + f(bx - bw / 4) + '" y1="' + f(sy(d[0], cy)) + '" x2="' + f(bx + bw / 4) + '" y2="' + f(sy(d[0], cy)) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
+        + '<line x1="' + f(bx - bw / 4) + '" y1="' + f(sy(d[d.length - 1], cy)) + '" x2="' + f(bx + bw / 4) + '" y2="' + f(sy(d[d.length - 1], cy)) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
+        + '<rect x="' + f(bx - bw / 2) + '" y="' + f(sy(q3, cy)) + '" width="' + f(bw) + '" height="' + f(Math.max(1.5, sy(q1, cy) - sy(q3, cy))) + '" fill="var(--bg-accent)" stroke="var(--border-accent)" stroke-width="1.2"/>'
+        + '<line x1="' + f(bx - bw / 2) + '" y1="' + f(sy(q2, cy)) + '" x2="' + f(bx + bw / 2) + '" y2="' + f(sy(q2, cy)) + '" stroke="var(--text-accent)" stroke-width="2"/>';
       g.forEach((x, n) => {
         const jx = bx + ((n % 3) - 1) * 4.2;
         s += '<circle cx="' + f(jx) + '" cy="' + f(sy(x.series[j], cy)) + '" r="2.2" fill="var(--text-primary)" stroke="var(--surface-2)" stroke-width="0.6"/>';
@@ -959,15 +985,28 @@ function plotTrend(atlas, pick, outcome, cycles, min) {
     const d = g.map(x => x.series[j]).sort((a, b) => a - b);
     return oquant(d, 0.75) - oquant(d, 0.25);
   }));
+  // Semicolons, not commas: `assessed, no criterion` has a comma in it.
+  const extra = (goneA.length || goneB.length
+      ? ' Dropped whole, reaching ' + min + ' in no combination — '
+        + [goneA.length ? esc(pick.col.replace(/_/g, ' ')) + ': ' + goneA.map(esc).join('; ') : '',
+           goneB.length ? esc(split.col.replace(/_/g, ' ')) + ': ' + goneB.map(esc).join('; ') : '']
+          .filter(Boolean).join('. ') + '.'
+      : '')
+    + (gonePairs.length
+      ? (split ? ' Also not drawn: ' : ' Not drawn: ')
+        + gonePairs.slice(0, 6).map(([k, g]) => esc(k) + ' (' + g.length + ')').join('; ')
+        + (gonePairs.length > 6 ? ' and ' + (gonePairs.length - 6) + ' more' : '') + '.'
+      : '');
   return s + '<p class="why"><strong>' + seen.size + ' countries</strong> present in all of '
-    + cycles.join(', ') + ', ' + kept.length + ' categories with ' + min + ' or more.'
-    + (dropped.length ? ' Not drawn: ' + dropped.map(([k, g]) => esc(k) + ' (' + g.length + ')').join('; ') + '.' : '')
+    + cycles.join(', ') + ', ' + kept.length + ' ' + (split ? 'combinations' : 'categories')
+    + ' with ' + min + ' or more.' + extra
     + ' Every box is the same countries at every cycle — a country missing one is out of the series, '
     + 'because letting membership change draws a trend that is partly the sample moving. '
     + 'Medians move ' + Math.min(...medianSpan).toFixed(1) + ' to '
     + (Math.max(...medianSpan) > 0 ? '+' : '') + Math.max(...medianSpan).toFixed(1)
     + ' score points across the span, inside boxes whose own interquartile range runs '
-    + Math.min(...iqr).toFixed(1) + ' to ' + Math.max(...iqr).toFixed(1) + '.</p>';
+    + Math.min(...iqr).toFixed(1) + ' to ' + Math.max(...iqr).toFixed(1) + '.'
+    + (split ? ' A country running several rules at once appears in several rows.' : '') + '</p>';
 }
 
 // ---- one cycle against another ---------------------------------------------
