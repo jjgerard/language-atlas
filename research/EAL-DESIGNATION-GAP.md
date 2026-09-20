@@ -5,7 +5,10 @@ says what form the category takes; `triggers` says what puts a pupil in it. A
 system with triggers and no designation is asserting a way into a category it
 does not record having.
 
-There are 28. None carry an absence flag. They are not one problem, and the
+There are 28. None carries an absence flag — checked with `Object.keys`, since
+`absences` is an object keyed by field and a `.length` test on it silently
+returns nothing. The eal map holds 127 `newcomerCriteria` absences, so a check
+reporting none anywhere is broken rather than informative. They are not one problem, and the
 first reading of them — that they are all availability rules filed under
 classification — is wrong. They split three ways, and only the third group is
 what that description fits.
@@ -114,6 +117,32 @@ value; they found no newcomer category because these documents are not about
 newcomers. The nineteen entries are a re-reading of the indigenous sources into
 a field that asks a different question. The minimal fix is to the coding rather
 than to the prose, which is honest about what exists.
+
+## Tonga — RESOLVED as an absence
+
+Not a missing `designation`. Its 2012 language policy "excepts children whose
+mother tongue is not Tongan" and PEER gives "no criteria, instrument or
+entitlement attached to that exception", so no value on `DESIGNATION_FORMS`
+is honest: `named category` needs a label there is none of, `proxy category`
+needs a grouping that is not language, and `functional` asserts a stated test
+that decides who gets support, which the entry explicitly denies.
+
+The scheme routes it itself. The comment above `DESIGNATION_FORMS` reads: "The
+absence case is NOT a value here: a system with no category carries the absence
+flag on the field." An exception with nothing attached is not an operative
+category, so the error was the trigger, not the missing designation.
+
+**Belarus is the same shape and the corpus had already resolved it this way** —
+"Absence is the finding: the Education Code defines no newcomer category / The
+only newcomer-facing rule is exemption from Belarusian or Russian study", with
+`coding` empty and `absences.newcomerCriteria` set. Tonga now matches it:
+`coding: {}`, the absence flagged, prose untouched. `decided_by` and
+`rule_locus` went with the triggers, because both describe entry to a category
+that is not there.
+
+The alternative was a fourth value for the exempting shape, covering both. Two
+entries is thin ground for one, and it would have reopened an entry where a
+reader had already ruled.
 
 ## Group B: no pupil-level category, said outright
 
