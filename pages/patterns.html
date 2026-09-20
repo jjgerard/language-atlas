@@ -39,6 +39,7 @@ main a { color: var(--focus); }
 .otick { font-size: 11px; fill: var(--muted, #777); }
 .osrc { font-size: .78rem; }
 .osrcline { color: var(--muted, #777); }
+.oguard { color: var(--muted, #777); }
 
 /* ---- findings: the claim carries its own number, so the number is the type ---- */
 .finding { margin: 0 0 22px; padding-left: 14px; border-left: 2px solid var(--hair-strong); }
@@ -695,22 +696,36 @@ function opermute(kept, pickValue) {
   return ge / T;
 }
 
+// What the chart shows, in one sentence, from the marks themselves: how far the
+// group medians sit apart against how wide the widest group is on its own. It
+// leads the caption because it is the reading, and because on this panel the
+// second number has been the larger one every time.
+function leadStat(kept, pickValue) {
+  const meds = kept.map(([, g]) => oquant(g.map(pickValue).sort((a, b) => a - b), 0.5));
+  const iqrs = kept.map(([, g]) => {
+    const d = g.map(pickValue).sort((a, b) => a - b);
+    return oquant(d, 0.75) - oquant(d, 0.25);
+  });
+  const span = Math.max(...meds) - Math.min(...meds);
+  return 'Group medians sit ' + span.toFixed(1) + ' score points apart at the widest, '
+    + 'inside groups whose own interquartile range reaches ' + Math.max(...iqrs).toFixed(1) + '.';
+}
+
+// The guards go last and short. They are what stops a reader over-reading the
+// chart, not what the chart is about, and the Gulf split had been a sentence
+// naming three states in front of every number on the panel.
 function guardLine(kept, countries, min, label, extra, pickValue) {
   const gulf = [...new Set(kept.flatMap(([, g]) => g).filter(c => GULF.has(c.cc)).map(c => c.cc))];
   const p = opermute(kept, pickValue);
   const noGulf = kept.map(([k, g]) => [k, g.filter(c => !GULF.has(c.cc))]).filter(([, g]) => g.length >= min);
   const p2 = noGulf.length > 1 ? opermute(noGulf, pickValue) : null;
-  return '<strong>' + countries + ' countries joined</strong>' + label
-    + ', ' + kept.length + ' ' + (kept.length === 1 ? 'group' : 'groups') + ' with ' + min + ' or more.'
+  return '<strong>' + leadStat(kept, pickValue) + '</strong> '
+    + countries + ' countries' + label + ', ' + kept.length + ' '
+    + (kept.length === 1 ? 'group' : 'groups') + ' of ' + min + ' or more.'
     + (extra || '')
-    + ' Permutation p = ' + p.toFixed(3)
-    + (gulf.length
-        ? (p2 == null
-            ? ', and the Gulf split cannot be computed at this size.'
-            : ', and ' + p2.toFixed(3) + ' without ' + gulf.length + ' Gulf '
-              + (gulf.length === 1 ? 'system' : 'systems') + ' (' + gulf.map(esc).join(', ') + ').')
-        : ', with no Gulf system in this comparison.')
-    + ' Read how far a group’s own countries spread before reading how far the groups sit apart.';
+    + ' <span class="oguard">p = ' + p.toFixed(3)
+    + (gulf.length && p2 != null ? ', or ' + p2.toFixed(3) + ' without the Gulf' : '')
+    + ', by permutation.</span>';
 }
 
 function renderOutcomes(atlas) {
@@ -1076,16 +1091,30 @@ function plotTrend(atlas, pick, outcome, cycles, min, split) {
     const d = g.map(x => x.series[j]).sort((a, b) => a - b);
     return oquant(d, 0.75) - oquant(d, 0.25);
   }));
-  return s + '<p class="why"><strong>' + countries + ' countries</strong> present in all of '
-    + cycles.join(', ') + ', ' + kept.length + ' ' + (split ? 'combinations' : 'categories')
-    + ' with ' + min + ' or more.' + dropNote(s0, min, pick, split)
-    + ' Every box is the same countries at every cycle — a country missing one is out of the series, '
-    + 'because letting membership change draws a trend that is partly the sample moving. '
-    + 'Medians move ' + Math.min(...medianSpan).toFixed(1) + ' to '
+  return s + '<p class="why"><strong>Medians move ' + Math.min(...medianSpan).toFixed(1) + ' to '
     + (Math.max(...medianSpan) > 0 ? '+' : '') + Math.max(...medianSpan).toFixed(1)
-    + ' score points across the span, inside boxes whose own interquartile range runs '
-    + Math.min(...iqr).toFixed(1) + ' to ' + Math.max(...iqr).toFixed(1) + '.'
-    + (split ? ' A country running several rules at once appears in several rows.' : '') + '</p>';
+    + ' score points from ' + cycles[0] + ' to ' + cycles[cycles.length - 1]
+    + ', inside boxes whose own interquartile range runs '
+    + Math.min(...iqr).toFixed(1) + ' to ' + Math.max(...iqr).toFixed(1) + '.</strong> '
+    + countries + ' countries present in every cycle, ' + kept.length + ' '
+    + (split ? 'combinations' : 'categories') + ' of ' + min + ' or more.'
+    + dropNote(s0, min, pick, split)
+    + ' Every box is the same countries at every cycle; a country missing one is out of the series.'
+    + (split ? ' A country running several rules appears in several rows.' : '')
+    // The trend view tests the thing it draws: whether the groups moved
+    // DIFFERENTLY, not whether they sit at different levels. The statistic is
+    // each country’s net change across the span, which is the interaction the
+    // eyes are being invited to read off the boxes.
+    + ' <span class="oguard">On net change across the span, p = '
+    + opermute(kept, c => c.series[c.series.length - 1] - c.series[0]).toFixed(3)
+    + (function () {
+        const ng = kept.map(([k, g]) => [k, g.filter(c => !GULF.has(c.cc))]).filter(([, g]) => g.length >= min);
+        const anyGulf = kept.some(([, g]) => g.some(c => GULF.has(c.cc)));
+        return anyGulf && ng.length > 1
+          ? ', or ' + opermute(ng, c => c.series[c.series.length - 1] - c.series[0]).toFixed(3) + ' without the Gulf'
+          : '';
+      })()
+    + ', by permutation.</span></p>';
 }
 
 // ---- one cycle against another ---------------------------------------------
