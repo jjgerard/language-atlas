@@ -52,7 +52,11 @@ const RULES = [
   // the requirement Andorra's "It replaces the model in force since 2008" broke
   // by falling through to `instrument made`, so the noun list is wide and the
   // lookaround runs in both directions rather than forward only.
-  ["body or programme changed", /\b(replac|supersed|abolish|discontinu)\w*\b[\s\S]{0,40}\b(programme|program|scheme|classes|grant|unit|centre|center)\b|\b(programme|program|scheme|classes|grant|OETC|OALT|ELCO|MEAG|Tanoda)\b[\s\S]{0,60}\b(replaced|abolished|discontinued|ended|folded|integrated into)\b|\brenam(e|es|ed|ing)\b|\brestructur(e|es|ed|ing)\b|\bmerg(e|es|ed|ing)\b/i],
+  ["body or programme changed", /\b(replac|supersed|abolish|discontinu)\w*\b[\s\S]{0,40}\b(programme|program|scheme|classes|grant|unit|centre|center)\b|\b(programme|program|scheme|classes|grant|OETC|OALT|ELCO|MEAG|Tanoda)\b[\s\S]{0,60}\b(replaced|abolished|discontinued|ended|folded|integrated into)\b|\brenam(e|es|ed|ing)\b|\brestructur(e|es|ed|ing)\b|\bmerg(e|es|ed|ing)\b/i,
+   // Consolidating an act MERGES its amendments into one text; it does not merge
+   // two bodies. Greenland 2023, "Consolidated folkeskole act published, merging
+   // 2017 and 2021 amendments", is an amendment to an instrument.
+   /\bconsolidat\w*|\bmerg\w*[\s\S]{0,40}\bamendments?\b/i],
   ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*|\bnullif\w*|\bvoid\w*|\bannul\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|model)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)/i],
   // A SEPARATE rule because the clause above needs /i for its noun list and this
   // one must not have it: an all-caps acronym is the instrument, and ESSA is the
@@ -60,13 +64,28 @@ const RULES = [
   // one value cost nothing -- first match wins either way -- and the alternative
   // was a single literal that quietly lost the flag.
   ["instrument replaced", /\b[A-Z]{3,6}\b\s+(repeal|supersed|replac|revok)\w*/],
-  ["instrument amended", /\bamend\w*\b|\brewrit(e|es|ing)\b|\b(act|law|constitution|code|ordinance|regulation)\b[\s\S]{0,20}\brevis(ed|ion|ions)\b|\binserts?\b|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i],
+  ["instrument amended", /\bamend\w*\b|\brewrit(e|es|ing)\b|\b(act|law|constitution|code|ordinance|regulation|guidelines|guidance|policy|policies|rules|manual|chart|document|edition|plan)\b[\s\S]{0,20}\brevis(ed|ion|ions)\b|\binserts?\b|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i,
+   // A parenthetical or appositive amendment DATE is not an amendment: it dates
+   // the instrument the row describes. Four UNESCO PEER rows read "Constitution
+   // of Barbados, AMENDED 2007; does not enshrine the right to education" or
+   // "Constitution Art. 27 (AS AMENDED 2001) gives a right", and are dated
+   // decades before the amendment. Kuwait 1965 in the Asia batch is the same
+   // shape and its coding is corrected alongside this. Laos 2003's "amended IN
+   // 2003" is untouched: the word `in` marks a year that is the row's own.
+   /[(,;]\s*(as |last )?(amended|revised)\s+\d{4}/i],
   ["international instrument accepted", /\bratif(y|ies|ied|ication)\b|\baccede(d|s)?\b|\baccession\b|\benters? into force for\b|\bdeclaration under\b/i],
   // "Strategy ... adopted" is how a strategy is ISSUED, not how an instrument is
   // made. Hungary 2013 and Slovenia 2007 both matched `adopt` here and were
   // hand-corrected to `plan or strategy issued`, so `adopt` now stands down when
   // the row's own subject is a plan, a strategy or a recommendation.
-  ["instrument made", /\benact(s|ed|ment)?\b|\bpromulgat(e|ed|es)\b|\bcomes? into force\b|\bin force\b|\btakes? effect\b|\beffective\b|\bpublished in the .{0,20}gazette\b|\bpass(es|ed)\b.{0,20}\b(act|law)\b|^(?![\s\S]*\b(strateg|action plan|plan for|five-year plan|recommendation|neither|never adopt|not adopt)\w*)[\s\S]*\badopt(s|ed)\b/i],
+  ["instrument made", /\benact(s|ed|ment)?\b|\bpromulgat(e|ed|es)\b|\bcomes? into force\b|\bin force\b|\btakes? effect\b|\beffective\b|\bpublished in the .{0,20}gazette\b|\bpass(es|ed)\b.{0,20}\b(act|law)\b|\b(act|law)s?\b.{0,30}\bpass(es|ed)\b|^(?![\s\S]*\b(strateg|recommendation|neither|never adopt|not adopt)\w*|[\s\S]*plan\w*)[\s\S]*\badopt(s|ed)\b/i,
+   // Two refusals. A PARENTHESISED "(in force 2019)" dates the instrument the
+   // row describes -- Canada's "Education Act s 17 carries the
+   // language-of-instruction power (in force 2019)" -- while China's unbracketed
+   // "enacted, in force 1995-09-01" is a real making and must survive. And a row
+   // that says outright the enactment is NOT VERIFIED is the one row in the
+   // corpus that forbids this value in its own text.
+   /\((as |last )?(amended|in force)[^)]*\)|\bnot verified\b/i],
   // EIGHT of the twelve overrides in the first hand-coded region were the old
   // `establish` pattern firing on an abstract object: "establishes the
   // ausserordentlicher Schueler CATEGORY", "the individual educational needs
@@ -76,10 +95,14 @@ const RULES = [
   // residual -- a row that dates an instrument and says what it provides. A
   // thing established has to be a thing that can be walked into or enrolled on,
   // so the verb now needs a body-or-programme noun and the abstractions veto it.
-  ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programme|program|scheme|class|classes|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training)\b/i],
+  ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept|test)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programme|program|scheme|class|classes|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training)\b/i],
   ["funding decided", /\bfunding agreement\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|£[\d,.]+|\bfunding formula\b|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
-  ["plan or strategy issued", /\bstrategic plan\b|\bstrateg(y|ies)\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\bpledges?\b|\brecommendations?\b|\bwhite paper\b|\bframework document\b/i],
-  ["state of affairs recorded", /\bdoes not\b|\bno specific\b|\bomits\b|\bfound no\b|\bnever uses\b|\bis silent\b|\bno such\b|\bnothing\b|\bnames only\b/i],
+  ["plan or strategy issued", /\b(strategic|sector|master|implementation) plan\b|\bstrateg(y|ies)\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\bpledges?\b|\brecommendations?\b|\bwhite paper\b|\bframework document\b/i,
+   // Beginning to develop a plan is not issuing one. Dominica 2020, "Ministry of
+   // Education BEGAN DEVELOPING a new education sector plan", started matching
+   // only once `sector plan` was added to the pattern above.
+   /\bbeg(an|in|ins|un)\s+develop/i],
+  ["state of affairs recorded", /\bdoes not\b|\bno specific\b|\bomits\b|\bfound no\b|\bnever uses\b|\bis silent\b|\bno such\b|\bnothing\b|\bnames only\b|\bbut not\b|\bneither\b/i],
 ];
 
 const rows = JSON.parse(fs.readFileSync(pathFor(domainId), "utf8"));
@@ -109,7 +132,8 @@ for (const e of rows) {
       && String(c.matches) === key60(d)
       && Number(c.occurrence || 1) === seen[key]);
     let op = null;
-    for (const [value, re] of RULES) if (re.test(d)) { op = value; break; }
+    for (const [value, re, veto] of RULES)
+      if (re.test(d) && !(veto && veto.test(d))) { op = value; break; }
     out.push({
       cc: e.countryCode, unit: e.unitName, year: String(h.year || ""),
       matches: key60(d), occurrence: seen[key],

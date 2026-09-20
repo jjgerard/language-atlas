@@ -686,26 +686,151 @@ mother-tongue class relaxed from 20 to 15"; India 2014 again, where a G.O.
 holding near 3%, still coded `provision described`, still not an axis until you
 say so.
 
-## eal so far
+## Third held-out region: eal Americas, 143 rows
+
+58 entries, 72 rows carrying prior `fields_touched`.
 
 ```
-  provision described            158   44%
-  plan or strategy issued         53   15%
-  instrument amended              41   11%
-  body or programme established   37   10%
-  instrument made                 26    7%
-  state of affairs recorded       22    6%
-  body or programme changed       14    4%
-  funding decided                  5    1%
-  instrument replaced              4    1%
-                                 360
+  provision described            58   43%
+  instrument amended             23   17%
+  state of affairs recorded      12    9%
+  instrument made                12    9%
+  plan or strategy issued        10    7%
+  body or programme established   9    7%
+  instrument replaced             8    6%
+  body or programme changed       1    1%
+  international instrument accepted 1  1%
+  (left unset)                    9
 ```
+
+`instrument amended` at 17% is the highest of any region, and `instrument
+replaced` at 6% likewise. Both are the United States: a state's identification
+rules live in a plan, a chart or a memo that gets revised, superseded and
+reissued, so the corpus records operations ON instruments where other regions
+record what an instrument says.
+
+**The proposer scored 30 of 42, 71% — the worst of the three held-out regions,
+and the most useful.** One shape accounted for four of the twelve errors and is
+the largest single defect any region has exposed.
+
+### A parenthetical amendment date is not an amendment
+
+Four UNESCO PEER rows:
+
+- Barbados 1966: "Constitution of Barbados, AMENDED 2007; does not enshrine the
+  right to education"
+- Dominica 1978: "Constitution …, LAST AMENDED 2014; does not enshrine the right
+  to education"
+- Guyana 1980: "Constitution Art. 27 (AS AMENDED 2001) gives a right to free
+  education"
+- Suriname 1987: "Constitution (AMENDED 1992) Art. 39 guarantees free compulsory
+  primary education"
+
+Every one is dated decades before the amendment it mentions, because the
+amendment date is **dating the instrument the row describes**. Two of them are
+`state of affairs recorded` — the row's point is that the constitution does not
+enshrine the right — and two are the residual. Canada 2012 is the same shape
+with a different word: "Education Act s 17 carries the language-of-instruction
+power (IN FORCE 2019)".
+
+The distinction the veto has to keep is that China's "Education Law of the PRC
+enacted, in force 1995-09-01" is a real making and must survive. It does,
+because it is unbracketed and carries `enacted`. Laos 2003's "amended IN 2003"
+survives too: the word *in* marks a year that is the row's own.
+
+**This convicted one of my own Asia codings.** Kuwait 1965, "Compulsory
+Education Act, AMENDED 2014, sets special school placement", was coded
+`instrument amended` off the proposal. It is the same shape, it is dated 1965,
+and it is now `provision described`. The Asia batch was rebuilt and rewritten
+with that correction.
+
+### The row that forbids its own coding
+
+Cuba 2023 reads: "A Ley de Educación was listed on the legislative timetable for
+2023 per the 2020 UNESCO PEER profile; ENACTMENT NOT VERIFIED — do not state it
+as enacted." The proposer matched `enact` and proposed `instrument made`, which
+is precisely what the row instructs a reader not to record. It is
+`state of affairs recorded`, and `not verified` is now a veto on that value.
+
+### Nine rows left unset, and why
+
+Nine United States rows are provenance notes rather than policy events: "ECS
+reading of statute and regulation as at May 2020, not a state publication", and
+eight more like it. They date a secondary source's reading, not an operation on
+an instrument. `research/EAL-FRAMEWORK-DRAFT.md` argues that a property of the
+EVIDENCE does not belong in a column about systems, and this is that case
+exactly. They keep their `fields_touched` and carry no `operation`.
+
+That is nine in one region against one in the previous three combined, and it is
+worth saying what it is: a documentation pattern in the US sub-national entries,
+not a gap in the vocabulary.
+
+### What was fixed, and what was left
+
+Nine defects fixed, taking the region from 71% to **41 of 43, 95%**, with the
+other three regions unchanged at 100%. The proposer also gained a **veto slot**:
+cramming these refusals into the patterns was tried and abandoned, because a
+whole-row negative lookahead cannot say *unless this is the only thing that
+matched*, and the nesting was unreadable. A veto sits beside its pattern and
+says what it refuses.
+
+Two errors are left standing deliberately, both judgement calls rather than
+pattern faults:
+
+- Arizona 2019, "adopts four Structured English Immersion MODELS", proposes
+  `instrument made` and is coded `body or programme established`. Both readings
+  are defensible and the word `adopts` genuinely is there.
+- Washington 2019, "New teacher bilingual/ELL endorsement requirement TAKES
+  EFFECT", proposes `instrument made` and is the scope-change shape below.
+
+### The scope-change gap, updated
+
+Three more: Quebec 2006 "ESL becomes compulsory from Cycle 1 of primary";
+Washington 2019 above; Michigan 2018 "this threshold has moved". Running total
+**13 in 494, 2.6%**, across four regions.
+
+## eal, four regions of five
+
+```
+  provision described               217   44%
+  instrument amended                 63   13%
+  plan or strategy issued            63   13%
+  body or programme established      46    9%
+  instrument made                    38    8%
+  state of affairs recorded          34    7%
+  body or programme changed          15    3%
+  instrument replaced                12    2%
+  funding decided                     5    1%
+  international instrument accepted   1    0%
+                                    494
+```
+
+**The residual has sat between 42% and 50% in every region**, against the 48%
+the whole-corpus profile predicted. Four independent hand passes, four different
+documentation cultures, one number. That is the finding this column was wired in
+to produce, and it is now as well evidenced as anything in this file.
+
+### Held-out proposer scores, in order coded
+
+```
+  Europe     tuned on, not a measurement
+  Oceania    15/17   88%
+  Asia       48/51   94%
+  Americas   30/42   71%
+```
+
+The scores do not improve monotonically, and Americas is the reason to keep
+hand-coding. Each region has its own documentation habits — India's Commissioner
+reports, the Caribbean's UNESCO PEER profiles, the US states' secondary-source
+citations — and a proposer tuned on three of them met a fourth and lost twenty
+points. **Do not let it write a region unread.**
 
 ## Remaining, by region
 
 ```
-  eal   Americas 143   Africa 100
+  eal   Africa 100
   dld   Americas 316   Africa 292   Asia 124   Oceania 124   Europe  79
 ```
 
-eal Europe (124), Oceania (47) and Asia (190) are done — 361 of 604 eal rows.
+eal Europe (124), Oceania (47), Asia (190) and the Americas (143) are done —
+504 of 604 eal rows, 494 of them carrying an operation.
