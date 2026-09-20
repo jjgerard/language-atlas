@@ -28,7 +28,7 @@ const fs = require("fs");
 const path = require("path");
 const ROOT = path.join(__dirname, "..", "..");
 const { DOMAINS } = require(path.join(ROOT, "src", "domains"));
-const { SCHEMES } = require(path.join(ROOT, "src", "coding"));
+const { SCHEMES, codingRows } = require(path.join(ROOT, "src", "coding"));
 const { pathFor } = require("./datafile");
 
 const args = process.argv.slice(2);
@@ -57,21 +57,28 @@ for (const field of fields) {
   }
   anything = true;
   const scheme = SCHEMES[domainId + "." + field];
-  console.log(NL + domainId + "." + field + " -- " + coded.length
-    + " coded   [one row = " + scheme.row + "]" + NL);
+  let rowTotal = 0;
+  for (const r of coded) rowTotal += codingRows(r.coding[field]).length;
+  console.log(NL + domainId + "." + field + " -- " + coded.length + " coded"
+    + (rowTotal !== coded.length ? ", " + rowTotal + " rows" : "")
+    + "   [one row = " + scheme.row + "]" + NL);
   for (const [col, spec] of Object.entries(scheme.columns)) {
     if (typeof spec === "string") continue;          // free text or numeric
+    // An instrument-grained field stores an ARRAY of rows; codingRows() hands
+    // back one either way, so the denominator below is ROWS, not units. That is
+    // the right denominator for those fields and the heading says so.
     const counts = {};
-    let n = 0;
-    for (const r of coded) {
-      const v = r.coding[field][col];
+    let n = 0, total = 0;
+    for (const r of coded) for (const row of codingRows(r.coding[field])) {
+      total++;
+      const v = row[col];
       if (v == null || v === "") continue;
       n++;
       for (const x of (Array.isArray(v) ? v : [v])) counts[x] = (counts[x] || 0) + 1;
     }
-    const unset = coded.length - n;
+    const unset = total - n;
     console.log("  " + col.replace(/_/g, " ").toUpperCase()
-      + "   stated on " + n + " of " + coded.length
+      + "   stated on " + n + " of " + total
       + (unset ? "   (" + unset + " UNSET -- no value fitted)" : ""));
     const entries = Object.entries(counts).sort((a, b) => b[1] - a[1]);
     if (!entries.length) { console.log("    (none)" + NL); continue; }

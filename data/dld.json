@@ -100,7 +100,25 @@
      "speech-only difficulty"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Specialised-support regulation of 8 July 2026",
+     "instrument_type": "regulation",
+     "instrument_year": 2026,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Act",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the government",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -267,7 +285,24 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution Art. 43",
+     "instrument_type": "constitution",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Law 2008",
+     "instrument_type": "statute",
+     "instrument_year": 2008,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -353,7 +388,17 @@
     "bilingual_handling": "not solely because of language",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act s.83(1)",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "Director of Education",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -579,7 +624,27 @@
     "bilingual_handling": "case by case",
     "local_norms": "none",
     "evidence_type": "study or project"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law HO-200-N of 2014",
+     "instrument_type": "statute",
+     "instrument_year": 2014,
+     "obliges": 2,
+     "duty_org": "schools",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Law on Education 1999",
+     "instrument_type": "statute",
+     "instrument_year": 1999,
+     "obliges": 2,
+     "duty_org": "the State",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -632,7 +697,27 @@
     "year": 2012,
     "description": "Law 21/2012 art. 22 frames inclusive education as education of disabled people"
    }
-  ]
+  ],
+  "coding": {
+   "legalEntitlement": [
+    {
+     "instrument": "Law 21/2012 art. 22",
+     "instrument_type": "statute",
+     "instrument_year": 2012,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Decree 56/79",
+     "instrument_type": "decree",
+     "instrument_year": 1979,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
+  }
  },
  {
   "countryCode": "AR",
@@ -703,7 +788,17 @@
      "none stated"
     ],
     "rule_locus": "national framework, sub-national rules"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ley 26.206 arts. 42-44",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the jurisdictions",
+     "duty_type": "regional government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -869,7 +964,31 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "American Samoa Special Education Act of 2000",
+     "instrument_type": "statute",
+     "instrument_year": 2000,
+     "obliges": 4,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Territorial constitution",
+     "instrument_type": "constitution",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "IDEA",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -1017,7 +1136,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Schulpflichtgesetz 1985 para 8a",
+     "instrument_type": "statute",
+     "instrument_year": 1985,
+     "obliges": 3,
+     "duty_org": "the Bildungsdirektion",
+     "duty_type": "regional government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -1155,7 +1285,16 @@
      "none stated"
     ],
     "rule_locus": "sub-national only"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "NDIS",
+     "instrument_type": "scheme",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -2065,7 +2204,25 @@
     "assessment_language": "not stated",
     "bilingual_handling": "excluded on language grounds",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Landsverordening AZV arts. 13a and 22",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "AZV",
+     "duty_type": "insurer",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Decree under the Landsverordening AZV",
+     "instrument_type": "decree",
+     "obliges": 3,
+     "duty_org": "AZV",
+     "duty_type": "insurer",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -2131,7 +2288,33 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution Art. 42.2",
+     "instrument_type": "constitution",
+     "obliges": 2,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Law on the Rights of the Child 1998",
+     "instrument_type": "statute",
+     "instrument_year": 1998,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Law on Education of Persons with Limited Health Capacity 2001",
+     "instrument_type": "statute",
+     "instrument_year": 2001,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -2244,7 +2427,16 @@
      "none stated"
     ],
     "rule_locus": "sub-national only"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Framework law on education",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -2326,7 +2518,24 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution",
+     "instrument_type": "constitution",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Act, Art. 53",
+     "instrument_type": "statute",
+     "obliges": 0,
+     "duty_org": "the Minister",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -2388,7 +2597,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "study or project"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Rights of Persons with Disabilities Act 2013",
+     "instrument_type": "statute",
+     "instrument_year": 2013,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Constitution 1972",
+     "instrument_type": "constitution",
+     "instrument_year": 1972,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -2571,7 +2798,33 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "study or project"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Act 012-2010/AN art. 9",
+     "instrument_type": "statute",
+     "instrument_year": 2010,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Act 013-2007/AN art. 3",
+     "instrument_type": "statute",
+     "instrument_year": 2007,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Decree 2012-828",
+     "instrument_type": "decree",
+     "instrument_year": 2012,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -2708,7 +2961,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Preschool and School Education Act",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "kindergartens, schools and personal-development centres",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -2764,7 +3027,18 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Law 2005, arts. 2, 5 and 6",
+     "instrument_type": "statute",
+     "instrument_year": 2005,
+     "obliges": 1,
+     "duty_org": "the Kingdom",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -2840,7 +3114,25 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act 2013 art. 15",
+     "instrument_type": "statute",
+     "instrument_year": 2013,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Act 1/03 of 2018 art. 30",
+     "instrument_type": "statute",
+     "instrument_year": 2018,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -2922,7 +3214,27 @@
     "bilingual_handling": "silent",
     "local_norms": "none",
     "evidence_type": "study or project"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Act 2017-06, arts. 35 and following",
+     "instrument_type": "statute",
+     "instrument_year": 2017,
+     "obliges": 3,
+     "duty_org": "institutions",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Act 2003-17 art. 13",
+     "instrument_type": "statute",
+     "instrument_year": 2003,
+     "obliges": 2,
+     "duty_org": "schools",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -2986,7 +3298,33 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Compulsory Education Order 2007",
+     "instrument_type": "regulation",
+     "instrument_year": 2007,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Order 2003",
+     "instrument_type": "regulation",
+     "instrument_year": 2003,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Special Education Policy 1997",
+     "instrument_type": "policy",
+     "instrument_year": 1997,
+     "obliges": 4,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -3072,7 +3410,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ley 070/2010 arts. 25-26",
+     "instrument_type": "statute",
+     "instrument_year": 2010,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -3142,7 +3490,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Lei 13.146 art. 28",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -3230,7 +3588,24 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act arts. 12.2(c) and 20.2",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Persons with Disabilities Act 2014 art. 33.2",
+     "instrument_type": "statute",
+     "instrument_year": 2014,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -3281,7 +3656,25 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 2008",
+     "instrument_type": "constitution",
+     "instrument_year": 2008,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Special educational needs policy 2012",
+     "instrument_type": "policy",
+     "instrument_year": 2012,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -3371,7 +3764,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 1966, amended 2006",
+     "instrument_type": "constitution",
+     "instrument_year": 1966,
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Act 1966, amended 2003",
+     "instrument_type": "statute",
+     "instrument_year": 1966,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -3474,7 +3885,15 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Centre conclusion (no instrument named)",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -3609,7 +4028,18 @@
     "year": 1867,
     "description": "Education is exclusively provincial under s. 93 of the Constitution Act 1867"
    }
-  ]
+  ],
+  "coding": {
+   "legalEntitlement": [
+    {
+     "instrument": "No national instrument; entitlement is provincial",
+     "instrument_type": "none",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
+  }
  },
  {
   "countryCode": "CA",
@@ -4438,7 +4868,31 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution arts. 43 and 45",
+     "instrument_type": "constitution",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Framework Act 14/004 of 2014 art. 33",
+     "instrument_type": "statute",
+     "instrument_year": 2014,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Convention against Discrimination in Education, not signed or ratified",
+     "instrument_type": "treaty",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -4493,7 +4947,26 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Act 00.007 arts. 26 and 28",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "mainstream schools or special centres",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Constitution 2016 art. 9",
+     "instrument_type": "constitution",
+     "instrument_year": 2016,
+     "obliges": 2,
+     "duty_org": "the State",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -4569,7 +5042,32 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution art. 29",
+     "instrument_type": "constitution",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Act 4-2010 art. 3",
+     "instrument_type": "statute",
+     "instrument_year": 2010,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Act 25/95 art. 2",
+     "instrument_type": "statute",
+     "instrument_year": 1995,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -4707,7 +5205,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "BehiG (SR 151.3) art. 20",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the cantons",
+     "duty_type": "regional government",
+     "redress_type": "court"
+    },
+    {
+     "instrument": "Special-education concordat 2007 (inter-cantonal agreement)",
+     "instrument_year": 2007,
+     "obliges": 3,
+     "duty_org": "the acceding cantons",
+     "duty_type": "regional government",
+     "redress_type": "court"
+    }
+   ]
   }
  },
  {
@@ -4793,7 +5309,32 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Act No. 98-594 art. 6",
+     "instrument_type": "statute",
+     "instrument_year": 1998,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Constitution art. 32",
+     "instrument_type": "constitution",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Order 0111/MENET/CAB of 2014 art. 5",
+     "instrument_type": "regulation",
+     "instrument_year": 2014,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -4896,7 +5437,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Decreto 170, arts. 31 and 79",
+     "instrument_type": "scheme",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -4974,7 +5524,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Loi 2010/002, arts. 24 and 26",
+     "instrument_type": "statute",
+     "instrument_year": 2010,
+     "obliges": 2,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -5072,7 +5633,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law on the Protection of Persons with Disabilities, art. 15",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -6406,7 +6976,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Plan Individual de Ajustes Razonables (PIAR)",
+     "instrument_type": "decree",
+     "obliges": 4,
+     "duty_org": "teachers, the orientador or school leaders",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -6478,7 +7058,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ley 7600, arts. 14, 17 and 18",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "schools",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -6583,7 +7173,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 2019 art. 37",
+     "instrument_type": "constitution",
+     "instrument_year": 2019,
+     "obliges": 2,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Decrees, resolutions and regulations (none named)",
+     "instrument_type": "regulation",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -6638,7 +7246,18 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Decreto-Legislativo 2/2010 art. 48",
+     "instrument_type": "decree",
+     "instrument_year": 2010,
+     "obliges": 2,
+     "duty_org": "the State",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -6698,7 +7317,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Landsverordening funderend onderwijs, arts. 1 and 20",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -6871,7 +7499,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law 113(I)/1999",
+     "instrument_type": "statute",
+     "instrument_year": 1999,
+     "obliges": 3,
+     "duty_org": "the Council of Ministers",
+     "duty_type": "ministry",
+     "redress_type": "specialist commission"
+    }
+   ]
   }
  },
  {
@@ -7040,7 +7679,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Skolsky zakon 561/2004",
+     "instrument_type": "statute",
+     "instrument_year": 2004,
+     "obliges": 4,
+     "duty_org": "the school",
+     "duty_type": "school",
+     "redress_type": "administrative appeal"
+    }
+   ]
   }
  },
  {
@@ -7275,7 +7925,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "SGB V para 32",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "the sick funds",
+     "duty_type": "insurer",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "G-BA Heilmittel-Richtlinie",
+     "instrument_type": "regulation",
+     "obliges": 3,
+     "duty_org": "the funds, the insured and contract doctors",
+     "duty_type": "insurer",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -7795,7 +8463,25 @@
      "none stated"
     ],
     "rule_locus": "national, non-binding"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Decree of 12 May 2011",
+     "instrument_type": "decree",
+     "instrument_year": 2011,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Framework act 2000",
+     "instrument_type": "statute",
+     "instrument_year": 2000,
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -7949,7 +8635,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Folkeskoleloven",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the council",
+     "duty_type": "local authority",
+     "redress_type": "specialist commission"
+    }
+   ]
   }
  },
  {
@@ -8041,7 +8737,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -8157,7 +8862,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 2015 art. 63",
+     "instrument_type": "constitution",
+     "instrument_year": 2015,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "General Act on Disability 2013 art. 76",
+     "instrument_type": "statute",
+     "instrument_year": 2013,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -8247,7 +8970,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Loi 02-09 of 2002, arts. 14, 15 and 22",
+     "instrument_type": "statute",
+     "instrument_year": 2002,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -8333,7 +9066,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "LOEI 2011",
+     "instrument_type": "statute",
+     "instrument_year": 2011,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Ley Organica de Discapacidades 2012",
+     "instrument_type": "statute",
+     "instrument_year": 2012,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -8487,7 +9238,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Pohikooli- ja gumnaasiumiseadus § 37",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "the home municipality and the school maintainer",
+     "duty_type": "local authority",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -8584,7 +9345,18 @@
     "bilingual_handling": "silent",
     "local_norms": "exist",
     "evidence_type": "study or project"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law 10/2018, arts. 7, 10 and 13",
+     "instrument_type": "statute",
+     "instrument_year": 2018,
+     "obliges": 2,
+     "duty_org": "the education ministries",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -8630,7 +9402,26 @@
     "year": 1997,
     "description": "The 1997 Constitution bars discrimination on grounds including disability"
    }
-  ]
+  ],
+  "coding": {
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 1997",
+     "instrument_type": "constitution",
+     "instrument_year": 1997,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Convention Against Discrimination in Education, not ratified",
+     "instrument_type": "treaty",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
+  }
  },
  {
   "countryCode": "ES",
@@ -8819,7 +9610,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ley Organica 2/2006, arts. 71.2 and 71.3",
+     "instrument_type": "statute",
+     "instrument_year": 2006,
+     "obliges": 2,
+     "duty_org": "the authorities",
+     "duty_type": "regional government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -9450,7 +10252,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ministry national plan of action",
+     "instrument_type": "policy",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -9930,7 +10741,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Basic Education Act s.30",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "the home municipality",
+     "duty_type": "local authority",
+     "redress_type": "administrative appeal"
+    }
+   ]
   }
  },
  {
@@ -10090,7 +10911,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -10266,7 +11096,24 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "FSM Special Education Act of 1993",
+     "instrument_type": "statute",
+     "instrument_year": 1993,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "IDEA Part B grant, 20 USC 1411(b)(1)",
+     "instrument_type": "scheme",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -10395,7 +11242,16 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Folkaskulalogin s.4(5)-(6)",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -10561,7 +11417,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Code de l'education L.112-4",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_org": "the CDAPH",
+     "duty_type": "statutory body",
+     "redress_type": "consultation right"
+    }
+   ]
   }
  },
  {
@@ -10648,7 +11514,40 @@
      "none stated"
     ],
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 1991",
+     "instrument_type": "constitution",
+     "instrument_year": 1991,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Act 21/2011 art. 2",
+     "instrument_type": "statute",
+     "instrument_year": 2011,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "CRPD, ratified 2007",
+     "instrument_type": "treaty",
+     "instrument_year": 2007,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Convention against Discrimination in Education, not ratified",
+     "instrument_type": "treaty",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -11437,7 +12336,32 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution Art. 27.1",
+     "instrument_type": "constitution",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Law on General Education 2005 art. 7.1",
+     "instrument_type": "statute",
+     "instrument_year": 2005,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Anti-discrimination law 2014",
+     "instrument_type": "statute",
+     "instrument_year": 2014,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -11542,7 +12466,17 @@
     ],
     "decider": "not stated",
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education (Guernsey) Law 1970, as amended; resolved in 2017 to be repealed and replaced",
+     "instrument_type": "statute",
+     "instrument_year": 1970,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -11638,7 +12572,25 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 1992, arts. 25.1(a), 12, 17.2 and 35.5",
+     "instrument_type": "constitution",
+     "instrument_year": 1992,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Children's Act 1998 art. 8",
+     "instrument_type": "statute",
+     "instrument_year": 1998,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -11776,7 +12728,17 @@
      "socio-cultural factors"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education and Training Act, s.47",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "the Minister and the Department of Education",
+     "duty_type": "ministry",
+     "redress_type": "specialist commission"
+    }
+   ]
   }
  },
  {
@@ -11865,7 +12827,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Folkeskole act, 2023 consolidation",
+     "instrument_type": "statute",
+     "instrument_year": 2023,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -11939,7 +12911,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 1997, ss. 30(a) and 217(1)",
+     "instrument_type": "constitution",
+     "instrument_year": 1997,
+     "obliges": 2,
+     "duty_org": "the State",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -12012,7 +12995,24 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution Art. 1",
+     "instrument_type": "constitution",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "ProDEG 2019-2028",
+     "instrument_type": "policy",
+     "instrument_year": 2019,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -12064,7 +13064,18 @@
     ],
     "rule_locus": "national statute",
     "decider": "national authority"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "General Education Law 2007, section 8",
+     "instrument_type": "statute",
+     "instrument_year": 2007,
+     "obliges": 2,
+     "duty_org": "the ministry",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -12228,7 +13239,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "N. 3699/2008",
+     "instrument_type": "statute",
+     "instrument_year": 2008,
+     "obliges": 2,
+     "duty_org": "the State",
+     "duty_type": "national government",
+     "redress_type": "specialist commission"
+    }
+   ]
   }
  },
  {
@@ -12294,7 +13316,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Disability law 1996",
+     "instrument_type": "statute",
+     "instrument_year": 1996,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -12437,7 +13469,16 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "IDEA, as applied in Guam",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -12493,7 +13534,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Basic Education Law 2010",
+     "instrument_type": "statute",
+     "instrument_year": 2010,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -12579,7 +13630,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "2014 instrument (PEER calls it a Bill; enactment not verified)",
+     "instrument_type": "statute",
+     "instrument_year": 2014,
+     "obliges": 2,
+     "duty_org": "the chief education officer",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -12712,7 +13774,17 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Disability equity act 2005",
+     "instrument_type": "statute",
+     "instrument_year": 2005,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -12859,7 +13931,27 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "School act 2008 art. 65",
+     "instrument_type": "statute",
+     "instrument_year": 2008,
+     "obliges": 3,
+     "duty_org": "the school",
+     "duty_type": "school",
+     "redress_type": "administrative appeal"
+    },
+    {
+     "instrument": "Pravilnik NN 24/2015",
+     "instrument_type": "regulation",
+     "instrument_year": 2015,
+     "obliges": 3,
+     "duty_org": "the minister",
+     "duty_type": "ministry",
+     "redress_type": "administrative appeal"
+    }
+   ]
   }
  },
  {
@@ -12945,7 +14037,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Act on the integration of persons with disabilities 2012",
+     "instrument_type": "statute",
+     "instrument_year": 2012,
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -13086,7 +14188,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Act CXC of 2011, s.47",
+     "instrument_type": "statute",
+     "instrument_year": 2011,
+     "obliges": 4,
+     "duty_type": "not stated",
+     "redress_type": "administrative appeal"
+    }
+   ]
   }
  },
  {
@@ -13146,7 +14258,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law on Persons with Disabilities 2016",
+     "instrument_type": "statute",
+     "instrument_year": 2016,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -13342,7 +14464,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "EPSEN Act 2004, part-commenced",
+     "instrument_type": "statute",
+     "instrument_year": 2004,
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Circular 0052/2019",
+     "instrument_type": "regulation",
+     "instrument_year": 2019,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -13442,7 +14582,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Special Education Law",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_org": "a statutory committee (va'ada)",
+     "duty_type": "statutory body",
+     "redress_type": "court"
+    }
+   ]
   }
  },
  {
@@ -13617,7 +14767,25 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "RPwD Act 2016",
+     "instrument_type": "statute",
+     "instrument_year": 2016,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "National Trust Act 1999",
+     "instrument_type": "statute",
+     "instrument_year": 1999,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -14928,7 +16096,26 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law 38 of 2013",
+     "instrument_type": "statute",
+     "instrument_year": 2013,
+     "obliges": 2,
+     "duty_org": "the Ministry of Education",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Constitution Art. 32",
+     "instrument_type": "constitution",
+     "obliges": 2,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -14996,7 +16183,26 @@
     ],
     "rule_locus": "national statute",
     "decider": "national authority"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 1989, arts. 3.9 and 19",
+     "instrument_type": "constitution",
+     "instrument_year": 1989,
+     "obliges": 2,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Disability rights law 2018 art. 15",
+     "instrument_type": "statute",
+     "instrument_year": 2018,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -15126,7 +16332,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Compulsory School Act 91/2008 art. 17",
+     "instrument_type": "statute",
+     "instrument_year": 2008,
+     "obliges": 3,
+     "duty_org": "the municipalities",
+     "duty_type": "local authority",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -15292,7 +16509,26 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Legge 104/1992 art. 12",
+     "instrument_type": "statute",
+     "instrument_year": 1992,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "D.Lgs 66/2017",
+     "instrument_type": "decree",
+     "instrument_year": 2017,
+     "obliges": 3,
+     "duty_org": "the State, with local authorities carrying the assistance duty",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -15423,7 +16659,18 @@
     "bilingual_handling": "not solely because of language",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education (Jersey) Law 1999",
+     "instrument_type": "statute",
+     "instrument_year": 1999,
+     "obliges": 3,
+     "duty_org": "the Minister",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -15588,7 +16835,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law 20/2017 art. 24(d)",
+     "instrument_type": "statute",
+     "instrument_year": 2017,
+     "obliges": 3,
+     "duty_org": "civil health insurance",
+     "duty_type": "insurer",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -15662,7 +16920,17 @@
     "bilingual_handling": "case by case",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "School Education Law, amended FY2007",
+     "instrument_type": "statute",
+     "instrument_year": 2007,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -15722,7 +16990,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Basic Education Act s.44",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the Cabinet Secretary",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -15778,7 +17056,34 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law on the Rights and Guarantees of Persons with Disabilities 2008",
+     "instrument_type": "statute",
+     "instrument_year": 2008,
+     "obliges": 2,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Law 2003",
+     "instrument_type": "statute",
+     "instrument_year": 2003,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Code on Children 2006",
+     "instrument_type": "statute",
+     "instrument_year": 2006,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -15852,7 +17157,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Law 2007, arts. 39 and 40",
+     "instrument_type": "statute",
+     "instrument_year": 2007,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "court"
+    }
+   ]
   }
  },
  {
@@ -15999,7 +17314,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act",
+     "instrument_type": "statute",
+     "obliges": 0,
+     "duty_org": "the Minister",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16070,7 +17395,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Loi 20-034/AU, arts. 3, 4, 105 and 106",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the education ministry",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16144,7 +17479,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act ss. 82(1) and 85",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the Chief Education Officer",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16210,7 +17555,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Disability protection law, recast November 2013",
+     "instrument_type": "statute",
+     "instrument_year": 2013,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16292,7 +17647,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Special education law, compulsory kindergarten to high school",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16364,7 +17728,26 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law No. 8 of 2010, amended 2017, arts. 2, 4 and 9",
+     "instrument_type": "statute",
+     "instrument_year": 2010,
+     "obliges": 2,
+     "duty_org": "the government",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Law No. 49 of 1996 art. 3(3)",
+     "instrument_type": "statute",
+     "instrument_year": 1996,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16428,7 +17811,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Art. 15, free correction from detection",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_org": "the psychological-medical-pedagogical body",
+     "duty_type": "statutory body",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16502,7 +17895,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "study or project"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "National disability policy and action plan 2020-2030",
+     "instrument_type": "policy",
+     "instrument_year": 2020,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Disability-Inclusive Rehabilitation Strategy 2018-2025",
+     "instrument_type": "policy",
+     "instrument_year": 2018,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16607,7 +18018,33 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law No. 150 of 2011 art. 1",
+     "instrument_type": "statute",
+     "instrument_year": 2011,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Social development strategy 2011",
+     "instrument_type": "policy",
+     "instrument_year": 2011,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "UN Convention Against Discrimination in Education, ratified 1964",
+     "instrument_type": "treaty",
+     "instrument_year": 1964,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16700,7 +18137,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act, arts. 14 and 29",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16810,7 +18256,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Entitlement from birth to age 20, to 22 in certain circumstances",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16916,7 +18371,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Protection of the Rights of Persons with Disabilities Act 1996",
+     "instrument_type": "statute",
+     "instrument_year": 1996,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -16982,7 +18447,35 @@
     "year": 2017,
     "description": "Education sector plan 2017-21 makes in-service training mandatory and revises the school census"
    }
-  ]
+  ],
+  "coding": {
+   "legalEntitlement": [
+    {
+     "instrument": "Education Reform Act 2011",
+     "instrument_type": "statute",
+     "instrument_year": 2011,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Constitution 1986, arts. 6 and 11(b)",
+     "instrument_type": "constitution",
+     "instrument_year": 1986,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education sector plan 2010",
+     "instrument_type": "policy",
+     "instrument_year": 2010,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
+  }
  },
  {
   "countryCode": "LS",
@@ -17083,7 +18576,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Lesotho Inclusive Education Policy",
+     "instrument_type": "policy",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -17253,7 +18755,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Svietimo istatymas art. 34",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "the municipality where the child lives",
+     "duty_type": "local authority",
+     "redress_type": "administrative appeal"
+    }
+   ]
   }
  },
  {
@@ -17361,7 +18873,18 @@
     "bilingual_handling": "silent",
     "local_norms": "exist",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law of 2011 on reasonable arrangements",
+     "instrument_type": "statute",
+     "instrument_year": 2011,
+     "obliges": 3,
+     "duty_org": "the school inclusion commission",
+     "duty_type": "statutory body",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -17503,7 +19026,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Izglitibas likums art. 42",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the municipality",
+     "duty_type": "local authority",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -17587,7 +19120,25 @@
      "none stated"
     ],
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitutional Declaration Art. 8",
+     "instrument_type": "constitution",
+     "obliges": 2,
+     "duty_org": "the government",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Decree 276 of 2019",
+     "instrument_type": "decree",
+     "instrument_year": 2019,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -17664,7 +19215,25 @@
     "bilingual_handling": "silent",
     "local_norms": "none",
     "evidence_type": "study or project"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "CRPD, ratified 2009",
+     "instrument_type": "treaty",
+     "instrument_year": 2009,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Act of 2016",
+     "instrument_type": "statute",
+     "instrument_year": 2016,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -17761,7 +19330,16 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act of 12 July 2007 (text not retrieved)",
+     "instrument_type": "statute",
+     "instrument_year": 2007,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -17869,7 +19447,16 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education code, free SEN provision",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -17960,7 +19547,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law on Education of Children with Special Educational Needs 2025",
+     "instrument_type": "statute",
+     "instrument_year": 2025,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -18012,7 +19609,24 @@
      "none stated"
     ],
     "rule_locus": "national, non-binding"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Decree 2009-1147",
+     "instrument_type": "decree",
+     "instrument_year": 2009,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Constitution, which does not use the word disability",
+     "instrument_type": "constitution",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -18136,7 +19750,16 @@
      "none stated"
     ],
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "IDEA Part B grant, 20 USC 1411(b)(1)",
+     "instrument_type": "scheme",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -18257,7 +19880,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Zakon za osnovnoto obrazovanie art. 11",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "the school",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -18345,7 +19978,25 @@
      "none stated"
     ],
     "rule_locus": "national, non-binding"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Child Protection Code 2002 art. 16",
+     "instrument_type": "statute",
+     "instrument_year": 2002,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Act 2018-027",
+     "instrument_type": "statute",
+     "instrument_year": 2018,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -18407,7 +20058,26 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Rights of Persons with Disabilities Law 2015",
+     "instrument_type": "statute",
+     "instrument_year": 2015,
+     "obliges": 2,
+     "duty_org": "the National Committee on disability rights and the Ministry of Education",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "CRPD, ratified 2011",
+     "instrument_type": "treaty",
+     "instrument_year": 2011,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -18509,7 +20179,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Disability law, arts. 15 and 28",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -18669,7 +20348,16 @@
     "bilingual_handling": "not solely because of language",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "NMIAC chapter 60-50 read with IDEA Part B",
+     "instrument_type": "regulation",
+     "obliges": 4,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -18733,7 +20421,32 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution, which does not enshrine a right to education",
+     "instrument_type": "constitution",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Act 054-2001 art. 10",
+     "instrument_type": "statute",
+     "instrument_year": 2001,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Sector programme 2011-2020",
+     "instrument_type": "policy",
+     "instrument_year": 2011,
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -18875,7 +20588,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Equal Opportunities (Persons with Disability) Act, Cap. 413, art. 11",
+     "instrument_type": "statute",
+     "obliges": 1,
+     "duty_org": "the educational authority and the body administering the institution",
+     "duty_type": "school",
+     "redress_type": "complaint to agency"
+    }
+   ]
   }
  },
  {
@@ -18976,7 +20699,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Special Education Needs Authority Act 2018",
+     "instrument_type": "statute",
+     "instrument_year": 2018,
+     "obliges": 2,
+     "duty_org": "the Special Education Needs Authority",
+     "duty_type": "statutory body",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -19040,7 +20774,26 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "study or project"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law 8/2010",
+     "instrument_type": "statute",
+     "instrument_year": 2010,
+     "obliges": 2,
+     "duty_org": "the Ministry of Education",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Constitution 2008 art. 7a",
+     "instrument_type": "constitution",
+     "instrument_year": 2008,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -19156,7 +20909,33 @@
     ],
     "rule_locus": "national statute",
     "decider": "national authority"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 1994, amended 2017, art. 25",
+     "instrument_type": "constitution",
+     "instrument_year": 1994,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Act 2013",
+     "instrument_type": "statute",
+     "instrument_year": 2013,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "National Education Standards 2015",
+     "instrument_type": "policy",
+     "instrument_year": 2015,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -19222,7 +21001,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ley General de Educacion art. 64(IV)-(V)",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -19286,7 +21075,18 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act 1996 s.40",
+     "instrument_type": "statute",
+     "instrument_year": 1996,
+     "obliges": 2,
+     "duty_org": "the Minister",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -19366,7 +21166,17 @@
      "none stated"
     ],
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law 6/1992 art. 29",
+     "instrument_type": "statute",
+     "instrument_year": 1992,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -19438,7 +21248,23 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Basic Education Act",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Sector Policy on Inclusive Education",
+     "instrument_type": "policy",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -19572,7 +21398,16 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Territorial rule on schooling and assessment of skills and needs",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -19652,7 +21487,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Act 98-12 art. 42",
+     "instrument_type": "statute",
+     "instrument_year": 1998,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -19702,7 +21547,28 @@
     "year": 2004,
     "description": "Compulsory, Free Universal Basic Education Act 2004 included disabled groups within universal basic education"
    }
-  ]
+  ],
+  "coding": {
+   "legalEntitlement": [
+    {
+     "instrument": "Disability Act 2018, Part V arts. 17 and 18.1",
+     "instrument_type": "statute",
+     "instrument_year": 2018,
+     "obliges": 2,
+     "duty_org": "public schools",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "UBE Act 2004",
+     "instrument_type": "statute",
+     "instrument_year": 2004,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
+  }
  },
  {
   "countryCode": "NI",
@@ -19765,7 +21631,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ley 582",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "public and private schools",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -19965,7 +21841,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Passend-onderwijs framework, with the Simea criteria",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "specialist commission"
+    }
+   ]
   }
  },
  {
@@ -20239,7 +22124,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "study or project"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 2015, arts. 18 and 31",
+     "instrument_type": "constitution",
+     "instrument_year": 2015,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Act 1971, 7th Amendment 2001",
+     "instrument_type": "statute",
+     "instrument_year": 1971,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -20374,7 +22277,18 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act 2011, Part 11",
+     "instrument_type": "statute",
+     "instrument_year": 2011,
+     "obliges": 2,
+     "duty_org": "the Minister",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -20526,7 +22440,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ongoing Resourcing Scheme (ORS)",
+     "instrument_type": "scheme",
+     "obliges": 2,
+     "duty_org": "the school",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -20578,7 +22502,26 @@
     ],
     "rule_locus": "national statute",
     "decider": "national authority"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law on the Care and Rehabilitation of the Disabled, Royal Decree 63/2008, arts. 5 and 24",
+     "instrument_type": "decree",
+     "instrument_year": 2008,
+     "obliges": 2,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Child Law 2014 art. 36",
+     "instrument_type": "statute",
+     "instrument_year": 2014,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -20644,7 +22587,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Act 42 of 27 August 1999",
+     "instrument_type": "statute",
+     "instrument_year": 1999,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Executive Decree No. 1 of 4 February 2000",
+     "instrument_type": "decree",
+     "instrument_year": 2000,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -20722,7 +22683,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ley 28044 art. 20-A",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -20839,7 +22810,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "CTES territorial arrangements, birth to twenty",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the CTES",
+     "duty_type": "statutory body",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -20977,7 +22958,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 1975",
+     "instrument_type": "constitution",
+     "instrument_year": 1975,
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Act 1983, art. 4(b), (d) and (e)",
+     "instrument_type": "statute",
+     "instrument_year": 1983,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -21103,7 +23102,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Inclusive Education Act 2022",
+     "instrument_type": "statute",
+     "instrument_year": 2022,
+     "obliges": 4,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -21185,7 +23194,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Disability Act 2020 (federal capital territory only)",
+     "instrument_type": "statute",
+     "instrument_year": 2020,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -21368,7 +23387,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Prawo oswiatowe art. 127",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_org": "preschools, schools and centres",
+     "duty_type": "school",
+     "redress_type": "administrative appeal"
+    }
+   ]
   }
  },
  {
@@ -21477,7 +23506,24 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ley 51-1996",
+     "instrument_type": "statute",
+     "instrument_year": 1996,
+     "obliges": 4,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "IDEA Part B",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -21559,7 +23605,35 @@
     "year": 2018,
     "description": "Convention Against Discrimination in Education ratified"
    }
-  ]
+  ],
+  "coding": {
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution Art. 24",
+     "instrument_type": "constitution",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Law 2017, arts. 4(6) and 5",
+     "instrument_type": "statute",
+     "instrument_year": 2017,
+     "obliges": 2,
+     "duty_org": "the ministry",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Convention Against Discrimination in Education, ratified 2018",
+     "instrument_type": "treaty",
+     "instrument_year": 2018,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
+  }
  },
  {
   "countryCode": "PT",
@@ -21909,7 +23983,24 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "RPPL 3-9 of 1989, Programs and Services for Handicapped Children Act",
+     "instrument_type": "statute",
+     "instrument_year": 1989,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "IDEA Part B grant, 20 USC 1411(b)(1)",
+     "instrument_type": "scheme",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -21987,7 +24078,26 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Arts. 80 and 81",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Ley 5136/2013",
+     "instrument_type": "statute",
+     "instrument_year": 2013,
+     "obliges": 2,
+     "duty_org": "public, private and subsidised institutions",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -22057,7 +24167,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ministry circular on direct admission",
+     "instrument_type": "regulation",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -22185,7 +24304,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Legea 198/2023",
+     "instrument_type": "statute",
+     "instrument_year": 2023,
+     "obliges": 4,
+     "duty_org": "every school unit, with the county commission",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -22320,7 +24450,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Zakon o osnovama art. 3",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "institutions founded by the state, province or municipality",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -22464,7 +24604,17 @@
     ],
     "decider": "school or authority",
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Federal Law 273-FZ art. 79",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_org": "the regions",
+     "duty_type": "regional government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -22552,7 +24702,25 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution Article 40",
+     "instrument_type": "constitution",
+     "obliges": 2,
+     "duty_org": "the State",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Law 2011",
+     "instrument_type": "statute",
+     "instrument_year": 2011,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -22616,7 +24784,18 @@
     "bilingual_handling": "silent",
     "decider": "multidisciplinary team",
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Disability Code 2000, art. 2",
+     "instrument_type": "decree",
+     "instrument_year": 2000,
+     "obliges": 2,
+     "duty_org": "public agencies",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -22803,7 +24982,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act 2023",
+     "instrument_type": "statute",
+     "instrument_year": 2023,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -22886,7 +25075,26 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act 2004 art. 15",
+     "instrument_type": "statute",
+     "instrument_year": 2004,
+     "obliges": 2,
+     "duty_org": "the Minister",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Constitution art. 36",
+     "instrument_type": "constitution",
+     "obliges": 1,
+     "duty_org": "the State",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -22970,7 +25178,25 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Interim Constitution 2005 art. 44",
+     "instrument_type": "constitution",
+     "instrument_year": 2005,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Law 2001 art. 13",
+     "instrument_type": "statute",
+     "instrument_year": 2001,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -23162,7 +25388,16 @@
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Skollagen, right to sarskilt stod",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -23248,7 +25483,18 @@
     "bilingual_handling": "silent",
     "local_norms": "none",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Compulsory Education Act 2000",
+     "instrument_type": "statute",
+     "instrument_year": 2000,
+     "obliges": 1,
+     "duty_org": "each parent",
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -23535,7 +25781,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Skolsky zakon 245/2008 § 144",
+     "instrument_type": "statute",
+     "instrument_year": 2008,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -23665,7 +25921,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 1991, amended 2008",
+     "instrument_type": "constitution",
+     "instrument_year": 1991,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Persons with Disability Act 2011",
+     "instrument_type": "statute",
+     "instrument_year": 2011,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -23773,7 +26047,16 @@
      "sensory impairment"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Exoneration from the third language in cases of particular severity",
+     "instrument_type": "regulation",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -23852,7 +26135,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Social Policy Act on the Rights of Persons with Disabilities, art. 17",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -23936,7 +26228,25 @@
      "none stated"
     ],
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Provisional Constitution 2012 art. 30",
+     "instrument_type": "constitution",
+     "instrument_year": 2012,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Somaliland Education Act arts. 40-41",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the state and ministries",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -24017,7 +26327,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 1987 art. 39",
+     "instrument_type": "constitution",
+     "instrument_year": 1987,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "CRPD, ratified 2017",
+     "instrument_type": "treaty",
+     "instrument_year": 2017,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -24107,7 +26435,30 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Disability Act",
+     "instrument_type": "statute",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "National Inclusive Education Policy",
+     "instrument_type": "policy",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "CRPD, signed but not ratified",
+     "instrument_type": "treaty",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -24159,7 +26510,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Basic Law of the Education System 2003",
+     "instrument_type": "statute",
+     "instrument_year": 2003,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -24229,7 +26590,19 @@
     "year": 2016,
     "description": "Plan El Salvador Educado sets 104 actions and the 2016-2026 inclusive school target"
    }
-  ]
+  ],
+  "coding": {
+   "legalEntitlement": [
+    {
+     "instrument": "Child protection law 2009",
+     "instrument_type": "statute",
+     "instrument_year": 2009,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
+  }
  },
  {
   "countryCode": "SX",
@@ -24290,7 +26663,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Landsverordening funderend onderwijs, school plan and leerlingenzorg funding",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the school board, funded by the ministry",
+     "duty_type": "school",
+     "redress_type": "complaint to agency"
+    }
+   ]
   }
  },
  {
@@ -24349,7 +26732,35 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law No. 34 of 2004, arts. 9(4) and 9(7)",
+     "instrument_type": "statute",
+     "instrument_year": 2004,
+     "obliges": 2,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Law No. 7 of 2012",
+     "instrument_type": "statute",
+     "instrument_year": 2012,
+     "obliges": 2,
+     "duty_org": "the Ministry of Social Affairs",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Constitution 2012 art. 29(1)",
+     "instrument_type": "constitution",
+     "instrument_year": 2012,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -24457,7 +26868,24 @@
      "none stated"
     ],
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Persons with Disability Act 2018",
+     "instrument_type": "statute",
+     "instrument_year": 2018,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Standards for Inclusive Education",
+     "instrument_type": "policy",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -24519,7 +26947,35 @@
     "year": 2018,
     "description": "Interim Education Plan 2018-2020 (PIET); 0.6 per cent of its activities focus on inclusive education"
    }
-  ]
+  ],
+  "coding": {
+   "legalEntitlement": [
+    {
+     "instrument": "Act 16/PR/2006",
+     "instrument_type": "statute",
+     "instrument_year": 2006,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Act 007/PR/2007",
+     "instrument_type": "statute",
+     "instrument_year": 2007,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Order 337/MEN/DG/95",
+     "instrument_type": "regulation",
+     "instrument_year": 1995,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
+  }
  },
  {
   "countryCode": "TG",
@@ -24604,7 +27060,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Act No. 2004-2005, art. 11",
+     "instrument_type": "statute",
+     "instrument_year": 2004,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -24667,7 +27133,17 @@
      "none stated"
     ],
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "National Education Act B.E. 2542 (1999) s.10",
+     "instrument_type": "statute",
+     "instrument_year": 1999,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -24733,7 +27209,26 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law on Social Protection of Persons with Disabilities 2010",
+     "instrument_type": "statute",
+     "instrument_year": 2010,
+     "obliges": 2,
+     "duty_org": "regional and local authorities",
+     "duty_type": "local authority",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Law on Education 2013",
+     "instrument_type": "statute",
+     "instrument_year": 2013,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -24811,7 +27306,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Lei on inclusive education, with normas gerais set by decreto-lei",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_org": "the State",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -24853,7 +27358,35 @@
     "year": 2013,
     "description": "Law on Education, Art 4.5, defines inclusive education"
    }
-  ]
+  ],
+  "coding": {
+   "legalEntitlement": [
+    {
+     "instrument": "Law on Education",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Child rights law 2014",
+     "instrument_type": "statute",
+     "instrument_year": 2014,
+     "obliges": 2,
+     "duty_org": "the state",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Constitution 2008",
+     "instrument_type": "constitution",
+     "instrument_year": 2008,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
+  }
  },
  {
   "countryCode": "TN",
@@ -24960,7 +27493,32 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Act No. 2002-80",
+     "instrument_type": "statute",
+     "instrument_year": 2002,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Constitution, chapters 23 and 47",
+     "instrument_type": "constitution",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Act No. 2008-10",
+     "instrument_type": "statute",
+     "instrument_year": 2008,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -25106,7 +27664,16 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act Part XXI, commencement conditional on a ministerial proclamation",
+     "instrument_type": "statute",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -25308,7 +27875,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act, s.7",
+     "instrument_type": "statute",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -25458,7 +28034,16 @@
      "none stated"
     ],
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Ordinance, read in full, with no disability provision",
+     "instrument_type": "statute",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -25599,7 +28184,17 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Special Education Act, art. 38",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_org": "schools",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -25679,7 +28274,25 @@
      "none stated"
     ],
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Persons with Disabilities Act 2010 (Mainland)",
+     "instrument_type": "statute",
+     "instrument_year": 2010,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Zanzibar Persons with Disabilities Act 2006",
+     "instrument_type": "statute",
+     "instrument_year": 2006,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -25824,7 +28437,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Zakon Pro osvitu art. 19",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_org": "state bodies, local self-government and the education institutions",
+     "duty_type": "local authority",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -25920,7 +28543,18 @@
      "none stated"
     ],
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Persons with Disabilities Act 2020",
+     "instrument_type": "statute",
+     "instrument_year": 2020,
+     "obliges": 3,
+     "duty_org": "schools",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -29572,7 +32206,16 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Ley 18.437, arts. 33 and 72(B)",
+     "instrument_type": "statute",
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -29642,7 +32285,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Law ZRU-641, arts. 38 and 44",
+     "instrument_type": "statute",
+     "obliges": 4,
+     "duty_org": "education organisations with state bodies",
+     "duty_type": "national government",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -29820,7 +32473,17 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act s.113",
+     "instrument_type": "statute",
+     "obliges": 2,
+     "duty_org": "the Chief Education Officer",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -29900,7 +32563,26 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Resolucion 2005 of 1996",
+     "instrument_type": "regulation",
+     "instrument_year": 1996,
+     "obliges": 2,
+     "duty_org": "all schools",
+     "duty_type": "school",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Ley para Personas con Discapacidad 2007, arts. 16 and 20",
+     "instrument_type": "statute",
+     "instrument_year": 2007,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -29973,7 +32655,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Law, art. 27",
+     "instrument_type": "statute",
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   },
   "slots": {
    "dischargeCriteria": [
@@ -30138,7 +32829,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "National Education Act 2001",
+     "instrument_type": "statute",
+     "instrument_year": 2001,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Act 2014",
+     "instrument_type": "statute",
+     "instrument_year": 2014,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -30214,7 +32923,17 @@
      "none stated"
     ],
     "rule_locus": "national statute"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "French disability rights law 2005, not applied in the territory",
+     "instrument_type": "statute",
+     "instrument_year": 2005,
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -30356,7 +33075,18 @@
      "none stated"
     ],
     "rule_locus": "not stated"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education Act 2009, Part IX",
+     "instrument_type": "statute",
+     "instrument_year": 2009,
+     "obliges": 2,
+     "duty_org": "the chief executive",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -30398,7 +33128,28 @@
     "year": 2013,
     "description": "'Special needs' are mentioned many times in the 2013-15 Mid Term Results Framework, which highlighted that about…"
    }
-  ]
+  ],
+  "coding": {
+   "legalEntitlement": [
+    {
+     "instrument": "Law 61/1999 on care and habilitation of the disabled",
+     "instrument_type": "statute",
+     "instrument_year": 1999,
+     "obliges": 1,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "Education Law 1992, arts. 8 and 28",
+     "instrument_type": "statute",
+     "instrument_year": 1992,
+     "obliges": 2,
+     "duty_org": "the state, with the Ministry of Social Affairs on curricula",
+     "duty_type": "ministry",
+     "redress_type": "not stated"
+    }
+   ]
+  }
  },
  {
   "countryCode": "ZA",
@@ -30507,7 +33258,25 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "study or project"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Education White Paper 6 (2001)",
+     "instrument_type": "policy",
+     "instrument_year": 2001,
+     "obliges": 2,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "SIAS (2014)",
+     "instrument_type": "policy",
+     "instrument_year": 2014,
+     "obliges": 3,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -30583,7 +33352,25 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Constitution 1991, amended 2016, which does not enshrine a right to education",
+     "instrument_type": "constitution",
+     "instrument_year": 1991,
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    },
+    {
+     "instrument": "National Development Plan 2017-21",
+     "instrument_type": "policy",
+     "instrument_year": 2017,
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {
@@ -30680,7 +33467,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "Inclusive education undefined in law as of the 2023 UNICEF review",
+     "instrument_type": "none",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  }
 ]
