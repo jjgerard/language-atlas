@@ -622,11 +622,90 @@ January and March" record a document being reissued with no change stated —
 neither amended nor made nor described. Two rows, coded `provision described`,
 noted in case it recurs.
 
+## Second held-out region: eal Asia, 190 rows
+
+The largest eal region, 65 entries, and only 16 rows carried any prior coding.
+
+```
+  provision described            79   42%
+  plan or strategy issued        28   15%
+  instrument amended             22   12%
+  body or programme established  22   12%
+  instrument made                17    9%
+  state of affairs recorded      14    7%
+  body or programme changed       7    4%
+  instrument replaced             1    1%
+  funding decided                 0
+```
+
+**The residual drops to 42% here, against Europe's 50%,** and the value that
+takes up the slack is `state of affairs recorded` at 7% against Europe's 2%.
+That is India: the Commissioner for Linguistic Minorities' 52nd Report runs
+through the states recording that a government did not reply, that no monitoring
+machinery exists, that no Language Preference Registers are kept. Those rows are
+dated observations that nothing exists, which is exactly what the value is for,
+and they are concentrated in one country's sub-national entries.
+
+The same entries are why `plan or strategy issued` holds at 15% on a region with
+few national strategies — the CLM's reiterated recommendations to sixteen states
+are recommendations, and they code as such.
+
+**53 of 53 proposals correct after the fixes below, 48 of 51 (94%) before them.**
+The three errors:
+
+- China 2006, "Compulsory Education Law REVISED, in force 2006-09-01", took
+  `instrument made` off *in force*. `revised` was not in the amendment pattern.
+- Myanmar 2022, "military AMENDMENTS to the National Education Law", did the
+  same, because `amend(s|ed|ing|ment)?` does not match the plural.
+- Taiwan 2015, "Five-year PLAN ... ADOPTED", took `instrument made`. The adopt
+  veto knew *strategy* and *action plan* but not a bare plan.
+
+`revised` needed care rather than adding. China 2026 reads "REVISED Law on the
+Standard Spoken and Written Chinese Language enters into force 1 January", which
+dates a commencement, not a revision — the same word, and the operation is
+`instrument made`. The order carries the difference, so the pattern requires
+`revised` to FOLLOW the instrument noun rather than precede it.
+
+Three abstentions were misses rather than residual, and all three were missing
+vocabulary in the patterns rather than missing values in the scheme: India's
+"Chhattisgarh State Urdu ACADEMY established" (no `academy` in the noun list),
+Turkey's "establishes Temporary Education CENTERS" (`center` had no plural), and
+Iran's "NULLIFIES the 2004 directive … and VOIDS tuition-fee articles", which is
+a repeal in every sense but the word used for it.
+
+All three regions score clean with the fixes in, and `dld` — still never tuned
+on — moved the way it should: `instrument amended` 102 to 108, `body or
+programme established` 22 to 26, nothing else disturbed.
+
+### The scope-change gap, updated
+
+Asia adds four: China 2017 and 2020, where five and then six provinces "begin
+the unified three-subject textbooks"; India 2014, "minimum enrolment for a
+mother-tongue class relaxed from 20 to 15"; India 2014 again, where a G.O.
+"extended the pattern to CBSE schools". Running total **10 in 361, 2.8%.** Still
+holding near 3%, still coded `provision described`, still not an axis until you
+say so.
+
+## eal so far
+
+```
+  provision described            158   44%
+  plan or strategy issued         53   15%
+  instrument amended              41   11%
+  body or programme established   37   10%
+  instrument made                 26    7%
+  state of affairs recorded       22    6%
+  body or programme changed       14    4%
+  funding decided                  5    1%
+  instrument replaced              4    1%
+                                 360
+```
+
 ## Remaining, by region
 
 ```
+  eal   Americas 143   Africa 100
   dld   Americas 316   Africa 292   Asia 124   Oceania 124   Europe  79
-  eal   Asia     174   Africa 100   Americas 71
 ```
 
-eal Europe (124 rows) and eal Oceania (47) are done.
+eal Europe (124), Oceania (47) and Asia (190) are done — 361 of 604 eal rows.
