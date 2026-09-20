@@ -165,7 +165,7 @@
  "163": "international instrument accepted",
  "164": "international instrument accepted",
  "165": "body or programme established",
- "166": "state of affairs recorded",
+ "166": "plan or strategy issued",
  "167": "international instrument accepted",
  "168": "provision described",
  "169": "provision described",
@@ -181,5 +181,5 @@
  "180": "international instrument accepted",
  "181": "instrument made",
  "182": "instrument amended",
- "_note": "index -> operation, against research/hist-op-ind-europe.json. Index 174 omitted deliberately: it is the same Sweden 2015 row left unset in eal Europe, whose subject is a statistic hedged to 'may be due to' and whose text is truncated."
+ "_note": "index -> operation, against research/hist-op-ind-europe.json. Index 174 omitted deliberately: it is the same Sweden 2015 row left unset in eal Europe, whose subject is a statistic hedged to 'may be due to' and whose text is truncated. 166 (Portugal 2025) corrected from state of affairs recorded to plan or strategy issued: the row both RECORDS and RECOMMENDS, and the vocabulary puts plan above state. This matches how India 2015 and 2016 are coded in indigenous Asia."
 }

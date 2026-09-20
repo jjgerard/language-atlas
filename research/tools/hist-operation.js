@@ -93,9 +93,9 @@ const describesAPlan = d =>
 // Portugal. They are dated observations, and a reader codes them as such; the
 // proposer's job here is to keep quiet, so this vetoes all three rules whose
 // vocabulary the sentences happen to use.
-const isMonitoringOpinion = d =>
-  /\bopinion\b/i.test(d)
-  && /\b(find|found|record|recommend|noting|note)\w*\b/i.test(d);
+const isMonitoringDocument = d =>
+  /\b(opinion|report|review)\b/i.test(d)
+  && /\b(find|found|record|recommend|urge|noting|note|ask)\w*\b/i.test(d);
 
 const RULES = [
   // A PROGRAMME replaced is not an INSTRUMENT replaced. France's "ELCO formally
@@ -110,7 +110,7 @@ const RULES = [
    // Only what the hoist was for. Everything else this value covers sits at its
    // declared precedence further down, so an amendment beats a rename.
    /\bconsolidat\w*|\bmerg\w*[\s\S]{0,40}\bamendments?\b|\b(programmes?|programs?)\s+(guide|order|act|regulation|policy|plan|directive)\b/i],
-  ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*|\bnullif\w*|\bvoid\w*|\bannul\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|chapters?|subchapters?|sections?|subsections?|regulations?|rules?|model|P\.?L\.? ?\d)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|sections?|subsections?)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)/i,
+  ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*|\bnullif\w*|\bvoid\w*|\bannul\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|chapters?|subchapters?|sections?|subsections?|regulations?|rules?|model|P\.?L\.? ?\d)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|sections?|subsections?)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)|\brepeal\w*[\s\S]{0,60}\bnew (measures?|rules?|regulations?|provisions?)\b/i,
    // South Africa 1953: "Bantu Education Act reinforces apartheid through
    // segregated schooling, REPEALED IN 1979". The repeal is real and is not this
    // row's business; the row says what the Act did.
@@ -121,7 +121,7 @@ const RULES = [
   // one value cost nothing -- first match wins either way -- and the alternative
   // was a single literal that quietly lost the flag.
   ["instrument replaced", /\b[A-Z]{3,6}\b\s+(repeal|supersed|replac|revok)\w*/],
-  ["instrument amended", /\bamend\w*\b|\brewrit\w*\b|\b(act|law|constitution|code|ordinances?|regulations?|guidelines|guidance|policy|policies|rules|manual|chart|document|edition|plan)\b[\s\S]{0,20}\brevis(ed|ion|ions)\b|\binsert\w*|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i,
+  ["instrument amended", /\bamend\w*\b|\brewrit\w*\b|\(\d{4} revision\)|\b(act|law|constitution|code|ordinances?|regulations?|guidelines|guidance|policy|policies|rules|manual|chart|document|edition|plan)\b[\s\S]{0,20}\brevis(ed|ion|ions)\b|\binsert\w*|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i,
    // A parenthetical or appositive amendment DATE is not an amendment: it dates
    // the instrument the row describes. Four UNESCO PEER rows read "Constitution
    // of Barbados, AMENDED 2007; does not enshrine the right to education" or
@@ -129,7 +129,7 @@ const RULES = [
    // decades before the amendment. Kuwait 1965 in the Asia batch is the same
    // shape and its coding is corrected alongside this. Laos 2003's "amended IN
    // 2003" is untouched: the word `in` marks a year that is the row's own.
-   (d, h) => datedElsewhere(d, h) || /\bbeg(an|in|ins|un)\s+amend|\bamended since\b/i.test(d)],
+   (d, h) => datedElsewhere(d, h) || /\bbeg(an|in|ins|un)\s+amend|\bamended since\b/i.test(d) || isMonitoringDocument(d)],
   ["international instrument accepted", /\bratif(y|ies|ied|ication)\b|\baccede(d|s)?\b|\baccession\b|\benters? into force for\b|\bdeclaration under\b|\b(charter|convention|covenant|protocol|treaty)\b[\s\S]{0,120}\bin force for\b|\bin force for\b[\s\S]{0,120}\b(charter|convention|covenant|protocol|treaty)\b|\bdeclaration takes effect\b|\bextends? the protection of\b/i,
    // Ratification DENIED is not ratification. Eritrea 1997 reads "Even if Eritrea
    // has NOT RATIFIED the Convention Against Discrimination in Education", which
@@ -146,7 +146,7 @@ const RULES = [
    // "enacted, in force 1995-09-01" is a real making and must survive. And a row
    // that says outright the enactment is NOT VERIFIED is the one row in the
    // corpus that forbids this value in its own text.
-   (d, h) => datedElsewhere(d, h) || /\bnot verified\b|\bbefore the\b[\s\S]{0,40}\badopt|\bunder which\b|\bamended since\b|\badopted in\b[\s\S]{0,40}\btranslations?\b|\badopt\w*\s+[A-Z][a-z]+\s+for\b/i.test(d) || isMonitoringOpinion(d) || (/\brenam\w*/i.test(d) && !/\bamend\w*/i.test(d))],
+   (d, h) => datedElsewhere(d, h) || /\bnot verified\b|\bbefore the\b[\s\S]{0,40}\badopt|\bunder which\b|\bamended since\b|\badopted in\b[\s\S]{0,40}\btranslations?\b|\badopt\w*\s+[A-Z][a-z]+\s+for\b/i.test(d) || isMonitoringDocument(d) || (/\brenam\w*/i.test(d) && !/\bamend\w*/i.test(d))],
   // Renaming, restructuring, merging and closing, at the precedence
   // HISTORY_OPERATION declares for them: below every operation on an instrument.
   // Nunavut's "Inuit Language Protection Act RENAMED the Inuktut Protection Act"
@@ -169,7 +169,7 @@ const RULES = [
   // thing established has to be a thing that can be walked into or enrolled on,
   // so the verb now needs a body-or-programme noun and the abstractions veto it.
   ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept|test|education|schooling)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programmes?|programs?|scheme|class|classes|committee|office|initiative|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training|groups?|task forces?|index|indexes|indices)\b/i,
-   d => /\b(requires?|requiring|makes?|obliges?|obliging|directs?|shall|must|will ensure|ensures?|ensuring)\b[\s\S]{0,60}\b(establish\w*|maintain|creat\w*|set up|provide|provision of)|\bon the establishment of\b/i.test(d) || isMonitoringOpinion(d)],
+   d => /\b(requires?|requiring|makes?|obliges?|obliging|directs?|shall|must|will ensure|ensures?|ensuring)\b[\s\S]{0,60}\b(establish\w*|maintain|creat\w*|set up|provide|provision of)|\bon the establishment of\b/i.test(d) || isMonitoringDocument(d)],
   ["funding decided", /\bfunding agreement\b|\bbudget of\b|\b\d[\d\s,.]*\s?(euros?|dollars?|pounds?)\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|£[\d,.]+|\bfunding formula\b|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
   ["plan or strategy issued", /\b(strategic|sector|master|implementation) plan\b|\bstrateg(y|ies)\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\bpledges?\b|\brecommendations?\b|\bwhite paper\b|\bframework document\b/i,
    // Beginning to develop a plan is not issuing one. Dominica 2020, "Ministry of
@@ -180,7 +180,7 @@ const RULES = [
    // "Education (Disability STRATEGIES and Pupils' Educational Records)
    // (Scotland) Act 2002", both carry a plan word as ordinary content: one
    // inside the thing a regulation regulates, one inside an Act's own title.
-   d => /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b|\b(procedure|rules|process) for\b[\s\S]{0,40}\brecommendations?\b|\([^)]*[Ss]trateg|\b(prepare|prepares|preparing|require|requires|requiring)\b[\s\S]{0,40}\bplans?\b/i.test(d) || describesAPlan(d) || /\b(include|includes|including|use|uses|using)\b[\s\S]{0,30}\bstrategies\b/i.test(d) || isMonitoringOpinion(d)],
+   d => /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b|\b(procedure|rules|process) for\b[\s\S]{0,40}\brecommendations?\b|\([^)]*[Ss]trateg|\b(prepare|prepares|preparing|require|requires|requiring)\b[\s\S]{0,40}\bplans?\b/i.test(d) || describesAPlan(d) || /\b(include|includes|including|use|uses|using)\b[\s\S]{0,30}\bstrategies\b/i.test(d)],
   ["state of affairs recorded", /\bdoes not\b|\bno specific\b|\bomits\b|\bfound no\b|\bnever uses\b|\bis silent\b|\bno such\b|\bnothing\b|\bnames only\b|\bbut not\b|\bneither\b/i],
 ];
 

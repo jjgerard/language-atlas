@@ -1851,3 +1851,116 @@ with a new cell yet.
 
 Held-out at first sight, in coding order: **88, 94, 71, 73, 88, 91, 81, 93, 99,
 88, 85, 85**.
+
+## indigenous Asia, 266 rows
+
+74 entries, one left unset.
+
+```
+  provision described            86   32%
+  state of affairs recorded      57   22%
+  body or programme established  46   17%
+  instrument made                23    9%
+  plan or strategy issued        23    9%
+  instrument amended             21    8%
+  body or programme changed       8    3%
+  instrument replaced             1    0%
+```
+
+**`state of affairs recorded` reaches 22% — nearly twice its next-highest cell
+anywhere** (`eal` Oceania, 13%) and eleven times its level in indigenous Europe.
+That is one document: the Commissioner for Linguistic Minorities' reports, which
+go state by state recording that a government did not reply, that no monitoring
+machinery exists, that Urdu is the only minority medium in three primary schools,
+that the safeguards status is unascertainable. Sixty-odd rows of it.
+
+The same source made `eal` Asia's `state of affairs recorded` the highest in that
+domain too, at 7%. Here it is three times as high again, because the indigenous
+map takes the CLM reports state by state rather than in summary.
+
+`instrument replaced` is one row in 266. The other side of the same coin: this
+region's timeline is observation and institution-building — language academies in
+nineteen Indian states, the Ura Academy in 1939, the Tamil Virtual Academy in
+2000 — not statutes superseding one another.
+
+The proposer scored **50 of 55, 91%**, and finished at 51/52.
+
+### The opinion helper generalises into a document helper
+
+indigenous Europe found the Council of Europe monitoring opinion and gave it a
+named veto. Asia has the same species at ten times the volume, from a different
+institution:
+
+> "48th **Report** of the Commissioner for Linguistic Minorities **records**
+> Odisha's School and Mass Education Department **introducing** Santhali …"
+> "52nd **Report** … **urges** Uttar Pradesh to **amend** the 1952 Hindi-medium
+> recognition clause"
+
+The operations in a monitoring document's sentences belong to whoever it is
+writing about, not to the document. `isMonitoringOpinion()` is now
+`isMonitoringDocument()` and covers reports and reviews as well as opinions,
+vetoing `instrument made`, `instrument amended` and `body or programme
+established`.
+
+It deliberately no longer vetoes `plan or strategy issued`. A document that
+**urges** or **recommends** is issuing a recommendation, and the vocabulary puts
+that above `state of affairs recorded`. A row that only **finds** or **records**
+abstains, and a reader codes it as the observation it is.
+
+**That cost a correction in indigenous Europe.** Portugal 2025 "records that
+Mirandese is taught only as an optional extra-curricular course … and
+**recommends** introducing it as a curricular subject" was coded `state of
+affairs recorded` there. It both records and recommends, and by the precedence it
+is `plan or strategy issued` — which is how the identical shape is coded here for
+India 2015 and 2016. Corrected.
+
+### Two China rows, one of them a lesson about where a clause goes
+
+"内蒙古自治区蒙古语言文字工作条例 (2004) **repealed** on 1 January 2022 **as new
+measures took effect**" is a repeal and a replacement in one sentence, with no
+Latin instrument noun for the pattern to hold on to. The clause for it was first
+written **inside** the group that the instrument-noun requirement applies to, so
+it still demanded a noun it could never find and changed nothing. It belongs
+beside that alternative, not inside it. A regex edit that leaves the score
+unmoved is worth re-reading before it is believed.
+
+"(2010 revision) in force from 1 September 2010" needed the same kind of help:
+the `revised` pattern wants a noun beside the word, and here the noun is in
+Chinese.
+
+The one error left standing is West Bengal 1961, "Official Language Act **adopts
+Bengali**, Nepali in the hills" — adopting a language, not an instrument. The
+veto that catches Guernsey's "adopted English for ordinary business" needs a
+preposition after the language name, and widening it to reach this row would have
+caught "MEHE **adopted Education for** All" instead. Left alone.
+
+### Fourteen cells
+
+```
+residual                          state of affairs recorded
+region     eal   dld   indig      eal   dld   indig
+ Africa    60%   45%    —          8%    5%    —
+ Europe    50%   59%   27%         2%    2%    3%
+ Asia      42%   49%   32%         7%    4%   22%
+ Americas  43%   39%   40%         9%    4%    7%
+ Oceania   43%   38%   54%        13%    9%    4%
+```
+
+The second grid is the more useful one to have. `state of affairs recorded` sits
+between 2% and 9% in thirteen of the fourteen cells and at **22%** in the
+fourteenth, and the exception is not a region or a domain but a single
+institution that files its findings state by state. That is what this column
+measures when it is read carefully: not what systems do, but what somebody
+wrote down about them.
+
+## Where the proposer stands, fourteen regions
+
+```
+  eal Europe      30/30   100%    dld Europe      36/36   100%    ind Oceania   16/16   100%
+  eal Oceania     21/21   100%    dld Oceania     48/48   100%    ind Europe    72/73    99%
+  eal Asia        52/52   100%    dld Asia        41/43    95%    ind Americas  63/65    97%
+  eal Americas    40/42    95%    dld Americas   137/137  100%    ind Asia      51/52    98%
+  eal Africa      22/23    96%    dld Africa      84/84   100%           713/722    99%
+```
+
+Held-out at first sight: **88, 94, 71, 73, 88, 91, 81, 93, 99, 88, 85, 85, 91**.
