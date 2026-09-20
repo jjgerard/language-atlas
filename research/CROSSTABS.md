@@ -107,9 +107,57 @@ the most common mechanism under every threshold basis that has more than two
 systems, and no threshold basis avoids it. Systems differ in how they let a
 child IN far more than in how they let one out.
 
+## One that survives every check: how Asia and Europe ground identification
+
+`node research/tools/coding-region.js dld identificationCriteria threshold_basis`
+
+National only, `not stated` excluded because it is a statement about sources
+rather than about systems (see below). n = 110.
+
+**Asia grounds identification in clinical diagnosis, Europe in educational
+need.** Asia 17 of 31, 55%. Europe 21 of 40, 53%, against 30% clinical. V =
+0.311, permutation p = 0.0025 holding each system's value count fixed.
+
+It survives the two checks that have killed everything else here:
+
+- **Sub-national inflation.** National units only, so no country is counted
+  once per province.
+- **Documentation depth.** This is the one that matters, because Europe carries
+  8.8 mean docLinks against Asia's 4.0, and a plausible mechanism exists — thin
+  sources might show only the medical route while deep ones also reveal the
+  school-side rule. Tested within regions, it does not operate. Europe:
+  clinical 9.6 docs, educational need 8.7. Asia: clinical 3.6, educational need
+  4.4. Americas: 2.0 against 2.5. Depth does not predict the value inside any
+  region, and the direction is not even consistent across them.
+
+## Two that are a statement about sources, and should be quoted as one
+
+**`not stated` on dld threshold tracks documentation almost exactly.** Africa
+29 of 38, 76%, at 3.3 mean docLinks. Americas 43% at 2.6. Europe 13% at 8.6.
+This is worth reporting — it is the clearest measure the atlas has of where the
+record thins — but it is a finding about the corpus, not about the systems, and
+the regional table should never be shown without it.
+
+**The eal designation split is clean in Europe and is not in Asia.** Europe
+names a category 23 times in 32 and uses a proxy once; Asia uses a proxy 10
+times in 17. V = 0.477, p = 0.0004. But within Europe the depth is flat across
+values — functional 4.3, named 4.4, proxy 4.0 — while within Asia proxy sits at
+2.8 against named category at 6.8. Either Asian proxy systems are the
+under-documented ones, or a citizenship rule is genuinely one line where a named
+category with a definition and a test generates a literature. Nothing here
+separates those.
+
+## Two the corpus cannot be asked about at all
+
+**Exit criteria by region, in both domains.** eal `exit_mechanism` is n = 36
+with 26 in Europe and nothing in Africa, p = 0.77. dld `discharge_basis` is n =
+49 with 30 in Europe, p = 0.19. Whether systems exit on time, on a test or on a
+judgement is a question about a European sample, and asking it regionally
+invites an answer the data cannot give.
+
 ## The habit this file is really recording
 
-Four of the seven candidate findings here failed a check that took one command
+Five of the nine candidate findings here failed a check that took one command
 to run, and a fifth — the eal entry/exit timing cross, withdrawn in e6202f4 —
 failed a permutation test at p = 0.40. The usual check is `confound()` in
 `coding-crosstab.js`: split the corpus by the column under test, report the hit
