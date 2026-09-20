@@ -7081,7 +7081,7 @@
   "legalEntitlement": "The Plan Individual de Ajustes Razonables (PIAR) is the operative instrument\nBuilt on pedagogical and social valuation, covering curriculum and infrastructure support\nPrepared by teachers, the orientador or school leaders — an advisory teacher where there is one\nIt feeds the teacher's classroom planning and the school improvement plan",
   "funding": "Money follows the pupil through the Sistema General de Participaciones\nAn extra 20% or more per pupil with a disability reported in SIMAT\nSubject to the budget available, and set annually by level and zone\nTerritorial entities may fund temporary posts for docentes de apoyo pedagógico",
   "workforce": "Fonoaudiología is a statutorily autonomous university-level profession, Ley 376 de 1997\nIts object of study covers disorders of language, speech and hearing\nRegistration needs a Colombian university degree in fonoaudiología, art. 5\nThe ACFTL holds the Registro Único Nacional of those practising the profession",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "The PIAR is made in the first trimestre and se actualizará anualmente (art. 2.3.3.5.2.3.5)\nAn informe anual de competencias is annexed at the end of each academic year\nThe decree fixes no point at which the ajustes razonables cease\nDocentes de aula lead it with the docente de apoyo, the family and the student\nThe acta de acuerdo is what lets the family hold the school to it (art. 2.3.3.5.2.3.6)",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -7123,6 +7123,24 @@
      "duty_type": "school",
      "redress_type": "not stated"
     }
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "review without criterion"
+    ],
+    "review_interval_months": 12,
+    "decider": "school or authority",
+    "rule_locus": "national statute"
+   }
+  },
+  "slots": {
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    2,
+    2
    ]
   }
  },
@@ -23003,6 +23021,14 @@
    {
     "label": "UNESCO GEM Report PEER, country profile: inclusion",
     "url": "https://education-profiles.org/oceania/new-zealand/~inclusion"
+   },
+   {
+    "label": "Ministry of Education, Overview of the Ongoing Resourcing Scheme",
+    "url": "https://www.education.govt.nz/school/student-support/special-education/ors"
+   },
+   {
+    "label": "Ministry of Education, Section 47 reconsideration process for the Ongoing Resourcing Scheme",
+    "url": "https://www.education.govt.nz/parents-and-caregivers/schools-year-0-13/learning-support/section-47-reconsideration-process-ongoing-resourcing-scheme"
    }
   ],
   "supportLinks": [
@@ -23025,7 +23051,7 @@
   "legalEntitlement": "ORS is a resourcing scheme with eligibility criteria\nNot an individually enforceable right to a named quantum of therapy\nIt provides resources to the school for pupils with high and very high needs\nAcross learning, vision, hearing, mobility, language and social communication",
   "funding": "Publicly funded through the education system\nORS is the principal vehicle for pupils with the highest needs",
   "workforce": "Source describes special-needs provision generally, never language disorder\nInitial teacher education programmes were to be reviewed and monitored by end of 2020\nTeachers Council reported willing to add inclusive education focus to future ITE\nLate 2015: expert advisory group recommended revising professional learning provision",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "ORS is linked to the student and continues as they change schools until they leave school\nThe Ministry states no review, no re-verification and no criterion for withdrawal\nOnly a parent or caregiver may seek a section 47 reconsideration, within one month of refusal\nThat request goes to the Secretary of Education, with arbitration after it",
   "outcomesEvidence": "Source describes special-needs provision generally, never language disorder\nERO outcome indicators cover students' confidence in identity, language and culture\nERO reviews and reports on quality in all schools and publishes national reports\n2011 Independent Monitoring Mechanism qualitatively monitors CRPD implementation\n2017 Diversity and Inclusion framework sets quarterly diversity targets",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -23103,6 +23129,12 @@
     2,
     2,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    2,
+    2
    ]
   },
   "coding": {
@@ -23131,7 +23163,14 @@
      "bilingual_fit": "not stated",
      "modality": "not stated"
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "none established"
+    ],
+    "decider": "national authority",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
@@ -28671,6 +28710,10 @@
    {
     "label": "İhlas Haber Ajansı, 18 January 2023 — remarks by Öğr. Gör. Namık Yücel Birol at the opening of Kapadokya University's speech and language therapy centre",
     "url": "https://www.iha.com.tr/nevsehir-haberleri/-4133632"
+   },
+   {
+    "label": "Özel Eğitim Hizmetleri Yönetmeliği, md. 7-10, güncel metin — MEB Özel Eğitim ve Rehberlik Hizmetleri GM",
+    "url": "https://orgm.meb.gov.tr/meb_iys_dosyalar/2021_09/13145613_Ozel_EYitim_Hizmetleri_YonetmeliYi_son.pdf"
    }
   ],
   "supportLinks": [],
@@ -28688,7 +28731,7 @@
   "legalEntitlement": "Decree-law 573 of 1997 governs the right to general and vocational education\nPre-school is compulsory for a child with a confirmed special education diagnosis\nState and private schools are obliged to provide special education services in their area\nParent may appeal an assessment or placement decision within thirty working days",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 55\nFunders: family 58%, state education 38%, state health 9%\n40% said a maximum number of sessions applied (n = 55)",
   "workforce": "Numbers are a therapist's statement at a centre opening in January 2023, not a register\nProfession put at around 2,500 therapists\nOne therapist per 28,260 people here, against one per 6,266 in Europe\nRoute is a speech and language therapy degree, or another degree plus a master's or PhD",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Eğitsel değerlendirme ve tanılama is redone at every transition of type and level (md. 9/1a)\nDestek eğitim plans run at most one year, renewable ihtiyaç hâlinde (md. 7/3c)\nA renewal needs a Dönem Sonu Bireysel Performans Değerlendirme Formu (md. 8/1e)\nThe Özel Eğitim Değerlendirme Kurulu at the RAM does the re-assessment",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -28741,6 +28784,23 @@
       "morphosyntax"
      ]
     }
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "fixed time limit",
+     "re-evaluation cycle"
+    ],
+    "review_interval_months": 12,
+    "decider": "multidisciplinary team",
+    "rule_locus": "national rule, local application"
+   }
+  },
+  "slots": {
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    2
    ]
   }
  },
