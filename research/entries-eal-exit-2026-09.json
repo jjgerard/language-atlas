@@ -1,0 +1,30 @@
+[
+ {
+  "domain": "eal",
+  "unit": "PT|Portugal",
+  "fields": {
+   "removalCriteria": [
+    "Levels run A1, A2, B1, B2; from B2 pupils follow the national Portuguese curriculum",
+    "Moving up a level needs a pass in an intermediate test written by the school itself",
+    "It can happen at the end of the school year or at any other moment in the year",
+    "In years 9 and 12 the final subject classification decides, not the exam alone",
+    "A pass does not force a move: a pupil may stay two years at A1, at A2 or at B1"
+   ]
+  },
+  "coding": {
+   "removalCriteria": {
+    "exit_mechanism": ["proficiency judgement"],
+    "decided_by": "school",
+    "rule_locus": "national rule, local application"
+   }
+  },
+  "docLinks": [
+   {
+    "label": "Direção-Geral da Educação, Perguntas Frequentes — Português Língua Não Materna (September 2025), Q9 on how a pupil moves between proficiency levels",
+    "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/PLNM/faq_plnm_set2025.pdf"
+   }
+  ],
+  "lastVerified": "2026-09",
+  "confidence": "official-document"
+ }
+]

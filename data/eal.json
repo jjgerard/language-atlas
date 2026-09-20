@@ -17112,7 +17112,7 @@
   "subregion": "Southern Europe",
   "status": "partial",
   "confidence": "official-document",
-  "lastVerified": "2026-08",
+  "lastVerified": "2026-09",
   "collaborators": [
    {
     "name": "Silvia de Almeida",
@@ -17147,6 +17147,10 @@
    {
     "label": "COST Action IS1406, Language Surveys and Definition Documents, Portuguese version pp. 599-624",
     "url": "https://ndownloader.figshare.com/files/17588786"
+   },
+   {
+    "label": "Direção-Geral da Educação, Perguntas Frequentes — Português Língua Não Materna (September 2025), Q9 on how a pupil moves between proficiency levels",
+    "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/PLNM/faq_plnm_set2025.pdf"
    }
   ],
   "supportLinks": [],
@@ -17156,7 +17160,7 @@
   "inst": "International Journal of Educational Research Open",
   "source": "seed",
   "newcomerCriteria": "Newly arrived migrant pupils are the large majority of children with a migrant background\nImmigration to Portugal is recent, dating from the turn of the millennium",
-  "removalCriteria": "",
+  "removalCriteria": "Levels run A1, A2, B1, B2; from B2 pupils follow the national Portuguese curriculum\nMoving up a level needs a pass in an intermediate test written by the school itself\nIt can happen at the end of the school year or at any other moment in the year\nIn years 9 and 12 the final subject classification decides, not the exam alone\nA pass does not force a move: a pupil may stay two years at A1, at A2 or at B1",
   "newcomerProportion": [
    {
     "year": "2018",
@@ -17217,6 +17221,15 @@
     2,
     4
    ]
+  },
+  "coding": {
+   "removalCriteria": {
+    "exit_mechanism": [
+     "proficiency judgement"
+    ],
+    "decided_by": "school",
+    "rule_locus": "national rule, local application"
+   }
   }
  },
  {
