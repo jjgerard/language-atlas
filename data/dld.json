@@ -2960,7 +2960,7 @@
   "legalEntitlement": "Preschool and School Education Act lists logopedic work as general support\nAdditional support includes rehabilitation of communicative disorders\nSupport is delivered where the child is, and at home or in hospital in named cases\nGeneral support is provided by kindergartens, schools and personal-development centres",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 99\nFunders: family 51%, state education 45%, state social services 12%, pro bono 10%\n11% said a maximum number of sessions applied (n = 98)",
   "workforce": "A logoped works in kindergartens and schools to deliver general and additional support\nRegional inclusive-education centres also carry logopeds on their support teams",
-  "dischargeCriteria": "Resource support may be discontinued once the goals in the plan za podkrepa are met (chl. 123)\nThe ekip za podkrepa na lichnostno razvitie decides, after reviewing the child's progress\nThat team tracks progress twice in the school year and may amend the plan (chl. 129/1/8)\nDiscontinuation also requires an application from the parent",
+  "dischargeCriteria": "Resource support may be discontinued once the goals in the plan za podkrepa are met (chl. 123)\nThe support team tracks progress twice in the school year and may amend the plan (chl. 129/1/8)\nDiscontinuation also requires an application from the parent\nThe ekip za podkrepa na lichnostno razvitie decides, after reviewing the child's progress",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -9404,7 +9404,7 @@
    ],
    "dischargeCriteria": [
     1,
-    1,
+    2,
     2
    ]
   },
@@ -11568,6 +11568,10 @@
    {
     "label": "DREES, Les depenses de sante en 2024 - Fiche 08, Les soins des auxiliaires medicaux hors soins infirmiers (edition 2025); effectifs from the Adeli register and RPPS",
     "url": "https://drees.solidarites-sante.gouv.fr/sites/default/files/2025-09/CNS%20-%20Fiche%2008%20-%20Les%20soins%20des%20auxiliaires%20m%C3%A9dicaux%20hors%20soins%20infirmiers.pdf"
+   },
+   {
+    "label": "Code de l'education, article D. 351-10, equipes de suivi de la scolarisation — Legifrance",
+    "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006527292/2013-01-04"
    }
   ],
   "supportLinks": [],
@@ -11585,7 +11589,7 @@
   "legalEntitlement": "Code de l'education L.112-4 allows adjusted exam arrangements for disabled candidates\nAny child with a disabling health condition is enrolled in the nearest school\nThe CDAPH takes the decisions in its competence on the basis of the PPS\nFamily has 15 days to comment on the draft PPS before the commission is informed",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 197\nFunders: state health 90%, private health insurance 20%, family 8%\n10% said a maximum number of sessions applied (n = 195)",
   "workforce": "23,500 orthophonistes practised in the community in France at 1 January 2024\nCounted from the Adeli register, under-62s only; hospital-only staff are excluded\nNumbers grew 1.8 per cent a year on average between 2018 and 2024\n91 per cent of them work in liberal or mixed practice",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "The equipe de suivi de la scolarisation evaluates the PPS at least once a year (D. 351-10)\nIt can also be convened in-year by the pupil, the parents or the school team\nIts stated purpose is continuite du parcours de formation, and no exit test is set\nIt proposes any revision of the orientation to the CDAPH, which needs parental accord",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -11657,6 +11661,12 @@
     1,
     1,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    2
    ]
   },
   "coding": {
@@ -11694,7 +11704,16 @@
       "morphosyntax"
      ]
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "review without criterion"
+    ],
+    "review_interval_months": 12,
+    "decider": "multidisciplinary team",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
@@ -16660,7 +16679,7 @@
   "legalEntitlement": "Compulsory School Act 91/2008 art 17: a right to support matched to assessed need\nPupils have a right to have their learning needs met in a general school, unsegregated\nMunicipalities must ensure the school service is provided in compulsory schools\nThe ministry may rule that a named pupil is to be given an assessment",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 38\nFunders: health insurance 58%, state education 47%, state health 34%, family 8%\n59% said a maximum number of sessions applied (n = 37)",
   "workforce": "Just under 70 self-employed therapists serve children, uncontracted since 2022\nMasters intake runs every second year, recently raised from 15 to 18 students\nAbout 100 have met the prerequisites but cannot get a place on the masters\nThe minister calls the shortage of therapists one of the biggest challenges",
-  "dischargeCriteria": "The einstaklingsnamskra is reviewed reglulega with parents, at no stated interval (11. gr.)\nMunicipalities running a serskoli or serurraedi must set their own utskrift rules (20. gr.)\nThose rules may let a panel of fagadilar propose discharge to the skolastjori\nNo national standard governs when support ceases — the content is set below",
+  "dischargeCriteria": "The einstaklingsnamskra is reviewed reglulega with parents, at no stated interval (11. gr.)\nMunicipalities running a serskoli or serurraedi must set their own utskrift rules (20. gr.)\nNo national standard governs when support ceases — the content is set below\nThose rules may let a panel of fagadilar propose discharge to the skolastjori",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -16723,9 +16742,9 @@
    ],
    "dischargeCriteria": [
     1,
-    2,
-    2,
-    3
+    1,
+    1,
+    2
    ]
   },
   "coding": {
@@ -16825,6 +16844,10 @@
    {
     "label": "Sanità Informazione, interview with Tiziana Rossetto, president of the Federazione Logopedisti Italiani, 17 October 2019 (trade press reporting the professional body's own figure)",
     "url": "https://www.sanitainformazione.it/lavoro/logopedisti-potenziare-percorso-formativo/"
+   },
+   {
+    "label": "Decreto Interministeriale 182 del 29.12.2020, modello nazionale di PEI, artt. 2, 4 and 15 — Ministero dell'Istruzione",
+    "url": "https://www.istruzione.it/inclusione-e-nuovo-pei/allegati/m_pi.AOOGABMI.Registro%20Decreti(R).0000182.29-12-2020.pdf"
    }
   ],
   "supportLinks": [],
@@ -16910,6 +16933,12 @@
     1,
     2,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    1
    ]
   },
   "coding": {
@@ -16956,8 +16985,17 @@
       "morphosyntax"
      ]
     }
-   ]
-  }
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle"
+    ],
+    "review_interval_months": 12,
+    "decider": "multidisciplinary team",
+    "rule_locus": "national statute"
+   }
+  },
+  "dischargeCriteria": "The PEI runs one year and is updated on new conditions of functioning (art. 2/1 d-e)\nThe GLO meets at least once between November and April for verifiche intermedie (art. 4/2)\nIt meets by 30 June each year for the verifica finale (art. 4/3)\nThat verifica weighs the results reached and next year's resources, not an exit (art. 15/1)"
  },
  {
   "countryCode": "JE",
