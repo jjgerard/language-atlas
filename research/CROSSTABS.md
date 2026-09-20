@@ -315,6 +315,31 @@ PISA reports no gap came through as `null` and coerced to 0 in the group means,
 dragging every group toward no difference. Only Cambodia was affected here. A
 null outcome is not a zero outcome and the join now drops it.
 
+## The outcome moved, and no coded column moved with it
+
+PISA 2025 landed on 8 September 2026 and Table I.B1.2d.10 carries the science
+gap for 2015, 2018, 2022 and 2025 on one comparable basis, each at three
+adjustment levels. `data/pisa-outcomes.json` holds all four.
+
+**On the same 71 countries the immigrant science gap widened by 6.5 points
+between 2022 and 2025** — from -22.9 to -29.4. It still widened by 4.4 points
+after accounting for socio-economic status AND language spoken at home, so this
+is not the composition story that has eaten every other result here. Latvia
+widened by 69 points, North Macedonia by 54; the United States narrowed by 30
+and Poland by 26.
+
+None of it tracks anything the atlas codes. Threshold basis against the change
+from 2022 to 2025: p = 0.94 raw, p = 0.53 adjusted, and the Gulf split moves
+neither. A real movement in the outcome, over three years, and the
+classification columns are silent about it in exactly the way they are silent
+about the level.
+
+Latvia is worth a second look for its own sake rather than as a data point. It
+was the one European system with an immigrant ADVANTAGE in 2022 — +8.2 in
+maths, +4.3 in reading — and it is now the single largest widening in the
+table. Something changed there that this atlas records as policy history and
+does not yet connect to anything.
+
 ## The habit this file is really recording
 
 Seven of the fourteen candidate findings here failed a check that took one command

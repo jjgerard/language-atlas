@@ -41,6 +41,7 @@ main a { color: var(--focus); }
 .on { font-size: 11px; fill: var(--muted, #777); }
 .otick { font-size: 11px; fill: var(--muted, #777); }
 .osrc { font-size: .78rem; }
+.osrcline { color: var(--muted, #777); }
 
 /* ---- findings: the claim carries its own number, so the number is the type ---- */
 .finding { margin: 0 0 22px; padding-left: 14px; border-left: 2px solid var(--hair-strong); }
@@ -592,14 +593,53 @@ function outcomeOptions(atlas) {
   return out.sort((a, b) => b.n - a.n);
 }
 
-function outcomeRows(atlas, pick, outcome) {
+// Which cycles an outcome actually carries. Read off the data rather than
+// declared, because the science series runs 2015 to 2025 and the 2022 tables
+// run for one year, and a selector offering an empty cycle is worse than one
+// that offers fewer.
+function cyclesFor(pisa, outcome) {
+  const s = new Set();
+  for (const c of Object.values(pisa.byCountry || {}))
+    for (const k of Object.keys((c.values || {})[outcome] || {})) s.add(k);
+  return [...s].sort();
+}
+
+// A change is written into the option value as change:FROM-TO, so the pair is
+// explicit rather than implied by position. The most recent step is the one a
+// reader usually wants and the full span is the one that shows a trend, so
+// both are offered and neither is inferred.
+
+function valueAt(entry, outcome, cycle) {
+  const v = (entry.values || {})[outcome];
+  if (!v) return null;
+  if (!String(cycle).startsWith('change:')) return v[cycle] == null ? null : v[cycle];
+  // A change needs both ends. A country present only in the later cycle would
+  // otherwise difference against nothing and read as no change at all.
+  const [from, to] = cycle.slice(7).split('-');
+  const a = v[from], b = v[to];
+  return a == null || b == null ? null : b - a;
+}
+
+// The most recent step and the full span. Offering every pair would be a
+// combinatorial menu nobody reads.
+function changeOptions(cy) {
+  if (cy.length < 2) return [];
+  const last = cy[cy.length - 1], prev = cy[cy.length - 2], first = cy[0];
+  const out = [{ v: 'change:' + prev + '-' + last, t: 'change ' + prev + ' → ' + last }];
+  if (first !== prev) out.push({ v: 'change:' + first + '-' + last, t: 'change ' + first + ' → ' + last });
+  return out;
+}
+
+function outcomeRows(atlas, pick, outcome, cycle) {
   const by = (atlas.pisa && atlas.pisa.byCountry) || {};
   const groups = {};
   const seen = new Set();
   for (const u of (atlas.units[pick.id] || [])) {
     if (!u.nat || !u.coding || !u.coding[pick.key]) continue;
     const p = by[u.cc];
-    if (!p || p[outcome] == null) continue;
+    if (!p) continue;
+    const val = valueAt(p, outcome, cycle);
+    if (val == null) continue;
     const rows = Array.isArray(u.coding[pick.key]) ? u.coding[pick.key] : [u.coding[pick.key]];
     const vals = new Set();
     for (const r of rows) {
@@ -609,7 +649,7 @@ function outcomeRows(atlas, pick, outcome) {
     }
     if (!vals.size) continue;
     seen.add(u.cc);
-    for (const x of vals) (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, v: p[outcome] });
+    for (const x of vals) (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, v: val });
   }
   return { groups, countries: seen.size };
 }
@@ -659,33 +699,53 @@ function renderOutcomes(atlas) {
     return;
   }
   const OUT = Object.keys(pisa.outcomes || {});
-  const label = k => k === 'homeLanguage' ? 'language spoken at home' : k;
   host.innerHTML = '<div class="ocontrols">'
     + '<label>Category <select id="o-cat">' + opts.map((o, i) =>
         '<option value="' + i + '">' + esc(o.map) + ' — ' + esc(o.field) + ': ' + esc(o.col.replace(/_/g, ' ')) + '</option>').join('') + '</select></label>'
     + '<label>Outcome <select id="o-out">' + OUT.map(k =>
-        '<option value="' + esc(k) + '">' + esc(label(k)) + '</option>').join('') + '</select></label>'
-    + '</div><div id="o-plot"></div>'
-    + '<p class="why osrc">' + esc(pisa.source || '') + '. Retrieved ' + esc(pisa.retrieved || '') + '.'
-    + (pisa.unjoined && pisa.unjoined.length
-        ? ' Not joined: ' + pisa.unjoined.map(u => esc(u.name) + ' (' + esc(u.why) + ')').join(', ') + '.'
-        : '') + '</p>';
+        '<option value="' + esc(k) + '">' + esc((pisa.outcomes[k] || {}).label || k) + '</option>').join('') + '</select></label>'
+    + '<label>Cycle <select id="o-cyc"></select></label>'
+    + '</div><div id="o-plot"></div><p class="why osrc" id="o-src"></p>';
+
+  const fillCycles = () => {
+    const outcome = $('#o-out').value;
+    const cy = cyclesFor(pisa, outcome);
+    const prev = $('#o-cyc').value;
+    $('#o-cyc').innerHTML = cy.map(c => '<option value="' + c + '">' + c + '</option>').join('')
+      + changeOptions(cy).map(c => '<option value="' + c.v + '">' + esc(c.t) + '</option>').join('');
+    // Keep the reader where they were when the new outcome offers the same
+    // cycle; otherwise land on the most recent one rather than the oldest.
+    const all = [...cy, ...changeOptions(cy).map(c => c.v)];
+    $('#o-cyc').value = all.includes(prev) ? prev : (cy[cy.length - 1] || '');
+    return cy;
+  };
+
   const draw = () => {
     const pick = opts[Number($('#o-cat').value)];
-    $('#o-plot').innerHTML = plotOutcome(atlas, pick, $('#o-out').value);
+    const outcome = $('#o-out').value;
+    $('#o-plot').innerHTML = plotOutcome(atlas, pick, outcome, $('#o-cyc').value);
+    const meta = pisa.outcomes[outcome] || {};
+    const src = (pisa.sources || {})[meta.basis] || '';
+    $('#o-src').innerHTML = esc(meta.note || '') + ' <span class="osrcline">' + esc(src) + '</span>'
+      + (pisa.unjoined && pisa.unjoined.length
+          ? ' Not joined: ' + pisa.unjoined.map(u => esc(u.name) + ' (' + esc(u.why) + ')').join(', ') + '.'
+          : '');
   };
+
   $('#o-cat').addEventListener('change', draw);
-  $('#o-out').addEventListener('change', draw);
+  $('#o-out').addEventListener('change', () => { fillCycles(); draw(); });
+  $('#o-cyc').addEventListener('change', draw);
+  fillCycles();
   draw();
 }
 
-function plotOutcome(atlas, pick, outcome) {
-  const { groups, countries } = outcomeRows(atlas, pick, outcome);
+function plotOutcome(atlas, pick, outcome, cycle) {
+  const { groups, countries } = outcomeRows(atlas, pick, outcome, cycle);
   const kept = Object.entries(groups).filter(([, g]) => g.length >= MIN_N)
     .sort((a, b) => omean(b[1].map(c => c.v)) - omean(a[1].map(c => c.v)));
   const dropped = Object.entries(groups).filter(([, g]) => g.length < MIN_N);
   if (!kept.length)
-    return '<p class="why">No category here reaches ' + MIN_N + ' countries with a value for this outcome.</p>';
+    return '<p class="why">No category here reaches ' + MIN_N + ' countries with a value for this outcome and cycle.</p>';
 
   const all = kept.flatMap(([, g]) => g.map(c => c.v));
   const lo = Math.min(...all), hi = Math.max(...all);
@@ -694,10 +754,11 @@ function plotOutcome(atlas, pick, outcome) {
   const H = TOP + RH * kept.length + 28;
   const sx = v => X0 + (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (X1 - X0);
   const f = n => n.toFixed(1);
+  const step = (hi - lo) > 120 ? 50 : (hi - lo) > 45 ? 25 : 10;
 
   let s = '<svg viewBox="0 0 684 ' + H + '" width="100%" role="img" aria-label="box plots of the PISA gap by '
     + esc(pick.col.replace(/_/g, ' ')) + '">';
-  for (let t = Math.ceil((lo - pad) / 25) * 25; t <= hi + pad; t += 25) {
+  for (let t = Math.ceil((lo - pad) / step) * step; t <= hi + pad; t += step) {
     s += '<line x1="' + f(sx(t)) + '" y1="' + (TOP - 4) + '" x2="' + f(sx(t)) + '" y2="' + (TOP + RH * kept.length) + '" stroke="var(--border)" stroke-width="1"/>'
       + '<text x="' + f(sx(t)) + '" y="' + (TOP + RH * kept.length + 16) + '" text-anchor="middle" class="otick">' + (t > 0 ? '+' + t : t) + '</text>';
   }
@@ -731,8 +792,11 @@ function plotOutcome(atlas, pick, outcome) {
   const noGulf = Object.fromEntries(kept.map(([k, g]) => [k, g.filter(c => !GULF.has(c.cc))])
     .filter(([, g]) => g.length >= MIN_N));
   const p2 = Object.keys(noGulf).length > 1 ? opermute(noGulf) : null;
-  return s + '<p class="why"><strong>' + countries + ' countries joined</strong>, '
-    + kept.length + ' categories with ' + MIN_N + ' or more.'
+  return s + '<p class="why"><strong>' + countries + ' countries joined</strong>'
+    + (String(cycle).startsWith('change:')
+        ? ' with both ' + cycle.slice(7).split('-').join(' and ')
+        : ' in ' + cycle)
+    + ', ' + kept.length + ' categories with ' + MIN_N + ' or more.'
     + (dropped.length ? ' Not drawn: ' + dropped.map(([k, g]) => esc(k) + ' (' + g.length + ')').join(', ') + '.' : '')
     + ' Permutation p = ' + p.toFixed(3)
     + (gulf.length
