@@ -1464,7 +1464,7 @@ region        residual          plan issued
   Europe      50%   59%    +9    16%    1%   -15
   Asia        42%   49%    +7    15%   13%    -2
   Americas    43%   39%    -4     7%    6%    -1
-  Oceania     40%   38%    -2    11%   23%   +12
+  Oceania     43%   38%    -5    11%   23%   +12
 ```
 
 Africa moves from first to third and swings fifteen points, the largest
@@ -1490,7 +1490,7 @@ region        eal   dld   diff
   Europe      66%   60%    -6
   Asia        57%   63%    +6
   Americas    51%   45%    -6
-  Oceania     51%   61%   +10
+  Oceania     53%   61%    +8
 
   mean absolute difference   5.8 points
   residual alone             7.4
@@ -1565,3 +1565,75 @@ honest answer, and the count is small enough to say so.
   and noted in case it recurs.
 
 All four are the maintainer's call. None was acted on.
+
+# indigenous
+
+1,029 rows across five regions — Americas 272, Asia 266, Africa 240, Europe 183,
+Oceania 68 — and **every one already carries `fields_touched`**, so this pass
+adds only the new column.
+
+## indigenous Oceania, 68 rows
+
+20 entries. Taken first because it is the smallest, and because it makes the
+cleanest test of whether the proposer transfers to a **third** domain.
+
+```
+  provision described            37   54%
+  body or programme established  10   15%
+  instrument amended              5    7%
+  plan or strategy issued         5    7%
+  state of affairs recorded       3    4%
+  instrument made                 3    4%
+  instrument replaced             3    4%
+  body or programme changed       2    3%
+```
+
+`body or programme established` at 15% is the highest of any Oceania cell, and it
+is what an indigenous-language timeline is made of: Guam's CHamoru Heritage
+Commission, the Marshall Islands' Marshallese Studies course, Wallis and Futuna's
+Académie des langues and its *Un maître, une langue* scheme, New Caledonia's
+kanak-language hours. Bodies and courses being created, rather than statutes
+being amended.
+
+**The proposer scored 15 of 17, 88%** — the same figure it managed on its second
+`eal` region and on its first `dld` one. It transfers to a third domain without
+losing anything.
+
+### Two errors, and a third cross-domain correction
+
+- Fiji 2013: "Constitution bars bias by primary language …; it is ADOPTED IN
+  English with iTaukei and Hindi TRANSLATIONS" took `instrument made`. The phrase
+  says what language the text was written in. Vetoed now, but only when a
+  translation is named beside it.
+- Northern Marianas 1982: "PL 3-26 created the Chamorro-Carolinian Language Policy
+  Commission, REPEALING PL 1-37" is a replacement by the precedence
+  `HISTORY_OPERATION` states — the same call already made for Puerto Rico's "Ley
+  51 repeals the 1977 law and creates the Secretaría Auxiliar". "PL 1-37" is a
+  statute citation two letters long, below the acronym rule's floor of three and
+  absent from every noun list.
+
+And the Marshall Islands 1979 constitution row appears in `eal` and here with the
+same sentence — "Constitution, AMENDED BY THE 1990 Constitutional Convention and
+certified 14 March 1991" — coded `instrument amended` in the `eal` Oceania batch
+before `datedElsewhere` existed. The row is dated 1979 and the amendment is
+1990–91. **The `eal` coding is corrected to match**, the second such correction
+after Fiji 1966.
+
+### The post-hoc pattern gets a real test, and survives
+
+The finished-column write-up recorded, and explicitly declined to believe, that
+the residual and the plan share trade off within a region and that their SUM is
+more stable across domains than either alone. It said to test it on a third
+domain. Oceania now has three:
+
+```
+domain        residual  plan   sum     n
+  eal            43%    11%    53%     47
+  dld            38%    23%    61%    139
+  indigenous     54%     7%    62%     68
+```
+
+The residual swings 16 points across the three, the plan share swings 16, and the
+sum swings 9. That is the first out-of-sample evidence for it and it is consistent
+with the pattern — on **one region**, with a 47-row cell in it. Still not a
+finding. Four indigenous regions remain, and they will settle it properly.
