@@ -556,6 +556,9 @@ function renderCoding(atlas) {
 //   were set aside.
 const GULF = new Set(['AE', 'QA', 'SA', 'KW', 'BH', 'OM']);
 const MIN_N = 3;
+// One definition of the pair separator: used to build a combination key and to
+// take it apart again when working out which whole values never cleared.
+const PAIR = '  →  ';
 
 function outcomeOptions(atlas) {
   const out = [];
@@ -659,7 +662,7 @@ function outcomeRows(atlas, pick, outcome, cycle, split) {
       const second = valuesOf(split);
       if (!second) continue;
       keys = [];
-      for (const a of vals) for (const b of second) keys.push(a + '  →  ' + b);
+      for (const a of vals) for (const b of second) keys.push(a + PAIR + b);
     }
     seen.add(u.cc);
     for (const x of keys) (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, v: val });
@@ -762,6 +765,22 @@ function plotOutcome(atlas, pick, outcome, cycle, split) {
   const kept = Object.entries(groups).filter(([, g]) => g.length >= MIN_N)
     .sort((a, b) => omean(b[1].map(c => c.v)) - omean(a[1].map(c => c.v)));
   const dropped = Object.entries(groups).filter(([, g]) => g.length < MIN_N);
+
+  // A value that clears the floor in NO combination is dropped whole rather
+  // than listed once per pair it fails in. Splitting triggers by exit
+  // mechanism, four of the thin pairs were the same `not stated` exit, and
+  // naming it four times said less than naming it once. What remains after
+  // that are pairs whose two ends each survive somewhere and only fail
+  // together — a different fact, and worth keeping separate.
+  const part = (k, i) => String(k).split(PAIR)[i];
+  const survA = new Set(kept.map(([k]) => part(k, 0)));
+  const survB = new Set(kept.map(([k]) => part(k, 1)));
+  const allKeys = Object.keys(groups);
+  const goneA = split ? [...new Set(allKeys.map(k => part(k, 0)))].filter(x => !survA.has(x)) : [];
+  const goneB = split ? [...new Set(allKeys.map(k => part(k, 1)))].filter(x => !survB.has(x)) : [];
+  const gonePairs = split
+    ? dropped.filter(([k]) => survA.has(part(k, 0)) && survB.has(part(k, 1)))
+    : dropped;
   if (!kept.length)
     return '<p class="why">No ' + (split ? 'combination' : 'category') + ' here reaches ' + MIN_N
       + ' countries with a value for this outcome and cycle.</p>';
@@ -816,7 +835,21 @@ function plotOutcome(atlas, pick, outcome, cycle, split) {
         ? ' with both ' + cycle.slice(7).split('-').join(' and ')
         : ' in ' + cycle)
     + ', ' + kept.length + (split ? ' combinations' : ' categories') + ' with ' + MIN_N + ' or more.'
-    + (dropped.length ? ' Not drawn: ' + dropped.map(([k, g]) => esc(k) + ' (' + g.length + ')').join(', ') + '.' : '')
+    // Semicolons, not commas: `assessed, no criterion` has a comma in it, and
+    // a comma-joined list of these values cannot be read back apart. The axis
+    // is named too — `ethnicity` dropping is a fact about triggers and
+    // `not stated` dropping is a fact about exit mechanisms.
+    + (goneA.length || goneB.length
+        ? ' Dropped whole, reaching ' + MIN_N + ' in no combination — '
+          + [goneA.length ? esc(pick.col.replace(/_/g, ' ')) + ': ' + goneA.map(esc).join('; ') : '',
+             goneB.length ? esc(split.col.replace(/_/g, ' ')) + ': ' + goneB.map(esc).join('; ') : '']
+            .filter(Boolean).join('. ') + '.'
+        : '')
+    + (gonePairs.length
+        ? (split ? ' Also not drawn: ' : ' Not drawn: ')
+          + gonePairs.slice(0, 8).map(([k, g]) => esc(k) + ' (' + g.length + ')').join('; ')
+          + (gonePairs.length > 8 ? ' and ' + (gonePairs.length - 8) + ' more' : '') + '.'
+        : '')
     + ' Permutation p = ' + p.toFixed(3)
     + (gulf.length
         ? (p2 == null
