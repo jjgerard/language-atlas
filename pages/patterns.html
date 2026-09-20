@@ -235,19 +235,9 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
 <main>
   <h2>Build a plot: coded categories against a PISA outcome</h2>
   <p class="standfirst">
-    Every coded column on these maps, set against the PISA immigrant attainment gap for the same
-    countries. Pick one column, or two to compare the combinations &mdash; which is how the trigger
-    a system uses to let a child into a category sits next to the rule that lets them out. Science
-    runs across four cycles, 2015 to 2025, so a category can be read as a spread over time and not
-    only as a level.
-  </p>
-  <p>
-    <strong>Read the spread before the difference between categories.</strong> In every cross run
-    so far the disagreement inside a category has been wider than the gap between categories, and
-    the one result that looked significant disappeared when three Gulf states were set aside
-    &mdash; an immigrant student in the UAE is often an expatriate professional&rsquo;s child. This
-    measures who a country&rsquo;s immigrants are long before it measures anything a ministry wrote
-    down.
+    Coded columns from these maps against the PISA immigrant attainment gap, 2015 to 2025.
+    <b>Read the spread inside a category before the gap between categories</b> &mdash; it has been
+    the wider of the two every time.
   </p>
   <div id="outcomes"></div>
   <h3>What kind of rule</h3>
@@ -792,12 +782,64 @@ function renderOutcomes(atlas) {
         o.textContent = base + '  — already the category';
         return;
       }
+      // A column from another map is empty by construction, not by scarcity:
+      // the coding lives on that map’s units and this one’s units do not carry
+      // it. Saying “no combination reaches 3” there invites someone to go and
+      // research more countries, which would not help.
+      if (cand.id !== pick.id) {
+        o.disabled = true;
+        o.textContent = base + '  — a different map';
+        return;
+      }
       const { groups } = groupsFor(atlas, pick, outcome, cand, spec);
       const n = Object.values(groups).filter(g => g.length >= min).length;
       o.disabled = n === 0;
       o.textContent = base + (n === 0 ? '  — no combination reaches ' + min : '  — ' + n + ' combinations');
     });
     if (sel.selectedOptions[0] && sel.selectedOptions[0].disabled) sel.value = '';
+  };
+
+  // Which categories are worth starting from: the RECOMMEND_TOP whose best
+  // same-map split yields the most groups reaching the floor, ties broken by
+  // how many countries it is drawn over. A fixed tier rather than a threshold,
+  // because the numbers move with the view -- a bar set for the box plots
+  // bolded 18 of 27 as soon as the trend view narrowed the country set, which
+  // is the list again rather than a recommendation. The scan is the expensive
+  // thing here, 27 categories against their same-map partners, so it is cached
+  // per outcome, cycle and floor.
+  const RECOMMEND_TOP = 6;
+  const recCache = new Map();
+  const markCategories = () => {
+    const kind = $('#o-kind').value;
+    if (kind === 'scatter') return;
+    const outcome = $('#o-out').value;
+    const min = Math.max(MIN_FLOOR, Number($('#o-min').value) || MIN_FLOOR);
+    const spec = kind === 'trend' ? { cycles: cyclesFor(pisa, outcome) } : { cycle: $('#o-cyc').value };
+    if (spec.cycles && spec.cycles.length < 2) return;
+    const key = kind + '|' + outcome + '|' + (spec.cycle || 'all') + '|' + min;
+    let best = recCache.get(key);
+    if (!best) {
+      best = opts.map(p => {
+        let top = { n: 0, c: 0, col: null };
+        for (const q of opts) {
+          if (q === p || q.id !== p.id) continue;
+          const { groups, countries } = groupsFor(atlas, p, outcome, q, spec);
+          const n = Object.values(groups).filter(g => g.length >= min).length;
+          if (n > top.n || (n === top.n && countries > top.c)) top = { n, c: countries, col: q.col };
+        }
+        return top;
+      });
+      recCache.set(key, best);
+    }
+    const rank = best.map((b, i) => i)
+      .sort((x, y) => best[y].n - best[x].n || best[y].c - best[x].c)
+      .slice(0, RECOMMEND_TOP);
+    [...$('#o-cat').options].forEach((o, i) => {
+      const b = best[i];
+      const label = esc(opts[i].map) + ' — ' + esc(opts[i].field) + ': ' + esc(opts[i].col.replace(/_/g, ' '));
+      o.style.fontWeight = rank.includes(i) && best[i].n > 0 ? '500' : '';
+      o.textContent = label + (b.col ? '  · best split: ' + b.col.replace(/_/g, ' ') + ' (' + b.n + ')' : '');
+    });
   };
 
   const showFor = kind => {
@@ -811,6 +853,7 @@ function renderOutcomes(atlas) {
   const draw = () => {
     const kind = $('#o-kind').value;
     showFor(kind);
+    markCategories();
     markSplits();
     const pick = opts[Number($('#o-cat').value)];
     const outcome = $('#o-out').value;
