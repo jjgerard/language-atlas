@@ -18128,6 +18128,14 @@
    {
     "label": "장애아동 복지지원법 제21조 발달재활서비스지원 (Act on Welfare Support for Children with Disabilities, art. 21, developmental rehabilitation service support)",
     "url": "https://www.law.go.kr/LSW//lsSideInfoP.do?lsiSeq=267353&joNo=0021&joBrNo=00&docCls=jo&urlMode=lsScJoRltInfoR"
+   },
+   {
+    "label": "장애인 등에 대한 특수교육법, 법률 제18992호, 제15조·제16조·제22조 — 국가법령정보센터",
+    "url": "https://www.law.go.kr/lsInfoP.do?lsiSeq=244921&efYd=20230419"
+   },
+   {
+    "label": "장애인 등에 대한 특수교육법 시행령, 대통령령 제36220호 — 국가법령정보센터",
+    "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9E%A5%EC%95%A0%EC%9D%B8%EB%93%B1%EC%97%90%EB%8C%80%ED%95%9C%ED%8A%B9%EC%88%98%EA%B5%90%EC%9C%A1%EB%B2%95%EC%8B%9C%ED%96%89%EB%A0%B9"
    }
   ],
   "supportLinks": [],
@@ -18145,7 +18153,7 @@
   "legalEntitlement": "Kindergarten through high school is compulsory for eligible children\nThe right to that compulsory education runs from age 3 to age 17\nInfant education under 3 and post-secondary courses are free",
   "funding": "The state or a local government bears the cost of that compulsory and free education\nState and local bodies may fund developmental rehabilitation for communication function\nSupport weighs the child's disability type and degree and the family's economic means\nIt runs to the month the child turns 18, or 20 while still at school",
   "workforce": "No cumulative licence-holder count was retrievable from an official source\nLicensed by the Minister of Health and Welfare under Welfare Act article 72-2\nTwo grades: grade 1 needs grade 2 plus a degree and one to three years in post",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "The 개별화교육지원팀 writes an 개별화교육계획 매 학기마다, every semester (제22조②)\nNeither the Act nor the 시행령 provides for cancelling 특수교육대상자 status\nNothing sets an age at which the designation lapses\nDesignation is by the 교육장 or 교육감 after 특수교육운영위원회 심사 (제15조②)",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -18189,6 +18197,22 @@
      "bilingual_fit": "not stated",
      "modality": "not stated"
     }
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "review without criterion"
+    ],
+    "review_interval_months": 6,
+    "decider": "school or authority",
+    "rule_locus": "national statute"
+   }
+  },
+  "slots": {
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    2
    ]
   }
  },
