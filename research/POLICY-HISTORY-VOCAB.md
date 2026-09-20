@@ -574,9 +574,59 @@ Abstention stayed high on purpose — 96 of 124 — and 64% of abstentions took 
 residual. The proposer covers roughly a fifth of a batch and the reader does the
 rest, which is the split the header argues for.
 
+## Held-out region: eal Oceania, 47 rows
+
+The point of coding Oceania next was that the proposer had never seen it, so the
+score here is a measurement rather than the fit Europe produced.
+
+**15 of 17 proposals correct, 88%**, on 19 entries and 47 rows. The two errors
+were new defects rather than repeats:
+
+- American Samoa 2007, "piloted LAS Links and the Stanford ELP but had ADOPTED
+  NEITHER", took `instrument made` off the word *adopted*. It is a dated record
+  that nothing was adopted, so it is coded `state of affairs recorded`. The
+  negation veto is now anchored to the whole row, for the same reason the
+  strategy veto had to be.
+- Vanuatu 2001, "National Education Act TARGETS disadvantage by gender,
+  ethnicity and status", took `plan or strategy issued`. It is an Act saying
+  what it provides. `targets` was too loose a marker for a plan and is gone.
+
+### The regression the held-out region caught
+
+Three entries — American Samoa, Guam and the Northern Mariana Islands — carry
+"ESSA replaced 'limited English proficient' with 'English learner' throughout
+the ESEA". That row is the example `instrument replaced` uses **in its own
+gloss**, and the instrument-noun requirement added for ELCO and OETC made the
+proposer abstain on all three. An all-caps acronym is the instrument noun there.
+
+Fixing it introduced a second, quieter fault worth recording: the acronym clause
+needs case sensitivity and the rest of the rule needs `/i`, one regex cannot
+carry both, and folding them into one literal dropped the flag. Nothing errored.
+`dld`'s `instrument replaced` count fell from 26 to 8 and both eal regions still
+scored 100%, because neither region's answer key had many replacements in it.
+The count on a third domain is what showed it. It is two rules now, which costs
+nothing since the first match wins either way.
+
+With all three fixed, both regions score 27/27 and 18/18. Europe's remains a
+fit; Oceania's is now a fit too, and the next held-out region is Asia.
+
+### Two more shapes with nowhere to go
+
+The scope-change gap from Europe gained two more rows here — Australia 2027
+"EAL 2.0 full implementation mandated" and the same shape as GB 2012. Running
+total **6 in 171**, 3.5%, holding at the rate that would make it an axis.
+
+A separate small shape: **republication**. Australia 2025 "'Advice on using the
+EAL/D Learning Progressions' reissued" and 2026 "guidelines both republished, in
+January and March" record a document being reissued with no change stated —
+neither amended nor made nor described. Two rows, coded `provision described`,
+noted in case it recurs.
+
 ## Remaining, by region
 
 ```
   dld   Americas 316   Africa 292   Asia 124   Oceania 124   Europe  79
-  eal   Asia     174   Africa 100   Americas 71   Oceania 25   Europe  0
+  eal   Asia     174   Africa 100   Americas 71
 ```
+
+eal Europe (124 rows) and eal Oceania (47) are done.

@@ -54,13 +54,19 @@ const RULES = [
   // lookaround runs in both directions rather than forward only.
   ["body or programme changed", /\b(replac|supersed|abolish|discontinu)\w*\b[\s\S]{0,40}\b(programme|program|scheme|classes|grant|unit|centre|center)\b|\b(programme|program|scheme|classes|grant|OETC|OALT|ELCO|MEAG|Tanoda)\b[\s\S]{0,60}\b(replaced|abolished|discontinued|ended|folded|integrated into)\b|\brenam(e|es|ed|ing)\b|\brestructur(e|es|ed|ing)\b|\bmerg(e|es|ed|ing)\b/i],
   ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|model)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)/i],
+  // A SEPARATE rule because the clause above needs /i for its noun list and this
+  // one must not have it: an all-caps acronym is the instrument, and ESSA is the
+  // row `instrument replaced` uses as its own gloss example. Two rules carrying
+  // one value cost nothing -- first match wins either way -- and the alternative
+  // was a single literal that quietly lost the flag.
+  ["instrument replaced", /\b[A-Z]{3,6}\b\s+(repeal|supersed|replac|revok)\w*/],
   ["instrument amended", /\bamend(s|ed|ing|ment)?\b|\brewrit(e|es|ing)\b|\binserts?\b|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i],
   ["international instrument accepted", /\bratif(y|ies|ied|ication)\b|\baccede(d|s)?\b|\baccession\b|\benters? into force for\b|\bdeclaration under\b/i],
   // "Strategy ... adopted" is how a strategy is ISSUED, not how an instrument is
   // made. Hungary 2013 and Slovenia 2007 both matched `adopt` here and were
   // hand-corrected to `plan or strategy issued`, so `adopt` now stands down when
   // the row's own subject is a plan, a strategy or a recommendation.
-  ["instrument made", /\benact(s|ed|ment)?\b|\bpromulgat(e|ed|es)\b|\bcomes? into force\b|\bin force\b|\btakes? effect\b|\beffective\b|\bpublished in the .{0,20}gazette\b|\bpass(es|ed)\b.{0,20}\b(act|law)\b|^(?![\s\S]*\b(strateg|action plan|recommendation)\w*)[\s\S]*\badopt(s|ed)\b/i],
+  ["instrument made", /\benact(s|ed|ment)?\b|\bpromulgat(e|ed|es)\b|\bcomes? into force\b|\bin force\b|\btakes? effect\b|\beffective\b|\bpublished in the .{0,20}gazette\b|\bpass(es|ed)\b.{0,20}\b(act|law)\b|^(?![\s\S]*\b(strateg|action plan|recommendation|neither|never adopt|not adopt)\w*)[\s\S]*\badopt(s|ed)\b/i],
   // EIGHT of the twelve overrides in the first hand-coded region were the old
   // `establish` pattern firing on an abstract object: "establishes the
   // ausserordentlicher Schueler CATEGORY", "the individual educational needs
@@ -72,7 +78,7 @@ const RULES = [
   // so the verb now needs a body-or-programme noun and the abstractions veto it.
   ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept)\b)[\s\S]{0,60}\b(institut\w*|unit|centre|center|commission|council|programme|program|scheme|class|classes|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training)\b/i],
   ["funding decided", /\bfunding agreement\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|£[\d,.]+|\bfunding formula\b|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
-  ["plan or strategy issued", /\bstrategic plan\b|\bstrateg(y|ies)\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\bpledges?\b|\btargets?\b|\brecommendations?\b|\bwhite paper\b|\bframework document\b/i],
+  ["plan or strategy issued", /\bstrategic plan\b|\bstrateg(y|ies)\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\bpledges?\b|\brecommendations?\b|\bwhite paper\b|\bframework document\b/i],
   ["state of affairs recorded", /\bdoes not\b|\bno specific\b|\bomits\b|\bfound no\b|\bnever uses\b|\bis silent\b|\bno such\b|\bnothing\b|\bnames only\b/i],
 ];
 

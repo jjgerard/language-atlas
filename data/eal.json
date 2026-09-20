@@ -563,36 +563,40 @@
    },
    "policyHistory": [
     {
-     "year": 1962,
+     "year": "1962",
      "matches": "asca 16 0510 enacted english medium samoan usable to facilit",
      "occurrence": 1,
      "fields_touched": [
       "l2Support"
-     ]
+     ],
+     "operation": "instrument made"
     },
     {
-     "year": 2007,
+     "year": "2007",
      "matches": "american samoa piloted las links and the stanford elp but ha",
      "occurrence": 1,
      "fields_touched": [
       "newcomerCriteria"
-     ]
+     ],
+     "operation": "state of affairs recorded"
     },
     {
-     "year": 2015,
+     "year": "2015",
      "matches": "essa replaced limited english proficient with english learne",
      "occurrence": 1,
      "fields_touched": [
       "newcomerCriteria"
-     ]
+     ],
+     "operation": "instrument replaced"
     },
     {
-     "year": 2022,
+     "year": "2022",
      "matches": "governor signed the samoan language commission law amending",
      "occurrence": 1,
      "fields_touched": [
       "l1Support"
-     ]
+     ],
+     "operation": "instrument amended"
     }
    ]
   }
@@ -1007,28 +1011,31 @@
    },
    "policyHistory": [
     {
-     "year": 2005,
+     "year": "2005",
      "matches": "multicultural education policy pd 2005 0234 implemented",
      "occurrence": 1,
      "fields_touched": [
       "system-wide"
-     ]
+     ],
+     "operation": "provision described"
     },
     {
-     "year": 2024,
+     "year": "2024",
      "matches": "major policy revision 9 may",
      "occurrence": 1,
      "fields_touched": [
       "not determined"
-     ]
+     ],
+     "operation": "instrument amended"
     },
     {
-     "year": 2025,
+     "year": "2025",
      "matches": "advice on using the eal d learning progressions reissued",
      "occurrence": 1,
      "fields_touched": [
       "l2Support"
-     ]
+     ],
+     "operation": "provision described"
     }
    ]
   }
@@ -1121,30 +1128,33 @@
    },
    "policyHistory": [
     {
-     "year": 2008,
+     "year": "2008",
      "matches": "the first four hours of english policy cut the capacity of s",
      "occurrence": 1,
      "fields_touched": [
       "bilingualEducationNotes",
       "l2Support"
-     ]
+     ],
+     "operation": "body or programme changed"
     },
     {
-     "year": 2014,
+     "year": "2014",
      "matches": "wilson review finds formal eal d practice has markedly decli",
      "occurrence": 1,
      "fields_touched": [
       "l2Support"
-     ]
+     ],
+     "operation": "state of affairs recorded"
     },
     {
-     "year": 2026,
+     "year": "2026",
      "matches": "bilingual education and intensive english unit guidelines bo",
      "occurrence": 1,
      "fields_touched": [
       "bilingualEducationNotes",
       "l2Support"
-     ]
+     ],
+     "operation": "provision described"
     }
    ]
   }
@@ -1444,29 +1454,32 @@
    },
    "policyHistory": [
     {
-     "year": 2015,
+     "year": "2015",
      "matches": "eal handbook published updated 2019",
      "occurrence": 1,
      "fields_touched": [
       "l2Support"
-     ]
+     ],
+     "operation": "provision described"
     },
     {
-     "year": 2020,
+     "year": "2020",
      "matches": "eal provision for newly arrived students policy dated from j",
      "occurrence": 1,
      "fields_touched": [
       "newcomerCriteria",
       "l2Support"
-     ]
+     ],
+     "operation": "provision described"
     },
     {
-     "year": 2027,
+     "year": "2027",
      "matches": "eal 2 0 full implementation mandated",
      "occurrence": 1,
      "fields_touched": [
       "l2Support"
-     ]
+     ],
+     "operation": "provision described"
     }
    ]
   }
@@ -7925,6 +7938,28 @@
   },
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1966",
+     "matches": "education act cap 262 ordinance 36 of 1966 amended to act 30",
+     "occurrence": 1,
+     "operation": "instrument amended"
+    },
+    {
+     "year": "2013",
+     "matches": "2013 constitution makes primary language a protected discrim",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2026",
+     "matches": "the education act 2026 has no medium of instruction or verna",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    }
+   ]
   }
  },
  {
@@ -8001,6 +8036,16 @@
   },
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1979",
+     "matches": "constitution effective 10 may 1979 bars discrimination on gr",
+     "occurrence": 1,
+     "operation": "instrument made"
+    }
+   ]
   }
  },
  {
@@ -9667,37 +9712,41 @@
    },
    "policyHistory": [
     {
-     "year": 1973,
+     "year": "1973",
      "matches": "p l 12 031 authorised a bilingual bicultural education progr",
      "occurrence": 1,
      "fields_touched": [
       "bilingualEducationNotes",
       "l1Support"
-     ]
+     ],
+     "operation": "body or programme established"
     },
     {
-     "year": 1977,
+     "year": "1977",
      "matches": "p l 14 053 added the mandatory chamorro language and culture",
      "occurrence": 1,
      "fields_touched": [
       "l1Support"
-     ]
+     ],
+     "operation": "instrument amended"
     },
     {
-     "year": 2011,
+     "year": "2011",
      "matches": "p l 31 045 amended the mandatory chamorro coursework provisi",
      "occurrence": 1,
      "fields_touched": [
       "l1Support"
-     ]
+     ],
+     "operation": "instrument amended"
     },
     {
-     "year": 2015,
+     "year": "2015",
      "matches": "essa replaced limited english proficient with english learne",
      "occurrence": 1,
      "fields_touched": [
       "newcomerCriteria"
-     ]
+     ],
+     "operation": "instrument replaced"
     }
    ]
   }
@@ -13303,6 +13352,34 @@
   },
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2012",
+     "matches": "language policy sets transition from te kiribati to english",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2012",
+     "matches": "a new language policy was adopted in 2012 to transitions fro",
+     "occurrence": 1,
+     "operation": "instrument made"
+    },
+    {
+     "year": "2013",
+     "matches": "the education act 2013 never uses language vernacular or med",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    },
+    {
+     "year": "2016",
+     "matches": "teachers college tesol curriculum reviewed in 2016 for inclu",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -14888,6 +14965,28 @@
   "absences": {
    "newcomerCriteria": true,
    "removalCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1979",
+     "matches": "constitution amended by the 1990 constitutional convention a",
+     "occurrence": 1,
+     "operation": "instrument amended"
+    },
+    {
+     "year": "1991",
+     "matches": "education act art 317 creates the compulsory marshallese stu",
+     "occurrence": 1,
+     "operation": "body or programme established"
+    },
+    {
+     "year": "1991",
+     "matches": "article 317 of the 1991 education act states that the depart",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -15273,28 +15372,31 @@
    },
    "policyHistory": [
     {
-     "year": 1981,
+     "year": "1981",
      "matches": "public school system rules and regulations first proposed in",
      "occurrence": 1,
      "fields_touched": [
       "system-wide"
-     ]
+     ],
+     "operation": "provision described"
     },
     {
-     "year": 2002,
+     "year": "2002",
      "matches": "board barred single ethnic or language group classes except",
      "occurrence": 1,
      "fields_touched": [
       "bilingualEducationNotes"
-     ]
+     ],
+     "operation": "provision described"
     },
     {
-     "year": 2015,
+     "year": "2015",
      "matches": "essa replaced limited english proficient with english learne",
      "occurrence": 1,
      "fields_touched": [
       "newcomerCriteria"
-     ]
+     ],
+     "operation": "instrument replaced"
     }
    ]
   }
@@ -16494,6 +16596,28 @@
   },
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2008",
+     "matches": "education and training strategic plan 2008 13 proposes a nau",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    },
+    {
+     "year": "2008",
+     "matches": "the 2008 13 education and training strategic plan intended t",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    },
+    {
+     "year": "2011",
+     "matches": "the education act 2011 never uses language or medium of inst",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    }
+   ]
   }
  },
  {
@@ -16620,20 +16744,22 @@
    },
    "policyHistory": [
     {
-     "year": 2018,
+     "year": "2018",
      "matches": "budget 2018 allocates nz 34 5m additional esol funding",
      "occurrence": 1,
      "fields_touched": [
       "l2Support"
-     ]
+     ],
+     "operation": "funding decided"
     },
     {
-     "year": 2019,
+     "year": "2019",
      "matches": "further nz 13 2m funding boost announced 16 august bringing",
      "occurrence": 1,
      "fields_touched": [
       "l2Support"
-     ]
+     ],
+     "operation": "funding decided"
     }
    ]
   }
@@ -16875,6 +17001,22 @@
   },
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1975",
+     "matches": "constitution art 2 11 encourages literacy in tok ples alongs",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "1995",
+     "matches": "education act amendment no 13 of 1995 defines elementary edu",
+     "occurrence": 1,
+     "operation": "instrument amended"
+    }
+   ]
   }
  },
  {
@@ -17555,6 +17697,16 @@
   },
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2006",
+     "matches": "2006 16 education master plan backs literacy work to raise e",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    }
+   ]
   }
  },
  {
@@ -18237,6 +18389,16 @@
   },
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2023",
+     "matches": "the education act 2023 uses neither additional language nor",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    }
+   ]
   }
  },
  {
@@ -19884,6 +20046,16 @@
   },
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2012",
+     "matches": "the 2012 language policy excepts children whose mother tongu",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -20137,6 +20309,28 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1976",
+     "matches": "education ordinance lets the minister arrange provision by a",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2012",
+     "matches": "2012 cultural mapping report urged a vernacular languages in",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    },
+    {
+     "year": "2016",
+     "matches": "education sector plan iii 2016 20 names six cross cutting is",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    }
+   ]
   }
  },
  {
@@ -25076,6 +25270,16 @@
   "absences": {
    "newcomerCriteria": true,
    "removalCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2001",
+     "matches": "national education act targets disadvantage by gender ethnic",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -25174,6 +25378,22 @@
   },
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1960",
+     "matches": "constitution art 15 2 bars discrimination on grounds of lang",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2009",
+     "matches": "education act makes education compulsory for all school aged",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
