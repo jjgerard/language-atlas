@@ -54,6 +54,37 @@ either way. It is a scope decision about what `eal` means where the additional
 language is a domestic one rather than a migrant one, and it reaches well past
 these nineteen.
 
+### What the sources say, which settles more of this than the prose does
+
+Three checks, all against the corpus rather than against background knowledge:
+
+**All 34 Indian eal units share docLinks with their own indigenous entry** —
+34 of 34, in most cases every link. The recurring source is the Commissioner
+for Linguistic Minorities reports. The two domains are reading the same
+documents.
+
+**The indigenous India entry already carries the instrument.** Its
+`mediumOfInstruction` reads: "Art 350A: states to provide facilities for
+instruction in the mother tongue / That duty runs at the primary stage only,
+and to linguistic minority groups."
+
+**There is almost no immigrant content.** Across all 34 Indian eal units, one
+substantive mention of migration: a CBSE circular of 18-09-2014 affecting
+children of migrant parents, and those are internal migrants. A grep that
+appears to find more is matching `stubNote` boilerplate.
+
+So `linguistic minority` is not the eal category recorded elsewhere on this
+map, and it is not simply an indigenous category either — it covers internal
+migrants and tribal groups alike, and excludes foreign arrivals. Moving it
+wholesale to `indigenous` would be wrong for the same reason it sits awkwardly
+here: it is broader than either domain.
+
+This supports the second reading above. The coder did not miss a `designation`
+value; they found no newcomer category because these documents are not about
+newcomers. The nineteen entries are a re-reading of the indigenous sources into
+a field that asks a different question. The minimal fix is to the coding rather
+than to the prose, which is honest about what exists.
+
 ## Group B: no pupil-level category, said outright
 
 Five entries state that no designation exists, in their own words.
