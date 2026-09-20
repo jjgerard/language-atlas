@@ -90,6 +90,17 @@ for (const [domainId, list] of Object.entries(byDomain)) {
       row.coding[k] = Object.assign({}, row.coding[k], c);
     }
 
+    // Slots index the field’s declared QUESTIONS, one per bullet, and must not
+    // decrease. Changing the number of bullets invalidates the old list, and
+    // store.js then refuses it and drops it silently -- which shows up only as
+    // an unexpected `slots` change in coding-verify, well after the edit.
+    for (const [k, v] of Object.entries(spec.slots || {})) {
+      row.slots = row.slots || {};
+      row.slots[k] = v;
+      const n = String(row[k] || '').split(String.fromCharCode(10)).filter(x => x.trim()).length;
+      if (v.length !== n) { console.error('slots for ' + k + ' on ' + spec.unit + ': ' + v.length + ' given for ' + n + ' bullets'); process.exit(2); }
+    }
+
     if (spec.docLinks) {
       const have = new Set((row.docLinks || []).map(d => String(d.url)));
       row.docLinks = (row.docLinks || []).concat(spec.docLinks.filter(d => !have.has(String(d.url))));
@@ -108,6 +119,13 @@ for (const [domainId, list] of Object.entries(byDomain)) {
     // restructure every row it touched.
     const clean = sanitize(domain, row);
     const got = clean.fields || {};
+    for (const k of Object.keys(spec.slots || {})) {
+      if (!((got.slots || {})[k] || []).length) {
+        console.error('sanitize refused the slot list for ' + k + ' on ' + spec.unit
+          + ' — it must be non-decreasing and one entry per bullet');
+        process.exit(2);
+      }
+    }
     for (const k of Object.keys(spec.fields || {})) {
       if (!String(got[k] == null ? '' : got[k]).trim()) {
         console.error('sanitize dropped ' + k + ' on ' + spec.unit + ' — it would be refused from a submission too');

@@ -471,3 +471,38 @@ one leads is the maintainer's call.
 Decreto-Lei 8/2009's sumario cites "67/78" where the decree it is amending is
 67/98. The entry records the sumario's own wording and asserts none of the
 three candidate dates, because guessing which digit is the typo is inference.
+
+## 2026-09-20 — Portugal, l2Support: a mechanism named wrongly
+
+The entry said:
+
+> The only one of the six comparison countries offering targeted academic support by quota
+
+The “six comparison countries” are Meehan et al. (2021), *Context rules! Top-level
+education policies for newly arrived migrant students across six European
+countries*. The paper was cited on no entry at all, which is how the error
+survived: there was nothing to check the sentence against.
+
+Read against it, the claim is half right and half wrong in the same breath. The
+Discussion says “alone among our PCs, Portugal provides targeted academic support
+to NAMS by means of the Educational Territories Program for Priority
+Intervention”, so **alone of the six** is correct. But §5.2.2 says outright that
+“Ireland, Malta and Portugal do not apply school quotas”, so **by quota** names
+the wrong mechanism — and the right one was already sitting in the bullet above
+it, unrecognised.
+
+The entry also dropped the paper’s own hedge. The EC Study it measures Portugal
+against counsels that “universal and loosely targeted education mechanisms aimed
+at supporting all underachieving students or immigrant students are often more
+inclusive and beneficial for NAMS in particular”, which turns a distinction the
+atlas was reporting as an achievement into one the literature is unsure about.
+
+Now two bullets, on slots 3 and 3: that the support is targeted rather than
+universal, and that it is not a quota and the EC study prefers universal
+schemes. The paper is a docLink on the entry.
+
+Four more entries — Belgium (French Community), Malta, Norway and Romania —
+carry this paper’s vocabulary (“top-level policy”, “newly arrived migrant
+pupils”) and do not cite it either. Their sentences have not been checked line
+by line against it, so no citation was added: an unverified link is the other
+half of the rule that caught this one.
