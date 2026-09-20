@@ -84,19 +84,46 @@ for (const d of dld) {
 }
 
 const val = v => Array.isArray(v) ? (v.length ? v.join("+") : undefined) : v;
+/**
+ * A cross-tab nobody has to decode.
+ *
+ * The first version truncated column labels to twelve characters, so
+ * `national rule, local application` and `national statute` both printed as
+ * "national ..." and a reader could not tell which column they were in. It
+ * also printed counts and nothing else, which made a grid of numbers with no
+ * visible connection to the entries behind them.
+ *
+ * So: full labels down the left, a numbered legend for the columns, and the
+ * units NAMED in every cell. The point of a cross-tab here is to send a reader
+ * back to specific entries, and it cannot do that if it never names one.
+ */
 function tab(title, rowKey, colKey, opts = {}) {
   const rows = SYS.filter(s => val(s[rowKey]) != null && val(s[colKey]) != null)
     .filter(opts.where || (() => true));
-  if (!rows.length) { console.log("\n" + title + "  — no data"); return; }
+  if (!rows.length) { console.log("\n" + title + "  -- no data"); return; }
   const R = [...new Set(rows.map(s => String(val(s[rowKey]))))].sort();
   const C = [...new Set(rows.map(s => String(val(s[colKey]))))].sort();
-  const w = Math.max(...R.map(x => x.length), 8) + 1;
-  console.log("\n" + title + "   n=" + rows.length);
-  console.log(" ".repeat(w) + C.map(c => c.slice(0, 12).padStart(13)).join("") + "   total");
+  const cell = (r, c) => rows.filter(s => String(val(s[rowKey])) === r && String(val(s[colKey])) === c);
+  console.log("\n" + title + "   n=" + rows.length + " systems, each counted once");
+  console.log("  rows = " + rowKey + "      columns = " + colKey);
+  C.forEach((c, i) => console.log("    [" + (i + 1) + "] " + c));
+  const w = Math.max(...R.map(x => x.length)) + 2;
+  console.log("");
+  console.log(" ".repeat(w) + C.map((_, i) => ("[" + (i + 1) + "]").padStart(6)).join("") + "     total");
   for (const r of R) {
-    const cells = C.map(c => rows.filter(s => String(val(s[rowKey])) === r && String(val(s[colKey])) === c).length);
-    console.log(r.padEnd(w) + cells.map(n => String(n).padStart(13)).join("")
-      + String(cells.reduce((a, b) => a + b, 0)).padStart(8));
+    const cs = C.map(c => cell(r, c).length);
+    console.log(r.padEnd(w) + cs.map(n => String(n).padStart(6)).join("")
+      + String(cs.reduce((a, b) => a + b, 0)).padStart(10));
+  }
+  if (opts.names !== false) {
+    console.log("  who is in each cell:");
+    for (const r of R) for (let i = 0; i < C.length; i++) {
+      const got = cell(r, C[i]);
+      if (!got.length) continue;
+      console.log("    " + r + "  ->  " + C[i] + "   (" + got.length + (r === C[i] ? ", same" : "") + ")");
+      console.log("        " + got.slice(0, 8).map(s => s.unit).join(", ")
+        + (got.length > 8 ? ", +" + (got.length - 8) + " more" : ""));
+    }
   }
 }
 
