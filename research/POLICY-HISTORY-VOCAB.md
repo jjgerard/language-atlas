@@ -469,3 +469,114 @@ stored key reads “pre university education act” where the description reads
 1,331 rows still carry no coding at all — 935 on dld, 396 on eal. The 415 rows
 already coded carry `fields_touched` and no `operation`, so they need a second
 pass even though they are not part of that backlog.
+
+## First hand-coded region: eal Europe, 124 rows
+
+Batching is by region because a region is the unit a reader can actually check.
+`eal` Europe is 38 entries and 124 policyHistory rows, every one of which needed
+`operation`: 98 already carried `fields_touched` from the earlier pass and 26
+carried no coding at all, so the batch size is set by the new column rather than
+by what was missing before.
+
+```
+  provision described            61   50%
+  plan or strategy issued        20   16%
+  body or programme established  13   11%
+  instrument amended             12   10%
+  instrument made                 6    5%
+  body or programme changed       6    5%
+  funding decided                 3    2%
+  state of affairs recorded       2    2%
+  instrument replaced             0    0%
+  (left unset)                    1
+```
+
+**The residual lands at 50%, against the 48% predicted from the whole corpus.**
+That is the one number worth taking seriously here: the derivation profiled all
+4,305 rows with regexes it called poor instruments, and a hand pass over 124 of
+them put the residual within two points of the profile. The column measures what
+the derivation said it would.
+
+`instrument replaced` comes out **empty**, and the two rows that look like
+replacements are why. France's "ELCO formally ended, replaced by EILE" and the
+Netherlands' "OETC replaced by OALT" are both programmes being replaced, not
+instruments, and `body or programme changed` already glosses closure. Whether
+`instrument replaced` is rare in European eal or simply rare in 124 rows is not
+answerable from one region.
+
+### One row left unset
+
+Sweden 2015 — "For primary school there is a slight increase, which may be due
+to the amendment of the Education Act introduced…". The row's subject is a
+statistic and its attribution is hedged to a maybe, so no operation happened in
+2015 that this row asserts. It is also visibly truncated. `apply-coding.js` was
+given no value for it, and the cell is absent rather than filled, per the
+coding-pass rule that a forced value corrupts a distribution silently because
+the result looks complete.
+
+### The vocabulary gap this pass found
+
+**A change of SCOPE with no instrument named has nowhere to go.** Four rows:
+Czechia 2025 "eligibility for free language preparation extended to Czech
+citizens with foreigner-equivalent needs"; Great Britain 2012 "first-language
+reporting becomes mandatory in the Pupil Level Annual School Census"; the
+Netherlands 2023 "2-year cap on newcomer provisions formalised"; Slovakia 2025
+"compulsory schooling extended to Ukrainian refugee children". Each records a
+real change — who is covered, or whether a thing binds — but names no instrument
+to amend and no body to establish. All four took `provision described`, which is
+true of the sentence and loses the change.
+
+That is four rows in 124 and not yet worth a value. Noted here so the count can
+be carried forward: if it runs at 3% across regions it is ~130 rows corpus-wide,
+and at that size it is an axis.
+
+A second, smaller stretch: `state of affairs recorded` is glossed as a dated
+observation **that nothing exists**, and San Marino's 2016 row observes a fact
+rather than an absence ("the 2016 curriculum guidance notes many pupils have a
+non-school language background"). It is coded there because the row records an
+observation rather than an operation, and the gloss wants widening from *that
+nothing exists* to *that records a state rather than a change*.
+
+## What the hand pass did to the proposer
+
+The hand coding is an answer key, so the proposer can be scored rather than
+guessed at. It was **17 of 29 correct, 59%**, and the twelve errors were three
+defects rather than twelve:
+
+- **Eight of twelve** were `establish` firing on an abstract object. "Establishes
+  the *außerordentlicher Schüler* category", "the individual educational needs
+  principle", "the state's duty", "the right to preparatory education", "the
+  inclusive-education principle", "entry-assessment procedures", "the ASL legal
+  framework", "socio-economic index variables". Every one is the residual: a row
+  that dates an instrument and says what it provides. The verb now requires a
+  noun for something that can be walked into or enrolled on, and the abstract
+  nouns veto it outright.
+- **Two** were a programme replacement read as an instrument replacement (ELCO,
+  OETC). The programme test now runs first.
+- **Two** were `Strategy … adopted` taken as an instrument being made (Hungary
+  2013, Slovenia 2007). That is how a strategy is issued.
+
+Fixed, it scores **27 of 27**. That number is a fit and not a measurement: the
+region it was tuned on cannot also test it, and the held-out test is whichever
+region is coded next. Two things are worth reporting honestly about the fix:
+
+- The first attempt at the `adopt` veto **did not work**, and scored 82% rather
+  than 100% because a negative lookahead only looks forward while both failing
+  rows put the word *Strategy* before *adopted*. It is anchored to the whole row
+  now.
+- Widening the plan pattern to `guidance|guidelines` **made things worse**,
+  adding four false positives in one region: Irish application guidelines, two
+  Italian *circolari* and a San Marino curriculum note all describe provision or
+  record a fact. A document type is not an operation, and the words are gone
+  again.
+
+Abstention stayed high on purpose — 96 of 124 — and 64% of abstentions took the
+residual. The proposer covers roughly a fifth of a batch and the reader does the
+rest, which is the split the header argues for.
+
+## Remaining, by region
+
+```
+  dld   Americas 316   Africa 292   Asia 124   Oceania 124   Europe  79
+  eal   Asia     174   Africa 100   Americas 71   Oceania 25   Europe  0
+```

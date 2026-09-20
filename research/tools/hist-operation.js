@@ -32,26 +32,48 @@ const si = rest.indexOf("--sample");
 const SAMPLE = si > -1 ? Number(rest[si + 1]) || 40 : 0;
 const ei = rest.indexOf("--emit");
 const EMIT = ei > -1 ? rest[ei + 1] : null;
+// Batching is by region because that is the unit a reader can check. A domain is
+// 600 to 1,100 rows and nobody verifies that in one sitting; a region is 25 to
+// 300, and the entries inside one share enough context that a coder stays
+// calibrated across them.
+const ri = rest.indexOf("--region");
+const REGION = ri > -1 ? rest[ri + 1] : null;
+const TODO = rest.includes("--todo");
 
 // Ordered to match HISTORY_OPERATION's precedence. Each entry is deliberately
 // narrower than the value it proposes, because a miss costs a reader one row
 // and a false positive costs the column its meaning.
 const RULES = [
-  // `replac...` carries no noun requirement. It had one -- act, law, decree and
-  // so on within forty characters -- and Andorra's "It replaces the model in
-  // force since 2008" fell through it, then matched `instrument made` on the
-  // words "in force". A replacement misread as a making is the one error this
-  // precedence exists to prevent, so the broad pattern sits first and a false
-  // positive here costs less than that miss did.
-  ["instrument replaced", /\brepeal(s|ed|ing)?\b|\bsupersed(e|es|ed|ing)\b|\breplac(e|es|ed|ing|ement)\b|\brevok(e|es|ed|ing)\b/i],
+  // A PROGRAMME replaced is not an INSTRUMENT replaced. France's "ELCO formally
+  // ended, replaced by EILE" and the Netherlands' "OETC replaced by OALT" both
+  // matched `instrument replaced` and were both hand-corrected to `body or
+  // programme changed`, whose gloss already covers closure. So the programme
+  // test runs first, and the instrument pattern now wants an instrument noun --
+  // the requirement Andorra's "It replaces the model in force since 2008" broke
+  // by falling through to `instrument made`, so the noun list is wide and the
+  // lookaround runs in both directions rather than forward only.
+  ["body or programme changed", /\b(replac|supersed|abolish|discontinu)\w*\b[\s\S]{0,40}\b(programme|program|scheme|classes|grant|unit|centre|center)\b|\b(programme|program|scheme|classes|grant|OETC|OALT|ELCO|MEAG|Tanoda)\b[\s\S]{0,60}\b(replaced|abolished|discontinued|ended|folded|integrated into)\b|\brenam(e|es|ed|ing)\b|\brestructur(e|es|ed|ing)\b|\bmerg(e|es|ed|ing)\b/i],
+  ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|model)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)/i],
   ["instrument amended", /\bamend(s|ed|ing|ment)?\b|\brewrit(e|es|ing)\b|\binserts?\b|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i],
   ["international instrument accepted", /\bratif(y|ies|ied|ication)\b|\baccede(d|s)?\b|\baccession\b|\benters? into force for\b|\bdeclaration under\b/i],
-  ["instrument made", /\benact(s|ed|ment)?\b|\bpromulgat(e|ed|es)\b|\badopt(s|ed)\b|\bcomes? into force\b|\bin force\b|\btakes? effect\b|\beffective\b|\bpublished in the .{0,20}gazette\b|\bpass(es|ed)\b.{0,20}\b(act|law)\b/i],
-  ["body or programme changed", /\brenam(e|es|ed|ing)\b|\brestructur(e|es|ed|ing)\b|\bmerg(e|es|ed|ing)\b|\bclos(e|es|ed|ing)\b.{0,30}\b(unit|centre|center|programme|program|school)\b|\babolish(es|ed)?\b/i],
-  ["body or programme established", /\bestablish(es|ed|ing|ment)?\b|\bcreat(e|es|ed|ing)\b|\bfound(ed|ing)\b|\bset up\b|\bintroduc(e|es|ed)\b.{0,40}\b(elective|subject|course|programme|program)\b|\blaunch(es|ed)\b/i],
-  ["funding decided", /\bfunding agreement\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
-  ["plan or strategy issued", /\bstrategic plan\b|\bstrategy\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\btargets?\b|\brecommendation\b|\bwhite paper\b|\bframework document\b/i],
-  ["state of affairs recorded", /\bdoes not\b|\bno specific\b|\bomits\b|\bfound no\b|\bnever uses\b|\bis silent\b|\bno such\b|\bnothing\b/i],
+  // "Strategy ... adopted" is how a strategy is ISSUED, not how an instrument is
+  // made. Hungary 2013 and Slovenia 2007 both matched `adopt` here and were
+  // hand-corrected to `plan or strategy issued`, so `adopt` now stands down when
+  // the row's own subject is a plan, a strategy or a recommendation.
+  ["instrument made", /\benact(s|ed|ment)?\b|\bpromulgat(e|ed|es)\b|\bcomes? into force\b|\bin force\b|\btakes? effect\b|\beffective\b|\bpublished in the .{0,20}gazette\b|\bpass(es|ed)\b.{0,20}\b(act|law)\b|^(?![\s\S]*\b(strateg|action plan|recommendation)\w*)[\s\S]*\badopt(s|ed)\b/i],
+  // EIGHT of the twelve overrides in the first hand-coded region were the old
+  // `establish` pattern firing on an abstract object: "establishes the
+  // ausserordentlicher Schueler CATEGORY", "the individual educational needs
+  // PRINCIPLE", "the state's DUTY", "the RIGHT to preparatory education", "the
+  // inclusive-education PRINCIPLE", "entry-assessment PROCEDURES", "the ASL
+  // legal FRAMEWORK", "socio-economic index VARIABLES". Every one of them is the
+  // residual -- a row that dates an instrument and says what it provides. A
+  // thing established has to be a thing that can be walked into or enrolled on,
+  // so the verb now needs a body-or-programme noun and the abstractions veto it.
+  ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept)\b)[\s\S]{0,60}\b(institut\w*|unit|centre|center|commission|council|programme|program|scheme|class|classes|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training)\b/i],
+  ["funding decided", /\bfunding agreement\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|£[\d,.]+|\bfunding formula\b|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
+  ["plan or strategy issued", /\bstrategic plan\b|\bstrateg(y|ies)\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\bpledges?\b|\btargets?\b|\brecommendations?\b|\bwhite paper\b|\bframework document\b/i],
+  ["state of affairs recorded", /\bdoes not\b|\bno specific\b|\bomits\b|\bfound no\b|\bnever uses\b|\bis silent\b|\bno such\b|\bnothing\b|\bnames only\b/i],
 ];
 
 const rows = JSON.parse(fs.readFileSync(pathFor(domainId), "utf8"));
@@ -67,6 +89,7 @@ const norm = s => String(s || "").replace(/\s+/g, " ").trim();
 const out = [];
 let total = 0;
 for (const e of rows) {
+  if (REGION && (e.region || "") !== REGION) continue;
   const f = e.fields || e;
   const hist = Array.isArray(f.policyHistory) ? f.policyHistory : [];
   const already = Array.isArray((e.coding || {}).policyHistory) ? e.coding.policyHistory : [];
@@ -114,6 +137,21 @@ if (SAMPLE) {
     console.log("\n  " + (r.proposal || "(abstained)").toUpperCase());
     console.log("    " + r.cc + " " + r.unit + " " + r.year);
     console.log("    " + r.description.slice(0, 150));
+  }
+}
+
+// Every uncoded row in the batch, in full, for a reader to work down. The
+// description is NOT truncated here: a proposal is made off the whole sentence
+// and has to be checkable against the whole sentence.
+if (TODO) {
+  const todo = out.filter(r => !r.hasOperation);
+  console.log("\n--- " + todo.length + " rows to code"
+    + (REGION ? " in " + REGION : "") + " ---");
+  let unit = "";
+  for (const r of todo) {
+    if (r.cc + r.unit !== unit) { unit = r.cc + r.unit; console.log("\n" + r.cc + " " + r.unit); }
+    console.log("  [" + r.year + "] " + (r.proposal || "?") + (r.occurrence > 1 ? "  (occ " + r.occurrence + ")" : ""));
+    console.log("      " + r.description);
   }
 }
 
