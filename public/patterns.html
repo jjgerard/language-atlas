@@ -428,7 +428,11 @@ const PAIRS = [
 function codedFields(atlas) {
   const seen = new Map();
   for (const d of atlas.domains) {
-    const label = LABELS[d.id] || d.id;
+    // LABELS names the two maps whose blocks have hand-written prose around
+    // them. Every other map falls back to its OWN label from domains.js, not to
+    // its id -- three policyHistory blocks rendered as "indigenous", "fl" and
+    // "he" before this.
+    const label = LABELS[d.id] || d.label || d.id;
     for (const u of (atlas.units[d.id] || [])) {
       if (!u.nat || !u.coding) continue;
       for (const key of Object.keys(u.coding)) {
