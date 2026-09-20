@@ -9715,6 +9715,10 @@
    {
     "label": "INE, Estadistica de Profesionales Sanitarios Colegiados, ano 2023 (nota de prensa)",
     "url": "https://www.ine.es/dyngs/Prensa/es/EPSC2023.pdf"
+   },
+   {
+    "label": "Ley Orgánica 2/2006, de Educación, art. 74, texto consolidado — BOE-A-2006-7899",
+    "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899"
    }
   ],
   "supportLinks": [],
@@ -9732,7 +9736,7 @@
   "legalEntitlement": "Ley Organica 2/2006 art 71.2: authorities must secure the resources such pupils need\nArt 71.3 obliges them to set up procedures to identify those needs early\nSpecial-education placement only where mainstream diversity measures cannot meet needs\nSchooling in special units or centres may run to age twenty-one",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 396\nFunders: family 52%, state education 48%, state health 13%, state social services 8%\n32% said a maximum number of sessions applied (n = 389)",
   "workforce": "12,196 logopedas on the professional colleges' rolls in 2024, INE colegiados statistic\nUp from 10,483 in 2020; a registration count, not a count of posts\nIn 2023 logopedas were the most female of the health professions, at 93.0%\nLey 44/2003 route: a university diploma in Logopedia is the qualifying degree",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Results are evaluated al finalizar cada curso against the initial valoración (art. 74/3)\nThat evaluation can change the plan de actuación and the modalidad de escolarización\nIts stated aim is un régimen de mayor integración for the pupil where possible\nEach Administración educativa sets the terms of identification and valoración (art. 74/2)\nSchooling in special units or centres may extend to twenty-one (art. 74/1)",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -9816,6 +9820,13 @@
     1,
     1,
     3
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    2,
+    4
    ]
   },
   "coding": {
@@ -9863,7 +9874,16 @@
       "morphosyntax"
      ]
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "age ceiling"
+    ],
+    "review_interval_months": 12,
+    "decider": "educational psychology service",
+    "rule_locus": "national rule, local application"
+   }
   }
  },
  {
@@ -29266,6 +29286,10 @@
    {
     "label": "Postanova KMU No. 957 (2021), Poriadok orhanizatsii inkliuzyvnoho navchannia",
     "url": "https://zakon.rada.gov.ua/laws/show/957-2021-%D0%BF/print"
+   },
+   {
+    "label": "Положення про інклюзивно-ресурсний центр, постанова КМУ № 545 від 12.07.2017, п. 34 — Законодавство України",
+    "url": "https://zakon.rada.gov.ua/laws/show/545-2017-%D0%BF"
    }
   ],
   "supportLinks": [],
@@ -29283,7 +29307,7 @@
   "legalEntitlement": "Zakon Pro osvitu art 19 obliges conditions for education on a par with other people\nDischarged through funding, staffing, materials and reasonable accommodation\nNeeds are set out in the person's individual development programme\nThe duty falls on state bodies, local self-government and the education institutions",
   "funding": "Funded from state and local budgets across preschool and general secondary",
   "workforce": "Centre staffing is set in regulation and names a speech and language teacher\nAlso practical psychologists and other defectologists",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Повторна комплексна оцінка is triggered rather than scheduled — no interval is set (п. 34)\nTriggers include moving between levels of education, and leaving a special setting\nThe команда психолого-педагогічного супроводу may ask for it on успіхи or труднощі\nParents may initiate it; monitoring requests run не частіше ніж раз на рік\nФахівці of the інклюзивно-ресурсний центр carry out the re-assessment",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -29353,6 +29377,13 @@
    "workforce": [
     4,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    1,
+    2
    ]
   },
   "coding": {
@@ -29391,7 +29422,15 @@
       "general"
      ]
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "decision on continuing need"
+    ],
+    "decider": "multidisciplinary team",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
