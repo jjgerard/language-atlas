@@ -31,7 +31,7 @@ main a { color: var(--focus); }
    from the vocabulary -- "diagnosis plus impact", "national rule, local
    application" -- and abbreviating them in a chart is how a reader ends up
    comparing two things they cannot name. */
-.ocontrols { display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0 0 .75rem; }
+.ocontrols { display: flex; flex-wrap: wrap; gap: 1rem 1.25rem; margin: 0 0 .9rem; align-items: center; }
 .ocontrols label { font-size: .85rem; color: var(--muted, #555); display: flex; align-items: center; gap: .4rem; }
 .ocontrols select { font: inherit; font-size: .85rem; padding: .2rem .35rem; max-width: 22rem; }
 .olab { font-size: 12px; fill: currentColor; }
@@ -540,43 +540,46 @@ function renderCoding(atlas) {
     : '<p class="why">No entry carries a coding yet. The vocabularies are in src/coding.js; nothing has been coded against them.</p>';
 }
 
-// A coded category against a PISA attainment gap.
+// A plot builder over the coded columns and one outside outcome.
 //
-// The panel exists because the obvious question once a column is coded is
-// "and does it go with anything". The answer so far is no, every time, and the
-// panel is built to make that readable rather than to hide it: the box shows
-// the spread of the countries inside a category, and that spread has been wider
-// than the difference between categories in every cross run against it.
+// The panel exists because the obvious question once a column is coded is "and
+// does it go with anything". The answer so far is no, every time, and it is
+// built to make that readable rather than to hide it: the spread inside a
+// category has been wider than the gap between categories in every cross run
+// against it.
 //
-// THREE GUARDS, NOT OPTIONAL.
-//   National units only. A country counted once per province reached p = 0.04
-//   on a cross that sits at p = 0.17 over national units alone -- five Chinese
+// THREE GUARDS, NOT OPTIONAL, each one earned by a finding that died on it.
+//   National units only. A country counted once per province reached p = 0.04 on
+//   a cross that sits at p = 0.17 over national units alone -- five Chinese
 //   provinces in one cell.
 //   A floor on group size. A box drawn over two countries is two dots and a
-//   decoration.
+//   decoration. The floor is adjustable upward and cannot go below three.
 //   The Gulf split, reported beside every result. An immigrant student in the
 //   UAE, Qatar or Saudi Arabia is often an expatriate professional's child, so
 //   those systems carry an immigrant ADVANTAGE that has nothing to do with any
-//   rule. The one cross that reached significance lost it when three of them
-//   were set aside.
+//   rule. The one cross that reached significance lost it when three were set
+//   aside.
 const GULF = new Set(['AE', 'QA', 'SA', 'KW', 'BH', 'OM']);
-const MIN_N = 3;
+const MIN_FLOOR = 3;
 // One definition of the pair separator: used to build a combination key and to
 // take it apart again when working out which whole values never cleared.
 const PAIR = '  →  ';
+// Series colours in a fixed order, so a category keeps its colour when the
+// selection changes and filtering never repaints the chart.
+const SERIES = ['#2a78d6', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#6250d6', '#008300', '#e34948'];
 
 function outcomeOptions(atlas) {
   const out = [];
   const doms = Object.fromEntries(atlas.domains.map(d => [d.id, d]));
   for (const [id, key, map] of codedFields(atlas)) {
     if (!doms[id]) continue;
+    const fd = (doms[id].fields || []).find(x => x.k === key);
+    const fieldLabel = fd ? fd.label : key;
+    const sch = ((atlas.schemes || {})[id + '.' + key]) || {};
     // Only columns backed by a vocabulary. A free-text column such as the
     // instrument name on dld.assessments yields one group per country, and the
     // panel then reports that no category reaches the floor -- true, and a
     // useless thing to offer in the first place.
-    const fd = (doms[id].fields || []).find(x => x.k === key);
-    const fieldLabel = fd ? fd.label : key;
-    const sch = ((atlas.schemes || {})[id + '.' + key]) || {};
     const allowed = new Set(sch.valueColumns || []);
     if (!allowed.size) continue;
     // A scheme that declares keyColumns is row-grained -- policyHistory codes
@@ -598,10 +601,6 @@ function outcomeOptions(atlas) {
   return out.sort((a, b) => b.n - a.n);
 }
 
-// Which cycles an outcome actually carries. Read off the data rather than
-// declared, because the science series runs 2015 to 2025 and the 2022 tables
-// run for one year, and a selector offering an empty cycle is worse than one
-// that offers fewer.
 function cyclesFor(pisa, outcome) {
   const s = new Set();
   for (const c of Object.values(pisa.byCountry || {}))
@@ -610,9 +609,14 @@ function cyclesFor(pisa, outcome) {
 }
 
 // A change is written into the option value as change:FROM-TO, so the pair is
-// explicit rather than implied by position. The most recent step is the one a
-// reader usually wants and the full span is the one that shows a trend, so
-// both are offered and neither is inferred.
+// explicit rather than implied by position.
+function changeOptions(cy) {
+  if (cy.length < 2) return [];
+  const last = cy[cy.length - 1], prev = cy[cy.length - 2], first = cy[0];
+  const out = [{ v: 'change:' + prev + '-' + last, t: 'change ' + prev + ' → ' + last }];
+  if (first !== prev) out.push({ v: 'change:' + first + '-' + last, t: 'change ' + first + ' → ' + last });
+  return out;
+}
 
 function valueAt(entry, outcome, cycle) {
   const v = (entry.values || {})[outcome];
@@ -625,46 +629,34 @@ function valueAt(entry, outcome, cycle) {
   return a == null || b == null ? null : b - a;
 }
 
-// The most recent step and the full span. Offering every pair would be a
-// combinatorial menu nobody reads.
-function changeOptions(cy) {
-  if (cy.length < 2) return [];
-  const last = cy[cy.length - 1], prev = cy[cy.length - 2], first = cy[0];
-  const out = [{ v: 'change:' + prev + '-' + last, t: 'change ' + prev + ' → ' + last }];
-  if (first !== prev) out.push({ v: 'change:' + first + '-' + last, t: 'change ' + first + ' → ' + last });
-  return out;
+// Every value a unit carries on one coded column.
+function valuesOf(u, q) {
+  if (!q || !u.coding || !u.coding[q.key]) return null;
+  const rows = Array.isArray(u.coding[q.key]) ? u.coding[q.key] : [u.coding[q.key]];
+  const out = new Set();
+  for (const r of rows) {
+    const v = (r || {})[q.col];
+    if (v == null) continue;
+    for (const x of (Array.isArray(v) ? v : [v])) out.add(x);
+  }
+  return out.size ? out : null;
 }
 
-// With a second category the groups become COMBINATIONS rather than a grid.
-// A 7 by 6 grid of these columns has 21 non-empty cells of which 13 hold fewer
-// than three countries, so a matrix is mostly holes; a flat list of the
-// combinations that clear the floor says the same thing and can be read.
 function outcomeRows(atlas, pick, outcome, cycle, split) {
   const by = (atlas.pisa && atlas.pisa.byCountry) || {};
   const groups = {};
   const seen = new Set();
   for (const u of (atlas.units[pick.id] || [])) {
-    if (!u.nat || !u.coding || !u.coding[pick.key]) continue;
+    if (!u.nat) continue;
     const p = by[u.cc];
     if (!p) continue;
     const val = valueAt(p, outcome, cycle);
     if (val == null) continue;
-    const valuesOf = q => {
-      if (!q || !u.coding[q.key]) return null;
-      const rows = Array.isArray(u.coding[q.key]) ? u.coding[q.key] : [u.coding[q.key]];
-      const out = new Set();
-      for (const r of rows) {
-        const v = (r || {})[q.col];
-        if (v == null) continue;
-        for (const x of (Array.isArray(v) ? v : [v])) out.add(x);
-      }
-      return out.size ? out : null;
-    };
-    const vals = valuesOf(pick);
+    const vals = valuesOf(u, pick);
     if (!vals) continue;
     let keys = [...vals];
     if (split) {
-      const second = valuesOf(split);
+      const second = valuesOf(u, split);
       if (!second) continue;
       keys = [];
       for (const a of vals) for (const b of second) keys.push(a + PAIR + b);
@@ -720,63 +712,125 @@ function renderOutcomes(atlas) {
     return;
   }
   const OUT = Object.keys(pisa.outcomes || {});
+  const catOptions = sel => opts.map((o, i) =>
+    '<option value="' + i + '"' + (i === sel ? ' selected' : '') + '>'
+    + esc(o.map) + ' — ' + esc(o.field) + ': ' + esc(o.col.replace(/_/g, ' ')) + '</option>').join('');
+  const outOptions = () => OUT.map(k =>
+    '<option value="' + esc(k) + '">' + esc((pisa.outcomes[k] || {}).label || k) + '</option>').join('');
+
   host.innerHTML = '<div class="ocontrols">'
-    + '<label>Category <select id="o-cat">' + opts.map((o, i) =>
-        '<option value="' + i + '">' + esc(o.map) + ' — ' + esc(o.field) + ': ' + esc(o.col.replace(/_/g, ' ')) + '</option>').join('') + '</select></label>'
-    + '<label>Outcome <select id="o-out">' + OUT.map(k =>
-        '<option value="' + esc(k) + '">' + esc((pisa.outcomes[k] || {}).label || k) + '</option>').join('') + '</select></label>'
-    + '<label>Cycle <select id="o-cyc"></select></label>'
-    + '<label>Split by <select id="o-by"><option value="">nothing</option>' + opts.map((o, i) =>
-        '<option value="' + i + '">' + esc(o.map) + ' — ' + esc(o.field) + ': ' + esc(o.col.replace(/_/g, ' ')) + '</option>').join('') + '</select></label>'
+    + '<label>Plot <select id="o-kind">'
+      + '<option value="box">box plots by category</option>'
+      + '<option value="trend">category means across cycles</option>'
+      + '<option value="scatter">one cycle against another</option>'
+      + '</select></label>'
+    + '<label>Category <select id="o-cat">' + catOptions(0) + '</select></label>'
+    + '<label class="o-boxonly">Split by <select id="o-by"><option value="">nothing</option>' + catOptions(-1) + '</select></label>'
+    + '<label>Outcome <select id="o-out">' + outOptions() + '</select></label>'
+    + '<label class="o-cyconly">Cycle <select id="o-cyc"></select></label>'
+    + '<label class="o-scatteronly">From <select id="o-x"></select></label>'
+    + '<label class="o-scatteronly">To <select id="o-y"></select></label>'
+    + '<label>Least <select id="o-min"><option value="3">3 countries</option>'
+      + '<option value="4">4</option><option value="5">5</option><option value="6">6</option></select></label>'
     + '</div><div id="o-plot"></div><p class="why osrc" id="o-src"></p>';
 
   const fillCycles = () => {
-    const outcome = $('#o-out').value;
-    const cy = cyclesFor(pisa, outcome);
+    const cy = cyclesFor(pisa, $('#o-out').value);
     const prev = $('#o-cyc').value;
     $('#o-cyc').innerHTML = cy.map(c => '<option value="' + c + '">' + c + '</option>').join('')
       + changeOptions(cy).map(c => '<option value="' + c.v + '">' + esc(c.t) + '</option>').join('');
-    // Keep the reader where they were when the new outcome offers the same
-    // cycle; otherwise land on the most recent one rather than the oldest.
     const all = [...cy, ...changeOptions(cy).map(c => c.v)];
     $('#o-cyc').value = all.includes(prev) ? prev : (cy[cy.length - 1] || '');
+    const cyOpt = cy.map(c => '<option value="' + c + '">' + c + '</option>').join('');
+    $('#o-x').innerHTML = cyOpt;
+    $('#o-y').innerHTML = cyOpt;
+    $('#o-x').value = cy[0] || '';
+    $('#o-y').value = cy[cy.length - 1] || '';
     return cy;
   };
 
+  const showFor = kind => {
+    host.querySelectorAll('.o-boxonly').forEach(e => e.style.display = kind === 'box' ? '' : 'none');
+    host.querySelectorAll('.o-cyconly').forEach(e => e.style.display = kind === 'scatter' ? 'none' : '');
+    host.querySelectorAll('.o-scatteronly').forEach(e => e.style.display = kind === 'scatter' ? '' : 'none');
+  };
+
   const draw = () => {
+    const kind = $('#o-kind').value;
+    showFor(kind);
     const pick = opts[Number($('#o-cat').value)];
     const outcome = $('#o-out').value;
-    const byIdx = $('#o-by').value;
-    const split = byIdx === '' ? null : opts[Number(byIdx)];
-    $('#o-plot').innerHTML = plotOutcome(atlas, pick, outcome, $('#o-cyc').value, split);
+    const min = Math.max(MIN_FLOOR, Number($('#o-min').value) || MIN_FLOOR);
+    const cy = cyclesFor(pisa, outcome);
+    let html;
+    if (kind === 'trend') html = plotTrend(atlas, pick, outcome, cy, min);
+    else if (kind === 'scatter') html = plotScatter(atlas, pick, outcome, $('#o-x').value, $('#o-y').value, min);
+    else {
+      const byIdx = $('#o-by').value;
+      const split = byIdx === '' ? null : opts[Number(byIdx)];
+      html = plotOutcome(atlas, pick, outcome, $('#o-cyc').value, split, min);
+    }
+    $('#o-plot').innerHTML = html;
     const meta = pisa.outcomes[outcome] || {};
-    const src = (pisa.sources || {})[meta.basis] || '';
-    $('#o-src').innerHTML = esc(meta.note || '') + ' <span class="osrcline">' + esc(src) + '</span>'
+    $('#o-src').innerHTML = esc(meta.note || '') + ' <span class="osrcline">'
+      + esc((pisa.sources || {})[meta.basis] || '') + '</span>'
       + (pisa.unjoined && pisa.unjoined.length
           ? ' Not joined: ' + pisa.unjoined.map(u => esc(u.name) + ' (' + esc(u.why) + ')').join(', ') + '.'
           : '');
   };
 
-  $('#o-cat').addEventListener('change', draw);
+  ['o-kind', 'o-cat', 'o-by', 'o-cyc', 'o-x', 'o-y', 'o-min'].forEach(id =>
+    $('#' + id).addEventListener('change', draw));
   $('#o-out').addEventListener('change', () => { fillCycles(); draw(); });
-  $('#o-cyc').addEventListener('change', draw);
-  $('#o-by').addEventListener('change', draw);
   fillCycles();
   draw();
 }
 
-function plotOutcome(atlas, pick, outcome, cycle, split) {
-  const { groups, countries } = outcomeRows(atlas, pick, outcome, cycle, split);
-  const kept = Object.entries(groups).filter(([, g]) => g.length >= MIN_N)
-    .sort((a, b) => omean(b[1].map(c => c.v)) - omean(a[1].map(c => c.v)));
-  const dropped = Object.entries(groups).filter(([, g]) => g.length < MIN_N);
+// ---- shared chrome ---------------------------------------------------------
+function axisTicks(lo, hi, sx, top, bottom) {
+  const span = hi - lo;
+  const step = span > 240 ? 100 : span > 120 ? 50 : span > 45 ? 25 : 10;
+  let s = '';
+  for (let t = Math.ceil(lo / step) * step; t <= hi; t += step)
+    s += '<line x1="' + sx(t).toFixed(1) + '" y1="' + top + '" x2="' + sx(t).toFixed(1) + '" y2="' + bottom + '" stroke="var(--border)" stroke-width="1"/>'
+      + '<text x="' + sx(t).toFixed(1) + '" y="' + (bottom + 16) + '" text-anchor="middle" class="otick">' + (t > 0 ? '+' + t : t) + '</text>';
+  if (lo < 0 && hi > 0)
+    s += '<line x1="' + sx(0).toFixed(1) + '" y1="' + top + '" x2="' + sx(0).toFixed(1) + '" y2="' + bottom + '" stroke="var(--border-strong)" stroke-width="1.5"/>';
+  return s;
+}
 
-  // A value that clears the floor in NO combination is dropped whole rather
-  // than listed once per pair it fails in. Splitting triggers by exit
-  // mechanism, four of the thin pairs were the same `not stated` exit, and
-  // naming it four times said less than naming it once. What remains after
-  // that are pairs whose two ends each survive somewhere and only fail
-  // together — a different fact, and worth keeping separate.
+function guardLine(kept, countries, dropped, min, label, extra) {
+  const gulf = [...new Set(kept.flatMap(([, g]) => g).filter(c => GULF.has(c.cc)).map(c => c.cc))];
+  const p = opermute(Object.fromEntries(kept));
+  const noGulf = Object.fromEntries(kept.map(([k, g]) => [k, g.filter(c => !GULF.has(c.cc))])
+    .filter(([, g]) => g.length >= min));
+  const p2 = Object.keys(noGulf).length > 1 ? opermute(noGulf) : null;
+  return '<p class="why"><strong>' + countries + ' countries joined</strong>' + label
+    + ', ' + kept.length + ' ' + (kept.length === 1 ? 'group' : 'groups') + ' with ' + min + ' or more.'
+    + (extra || '')
+    + ' Permutation p = ' + p.toFixed(3)
+    + (gulf.length
+        ? (p2 == null
+            ? ', and the Gulf split cannot be computed at this size.'
+            : ', and ' + p2.toFixed(3) + ' without ' + gulf.length + ' Gulf '
+              + (gulf.length === 1 ? 'system' : 'systems') + ' (' + gulf.map(esc).join(', ') + ').')
+        : ', with no Gulf system in this comparison.')
+    + ' Read how far a group’s own countries spread before reading how far the groups sit apart.</p>';
+}
+
+// ---- box plots -------------------------------------------------------------
+function plotOutcome(atlas, pick, outcome, cycle, split, min) {
+  const { groups, countries } = outcomeRows(atlas, pick, outcome, cycle, split);
+  const kept = Object.entries(groups).filter(([, g]) => g.length >= min)
+    .sort((a, b) => omean(b[1].map(c => c.v)) - omean(a[1].map(c => c.v)));
+  const dropped = Object.entries(groups).filter(([, g]) => g.length < min);
+  if (!kept.length)
+    return '<p class="why">No ' + (split ? 'combination' : 'category') + ' here reaches ' + min
+      + ' countries with a value for this outcome and cycle.</p>';
+
+  // A value that clears the floor in NO combination is dropped whole rather than
+  // listed once per pair it fails in. What remains are pairs whose two ends each
+  // survive somewhere and only fail together -- a different fact.
   const part = (k, i) => String(k).split(PAIR)[i];
   const survA = new Set(kept.map(([k]) => part(k, 0)));
   const survB = new Set(kept.map(([k]) => part(k, 1)));
@@ -786,9 +840,6 @@ function plotOutcome(atlas, pick, outcome, cycle, split) {
   const gonePairs = split
     ? dropped.filter(([k]) => survA.has(part(k, 0)) && survB.has(part(k, 1)))
     : dropped;
-  if (!kept.length)
-    return '<p class="why">No ' + (split ? 'combination' : 'category') + ' here reaches ' + MIN_N
-      + ' countries with a value for this outcome and cycle.</p>';
 
   const all = kept.flatMap(([, g]) => g.map(c => c.v));
   const lo = Math.min(...all), hi = Math.max(...all);
@@ -797,17 +848,10 @@ function plotOutcome(atlas, pick, outcome, cycle, split) {
   const H = TOP + RH * kept.length + 28;
   const sx = v => X0 + (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (X1 - X0);
   const f = n => n.toFixed(1);
-  const step = (hi - lo) > 120 ? 50 : (hi - lo) > 45 ? 25 : 10;
 
-  let s = '<svg viewBox="0 0 684 ' + H + '" width="100%" role="img" aria-label="box plots of the PISA gap by '
-    + esc(pick.col.replace(/_/g, ' ')) + '">';
-  for (let t = Math.ceil((lo - pad) / step) * step; t <= hi + pad; t += step) {
-    s += '<line x1="' + f(sx(t)) + '" y1="' + (TOP - 4) + '" x2="' + f(sx(t)) + '" y2="' + (TOP + RH * kept.length) + '" stroke="var(--border)" stroke-width="1"/>'
-      + '<text x="' + f(sx(t)) + '" y="' + (TOP + RH * kept.length + 16) + '" text-anchor="middle" class="otick">' + (t > 0 ? '+' + t : t) + '</text>';
-  }
-  if (lo - pad < 0 && hi + pad > 0)
-    s += '<line x1="' + f(sx(0)) + '" y1="' + (TOP - 4) + '" x2="' + f(sx(0)) + '" y2="' + (TOP + RH * kept.length) + '" stroke="var(--border-strong)" stroke-width="1.5"/>';
-
+  let s = '<svg viewBox="0 0 684 ' + H + '" width="100%" role="img" aria-label="box plots of the outcome by '
+    + esc(pick.col.replace(/_/g, ' ')) + '">'
+    + axisTicks(lo - pad, hi + pad, sx, TOP - 4, TOP + RH * kept.length);
   let hits = '';
   kept.forEach(([lab, g], i) => {
     const cy = TOP + RH * i + RH / 2;
@@ -828,43 +872,164 @@ function plotOutcome(atlas, pick, outcome, cycle, split) {
   });
   s += hits + '</svg>';
 
-  // Distinct countries. A list column puts a system in several categories, so
-  // flattening the groups names the same Gulf state once per category it runs.
-  const gulf = [...new Set(kept.flatMap(([, g]) => g).filter(c => GULF.has(c.cc)).map(c => c.cc))];
-  const p = opermute(Object.fromEntries(kept));
-  const noGulf = Object.fromEntries(kept.map(([k, g]) => [k, g.filter(c => !GULF.has(c.cc))])
-    .filter(([, g]) => g.length >= MIN_N));
-  const p2 = Object.keys(noGulf).length > 1 ? opermute(noGulf) : null;
-  return s + '<p class="why"><strong>' + countries + ' countries joined</strong>'
-    + (String(cycle).startsWith('change:')
-        ? ' with both ' + cycle.slice(7).split('-').join(' and ')
-        : ' in ' + cycle)
-    + ', ' + kept.length + (split ? ' combinations' : ' categories') + ' with ' + MIN_N + ' or more.'
-    // Semicolons, not commas: `assessed, no criterion` has a comma in it, and
-    // a comma-joined list of these values cannot be read back apart. The axis
-    // is named too — `ethnicity` dropping is a fact about triggers and
-    // `not stated` dropping is a fact about exit mechanisms.
-    + (goneA.length || goneB.length
-        ? ' Dropped whole, reaching ' + MIN_N + ' in no combination — '
-          + [goneA.length ? esc(pick.col.replace(/_/g, ' ')) + ': ' + goneA.map(esc).join('; ') : '',
-             goneB.length ? esc(split.col.replace(/_/g, ' ')) + ': ' + goneB.map(esc).join('; ') : '']
-            .filter(Boolean).join('. ') + '.'
-        : '')
+  // Semicolons, not commas: `assessed, no criterion` has a comma in it, and a
+  // comma-joined list of these values cannot be read back apart.
+  const extra = (goneA.length || goneB.length
+      ? ' Dropped whole, reaching ' + min + ' in no combination — '
+        + [goneA.length ? esc(pick.col.replace(/_/g, ' ')) + ': ' + goneA.map(esc).join('; ') : '',
+           goneB.length ? esc(split.col.replace(/_/g, ' ')) + ': ' + goneB.map(esc).join('; ') : '']
+          .filter(Boolean).join('. ') + '.'
+      : '')
     + (gonePairs.length
-        ? (split ? ' Also not drawn: ' : ' Not drawn: ')
-          + gonePairs.slice(0, 8).map(([k, g]) => esc(k) + ' (' + g.length + ')').join('; ')
-          + (gonePairs.length > 8 ? ' and ' + (gonePairs.length - 8) + ' more' : '') + '.'
-        : '')
-    + ' Permutation p = ' + p.toFixed(3)
-    + (gulf.length
-        ? (p2 == null
-            ? ', and the Gulf split cannot be computed at this size.'
-            : ', and ' + p2.toFixed(3) + ' without ' + gulf.length + ' Gulf '
-              + (gulf.length === 1 ? 'system' : 'systems') + ' (' + gulf.map(esc).join(', ') + ').')
-        : ', with no Gulf system in this comparison.')
-    + ' Read how far a ' + (split ? 'combination' : 'category')
-    + '’s own countries spread before reading how far the boxes sit apart.'
-    + (split ? ' A country running several rules at once appears in several rows.' : '') + '</p>';
+      ? (split ? ' Also not drawn: ' : ' Not drawn: ')
+        + gonePairs.slice(0, 8).map(([k, g]) => esc(k) + ' (' + g.length + ')').join('; ')
+        + (gonePairs.length > 8 ? ' and ' + (gonePairs.length - 8) + ' more' : '') + '.'
+      : '');
+  const label = String(cycle).startsWith('change:')
+    ? ' with both ' + cycle.slice(7).split('-').join(' and ')
+    : ' in ' + cycle;
+  return s + guardLine(kept, countries, dropped, min, label, extra);
+}
+
+// ---- category means across cycles ------------------------------------------
+// Every line is drawn over the SAME countries at every point: a country missing
+// one cycle is dropped from the series entirely. Letting the membership change
+// between cycles produces a trend that is partly the sample moving, which is the
+// mistake that made a 6.5-point widening look like a deterioration when the
+// fixed-set view showed 2022 as the anomaly instead.
+function plotTrend(atlas, pick, outcome, cycles, min) {
+  if (cycles.length < 2)
+    return '<p class="why">This outcome carries one cycle, so there is no trend to draw. The science series runs 2015 to 2025.</p>';
+  const by = (atlas.pisa && atlas.pisa.byCountry) || {};
+  const groups = {};
+  const seen = new Set();
+  for (const u of (atlas.units[pick.id] || [])) {
+    if (!u.nat) continue;
+    const p = by[u.cc];
+    if (!p) continue;
+    const v = (p.values || {})[outcome];
+    if (!v || !cycles.every(c => v[c] != null)) continue;
+    const vals = valuesOf(u, pick);
+    if (!vals) continue;
+    seen.add(u.cc);
+    for (const x of vals) (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, v, series: cycles.map(c => v[c]) });
+  }
+  const kept = Object.entries(groups).filter(([, g]) => g.length >= min)
+    .sort((a, b) => b[1].length - a[1].length);
+  if (!kept.length)
+    return '<p class="why">No category reaches ' + min + ' countries present in all of ' + cycles.join(', ') + '.</p>';
+
+  const means = kept.map(([k, g]) => [k, cycles.map((c, i) => omean(g.map(x => x.series[i])))]);
+  const all = means.flatMap(([, m]) => m);
+  const lo = Math.min(...all), hi = Math.max(...all);
+  const pad = Math.max(4, (hi - lo) * 0.12);
+  const L = 60, R = 470, TOP = 20, BOT = 250;
+  const sx = i => L + i / (cycles.length - 1) * (R - L);
+  const sy = v => BOT - (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (BOT - TOP);
+  const f = n => n.toFixed(1);
+
+  let s = '<svg viewBox="0 0 684 ' + (BOT + 34) + '" width="100%" role="img" aria-label="mean outcome by category across PISA cycles">';
+  const step = (hi - lo) > 60 ? 20 : (hi - lo) > 25 ? 10 : 5;
+  for (let t = Math.ceil((lo - pad) / step) * step; t <= hi + pad; t += step)
+    s += '<line x1="' + L + '" y1="' + f(sy(t)) + '" x2="' + R + '" y2="' + f(sy(t)) + '" stroke="var(--border)" stroke-width="1"/>'
+      + '<text x="' + (L - 8) + '" y="' + f(sy(t) + 4) + '" text-anchor="end" class="otick">' + (t > 0 ? '+' + t : t) + '</text>';
+  if (lo - pad < 0 && hi + pad > 0)
+    s += '<line x1="' + L + '" y1="' + f(sy(0)) + '" x2="' + R + '" y2="' + f(sy(0)) + '" stroke="var(--border-strong)" stroke-width="1.5"/>';
+  cycles.forEach((c, i) =>
+    s += '<text x="' + f(sx(i)) + '" y="' + (BOT + 18) + '" text-anchor="middle" class="otick">' + esc(c) + '</text>');
+
+  let hits = '', legend = '';
+  means.forEach(([lab, m], k) => {
+    const col = SERIES[k % SERIES.length];
+    s += '<polyline fill="none" stroke="' + col + '" stroke-width="2" stroke-linejoin="round" points="'
+      + m.map((v, i) => f(sx(i)) + ',' + f(sy(v))).join(' ') + '"/>';
+    m.forEach((v, i) => {
+      s += '<circle cx="' + f(sx(i)) + '" cy="' + f(sy(v)) + '" r="3.4" fill="' + col + '" stroke="var(--surface-2)" stroke-width="1"/>';
+      hits += '<circle cx="' + f(sx(i)) + '" cy="' + f(sy(v)) + '" r="8" fill="transparent"><title>'
+        + esc(lab) + ' — ' + cycles[i] + ': ' + f(v) + '</title></circle>';
+    });
+    legend += '<g><rect x="' + (R + 24) + '" y="' + (TOP + k * 20) + '" width="10" height="10" rx="2" fill="' + col + '"/>'
+      + '<text x="' + (R + 40) + '" y="' + (TOP + k * 20 + 9) + '" class="on">' + esc(lab) + ' (' + kept[k][1].length + ')</text></g>';
+  });
+  s += legend + hits + '</svg>';
+
+  const spread = means.map(([, m]) => m[m.length - 1] - m[0]);
+  return s + '<p class="why"><strong>' + seen.size + ' countries</strong> present in all of '
+    + cycles.join(', ') + ', ' + kept.length + ' categories with ' + min + ' or more. '
+    + 'Every line is the same countries at every point — a country missing one cycle is out of the '
+    + 'series, because letting membership change between cycles draws a trend that is partly the sample '
+    + 'moving. Net change across the span runs '
+    + Math.min(...spread).toFixed(1) + ' to ' + (Math.max(...spread) > 0 ? '+' : '') + Math.max(...spread).toFixed(1)
+    + ' score points, against a within-category spread that is wider than that in every cross run so far.</p>';
+}
+
+// ---- one cycle against another ---------------------------------------------
+function plotScatter(atlas, pick, outcome, cx, cy2, min) {
+  if (!cx || !cy2 || cx === cy2)
+    return '<p class="why">Pick two different cycles. On a single-cycle outcome there is nothing to compare.</p>';
+  const by = (atlas.pisa && atlas.pisa.byCountry) || {};
+  const pts = [];
+  const groups = {};
+  for (const u of (atlas.units[pick.id] || [])) {
+    if (!u.nat) continue;
+    const p = by[u.cc];
+    if (!p) continue;
+    const v = (p.values || {})[outcome];
+    if (!v || v[cx] == null || v[cy2] == null) continue;
+    const vals = valuesOf(u, pick);
+    if (!vals) continue;
+    pts.push({ cc: u.cc, name: p.name, x: v[cx], y: v[cy2], vals: [...vals] });
+    for (const x of vals) (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, v: v[cy2] - v[cx] });
+  }
+  if (!pts.length) return '<p class="why">No country carries this outcome in both cycles.</p>';
+  const kept = Object.entries(groups).filter(([, g]) => g.length >= min)
+    .sort((a, b) => b[1].length - a[1].length);
+  const colOf = {};
+  kept.forEach(([k], i) => colOf[k] = SERIES[i % SERIES.length]);
+
+  const vals = pts.flatMap(p => [p.x, p.y]);
+  const lo = Math.min(...vals), hi = Math.max(...vals);
+  const pad = Math.max(6, (hi - lo) * 0.06);
+  const L = 60, R = 430, TOP = 18, BOT = 388;
+  const sx = v => L + (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (R - L);
+  const sy = v => BOT - (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (BOT - TOP);
+  const f = n => n.toFixed(1);
+
+  let s = '<svg viewBox="0 0 684 ' + (BOT + 34) + '" width="100%" role="img" aria-label="the outcome in '
+    + esc(cx) + ' against ' + esc(cy2) + ', one point per country">';
+  const step = (hi - lo) > 120 ? 50 : (hi - lo) > 45 ? 25 : 10;
+  for (let t = Math.ceil((lo - pad) / step) * step; t <= hi + pad; t += step) {
+    s += '<line x1="' + f(sx(t)) + '" y1="' + TOP + '" x2="' + f(sx(t)) + '" y2="' + BOT + '" stroke="var(--border)" stroke-width="1"/>'
+      + '<text x="' + f(sx(t)) + '" y="' + (BOT + 17) + '" text-anchor="middle" class="otick">' + (t > 0 ? '+' + t : t) + '</text>'
+      + '<line x1="' + L + '" y1="' + f(sy(t)) + '" x2="' + R + '" y2="' + f(sy(t)) + '" stroke="var(--border)" stroke-width="1"/>'
+      + '<text x="' + (L - 8) + '" y="' + f(sy(t) + 4) + '" text-anchor="end" class="otick">' + (t > 0 ? '+' + t : t) + '</text>';
+  }
+  // The line of no change. A point above it widened, below it narrowed.
+  s += '<line x1="' + f(sx(lo - pad)) + '" y1="' + f(sy(lo - pad)) + '" x2="' + f(sx(hi + pad)) + '" y2="' + f(sy(hi + pad))
+    + '" stroke="var(--border-strong)" stroke-width="1.5" stroke-dasharray="4 3"/>'
+    + '<text x="' + ((L + R) / 2) + '" y="' + (BOT + 31) + '" text-anchor="middle" class="on">' + esc(cx) + '</text>'
+    + '<text transform="translate(16,' + ((TOP + BOT) / 2) + ') rotate(-90)" text-anchor="middle" class="on">' + esc(cy2) + '</text>';
+
+  let hits = '', legend = '';
+  for (const p of pts) {
+    const k = p.vals.find(v => colOf[v]);
+    const col = k ? colOf[k] : 'var(--text-muted)';
+    s += '<circle cx="' + f(sx(p.x)) + '" cy="' + f(sy(p.y)) + '" r="3.6" fill="' + col + '" fill-opacity="0.85" stroke="var(--surface-2)" stroke-width="0.8"/>';
+    hits += '<circle cx="' + f(sx(p.x)) + '" cy="' + f(sy(p.y)) + '" r="8" fill="transparent"><title>'
+      + esc(p.name) + '\n' + cx + ': ' + f(p.x) + '\n' + cy2 + ': ' + f(p.y)
+      + '\n' + (p.y - p.x >= 0 ? '+' : '') + f(p.y - p.x) + ' change\n' + esc(p.vals.join(', ')) + '</title></circle>';
+  }
+  kept.forEach(([k, g], i) =>
+    legend += '<g><rect x="' + (R + 26) + '" y="' + (TOP + i * 20) + '" width="10" height="10" rx="2" fill="' + colOf[k] + '"/>'
+      + '<text x="' + (R + 42) + '" y="' + (TOP + i * 20 + 9) + '" class="on">' + esc(k) + ' (' + g.length + ')</text></g>');
+  s += legend + hits + '</svg>';
+
+  const moved = pts.filter(p => p.y < p.x).length;
+  return s + guardLine(kept, pts.length, [], min,
+    ' with both ' + cx + ' and ' + cy2,
+    ' The dashed line is no change: ' + moved + ' of ' + pts.length + ' countries sit below it. '
+    + 'A point is coloured by the first of its coded values that reaches the floor, so a country running '
+    + 'several rules is drawn once and counted under each.');
 }
 
 function renderCriteria(atlas) {
