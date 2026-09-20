@@ -321,24 +321,51 @@ PISA 2025 landed on 8 September 2026 and Table I.B1.2d.10 carries the science
 gap for 2015, 2018, 2022 and 2025 on one comparable basis, each at three
 adjustment levels. `data/pisa-outcomes.json` holds all four.
 
-**On the same 71 countries the immigrant science gap widened by 6.5 points
-between 2022 and 2025** — from -22.9 to -29.4. It still widened by 4.4 points
-after accounting for socio-economic status AND language spoken at home, so this
-is not the composition story that has eaten every other result here. Latvia
-widened by 69 points, North Macedonia by 54; the United States narrowed by 30
-and Poland by 26.
+**Four cycles say something the two-cycle comparison did not.** On the 51
+countries present in all of them, the science gap runs -27.8 (2015), -28.4
+(2018), **-24.2 (2022)**, -30.0 (2025). After socio-economic status and home
+language: -12.7, -11.3, **-4.6**, -9.2.
 
-None of it tracks anything the atlas codes. Threshold basis against the change
-from 2022 to 2025: p = 0.94 raw, p = 0.53 adjusted, and the Gulf split moves
-neither. A real movement in the outcome, over three years, and the
-classification columns are silent about it in exactly the way they are silent
-about the level.
+**2022 is the anomaly, not 2025.** The gap narrowed into the COVID-disrupted
+cycle and reverted afterwards; 2025 sits close to where 2015 and 2018 were. The
+6.5-point widening from 2022 to 2025 is real and is not composition — it
+survives both adjustments — but reading it as a new deterioration was wrong, and
+one cycle pair was never enough to tell.
 
-Latvia is worth a second look for its own sake rather than as a data point. It
-was the one European system with an immigrant ADVANTAGE in 2022 — +8.2 in
-maths, +4.3 in reading — and it is now the single largest widening in the
-table. Something changed there that this atlas records as policy history and
-does not yet connect to anything.
+### The interaction, and why it does not hold
+
+With four cycles you can ask whether categories moved DIFFERENTLY, which is a
+better question than any single cross-section. Two columns reach significance on
+the 2015 to 2025 net change:
+
+- `dld.threshold_basis`, p = 0.026 — **dies immediately.** It is carried by
+  `not stated` at -24.0, the category that measures whether anyone wrote the
+  rule down. Drop it and p = 0.443.
+- `eal.triggers`, p = 0.030 — survives the Gulf split (0.034) and the
+  documentation check (mean docLinks 4.3 to 5.4, flat across categories).
+
+So for one afternoon this was the first thing in this file to pass every guard:
+countries designating by `home language` (+11.2) or `tested proficiency` (+6.7)
+narrowed their gap over the decade while those designating by `immigration
+status` (-9.6) widened theirs, about 21 points apart.
+
+Then the window check:
+
+```
+              2015->2025   2018->2025   2022->2025   2015->2022
+escsLang        0.036       0.428       0.685       0.138
+escs            0.081       0.606       0.751       0.316
+raw             0.058       0.441       0.515       0.157
+```
+
+Twelve windows, one below 0.05. That is what chance gives, and the endpoint pair
+that produces it is the one containing the anomalous 2022 at neither end. It is
+withdrawn.
+
+What is left is directional and worth a PRE-REGISTERED test rather than another
+look: `immigration status` is negative in all twelve windows, from -6 to -18.
+The way to settle it is more countries, not more windows — see
+`research/EAL-EXIT-TARGETS.md`.
 
 ## The habit this file is really recording
 
