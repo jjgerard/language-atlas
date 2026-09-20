@@ -414,3 +414,58 @@ the confound is not documentation depth but how few dated rows an entry has.
 
 An entry with two history rows cannot produce evidence about timing. It can
 only produce coincidence.
+
+## Wired in, 2026-09-20
+
+Axis 1 is now a column. `HISTORY_OPERATION` sits in `src/coding.js` with the ten
+values and the glosses above, and `operation` joins `fields_touched` on every
+domain’s policyHistory scheme. One file: `codingFor` picks up any field that
+has a scheme, so storage, derive, the API, /patterns and the CSV all took it
+without an edit.
+
+**The precedence is stated explicitly, and it is not the frequency order this
+file printed.** The derivation says a row that repeals one act and makes another
+is a replacement, so `instrument replaced` has to beat `instrument made`, and
+the same logic puts every change-to-an-existing-thing above the making of a new
+one. The order in the constant IS the precedence.
+
+### The proposer, and what it is worth
+
+`research/tools/hist-operation.js` proposes an operation per row and ABSTAINS
+rather than guessing. It never proposes `provision described`: that value is 48%
+of the corpus and a tool defaulting to it would code half the rows by doing
+nothing. Abstentions are where it lives, alongside whatever the patterns missed.
+
+```
+            proposes   abstains
+  dld          437 38%   705 62%
+  eal          186 31%   418 69%
+```
+
+Hand-checked on 22 dld rows spread across the corpus: **7 of 9 proposals right,
+11 of 13 abstentions right.** The two failures were both the mode this file
+warned about, and both are fixed:
+
+- Andorra, “It replaces the model in force since 2008”, came out
+  `instrument made`. The replacement pattern demanded an instrument noun within
+  forty characters and “model” is not one, so the row fell through to “in
+  force”. The noun requirement is gone; a replacement misread as a making is
+  the error the precedence exists to prevent.
+- District of Columbia, “takes effect”, was not recognised as coming into
+  force. Added — and the precedence then had to be checked, because
+  “amended effective 14 August 2022” now matches BOTH amendment and making.
+  South Dakota still comes out `instrument amended`, which is the order doing
+  its job.
+
+### What is still to do
+
+The join between a coding row and the history row it codes is by year, a
+60-character normalised prefix, and occurrence. Matching on a whitespace-only
+normalisation found **zero** of the 207 already-coded dld rows, because the
+stored key reads “pre university education act” where the description reads
+“Pre-University Education Act”. The tool now uses the same normaliser as
+`hist-attr-build.js` and `views.html`, and finds 207 and 208 exactly.
+
+1,331 rows still carry no coding at all — 935 on dld, 396 on eal. The 415 rows
+already coded carry `fields_touched` and no `operation`, so they need a second
+pass even though they are not part of that backlog.

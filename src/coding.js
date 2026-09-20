@@ -440,6 +440,36 @@ const HISTORY_NON_FIELD = {
   'not determined': 'Nobody has established which field this row touched. 58% of rows carry no signal that a matcher can read, and this value keeps that gap visible instead of letting it look like `system-wide`',
 };
 
+// WHAT HAPPENED in the year the row carries, as against WHICH FIELD it touched.
+// Derived in research/POLICY-HISTORY-VOCAB.md by reading 105 rows and then
+// profiling all 4,305; every gloss names entries a reader can go and check.
+//
+// THE 48% IS THE FINDING, and it is why this column sat unwired. Nearly half
+// the corpus takes `provision described`, because the policy history was
+// written as a timeline of what instruments SAY rather than of what CHANGED.
+// That is a fact about the field, not a defect in the list, and a reader of the
+// timeline needs telling it. Per domain the top value runs 41% to 52%, so the
+// shape belongs to the corpus rather than to one map.
+//
+// MUTUALLY EXCLUSIVE, so a coder takes the first that applies. The order below
+// IS the precedence, and it is NOT the frequency order the derivation printed:
+// that file says a row which repeals one act and makes another is a
+// replacement, so `instrument replaced` has to beat `instrument made`, and the
+// same logic puts every change-to-an-existing-thing above the making of a new
+// one.
+const HISTORY_OPERATION = {
+  'instrument replaced': 'One instrument supersedes or repeals another. Kept SEPARATE from amendment because the corpus keeps them separate and a reader needs to see a break rather than a revision (Benin: "Loi 2003-17 repeals the 1975 ordonnance d\'orientation"; American Samoa: "ESSA replaced \'limited English proficient\' with \'English learner\' throughout the ESEA"; Brazil: "Lei 13.415 ... repeals Lei 11.161 outright")',
+  'instrument amended': 'An existing instrument is changed in place (Cyprus: "Amending Law 131(I)/2025 rewrites section 15(4) to let special education continue yearly up to age 22"; Brazil: "Lei 14.191 adds LDB art 60-A, deaf bilingual education in Libras as first language")',
+  'international instrument accepted': 'Ratification, accession, or a Charter declaration (Fiji: "Ratified the Convention on the Rights of Persons with Disabilities"; Switzerland: "European Charter enters into force for Switzerland on 1 April 1998; Italian and Romansh are covered by Part III")',
+  'instrument made': 'A new instrument is enacted, adopted or comes into force (China: "Education Law of the PRC enacted, in force 1995-09-01"; Belize: "Education Act 2008 published in the Official Gazette")',
+  'body or programme changed': 'Renamed, merged, restructured or closed (Dominican Republic: "Resolution No. 05 of 2018 renames the National Council on Disability\'s Education Division"; Nunavut: "Inuit Language Protection Act renamed the Inuktut Protection Act"; Bahrain 2020: "Restructuring of the Ministry of Education")',
+  'body or programme established': 'An institution, unit, commission, course or department comes into being (Burundi: "Statutory Order 610/902 creating an inclusive education unit inside the Ministry of Education"; Estonia: "Voru Institute established as a state research and development institution"; Palau: "Chinese introduced as an elective for grades 11 and 12")',
+  'funding decided': 'A sum or a funding agreement is settled. Twenty rows in 4,305, and the count is the point (Canada: "Canada and Ontario signed a $126 million, eight-year funding agreement on 22 January 2020"). Kept because the shape is real and the scarcity is informative, on the same grounds EXIT_MECHANISM keeps age ceiling',
+  'plan or strategy issued': 'A non-binding plan, strategy or recommendation. The verbs that mark it are PROPOSES, AIMS, INTENDS, TARGETS (Nauru: "Education and training strategic plan 2008-13 proposes a Nauruan language policy"; Germany: KMK recommendation "Interkulturelle Bildung und Erziehung in der Schule")',
+  'state of affairs recorded': 'A dated observation that nothing exists. Distinguished from provision described for the same reason this project distinguishes none established from not stated (Bahamas: "Constitution; does not enshrine the right to education and omits disability from its equality provision"; Tasmania: "The 2017 national review found no specific policy for languages education in Tasmania")',
+  'provision described': 'The row dates an instrument and states what it PROVIDES, recording no operation on it. The residual, and 48% of the corpus (Antigua and Barbuda: "Education Act 2008 (No. 21 of 2008); s.83 makes communicative exceptionalities the route to special education"; Azerbaijan: "Law on Education Art. 7.1 makes Azerbaijani the official medium")',
+};
+
 /** The fields a policyHistory row on this domain could have touched. */
 const fieldsTouchedFor = id => {
   const list = Array.isArray(DOMAINS) ? DOMAINS : Object.values(DOMAINS);
@@ -490,6 +520,7 @@ const HISTORY_SCHEME = id => ({
     // A duplicate row is a content problem worth fixing on its own; until
     // somebody does, this keeps the coding attached to the right one.
     occurrence: 'integer, the 1-based position among rows sharing a year and a matches prefix; 1 unless the entry has duplicate history rows',
+    operation: HISTORY_OPERATION,
     fields_touched: fieldsTouchedFor(id),
   },
 });
@@ -609,7 +640,9 @@ module.exports = {
   ASSESSMENT_LANGUAGE, LOCAL_NORMS, EVIDENCE_TYPE,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
+  HISTORY_OPERATION,
   SCHEMES,
+  isHistoryOperation: v => has(HISTORY_OPERATION, v),
   isThresholdBasis: v => has(THRESHOLD_BASIS, v),
   isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
   isAssessmentLanguage: v => has(ASSESSMENT_LANGUAGE, v),
