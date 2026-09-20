@@ -724,7 +724,7 @@ function renderOutcomes(atlas) {
   host.innerHTML = '<div class="ocontrols">'
     + '<label>Plot <select id="o-kind">'
       + '<option value="box">box plots by category</option>'
-      + '<option value="trend">category means across cycles</option>'
+      + '<option value="trend">category spread across cycles</option>'
       + '<option value="scatter">one cycle against another</option>'
       + '</select></label>'
     + '<label>Category <select id="o-cat">' + catOptions(0) + '</select></label>'
@@ -894,12 +894,21 @@ function plotOutcome(atlas, pick, outcome, cycle, split, min) {
   return s + guardLine(kept, countries, dropped, min, label, extra);
 }
 
-// ---- category means across cycles ------------------------------------------
-// Every line is drawn over the SAME countries at every point: a country missing
-// one cycle is dropped from the series entirely. Letting the membership change
-// between cycles produces a trend that is partly the sample moving, which is the
-// mistake that made a 6.5-point widening look like a deterioration when the
-// fixed-set view showed 2022 as the anomaly instead.
+// ---- category distributions across cycles ----------------------------------
+// One row per category, one box per cycle, on a shared scale.
+//
+// This started as five lines of category means and that was wrong. Everything
+// else on this panel says to read the spread before the difference between
+// categories, and a line of means throws the spread away -- five lines moving
+// roughly together look like structure when what they show is that all of them
+// dipped in 2022 and came back. A box per cycle keeps the thing worth reading
+// and adds the time axis to it.
+//
+// Every box is drawn over the SAME countries at every cycle: a country missing
+// one cycle is out of the series entirely. Letting membership change between
+// cycles draws a trend that is partly the sample moving, which is the mistake
+// that made a 6.5-point widening from 2022 to 2025 look like a deterioration
+// when the fixed-set view showed 2022 as the anomaly instead.
 function plotTrend(atlas, pick, outcome, cycles, min) {
   if (cycles.length < 2)
     return '<p class="why">This outcome carries one cycle, so there is no trend to draw. The science series runs 2015 to 2025.</p>';
@@ -915,55 +924,76 @@ function plotTrend(atlas, pick, outcome, cycles, min) {
     const vals = valuesOf(u, pick);
     if (!vals) continue;
     seen.add(u.cc);
-    for (const x of vals) (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, v, series: cycles.map(c => v[c]) });
+    for (const x of vals)
+      (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, series: cycles.map(c => v[c]) });
   }
   const kept = Object.entries(groups).filter(([, g]) => g.length >= min)
     .sort((a, b) => b[1].length - a[1].length);
+  const dropped = Object.entries(groups).filter(([, g]) => g.length < min);
   if (!kept.length)
     return '<p class="why">No category reaches ' + min + ' countries present in all of ' + cycles.join(', ') + '.</p>';
 
-  const means = kept.map(([k, g]) => [k, cycles.map((c, i) => omean(g.map(x => x.series[i])))]);
-  const all = means.flatMap(([, m]) => m);
+  const all = kept.flatMap(([, g]) => g.flatMap(x => x.series));
   const lo = Math.min(...all), hi = Math.max(...all);
-  const pad = Math.max(4, (hi - lo) * 0.12);
-  const L = 60, R = 470, TOP = 20, BOT = 250;
-  const sx = i => L + i / (cycles.length - 1) * (R - L);
-  const sy = v => BOT - (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (BOT - TOP);
+  const pad = Math.max(6, (hi - lo) * 0.05);
+  const L = 152, CW = Math.min(126, (660 - L) / cycles.length), RH = 112, TOP = 30;
+  const H = TOP + RH * kept.length + 12;
+  const half = RH / 2 - 14;
+  const sy = (v, cy) => cy + half - (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (half * 2);
   const f = n => n.toFixed(1);
 
-  let s = '<svg viewBox="0 0 684 ' + (BOT + 34) + '" width="100%" role="img" aria-label="mean outcome by category across PISA cycles">';
-  const step = (hi - lo) > 60 ? 20 : (hi - lo) > 25 ? 10 : 5;
-  for (let t = Math.ceil((lo - pad) / step) * step; t <= hi + pad; t += step)
-    s += '<line x1="' + L + '" y1="' + f(sy(t)) + '" x2="' + R + '" y2="' + f(sy(t)) + '" stroke="var(--border)" stroke-width="1"/>'
-      + '<text x="' + (L - 8) + '" y="' + f(sy(t) + 4) + '" text-anchor="end" class="otick">' + (t > 0 ? '+' + t : t) + '</text>';
-  if (lo - pad < 0 && hi + pad > 0)
-    s += '<line x1="' + L + '" y1="' + f(sy(0)) + '" x2="' + R + '" y2="' + f(sy(0)) + '" stroke="var(--border-strong)" stroke-width="1.5"/>';
-  cycles.forEach((c, i) =>
-    s += '<text x="' + f(sx(i)) + '" y="' + (BOT + 18) + '" text-anchor="middle" class="otick">' + esc(c) + '</text>');
+  let s = '<svg viewBox="0 0 684 ' + H + '" width="100%" role="img" aria-label="distribution of the outcome by '
+    + esc(pick.col.replace(/_/g, ' ')) + ' across PISA cycles">';
+  cycles.forEach((c, j) =>
+    s += '<text x="' + (L + CW * j + CW / 2) + '" y="18" text-anchor="middle" class="otick">' + esc(c) + '</text>');
 
-  let hits = '', legend = '';
-  means.forEach(([lab, m], k) => {
-    const col = SERIES[k % SERIES.length];
-    s += '<polyline fill="none" stroke="' + col + '" stroke-width="2" stroke-linejoin="round" points="'
-      + m.map((v, i) => f(sx(i)) + ',' + f(sy(v))).join(' ') + '"/>';
-    m.forEach((v, i) => {
-      s += '<circle cx="' + f(sx(i)) + '" cy="' + f(sy(v)) + '" r="3.4" fill="' + col + '" stroke="var(--surface-2)" stroke-width="1"/>';
-      hits += '<circle cx="' + f(sx(i)) + '" cy="' + f(sy(v)) + '" r="8" fill="transparent"><title>'
-        + esc(lab) + ' — ' + cycles[i] + ': ' + f(v) + '</title></circle>';
+  let hits = '';
+  kept.forEach(([lab, g], i) => {
+    const cy = TOP + RH * i + RH / 2;
+    s += '<line x1="' + L + '" y1="' + (TOP + RH * i) + '" x2="660" y2="' + (TOP + RH * i) + '" stroke="var(--border)" stroke-width="1"/>'
+      + '<text x="' + (L - 14) + '" y="' + (cy - 3) + '" text-anchor="end" class="olab">' + esc(lab) + '</text>'
+      + '<text x="' + (L - 14) + '" y="' + (cy + 12) + '" text-anchor="end" class="on">' + g.length + ' countries</text>';
+    // A zero line where the scale crosses it, so "no gap" is visible per row.
+    if (lo - pad < 0 && hi + pad > 0)
+      s += '<line x1="' + L + '" y1="' + f(sy(0, cy)) + '" x2="660" y2="' + f(sy(0, cy)) + '" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="3 3"/>';
+    cycles.forEach((c, j) => {
+      const bx = L + CW * j + CW / 2;
+      const d = g.map(x => x.series[j]).sort((a, b) => a - b);
+      const q1 = oquant(d, 0.25), q2 = oquant(d, 0.5), q3 = oquant(d, 0.75);
+      s += '<line x1="' + bx + '" y1="' + f(sy(d[0], cy)) + '" x2="' + bx + '" y2="' + f(sy(d[d.length - 1], cy)) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
+        + '<line x1="' + (bx - 6) + '" y1="' + f(sy(d[0], cy)) + '" x2="' + (bx + 6) + '" y2="' + f(sy(d[0], cy)) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
+        + '<line x1="' + (bx - 6) + '" y1="' + f(sy(d[d.length - 1], cy)) + '" x2="' + (bx + 6) + '" y2="' + f(sy(d[d.length - 1], cy)) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
+        + '<rect x="' + (bx - 13) + '" y="' + f(sy(q3, cy)) + '" width="26" height="' + f(Math.max(1.5, sy(q1, cy) - sy(q3, cy))) + '" fill="var(--bg-accent)" stroke="var(--border-accent)" stroke-width="1.2"/>'
+        + '<line x1="' + (bx - 13) + '" y1="' + f(sy(q2, cy)) + '" x2="' + (bx + 13) + '" y2="' + f(sy(q2, cy)) + '" stroke="var(--text-accent)" stroke-width="2"/>';
+      g.forEach((x, n) => {
+        const jx = bx + ((n % 3) - 1) * 4.2;
+        s += '<circle cx="' + f(jx) + '" cy="' + f(sy(x.series[j], cy)) + '" r="2.2" fill="var(--text-primary)" stroke="var(--surface-2)" stroke-width="0.6"/>';
+        hits += '<circle cx="' + f(jx) + '" cy="' + f(sy(x.series[j], cy)) + '" r="6.5" fill="transparent"><title>'
+          + esc(x.name) + '\n' + esc(lab) + ', ' + cycles[j] + ': ' + f(x.series[j])
+          + '\n' + (x.series[j] - x.series[0] >= 0 ? '+' : '') + f(x.series[j] - x.series[0]) + ' since ' + cycles[0] + '</title></circle>';
+      });
     });
-    legend += '<g><rect x="' + (R + 24) + '" y="' + (TOP + k * 20) + '" width="10" height="10" rx="2" fill="' + col + '"/>'
-      + '<text x="' + (R + 40) + '" y="' + (TOP + k * 20 + 9) + '" class="on">' + esc(lab) + ' (' + kept[k][1].length + ')</text></g>';
   });
-  s += legend + hits + '</svg>';
+  s += '<line x1="' + L + '" y1="' + (TOP + RH * kept.length) + '" x2="660" y2="' + (TOP + RH * kept.length) + '" stroke="var(--border)" stroke-width="1"/>'
+    + hits + '</svg>';
 
-  const spread = means.map(([, m]) => m[m.length - 1] - m[0]);
+  const medianSpan = kept.map(([, g]) => {
+    const med = j => oquant(g.map(x => x.series[j]).sort((a, b) => a - b), 0.5);
+    return med(cycles.length - 1) - med(0);
+  });
+  const iqr = kept.flatMap(([, g]) => cycles.map((c, j) => {
+    const d = g.map(x => x.series[j]).sort((a, b) => a - b);
+    return oquant(d, 0.75) - oquant(d, 0.25);
+  }));
   return s + '<p class="why"><strong>' + seen.size + ' countries</strong> present in all of '
-    + cycles.join(', ') + ', ' + kept.length + ' categories with ' + min + ' or more. '
-    + 'Every line is the same countries at every point — a country missing one cycle is out of the '
-    + 'series, because letting membership change between cycles draws a trend that is partly the sample '
-    + 'moving. Net change across the span runs '
-    + Math.min(...spread).toFixed(1) + ' to ' + (Math.max(...spread) > 0 ? '+' : '') + Math.max(...spread).toFixed(1)
-    + ' score points, against a within-category spread that is wider than that in every cross run so far.</p>';
+    + cycles.join(', ') + ', ' + kept.length + ' categories with ' + min + ' or more.'
+    + (dropped.length ? ' Not drawn: ' + dropped.map(([k, g]) => esc(k) + ' (' + g.length + ')').join('; ') + '.' : '')
+    + ' Every box is the same countries at every cycle — a country missing one is out of the series, '
+    + 'because letting membership change draws a trend that is partly the sample moving. '
+    + 'Medians move ' + Math.min(...medianSpan).toFixed(1) + ' to '
+    + (Math.max(...medianSpan) > 0 ? '+' : '') + Math.max(...medianSpan).toFixed(1)
+    + ' score points across the span, inside boxes whose own interquartile range runs '
+    + Math.min(...iqr).toFixed(1) + ' to ' + Math.max(...iqr).toFixed(1) + '.</p>';
 }
 
 // ---- one cycle against another ---------------------------------------------
