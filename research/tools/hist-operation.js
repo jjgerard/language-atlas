@@ -134,7 +134,7 @@ const RULES = [
    // Ratification DENIED is not ratification. Eritrea 1997 reads "Even if Eritrea
    // has NOT RATIFIED the Convention Against Discrimination in Education", which
    // is a dated record that nothing was accepted.
-   /\b(not|never|yet to|failed to)\s+(been\s+)?(ratif|accede|sign)|\bahead of\b[\s\S]{0,25}\b(accession|ratification)\b/i],
+   /\b(not|never|yet to|failed to)\s+(been\s+)?(ratif|accede|sign)|\bahead of\b[\s\S]{0,25}\b(accession|ratification)\b|\bCMEC\b|\bCanada-[A-Z]|\bfederal-provincial\b/i],
   // "Strategy ... adopted" is how a strategy is ISSUED, not how an instrument is
   // made. Hungary 2013 and Slovenia 2007 both matched `adopt` here and were
   // hand-corrected to `plan or strategy issued`, so `adopt` now stands down when
@@ -158,7 +158,7 @@ const RULES = [
    // DOCUMENT does not: Oklahoma's "HB 2768 adds dysgraphia to the required
    // dyslexia awareness training and RENAMES THE STATE DYSLEXIA HANDBOOK" is an
    // amendment, and nothing above this rule caught it.
-   /\brenam\w*[\s\S]{0,40}\b(handbooks?|manuals?|guides?|toolkits?|regulations?|codes?|charts?|documents?|categor(y|ies)|classification)\b/i],
+   /\brenam\w*[\s\S]{0,40}\b(handbooks?|manuals?|guides?|toolkits?|regulations?|codes?|charts?|documents?|categor(y|ies)|classification)\b|\bplans? (for|to)\b[\s\S]{0,40}\b(restructur|reorganis|reorganiz)/i],
   // EIGHT of the twelve overrides in the first hand-coded region were the old
   // `establish` pattern firing on an abstract object: "establishes the
   // ausserordentlicher Schueler CATEGORY", "the individual educational needs

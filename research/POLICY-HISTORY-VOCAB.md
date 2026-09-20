@@ -2141,3 +2141,123 @@ Three small gaps were worth closing anyway:
 of the Education Act introduced…" now appears in `eal` Europe, `indigenous`
 Europe and `fl` Europe, and is left unset in all three. Whatever produced it put
 the same truncated sentence on three maps.
+
+## fl Asia (243) and fl Americas (265)
+
+```
+                    proposals   first sight   after
+  fl Asia              47          94%        44/46
+  fl Americas         108          94%       101/106
+```
+
+**fl Americas leaves forty rows unset — the largest provenance cluster in the
+project.** Every one reads "Peer-reviewed 50-state statute inventory, policy as
+at December 2024" or "Inventory covers statute as at December 2024, not what
+districts actually offer". Beside them sit **fifty** rows reading "State Seal of
+Biliteracy adopted 4/6/2022" and forty-nine variants of the same date. Ninety of
+this region's 265 rows are those two sentences, and both were classified by
+matching the sentence rather than by typing ninety indices — a hand-typed list
+that long is a transcription test, not a coding decision.
+
+```
+fl Americas
+  instrument made                80   36%
+  provision described            59   26%
+  instrument amended             25   11%
+  body or programme established  18    8%
+```
+
+`instrument made` at **36% is the highest figure any value reaches in the
+Americas column of the grid**, and the Seals are most of it.
+
+### What the two regions cost the proposer
+
+- Canada's federal-provincial language protocols are **ratified** and are not
+  international instruments: "New CMEC-Canada Protocol 2024-25 to 2027-28
+  ratified in November", "Canada-Alberta bilateral agreement ratified in April".
+  Requiring the row to name a convention would not separate them, because
+  `Protocol` is exactly the word they use. Naming the parties does, and that is a
+  narrow, deliberate exception rather than a general rule.
+- "**Plan for restructuring** the Lebanese education system **adopted**" is a plan
+  being adopted; `adopt` was already vetoed for it and `restructure` caught it on
+  the way down.
+
+# fl, finished
+
+```
+  provision described            281   38%
+  instrument made                161   22%
+  state of affairs recorded       78   10%
+  body or programme established   71   10%
+  instrument amended              67    9%
+  plan or strategy issued         38    5%
+  body or programme changed       25    3%
+  instrument replaced             15    2%
+  funding decided                  7    1%
+                                 743   (42 left unset)
+```
+
+**`instrument made` at 22% is the highest of any domain** — against 9% in `eal`,
+9% in `dld` and 10% in `indigenous` — and `plan or strategy issued` at 5% is the
+lowest. Foreign-language policy is made by decree and curriculum order: a
+ministry issues a curriculum, a board adopts a Seal, a decree fixes the hours.
+There is very little strategising in it and almost no institution-building.
+
+# Four domains, 3,556 rows
+
+```
+  provision described              1462   42%
+  instrument made                   412   12%
+  body or programme established     372   11%
+  instrument amended                367   11%
+  plan or strategy issued           347   10%
+  state of affairs recorded         268    8%
+  body or programme changed          78    2%
+  international instrument accepted  78    2%
+  instrument replaced                77    2%
+  funding decided                    21    1%
+                                   3482   (74 left unset)
+```
+
+The residual is **42%** across four domains and twenty regions, against the
+**48%** the original whole-corpus profile predicted.
+
+## The twenty-cell grid
+
+```
+region        eal    dld    indig  fl
+  Africa      60%    45%    50%    50%
+  Europe      50%    59%    27%    63%
+  Asia        42%    49%    32%    31%
+  Americas    43%    39%    40%    26%
+  Oceania     43%    38%    54%    33%
+```
+
+**The cells now range 37 points, from 26% to 63%** — and both new extremes are
+`fl`. Europe's `fl` at 63% is the highest single cell recorded; the Americas' at
+26% is the lowest. Europe's row alone now spans 27% to 63%, which is more than
+the whole grid spanned when it had three columns.
+
+Each new column has widened the range rather than filling in a pattern, and that
+is the fourth consecutive confirmation of the same thing: **the cell is the unit,
+and no margin predicts it.** A fifth domain is unlikely to change that, but it is
+the only way to find out.
+
+## The proposer, twenty regions
+
+```
+  eal Europe      30/30   dld Europe      36/36   ind Europe    72/73   fl Europe     13/13
+  eal Oceania     21/21   dld Oceania     48/48   ind Oceania   16/16   fl Oceania    15/15
+  eal Asia        52/52   dld Asia        41/43   ind Asia      51/52   fl Asia       44/46
+  eal Americas    40/42   dld Americas   137/137  ind Americas  63/65   fl Americas  101/106
+  eal Africa      22/23   dld Africa      84/84   ind Africa    47/49   fl Africa     22/22
+                                                                          955/973    98%
+```
+
+Held-out at first sight, in coding order: **88, 94, 71, 73, 88, 91, 81, 93, 99,
+88, 85, 85, 91, 85, 100, 93, 100, 94, 94**. Nineteen measurements; the two 100s
+are `fl` Oceania and `fl` Africa, the first held-out regions in the whole pass to
+arrive with no errors at all.
+
+Eighteen errors stand across 3,556 rows. Every one is named in the sections
+above, and three are there on purpose.
