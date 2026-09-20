@@ -1425,7 +1425,7 @@ tense and a noun form the veto did not know. Africa finished at **84/84**.
 # The column, finished
 
 ```
-eal + dld, 1,742 rows, ten regions, all hand-coded
+eal + dld, 1,746 rows, ten regions, all hand-coded
 
   provision described               787   45%
   plan or strategy issued           223   13%
@@ -1437,7 +1437,7 @@ eal + dld, 1,742 rows, ten regions, all hand-coded
   instrument replaced                44    3%
   body or programme changed          31    2%
   funding decided                     7    0%
-                                   1732   (10 left unset)
+                                   1732   (14 left unset)
 ```
 
 **The residual is 45%. The whole-corpus profile predicted 48%.**
@@ -1522,7 +1522,7 @@ those drops was a documentation habit the proposer had not met — UNESCO PEER
 constitution profiles, African statute recitals, Jordanian plans quoted for their
 definitions — and every one produced a shape it read confidently and wrongly.
 
-It now abstains on 1,214 rows of 1,742, seventy per cent, and that is the right
+It now abstains on 1,214 rows of 1,746, seventy per cent, and that is the right
 place for it to have ended up. The five errors still standing are judgement calls
 named in the sections above, not pattern faults.
 
@@ -1533,7 +1533,7 @@ found only by hand.
 
 ## Rows left unset, and what they turned out to be
 
-Ten rows across 1,742, and most of them are one shape:
+Fourteen rows across 1,746 — ten in `eal`, four in `dld` — and most are one shape:
 
 - **Provenance rows** — nine US ECS readings, Solomon Islands' image-only scan,
   Mongolia's ministry project report, Delaware's "2008 state guidance, not
