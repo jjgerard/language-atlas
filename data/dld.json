@@ -6721,7 +6721,7 @@
   "legalEntitlement": "Skolsky zakon 561/2004: free support measures are a right of pupils with SEN\nSupport measures are the necessary adjustments in education and school services\nSchool must provide the measure without delay once the recommendation arrives\nPupil or guardian may ask for a revision within 30 days of the recommendation",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 134\nFunders: health insurance 65%, state health 46%, family 15%, state education 14%\n10% said a maximum number of sessions applied (n = 133)",
   "workforce": "Health-sector care is given by a logoped ve zdravotnictvi or a klinicky logoped\nSchool logoped route is a master's in special education with state exams in logopedics\nSince 1 July 2019 logopedic services cannot be provided under the trades act\nSchool logopeds are employed in schools, school facilities or social service bodies",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Not established from the sources consulted. Eurydice's SEN provision page sets out the five levels of support and the consent rules, and addresses no exit.",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -8131,7 +8131,7 @@
   "legalEntitlement": "PGS § 37 obliges a free logopeed service at school where the pupil needs it\nThe school's maintainer creates the conditions; the head organises delivery\nIf the home municipality cannot deliver the recommended teaching it must secure a place\nIt must also arrange transport or reimburse the pupil's travel costs",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 39\nFunders: state education 72%, family 26%, state health 21%, pro bono 18%\n8% said a maximum number of sessions applied (n = 39)",
   "workforce": "A logopeed needs a specialist master's degree or the logopeed occupational certificate\nThe employer, not a register, judges whether the requirements are met\nAn Estonian language requirement applies as a qualification condition from 1 September 2025\nThe head either employs the specialists or arranges the service some other way",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Not established from the sources consulted. Eurydice records monitoring of effectiveness by the school support group, but no review cycle or ending.",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -11743,6 +11743,10 @@
    {
     "label": "Ν. 4823/2021 Αναβάθμιση του σχολείου (ΦΕΚ Α΄136)",
     "url": "https://www.minedu.gov.gr/publications/docs2023/FEK-2021-Tefxos-A-00136.pdf"
+   },
+   {
+    "label": "Eurydice, Greece — Special education needs provision within mainstream education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/greece/special-education-needs-provision-within-mainstream-education"
    }
   ],
   "supportLinks": [],
@@ -11760,7 +11764,7 @@
   "legalEntitlement": "N. 3699/2008: the State binds itself to special education's compulsory character\nThe State also binds itself to free public special education for disabled people of all ages\nKEDASY alone may recommend placement in the appropriate school unit\nParents may appeal to the EDEA within 30 days; the EDEA report is final",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 82\nFunders: family 39%, health insurance 38%, state health 35%\n41% said a maximum number of sessions applied (n = 82)",
   "workforce": "Establishment posts created by N. 4823/2021, not a count of therapists in post\n71 speech therapist (PE21) posts among the 1,120 KEDASY staff posts\nAgainst 223 psychologist and 223 social worker posts in the same centres\nTwo PE21 speech therapist Education Adviser posts exist nationally",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "KEDASY sets the re-evaluation time by type and degree of need (Eurydice)\nWhere no re-evaluation time is specified, the report is permanently valid",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -11831,6 +11835,10 @@
     1,
     2,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1
    ]
   },
   "coding": {
@@ -11841,6 +11849,13 @@
     "exclusions": [
      "socio-cultural factors"
     ],
+    "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle"
+    ],
+    "decider": "multidisciplinary team",
     "rule_locus": "national statute"
    }
   }
@@ -14741,7 +14756,7 @@
   "legalEntitlement": "Legge 104/1992 art 12: the right runs in ordinary classes at every level\nLearning difficulty is no bar to exercising that right\nD.Lgs 66/2017: the State assigns support teachers to state schools\nLocal authorities carry the assistance duty, within available resources",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 606\nFunders: family 58%, state health 44%\n23% said a maximum number of sessions applied (n = 596)",
   "workforce": "FLI president in 2019: the register held 11,500 logopedisti across Italy\nShe called that a shortage - France, same population, has three times as many\nSame interview: they work across child services, neuro-rehab and geriatrics",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Not established from the sources consulted. The Profilo di funzionamento is \"periodically updated\" with no interval given; the temporary-measures rule found applies to disadvantage, not to disability.",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -19203,6 +19218,10 @@
    {
     "label": "Vis, Flinterman, van Schaaijk & Batenburg, De arbeidsmarkt voor logopedisten in Nederland: een capaciteitsraming vanaf 2023, Nivel, January 2024 — commissioned by NVLF and LOOL",
     "url": "https://www.nivel.nl/sites/default/files/bestanden/1004427.pdf"
+   },
+   {
+    "label": "Rijksoverheid, (Voortgezet) speciaal onderwijs — age limit in vso",
+    "url": "https://www.rijksoverheid.nl/onderwerpen/passend-onderwijs/speciaal-onderwijs"
    }
   ],
   "supportLinks": [
@@ -19233,7 +19252,7 @@
   "legalEntitlement": "Runs through the passend-onderwijs framework\nA pupil meeting the Siméa criteria gets an onderwijsarrangement, or a cluster-2 place\nAdmission decisions can be disputed at the Geschillencommissie passend onderwijs\nSo the entitlement is contestable rather than purely discretionary",
   "funding": "Mixed, and routed by which system the child is in\nSpeech therapy under health insurance (Zorgverzekeringswet)\nDay treatment and some support via long-term care or the municipality (Jeugdwet)\nCluster-2 education funded through the education system",
   "workforce": "Estimate built from the paramedic quality register and NVLF rolls, not a headcount\nNivel put 7,711 logopedisten in work in the Netherlands in 2023\nAt about 30 hours a week that is 5,783 FTE of capacity\nMost respondents work in first-line practice — 61% of the Nivel 2023 survey\nThe model puts the current shortfall at 11% of capacity",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Pupils stay in vso to the school year in which they turn 20 (Rijksoverheid)\nExtension past that needs Inspectie van het Onderwijs approval",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -19305,6 +19324,10 @@
     1,
     4,
     4
+   ],
+   "dischargeCriteria": [
+    4,
+    4
    ]
   },
   "coding": {
@@ -19317,6 +19340,13 @@
      "intellectual disability"
     ],
     "rule_locus": "institutional"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
+    "decider": "not stated",
+    "rule_locus": "national statute"
    }
   }
  },
@@ -19374,6 +19404,10 @@
    {
     "label": "Store norske leksikon, 'Norsk logopedforbund' (encyclopaedia entry, used only for the body's status and history)",
     "url": "https://snl.no/Norsk_logopedforbund"
+   },
+   {
+    "label": "Udir, Spesialpedagogisk hjelp — Fase 4, Enkeltvedtaket (duration of the vedtak)",
+    "url": "https://www.udir.no/laring-og-trivsel/spesialpedagogikk/spesialpedagogisk-hjelp/Spesialpedagogisk-hjelp/Fase-4-Vedtaksfasen/Enkeltvedtaket/"
    }
   ],
   "supportLinks": [],
@@ -19391,7 +19425,7 @@
   "legalEntitlement": "Opplaeringslova 2023: right to the personal assistance needed to take part\nRight to technical aids and physical adaptation, and to training in their use\nThe municipality may depart from the expert assessment only with reasons\nThe department is the appeal body for individual decisions under the Act",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 93\nFunders: state education 82%, family 10%, state health 9%, state social services 8%\n45% said a maximum number of sessions applied (n = 85)",
   "workforce": "About 850 members, the professional body's own figure given in February 2025\nIt became a trade union only in 2024, an interest organisation before that",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Vedtak runs one year as a rule (Udir: \"bør vedtaket ha en varighet på ett år\")\nA fresh sakkyndig vurdering and a new vedtak are needed when it expires (Udir)",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -19455,6 +19489,10 @@
    "workforce": [
     1,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1
    ]
   },
   "coding": {
@@ -19466,6 +19504,14 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle"
+    ],
+    "review_interval_months": 12,
+    "decider": "not stated",
+    "rule_locus": "national statute"
    }
   }
  },
@@ -20526,6 +20572,10 @@
    {
     "label": "Rozporzadzenie MEN z 1 sierpnia 2017 w sprawie szczegolowych kwalifikacji wymaganych od nauczycieli (Dz.U. 2017 poz. 1575), para 20",
     "url": "https://dziennikustaw.gov.pl/D2017000157501.pdf"
+   },
+   {
+    "label": "Eurydice, Poland — Special education needs provision within mainstream education",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/poland/special-education-needs-provision-within-mainstream-education"
    }
   ],
   "supportLinks": [],
@@ -20543,7 +20593,7 @@
   "legalEntitlement": "Prawo oswiatowe art. 127 covers pupils needing special organisation of learning\nCurriculum is adapted through an individual educational-therapeutic programme\nPreschools, schools and centres must carry out what the ruling recommends\nAppeal lies to the kurator oswiaty within 14 days of the ruling being served",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 223\nFunders: state education 72%, family 41%, state health 14%, health insurance 13%\n21% said a maximum number of sessions applied (n = 222)",
   "workforce": "Nauczyciel logopeda post needs higher studies in logopedics and pedagogical preparation\nA degree plus first-cycle or postgraduate studies in logopedics\nLogopedists are among the specialists giving psychological-pedagogical help in schools",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Programme runs only for the period the SEN statement is issued for (Eurydice)\nIt cannot exceed the length of one stage of education\nMultifaceted specialist assessment at least twice a school year\nRuns to age 20 in primary and 24 in post-primary, to the school year's end",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -20617,6 +20667,12 @@
     3,
     3,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    4
    ]
   },
   "coding": {
@@ -20627,6 +20683,15 @@
     "exclusions": [
      "none stated"
     ],
+    "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "age ceiling"
+    ],
+    "review_interval_months": 6,
+    "decider": "not stated",
     "rule_locus": "national statute"
    }
   }
@@ -20886,7 +20951,7 @@
   "legalEntitlement": "Decreto-Lei 54/2018 lays down the norms that guarantee inclusion\nImplementing the measures depends on the parents' agreement\nThe school director has 10 working days to homologate the report\nParents who withhold agreement have their grounds annexed to the report",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 75\nFunders: family 37%, state social services 25%, state health 21%, state education 15%\n12% said a maximum number of sessions applied (n = 75)",
   "workforce": "Two large surveys with a firm denominator — 351 and 357 respondents, about 10% each\n64.2% of the first group worked in clinics, over 60% held a master's, 97.4% female\n89–91% had never used any specific approach for syntactic intervention\nOver 40% not confident assessing syntax, 43% not confident intervening",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Not established from the sources consulted. Eurydice sets out the three-level intervention model and carries nothing on discontinuing a measure.",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -22504,7 +22569,7 @@
   "legalEntitlement": "ZUOPP-1 regulates usmerjanje of children with special educational needs\nAdditional professional help caps at five hours weekly, one of them advisory\nPre-school children get advice, at most two hours monthly, before placement\nParents or a minor over 15 appeal within 15 days; the minister decides",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 50\nFunders: state education 56%, state health 48%, health insurance 20%, family 10%\n28% said a maximum number of sessions applied (n = 50)",
   "workforce": "Organised services date from 1942, university training from the mid-1980s\nSpeech and language therapists work across four settings\nHealth institutions, education, hearing and speech rehabilitation centres, private practice\nThe 62 Slovenian respondents rated attitudes to involving parents above 48 Macedonian ones",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Not established from the sources consulted. Eurydice records only that the individualised programme is monitored and updated on an ongoing basis.",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
