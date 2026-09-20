@@ -2939,6 +2939,10 @@
    {
     "label": "ПМС 232/2017 за приемане на Наредба за приобщаващото образование, ДВ бр. 86/2017",
     "url": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=119142"
+   },
+   {
+    "label": "Naredba za priobshtavashtoto obrazovanie, DV br. 86/27.10.2017, chl. 123 and 129 — lex.bg",
+    "url": "https://lex.bg/en/laws/ldoc/2137177670"
    }
   ],
   "supportLinks": [],
@@ -2956,7 +2960,7 @@
   "legalEntitlement": "Preschool and School Education Act lists logopedic work as general support\nAdditional support includes rehabilitation of communicative disorders\nSupport is delivered where the child is, and at home or in hospital in named cases\nGeneral support is provided by kindergartens, schools and personal-development centres",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 99\nFunders: family 51%, state education 45%, state social services 12%, pro bono 10%\n11% said a maximum number of sessions applied (n = 98)",
   "workforce": "A logoped works in kindergartens and schools to deliver general and additional support\nRegional inclusive-education centres also carry logopeds on their support teams",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Resource support may be discontinued once the goals in the plan za podkrepa are met (chl. 123)\nThe ekip za podkrepa na lichnostno razvitie decides, after reviewing the child's progress\nThat team tracks progress twice in the school year and may amend the plan (chl. 129/1/8)\nDiscontinuation also requires an application from the parent",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -3019,6 +3023,12 @@
    "workforce": [
     4,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    2
    ]
   },
   "coding": {
@@ -3045,7 +3055,16 @@
      "duty_type": "school",
      "redress_type": "not stated"
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "decision on continuing need",
+     "re-evaluation cycle"
+    ],
+    "review_interval_months": 6,
+    "decider": "multidisciplinary team",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
@@ -9293,6 +9312,10 @@
    {
     "label": "Haridus- ja teadusministri määrus nr 30, Direktori, õppealajuhataja, õpetajate ja tugispetsialistide kvalifikatsiooninõuded (consolidated text RT I, 05.07.2022, 3)",
     "url": "https://www.riigiteataja.ee/public-api/api/v1/akt/105072022003/blob-html"
+   },
+   {
+    "label": "Pohikooli- ja gumnaasiumiseadus, RT I 22.01.2018, 3, §§ 46, 47 and 48 — Riigi Teataja",
+    "url": "https://www.riigiteataja.ee/akt/122012018003"
    }
   ],
   "supportLinks": [],
@@ -9310,7 +9333,7 @@
   "legalEntitlement": "PGS § 37 obliges a free logopeed service at school where the pupil needs it\nThe school's maintainer creates the conditions; the head organises delivery\nIf the home municipality cannot deliver the recommended teaching it must secure a place\nIt must also arrange transport or reimburse the pupil's travel costs",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 39\nFunders: state education 72%, family 26%, state health 21%, pro bono 18%\n8% said a maximum number of sessions applied (n = 39)",
   "workforce": "A logopeed needs a specialist master's degree or the logopeed occupational certificate\nThe employer, not a register, judges whether the requirements are met\nAn Estonian language requirement applies as a qualification condition from 1 September 2025\nThe head either employs the specialists or arranges the service some other way",
-  "dischargeCriteria": "Not established from the sources consulted. Eurydice records only that the school support group monitors effectiveness; the Riigi Teataja recommendation regulation was searched and states no validity period.",
+  "dischargeCriteria": "Support is evaluated at least once a school year, and when its tahtaeg runs out (§ 46/8)\nThe HEV oppe koordineerija does that with teachers and tugispetsialistid, proposing next steps\nThe term is set by the koolivaline noustamismeeskond, applied on parental consent (§ 48/1)",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -9378,6 +9401,11 @@
     3,
     3,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    2
    ]
   },
   "coding": {
@@ -9404,7 +9432,16 @@
      "duty_type": "local authority",
      "redress_type": "not stated"
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "fixed time limit"
+    ],
+    "review_interval_months": 12,
+    "decider": "multidisciplinary team",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
@@ -26425,6 +26462,10 @@
    {
     "label": "Zakon c. 138/2019 Z. z. o pedagogickych zamestnancoch a odbornych zamestnancoch, §§ 11 a 27",
     "url": "https://www.slov-lex.sk/static/pdf/2019/138/ZZ_2019_138.pdf"
+   },
+   {
+    "label": "Zakon c. 245/2008 Z. z. o vychove a vzdelavani (skolsky zakon), §§ 145a-145b, znenie k 1.9.2023 — Slov-Lex",
+    "url": "https://static.slov-lex.sk/static/SK/ZZ/2008/245/20230901.html"
    }
   ],
   "supportLinks": [],
@@ -26442,7 +26483,7 @@
   "legalEntitlement": "Skolsky zakon 245/2008 § 144: right to forms and methods matching the child's needs\nThe same right covers creating the conditions that make that education possible\nChildren with narusena komunikacna schopnost get alternative means of communication\nSpecial textbooks and compensatory aids are part of the same statutory right",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 64\nFunders: state education 55%, family 39%, state health 27%, health insurance 9%\n8% said a maximum number of sessions applied (n = 64)",
   "workforce": "A counselling centre's department must have at least three specialist staff\nZakon 138/2019 makes logoped and skolsky logoped a category of specialist staff\nA specialist staff member needs at least second-cycle university education",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "A podporne opatrenie may be reassessed against whether it meets its purpose (§ 145b/12)\nReassessment is permissive, and the Act sets no interval and no test for ending a measure\nIt runs the original route: a vyjadrenie, then the riaditel's written answer within 10 days",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -26509,6 +26550,11 @@
     2,
     3,
     3
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    2
    ]
   },
   "coding": {
@@ -26535,7 +26581,14 @@
      "duty_type": "not stated",
      "redress_type": "not stated"
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "review without criterion"
+    ],
+    "decider": "school or authority",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
