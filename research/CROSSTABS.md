@@ -367,9 +367,38 @@ look: `immigration status` is negative in all twelve windows, from -6 to -18.
 The way to settle it is more countries, not more windows — see
 `research/EAL-EXIT-TARGETS.md`.
 
+## The one that came from outside, and holds
+
+Meehan et al. (2021) found policy for newly arrived migrant students both
+contextually shaped and converging at a European level, across six countries.
+The convergence half is a similarity claim, and `research/EC-FRAMEWORK.md`
+measures it over 64 national systems.
+
+**Europe is more internally alike than chance and no other large region is:**
+within-Europe similarity 0.567 against 0.445 cross-region, p = 0.0015 on a null
+that shuffles which systems carry the region label. Asia, at 19 systems, sits at
+p = 0.77.
+
+It is the first result in this file to survive its own main confound by getting
+STRONGER. `decided_by` is `not stated` on 56% of European systems, so the
+obvious objection is convergence-by-shared-silence; dropping `not stated` as a
+matching value takes similarity to 0.668 and p to 0.0010.
+
+Two things it is not. Oceania scores higher — 0.833, and 1.000 without silence —
+on four systems and six pairs, which is what four systems look like rather than
+a finding. And the vocabulary was derived from a European-leaning corpus, which
+`src/coding.js` says about itself; if the values were built to describe European
+systems then European systems may simply fit them more neatly, and nothing
+measurable from inside the atlas separates that from real convergence.
+
+Worth noting what was different about this one. Every other candidate here began
+with a column and looked for something it might go with. This began with a
+finding somebody else had established on other evidence, and asked whether this
+corpus agreed.
+
 ## The habit this file is really recording
 
-Seven of the fourteen candidate findings here failed a check that took one command
+Seven of the fifteen candidate findings here failed a check that took one command
 to run, and a fifth — the eal entry/exit timing cross, withdrawn in e6202f4 —
 failed a permutation test at p = 0.40. The usual check is `confound()` in
 `coding-crosstab.js`: split the corpus by the column under test, report the hit
