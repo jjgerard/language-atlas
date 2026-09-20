@@ -53,7 +53,7 @@ const TODO = rest.includes("--todo");
 // 2016" from the rest. Comparing the year does, and it is the actual rule.
 const datedElsewhere = (d, h) => {
   const year = String(h.year || "").match(/\d{4}/);
-  const re = /\b(amended|revised|repealed|replaced|superseded|substituted|in force)\s*,?\s*(?:in\s+)?(\d{4})/gi;
+  const re = /\b(amended|revised|repealed|replaced|superseded|substituted|in force)[^.;]{0,30}?\b(\d{4})\b/gi;
   let m, found = false;
   while ((m = re.exec(d))) { if (!year || m[2] !== year[0]) found = true; }
   return found;
@@ -72,7 +72,7 @@ const RULES = [
    // Only what the hoist was for. Everything else this value covers sits at its
    // declared precedence further down, so an amendment beats a rename.
    /\bconsolidat\w*|\bmerg\w*[\s\S]{0,40}\bamendments?\b/i],
-  ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*|\bnullif\w*|\bvoid\w*|\bannul\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|model)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)/i,
+  ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*|\bnullif\w*|\bvoid\w*|\bannul\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|chapters?|subchapters?|regulations?|rules?|model)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)/i,
    // South Africa 1953: "Bantu Education Act reinforces apartheid through
    // segregated schooling, REPEALED IN 1979". The repeal is real and is not this
    // row's business; the row says what the Act did.
@@ -124,7 +124,7 @@ const RULES = [
   // residual -- a row that dates an instrument and says what it provides. A
   // thing established has to be a thing that can be walked into or enrolled on,
   // so the verb now needs a body-or-programme noun and the abstractions veto it.
-  ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept|test)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programmes?|programs?|scheme|class|classes|committee|office|initiative|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training)\b/i],
+  ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept|test|education|schooling)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programmes?|programs?|scheme|class|classes|committee|office|initiative|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training)\b/i],
   ["funding decided", /\bfunding agreement\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|£[\d,.]+|\bfunding formula\b|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
   ["plan or strategy issued", /\b(strategic|sector|master|implementation) plan\b|\bstrateg(y|ies)\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\bpledges?\b|\brecommendations?\b|\bwhite paper\b|\bframework document\b/i,
    // Beginning to develop a plan is not issuing one. Dominica 2020, "Ministry of
@@ -135,7 +135,7 @@ const RULES = [
    // "Education (Disability STRATEGIES and Pupils' Educational Records)
    // (Scotland) Act 2002", both carry a plan word as ordinary content: one
    // inside the thing a regulation regulates, one inside an Act's own title.
-   /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b|\b(procedure|rules|process) for\b[\s\S]{0,40}\brecommendations?\b|\([^)]*[Ss]trateg/i],
+   /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b|\b(procedure|rules|process) for\b[\s\S]{0,40}\brecommendations?\b|\([^)]*[Ss]trateg|\b(prepare|prepares|preparing|require|requires|requiring)\b[\s\S]{0,40}\bplans?\b/i],
   ["state of affairs recorded", /\bdoes not\b|\bno specific\b|\bomits\b|\bfound no\b|\bnever uses\b|\bis silent\b|\bno such\b|\bnothing\b|\bnames only\b|\bbut not\b|\bneither\b/i],
 ];
 

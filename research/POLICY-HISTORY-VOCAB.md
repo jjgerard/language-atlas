@@ -1054,8 +1054,108 @@ regions was hand-coded first and the proposer fixed afterwards; the number says
 what the patterns have learned from six regions, not what they will do on a
 seventh.
 
+## dld Oceania, 140 rows
+
+27 entries, 16 rows carrying prior `fields_touched`, one left unset.
+
+```
+  provision described             53   38%
+  plan or strategy issued         32   23%
+  instrument amended              14   10%
+  instrument made                 12    9%
+  state of affairs recorded       12    9%
+  body or programme established    6    4%
+  international instrument accepted 6   4%
+  body or programme changed        3    2%
+  instrument replaced              1    1%
+```
+
+**`plan or strategy issued` at 23% is the highest anywhere**, against 1% in dld
+Europe. Small Pacific states document special-needs policy through sector plans,
+disability action plans and national strategies rather than through statute, and
+the column reads it straight off the corpus. Tuvalu files four plans in 2016
+alone. `international instrument accepted` at 4% is also the highest: CRC and
+CRPD ratifications are a visible part of these timelines in a way they are not in
+Europe's.
+
+The proposer scored **49 of 54, 91%**.
+
+### One row left unset, and it is the second of its kind
+
+Solomon Islands 2023: "The Education Act 2023 sealed copy is an image-only scan
+with no text layer." That is a note about the EVIDENCE, exactly like the nine US
+ECS rows in eal Americas, and it gets the same treatment — `fields_touched`
+kept, no `operation`.
+
+### A correction that crossed domains
+
+Fiji 1966 appears in both maps with the same sentence: "Education Act (Cap 262),
+Ordinance 36 of 1966 AMENDED TO ACT 30 OF 1976, regulates provision so that every
+school-aged child attends school." It was coded `instrument amended` in the eal
+Oceania batch, before `datedElsewhere` existed. The row is dated 1966 and the
+amendment is 1976, so it is the residual, and **the eal coding has been
+corrected to match.**
+
+`datedElsewhere` missed it because the year sat thirty characters from the verb
+rather than against it — "amended TO ACT 30 OF 1976" — and New Zealand 1989's
+"later REPEALED BY THE 2020 Education and Training Act" was the same. The window
+is thirty characters now, stopping at a sentence break so it cannot reach into an
+unrelated clause, and every row whose year is its own still survives it.
+
+### The other four
+
+- Northern Marianas 2013, "Chapter 60-50 regulations adopted, REPLACING THE
+  FORMER CHAPTER entirely" — a replacement of an instrument that is not called an
+  act, a law or a decree. `chapter`, `regulations` and `rules` are nouns now.
+- Samoa 2009, "Education Act ESTABLISHES COMPULSORY EDUCATION for all
+  SCHOOL-AGED children" — `school` matches inside `school-aged`, because a
+  hyphen is a word boundary. `education` joins the abstract nouns that veto this
+  rule, alongside the rights and principles already there.
+- New South Wales 2014, "makes every public authority PREPARE a disability
+  inclusion ACTION PLAN" — a plan that is the OBJECT of a statutory duty is not a
+  plan being issued. Scotland 2002 and South Australia 2018 are the same
+  sentence in different words; the first of them was hand-corrected in dld
+  Europe and this is the general fix.
+
+### Two regions of dld, and what cannot yet be said
+
+```
+                       eal    dld
+  residual, Oceania    40%    38%
+  residual, Europe     50%    59%
+
+  plan share, Oceania  11%    23%
+  plan share, Europe   16%     1%
+```
+
+Oceania's residual replicates across the two domains almost exactly. Europe's
+does not, and the plan share moves in **opposite directions** between the two
+regions. So the tempting story — that the residual measures a region's
+documentation culture and is stable across domains — is supported by one region
+and contradicted by the other. It needs the remaining three dld regions before
+anything is claimed. Reported here so the claim is not quietly made on the
+strength of the half that fits.
+
+## Where the proposer stands, seven regions
+
+```
+  eal Europe      30/30   100%
+  eal Oceania     21/21   100%
+  eal Asia        53/53   100%
+  eal Americas    40/42    95%
+  eal Africa      22/23    96%
+  dld Europe      36/36   100%
+  dld Oceania     48/48   100%
+                250/253    99%
+```
+
+Held-out at first sight: 88, 94, 71, 73, 88, 91. Abstention has risen with every
+veto added — 91 of 139 in dld Oceania — and that is the intended direction. A
+proposal that has to be checked costs a reader the same as an abstention when it
+is wrong, and more when it is plausible.
+
 ## Remaining
 
 ```
-  dld   Americas 391   Africa 296   Asia 143   Oceania 140   (970)
+  dld   Americas 391   Africa 296   Asia 143   (830)
 ```
