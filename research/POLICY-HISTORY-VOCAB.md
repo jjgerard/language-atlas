@@ -1964,3 +1964,138 @@ wrote down about them.
 ```
 
 Held-out at first sight: **88, 94, 71, 73, 88, 91, 81, 93, 99, 88, 85, 85, 91**.
+
+## indigenous Africa, 240 rows — the last of three domains
+
+51 entries, none unset.
+
+```
+  provision described            120   50%
+  body or programme established   37   15%
+  plan or strategy issued         30   13%
+  instrument made                 19    8%
+  state of affairs recorded       14    6%
+  instrument amended              14    6%
+  body or programme changed        4    2%
+  instrument replaced              2    1%
+```
+
+The proposer scored **46 of 54, 85%**, and finished at 47/49. Five of the eight
+errors were fixable and three were the same kind of thing: a duty or a plan
+described in the vocabulary of an event.
+
+- Togo 1975: "article 7 **requires** school programmes to take account of
+  national concerns by **introducing new subjects**" — a statutory duty, the
+  third region to produce that shape.
+- Mali's PRODEC 2: "**plans to introduce** national languages as taught
+  **subjects** in teacher-training schools" — a plan saying what it will do.
+- Ghana 2018: "Education Strategic Plan 2018-2030 **records** that the policy is
+  not clear … and sets activity BE 2.4.3, 'Use **effective strategies** to
+  ensure transition from reading in local language to English'". `effective` was
+  in the making pattern for dates — "effective 1 July 1981" — and it now has to
+  be followed by a number.
+
+Two more were pattern gaps worth naming: `\\bconstitution\\b` does not match
+"**Constitutional** revision", and `datedElsewhere`'s window was thirty
+characters where Ghana 2009 needs forty-five — "gazetted on 9 January 2009; the
+Act, later **amended by the Education (Amendment) Act, 2010**". The test there
+is the year, not the distance, so widening it costs nothing.
+
+# indigenous, finished
+
+```
+  provision described               393   39%
+  body or programme established     162   16%
+  instrument made                   102   10%
+  state of affairs recorded          96   10%
+  instrument amended                 91    9%
+  plan or strategy issued            86    9%
+  international instrument accepted  30    3%
+  body or programme changed          22    2%
+  instrument replaced                18    2%
+  funding decided                     7    1%
+                                   1007   (22 left unset)
+```
+
+**`body or programme established` at 16% is the highest of any domain**, against
+8% in `eal` and 7% in `dld`, and the residual at 39% is the lowest. Indigenous-
+language policy is built by creating things: language academies, commissions,
+institutes, heritage foundations, immersion schools, named subjects on a
+timetable. The other two domains legislate; this one institutes.
+
+# Three domains, 2,771 rows
+
+```
+  provision described              1181   43%
+  plan or strategy issued           309   11%
+  body or programme established     301   11%
+  instrument amended                300   11%
+  instrument made                   251    9%
+  state of affairs recorded         190    7%
+  international instrument accepted  78    3%
+  instrument replaced                62    2%
+  body or programme changed          53    2%
+  funding decided                    14    1%
+                                   2739   (32 left unset)
+```
+
+The residual is **43%** across three domains and fifteen regions, against the
+**48%** the original whole-corpus profile predicted and the 45% `eal` and `dld`
+reached between them. Twenty-seven hundred rows, every one read by hand.
+
+## What the finished grid says
+
+```
+region        eal    dld    indigenous
+  Africa      60%    45%    50%
+  Europe      50%    59%    27%
+  Asia        42%    49%    32%
+  Americas    43%    39%    40%
+  Oceania     43%    38%    54%
+```
+
+**The cells range 33 points, from 27% to 60%. The domain margins range 7 and the
+region margins 11.** Neither margin explains the grid; almost all of the
+variation is in the interaction.
+
+```
+  cell values                     27% to 60%     range 33
+  domain means   eal 47.6  dld 46.0  ind 40.6    range  7
+  region means   Africa 51.7 … Americas 40.7     range 11
+```
+
+Per region across the three domains: the Americas varies by 4 points, Africa by
+15, Oceania by 16, Asia by 17, **Europe by 32**. So the question "is this
+region's policy history mostly description?" has no answer without naming the
+domain, and in Europe it has three different answers.
+
+This file has now proposed and withdrawn three summaries of that grid — that the
+residual is regional, that the plan share is domain-driven, that the residual and
+plan share sum to something stable. Each was supported by the cells in hand and
+refuted by the next one coded. What survives is the grid itself, and the reason
+to keep it: **`operation` measures how a cell was documented, and the cell is the
+unit.** Any cross-region or cross-domain comparison of this column carries that
+caveat, and it is now backed by fifteen hand-coded cells rather than three.
+
+## The proposer, across three domains
+
+```
+  eal Europe      30/30   100%   dld Europe     36/36   100%   ind Europe    72/73    99%
+  eal Oceania     21/21   100%   dld Oceania    48/48   100%   ind Oceania   16/16   100%
+  eal Asia        52/52   100%   dld Asia       41/43    95%   ind Asia      51/52    98%
+  eal Americas    40/42    95%   dld Americas  137/137  100%   ind Americas  63/65    97%
+  eal Africa      22/23    96%   dld Africa     84/84   100%   ind Africa    47/49    96%
+                                                                     760/771    99%
+```
+
+**Held-out at first sight, in coding order: 88, 94, 71, 73, 88, 91, 81, 93, 99,
+88, 85, 85, 91, 85.** Fourteen measurements, never monotonic, mean 87.
+
+It abstains on 1,968 rows of 2,771 — **71%** — and that is where it should be. It
+now carries three function vetoes (`datedElsewhere`, `describesAPlan`,
+`isMonitoringDocument`) and roughly thirty regex ones, every one of them written
+against a row that a hand pass had already coded differently.
+
+The eleven errors still standing are judgement calls, named in the sections
+above, and two of them are there on purpose: the `reform` fix that would have
+cost six clean rows to gain two.
