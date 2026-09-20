@@ -79,6 +79,19 @@ for (const [key, byField] of Object.entries(coding)) {
     const scheme = SCHEMES[domainId + "." + field];
     if (!scheme) { refused.push(key + "/" + field + ": no scheme for this field"); continue; }
     if (!content(e[field])) { empty.push(key + "/" + field); continue; }
+
+    // An instrument-grained scheme takes an ARRAY of rows -- Ghana's
+    // constitution and Children's Act are two rows, not one merged one. The
+    // input carries an array for those fields and an object for the rest, and
+    // a mismatch is refused rather than reshaped: flattening two instruments
+    // into one is exactly the loss the `many` grain exists to prevent.
+    if (!!scheme.many !== Array.isArray(cols)) {
+      refused.push(key + "/" + field + ": scheme is "
+        + (scheme.many ? "instrument-grained and wants an ARRAY of rows"
+                       : "system-grained and wants ONE object"));
+      continue;
+    }
+    const cleanRow = cols => {
     const row = {};
     for (const [col, value] of Object.entries(cols || {})) {
       const spec = scheme.columns[col];
@@ -93,10 +106,24 @@ for (const [key, byField] of Object.entries(coding)) {
       } else if (ok(value)) row[col] = value;
       else refused.push(key + "/" + field + "/" + col + ': "' + value + '" is not in the vocabulary');
     }
-    if (!Object.keys(row).length) continue;
+      return row;
+    };
+
     e.coding = e.coding || {};
-    e.coding[field] = Object.assign({}, e.coding[field], row);
-    cells += Object.keys(row).length;
+    if (scheme.many) {
+      const rows = cols.map(cleanRow).filter(r => Object.keys(r).length);
+      if (!rows.length) continue;
+      // Rows REPLACE rather than merge. Merging an array by index would pair
+      // row 2 of a new reading with row 2 of an old one on no evidence that
+      // they are the same instrument.
+      e.coding[field] = rows;
+      cells += rows.reduce((n, r) => n + Object.keys(r).length, 0);
+    } else {
+      const row = cleanRow(cols);
+      if (!Object.keys(row).length) continue;
+      e.coding[field] = Object.assign({}, e.coding[field], row);
+      cells += Object.keys(row).length;
+    }
     touched = true;
   }
   if (touched) units++;

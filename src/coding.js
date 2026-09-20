@@ -419,6 +419,9 @@ const SCHEMES = {
     },
   },
   'dld.legalEntitlement': {
+    // MANY: a coding for this field is an ARRAY of rows, one per
+    // legal instrument. See the note on `many` below.
+    many: true,
     row: 'one legal instrument named by the entry',
     columns: {
       instrument: 'free text — the instrument as the entry names it',
@@ -462,6 +465,9 @@ const SCHEMES = {
     },
   },
   'dld.assessments': {
+    // MANY: a coding for this field is an ARRAY of rows, one per
+    // assessment instrument. See the note on `many` below.
+    many: true,
     row: 'one assessment instrument named by the entry',
     columns: {
       instrument: 'free text — the test as the entry names it, never its contents',
@@ -473,10 +479,31 @@ const SCHEMES = {
   },
 };
 
+// ONE ROW PER UNIT, OR MANY?
+//
+// Four of the seven schemes are system-grained: a system designates a pupil
+// once however many documents say so, so one row per unit is the truth. Two are
+// INSTRUMENT-grained and were unstorable because of it. Ghana cites a
+// constitution and a Children's Act; Chile names TECAL, TEPROSIF and a
+// screening test; the United Arab Emirates names Federal Law 29 of 2006, a 2020
+// Ministerial Resolution and Law 14 of 2009 -- three instruments, three types,
+// three decades. A stratified read of 30 national legalEntitlement entries
+// found 14 naming two or more, and in nearly all of them instrument_type,
+// instrument_year and obliges differ WITHIN the entry. One flat row forces a
+// choice between them, which is the discarding these vocabularies were revised
+// to stop.
+//
+// So a `many` scheme stores an array. Everything else stores an object, because
+// wrapping a single true row in an array to look uniform would be noise.
+// Readers should not branch on that themselves -- call codingRows(), which
+// always hands back an array.
+const codingRows = c => (c == null ? [] : Array.isArray(c) ? c : [c]);
+
 const has = (o, v) => Object.prototype.hasOwnProperty.call(o, v);
 const isObligesLevel = v => Number.isInteger(v) && v >= 0 && v <= 4;
 
 module.exports = {
+  codingRows,
   INSTRUMENT_TYPES, OBLIGES_LEVELS, DUTY_TYPES, REDRESS_TYPES,
   TEST_TYPES, BILINGUAL_FIT, MODALITY, LANGUAGE_DOMAINS,
   ASSESSMENT_LANGUAGE, LOCAL_NORMS, EVIDENCE_TYPE,

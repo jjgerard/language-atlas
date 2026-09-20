@@ -314,27 +314,48 @@ function codingFor(domain, body, fields) {
     const scheme = SCHEMES[domain.id + "." + k];
     if (!scheme) continue;
     const given = src[k];
-    if (!given || typeof given !== "object" || Array.isArray(given)) continue;
+    if (!given || typeof given !== "object") continue;
+    // A `many` scheme is instrument-grained and stores an ARRAY of rows; every
+    // other scheme is system-grained and stores one object. An array arriving
+    // for a one-row scheme is refused rather than flattened, and vice versa:
+    // silently reshaping it would let a submission assert a grain the scheme
+    // does not have.
+    if (Array.isArray(given) !== !!scheme.many) continue;
     // A coding describes a text. Where there is no text there is nothing to
     // have read, and a coding surviving on an emptied field would assert one.
     const text = String(fields[k] == null ? "" : fields[k]).trim();
     if (!text || NOT_ESTABLISHED_RE.test(text) || /^Not applicable/i.test(text)) continue;
-    const row = {};
-    for (const [col, spec] of Object.entries(scheme.columns)) {
-      const v = given[col];
-      if (v == null || v === "") continue;
-      if (typeof spec === "string") {
-        // free text or a number, per the scheme
-        row[col] = typeof v === "number" ? v : str(v, 300);
-        continue;
+    const clean = given => {
+      const row = {};
+      for (const [col, spec] of Object.entries(scheme.columns)) {
+        const v = given[col];
+        if (v == null || v === "") continue;
+        if (typeof spec === "string") {
+          // free text or a number, per the scheme
+          row[col] = typeof v === "number" ? v : str(v, 300);
+          continue;
+        }
+        const ok = x => Object.prototype.hasOwnProperty.call(spec, String(x));
+        if (Array.isArray(v)) {
+          const kept = v.filter(ok);
+          if (kept.length) row[col] = kept;
+        } else if (ok(v)) row[col] = v;
       }
-      const ok = x => Object.prototype.hasOwnProperty.call(spec, String(x));
-      if (Array.isArray(v)) {
-        const kept = v.filter(ok);
-        if (kept.length) row[col] = kept;
-      } else if (ok(v)) row[col] = v;
+      return row;
+    };
+    if (scheme.many) {
+      // Capped for the same reason typed fields are: a submission is not a
+      // place to put two hundred instruments. Ghana names two; nothing in the
+      // corpus names more than four.
+      const rows = given.slice(0, 20)
+        .filter(r => r && typeof r === "object" && !Array.isArray(r))
+        .map(clean)
+        .filter(r => Object.keys(r).length);
+      if (rows.length) out[k] = rows;
+    } else {
+      const row = clean(given);
+      if (Object.keys(row).length) out[k] = row;
     }
-    if (Object.keys(row).length) out[k] = row;
   }
   return out;
 }

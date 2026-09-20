@@ -403,7 +403,8 @@ const CSV_COLS = [
 function codingCols(units, key) {
   const seen = new Set();
   for (const u of units) {
-    const c = (u.coding || {})[key];
+    const c0 = (u.coding || {})[key];
+    const c = Array.isArray(c0) ? Object.assign({}, ...c0) : c0;
     if (c) for (const col of Object.keys(c)) seen.add(col);
   }
   return [...seen].sort().map(c => 'coding_' + c);
@@ -440,8 +441,17 @@ function csvRows() {
     // A coding belongs to the unit, not to a bullet, so it repeats down every
     // row for that unit. A list joins with "; " -- a system running a clock and
     // an age ceiling is doing both, and the cell has to say so.
-    for (const [col, v] of Object.entries((u.coding || {})[field.k] || {})) {
-      base['coding_' + col] = Array.isArray(v) ? v.join('; ') : v;
+    // Instrument-grained fields store an array of rows. The CSV is keyed by
+    // bullet, not by instrument, so those are joined with " | " per column --
+    // enough to see that a country named a constitution AND a statute, with
+    // the per-instrument detail left to the JSON.
+    const cRows = (u.coding || {})[field.k];
+    const cFlat = {};
+    for (const r of (Array.isArray(cRows) ? cRows : [cRows || {}]))
+      for (const [col, v] of Object.entries(r || {}))
+        (cFlat[col] = cFlat[col] || []).push(Array.isArray(v) ? v.join('; ') : v);
+    for (const [col, v] of Object.entries(cFlat)) {
+      base['coding_' + col] = v.join(' | ');
     }
     const recs = (u.records || {})[field.k];
     const slots = (u.slots || {})[field.k] || [];

@@ -419,21 +419,68 @@ const PAIRS = [
 //
 // Only columns with a controlled vocabulary are shown. A free-text or numeric
 // column has no categories to distribute and belongs in the CSV instead.
+// Every coded field, found in the DATA rather than listed here. PAIRS covers
+// the four criteria fields the table above needs by name; this block used to
+// iterate the same list, which meant the two instrument-grained fields --
+// twelve of the twenty-nine columns, including `obliges` and `redress_type` --
+// were coded and then rendered nowhere. A page that only shows the fields
+// somebody remembered to add is a page that hides work.
+function codedFields(atlas) {
+  const seen = new Map();
+  for (const d of atlas.domains) {
+    const label = LABELS[d.id] || d.id;
+    for (const u of (atlas.units[d.id] || [])) {
+      if (!u.nat || !u.coding) continue;
+      for (const key of Object.keys(u.coding)) {
+        const id = d.id + '.' + key;
+        if (seen.has(id)) continue;
+        const f = (d.fields || []).find(x => x.k === key);
+        seen.set(id, [d.id, key, label, ASKS[id] || (f ? f.label.toLowerCase() : key)]);
+      }
+    }
+  }
+  // PAIRS order first, so the four the table names stay at the top.
+  const order = PAIRS.map(p => p[0] + '.' + p[1]);
+  return [...seen.entries()]
+    .sort((a, b) => (order.indexOf(a[0]) + 1 || 99) - (order.indexOf(b[0]) + 1 || 99))
+    .map(e => e[1]);
+}
+const LABELS = { dld: 'Language disorder', eal: 'Additional language' };
+const ASKS = {
+  'dld.identificationCriteria': 'who is identified',
+  'dld.dischargeCriteria': 'who is discharged',
+  'eal.newcomerCriteria': 'who counts as a newcomer',
+  'eal.removalCriteria': 'what ends the designation',
+  'dld.legalEntitlement': 'what the law obliges — one row per instrument',
+  'dld.assessments': 'what is in use — one row per instrument',
+  'dld.multilingualProvision': 'assessment in a language the child speaks',
+};
+
 function renderCoding(atlas) {
   const doms = Object.fromEntries(atlas.domains.map(d => [d.id, d]));
   const blocks = [];
-  for (const [id, key, map, asks] of PAIRS) {
+  for (const [id, key, map, asks] of codedFields(atlas)) {
     const d = doms[id];
     if (!d) continue;
     const units = (atlas.units[id] || []).filter(u => u.nat && u.coding && u.coding[key]);
     if (!units.length) continue;
+    // A coding is one object for a system-grained field and an ARRAY of rows
+    // for an instrument-grained one, so both are read as rows. That also means
+    // a country naming three instruments contributes three, which is right:
+    // the denominator for those fields is instruments, not systems, and the
+    // heading says so.
     const cols = {};
+    let rowCount = 0;
     for (const u of units) {
-      for (const [col, v] of Object.entries(u.coding[key])) {
-        if (typeof v === 'number') continue;
-        const vals = Array.isArray(v) ? v : [v];
-        cols[col] = cols[col] || {};
-        for (const x of vals) cols[col][x] = (cols[col][x] || 0) + 1;
+      const rows = Array.isArray(u.coding[key]) ? u.coding[key] : [u.coding[key]];
+      for (const r of rows) {
+        rowCount++;
+        for (const [col, v] of Object.entries(r || {})) {
+          if (typeof v === 'number') continue;
+          const vals = Array.isArray(v) ? v : [v];
+          cols[col] = cols[col] || {};
+          for (const x of vals) cols[col][x] = (cols[col][x] || 0) + 1;
+        }
       }
     }
     const inner = Object.entries(cols).map(([col, counts]) => {
@@ -446,8 +493,9 @@ function renderCoding(atlas) {
             <span class="n">${n}</span></div>`).join('')
         + '</div>';
     }).join('');
+    const many = rowCount !== units.length;
     blocks.push(`<div class="codeblock"><h4 class="codehead">${esc(map)} — ${esc(asks)}
-      <span class="count">${units.length} coded</span></h4>${inner}</div>`);
+      <span class="count">${units.length} coded${many ? `, ${rowCount} rows` : ''}</span></h4>${inner}</div>`);
   }
   $('#coding').innerHTML = blocks.length ? blocks.join('')
     : '<p class="why">No entry carries a coding yet. The vocabularies are in src/coding.js; nothing has been coded against them.</p>';
