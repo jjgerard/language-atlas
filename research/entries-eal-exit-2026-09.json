@@ -26,5 +26,33 @@
   ],
   "lastVerified": "2026-09",
   "confidence": "official-document"
+ },
+ {
+  "domain": "eal",
+  "unit": "HR|Croatia",
+  "fields": {
+   "removalCriteria": [
+    "Preparatory Croatian runs one or two hours a day for 70 hours",
+    "At the end the school expert committee tests Croatian in writing and orally",
+    "The county office issues a written certificate on those results and the pupil enters mainstream",
+    "A pupil below the minimum conditions must attend the preparatory programme once more",
+    "Finishing inside a year carries a right to one or two weekly supplementary Croatian hours"
+   ]
+  },
+  "coding": {
+   "removalCriteria": {
+    "exit_mechanism": ["proficiency judgement"],
+    "decided_by": "statutory body",
+    "rule_locus": "national rule, local application"
+   }
+  },
+  "docLinks": [
+   {
+    "label": "Pravilnik o provođenju pripremne i dopunske nastave za učenike koji ne znaju ili nedostatno znaju hrvatski jezik (NN 15/2013), arts. 5 and 8",
+    "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2013_02_15_252.html"
+   }
+  ],
+  "lastVerified": "2026-09",
+  "confidence": "official-document"
  }
 ]

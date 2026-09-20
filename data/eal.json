@@ -9877,8 +9877,8 @@
   "region": "Europe",
   "subregion": "Southeast Europe",
   "status": "partial",
-  "confidence": "secondary-source",
-  "lastVerified": "2026-08",
+  "confidence": "official-document",
+  "lastVerified": "2026-09",
   "collaborators": [],
   "docLinks": [
    {
@@ -9896,6 +9896,10 @@
    {
     "label": "PISA 2022 Results (Volume I), Table I.B1.7.57: reading performance by immigrant background (OECD, 2023)",
     "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html"
+   },
+   {
+    "label": "Pravilnik o provođenju pripremne i dopunske nastave za učenike koji ne znaju ili nedostatno znaju hrvatski jezik (NN 15/2013), arts. 5 and 8",
+    "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2013_02_15_252.html"
    }
   ],
   "supportLinks": [],
@@ -9905,7 +9909,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "Children of asylum seekers and of foreigners under international protection\nFamily members of EU citizens, national minority members, foreigners with residence rights\nIdentified from enrolment documents and decisions of competent authorities\nPlus pedagogical-psychological assessment by the school's professional service",
-  "removalCriteria": "",
+  "removalCriteria": "Preparatory Croatian runs one or two hours a day for 70 hours\nAt the end the school expert committee tests Croatian in writing and orally\nThe county office issues a written certificate on those results and the pupil enters mainstream\nA pupil below the minimum conditions must attend the preparatory programme once more\nFinishing inside a year carries a right to one or two weekly supplementary Croatian hours",
   "newcomerProportion": [
    {
     "year": "2018",
@@ -9972,6 +9976,13 @@
     ],
     "decided_by": "school",
     "rule_locus": "national statute"
+   },
+   "removalCriteria": {
+    "exit_mechanism": [
+     "proficiency judgement"
+    ],
+    "decided_by": "statutory body",
+    "rule_locus": "national rule, local application"
    }
   }
  },

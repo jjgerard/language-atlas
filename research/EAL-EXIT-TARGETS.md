@@ -79,6 +79,59 @@ Israel, Japan, Singapore and Thailand are the second tier: national, tractable,
 but each needs a source in a language that the existing entries for those places
 show has been the slow part before.
 
+## Worked, 2026-09-20: two landed and the other six are not what I said
+
+The claim above that all eight tractable targets “already carry a
+`newcomerCriteria` coding so the entry side is done” **was wrong for two of
+them**, and three more turn out not to have an exit rule to find. Working the
+list is what established that, which is the argument for working a list rather
+than counting it.
+
+**Portugal — done.** DGE PLNM FAQ, September 2025, Q9. Levels A1 to B2, exit to
+the national curriculum at B2, movement on a pass in an intermediate test the
+school writes itself. `proficiency judgement`.
+
+**Croatia — done.** Pravilnik NN 15/2013, arts. 5 and 8. Preparatory Croatian is
+70 hours at one or two hours a day; at the end the school expert committee tests
+in writing and orally, the county office issues a written certificate on those
+results, and a pupil below the minimum conditions repeats the programme once.
+`proficiency judgement`, decided by a `statutory body` — the testing committee
+and the county office’s own committee — under a national rule applied locally.
+
+**Malta — blocked, not missing.** `migrantlearnersunit.gov.mt` and
+`meae.gov.mt` still do not resolve from this network (curl exit 6, retried
+2026-09-20), which is exactly what its `l1Support` note already records. It
+needs a different network or an archived copy, not more searching.
+
+**Cyprus — probably nothing to find.** The Pedagogical Institute’s reception and
+integration guide sets out proficiency indicators for A1, A2 and B1 and three
+groupings by level, but it is a pedagogical guide rather than a regulation and
+codifies no exit rule. That agrees with the entry’s own “no formal legal
+definition, threshold or codified status was located”.
+
+**Georgia — the category is a school type, not a pupil status.** Non-Georgian
+language schools teach in the minority language with Georgian as a subject, so
+there is no pupil designation for a pupil to leave. The open question is not
+what the exit rule is but whether `removalCriteria` should read `Not
+applicable`, which is a maintainer’s call and not a research gap.
+
+**Hungary — the preparatory year is not a newcomer measure.** The language
+preparatory year before year nine in Act CXC of 2011 is a general provision for
+grammar and vocational secondary schools, open to any pupil. No newcomer exit
+rule was located, which fits the entry’s own finding that no formal newcomer
+definition exists.
+
+**Moldova and Montenegro — never belonged on this list.** Neither carries a
+`newcomerCriteria` coding, and both entries say outright that no newcomer
+category exists. Their honest answer is a documented absence, and an absence
+adds a system to the record without adding a data point to the cross, because
+`none established` is for a system that HAS a designation and sets no exit rule.
+
+So the tractable eight were really two. `exit_mechanism` now stands at 38
+national systems, 24 of them in the four-cycle PISA set, up from 36 and 22. The
+next tier — Israel, Japan, Singapore, Thailand — should be read before being
+promised, on this evidence.
+
 ## What it will not fix
 
 More countries will not repair a fragile finding, and this document should not
