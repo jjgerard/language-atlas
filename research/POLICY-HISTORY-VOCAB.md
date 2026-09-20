@@ -1394,8 +1394,174 @@ Held-out at first sight, in coding order: **88, 94, 71, 73, 88, 91, 81, 93**.
 Abstention now runs 253 of 390 in the largest region — the vetoes have made it
 much more reluctant, which is the intended direction.
 
-## Remaining
+## dld Africa, 296 rows — the last batch
+
+54 entries, and only **four** rows carried any prior coding.
 
 ```
-  dld   Africa 296
+  provision described            133   45%
+  plan or strategy issued         75   25%
+  body or programme established   31   10%
+  international instrument accepted 20  7%
+  state of affairs recorded       14    5%
+  instrument made                 13    4%
+  instrument amended               6    2%
+  body or programme changed        4    1%
+  instrument replaced              0
 ```
+
+**`plan or strategy issued` at 25% is the highest figure any value reaches in any
+region**, and `instrument amended` collapses to 2% against 21% in the Americas.
+African special-needs policy history is written as a sequence of education sector
+plans and national strategies — Burkina Faso's PDSEB, Ethiopia's Inclusive
+Education Master Plan, Malawi's five separate strategies — with very little
+amendment of statute recorded at all. `instrument replaced` is empty.
+
+The proposer scored **84 of 85, 99%**, the best first sight of the ten. Its one
+error was the duty shape a third time: Libya 1970, "states that the Ministry of
+Education and National Guidance WILL ENSURE THE ESTABLISHMENT of classes", in a
+tense and a noun form the veto did not know. Africa finished at **84/84**.
+
+# The column, finished
+
+```
+eal + dld, 1,742 rows, ten regions, all hand-coded
+
+  provision described               787   45%
+  plan or strategy issued           223   13%
+  instrument amended                210   12%
+  instrument made                   149    9%
+  body or programme established     139    8%
+  state of affairs recorded          94    5%
+  international instrument accepted  48    3%
+  instrument replaced                44    3%
+  body or programme changed          31    2%
+  funding decided                     7    0%
+                                   1732   (10 left unset)
+```
+
+**The residual is 45%. The whole-corpus profile predicted 48%.**
+
+That is the result the column was wired in to test, and it is now settled by ten
+independent hand passes rather than by the regexes the derivation itself called
+poor instruments. Nearly half this corpus's policy history is a timeline of what
+instruments SAY rather than of what CHANGED, and that is a fact about the field
+rather than a defect in the vocabulary.
+
+## The regional hypothesis failed
+
+This file said, after three regions of `dld`, that the residual looked like a
+property of how a REGION documents. `dld` Africa was the test: `eal` Africa sat
+at 60%, the highest figure recorded anywhere, and if the regional reading were
+right Africa should have come in near it.
+
+**It came in at 45%.**
+
+```
+region        residual          plan issued
+              eal   dld  diff    eal   dld  diff
+  Africa      60%   45%   -15     9%   25%   +16
+  Europe      50%   59%    +9    16%    1%   -15
+  Asia        42%   49%    +7    15%   13%    -2
+  Americas    43%   39%    -4     7%    6%    -1
+  Oceania     40%   38%    -2    11%   23%   +12
+```
+
+Africa moves from first to third and swings fifteen points, the largest
+divergence in the table. Across the five regions the two rank orders correlate at
+about 0.5 — which on five points is nothing. Only Oceania holds still.
+
+So the honest conclusion, after the whole column: **`operation` measures the
+region-and-domain cell, and neither the region nor the domain alone predicts it.**
+Africa documents `eal` as statute recital and `dld` as sector plans; Europe does
+the reverse. That is the caveat to attach whenever this column is compared across
+regions, and it is a stronger caveat than the one this file was carrying two
+sections ago.
+
+### One pattern worth recording, and not worth believing yet
+
+The residual and the plan share move against each other within every region.
+Adding them — the share of rows that DESCRIBE a document rather than record an
+operation on one — is more stable across domains than either alone:
+
+```
+region        eal   dld   diff
+  Africa      69%   70%    +1
+  Europe      66%   60%    -6
+  Asia        57%   63%    +6
+  Americas    51%   45%    -6
+  Oceania     51%   61%   +10
+
+  mean absolute difference   5.8 points
+  residual alone             7.4
+  plan alone                 9.2
+```
+
+Africa lands within a point across the two domains. But this is a pattern found
+AFTER the fact in ten cells, the improvement is 5.8 against 7.4, and Oceania is
+ten points out. It is written down so a later reader can test it on `indigenous`,
+`fl` or `he`, and it should not be quoted as a finding before they do.
+
+## The proposer, finished
+
+```
+  eal Europe      30/30   100%        dld Europe      36/36   100%
+  eal Oceania     21/21   100%        dld Oceania     48/48   100%
+  eal Asia        53/53   100%        dld Asia        42/44    95%
+  eal Americas    40/42    95%        dld Americas   137/137  100%
+  eal Africa      22/23    96%        dld Africa      84/84   100%
+                                                    513/518    99%
+```
+
+**Held-out at first sight, in coding order: 88, 94, 71, 73, 88, 91, 81, 93, 99.**
+
+It ends well, and the shape of the series is the point. It never improved
+monotonically: the Americas cost twenty points after Asia, Africa cost seven
+after that, and Asia in `dld` cost twelve after two clean regions. Every one of
+those drops was a documentation habit the proposer had not met — UNESCO PEER
+constitution profiles, African statute recitals, Jordanian plans quoted for their
+definitions — and every one produced a shape it read confidently and wrongly.
+
+It now abstains on 1,214 rows of 1,742, seventy per cent, and that is the right
+place for it to have ended up. The five errors still standing are judgement calls
+named in the sections above, not pattern faults.
+
+**The rule that earned itself five times over: every noun in every list carries
+its plural, first time.** `center`, `academy`, `programme`, `centre`,
+`regulation` — five rows lost to five missing plurals across ten regions, each
+found only by hand.
+
+## Rows left unset, and what they turned out to be
+
+Ten rows across 1,742, and most of them are one shape:
+
+- **Provenance rows** — nine US ECS readings, Solomon Islands' image-only scan,
+  Mongolia's ministry project report, Delaware's "2008 state guidance, not
+  binding regulation". A policy history that records what the SOURCE is rather
+  than what happened.
+- **Sweden 2015**, whose subject is a statistic hedged to "may be due to" and
+  whose text is truncated.
+- **Andorra 2008**, whose sentence's subject is the 2026 regulation.
+
+If `entry.absences` ever grows a sibling for *this row is about the evidence*,
+these are the rows that would populate it. Until then an absent cell is the
+honest answer, and the count is small enough to say so.
+
+## The vocabulary gaps this pass found and did not fill
+
+- **A change of SCOPE with no instrument named.** "Eligibility extended to Czech
+  citizens", "reporting becomes mandatory", "compulsory schooling extended to
+  Ukrainian refugee children", "the minimum enrolment relaxed from 20 to 15". It
+  ran at 2.6% through `eal` and the same shape recurs in `dld`. Real, countable,
+  and no value carries it.
+- **Signature without ratification.** The Bahamas 2013, Saint Vincent 2010, Libya
+  2008, Seychelles 2009 and Somalia 1994 all SIGNED an instrument they had not
+  ratified. They are coded `international instrument accepted` because nothing
+  else is closer, and the gloss should say so or the value should split.
+- **`state of affairs recorded` is glossed as an observation THAT NOTHING EXISTS**
+  and has been used throughout for dated observations generally — reviews,
+  reports, baselines, counts. The gloss wants widening to match the use.
+- **Republication**, where a document is reissued with no change stated. Small,
+  and noted in case it recurs.
+
+All four are the maintainer's call. None was acted on.
