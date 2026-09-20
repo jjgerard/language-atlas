@@ -75,10 +75,44 @@ against 39% — is documentation depth almost exactly: mean docLinks 8.9 against
 cross rather than as a gap (n=35). Both need `dischargeCriteria` and
 `removalCriteria` filled before they mean anything.
 
+## One that fails on a different confound: sub-national double-counting
+
+**Threshold basis against discharge mechanism.** This is the cross the whole
+criteria-coding effort was aimed at, and it was blocked until now because
+`coding-crosstab.js` joins dld to eal and keeps national units only. Both
+columns here are dld, and after the sub-national identification pass all twelve
+sub-national units carrying a discharge coding carry an identification coding
+too. `coding-cross-dld.js` runs it without the join, on 58 systems.
+
+Over all 58 it reaches Cramer's V = 0.343, p = 0.041 against a permutation null
+that holds each system's NUMBER of mechanisms fixed and reshuffles which ones.
+Over the 46 national units alone: V = 0.323, p = 0.165.
+
+The effect size barely moves. What moves is n, and the added n is not
+independent. Six of the seven `administrative certification` systems are Chinese
+provinces applying one national certification rule, and five of them sit in the
+single cell `administrative certification x age ceiling` — the cell that carries
+the association. Twelve sub-national rows bought twelve degrees of freedom the
+corpus does not actually have.
+
+This is not an argument against the sub-national coding, which is correct and
+is what `/patterns` should show. It is an argument that a significance test over
+a corpus containing a country and its provinces is testing the wrong
+population. `coding-cross-dld.js` therefore prints both runs by default rather
+than taking a flag, because reading one without the other is how this goes
+wrong.
+
+What survives is descriptive and worth stating anyway: `re-evaluation cycle` is
+the most common mechanism under every threshold basis that has more than two
+systems, and no threshold basis avoids it. Systems differ in how they let a
+child IN far more than in how they let one out.
+
 ## The habit this file is really recording
 
-Three of the six candidate findings here failed a confound check that took one
-command to run. The check is `confound()` in `coding-crosstab.js`: split the
-corpus by the column under test, report the hit rate, the mean docLinks, and
-the same split inside every region. A finding that does not hold inside regions
-is usually a finding about who writes things down.
+Four of the seven candidate findings here failed a check that took one command
+to run, and a fifth — the eal entry/exit timing cross, withdrawn in e6202f4 —
+failed a permutation test at p = 0.40. The usual check is `confound()` in
+`coding-crosstab.js`: split the corpus by the column under test, report the hit
+rate, the mean docLinks, and the same split inside every region. A finding that does not hold inside regions
+is usually a finding about who writes things down; one that does not hold
+without sub-national units is usually a finding about one country.
