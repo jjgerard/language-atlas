@@ -236,39 +236,13 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
 </header>
 
 <main>
-  <h2>Who gets in, and who gets out</h2>
+  <h2>Build a plot: coded categories against a PISA outcome</h2>
   <p class="standfirst">
-    Two maps put a child in a category: <b>language disorder</b> and <b>additional language</b>.
-    Both ask who enters it and who leaves it. Most systems answer the first question — often by
-    establishing that they have no such category at all. The second is answered far less often,
-    and on the language-disorder map that is still mostly a gap in the reading rather than a
-    finding about the systems.
-  </p>
-
-  <div id="crit"></div>
-
-  <p class="lead">
-    Counted live from the entries. <b>Cannot arise</b> means no such category exists there, so
-    nothing can end it.
-  </p>
-  <p class="lead">
-    <b>Read the third column before the first.</b> A system that establishes it has no such rule
-    has answered the question, and that is a different thing from nobody having checked — which is
-    why they are separate columns rather than one gap. On the newcomer row it is now the larger
-    number: more systems establish that they designate nobody than describe a designation.
-  </p>
-  <p class="lead">
-    The discharge row is the one still to read as coverage rather than as policy. Its
-    <b>not checked</b> figure is the field nobody has researched, not a finding that systems set
-    no rule — the reason is written up in <code>research/DISCHARGE-WAVE.md</code>.
-  </p>
-
-  <h3>The same categories, against an outcome the atlas did not write</h3>
-  <p>
-    Pick a coded column and set it beside the PISA immigrant attainment gap for the same
-    countries &mdash; or pick two and compare the combinations, which is how the trigger a system
-    uses to let a child in sits next to the rule that lets them out. Science runs across four
-    cycles, 2015 to 2025, so a category can be read as a trend as well as a level.
+    Every coded column on these maps, set against the PISA immigrant attainment gap for the same
+    countries. Pick one column, or two to compare the combinations &mdash; which is how the trigger
+    a system uses to let a child into a category sits next to the rule that lets them out. Science
+    runs across four cycles, 2015 to 2025, so a category can be read as a spread over time and not
+    only as a level.
   </p>
   <p>
     <strong>Read the spread before the difference between categories.</strong> In every cross run
@@ -1065,33 +1039,6 @@ function plotScatter(atlas, pick, outcome, cx, cy2, min) {
     + 'several rules is drawn once and counted under each.');
 }
 
-function renderCriteria(atlas) {
-  const doms = Object.fromEntries(atlas.domains.map(d => [d.id, d]));
-  const rows = PAIRS.map(([id, key, map, asks]) => {
-    const d = doms[id];
-    if (!d) return null;
-    const i = d.fields.findIndex(f => f.k === key);
-    const units = (atlas.units[id] || []).filter(u => u.nat);
-    let rule = 0, absent = 0, na = 0, unchecked = 0;
-    for (const u of units) {
-      const c = (u.fieldStates || '')[i];
-      if (c === 'h') { if (u.absences && u.absences[key]) absent++; else rule++; }
-      else if (c === 'x') na++;
-      else unchecked++;
-    }
-    return { map, asks, rule, absent, na, unchecked, n: units.length };
-  }).filter(Boolean);
-
-  $('#crit').innerHTML = '<div class="twrap"><table class="xtab"><thead><tr>'
-    + '<th>Map</th><th>Question</th><th class="num">Defines it</th>'
-    + '<th class="num">No rule, established</th><th class="num">Cannot arise</th>'
-    + '<th class="num">Not checked</th></tr></thead><tbody>'
-    + rows.map(r => `<tr><td class="unit">${esc(r.map)}</td><td>${esc(r.asks)}</td>
-        <td class="num">${r.rule}</td><td class="num">${r.absent}</td>
-        <td class="num">${r.na}</td><td class="num">${r.unchecked}</td></tr>`).join('')
-    + '</tbody></table></div>';
-}
-
 function render() {
   // ---- decades ----
   const dec = T.timeline.byDecade;
@@ -1137,13 +1084,15 @@ function render() {
 // panel each fetched their own copy before this — so the page pulled it twice
 // on every load, for data neither of them changes.
 const atlas = fetch('/api/atlas').then(r => r.ok ? r.json() : Promise.reject(new Error('atlas ' + r.status)));
-atlas.then(a => { mountNav(null, a.domains); renderCriteria(a); renderCoding(a); renderOutcomes(a); }).catch(() => mountNav(null));
+atlas.then(a => { mountNav(null, a.domains); renderCoding(a); renderOutcomes(a); }).catch(() => mountNav(null));
 
 
 fetch('/api/trends')
   .then(r => r.ok ? r.json() : Promise.reject(new Error('trends ' + r.status)))
   .then(d => { T = d; render(); })
   .catch(err => {
-    $('#crit').innerHTML = `<p class="why">The timeline could not be loaded (${esc(err.message)}). The maps themselves are unaffected.</p>`;
+    // #crit used to host this. The criteria table it belonged to is gone, so the
+    // message goes where the timeline it is about would have been.
+    $('#decades').innerHTML = `<p class="why">The timeline could not be loaded (${esc(err.message)}). The maps themselves are unaffected.</p>`;
   });
 </script>
