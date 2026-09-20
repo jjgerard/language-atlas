@@ -14,6 +14,7 @@
 
 const { LIVE, DOMAINS } = require('./domains');
 const { SCHEMES } = require("./coding.js");
+const { load: pisa } = require("./pisa.js");
 const store = require('./store');
 const { makeHistoryMatcher } = require('./history');
 const { deriveUnits } = require('./derive');
@@ -40,9 +41,21 @@ function build(catalogs, sources) {
     // /patterns renders every coding column it finds as a frequency table,
     // and it cannot know that policyHistory's `year` and `matches` are a
     // key without being told.
-    schemes: Object.fromEntries(Object.entries(SCHEMES)
-      .filter(([, s]) => s.keyColumns)
-      .map(([k, s]) => [k, { keyColumns: s.keyColumns }])),
+    // keyColumns identify a row rather than describe it. valueColumns are the
+    // ones backed by a vocabulary: a scheme column whose definition is an
+    // object lists its allowed values, and one whose definition is a string is
+    // prose describing a number or a free-text field. A renderer that tabulates
+    // the second kind gets a frequency table of instrument names, each seen
+    // once, which is what the outcomes panel did before this was sent.
+    schemes: Object.fromEntries(Object.entries(SCHEMES).map(([k, s]) => [k, {
+      keyColumns: s.keyColumns,
+      valueColumns: Object.entries(s.columns || {})
+        .filter(([, def]) => def && typeof def === "object").map(([c]) => c),
+    }])),
+    // Rides along on the atlas payload rather than getting its own endpoint,
+    // for the reason the patterns page already records: the page pulled 3MB
+    // twice before these were merged, and this adds a few kilobytes.
+    pisa: pisa(),
     domains: DOMAINS.map(({ fields, ...rest }) => ({
       ...rest,
       // Typed and hinted, because the submission form is generated from this.

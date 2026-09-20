@@ -26,6 +26,19 @@ main p, main li { font-size: 15px; line-height: 1.65; }
 main p { margin: 0 0 14px; max-width: 68ch; }
 main a { color: var(--focus); }
 
+/* ---- outcomes: a coded category set beside a number from outside ---- */
+/* The label column is wide on purpose. These category names are sentences
+   from the vocabulary -- "diagnosis plus impact", "national rule, local
+   application" -- and abbreviating them in a chart is how a reader ends up
+   comparing two things they cannot name. */
+.ocontrols { display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0 0 .75rem; }
+.ocontrols label { font-size: .85rem; color: var(--muted, #555); display: flex; align-items: center; gap: .4rem; }
+.ocontrols select { font: inherit; font-size: .85rem; padding: .2rem .35rem; max-width: 22rem; }
+.olab { font-size: 12px; fill: currentColor; }
+.on { font-size: 11px; fill: var(--muted, #777); }
+.otick { font-size: 11px; fill: var(--muted, #777); }
+.osrc { font-size: .78rem; }
+
 /* ---- findings: the claim carries its own number, so the number is the type ---- */
 .finding { margin: 0 0 22px; padding-left: 14px; border-left: 2px solid var(--hair-strong); }
 .finding .claim { font-size: 17px; line-height: 1.5; margin: 0 0 6px; text-wrap: pretty; }
@@ -252,6 +265,18 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
     so these add up to more than the number of systems.
   </p>
   <div id="coding"></div>
+
+  <h3>Against an outcome the atlas did not write</h3>
+  <p>
+    Every category above, set beside the PISA 2022 attainment gap for the same country.
+    <strong>Read the spread before the difference between categories.</strong> In every
+    cross run so far the disagreement inside a category has been wider than the gap
+    between categories, and the one result that looked significant disappeared when
+    three Gulf states were set aside &mdash; an immigrant student in the UAE is often an
+    expatriate professional&rsquo;s child. This measures who a country&rsquo;s immigrants are
+    long before it measures anything a ministry wrote down.
+  </p>
+  <div id="outcomes"></div>
 
   <h3>A clock or a test, and systems say which they are not using</h3>
   <p>
@@ -509,6 +534,213 @@ function renderCoding(atlas) {
     : '<p class="why">No entry carries a coding yet. The vocabularies are in src/coding.js; nothing has been coded against them.</p>';
 }
 
+// A coded category against a PISA attainment gap.
+//
+// The panel exists because the obvious question once a column is coded is
+// "and does it go with anything". The answer so far is no, every time, and the
+// panel is built to make that readable rather than to hide it: the box shows
+// the spread of the countries inside a category, and that spread has been wider
+// than the difference between categories in every cross run against it.
+//
+// THREE GUARDS, NOT OPTIONAL.
+//   National units only. A country counted once per province reached p = 0.04
+//   on a cross that sits at p = 0.17 over national units alone -- five Chinese
+//   provinces in one cell.
+//   A floor on group size. A box drawn over two countries is two dots and a
+//   decoration.
+//   The Gulf split, reported beside every result. An immigrant student in the
+//   UAE, Qatar or Saudi Arabia is often an expatriate professional's child, so
+//   those systems carry an immigrant ADVANTAGE that has nothing to do with any
+//   rule. The one cross that reached significance lost it when three of them
+//   were set aside.
+const GULF = new Set(['AE', 'QA', 'SA', 'KW', 'BH', 'OM']);
+const MIN_N = 3;
+
+function outcomeOptions(atlas) {
+  const out = [];
+  const doms = Object.fromEntries(atlas.domains.map(d => [d.id, d]));
+  for (const [id, key, map] of codedFields(atlas)) {
+    if (!doms[id]) continue;
+    // Only columns backed by a vocabulary. A free-text column such as the
+    // instrument name on dld.assessments yields one group per country, and the
+    // panel then reports that no category reaches the floor -- true, and a
+    // useless thing to offer in the first place.
+    const fd = (doms[id].fields || []).find(x => x.k === key);
+    const fieldLabel = fd ? fd.label : key;
+    const sch = ((atlas.schemes || {})[id + '.' + key]) || {};
+    const allowed = new Set(sch.valueColumns || []);
+    if (!allowed.size) continue;
+    // A scheme that declares keyColumns is row-grained -- policyHistory codes
+    // one dated row, not one system -- so grouping countries by it would set
+    // rows against an outcome measured per country. Skipped by declaration.
+    if ((sch.keyColumns || []).length) continue;
+    const cols = {};
+    for (const u of (atlas.units[id] || [])) {
+      if (!u.nat || !u.coding || !u.coding[key]) continue;
+      const rows = Array.isArray(u.coding[key]) ? u.coding[key] : [u.coding[key]];
+      for (const r of rows) for (const [col, v] of Object.entries(r || {})) {
+        if (!allowed.has(col)) continue;
+        (cols[col] = cols[col] || new Set()).add(u.cc);
+      }
+    }
+    for (const [col, ccs] of Object.entries(cols))
+      if (ccs.size >= 8) out.push({ id, key, col, map, field: fieldLabel, n: ccs.size });
+  }
+  return out.sort((a, b) => b.n - a.n);
+}
+
+function outcomeRows(atlas, pick, outcome) {
+  const by = (atlas.pisa && atlas.pisa.byCountry) || {};
+  const groups = {};
+  const seen = new Set();
+  for (const u of (atlas.units[pick.id] || [])) {
+    if (!u.nat || !u.coding || !u.coding[pick.key]) continue;
+    const p = by[u.cc];
+    if (!p || p[outcome] == null) continue;
+    const rows = Array.isArray(u.coding[pick.key]) ? u.coding[pick.key] : [u.coding[pick.key]];
+    const vals = new Set();
+    for (const r of rows) {
+      const v = (r || {})[pick.col];
+      if (v == null) continue;
+      for (const x of (Array.isArray(v) ? v : [v])) vals.add(x);
+    }
+    if (!vals.size) continue;
+    seen.add(u.cc);
+    for (const x of vals) (groups[x] = groups[x] || []).push({ cc: u.cc, name: p.name, v: p[outcome] });
+  }
+  return { groups, countries: seen.size };
+}
+
+const omean = a => a.reduce((x, y) => x + y, 0) / a.length;
+const oquant = (s, p) => {
+  const i = p * (s.length - 1), lo = Math.floor(i), hi = Math.ceil(i);
+  return lo === hi ? s[lo] : s[lo] + (s[hi] - s[lo]) * (i - lo);
+};
+
+// Shuffle the outcome across countries and keep the grouping. A country sitting
+// in two categories stays in two, so the null carries the same overlap the data
+// does -- these columns are lists and a system really does run several rules.
+function opermute(groups) {
+  const names = Object.keys(groups);
+  const all = [];
+  const at = new Map();
+  for (const g of names) for (const c of groups[g])
+    if (!at.has(c.cc)) { at.set(c.cc, all.length); all.push(c.v); }
+  const idx = names.map(g => groups[g].map(c => at.get(c.cc)));
+  const stat = vals => {
+    const m = omean(vals);
+    return idx.reduce((a, g) => a + g.length * Math.pow(omean(g.map(i => vals[i])) - m, 2), 0);
+  };
+  const obs = stat(all);
+  let ge = 0;
+  const T = 4000;
+  for (let t = 0; t < T; t++) {
+    const s = all.slice();
+    for (let i = s.length - 1; i > 0; i--) { const j = (Math.random() * (i + 1)) | 0; const q = s[i]; s[i] = s[j]; s[j] = q; }
+    if (stat(s) >= obs) ge++;
+  }
+  return ge / T;
+}
+
+function renderOutcomes(atlas) {
+  const host = $('#outcomes');
+  if (!host) return;
+  const pisa = atlas.pisa || {};
+  if (!pisa.byCountry || !Object.keys(pisa.byCountry).length) {
+    host.innerHTML = '<p class="why">No outcome data is loaded. Everything above derives from the entries and is unaffected.</p>';
+    return;
+  }
+  const opts = outcomeOptions(atlas);
+  if (!opts.length) {
+    host.innerHTML = '<p class="why">No coded column yet covers enough countries to set beside an outcome.</p>';
+    return;
+  }
+  const OUT = Object.keys(pisa.outcomes || {});
+  const label = k => k === 'homeLanguage' ? 'language spoken at home' : k;
+  host.innerHTML = '<div class="ocontrols">'
+    + '<label>Category <select id="o-cat">' + opts.map((o, i) =>
+        '<option value="' + i + '">' + esc(o.map) + ' — ' + esc(o.field) + ': ' + esc(o.col.replace(/_/g, ' ')) + '</option>').join('') + '</select></label>'
+    + '<label>Outcome <select id="o-out">' + OUT.map(k =>
+        '<option value="' + esc(k) + '">' + esc(label(k)) + '</option>').join('') + '</select></label>'
+    + '</div><div id="o-plot"></div>'
+    + '<p class="why osrc">' + esc(pisa.source || '') + '. Retrieved ' + esc(pisa.retrieved || '') + '.'
+    + (pisa.unjoined && pisa.unjoined.length
+        ? ' Not joined: ' + pisa.unjoined.map(u => esc(u.name) + ' (' + esc(u.why) + ')').join(', ') + '.'
+        : '') + '</p>';
+  const draw = () => {
+    const pick = opts[Number($('#o-cat').value)];
+    $('#o-plot').innerHTML = plotOutcome(atlas, pick, $('#o-out').value);
+  };
+  $('#o-cat').addEventListener('change', draw);
+  $('#o-out').addEventListener('change', draw);
+  draw();
+}
+
+function plotOutcome(atlas, pick, outcome) {
+  const { groups, countries } = outcomeRows(atlas, pick, outcome);
+  const kept = Object.entries(groups).filter(([, g]) => g.length >= MIN_N)
+    .sort((a, b) => omean(b[1].map(c => c.v)) - omean(a[1].map(c => c.v)));
+  const dropped = Object.entries(groups).filter(([, g]) => g.length < MIN_N);
+  if (!kept.length)
+    return '<p class="why">No category here reaches ' + MIN_N + ' countries with a value for this outcome.</p>';
+
+  const all = kept.flatMap(([, g]) => g.map(c => c.v));
+  const lo = Math.min(...all), hi = Math.max(...all);
+  const pad = Math.max(8, (hi - lo) * 0.06);
+  const X0 = 200, X1 = 660, RH = 48, TOP = 24;
+  const H = TOP + RH * kept.length + 28;
+  const sx = v => X0 + (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (X1 - X0);
+  const f = n => n.toFixed(1);
+
+  let s = '<svg viewBox="0 0 684 ' + H + '" width="100%" role="img" aria-label="box plots of the PISA gap by '
+    + esc(pick.col.replace(/_/g, ' ')) + '">';
+  for (let t = Math.ceil((lo - pad) / 25) * 25; t <= hi + pad; t += 25) {
+    s += '<line x1="' + f(sx(t)) + '" y1="' + (TOP - 4) + '" x2="' + f(sx(t)) + '" y2="' + (TOP + RH * kept.length) + '" stroke="var(--border)" stroke-width="1"/>'
+      + '<text x="' + f(sx(t)) + '" y="' + (TOP + RH * kept.length + 16) + '" text-anchor="middle" class="otick">' + (t > 0 ? '+' + t : t) + '</text>';
+  }
+  if (lo - pad < 0 && hi + pad > 0)
+    s += '<line x1="' + f(sx(0)) + '" y1="' + (TOP - 4) + '" x2="' + f(sx(0)) + '" y2="' + (TOP + RH * kept.length) + '" stroke="var(--border-strong)" stroke-width="1.5"/>';
+
+  let hits = '';
+  kept.forEach(([lab, g], i) => {
+    const cy = TOP + RH * i + RH / 2;
+    const d = g.map(c => c.v).sort((a, b) => a - b);
+    const q1 = oquant(d, 0.25), q2 = oquant(d, 0.5), q3 = oquant(d, 0.75);
+    s += '<text x="' + (X0 - 14) + '" y="' + (cy + 1) + '" text-anchor="end" class="olab">' + esc(lab) + '</text>'
+      + '<text x="' + (X0 - 14) + '" y="' + (cy + 14) + '" text-anchor="end" class="on">' + g.length + ' countries</text>'
+      + '<line x1="' + f(sx(d[0])) + '" y1="' + cy + '" x2="' + f(sx(d[d.length - 1])) + '" y2="' + cy + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
+      + '<line x1="' + f(sx(d[0])) + '" y1="' + (cy - 6) + '" x2="' + f(sx(d[0])) + '" y2="' + (cy + 6) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
+      + '<line x1="' + f(sx(d[d.length - 1])) + '" y1="' + (cy - 6) + '" x2="' + f(sx(d[d.length - 1])) + '" y2="' + (cy + 6) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
+      + '<rect x="' + f(sx(q1)) + '" y="' + (cy - 10) + '" width="' + f(Math.max(1.5, sx(q3) - sx(q1))) + '" height="20" fill="var(--bg-accent)" stroke="var(--border-accent)" stroke-width="1.2"/>'
+      + '<line x1="' + f(sx(q2)) + '" y1="' + (cy - 10) + '" x2="' + f(sx(q2)) + '" y2="' + (cy + 10) + '" stroke="var(--text-accent)" stroke-width="2"/>';
+    g.forEach((c, n) => {
+      const jy = cy + ((n % 3) - 1) * 4.4;
+      s += '<circle cx="' + f(sx(c.v)) + '" cy="' + f(jy) + '" r="3" fill="var(--text-primary)" stroke="var(--surface-2)" stroke-width="0.7"/>';
+      hits += '<circle cx="' + f(sx(c.v)) + '" cy="' + f(jy) + '" r="7.5" fill="transparent"><title>' + esc(c.name) + ' — ' + f(c.v) + ' score points</title></circle>';
+    });
+  });
+  s += hits + '</svg>';
+
+  // Distinct countries. A list column puts a system in several categories, so
+  // flattening the groups names the same Gulf state once per category it runs.
+  const gulf = [...new Set(kept.flatMap(([, g]) => g).filter(c => GULF.has(c.cc)).map(c => c.cc))];
+  const p = opermute(Object.fromEntries(kept));
+  const noGulf = Object.fromEntries(kept.map(([k, g]) => [k, g.filter(c => !GULF.has(c.cc))])
+    .filter(([, g]) => g.length >= MIN_N));
+  const p2 = Object.keys(noGulf).length > 1 ? opermute(noGulf) : null;
+  return s + '<p class="why"><strong>' + countries + ' countries joined</strong>, '
+    + kept.length + ' categories with ' + MIN_N + ' or more.'
+    + (dropped.length ? ' Not drawn: ' + dropped.map(([k, g]) => esc(k) + ' (' + g.length + ')').join(', ') + '.' : '')
+    + ' Permutation p = ' + p.toFixed(3)
+    + (gulf.length
+        ? (p2 == null
+            ? ', and the Gulf split cannot be computed at this size.'
+            : ', and ' + p2.toFixed(3) + ' without ' + gulf.length + ' Gulf '
+              + (gulf.length === 1 ? 'system' : 'systems') + ' (' + gulf.map(esc).join(', ') + ').')
+        : ', with no Gulf system in this comparison.')
+    + ' Read how far a category’s own countries spread before reading how far the boxes sit apart.</p>';
+}
+
 function renderCriteria(atlas) {
   const doms = Object.fromEntries(atlas.domains.map(d => [d.id, d]));
   const rows = PAIRS.map(([id, key, map, asks]) => {
@@ -581,7 +813,7 @@ function render() {
 // panel each fetched their own copy before this — so the page pulled it twice
 // on every load, for data neither of them changes.
 const atlas = fetch('/api/atlas').then(r => r.ok ? r.json() : Promise.reject(new Error('atlas ' + r.status)));
-atlas.then(a => { mountNav(null, a.domains); renderCriteria(a); renderCoding(a); }).catch(() => mountNav(null));
+atlas.then(a => { mountNav(null, a.domains); renderCriteria(a); renderCoding(a); renderOutcomes(a); }).catch(() => mountNav(null));
 
 
 fetch('/api/trends')
