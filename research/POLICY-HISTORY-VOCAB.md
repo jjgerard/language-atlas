@@ -1739,3 +1739,115 @@ What is left standing is simpler and stronger: **the operation-density of a cell
 is a property of that cell**, and it varies enormously — 27% residual in
 indigenous Europe against 60% in `eal` Africa. Neither the region nor the domain
 predicts it on its own.
+
+## indigenous Americas, 272 rows
+
+75 entries, and **twenty rows left unset** — by far the largest such cluster in
+the project.
+
+```
+  provision described               100   40%
+  instrument made                    42   17%
+  body or programme established      41   16%
+  instrument amended                 25   10%
+  state of affairs recorded          17    7%
+  plan or strategy issued            13    5%
+  instrument replaced                 8    3%
+  body or programme changed           3    1%
+  funding decided                     2    1%
+  international instrument accepted   1    0%
+```
+
+`instrument made` at 17% and `body or programme established` at 16% are both
+near the top of their columns, and together they are a third of the region:
+language academies, bilingual directorates, school boards, immersion schools,
+Sectores de Lengua Indígena. This is policy built by creating things.
+
+**`international instrument accepted` is one row in 272 — 0%.** Set that beside
+indigenous Europe's 16% and it is the sharpest contrast in the whole grid.
+European minority-language policy runs through the Charter and the Framework
+Convention; the Americas' indigenous-language policy runs through domestic
+statute and institution-building, and ILO Convention 169 appears exactly once.
+
+### Twenty unset rows, all the same sentence
+
+Twenty United States rows read, in full: *"Evidence is the 2024 Seal of
+Biliteracy report and a 50-state statute inventory."* They name the source and
+nothing else. That is the fifth appearance of the provenance shape and much the
+largest — it now stands at 33 rows across four domains, against 14 in the whole
+of `eal` and `dld` combined.
+
+At this size it is no longer an oddity to note in passing. A policy history that
+records **what the source is** rather than what happened is a recognisable,
+countable thing, and if `entry.absences` ever grows a sibling for it these are
+the rows that would fill it.
+
+### The proposer scored 58 of 68, 85%, and three errors were my own
+
+The last region's fix added `in force for` to the international rule, to catch
+Serbia's "Charter … in force for Serbia from 1 June 2006". It promptly claimed
+three Nunavut rows — "Right to Inuit Language instruction (s.8) **in force for**
+Kindergarten to Grade 3" — as international acceptances. The clause now requires
+an international instrument named in the row, **in either direction**: the
+forward-only version missed Serbia, which puts "European Charter" before the
+phrase rather than after.
+
+The rest were single shapes, and two are worth keeping:
+
+- "Ministerial Order 231/19 **replaces** the Educational **Program Guide Order**
+  M333/99" is one instrument replacing another; `Program` is part of a title. The
+  hoisted programme-replacement rule stands down when its noun is followed by a
+  word that makes it a document.
+- "The Act is **renamed** the Inuktut Protection Act, **in force** 18 September"
+  was taken for a making by the commencement date beside it. A renamed Act is
+  `body or programme changed` by this vocabulary's own gloss.
+
+### A fix reverted, and why that is the right outcome
+
+Nicaragua's "Ley 926 **reforms** Ley 28" and Ecuador's "**LOEI reform** …
+restructures the intercultural bilingual system" are both amendments, and adding
+`reform` to the amendment pattern caught them. It also broke **six rows across
+four regions that had been clean**: Greenland's "**Reform act** fixes Greenlandic
+and Danish", Liberia's "Education **Reform Act** entitles", Victoria's "Education
+and Training **Reform Act** 2006", and three more.
+
+`reform` is a common part of an instrument's NAME, and no wording of the pattern
+separated the two uses reliably. Two rows gained against six lost, so it is
+reverted and the two abstain. **They stand in the table below as errors on
+purpose** — the alternative was a proposer that reads every Reform Act as an
+amendment.
+
+That re-score across thirteen regions is the fourth time it has caught a fix
+making things worse elsewhere. It is the single most useful habit in this whole
+pass.
+
+### The Americas is the stable region
+
+```
+region        eal    dld    indigenous
+  Africa      60%    45%     —
+  Europe      50%    59%    27%
+  Asia        42%    49%     —
+  Americas    43%    39%    40%
+  Oceania     43%    38%    54%
+```
+
+**The Americas' residual sits within four points across all three domains.**
+Europe's swings thirty-two, Oceania's sixteen. So it is not that regions are
+stable or unstable as a class: one region documents the three domains the same
+way and another does not, and which is which is a fact to be looked up rather
+than assumed. The grid is the finding; no summary of it has survived contact
+with a new cell yet.
+
+## Where the proposer stands, thirteen regions
+
+```
+  eal Europe      30/30   100%    dld Europe      36/36   100%    ind Oceania   16/16   100%
+  eal Oceania     21/21   100%    dld Oceania     48/48   100%    ind Europe    73/74    99%
+  eal Asia        53/53   100%    dld Asia        41/43    95%    ind Americas  63/65    97%
+  eal Americas    40/42    95%    dld Americas   137/137  100%
+  eal Africa      22/23    96%    dld Africa      84/84   100%           664/672    99%
+```
+
+Held-out at first sight, in coding order: **88, 94, 71, 73, 88, 91, 81, 93, 99,
+88, 85, 85**.

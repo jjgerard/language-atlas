@@ -76,7 +76,7 @@ const datedElsewhere = (d, h) => {
 // is a law stating its own object. That one needs an AND-NOT -- an instrument
 // subject and no plan noun anywhere -- which is why this is a function.
 const describesAPlan = d =>
-  /\b(means|refers to|defines|according to|there are|states that)\b|\bprovides an? [a-z]+ definition\b/i.test(d)
+  /\b(means|refers to|defines|according to|there are|states that|records|recorded|indicates|indicated)\b|\bprovides an? [a-z]+ definition\b/i.test(d)
   || /^\s*\d{1,3}(?![\d-])/.test(d)
   || (/^[^.;]{0,60}\b(law|act|decree|ordinance|constitution)\b/i.test(d)
       && !/\b(plan|plans|strateg[a-z]*|policy|policies|framework|agenda|concept|recommendation[s]?|white paper)\b/i.test(d));
@@ -109,12 +109,12 @@ const RULES = [
   ["body or programme changed", /\b(replac|supersed|abolish|discontinu)\w*\b[\s\S]{0,40}\b(programmes?|programs?|schemes?|classes|grants?|units?|centres?|centers?|services?)\b|\b(programmes?|programs?|schemes?|classes|grants?|OETC|OALT|ELCO|MEAG|Tanoda)\b[\s\S]{0,60}\b(replaced|abolished|discontinued|ended|folded|integrated into)\b/i,
    // Only what the hoist was for. Everything else this value covers sits at its
    // declared precedence further down, so an amendment beats a rename.
-   /\bconsolidat\w*|\bmerg\w*[\s\S]{0,40}\bamendments?\b/i],
+   /\bconsolidat\w*|\bmerg\w*[\s\S]{0,40}\bamendments?\b|\b(programmes?|programs?)\s+(guide|order|act|regulation|policy|plan|directive)\b/i],
   ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*|\bnullif\w*|\bvoid\w*|\bannul\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|chapters?|subchapters?|sections?|subsections?|regulations?|rules?|model|P\.?L\.? ?\d)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|sections?|subsections?)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)/i,
    // South Africa 1953: "Bantu Education Act reinforces apartheid through
    // segregated schooling, REPEALED IN 1979". The repeal is real and is not this
    // row's business; the row says what the Act did.
-   (d, h) => datedElsewhere(d, h) || /\bamend\w*\b[\s\S]{0,60}\b(replac|repeal)|\brepeal\w*\b[\s\S]{0,40}\barticles?\b/i.test(d)],
+   (d, h) => datedElsewhere(d, h) || /\bamend\w*\b[\s\S]{0,60}\b(replac|repeal)|\b(repeal|revok)\w*\b[\s\S]{0,12}\barticles?|\bart\.? \b/i.test(d)],
   // A SEPARATE rule because the clause above needs /i for its noun list and this
   // one must not have it: an all-caps acronym is the instrument, and ESSA is the
   // row `instrument replaced` uses as its own gloss example. Two rules carrying
@@ -130,7 +130,7 @@ const RULES = [
    // shape and its coding is corrected alongside this. Laos 2003's "amended IN
    // 2003" is untouched: the word `in` marks a year that is the row's own.
    (d, h) => datedElsewhere(d, h) || /\bbeg(an|in|ins|un)\s+amend|\bamended since\b/i.test(d)],
-  ["international instrument accepted", /\bratif(y|ies|ied|ication)\b|\baccede(d|s)?\b|\baccession\b|\benters? into force for\b|\bdeclaration under\b|\bin force for\b|\bdeclaration takes effect\b|\bextends? the protection of\b/i,
+  ["international instrument accepted", /\bratif(y|ies|ied|ication)\b|\baccede(d|s)?\b|\baccession\b|\benters? into force for\b|\bdeclaration under\b|\b(charter|convention|covenant|protocol|treaty)\b[\s\S]{0,120}\bin force for\b|\bin force for\b[\s\S]{0,120}\b(charter|convention|covenant|protocol|treaty)\b|\bdeclaration takes effect\b|\bextends? the protection of\b/i,
    // Ratification DENIED is not ratification. Eritrea 1997 reads "Even if Eritrea
    // has NOT RATIFIED the Convention Against Discrimination in Education", which
    // is a dated record that nothing was accepted.
@@ -146,7 +146,7 @@ const RULES = [
    // "enacted, in force 1995-09-01" is a real making and must survive. And a row
    // that says outright the enactment is NOT VERIFIED is the one row in the
    // corpus that forbids this value in its own text.
-   (d, h) => datedElsewhere(d, h) || /\bnot verified\b|\bbefore the\b[\s\S]{0,40}\badopt|\bunder which\b|\bamended since\b|\badopted in\b[\s\S]{0,40}\btranslations?\b|\badopt\w*\s+[A-Z][a-z]+\s+for\b/i.test(d) || isMonitoringOpinion(d)],
+   (d, h) => datedElsewhere(d, h) || /\bnot verified\b|\bbefore the\b[\s\S]{0,40}\badopt|\bunder which\b|\bamended since\b|\badopted in\b[\s\S]{0,40}\btranslations?\b|\badopt\w*\s+[A-Z][a-z]+\s+for\b/i.test(d) || isMonitoringOpinion(d) || (/\brenam\w*/i.test(d) && !/\bamend\w*/i.test(d))],
   // Renaming, restructuring, merging and closing, at the precedence
   // HISTORY_OPERATION declares for them: below every operation on an instrument.
   // Nunavut's "Inuit Language Protection Act RENAMED the Inuktut Protection Act"
