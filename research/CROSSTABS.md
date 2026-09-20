@@ -203,7 +203,53 @@ countries, so it belongs in prose and not in a test.
 What remains genuinely open is the clock length: fourteen European systems, 2 to
 48 months, against nothing yet that would explain the spread.
 
-## Outcomes: no eal rule corresponds to the immigrant attainment gap
+## Four PISA outcomes, and only two of them are different from each other
+
+`research/pisa-2022-immigrant-outcomes.json` now holds four columns per country
+from PISA 2022 Annex B1 chapter 7: the immigrant minus non-immigrant gap in
+mathematics (I.B1.7.17), reading (I.B1.7.21) and science (I.B1.7.25), and the
+gap WITHIN immigrant students between those who speak the language of assessment
+at home and those who do not (I.B1.7.29).
+
+**The three subjects are one variable measured three times.**
+
+```
+  maths x reading      r = 0.933  (n = 75)
+  maths x science      r = 0.964
+  reading x science    r = 0.950
+  maths x homeLanguage r = -0.276  (n = 50)
+```
+
+Running a coding column against all three subjects is not three tests, and a
+result that held in one and not the others would be noise rather than a subject
+effect. Mathematics was the major domain in 2022; the other two are measured
+less precisely.
+
+**The language gap is the one that differs**, at r = -0.28 against the other
+three, and it is the better dependent variable for this atlas. It holds
+immigrant status constant — immigrants against immigrants — and it asks about
+language, which is what an eal rule acts on, rather than about migration.
+
+The two variables come apart exactly where composition does:
+
+```
+                         immigrant gap    language gap
+  United Arab Emirates        +90              -8
+  Qatar                       +71             -40
+  Germany                     -59             +51
+  Switzerland                 -53             +46
+  Austria                     -58             +37
+```
+
+In the Gulf an immigrant student is often an expatriate professional's child, so
+immigrants outperform and the ones NOT speaking Arabic at home outperform most.
+In German-speaking Europe immigrants underperform and speaking the test language
+at home is worth around 50 score points. The immigrant gap is mostly a fact
+about who migrates. The language gap is closer to a fact about language.
+
+## No eal rule corresponds to any of them
+
+### The original maths run
 
 The outcome is PISA 2022 Table I.B1.7.17 — immigrant minus non-immigrant mean
 mathematics score, in score points. `research/pisa-2022-immigrant-maths.json`
@@ -248,6 +294,22 @@ measures anything a ministry wrote down, and at n of about 20 per group nothing
 separates the two. The honest use of the join is descriptive — policy and
 outcome side by side, with no causal claim attached.
 
+### And the language gap, which is the fairer test, says the same
+
+```
+  column            all           no Gulf        Europe
+  designation       p = 0.0084    p = 0.1986     p = 0.3841
+  triggers          p = 0.5967    p = 0.8009     p = 0.7725
+  exit_mechanism    p = 0.1152    p = 0.1168     p = 0.1949
+```
+
+`designation` reaches p = 0.0084 and collapses on the same three Gulf states, in
+the same way, on the outcome that was supposed to be less exposed to them. Its
+non-Gulf means — functional 8, named category 20, proxy 11 — lean the way you
+might expect if naming and defining a category did something, and p = 0.20 at
+n = 30 is not evidence of it. Six of twelve candidates in this file have died at
+this exact step.
+
 One tool bug worth recording, because it points the wrong way. Countries where
 PISA reports no gap came through as `null` and coerced to 0 in the group means,
 dragging every group toward no difference. Only Cambodia was affected here. A
@@ -255,7 +317,7 @@ null outcome is not a zero outcome and the join now drops it.
 
 ## The habit this file is really recording
 
-Six of the twelve candidate findings here failed a check that took one command
+Seven of the fourteen candidate findings here failed a check that took one command
 to run, and a fifth — the eal entry/exit timing cross, withdrawn in e6202f4 —
 failed a permutation test at p = 0.40. The usual check is `confound()` in
 `coding-crosstab.js`: split the corpus by the column under test, report the hit

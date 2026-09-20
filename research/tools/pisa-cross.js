@@ -1,8 +1,20 @@
 // A coding column against the PISA 2022 immigrant attainment gap.
 //
-//     node pisa-cross.js <domain> <field> <column>
+//     node pisa-cross.js <domain> <field> <column> [--outcome maths|reading|science|homeLanguage]
 //
-// The outcome is `diff` from research/pisa-2022-immigrant-maths.json: the mean
+// maths, reading and science correlate at r = 0.93 to 0.96 across the 75
+// countries that report all three. They are one variable measured three times,
+// not three outcomes, so running all three is not three tests.
+//
+// homeLanguage is the different one, r = -0.28 against the other three. It
+// compares immigrant students who speak the language of assessment at home
+// against immigrant students who do not, so immigrant status is held constant
+// and it asks about language rather than about migration. For a language policy
+// atlas it is the better dependent variable, and the Gulf states show why: the
+// UAE has an immigrant ADVANTAGE of +90 in maths and a language gap of -8,
+// while Germany has an immigrant gap of -59 and a language gap of +51.
+//
+// The outcome is `diff` from research/pisa-2022-immigrant-outcomes.json: the mean
 // mathematics score of immigrant students minus that of non-immigrant students,
 // in score points, PISA 2022 Table I.B1.7.17.
 //
@@ -26,11 +38,14 @@ const path = require("path");
 const { pathFor } = require("./datafile.js");
 
 const [, , domainId, field, column] = process.argv;
+const oi = process.argv.indexOf("--outcome");
+const OUT = oi > -1 ? process.argv[oi + 1] : "maths";
 if (!domainId || !field || !column) {
   console.error("usage: pisa-cross.js <domain> <field> <column>");
   process.exit(2);
 }
-const P = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "pisa-2022-immigrant-maths.json"), "utf8")).rows;
+const P = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "pisa-2022-immigrant-outcomes.json"), "utf8")).rows
+  .map(r => Object.assign({}, r, { diff: r[OUT] ? r[OUT].diff : null }));
 const E = JSON.parse(fs.readFileSync(pathFor(domainId), "utf8")).filter(r => r.isNational !== false);
 
 const norm = s => String(s).normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
@@ -61,7 +76,7 @@ for (const p of P) {
   sys.push({ name: p.name, diff: p.diff, docs: (e.docLinks || []).length,
     v: Array.isArray(v) ? v : [v] });
 }
-console.log(domainId + "." + field + "." + column + "  against the PISA immigrant maths gap");
+console.log(domainId + "." + field + "." + column + "  against PISA " + OUT);
 console.log(P.length + " PISA countries; " + unmatched + " with no national atlas entry; "
   + nocode.length + " joined but uncoded; " + nogap.length + " with no gap reported; n = "
   + sys.length + " analysed");
