@@ -10,7 +10,37 @@ first reading of them — that they are all availability rules filed under
 classification — is wrong. They split three ways, and only the third group is
 what that description fits.
 
-## Group A: 'linguistic minority', and the question this document exists for
+## Resolved, 2026-09-20
+
+Two rulings from the maintainer, in the order they were made.
+
+**`demand threshold` is about availability, not classification.** It records
+when provision exists, not which child is in a category. Group C below is what
+that covers. Not yet actioned: moving it needs an availability axis, and that
+axis has to be derived from the corpus rather than proposed, so the value stays
+on `triggers` until the reading is done.
+
+**Internal migration counts as migration for this map.** A child moving from
+one Indian state to another faces an additional language at school, and whether
+they crossed a national border is not what makes the educational situation. So
+`linguistic minority` is an eal category for these purposes, and Group A
+resolves the first way: the nineteen take `designation: named category` and
+`home language` stays a correct trigger.
+
+That is written. `research/coding-eal-designation-linguistic-minority.json`
+holds the nineteen, built by matching the entries that actually carry the
+"Category is 'linguistic minority'" bullet rather than from a transcribed list.
+`coding-verify.js` reports coding on 19 entries and no other key changed.
+
+The ruling is general but the corpus gives it one place to bite. Of the 28,
+only the Indian units turn on it: every other entry with `designation` unset
+has no triggers either, which makes it an uncoded stub rather than a scope
+casualty. Tonga is the one loose end — "children whose mother tongue is not
+Tongan" is the same shape and its gap is still open, probably `functional`.
+
+The national distribution is untouched, because all nineteen are sub-national.
+
+## Group A: 'linguistic minority' — RESOLVED, counts as eal
 
 Nineteen Indian states carry the identical four bullets:
 
