@@ -2099,3 +2099,45 @@ against a row that a hand pass had already coded differently.
 The eleven errors still standing are judgement calls, named in the sections
 above, and two of them are there on purpose: the `reform` fix that would have
 cost six clean rows to gain two.
+
+# fl
+
+785 rows — Americas 265, Asia 243, Africa 118, Europe 116, Oceania 43 — all
+already carrying `fields_touched`. `fl` writes to `data/fl.seed.json` rather than
+`data/fl.json`, because the domain is seed-based; `coding-verify.js` reads it the
+same way.
+
+## fl Oceania (43), Europe (116) and Africa (118)
+
+```
+                    proposals   first sight   after
+  fl Oceania           12         100%        15/15
+  fl Europe            14          93%        13/13
+  fl Africa            22         100%        22/22
+```
+
+**Oceania is the first held-out region in the whole pass to come in clean at
+first sight, and Africa is the second.** By the fourth domain the proposer is
+meeting shapes it has seen in three others, and `fl` shares a great deal of its
+prose with them: the same Eritrean constitution row, the same Mauritian
+amendments, the same South African Bantu Education Act, the same
+`datedElsewhere` traps.
+
+Three small gaps were worth closing anyway:
+
+- **French Pacific instruments.** "Arrêté 1069 CM **repeals** the 1996 **arrêté**
+  fixing weekly hours", "Arrêté of 9 November 2015 **repeals** the 2008 primary
+  **timetable**", "Délibération 127 **replaces** the 2012 primary organisation".
+  The noun list carried `ordonnance` and nothing else from that family; three
+  rows in one 43-row region.
+- **A curriculum is a framework by another name.** "Education (Jersey) Law 1999
+  **establishes** the Jersey **Curriculum** and the subjects children must be
+  taught" is the residual, and `framework` has vetoed that rule since indigenous
+  Europe. `curriculum` and `curricula` join it.
+
+### The Sweden 2015 row, a third time
+
+"For primary school there is a slight increase, which may be due to the amendment
+of the Education Act introduced…" now appears in `eal` Europe, `indigenous`
+Europe and `fl` Europe, and is left unset in all three. Whatever produced it put
+the same truncated sentence on three maps.
