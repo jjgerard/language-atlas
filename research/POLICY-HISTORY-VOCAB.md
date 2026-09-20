@@ -2261,3 +2261,165 @@ arrive with no errors at all.
 
 Eighteen errors stand across 3,556 rows. Every one is named in the sections
 above, and three are there on purpose.
+
+# he
+
+745 rows — Asia 300, Europe 157, Africa 126, Americas 125, Oceania 37 — none
+left unset.
+
+```
+                    proposals   first sight   after
+  he Oceania            9         100%         9/9
+  he Americas          25          96%        25/25
+  he Africa            28         100%        28/28
+  he Europe            24          83%        20/20
+  he Asia              91          92%        87/89
+```
+
+Two more regions arrived clean at first sight, making four in the project, all of
+them in the last two domains.
+
+```
+he, all five regions
+  body or programme established   283   38%
+  body or programme changed       154   21%
+  provision described             132   18%
+  instrument made                  67    9%
+  instrument amended               41    6%
+  instrument replaced              30    4%
+  plan or strategy issued          19    3%
+  state of affairs recorded        16    2%
+  funding decided                   3    0%
+```
+
+**`he` is the first domain where the residual is not the largest value, and it is
+not close.** `body or programme established` at 38% and `body or programme
+changed` at 21% take **59% between them**: chairs founded, institutes renamed,
+departments merged, faculties split, colleges absorbed, programmes closed.
+Higher-education language policy is almost entirely institutional history, and
+the residual falls to 18% — half of `fl`'s and less than a third of `eal`'s.
+
+### What it cost the proposer
+
+- **The sixth missing plural, and this one in a helper.**
+  `isMonitoringDocument` tested `/\b(opinion|report|review)\b/` and "The Reay
+  **Committee reports**, urging London's Asian and African language teaching be
+  merged" has an s on the end. One line further on, `urge\w*` could not match
+  **urging** either — the stem is `urg`. The rule now covers helpers, not just
+  noun lists.
+- **A later change mentioned as subsequent history is not this row's operation.**
+  Four rows: "formally **established** its Foreign Languages College; the unit
+  **had been renamed**", "was **established** by an ordinance of 9 June 1999,
+  **later replaced** by the Utkal University Act", "The University of Bhopal was
+  **founded**; it was **renamed** Barkatullah University **in 1988**". The last
+  needed `renamed` adding to `datedElsewhere`, and `datedElsewhere` adding to the
+  rename rule; the others needed a veto for `later`, `subsequently` and `had
+  been`.
+- **A regression of my own, caught by the re-score.** Widening the
+  undated-amendment veto to a bare `as amended` broke two Alabama and Kentucky
+  rows reading "as **amended effective** February 2025" — a dated amendment in
+  the row's own year. Narrowed back to the explicitly undated forms. That is the
+  **sixth** time the all-regions re-score has caught a fix making something else
+  worse.
+
+# The column, finished — five domains
+
+```
+eal + dld + indigenous + fl + he
+4,301 rows, twenty-five regions, every one hand-coded
+
+  provision described               1594   38%
+  body or programme established      655   15%
+  instrument made                    479   11%
+  instrument amended                 408   10%
+  plan or strategy issued            366    9%
+  state of affairs recorded          284    7%
+  body or programme changed          232    5%
+  instrument replaced                107    3%
+  international instrument accepted   78    2%
+  funding decided                     24    1%
+                                    4227   (74 left unset)
+```
+
+## The residual, and what happened to the prediction
+
+```
+  after eal + dld                45%      (predicted 48%)
+  + indigenous                   43%
+  + fl                           42%
+  + he                           38%
+```
+
+The whole-corpus profile that argued for this column predicted 48%, and the first
+two domains came in at 45% — within three points, which this file reported as the
+result. **Each domain added since has pulled it down**, and the reason is now
+plain: that profile was computed over a corpus which was, at the time, mostly
+`eal` and `dld`. It predicted those two domains well and the other three not at
+all. The honest summary is that the derivation was right about the corpus it
+could see and the corpus turned out to be more varied than it.
+
+## The finished grid
+
+```
+region        eal    dld    indig  fl     he
+  Africa      60%    45%    50%    50%    27%
+  Europe      50%    59%    27%    63%    22%
+  Asia        42%    49%    32%    31%     9%
+  Americas    43%    39%    40%    26%    22%
+  Oceania     43%    38%    54%    33%    19%
+```
+
+**Twenty-five cells, ranging from 9% to 63% — fifty-four points.** With three
+columns it ranged 33, with four 37. Every domain added has widened it.
+
+`he` Asia at 9% is the extreme: three hundred rows of Chinese and Indian
+university history in which almost nothing is described and almost everything
+happens. `fl` Europe at 63% is the other: statute after statute saying which
+language is taught when.
+
+This file proposed and withdrew four summaries of that grid — the residual is
+regional, the plan share is domain-driven, residual-plus-plan is stable, and
+(implicitly, by predicting 48%) that there is one number for the corpus at all.
+Each was supported by the cells in hand and refuted by the next ones coded.
+
+What survives is what was true after the first three columns and is now true
+across five: **`operation` measures how a particular cell was documented. The
+cell is the unit. No margin predicts it, and no single figure summarises it.**
+Anyone comparing this column across regions or domains needs that sentence
+attached.
+
+## The proposer, finished
+
+```
+  eal          165/168   98%
+  dld          346/348   99%
+  indigenous   249/255   98%
+  fl           195/202   97%
+  he           167/169   99%
+                1122/1142   98%
+```
+
+**Held-out at first sight, in coding order: 88, 94, 71, 73, 88, 91, 81, 93, 99,
+88, 85, 85, 91, 85, 100, 93, 100, 94, 94, 100, 96, 100, 83, 92.** Twenty-four
+measurements across five domains; four arrived clean, and the worst two were the
+regions that taught it the most.
+
+It abstains on 3,087 of 4,301 rows — **72%** — and ends with three function
+vetoes (`datedElsewhere`, `describesAPlan`, `isMonitoringDocument`) and something
+over forty regex ones. Every single one was written against a row that a hand
+pass had already coded differently.
+
+Twenty errors stand across 4,301 rows. All are judgement calls, named in the
+sections above, and three are there on purpose.
+
+### The two habits that paid for themselves
+
+**Re-score every coded region after every fix.** It caught a change making
+something else worse **six** times, including one revert (`reform`, which gained
+two rows and broke six) and one silent flag drop that cost `dld` eighteen rows
+while both `eal` regions still scored 100%.
+
+**Every noun in every list carries its plural, first time.** `center`, `academy`,
+`programme`, `centre`, `regulation`, and finally `report` inside a helper — six
+rows lost to six missing plurals across twenty-five regions, each found only by
+hand.

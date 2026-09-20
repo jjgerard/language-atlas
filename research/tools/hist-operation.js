@@ -53,7 +53,7 @@ const TODO = rest.includes("--todo");
 // 2016" from the rest. Comparing the year does, and it is the actual rule.
 const datedElsewhere = (d, h) => {
   const year = String(h.year || "").match(/\d{4}/);
-  const re = /\b(amended|revised|repealed|replaced|superseded|substituted|in force)[^.;]{0,45}?\b(\d{4})\b/gi;
+  const re = /\b(amended|revised|repealed|replaced|renamed|superseded|substituted|in force)[^.;]{0,45}?\b(\d{4})\b/gi;
   let m, found = false;
   while ((m = re.exec(d))) { if (!year || m[2] !== year[0]) found = true; }
   return found;
@@ -94,8 +94,8 @@ const describesAPlan = d =>
 // proposer's job here is to keep quiet, so this vetoes all three rules whose
 // vocabulary the sentences happen to use.
 const isMonitoringDocument = d =>
-  /\b(opinion|report|review)\b/i.test(d)
-  && /\b(find|found|record|recommend|urge|noting|note|ask)\w*\b/i.test(d);
+  /\b(opinions?|reports?|reviews?)\b/i.test(d)
+  && /\b(find|found|record|recommend|urg|noting|note|ask)\w*\b/i.test(d);
 
 const RULES = [
   // A PROGRAMME replaced is not an INSTRUMENT replaced. France's "ELCO formally
@@ -109,12 +109,12 @@ const RULES = [
   ["body or programme changed", /\b(replac|supersed|abolish|discontinu)\w*\b[\s\S]{0,40}\b(programmes?|programs?|schemes?|classes|grants?|units?|centres?|centers?|services?)\b|\b(programmes?|programs?|schemes?|classes|grants?|OETC|OALT|ELCO|MEAG|Tanoda)\b[\s\S]{0,60}\b(replaced|abolished|discontinued|ended|folded|integrated into)\b/i,
    // Only what the hoist was for. Everything else this value covers sits at its
    // declared precedence further down, so an amendment beats a rename.
-   /\bconsolidat\w*|\bmerg\w*[\s\S]{0,40}\bamendments?\b|\b(programmes?|programs?)\s+(guide|order|act|regulation|policy|plan|directive)\b/i],
-  ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*|\bnullif\w*|\bvoid\w*|\bannul\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|arr\u00eat\u00e9s?|arretes?|d\u00e9lib\u00e9rations?|deliberations?|timetables?|order|code|regulation|statute|circular|chapters?|subchapters?|sections?|subsections?|regulations?|rules?|model|P\.?L\.? ?\d)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|arr\u00eat\u00e9s?|arretes?|d\u00e9lib\u00e9rations?|deliberations?|timetables?|order|code|regulation|statute|circular|sections?|subsections?)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)|\brepeal\w*[\s\S]{0,60}\bnew (measures?|rules?|regulations?|provisions?)\b/i,
+   d => /\bconsolidat\w*|\bmerg\w*[\s\S]{0,40}\b(amendments?|agreements?|texts?|instruments?)\b|\binto one text\b|\b(programmes?|programs?)\s+(guide|order|act|regulation|policy|plan|directive)\b/i.test(d) || isMonitoringDocument(d) || /\b(later|subsequently|since then)\s+(renam|replac|repeal|merg|amend|becam|became)|\bhad been (renamed|merged|replaced)\b/i.test(d)],
+  ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*|\bnullif\w*|\bvoid\w*|\bannul\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|arr\u00eat\u00e9s?|arretes?|d\u00e9lib\u00e9rations?|deliberations?|timetables?|order|code|regulation|statute|circular|frameworks?|chapters?|subchapters?|sections?|subsections?|regulations?|rules?|model|P\.?L\.? ?\d)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|arr\u00eat\u00e9s?|arretes?|d\u00e9lib\u00e9rations?|deliberations?|timetables?|order|code|regulation|statute|circular|sections?|subsections?)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)|\brepeal\w*[\s\S]{0,60}\bnew (measures?|rules?|regulations?|provisions?)\b/i,
    // South Africa 1953: "Bantu Education Act reinforces apartheid through
    // segregated schooling, REPEALED IN 1979". The repeal is real and is not this
    // row's business; the row says what the Act did.
-   (d, h) => datedElsewhere(d, h) || /\bamend\w*\b[\s\S]{0,60}\b(replac|repeal)|\b(repeal|revok)\w*\b[\s\S]{0,12}\barticles?|\bart\.? \b/i.test(d)],
+   (d, h) => datedElsewhere(d, h) || /\bamend\w*\b[\s\S]{0,60}\b(replac|repeal)|\b(repeal|revok)\w*\b[\s\S]{0,12}\barticles?|\bart\.? \b/i.test(d) || /\b(later|subsequently|since then)\s+(renam|replac|repeal|merg|amend|becam|became)|\bhad been (renamed|merged|replaced)\b/i.test(d)],
   // A SEPARATE rule because the clause above needs /i for its noun list and this
   // one must not have it: an all-caps acronym is the instrument, and ESSA is the
   // row `instrument replaced` uses as its own gloss example. Two rules carrying
@@ -129,7 +129,7 @@ const RULES = [
    // decades before the amendment. Kuwait 1965 in the Asia batch is the same
    // shape and its coding is corrected alongside this. Laos 2003's "amended IN
    // 2003" is untouched: the word `in` marks a year that is the row's own.
-   (d, h) => datedElsewhere(d, h) || /\bbeg(an|in|ins|un)\s+amend|\bamended since\b/i.test(d) || isMonitoringDocument(d)],
+   (d, h) => datedElsewhere(d, h) || /\bbeg(an|in|ins|un)\s+amend|\b(amended since|as later amended|as subsequently amended)\b/i.test(d) || isMonitoringDocument(d) || /\b(later|subsequently|since then)\s+(renam|replac|repeal|merg|amend|becam|became)|\bhad been (renamed|merged|replaced)\b/i.test(d)],
   ["international instrument accepted", /\bratif(y|ies|ied|ication)\b|\baccede(d|s)?\b|\baccession\b|\benters? into force for\b|\bdeclaration under\b|\b(charter|convention|covenant|protocol|treaty)\b[\s\S]{0,120}\bin force for\b|\bin force for\b[\s\S]{0,120}\b(charter|convention|covenant|protocol|treaty)\b|\bdeclaration takes effect\b|\bextends? the protection of\b/i,
    // Ratification DENIED is not ratification. Eritrea 1997 reads "Even if Eritrea
    // has NOT RATIFIED the Convention Against Discrimination in Education", which
@@ -158,7 +158,7 @@ const RULES = [
    // DOCUMENT does not: Oklahoma's "HB 2768 adds dysgraphia to the required
    // dyslexia awareness training and RENAMES THE STATE DYSLEXIA HANDBOOK" is an
    // amendment, and nothing above this rule caught it.
-   /\brenam\w*[\s\S]{0,40}\b(handbooks?|manuals?|guides?|toolkits?|regulations?|codes?|charts?|documents?|categor(y|ies)|classification)\b|\bplans? (for|to)\b[\s\S]{0,40}\b(restructur|reorganis|reorganiz)/i],
+   (d, h) => /\brenam\w*[\s\S]{0,40}\b(handbooks?|manuals?|guides?|toolkits?|regulations?|codes?|charts?|documents?|categor(y|ies)|classification)\b|\bplans? (for|to)\b[\s\S]{0,40}\b(restructur|reorganis|reorganiz)|\bmerg\w*[\s\S]{0,60}\b(agreements?|texts?|instruments?|amendments?)\b|\binto one text\b/i.test(d) || isMonitoringDocument(d) || /\b(later|subsequently|since then)\s+(renam|replac|repeal|merg|amend|becam|became)|\bhad been (renamed|merged|replaced)\b/i.test(d) || datedElsewhere(d, h)],
   // EIGHT of the twelve overrides in the first hand-coded region were the old
   // `establish` pattern firing on an abstract object: "establishes the
   // ausserordentlicher Schueler CATEGORY", "the individual educational needs
@@ -168,9 +168,9 @@ const RULES = [
   // residual -- a row that dates an instrument and says what it provides. A
   // thing established has to be a thing that can be walked into or enrolled on,
   // so the verb now needs a body-or-programme noun and the abstractions veto it.
-  ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept|test|education|schooling|curriculum|curricula)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programmes?|programs?|scheme|class|classes|committee|office|initiative|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training|groups?|task forces?|index|indexes|indices)\b/i,
-   d => /\b(requires?|requiring|makes?|obliges?|obliging|directs?|shall|must|will ensure|ensures?|ensuring)\b[\s\S]{0,60}\b(establish\w*|maintain|creat\w*|set up|provide|provision of|introduc\w*)|\bon the establishment of\b|\bplans? to\b[\s\S]{0,40}\bintroduc/i.test(d) || isMonitoringDocument(d)],
-  ["funding decided", /\bfunding agreement\b|\bbudget of\b|\b\d[\d\s,.]*\s?(euros?|dollars?|pounds?)\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|£[\d,.]+|\bfunding formula\b|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
+  ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept|test|education|schooling|curriculum|curricula|regime|regimes)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programmes?|programs?|scheme|class|classes|committee|office|initiative|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training|groups?|task forces?|index|indexes|indices)\b/i,
+   d => /\b(requires?|requiring|makes?|obliges?|obliging|directs?|shall|must|will ensure|ensures?|ensuring)\b[\s\S]{0,60}\b(establish\w*|maintain|creat\w*|set up|provide|provision of|introduc\w*)|\bon the establishment of\b|\bfor (founding|establishing|creating|setting up)\b|\bplans? to\b[\s\S]{0,40}\bintroduc/i.test(d) || isMonitoringDocument(d)],
+  ["funding decided", /\bfunding agreement\b|[$\u00a3\u20ac][ ]?[0-9,.]+[ ]?[MBK]\b|\bbudget of\b|\b\d[\d\s,.]*\s?(euros?|dollars?|pounds?)\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|£[\d,.]+|\bfunding formula\b|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
   ["plan or strategy issued", /\b(strategic|sector|master|implementation) plan\b|\bstrateg(y|ies)\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\bpledges?\b|\brecommendations?\b|\bwhite paper\b|\bframework document\b/i,
    // Beginning to develop a plan is not issuing one. Dominica 2020, "Ministry of
    // Education BEGAN DEVELOPING a new education sector plan", started matching
