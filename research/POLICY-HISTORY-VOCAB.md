@@ -1154,8 +1154,117 @@ veto added — 91 of 139 in dld Oceania — and that is the intended direction. 
 proposal that has to be checked costs a reader the same as an abstention when it
 is wrong, and more when it is plausible.
 
+## dld Asia, 143 rows
+
+44 entries, 19 rows carrying prior `fields_touched`, one left unset.
+
+```
+  provision described             70   49%
+  plan or strategy issued         19   13%
+  instrument amended              18   13%
+  body or programme established   15   11%
+  instrument made                  6    4%
+  international instrument accepted 5   4%
+  state of affairs recorded        5    4%
+  instrument replaced              3    2%
+  body or programme changed        1    1%
+```
+
+The proposer scored **38 of 47, 81%** — the second-worst first sight, after the
+Americas. Six of the nine errors were one thing.
+
+### A plan word is not a plan: the row's grammar decides
+
+```
+  Jordan 2018   "SEN in the 2018-22 Education Strategic Plan MEANS visual,
+                 hearing or learning disabilities"
+  Jordan 2018   "The Plan REFERS TO learners with special education needs TO
+                 INDICATE children and …"
+  Laos 2011     "The 2011-15 National Strategy PROVIDES an operational
+                 DEFINITION of inclusive education"
+  Uzbekistan    "ACCORDING TO the 2019-23 education sector plan, THERE ARE 188
+   2019          special preschool institutions and 85 boarding schools"
+```
+
+Every one names a plan and none of them issues one. The rule the hand pass
+settled on is about the verb: **a plan word marks this value when the row records
+the document coming into being — adopted, issued, launched, published, approved —
+or states its purpose in the verbs the gloss itself names, PROPOSES, AIMS,
+INTENDS, TARGETS. When the verb is about CONTENT — means, refers to, defines,
+provides a definition, according to — the row is describing what the document
+says, which is the residual.**
+
+Iran 1988 is the mirror image: "Law on Goals and Duties of the Ministry of
+Education AIMS TO eliminate prejudice in education" is a law stating its own
+object, and the plan verb is there without a plan. Catching that needs an
+AND-NOT — an instrument subject and no plan noun anywhere in the row — which a
+regex cannot express, so `describesAPlan()` is the second function veto in the
+file after `datedElsewhere()`.
+
+Uzbekistan's other 2019 row needed one more clause. "188 special preschool
+institutions and 85 boarding schools, 2019-23 sector plan" cites a plan as its
+source with no content verb at all; a row opening with a small bare number is
+reporting a figure. The bound keeps year ranges out — "2016-19 Education Sector
+Strategic Plan makes…" is four digits and "10-Year Strategy" is followed by a
+hyphen, so both stay plans.
+
+### Three more, and a third provenance row
+
+- Taiwan files "Act REWRITTEN in full" three times, and `rewrit(e|es|ing)`
+  matches none of them. The 2023 one was caught by `instrument made` on
+  "effective on promulgation" instead. Three rows for one missing `\w*`.
+- Brunei 2017's "the Act TOOK EFFECT on 1 July 2017" — the past tense of a
+  pattern that only knew `takes effect`.
+- Afghanistan's "Coordination WORKING GROUP … established" and Nepal's "Equity
+  INDEX launched" — two more nouns.
+
+Mongolia 2019, "the evidence here is a 2019 ministry project report, not standing
+policy", is left unset. That is the **third** row of its kind, after the nine US
+ECS rows and Solomon Islands' image-only scan, and at thirteen rows across five
+hundred it is now a recognisable shape rather than three oddities: a policy
+history that records what the SOURCE is, not what happened.
+
+Asia went 81% to **42 of 44, 95%**, with two judgement calls standing.
+
+### Three regions of dld: what the cross-domain table now says
+
+```
+region      residual        plan issued
+            eal    dld      eal    dld
+  Europe    50%    59%      16%     1%
+  Asia      42%    49%      15%    13%
+  Oceania   40%    38%      11%    23%
+```
+
+**The residual's regional ORDER replicates.** Europe above Asia above Oceania,
+in both domains, independently hand-coded. The levels shift — dld runs six to
+nine points higher in Europe and Asia — but the ranking survives, which is more
+than could be said after two regions.
+
+**The plan share does not replicate at all.** Europe collapses from 16% to 1%;
+Oceania doubles from 11% to 23%. That is not documentation culture, it is what
+each domain's policy is made of: European special-needs provision is statutory
+and European EAL provision is not, while Pacific states run both through sector
+plans.
+
+So the careful version, with three of five regions in: the residual looks like a
+property of how a REGION documents, and the plan share like a property of how a
+DOMAIN is governed. Africa and the Americas will settle it or break it.
+
+## Where the proposer stands, eight regions
+
+```
+  eal Europe      30/30   100%        dld Europe     36/36   100%
+  eal Oceania     21/21   100%        dld Oceania    48/48   100%
+  eal Asia        53/53   100%        dld Asia       42/44    95%
+  eal Americas    40/42    95%
+  eal Africa      22/23    96%                     292/297    98%
+```
+
+Held-out at first sight, in coding order: **88, 94, 71, 73, 88, 91, 81**.
+
 ## Remaining
 
 ```
-  dld   Americas 391   Africa 296   Asia 143   (830)
+  dld   Americas 391   Africa 296   (687)
 ```

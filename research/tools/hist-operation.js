@@ -59,6 +59,28 @@ const datedElsewhere = (d, h) => {
   return found;
 };
 
+// A plan word marks `plan or strategy issued` only when the row records the
+// document coming into being, or states its purpose in the verbs the gloss
+// names -- PROPOSES, AIMS, INTENDS, TARGETS. When the verb is about CONTENT,
+// the row is describing what the document says and belongs to the residual:
+//
+//   Jordan 2018   "SEN in the 2018-22 Education Strategic Plan MEANS visual,
+//                  hearing or learning disabilities"
+//   Laos 2011     "The 2011-15 National Strategy PROVIDES an operational
+//                  DEFINITION of inclusive education"
+//   Uzbekistan    "ACCORDING TO the 2019-23 education sector plan, THERE ARE
+//    2019          188 special preschool institutions"
+//
+// And a plan VERB inside an instrument is not a plan either: Iran 1988's "Law
+// on Goals and Duties of the Ministry of Education AIMS TO eliminate prejudice"
+// is a law stating its own object. That one needs an AND-NOT -- an instrument
+// subject and no plan noun anywhere -- which is why this is a function.
+const describesAPlan = d =>
+  /\b(means|refers to|defines|according to|there are|states that)\b|\bprovides an? [a-z]+ definition\b/i.test(d)
+  || /^\s*\d{1,3}(?![\d-])/.test(d)
+  || (/^[^.;]{0,60}\b(law|act|decree|ordinance|constitution)\b/i.test(d)
+      && !/\b(plan|plans|strateg[a-z]*|policy|policies|framework|agenda|concept|recommendation[s]?|white paper)\b/i.test(d));
+
 const RULES = [
   // A PROGRAMME replaced is not an INSTRUMENT replaced. France's "ELCO formally
   // ended, replaced by EILE" and the Netherlands' "OETC replaced by OALT" both
@@ -83,7 +105,7 @@ const RULES = [
   // one value cost nothing -- first match wins either way -- and the alternative
   // was a single literal that quietly lost the flag.
   ["instrument replaced", /\b[A-Z]{3,6}\b\s+(repeal|supersed|replac|revok)\w*/],
-  ["instrument amended", /\bamend\w*\b|\brewrit(e|es|ing)\b|\b(act|law|constitution|code|ordinance|regulation|guidelines|guidance|policy|policies|rules|manual|chart|document|edition|plan)\b[\s\S]{0,20}\brevis(ed|ion|ions)\b|\binsert\w*|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i,
+  ["instrument amended", /\bamend\w*\b|\brewrit\w*\b|\b(act|law|constitution|code|ordinance|regulation|guidelines|guidance|policy|policies|rules|manual|chart|document|edition|plan)\b[\s\S]{0,20}\brevis(ed|ion|ions)\b|\binsert\w*|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i,
    // A parenthetical or appositive amendment DATE is not an amendment: it dates
    // the instrument the row describes. Four UNESCO PEER rows read "Constitution
    // of Barbados, AMENDED 2007; does not enshrine the right to education" or
@@ -101,7 +123,7 @@ const RULES = [
   // made. Hungary 2013 and Slovenia 2007 both matched `adopt` here and were
   // hand-corrected to `plan or strategy issued`, so `adopt` now stands down when
   // the row's own subject is a plan, a strategy or a recommendation.
-  ["instrument made", /\benact(s|ed|ment)?\b|\bpromulgat(e|ed|es)\b|\bcomes? into force\b|\bin force\b|\btakes? effect\b|\beffective\b|\bpublished in the .{0,20}gazette\b|\bpass(es|ed)\b.{0,20}\b(act|law)\b|\b(act|law)s?\b.{0,30}\bpass(es|ed)\b|^(?![\s\S]*\b(strateg|recommendation|neither|never adopt|not adopt)\w*|[\s\S]*plan\w*)[\s\S]*\badopt(s|ed)\b/i,
+  ["instrument made", /\benact(s|ed|ment)?\b|\bpromulgat(e|ed|es)\b|\bcomes? into force\b|\bin force\b|\b(takes?|took) effect\b|\beffective\b|\bpublished in the .{0,20}gazette\b|\bpass(es|ed)\b.{0,20}\b(act|law)\b|\b(act|law)s?\b.{0,30}\bpass(es|ed)\b|^(?![\s\S]*\b(strateg|recommendation|neither|never adopt|not adopt)\w*|[\s\S]*plan\w*)[\s\S]*\badopt(s|ed)\b/i,
    // Two refusals. A PARENTHESISED "(in force 2019)" dates the instrument the
    // row describes -- Canada's "Education Act s 17 carries the
    // language-of-instruction power (in force 2019)" -- while China's unbracketed
@@ -124,7 +146,7 @@ const RULES = [
   // residual -- a row that dates an instrument and says what it provides. A
   // thing established has to be a thing that can be walked into or enrolled on,
   // so the verb now needs a body-or-programme noun and the abstractions veto it.
-  ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept|test|education|schooling)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programmes?|programs?|scheme|class|classes|committee|office|initiative|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training)\b/i],
+  ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept|test|education|schooling)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programmes?|programs?|scheme|class|classes|committee|office|initiative|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training|groups?|task forces?|index|indexes|indices)\b/i],
   ["funding decided", /\bfunding agreement\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|£[\d,.]+|\bfunding formula\b|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
   ["plan or strategy issued", /\b(strategic|sector|master|implementation) plan\b|\bstrateg(y|ies)\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\bpledges?\b|\brecommendations?\b|\bwhite paper\b|\bframework document\b/i,
    // Beginning to develop a plan is not issuing one. Dominica 2020, "Ministry of
@@ -135,7 +157,7 @@ const RULES = [
    // "Education (Disability STRATEGIES and Pupils' Educational Records)
    // (Scotland) Act 2002", both carry a plan word as ordinary content: one
    // inside the thing a regulation regulates, one inside an Act's own title.
-   /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b|\b(procedure|rules|process) for\b[\s\S]{0,40}\brecommendations?\b|\([^)]*[Ss]trateg|\b(prepare|prepares|preparing|require|requires|requiring)\b[\s\S]{0,40}\bplans?\b/i],
+   d => /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b|\b(procedure|rules|process) for\b[\s\S]{0,40}\brecommendations?\b|\([^)]*[Ss]trateg|\b(prepare|prepares|preparing|require|requires|requiring)\b[\s\S]{0,40}\bplans?\b/i.test(d) || describesAPlan(d)],
   ["state of affairs recorded", /\bdoes not\b|\bno specific\b|\bomits\b|\bfound no\b|\bnever uses\b|\bis silent\b|\bno such\b|\bnothing\b|\bnames only\b|\bbut not\b|\bneither\b/i],
 ];
 
