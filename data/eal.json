@@ -471,7 +471,23 @@
     "year": 2010,
     "description": "Constitution of 2010 art. 19: Portuguese is the official language"
    }
-  ]
+  ],
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2001",
+     "matches": "law 13 01 art 9 makes portuguese the language of instruction",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2010",
+     "matches": "constitution of 2010 art 19 portuguese is the official langu",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
+  }
  },
  {
   "countryCode": "AR",
@@ -2363,7 +2379,15 @@
     ],
     "decided_by": "not stated",
     "rule_locus": "not stated"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": "2005",
+     "matches": "2005 constitution art 5 kirundi is the national language",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -2668,6 +2692,22 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1983",
+     "matches": "breakthrough to setswana lower primary literacy programme be",
+     "occurrence": 1,
+     "operation": "body or programme established"
+    },
+    {
+     "year": "1995",
+     "matches": "breakthrough to setswana evaluated for the ministry of educa",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    }
+   ]
   }
  },
  {
@@ -4312,6 +4352,16 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2014",
+     "matches": "only ethnicity clause is the 2014 order banning discriminati",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -6649,6 +6699,22 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2000",
+     "matches": "act no 96 an 00 4e l of 2000 art 5 teaching in the official",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2012",
+     "matches": "loi 164 an 12 6 me l creates a service arabe for examination",
+     "occurrence": 1,
+     "operation": "body or programme established"
+    }
+   ]
   }
  },
  {
@@ -7284,6 +7350,34 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1997",
+     "matches": "constitution of eritrea guarantees all languages equal statu",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "1997",
+     "matches": "even if eritrea has not ratified the convention against disc",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    },
+    {
+     "year": "2010",
+     "matches": "policy revised in 2010 provides basic education through the",
+     "occurrence": 1,
+     "operation": "instrument amended"
+    },
+    {
+     "year": "2011",
+     "matches": "the 2011 national education policy underlines the ministry o",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -7941,6 +8035,28 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1991",
+     "matches": "instruction in different languages was allowed from 1991 bef",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "1994",
+     "matches": "constitution gives all ethiopian languages equal state recog",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2007",
+     "matches": "heugh bogale benson and gebre yohannes study of language in",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    }
+   ]
   }
  },
  {
@@ -8800,6 +8916,16 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2011",
+     "matches": "act no 21 2011 art 5 curricula must allow knowledge and skil",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -9568,6 +9694,28 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1925",
+     "matches": "education ordinance carries a language in education statemen",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2007",
+     "matches": "education reform sets a ghanaian language and english where",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2009",
+     "matches": "nalap 2009 is the one policy devoted exclusively to language",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -9803,6 +9951,16 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2004",
+     "matches": "the 2004 15 policy promoted local language in the first thre",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -14349,6 +14507,16 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2013",
+     "matches": "basic education act 2013 states it as a guiding principle",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -14750,6 +14918,16 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2001",
+     "matches": "the 2001 constitution lists it as the official language with",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -15463,6 +15641,22 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2010",
+     "matches": "2010 sector plan established these programmes where children",
+     "occurrence": 1,
+     "operation": "body or programme established"
+    },
+    {
+     "year": "2011",
+     "matches": "english is the primary language of instruction under the edu",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -15996,6 +16190,34 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1975",
+     "matches": "compulsory education law art 1 makes primary and intermediat",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2013",
+     "matches": "ministry of education decree no 18 approves teaching amazigh",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2017",
+     "matches": "ministry of education establishes the women s support and em",
+     "occurrence": 1,
+     "operation": "body or programme established"
+    },
+    {
+     "year": "2018",
+     "matches": "resolution 1421 establishes a ministry of education committe",
+     "occurrence": 1,
+     "operation": "body or programme established"
+    }
+   ]
   }
  },
  {
@@ -16311,6 +16533,22 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2008",
+     "matches": "government reviews language policy malagasy to be the means",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    },
+    {
+     "year": "2009",
+     "matches": "unconstitutional change of government halts the language pol",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    }
+   ]
   }
  },
  {
@@ -17146,7 +17384,71 @@
     "year": 2019,
     "description": "Five-day OpenEMIS technical support initiative run with the Ministry of Education"
    }
-  ]
+  ],
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1957",
+     "matches": "education act the main law regulating formal education guara",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "1968",
+     "matches": "constitution of mauritius bars discrimination but does not e",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    },
+    {
+     "year": "2004",
+     "matches": "education law amended to guarantee free and compulsory educa",
+     "occurrence": 1,
+     "operation": "instrument amended"
+    },
+    {
+     "year": "2004",
+     "matches": "free and compulsory education for all children up to 16 year",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2008",
+     "matches": "2008 20 strategy plan expects teachers trained on the impact",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    },
+    {
+     "year": "2009",
+     "matches": "ministry of education and human resources issues a gender po",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2010",
+     "matches": "new national curriculum framework launched aimed at flexibil",
+     "occurrence": 1,
+     "operation": "instrument made"
+    },
+    {
+     "year": "2016",
+     "matches": "education act last amended by act 18 of 2016 and act 20 of 2",
+     "occurrence": 1,
+     "operation": "instrument amended"
+    },
+    {
+     "year": "2016",
+     "matches": "constitution amended",
+     "occurrence": 1,
+     "operation": "instrument amended"
+    },
+    {
+     "year": "2019",
+     "matches": "five day openemis technical support initiative run with the",
+     "occurrence": 1,
+     "operation": "body or programme established"
+    }
+   ]
+  }
  },
  {
   "countryCode": "MV",
@@ -17241,6 +17543,22 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1996",
+     "matches": "a march 1996 directive introduced a three plus or minus lang",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2004",
+     "matches": "pilot phase of the 1996 language policy finally begins",
+     "occurrence": 1,
+     "operation": "body or programme established"
+    }
+   ]
   }
  },
  {
@@ -17402,6 +17720,40 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1990",
+     "matches": "art 5 of the 1990 constitution reinforces portuguese as the",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2012",
+     "matches": "education strategic plan 2012 16 adopted later extended to 2",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    },
+    {
+     "year": "2015",
+     "matches": "operational plan 2015 18 created to implement the education",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    },
+    {
+     "year": "2018",
+     "matches": "new law of the national education system extends compulsory",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2018",
+     "matches": "the new 2018 law of the national education system extended c",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -17459,7 +17811,21 @@
     ],
     "decided_by": "school",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": "2003",
+     "matches": "language policy restated predominant local language as mediu",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2008",
+     "matches": "t temeyer nied tried again during the 2008 curriculum drafti",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    }
+   ]
   }
  },
  {
@@ -17537,6 +17903,16 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1973",
+     "matches": "experimentation with bilingual teaching begins following the",
+     "occurrence": 1,
+     "operation": "body or programme established"
+    }
+   ]
   }
  },
  {
@@ -17578,7 +17954,23 @@
     "year": 2025,
     "description": "The Federal Government reverses that policy in November, reinstating English as the sole medium of instruction at every level. The Minister of Education cites declining WAEC, NECO and JAMB performance; commentators dispute both the attribution and the process."
    }
-  ]
+  ],
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2022",
+     "matches": "the national language policy makes the mother tongue or lang",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2025",
+     "matches": "the federal government reverses that policy in november rein",
+     "occurrence": 1,
+     "operation": "instrument replaced"
+    }
+   ]
+  }
  },
  {
   "countryCode": "NI",
@@ -19836,6 +20228,28 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1994",
+     "matches": "returnees from anglophone exile after 1994 drove the policy",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    },
+    {
+     "year": "1996",
+     "matches": "education reform sets kinyarwanda for grades 1 3 and english",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2008",
+     "matches": "the 2008 strategy moved decisively from french to english",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    }
+   ]
   }
  },
  {
@@ -20039,6 +20453,34 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1998",
+     "matches": "kreol is the medium in cr che p1 and p2 under the 1998 langu",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "1998",
+     "matches": "the ministry of education s language policy 1998 which speci",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2011",
+     "matches": "framework for early childhood care and education october 201",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2013",
+     "matches": "national curriculum framework and national assessment framew",
+     "occurrence": 1,
+     "operation": "instrument made"
+    }
+   ]
   }
  },
  {
@@ -20099,6 +20541,46 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1974",
+     "matches": "sudan accedes to the convention relating to the status of re",
+     "occurrence": 1,
+     "operation": "international instrument accepted"
+    },
+    {
+     "year": "2001",
+     "matches": "education law art 13 gives every sudanese child a right to b",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2001",
+     "matches": "education act sets the functions of federal and state minist",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2001",
+     "matches": "article 13 of the 2001 education law states that every sudan",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2005",
+     "matches": "2005 constitution art 8 makes arabic and english the media o",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2010",
+     "matches": "the 2010 child act gives minorities a right to use their lan",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -20678,6 +21160,46 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1991",
+     "matches": "constitution art 9 1 obliges government to provide education",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "1991",
+     "matches": "constitution s 9 3 original 1991 text obliges the government",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2004",
+     "matches": "education act supports local languages as new curriculum sub",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2004",
+     "matches": "local government act with the education act regulates decent",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2004",
+     "matches": "the 2004 education act provides for the establishment and ma",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2021",
+     "matches": "the 2021 radical inclusion policy lists disability gender pr",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -20816,7 +21338,17 @@
     "year": 2001,
     "description": "The Constitution of 2001 makes French the official language"
    }
-  ]
+  ],
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2001",
+     "matches": "the constitution of 2001 makes french the official language",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
+  }
  },
  {
   "countryCode": "SO",
@@ -20868,6 +21400,34 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1978",
+     "matches": "somalia ratifies the convention and protocol relating to the",
+     "occurrence": 1,
+     "operation": "international instrument accepted"
+    },
+    {
+     "year": "2012",
+     "matches": "provisional constitution art 30 protects the right to educat",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2018",
+     "matches": "somalia education sector strategic plan 2018 20 published by",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    },
+    {
+     "year": "2019",
+     "matches": "national policy on refugee returnees and internally displace",
+     "occurrence": 1,
+     "operation": "instrument made"
+    }
+   ]
   }
  },
  {
@@ -21041,6 +21601,34 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2003",
+     "matches": "constitution art 55 in the redaction of lei n 1 2003 recogni",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2003",
+     "matches": "recorded in the profile s account of the 2003 basic law of t",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2011",
+     "matches": "basic universal education achieved per the education sector",
+     "occurrence": 1,
+     "operation": "state of affairs recorded"
+    },
+    {
+     "year": "2012",
+     "matches": "education sector plan 2012 22 sets a goal of 12 years of uni",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    }
+   ]
   }
  },
  {
@@ -21237,6 +21825,40 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2005",
+     "matches": "constitution art 29 gives a right to free education to the e",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2010",
+     "matches": "free primary education act makes universal primary education",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2010",
+     "matches": "universal primary education is free and compulsory as establ",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2011",
+     "matches": "all children are expected to learn siswati under the 2011 se",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2018",
+     "matches": "national curriculum framework for general education adopted",
+     "occurrence": 1,
+     "operation": "instrument made"
+    }
+   ]
   }
  },
  {
@@ -21289,6 +21911,22 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2013",
+     "matches": "refugee education strategy 2013 2016 adopted on a policy of",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    },
+    {
+     "year": "2018",
+     "matches": "government links 108 schools in 19 refugee camps and settlem",
+     "occurrence": 1,
+     "operation": "body or programme changed"
+    }
+   ]
   }
  },
  {
@@ -21697,6 +22335,28 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2003",
+     "matches": "national programme for the integration of children with disa",
+     "occurrence": 1,
+     "operation": "body or programme changed"
+    },
+    {
+     "year": "2003",
+     "matches": "national commission establishes the strategy for educational",
+     "occurrence": 1,
+     "operation": "plan or strategy issued"
+    },
+    {
+     "year": "2018",
+     "matches": "m3d framework from 2018 adds listening and support offices i",
+     "occurrence": 1,
+     "operation": "body or programme established"
+    }
+   ]
   }
  },
  {
@@ -22357,6 +23017,16 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2015",
+     "matches": "new education policy launched on 13 february extends swahili",
+     "occurrence": 1,
+     "operation": "instrument made"
+    }
+   ]
   }
  },
  {
@@ -22496,6 +23166,16 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "2007",
+     "matches": "the 2007 curriculum reform mandates local languages in grade",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -27340,7 +28020,33 @@
     ],
     "decided_by": "school",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": "1953",
+     "matches": "bantu education act reinforces apartheid through segregated",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "1996",
+     "matches": "constitution accords official status to 11 languages with pa",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "1996",
+     "matches": "the new language policy spelled out in the 1996 constitution",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "1997",
+     "matches": "language in education policy vests the choice of language of",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  },
  {
@@ -27456,6 +28162,34 @@
   ],
   "absences": {
    "newcomerCriteria": true
+  },
+  "coding": {
+   "policyHistory": [
+    {
+     "year": "1987",
+     "matches": "education act s 62 as enacted set shona or ndebele with engl",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2013",
+     "matches": "national constitution confirms 16 officially recognized lang",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2013",
+     "matches": "the national constitution of 2013 confirms 16 officially rec",
+     "occurrence": 1,
+     "operation": "provision described"
+    },
+    {
+     "year": "2016",
+     "matches": "ministry of primary and secondary education begins amending",
+     "occurrence": 1,
+     "operation": "provision described"
+    }
+   ]
   }
  }
 ]

@@ -825,12 +825,143 @@ reports, the Caribbean's UNESCO PEER profiles, the US states' secondary-source
 citations — and a proposer tuned on three of them met a fourth and lost twenty
 points. **Do not let it write a region unread.**
 
-## Remaining, by region
+## Last region: eal Africa, 100 rows
+
+35 entries, and **not one row carried any prior coding** — the only region where
+the `operation` pass was also the first pass.
 
 ```
-  eal   Africa 100
-  dld   Americas 316   Africa 292   Asia 124   Oceania 124   Europe  79
+  provision described            60   60%
+  body or programme established   8    8%
+  plan or strategy issued         8    8%
+  state of affairs recorded       7    7%
+  instrument made                 5    5%
+  instrument amended              4    4%
+  provision, other values         8    8%
 ```
 
-eal Europe (124), Oceania (47), Asia (190) and the Americas (143) are done —
-504 of 604 eal rows, 494 of them carrying an operation.
+**The residual reaches 60% here, the highest of any region**, and the abstention
+residual is 76%. Africa's policy history is written almost entirely as *this
+instrument says this*: "Law 13/01 art 9 makes Portuguese the language of
+instruction", "2005 Constitution art. 5: Kirundi is the national language",
+"Education Law art. 13 gives every Sudanese child a right to basic education".
+The timeline records what the law provides far more often than it records
+anything happening to the law.
+
+**The proposer scored 19 of 26, 73%** — near the Americas' 71% and for the same
+underlying reason, which is now fixed properly.
+
+### The defect that took four regions to see correctly
+
+Three regions produced the same error in three costumes:
+
+```
+  Barbados 1966    "Constitution of Barbados, AMENDED 2007; does not enshrine…"
+  Kuwait 1965      "Compulsory Education Act, AMENDED 2014, sets placement"
+  South Africa 1953 "Bantu Education Act …, REPEALED IN 1979"
+  Canada 2012      "…carries the language-of-instruction power (IN FORCE 2019)"
+```
+
+Each row is dated years or decades before the operation it mentions, because the
+date is **dating the instrument the row describes**. The Americas fix was a
+regex for the punctuation these happen to use — a comma, a bracket, a semicolon
+— and South Africa broke it immediately by writing "repealed in 1979" with no
+punctuation cue at all.
+
+The actual rule was never in the text. It is whether the year attached to the
+operation is **the row's own year**, and the proposer has had the row in hand the
+whole time. `datedElsewhere(d, h)` compares them, and it does in one function
+what four increasingly baroque regexes were failing to approximate:
+
+- Barbados, Kuwait, South Africa, Canada — vetoed, year differs
+- Laos 2003 "amended IN 2003" — kept, year matches
+- Mauritius 2016 "last amended, by Act 18 of 2016" — kept, year matches
+- China 1995 "enacted, in force 1995-09-01" — kept, year matches
+
+To carry it, a veto may now be a **function of (description, row)** as well as a
+regex. That is the design change this region paid for, and it is the one worth
+remembering: the fact that decides a coding is not always in the sentence.
+
+### The other six
+
+- Eritrea 1997, "Even if Eritrea has NOT RATIFIED the Convention Against
+  Discrimination in Education", proposed `international instrument accepted`.
+  Ratification denied is not ratification.
+- Ethiopia 1991, "Instruction in different languages was allowed from 1991,
+  BEFORE the policy was adopted", proposed `instrument made` off an adoption the
+  row places in a different year on purpose.
+- Liberia 2010, "sector plan established these PROGRAMMES", fell through to
+  `plan or strategy issued` because `programme` has no plural in the noun list —
+  the third time this exact class of miss has appeared, after `Centers` and
+  `academy`. Plurals are in now, with `committee`, `office` and `initiative`.
+- São Tomé 2011, "Basic universal education ACHIEVED, PER THE education sector
+  plan", cites a plan as its source rather than issuing one.
+- Zimbabwe 2016, "BEGINS AMENDING the Education Act", records a process started.
+- Zimbabwe 1987, "Education Act s.62 AS ENACTED set Shona or Ndebele with
+  English", is left standing as a judgement call: the enactment year is right,
+  and the row still reads like the residual's own gloss example.
+
+Africa went 73% to **23 of 24, 96%**.
+
+## eal complete — 604 rows, five regions
+
+```
+  provision described               277   47%
+  plan or strategy issued            72   12%
+  instrument amended                 67   11%
+  body or programme established      55    9%
+  instrument made                    43    7%
+  state of affairs recorded          42    7%
+  body or programme changed          17    3%
+  instrument replaced                13    2%
+  funding decided                     5    1%
+  international instrument accepted   3    1%
+                                    594   (10 left unset)
+```
+
+**The residual is 47%. The whole-corpus profile predicted 48%.**
+
+That is the result this column was wired in to test, and it is now settled on
+`eal` by five independent hand passes rather than by the regexes the derivation
+warned were poor instruments. The per-region spread is the more interesting
+half:
+
+```
+  Africa      60%      the timeline is what the law says
+  Europe      50%
+  Americas    43%      US states revise, supersede and reissue
+  Asia        42%      India's CLM reports record absences
+  Oceania     38%
+```
+
+**Twenty-two points separate Africa from Oceania**, and every region's position
+is explicable from how its entries were written rather than from what its
+systems do. That is a finding about the corpus, and it is the honest caveat to
+attach to any cross-region comparison of this column: `operation` measures the
+documentation at least as much as the policy.
+
+### Held-out proposer scores, in coding order
+
+```
+  Europe     tuned on, not a measurement
+  Oceania    15/17   88%
+  Asia       48/51   94%
+  Americas   30/42   71%
+  Africa     19/26   73%
+```
+
+Never monotonic, and that is the argument. Two of the four held-out regions cost
+twenty points each, both times because a documentation habit the proposer had
+never met — UNESCO PEER constitution profiles, then African statute-recital
+timelines — produced a shape it read confidently and wrongly. After every fix
+all five regions score 95% or better, which says nothing about the sixth.
+**Do not let the proposer write a region unread.**
+
+## Remaining
+
+```
+  dld   Americas 316   Africa 292   Asia 124   Oceania 124   Europe  79   (1,135)
+```
+
+All of `eal` is done. `dld` is next, and it is nearly twice the size — 1,135
+rows against eal's 604 — with 207 rows already carrying `fields_touched`.
