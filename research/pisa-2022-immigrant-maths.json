@@ -1,0 +1,798 @@
+{
+ "source": "OECD PISA 2022 Results (Volume I), Table I.B1.7.17 -- Mathematics performance of students with an immigrant background",
+ "statLink": "https://stat.link/qmuad8",
+ "retrieved": "2026-09-20",
+ "note": "diff = immigrant minus non-immigrant mean mathematics score, score points. Taken from the StatLink workbook, NOT from the PDF: pdftotext misaligns this table, offsetting the difference column from the score columns and blanking alternate rows. Aggregate and sub-national rows (OECD average, Baku, Ukrainian regions) dropped.",
+ "rows": [
+  {
+   "name": "Australia",
+   "all": 487.0842535121308,
+   "nonImmigrant": 483.00031632485735,
+   "immigrant": 507.4742427171453,
+   "secondGen": 509.18497319599567,
+   "firstGen": 505.5630136497937,
+   "diff": 24.47392639228785,
+   "diffSE": 3.4610444777485143
+  },
+  {
+   "name": "Austria",
+   "all": 487.2674989673573,
+   "nonImmigrant": 504.77879497112644,
+   "immigrant": 447.0925507866886,
+   "secondGen": 451.4835751475469,
+   "firstGen": 439.29051008183745,
+   "diff": -57.686244184437875,
+   "diffSE": 4.1552586648429255
+  },
+  {
+   "name": "Belgium",
+   "all": 489.48681674494503,
+   "nonImmigrant": 504.06051418016307,
+   "immigrant": 446.42001079205824,
+   "secondGen": 452.22056398117513,
+   "firstGen": 438.90944724569584,
+   "diff": -57.64050338810483,
+   "diffSE": 3.980241509782192
+  },
+  {
+   "name": "Canada",
+   "all": 496.9478944357039,
+   "nonImmigrant": 496.83468366751185,
+   "immigrant": 508.4487811893056,
+   "secondGen": 517.0356778674549,
+   "firstGen": 498.72636318621863,
+   "diff": 11.614097521793788,
+   "diffSE": 3.193041074776781
+  },
+  {
+   "name": "Chile",
+   "all": 411.6965707080961,
+   "nonImmigrant": 416.8740029054091,
+   "immigrant": 387.9414791801993,
+   "secondGen": 435.36293096940227,
+   "firstGen": 380.8659469212642,
+   "diff": -28.932523725209865,
+   "diffSE": 6.676318167025275
+  },
+  {
+   "name": "Colombia",
+   "all": 382.6968351295674,
+   "nonImmigrant": 386.8829670224668,
+   "immigrant": 363.3045940945594,
+   "secondGen": null,
+   "firstGen": 366.00309153984944,
+   "diff": -23.57837292790746,
+   "diffSE": 9.182048326761826
+  },
+  {
+   "name": "Costa Rica",
+   "all": 384.57604112435735,
+   "nonImmigrant": 387.36122504764126,
+   "immigrant": 371.04483134605084,
+   "secondGen": 372.7565279796063,
+   "firstGen": 367.1770340022613,
+   "diff": -16.316393701590478,
+   "diffSE": 4.1332866065197225
+  },
+  {
+   "name": "Czech Republic",
+   "all": 486.9992078519244,
+   "nonImmigrant": 488.5256001183365,
+   "immigrant": 463.4286906871833,
+   "secondGen": 484.3639638900893,
+   "firstGen": 443.41563404460726,
+   "diff": -25.096909431153133,
+   "diffSE": 6.512296578683578
+  },
+  {
+   "name": "Denmark",
+   "all": 489.273876942411,
+   "nonImmigrant": 496.5330211077014,
+   "immigrant": 442.1461533120999,
+   "secondGen": 445.18947482980775,
+   "firstGen": 436.95314405858073,
+   "diff": -54.386867795601475,
+   "diffSE": 4.282923503014845
+  },
+  {
+   "name": "Estonia",
+   "all": 509.9469532247615,
+   "nonImmigrant": 514.3009224206943,
+   "immigrant": 489.6139368239038,
+   "secondGen": 492.1336916286589,
+   "firstGen": 474.59359305983685,
+   "diff": -24.686985596790397,
+   "diffSE": 5.7958458487895905
+  },
+  {
+   "name": "Finland",
+   "all": 484.13922563776697,
+   "nonImmigrant": 490.51830883002714,
+   "immigrant": 425.3867602512744,
+   "secondGen": 441.88838807092793,
+   "firstGen": 413.08099877572835,
+   "diff": -65.13154857875281,
+   "diffSE": 3.513332789062661
+  },
+  {
+   "name": "France",
+   "all": 473.9444184205984,
+   "nonImmigrant": 485.18359671128815,
+   "immigrant": 433.71044814830395,
+   "secondGen": 437.809938809224,
+   "firstGen": 424.8774446311427,
+   "diff": -51.47314856298408,
+   "diffSE": 5.270851401909918
+  },
+  {
+   "name": "Germany",
+   "all": 474.82645390785706,
+   "nonImmigrant": 494.9979957000922,
+   "immigrant": 436.3051475399438,
+   "secondGen": 457.15680980240086,
+   "firstGen": 398.404277705582,
+   "diff": -58.6928481601484,
+   "diffSE": 4.432833279034447
+  },
+  {
+   "name": "Greece",
+   "all": 430.1463218532806,
+   "nonImmigrant": 437.811546121914,
+   "immigrant": 397.7661586134041,
+   "secondGen": 403.7481488911428,
+   "firstGen": 372.5940077346185,
+   "diff": -40.04538750850981,
+   "diffSE": 4.2948917284101675
+  },
+  {
+   "name": "Hungary",
+   "all": 472.77612237193983,
+   "nonImmigrant": 474.1737161177982,
+   "immigrant": 482.45622973568464,
+   "secondGen": 499.2306407567954,
+   "firstGen": 461.6236736641546,
+   "diff": 8.282513617886554,
+   "diffSE": 9.760238286933566
+  },
+  {
+   "name": "Iceland",
+   "all": 458.89644981037986,
+   "nonImmigrant": 464.3145106039633,
+   "immigrant": 427.3003637583497,
+   "secondGen": 436.48949594431946,
+   "firstGen": 419.1905223222393,
+   "diff": -37.01414684561353,
+   "diffSE": 5.645166687809313
+  },
+  {
+   "name": "Ireland",
+   "all": 491.6482795918828,
+   "nonImmigrant": 494.8239175765329,
+   "immigrant": 486.58710566375566,
+   "secondGen": 488.6557148830682,
+   "firstGen": 484.1310548789552,
+   "diff": -8.236811912777302,
+   "diffSE": 3.3803636428007473
+  },
+  {
+   "name": "Israel",
+   "all": 457.8966665933153,
+   "nonImmigrant": 467.23002472602724,
+   "immigrant": 453.8213508433157,
+   "secondGen": 467.90511249771566,
+   "firstGen": 409.58939646430235,
+   "diff": -13.40867388271151,
+   "diffSE": 5.144040966458736
+  },
+  {
+   "name": "Italy",
+   "all": 471.2594754762866,
+   "nonImmigrant": 476.4059180340486,
+   "immigrant": 446.4959970325891,
+   "secondGen": 453.19254440403785,
+   "firstGen": 429.921049568301,
+   "diff": -29.90992100145959,
+   "diffSE": 4.855602042826217
+  },
+  {
+   "name": "Japan",
+   "all": 535.5793059957158,
+   "nonImmigrant": 537.0210489017222,
+   "immigrant": 504.349196926213,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": -32.671851975509206,
+   "diffSE": 17.51117574157858
+  },
+  {
+   "name": "Korea",
+   "all": 527.3025017804583,
+   "nonImmigrant": 528.7175305204961,
+   "immigrant": null,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": null,
+   "diffSE": null
+  },
+  {
+   "name": "Latvia",
+   "all": 483.1594552018177,
+   "nonImmigrant": 484.1771392337507,
+   "immigrant": 492.356903958188,
+   "secondGen": 491.3855681964364,
+   "firstGen": 495.5310744237786,
+   "diff": 8.179764724437263,
+   "diffSE": 8.273173718414595
+  },
+  {
+   "name": "Lithuania",
+   "all": 475.14676197725714,
+   "nonImmigrant": 477.4185080475408,
+   "immigrant": 463.01675694846557,
+   "secondGen": 453.22676640948725,
+   "firstGen": 478.5122595070174,
+   "diff": -14.401751099075245,
+   "diffSE": 8.73335475064536
+  },
+  {
+   "name": "Mexico",
+   "all": 395.02991921871023,
+   "nonImmigrant": 397.8553116384237,
+   "immigrant": 333.79429121457713,
+   "secondGen": 351.5378274712415,
+   "firstGen": 325.1070751530468,
+   "diff": -64.0610204238465,
+   "diffSE": 8.34573120638982
+  },
+  {
+   "name": "Netherlands",
+   "all": 492.6756389784962,
+   "nonImmigrant": 508.4963325966368,
+   "immigrant": 450.08489449974326,
+   "secondGen": 459.8803236906316,
+   "firstGen": 430.6886277374481,
+   "diff": -58.41143809689363,
+   "diffSE": 7.481679304553578
+  },
+  {
+   "name": "New Zealand",
+   "all": 479.07419345237787,
+   "nonImmigrant": 479.04622924978304,
+   "immigrant": 491.004106449555,
+   "secondGen": 499.87434427135827,
+   "firstGen": 482.2246669119348,
+   "diff": 11.957877199772042,
+   "diffSE": 5.080239681023869
+  },
+  {
+   "name": "Norway",
+   "all": 468.44994989168754,
+   "nonImmigrant": 478.68877624581364,
+   "immigrant": 442.93501010153744,
+   "secondGen": 448.401319828677,
+   "firstGen": 436.44111979913214,
+   "diff": -35.75376614427637,
+   "diffSE": 4.4752292395329345
+  },
+  {
+   "name": "Poland",
+   "all": 488.9600537637015,
+   "nonImmigrant": 491.828985869829,
+   "immigrant": 447.0506170857647,
+   "secondGen": null,
+   "firstGen": 435.0750234753926,
+   "diff": -44.77836878406433,
+   "diffSE": 14.889534386580447
+  },
+  {
+   "name": "Portugal",
+   "all": 471.91052210574856,
+   "nonImmigrant": 477.0022643015691,
+   "immigrant": 444.557959619636,
+   "secondGen": 460.5529206004545,
+   "firstGen": 433.57175751851173,
+   "diff": -32.44430468193309,
+   "diffSE": 4.942248252286396
+  },
+  {
+   "name": "Slovak Republic",
+   "all": 463.9946184782649,
+   "nonImmigrant": 467.41864741241443,
+   "immigrant": 456.0230867480334,
+   "secondGen": 458.89543033307496,
+   "firstGen": 454.2644070508222,
+   "diff": -11.395560664381078,
+   "diffSE": 10.913902198273215
+  },
+  {
+   "name": "Slovenia",
+   "all": 484.5290086483499,
+   "nonImmigrant": 492.24353747252394,
+   "immigrant": 432.70130987550465,
+   "secondGen": 446.6564478137605,
+   "firstGen": 424.14973700704195,
+   "diff": -59.54222759701925,
+   "diffSE": 5.206450104552638
+  },
+  {
+   "name": "Spain",
+   "all": 473.1402080246069,
+   "nonImmigrant": 480.66786991017517,
+   "immigrant": 448.13030337803343,
+   "secondGen": 459.24197907674744,
+   "firstGen": 432.67165530056985,
+   "diff": -32.53756653214176,
+   "diffSE": 2.496261026390456
+  },
+  {
+   "name": "Sweden",
+   "all": 481.76606539700737,
+   "nonImmigrant": 498.98098258562953,
+   "immigrant": 436.0751030534052,
+   "secondGen": 449.34614383233003,
+   "firstGen": 422.60676138904773,
+   "diff": -62.90587953222435,
+   "diffSE": 3.89167691609471
+  },
+  {
+   "name": "Switzerland",
+   "all": 507.99058644870297,
+   "nonImmigrant": 528.1595725037653,
+   "immigrant": 475.03586538068413,
+   "secondGen": 476.5817224546141,
+   "firstGen": 472.32938714093217,
+   "diff": -53.12370712308109,
+   "diffSE": 3.0336669994820467
+  },
+  {
+   "name": "Türkiye",
+   "all": 453.15176740183233,
+   "nonImmigrant": 454.87528470296814,
+   "immigrant": 417.5259249927329,
+   "secondGen": null,
+   "firstGen": 409.978512737166,
+   "diff": -37.34935971023516,
+   "diffSE": 13.415861572309886
+  },
+  {
+   "name": "United Kingdom",
+   "all": 488.9750850657636,
+   "nonImmigrant": 494.1943478614728,
+   "immigrant": 496.31360523382665,
+   "secondGen": 506.93389694889186,
+   "firstGen": 483.1417254332174,
+   "diff": 2.119257372353883,
+   "diffSE": 5.592697540936437
+  },
+  {
+   "name": "United States",
+   "all": 464.88804301212303,
+   "nonImmigrant": 469.96245026500986,
+   "immigrant": 460.3641496707893,
+   "secondGen": 465.6597125080165,
+   "firstGen": 441.14621867219904,
+   "diff": -9.598300594220559,
+   "diffSE": 6.933054608469839
+  },
+  {
+   "name": "Albania",
+   "all": 368.2217199510451,
+   "nonImmigrant": 374.8761180339594,
+   "immigrant": 335.17407142327056,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": -39.7020466106889,
+   "diffSE": 13.943241509845818
+  },
+  {
+   "name": "Argentina",
+   "all": 377.52902864845396,
+   "nonImmigrant": 379.984887305995,
+   "immigrant": 371.6105725763118,
+   "secondGen": 374.8951245111851,
+   "firstGen": 364.95461048410107,
+   "diff": -8.374314729683254,
+   "diffSE": 5.575567818493907
+  },
+  {
+   "name": "Brazil",
+   "all": 378.6913669469825,
+   "nonImmigrant": 384.1324042092557,
+   "immigrant": 338.11145015159826,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": -46.020954057657434,
+   "diffSE": 15.267643431479291
+  },
+  {
+   "name": "Brunei Darussalam",
+   "all": 442.09310447098136,
+   "nonImmigrant": 438.8191044289069,
+   "immigrant": 493.44080068353145,
+   "secondGen": 474.8406485265281,
+   "firstGen": 504.55291772051817,
+   "diff": 54.62169625462465,
+   "diffSE": 4.231836403019344
+  },
+  {
+   "name": "Bulgaria",
+   "all": 417.30390037486825,
+   "nonImmigrant": 423.8846471249349,
+   "immigrant": 395.1476594186131,
+   "secondGen": null,
+   "firstGen": 412.55705399702265,
+   "diff": -28.736987706321784,
+   "diffSE": 17.116935843103814
+  },
+  {
+   "name": "Cambodia",
+   "all": 336.39604125930657,
+   "nonImmigrant": 340.4506752409061,
+   "immigrant": null,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": null,
+   "diffSE": null
+  },
+  {
+   "name": "Croatia",
+   "all": 463.1051893674915,
+   "nonImmigrant": 465.68829051360353,
+   "immigrant": 451.730774751476,
+   "secondGen": 450.55984965472726,
+   "firstGen": 458.7351764883037,
+   "diff": -13.95751576212757,
+   "diffSE": 4.5034801053622
+  },
+  {
+   "name": "Cyprus",
+   "all": 418.30668002350967,
+   "nonImmigrant": 424.10084316204404,
+   "immigrant": 431.08517560595266,
+   "secondGen": 418.6238279057293,
+   "firstGen": 439.1295643069806,
+   "diff": 6.984332443908613,
+   "diffSE": 3.887900583836736
+  },
+  {
+   "name": "Dominican Republic",
+   "all": 339.10724673258596,
+   "nonImmigrant": 344.6221355453647,
+   "immigrant": 321.50039397321774,
+   "secondGen": 311.11736980853107,
+   "firstGen": 332.2250300306905,
+   "diff": -23.121741572146966,
+   "diffSE": 5.05130247785672
+  },
+  {
+   "name": "El Salvador",
+   "all": 343.4691009767227,
+   "nonImmigrant": 345.8903416829439,
+   "immigrant": 327.78393103128474,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": -18.106410651659218,
+   "diffSE": 14.985133665673649
+  },
+  {
+   "name": "Georgia",
+   "all": 390.0242203216826,
+   "nonImmigrant": 396.25701350881496,
+   "immigrant": 360.91020071983047,
+   "secondGen": 341.42358804857804,
+   "firstGen": 374.4043473338745,
+   "diff": -35.34681278898452,
+   "diffSE": 17.2688232930361
+  },
+  {
+   "name": "Guatemala",
+   "all": 344.19948813728763,
+   "nonImmigrant": 350.06575749919523,
+   "immigrant": 332.47290928905153,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": -17.592848210143757,
+   "diffSE": 26.72718244822076
+  },
+  {
+   "name": "Hong Kong (China)",
+   "all": 540.3518012286893,
+   "nonImmigrant": 546.6994101319661,
+   "immigrant": 539.0139685824817,
+   "secondGen": 542.2514800077371,
+   "firstGen": 526.5888823464082,
+   "diff": -7.685441549484586,
+   "diffSE": 3.5432254829447127
+  },
+  {
+   "name": "Indonesia",
+   "all": 365.525253871577,
+   "nonImmigrant": 367.43889462998663,
+   "immigrant": 300.50444175775164,
+   "secondGen": 303.2142627234906,
+   "firstGen": null,
+   "diff": -66.93445287223497,
+   "diffSE": 12.90475279575087
+  },
+  {
+   "name": "Jamaica",
+   "all": 377.41693921863487,
+   "nonImmigrant": 383.1891763019177,
+   "immigrant": 345.55448097866224,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": -37.63469532325551,
+   "diffSE": 13.32592848909928
+  },
+  {
+   "name": "Jordan",
+   "all": 361.22802836657854,
+   "nonImmigrant": 363.0692988326947,
+   "immigrant": 369.6194485055308,
+   "secondGen": 376.4771198452327,
+   "firstGen": 364.4076638754643,
+   "diff": 6.550149672836074,
+   "diffSE": 3.70277764696871
+  },
+  {
+   "name": "Kazakhstan",
+   "all": 425.4391288356629,
+   "nonImmigrant": 425.50293763332013,
+   "immigrant": 430.2618067629162,
+   "secondGen": 429.88310226588857,
+   "firstGen": 430.7777859202963,
+   "diff": 4.758869129596014,
+   "diffSE": 4.08611236542811
+  },
+  {
+   "name": "Kosovo",
+   "all": 354.9624438264088,
+   "nonImmigrant": 357.61681982576374,
+   "immigrant": 342.81830925113445,
+   "secondGen": 340.3560945222668,
+   "firstGen": null,
+   "diff": -14.798510574629308,
+   "diffSE": 8.111776806581101
+  },
+  {
+   "name": "Macao (China)",
+   "all": 551.923153064622,
+   "nonImmigrant": 543.0948452825479,
+   "immigrant": 560.360380192142,
+   "secondGen": 558.1573269867057,
+   "firstGen": 564.2002855383529,
+   "diff": 17.265534909594045,
+   "diffSE": 2.810753949582805
+  },
+  {
+   "name": "Malaysia",
+   "all": 408.6874321942563,
+   "nonImmigrant": 411.3843340161844,
+   "immigrant": 384.2559362091718,
+   "secondGen": 386.71461178730806,
+   "firstGen": null,
+   "diff": -27.128397807012604,
+   "diffSE": 10.831009429716728
+  },
+  {
+   "name": "Malta",
+   "all": 466.01611291105684,
+   "nonImmigrant": 469.3724506693605,
+   "immigrant": 475.28687345552675,
+   "secondGen": 450.8657051114449,
+   "firstGen": 483.5158802941173,
+   "diff": 5.914422786166296,
+   "diffSE": 6.183613588639409
+  },
+  {
+   "name": "Moldova",
+   "all": 414.1980631976307,
+   "nonImmigrant": 415.9445534655699,
+   "immigrant": 405.89439839315673,
+   "secondGen": 417.7104146492312,
+   "firstGen": 378.4309057373883,
+   "diff": -10.050155072413311,
+   "diffSE": 8.93506671543451
+  },
+  {
+   "name": "Mongolia",
+   "all": 424.59312854284474,
+   "nonImmigrant": 427.26888942239697,
+   "immigrant": null,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": null,
+   "diffSE": null
+  },
+  {
+   "name": "Montenegro",
+   "all": 405.6011733379937,
+   "nonImmigrant": 407.2556917596606,
+   "immigrant": 410.41378348090296,
+   "secondGen": 417.33796054142914,
+   "firstGen": 401.55410395337117,
+   "diff": 3.158091721242397,
+   "diffSE": 5.105608931095049
+  },
+  {
+   "name": "Morocco",
+   "all": 364.7662406960326,
+   "nonImmigrant": 366.7802647750075,
+   "immigrant": 318.1011179778247,
+   "secondGen": null,
+   "firstGen": 324.17216966032873,
+   "diff": -48.67914679718275,
+   "diffSE": 9.738561956829331
+  },
+  {
+   "name": "North Macedonia",
+   "all": 388.5755067832621,
+   "nonImmigrant": 392.9651946072097,
+   "immigrant": 351.6315078441503,
+   "secondGen": 340.60373365347925,
+   "firstGen": 365.5799106996487,
+   "diff": -41.333686763059454,
+   "diffSE": 9.153163706676617
+  },
+  {
+   "name": "Palestinian Authority",
+   "all": 365.7466764424854,
+   "nonImmigrant": 368.3642628688108,
+   "immigrant": 347.35478084018933,
+   "secondGen": 358.50744182641694,
+   "firstGen": 328.7243010042551,
+   "diff": -21.009482028621463,
+   "diffSE": 7.080328845451239
+  },
+  {
+   "name": "Panama",
+   "all": 356.57350391859563,
+   "nonImmigrant": 357.6851048228543,
+   "immigrant": 411.4061414188825,
+   "secondGen": 415.8383259305689,
+   "firstGen": 409.79540592496454,
+   "diff": 53.72103659602811,
+   "diffSE": 12.652388138681543
+  },
+  {
+   "name": "Paraguay",
+   "all": 337.53975043615014,
+   "nonImmigrant": 342.04462609398047,
+   "immigrant": 357.2225296995283,
+   "secondGen": 352.44923553153035,
+   "firstGen": 362.9317642001622,
+   "diff": 15.177903605547886,
+   "diffSE": 16.39420202819584
+  },
+  {
+   "name": "Peru",
+   "all": 391.23578464022944,
+   "nonImmigrant": 393.96462775022906,
+   "immigrant": 370.4639523354713,
+   "secondGen": null,
+   "firstGen": 387.6133719186501,
+   "diff": -23.50067541475774,
+   "diffSE": 11.58519692314319
+  },
+  {
+   "name": "Philippines",
+   "all": 354.7197127888579,
+   "nonImmigrant": 359.47895605886504,
+   "immigrant": 296.4354878111148,
+   "secondGen": 278.4289702719872,
+   "firstGen": 318.68657083196723,
+   "diff": -63.04346824775031,
+   "diffSE": 9.249691290234601
+  },
+  {
+   "name": "Qatar",
+   "all": 414.1062217855216,
+   "nonImmigrant": 377.63985187339114,
+   "immigrant": 448.82316449782303,
+   "secondGen": 427.97446721644883,
+   "firstGen": 457.82459033947265,
+   "diff": 71.18331262443203,
+   "diffSE": 2.43423940016049
+  },
+  {
+   "name": "Romania",
+   "all": 427.7599966689727,
+   "nonImmigrant": 431.3903452156849,
+   "immigrant": 397.4798191867482,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": -33.91052602893677,
+   "diffSE": 22.185814413808732
+  },
+  {
+   "name": "Saudi Arabia",
+   "all": 388.781606995968,
+   "nonImmigrant": 386.39323842048464,
+   "immigrant": 415.2336569918087,
+   "secondGen": 412.2372511216144,
+   "firstGen": 417.50631636005096,
+   "diff": 28.84041857132403,
+   "diffSE": 4.730261525940279
+  },
+  {
+   "name": "Serbia",
+   "all": 439.8766666814576,
+   "nonImmigrant": 441.4213081445398,
+   "immigrant": 448.0185545726347,
+   "secondGen": 448.3053658956049,
+   "firstGen": 444.5642156807556,
+   "diff": 6.597246428094855,
+   "diffSE": 4.001511296946154
+  },
+  {
+   "name": "Singapore",
+   "all": 574.6638195932204,
+   "nonImmigrant": 567.7928941954859,
+   "immigrant": 597.6374900253408,
+   "secondGen": 608.0462224077243,
+   "firstGen": 591.0259575275107,
+   "diff": 29.844595829854928,
+   "diffSE": 3.277371911868747
+  },
+  {
+   "name": "Chinese Taipei",
+   "all": 547.0941643886057,
+   "nonImmigrant": 548.9916899782012,
+   "immigrant": 480.61437462070893,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": -68.37731535749234,
+   "diffSE": 19.589684706505064
+  },
+  {
+   "name": "Thailand",
+   "all": 393.9453559167338,
+   "nonImmigrant": 396.58944895550025,
+   "immigrant": 364.25694733442356,
+   "secondGen": 363.59700613168945,
+   "firstGen": 366.35882016735593,
+   "diff": -32.33250162107673,
+   "diffSE": 8.484998991171965
+  },
+  {
+   "name": "United Arab Emirates",
+   "all": 431.11047658355506,
+   "nonImmigrant": 390.4764604684889,
+   "immigrant": 480.83485257576206,
+   "secondGen": 465.69300080832795,
+   "firstGen": 489.03272733768927,
+   "diff": 90.35839210727316,
+   "diffSE": 1.7853362201238177
+  },
+  {
+   "name": "Uruguay",
+   "all": 408.7120663921702,
+   "nonImmigrant": 410.89312052967944,
+   "immigrant": 419.733673636098,
+   "secondGen": null,
+   "firstGen": 424.786639320552,
+   "diff": 8.84055310641852,
+   "diffSE": 12.207790001959886
+  },
+  {
+   "name": "Uzbekistan",
+   "all": 363.9353746814326,
+   "nonImmigrant": 365.25219609411033,
+   "immigrant": 337.4778870253226,
+   "secondGen": 336.10080840424706,
+   "firstGen": null,
+   "diff": -27.774309068787705,
+   "diffSE": 7.646809193797793
+  },
+  {
+   "name": "Viet Nam",
+   "all": 469.40242748130413,
+   "nonImmigrant": 470.6112570155246,
+   "immigrant": null,
+   "secondGen": null,
+   "firstGen": null,
+   "diff": null,
+   "diffSE": null
+  }
+ ]
+}

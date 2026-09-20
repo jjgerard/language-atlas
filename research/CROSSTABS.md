@@ -203,9 +203,59 @@ countries, so it belongs in prose and not in a test.
 What remains genuinely open is the clock length: fourteen European systems, 2 to
 48 months, against nothing yet that would explain the spread.
 
+## Outcomes: no eal rule corresponds to the immigrant attainment gap
+
+The outcome is PISA 2022 Table I.B1.7.17 — immigrant minus non-immigrant mean
+mathematics score, in score points. `research/pisa-2022-immigrant-maths.json`
+holds 79 countries, taken from the StatLink workbook and not from the PDF,
+which misaligns that table badly enough to pair countries with other countries'
+numbers. `research/tools/pisa-cross.js` joins it to any coding column.
+
+**Nothing corresponds.** Three columns, three nulls:
+
+```
+  column                             n   permutation p
+  newcomerCriteria.designation      39   0.0138  -> 0.2887 -> 0.8488
+  newcomerCriteria.triggers         40   0.5523
+  removalCriteria.exit_mechanism    25   0.9034
+```
+
+The exit result is the flattest thing in this file. Clock -35.1, proficiency
+judgement -35.0, test -37.0. Three different ways of deciding when support ends
+and the same gap under all of them, to within two score points.
+
+### The designation result, and why it has three numbers
+
+It reaches p = 0.0138 on all 39, because `proxy category` sits at +25 against
+`named category` at -31. Named:
+
+> **proxy category**: Qatar +71, Singapore +30, Saudi Arabia +29, Italy -30
+
+Three of the four are Gulf or Singapore, where an immigrant student is often
+the child of an expatriate professional in a private international school. The
+largest positive anywhere in the table is the United Arab Emirates at +90, under
+`functional`. Italy — the one non-Gulf proxy system — sits at -30, which is the
+European mean.
+
+Drop the three Gulf states and it goes: `functional` -19.0 to -31.1,
+`proxy category` +25.0 to -0.0, `named category` unchanged at -31.1, p = 0.2887.
+Europe alone: -26.0, -29.9, -33.1, p = 0.8488. Three forms of designation, one
+number.
+
+This is the composition confound the tool header warns about, arriving exactly
+where it was expected. The gap measures who a country's immigrants are before it
+measures anything a ministry wrote down, and at n of about 20 per group nothing
+separates the two. The honest use of the join is descriptive — policy and
+outcome side by side, with no causal claim attached.
+
+One tool bug worth recording, because it points the wrong way. Countries where
+PISA reports no gap came through as `null` and coerced to 0 in the group means,
+dragging every group toward no difference. Only Cambodia was affected here. A
+null outcome is not a zero outcome and the join now drops it.
+
 ## The habit this file is really recording
 
-Five of the nine candidate findings here failed a check that took one command
+Six of the twelve candidate findings here failed a check that took one command
 to run, and a fifth — the eal entry/exit timing cross, withdrawn in e6202f4 —
 failed a permutation test at p = 0.40. The usual check is `confound()` in
 `coding-crosstab.js`: split the corpus by the column under test, report the hit
