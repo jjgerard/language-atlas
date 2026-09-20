@@ -115,8 +115,27 @@ National only, `not stated` excluded because it is a statement about sources
 rather than about systems (see below). n = 110.
 
 **Asia grounds identification in clinical diagnosis, Europe in educational
-need.** Asia 17 of 31, 55%. Europe 21 of 40, 53%, against 30% clinical. V =
-0.311, permutation p = 0.0025 holding each system's value count fixed.
+need.** Stating this as "55% against 53%" undersells and misdescribes it — two
+thin majorities pointing opposite ways is not the claim. The claim is the
+contrast. Among the systems using one of these two grounds:
+
+```
+            clinical   educational need
+  Asia          17            7
+  Europe        12           21
+```
+
+Odds ratio 4.25, Fisher exact two-sided p = 0.0156. Across the full column, V =
+0.311 and permutation p = 0.0025 holding each system's value count fixed.
+
+**And `clinical diagnosis` means the same thing in both places**, which is the
+check that matters before a proportion is worth anything. The two groups are
+near-identical on every other column of the same field. Decider: Europe splits
+4 multidisciplinary team and 4 clinician of 12, Asia 7 and 7 of 17. National
+statute as the locus: 10 of 12 against 13 of 17. Silent on bilingual handling:
+11 of 12 against 16 of 17. Exclusions `none stated`: 11 against 15. The value is
+not hiding two different phenomena, so the regional difference is in how often
+systems reach for it, not in what they mean by it.
 
 It survives the two checks that have killed everything else here:
 
@@ -147,13 +166,42 @@ under-documented ones, or a citizenship rule is genuinely one line where a named
 category with a definition and a test generates a literature. Nothing here
 separates those.
 
-## Two the corpus cannot be asked about at all
+## Exit criteria: the variation is real, the regional question is not
 
-**Exit criteria by region, in both domains.** eal `exit_mechanism` is n = 36
-with 26 in Europe and nothing in Africa, p = 0.77. dld `discharge_basis` is n =
-49 with 30 in Europe, p = 0.19. Whether systems exit on time, on a test or on a
-judgement is a question about a European sample, and asking it regionally
-invites an answer the data cannot give.
+The first version of this section said the corpus could not be asked about exit
+by region. That was too broad, and the column has more structure than n = 36
+national rows suggests.
+
+**Within Europe there is real variation.** n = 26: clock 14, proficiency
+judgement 5, not stated 4, none established 3, test 1, assessed-no-criterion 1.
+
+**Inside `clock` there is an ordinal spread**, and it is the most analysable
+thing in the column. Serbia 2 months; Austria, Finland, Liechtenstein,
+Luxembourg, Latvia, Poland, Slovakia 12; Czechia, Greece, Netherlands, Slovenia
+24; Estonia 36; Sweden 48; New Zealand and Puerto Rico 60; Taiwan a clock with
+no length given. Fourteen of the seventeen are European, so this is a question
+about European practice with two long outliers, not a global one.
+
+**Across all units the instruments are regionally specialised**, V = 0.404,
+p = 0.0001, and unusually for this file the documentation spread is tight
+(4.5 to 6.3), so depth is not the explanation:
+
+```
+            assessed  clock  none  not stated  judgement  test    n
+  Americas         0      5     2       4          18      48     61
+  Europe           1     17     4       4           5       3     31
+  Oceania          0      5     0       3           2       6     12
+```
+
+The Americas run on named tests, Europe on clocks. But the Americas column is
+61 US units under one federal framework — ESSA requires a uniform statewide exit
+procedure, and the states adopted standardised proficiency assessments under it.
+That is one decision counted fifty times, the Chinese-provinces problem again.
+The contrast is a true description of instruments and a sample of about two
+countries, so it belongs in prose and not in a test.
+
+What remains genuinely open is the clock length: fourteen European systems, 2 to
+48 months, against nothing yet that would explain the spread.
 
 ## The habit this file is really recording
 
