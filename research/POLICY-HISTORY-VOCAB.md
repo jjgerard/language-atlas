@@ -352,3 +352,65 @@ second time this corpus has answered a question about policy with a fact about
 drafting. Worth carrying into the outcomes work: a year in which a system's
 entry and exit rules both changed may mean a reform, or it may mean the
 country files them on one form.
+
+---
+
+# WITHDRAWN: the eal entry/exit co-occurrence
+
+Recorded above, on the day the eal pass was applied:
+
+> But the eal co-occurrences are not random, and that IS worth recording. Five
+> of the six are the United States [...] The mechanism is in the 2015 row --
+> ESSA REQUIRES a state to publish uniform entrance and exit procedures.
+
+The co-occurrence part does not survive a null and is withdrawn.
+
+`research/tools/hist-entry-exit-cross.js` runs the test. Eight systems carry
+both an entry year and an exit year, which is the whole analysable set:
+
+    Greenland      rows in 6 years, entry 2, exit 1, same-year 1
+    Netherlands    rows in 5 years, entry 1, exit 1, same-year 0
+    United States  rows in 3 years, entry 1, exit 1, same-year 1
+    Michigan       rows in 3 years, entry 2, exit 1, same-year 1
+    Minnesota      rows in 3 years, entry 2, exit 1, same-year 0
+    New Jersey     rows in 2 years, entry 2, exit 2, same-year 2
+    Rhode Island   rows in 2 years, entry 1, exit 1, same-year 1
+    Texas          rows in 2 years, entry 1, exit 1, same-year 0
+
+Six of nine exit years co-occur with an entry year. Reshuffling each system's
+exit years among the years that system ACTUALLY HAS ROWS IN -- which is the
+only place a coding can land -- gives six or more co-occurrences 40% of the
+time. **p = 0.40.**
+
+The reason is in the middle column. New Jersey has rows in two years and both
+carry entry and exit, so its two co-occurrences are forced by arithmetic, not
+observed. Rhode Island and Texas have two row-years each. Five of the eight
+systems have three or fewer. With that little room, coincidence is the
+expected result.
+
+## What survives
+
+Two things, and they are about documentation rather than about timing.
+
+**Exit rules are written down in the United States and almost nowhere else.**
+US entries are 23 of the 73 attributed eal entries and 19% of the attributed
+rows, but carry 10 of the 13 rows that touch `removalCriteria` -- four times
+their share. That is a real skew and it is not what the withdrawn claim was
+about.
+
+**The ESSA mechanism is in the row text, not in the statistics.** The 2015
+United States row reads "requires statewide uniform EL entrance/exit
+procedures", and Greenland's Order 21/1999 "sets entry, review and exit" in one
+instrument. One document governing both is a documented fact about those two
+instruments. It is not evidence that entry and exit MOVE together, and the
+earlier note read as though it were.
+
+## The rule this is the third instance of
+
+Split by the thing under test, and check whether the result survives the
+corpus's own shape. `CROSSTABS.md` records three of six candidate findings
+failing a confound check; this is the same failure in a different form, where
+the confound is not documentation depth but how few dated rows an entry has.
+
+An entry with two history rows cannot produce evidence about timing. It can
+only produce coincidence.
