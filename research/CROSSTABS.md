@@ -113,6 +113,7 @@ Four of the seven candidate findings here failed a check that took one command
 to run, and a fifth — the eal entry/exit timing cross, withdrawn in e6202f4 —
 failed a permutation test at p = 0.40. The usual check is `confound()` in
 `coding-crosstab.js`: split the corpus by the column under test, report the hit
-rate, the mean docLinks, and the same split inside every region. A finding that does not hold inside regions
-is usually a finding about who writes things down; one that does not hold
-without sub-national units is usually a finding about one country.
+rate, the mean docLinks, and the same split inside every region. A finding that
+does not hold inside regions is usually a finding about who writes things down;
+one that does not hold without sub-national units is usually a finding about one
+country.
