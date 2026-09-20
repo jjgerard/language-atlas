@@ -362,7 +362,15 @@ function codingFor(domain, body, fields) {
       // Capped for the same reason typed fields are: a submission is not a
       // place to put two hundred instruments. Ghana names two; nothing in the
       // corpus names more than four.
-      const rows = given.slice(0, 20)
+      //
+      // But a scheme on a TYPED field has one row per row of that field, not
+      // per instrument, and 20 is then far too low: the Northwest Territories
+      // has 21 policyHistory rows and its twenty-first coding was dropped in
+      // silence, joining 1,028 of 1,029 rows and looking like a key bug. The
+      // cap for those is the field's own row cap, which is what bounds the
+      // thing being coded.
+      const cap = SHAPES[type] ? (MAX_ROWS[type] || 50) : 20;
+      const rows = given.slice(0, cap)
         .filter(r => r && typeof r === "object" && !Array.isArray(r))
         .map(clean)
         .filter(r => Object.keys(r).length);

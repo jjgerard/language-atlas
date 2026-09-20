@@ -71,7 +71,8 @@ const CODED_PAIR = {
 };
 const PAIR = CODED_PAIR[domainId] || [];
 if (codedOnly && !PAIR.length) {
-  console.error("--coded-only has no criteria pair defined for " + domainId);
+  console.error("--coded-only has no criteria pair for " + domainId
+    + "; that map has no criteria codings, so every entry with history is in scope");
   process.exit(2);
 }
 

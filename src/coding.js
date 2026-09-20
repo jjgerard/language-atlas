@@ -464,7 +464,7 @@ const HISTORY_SCHEME = id => ({
   // /patterns tabulates every column it finds, which for a key means 185
   // values each seen once. Declared here so a renderer can skip them
   // without knowing their names.
-  keyColumns: ['year', 'matches'],
+  keyColumns: ['year', 'matches', 'occurrence'],
   columns: {
     year: 'integer — the year the history row carries',
     // 23% of rows sit on a year that repeats within the same entry (Armenia
@@ -482,6 +482,14 @@ const HISTORY_SCHEME = id => ({
     // key that is too short, and the fix for them is to deduplicate the
     // history rather than to lengthen this.
     matches: 'free text — the first 60 characters of the row description, normalised, which with `year` identifies the row this codes',
+    // The last resort, and it is needed. Three entries carry DUPLICATE
+    // history rows -- Sierra Leone repeats the same sentence about
+    // Constitution s.9(3) twice, character for character -- so year and a
+    // prefix cannot separate them at any length. This is the 1-based
+    // position among rows sharing both, and it is 1 on 4,302 of 4,305 rows.
+    // A duplicate row is a content problem worth fixing on its own; until
+    // somebody does, this keeps the coding attached to the right one.
+    occurrence: 'integer, the 1-based position among rows sharing a year and a matches prefix; 1 unless the entry has duplicate history rows',
     fields_touched: fieldsTouchedFor(id),
   },
 });

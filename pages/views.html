@@ -525,6 +525,20 @@ function csvRows() {
     // row-grained against history.
     const hist = byKey && Array.isArray(u.history) && u.history.length === lines.length
       ? u.history : null;
+    // `occurrence` disambiguates duplicate history rows, so it has to be
+    // counted the same way here as the coder counted it: 1-based position
+    // among earlier rows sharing the same year and matches prefix.
+    const occOf = [];
+    if (hist) {
+      const seenK = new Map();
+      for (const h of hist) {
+        const k = String(h.year) + '|'
+          + String(h.description || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().slice(0, 60).trim();
+        const c = (seenK.get(k) || 0) + 1;
+        seenK.set(k, c);
+        occOf.push(c);
+      }
+    }
     const norm = x => String(x).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
     lines.forEach((b, n) => {
       const sl = Number(slots[n]);
@@ -538,6 +552,7 @@ function csvRows() {
         const h = hist[n];
         const k = keyCols.map(c => c === 'matches'
           ? norm(h.description || '').slice(0, 60).trim()
+          : c === 'occurrence' ? String(occOf[n])
           : String(h[c] == null ? '' : h[c])).join('|');
         for (const [col, v] of Object.entries(byKey.get(k) || {})) {
           if (keyCols.includes(col)) continue;

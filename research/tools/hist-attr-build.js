@@ -38,8 +38,12 @@ const CODED_PAIR = {
   dld: ["identificationCriteria", "dischargeCriteria"],
   eal: ["newcomerCriteria", "removalCriteria"],
 };
-const PAIR = CODED_PAIR[domainId];
-if (!PAIR) { console.error("no criteria pair defined for " + domainId); process.exit(2); }
+// indigenous, fl and he have NO criteria codings at all -- policyHistory is
+// their only scheme -- so there is no pair to select on and the whole history
+// is in scope. That is not a looser standard, it is the absence of the filter
+// that made dld and eal a subset: on those two the point of the subset was the
+// rows that could enter a cross-tab, and here there is nothing to cross yet.
+const PAIR = CODED_PAIR[domainId] || [];
 
 const scheme = SCHEMES[domainId + ".policyHistory"];
 if (!scheme) { console.error("no policyHistory scheme for " + domainId); process.exit(2); }
@@ -65,6 +69,7 @@ for (const e of rows) {
     bad.push(key + ": " + a.length + " attributions for " + hist.length + " rows");
     continue;
   }
+  const seenKey = new Map();
   out[key] = {
     policyHistory: hist.map((h, i) => {
       for (const v of a[i]) {
@@ -74,11 +79,12 @@ for (const e of rows) {
       }
       n++;
       const y = String(h.year).match(/\d{4}/);
-      return {
-        year: y ? Number(y[0]) : h.year,
-        matches: norm(h.description).slice(0, 60).trim(),
-        fields_touched: a[i],
-      };
+      const yr = y ? Number(y[0]) : h.year;
+      const mk = norm(h.description).slice(0, 60).trim();
+      const kk = yr + "|" + mk;
+      const occ = (seenKey.get(kk) || 0) + 1;
+      seenKey.set(kk, occ);
+      return { year: yr, matches: mk, occurrence: occ, fields_touched: a[i] };
     }),
   };
 }
@@ -91,7 +97,7 @@ if (extra.length) bad.push("attributions for entries outside the coded set: " + 
 for (const [k, v] of Object.entries(out)) {
   const seen = new Set();
   for (const r of v.policyHistory) {
-    const kk = r.year + "|" + r.matches;
+    const kk = r.year + "|" + r.matches + "|" + r.occurrence;
     if (seen.has(kk)) bad.push(k + ": two rows share the key " + kk);
     seen.add(kk);
   }
