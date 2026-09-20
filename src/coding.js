@@ -277,10 +277,59 @@ const THRESHOLD_BASIS = {
 // separate from the exclusions list, because these three are not degrees of one
 // thing -- they are opposite policies, and this is the population the atlas is
 // about.
+// `culturally excluded` was one value doing two opposite jobs, and splitting it
+// needed more than the five entries on identificationCriteria that carried it.
+// Reading all 115 multilingualProvision entries supplied the rest, and the two
+// halves are not degrees of one thing: one screens a bilingual child AWAY from
+// services, the other exists to stop them being mislabelled as disordered. The
+// word that separates them is SOLELY.
+//
+// `case by case` is the third shape and it belongs to neither: somebody decides,
+// per child, whether another language explains the difficulty. That is not a
+// rule about bilingualism, it is the absence of one, delegated.
+//
+// Shared by dld.identificationCriteria and dld.multilingualProvision, so the
+// two can be read together -- which matters, because a system often states the
+// exclusion in one and the assessment rule in the other.
 const BILINGUAL_HANDLING = {
-  'required across languages': 'The criterion demands difficulty in ALL of the child\'s languages, which is what distinguishes disorder from second-language learning (Sweden: "the rule that does most work: difficulties in all of the child\'s languages")',
-  'culturally excluded': 'A child is ruled OUT where the difficulty can be attributed to linguistic or cultural background -- so the bilingual child is screened away from services rather than assessed properly (Greece: "ruled out where low attainment traces to outside linguistic or cultural factors"; Chile: excluded for "socio-affective deprivation, and features of a social or ethnic setting")',
-  silent: 'The criterion says nothing about the child\'s other languages either way',
+  'required across languages': 'The criterion demands difficulty in ALL of the child\'s languages, which is what distinguishes disorder from second-language learning (Sweden: "difficulties must show in all the child\'s languages", and the logoped decides disorder or insufficient exposure)',
+  'excluded on language grounds': 'A child is ruled OUT where the difficulty can be attributed to linguistic or cultural background, so the bilingual child is screened away from services rather than assessed properly (United Arab Emirates: "not being a native Arabic speaker is an exclusion from the disability term"; Aruba: no cover for a taalontwikkelingsstoornis "tied to dialect or anderstaligheid"; Greece; Chile; Taiwan, whose learning-disability rules exclude difficulty caused by language or thin cultural input)',
+  'not solely because of language': 'Language background alone may NOT be treated as the disorder, which protects the bilingual child instead of screening them out and leaves a genuine disorder assessable. The load-bearing word is "solely" (Jersey: "difficulties related solely to limitations in English as an additional language are not SEN", with a duty to establish which it is; Antigua and Barbuda; Gibraltar; the United States, where limited English "may not be the determinant")',
+  'case by case': 'Somebody judges per child whether another language explains the difficulty, with no rule either way (Armenia: "the school itself judges if another language explains it", working from a methodological guide)',
+  silent: 'The text says nothing about the child\'s other languages either way',
+};
+
+// Whether a child can be assessed in a language they actually speak -- the
+// first of multilingualProvision\'s four questions, and the one this atlas
+// exists around. Ordered by nothing: these are kinds, not degrees.
+const ASSESSMENT_LANGUAGE = {
+  'required': 'An instrument requires assessment in the child\'s own language (United States, IDEA: "evaluate in the child\'s native language" -- the entry calls it "the strongest statutory language in this catalog, and the widest gap to delivery"; Micronesia; Northern Mariana Islands "unless clearly not feasible"; Chile art. 16, where the diagnosing professional must communicate in the language of that community AND know its culture; Ukraine)',
+  'protocol or adapted instrument': 'A worked protocol or an instrument built for the population exists (Netherlands: Siméa\'s "Handreiking meertaligheid en TOS", requiring examination data in both languages, an interpreter where needed, a diagnostic decision tree; Luxembourg, whose new batteries adapt their instruction language to each pupil\'s profile and separate language-profile difficulty from specific disorder; Egypt, testing in colloquial rather than Modern Standard Arabic; Taiwan, adjusting content or scoring where no tool fits)',
+  'interpreter': 'Bridged by an interpreter or ad hoc translation rather than by a clinician who shares the language (Burkina Faso: "therapist and patient often share no language, so an interpreter is sought"; South Africa, where a shortage of therapists fluent in African languages leaves "ad hoc translation used as a stopgap")',
+  'majority language only': 'Assessment runs in the school or official language and the entry establishes no alternative (Morocco: "no adapted standardized assessments exist in Moroccan Arabic or Amazigh"; Singapore, where practitioners "used standardised tests not designed for the population"; Suriname)',
+  'not stated': 'The entry does not establish whether a child can be assessed in a language they speak',
+};
+
+// Whether normed tools exist for these children -- multilingualProvision\'s
+// fourth question. `none` and `not stated` stay apart for the reason they do
+// everywhere else here: Morocco and Singapore both went looking.
+const LOCAL_NORMS = {
+  'exist': 'Normed or purpose-built tools for this population are named as existing',
+  'none': 'The entry establishes that no locally normed tool exists (Singapore: "no local norms exist and no data on local languages\' developmental trajectories", the authors urging alternative assessment over re-norming; Morocco; Benin, where "no locally normed tool is named" and African SLPs were adapting European tests)',
+  'not stated': 'The entry does not reach the question',
+};
+
+// WHAT KIND OF EVIDENCE the entry rests on, and it is not optional here.
+// Thirty of the 115 multilingualProvision entries are the COST IS1406
+// practitioner survey, and every one of them opens with the same hedge --
+// "Practitioner perceptions, not policy". Coding those beside a statute as
+// though both described a rule is the single largest error this field offers,
+// and the hedge exists because a drafter saw it coming.
+const EVIDENCE_TYPE = {
+  'policy': 'A statute, regulation, or official guidance',
+  'practitioner survey': 'What practitioners report doing, not what any rule requires (the COST IS1406 2017 survey, carried on 30 entries with its own n each; Singapore\'s 2018 survey of 26 practitioners)',
+  'study or project': 'A research paper, interview set or single project (Laos, where the evidence is "one cleft-palate project, not a national rule"; Morocco\'s twelve interviewees)',
+  'not stated': 'The entry does not make clear what kind of source this is',
 };
 
 // WHO DECIDES. Same purpose as the eal axis -- the same test applied by a
@@ -399,6 +448,19 @@ const SCHEMES = {
       rule_locus: RULE_LOCUS,
     },
   },
+  // The field that actually asks whether a bilingual child can be assessed
+  // properly. `bilingual_handling` lived only on identificationCriteria, where
+  // it came out `silent` on 187 of 193 -- a finding about where drafters put
+  // the answer, not about what systems do. 104 of those 187 have prose here.
+  'dld.multilingualProvision': {
+    row: 'one national or sub-national system',
+    columns: {
+      assessment_language: ASSESSMENT_LANGUAGE,
+      bilingual_handling: BILINGUAL_HANDLING,
+      local_norms: LOCAL_NORMS,
+      evidence_type: EVIDENCE_TYPE,
+    },
+  },
   'dld.assessments': {
     row: 'one assessment instrument named by the entry',
     columns: {
@@ -417,11 +479,15 @@ const isObligesLevel = v => Number.isInteger(v) && v >= 0 && v <= 4;
 module.exports = {
   INSTRUMENT_TYPES, OBLIGES_LEVELS, DUTY_TYPES, REDRESS_TYPES,
   TEST_TYPES, BILINGUAL_FIT, MODALITY, LANGUAGE_DOMAINS,
+  ASSESSMENT_LANGUAGE, LOCAL_NORMS, EVIDENCE_TYPE,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
   SCHEMES,
   isThresholdBasis: v => has(THRESHOLD_BASIS, v),
   isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
+  isAssessmentLanguage: v => has(ASSESSMENT_LANGUAGE, v),
+  isLocalNorms: v => has(LOCAL_NORMS, v),
+  isEvidenceType: v => has(EVIDENCE_TYPE, v),
   isDecider: v => has(DECIDER_TYPES, v),
   isExclusion: v => has(EXCLUSIONS, v),
   isDischargeBasis: v => has(DISCHARGE_BASIS, v),
