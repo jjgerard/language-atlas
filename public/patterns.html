@@ -607,6 +607,15 @@ function groupsFor(atlas, pick, outcome, split, spec) {
   const by = (atlas.pisa && atlas.pisa.byCountry) || {};
   const groups = {};
   const seen = new Set();
+  // A second column from ANOTHER map is not on this map’s unit records: a
+  // country has a dld entry and an eal entry, and they are separate rows. So
+  // the join is by country code, the same one coding-crosstab.js makes in the
+  // research tools. Looking for both codings on one unit finds nothing, which
+  // is what this panel did before and then reported as though the data were
+  // scarce.
+  const other = split && split.id !== pick.id
+    ? new Map((atlas.units[split.id] || []).filter(u => u.nat).map(u => [u.cc, u]))
+    : null;
   for (const u of (atlas.units[pick.id] || [])) {
     if (!u.nat) continue;
     const p = by[u.cc];
@@ -625,7 +634,8 @@ function groupsFor(atlas, pick, outcome, split, spec) {
     if (!a) continue;
     let keys = [...a].map(x => ({ k: x, a: x, b: null }));
     if (split) {
-      const b = valuesOf(u, split);
+      const su = other ? other.get(u.cc) : u;
+      const b = su ? valuesOf(su, split) : null;
       if (!b) continue;
       keys = [];
       for (const x of a) for (const y of b) keys.push({ k: x + PAIR + y, a: x, b: y });
@@ -651,6 +661,16 @@ function sift(groups, min, pick, split) {
     ? dropped.filter(([, g]) => rows.includes(g[0].a) && cols.includes(g[0].b))
     : dropped;
   return { kept, dropped, rows, cols, goneA, goneB, gonePairs };
+}
+
+// A cross-map split joins two different entries for the same country, so a
+// country missing either coding drops out and the count can fall well below
+// what each column carries on its own. Worth saying on the chart rather than
+// only in the menu that offered it.
+function joinNote(pick, split) {
+  return split && split.id !== pick.id
+    ? ' The two columns come from different maps and are joined by country, so a country needs both codings to appear.'
+    : '';
 }
 
 function dropNote(s, min, pick, split) {
@@ -804,32 +824,23 @@ function renderOutcomes(atlas) {
         o.textContent = base + '  — already the category';
         return;
       }
-      // A column from another map is empty by construction, not by scarcity:
-      // the coding lives on that map’s units and this one’s units do not carry
-      // it. Saying “no combination reaches 3” there invites someone to go and
-      // research more countries, which would not help.
-      if (cand.id !== pick.id) {
-        o.disabled = true;
-        o.style.fontWeight = '';
-        o.textContent = base + '  — a different map';
-        return;
-      }
       const { groups } = groupsFor(atlas, pick, outcome, cand, spec);
       const n = Object.values(groups).filter(g => g.length >= min).length;
       o.disabled = n === 0;
       o.style.fontWeight = n === 0 ? '' : '500';
-      o.textContent = base + (n === 0 ? '  — no combination reaches ' + min : '  — ' + n + ' combinations');
+      o.textContent = base + (n === 0 ? '  — no combination reaches ' + min
+        : '  — ' + n + ' combinations' + (cand.id !== pick.id ? ', joined by country' : ''));
     });
     if (sel.selectedOptions[0] && sel.selectedOptions[0].disabled) sel.value = '';
   };
 
   // Which categories are worth starting from: the RECOMMEND_TOP whose best
-  // same-map split yields the most groups reaching the floor, ties broken by
+  // split yields the most groups reaching the floor, ties broken by
   // how many countries it is drawn over. A fixed tier rather than a threshold,
   // because the numbers move with the view -- a bar set for the box plots
   // bolded 18 of 27 as soon as the trend view narrowed the country set, which
   // is the list again rather than a recommendation. The scan is the expensive
-  // thing here, 27 categories against their same-map partners, so it is cached
+  // thing here, 27 categories against all the others, so it is cached
   // per outcome, cycle and floor.
   const RECOMMEND_TOP = 6;
   const recCache = new Map();
@@ -846,7 +857,7 @@ function renderOutcomes(atlas) {
       best = opts.map(p => {
         let top = { n: 0, c: 0, col: null };
         for (const q of opts) {
-          if (q === p || q.id !== p.id) continue;
+          if (q === p) continue;
           const { groups, countries } = groupsFor(atlas, p, outcome, q, spec);
           const n = Object.values(groups).filter(g => g.length >= min).length;
           if (n > top.n || (n === top.n && countries > top.c)) top = { n, c: countries, col: q.col };
@@ -1013,7 +1024,8 @@ function plotOutcome(atlas, pick, outcome, cycle, split, min) {
   s += '<line x1="0" y1="' + (TOP + RH * rows.length) + '" x2="664" y2="' + (TOP + RH * rows.length) + '" stroke="var(--border)" stroke-width="1"/>'
     + hits + '</svg>';
   return s + '<p class="why">' + guard
-    + ' A dash is a combination no country runs; the number under a box is its country count.</p>';
+    + ' A dash is a combination no country runs; the number under a box is its country count.'
+    + joinNote(pick, split) + '</p>';
 }
 
 // ---- shared chrome ---------------------------------------------------------
@@ -1110,6 +1122,7 @@ function plotTrend(atlas, pick, outcome, cycles, min, split) {
     + dropNote(s0, min, pick, split)
     + ' Every box is the same countries at every cycle; a country missing one is out of the series.'
     + (split ? ' A country running several rules appears in several rows.' : '')
+    + joinNote(pick, split)
     // The trend view tests the thing it draws: whether the groups moved
     // DIFFERENTLY, not whether they sit at different levels. The statistic is
     // each country’s net change across the span, which is the interaction the
