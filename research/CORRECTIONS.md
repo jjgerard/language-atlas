@@ -506,3 +506,35 @@ carry this paper’s vocabulary (“top-level policy”, “newly arrived migran
 pupils”) and do not cite it either. Their sentences have not been checked line
 by line against it, so no citation was added: an unverified link is the other
 half of the rule that caught this one.
+
+### The other four entries, checked line by line
+
+Four more entries used the paper’s vocabulary. Read against it, three carried
+claims that nothing else on the entry supported, and one did not.
+
+**Norway — two.** “Newly arrived migrant pupils are a named category in
+top-level policy” comes from §1, which names Belgium, Norway, Malta and Romania
+and attributes it to Eurydice 2019 p.54 — a different Eurydice report from the
+Key Data edition the entry cites. And “in practice read as a bridge to Norwegian
+rather than sustained bilingual education” is §5.1.2’s reading of § 2-8, citing
+Båtevik et al. 2017. The Education Act says the entitlement exists; it does not
+say how it is interpreted, so that bullet rested on nothing the entry held.
+
+**Malta — one.** The same named-category sentence from §1.
+
+**Romania — three.** That newly arrived pupils are overwhelmingly returnees and
+that Romania is a country of net emigration are §4.2, citing Anghel et al. 2016.
+That top-level policy for them is minimal is §5.2: “targeted measures for
+systematically supporting NAMS do not occur in the Romanian education system”.
+OUG 194/2002 and the Eurydice and PISA links carry none of that.
+
+All three now cite the paper.
+
+**Belgium is the one that did not need it**, and it is worth saying why, because
+the wording looks closer than the sourcing is. Its DASPA bullets track §5.1.1
+almost phrase for phrase — bridge classes, French as a learning language, one
+week to one year, otherwise direct integration with FLA support — but the paper
+attributes all of that to GFCB 2019, and the entry cites the DASPA decree
+itself. The claims rest on a primary source the entry already holds. The overlap
+is real and is the kind of thing worth knowing about a set of entries; it is not
+a missing citation.
