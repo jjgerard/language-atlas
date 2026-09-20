@@ -94,18 +94,18 @@ const RULES = [
    // Only what the hoist was for. Everything else this value covers sits at its
    // declared precedence further down, so an amendment beats a rename.
    /\bconsolidat\w*|\bmerg\w*[\s\S]{0,40}\bamendments?\b/i],
-  ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*|\bnullif\w*|\bvoid\w*|\bannul\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|chapters?|subchapters?|regulations?|rules?|model)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)/i,
+  ["instrument replaced", /(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*|\bnullif\w*|\bvoid\w*|\bannul\w*)[\s\S]{0,60}\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|chapters?|subchapters?|sections?|subsections?|regulations?|rules?|model)\b|\b(act|law|loi|lei|ley|decree|decreto|ordinance|ordonnance|order|code|regulation|statute|circular|sections?|subsections?)\b[\s\S]{0,60}(\brepeal\w*|\bsupersed\w*|\breplac\w*|\brevok\w*)/i,
    // South Africa 1953: "Bantu Education Act reinforces apartheid through
    // segregated schooling, REPEALED IN 1979". The repeal is real and is not this
    // row's business; the row says what the Act did.
-   datedElsewhere],
+   (d, h) => datedElsewhere(d, h) || /\bamend\w*\b[\s\S]{0,60}\b(replac|repeal)/i.test(d)],
   // A SEPARATE rule because the clause above needs /i for its noun list and this
   // one must not have it: an all-caps acronym is the instrument, and ESSA is the
   // row `instrument replaced` uses as its own gloss example. Two rules carrying
   // one value cost nothing -- first match wins either way -- and the alternative
   // was a single literal that quietly lost the flag.
   ["instrument replaced", /\b[A-Z]{3,6}\b\s+(repeal|supersed|replac|revok)\w*/],
-  ["instrument amended", /\bamend\w*\b|\brewrit\w*\b|\b(act|law|constitution|code|ordinance|regulation|guidelines|guidance|policy|policies|rules|manual|chart|document|edition|plan)\b[\s\S]{0,20}\brevis(ed|ion|ions)\b|\binsert\w*|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i,
+  ["instrument amended", /\bamend\w*\b|\brewrit\w*\b|\b(act|law|constitution|code|ordinances?|regulations?|guidelines|guidance|policy|policies|rules|manual|chart|document|edition|plan)\b[\s\S]{0,20}\brevis(ed|ion|ions)\b|\binsert\w*|\badds?\b.{0,30}\bart(icle)?\b|\bmodif(y|ies|ied|ication)\b/i,
    // A parenthetical or appositive amendment DATE is not an amendment: it dates
    // the instrument the row describes. Four UNESCO PEER rows read "Constitution
    // of Barbados, AMENDED 2007; does not enshrine the right to education" or
@@ -113,12 +113,12 @@ const RULES = [
    // decades before the amendment. Kuwait 1965 in the Asia batch is the same
    // shape and its coding is corrected alongside this. Laos 2003's "amended IN
    // 2003" is untouched: the word `in` marks a year that is the row's own.
-   (d, h) => datedElsewhere(d, h) || /\bbeg(an|in|ins|un)\s+amend/i.test(d)],
+   (d, h) => datedElsewhere(d, h) || /\bbeg(an|in|ins|un)\s+amend|\bamended since\b/i.test(d)],
   ["international instrument accepted", /\bratif(y|ies|ied|ication)\b|\baccede(d|s)?\b|\baccession\b|\benters? into force for\b|\bdeclaration under\b/i,
    // Ratification DENIED is not ratification. Eritrea 1997 reads "Even if Eritrea
    // has NOT RATIFIED the Convention Against Discrimination in Education", which
    // is a dated record that nothing was accepted.
-   /\b(not|never|yet to|failed to)\s+(been\s+)?(ratif|accede|sign)/i],
+   /\b(not|never|yet to|failed to)\s+(been\s+)?(ratif|accede|sign)|\bahead of\b[\s\S]{0,25}\b(accession|ratification)\b/i],
   // "Strategy ... adopted" is how a strategy is ISSUED, not how an instrument is
   // made. Hungary 2013 and Slovenia 2007 both matched `adopt` here and were
   // hand-corrected to `plan or strategy issued`, so `adopt` now stands down when
@@ -130,13 +130,19 @@ const RULES = [
    // "enacted, in force 1995-09-01" is a real making and must survive. And a row
    // that says outright the enactment is NOT VERIFIED is the one row in the
    // corpus that forbids this value in its own text.
-   (d, h) => datedElsewhere(d, h) || /\bnot verified\b|\bbefore the\b[\s\S]{0,40}\badopt/i.test(d)],
+   (d, h) => datedElsewhere(d, h) || /\bnot verified\b|\bbefore the\b[\s\S]{0,40}\badopt|\bunder which\b|\bamended since\b/i.test(d)],
   // Renaming, restructuring, merging and closing, at the precedence
   // HISTORY_OPERATION declares for them: below every operation on an instrument.
   // Nunavut's "Inuit Language Protection Act RENAMED the Inuktut Protection Act"
   // is the gloss's own example and still lands here, because nothing above it
   // matches a bare rename.
-  ["body or programme changed", /\brenam(e|es|ed|ing)\b|\brestructur(e|es|ed|ing)\b|\bmerg(e|es|ed|ing)\b|\babolish(es|ed)?\b|\bclos(e|es|ed|ing)\b[\s\S]{0,30}\b(units?|centres?|centers?|programmes?|programs?|schools?)\b/i],
+  ["body or programme changed", /\brenam(e|es|ed|ing)\b|\brestructur(e|es|ed|ing)\b|\bmerg(e|es|ed|ing)\b|\babolish(es|ed)?\b|\bclos(e|es|ed|ing)\b[\s\S]{0,30}\b(units?|centres?|centers?|programmes?|programs?|schools?)\b/i,
+   // Nunavut's "Inuit Language Protection ACT renamed the Inuktut Protection Act"
+   // is this value's own gloss example, so a bare rename stays here. A renamed
+   // DOCUMENT does not: Oklahoma's "HB 2768 adds dysgraphia to the required
+   // dyslexia awareness training and RENAMES THE STATE DYSLEXIA HANDBOOK" is an
+   // amendment, and nothing above this rule caught it.
+   /\brenam\w*[\s\S]{0,40}\b(handbooks?|manuals?|guides?|toolkits?|regulations?|codes?|charts?|documents?|categor(y|ies)|classification)\b/i],
   // EIGHT of the twelve overrides in the first hand-coded region were the old
   // `establish` pattern firing on an abstract object: "establishes the
   // ausserordentlicher Schueler CATEGORY", "the individual educational needs
@@ -146,7 +152,8 @@ const RULES = [
   // residual -- a row that dates an instrument and says what it provides. A
   // thing established has to be a thing that can be walked into or enrolled on,
   // so the verb now needs a body-or-programme noun and the abstractions veto it.
-  ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept|test|education|schooling)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programmes?|programs?|scheme|class|classes|committee|office|initiative|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training|groups?|task forces?|index|indexes|indices)\b/i],
+  ["body or programme established", /(\bestablish\w*|\bcreat\w*|\bfound(ed|ing)\b|\bset up\b|\bintroduc\w*|\blaunch\w*)(?![\s\S]{0,40}\b(category|principle|duty|rights?|framework|procedures?|basis|obligation|variables|concept|test|education|schooling)\b)[\s\S]{0,60}\b(institut\w*|unit|centres?|centers?|academy|academies|commission|council|programmes?|programs?|scheme|class|classes|committee|office|initiative|course|courses|school|schools|department|service|network|subjects?|elective|pathway|kindergarten|facilit\w*|advisor|training|groups?|task forces?|index|indexes|indices)\b/i,
+   /\b(requires?|requiring|makes?|obliges?|obliging|directs?|shall|must)\b[\s\S]{0,60}\b(establish|maintain|create|set up|provide)/i],
   ["funding decided", /\bfunding agreement\b|\$[\d,.]+\s*(million|billion)?\b|€[\d,.]+|£[\d,.]+|\bfunding formula\b|\ballocat(e|es|ed)\b.{0,30}\b(million|billion|budget)\b/i],
   ["plan or strategy issued", /\b(strategic|sector|master|implementation) plan\b|\bstrateg(y|ies)\b|\baction plan\b|\bproposes?\b|\baims? to\b|\bintends? to\b|\bpledges?\b|\brecommendations?\b|\bwhite paper\b|\bframework document\b/i,
    // Beginning to develop a plan is not issuing one. Dominica 2020, "Ministry of
@@ -157,7 +164,7 @@ const RULES = [
    // "Education (Disability STRATEGIES and Pupils' Educational Records)
    // (Scotland) Act 2002", both carry a plan word as ordinary content: one
    // inside the thing a regulation regulates, one inside an Act's own title.
-   d => /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b|\b(procedure|rules|process) for\b[\s\S]{0,40}\brecommendations?\b|\([^)]*[Ss]trateg|\b(prepare|prepares|preparing|require|requires|requiring)\b[\s\S]{0,40}\bplans?\b/i.test(d) || describesAPlan(d)],
+   d => /\bbeg(an|in|ins|un)\s+develop|\bper the\b[\s\S]{0,30}\bplan\b|\b(procedure|rules|process) for\b[\s\S]{0,40}\brecommendations?\b|\([^)]*[Ss]trateg|\b(prepare|prepares|preparing|require|requires|requiring)\b[\s\S]{0,40}\bplans?\b/i.test(d) || describesAPlan(d) || /\b(include|includes|including|use|uses|using)\b[\s\S]{0,30}\bstrategies\b/i.test(d)],
   ["state of affairs recorded", /\bdoes not\b|\bno specific\b|\bomits\b|\bfound no\b|\bnever uses\b|\bis silent\b|\bno such\b|\bnothing\b|\bnames only\b|\bbut not\b|\bneither\b/i],
 ];
 

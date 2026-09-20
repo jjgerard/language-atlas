@@ -1263,8 +1263,139 @@ DOMAIN is governed. Africa and the Americas will settle it or break it.
 
 Held-out at first sight, in coding order: **88, 94, 71, 73, 88, 91, 81**.
 
+## dld Americas, 391 rows
+
+The largest batch in the project. 102 entries, 75 rows carrying prior
+`fields_touched`, one left unset.
+
+```
+  provision described            152   39%
+  instrument amended              81   21%
+  instrument made                 57   15%
+  body or programme established   26    7%
+  plan or strategy issued         23    6%
+  state of affairs recorded       17    4%
+  international instrument accepted 14  4%
+  instrument replaced             13    3%
+  body or programme changed        5    1%
+  funding decided                  2    1%
+```
+
+**Operations ON instruments take 39% here — amended plus made plus replaced —
+the highest anywhere, and the residual is the lowest at 39%.** That is the
+United States: 176 of these rows are state legislatures and boards, and their
+policy history is written as a sequence of enactments and amendments rather than
+as a description of what the law says. "Act 1268 of 2015 rewrites the Arkansas
+dyslexia statute." "2023 c.290 enacts ORS 343.324." "L. 1999, ch. 116 amends the
+act's section on school boards' duty."
+
+That grammar is regular enough to code by the verb, and this pass did:
+**enacts, promulgates, takes effect, adopts, filed → `instrument made`; adds,
+amends, rewrites, recasts, creates a code section → `instrument amended`;
+repeals, replaces in full → `instrument replaced`; anything that only says what
+the instrument REQUIRES, SETS or DEFINES → the residual.**
+
+The proposer scored **134 of 144, 93%** at first sight.
+
+### A duty to establish is not an establishment
+
+Two rows, and it is the same mistake the plan rule made in Oceania with "makes
+every public authority PREPARE a disability inclusion action plan":
+
+- Ontario 1998: "Regulation 181/98 REQUIRES every school board to ESTABLISH an
+  Identification, Placement and Review Committee"
+- Kentucky 1948: "KRS 157.230 MAKES school boards MAINTAIN special education
+  programs"
+
+Both state a standing duty, not a thing coming into being, and both are the
+residual. `require|make|oblige|direct|shall|must` followed by
+`establish|maintain|create|set up|provide` now vetoes the rule.
+
+### The fifth plural
+
+`regulation` does not match "regulations", so Nebraska's "special education
+REGULATIONS, REVISED effective 17 May 2022" missed the amendment rule and took
+`instrument made` off the word "effective". That is the fifth time a missing
+plural has cost a row, after `center`, `academy`, `programme` and `centre`. The
+rule from here is flat: every noun in every list in this file carries its plural,
+first time.
+
+### Three words doing ordinary work, and one veto on the wrong rule
+
+- Iowa 2014: "requires reading assistance to INCLUDE STRATEGIES that formally
+  address dyslexia" — not a strategy issued.
+- Suriname 2005: "2005-10 Policy for People with Disability executed AHEAD OF
+  CRPD ACCESSION" — names an accession as something still to come.
+- Michigan 1976: "the Michigan statute UNDER WHICH the state's special education
+  rules are PROMULGATED" — not a promulgation.
+- Alaska 1983: "effective 1983 and AMENDED SINCE" — an amendment with no date of
+  its own. The veto for it was written onto `instrument made` when the proposal
+  came from `instrument amended`; both carry it now.
+
+### Two that needed the precedence read carefully
+
+Canada 2014's "Education Act AMENDMENT replaces s. 12 with personalized learning
+plans" and New Mexico 2023's "6.31.2 NMAC AMENDED, renaming the part and
+REPEALING its gifted education section" are both revisions that use the word
+`replace` or `repeal` about a part of themselves. An amend word anywhere in the
+row now vetoes `instrument replaced` — and rows that are genuinely replacements
+never carry one: Korea "repeals the Special Education Promotion Act", Illinois
+"repealed and readopted Part 226", Utah "repealed and re-enacted".
+
+Adding `chapters?` to the replacement nouns to catch Wisconsin's "SUBSECTION (5)
+was REPEALED AND RECREATED" **broke dld Europe**, where Finland's "New CHAPTER 4a
+on learning support REPLACES the tiered support decisions" is a chapter inserted
+into an act and therefore an amendment. Only `section` and `subsection` carry the
+replacement reading in that position. Caught by re-scoring every region, which is
+the third time that has paid for itself.
+
+Americas went 93% to **137 of 137, 100%**.
+
+### Four regions of dld: the claim gets weaker, not stronger
+
+```
+region      residual        plan issued
+            eal    dld      eal    dld
+  Europe    50%    59%      16%     1%
+  Americas  43%    39%       7%     6%
+  Asia      42%    49%      15%    13%
+  Oceania   40%    38%      11%    23%
+```
+
+After three regions this file said the residual's regional ORDER replicates
+across domains. With the Americas in, **it partly does not**: Europe stays top
+and Oceania stays bottom in both, but the Americas and Asia swap places. The
+honest reading is that the two middle regions sit one point apart in `eal`, so
+their order was never a real ordering, and what actually replicates is the
+extremes.
+
+The plan share is the reverse of what it looked like too. Americas and Asia are
+nearly identical across domains (7/6 and 15/13); the divergence is entirely
+Europe and Oceania, the two regions whose governance of the two domains differs
+most. So the earlier sentence — "the plan share is a property of how a DOMAIN is
+governed" — is right for two regions and does nothing in the other two.
+
+One region of `dld` remains, and Africa's `eal` residual was 60%, the highest
+recorded. If dld Africa lands near it, the residual's regional character holds at
+the extremes; if it lands mid-table, it does not.
+
+## Where the proposer stands, nine regions
+
+```
+  eal Europe      30/30   100%        dld Europe      36/36   100%
+  eal Oceania     21/21   100%        dld Oceania     48/48   100%
+  eal Asia        53/53   100%        dld Asia        42/44    95%
+  eal Americas    40/42    95%        dld Americas   137/137  100%
+  eal Africa      22/23    96%
+                                                    429/434    99%
+```
+
+Held-out at first sight, in coding order: **88, 94, 71, 73, 88, 91, 81, 93**.
+Abstention now runs 253 of 390 in the largest region — the vetoes have made it
+much more reluctant, which is the intended direction.
+
 ## Remaining
 
 ```
-  dld   Americas 391   Africa 296   (687)
+  dld   Africa 296
 ```
