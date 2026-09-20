@@ -14130,7 +14130,7 @@
   "legalEntitlement": "Article 65 of the 2008 school act carries a right to appropriate programmes and help\nThe minister sets which difficulty types carry that right — Pravilnik NN 24/2015\nThe school must provide the pedagogic-didactic adaptation the pupil needs, at once\nA parent may appeal the office's decision to the Ministry",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 84\nFunders: state health 55%, state education 36%, family 23%, health insurance 14%\n20% said a maximum number of sessions applied (n = 83)",
   "workforce": "A national survey of 255 speech-language pathologists (Kuvač Kraljević et al., 2020)\nYoung — 69% under 41, 49.8% with under ten years' experience; 97.7% female\nHealth care 37.6%, education 35.3%, private practice or NGO 18.8%, social care 8.2%\nPreschool children aged 3–7 the main caseload for 63.2% of respondents",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "School committee or staff may propose ukidanje rješenja, revoking it (čl. 4/8)\nNo fixed interval for review appears in the Pravilnik\nThe Stručno povjerenstvo of the Ured decides on that proposal",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -14195,6 +14195,11 @@
     1,
     4,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    2
    ]
   },
   "coding": {
@@ -14242,7 +14247,14 @@
       "morphosyntax"
      ]
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "decision on continuing need"
+    ],
+    "decider": "multidisciplinary team",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
@@ -19058,6 +19070,10 @@
    {
     "label": "Nacionaline svietimo agentura, Pedagogu poreikio prognozavimas: atnaujintas modelis ir rezultatai, 2025",
     "url": "https://www.nsa.smsm.lt/wp-content/uploads/2025/07/Pedagogu-poreikio-prognozavimas-2025.pdf"
+   },
+   {
+    "label": "Dėl asmens specialiųjų ugdymosi poreikių įvertinimo tvarkos, III sk. 17 p.",
+    "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/TAIS.110552/"
    }
   ],
   "supportLinks": [],
@@ -19075,7 +19091,7 @@
   "legalEntitlement": "Svietimo istatymas art 34: the municipality where the child lives ensures access\nAccess means adapting the school and giving special pedagogical and special help\nWhere parents wish it, a place is made at a school nearer the child's home\nParents disputing the service's finding may seek assessment at the national Centre",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 95\nFunders: state education 92%, state health 11%\n35% said a maximum number of sessions applied (n = 94)",
   "workforce": "Most figures here cover all special-pedagogical-help staff, logopedists among them\n43 pupils with special needs per specialist post in 2024-2025, down from 50\nThe norm for one logopedist post is 30 to 50 such pupils — order V-1228 of 2011\nAbout 8% of these specialists left school work each year over those five years",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Re-assessed if the first assessment recommended it, or if the school commission refers\nPedagoginė psichologinė tarnyba carries out that re-assessment",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -19151,6 +19167,10 @@
     2,
     2,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    2
    ]
   },
   "coding": {
@@ -19188,7 +19208,14 @@
       "morphosyntax"
      ]
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle"
+    ],
+    "decider": "educational psychology service",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
@@ -19356,6 +19383,10 @@
    {
     "label": "Izglītības likums, consolidated text, arts 17 and 42 — likumi.lv",
     "url": "https://likumi.lv/ta/id/50759-izglitibas-likums"
+   },
+   {
+    "label": "Ministru kabineta noteikumi Nr. 709, Noteikumi par pedagoģiski medicīniskajām komisijām",
+    "url": "https://likumi.lv/doc.php?id=252162"
    }
   ],
   "supportLinks": [],
@@ -19373,7 +19404,7 @@
   "legalEntitlement": "Izglitibas likums art 42: special education where the setting can suit health\nThe municipality must secure that education in the named special settings\nIt must also secure the pedagogical-medical commission's work and accessibility\nTransport to school and home is a municipal duty where public transport cannot serve",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 69\nFunders: state education 83%, state health 22%, family 19%, state social services 12%\n33% said a maximum number of sessions applied (n = 69)",
   "workforce": "The municipal education board may employ support staff, e.g. psychologist, logopeds\nTheir pay may be drawn from the state earmark for teachers' salaries",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Opinions for valodas traucējumi expire 31 August 2028; others carry no term (p. 24)\nNo fixed reassessment schedule is set in the noteikumi\nState commission re-evaluates only on a parent or adult pupil petition (p. 4.5)",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -19433,6 +19464,11 @@
    "workforce": [
     4,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    2
    ]
   },
   "coding": {
@@ -19459,7 +19495,14 @@
      "duty_type": "local authority",
      "redress_type": "not stated"
     }
-   ]
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "fixed time limit"
+    ],
+    "decider": "multidisciplinary team",
+    "rule_locus": "national statute"
+   }
   }
  },
  {
@@ -26169,6 +26212,10 @@
    {
     "label": "Zakon o usmerjanju otrok s posebnimi potrebami (ZUOPP-1), Uradni list RS 58/2011",
     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-2714"
+   },
+   {
+    "label": "Zavod RS za šolstvo — usmerjanje otrok s posebnimi potrebami, pogosta vprašanja",
+    "url": "https://www.zrss.si/usmerjanje-otrok-posebne-potrebe/pogosta-vprasanja-in-odgovori/"
    }
   ],
   "supportLinks": [],
@@ -26242,6 +26289,10 @@
     4,
     4,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    2
    ]
   },
   "coding": {
@@ -26262,8 +26313,17 @@
      "duty_type": "not stated",
      "redress_type": "administrative appeal"
     }
-   ]
-  }
+   ],
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle",
+     "decision on continuing need"
+    ],
+    "decider": "national authority",
+    "rule_locus": "national statute"
+   }
+  },
+  "dischargeCriteria": "Where the odločba sets a review deadline, ZRSŠ must review po uradni dolžnosti\nParents or the institution may seek a change on bistvene spremembe okoliščin"
  },
  {
   "countryCode": "SK",
