@@ -186,3 +186,93 @@ at all. There is nothing to cross.
    the build was run.
 4. **Nothing needs recoding**, because nothing is coded. That is the one
    advantage of arriving at this field last.
+
+---
+
+# Costing the field link (asked 2026-09-20, after the above)
+
+Axis 3 was reported as weak on a description-keyword probe: 30% of dld rows.
+That was the WORST available route and the number was misleading. Three
+better routes exist, and the cost depends entirely on which tier a row lands in.
+
+## Design: no typed-shape change is needed
+
+The `coding` sidecar already carries array-grained rows — `many: true`, built
+this session for `dld.legalEntitlement` and `dld.assessments`. A
+`<domain>.policyHistory` scheme rides it: one coding row per history row,
+columns `year`, a `key` disambiguator, and `fields_touched` as a LIST.
+
+`SHAPES.history` never changes. `apply-coding.js` validates it,
+`store.js` `codingFor()` already branches on `many`, `/patterns` renders any
+vocabulary column it finds and the `/views` CSV discovers columns from the
+data. One edit to `src/coding.js`, five scheme entries (the field list differs
+per domain), and nothing else has to move.
+
+The `key` is required because **23% of rows sit on a repeated year** — 344 of
+1,259 entries with history have at least one year twice, Armenia has 1999
+twice and 2009 twice, Antigua has 2013 three times. Year alone cannot key a
+coding row to a history row. Year plus a normalised 30-character prefix of the
+description can, and survives `hist-apply.js` merging rows because that tool
+adds rows rather than rewriting them.
+
+## What can be attributed automatically, measured over all 4,305 rows
+
+    tier                                    rows        single-field
+    1  description sentence in a field       333   8%        330
+    2  shared instrument identifier          167   4%        137
+    3  shared year, PROSE fields only       1319  31%        926
+       no signal                            2486  58%
+
+- **Tier 1 is near-certain by construction.** `hist-from-fields.js` mined
+  those rows OUT of that field's prose, so the sentence is still sitting
+  there. Andorra's "It replaces the model in force since 2008" is in the
+  history AND in `legalEntitlement`.
+- **Tier 2 looks right on inspection.** "Ontario Regulation 181/98 requires
+  every school board to establish an Identification, Placement..." →
+  `identificationCriteria`. Cyprus 113(I)/1999 → `legalEntitlement`.
+- **Tier 3 is ~75-85% precise on a 15-row hand check** — 11 clearly right, 2
+  clearly wrong, 2 ambiguous. Both failures were coincidental years: Sierra
+  Leone's 2021 inclusion policy matched a 2021 SLT volunteer post, and Spain's
+  Real Decreto 217/2022 matched a Eurostat count in a typed series. Excluding
+  typed fields (done above) removes the second class. This tier needs REVIEW,
+  not acceptance.
+- **58% get no signal.** Much of that is genuinely not field-specific —
+  "Restructuring of the Ministry of Education", "Constitution; does not
+  enshrine the right to education", "Education Law aims at universal, balanced
+  and equitable education". `system-wide` must be a value, on the same logic
+  that separates `none established` from `not stated`, or the coder will be
+  pushed into guessing.
+
+## The number that should decide the order of work
+
+Only rows on systems that carry the codings can enter a cross-tab at all:
+
+    dld entries with policyHistory:                279   1142 rows
+      ... and a coded threshold_basis:             172    784 rows
+      ... and BOTH threshold and discharge coded:   46    185 rows
+
+**185 rows on 46 systems** is the slice that can answer "did discharge rules
+change in the same years categorization did". And it is the slice automation
+serves WORST:
+
+    tier 1 sentence match      3   2%
+    tier 2 token match        13   7%
+    tier 3 year, prose        53  29%
+    no signal                116  63%
+
+The rows that attribute easily sit on entries with long prose. The rows that
+are needed sit on entries whose history is short and instrument-level. 63% of
+the useful slice needs a person to read it.
+
+## Recommendation
+
+Do the 185 first, not the 4,305. It is bounded, it is the only slice that can
+produce a finding, and finishing it says whether attribution buys anything
+before another 4,120 rows are touched.
+
+State the limit honestly either way: 185 rows across 46 systems is thin for a
+year x field x outcome analysis, and `dischargeCriteria` was signalled by
+three rows out of 1,142 in the description probe. The history may simply not
+record much about discharge, in which case the answer to the original question
+is that the corpus cannot support it yet — and that is worth knowing for the
+price of one pass rather than five.
