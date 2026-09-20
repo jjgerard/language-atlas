@@ -556,6 +556,23 @@
       "morphosyntax"
      ]
     }
+   ],
+   "policyHistory": [
+    {
+     "year": 2012,
+     "matches": "pre university education act guarantees assistant teachers a",
+     "fields_touched": [
+      "legalEntitlement",
+      "workforce"
+     ]
+    },
+    {
+     "year": 2023,
+     "matches": "law 44 2023 amends the education act to create resource cent",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    }
    ]
   }
  },
@@ -838,7 +855,31 @@
     ],
     "decider": "school or authority",
     "rule_locus": "national framework, sub-national rules"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 2006,
+     "matches": "ley 26 206 de educaci n nacional made special education a mo",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2008,
+     "matches": "ley 26 378 approved the un disability convention binding arg",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2016,
+     "matches": "ley 27 306 made specific learning difficulties affecting lan",
+     "fields_touched": [
+      "terminology",
+      "legalEntitlement"
+     ]
+    }
+   ]
   },
   "slots": {
    "dischargeCriteria": [
@@ -1194,6 +1235,22 @@
      "duty_org": "the Bildungsdirektion",
      "duty_type": "regional government",
      "redress_type": "not stated"
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 1962,
+     "matches": "schulorganisationsgesetz para 22 defines the task of the son",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 1985,
+     "matches": "schulpflichtgesetz 1985 para 8 bases schooling on a formal f",
+     "fields_touched": [
+      "identificationCriteria"
+     ]
     }
    ]
   }
@@ -3083,7 +3140,31 @@
     "review_interval_months": 6,
     "decider": "multidisciplinary team",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 2015,
+     "matches": "pre school and school education act puts a speech therapist",
+     "fields_touched": [
+      "workforce",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2016,
+     "matches": "decree 286 adopts the first inclusive education regulation t",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "decree 232 adopts a new inclusive education regulation and r",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    }
+   ]
   }
  },
  {
@@ -5602,6 +5683,44 @@
       "morphosyntax"
      ]
     }
+   ],
+   "policyHistory": [
+    {
+     "year": 2010,
+     "matches": "ley 20 422 set rules on equal opportunities and social inclu",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2010,
+     "matches": "decreto 170 fixed the diagnostic criteria for specific langu",
+     "fields_touched": [
+      "identificationCriteria",
+      "funding"
+     ]
+    },
+    {
+     "year": 2015,
+     "matches": "decreto exento 83 approved curricular adaptation criteria fo",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2021,
+     "matches": "ley 21 303 amended ley 20 422 to promote the use of sign lan",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2023,
+     "matches": "ley 21 545 set inclusion integrated care and rights protecti",
+     "fields_touched": [
+      "system-wide"
+     ]
+    }
    ]
   }
  },
@@ -7151,7 +7270,32 @@
     "review_interval_months": 12,
     "decider": "school or authority",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 1994,
+     "matches": "ley 115 made education of people with physical sensory and c",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2013,
+     "matches": "ley 1618 required the education ministry to regulate schooli",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "decreto 1421 regulated educational provision for pupils with",
+     "fields_touched": [
+      "legalEntitlement",
+      "serviceModel",
+      "dischargeCriteria"
+     ]
+    }
+   ]
   },
   "slots": {
    "dischargeCriteria": [
@@ -7364,6 +7508,85 @@
      "obliges": 2,
      "duty_type": "not stated",
      "redress_type": "not stated"
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 1959,
+     "matches": "baseline reported by mined 8 special schools 20 teachers 134",
+     "fields_touched": [
+      "outcomesEvidence"
+     ]
+    },
+    {
+     "year": 1961,
+     "matches": "ley de nacionalizaci n general y gratuita de la ense anza es",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 1980,
+     "matches": "resoluci n no 247 de 1980 approves the school regulations fo",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 1991,
+     "matches": "resoluci n no 160 de 1991 establishes the guiding normative",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2001,
+     "matches": "resoluci n 141 de 2001 establishes transitional preparation",
+     "fields_touched": [
+      "dischargeCriteria"
+     ]
+    },
+    {
+     "year": 2003,
+     "matches": "circular conjunta mes mined provides differentiated treatmen",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2006,
+     "matches": "resoluci n no 48 2006 del mined regulates access of pupils w",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2007,
+     "matches": "cuba ratified the convention on the rights of persons with d",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2008,
+     "matches": "resoluci n no 56 de 2008 empowers higher education rectors t",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2019,
+     "matches": "new constitution approved by referendum on 24 february 2019",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2019,
+     "matches": "crpd committee concluding observations on cuba s initial rep",
+     "fields_touched": [
+      "outcomesEvidence"
+     ]
     }
    ]
   }
@@ -7719,7 +7942,46 @@
     "review_interval_months": 24,
     "decider": "multidisciplinary team",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 1999,
+     "matches": "law 113 i 1999 establishes special education as a right and",
+     "fields_touched": [
+      "legalEntitlement",
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2001,
+     "matches": "amending law 69 i 2001 ties district committee resources to",
+     "fields_touched": [
+      "dischargeCriteria",
+      "funding"
+     ]
+    },
+    {
+     "year": 2014,
+     "matches": "amending law 87 i 2014 bases assessment on a multidisciplina",
+     "fields_touched": [
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2020,
+     "matches": "amending law 166 i 2020 makes district committees plan schoo",
+     "fields_touched": [
+      "workforce"
+     ]
+    },
+    {
+     "year": 2025,
+     "matches": "amending law 131 i 2025 rewrites section 15 4 to let special",
+     "fields_touched": [
+      "dischargeCriteria"
+     ]
+    }
+   ]
   }
  },
  {
@@ -7898,6 +8160,46 @@
      "duty_org": "the school",
      "duty_type": "school",
      "redress_type": "administrative appeal"
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 2004,
+     "matches": "education act 561 2004 sb sets the school system and duties",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2005,
+     "matches": "decree 73 2005 sb regulated schooling of pupils with special",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2005,
+     "matches": "decree 72 2005 sb set counselling services in schools and in",
+     "fields_touched": [
+      "referralPathway",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2015,
+     "matches": "act 82 2015 sb amended the education act recasting special n",
+     "fields_touched": [
+      "legalEntitlement",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2016,
+     "matches": "decree 27 2016 sb set graded levels of support measures and",
+     "fields_touched": [
+      "serviceModel",
+      "dischargeCriteria"
+     ]
     }
    ]
   }
@@ -8865,6 +9167,31 @@
      "duty_type": "local authority",
      "redress_type": "specialist commission"
     }
+   ],
+   "policyHistory": [
+    {
+     "year": 2012,
+     "matches": "act 379 2012 restricts folkeskole special education to suppo",
+     "fields_touched": [
+      "identificationCriteria",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2014,
+     "matches": "order 693 2014 sets the content of and procedure for folkesk",
+     "fields_touched": [
+      "referralPathway",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2024,
+     "matches": "consolidating order 989 2024 restates the folkeskole act dut",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    }
    ]
   }
  },
@@ -9493,7 +9820,40 @@
     "review_interval_months": 12,
     "decider": "multidisciplinary team",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 2010,
+     "matches": "basic schools and upper secondary schools act obliges school",
+     "fields_touched": [
+      "legalEntitlement",
+      "workforce"
+     ]
+    },
+    {
+     "year": 2014,
+     "matches": "minister s regulation 67 sets remedial group work to correct",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2018,
+     "matches": "amendment act makes speech therapist and special educator se",
+     "fields_touched": [
+      "legalEntitlement",
+      "funding"
+     ]
+    },
+    {
+     "year": 2018,
+     "matches": "minister s regulation 2 sets the procedure for external coun",
+     "fields_touched": [
+      "referralPathway",
+      "identificationCriteria"
+     ]
+    }
+   ]
   }
  },
  {
@@ -9935,7 +10295,52 @@
     "review_interval_months": 12,
     "decider": "educational psychology service",
     "rule_locus": "national rule, local application"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 1982,
+     "matches": "ley 13 1982 lismi places special education inside ordinary i",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 1995,
+     "matches": "real decreto 696 1995 staffs schools with hearing and langua",
+     "fields_touched": [
+      "workforce"
+     ]
+    },
+    {
+     "year": 2006,
+     "matches": "ley organica 2 2006 loe defines pupils with special educatio",
+     "fields_touched": [
+      "terminology",
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2013,
+     "matches": "ley organica 8 2013 lomce adds duties to identify pupils wit",
+     "fields_touched": [
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2013,
+     "matches": "real decreto legislativo 1 2013 states a right to free inclu",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2020,
+     "matches": "ley organica 3 2020 lomloe names developmental language and",
+     "fields_touched": [
+      "terminology"
+     ]
+    }
+   ]
   }
  },
  {
@@ -11065,6 +11470,29 @@
      "duty_type": "local authority",
      "redress_type": "administrative appeal"
     }
+   ],
+   "policyHistory": [
+    {
+     "year": 1998,
+     "matches": "basic education act 628 1998 gives a right to special teachi",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2010,
+     "matches": "act 642 2010 rebuilds school support as general intensified",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2025,
+     "matches": "new chapter 4a on learning support replaces the tiered suppo",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    }
    ]
   }
  },
@@ -11441,6 +11869,80 @@
      "bilingual_fit": "not stated",
      "modality": "not stated"
     }
+   ],
+   "policyHistory": [
+    {
+     "year": 1979,
+     "matches": "constitution effective 10 may 1979 enshrines the right of th",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 1993,
+     "matches": "federated states of micronesia special education act of 1993",
+     "fields_touched": [
+      "serviceModel",
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 1993,
+     "matches": "ratified the 1989 convention on the rights of the child",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 1993,
+     "matches": "this subchapter shall be known and may be cited as the feder",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 1998,
+     "matches": "yap state refers to inclusive education within all programme",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2004,
+     "matches": "strategic development plan 2004 23 sets disability friendly",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2005,
+     "matches": "constitution of 1975 last revised",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2009,
+     "matches": "national policy on disability 2009 16 adopted to increase aw",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2014,
+     "matches": "fsm code education chapter defines children with disabilitie",
+     "fields_touched": [
+      "terminology",
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2016,
+     "matches": "ratified the 2006 un convention on the rights of persons wit",
+     "fields_touched": [
+      "system-wide"
+     ]
+    }
    ]
   }
  },
@@ -11785,7 +12287,31 @@
     "review_interval_months": 12,
     "decider": "multidisciplinary team",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 2009,
+     "matches": "arrete on unites d enseignement in medico social establishme",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2015,
+     "matches": "arrete of 6 february 2015 fixes the national model document",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2015,
+     "matches": "arrete of 6 february 2015 introduces the geva sco form for a",
+     "fields_touched": [
+      "assessments",
+      "identificationCriteria"
+     ]
+    }
+   ]
   }
  },
  {
@@ -12737,6 +13263,58 @@
       "general"
      ]
     }
+   ],
+   "policyHistory": [
+    {
+     "year": 1995,
+     "matches": "constitution lays down the right to education and prohibits",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2005,
+     "matches": "law on general education sets proximity inclusion and multil",
+     "fields_touched": [
+      "legalEntitlement",
+      "multilingualProvision"
+     ]
+    },
+    {
+     "year": 2010,
+     "matches": "law on general education amended",
+     "fields_touched": [
+      "not determined"
+     ]
+    },
+    {
+     "year": 2013,
+     "matches": "inclusive education support programme introduces integrated",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2014,
+     "matches": "law on the elimination of all forms of discrimination consol",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "unified strategy for education and science 2017 21 commits t",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2018,
+     "matches": "constitution of 1995 amended",
+     "fields_touched": [
+      "not determined"
+     ]
+    }
    ]
   }
  },
@@ -12851,6 +13429,16 @@
      "obliges": 2,
      "duty_type": "not stated",
      "redress_type": "not stated"
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 2017,
+     "matches": "states of guernsey resolution designates two schools as spec",
+     "fields_touched": [
+      "serviceModel",
+      "system-wide"
+     ]
     }
    ]
   }
@@ -13226,6 +13814,46 @@
      "test_type": "none",
      "bilingual_fit": "not stated",
      "modality": "not stated"
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 1998,
+     "matches": "earlier special teaching order later repealed by the 2017 or",
+     "fields_touched": [
+      "not determined"
+     ]
+    },
+    {
+     "year": 2012,
+     "matches": "folkeskole act keeps special teaching and other special peda",
+     "fields_touched": [
+      "legalEntitlement",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "new order sets referral assessment and review steps in force",
+     "fields_touched": [
+      "referralPathway",
+      "identificationCriteria",
+      "dischargeCriteria"
+     ]
+    },
+    {
+     "year": 2019,
+     "matches": "disability act lists communication among the domains a munic",
+     "fields_touched": [
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2023,
+     "matches": "entitlement sits in the folkeskole act now the 2023 consolid",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
     }
    ]
   }
@@ -13656,6 +14284,32 @@
      "modality": "production",
      "language_domains": [
       "morphosyntax"
+     ]
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 2008,
+     "matches": "law 3699 2008 makes special education compulsory and free an",
+     "fields_touched": [
+      "legalEntitlement",
+      "terminology"
+     ]
+    },
+    {
+     "year": 2018,
+     "matches": "law 4547 2018 replaces the keddy assessment centres with edu",
+     "fields_touched": [
+      "identificationCriteria",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2021,
+     "matches": "law 4823 2021 creates kedasy and school based interdisciplin",
+     "fields_touched": [
+      "identificationCriteria",
+      "serviceModel"
      ]
     }
    ]
@@ -14382,7 +15036,24 @@
     ],
     "decider": "multidisciplinary team",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 2008,
+     "matches": "education act nn 87 2008 gives pupils with difficulties a ri",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2015,
+     "matches": "ordinance nn 24 2015 set the types of difficulty and the app",
+     "fields_touched": [
+      "terminology",
+      "serviceModel"
+     ]
+    }
+   ]
   }
  },
  {
@@ -14628,6 +15299,24 @@
      "obliges": 4,
      "duty_type": "not stated",
      "redress_type": "administrative appeal"
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 2011,
+     "matches": "act cxc of 2011 on national public education defines special",
+     "fields_touched": [
+      "terminology",
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2013,
+     "matches": "decree 15 2013 emmi set logopedic provision and speech and l",
+     "fields_touched": [
+      "serviceModel",
+      "identificationCriteria"
+     ]
     }
    ]
   }
@@ -14931,6 +15620,38 @@
      "modality": "production",
      "language_domains": [
       "morphosyntax"
+     ]
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 2004,
+     "matches": "education for persons with special educational needs epsen a",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2007,
+     "matches": "des circular 0038 2007 sets the criteria and operating rules",
+     "fields_touched": [
+      "identificationCriteria",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2019,
+     "matches": "circular 0052 2019 replaces circular 12 96 on exemptions fro",
+     "fields_touched": [
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2025,
+     "matches": "circular 0024 2025 replaces the ssld criteria the category i",
+     "fields_touched": [
+      "terminology",
+      "identificationCriteria"
      ]
     }
    ]
@@ -16851,7 +17572,24 @@
     ],
     "decider": "school or authority",
     "rule_locus": "national framework, sub-national rules"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 2008,
+     "matches": "compulsory school act 91 2008 gives pupils a right to have l",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2010,
+     "matches": "regulation 585 2010 on support for compulsory school pupils",
+     "fields_touched": [
+      "serviceModel",
+      "identificationCriteria"
+     ]
+    }
+   ]
   }
  },
  {
@@ -17065,7 +17803,31 @@
     "review_interval_months": 12,
     "decider": "multidisciplinary team",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 1977,
+     "matches": "legge 517 brings pupils with disabilities into ordinary clas",
+     "fields_touched": [
+      "serviceModel",
+      "workforce"
+     ]
+    },
+    {
+     "year": 2010,
+     "matches": "legge 170 recognises dyslexia dysgraphia dysorthographia and",
+     "fields_touched": [
+      "terminology"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "decreto legislativo 66 restates school inclusion as an answe",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    }
+   ]
   },
   "dischargeCriteria": "The PEI runs one year and is updated on new conditions of functioning (art. 2/1 d-e)\nThe GLO meets at least once between November and April for verifiche intermedie (art. 4/2)\nIt meets by 30 June each year for the verifica finale (art. 4/3)\nThat verifica weighs the results reached and next year's resources, not an exit (art. 15/1)"
  },
@@ -18224,7 +18986,23 @@
     "review_interval_months": 6,
     "decider": "school or authority",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 2007,
+     "matches": "act no 8483 of 2007 on special education for persons with di",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2008,
+     "matches": "enforcement decree of the special education act presidential",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    }
+   ]
   },
   "slots": {
    "dischargeCriteria": [
@@ -18739,6 +19517,66 @@
      "test_type": "none",
      "bilingual_fit": "not stated",
      "modality": "not stated"
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 1978,
+     "matches": "constitution of saint lucia prohibits discrimination on grou",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 1999,
+     "matches": "education act no 41 of 1999 s 83 1 makes communicative excep",
+     "fields_touched": [
+      "terminology",
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 1999,
+     "matches": "special needs assessment involves where possible professiona",
+     "fields_touched": [
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2000,
+     "matches": "education act 41 of 1999 in force 4 january 2000 s i 57 2000",
+     "fields_touched": [
+      "not determined"
+     ]
+    },
+    {
+     "year": 2001,
+     "matches": "equality of opportunity and treatment in employment and occu",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2005,
+     "matches": "education act consolidated as cap 18 01 revised edition show",
+     "fields_touched": [
+      "not determined"
+     ]
+    },
+    {
+     "year": 2006,
+     "matches": "draft national policy for persons with disabilities prepared",
+     "fields_touched": [
+      "assessments",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2015,
+     "matches": "education sector development plan 2015 20 commits to strengt",
+     "fields_touched": [
+      "serviceModel"
+     ]
     }
    ]
   }
@@ -19403,7 +20241,46 @@
     ],
     "decider": "educational psychology service",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 1991,
+     "matches": "law on education places children with impairments in mainstr",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 1998,
+     "matches": "law on special education sets where pupils with special need",
+     "fields_touched": [
+      "serviceModel",
+      "terminology"
+     ]
+    },
+    {
+     "year": 2011,
+     "matches": "recast law on education states the purpose of special pedago",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2011,
+     "matches": "joint ministerial order classifies special educational needs",
+     "fields_touched": [
+      "terminology",
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2011,
+     "matches": "order v 1775 sets how pedagogical psychological services ass",
+     "fields_touched": [
+      "identificationCriteria"
+     ]
+    }
+   ]
   }
  },
  {
@@ -19690,7 +20567,31 @@
     ],
     "decider": "multidisciplinary team",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 1998,
+     "matches": "education law gives persons with special needs a right to sp",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 1999,
+     "matches": "general education law allows ten years of basic schooling fo",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2019,
+     "matches": "cabinet regulation 556 lets school speech therapists assess",
+     "fields_touched": [
+      "identificationCriteria",
+      "referralPathway"
+     ]
+    }
+   ]
   }
  },
  {
@@ -22567,6 +23468,31 @@
       "morphosyntax"
      ]
     }
+   ],
+   "policyHistory": [
+    {
+     "year": 2016,
+     "matches": "sim a publishes handreiking meertaligheid en tos national gu",
+     "fields_touched": [
+      "multilingualProvision",
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "sim a richtlijn toelaatbaarheid shared national eligibility",
+     "fields_touched": [
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2024,
+     "matches": "nvlf publishes the clinical guideline richtlijn logopedie bi",
+     "fields_touched": [
+      "assessments",
+      "serviceModel"
+     ]
+    }
    ]
   }
  },
@@ -22757,6 +23683,23 @@
      "modality": "production",
      "language_domains": [
       "morphosyntax"
+     ]
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 1998,
+     "matches": "education act 1998 gives a right to special education where",
+     "fields_touched": [
+      "legalEntitlement",
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2023,
+     "matches": "education act 2023 replaces special education with a right t",
+     "fields_touched": [
+      "legalEntitlement"
      ]
     }
    ]
@@ -23213,7 +24156,51 @@
     ],
     "decider": "national authority",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 1989,
+     "matches": "education act later repealed by the 2020 education and train",
+     "fields_touched": [
+      "not determined"
+     ]
+    },
+    {
+     "year": 1990,
+     "matches": "bill of rights act reiterates non discrimination provisions",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 1993,
+     "matches": "human rights act part 2 prohibits discrimination on disabili",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2016,
+     "matches": "2016 20 education plan recognises diverse needs for addition",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "diversity and inclusion committee launched a framework with",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2020,
+     "matches": "education and training act entitles domestic students to fre",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    }
+   ]
   }
  },
  {
@@ -24189,6 +25176,38 @@
       "morphosyntax"
      ]
     }
+   ],
+   "policyHistory": [
+    {
+     "year": 2016,
+     "matches": "education law act makes the head teacher answerable for carr",
+     "fields_touched": [
+      "legalEntitlement",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "regulation on psychological pedagogical help sets speech the",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "regulation sets conditions for organising schooling for disa",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "regulation governs rulings and opinions issued by adjudicati",
+     "fields_touched": [
+      "identificationCriteria",
+      "referralPathway"
+     ]
+    }
    ]
   }
  },
@@ -24632,7 +25651,31 @@
     ],
     "decider": "multidisciplinary team",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 2008,
+     "matches": "decreto lei 3 2008 makes speech therapy a non teaching servi",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2018,
+     "matches": "decreto lei 54 2018 replaces the special needs regime with a",
+     "fields_touched": [
+      "legalEntitlement",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2019,
+     "matches": "lei 116 2019 makes the first parliamentary amendment to the",
+     "fields_touched": [
+      "not determined"
+     ]
+    }
+   ]
   },
   "dischargeCriteria": "Measures are set on evidence from systematic monitoring of their efficacy (art. 7/3)\nThe relatorio tecnico-pedagogico sets how each measure is evaluated (art. 21/2e)\nWhere measures run plurianual, that report must fix interim evaluation points (art. 21/5)\nParents may solicitar a revisao of the programa educativo individual (art. 4/2c)"
  },
@@ -25180,7 +26223,25 @@
     "review_interval_months": 12,
     "decider": "multidisciplinary team",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 2011,
+     "matches": "national education act 1 2011 gives pupils with special educ",
+     "fields_touched": [
+      "legalEntitlement",
+      "serviceModel",
+      "workforce"
+     ]
+    },
+    {
+     "year": 2023,
+     "matches": "pre university education act 198 2023 requires a support res",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    }
+   ]
   }
  },
  {
@@ -25340,7 +26401,31 @@
     "review_interval_months": 6,
     "decider": "school or authority",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 2013,
+     "matches": "primary education act gives pupils with developmental diffic",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "education system foundations act defines the individual educ",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2018,
+     "matches": "rulebook sets who qualifies for an individual education plan",
+     "fields_touched": [
+      "identificationCriteria",
+      "dischargeCriteria"
+     ]
+    }
+   ]
   }
  },
  {
@@ -25503,6 +26588,15 @@
      "modality": "production",
      "language_domains": [
       "morphosyntax"
+     ]
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 2020,
+     "matches": "ministry model regulation r 75 of 2020 governs logopedic hel",
+     "fields_touched": [
+      "serviceModel"
      ]
     }
    ]
@@ -26331,6 +27425,16 @@
       "general"
      ]
     }
+   ],
+   "policyHistory": [
+    {
+     "year": 2010,
+     "matches": "education act 2010 800 requires special support once an inve",
+     "fields_touched": [
+      "legalEntitlement",
+      "identificationCriteria"
+     ]
+    }
    ]
   }
  },
@@ -26582,7 +27686,31 @@
     ],
     "decider": "national authority",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 1996,
+     "matches": "primary school act zosn named children with speech disorders",
+     "fields_touched": [
+      "terminology"
+     ]
+    },
+    {
+     "year": 2000,
+     "matches": "placement of children with special needs act zuopp created t",
+     "fields_touched": [
+      "referralPathway",
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2011,
+     "matches": "zuopp 1 replaced the 2000 act and restated the categories ke",
+     "fields_touched": [
+      "terminology"
+     ]
+    }
+   ]
   },
   "dischargeCriteria": "Where the odločba sets a review deadline, ZRSŠ must review po uradni dolžnosti\nParents or the institution may seek a change on bistvene spremembe okoliščin"
  },
@@ -26758,7 +27886,40 @@
     ],
     "decider": "school or authority",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 2008,
+     "matches": "education act 245 2008 z z defines special educational needs",
+     "fields_touched": [
+      "terminology",
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2008,
+     "matches": "decree 322 2008 z z on special schools sets their types incl",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2008,
+     "matches": "decree 325 2008 z z set up counselling and prevention centre",
+     "fields_touched": [
+      "serviceModel",
+      "referralPathway"
+     ]
+    },
+    {
+     "year": 2023,
+     "matches": "act 182 2023 z z amended the education act to introduce a st",
+     "fields_touched": [
+      "legalEntitlement",
+      "serviceModel"
+     ]
+    }
+   ]
   }
  },
  {
@@ -28836,7 +29997,30 @@
     "review_interval_months": 12,
     "decider": "multidisciplinary team",
     "rule_locus": "national rule, local application"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 1997,
+     "matches": "decree law no 573 on special education sets the statutory ba",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2005,
+     "matches": "act no 5378 on persons with disabilities requires inclusive",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2018,
+     "matches": "special education services regulation official gazette 7 7 2",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    }
+   ]
   },
   "slots": {
    "dischargeCriteria": [
@@ -29280,6 +30464,50 @@
       "general"
      ]
     }
+   ],
+   "policyHistory": [
+    {
+     "year": 1984,
+     "matches": "special education act enacted 25 articles",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 1997,
+     "matches": "act rewritten in full to 33 articles",
+     "fields_touched": [
+      "not determined"
+     ]
+    },
+    {
+     "year": 2009,
+     "matches": "act rewritten in full to 51 articles",
+     "fields_touched": [
+      "not determined"
+     ]
+    },
+    {
+     "year": 2023,
+     "matches": "act rewritten in full to 57 articles effective on promulgati",
+     "fields_touched": [
+      "not determined"
+     ]
+    },
+    {
+     "year": 2024,
+     "matches": "identification rules remade to match the 2023 act in force 1",
+     "fields_touched": [
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2026,
+     "matches": "identification rules amended again amended articles in force",
+     "fields_touched": [
+      "identificationCriteria"
+     ]
+    }
    ]
   }
  },
@@ -29563,7 +30791,55 @@
     ],
     "decider": "multidisciplinary team",
     "rule_locus": "national statute"
-   }
+   },
+   "policyHistory": [
+    {
+     "year": 1993,
+     "matches": "ministry of education order no 135 approves the regulation o",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "education act no 2145 viii creates inclusive resource centre",
+     "fields_touched": [
+      "identificationCriteria",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "cabinet resolution no 545 approves the regulation governing",
+     "fields_touched": [
+      "serviceModel",
+      "identificationCriteria",
+      "dischargeCriteria"
+     ]
+    },
+    {
+     "year": 2018,
+     "matches": "act no 2541 viii makes schools open inclusive or special cla",
+     "fields_touched": [
+      "referralPathway",
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2020,
+     "matches": "act no 463 ix on complete general secondary education sets i",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 2021,
+     "matches": "cabinet resolution no 957 replaces the 2011 procedure for or",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    }
+   ]
   }
  },
  {
@@ -29871,6 +31147,92 @@
      "modality": "production",
      "language_domains": [
       "morphosyntax"
+     ]
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 1970,
+     "matches": "education of the handicapped act pub l 91 230 named speech i",
+     "fields_touched": [
+      "terminology"
+     ]
+    },
+    {
+     "year": 1973,
+     "matches": "section 504 of the rehabilitation act pub l 93 112 barred di",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 1975,
+     "matches": "education for all handicapped children act p l 94 142 establ",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 1975,
+     "matches": "education for all handicapped children act pub l 94 142 list",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 1986,
+     "matches": "education of the handicapped act amendments pub l 99 457 add",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    },
+    {
+     "year": 1990,
+     "matches": "americans with disabilities act pub l 101 336 barred disabil",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 1990,
+     "matches": "pub l 101 476 renamed the education of the handicapped act t",
+     "fields_touched": [
+      "terminology"
+     ]
+    },
+    {
+     "year": 1997,
+     "matches": "idea amendments pub l 105 17 reauthorized idea keeping speec",
+     "fields_touched": [
+      "terminology"
+     ]
+    },
+    {
+     "year": 2004,
+     "matches": "idea reauthorisation ideia speech or language impairment rem",
+     "fields_touched": [
+      "terminology"
+     ]
+    },
+    {
+     "year": 2004,
+     "matches": "individuals with disabilities education improvement act pub",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2008,
+     "matches": "ada amendments act pub l 110 325 required the definition of",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "catalise consensus published us uptake of the dld label is s",
+     "fields_touched": [
+      "terminology"
      ]
     }
    ]
@@ -33626,6 +34988,53 @@
      "bilingual_fit": "not stated",
      "modality": "not stated"
     }
+   ],
+   "policyHistory": [
+    {
+     "year": 1979,
+     "matches": "saint vincent constitution order does not enshrine the right",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2006,
+     "matches": "education act 2006 s 113 uses communicative exceptionalities",
+     "fields_touched": [
+      "terminology",
+      "identificationCriteria"
+     ]
+    },
+    {
+     "year": 2007,
+     "matches": "ministry of education notes difficulties identifying and dia",
+     "fields_touched": [
+      "identificationCriteria",
+      "outcomesEvidence"
+     ]
+    },
+    {
+     "year": 2010,
+     "matches": "signed the crpd and its optional protocol signature only per",
+     "fields_touched": [
+      "system-wide"
+     ]
+    },
+    {
+     "year": 2015,
+     "matches": "education for all 2015 national review reports an acute shor",
+     "fields_touched": [
+      "workforce",
+      "outcomesEvidence"
+     ]
+    },
+    {
+     "year": 2017,
+     "matches": "un committee on the rights of the child recommends prioritis",
+     "fields_touched": [
+      "serviceModel"
+     ]
+    }
    ]
   }
  },
@@ -33806,6 +35215,15 @@
      "obliges": 1,
      "duty_type": "not stated",
      "redress_type": "not stated"
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 2010,
+     "matches": "one of six disability types listed in article 3 of the 2010",
+     "fields_touched": [
+      "terminology"
+     ]
     }
    ]
   },
@@ -34657,6 +36075,37 @@
      "test_type": "none",
      "bilingual_fit": "not stated",
      "modality": "not stated"
+    }
+   ],
+   "policyHistory": [
+    {
+     "year": 1987,
+     "matches": "education act amended in 1996 and 2006 gives every child acc",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 1990,
+     "matches": "secretary s circular no p36 establishes special education pr",
+     "fields_touched": [
+      "serviceModel",
+      "dischargeCriteria"
+     ]
+    },
+    {
+     "year": 2013,
+     "matches": "constitution amendment act recognizes the education rights o",
+     "fields_touched": [
+      "legalEntitlement"
+     ]
+    },
+    {
+     "year": 2016,
+     "matches": "2016 20 education sector strategic plan commits to developin",
+     "fields_touched": [
+      "system-wide"
+     ]
     }
    ]
   }

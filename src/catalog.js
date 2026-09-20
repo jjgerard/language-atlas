@@ -13,6 +13,7 @@
 // the window to lapse.
 
 const { LIVE, DOMAINS } = require('./domains');
+const { SCHEMES } = require("./coding.js");
 const store = require('./store');
 const { makeHistoryMatcher } = require('./history');
 const { deriveUnits } = require('./derive');
@@ -35,6 +36,13 @@ function build(catalogs, sources) {
     units,
     stats,
     sources,
+    // Which columns of a scheme identify a row rather than describe one.
+    // /patterns renders every coding column it finds as a frequency table,
+    // and it cannot know that policyHistory's `year` and `matches` are a
+    // key without being told.
+    schemes: Object.fromEntries(Object.entries(SCHEMES)
+      .filter(([, s]) => s.keyColumns)
+      .map(([k, s]) => [k, { keyColumns: s.keyColumns }])),
     domains: DOMAINS.map(({ fields, ...rest }) => ({
       ...rest,
       // Typed and hinted, because the submission form is generated from this.

@@ -469,6 +469,12 @@ function renderCoding(atlas) {
     // a country naming three instruments contributes three, which is right:
     // the denominator for those fields is instruments, not systems, and the
     // heading says so.
+    // A scheme may declare columns that IDENTIFY a row rather than describe
+    // it. policyHistory carries `year` and `matches` so its coding rows can
+    // be tied back to the history rows they code, and tabulating those gave
+    // a frequency table of 185 keys each seen once, with the row
+    // descriptions leaking into it. Skipped by declaration, not by name.
+    const keyCols = new Set((((atlas.schemes || {})[id + '.' + key]) || {}).keyColumns || []);
     const cols = {};
     let rowCount = 0;
     for (const u of units) {
@@ -476,6 +482,7 @@ function renderCoding(atlas) {
       for (const r of rows) {
         rowCount++;
         for (const [col, v] of Object.entries(r || {})) {
+          if (keyCols.has(col)) continue;
           if (typeof v === 'number') continue;
           const vals = Array.isArray(v) ? v : [v];
           cols[col] = cols[col] || {};

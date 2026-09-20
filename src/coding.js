@@ -398,6 +398,93 @@ const DISCHARGE_BASIS = {
  * `row` names what one CSV row IS for that field, because it is not the country
  * in either case and a reader of the export needs to be told so.
  */
+// ===========================================================================
+// <domain>.policyHistory
+// ===========================================================================
+//
+// WHICH FIELD A DATED ROW CHANGED. Derived in research/POLICY-HISTORY-VOCAB.md
+// by reading 105 rows sampled across every domain x region bucket and then
+// profiling all 4,305, and the reading killed two other axes on the way:
+//
+//   `change_type` (enact / amend / repeal / ...) was derivable -- ten values,
+//   top value 48% -- but that 48% is `provision described`: the row dates an
+//   instrument and says what it PROVIDES, recording no operation at all.
+//   "Law on Education Art. 7.1 makes Azerbaijani the official medium" is a
+//   provision, not a change. A column that is half "no change recorded"
+//   describes how the timeline was drafted, not what systems did.
+//
+//   `direction` (widened / narrowed) died outright: 94% of rows state neither.
+//   Unlike bilingual_handling's 93% silence, which is a fact about policy,
+//   this is a fact about drafting and not worth a column to say. The rows that
+//   DO record a delta -- Queensland 2022, "Speech-Language Impairment ceases
+//   as a verified category" -- are worth finding by hand, not by schema.
+//
+// So one column survives, and it is the one that was asked for: which of the
+// entry's own fields the dated row touched.
+//
+// IT IS A LIST. A framework act routinely creates an entitlement AND names who
+// identifies; coding one value would throw the other away, for the same reason
+// `exclusions`, `triggers` and `exit_mechanism` are lists.
+//
+// THE VOCABULARY IS BUILT FROM src/domains.js, not written out here. A domain
+// declares its fields and that list already drives the coverage count, the
+// hover checklist, the entry panel, the submission form and the sanitiser;
+// making it drive this too keeps the promise CLAUDE.md makes, that adding a
+// domain is a domains.js edit and nothing else.
+const { DOMAINS } = require("./domains.js");
+
+// Two values that are not fields, and the distinction between them is the same
+// one `none established` and `not stated` carry everywhere else in this file.
+const HISTORY_NON_FIELD = {
+  'system-wide': 'The row changed the system rather than any field of this entry: a constitution, a framework act, a ministry restructure. Checked, and no field is the right answer (Bahrain 2020, "Restructuring of the Ministry of Education", which sits on three maps at once; Bahamas, "Constitution; does not enshrine the right to education")',
+  'not determined': 'Nobody has established which field this row touched. 58% of rows carry no signal that a matcher can read, and this value keeps that gap visible instead of letting it look like `system-wide`',
+};
+
+/** The fields a policyHistory row on this domain could have touched. */
+const fieldsTouchedFor = id => {
+  const list = Array.isArray(DOMAINS) ? DOMAINS : Object.values(DOMAINS);
+  const d = list.find(x => x.id === id);
+  const out = {};
+  for (const f of ((d && d.fields) || [])) {
+    const key = Array.isArray(f) ? f[0] : f.key;
+    const label = Array.isArray(f) ? f[1] : f.label;
+    if (key === 'policyHistory') continue;
+    out[key] = label + ' on this entry';
+  }
+  return Object.assign(out, HISTORY_NON_FIELD);
+};
+
+// One scheme per domain, because the field list differs per domain -- which is
+// the whole reason this could not be a single shared vocabulary.
+const HISTORY_SCHEME = id => ({
+  // MANY: one coding row per policyHistory row, not per entry.
+  many: true,
+  row: 'one dated row of this entry\'s policy history',
+  // `year` and `matches` IDENTIFY a row; they are not findings about it.
+  // /patterns tabulates every column it finds, which for a key means 185
+  // values each seen once. Declared here so a renderer can skip them
+  // without knowing their names.
+  keyColumns: ['year', 'matches'],
+  columns: {
+    year: 'integer — the year the history row carries',
+    // 23% of rows sit on a year that repeats within the same entry (Armenia
+    // has 1999 twice and 2009 twice, Antigua 2013 three times), so year alone
+    // cannot tie a coding row back to the row it codes. This holds a
+    // normalised prefix of that row's description and the pair is the key.
+    //
+    // SIXTY CHARACTERS, measured rather than guessed. At thirty the two
+    // United States rows of 1975 collided -- both open "Education for All
+    // Handicapped Children Act" and differ only at "(P.L. 94-142)
+    // establishes" against "(Pub. L. 94-142) listed". Sixty leaves zero
+    // collisions across dld's 1,142 rows and three across all 4,305. Those
+    // three (Tamil Nadu 1973, Montenegro 2006, Sierra Leone 1991) still
+    // collide at a hundred, so they are near-duplicate ROWS rather than a
+    // key that is too short, and the fix for them is to deduplicate the
+    // history rather than to lengthen this.
+    matches: 'free text — the first 60 characters of the row description, normalised, which with `year` identifies the row this codes',
+    fields_touched: fieldsTouchedFor(id),
+  },
+});
 const SCHEMES = {
   'dld.identificationCriteria': {
     row: 'one national or sub-national system',
@@ -477,6 +564,11 @@ const SCHEMES = {
       language_domains: LANGUAGE_DOMAINS,
     },
   },
+  'dld.policyHistory': HISTORY_SCHEME('dld'),
+  'eal.policyHistory': HISTORY_SCHEME('eal'),
+  'indigenous.policyHistory': HISTORY_SCHEME('indigenous'),
+  'fl.policyHistory': HISTORY_SCHEME('fl'),
+  'he.policyHistory': HISTORY_SCHEME('he'),
 };
 
 // ONE ROW PER UNIT, OR MANY?
@@ -531,4 +623,6 @@ module.exports = {
   isModality: v => has(MODALITY, v),
   isLanguageDomain: v => has(LANGUAGE_DOMAINS, v),
   isObligesLevel,
+  fieldsTouchedFor,
+  isFieldTouched: (id, v) => has(fieldsTouchedFor(id), v),
 };

@@ -399,10 +399,14 @@ const CSV_COLS = [
 /** Coded columns present on this field, discovered from the units. */
 function codingCols(units, key) {
   const seen = new Set();
+  // Key columns identify the row this coding belongs to; they are not findings
+  // about it, and csvRows() does not emit them. Listing them here produced two
+  // header columns that were empty in every row.
+  const keyCols = new Set(((( (typeof payload !== 'undefined' && payload.schemes) || {})[domain.id + '.' + key]) || {}).keyColumns || []);
   for (const u of units) {
     const c0 = (u.coding || {})[key];
     const c = Array.isArray(c0) ? Object.assign({}, ...c0) : c0;
-    if (c) for (const col of Object.keys(c)) seen.add(col);
+    if (c) for (const col of Object.keys(c)) if (!keyCols.has(col)) seen.add(col);
   }
   return [...seen].sort().map(c => 'coding_' + c);
 }
@@ -443,12 +447,25 @@ function csvRows() {
     // enough to see that a country named a constitution AND a statute, with
     // the per-instrument detail left to the JSON.
     const cRows = (u.coding || {})[field.k];
+    // A scheme that declares keyColumns is ROW-GRAINED against the field's own
+    // rows, not against the unit. policyHistory is the first: each coding row
+    // carries the year and a 60-character description prefix of the ONE history
+    // row it codes. Flattening those with ' | ' put all 185 attributions onto
+    // every history row of the entry, which is not a join, it is a smear.
+    const scheme = (payload.schemes || {})[domain.id + '.' + field.k] || {};
+    const keyCols = scheme.keyColumns || [];
+    const rowKey = r => keyCols.map(c => String((r || {})[c] == null ? '' : r[c])).join('|');
+    const byKey = keyCols.length
+      ? new Map((Array.isArray(cRows) ? cRows : []).map(r => [rowKey(r), r]))
+      : null;
     const cFlat = {};
-    for (const r of (Array.isArray(cRows) ? cRows : [cRows || {}]))
-      for (const [col, v] of Object.entries(r || {}))
-        (cFlat[col] = cFlat[col] || []).push(Array.isArray(v) ? v.join('; ') : v);
-    for (const [col, v] of Object.entries(cFlat)) {
-      base['coding_' + col] = v.join(' | ');
+    if (!byKey) {
+      for (const r of (Array.isArray(cRows) ? cRows : [cRows || {}]))
+        for (const [col, v] of Object.entries(r || {}))
+          (cFlat[col] = cFlat[col] || []).push(Array.isArray(v) ? v.join('; ') : v);
+      for (const [col, v] of Object.entries(cFlat)) {
+        base['coding_' + col] = v.join(' | ');
+      }
     }
     const recs = (u.records || {})[field.k];
     const slots = (u.slots || {})[field.k] || [];
@@ -456,13 +473,32 @@ function csvRows() {
     // columns because those are the two things anyone exporting a series is
     // exporting it FOR; the rest of the row still goes to `text`.
     if (st === 'has' && Array.isArray(recs) && recs.length) {
-      recs.forEach((r, n) => out.push(Object.assign({}, base, {
-        n_bullets: recs.length, bullet_no: n + 1,
-        slot: '', question: '',
-        text: flatRow(r),
-        row_year: r.year == null ? '' : r.year,
-        row_value: r.value == null ? '' : r.value,
-      })));
+      // Same normalisation the coder used to build the key. Kept to one place
+      // by being derived from the record, never typed out.
+      const norm = x => String(x).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+      recs.forEach((r, n) => {
+        const row = Object.assign({}, base, {
+          n_bullets: recs.length, bullet_no: n + 1,
+          slot: '', question: '',
+          text: flatRow(r),
+          row_year: r.year == null ? '' : r.year,
+          row_value: r.value == null ? '' : r.value,
+        });
+        if (byKey) {
+          const k = keyCols.map(c => c === 'matches'
+            // .trim() because store.js trims every free-text column on the way
+            // in, so a key cut mid-word lost its trailing space in storage and
+            // not here. 26 of 185 rows failed to join on exactly that.
+            ? norm(r.description || '').slice(0, 60).trim()
+            : String(r[c] == null ? '' : r[c])).join('|');
+          const hit = byKey.get(k);
+          for (const [col, v] of Object.entries(hit || {})) {
+            if (keyCols.includes(col)) continue;
+            row['coding_' + col] = Array.isArray(v) ? v.join('; ') : v;
+          }
+        }
+        out.push(row);
+      });
       continue;
     }
     const text = (u.values || {})[field.k] || '';
@@ -478,14 +514,37 @@ function csvRows() {
       }));
       continue;
     }
+    // policyHistory does NOT come through the typed-record branch above: derive
+    // flattens it into `values` as one line per dated row and puts the rows
+    // themselves on `u.history`. So the row-grained coding is joined here, line
+    // n against history row n, which is the order derive wrote them in.
+    // Guarded on byKey, NOT on the line count alone: u.history is the entry's
+    // policy history whatever field is selected, so any other field whose
+    // bullet count happened to equal it would have picked up a row_year and a
+    // join that mean nothing. Only a field whose scheme declares a key is
+    // row-grained against history.
+    const hist = byKey && Array.isArray(u.history) && u.history.length === lines.length
+      ? u.history : null;
+    const norm = x => String(x).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
     lines.forEach((b, n) => {
       const sl = Number(slots[n]);
-      out.push(Object.assign({}, base, {
+      const row = Object.assign({}, base, {
         n_bullets: lines.length, bullet_no: n + 1,
         slot: Number.isInteger(sl) ? sl : '',
         question: Number.isInteger(sl) && qs[sl - 1] ? qs[sl - 1] : '',
-        text: b, row_year: '', row_value: '',
-      }));
+        text: b, row_year: hist ? (hist[n].year || '') : '', row_value: '',
+      });
+      if (byKey && hist) {
+        const h = hist[n];
+        const k = keyCols.map(c => c === 'matches'
+          ? norm(h.description || '').slice(0, 60).trim()
+          : String(h[c] == null ? '' : h[c])).join('|');
+        for (const [col, v] of Object.entries(byKey.get(k) || {})) {
+          if (keyCols.includes(col)) continue;
+          row['coding_' + col] = Array.isArray(v) ? v.join('; ') : v;
+        }
+      }
+      out.push(row);
     });
   }
   return out;

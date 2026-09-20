@@ -310,7 +310,12 @@ function codingFor(domain, body, fields) {
   const out = {};
   if (!src || typeof src !== "object" || Array.isArray(src)) return out;
   for (const [k, , type] of domain.fields) {
-    if (type !== "text") continue;
+    // This used to skip anything that was not `text`, which was true of every
+    // scheme until policyHistory got one. A scheme on a TYPED field was then
+    // dropped in silence: 185 hand-coded rows survived apply-coding.js, sat in
+    // data/dld.json, and would have vanished at the next deploy, because a
+    // deploy re-seeds through this function. Having a scheme is the condition;
+    // the field type is not.
     const scheme = SCHEMES[domain.id + "." + k];
     if (!scheme) continue;
     const given = src[k];
@@ -321,10 +326,20 @@ function codingFor(domain, body, fields) {
     // silently reshaping it would let a submission assert a grain the scheme
     // does not have.
     if (Array.isArray(given) !== !!scheme.many) continue;
-    // A coding describes a text. Where there is no text there is nothing to
+    // A coding describes a field. Where the field is empty there is nothing to
     // have read, and a coding surviving on an emptied field would assert one.
-    const text = String(fields[k] == null ? "" : fields[k]).trim();
-    if (!text || NOT_ESTABLISHED_RE.test(text) || /^Not applicable/i.test(text)) continue;
+    //
+    // A TYPED field holds rows, not prose, so the emptiness test is whether it
+    // has any. Running the old string test over an array gave
+    // "[object Object],[object Object]" -- truthy for any array INCLUDING one
+    // that was emptied to [], which is precisely the case the guard exists to
+    // catch.
+    if (SHAPES[type]) {
+      if (!Array.isArray(fields[k]) || !fields[k].length) continue;
+    } else {
+      const text = String(fields[k] == null ? "" : fields[k]).trim();
+      if (!text || NOT_ESTABLISHED_RE.test(text) || /^Not applicable/i.test(text)) continue;
+    }
     const clean = given => {
       const row = {};
       for (const [col, spec] of Object.entries(scheme.columns)) {
