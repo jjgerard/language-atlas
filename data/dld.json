@@ -1519,6 +1519,15 @@
     "review_interval_months": 24,
     "decider": "not stated",
     "rule_locus": "sub-national only"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
    }
   }
  },
@@ -1642,6 +1651,17 @@
     1,
     4
    ]
+  },
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -1736,6 +1756,17 @@
     3,
     3
    ]
+  },
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -1837,6 +1868,17 @@
     3,
     3
    ]
+  },
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -1938,6 +1980,14 @@
     4,
     4
    ]
+  },
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "cognitive referencing",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -2043,6 +2093,17 @@
     1,
     2
    ]
+  },
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -2163,6 +2224,17 @@
     3,
     3
    ]
+  },
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -2266,6 +2338,17 @@
     2,
     2
    ]
+  },
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "cognitive referencing",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
   }
  },
  {
@@ -2820,7 +2903,19 @@
     "year": 2017,
     "description": "Decret of 7 December 2017 gives pupils with specific needs a right to reasonable accommodation in mainstream schools"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "sensory impairment",
+     "intellectual disability"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "BF",
@@ -4322,7 +4417,18 @@
     "year": 2026,
     "description": "Literacy and Numeracy Screening Assessments Regulation AR 44/2026 sets K-3 screening, awaiting commencement"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -4391,7 +4497,18 @@
     "year": 1995,
     "description": "Individual Education Plan Order M638/95 requires an IEP for each identified student, with listed support services"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "not stated",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "institutional"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -4440,7 +4557,18 @@
     "year": 2004,
     "description": "American Sign Language becomes eligible for Special Language Credit Option credits"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -4501,7 +4629,18 @@
     "year": 2025,
     "description": "Private Act reconstitutes the speech-language pathologists and audiologists body as a regulatory college"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -4562,7 +4701,18 @@
     "year": 2013,
     "description": "Regulation 47/13 registers speech-language pathologists and defines their practice under the Health Professions Act"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -4611,7 +4761,18 @@
     "year": 2016,
     "description": "Ministerial Directive on Inclusive Schooling (2016) issued under s 7(2), mandating School-Based Support Teams"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -4664,7 +4825,18 @@
     "year": 2019,
     "description": "The 2019 Inclusive Education Policy has no categories, codes or exceptionality list"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -4725,7 +4897,18 @@
     "year": 2020,
     "description": "S.Nu. 2020 c.14 Part I rewrites the inclusive education Part, adding individual student support plans"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -4795,7 +4978,18 @@
     "year": 1998,
     "description": "Ontario Regulation 181/98 requires every school board to establish an Identification, Placement and Review Committee (IPRC)."
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "not stated",
+    "bilingual_handling": "silent",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -4844,7 +5038,18 @@
     "year": 2016,
     "description": "Education Act 2016 makes education authorities provide a continuum of specialized supports under inclusive education"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -4921,7 +5126,18 @@
     "year": 2020,
     "description": "Bill 40 requires each service centre's student success committee to include a member experienced with these students"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -4982,7 +5198,18 @@
     "year": 2019,
     "description": "The Education Regulations, 2019 (E-0.2 Reg 29) set the referral and assessment route and free intensive-needs supports"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -5022,7 +5249,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "not stated",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "CD",
@@ -5991,6 +6229,15 @@
     ],
     "decider": "not stated",
     "rule_locus": "sub-national only"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
    }
   }
  },
@@ -6042,6 +6289,15 @@
     "review_interval_months": 12,
     "decider": "not stated",
     "rule_locus": "not stated"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
    }
   }
  },
@@ -6079,7 +6335,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6128,6 +6395,15 @@
     ],
     "decider": "not stated",
     "rule_locus": "sub-national only"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
    }
   }
  },
@@ -6165,7 +6441,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6201,7 +6488,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6241,7 +6539,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6281,7 +6590,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6317,7 +6637,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6357,7 +6688,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "municipality",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6393,7 +6735,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6433,7 +6786,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6469,7 +6833,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6518,6 +6893,15 @@
     ],
     "decider": "not stated",
     "rule_locus": "sub-national only"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
    }
   }
  },
@@ -6555,7 +6939,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6591,7 +6986,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6627,7 +7033,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6663,7 +7080,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6699,7 +7127,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6748,6 +7187,15 @@
     ],
     "decider": "not stated",
     "rule_locus": "sub-national only"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
    }
   }
  },
@@ -6789,7 +7237,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6842,6 +7301,15 @@
     ],
     "decider": "not stated",
     "rule_locus": "sub-national only"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
    }
   }
  },
@@ -6879,7 +7347,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6915,7 +7394,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6951,7 +7441,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -6987,7 +7488,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -7023,7 +7535,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -7072,6 +7595,15 @@
     ],
     "decider": "not stated",
     "rule_locus": "sub-national only"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
    }
   }
  },
@@ -7113,7 +7645,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -7153,7 +7696,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -7189,7 +7743,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "CO",
@@ -10913,7 +11478,18 @@
     "year": 2017,
     "description": "Decret 150/2017 lists communication disorders affecting language as a specific-support category"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "educational psychology service",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "ES",
@@ -12855,6 +13431,12 @@
     ],
     "decider": "municipality",
     "rule_locus": "sub-national only"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "rule_locus": "sub-national only"
    }
   }
  },
@@ -12969,7 +13551,18 @@
     "year": 2020,
     "description": "Commencement No. 2 Order brings section 1 of the SEN and Disability Act (NI) 2016 into operation"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "not solely because of language",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "GB",
@@ -13134,7 +13727,18 @@
     "year": 2017,
     "description": "Additional Support for Learning (Collection of Data) (Scotland) Regulations 2017 require reporting of pupil ASN data"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "GB",
@@ -13251,7 +13855,18 @@
     "year": 2021,
     "description": "Additional Learning Needs (Wales) Regulations 2021 bring the individual development plan system into operation"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "not solely because of language",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
+   }
+  }
  },
  {
   "countryCode": "GD",
@@ -15050,6 +15665,15 @@
     ],
     "decider": "not stated",
     "rule_locus": "not stated"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "not stated",
+    "bilingual_handling": "silent",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "sub-national only"
    }
   }
  },
@@ -16336,7 +16960,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16372,7 +17007,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16420,7 +17066,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16456,7 +17113,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "not stated",
+    "bilingual_handling": "silent",
+    "decider": "municipality",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16512,7 +17180,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16548,7 +17227,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16584,7 +17274,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16624,7 +17325,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16660,7 +17372,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16696,7 +17419,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national, non-binding"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16732,7 +17466,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16776,7 +17521,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16812,7 +17568,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16919,7 +17686,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16955,7 +17733,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -16991,7 +17780,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17031,7 +17831,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17067,7 +17878,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17134,7 +17956,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "not stated",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17209,7 +18042,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17245,7 +18089,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17281,7 +18136,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17317,7 +18183,17 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "bilingual_handling": "silent",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17357,7 +18233,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17397,7 +18284,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "not stated",
+    "bilingual_handling": "silent",
+    "decider": "school or authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17433,7 +18331,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17481,7 +18390,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -17517,7 +18437,18 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "administrative certification",
+    "bilingual_handling": "silent",
+    "decider": "medical commission",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
+   }
+  }
  },
  {
   "countryCode": "IQ",
@@ -31657,7 +32588,19 @@
     "year": 2025,
     "description": "Ala. Admin. Code 290-3-3-.38, remade effective May 2025, sets the Speech-Language Pathology P-12 program standards"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "sensory impairment",
+     "speech-only difficulty"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -31722,7 +32665,18 @@
     "year": 2022,
     "description": "The Alaska Reads Act adds AS 14.30.760, a statewide screening tool for reading deficiency and dyslexia in K-3"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -31783,7 +32737,18 @@
     "year": 2019,
     "description": "Laws 2019, Ch. 198 (SB 1318) required an Arizona dyslexia screening plan, a dyslexia specialist and teacher training"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -31876,7 +32841,18 @@
     "year": 2024,
     "description": "Arkansas DESE Rules Governing the Right to Read Act, effective 1 July 2024, mandate scientific reading training"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -31945,7 +32921,18 @@
     "year": 2022,
     "description": "EC § 56333 (amended by AB 486, in force 2022) frames it clinically"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32010,7 +32997,18 @@
     "year": 2013,
     "description": "State Board rules for the Colorado READ Act, 1 CCR 301-92, set how a significant reading deficiency is determined"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32063,7 +33061,18 @@
     "year": 2008,
     "description": "What follows is 2008 state guidance, not binding regulation"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32150,6 +33159,15 @@
     ],
     "decider": "multidisciplinary team",
     "rule_locus": "not stated"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
    }
   }
  },
@@ -32224,7 +33242,18 @@
     "year": 2021,
     "description": "D.C. Law 23-191 requires universal screening for reading difficulties in kindergarten to second grade"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "not solely because of language",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "socio-cultural factors"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32301,7 +33330,18 @@
     "year": 2010,
     "description": "State Board Rule 6A-6.030121 creates ESE eligibility for language impairments and SLP responsibilities"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32362,7 +33402,18 @@
     "year": 2022,
     "description": "State Board Rule 160-4-2-.39 requires annual K-3 universal screening for characteristics of dyslexia"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32419,7 +33470,18 @@
     "year": 2011,
     "description": "Act 128, Session Laws 2011, requires state-funded nonpublic special education programs to seek accreditation"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "cognitive referencing",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32460,7 +33522,18 @@
     "year": 2025,
     "description": "Both defined in the Idaho Special Education Manual 2025, chapter 4"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32533,7 +33606,18 @@
     "year": 2025,
     "description": "Latest amendment to Illinois' special education rules, 23 Ill. Adm. Code 226, effective 5 May 2025"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32594,7 +33678,18 @@
     "year": 2014,
     "description": "Indiana readopted its Article 7 special education rules, including the language or speech impairment criteria"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32663,7 +33758,18 @@
     "year": 2024,
     "description": "Iowa's special education rules 281 IAC ch. 41 (ARC 7792C, effective 22 May 2024) define speech or language impairment"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32732,7 +33838,18 @@
     "year": 2005,
     "description": "L. 2005, ch. 171 suspends Kansas special education rules that conflict with federal law or with the state act"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32821,7 +33938,18 @@
     "year": 2026,
     "description": "KRS 157.220, as amended effective July 2026, caps special education class sizes and teacher caseloads"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32914,7 +34042,18 @@
     "year": 2024,
     "description": "Acts 2024 No. 517 (SB 336) rewrites R.S. 17:392.11, giving every public school a free dyslexia screener"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -32971,7 +34110,18 @@
     "year": 2017,
     "description": "Resolves 2017 c.12 authorises final adoption of Chapter 101 MUSER, Maine's special education rule, with changes"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33048,7 +34198,18 @@
     "year": 2021,
     "description": "Chapter 246 of 2021 widens parents' right to an independent educational evaluation at public expense"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33121,7 +34282,18 @@
     "year": 2026,
     "description": "603 CMR 28.00, the Massachusetts special education regulations, amended again by the state Board of Education"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33198,7 +34370,18 @@
     "year": 2025,
     "description": "Michigan SLP rule R 338.623, effective 7 May 2025, keeps a limited licence for school teachers endorsed in SLI"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33259,7 +34442,18 @@
     "year": 2023,
     "description": "Minnesota's Read Act, at Minn. Stat. 120B.12, requires universal screening of K-3 pupils for characteristics of dyslexia"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33348,7 +34542,18 @@
     "year": 2022,
     "description": "HB 881 amends Section 37-23-33 to let speech-language pathologists serve as lead teacher for communication needs"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "sensory impairment"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33413,7 +34618,18 @@
     "year": 2016,
     "description": "H.B. 2379 requires every Missouri public and charter school to screen students for dyslexia and to train teachers"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33474,7 +34690,18 @@
     "year": 2005,
     "description": "Ch. 255, L. 2005 amended MCA 20-7-414 on the district duty to identify children needing special education"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33523,7 +34750,18 @@
     "year": 2022,
     "description": "Rule 51 (92 NAC 51), Nebraska's special education regulations, revised effective 17 May 2022"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33592,7 +34830,18 @@
     "year": 1988,
     "description": "Nevada Board of Education regulation added NAC 388.125, defining speech and language impairment for special education"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33641,7 +34890,18 @@
     "year": 2018,
     "description": "RSA 186-C:10-a, added by 2018, 76:1, set rules for retaining and destroying individualized education programs"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33690,7 +34950,18 @@
     "year": 2015,
     "description": "School districts must provide ELLs with disabilities with both the language assistance and disability-related…"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33747,7 +35018,18 @@
     "year": 2023,
     "description": "6.31.2 NMAC amended, renaming the part Children with Disabilities and repealing its gifted education section"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33852,7 +35134,18 @@
     "year": 2022,
     "description": "Regents permanently adopt amendments to 8 NYCRR 200.1 and 200.4 renaming the emotional disturbance classification"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33897,7 +35190,18 @@
     "year": 2021,
     "description": "NC Policies Governing Services for Children with Disabilities, amended March 2021, define speech-language impairment"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -33954,7 +35258,18 @@
     "year": 2023,
     "description": "House Bill 1231 creates a dyslexia and literacy task force and revises the dyslexia screening and intervention program"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34015,7 +35330,18 @@
     "year": 2023,
     "description": "OAC 3301-51-09 revised, setting the caseload a school speech and language pathologist may carry"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34084,7 +35410,18 @@
     "year": 2023,
     "description": "SB 362 renames the Reading Sufficiency Act the Strong Readers Act and requires K-3 screening for dyslexia"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34187,6 +35524,12 @@
     "review_interval_months": 12,
     "decider": "not stated",
     "rule_locus": "not stated"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "rule_locus": "national framework, sub-national rules"
    }
   }
  },
@@ -34261,7 +35604,18 @@
     "year": 2023,
     "description": "Chapter 14 evaluation, reevaluation and IEP rules amended at 53 Pa.B. 7485"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34310,7 +35664,18 @@
     "year": 2023,
     "description": "Right to Read regulations 200-RICR-20-20-6 set teacher competency rules for dyslexia and reading instruction"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34363,7 +35728,18 @@
     "year": 2018,
     "description": "Act No. 213 requires districts to screen all K-1 students for reading difficulties including dyslexia"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34420,7 +35796,18 @@
     "year": 2022,
     "description": "The language disorder definition was last amended effective 14 August 2022"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "cognitive referencing",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34465,7 +35852,18 @@
     "year": 2021,
     "description": "Rule text last amended effective 12 August 2021"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34554,7 +35952,18 @@
     "year": 2023,
     "description": "HB 3928, the Beckley Wilson Act, makes dyslexia a specific learning disability and sets evaluation duties"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34607,7 +36016,18 @@
     "year": 2022,
     "description": "Chapter 431, 2022 General Session amended Utah Code 53E-7-201, the special education eligibility age definitions"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34672,7 +36092,18 @@
     "year": 2022,
     "description": "State Board Rule Series 2360, Vermont's special education rules, revised 2021 and effective 1 July 2022"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34745,7 +36176,18 @@
     "year": 2025,
     "description": "Va. Code § 22.1-217.4 requires IEPs to document augmentative and alternative communication needs and staff training"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34814,7 +36256,18 @@
     "year": 2025,
     "description": "2025 c 256 extends special education entitlement to the end of the school year in which the student turns 22"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34879,7 +36332,18 @@
     "year": 2024,
     "description": "W. Va. Code §18-20-12, added by HB 5262, limits special education class size and requires overage pay"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34932,7 +36396,18 @@
     "year": 2021,
     "description": "Subsection (5) was repealed and recreated effective 1 August 2021"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -34997,7 +36472,18 @@
     "year": 2025,
     "description": "Enrolled Act No. 9 (SF0013) amended W.S. 21-3-401 to require reading screening three times a year in grades K-3"
    }
-  ]
+  ],
+  "coding": {
+   "identificationCriteria": {
+    "threshold_basis": "clinical diagnosis",
+    "bilingual_handling": "silent",
+    "decider": "clinician",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national framework, sub-national rules"
+   }
+  }
  },
  {
   "countryCode": "UY",
