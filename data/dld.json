@@ -354,12 +354,12 @@
   "identificationCriteria": "For pupils with disabilities the local education authority sets up a commission\nIt is made up of doctors, psychologists, teachers and disability specialists\nIt acts on a request from the parent or from the head of an education institution\nIt recommends an ordinary or a specialised institution; parents make the choice",
   "assessments": "LITMUS sentence repetition (SRep) task for Albanian\nDeveloped by Enkeleida Kapia (Academy of Albanian Studies; LMU Munich)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Not established from the sources consulted — a language-appropriate LITMUS sentence repetition instrument exists for this system (see assessments above), but whether any service, clinical guideline or funder requires, supports or reimburses assessment in all of a child's languages was not determined. That gap between an available research instrument and routine clinical practice is the single most useful thing a contributor here could resolve.",
-  "referralPathway": "Ministry and local self-government place the child, consulting parents and commission\nPupils with disabilities stay in specialised schools until the age of 19\nWhere neither school type is possible the local body provides schooling at home",
+  "referralPathway": "Ministry and local self-government place the child, consulting parents and commission\nWhere neither school type is possible the local body provides schooling at home",
   "serviceModel": "Delivered by various specialists, usually language specialists (Action wording, not Albanian)\nGlossed as speech and communication therapists, clinical linguists and psychologists\nNo Albanian institution, caseload or funding route is named in either cited source",
   "legalEntitlement": "Ligj 69/2012 as amended, Chapter XI, on educating children with disabilities\nHearing, sight and communication disability: sign language, Braille, e-materials\nPupils with disabilities are provided assistant teachers and rehabilitation service\nThe local self-government unit must provide suitable teaching and learning premises",
   "funding": "Compulsory education and upper secondary are free in public schools\nA per-pupil formula fund covers small spending and emergency work in public schools\nA quality fund in the ministry budget is competed for by school projects",
   "workforce": "The director employs teachers and assistant teachers from the institution's own funds\nStaff in institutions with pupils with disabilities are certified in training programmes",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Pupils with disabilities stay in specialised schools until the age of 19",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -392,7 +392,6 @@
    ],
    "referralPathway": [
     2,
-    4,
     4
    ],
    "serviceModel": [
@@ -414,6 +413,9 @@
    "workforce": [
     3,
     3
+   ],
+   "dischargeCriteria": [
+    4
    ]
   },
   "coding": {
@@ -425,6 +427,13 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling"
+    ],
+    "decider": "not stated",
+    "rule_locus": "not stated"
    }
   }
  },
@@ -841,12 +850,12 @@
   "identificationCriteria": "Bildungsdirektion establishes special educational need by formal decision (Bescheid)\nA child may be admitted to a school of the type applied for, for observation\nTest in words: cannot follow mainstream lessons without special support, due to disability\nThe impairment must be expected to last more than six months to count",
   "assessments": "",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 102 (Law et al., 2020)\nAssessment: mainstream only 77%, both 10%\nIntervention: mainstream only 83%\nInterpreters sometimes used — assessment 77%, intervention 55%, counselling 83%\nPractitioner training: optional 45%, none 28%, unsure 25% (n = 113)",
-  "referralPathway": "The Bildungsdirektion acts on an application or of its own motion\nIt must advise parents on the options in special and in mainstream schools\nIf parents want a mainstream place it names the nearest school that can meet it\nThe finding is lifted once the child can follow the general curriculum",
+  "referralPathway": "The Bildungsdirektion acts on an application or of its own motion\nIt must advise parents on the options in special and in mainstream schools\nIf parents want a mainstream place it names the nearest school that can meet it",
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 204 from Austria (Law et al., 2020)\nSettings: private practice 55%, hospital 22%, mainstream school 18%\nSector: private 54%, public health 36%, public education 30%\nDirect intervention most often weekly — 81%\nAccess shaped by: urban/rural 67%, social position 67%, cost to parents 64%",
   "legalEntitlement": "Schulpflichtgesetz 1985 para 8a entitles the child to a special or a mainstream school\nThe right holds only where such schools or classes exist and the journey is reasonable\nA child not in such a mainstream school attends a special school matching the disability\nWhere no reachable mainstream school can meet the need, the Bildungsdirektion must act",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 204\nFunders: health insurance 70%, state education 23%, family 23%, state health 18%\n14% said a maximum number of sessions applied (n = 204)",
   "workforce": "2,427 registered in Logopädie in the federal health professions register\nThat register was counted at 31 December 2023, 41,184 people across the MTD professions\nDensity runs from 0.21 per 1,000 inhabitants in Burgenland to 0.39 in Tirol\n34% of them work exclusively freelance, the second highest share of the MTD professions",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "The finding is lifted once the child can follow the general curriculum",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -881,8 +890,7 @@
    "referralPathway": [
     1,
     2,
-    2,
-    4
+    2
    ],
    "serviceModel": [
     1,
@@ -907,6 +915,9 @@
     1,
     2,
     4
+   ],
+   "dischargeCriteria": [
+    1
    ]
   },
   "coding": {
@@ -918,6 +929,13 @@
      "none stated"
     ],
     "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "decision on continuing need"
+    ],
+    "decider": "not stated",
+    "rule_locus": "not stated"
    }
   }
  },
@@ -4946,7 +4964,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "",
-  "identificationCriteria": "Child needs Beijing hukou and a disability certificate or designated-hospital diagnosis\nDiagnosing bodies are designated jointly by the city disabled federation and health commission\nA child claiming on a diagnosis report must be reassessed every year",
+  "identificationCriteria": "Child needs Beijing hukou and a disability certificate or designated-hospital diagnosis\nDiagnosing bodies are designated jointly by the city disabled federation and health commission",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "Families apply themselves, online, through the city disabled children rehabilitation system\nRehabilitation must happen at a designated institution meeting the relevant work standards\nMedical designated institutions are set by the city federation with the health commission\nAge gate: the measures reach disabled children aged 0 to 15 years",
@@ -4954,10 +4972,25 @@
   "legalEntitlement": "Beijing Measures for Rehabilitation Services for Disabled Children, in force 1 Jan 2020\nEvery child meeting article 3 receives the basic rehabilitation subsidy as of right\nThe district disabled persons federation of the hukou area approves the application\nDistrict budgets must carry the subsidy cost as an annual budget line",
   "funding": "Eligible items and subsidy rates are set by the city basic rehabilitation catalogue\nDistrict federations pay the subsidy once the child has taken the basic services\nDistricts may widen the catalogue and raise the subsidy above the city standard\nCatalogue items are excluded from federation purchase-of-service arrangements",
   "workforce": "Designated hearing and speech rehabilitation bodies need at least five front-line staff\nRehabilitation teacher to child ratio at a designated hearing and speech body is capped at 1:8\nFront-line rehabilitation teachers need a college diploma and a teaching certificate\nAt least half the individual-session teachers hold a speech rehabilitation certificate\nAn audiology technician trained in paediatric audiology, hearing aids and implants is required",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "A child claiming on a diagnosis report must be reassessed every year",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "dischargeCriteria": [
+    1
+   ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle"
+    ],
+    "review_interval_months": 12,
+    "decider": "not stated",
+    "rule_locus": "not stated"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -11090,7 +11123,7 @@
   "stubNote": "",
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "terminology": "Service names itself the Speech, Language and Communication Needs Service, SLCN\nSLCN spans fluency, forming sounds and words, sentences, understanding, social language\nCaseload named as language disorders, social communication, hearing impairment, mutism\nDefinitions are taken from the Royal College of Speech and Language Therapists",
-  "identificationCriteria": "Intervention is clinician-set on individual need, not diagnosis-led or a set quota\nA SEND Identification Toolkit summarises the child's SLCN profile before assessment\nTargeted caseload runs up to three terms, then specialist caseload or discharge\nSLCN below the threshold for direct SLT input is met at Universal and Targeted T1",
+  "identificationCriteria": "Intervention is clinician-set on individual need, not diagnosis-led or a set quota\nA SEND Identification Toolkit summarises the child's SLCN profile before assessment\nSLCN below the threshold for direct SLT input is met at Universal and Targeted T1",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "Pre-school concerns go to a Let's Talk drop-in assessment clinic\nSchool-age concerns go first to the school Additional Learning Needs Co-ordinator\nSchool referral needs at least one term of IEP/PLP targets on SLCN as evidence\nOutcome may be advice for the school rather than the child being seen",
@@ -11098,7 +11131,7 @@
   "legalEntitlement": "A 2017 States resolution names the Education (Guernsey) Law, 1970, as amended\nThe States resolved that that Law be repealed and replaced\nReplacement is to set out the powers and duties expected of a government",
   "funding": "The team provides regular free drop-in assessment clinics",
   "workforce": "All members of the team speak English as a first language; interpreters available\nThe team works Monday to Friday, including during school holidays",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Targeted caseload runs up to three terms, then specialist caseload or discharge",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -11117,7 +11150,6 @@
    "identificationCriteria": [
     1,
     2,
-    3,
     3
    ],
    "referralPathway": [
@@ -11143,6 +11175,9 @@
    "workforce": [
     3,
     4
+   ],
+   "dischargeCriteria": [
+    1
    ]
   },
   "coding": {
@@ -11154,6 +11189,13 @@
      "none stated"
     ],
     "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "fixed time limit"
+    ],
+    "decider": "not stated",
+    "rule_locus": "not stated"
    }
   }
  },
@@ -21551,12 +21593,12 @@
   "identificationCriteria": "The caseload is built from logopedic diagnosis plus PMPK and PPk recommendations\nLogopedic diagnosis runs at least twice a year, entry and control, 15 days or more each\nA teacher can trigger an unplanned assessment by writing a pedagogical characterisation\nHealth-limitation status needs PMPK-confirmed deficits blocking education without support",
   "assessments": "LITMUS sentence repetition (SRep) task for Russian\nDeveloped by Natalia Meir and Sharon Armon-Lotem (Bar-Ilan University)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nStrongest diagnostic-accuracy evidence in the set, with Hebrew — Armon-Lotem & Meir (2016)\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Not established from the sources consulted — a language-appropriate LITMUS sentence repetition instrument exists for this system (see assessments above), but whether any service, clinical guideline or funder requires, supports or reimburses assessment in all of a child's languages was not determined. That gap between an available research instrument and routine clinical practice is the single most useful thing a contributor here could resolve.",
-  "referralPathway": "Logopedic help rests on a parent's own written application or their consent\nEnrolment and discharge run by administrative act of the head of the organisation\nEnrolment onto logopedic lessons may be made at any point in the school year\nChildren attending no preschool at all may also be enrolled, on a medical card",
+  "referralPathway": "Logopedic help rests on a parent's own written application or their consent\nEnrolment onto logopedic lessons may be made at any point in the school year\nChildren attending no preschool at all may also be enrolled, on a medical card",
   "serviceModel": "Delivered inside school and preschool by the uchitel-logoped, an education-service post\nHealth sector has a separate meditsinskiy logoped post in child rehabilitation units\nEntry via a PMPK or school PPk panel, or logopedist screening, with parental consent\nMinistry model regulation R-75 of 2020 governs logopedic help in education organisations",
   "legalEntitlement": "Federal Law 273-FZ art 79: conditions are set in the PMPK's recommendations\nSpecial conditions must include group and individual corrective lessons\nRegions set up separate schools for pupils with severe speech disorders\nProviding those staff and aids is an expenditure obligation of the region",
   "funding": "Special textbooks, teaching aids and materials are provided free under 273-FZ art 79\nWhere the child is funded from the federal budget the cost falls to the Federation\nPupils with health limitations living in the school are on full state support\nThose not living there get free twice-daily meals from the organisation's founder",
   "workforce": "Recommended staffing norms in a 2020 ministry model regulation, not a count of posts\n1 logopedist post per 6 to 12 pupils with a PMPK adapted-programme recommendation\n1 post per 25 pupils recommended corrective lessons by the PPk or the PMPK\nHow many posts there are is fixed by the organisation's own local act",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Enrolment and discharge run by administrative act of the head of the organisation",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -21587,7 +21629,6 @@
    ],
    "referralPathway": [
     1,
-    2,
     4,
     4
    ],
@@ -21614,6 +21655,9 @@
     2,
     2,
     4
+   ],
+   "dischargeCriteria": [
+    2
    ]
   },
   "coding": {
@@ -21625,6 +21669,13 @@
      "none stated"
     ],
     "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "not stated"
+    ],
+    "decider": "school or authority",
+    "rule_locus": "not stated"
    }
   }
  },
@@ -25666,11 +25717,11 @@
   "assessments": "",
   "multilingualProvision": "Adverse effect must not be primarily explained by sociocultural dialect\nNor by differences associated with acquisition of English as a new language\nArticulation is judged against the child's own cultural linguistic background",
   "referralPathway": "A licensed certified speech-language pathologist must sit on the eligibility team\nWhere this is the primary classification a special education teacher is not required",
-  "serviceModel": "Eligibility drives an IEP built under 14 DE Admin. Code 925 sections 7.0 to 11.0\nA child may hold more than one educational classification, with a primary one recorded first\nEligibility also triggers counting under the Delaware unit funding system, 14 Del.C. Ch. 17\nExit rules end entitlement at the 22nd birthdate or on an IEP Team no-longer-eligible finding",
+  "serviceModel": "Eligibility drives an IEP built under 14 DE Admin. Code 925 sections 7.0 to 11.0\nA child may hold more than one educational classification, with a primary one recorded first\nEligibility also triggers counting under the Delaware unit funding system, 14 Del.C. Ch. 17",
   "legalEntitlement": "14 DE Admin. Code 923: FAPE available to all children with disabilities in Delaware\nIt runs to a regular diploma or 31 August of the year the child turns 22\nDuty falls on each public agency receiving state funding for children's education\n14 DE Admin. Code 926: a due process complaint may be filed with the Secretary",
   "funding": "The K-12 basic special education unit is 1 unit for 8.4 students\nThe complex unit, preschool to grade 12, is 1 unit for 2.6 students\nPartial unit funding runs between 1 and 8.4 students on the cash-in value of the unit\nPreschool basic unit money is ring-fenced to the children counted in that unit",
   "workforce": "Units generated by special education pupils must pay professional staff, SLPs among them\nPreschool units may hire teachers, paraprofessionals and speech and language pathologists",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Exit rules end entitlement at the 22nd birthdate or on an IEP Team no-longer-eligible finding",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -25686,7 +25737,22 @@
     "year": 2022,
     "description": "House Bill 304 adds 14 Del. C. 158, requiring universal reading screening for dyslexia risk in K-3"
    }
-  ]
+  ],
+  "slots": {
+   "dischargeCriteria": [
+    1
+   ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "age ceiling",
+     "decision on continuing need"
+    ],
+    "decider": "multidisciplinary team",
+    "rule_locus": "not stated"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -27679,12 +27745,12 @@
   "identificationCriteria": "OAR 581-015-2135 sets separate minimum criteria for each disorder type\nVoice must rate moderate to severe on a voice assessment scale\nA syntax or semantics disorder must not be the result of another disability\nAdverse impact and need for special education services are both required",
   "assessments": "No instrument is named in the rule\nLanguage evaluation needs a language sample plus standardized tests\nVoice disorder needs a medical statement from an otolaryngologist",
   "multilingualProvision": "Only the standard bar on limited English proficiency, OAR 581-015-2120",
-  "referralPathway": "A parent or public agency may initiate a request for an initial evaluation\nSchool districts are the public agencies responsible for evaluating school-age children\nReevaluation may occur not more than once a year unless parent and agency agree",
+  "referralPathway": "A parent or public agency may initiate a request for an initial evaluation\nSchool districts are the public agencies responsible for evaluating school-age children",
   "serviceModel": "Assessment must be by an SLP licensed by the state board OR by the TSPC\nDual licensure route means a teacher-licensed SLP can carry out the assessment\nOregon's category name is 'communication disorder', not speech or language impairment\nRead on oregon.public.law; oregonlegislature.gov refuses the TLS handshake",
   "legalEntitlement": "ORS 343.221 requires the district school board to provide special education\nThe board must file an annual projected activities and cost statement with the Superintendent\nA parent may demand a hearing contesting identification, evaluation, IEP or placement\nEither party aggrieved by the hearing officer may bring a civil action, ORS 343.175",
   "funding": "The State School Fund weights a child with a disability at an extra 1.0 of ADM\nThat extra weight is capped at 11 per cent of district ADM without ODE approval",
   "workforce": "Licensure needs a master's or doctoral degree in speech-language pathology, ORS 681.260\nBoard-set supervised clinical experience is also required for the licence",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Reevaluation may occur not more than once a year unless parent and agency agree",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -27708,7 +27774,22 @@
     "year": 2023,
     "description": "2023 c.290 enacts ORS 343.324, limiting abbreviated school day placements for students with disabilities"
    }
-  ]
+  ],
+  "slots": {
+   "dischargeCriteria": [
+    1
+   ]
+  },
+  "coding": {
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle"
+    ],
+    "review_interval_months": 12,
+    "decider": "not stated",
+    "rule_locus": "not stated"
+   }
+  }
  },
  {
   "countryCode": "US",
@@ -28937,12 +29018,12 @@
   "identificationCriteria": "Assessment is by the Council for the Identification of the Disability Level\nMethod is direct observation, simple daily-living tasks and a set of questions\nIn listed cases the Hội đồng giám định y khoa determines the level instead\nSchool staff and teachers are trained to use a screening toolkit",
   "assessments": "",
   "multilingualProvision": "A general curriculum rule, not one on assessment: ethnic-language materials are optional\nThe 2005 Education Law gives ethnic groups a right to learn their own languages\nMother tongue-based bilingual education has been piloted with three ethnic groups\nVietnamese remains the language of instruction at lower secondary level",
-  "referralPathway": "The person or a legal representative applies to the commune People's Committee\nWithin 30 days of the application the commune chairman convenes the council\nThe certificate issues within five working days of the council's conclusion\nRe-assessment runs on request when an event changes the level of disability",
+  "referralPathway": "The person or a legal representative applies to the commune People's Committee\nWithin 30 days of the application the commune chairman convenes the council\nThe certificate issues within five working days of the council's conclusion",
   "serviceModel": "Article 28 makes inclusive education the main mode for disabled learners\nSemi-inclusive and special education apply only where inclusion is not yet feasible\nParents or guardians choose the mode of education",
   "legalEntitlement": "Article 27 gives late entry, admission priority and fee exemption or reduction\nSubjects the child cannot manage may be waived or reduced\nIts answer to hearing-and-speech disability is teaching in SIGN LANGUAGE\nNo entitlement to speech and language therapy in school appears in the Law",
   "funding": "The State allocates budget each year to carry out disabled-persons policy\nLearners may be considered for scholarships and help with equipment and school supplies\nMonthly social allowance reaches especially severe and severe disability only\nHealth insurance cover follows the health insurance law, art. 22",
   "workforce": "A project-body account, not a government register or count\nNo formal speech therapy training programme existed in Vietnam before 2009\nIn the education sector therapy is largely delivered by special-education teachers",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Re-assessment runs on request when an event changes the level of disability",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -28960,7 +29041,19 @@
      "none stated"
     ],
     "rule_locus": "national statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": [
+     "re-evaluation cycle"
+    ],
+    "decider": "not stated",
+    "rule_locus": "not stated"
    }
+  },
+  "slots": {
+   "dischargeCriteria": [
+    1
+   ]
   }
  },
  {
