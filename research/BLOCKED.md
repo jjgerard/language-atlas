@@ -2102,3 +2102,48 @@ Two of the six hosts probed here were already in this file, and the PEER move
 was already section 11. **Read this file and `BRIEF.md` before probing
 anything.** That is what both are for, and this pass paid the cost they exist
 to remove.
+
+## 27. The eal exit pass: a client flag worth knowing, and Malta's two dead domains
+
+### `--ssl-no-revoke` is needed for matsne.gov.ge from this environment
+
+Georgia's legislative register answers curl with
+
+    curl: (35) schannel: next InitializeSecurityContext failed:
+    CRYPT_E_REVOCATION_OFFLINE - The revocation function was unable to check
+    revocation because the revocation server was offline
+
+That is **Windows schannel failing to reach a revocation server, not the host
+refusing**. `curl --ssl-no-revoke` fetches the same URL at 200 with 910,231
+bytes of the Law of Georgia on General Education. Add the flag before recording
+any `.gov.ge` host as blocked; the same class may affect other registers behind
+certificate authorities this machine cannot reach.
+
+### Malta's education domains no longer resolve
+
+- **`migrantlearnersunit.gov.mt`** — NXDOMAIN
+- **`meae.gov.mt`** — NXDOMAIN
+
+Both from curl AND from WebFetch, so it is not a client quirk. **Search engines
+still index them**, which makes this the most misleading failure in this file:
+a search returns the exact sentence you need, with a URL that cannot be fetched
+by anything. Do not cite from a search snippet.
+
+**The Internet Archive has them**, and `BRIEF.md` rule 2 expressly allows an
+archive URL when only that works. `web.archive.org/web/2024/<url>` redirects to
+the nearest snapshot and returns 200; Malta's one-year induction rule was
+recovered from the 2022-06-14 capture and gated normally. `terr-verify` fetches
+web.archive.org without complaint.
+
+Note that `archive.org/wayback/available` — the JSON availability API — returned
+**429 Too Many Requests** on the first call. The dated `web.archive.org/web/...`
+path worked immediately. Prefer the dated path.
+
+### Eurydice answers, and does not carry exit rules
+
+Not a block: `eurydice.eacea.ec.europa.eu` serves 200 throughout. But its
+"support measures for learners" pages for Cyprus, Hungary and Malta describe
+reception and integration and say nothing about when support CEASES. That is the
+same finding `DISCHARGE-WAVE.md` records for the dld side, and it is worth
+having here too so the next pass does not spend the fetches: **for an exit or
+discharge question, Eurydice is not the source.**

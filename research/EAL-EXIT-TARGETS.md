@@ -183,3 +183,80 @@ windows tested, which is a reason to look again with more data, and the
 pre-registered form of the question has to be fixed BEFORE the new entries land:
 the measure, the window, and the adjustment level, written down, so the test is
 one test rather than another twelve.
+
+---
+
+# Worked 2026-09-21: the list was stale, and four of the eight hit a wall
+
+## The baseline in this file is out of date
+
+It was written when the exit cross reached about 21 systems. **It is now 40**,
+and `exit_mechanism` is coded on 41. Other work moved it in between, so the "21
+to 29" arithmetic above should not be quoted.
+
+## Three of the eight tractable countries were already resolved
+
+Checked before researching anything:
+
+- **Croatia** — `removalCriteria` prose present, coded `proficiency judgement`.
+- **Portugal** — prose present, coded `proficiency judgement`.
+- **Montenegro** — carries the **not-applicable** marker: "no newcomer definition
+  exists; newly arrived pupils go straight into mainstream classes". That is a
+  deliberate answer, not a gap, and it is the right one.
+
+So the eight were really five.
+
+## Malta is done, and only the Internet Archive could prove it
+
+Coded `clock` + `assessed, no criterion`, 12 months, decided by the school,
+`rule_locus: national, non-binding`. The Migrant Learners' Unit ran a **one-year
+induction programme** and "Learners are assessed regularly throughout the year
+and at the end of the induction period, a decision will be taken by educational
+staff concerning the transition of the learner into mainstream education" — a
+fixed period with a review at the end and **no stated standard for ceasing**,
+which is exactly what `assessed, no criterion` is for.
+
+**Both Malta docLinks are NXDOMAIN.** `migrantlearnersunit.gov.mt` and
+`meae.gov.mt` no longer resolve, from two different clients, although search
+engines still index them. The rule survives only in a 2022 Internet Archive
+snapshot, which `BRIEF.md` expressly permits and which the entry's first bullet
+says out loud. Eurydice's Malta page and AIDA both describe the programme and
+neither states the period or the exit decision.
+
+## The remaining four hit the wall DISCHARGE-WAVE.md already mapped
+
+Cyprus, Georgia, Hungary and Moldova are **not tractable in the way this file
+assumed**, and the reason is structural rather than per-country:
+
+> the comparative sources describe how support STARTS and say nothing about how
+> it ends
+
+That sentence was written about `dld.dischargeCriteria`. It is equally true
+here. Eurydice's "support measures for learners" pages for Cyprus and Hungary
+carry reception and integration material and nothing on ceasing. This is very
+likely *why* `exit_mechanism` is missing on 24 of 46 in the first place — the
+gap is in the source family, not in the research effort.
+
+**Georgia is further along than the others and points somewhere specific.** The
+Law of Georgia on General Education, art. 4, gives citizens whose native
+language is not Georgian "the right to acquire a complete general education in
+their native language" — a **school-type right, not a time-limited support**, so
+there is nothing to exit. A full-text search of the Law found no cessation rule
+of any kind for language support: `cease` 0 hits, `exit` 0, and every "no
+longer" and "proficiency" hit is about board members, referral centres or
+foreign-language exam certificates. That points at the **not-applicable marker**,
+as Montenegro uses, rather than a coded `exit_mechanism` — **but it is one
+source, and the two-source rule applies.** Do not write it off the Law alone.
+
+## What the next session should do differently
+
+Take the second tier (Israel, Japan, Singapore, Thailand) or the federal four
+only if the *national instrument* is in hand. For these four, going back to
+Eurydice will produce the same nothing. The instruments to find are:
+
+| unit | what to look for |
+|---|---|
+| GE Georgia | a second source on whether any time-limited support exists at all |
+| CY Cyprus | the Ministry circular behind the bilingual-children provision |
+| HU Hungary | the ministerial decree behind the start-of-schooling diagnostic test |
+| MD Moldova | whether any newcomer support exists to exit from; the plan-cadru is a timetable |

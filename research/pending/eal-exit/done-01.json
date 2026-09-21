@@ -1,0 +1,31 @@
+{
+ "MT|Malta": {
+  "fields": {
+   "removalCriteria": [
+    "Source is a 2022 Internet Archive copy; migrantlearnersunit.gov.mt no longer resolves",
+    "One-year induction programme in Maltese and English before mainstream education",
+    "Learners assessed regularly through the year; educational staff decide the transition"
+   ]
+  },
+  "slots": {
+   "removalCriteria": [1, 1, 2]
+  },
+  "evidence": [
+   {
+    "bullet": "Source is a 2022 Internet Archive copy; migrantlearnersunit.gov.mt no longer resolves",
+    "url": "https://web.archive.org/web/20220614051559/https://migrantlearnersunit.gov.mt/en/Pages/Education%20System/Induction-Programme.aspx",
+    "quote": "The one year induction programme focuses on the learning of Maltese and English"
+   },
+   {
+    "bullet": "One-year induction programme in Maltese and English before mainstream education",
+    "url": "https://web.archive.org/web/20220614051559/https://migrantlearnersunit.gov.mt/en/Pages/Education%20System/Induction-Programme.aspx",
+    "quote": "The one year induction programme focuses on the learning of Maltese and English which are the languages of schooling in Malta"
+   },
+   {
+    "bullet": "Learners assessed regularly through the year; educational staff decide the transition",
+    "url": "https://web.archive.org/web/20220614051559/https://migrantlearnersunit.gov.mt/en/Pages/Education%20System/Induction-Programme.aspx",
+    "quote": "Learners are assessed regularly throughout the year and at the end of the induction period, a decision will be taken by educational staff concerning the transition of the learner into mainstream education"
+   }
+  ]
+ }
+}

@@ -17311,7 +17311,7 @@
   "inst": "International Journal of Educational Research Open",
   "source": "seed",
   "newcomerCriteria": "Newly arrived migrant pupils are a named category in top-level policy\nDiagnostic language testing covers the whole age cohort and newly arrived pupils specifically\nManaged centrally through the Migrant Learners Unit",
-  "removalCriteria": "",
+  "removalCriteria": "Source is a 2022 Internet Archive copy; migrantlearnersunit.gov.mt no longer resolves\nOne-year induction programme in Maltese and English before mainstream education\nLearners assessed regularly through the year; educational staff decide the transition",
   "newcomerProportion": [
    {
     "year": "2018",
@@ -17376,6 +17376,11 @@
    "bilingualEducationNotes": [
     1,
     4
+   ],
+   "removalCriteria": [
+    1,
+    1,
+    2
    ]
   },
   "coding": {
@@ -17408,7 +17413,16 @@
      "occurrence": 1,
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "removalCriteria": {
+    "exit_mechanism": [
+     "clock",
+     "assessed, no criterion"
+    ],
+    "exit_period_months": 12,
+    "decided_by": "school",
+    "rule_locus": "national, non-binding"
+   }
   }
  },
  {
