@@ -497,6 +497,31 @@ const L1_SECURED_BY = {
   'not stated': 'The entry does not establish what secures the arrangement it describes',
 };
 
+// ===========================================================================
+// eal.l2Support
+// ===========================================================================
+//
+// Derived 2026-09-21 from 40 entries sampled across all five regions, and the
+// pair to eal.l1Support: what a pupil who lacks the school language gets IN
+// that language. `for_whom` and `secured_by` are the l1Support columns reused
+// unchanged, so the two fields can be read against each other -- which is the
+// point, since a system can offer one, both or neither.
+
+// HOW IT IS DELIVERED. A LIST, because the entries that describe a real
+// service almost always name more than one setting: Denmark names reception
+// classes, special groups AND one-to-one; Greenland names one-to-one, group,
+// split lessons, in-class support and a language workshop. Coding a single
+// "main" model would flatten the systems that have actually thought about it
+// into the ones that have not.
+const L2_MODELS = {
+  'reception or preparatory class': 'A separate class the pupil attends before or alongside mainstream (Greece, ZEP I intensive instruction "with mainstream attendance for PE, arts, music and languages", and the DYEP refugee facilities; Serbia, where schools "must organise Serbian courses, preparatory classes and supplemental classes"; Monaco, francais langue etrangere "run as a section within schools")',
+  'withdrawal for lessons': 'The pupil leaves the ordinary class for language teaching (Israel, where the head appoints a teacher to "no fewer than six weekly hours per pupil", taught in a group; Guam, whose "pull-out pupils get extra academic support through SIOP sheltered instruction"; Denmark, special groups or one-to-one)',
+  'in-class support': 'Help arrives inside the ordinary class (Italy, teachers reallocated where newcomer concentration is high, plus linguistic-cultural mediators and "didattica personalizzata"; Greenland, in-class support among five named forms; Puerto Rico, full immersion "with accommodations provided" and an individual language development plan)',
+  'taught to all as a subject': 'The school language is a timetabled subject for the whole cohort rather than targeted support (Fiji, English "taught as a second language" with "no withdrawal, newcomer or targeted second-language programme described"; Lebanon, written classical Arabic compulsory in all primary schools at seven hours a week; Cambodia, where Khmer is "explicitly the L2 inside the multilingual education programme")',
+  'none established': 'Checked, and nothing is provided for a pupil arriving without the school language (Brazil: "No national provision was found for children arriving without Portuguese"; Chile, the same for Spanish; Bahrain; Central African Republic, Algeria and Guinea, whose PEER profiles describe no support route at all)',
+  'not stated': 'The entry does not establish how any support is delivered',
+};
+
 // WHO DECIDES. Same purpose as the eal axis -- the same test applied by a
 // clinician, a commission or a school is three different systems.
 const DECIDER_TYPES = {
@@ -1166,6 +1191,17 @@ const SCHEMES = {
   // properly. `bilingual_handling` lived only on identificationCriteria, where
   // it came out `silent` on 187 of 193 -- a finding about where drafters put
   // the answer, not about what systems do. 104 of those 187 have prose here.
+  'eal.l2Support': {
+    row: 'one national or sub-national system',
+    columns: {
+      // `models` is a LIST -- see the note on L2_MODELS.
+      models: L2_MODELS,
+      // Reused from l1Support unchanged, so the pair can be read together.
+      for_whom: L1_FOR_WHOM,
+      secured_by: L1_SECURED_BY,
+      evidence_type: EVIDENCE_TYPE,
+    },
+  },
   'eal.l1Support': {
     row: 'one national or sub-national system',
     columns: {
@@ -1255,7 +1291,7 @@ module.exports = {
   ASSESSMENT_LANGUAGE, LOCAL_NORMS, EVIDENCE_TYPE,
   SERVICE_SECTOR, SERVICE_PRACTITIONER, SERVICE_PLACEMENT,
   FUNDERS, FAMILY_PAYS, FUNDING_SCOPE,
-  L1_FORM, L1_FOR_WHOM, L1_SECURED_BY,
+  L1_FORM, L1_FOR_WHOM, L1_SECURED_BY, L2_MODELS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
   HISTORY_OPERATION,
@@ -1281,6 +1317,7 @@ module.exports = {
   isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
   isAssessmentLanguage: v => has(ASSESSMENT_LANGUAGE, v),
   isL1Form: v => has(L1_FORM, v),
+  isL2Model: v => has(L2_MODELS, v),
   isL1ForWhom: v => has(L1_FOR_WHOM, v),
   isL1SecuredBy: v => has(L1_SECURED_BY, v),
   isFunder: v => has(FUNDERS, v),
