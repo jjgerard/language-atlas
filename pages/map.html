@@ -2466,7 +2466,7 @@ function fieldSourcesHTML(u, fieldKey) {
           </details>` : ''}
         <p class="note">${anyRecorded
           ? 'Recorded against this question when the entry was drafted, with the sentence it was read from.'
-          : 'Chosen from this entry\'s own sources by reading them: this is the one that carries the wording above, and the others do not.'}</p>
+          : `Chosen from this entry's own sources by reading them: ${drafted.length === 1 ? 'this is the one that carries' : 'these carry'} the wording above, and the others do not.`}</p>
       </div>`;
     }
     return `<div class="cpanlinks">
