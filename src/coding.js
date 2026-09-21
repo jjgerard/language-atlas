@@ -522,6 +522,49 @@ const L2_MODELS = {
   'not stated': 'The entry does not establish how any support is delivered',
 };
 
+// ===========================================================================
+// dld.workforce
+// ===========================================================================
+//
+// Derived 2026-09-21 from 40 entries sampled across all five regions.
+//
+// Two axes were considered and MEASURED OUT rather than argued out. `scope`,
+// the column that earns its place on dld.funding at 23%, reaches only 7% here,
+// so it is not a column. A numeric practitioner count was considered and
+// rejected because the bases do not compare: France counts a register of
+// 23,500, Nigeria counts 4 from a key-informant survey, and averaging those
+// would be nonsense. What the third column records instead is WHAT KIND of
+// count the entry has, which is comparable.
+
+// WHO MAY PRACTISE. The axis with the most in it, and the one that separates a
+// regulated profession from a job a trained teacher does.
+const WORKFORCE_ENTRY = {
+  'licence or registration': 'A statutory licence or register gates practice (Philippines, whose 2019 Act created a Professional Regulatory Board and where "practice without a licence is prohibited"; Colombia, where registration needs a degree in fonoaudiologia and the ACFTL holds the Registro Unico Nacional; Guam, requiring "a current ASHA Certificate of Clinical Competence to be licensed"; Puerto Rico, licensing three graded titles)',
+  'named qualification': 'A degree or title is required and no register is named (Hungary, where provision is "reserved to a logopedus or logopedics-qualified teacher"; Poland, whose nauczyciel logopeda post "needs higher studies in logopedics and pedagogical preparation"; Denmark, bachelor in logopaedi then cand.mag. i audiologopaedi)',
+  'general teacher training': 'The workforce is teachers with special-education training and no distinct profession is named (Antigua and Barbuda, whose Act "names no therapist, psychologist or other support professional" and whose policy states "all teachers are teachers of children with special educational needs"; Angola, 1,668 teachers trained in special education; Papua New Guinea, mainstream teachers via an applied diploma)',
+  'none named': 'Checked, and the entry establishes that nobody is qualified or designated to do it (Central African Republic, where "forty per cent of teachers are parent-teachers with no training or qualifications"; Bahrain, where the 540 specialised personnel have "no speech or language specialism among them")',
+  'not stated': 'The entry does not establish who may practise',
+};
+
+// WHETHER THE COUNTRY TRAINS ANYONE. Separate from entry route, because a
+// system can require a qualification it does not teach.
+const WORKFORCE_TRAINING = {
+  'domestic programme': 'A training route exists in the country and the entry names it (Algeria, an orthophonie licence created by ministerial order in 1999 and spread to seven universities; Singapore, "a university masters and a separate bachelor\'s degree"; Nigeria, the University of Ibadan)',
+  'no programme found': 'Checked, and there is none (Mongolia: "No Mongolian speech therapy degree programme was found"; Gambia and Liberia, each with "no training programme, association or workforce count found anywhere")',
+  'overseas or planned': 'Training happens abroad, or exists only as an aspiration (Mongolia again, where art. 16.4 requires the state to train speech correctors and "training may be domestic or overseas"; Fiji, where "a 2016 policy action was to advocate for local university-level courses")',
+  'not stated': 'The entry does not reach the question of training',
+};
+
+// WHAT KIND OF COUNT, IF ANY. Comes out `not stated` on roughly 85%, and that
+// is the finding rather than a fault: a field called workforce that mostly
+// cannot say how many people are in it.
+const WORKFORCE_COUNT = {
+  'register or licence count': 'A number taken from a register or licensing body (France, 23,500 orthophonistes "counted from the Adeli register, under-62s only"; Singapore, 861 registered at 31 December 2024; Israel, about 1,400 on the association roll; New Caledonia, about 110 per the union)',
+  'survey estimate': 'A number from a survey or key informants, and the entry says so (Nigeria: "key-informant survey estimates, not register counts", 4 in 2015 against 3 in 2009; the sub-Saharan ENT survey figures generally)',
+  'none reported': 'The count is zero, or the entry records that no workforce is known (Marshall Islands, "zero speech-language pathologists reported for 2023-24", which the entry calls "an official US federal return, not a survey estimate"; Gambia and Liberia, each reporting "no known speech and language therapy work")',
+  'not stated': 'No count of any kind is given',
+};
+
 // WHO DECIDES. Same purpose as the eal axis -- the same test applied by a
 // clinician, a commission or a school is three different systems.
 const DECIDER_TYPES = {
@@ -1221,6 +1264,15 @@ const SCHEMES = {
       evidence_type: EVIDENCE_TYPE,
     },
   },
+  'dld.workforce': {
+    row: 'one national or sub-national system',
+    columns: {
+      entry_route: WORKFORCE_ENTRY,
+      training: WORKFORCE_TRAINING,
+      headcount: WORKFORCE_COUNT,
+      evidence_type: EVIDENCE_TYPE,
+    },
+  },
   'dld.serviceModel': {
     row: 'one national or sub-national system',
     columns: {
@@ -1291,6 +1343,7 @@ module.exports = {
   ASSESSMENT_LANGUAGE, LOCAL_NORMS, EVIDENCE_TYPE,
   SERVICE_SECTOR, SERVICE_PRACTITIONER, SERVICE_PLACEMENT,
   FUNDERS, FAMILY_PAYS, FUNDING_SCOPE,
+  WORKFORCE_ENTRY, WORKFORCE_TRAINING, WORKFORCE_COUNT,
   L1_FORM, L1_FOR_WHOM, L1_SECURED_BY, L2_MODELS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
@@ -1320,6 +1373,9 @@ module.exports = {
   isL2Model: v => has(L2_MODELS, v),
   isL1ForWhom: v => has(L1_FOR_WHOM, v),
   isL1SecuredBy: v => has(L1_SECURED_BY, v),
+  isWorkforceEntry: v => has(WORKFORCE_ENTRY, v),
+  isWorkforceTraining: v => has(WORKFORCE_TRAINING, v),
+  isWorkforceCount: v => has(WORKFORCE_COUNT, v),
   isFunder: v => has(FUNDERS, v),
   isFamilyPays: v => has(FAMILY_PAYS, v),
   isFundingScope: v => has(FUNDING_SCOPE, v),
