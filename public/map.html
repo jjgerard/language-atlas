@@ -207,6 +207,11 @@
 .catlegend .cl .n { margin-left: auto; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
 .catlegend .cl.off { opacity: .42; }
 .catlegend .note { font-size: 11px; color: var(--ink-faint); line-height: 1.45; margin: 2px 0 0; }
+.catlegend .readall {
+  font-size: 11px; color: var(--ink-faint); text-decoration: none; margin-top: 4px;
+  padding-top: 5px; border-top: 1px solid var(--hair);
+}
+.catlegend .readall:hover { color: var(--ink); text-decoration: underline; }
 .legendbox .ramplabel {
   display: block; font-size: 10px; font-weight: 600; letter-spacing: .1em;
   text-transform: uppercase; color: var(--ink-faint); margin-bottom: 5px;
@@ -313,38 +318,7 @@
   margin: 0; font-size: 13.5px; line-height: 1.58; white-space: pre-line;
   overflow-wrap: break-word;
 }
-/* The coding, under the prose it reads. Set apart with a rule and a smaller,
-   quieter type than the text above, because it is a READING of that text and
-   not more of it -- the separation entry.coding keeps in the data is the one
-   thing this block has to keep on screen. */
-.coded { margin: 9px 0 0; padding: 8px 0 0; border-top: 1px dashed var(--hair); }
-.coded .ch {
-  font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
-  color: var(--ink-faint); margin: 0 0 6px;
-}
-.crow { display: grid; grid-template-columns: 96px 1fr; gap: 4px 10px; margin: 0 0 4px; align-items: start; }
-.crow .cn { font-size: 11.5px; color: var(--ink-faint); line-height: 1.5; }
-.cvs { display: flex; flex-wrap: wrap; gap: 4px; }
-/* A value is a chip. Where the vocabulary defines it the chip is a <summary>,
-   so the definition is one click away and nothing is paraphrased in the page. */
-.cv {
-  display: inline-block; font-size: 11.5px; line-height: 1.45;
-  padding: 1px 7px; border-radius: 3px; cursor: pointer;
-  background: var(--surface-2); border: 1px solid var(--hair);
-  color: var(--ink); list-style: none;
-}
-.cv::-webkit-details-marker { display: none; }
-.cvwrap { display: inline-block; }
-.cvwrap[open] .cv { border-color: var(--hair-strong); }
-/* An ORDINAL column is marked, because its values are ranked and the others are
-   not. The mark is a leading bar rather than a colour, so it survives
-   monochrome and does not borrow a categorical hue to mean something else. */
-.cv.ord { border-left: 3px solid var(--cov-3); padding-left: 5px; }
-.cgloss {
-  margin: 5px 0 7px; font-size: 11.5px; line-height: 1.55;
-  color: var(--ink-soft); white-space: normal;
-  padding-left: 8px; border-left: 2px solid var(--hair);
-}
+
 .field.empty p, .field.looked p { color: var(--ink-faint); font-style: italic; }
 /* Not applicable: the question has no meaning for this unit. Set apart from
    "empty" so it does not read as an invitation to fill it in. */
@@ -378,16 +352,17 @@
    would compete with the content the panel exists to show. `.from` also takes
    margin-left:auto, so on an inherited field the two share the right edge and
    this one sits after it. */
-.field h4 a.cmp {
-  margin-left: auto; letter-spacing: .04em; text-transform: none; white-space: nowrap;
-  font-weight: 500; font-size: 10px; color: var(--ink-faint); text-decoration: none;
-  opacity: 0; transition: opacity .12s, color .12s; flex: none;
+/* The field NAME is the link, so the heading has to keep looking like a
+   heading: it inherits everything and earns an underline and an arrow on hover.
+   The arrow is always there rather than appearing on hover, because on touch
+   and keyboard there is no hover and the affordance has to exist anyway. */
+.field h4 a.fieldmap {
+  color: inherit; text-decoration: none; font: inherit; letter-spacing: inherit;
+  text-transform: inherit; transition: color .12s;
 }
-.field h4 .from + a.cmp { margin-left: 7px; }
-.field:hover h4 a.cmp, .field h4 a.cmp:focus-visible { opacity: 1; }
-.field h4 a.cmp:hover { color: var(--ink); text-decoration: underline; }
-/* Touch and keyboard have no hover, so never hide it there. */
-@media (hover: none) { .field h4 a.cmp { opacity: 1; } }
+.field h4 a.fieldmap span { color: var(--ink-faint); transition: color .12s; }
+.field h4 a.fieldmap:hover, .field h4 a.fieldmap:focus-visible { color: var(--ink); text-decoration: underline; }
+.field h4 a.fieldmap:hover span { color: var(--ink); }
 
 a.cite {
   color: inherit; text-decoration: underline; text-decoration-style: dotted;
@@ -1901,59 +1876,6 @@ function linkList(links) {
   ).join('');
 }
 
-/* The coding for one field, rendered under its prose.
- *
- * The coding is a READING of the prose above it, held apart from the prose on
- * purpose -- src/coding.js keeps it in entry.coding, beside the text and never
- * inside it, so it can be argued with or thrown away without a sourced claim
- * moving. The panel keeps that separation visible: the prose is the record, and
- * this is headed as a reading of it.
- *
- * Every value carries its own definition from the vocabulary, verbatim, behind
- * a disclosure. That matters more here than anywhere else in the project: a
- * value like `assessed, no criterion` or `national rule, local application` is
- * precise and non-obvious, and a reader who cannot see the definition will
- * guess one. The glosses name the entries that forced each value, so the reader
- * can go and disagree with the typing rather than with our taste.
- *
- * Row-grained schemes -- policyHistory and the instrument-grained fields -- hold
- * an ARRAY of rows per unit rather than one reading, so they are summarised by
- * count and left to the timeline rather than flattened into a value here.
- */
-function codingHTML(u, fieldKey) {
-  const sc = (B.schemes || {})[domainId + '.' + fieldKey];
-  const coded = (u.coding || {})[fieldKey];
-  if (!sc || !coded) return '';
-  // Every column, not just the vocabulary-backed ones: a numeric column like
-  // `exit_period_months` is part of the coding and has no gloss to carry it.
-  const cols = (sc.allColumns && sc.allColumns.length) ? sc.allColumns : (sc.valueColumns || []);
-  if (!cols.length) return '';
-
-  if (Array.isArray(coded)) {
-    const n = coded.length;
-    if (!n) return '';
-    return `<div class="coded"><div class="ch">Coded — ${n} row${n === 1 ? '' : 's'}, one per dated entry above</div></div>`;
-  }
-
-  const ordinal = new Set(sc.ordinalColumns || []);
-  const rows = cols.map(c => {
-    const raw = coded[c];
-    if (raw === undefined || raw === null || !String(raw).length) return '';
-    const vals = [].concat(raw);
-    const defs = (sc.values || {})[c] || {};
-    const chips = vals.map(v => {
-      const gloss = defs[v];
-      const cls = 'cv' + (ordinal.has(c) ? ' ord' : '');
-      return gloss
-        ? `<details class="cvwrap"><summary class="${cls}">${esc(String(v))}</summary><p class="cgloss">${esc(String(gloss))}</p></details>`
-        : `<span class="${cls}">${esc(String(v))}</span>`;
-    }).join('');
-    return `<div class="crow"><span class="cn">${esc(c.replace(/_/g, ' '))}</span><span class="cvs">${chips}</span></div>`;
-  }).join('');
-  if (!rows) return '';
-  return `<div class="coded"><div class="ch">Coded — a reading of the text above, not part of it</div>${rows}</div>`;
-}
-
 function panelHTML(u, via) {
   const d = domain();
   const st = stateOf(u);
@@ -1973,10 +1895,21 @@ function panelHTML(u, via) {
   // and re-picking the map and the field by hand -- three steps to ask a
   // question the panel already knows the answer to. The link is per FIELD
   // because that is the unit the other page is organised by.
-  const cmp = key => `<a class="cmp" href="/views?map=${encodeURIComponent(d.id)}&field=${encodeURIComponent(key)}"
-     title="Read every country's answer to this question">every country<span aria-hidden="true"> →</span></a>`;
+  // The heading IS the way out. Clicking a field name re-draws the whole map by
+  // that question -- every country's answer to it, in one picture -- which is
+  // what the old /views table was for and is a better answer than a table.
+  //
+  // Only where the map can actually shade by it: a field with no coded column,
+  // or a row-grained one, has nothing to colour, so its heading stays plain
+  // text rather than a link that leads to the coverage map with nothing
+  // changed.
+  const mappable = key => shadeableColumns().some(c => c.field === key);
+  const head = (label, key) => key && mappable(key)
+    ? `<a class="fieldmap" href="/${encodeURIComponent(d.id)}?field=${encodeURIComponent(key)}"
+         title="Draw the map by this question">${esc(label)}<span aria-hidden="true"> →</span></a>`
+    : esc(label);
   const block = (cls, label, body, from, key) =>
-    `<div class="field ${cls}"><h4>${esc(label)}${from ? `<span class="from">inherited from ${esc(from)}</span>` : ''}${key ? cmp(key) : ''}</h4>${body}</div>`;
+    `<div class="field ${cls}"><h4>${head(label, key)}${from ? `<span class="from">inherited from ${esc(from)}</span>` : ''}</h4>${body}</div>`;
   // A field is either a paragraph or a set of sub-bullets, one per line. Sources
   // are not repeated per field — every one is linked once under "Evidence for
   // this entry" at the foot of the panel. Prose fields hold no newline, so they
@@ -2002,7 +1935,7 @@ function panelHTML(u, via) {
       : isLangs ? languagesHTML(u.records[f.k])
       : rowKey ? rowsHTML(u.records[f.k], rowKey)
       : prose(u.values[f.k], u);
-    if (c === 'h') return block('on', f.label, renderOwn() + codingHTML(u, f.k), null, f.k);
+    if (c === 'h') return block('on', f.label, renderOwn(), null, f.k);
     // "Not established from the sources consulted…" is a sentence explaining an
     // absence, not a list of facts, so it stays a paragraph even where the
     // domain's documented fields are bulleted.
@@ -2019,10 +1952,10 @@ function panelHTML(u, via) {
     if (inheritable) {
       nInherited++;
       return block('inh', f.label,
-        (isHist ? historyHTML(par.history, par)
+        isHist ? historyHTML(par.history, par)
           : isLangs ? languagesHTML(par.records[f.k])
           : rowKey ? rowsHTML(par.records[f.k], rowKey)
-          : prose(par.values[f.k], par)) + codingHTML(par, f.k), par.name, f.k);
+          : prose(par.values[f.k], par), par.name, f.k);
     }
     return block('empty', f.label, '<p>Not recorded.</p>', null, f.k);
   }).join('');
@@ -2243,6 +2176,12 @@ function paintCatLegend() {
     rows.push(`<div class="cl" disabled>${sw('var(--cat-other)')}<span>${hidden} more value${hidden === 1 ? '' : 's'}</span></div>`);
   }
   rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Recorded, not yet coded</span></div>`);
+  // The map answers "who does what"; the table answers "what exactly does each
+  // one say", which a colour cannot. It is one click from here rather than in
+  // the nav, because the question it needs is the one already chosen.
+  const [fk] = CODED.key.split('.');
+  rows.push(`<a class="readall" href="/views/table?map=${encodeURIComponent(domainId)}&field=${encodeURIComponent(fk)}"
+    >Read every country's answer<span aria-hidden="true"> →</span></a>`);
   catLegend.innerHTML = rows.join('');
   catLegend.querySelectorAll('button.cl').forEach(b => b.addEventListener('click', () => {
     CODED.only = CODED.only === b.dataset.v ? null : b.dataset.v;
@@ -2269,6 +2208,25 @@ function setShade(key) {
 shadeSel.addEventListener('change', () => setShade(shadeSel.value));
 
 buildShadePicker();
+
+/* ?field=<key> opens the map already drawn by that question, which is what a
+   field heading in an entry panel links to. A field usually has several coded
+   columns -- newcomer criteria has designation, triggers, decided by and rule
+   locus -- so the one with the most countries answering is chosen, because a
+   reader arriving from a heading should land on the fullest picture of it and
+   can change the question from the picker without going back. */
+function openField(fieldKey) {
+  const cols = shadeableColumns().filter(c => c.field === fieldKey);
+  if (!cols.length) return false;
+  const best = cols
+    .map(c => ({ c, n: (B.units[domainId] || []).filter(u => codedValues(u, c.key)).length }))
+    .sort((a, b) => b.n - a.n)[0];
+  setShade(best.c.key);
+  shadeSel.value = best.c.key;
+  return true;
+}
+const askedField = new URLSearchParams(location.search).get('field');
+if (askedField) openField(askedField);
 buildDomainStack(); openDomainBox(domainId, false); buildDomains(); paint(); sizeMap(); applyView(); paintLegend();
 loading.classList.add('done');
 

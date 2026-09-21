@@ -126,6 +126,26 @@ coding, and `EXIT_MECHANISM` says outright that the United States is NOT
 value or nothing. Inheriting a national coding onto sub-national units would
 manufacture agreement that the corpus does not assert.
 
+## Corrected: the field is a DOOR, not a place to print the coding
+
+A first attempt rendered each field's coding under its own bullets in the entry
+panel. That was wrong twice over: it repeated the same apparatus on every field,
+and it answered the question in the panel instead of using the field to leave
+it. **The entry panel is unchanged from before — bullets, as they were.**
+
+What the field does now is open a map. Clicking a field heading redraws the
+whole map by that question, shaded by the coding, for every country at once.
+Only fields the map can actually shade link; one with no coded column, or a
+row-grained one, stays plain text rather than leading to a map with nothing
+changed. A field usually has several coded columns, so the heading opens the one
+with the most countries answering, and the picker changes the question from
+there without going back.
+
+**`/views` is now that map.** The table it replaced is kept at `/views/table`,
+reachable from the map's own legend: a map answers "who does what", a table
+answers "what exactly does each one say", and the second is a thing a colour
+cannot do. Nothing in the nav points at it.
+
 ## Answered: the options are the columns, wherever they live
 
 Reading A, confirmed 2026-09-21 and built. The picker is a list of COLUMNS, and

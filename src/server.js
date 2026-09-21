@@ -404,7 +404,14 @@ app.get('/patterns', page('patterns.html'));
 // Kept reachable but deliberately absent from the nav: the old patterns content,
 // parked when /patterns became the criteria analysis.
 app.get('/patterns-archive', page('patterns-archive.html'));
-app.get('/views', page('views.html'));
+// "Field views" is now the MAP drawn by one question rather than a table of
+// every country's answer to it. A field heading in an entry panel links here
+// with ?field=, and the map opens already shaded by that question's fullest
+// column. The table it replaced is kept at /views/table, because the CSV export
+// and the side-by-side reading are things a map cannot do and somebody may
+// still want; nothing links to it from the nav.
+app.get('/views', page('map.html'));
+app.get('/views/table', page('views.html'));
 app.get('/sources', page('sources.html'));
 // /explore was folded into /patterns. Redirect rather than 404: the URL was
 // live and may have been shared or bookmarked.
