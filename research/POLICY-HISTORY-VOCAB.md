@@ -2423,3 +2423,99 @@ while both `eal` regions still scored 100%.
 `programme`, `centre`, `regulation`, and finally `report` inside a helper — six
 rows lost to six missing plurals across twenty-five regions, each found only by
 hand.
+
+## The provenance rows: `not_an_operation`
+
+The first of the five recorded vocabulary gaps to be ruled on. Most of the rows
+`operation` left unset do not record what happened; they record **what the
+source is**. A column that had to answer "which operation?" for them was being
+asked the wrong question.
+
+### The corpus is 4,305 rows, not 4,301
+
+Correcting a figure carried through the whole operation write-up. Four rows —
+Andorra 2008, Mongolia 2019, Solomon Islands 2023, Connecticut 2008, all `dld` —
+had no coding row at all, not even an empty one, so every count derived from the
+coding array missed them. **The coded total, 4,227, is unchanged, and so is the
+twenty-five-cell grid**, which was computed as a share of coded rows; the four
+rows carry no `operation` and never entered a numerator or a denominator. What
+changes is the row count and the unset count: **4,305 rows, 78 unset, not 4,301
+and 74.** The 74 was the provenance count, and the two figures were conflated.
+
+### The line, and the eight rows that sit on the far side of it
+
+Thirty-nine rows in the corpus carry a provenance marker and **eight of them are
+coded normally**. Reading those eight is what settled the rule:
+
+> A row whose **subject** is the evidence has no operation. A row about an
+> operation that merely **carries** an evidence caveat has one.
+
+Cuba's "…per the 2020 UNESCO PEER profile; enactment not verified" is a sentence
+about a state of affairs with a caveat attached, and stays `state of affairs
+recorded`. Punjab's "Act 25 of 2008, exists; text not found" is a sentence about
+an Act, and stays `provision described`. Vanuatu is the third. The test is
+grammatical, not topical, which is why it can be applied by reading and why the
+classifier in `research/tools/hist-notop-build.js` matches only rows that **open**
+with the evidence or consist of nothing else.
+
+### A separate column, not an eleventh `operation` value
+
+`operation` gets compared across regions. Putting 70 United States source notes
+into the Americas denominator would change what a share of that column MEANS,
+and the size of the distortion is now measurable rather than hypothetical:
+
+```
+                  residual as a     residual as a
+                  share of CODED    share of ALL rows
+  fl Americas          26%               22%
+  indigenous Americas  40%               37%
+  eal Americas         43%               41%
+```
+
+Four points on `fl` Americas, for a column whose twenty-five cells range from 9%
+to 63%. That is not fatal, but it is a real distortion produced entirely by one
+country's sourcing convention, and it is invisible unless the rows are named.
+
+### Three values, and where they came from
+
+`source note` (74), `text incomplete` (3), `subject is another row` (1). The
+second and third exist because one row each could not be forced into the first
+and are honest about different failures: Sweden 2015's row is **truncated
+mid-sentence** and appears that way on three maps, and Andorra 2008's row reads
+"It replaces the model in force since 2008", where "It" is the 2026 regulation —
+the row is a continuation of the row above it, and coding it `instrument
+replaced` would double-count one replacement.
+
+### What the distribution actually says
+
+**70 of 78 are the United States.** Every Americas row is a US one; the other
+eight are singletons in Sweden, Andorra, Mongolia, Solomon Islands, Afghanistan
+and Australia. Four wording families make 65 of the 74 source notes:
+
+```
+  24  "Peer-reviewed 50-state statute inventory…"          fl
+  20  "Evidence is the 2024 Seal of Biliteracy report…"    indigenous
+  16  "Inventory covers statute as at December 2024"       fl
+   9  "ECS reading of statute/regulation as at May 2020"   eal
+```
+
+So this column is not measuring a property of policy systems at all. It is
+measuring **one research decision**: the 50-state entries were built from
+statute inventories and each carries a note saying so. That is a good reason to
+have the column and a bad reason to read anything into its geography — the
+Americas concentration is the sourcing method, not the Americas.
+
+It also means the column will stay small. It is a quarantine, not an axis, and
+`he` has none at all.
+
+### Result
+
+**Every one of the 4,305 rows now carries a value on one column or the other:
+4,227 `operation`, 78 `not_an_operation`, zero unaccounted.** Nothing moved:
+a row-by-row comparison of all 4,301 previously coded rows found 0 changed
+`operation` values and 0 disappeared, and `coding-verify.js` reports no key
+outside `coding` differing from HEAD on any of the five domains.
+
+Four gaps remain recorded and unruled: a change of SCOPE with no instrument
+named (~2.6%); signature without ratification; `state of affairs recorded`
+glossed for absence but used for dated observation generally; republication.

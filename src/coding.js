@@ -486,6 +486,28 @@ const fieldsTouchedFor = id => {
 
 // One scheme per domain, because the field list differs per domain -- which is
 // the whole reason this could not be a single shared vocabulary.
+// WHY A ROW CARRIES NO `operation`, which is not the same as nobody having
+// coded it. Coding `operation` across all five domains left 78 rows of 4,305
+// with no honest value, and reading them showed they are not one problem but
+// three -- and that 74 of the three are the same thing.
+//
+// THIS IS THE `none` / `not stated` SEPARATION AGAIN, one level up. An empty
+// `operation` cell currently cannot say whether the row has no operation to
+// record or whether nobody has read it yet, and 74 rows is too many to leave
+// indistinguishable from future work.
+//
+// IT IS A SEPARATE COLUMN ON PURPOSE. `operation` could have taken an
+// eleventh value instead, and two of its ten (`provision described`, `state of
+// affairs recorded`) already describe rows where nothing happened, so it would
+// have fitted the column's real shape. It is kept out because `operation` gets
+// compared across regions: putting 40 United States source notes into fl's
+// Americas denominator would change what a share of that column MEANS. The
+// reason lives beside the column rather than inside it.
+const NOT_AN_OPERATION = {
+  'source note': 'The row\'s SUBJECT is the evidence rather than anything that happened. 74 of the 78, and they cluster: 24 fl rows reading "Peer-reviewed 50-state statute inventory, policy as at December 2024", 20 indigenous rows reading "Evidence is the 2024 Seal of Biliteracy report and a 50-state statute inventory", 16 more reading "Inventory covers statute as at December 2024, not what districts actually offer", 9 eal rows reading "ECS reading of regulation as at May 2020, not a state publication". The singletons say the same thing in their own words (Connecticut: "What follows is 2008 state guidance, not binding regulation"; Mongolia: "The evidence here is a 2019 ministry project report, not standing policy"; Solomon Islands: "The Education Act 2023 sealed copy is an image-only scan with no text layer"; Australian Capital Territory: "The source is the 2009 curriculum requirements policy; no newer version was retrievable"; Afghanistan: "Both sources describe the pre-August 2021 framework; the position since was not established"). NOT a row that merely carries a caveat -- eight rows do that and are coded normally, because their subject is still an event (Cuba: "A Ley de Educación was listed on the legislative timetable for 2023 per the 2020 UNESCO PEER profile; enactment NOT verified"; Punjab: "Punjab Act 25 of 2008, exists; text not found"; Vanuatu: "…launched…; the policy text itself could not be retrieved"). The line is whether the evidence is the SUBJECT or an aside',
+  'text incomplete': 'The sentence is truncated and what it was going to say cannot be recovered. Three rows, and they are one row copied onto three maps: Sweden 2015 appears in eal, indigenous and fl as "For primary school there is a slight increase, which may be due to the amendment of the Education Act introduced…", a statistic hedged to a maybe and cut off mid-clause',
+  'subject is another row': 'The sentence\'s subject belongs to a different row of the same entry, so the year it sits on is not the year of what it describes. One row: Andorra 2008, "It replaces the model in force since 2008", where "It" is the 2026 regulation two rows down. Kept separate from `text incomplete` because the sentence is whole and the fault is in which row it was filed against',
+};
 const HISTORY_SCHEME = id => ({
   // MANY: one coding row per policyHistory row, not per entry.
   many: true,
@@ -521,6 +543,8 @@ const HISTORY_SCHEME = id => ({
     // somebody does, this keeps the coding attached to the right one.
     occurrence: 'integer, the 1-based position among rows sharing a year and a matches prefix; 1 unless the entry has duplicate history rows',
     operation: HISTORY_OPERATION,
+    // Only where `operation` is empty; see the comment on NOT_AN_OPERATION.
+    not_an_operation: NOT_AN_OPERATION,
     fields_touched: fieldsTouchedFor(id),
   },
 });
@@ -641,8 +665,10 @@ module.exports = {
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
   HISTORY_OPERATION,
+  NOT_AN_OPERATION,
   SCHEMES,
   isHistoryOperation: v => has(HISTORY_OPERATION, v),
+  isNotAnOperation: v => has(NOT_AN_OPERATION, v),
   isThresholdBasis: v => has(THRESHOLD_BASIS, v),
   isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
   isAssessmentLanguage: v => has(ASSESSMENT_LANGUAGE, v),
