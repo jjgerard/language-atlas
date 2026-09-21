@@ -14,13 +14,21 @@ and applied by `terr-apply.js`, with the filled fields coded after.
 | GI Gibraltar | standing | 2 bullets, coded `protected as culture` / `policy` / `duty to promote` |
 | JM Jamaica | taughtAsSubject | 2 bullets, coded `not taught` |
 | SM San Marino | mediumOfInstruction | 2 bullets, coded `not a medium` |
+| CU Cuba | mediumOfInstruction, taughtAsSubject | third state, two sources each |
+| KR South Korea | mediumOfInstruction | third state, two sources |
+| MN Mongolia | taughtAsSubject | third state, two sources |
 | AG Antigua and Barbuda | standing, mediumOfInstruction | third state, two sources each |
 | BB Barbados | standing, mediumOfInstruction | third state, two sources each |
 | SV El Salvador | mediumOfInstruction | third state, two sources |
 | VC Saint Vincent | mediumOfInstruction, taughtAsSubject | third state, two sources each |
 
-**10 of 26 cells. 18 blank remain** (standing 4, mediumOfInstruction 6,
-taughtAsSubject 8). The rate is low on purpose; see below.
+**14 of 26 cells. 12 blank remain** (standing 4, mediumOfInstruction 3,
+taughtAsSubject 5). The rate is low on purpose; see below.
+
+**PROBE WITH THE BRIEF'S RECIPE.** Cuba, Mongolia and South Korea were all
+finished only after re-probing with the user-agent and referer `research/BRIEF.md`
+prescribes; a bare `curl` had reported 403, 403 and a closed socket. See
+`research/BLOCKED.md` section 26.
 
 **Apply batch by batch.** `terr-apply` refuses the WHOLE run if any field it
 carries is already written, so re-gating the whole directory after a batch lands
@@ -67,11 +75,8 @@ third-state finding until a second, independent source confirms it.
 |---|---|---|
 | BS Bahamas | all three | **no docLinks at all** — needs sources found from scratch |
 | VA Vatican City | all three | **no docLinks**; check whether `Not applicable` is the honest answer before researching |
-| CU Cuba | mediumOfInstruction, taughtAsSubject | Gaceta Oficial PDF **403s**; find another copy of the 2019 Constitution |
 | SM San Marino | standing | the 2016 Linee guida gives no standing, and saying so would restate what `localTerm` already carries; needs a different source |
 | BZ Belize | taughtAsSubject | Act URL is 404; find a working copy |
-| KR South Korea | mediumOfInstruction | the Jeju ordinance host `jst.re.kr` **closes the socket**; find a mirror |
-| MN Mongolia | taughtAsSubject | CERD release is right but OHCHR blocks fetching; find a mirror |
 
 ## How to resume
 

@@ -2039,3 +2039,66 @@ slot is a scan), **Comoros** (both HEPO slots hold the wrong document; the UDC's
 at all, as section 21 records). None of these is a network failure that a better
 client fixes — four of the five are image-only documents, and this environment
 still has no rasteriser or OCR.
+
+## 26. The indigenous trio fill pass, and three hosts that were never blocked
+
+### The UA recipe in BRIEF.md unblocks three of the four I had written off
+
+This pass began by probing with a bare `curl` and recording four hosts as
+unreachable. Re-probed with the user-agent and referer that `research/BRIEF.md`
+prescribes — `Mozilla/5.0 (Windows NT 10.0; Win64; x64) … Chrome/120.0 Safari`
+plus `-e https://www.google.com/` — **three of the four answer 200**:
+
+| host | bare curl | with the BRIEF recipe |
+|---|---|---|
+| `gacetaoficial.gob.cu` (Cuba's 2019 Constitution) | **403** | **200**, 419,799b `application/pdf` |
+| `ohchr.org` (CERD press releases) | **403** | **200**, 138,511b HTML |
+| `jst.re.kr` (the Jeju language ordinance) | socket closed | **200**, 113,810b `application/pdf` |
+| `ruraltransformation.gov.bz` (Belize Education and Training Act) | 404 | **404**, 564b — genuinely gone |
+
+**None of the first three belongs in this file as blocked.** They are
+UA-sensitive, which is the class section 5 already names and which BRIEF.md
+warns about in its second rule. `terr-verify.js` already sends that user-agent
+and that referer, so anything citing them gates normally — the gap was in the
+probing, not in the pipeline.
+
+Belize's Act is a real 404 and does need a substitute; none was found this pass.
+
+### `education.gov.vc` fails TLS to curl and serves fine to everything else
+
+Saint Vincent's Education Act 2006 PDF returns curl exit 35 (SSL connect error)
+under every option tried here, while **WebFetch and `terr-verify` both retrieve
+it without complaint**. It is already recorded in this file from an earlier
+pass. The lesson is the general one: **a single client's refusal is not a block.**
+Try a second client before writing a host down.
+
+### PEER publishes no Inclusion chapter for Cuba
+
+`education-profiles.org/latin-america-and-the-caribbean/cuba/~inclusion` serves
+**200 with a real 790,171-byte Cuba profile** whose Inclusion chapter reads
+"The Inclusion chapter is not available in this language." The profile exists;
+the chapter does not. That is a quotable absence rather than a failure, and it
+is the second source behind Cuba's two third-state findings on this pass.
+
+### The Saint Vincent PEER link points at Colombia
+
+`education-profiles.org/latin-america-and-the-caribbean/saint-vincent-and-the-grenadines/~inclusion`
+returns 200 and the body opens with **Colombia** boilerplate. That docLink is
+wrong rather than dead, which no status check would catch. Worth a sweep of the
+other Caribbean PEER links.
+
+### WebFetch cannot read a PDF, and says so misleadingly
+
+Handed a PDF, WebFetch reports that the content is "binary/encoded" and that it
+cannot parse it — which reads like the document being unavailable. It is not:
+the tool **saves the file locally and prints the path**, and
+`research/tools/pdftext.js` then extracts it cleanly. Four documents on this
+pass were nearly recorded as unreadable for this reason, including the San
+Marino Linee guida, which is a 2.77-million-character text layer.
+
+### What this section is really recording
+
+Two of the six hosts probed here were already in this file, and the PEER move
+was already section 11. **Read this file and `BRIEF.md` before probing
+anything.** That is what both are for, and this pass paid the cost they exist
+to remove.
