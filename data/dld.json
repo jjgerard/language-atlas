@@ -1884,7 +1884,22 @@
      "occurrence": 1,
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "education service",
+     "health service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -2043,6 +2058,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "health service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -2161,6 +2188,18 @@
     "assessment_language": "majority language only",
     "bilingual_handling": "silent",
     "local_norms": "none",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "health service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "free at the point of use",
+    "scope": "education generally",
     "evidence_type": "policy"
    }
   }
@@ -2288,7 +2327,19 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "clinician advises, teacher delivers",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -2411,7 +2462,22 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "health service",
+     "education service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -2535,7 +2601,22 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "education service",
+     "ngo or charity"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -2689,7 +2770,22 @@
      "occurrence": 1,
      "operation": "body or programme changed"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "education service",
+     "private practice"
+    ],
+    "practitioner": "clinician advises, teacher delivers",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -2822,6 +2918,21 @@
     "assessment_language": "not stated",
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": [
+     "education service",
+     "health service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -3560,6 +3671,26 @@
     "assessment_language": "majority language only",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
+    "evidence_type": "practitioner survey"
+   },
+   "serviceModel": {
+    "sectors": [
+     "private practice",
+     "education service",
+     "health service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "practitioner survey"
+   },
+   "funding": {
+    "funders": [
+     "state health or insurance",
+     "the family",
+     "state education budget"
+    ],
+    "family_pays": "co-payment or reimbursement",
+    "scope": "language specific",
     "evidence_type": "practitioner survey"
    }
   }
@@ -5585,7 +5716,19 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "special setting",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -5691,6 +5834,18 @@
     "bilingual_handling": "not solely because of language",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
    }
   }
  },
@@ -5764,6 +5919,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
     "evidence_type": "policy"
    }
   }
@@ -5857,7 +6024,19 @@
      "occurrence": 1,
      "operation": "body or programme changed"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -5949,6 +6128,18 @@
     "bilingual_handling": "not solely because of language",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "free at the point of use",
+    "scope": "education generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -6023,7 +6214,19 @@
      "occurrence": 1,
      "operation": "instrument made"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "health service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -6106,6 +6309,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "clinician advises, teacher delivers",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
     "evidence_type": "policy"
    }
   }
@@ -6205,6 +6420,18 @@
     "bilingual_handling": "not solely because of language",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -6294,7 +6521,19 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -6362,7 +6601,19 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -6482,7 +6733,19 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -6574,7 +6837,19 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -6630,6 +6905,12 @@
     "assessment_language": "not stated",
     "bilingual_handling": "not solely because of language",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "clinician advises, teacher delivers",
+    "placement": "mainstream first",
     "evidence_type": "policy"
    }
   }
@@ -7919,6 +8200,15 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services"
+    ],
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -7979,6 +8269,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8026,6 +8322,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8085,6 +8391,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8132,6 +8448,15 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services"
+    ],
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8179,6 +8504,15 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8235,6 +8569,16 @@
     "assessment_language": "not stated",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -8293,6 +8637,15 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services"
+    ],
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8340,6 +8693,15 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8391,6 +8753,15 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8438,6 +8809,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "language specific",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8489,6 +8870,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8536,6 +8927,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8601,6 +9002,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8648,6 +9059,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8695,6 +9116,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8742,6 +9173,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8789,6 +9230,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8836,6 +9287,15 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8895,6 +9355,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -8946,6 +9416,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -9009,6 +9489,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -9056,6 +9546,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -9103,6 +9599,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -9150,6 +9656,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -9203,6 +9719,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -9250,6 +9776,15 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services"
+    ],
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -9315,6 +9850,15 @@
     "bilingual_handling": "silent",
     "local_norms": "exist",
     "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -9372,6 +9916,16 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -9423,6 +9977,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -9470,6 +10034,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -13783,7 +14357,19 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "free at the point of use",
+    "scope": "education generally",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -16080,6 +16666,24 @@
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": [
+     "health service",
+     "education service"
+    ],
+    "practitioner": "clinician advises, teacher delivers",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state health or insurance",
+     "state education budget"
+    ],
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
    }
   }
  },
@@ -16241,6 +16845,24 @@
     "assessment_language": "interpreter",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
+    "evidence_type": "practitioner survey"
+   },
+   "serviceModel": {
+    "sectors": [
+     "health service",
+     "education service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "mainstream first",
+    "evidence_type": "practitioner survey"
+   },
+   "funding": {
+    "funders": [
+     "state health or insurance",
+     "state education budget"
+    ],
+    "family_pays": "not stated",
+    "scope": "language specific",
     "evidence_type": "practitioner survey"
    }
   }
@@ -16489,6 +17111,24 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
+   },
+   "serviceModel": {
+    "sectors": [
+     "health service",
+     "education service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "mainstream first",
+    "evidence_type": "practitioner survey"
+   },
+   "funding": {
+    "funders": [
+     "state health or insurance",
+     "state education budget"
+    ],
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "practitioner survey"
    }
   }
  },
@@ -16654,6 +17294,24 @@
     "assessment_language": "interpreter",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
+    "evidence_type": "practitioner survey"
+   },
+   "serviceModel": {
+    "sectors": [
+     "health service",
+     "education service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "mainstream first",
+    "evidence_type": "practitioner survey"
+   },
+   "funding": {
+    "funders": [
+     "state health or insurance",
+     "state education budget"
+    ],
+    "family_pays": "not stated",
+    "scope": "language specific",
     "evidence_type": "practitioner survey"
    }
   }
@@ -19011,6 +19669,22 @@
     "bilingual_handling": "not solely because of language",
     "local_norms": "exist",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "donor or ngo"
+    ],
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
    }
   }
  },
@@ -20532,6 +21206,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -20579,6 +21259,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -20638,6 +21324,15 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "study or project"
    }
   }
  },
@@ -20752,6 +21447,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "the family",
+    "family_pays": "co-payment or reimbursement",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -20799,6 +21500,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state social services",
+     "state education budget",
+     "donor or ngo"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -20846,6 +21557,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -20897,6 +21614,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -20944,6 +21667,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21038,6 +21767,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "the family",
+    "family_pays": "co-payment or reimbursement",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21099,6 +21834,12 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21146,6 +21887,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21183,7 +21930,15 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "funding": {
+    "funders": "not stated",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -21214,7 +21969,15 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "funding": {
+    "funders": "state health or insurance",
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -21270,6 +22033,15 @@
     "bilingual_handling": "silent",
     "local_norms": "exist",
     "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state social services",
+     "donor or ngo"
+    ],
+    "family_pays": "co-payment or reimbursement",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21317,6 +22089,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21364,6 +22142,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state social services",
+     "donor or ngo",
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21415,6 +22203,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21462,6 +22256,15 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state social services",
+     "donor or ngo"
+    ],
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21494,7 +22297,15 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -21540,6 +22351,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21572,7 +22389,15 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": []
+  "policyHistory": [],
+  "coding": {
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
+  }
  },
  {
   "countryCode": "IN",
@@ -21626,6 +22451,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21673,6 +22504,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21720,6 +22557,15 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state social services",
+     "donor or ngo"
+    ],
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21766,6 +22612,16 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state social services",
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21817,6 +22673,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21868,6 +22730,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "education generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21915,6 +22783,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -21974,6 +22848,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -22021,6 +22901,12 @@
      "none stated"
     ],
     "rule_locus": "national rule, local application"
+   },
+   "funding": {
+    "funders": "state social services",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -40610,6 +41496,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -40706,6 +41604,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -40791,6 +41701,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -40934,6 +41856,12 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "both routes named",
+    "evidence_type": "policy"
    }
   }
  },
@@ -41027,6 +41955,18 @@
     "assessment_language": "required",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -41124,6 +42064,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -41207,6 +42159,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "case by case",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "clinician advises, teacher delivers",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -41331,6 +42295,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -41453,6 +42429,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -41567,6 +42555,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -41652,6 +42652,12 @@
     "assessment_language": "not stated",
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
     "evidence_type": "policy"
    }
   }
@@ -41753,6 +42759,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -41818,6 +42836,21 @@
     "assessment_language": "not stated",
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "none",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -41935,6 +42968,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -42026,6 +43071,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
     "evidence_type": "policy"
    }
   }
@@ -42139,6 +43196,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -42244,6 +43313,18 @@
     "assessment_language": "required",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -42388,6 +43469,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
     "evidence_type": "policy"
    }
   }
@@ -42537,6 +43630,21 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -42624,6 +43732,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -42742,6 +43862,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -42851,6 +43983,18 @@
     "assessment_language": "required",
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -42990,7 +44134,19 @@
      "occurrence": 1,
      "operation": "instrument made"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -43081,6 +44237,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "not solely because of language",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -43220,6 +44388,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "withdrawal from class",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
    }
   }
  },
@@ -43325,6 +44505,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -43423,6 +44615,21 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -43502,6 +44709,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -43757,6 +44976,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -43856,6 +45087,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -43993,6 +45236,18 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -44062,6 +45317,12 @@
     "assessment_language": "not stated",
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
     "evidence_type": "policy"
    }
   }
@@ -44150,6 +45411,21 @@
     "assessment_language": "required",
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "language specific",
     "evidence_type": "policy"
    }
   }
@@ -44242,6 +45518,21 @@
     "assessment_language": "required",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "language specific",
     "evidence_type": "policy"
    }
   }
@@ -44348,6 +45639,12 @@
     "assessment_language": "not stated",
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
     "evidence_type": "policy"
    }
   }
@@ -44497,6 +45794,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -44619,6 +45928,12 @@
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
    }
   }
  },
@@ -44698,6 +46013,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "not solely because of language",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -44789,6 +46116,18 @@
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -44871,6 +46210,18 @@
     "bilingual_handling": "not solely because of language",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -44940,6 +46291,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -45073,6 +46436,18 @@
     "bilingual_handling": "case by case",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
    }
   }
  },
@@ -45156,6 +46531,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "language specific",
     "evidence_type": "policy"
    }
   }
@@ -45252,6 +46639,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -45369,6 +46768,18 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -45478,7 +46889,19 @@
       "coverage widened"
      ]
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -45580,6 +47003,21 @@
     "bilingual_handling": "excluded on language grounds",
     "local_norms": "not stated",
     "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state education budget",
+     "state health or insurance"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -45657,6 +47095,18 @@
     "assessment_language": "required",
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
@@ -45759,6 +47209,18 @@
     "assessment_language": "not stated",
     "bilingual_handling": "required across languages",
     "local_norms": "not stated",
+    "evidence_type": "policy"
+   },
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": "state education budget",
+    "family_pays": "not stated",
+    "scope": "disability generally",
     "evidence_type": "policy"
    }
   }
