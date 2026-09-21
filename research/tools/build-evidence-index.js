@@ -114,9 +114,15 @@ const KEY = /^[ \t]*(quotes?|sources?|bullets|note|tier|url|label|where|status|p
 function sourceTable(chunk) {
   const out = [];
   const block = chunk.split(/^EVIDENCE:/m)[0];
-  for (const m of block.matchAll(/^[ \t]*-[ \t]*label:[ \t]*"?([^"\r\n]+?)"?[ \t]*$[\s\S]*?^[ \t]*url:[ \t]*([^\r\n]+)/gm)) {
+  // The label runs to the end of the line and may contain quotes of its own --
+  // `Eurydice, "Key data on teaching languages at school in Europe"` -- so it
+  // is captured whole and unwrapped only when a quote pair encloses ALL of it.
+  // Excluding quote characters from the capture silently emptied every label
+  // written that way, which is most of the language wave.
+  for (const m of block.matchAll(/^[ \t]*-[ \t]*label:[ \t]*([^\r\n]+?)[ \t]*$[\s\S]*?^[ \t]*url:[ \t]*([^\r\n]+)/gm)) {
     const url = (String(m[2]).match(URL_RE) || [])[0];
-    out.push({ label: m[1].trim(), f: fold(m[1]), url: url || null });
+    const label = m[1].trim().replace(/^"([\s\S]*)"$/, "$1").trim();
+    out.push({ label, f: fold(label), url: url || null });
   }
   return out;
 }
@@ -264,33 +270,69 @@ for (const file of fs.readdirSync(PARTS).filter(f => f.endsWith(".md")).sort()) 
         index[domain][key][field] || []);
       const clean = url.replace(/[).,;]+$/, "");
       lastUrl = clean;
-      if (!slot.some(s => s.url === clean)) { slot.push({ url: clean, quote: quote || null, where }); kept++; }
-    }
-  }
-}
-
-// ---- report ----------------------------------------------------------------
-let pairs = 0, units = 0, onEntry = 0, offEntry = 0;
-const strays = [];
-for (const d of Object.keys(index)) {
-  for (const key of Object.keys(index[d])) {
-    units++;
-    const e = (ENTRIES[d] || []).find(x => `${x.countryCode}|${x.unitName}` === key);
-    const have = new Set((e && e.docLinks || []).map(l => String(l.url).split("#")[0]));
-    for (const f of Object.keys(index[d][key])) {
-      pairs++;
-      for (const s of index[d][key][f]) {
-        if (have.has(s.url.split("#")[0])) onEntry++;
-        else { offEntry++; strays.push(`${d} ${key} ${f}  ${s.url}`); }
+      // The SOURCES label for this URL, carried through because a URL is not a
+      // document. 80 citations point at the Cellar copy of "Key data on
+      // teaching languages at school in Europe" while the entries record its
+      // DOI; only the label shows those are the same publication.
+      const named = table.find(t => t.url === clean) || table.find(t => t.url && clean.startsWith(t.url));
+      if (!slot.some(s => s.url === clean)) {
+        slot.push({ url: clean, label: named ? named.label : null, quote: quote || null, where });
+        kept++;
       }
     }
   }
 }
 
+/* ---- report ----------------------------------------------------------------
+ *
+ * Is this citation already on its entry? A URL is not a document, so comparing
+ * URL strings answers a narrower question than the one worth asking. The first
+ * run of this tool reported 317 citations "not a docLink on the entry"; 122 of
+ * them were the entry's own source under another identifier, and the biggest
+ * group was one publication -- 80 citations of the Cellar PDF of Eurydice's Key
+ * Data on Teaching Languages at School in Europe 2023, against the DOI the
+ * entries cite. The drafter had even written the equivalence into the label.
+ *
+ * So three tests, in order of how much they prove, and a citation counts as
+ * absent only when all three fail.
+ */
+const nurl = u => String(u).trim().toLowerCase()
+  .replace(/^https?:\/\//, "").replace(/^www\./, "").split("#")[0].replace(/\/+$/, "");
+const nlab = t => fold(t).replace(/[^a-z0-9]+/g, " ").trim();
+const DOI_RE = /10\.\d{4,9}\/[^\s"<>,;)]+/g;
+const dois = t => (String(t || "").match(DOI_RE) || []).map(x => x.toLowerCase().replace(/[.)]+$/, ""));
+
+let pairs = 0, units = 0, byUrl = 0, byDoi = 0, byLabel = 0;
+const strays = [];
+for (const d of Object.keys(index)) {
+  for (const key of Object.keys(index[d])) {
+    units++;
+    const e = (ENTRIES[d] || []).find(x => `${x.countryCode}|${x.unitName}` === key);
+    const links = (e && e.docLinks) || [];
+    const urls = new Set(links.map(l => nurl(l.url)));
+    const labels = links.map(l => nlab(l.label)).filter(Boolean);
+    const entryDois = new Set(links.flatMap(l => dois(`${l.url} ${l.label || ""}`)));
+    for (const f of Object.keys(index[d][key])) {
+      pairs++;
+      for (const s of index[d][key][f]) {
+        if (urls.has(nurl(s.url))) { byUrl++; continue; }
+        if (dois(s.label).some(x => entryDois.has(x))) { byDoi++; continue; }
+        const L = s.label ? nlab(s.label) : null;
+        if (L && labels.some(x => x === L || x.includes(L) || L.includes(x)
+          || (L.length > 30 && x.length > 30 && x.slice(0, 45) === L.slice(0, 45)))) { byLabel++; continue; }
+        strays.push(`${d} ${key} ${f}  ${s.url}`);
+      }
+    }
+  }
+}
+const onEntry = byUrl + byDoi + byLabel;
+const offEntry = strays.length;
+
 console.log(`EVIDENCE rows read: ${rows}`);
 console.log(`  kept:       ${kept} source citations`);
 console.log(`  units:      ${units}   unit-field pairs: ${pairs}`);
-console.log(`  of the kept citations, ${onEntry} are already a docLink on that entry, ${offEntry} are not`);
+console.log(`  already a source on that entry: ${onEntry}  (${byUrl} same url, ${byDoi} same doi, ${byLabel} same title)`);
+console.log(`  NOT on the entry:               ${offEntry}  -- read while drafting, never recorded`);
 console.log(`drafted-prose rows skipped (bullets, no evidence attached): ${bulletRows}`);
 console.log("unresolved --");
 console.log(`  section heading, not a unit        ${miss.heading.length}`);
