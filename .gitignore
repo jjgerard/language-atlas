@@ -16,3 +16,8 @@ data/*.db-journal
 # https://github.com/cldf-datasets/wals, so it follows the same rule as
 # sources/ above. research/tools/wals/wals.js says so when they are absent.
 research/tools/wals/*.csv
+
+# Extracted text of cited sources, fetched by attribute-sources.js. Rebuildable
+# from the web and large; the attributions it produces live in
+# data/field-sources.json, which IS committed.
+.source-cache/

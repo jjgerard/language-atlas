@@ -211,6 +211,10 @@ function deriveUnits(domain, entries, sharedMatcher) {
           // is a worse answer than "UNESCO PEER, Suriname - Inclusion profile"
           // even when the entry happens to hold the same link.
           label: x.label || null,
+          // true where attribute-sources.js picked this source by READING the
+          // entry's sources, rather than a drafter having recorded it. The
+          // panel says which, because they are different claims.
+          found: !!x.found,
           quote: clip(x.quote, QUOTE_CAP),
           where: clip(x.where, WHERE_CAP),
         }));

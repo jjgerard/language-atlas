@@ -2306,6 +2306,51 @@ function srcTokens(text) {
   }).map(o => Object.assign({}, o, { f: srcFlat(o.t) }));
 }
 
+/* AN INSTRUMENT CITED BY NAME AND YEAR.
+ *
+ * Northern Ireland's legalEntitlement opens "Education (NI) Order 1996 art. 16"
+ * and the entry's source is labelled "Education (Northern Ireland) Order 1996,
+ * Part II" -- the same document, and no substring of either is a substring of
+ * the other, because the drafter abbreviated the country. So an instrument is
+ * matched by its YEAR plus two or more of its name-words IN ORDER, which
+ * survives an abbreviation dropping out of the middle.
+ *
+ * The year is what makes this safe. `Act` and `Order` stay in the name-words
+ * rather than being stopped, because requiring the same year already refuses
+ * the generic match a stop-list would be guarding against.
+ */
+const INST_STOP = new Set(('the a an of and for in on to by no nr num part arts article ' +
+  'articles ss reg regs sch schedule chapter section').split(' '));
+
+function srcInstruments(text) {
+  const out = [];
+  for (const m of String(text).matchAll(/([A-Z][^.\n]{0,88}?)\b((?:19|20)\d{2})\b/g)) {
+    // The window runs back up to 88 characters, so most of what it catches is
+    // the sentence around the citation. The instrument is the CAPITALISED RUN
+    // nearest the year: in "Scots has official status within Scotland,
+    // Scottish Languages Act 2025" that is the last four words, not all six.
+    // Cut at the last comma or semicolon first: a citation is what follows the
+    // clause, not the clause. "...within Scotland, Scottish Languages Act 2025"
+    // is the Act, and taking four words back from the year swept Scotland in.
+    const near = m[1].split(/[,;:]\s*/).pop() || m[1];
+    const caps = (near.match(/[A-Z][\w'’-]*/g) || []).slice(-4);
+    const ws = caps.map(w => srcFlat(w)).filter(w => w.length >= 2 && !INST_STOP.has(w));
+    if (ws.length >= 2) out.push({ year: m[2], words: ws, raw: caps.join(' ') + ' ' + m[2] });
+  }
+  return out;
+}
+
+function srcInstrumentHit(inst, labelFlat) {
+  if (!labelFlat.includes(inst.year)) return null;
+  let at = 0, hit = 0;
+  for (const w of inst.words) {
+    const i = labelFlat.indexOf(w, at);
+    if (i < 0) continue;                 // abbreviated away in one of the two
+    at = i + w.length; hit++;
+  }
+  return hit >= 2 ? inst.raw : null;
+}
+
 const srcInside = (hay, needle) => hay === needle ||
   hay.startsWith(needle + ' ') || hay.endsWith(' ' + needle) || hay.includes(' ' + needle + ' ');
 
@@ -2352,7 +2397,7 @@ function draftedSources(u, fieldKey) {
     // name rather than to "education-profiles.org".
     let label = byUrl.get(bare) || r.label;
     if (!label) { try { label = new URL(r.url).hostname.replace(/^www\./, ''); } catch (e) { label = r.url; } }
-    return { url: r.url, label, quote: r.quote, where: r.where };
+    return { url: r.url, label, quote: r.quote, where: r.where, found: !!r.found };
   });
 }
 
@@ -2379,6 +2424,8 @@ function fieldSources(u, fieldKey) {
   const drafted = new Set(ds.map(d => String(d.url).split('#')[0]));
   const draftedNames = ds.map(d => srcFlat(d.label)).filter(t => t.length > 12);
 
+  const insts = srcInstruments(text);
+
   const named = [], rest = [];
   for (const l of links) {
     if (drafted.has(String(l.url).split('#')[0])) continue;
@@ -2387,6 +2434,7 @@ function fieldSources(u, fieldKey) {
     const lab = { f: srcFlat(l.label || l.url || ''), c: srcFlatCase(l.label || l.url || '') };
     const on = [];
     for (const t of toks) { const h = srcHit(t, lab); if (h && on.indexOf(h) < 0) on.push(h); }
+    for (const i of insts) { const h = srcInstrumentHit(i, lab.f); if (h && on.indexOf(h) < 0) on.push(h); }
     if (on.length || cited.has(l.url)) named.push({ link: l, on: on });
     else rest.push(l);
   }
@@ -2398,8 +2446,13 @@ function fieldSourcesHTML(u, fieldKey) {
   const drafted = draftedSources(u, fieldKey);
   if (!total && !drafted.length) return `<div class="cpanlinks"><p class="cnone">No source is recorded on this entry.</p></div>`;
 
+  // Two different claims, and the panel does not blur them. A recorded source
+  // is what a reader wrote down against this field at the time. A FOUND one is
+  // this entry's own source that turned out to contain the wording above, which
+  // is evidence about the document rather than a record of anybody's reading.
+  const anyRecorded = drafted.some(d => !d.found);
   const draftedHTML = drafted.length ? `<div class="drafted">
-      <div class="ch">Read for this question</div>
+      <div class="ch">${anyRecorded ? 'Read for this question' : 'This text is in'}</div>
       <div class="links">${drafted.map(d => `<div class="srcrow">
         <a href="${esc(d.url)}" target="_blank" rel="noopener noreferrer">${esc(d.label)}</a>
         ${d.quote ? `<blockquote class="q">${esc(d.quote)}${d.where ? `<span class="where">${esc(d.where)}</span>` : ''}</blockquote>` : ''}
@@ -2414,8 +2467,9 @@ function fieldSourcesHTML(u, fieldKey) {
             <summary>${rest.length} other source${rest.length === 1 ? '' : 's'} on the ${esc(u.name)} entry</summary>
             <div class="links">${linkList(rest)}</div>
           </details>` : ''}
-        <p class="note">Recorded against this question when the entry was drafted, with the
-          sentence it was read from.</p>
+        <p class="note">${anyRecorded
+          ? 'Recorded against this question when the entry was drafted, with the sentence it was read from.'
+          : 'Chosen from this entry\'s own sources by reading them: this is the one that carries the wording above, and the others do not.'}</p>
       </div>`;
     }
     return `<div class="cpanlinks">

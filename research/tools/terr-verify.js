@@ -47,8 +47,12 @@ const BUCKET = { history: "history", series: "series", languages: "languages", p
 
 const NL = String.fromCharCode(10);
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
+// Required as a module by attribute-sources.js, which needs this file's
+// fetching and folding and must not get a second copy of either: every rule in
+// them was bought with a lost country. Requiring it must not run the CLI.
+const isCLI = require.main === module;
 const specDir = process.argv[2];
-if (!specDir) { console.log("usage: node terr-verify.js <specDir>"); process.exit(1); }
+if (isCLI && !specDir) { console.log("usage: node terr-verify.js <specDir>"); process.exit(1); }
 
 function get(url, redirects = 0, ua = UA) {
   return new Promise(resolve => {
@@ -242,6 +246,9 @@ function quoteOnce(quote, page) {
   }
   return false;
 }
+
+module.exports = { get, getViaCurl, strip, fold, words, quoteOn, unescapeEntities, UA };
+if (!isCLI) return;
 
 (async () => {
   const specs = {};
