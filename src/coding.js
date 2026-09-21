@@ -508,6 +508,52 @@ const NOT_AN_OPERATION = {
   'text incomplete': 'The sentence is truncated and what it was going to say cannot be recovered. Three rows, and they are one row copied onto three maps: Sweden 2015 appears in eal, indigenous and fl as "For primary school there is a slight increase, which may be due to the amendment of the Education Act introduced…", a statistic hedged to a maybe and cut off mid-clause',
   'subject is another row': 'The sentence\'s subject belongs to a different row of the same entry, so the year it sits on is not the year of what it describes. One row: Andorra 2008, "It replaces the model in force since 2008", where "It" is the 2026 regulation two rows down. Kept separate from `text incomplete` because the sentence is whole and the fault is in which row it was filed against',
 };
+// WHAT A ROW DID TO THE REACH OF A RULE, which is a different question from
+// `operation` and NOT a missing value on it. The gap was recorded during the
+// operation pass as "a change of SCOPE with no instrument named has nowhere to
+// go", on thirteen eal rows that took `provision described`. Reading the whole
+// corpus for it says the framing was wrong in two ways.
+//
+// FIRST, SCOPE CHANGE IS AN EFFECT, NOT AN OPERATION. Of the 107 candidates,
+// most already carry a correct `operation` and a scope effect at the same time:
+// Brazil 2021 is `instrument amended` AND extends the model to deaf pupils;
+// Guam 1974 is `instrument amended` AND widens the Chamorro provision
+// island-wide; Latvia 2018 is `instrument amended` AND reaches private
+// institutions. An eleventh `operation` value would have captured only the rows
+// that name no instrument and gone on losing the rest, which is the information
+// loss the gap complained about, moved rather than fixed. Two things true of
+// one row at once belong on two axes.
+//
+// SECOND, IT IS A FLAG AND NOT AN AXIS, and that is deliberate rather than a
+// disappointment. 74 rows of 4,305 is 1.7%, and of the 2,349 rows that record a
+// change at all it is 3%. A column asked of every row would be 98% empty, which
+// fails this file's own "does it discriminate" test. It is kept on the same
+// footing as NOT_AN_OPERATION (1.8%): a sparse mark on a real and countable
+// phenomenon, never a column to take a distribution over. The rate was measured
+// rather than assumed -- 26 rows sampled systematically across the corpus
+// contained no scope change at all, so the markers are not what makes it small.
+//
+// A LIST, because Wales 2021 makes Welsh mandatory in EVERY school curriculum
+// and so moves both at once. Most rows carry one value; coding one and dropping
+// the other is what the list columns in this file all exist to prevent.
+//
+// WHERE THE EDGES ARE, since they took more reading than the values. A scope
+// STATEMENT is not a scope change -- an instrument that says what it covers has
+// not moved anything (Thailand 2012, "applies to all grades in schools
+// generally"). A plan's PERIOD extended is not its coverage extended
+// (Mozambique's 2012-16 plan "later extended to 2019"). Organisational growth is
+// not a rule's reach over people (Ireland 2012, the primary B.Ed. "extended from
+// three years to four"). An aspiration is not a change (Georgia 2017, "commits
+// to expanding inclusive education"). Delhi 2016 records a narrowing ACROSS
+// LEVELS in a single year, which is cross-sectional and not a change over time.
+// And Namibia 2008 is the cleanest no of all: the attempt to extend to Grade 7
+// FAILED, so nothing moved.
+const SCOPE_CHANGE = {
+  'coverage widened': 'More people, places, languages or levels fall inside the rule than did before. 53 rows, the bulk of the flag, and they widen along every one of those dimensions: PEOPLE (Slovakia 2025, "compulsory schooling extended to Ukrainian refugee children"; Brazil 2021, Art. 78-A "extends the same model to deaf and deafblind pupils"; Washington 2025, entitlement "to the end of the school year in which the student turns 22"), PLACES (Guam 1974, P.L. 12-132 "widened the Chamorro official-language provision island-wide"; Scotland 2010, duties extended "to Scotland as well as England and Wales"; Brunei 1992, "extended to private schools, international schools excepted"), LANGUAGES (Hungary 2008, "extends the protection of Part III of the Charter to Boyash and Romani"; Isle of Man 2020, Part III "extended to Manx Gaelic"; Cambodia 2019, "expanding from five to six languages by adding Charai") and LEVELS (Mozambique 2018, "extends compulsory education to grade 9"; Marshall Islands 2003, compulsory Marshallese "to tertiary institutions"; Sri Lanka 2003, "Second National Language extended to Grades 3, 4 and 5"). A THRESHOLD LOWERED belongs here too, because lowering it is HOW the widening was done: Finland 2010, "minimum number of pupils needed to organise Romani language education lowered from four to two"; Goa 2014, "minimum enrolment for a mother-tongue class relaxed from 20 to 15"',
+  'coverage narrowed': 'Fewer fall inside the rule than did before. 10 rows, the mirror of the above rather than a separate shape: California 1998, "Proposition 227 restricted bilingual education, mandated English immersion"; the Philippines 2024, RA 12027 "discontinuing the mother tongue as medium of instruction... demoting the regional languages to auxiliary"; the Netherlands 1998, "OETC replaced by OALT (narrower scope)", where the entry says the narrowing outright; Uttar Pradesh 1952, a Notification that "restricts recognition to Hindi-medium institutions"; Argentina 1973, Ley 20.305, which "restricted sworn translation to university degree holders". A THRESHOLD RAISED is the same move from the other end: Denmark 2012, Act 379/2012 "restricts folkeskole special education to support of at least 9 lessons a week"',
+  'obligation added': 'What was available becomes required. 10 rows, and the distinction from `coverage widened` is that nobody new is brought inside the rule -- the same people are now bound by it: Quebec 2006, "ESL becomes compulsory from Cycle 1 of primary"; Guyana 2023, "Spanish made compulsory from Christmas Term by chief education officer circular"; Jordan 2026, "English made a compulsory Tawjihi subject for all fields"; Czechia 2007, "the Framework Education Programme for Basic Education becomes binding"; Wales 2012, "first-language reporting becomes mandatory in the Pupil Level Annual School Census". Wales 2021 is the one row carrying two values, because making Welsh "a mandatory element of EVERY school curriculum in Wales" adds the obligation and widens the coverage in the same clause',
+  'obligation removed': 'What was required becomes optional or advisory. Only 2 rows, kept apart from `coverage narrowed` for the same reason as above -- the rule still reaches the same people, it just stops binding them: Lithuania 2019, where the B1 "foreign language examination ceases to be a minimum admission requirement"; New Brunswick 2025, where "2025 policy moved the proficiency standard from Requirements to Guidelines". Two rows is thin, and the value is kept rather than folded into `coverage narrowed` because the corpus distinguishes them in its own words; if it is still two after the next pass that is worth saying, not worth merging',
+};
 const HISTORY_SCHEME = id => ({
   // MANY: one coding row per policyHistory row, not per entry.
   many: true,
@@ -545,6 +591,10 @@ const HISTORY_SCHEME = id => ({
     operation: HISTORY_OPERATION,
     // Only where `operation` is empty; see the comment on NOT_AN_OPERATION.
     not_an_operation: NOT_AN_OPERATION,
+    // A LIST, and a sparse one -- see the comment on SCOPE_CHANGE. It sits
+    // beside `operation` rather than inside it because a row can amend an
+    // instrument AND widen its reach, and both readings are worth keeping.
+    scope_change: SCOPE_CHANGE,
     fields_touched: fieldsTouchedFor(id),
   },
 });
@@ -665,10 +715,11 @@ module.exports = {
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
   HISTORY_OPERATION,
-  NOT_AN_OPERATION,
+  NOT_AN_OPERATION, SCOPE_CHANGE,
   SCHEMES,
   isHistoryOperation: v => has(HISTORY_OPERATION, v),
   isNotAnOperation: v => has(NOT_AN_OPERATION, v),
+  isScopeChange: v => has(SCOPE_CHANGE, v),
   isThresholdBasis: v => has(THRESHOLD_BASIS, v),
   isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
   isAssessmentLanguage: v => has(ASSESSMENT_LANGUAGE, v),

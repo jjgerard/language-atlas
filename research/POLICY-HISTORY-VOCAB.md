@@ -2519,3 +2519,115 @@ outside `coding` differing from HEAD on any of the five domains.
 Four gaps remain recorded and unruled: a change of SCOPE with no instrument
 named (~2.6%); signature without ratification; `state of affairs recorded`
 glossed for absence but used for dated observation generally; republication.
+
+## The scope changes: `scope_change`
+
+The second of the recorded gaps to be ruled on, and the reading changed what the
+gap was. It had been written down as *a change of SCOPE with no instrument named
+has nowhere to go* — a missing eleventh value on `operation`. It is not that.
+
+### Scope change is an EFFECT, not an operation
+
+107 candidates were surfaced from a deliberately over-wide marker set and read.
+Most of them **already carry a correct `operation`** and a scope effect at the
+same time. Of the 74 that were coded:
+
+```
+  the operation these 74 rows ALSO carry
+    provision described                41
+    instrument amended                 12
+    instrument made                     9
+    body or programme established       5
+    international instrument accepted   3
+    body or programme changed           2
+    plan or strategy issued             1
+    instrument replaced                 1
+```
+
+**33 of the 74 already had a home.** Brazil 2021 is `instrument amended` *and*
+extends the model to deaf pupils; Guam 1974 is `instrument amended` *and* widens
+the Chamorro provision island-wide; Hungary 2008 is `international instrument
+accepted` *and* extends Part III to Boyash and Romani. An eleventh `operation`
+value would have captured the 41 on the residual and gone on losing these 33 —
+the same information loss the gap complained about, moved rather than fixed.
+Two things true of one row at once belong on two axes, which is this file's own
+rule for when a column should split.
+
+### It is a flag, not an axis, and that was measured
+
+74 rows of 4,305 is **1.7%**; against the 2,349 rows that record a change at all
+it is 3%. A column asked of every row would be 98% empty and would fail the
+"does it discriminate" test outright. So it is kept on the footing
+`NOT_AN_OPERATION` established at 1.8% — a sparse mark on a real and countable
+phenomenon, **never a column to take a distribution over**.
+
+The rate was measured rather than assumed, because the obvious objection is that
+the markers are too narrow. **26 rows sampled systematically across the whole
+corpus contained no scope change at all**, and a 31-row sample of `provision
+described` found it doing one job honestly rather than two. The phenomenon is
+small because it is small.
+
+### A list, for one row
+
+`coverage widened`, `coverage narrowed`, `obligation added`, `obligation
+removed`. Wales 2021 — "makes Welsh a mandatory element of every school
+curriculum in Wales" — adds the obligation and widens the coverage in the same
+clause, and is the only row carrying two. One row is a thin basis for a list, but
+coding one value and dropping the other is exactly what the list columns in
+`coding.js` exist to prevent.
+
+`obligation removed` has **two** rows (Lithuania 2019, New Brunswick 2025). It is
+kept rather than folded into `coverage narrowed` because the corpus distinguishes
+them in its own words — the rule still reaches the same people, it just stops
+binding them. If it is still two after the next pass, that is worth saying.
+
+### Where the edges are
+
+The values took less reading than the exclusions. 33 of the 107 candidates are
+deliberate noes, in six families, recorded in
+`research/scope-change.decisions.json`:
+
+- **A scope STATEMENT is not a scope change.** Thailand 2012 "applies to all
+  grades in schools generally" — an instrument saying what it covers has not
+  moved anything.
+- **A plan's PERIOD is not its coverage.** Mozambique's 2012–16 plan "later
+  extended to 2019".
+- **Organisational growth is not a rule's reach over people.** Ireland 2012, the
+  primary B.Ed. "extended from three years to four".
+- **An aspiration is not a change.** Georgia 2017 "commits to expanding
+  inclusive education".
+- **Cross-sectional is not longitudinal.** Delhi 2016 records the
+  minority-language medium "narrowing from five languages at Primary to Urdu
+  alone at Higher Secondary" — a narrowing across LEVELS in one year.
+- **The change did not happen.** Namibia 2008: "attempts to extend it to Grade 7
+  during the 2008 curriculum drafting FAILED." The cleanest no of the set.
+
+Five further rows are recorded as misfits rather than forced — Rwanda 2008 "moved
+decisively from French to English", Kenya 2002, Laos 1994, Latvia 2018 — each
+says something changed, but not that any rule's reach did.
+
+### What the distribution says
+
+**Widening outnumbers narrowing better than five to one** (53 against 10; with
+obligations, 63 against 12). Whatever else the corpus records, the documented
+direction of language-policy scope in it is outward. That is a claim about what
+these entries CHOSE TO RECORD as much as about policy, and it should be quoted
+with that caveat attached.
+
+Unlike `not_an_operation`, which was 70/78 United States, this one is spread:
+Europe 21, Americas 19, Asia 16, Africa 13, Oceania 5; eal 21, indigenous 20, fl
+17, he 9, dld 7. It is a property of the corpus rather than of one sourcing
+decision.
+
+### Result
+
+1,910 coding cells rewritten to add 74 values. A row-by-row comparison finds **0
+`operation` or `fields_touched` values changed and 0 rows disappeared**, and
+`coding-verify.js` reports no key outside `coding` differing from HEAD on any of
+the five domains. A fresh seed serves all 74 with both of Wales's values intact,
+and `/views` exports `coding_scope_change`, the two-value row rendering as
+`obligation added; coverage widened`.
+
+Three gaps remain recorded and unruled: signature without ratification; `state of
+affairs recorded` glossed for absence but used for dated observation generally;
+and republication.
