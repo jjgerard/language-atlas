@@ -393,6 +393,61 @@ const SERVICE_PLACEMENT = {
   'not stated': 'The entry does not establish where the child is taught',
 };
 
+// ===========================================================================
+// dld.funding
+// ===========================================================================
+//
+// Derived 2026-09-21 from 40 entries sampled across all five regions. Three of
+// the four columns ask the same question at different depths -- who pays, does
+// the family pay, and is the source even talking about language -- and the
+// third turned out to be the one worth having.
+
+// WHO PAYS. A LIST, and it has to be: the COST IS1406 survey asks practitioners
+// to name every funder for one case, and they routinely name three. France is
+// state health 90%, private health insurance 20% AND family 8%; Norway names
+// four. Coding a single "main" funder would throw away exactly the mixed
+// arrangements that make one system different from another.
+const FUNDERS = {
+  'state education budget': 'The education budget carries it (Hungary, state education 90%; Norway 82%; the Philippines, where a Program Support Budget is a line item in the DepEd General Appropriations)',
+  'state health or insurance': 'Health, or a statutory health insurer, carries it (France, state health 90%; Israel, where the HMOs deliver therapy under national health insurance; New Caledonia, where CAFAT reimburses orthophonie acts at 50%)',
+  'state social services': 'A social-services budget rather than health or education (Denmark 21%, Norway 8%; Kuwait, where PADA social assistance is paid by salary transfer and set by degree of disability)',
+  'the family': 'Households pay some or all of it (France 8%, Hungary 14%; Central African Republic, where PEER records that "all school expenses fall to parents")',
+  'private insurance': 'A private or supplemental insurer (France, private health insurance 20%; Israel, where supplemental HMO cover reimburses some assessments and so creates a different effective entitlement)',
+  'donor or ngo': 'External donors, international agencies or non-state organisations (Rwanda, where "inclusive education support is dominated by international agencies including UNICEF"; Central African Republic, whose few special schools "rely on financial support from donors")',
+  'none established': 'Checked, and no funding route for this exists (Dominican Republic: "No dedicated funding line for language support was located")',
+  'not stated': 'The entry describes provision without establishing who pays for it',
+};
+
+// WHAT IT COSTS THE FAMILY. Kept separate from the funder list because it is
+// the question the atlas is actually about -- whether a poor child can get it --
+// and because a system can be state-funded and still charge.
+const FAMILY_PAYS = {
+  'free at the point of use': 'Nothing is charged (United Arab Emirates, where the ministry "provides all supporting services free in government schools"; Nicaragua, whose Ley 582 art. 90 "bans fees, voluntary quotas or any other payment" in state primary and secondary; Liechtenstein, where special schooling "is free of charge, and so are the measures added to it")',
+  'co-payment or reimbursement': 'The family pays a share, or pays first and is reimbursed (New Caledonia, reimbursed at 50% with the insured advancing the fees; French Polynesia at 70%; Antigua and Barbuda, where IEP costs are "apportioned between" the parent and the Ministry)',
+  'means-tested': 'What the family pays turns on what it has (Singapore, "means-tested with income-banded subsidies and caps"; the United Arab Emirates, tuition assistance up to AED 50,000 a year for low-income parents; Paraguay, where admission to free institutions "must be eased for people of limited means")',
+  'family bears the cost': 'The household carries it with no state share established (Central African Republic, which PEER links to significant non-enrolment)',
+  'not stated': 'The entry does not establish what the family pays',
+};
+
+// IS THE SOURCE EVEN ABOUT LANGUAGE. Not a shape anyone set out to code, and
+// the most useful column here.
+//
+// 45 of the 196 national funding entries -- 23% -- carry the same hedge in the
+// same words: "Source describes special-needs provision generally, never
+// language disorder". The writers put it there deliberately and CLAUDE.md says
+// to keep hedges; coding it makes the hedge countable, so a reader can see how
+// much of the funding picture is about disability in general and how much is
+// about this.
+//
+// For scale, the same hedge appears on 1 of 208 serviceModel entries. It is a
+// fact about the funding literature, not about the atlas.
+const FUNDING_SCOPE = {
+  'language specific': 'The source reaches speech or language provision (Mauritius, where the Grant-in-Aid to non-governmental SEN schools "covers speech therapists"; France and Hungary, where practitioners are reporting on a language case)',
+  'disability generally': 'The source describes disability or special-needs funding and never reaches language disorder. The entry usually says so outright (Rwanda, Algeria, Gambia, Liberia, South Sudan, Central African Republic, Mongolia, Marshall Islands, Tonga)',
+  'education generally': 'The rule is about school funding at large, with disability not the unit either (Nicaragua, whose article bans fees in all state schooling; Brazil, where LDB art. 69 binds the Union to 18% and states to 25% of tax revenue; Belarus, financing state institutions from republican and local budgets)',
+  'not stated': 'The entry does not make the scope of its source clear',
+};
+
 // WHO DECIDES. Same purpose as the eal axis -- the same test applied by a
 // clinician, a commission or a school is three different systems.
 const DECIDER_TYPES = {
@@ -1062,6 +1117,16 @@ const SCHEMES = {
   // properly. `bilingual_handling` lived only on identificationCriteria, where
   // it came out `silent` on 187 of 193 -- a finding about where drafters put
   // the answer, not about what systems do. 104 of those 187 have prose here.
+  'dld.funding': {
+    row: 'one national or sub-national system',
+    columns: {
+      // `funders` is a LIST -- see the note on FUNDERS.
+      funders: FUNDERS,
+      family_pays: FAMILY_PAYS,
+      scope: FUNDING_SCOPE,
+      evidence_type: EVIDENCE_TYPE,
+    },
+  },
   'dld.serviceModel': {
     row: 'one national or sub-national system',
     columns: {
@@ -1131,6 +1196,7 @@ module.exports = {
   TEST_TYPES, BILINGUAL_FIT, MODALITY, LANGUAGE_DOMAINS,
   ASSESSMENT_LANGUAGE, LOCAL_NORMS, EVIDENCE_TYPE,
   SERVICE_SECTOR, SERVICE_PRACTITIONER, SERVICE_PLACEMENT,
+  FUNDERS, FAMILY_PAYS, FUNDING_SCOPE,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
   HISTORY_OPERATION,
@@ -1155,6 +1221,9 @@ module.exports = {
   isThresholdBasis: v => has(THRESHOLD_BASIS, v),
   isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
   isAssessmentLanguage: v => has(ASSESSMENT_LANGUAGE, v),
+  isFunder: v => has(FUNDERS, v),
+  isFamilyPays: v => has(FAMILY_PAYS, v),
+  isFundingScope: v => has(FUNDING_SCOPE, v),
   isServiceSector: v => has(SERVICE_SECTOR, v),
   isServicePractitioner: v => has(SERVICE_PRACTITIONER, v),
   isServicePlacement: v => has(SERVICE_PLACEMENT, v),
