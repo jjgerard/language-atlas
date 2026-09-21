@@ -249,6 +249,19 @@
 }
 .cpanlinks .links a:hover { text-decoration-style: solid; }
 .cpanlinks .cnone { font-size: 12.5px; color: var(--ink-faint); font-style: italic; margin: 0; }
+.cpanlinks .srcrow { display: flex; flex-direction: column; gap: 1px; }
+.cpanlinks .why { font-size: 10.5px; color: var(--ink-faint); letter-spacing: .02em; }
+.cpanlinks .why b { font-weight: 600; color: var(--ink-soft); }
+.cpanlinks .rest { margin-top: 11px; }
+.cpanlinks .rest > summary {
+  font-size: 11px; color: var(--ink-faint); cursor: pointer; list-style: none; padding: 2px 0;
+}
+.cpanlinks .rest > summary::-webkit-details-marker { display: none; }
+.cpanlinks .rest > summary::before { content: 'B8 '; }
+.cpanlinks .rest[open] > summary::before { content: 'BE '; }
+.cpanlinks .rest > summary:hover { color: var(--ink-soft); }
+.cpanlinks .rest .links { margin-top: 7px; }
+.cpanlinks .note { font-size: 11px; color: var(--ink-faint); margin: 9px 0 0; line-height: 1.5; }
 .wholeentry {
   margin-top: 16px; font: inherit; font-size: 12px; color: var(--ink-soft);
   background: none; border: 1px solid var(--hair); border-radius: 5px;
@@ -2212,6 +2225,159 @@ function glossHTML(text) {
     ${tail ? `<p class="cgloss ctail">${esc(tail)}</p>` : ''}`;
 }
 
+
+/* WHICH OF AN ENTRY'S SOURCES BACK ONE FIELD.
+ *
+ * docLinks are recorded per ENTRY. Nothing in the data says which link backs
+ * which field, and showing the whole list under one field's four lines --
+ * fifteen links on South Africa, one of which is about SIAS -- tells a reader
+ * nothing about where THAT reading came from.
+ *
+ * So the field's own words are matched against the source titles, and only a
+ * source the text actually names is presented as belonging to it. This is a
+ * claim about the TEXT, not about the coder: "this line names SIAS and this
+ * source is the SIAS policy". Everything else stays on the entry, under its
+ * own heading, because an unmatched source may well be the one that was read
+ * and the corpus does not record it either way.
+ *
+ * Measured over all 3,735 coded field-instances that carry sources: 27% name
+ * at least one, 10% of link slots match. The other 73% are paraphrase that
+ * shares no name with any title, and they say so rather than guessing.
+ */
+const srcFold = t => String(t == null ? '' : t)
+  .normalize('NFD').replace(/[̀-ͯ]/g, '')
+  .replace(/[‘’“”]/g, "'");
+const srcFlat = t => srcFold(t).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const srcFlatCase = t => srcFold(t).replace(/[^A-Za-z0-9]+/g, ' ').trim();
+
+// Capitalised in prose without naming anything, and the nouns every entry in
+// the corpus uses. `state` is here because "The State" matched every Indian
+// rule whose title starts with the state's name.
+const SRC_WEAK = new Set(('the a an and or of for in on at to by with from under where when ' +
+  'this that these those it its is are was were be been has have no not all any each ' +
+  'one two three four five six seven eight nine ten both state states ' +
+  'children child school schools language languages support').split(' '));
+const SRC_JOIN = new Set(('of and for the on in de du des da do della di van von y e a la le ' +
+  'les el al als dan og').split(' '));
+
+function srcTokens(text) {
+  const raw = String(text == null ? '' : text);
+  const out = [];
+  // Acronyms and code-like names: SIAS, KEDASY, NDIS, IS1406.
+  for (const m of raw.matchAll(/\b[A-Z][A-Z0-9]{2,}\b/g)) out.push({ t: m[0], kind: 'acronym' });
+  // Instrument numbers: 245/2008, 2145-VIII, "61 of 1999".
+  for (const m of raw.matchAll(/\b\d{1,5}\s*[\/–-]\s*[A-Za-z0-9][A-Za-z0-9\/–-]*\b/g)) out.push({ t: m[0], kind: 'number' });
+  for (const m of raw.matchAll(/\b\d{1,4}\s+of\s+(?:19|20)\d\d\b/g)) out.push({ t: m[0], kind: 'number' });
+  // Proper phrases: two or more capitalised words, lowercase joiners allowed
+  // inside and never at either end.
+  const words = raw.match(/[A-ZÀ-Ý][\w'À-ſ-]*|[a-z][a-z]*/g) || [];
+  const isCap = w => /^[A-ZÀ-Ý]/.test(w);
+  let run = [];
+  const flush = () => {
+    while (run.length && !isCap(run[run.length - 1])) run.pop();
+    if (run.filter(isCap).length >= 2) out.push({ t: run.join(' '), kind: 'phrase' });
+    run = [];
+  };
+  for (const w of words) {
+    if (isCap(w)) run.push(w);
+    else if (run.length && SRC_JOIN.has(w.toLowerCase())) run.push(w);
+    else flush();
+  }
+  flush();
+
+  const seen = new Set();
+  return out.filter(o => {
+    const f = srcFlat(o.t);
+    if (!f || seen.has(f)) return false;
+    seen.add(f);
+    if (o.kind === 'acronym') return f.length >= 3 && !SRC_WEAK.has(f);
+    // A number is distinctive when it carries a year, three digits, or a
+    // letter suffix. "1-8" is a grade range and matches by accident.
+    if (o.kind === 'number') return /(?:19|20)\d\d/.test(f) || f.replace(/\D/g, '').length >= 3 || /\d\s*[a-z]/.test(f);
+    const ws = f.split(' ');
+    return ws.length >= 2 && f.length >= 9 && !ws.every(w => SRC_WEAK.has(w));
+  }).map(o => Object.assign({}, o, { f: srcFlat(o.t) }));
+}
+
+const srcInside = (hay, needle) => hay === needle ||
+  hay.startsWith(needle + ' ') || hay.endsWith(' ' + needle) || hay.includes(' ' + needle + ' ');
+
+function srcHit(tok, lab) {
+  // An acronym is matched CASE-SENSITIVELY. ACCESS is a test in Rhode Island
+  // and an ordinary verb in half the titles in the corpus; making the title
+  // shout it back is what tells the two apart.
+  if (tok.kind === 'acronym') return srcInside(lab.c, tok.t.toUpperCase()) ? tok.t : null;
+  if (srcInside(lab.f, tok.f)) return tok.t;
+  if (tok.kind !== 'phrase') return null;
+  const ws = tok.t.split(' ');
+  for (let n = ws.length - 1; n >= 2; n--) {
+    if (SRC_JOIN.has(ws[n - 1].toLowerCase())) continue;   // "Ministry of" is not a name
+    const part = ws.slice(0, n).join(' ');
+    if (srcFlat(part).length >= 9 && srcInside(lab.f, srcFlat(part))) return part;
+  }
+  return null;
+}
+
+function fieldSources(u, fieldKey) {
+  const links = u.docLinks || [];
+  const text = String((u.values || {})[fieldKey] == null ? '' : u.values[fieldKey]);
+  // The place's own name discriminates nothing -- every source on the entry is
+  // about that place, so matching on it would mark them all.
+  const skip = new Set([srcFlat(u.name), srcFlat((B.countries[u.cc] || {}).name || '')]);
+  const toks = srcTokens(text).filter(t => !skip.has(t.f));
+
+  // A resolved citation is the strongest signal there is, and the panel body
+  // is already showing it as an inline link on that very line.
+  const cited = new Set();
+  for (const line of text.split('\n')) {
+    const r = resolveCitation(line, u);
+    if (r && r.url) cited.add(r.url);
+  }
+
+  const named = [], rest = [];
+  for (const l of links) {
+    const lab = { f: srcFlat(l.label || l.url || ''), c: srcFlatCase(l.label || l.url || '') };
+    const on = [];
+    for (const t of toks) { const h = srcHit(t, lab); if (h && on.indexOf(h) < 0) on.push(h); }
+    if (on.length || cited.has(l.url)) named.push({ link: l, on: on });
+    else rest.push(l);
+  }
+  return { named: named, rest: rest, total: links.length };
+}
+
+function fieldSourcesHTML(u, fieldKey) {
+  const { named, rest, total } = fieldSources(u, fieldKey);
+  if (!total) return `<div class="cpanlinks"><p class="cnone">No source is recorded on this entry.</p></div>`;
+
+  if (!named.length) {
+    return `<div class="cpanlinks">
+      <div class="ch">Sources on this entry</div>
+      <div class="links">${linkList(rest)}</div>
+      <p class="note">These are the entry's sources, not this question's: nothing in the
+        text above names one of them, and the corpus does not record which source each
+        line was read from.</p>
+    </div>`;
+  }
+
+  const rows = named.map(m => `<div class="srcrow">
+      <a href="${esc(m.link.url)}" target="_blank" rel="noopener noreferrer">${esc(m.link.label || m.link.url)}</a>
+      ${m.on.length ? `<span class="why">the text names <b>${m.on.map(x => esc(x)).join('</b>, <b>')}</b></span>`
+                    : `<span class="why">cited in the text above</span>`}
+    </div>`).join('');
+
+  return `<div class="cpanlinks">
+    <div class="ch">Named in this text</div>
+    <div class="links">${rows}</div>
+    ${rest.length ? `<details class="rest">
+        <summary>${rest.length} other source${rest.length === 1 ? '' : 's'} on the ${esc(u.name)} entry</summary>
+        <div class="links">${linkList(rest)}</div>
+      </details>` : ''}
+    <p class="note">Matched on what the text names, which is a claim about the words above
+      rather than about what the coder read. A source in the second list may well be the
+      one this answer came from.</p>
+  </div>`;
+}
+
 function codedPanelHTML(u) {
   const d = domain();
   const [fk, col] = CODED.key.split('.');
@@ -2249,26 +2415,7 @@ function codedPanelHTML(u) {
         ? `<p class="cnone">Nothing is recorded for ${esc(u.name)} on this question.</p>`
         : `<p class="cnone">${esc(u.name)} has an answer written for this question, and nobody has coded it yet. The text is below.</p>`;
 
-  /* The sources, under the text they support.
-   *
-   * docLinks are recorded per ENTRY, not per field and not per bullet --
-   * CLAUDE.md requires every claim in a worked entry to trace to a docLinks
-   * entry ON THAT SAME ENTRY, and nothing in the data says which link backs
-   * which line. So these are labelled as the entry's sources and not as the
-   * source for a particular bullet, which would assert an attribution the
-   * corpus does not hold.
-   *
-   * Where a bullet names a citation the linker already resolves it inline
-   * against these same labels, so a reader who wants the link for one line
-   * usually has it there; this is the rest of the evidence.
-   */
-  const links = u.docLinks || [];
-  const sources = links.length
-    ? `<div class="cpanlinks">
-         <div class="ch">Sources on this entry</div>
-         <div class="links">${linkList(links)}</div>
-       </div>`
-    : `<div class="cpanlinks"><p class="cnone">No source is recorded on this entry.</p></div>`;
+  const sources = fieldSourcesHTML(u, fk);
 
   const text = u.values[fk];
   const lines = String(text == null ? '' : text).split('\n').map(x => x.trim()).filter(Boolean);
