@@ -891,6 +891,15 @@ const SCHEMES = {
     },
   },
   'dld.dischargeCriteria': {
+    // ORDINAL columns, named rather than detected. A renderer that shades the
+    // map by a coded value needs to know which columns carry a rank, because an
+    // ordinal one should use the coverage ramp -- lightness climbing with the
+    // value -- and an unordered one must not, or the fill asserts a ranking the
+    // vocabulary refuses. Detection would get this wrong in both directions:
+    // `obliges` has numeric keys and IS ordered, while `occurrence` has numeric
+    // keys and is a row identifier. So it is declared.
+    ordinal: ['review_interval_months'],
+
     row: 'one national or sub-national system',
     columns: {
       discharge_basis: DISCHARGE_BASIS,
@@ -900,6 +909,9 @@ const SCHEMES = {
     },
   },
   'dld.legalEntitlement': {
+    // See the note on dld.dischargeCriteria.
+    ordinal: ['obliges', 'instrument_year'],
+
     // MANY: a coding for this field is an ARRAY of rows, one per
     // legal instrument. See the note on `many` below.
     many: true,
@@ -924,6 +936,9 @@ const SCHEMES = {
     },
   },
   'eal.removalCriteria': {
+    // See the note on dld.dischargeCriteria.
+    ordinal: ['exit_period_months'],
+
     row: 'one national or sub-national system',
     columns: {
       exit_mechanism: EXIT_MECHANISM,

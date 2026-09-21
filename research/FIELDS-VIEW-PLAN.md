@@ -149,9 +149,47 @@ from `p.schemes` either way. Say which you meant before phase 2.
 
 ## Phasing
 
-**Phase 0 — the palette.** A categorical set meeting the CVD standard
-`shared.css` documents, plus the muted "coded, other value" tone and a second
-texture for the third state. Nothing else can be honest until this exists.
+**Phase 0 — the palette. DONE 2026-09-21.** `--cat-1` … `--cat-6` and
+`--cat-other` in all three theme blocks, verified by
+`research/tools/palette-check.js --live`. Two things came out of building it:
+
+- **Six is the ceiling, and it is measured.** The bar is `shared.css`'s own — 14
+  dE under simulated protanopia and deuteranopia — and the checker reproduces
+  the two figures that file already quotes (`--nodata` at 14.3 from `--cov-1`,
+  the rejected `#C4CDD5` at 4.3). The set holds every pair at **20.6 dE or
+  better under both**.
+- **Perfectly flat lightness is the wrong target.** Levelling all six to one L*
+  reads as "no order" but takes a dichromat's second axis away: the same hues at
+  one lightness measured **9.9 dE under protanopia**, well under the bar. The
+  set keeps a 12 L* spread instead, which is inside ONE step of the coverage
+  ramp — so it cannot be read as a ranking by anyone who can read the ramp as
+  one. That is the rule the checker now enforces.
+
+**There is no second grey**, and that is also measured. "Prose exists, nobody
+coded it" wanted a tone of its own, but three greys — that, `--nodata` and
+`--cat-other` — plus the ground cannot all stay 14 dE apart on one narrow
+lightness band; the best candidate still left two pairs at 9.4 and 12.1. That
+state belongs to a TEXTURE over the ground, the way "looked, found nothing"
+already belongs to `#hatch`.
+
+**Ordinal columns are now declared, not detected.** `src/coding.js` carries
+`ordinal: [...]` on the three schemes that have ranked columns, and
+`src/catalog.js` ships it as `ordinalColumns`. Detection would get this wrong
+both ways: `obliges` has numeric keys and IS ordered, `occurrence` has numeric
+keys and is a row identifier.
+
+**The click-to-read panel — DONE 2026-09-21, ahead of the map fill.** Clicking a
+country now opens its full coding under each field's prose, headed "Coded — a
+reading of the text above, not part of it" so the separation `entry.coding`
+keeps in the data stays on screen. Every vocabulary-backed value is a disclosure
+carrying its definition from `src/coding.js` VERBATIM, including the entries
+that forced it — Spain's `official in named areas only` opens onto its own
+Constitution quote. Numeric and free columns render too, so `exit_period_months
+= 12` is visible, and an ordinal column is marked with a leading bar rather than
+a colour, so it survives monochrome and borrows no categorical hue. Row-grained
+schemes are summarised by row count and left to the timeline rather than
+flattened. `src/catalog.js` ships the glosses (101 KB, about 1% of the payload)
+so nothing is paraphrased in the page.
 
 **Phase 1 — one column, value-highlight only.**
 `dld.identificationCriteria.rule_locus`: 331 units, 7 values, a full map. Add a

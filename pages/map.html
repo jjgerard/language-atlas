@@ -292,6 +292,38 @@
   margin: 0; font-size: 13.5px; line-height: 1.58; white-space: pre-line;
   overflow-wrap: break-word;
 }
+/* The coding, under the prose it reads. Set apart with a rule and a smaller,
+   quieter type than the text above, because it is a READING of that text and
+   not more of it -- the separation entry.coding keeps in the data is the one
+   thing this block has to keep on screen. */
+.coded { margin: 9px 0 0; padding: 8px 0 0; border-top: 1px dashed var(--hair); }
+.coded .ch {
+  font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-faint); margin: 0 0 6px;
+}
+.crow { display: grid; grid-template-columns: 96px 1fr; gap: 4px 10px; margin: 0 0 4px; align-items: start; }
+.crow .cn { font-size: 11.5px; color: var(--ink-faint); line-height: 1.5; }
+.cvs { display: flex; flex-wrap: wrap; gap: 4px; }
+/* A value is a chip. Where the vocabulary defines it the chip is a <summary>,
+   so the definition is one click away and nothing is paraphrased in the page. */
+.cv {
+  display: inline-block; font-size: 11.5px; line-height: 1.45;
+  padding: 1px 7px; border-radius: 3px; cursor: pointer;
+  background: var(--surface-2); border: 1px solid var(--hair);
+  color: var(--ink); list-style: none;
+}
+.cv::-webkit-details-marker { display: none; }
+.cvwrap { display: inline-block; }
+.cvwrap[open] .cv { border-color: var(--hair-strong); }
+/* An ORDINAL column is marked, because its values are ranked and the others are
+   not. The mark is a leading bar rather than a colour, so it survives
+   monochrome and does not borrow a categorical hue to mean something else. */
+.cv.ord { border-left: 3px solid var(--cov-3); padding-left: 5px; }
+.cgloss {
+  margin: 5px 0 7px; font-size: 11.5px; line-height: 1.55;
+  color: var(--ink-soft); white-space: normal;
+  padding-left: 8px; border-left: 2px solid var(--hair);
+}
 .field.empty p, .field.looked p { color: var(--ink-faint); font-style: italic; }
 /* Not applicable: the question has no meaning for this unit. Set apart from
    "empty" so it does not read as an invitation to fill it in. */
@@ -770,6 +802,10 @@ async function loadAtlas() {
   return {
     countries: geo.countries, subunits: geo.subunits, territories: geo.territories || [],
     dots, units: atlas.units, domains: atlas.domains, sources: atlas.sources, stats: atlas.stats,
+    // The vocabularies, so a field in the panel can say what its coded value
+    // MEANS rather than just naming it. Carries keyColumns, valueColumns,
+    // ordinalColumns and the glosses themselves; see src/catalog.js.
+    schemes: atlas.schemes || {},
   };
 }
 
@@ -1723,6 +1759,59 @@ function linkList(links) {
   ).join('');
 }
 
+/* The coding for one field, rendered under its prose.
+ *
+ * The coding is a READING of the prose above it, held apart from the prose on
+ * purpose -- src/coding.js keeps it in entry.coding, beside the text and never
+ * inside it, so it can be argued with or thrown away without a sourced claim
+ * moving. The panel keeps that separation visible: the prose is the record, and
+ * this is headed as a reading of it.
+ *
+ * Every value carries its own definition from the vocabulary, verbatim, behind
+ * a disclosure. That matters more here than anywhere else in the project: a
+ * value like `assessed, no criterion` or `national rule, local application` is
+ * precise and non-obvious, and a reader who cannot see the definition will
+ * guess one. The glosses name the entries that forced each value, so the reader
+ * can go and disagree with the typing rather than with our taste.
+ *
+ * Row-grained schemes -- policyHistory and the instrument-grained fields -- hold
+ * an ARRAY of rows per unit rather than one reading, so they are summarised by
+ * count and left to the timeline rather than flattened into a value here.
+ */
+function codingHTML(u, fieldKey) {
+  const sc = (B.schemes || {})[domainId + '.' + fieldKey];
+  const coded = (u.coding || {})[fieldKey];
+  if (!sc || !coded) return '';
+  // Every column, not just the vocabulary-backed ones: a numeric column like
+  // `exit_period_months` is part of the coding and has no gloss to carry it.
+  const cols = (sc.allColumns && sc.allColumns.length) ? sc.allColumns : (sc.valueColumns || []);
+  if (!cols.length) return '';
+
+  if (Array.isArray(coded)) {
+    const n = coded.length;
+    if (!n) return '';
+    return `<div class="coded"><div class="ch">Coded — ${n} row${n === 1 ? '' : 's'}, one per dated entry above</div></div>`;
+  }
+
+  const ordinal = new Set(sc.ordinalColumns || []);
+  const rows = cols.map(c => {
+    const raw = coded[c];
+    if (raw === undefined || raw === null || !String(raw).length) return '';
+    const vals = [].concat(raw);
+    const defs = (sc.values || {})[c] || {};
+    const chips = vals.map(v => {
+      const gloss = defs[v];
+      const cls = 'cv' + (ordinal.has(c) ? ' ord' : '');
+      return gloss
+        ? `<details class="cvwrap"><summary class="${cls}">${esc(String(v))}</summary><p class="cgloss">${esc(String(gloss))}</p></details>`
+        : `<span class="${cls}">${esc(String(v))}</span>`;
+    }).join('');
+    return `<div class="crow"><span class="cn">${esc(c.replace(/_/g, ' '))}</span><span class="cvs">${chips}</span></div>`;
+  }).join('');
+  if (!rows) return '';
+  return `<div class="coded"><div class="ch">Coded — a reading of the text above, not part of it</div>${rows}</div>`;
+}
+
 function panelHTML(u, via) {
   const d = domain();
   const st = stateOf(u);
@@ -1771,7 +1860,7 @@ function panelHTML(u, via) {
       : isLangs ? languagesHTML(u.records[f.k])
       : rowKey ? rowsHTML(u.records[f.k], rowKey)
       : prose(u.values[f.k], u);
-    if (c === 'h') return block('on', f.label, renderOwn(), null, f.k);
+    if (c === 'h') return block('on', f.label, renderOwn() + codingHTML(u, f.k), null, f.k);
     // "Not established from the sources consulted…" is a sentence explaining an
     // absence, not a list of facts, so it stays a paragraph even where the
     // domain's documented fields are bulleted.
@@ -1788,10 +1877,10 @@ function panelHTML(u, via) {
     if (inheritable) {
       nInherited++;
       return block('inh', f.label,
-        isHist ? historyHTML(par.history, par)
+        (isHist ? historyHTML(par.history, par)
           : isLangs ? languagesHTML(par.records[f.k])
           : rowKey ? rowsHTML(par.records[f.k], rowKey)
-          : prose(par.values[f.k], par), par.name, f.k);
+          : prose(par.values[f.k], par)) + codingHTML(par, f.k), par.name, f.k);
     }
     return block('empty', f.label, '<p>Not recorded.</p>', null, f.k);
   }).join('');

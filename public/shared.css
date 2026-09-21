@@ -59,6 +59,54 @@
   --cov-4: #2C639A;
   --cov-5: #1E3A6B;
 
+  /* CATEGORICAL palette, for shading the map by a CODED value rather than by
+     how much is documented. It is the coverage ramp's opposite and has to be,
+     because the two carry opposite claims.
+
+     The ramp works by making LIGHTNESS monotonic: more documented is lighter to
+     darker, so the order survives monochromacy. Coded values have no order.
+     `clock`, `test` and `proficiency judgement` are three ways of stopping, not
+     three amounts of it, and painting them on a lightness ramp would assert a
+     ranking the vocabulary refuses -- the same mistake src/coding.js warns
+     about when it says turning `obliges` into an averageable number is a
+     separate decision taken elsewhere.
+
+     So here lightness is held nearly flat and HUE does the work. The spread is
+     12 L*, which is inside ONE step of the coverage ramp: a set this flat
+     cannot be read as a ranking by anyone who can read the ramp as one.
+
+     It is not flatter than that on purpose. A dichromat has only the
+     blue-yellow axis and lightness left, so levelling all six to a single L*
+     takes the second away: the same six hues at one lightness were measured at
+     9.9 dE under protanopia, well under the bar. 12 keeps every pair at 20.6 dE
+     or better under BOTH protanopia and deuteranopia, against the 14 that
+     --nodata is held to.
+
+     Verify with `node research/tools/palette-check.js --live` after any change.
+     Six is also the practical ceiling for a choropleth, which is why columns
+     with more values are shown by highlighting one value at a time rather than
+     by colouring them all. */
+  --cat-1: #21b4dc;   /* cyan    */
+  --cat-2: #968729;   /* olive   */
+  --cat-3: #53b796;   /* green   */
+  --cat-4: #3f88dd;   /* blue    */
+  --cat-5: #d56265;   /* coral   */
+  --cat-6: #c266aa;   /* magenta */
+
+  /* NOT a category, and must never be mistaken for one: every value except the
+     highlighted one, when a column has more values than the map can colour.
+
+     There is deliberately no second grey here. "Prose exists and nobody has
+     coded it" is a distinct state and it wanted a tone of its own, but three
+     greys -- this, --nodata and an uncoded tone -- plus the ground cannot all
+     stay 14 dE apart, because a narrow lightness band is one axis and there is
+     not room on it for four. Measured: the best candidate set still put two
+     pairs at 9.4 and 12.1. So that state is carried by a TEXTURE over the
+     ground instead, the way "looked, found nothing" already is by #hatch. A
+     texture adds a state without spending a hue, which is why the map had one
+     to begin with. */
+  --cat-other: #6E8598;
+
   --shadow: 0 1px 2px rgba(16,24,32,.08), 0 8px 24px -8px rgba(16,24,32,.18);
 }
 @media (prefers-color-scheme: dark) {
@@ -94,6 +142,19 @@
     --cov-4: #69AED3;
     --cov-5: #A9CAED;
 
+    /* The categorical set, lifted for the dark ground. Same six hues in the
+       same order, so a reader switching theme sees the same six categories;
+       only the lightness moves, because the ground moved. Checked to the same
+       bar: every pair 18.4 dE or better under protanopia and deuteranopia. */
+    --cat-1: #0ac6f3;
+    --cat-2: #ad9c16;
+    --cat-3: #28cda0;
+    --cat-4: #489dff;
+    --cat-5: #fe6b71;
+    --cat-6: #e96eca;
+
+    --cat-other: #6E7F8D;
+
     --shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 30px -10px rgba(0,0,0,.7);
   }
 }
@@ -128,6 +189,13 @@
   --cov-3: #3392A6;
   --cov-4: #69AED3;
   --cov-5: #A9CAED;
+  --cat-1: #0ac6f3;
+  --cat-2: #ad9c16;
+  --cat-3: #28cda0;
+  --cat-4: #489dff;
+  --cat-5: #fe6b71;
+  --cat-6: #e96eca;
+  --cat-other: #6E7F8D;
 
   --shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 30px -10px rgba(0,0,0,.7);
 }

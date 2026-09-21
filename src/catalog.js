@@ -51,6 +51,28 @@ function build(catalogs, sources) {
       keyColumns: s.keyColumns,
       valueColumns: Object.entries(s.columns || {})
         .filter(([, def]) => def && typeof def === "object").map(([c]) => c),
+      // Which of those carry a RANK. A map shading by an ordinal column should
+      // use the coverage ramp, whose lightness climbs; one shading by an
+      // unordered column must use the categorical set instead, or the fill
+      // asserts an order the vocabulary refuses. Declared in coding.js rather
+      // than detected here -- `obliges` and `occurrence` both have numeric keys
+      // and only one of them is a rank.
+      ordinalColumns: s.ordinal || [],
+      // Every column except the key ones, in declared order. `valueColumns` is
+      // the subset backed by a vocabulary; a panel showing the FULL coding also
+      // needs the free and numeric ones -- `exit_period_months: 12` is exactly
+      // what a reader wants and it has no gloss to carry it here.
+      allColumns: Object.keys(s.columns || {}).filter(c => !(s.keyColumns || []).includes(c)),
+      // The glosses themselves, so a reader who clicks a country can be told
+      // what the coded value MEANS and which entries forced it, without a
+      // second request and without the vocabulary being paraphrased in the
+      // page. These are the evidenced definitions from src/coding.js verbatim:
+      // 101 KB across 378 values, about 1% of a payload that is already 9.7 MB,
+      // which is a cheap price for the panel not having to invent its own
+      // wording for a value the corpus defines precisely.
+      values: Object.fromEntries(Object.entries(s.columns || {})
+        .filter(([, def]) => def && typeof def === "object")
+        .map(([c, def]) => [c, def])),
     }])),
     // Rides along on the atlas payload rather than getting its own endpoint,
     // for the reason the patterns page already records: the page pulled 3MB
