@@ -447,6 +447,13 @@ const FAMILY_PAYS = {
 //
 // For scale, the same hedge appears on 1 of 208 serviceModel entries. It is a
 // fact about the funding literature, not about the atlas.
+//
+// dld.outcomesEvidence carries it on 49 of 66 entries in those exact words, and
+// 7 more say there is no language-specific figure -- 56 of 66. That is the
+// reverse of the test used elsewhere: the column barely discriminates, and it
+// is kept anyway, because without it a reader sees Cuba's 35,607 pupils and
+// Eswatini's enrolment counts and takes them for outcome evidence about
+// language. Same reasoning as bilingual_handling, silent on 97% and kept.
 const RECORD_SCOPE = {
   'language specific': 'The source reaches speech or language provision (Mauritius, where the Grant-in-Aid to non-governmental SEN schools "covers speech therapists"; France and Hungary, where practitioners are reporting on a language case; Sweden, where the trigger is "reported difficulty with spoken or written language")',
   'disability generally': 'The source describes disability or special-needs provision and never reaches language disorder. The entry usually says so outright, in those words (Rwanda, Algeria, Gambia, Liberia, South Sudan, Central African Republic, Mongolia, Marshall Islands and Tonga on funding; Sri Lanka, Fiji, Kenya, Niger, Senegal and Tanzania on referral)',
@@ -569,6 +576,63 @@ const WORKFORCE_COUNT = {
   'survey estimate': 'A number from a survey or key informants, and the entry says so (Nigeria: "key-informant survey estimates, not register counts", 4 in 2015 against 3 in 2009; the sub-Saharan ENT survey figures generally)',
   'none reported': 'The count is zero, or the entry records that no workforce is known (Marshall Islands, "zero speech-language pathologists reported for 2023-24", which the entry calls "an official US federal return, not a survey estimate"; Gambia and Liberia, each reporting "no known speech and language therapy work")',
   'not stated': 'No count of any kind is given',
+};
+
+// ===========================================================================
+// dld.outcomesEvidence
+// ===========================================================================
+//
+// Derived 2026-09-21 by reading all 66 national entries, not a sample -- the
+// field is small enough that sampling would have been a choice about which
+// continent to believe. Europe holds none of them: every entry is Africa (30),
+// Oceania (13), the Americas (13) or Asia (10), and most descend from one
+// source family, the UNESCO GEM PEER country profiles. So the columns below
+// describe what those profiles vary on, which is not the same as what school
+// systems vary on, and the distribution should be read that way.
+//
+// THE FIELD IS ABOUT ABSENCE. The hint on `outcomesEvidence` asks for "what was
+// measured, by whom and when, what it found, whether it is repeated". Almost no
+// entry can answer the third. What they record instead is whether any apparatus
+// exists that could ever produce an answer -- which is worth having, and is a
+// different question from the one the field's name asks.
+//
+// A `data_verdict` value for data the entry calls SOUND was drafted and not
+// written: no entry of the 66 says its data are adequate. The one-sided column
+// is the finding, and inventing the other side would hide it.
+//
+// EVIDENCE_TYPE is not here. It would read `policy` on nearly every row,
+// because nearly every row is a PEER profile; the column would measure the
+// atlas's sourcing rather than the system, which is the fault already recorded
+// on the policyHistory provenance rows.
+
+// WHAT THE ENTRY ACTUALLY OFFERS. A LIST: an entry can hold a headcount and a
+// finding at once (Cuba counts 357 schools and 35,607 pupils AND reports the
+// 2019 CRPD Committee's criticism of reliance on special schools).
+const OUTCOME_EVIDENCE = {
+  'none established': 'Somebody looked and there is no outcome data of any kind (Barbados and Trinidad and Tobago, both quoted verbatim: "There is no evidence of indicators or reporting mechanisms on inclusive education"; Dominica; Haiti; Saint Vincent and the Grenadines, where "the Ministry reports no record-keeping system, so no prevalence data exists")',
+  'counts': 'Headcounts of pupils, schools, teachers or enrolments, which say how many rather than how well (Cuba, 357 schools, 15,278 teachers and 35,607 pupils at the 2020 profile; Congo, 2011 net enrolment of disabled children in primary at 52.2 per cent; El Salvador, 85 per cent of disabled children in mainstream schools at the 2014 census; Tonga, a pilot class of nine in 2007 and 23 mainstreamed in 2009)',
+  'indicators': 'Indicators are defined and named, whether or not any result is given (Uganda, parity indices for gender and disability; Zimbabwe, enrolment of children with disability in early childhood education against a 2020 target of 35%; Tunisia, inclusion measured by promotion, repetition and dropout rates; Taiwan, statutory analysis items of placement, resources, transition and use of funds; Northern Mariana Islands, preschool outcome B on early language and communication)',
+  'findings': 'The entry reports something substantive about how these learners fare (Fiji, where a study of AQEP demonstration schools found teacher aides are needed for inclusion; Solomon Islands, "most rural children with disabilities out of school through limited accessibility"; Egypt, "schools that integrate students are few in number and are not meeting needs"; Sri Lanka, admitted students facing a limited choice of higher education courses)',
+  'not stated': 'The entry does not reach what evidence exists',
+};
+
+// THE APPARATUS, AND WHETHER THIS POPULATION IS VISIBLE IN IT. A LIST, because
+// "no regular report, but a study was run in 2018" is a common and coherent
+// pair (Togo, Ivory Coast) and coding one of them throws the other away.
+const OUTCOME_REPORTING = {
+  'regular report, population separated': 'A recurring national report exists AND breaks out disabled or special-needs learners (Ghana, disability data disaggregated by impairment in EMIS and in the MICS; Ethiopia, the Education Statistics Annual Abstract published yearly since 1999 covering special needs; Marshall Islands, reporting annually to the US Office of Special Education Programs; Taiwan, a statutory annual special education statistics report)',
+  'regular report, not separated': 'A recurring report exists and this population is not visible in it (Samoa, whose annual statistical digests "exclude data on students attending special education"; Eswatini, where "special needs statistics sit inside general education statistics"; Morocco, where "few of its key education indicators relate directly to inclusion")',
+  'one-off study or review': 'A single study, pilot evaluation or sector review, not repeated (Togo, a 2018 study of school careers of disabled children in mainstream schools; Ivory Coast, a 2014-2017 inclusive school pilot that integrated 82 deaf children; Vanuatu, a 2018 barriers study; Tuvalu, the 2017 Education Data Quality Assessment Report with UIS and SPC)',
+  'no regular report': 'The entry establishes that no recurring national education monitoring report covers this (DR Congo, Congo, Cameroon, Gabon, Liberia, Lesotho, Rwanda, Sudan, South Sudan, Zambia, Haiti, Libya and Togo all say so in one line)',
+  'not stated': 'The entry does not establish what reporting exists',
+};
+
+// WHAT THE ENTRY MAKES OF THE DATA IT FOUND. Separate from whether data exist,
+// because the two come apart in both directions: Gambia has reports and calls
+// them obsolete, Algeria has no report and says statistics are hard to get.
+const DATA_VERDICT = {
+  'called unreliable or incomplete': 'The entry records a judgement that the data are not to be trusted or do not cover the ground (Gambia, national special-needs data "described as obsolete" with the last disability survey in 1988 and EMIS data "sometimes not accurate"; Ethiopia, "very limited, fragmentary and not well organized"; Zambia, "many flaws"; Dominican Republic, where the Ministry states its three official sources are not comparable; Kiribati, where data lack unique student identifiers, blocking disaggregation by disability; Rwanda, where data "seems to reflect mainly visible impairments")',
+  'no verdict stated': 'The entry passes no judgement on the quality of what it found. NOTE that no entry of the 66 calls its data adequate, so this value covers silence only',
 };
 
 // ===========================================================================
@@ -1307,6 +1371,16 @@ const SCHEMES = {
       evidence_type: EVIDENCE_TYPE,
     },
   },
+  'dld.outcomesEvidence': {
+    row: 'one national or sub-national system',
+    columns: {
+      // BOTH of these are LISTS -- see the notes on the two constants.
+      evidence_found: OUTCOME_EVIDENCE,
+      reporting: OUTCOME_REPORTING,
+      data_verdict: DATA_VERDICT,
+      scope: RECORD_SCOPE,
+    },
+  },
   'dld.referralPathway': {
     row: 'one national or sub-national system',
     columns: {
@@ -1398,6 +1472,7 @@ module.exports = {
   FUNDERS, FAMILY_PAYS, RECORD_SCOPE,
   WORKFORCE_ENTRY, WORKFORCE_TRAINING, WORKFORCE_COUNT,
   REFERRAL_SOURCE, REFERRAL_TRIGGER,
+  OUTCOME_EVIDENCE, OUTCOME_REPORTING, DATA_VERDICT,
   L1_FORM, L1_FOR_WHOM, L1_SECURED_BY, L2_MODELS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
@@ -1427,6 +1502,9 @@ module.exports = {
   isL2Model: v => has(L2_MODELS, v),
   isL1ForWhom: v => has(L1_FOR_WHOM, v),
   isL1SecuredBy: v => has(L1_SECURED_BY, v),
+  isOutcomeEvidence: v => has(OUTCOME_EVIDENCE, v),
+  isOutcomeReporting: v => has(OUTCOME_REPORTING, v),
+  isDataVerdict: v => has(DATA_VERDICT, v),
   isReferralSource: v => has(REFERRAL_SOURCE, v),
   isReferralTrigger: v => has(REFERRAL_TRIGGER, v),
   isWorkforceEntry: v => has(WORKFORCE_ENTRY, v),
