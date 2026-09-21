@@ -206,6 +206,11 @@ function deriveUnits(domain, entries, sharedMatcher) {
         if (!Array.isArray(list) || !list.length || !values[k]) continue;
         fieldSources[k] = list.map(x => ({
           url: x.url,
+          // The drafter's own name for the document. Carried because the panel
+          // would otherwise fall back to a hostname, and "education-profiles.org"
+          // is a worse answer than "UNESCO PEER, Suriname - Inclusion profile"
+          // even when the entry happens to hold the same link.
+          label: x.label || null,
           quote: clip(x.quote, QUOTE_CAP),
           where: clip(x.where, WHERE_CAP),
         }));

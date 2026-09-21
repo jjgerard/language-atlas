@@ -2346,7 +2346,11 @@ function draftedSources(u, fieldKey) {
   for (const l of (u.docLinks || [])) byUrl.set(String(l.url).split('#')[0], l.label || l.url);
   return rows.map(r => {
     const bare = String(r.url).split('#')[0];
-    let label = byUrl.get(bare);
+    // The entry's own wording first, then the drafter's, and a hostname only
+    // when there is nothing else. A URL match against docLinks is exact, so a
+    // source recorded under a second address falls through to the drafter's
+    // name rather than to "education-profiles.org".
+    let label = byUrl.get(bare) || r.label;
     if (!label) { try { label = new URL(r.url).hostname.replace(/^www\./, ''); } catch (e) { label = r.url; } }
     return { url: r.url, label, quote: r.quote, where: r.where };
   });
@@ -2369,11 +2373,17 @@ function fieldSources(u, fieldKey) {
   }
 
   // Anything already shown as a recorded source is not repeated below it.
-  const drafted = new Set(draftedSources(u, fieldKey).map(d => String(d.url).split('#')[0]));
+  // By url AND by title: PEER's profiles are cited at two addresses, so the
+  // same document was appearing under both headings at once.
+  const ds = draftedSources(u, fieldKey);
+  const drafted = new Set(ds.map(d => String(d.url).split('#')[0]));
+  const draftedNames = ds.map(d => srcFlat(d.label)).filter(t => t.length > 12);
 
   const named = [], rest = [];
   for (const l of links) {
     if (drafted.has(String(l.url).split('#')[0])) continue;
+    const lf = srcFlat(l.label || '');
+    if (draftedNames.some(t => lf.startsWith(t) || t.startsWith(lf))) continue;
     const lab = { f: srcFlat(l.label || l.url || ''), c: srcFlatCase(l.label || l.url || '') };
     const on = [];
     for (const t of toks) { const h = srcHit(t, lab); if (h && on.indexOf(h) < 0) on.push(h); }

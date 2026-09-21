@@ -27,12 +27,13 @@ const path = require("path");
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 const NL = String.fromCharCode(10);
 
+const isCLI = require.main === module;
 const domain = process.argv[2];
 const region = process.argv[3] && process.argv[3] !== "-" ? process.argv[3] : null;
 const outFile = process.argv[4] || null;
-if (!domain) { console.log("usage: node linkcheck.js <domain> [region] [out.json]"); process.exit(1); }
+if (isCLI && !domain) { console.log("usage: node linkcheck.js <domain> [region] [out.json]"); process.exit(1); }
 
-const data = require(path.join(__dirname, "..", "..", "data", domain + ".json"));
+const data = isCLI ? require(path.join(__dirname, "..", "..", "data", domain + ".json")) : [];
 
 function req(url, opts, redirects, follow) {
   return new Promise(res => {
@@ -72,6 +73,34 @@ function viaCurl(url) {
   } catch { return null; }
 }
 
+/** Why this url is suspect, or null where it serves. The whole of the gate's
+ *  judgement, in one place, so a caller cannot accidentally use a weaker one. */
+async function checkUrl(url) {
+  if (/^https?:\/\/(dx\.)?doi\.org\//i.test(url)) {
+    // Resolution is the whole test. What the publisher does next is not this
+    // project's business, and a paywall is not a broken citation.
+    const h = await head(url);
+    if (h.status === 404) return "DOI does not resolve";
+    if (!h.to && h.status !== 200) return "DOI returned " + (h.status || h.err);
+    return null;
+  }
+  const r = await get(url);
+  if (r.status === 200) {
+    const body = (r.head || Buffer.alloc(0)).toString("latin1");
+    if (r.n < 1000) return "200 but only " + r.n + " bytes";
+    if (/Request Rejected|Just a moment|Access Denied|captcha/i.test(body))
+      return "200 carrying a challenge or rejection page";
+    return null;
+  }
+  const c = viaCurl(url);
+  if (c && c.status === 200 && c.n > 1000) return null;
+  return (r.status ? "HTTP " + r.status : "conn " + r.err) +
+         (c ? ", curl " + c.status + "/" + c.n + "b" : ", curl also failed");
+}
+
+module.exports = { checkUrl, UA };
+if (!isCLI) return;
+
 (async () => {
   const rows = data.filter(e => !region || e.region === region);
   const links = new Map();
@@ -88,28 +117,7 @@ function viaCurl(url) {
   let i = 0;
   for (const [url, units] of links) {
     i++;
-    let verdict = null;
-
-    if (/^https?:\/\/(dx\.)?doi\.org\//i.test(url)) {
-      // Resolution is the whole test. What the publisher does next is not this
-      // project's business, and a paywall is not a broken citation.
-      const h = await head(url);
-      if (h.status === 404) verdict = "DOI does not resolve";
-      else if (!h.to && h.status !== 200) verdict = "DOI returned " + (h.status || h.err);
-    } else {
-      const r = await get(url);
-      if (r.status === 200) {
-        const body = (r.head || Buffer.alloc(0)).toString("latin1");
-        if (r.n < 1000) verdict = "200 but only " + r.n + " bytes";
-        else if (/Request Rejected|Just a moment|Access Denied|captcha/i.test(body))
-          verdict = "200 carrying a challenge or rejection page";
-      } else {
-        const c = viaCurl(url);
-        if (!(c && c.status === 200 && c.n > 1000))
-          verdict = (r.status ? "HTTP " + r.status : "conn " + r.err) +
-                    (c ? ", curl " + c.status + "/" + c.n + "b" : ", curl also failed");
-      }
-    }
+    const verdict = await checkUrl(url);
 
     if (verdict) bad.push({ url, units, verdict });
     process.stderr.write("\r" + i + "/" + links.size + "  " + bad.length + " suspect ");
