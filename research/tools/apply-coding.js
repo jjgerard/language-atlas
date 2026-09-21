@@ -11,7 +11,7 @@
 //
 //     {
 //       "AT|Austria": {
-//         "removalCriteria": { "exit_mechanism": "clock", "exit_period_months": 12 }
+//         "removalCriteria": { "exit_mechanism": "fixed period", "exit_period_months": 12 }
 //       }
 //     }
 //

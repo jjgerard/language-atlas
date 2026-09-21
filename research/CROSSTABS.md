@@ -172,13 +172,13 @@ The first version of this section said the corpus could not be asked about exit
 by region. That was too broad, and the column has more structure than n = 36
 national rows suggests.
 
-**Within Europe there is real variation.** n = 26: clock 14, proficiency
+**Within Europe there is real variation.** n = 26: fixed period 14, proficiency
 judgement 5, not stated 4, none established 3, test 1, assessed-no-criterion 1.
 
-**Inside `clock` there is an ordinal spread**, and it is the most analysable
+**Inside `fixed period` there is an ordinal spread**, and it is the most analysable
 thing in the column. Serbia 2 months; Austria, Finland, Liechtenstein,
 Luxembourg, Latvia, Poland, Slovakia 12; Czechia, Greece, Netherlands, Slovenia
-24; Estonia 36; Sweden 48; New Zealand and Puerto Rico 60; Taiwan a clock with
+24; Estonia 36; Sweden 48; New Zealand and Puerto Rico 60; Taiwan a fixed period with
 no length given. Fourteen of the seventeen are European, so this is a question
 about European practice with two long outliers, not a global one.
 
@@ -187,20 +187,20 @@ p = 0.0001, and unusually for this file the documentation spread is tight
 (4.5 to 6.3), so depth is not the explanation:
 
 ```
-            assessed  clock  none  not stated  judgement  test    n
-  Americas         0      5     2       4          18      48     61
-  Europe           1     17     4       4           5       3     31
-  Oceania          0      5     0       3           2       6     12
+            assessed  period  none  not stated  judgement  test    n
+  Americas         0       5     2       4          18      48     61
+  Europe           1      17     4       4           5       3     31
+  Oceania          0       5     0       3           2       6     12
 ```
 
-The Americas run on named tests, Europe on clocks. But the Americas column is
+The Americas run on named tests, Europe on fixed periods. But the Americas column is
 61 US units under one federal framework — ESSA requires a uniform statewide exit
 procedure, and the states adopted standardised proficiency assessments under it.
 That is one decision counted fifty times, the Chinese-provinces problem again.
 The contrast is a true description of instruments and a sample of about two
 countries, so it belongs in prose and not in a test.
 
-What remains genuinely open is the clock length: fourteen European systems, 2 to
+What remains genuinely open is the period length: fourteen European systems, 2 to
 48 months, against nothing yet that would explain the spread.
 
 ## Four PISA outcomes, and only two of them are different from each other

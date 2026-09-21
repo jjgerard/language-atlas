@@ -10,7 +10,7 @@
 //
 // Three reading rules, all of them the page's:
 //
-// A LIST COLUMN IS COUNTED ONCE PER VALUE. A system running a clock and an age
+// A LIST COLUMN IS COUNTED ONCE PER VALUE. A system with a fixed period and an age
 // ceiling is doing both, and picking one would be exactly the discarding the
 // vocabularies were revised to stop -- so a column's total can exceed the
 // number of systems, and the percentages are of systems stating that column,

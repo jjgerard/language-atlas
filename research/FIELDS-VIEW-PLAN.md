@@ -54,7 +54,7 @@ lightness**, about 14 L* apart, teal to blue, deliberately off the red-green
 axis, so the ramp survives protanopia, deuteranopia, monochromacy and a
 photocopy. That works because coverage is ORDINAL — more is more.
 
-Coded values are not ordered. Painting `clock`, `test` and `proficiency
+Coded values are not ordered. Painting `fixed period`, `test` and `proficiency
 judgement` onto a lightness ramp would assert a ranking the vocabulary
 explicitly refuses; `src/coding.js` says of `obliges` that turning an ordinal
 into an averageable number is a separate decision, and this would be the same

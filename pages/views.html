@@ -440,7 +440,7 @@ function csvRows() {
       sources: (u.docLinks || []).length,
     };
     // A coding belongs to the unit, not to a bullet, so it repeats down every
-    // row for that unit. A list joins with "; " -- a system running a clock and
+    // row for that unit. A list joins with "; " -- a system with a fixed period and
     // an age ceiling is doing both, and the cell has to say so.
     // Instrument-grained fields store an array of rows. The CSV is keyed by
     // bullet, not by instrument, so those are joined with " | " per column --

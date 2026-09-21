@@ -292,7 +292,7 @@ function absencesFor(domain, body, fields) {
 //
 // Shape, keyed by field then by column:
 //
-//     coding: { removalCriteria: { exit_mechanism: "clock", exit_period_months: 12 } }
+//     coding: { removalCriteria: { exit_mechanism: "fixed period", exit_period_months: 12 } }
 //
 // Validated against src/coding.js, which holds the vocabularies and the
 // evidence for each value. A value not on the list is DROPPED rather than

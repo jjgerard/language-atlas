@@ -148,7 +148,7 @@ locally devised methods rather than as the instrument that decides. Q10 makes
 the review periodic. So `proficiency judgement` on the gloss’s own test, and
 `newcomerCriteria` filled at the same time from the same source.
 
-**Israel — done, and it is a clock.** Knesset RIC, already cited on the entry.
+**Israel — done, and it is a fixed period.** Knesset RIC, already cited on the entry.
 Hebrew hours run for the first two school years mostly studied in Israel;
 arriving before 1 January gives hours that year and the next, after it that year
 and two; upper secondary then keeps one hour across the following four years;
@@ -171,7 +171,7 @@ newcomer or additional-language pupil category, so like Moldova and Montenegro
 the honest answer is an absence and it adds nothing to the cross.
 
 `exit_mechanism` now stands at 40 national systems, 26 in the four-cycle PISA
-set. `clock` 18 against `proficiency judgement` 11, where before this work began
+set. `fixed period` 18 against `proficiency judgement` 11, where before this work began
 it was 17 against 5 — the two routes are close enough to compare for the first
 time.
 
@@ -208,7 +208,7 @@ So the eight were really five.
 
 ## Malta is done, and only the Internet Archive could prove it
 
-Coded `clock` + `assessed, no criterion`, 12 months, decided by the school,
+Coded `fixed period` + `assessed, no criterion`, 12 months, decided by the school,
 `rule_locus: national, non-binding`. The Migrant Learners' Unit ran a **one-year
 induction programme** and "Learners are assessed regularly throughout the year
 and at the end of the induction period, a decision will be taken by educational

@@ -57,7 +57,7 @@
   },
   "coding": {
    "removalCriteria": {
-    "exit_mechanism": ["clock"],
+    "exit_mechanism": ["fixed period"],
     "decided_by": "nobody, the period expires",
     "rule_locus": "national statute"
    }

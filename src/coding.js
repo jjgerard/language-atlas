@@ -197,7 +197,7 @@ const DECIDED_BY = {
   'national authority': 'A ministry or national agency (Israel: the Ministry of Education allocates by a key in the Director-General circular)',
   automatic: 'No decision is taken about the individual: the designation follows from records already held (Israel: set from the school reported pupil roll, with no application by the school)',
   'regional government': 'A state, province, canton or Land (Switzerland\'s cantons, Germany\'s Laender, United States states, Spain\'s regional decrees). DUTY_TYPES had this and this axis did not, which flattened every federal system',
-  'nobody, the period expires': 'No decision is taken about ending it: a clock runs out. All twelve clock systems in the first coding pass had no value for this, and `automatic` is not it -- that means a decision made without an application, which is not the same as no decision',
+  'nobody, the period expires': 'No decision is taken about ending it: a fixed period runs out. All twelve fixed-period systems in the first coding pass had no value for this, and `automatic` is not it -- that means a decision made without an application, which is not the same as no decision',
   'not stated': 'The entry does not establish who decides',
 };
 
@@ -234,14 +234,18 @@ const RULE_LOCUS = {
 // -- capped by duration instead". Taiwan: "No attainment exit test; the
 // entitlement is capped in periods". Czechia: "Capped by prior time in Czech
 // education, not by proficiency". Austria runs its 12 months out "regardless of
-// remaining German gaps". Systems choose a clock or a test, and say so.
+// remaining German gaps". Systems choose a fixed period or a test, and say so.
 // exit_mechanism IS A LIST. Eleven of the first 59 entries coded stated two or more
 // simultaneously operative rules, and coding one value threw the others away:
 // Chile runs an annual re-evaluation AND stops at 5;11, the United States a
 // triennial cycle AND a team decision AND an age limit, Ireland a two-year
 // school cap AND service-by-service discharge. Order them as the entry does.
 const EXIT_MECHANISM = {
-  clock: 'A fixed period, expiring whether or not the pupil is proficient (Austria 12 months extendable by 12, Czechia 24, Netherlands 2 years, Sweden 4, New Zealand 5 and 3, Greece ZEP II 2-3 years)',
+  // Called `clock` until 2026-09-21, and renamed because it was the only value
+  // in the column naming a DEVICE where its neighbours name what the rule turns
+  // on. 30 entries carried it and were migrated with the rename. A coding JSON
+  // written before that date still says clock and will be refused.
+  'fixed period': 'Expires whether or not the pupil is proficient (Austria 12 months extendable by 12, Czechia 24, Netherlands 2 years, Sweden 4, New Zealand 5 and 3, Greece ZEP II 2-3 years)',
   test: 'A NAMED instrument decides, with a stated level (Northern Mariana Islands WIDA ACCESS, Puerto Rico LAS Links level 4 or 5, Iceland competence level three)',
   'proficiency judgement': 'Proficiency decides, but no instrument is named -- an assessment made by a school, service or clinician (France assessed at school or CASNAV level, Norway "sufficiently proficient", Germany an assessment of German sometimes referencing DSD I). Liechtenstein states the distinction outright: exit is "proficiency-based rather than a fixed test"',
   'assessed, no criterion': 'A review point is fixed and no standard for ceasing is set — the decision exists, the criterion does not (Denmark: "the order sets that decision point but states no criterion for ceasing"; Sweden and Finland the same in their school acts)',
@@ -942,7 +946,7 @@ const SCHEMES = {
     row: 'one national or sub-national system',
     columns: {
       exit_mechanism: EXIT_MECHANISM,
-      exit_period_months: 'integer, where a clock is set and a length is given',
+      exit_period_months: 'integer, where a fixed period is set and a length is given',
       decided_by: DECIDED_BY,
       rule_locus: RULE_LOCUS,
     },
