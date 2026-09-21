@@ -579,6 +579,72 @@ const WORKFORCE_COUNT = {
 };
 
 // ===========================================================================
+// eal.achievementGap
+// ===========================================================================
+//
+// Derived 2026-09-21. This field needed less deriving than any other, because
+// the drafters had already written the vocabulary and nobody had noticed: 70 of
+// the 87 uncoded entries end on one of SIX sentences, and those six sentences
+// are the column. "A gap that narrows but survives both adjustments" (22
+// entries), "Small on all three measures" (17), "An advantage that survives
+// both adjustments" (9), "The gap is no smaller after either adjustment" (9),
+// "Close to zero once language is allowed for" (8), "The difference reverses
+// once background is allowed for" (5). Coding them is transcription, not
+// interpretation, and `after_adjustment` is coded FROM THOSE LINES.
+//
+// WHAT THE FIELD IS REALLY ABOUT IS THE PROXY. Almost nowhere measures language
+// directly. PISA reports immigrant background, PASEC reports how often a pupil
+// speaks French at home, Guyana measures coast against hinterland and Suriname
+// interior against coast -- "confounding language with remoteness", as its own
+// entry says. `proxy` exists so a reader can see what is standing in for the
+// thing the map claims to be about, and it is the column to read first.
+
+// WHERE THE NUMBER COMES FROM.
+const GAP_MEASURE = {
+  'international assessment': 'A cross-national survey, which in this corpus is PISA 2022 reading for 70 entries and PASEC2019 for 5',
+  'national assessment': 'The system\'s own testing (Puerto Rico, META-PR maths 2016-17, "29% of Spanish Learners proficient against 33% of all pupils"; Northern Mariana Islands, targeting "a 3% yearly rise in ELL pupils at Expanding or above on WIDA")',
+  'no measured gap': 'The entry establishes that no comparison by language exists (Guyana and Suriname, both "no language-disaggregated attainment data exists"; Mali, "not among the fourteen PASEC2019 countries"; Solomon Islands, "no comparison of results by home language is published")',
+  'argued, not measured': 'The entry offers an account of why a gap would exist and no figure (Mauritania, "a UNESCO PEER summary, not a measured gap"; Saint Kitts and Nevis, "framed through the BICS and CALP distinction, not through test-score data"; Kenya; Nicaragua)',
+  'not stated': 'The entry does not establish what, if anything, was measured',
+};
+
+// WHAT STANDS IN FOR LANGUAGE. The column to read first.
+const GAP_PROXY = {
+  'immigrant background': 'Born abroad, or to parents born abroad -- what PISA reports, and the entries say so in their own first line: "immigrant background, a proxy for home language"',
+  'home language use': 'How often the pupil speaks the school language at home (PASEC2019, which records that 52% of Benin\'s first-year pupils "never speak French at home", 60.6% in Guinea, 58% in Togo)',
+  'geography': 'Where the child lives, standing in for what they speak (Guyana, "coastal against hinterland, a geographic proxy"; Suriname, "interior against coast, confounding language with remoteness", where 29.4% of interior schools are reachable only by boat)',
+  'learner designation': 'The system\'s own label for pupils learning the language (Puerto Rico\'s Spanish Learners, the Northern Mariana Islands\' ELL pupils on WIDA, Taiwan\'s transnational transfer pupils)',
+  'none': 'No comparison group exists to draw (Micronesia, where English is official but "under 1 per cent of citizens speak it first", so "the whole cohort is in the majority-language condition")',
+  'not stated': 'The entry does not establish what the comparison rests on',
+};
+
+// THE UNADJUSTED DIFFERENCE, before anything is controlled for.
+//
+// `negligible` is under 10 PISA points, stated here rather than left implicit:
+// the scale has a standard deviation near 100, so that is a tenth of one, and
+// calling Guatemala's 1 point an "advantage" on the strength of its sign would
+// be a worse answer than calling it nothing.
+const GAP_DIRECTION = {
+  'gap': 'The group scores below its peers (Finland at 91 points below, Morocco 54, Albania 52)',
+  'advantage': 'The group scores above (United Arab Emirates at 108 points above, Qatar 83, Panama 37)',
+  'negligible': 'Under 10 points either way (Guatemala at 1 point, Jordan 8)',
+  'not measured': 'No figure is given',
+};
+
+// WHAT SURVIVES CONTROLLING FOR SOCIO-ECONOMIC PROFILE AND HOME LANGUAGE. Coded
+// from the drafters' own closing sentences, which is why the values read as
+// they do.
+const GAP_AFTER_ADJUSTMENT = {
+  'narrows but persists': '"A gap that narrows but survives both adjustments" -- the commonest answer at 22 entries (Finland: 91 points below, 69 after socio-economic profile, 41 once home language is allowed for)',
+  'negligible throughout': '"Small on all three measures" (Guatemala, Moldova)',
+  'persists undiminished': '"The gap is no smaller after either adjustment" (Morocco, where 54 points below becomes 62 and then 61; Albania; Uzbekistan)',
+  'closes once language is allowed for': '"Close to zero once language is allowed for -- a language gap, not an immigrant one". EIGHT entries, and the most interesting value in the field: it says the disadvantage was never about migration',
+  'reverses to advantage': '"The difference reverses once background is allowed for -- an advantage, not a deficit" (the United States, 13 points below becoming 31 above; Argentina)',
+  'advantage persists': '"An advantage that survives both adjustments" (United Arab Emirates, Qatar, Jordan, Panama)',
+  'not adjusted': 'No adjustment is reported, which is every entry outside the PISA and PASEC families',
+};
+
+// ===========================================================================
 // eal.bilingualEducationNotes
 // ===========================================================================
 //
@@ -1428,6 +1494,15 @@ const SCHEMES = {
       evidence_type: EVIDENCE_TYPE,
     },
   },
+  'eal.achievementGap': {
+    row: 'one national or sub-national system',
+    columns: {
+      measure: GAP_MEASURE,
+      proxy: GAP_PROXY,
+      direction: GAP_DIRECTION,
+      after_adjustment: GAP_AFTER_ADJUSTMENT,
+    },
+  },
   'eal.bilingualEducationNotes': {
     row: 'one national or sub-national system',
     columns: {
@@ -1540,6 +1615,7 @@ module.exports = {
   REFERRAL_SOURCE, REFERRAL_TRIGGER,
   OUTCOME_EVIDENCE, OUTCOME_REPORTING, DATA_VERDICT,
   BILINGUAL_PROVISION, BILINGUAL_PURPOSE, BILINGUAL_FOR_WHOM,
+  GAP_MEASURE, GAP_PROXY, GAP_DIRECTION, GAP_AFTER_ADJUSTMENT,
   L1_FORM, L1_FOR_WHOM, L1_SECURED_BY, L2_MODELS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
@@ -1569,6 +1645,10 @@ module.exports = {
   isL2Model: v => has(L2_MODELS, v),
   isL1ForWhom: v => has(L1_FOR_WHOM, v),
   isL1SecuredBy: v => has(L1_SECURED_BY, v),
+  isGapMeasure: v => has(GAP_MEASURE, v),
+  isGapProxy: v => has(GAP_PROXY, v),
+  isGapDirection: v => has(GAP_DIRECTION, v),
+  isGapAfterAdjustment: v => has(GAP_AFTER_ADJUSTMENT, v),
   isBilingualProvision: v => has(BILINGUAL_PROVISION, v),
   isBilingualPurpose: v => has(BILINGUAL_PURPOSE, v),
   isBilingualForWhom: v => has(BILINGUAL_FOR_WHOM, v),
