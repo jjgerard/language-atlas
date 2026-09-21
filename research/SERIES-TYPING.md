@@ -105,7 +105,7 @@ changes stored numbers, so they are reported and left. Most are
 
 ## What this does and does not unblock
 
-`counted` now reaches **81% of series rows**, so a cross that needs to know what
+`counted` now reaches **87% of series rows**, so a cross that needs to know what
 a figure counted can run over most of the corpus and say honestly which rows it
 excluded. That is the state the outcomes work needed.
 
