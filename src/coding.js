@@ -736,6 +736,72 @@ const MEDIUM_SECURED_BY = {
   'not stated': 'The entry does not say what secures the arrangement it describes',
 };
 
+// WHETHER THE LANGUAGE IS TAUGHT AS A SUBJECT, ON WHAT TERMS, AND WHETHER WHAT
+// IS TAUGHT IS THE LANGUAGE AT ALL. The third of the indigenous trio, derived
+// from 65 of the 182 national entries across the five regions and tested blind
+// on 25 more.
+//
+// IT EXISTS BECAUSE `mediumOfInstruction` LEFT 33 SYSTEMS AT `not a medium` AND
+// 29 OF THEM HAVE PROSE HERE. Knowing a language does not carry teaching says
+// nothing about whether it is taught, and the corpus shows those are different
+// worlds: Bulgaria offers it "only as the subject Mother Tongue... Armenian,
+// Hebrew, Romani and Turkish on offer", while Congo's Lingala and Munukutuba
+// were made subjects by a law that "is superseded". Both are `not a medium`.
+//
+// THE STATUS IS A LIST, because it changes with the stage and coding one value
+// throws the other away. Kenya is the clearest: "Indigenous Language Activities
+// is a listed lower primary subject, Grades 1 to 3... OPTIONAL at lower
+// secondary". Niger and Samoa do the same, Samoa putting Samoan at the head of
+// the compulsory list for Years 9 to 11 and then among the options at senior
+// secondary. Three of the 25 blind-test entries carried two values, which is
+// what made it a list rather than a judgement call. It is the subject-side
+// mirror of `transitional, early exit` on the medium: support thins as pupils
+// get older, whichever column you look down.
+//
+// EXEMPTION WAS NOT MADE A COLUMN. It appears in 4 entries, all European, and a
+// 2% column concentrated in one region is a regional flag rather than an axis --
+// the judgement already made about `who decides` on mediumOfInstruction. It is
+// recorded in the gloss on `compulsory for all` instead, where the Netherlands
+// case belongs, because a duty a school can be wholly released from is worth a
+// reader knowing about without being worth its own denominator.
+//
+// `stages` DELIBERATELY REUSES THE VALUE NAMES OF MEDIUM_REACH so the two can be
+// read against each other. That is the point of coding this field at all: Niger
+// has the mother tongue as the MEDIUM in cycle de base 1 and as a SUBJECT from
+// cycle de base 2, and the pair of columns says so where either alone would not.
+const SUBJECT_STATUS = {
+  'compulsory for all': 'Every pupil takes it (Ireland, where "Irish is a core subject in the curriculum the Minister determines for recognised schools"; the Maldives, where "Dhivehi shall be taught at every school, by statute... at preschool, primary, secondary and higher secondary alike"; Tonga, where "Tongan Language is one of four core subjects"; Moldova, where the minority language "sits in the compulsory invariable component"; Spain\'s Lengua Cooficial y Literatura "through the ESO years"). EXEMPTIONS do not move an entry off this value, and two systems are worth knowing about: Ireland allows one "only in the listed circumstances", decided by the principal and unavailable in Irish-medium schools, while the Netherlands makes teaching Frisian "a legal duty" and yet lets schools "claim full or partial exemption since 2014", a G-profile primary being "fully exempt"',
+  'compulsory in some schools or areas': 'Compulsory where it runs, and it does not run everywhere (Jordan, where the language is taught at "the private Prince Hamza School" and "every pupil takes the language class"; Micronesia, where the "primary State language" is taught "where it is not the local one"; Honduras, where the indigenous languages "are handled as second languages" for one group of peoples and not the other). The distinction from `compulsory for all` is the denominator, not the force',
+  'elective': 'Offered and chosen (Serbia: "Elective \'mother tongue with elements of national culture\', two hours a week in primary"; Bulgaria, where "the subject MAY be studied -- permissive, not an entitlement", the class "opens only at 13 students"; Israel, where Arabic is "elective in high school"; French Polynesia: "Not compulsory - Conseil constitutionnel reserve, neither for pupils nor teachers"; Pakistan, where "an additional native language may be offered as an optional subject")',
+  'extracurricular only': 'Taught outside the timetable, so not a school subject at all (Guernsey: "EXTRACURRICULAR ONLY: existing primary-school teaching to be supported and improved", with Guernesiais "encouraged as an enrichment activity" at secondary; Latvia, where the replacement "is an interest-related programme, OUTSIDE THE TIMETABLE, not a school subject"; Hungary\'s supplementary form, which "runs outside regular school hours")',
+  'not taught': 'Somebody checked and it is not taught -- a finding (Estonia: "No top-level steering document names Russian as a subject to be provided"; Fiji: "The 2007 framework names no vernacular subject at all"; Egypt, where "timetabled additional languages are English or French, not Nubian or Berber"; Sint Maarten, whose language education area "covers English, Dutch and Spanish only"; Guinea-Bissau, where "Creole use is BANNED inside the school precinct")',
+  'not stated': 'The entry does not establish whether it is taught. Distinct from `not taught`: Nepal\'s "sources consulted do not show a nationally timetabled mother-tongue subject" while the Curriculum Development Centre "has produced primary textbooks in 22 mother tongues", which is a search that came up short rather than a finding that nothing exists',
+};
+
+// The hint's fourth element, and it earns a column: 30 of 182 entries, spread
+// evenly across all five regions rather than concentrated in one, which is what
+// separated it from `exemption`. A curriculum can honour a language by teaching
+// pupils ABOUT the people who speak it, and counting that as language teaching
+// would overstate provision in exactly the systems that provide least.
+const SUBJECT_OBJECT = {
+  'the language': 'Pupils learn to use the language (Ireland, the Maldives, Greenland, Guam\'s "Beginning Chamorro", Bulgaria\'s Mother Tongue subject)',
+  'language and culture together': 'The subject carries both, and the entry names both (Serbia\'s "mother tongue with elements of national culture"; the Marshall Islands, where "instruction in Marshallese language, customs, culture and history is compulsory"; Hungary, "three lessons a week PLUS one of \'ethnology\' in the minority language"; Tonga, whose subject "also carries indigenous knowledge about climate change and adaptation"; Panama, where art 88 makes the languages "an object of special study" while art 108 frames programmes on "the groups\' own patrones culturales")',
+  'the community, not the language': 'What is taught is the people, the culture or the history, and the language itself is not on the timetable. The value that keeps a cultural-studies strand from being counted as language provision (Nicaragua, where outside the autonomous regions "the duty is units ABOUT the languages, NOT TEACHING OF THEM"; Trinidad and Tobago, "taught about inside the National Primary English Language Arts curriculum", with contrastive analysis of Creole against Standard English; Costa Rica, whose strand "is about the community: its history, knowledge, techniques and value systems"; Switzerland, where "Francoprovencal counted as cultural heritage, NOT A LANGUAGE"; Thailand, where dialects "sit inside the Thai language subject" and later grades "analyse the influence of dialects")',
+  'not stated': 'The entry does not say what the teaching is of. The usual value where the entry establishes that nothing is taught, since there is then no object',
+};
+
+// Same value names as MEDIUM_REACH, on purpose -- see the note above. Answered on
+// about half the entries, the same rate as its counterpart, and kept on the same
+// terms: it discriminates across five real values on the half that answers.
+const SUBJECT_STAGES = {
+  'preschool only': 'Before school proper and no further (Hungary\'s supplementary form, extended to kindergarten "since 2020")',
+  'early primary': 'Roughly the first three or four years (Kenya: "Indigenous Language Activities is a listed lower primary subject, GRADES 1 TO 3", with the "upper primary subject list omitting it")',
+  'all primary': 'The whole primary phase (Serbia, "two hours a week IN PRIMARY"; Bulgaria, "grades 1-7, and NOT AT ALL in grades 8-12")',
+  'into secondary': 'Beyond primary (Moldova, "3 hours a week in grades I-IX"; Spain, through the ESO years and "among the common subjects of the bachillerato"; Israel, "studied in lower secondary as a third language"; Micronesia, where pupils "should be able to keep writing in local languages through the 12th grade")',
+  'all levels': 'Every stage the entry recognises (the Maldives: "required at preschool, primary, secondary and higher secondary alike"; the Marshall Islands, "required at preschool, elementary and secondary level schools")',
+  'not stated': 'The entry does not say which stages carry the subject',
+};
+
 const HISTORY_SCHEME = id => ({
   // MANY: one coding row per policyHistory row, not per entry.
   many: true,
@@ -781,6 +847,17 @@ const HISTORY_SCHEME = id => ({
   },
 });
 const SCHEMES = {
+  'indigenous.taughtAsSubject': {
+    // One system, the grain the other two indigenous schemes use.
+    row: 'one national or sub-national system',
+    columns: {
+      // A LIST: compulsory early and optional later is common enough that coding
+      // one value loses the shape. See the comment on SUBJECT_STATUS.
+      status: SUBJECT_STATUS,
+      object: SUBJECT_OBJECT,
+      stages: SUBJECT_STAGES,
+    },
+  },
   'indigenous.mediumOfInstruction': {
     // One system. Where a system runs several languages at several roles the
     // dominant arrangement is coded; see the grain note on MEDIUM_ROLE.
@@ -922,6 +999,7 @@ module.exports = {
   NOT_AN_OPERATION, SCOPE_CHANGE,
   STANDING_STATUS, STANDING_SOURCE, STANDING_FORCE, STANDING_EXTENT,
   MEDIUM_ROLE, MEDIUM_REACH, MEDIUM_SECURED_BY,
+  SUBJECT_STATUS, SUBJECT_OBJECT, SUBJECT_STAGES,
   SCHEMES,
   isHistoryOperation: v => has(HISTORY_OPERATION, v),
   isNotAnOperation: v => has(NOT_AN_OPERATION, v),
@@ -933,6 +1011,9 @@ module.exports = {
   isMediumRole: v => has(MEDIUM_ROLE, v),
   isMediumReach: v => has(MEDIUM_REACH, v),
   isMediumSecuredBy: v => has(MEDIUM_SECURED_BY, v),
+  isSubjectStatus: v => has(SUBJECT_STATUS, v),
+  isSubjectObject: v => has(SUBJECT_OBJECT, v),
+  isSubjectStages: v => has(SUBJECT_STAGES, v),
   isThresholdBasis: v => has(THRESHOLD_BASIS, v),
   isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
   isAssessmentLanguage: v => has(ASSESSMENT_LANGUAGE, v),
