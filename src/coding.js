@@ -429,8 +429,14 @@ const FAMILY_PAYS = {
   'not stated': 'The entry does not establish what the family pays',
 };
 
-// IS THE SOURCE EVEN ABOUT LANGUAGE. Not a shape anyone set out to code, and
-// the most useful column here.
+// IS THE SOURCE EVEN ABOUT LANGUAGE. Not a shape anyone set out to code, the
+// most useful column on dld.funding, and NOT funding-specific -- which is why
+// it is RECORD_SCOPE rather than RECORD_SCOPE. Added to dld.referralPathway
+// 2026-09-21 on measurement: the hedge runs 23% there against 20% here.
+//
+// It is NOT added where it does not earn a column. dld.workforce carries it on
+// 7% and dld.serviceModel on 1 entry of 208, so neither has it. The test is the
+// count, taken before the column is written.
 //
 // 45 of the 196 national funding entries -- 23% -- carry the same hedge in the
 // same words: "Source describes special-needs provision generally, never
@@ -441,10 +447,10 @@ const FAMILY_PAYS = {
 //
 // For scale, the same hedge appears on 1 of 208 serviceModel entries. It is a
 // fact about the funding literature, not about the atlas.
-const FUNDING_SCOPE = {
-  'language specific': 'The source reaches speech or language provision (Mauritius, where the Grant-in-Aid to non-governmental SEN schools "covers speech therapists"; France and Hungary, where practitioners are reporting on a language case)',
-  'disability generally': 'The source describes disability or special-needs funding and never reaches language disorder. The entry usually says so outright (Rwanda, Algeria, Gambia, Liberia, South Sudan, Central African Republic, Mongolia, Marshall Islands, Tonga)',
-  'education generally': 'The rule is about school funding at large, with disability not the unit either (Nicaragua, whose article bans fees in all state schooling; Brazil, where LDB art. 69 binds the Union to 18% and states to 25% of tax revenue; Belarus, financing state institutions from republican and local budgets)',
+const RECORD_SCOPE = {
+  'language specific': 'The source reaches speech or language provision (Mauritius, where the Grant-in-Aid to non-governmental SEN schools "covers speech therapists"; France and Hungary, where practitioners are reporting on a language case; Sweden, where the trigger is "reported difficulty with spoken or written language")',
+  'disability generally': 'The source describes disability or special-needs provision and never reaches language disorder. The entry usually says so outright, in those words (Rwanda, Algeria, Gambia, Liberia, South Sudan, Central African Republic, Mongolia, Marshall Islands and Tonga on funding; Sri Lanka, Fiji, Kenya, Niger, Senegal and Tanzania on referral)',
+  'education generally': 'The rule is about schooling at large, with disability not the unit either (Nicaragua, whose article bans fees in all state schooling; Brazil, where LDB art. 69 binds the Union to 18% and states to 25% of tax revenue; Belarus, financing state institutions from republican and local budgets)',
   'not stated': 'The entry does not make the scope of its source clear',
 };
 
@@ -563,6 +569,43 @@ const WORKFORCE_COUNT = {
   'survey estimate': 'A number from a survey or key informants, and the entry says so (Nigeria: "key-informant survey estimates, not register counts", 4 in 2015 against 3 in 2009; the sub-Saharan ENT survey figures generally)',
   'none reported': 'The count is zero, or the entry records that no workforce is known (Marshall Islands, "zero speech-language pathologists reported for 2023-24", which the entry calls "an official US federal return, not a survey estimate"; Gambia and Liberia, each reporting "no known speech and language therapy work")',
   'not stated': 'No count of any kind is given',
+};
+
+// ===========================================================================
+// dld.referralPathway
+// ===========================================================================
+//
+// Derived 2026-09-21 from 40 entries sampled across all five regions. The pair
+// to dld.identificationCriteria: that field asks what the threshold IS, this
+// one asks how a child arrives at it.
+//
+// A time limit on the response was drafted and dropped -- Andorra "within ten
+// working days", Italy "no later than thirty days", South Korea assessing
+// within 30 and deciding within two weeks, Colombia within three months. Five
+// of 40, and consequential where it exists, but too thin for a column.
+// Recorded here rather than built.
+
+// WHO CAN START IT. A LIST, because the systems that have thought about this
+// name several routes at once: Sweden takes "concern from a guardian, teacher
+// or child health centre"; Saudi Arabia takes parents and nurseries before
+// school age and the school or the Directorate after it.
+const REFERRAL_SOURCE = {
+  'parent or self': 'The family can begin it themselves (Italy, where "parents, or the holder of parental responsibility, must ask for the accertamento"; Greece, where "parents may apply directly to the KEDASY assessment centre"; Antigua and Barbuda, whose s.84(3) gives parents "their own right to request a determination")',
+  'school or teacher': 'School staff refer (United Arab Emirates, where "written referrals to the school support team may be made by any school personnel"; New Caledonia, where "the head of the school the child attends may refer the case to the commission"; Greece, by documented recommendation of the school committee)',
+  'health service': 'A medical route is required or used (Indonesia, where "curative and rehabilitative therapy requires a medical referral"; Jordan, where "a health ministry diagnostic centre determines the suitable education provision"; Ethiopia, whose "referral linkages pass through field, social and health extension workers")',
+  'administrative decision': 'An official or body refers, rather than a parent or a school (Andorra, where the centre sends a justified demand to its inspector; Dominica, where "the Chief Education Officer identifies learning difficulties, Minister refers onward"; Senegal\'s departmental technical commissions)',
+  'screening programme': 'A population screen finds the child rather than anyone referring them (Guam, whose Child Find "must identify, locate and evaluate all such children residing on Guam"; Papua New Guinea, where schools "must register such students with the nearest resource centre" and "screening is done by the centres")',
+  'not stated': 'The entry does not establish who can start the process',
+};
+
+// WHAT SETS IT OFF. Separate from who refers, because the same referrer can be
+// acting on quite different tests.
+const REFERRAL_TRIGGER = {
+  'difficulty persists after support': 'Ordinary help was tried first and did not work (Greece: "difficulties persisting despite the support given at the pupil\'s school"; Switzerland, where the trigger is "measures taken before school or in the mainstream prove insufficient"; United Arab Emirates, requiring "four weeks of monitored pre-referral intervention before any evaluation")',
+  'performance gap': 'A comparison with peers (United Arab Emirates again: "regular-classroom performance above or below that of peers")',
+  'reported concern': 'Somebody raises it and that is enough (Sweden, where "concern from a guardian, teacher or child health centre opens the history-taking")',
+  'diagnosis or disability status': 'An existing diagnosis or registered status is what opens the route (Oman, where "rehabilitation specialists make the disability assessment that determines services"; Peru, whose PRITE takes children under three "with a disability or at risk of acquiring one")',
+  'not stated': 'The entry does not establish what triggers a referral',
 };
 
 // WHO DECIDES. Same purpose as the eal axis -- the same test applied by a
@@ -1260,7 +1303,17 @@ const SCHEMES = {
       // `funders` is a LIST -- see the note on FUNDERS.
       funders: FUNDERS,
       family_pays: FAMILY_PAYS,
-      scope: FUNDING_SCOPE,
+      scope: RECORD_SCOPE,
+      evidence_type: EVIDENCE_TYPE,
+    },
+  },
+  'dld.referralPathway': {
+    row: 'one national or sub-national system',
+    columns: {
+      // `initiated_by` is a LIST -- see the note on REFERRAL_SOURCE.
+      initiated_by: REFERRAL_SOURCE,
+      trigger: REFERRAL_TRIGGER,
+      scope: RECORD_SCOPE,
       evidence_type: EVIDENCE_TYPE,
     },
   },
@@ -1342,8 +1395,9 @@ module.exports = {
   TEST_TYPES, BILINGUAL_FIT, MODALITY, LANGUAGE_DOMAINS,
   ASSESSMENT_LANGUAGE, LOCAL_NORMS, EVIDENCE_TYPE,
   SERVICE_SECTOR, SERVICE_PRACTITIONER, SERVICE_PLACEMENT,
-  FUNDERS, FAMILY_PAYS, FUNDING_SCOPE,
+  FUNDERS, FAMILY_PAYS, RECORD_SCOPE,
   WORKFORCE_ENTRY, WORKFORCE_TRAINING, WORKFORCE_COUNT,
+  REFERRAL_SOURCE, REFERRAL_TRIGGER,
   L1_FORM, L1_FOR_WHOM, L1_SECURED_BY, L2_MODELS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
@@ -1373,12 +1427,14 @@ module.exports = {
   isL2Model: v => has(L2_MODELS, v),
   isL1ForWhom: v => has(L1_FOR_WHOM, v),
   isL1SecuredBy: v => has(L1_SECURED_BY, v),
+  isReferralSource: v => has(REFERRAL_SOURCE, v),
+  isReferralTrigger: v => has(REFERRAL_TRIGGER, v),
   isWorkforceEntry: v => has(WORKFORCE_ENTRY, v),
   isWorkforceTraining: v => has(WORKFORCE_TRAINING, v),
   isWorkforceCount: v => has(WORKFORCE_COUNT, v),
   isFunder: v => has(FUNDERS, v),
   isFamilyPays: v => has(FAMILY_PAYS, v),
-  isFundingScope: v => has(FUNDING_SCOPE, v),
+  isFundingScope: v => has(RECORD_SCOPE, v),
   isServiceSector: v => has(SERVICE_SECTOR, v),
   isServicePractitioner: v => has(SERVICE_PRACTITIONER, v),
   isServicePlacement: v => has(SERVICE_PLACEMENT, v),
