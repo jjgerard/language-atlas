@@ -6,16 +6,26 @@ complete in coverage as well as in coding.
 
 ## Done and applied
 
-`done-01.json` → gated by `terr-verify.js` (10 bullets offered, **0 dropped**,
-all four sources returned 200) → applied by `terr-apply.js`, then coded.
+Three batches, all gated by `terr-verify.js` (**14 bullets offered, 0 dropped**)
+and applied by `terr-apply.js`, with the filled fields coded after.
 
-| unit | field | outcome |
+| unit | field(s) | outcome |
 |---|---|---|
 | GI Gibraltar | standing | 2 bullets, coded `protected as culture` / `policy` / `duty to promote` |
 | JM Jamaica | taughtAsSubject | 2 bullets, coded `not taught` |
+| SM San Marino | mediumOfInstruction | 2 bullets, coded `not a medium` |
 | AG Antigua and Barbuda | standing, mediumOfInstruction | third state, two sources each |
+| BB Barbados | standing, mediumOfInstruction | third state, two sources each |
+| SV El Salvador | mediumOfInstruction | third state, two sources |
+| VC Saint Vincent | mediumOfInstruction, taughtAsSubject | third state, two sources each |
 
-**4 of 26 cells.** The rate is low on purpose; see below.
+**10 of 26 cells. 18 blank remain** (standing 4, mediumOfInstruction 6,
+taughtAsSubject 8). The rate is low on purpose; see below.
+
+**Apply batch by batch.** `terr-apply` refuses the WHOLE run if any field it
+carries is already written, so re-gating the whole directory after a batch lands
+fails on the batch before it. Copy the new `done-NN.json` alone into a scratch
+directory, gate and apply that, and keep the resulting `verified-NN.json` here.
 
 ## Why the rate is low, and what the next session must not skip
 
@@ -50,7 +60,6 @@ third-state finding until a second, independent source confirms it.
 | SA Saudi Arabia | standing | PEER inclusion | "Linguistic and ethnic groups" covers only Arabic and foreign nationals' schools |
 | TJ Tajikistan | taughtAsSubject | PEER inclusion | the ethnic/linguistic section is about MEDIA of instruction, not subjects |
 | KP North Korea | mediumOfInstruction, taughtAsSubject | Constitution (2016) | only arts. 54 and 165 touch language; neither reaches school |
-| SV El Salvador | mediumOfInstruction | MINEDUCYT 2019 | 85 teachers trained to promote teaching OF Nahuat, nothing on teaching IN it |
 
 ## Not yet started
 
@@ -58,12 +67,10 @@ third-state finding until a second, independent source confirms it.
 |---|---|---|
 | BS Bahamas | all three | **no docLinks at all** — needs sources found from scratch |
 | VA Vatican City | all three | **no docLinks**; check whether `Not applicable` is the honest answer before researching |
-| BB Barbados | standing, mediumOfInstruction | has *Reimagining Education* PDF + PEER |
-| CU Cuba | mediumOfInstruction, taughtAsSubject | has the 2019 Constitution (Gaceta Oficial PDF) |
-| VC Saint Vincent | mediumOfInstruction, taughtAsSubject | Education Act 2006 PDF is good; the PEER link is wrong (above) |
-| SM San Marino | standing, mediumOfInstruction | has the 2016 Linee guida |
+| CU Cuba | mediumOfInstruction, taughtAsSubject | Gaceta Oficial PDF **403s**; find another copy of the 2019 Constitution |
+| SM San Marino | standing | the 2016 Linee guida gives no standing, and saying so would restate what `localTerm` already carries; needs a different source |
 | BZ Belize | taughtAsSubject | Act URL is 404; find a working copy |
-| KR South Korea | mediumOfInstruction | has the Jeju ordinance PDF |
+| KR South Korea | mediumOfInstruction | the Jeju ordinance host `jst.re.kr` **closes the socket**; find a mirror |
 | MN Mongolia | taughtAsSubject | CERD release is right but OHCHR blocks fetching; find a mirror |
 
 ## How to resume

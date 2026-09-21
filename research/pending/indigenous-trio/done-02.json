@@ -1,0 +1,38 @@
+{
+ "SM|San Marino": {
+  "fields": {
+   "mediumOfInstruction": [
+    "Teaching runs in Italian, with English and other European languages used alongside it",
+    "Early years build multilingual settings rather than teach the languages formally"
+   ]
+  },
+  "slots": {
+   "mediumOfInstruction": [1, 3]
+  },
+  "evidence": [
+   {
+    "bullet": "Teaching runs in Italian, with English and other European languages used alongside it",
+    "url": "https://www.educazione.sm/on-line/home/docenti/indicazioni-curricolari/documento41103851.html",
+    "quote": "vi è una consolidata abitudine all'uso, insieme all'italiano, dell'inglese, ma anche di altre lingue europee come lo spagnolo e il francese"
+   },
+   {
+    "bullet": "Early years build multilingual settings rather than teach the languages formally",
+    "url": "https://www.educazione.sm/on-line/home/docenti/indicazioni-curricolari/documento41103851.html",
+    "quote": "Non vi è alcun insegnamento formale delle lingue, ma piuttosto la creazione di ambienti multilingui"
+   }
+  ]
+ },
+
+ "BB|Barbados": {
+  "notEstablished": {
+   "standing": "Not established from the sources consulted. The ministry's Reimagining Education reform paper roots schooling in Bajan values and respect for cultural heritage without giving the vernacular any standing, and PEER's language section for Barbados covers only conversational Spanish taught as a foreign language.",
+   "mediumOfInstruction": "Not established from the sources consulted. Neither the Reimagining Education reform paper nor the PEER profile names a language of instruction, and PEER's only language provision is a primary-school programme in conversational Spanish as a foreign language."
+  }
+ },
+
+ "SV|El Salvador": {
+  "notEstablished": {
+   "mediumOfInstruction": "Not established from the sources consulted. The ministry records training 85 teachers in Nahuat to promote teaching of the language, not teaching in it, and PEER records the 2015 indigenous peoples policy proposing curricular changes to include knowledge of indigenous culture rather than any medium of instruction."
+  }
+ }
+}

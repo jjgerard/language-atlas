@@ -3312,8 +3312,8 @@
   "stubNote": "",
   "by": "",
   "localTerm": "",
-  "standing": "",
-  "mediumOfInstruction": "",
+  "standing": "Not established from the sources consulted. The ministry's Reimagining Education reform paper roots schooling in Bajan values and respect for cultural heritage without giving the vernacular any standing, and PEER's language section for Barbados covers only conversational Spanish taught as a foreign language.",
+  "mediumOfInstruction": "Not established from the sources consulted. Neither the Reimagining Education reform paper nor the PEER profile names a language of instruction, and PEER's only language provision is a primary-school programme in conversational Spanish as a foreign language.",
   "taughtAsSubject": "Not established from the sources consulted. The Ministry of Education's own reform document Reimagining Education in Barbados sets out the current primary core curriculum as English, Mathematics, Social Studies, Science, Physical Education, Art, Music, Religious Knowledge and Health and Family Life Education, and the only language addition it proposes at pre-primary and primary level is \"functional foreign languages\"; no subject in the local vernacular appears. The UNESCO PEER profile for Barbados records under Language only a conversational Spanish programme in primary schools, taught as a foreign language.",
   "teacherSupply": "",
   "materials": "",
@@ -38759,7 +38759,7 @@
   "by": "",
   "localTerm": "Curriculum guidance speaks of il dialetto and of parlate regionali, not a named language\nThe plural le lingue dialettali sits beside jargons and generational idiolects\nThe terms are fixed in curriculum guidance, the 2016 Linee guida per i nuovi curricoli",
   "standing": "",
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Teaching runs in Italian, with English and other European languages used alongside it\nEarly years build multilingual settings rather than teach the languages formally",
   "taughtAsSubject": "Pupils are to gain historical and cultural awareness of how languages and dialects evolved\nDialect varieties are listed among the repertoires schools draw on for learning\nPrimary pupils are expected to notice the variety of language use around them",
   "teacherSupply": "",
   "materials": "",
@@ -38774,7 +38774,18 @@
     "status": "compulsory for all",
     "object": "the community, not the language",
     "stages": "all primary"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "not stated"
    }
+  },
+  "slots": {
+   "mediumOfInstruction": [
+    1,
+    3
+   ]
   }
  },
  {
@@ -39530,7 +39541,7 @@
   "by": "",
   "localTerm": "The Constitution art 62 calls them lenguas autoctonas\nLey de Cultura art 9 calls them lenguas de los pueblos indigenas\nThe same article's duty runs to las lenguas ancestrales\nArt 44 names nahuatl, cacahuira and lenca-poton as the languages meant",
   "standing": "Constitution art 62 makes them part of the cultural heritage, to be preserved and respected\nLey de Cultura art 9 keeps castellano as the sole official language\nArt 9 obliges the State to promote their rescate, ensenanza y respeto across the territory\nArt 44 puts preservation and diffusion of the named languages on local governments",
-  "mediumOfInstruction": "",
+  "mediumOfInstruction": "Not established from the sources consulted. The ministry records training 85 teachers in Nahuat to promote teaching of the language, not teaching in it, and PEER records the 2015 indigenous peoples policy proposing curricular changes to include knowledge of indigenous culture rather than any medium of instruction.",
   "taughtAsSubject": "MINEDUCYT trained 85 teachers in Nahuat to promote teaching of the language\nThe ministry monitored it at one school in Izalco, Sonsonate, in the west\nLey de Cultura art 9 obliges the State to promote la ensenanza de las lenguas ancestrales\nIts 2015 indigenous policy proposed curricular changes on culture, not on the language",
   "teacherSupply": "",
   "materials": "",
@@ -46247,8 +46258,8 @@
   "by": "",
   "localTerm": "",
   "standing": "Not established from the sources consulted. UNESCO's PEER profile, drawing on the country's own Education For All 2015 National Review, records that there are no distinct ethnic minorities despite the heterogeneity of the population, and describes relative equity and equality in access to the education system rather than any language provision.",
-  "mediumOfInstruction": "",
-  "taughtAsSubject": "",
+  "mediumOfInstruction": "Not established from the sources consulted. The Education Act 2006 carries no medium-of-instruction provision, naming language only among what schooling should promote understanding of and in the English Language pass required of teachers, and the Garifuna Heritage Foundation's 2024 programme runs teacher workshops and cultural exchanges without naming any classroom language.",
+  "taughtAsSubject": "Not established from the sources consulted. The Education Act 2006 names no Garifuna, Creole or vernacular subject at any level, and the Garifuna Heritage Foundation's 2024 programme describes training workshops for teachers and cultural exchanges rather than language classes.",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
