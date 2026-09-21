@@ -218,10 +218,15 @@
   padding: 7px 11px; cursor: pointer; width: 100%; text-align: left;
 }
 .wholeentry:hover { color: var(--ink); border-color: var(--hair-strong); }
-.shadeby { display: flex; align-items: center; gap: 7px; margin: 0 0 9px; }
+/* Label on its own line, menu on the next. Side by side the menu took whatever
+   width its longest option wanted -- "rule locus — Newcomer criteria" -- and
+   hung out over the map past the edge of the box it belongs to. Stacked, it
+   takes the box's width and the option text truncates instead. */
+.shadeby { display: flex; flex-direction: column; gap: 5px; margin: 0 0 9px; }
 .shadeby label { font-size: 11px; color: var(--ink-faint); letter-spacing: .04em; text-transform: uppercase; }
 .shadeby select {
-  font: inherit; font-size: 12px; padding: 3px 6px; max-width: 232px;
+  font: inherit; font-size: 12px; padding: 4px 6px;
+  width: 100%; max-width: 100%; box-sizing: border-box;
   background: var(--surface); color: var(--ink);
   border: 1px solid var(--hair); border-radius: 4px;
 }
@@ -1454,8 +1459,15 @@ function switchDomain(id, push = true) {
   if (id === domainId || !LIVE.some(d => d.id === id)) return;
   domainId = id;
   closePanel();
+  // The shading column is "<field>.<column>" and fields belong to a domain, so
+  // a column chosen on one map means nothing on the next. Drop it and rebuild
+  // the picker rather than carrying a dead key across and painting every
+  // country "not coded".
+  CODED.key = null; CODED.only = null; SCALE = null;
   openDomainBox(id);
   buildDomains();
+  buildShadePicker();
+  paintCatLegend();
   paint();
   paintLegend();
   sizeMap();
@@ -2227,6 +2239,25 @@ function paintLegend() {
   // unit on the screen.
   const rows = document.querySelector('.legendbox .rows');
   if (rows) rows.hidden = !!CODED.key;
+  // And on the coverage map itself, a row only earns its place if some unit is
+  // actually painted that way on THIS domain. The three were static markup, so
+  // a map with nothing hatched still explained hatching. Same rule as the
+  // coded legend: do not explain a fill that is not on the screen.
+  if (rows && !CODED.key) {
+    const seen = { looked: 0, none: 0, inherited: 0 };
+    for (const u of (B.units[domainId] || [])) {
+      const st = stateOf(u);
+      if (st in seen) seen[st]++;
+    }
+    const show = (id, n) => {
+      const el = document.getElementById(id);
+      if (el && el.parentElement) el.parentElement.hidden = !n;
+    };
+    show('sw-looked', seen.looked);
+    show('sw-none', seen.none);
+    show('sw-inh', seen.inherited);
+    rows.hidden = !(seen.looked || seen.none || seen.inherited);
+  }
   document.getElementById('sw-looked').style.background =
     'repeating-linear-gradient(45deg, var(--hatch-bg) 0 3px, var(--hatch-line) 3px 4px)';
   document.getElementById('sw-none').style.background = 'var(--nodata)';
