@@ -579,6 +579,63 @@ const WORKFORCE_COUNT = {
 };
 
 // ===========================================================================
+// eal.bilingualEducationNotes
+// ===========================================================================
+//
+// Derived 2026-09-21 from a region-stratified read of the 191 uncoded national
+// entries -- every region sampled at the same rate, because an alphabetical
+// first forty is Europe and the Caribbean and this field's most interesting
+// answers are African and Pacific.
+//
+// THE FIELD KEEPS ANSWERING A QUESTION THE DOMAIN DID NOT ASK. It sits on the
+// eal map, whose subject is pupils learning the language of school, and entry
+// after entry says in its own words that what it describes is somebody else:
+// Spain "a separate framework, not aimed at migrant pupils"; Latvia "not
+// newcomer provision"; the Netherlands "nothing targeting migrant pupils was
+// found"; Ireland "separate from mother-tongue teaching for pupils not yet
+// fluent"; Switzerland "not a bilingual-education model". `for_whom` exists to
+// count that rather than leave it as a remark, and it is the same finding
+// l1Support and l2Support produced on their own axes.
+//
+// `stage` was drafted as a fifth column and dropped. The entries that give one
+// are specific and useful -- Eritrea's first five primary years, Timor-Leste's
+// preschool to Grade 2, Ireland's ISCED 1-3 -- but they are a minority, and a
+// column that is `not stated` on most of the corpus describes the sources'
+// habits rather than the systems. Recorded here rather than built.
+
+// WHAT EXISTS. The first question the field's own hint asks, and the one that
+// decides whether the others mean anything.
+const BILINGUAL_PROVISION = {
+  'established': 'Content is taught through two languages as ordinary provision (Andorra, whose primary is "dual-medium Catalan and French from the start"; Eritrea, where nine indigenous languages "are the media of instruction for the first five primary years, by area language"; the United Arab Emirates, splitting subjects into Arabic-medium and English-medium streams; Spain, "extensive co-official-language bilingual education")',
+  'pilot or project': 'Named as experimental, a pilot, or a fixed set of schools (Angola, where the review "still calls the national-language subject an innovation in the experimental stage"; Timor-Leste, whose EMBLI "ran in two preschools and two primary schools per pilot district"; Solomon Islands, where Sa\'a and Arosi were taught in eight schools chosen on teacher-training access; the Netherlands, "general Dutch-English bilingual pilots")',
+  'proposed': 'Planned, aspirational, or with no evidence of adoption (Tuvalu, a 2012 report proposing a culture stream "no evidence of adoption"; Nauru, a strategic plan that "intended to introduce a language policy"; Guinea-Bissau, "aspirational: a national language policy document was still to be developed")',
+  'discontinued': 'It ran and was reversed or is being withdrawn (Papua New Guinea, over 400 vernacular pre-schools, "historical, on PEER\'s account, since the 2013 reversal"; Latvia, "being wound up under the transition to Latvian-only instruction")',
+  'none established': 'Somebody checked and content is not taught through two languages (Sao Tome and Principe, where "bilingual occurs 0 times in the retrieved body"; Qatar, "0 hits in all three Qatari documents"; Bhutan, "English is the sole medium from the start of primary"; Yemen; Suriname; Antigua and Barbuda; Saint Vincent and the Grenadines)',
+  'not stated': 'The entry does not establish whether such provision exists',
+};
+
+// WHAT THE TWO LANGUAGES ARE FOR. The distinction the literature turns on, and
+// the corpus states it outright often enough to code: South Africa aims at
+// "ADDITIVE multilingualism, developing all official languages, NOT TRADING ONE
+// FOR ANOTHER", while Rwanda hands over at Grade 4 and Congo\'s ORA "aims to
+// move pupils into the mainstream after two or three years".
+const BILINGUAL_PURPOSE = {
+  'transition': 'The first language carries the early years and is handed over to the main medium (Rwanda, Kinyarwanda in P1 to P3 with English taking over in Grade 4; Congo, where ORA moves pupils into the mainstream after two or three years; Eritrea, five primary years then a switch to English medium that a national survey found pupils poorly prepared for)',
+  'maintenance': 'Both languages are developed and the entry says the swap is not the point (South Africa, additive multilingualism "not trading one for another"; Samoa, a bilingual primary curriculum that "aims to maintain and develop Samoan"; Ireland, CLIL in English and Irish)',
+  'content through an international language': 'A global language carries content for reach rather than for anyone\'s home language (United Arab Emirates, selective streams teaching mathematics and science in English against a CEFR-benchmarked framework; the Netherlands, Dutch-English pilots; Andorra, where secondary vehiculates subjects in Catalan, Spanish or French)',
+  'not stated': 'The entry does not establish what the arrangement is for',
+};
+
+// WHOSE LANGUAGES. The column that makes the domain mismatch countable.
+const BILINGUAL_FOR_WHOM = {
+  'national or indigenous languages': 'The languages of the country itself (Eritrea\'s nine; Angola under Law 13/01; Guam, whose 17 GCA 8102 authorises a Chamorro language and culture programme; Samoa; Marshall Islands, instruction "in both English and Marshallese, the official languages")',
+  'settled minority languages': 'Communities long resident rather than newly arrived (Latvia, "historic Russian and other minority-language bilingual programmes"; Iraq, where Turkmen, Assyrian and Armenian "are expected to be taught in public schools"; Switzerland\'s HSK heritage track; Russia, where a 2018 law put native and republic language on parental application)',
+  'migrant home languages': 'Provision built for pupils who arrived. RARE, and worth watching: the entries that mention migrant pupils here mostly do so to say this is NOT for them',
+  'all pupils': 'Everyone in the system, with no group named (United Arab Emirates; the Netherlands; Fiji, whose multilingualism policy has as "its stated purpose identity and social cohesion, not attainment")',
+  'not stated': 'The entry does not establish whose languages these are',
+};
+
+// ===========================================================================
 // dld.outcomesEvidence
 // ===========================================================================
 //
@@ -1371,6 +1428,15 @@ const SCHEMES = {
       evidence_type: EVIDENCE_TYPE,
     },
   },
+  'eal.bilingualEducationNotes': {
+    row: 'one national or sub-national system',
+    columns: {
+      provision: BILINGUAL_PROVISION,
+      purpose: BILINGUAL_PURPOSE,
+      for_whom: BILINGUAL_FOR_WHOM,
+      evidence_type: EVIDENCE_TYPE,
+    },
+  },
   'dld.outcomesEvidence': {
     row: 'one national or sub-national system',
     columns: {
@@ -1473,6 +1539,7 @@ module.exports = {
   WORKFORCE_ENTRY, WORKFORCE_TRAINING, WORKFORCE_COUNT,
   REFERRAL_SOURCE, REFERRAL_TRIGGER,
   OUTCOME_EVIDENCE, OUTCOME_REPORTING, DATA_VERDICT,
+  BILINGUAL_PROVISION, BILINGUAL_PURPOSE, BILINGUAL_FOR_WHOM,
   L1_FORM, L1_FOR_WHOM, L1_SECURED_BY, L2_MODELS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
@@ -1502,6 +1569,9 @@ module.exports = {
   isL2Model: v => has(L2_MODELS, v),
   isL1ForWhom: v => has(L1_FOR_WHOM, v),
   isL1SecuredBy: v => has(L1_SECURED_BY, v),
+  isBilingualProvision: v => has(BILINGUAL_PROVISION, v),
+  isBilingualPurpose: v => has(BILINGUAL_PURPOSE, v),
+  isBilingualForWhom: v => has(BILINGUAL_FOR_WHOM, v),
   isOutcomeEvidence: v => has(OUTCOME_EVIDENCE, v),
   isOutcomeReporting: v => has(OUTCOME_REPORTING, v),
   isDataVerdict: v => has(DATA_VERDICT, v),
