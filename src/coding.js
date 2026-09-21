@@ -579,6 +579,79 @@ const WORKFORCE_COUNT = {
 };
 
 // ===========================================================================
+// indigenous.revitalisation
+// ===========================================================================
+//
+// Derived 2026-09-22 from a region-stratified read of the 98 uncoded national
+// entries. The field's own hint asks four things -- what is being done, who runs
+// it, since when, and whether it is funded and by whom -- and three of them
+// turned out to be columns. "Since when" did not: the entries that give a date
+// give a precise one (Algeria's decret presidentiel 95-147 of 27 May 1995,
+// Malaysia's trial start on 17 February 1997, Israel's Academy in December
+// 2007), and a date is a fact to read off the prose rather than a category.
+//
+// THE FIELD IS NOT ONLY ABOUT INDIGENOUS LANGUAGES, and that is worth knowing
+// before reading any distribution off it. Andorra's entry says so outright --
+// "Catalan here is the llengua propia i oficial, so promotion targets the state
+// language" -- and the United Arab Emirates records a centre for ARABIC. Where
+// a state's own majority language is the one being promoted, the work is real
+// and the map's question is not the one being answered.
+
+// WHO RUNS IT.
+const REVIT_ACTOR = {
+  'state body': 'A ministry, agency or statutory institute (Algeria\'s Haut Commissariat a l\'Amazighite, "under the tutelle of the Presidency of the Republic"; Angola\'s Instituto de Linguas Nacionais; Andorra\'s Servei de Politica Linguistica; Israel\'s Academy for Arabic, governed by a Knesset Law of March 2007)',
+  'community organisation': 'A body of the language community itself (Botswana, where the Kamanakao Association "is a civil society organization for the Bayeyi language community" and has been active since 1995, and Balumbidzi be iKalanga raises the profile of Kalanga)',
+  'university or institute': 'An academic body doing the work (Ivory Coast, where the Institut de linguistique appliquee at Cocody-Abidjan drew up the experimental projects under Loi 77-584; Thailand, where Mahidol University initiated the Patani Malay project with the Ministry\'s authorisation)',
+  'state with donor or NGO': 'The state and an outside funder together (Cambodia, whose MENAP multilingual-education component "ran with the support of UNICEF and CARE International"; Malaysia, where the Kadazandusun trainings had financial support from the Kadazandusun Language Foundation and the Progressive Education Foundation)',
+  'not stated': 'The entry does not establish who runs it',
+};
+
+// WHAT IS ACTUALLY DONE. A LIST: most entries that describe a programme at all
+// describe several strands of it, and coding one throws the others away.
+const REVIT_ACTIVITY = {
+  'standardisation': 'Fixing the written language -- alphabet, orthography, dictionaries, terminology (Ivory Coast, where the "alphabet and writing of dioula, baoule, bete and senoufo" were "harmonised and standardised"; the United Arab Emirates, whose centre runs Lexicon, "a specialised digital dictionary")',
+  'materials': 'Producing something to teach or read from (Botswana\'s Naro-language educational materials and the Kamanakao Association\'s Shiyeyi readers; Costa Rica\'s written translations of teaching materials; Thailand\'s Patani Malay primer and Patani Malay-to-Thai transitional primer)',
+  'teacher training': 'Preparing people to teach it (Cambodia\'s expanded training for preschool, primary and literacy MLE teachers; Malaysia\'s orientation course for the teachers selected; Argentina, whose art. 53(b) obliges the State to guarantee "specific initial and continuing teacher training")',
+  'teaching in school': 'The language carried into classrooms (Ivory Coast\'s Programme d\'ecole integree in ten national languages; Thailand, where twelve more schools joined in 2012 and the teachers "are paid and employed full time by the Thailand Ministry of Education")',
+  'media or broadcasting': 'Public presence outside school (Angola, whose Premio Nacional de Jornalismo "has a category for journalism done in national languages"; Denmark, where about DKK 0.25 million a year goes to German audio content on local radio)',
+  'grants to others': 'Money passed to bodies doing the work (Algeria, "about 350 subventions to associations since 1995")',
+  // Added DURING the coding pass, at the first batch: Brazil, China and
+  // Colombia all run a documentation programme and none of the other values
+  // holds it. Surveying a language is not standardising it, and an inventory is
+  // not a teaching material.
+  'documentation or survey': 'Recording what exists rather than intervening in it (Brazil\'s Inventario Nacional da Diversidade Linguistica, instituted by Decreto 7.387/2010 to "map, characterise and diagnose situations of Brazilian linguistic plurality"; China\'s master plan of 420 minority-language survey points, endangered languages included, guaranteed by national fiscal funds; Colombia\'s Plan Decenal and five-yearly sociolinguistic survey; Bhutan\'s dialect-mapping programme)',
+  // Added at the third batch. Ireland's whole answer is a plan -- a 20-year
+  // strategy targeting 250,000 daily speakers, 26 statutory Language Planning
+  // Areas -- and so is Peru's, Mexico's, the Philippines' and Puerto Rico's.
+  // Coding those `not stated` would have been false: the entries say plainly
+  // what is done, and what is done is planning.
+  'language planning': 'Setting targets, areas or a policy framework rather than doing a particular thing (Ireland\'s 20-Year Strategy 2010-2030, targeting 250,000 daily speakers outside education, with the Gaeltacht Act 2012 dividing the Gaeltacht into 26 Language Planning Areas and approved plans worth 3.2 million euro a year; Peru\'s Politica Nacional de Lenguas Originarias, updated by Decreto Supremo 012-2021-MC "to raise intergenerational transmission"; Mexico\'s PROINALI; the Philippines\' commission, which "must formulate policies, plans and programs")',
+  'none established': 'Somebody checked and there is no programme (Belarus, whose "Education Code sets out no revitalisation programme, only optional minority classes")',
+  'not stated': 'The entry does not establish what is done',
+};
+
+// HOW FAR IT HAS GOT.
+const REVIT_STATUS = {
+  'established': 'Running as ordinary provision (Algeria since 1995 with some 200 titles published; Israel\'s Academy; Andorra\'s Pla d\'accio nacional per la llengua 2026-2028, approved by the Consell Nacional per la Llengua on 1 December 2025)',
+  'pilot or trial': 'Explicitly experimental or confined to named schools (Malaysia, teaching started "on a trial basis on 17 February 1997 with Year 4 students"; Ivory Coast, "experimental and quite marginal"; Cambodia, which "followed a pilot project in 2002")',
+  'proposed or draft': 'Not yet in force (Panama, where a draft reglamentacion of Ley 88 of 2010 "is still a borrador, to be approved at the next Condipi meeting")',
+  // ONE instance in 98, and kept because the shape is real and the alternative
+  // is worse: coding Puerto Rico `none established` would say nobody had tried.
+  'discontinued': 'It existed and was abolished (Puerto Rico, where Ley 138-2002 created an Instituto de Planificacion Linguistica and Ley 111-2010 struck it)',
+  'none established': 'Checked, and nothing exists to have a status',
+  'not stated': 'The entry does not establish how far it has got',
+};
+
+// WHO PAYS. Asked by the field's own hint, and answered less often than the
+// other three -- which is the point of coding it rather than assuming.
+const REVIT_FUNDING = {
+  'state': 'Public money, named as such (Denmark, where the state funds German minority schools "to the same level as other public schools"; Algeria\'s subventions; Thailand, whose project teachers are paid by the Ministry)',
+  'donor or NGO': 'An outside body pays (Cambodia, with UNICEF and CARE International)',
+  'community': 'The language community funds its own work',
+  'not stated': 'The entry does not establish whether or by whom it is funded',
+};
+
+// ===========================================================================
 // eal.achievementGap
 // ===========================================================================
 //
@@ -1494,6 +1567,16 @@ const SCHEMES = {
       evidence_type: EVIDENCE_TYPE,
     },
   },
+  'indigenous.revitalisation': {
+    row: 'one national or sub-national system',
+    columns: {
+      actor: REVIT_ACTOR,
+      // `activity` is a LIST -- see the note on REVIT_ACTIVITY.
+      activity: REVIT_ACTIVITY,
+      status: REVIT_STATUS,
+      funding: REVIT_FUNDING,
+    },
+  },
   'eal.achievementGap': {
     row: 'one national or sub-national system',
     columns: {
@@ -1616,6 +1699,7 @@ module.exports = {
   OUTCOME_EVIDENCE, OUTCOME_REPORTING, DATA_VERDICT,
   BILINGUAL_PROVISION, BILINGUAL_PURPOSE, BILINGUAL_FOR_WHOM,
   GAP_MEASURE, GAP_PROXY, GAP_DIRECTION, GAP_AFTER_ADJUSTMENT,
+  REVIT_ACTOR, REVIT_ACTIVITY, REVIT_STATUS, REVIT_FUNDING,
   L1_FORM, L1_FOR_WHOM, L1_SECURED_BY, L2_MODELS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
@@ -1645,6 +1729,10 @@ module.exports = {
   isL2Model: v => has(L2_MODELS, v),
   isL1ForWhom: v => has(L1_FOR_WHOM, v),
   isL1SecuredBy: v => has(L1_SECURED_BY, v),
+  isRevitActor: v => has(REVIT_ACTOR, v),
+  isRevitActivity: v => has(REVIT_ACTIVITY, v),
+  isRevitStatus: v => has(REVIT_STATUS, v),
+  isRevitFunding: v => has(REVIT_FUNDING, v),
   isGapMeasure: v => has(GAP_MEASURE, v),
   isGapProxy: v => has(GAP_PROXY, v),
   isGapDirection: v => has(GAP_DIRECTION, v),
