@@ -189,6 +189,24 @@
   width: 236px;
 }
 .legendbox .rows { display: flex; flex-direction: column; gap: 5px; }
+.shadeby { display: flex; align-items: center; gap: 7px; margin: 0 0 9px; }
+.shadeby label { font-size: 11px; color: var(--ink-faint); letter-spacing: .04em; text-transform: uppercase; }
+.shadeby select {
+  font: inherit; font-size: 12px; padding: 3px 6px; max-width: 232px;
+  background: var(--surface); color: var(--ink);
+  border: 1px solid var(--hair); border-radius: 4px;
+}
+.catlegend { display: flex; flex-direction: column; gap: 4px; margin: 0 0 9px; }
+.catlegend .cl {
+  display: flex; align-items: center; gap: 8px; font-size: 11.5px;
+  background: none; border: 0; padding: 1px 0; color: var(--ink);
+  text-align: left; cursor: pointer; width: 100%;
+}
+.catlegend .cl[disabled] { cursor: default; color: var(--ink-soft); }
+.catlegend .cl .sw { width: 13px; height: 13px; border-radius: 3px; flex: none; border: 1px solid var(--hair); }
+.catlegend .cl .n { margin-left: auto; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.catlegend .cl.off { opacity: .42; }
+.catlegend .note { font-size: 11px; color: var(--ink-faint); line-height: 1.45; margin: 2px 0 0; }
 .legendbox .ramplabel {
   display: block; font-size: 10px; font-weight: 600; letter-spacing: .1em;
   text-transform: uppercase; color: var(--ink-faint); margin-bottom: 5px;
@@ -726,6 +744,16 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
          to the domain: repeated inside all four boxes it was the tallest thing
          in each of them and said nothing that changed. -->
     <div class="overlay legendbox">
+      <!-- The reader arrives at a map of how much is documented. This is the
+           way across to what the documents SAY, and it is a column rather than
+           a field on purpose: `decided by` sits on newcomer criteria and on
+           removal criteria both, so the two are adjacent here and the reader
+           can hold the question fixed and change which decision is meant. -->
+      <div class="shadeby">
+        <label for="shadesel">Shade by</label>
+        <select id="shadesel"></select>
+      </div>
+      <div class="catlegend" id="catlegend" hidden></div>
       <div class="rows">
         <div class="row"><span class="sw" id="sw-looked"></span> Looked, found nothing</div>
         <div class="row"><span class="sw" id="sw-none"></span> Nothing recorded</div>
@@ -941,7 +969,106 @@ const covVar = u => `--cov-${covStep(u)}`;
    it explains. */
 const hueOf = u => `var(${covVar(u)})`;
 
-function fillFor(u, st) {
+/* ---------- shading by a CODED value instead of by coverage ----------
+ *
+ * CODED.key is "<field>.<column>" within the current domain, or null for the
+ * coverage map. CODED.only isolates one value.
+ *
+ * Three rules this mode is built on, each of which is a claim the corpus makes
+ * about itself rather than a rendering preference:
+ *
+ * 1. NO INHERITANCE. The coverage map paints a sub-national unit from its
+ *    country where it has nothing of its own, because a US state answering four
+ *    state-level questions is not half-researched. A CODING is different:
+ *    EXIT_MECHANISM says outright that the United States is NOT `none
+ *    established`, because the rule is made below. Inheriting a national coding
+ *    downward would manufacture agreement the corpus does not assert, so a unit
+ *    shows its own value or none.
+ * 2. A LIST COLUMN HAS NO SINGLE COLOUR. `triggers`, `exclusions`,
+ *    `exit_mechanism` and `force` hold several values at once, and picking one
+ *    to paint would be a reduction -- which research/CROSSTABS.md is explicit is
+ *    a claim. So a list column is ISOLATE-ONLY: the map answers "does this
+ *    system's answer include X", which is a question the data can answer.
+ * 3. ROW-GRAINED SCHEMES ARE NOT OFFERED AT ALL, the same refusal /patterns
+ *    already makes, for the same reason.
+ */
+const CODED = { key: null, only: null };
+
+function schemeFor(fieldKey) { return (B.schemes || {})[domainId + '.' + fieldKey]; }
+
+/* Every column a reader can shade by, in this domain, wherever it lives. Two
+   fields carrying a column of the SAME NAME -- `decided_by` and `rule_locus` sit
+   on both newcomer and removal criteria -- are deliberately adjacent in the
+   list, so the reader can hold "who decides" fixed and change which decision
+   is meant. That is the whole reason the picker is built from columns rather
+   than from fields. */
+function shadeableColumns() {
+  const out = [];
+  for (const f of domain().fields) {
+    const sc = schemeFor(f.k);
+    if (!sc || sc.many || (sc.keyColumns || []).length) continue;   // row-grained: rule 3
+    for (const c of (sc.valueColumns || [])) out.push({ field: f.k, label: f.label, col: c, key: f.k + '.' + c });
+  }
+  return out.sort((a, b) => a.col.localeCompare(b.col) || a.label.localeCompare(b.label));
+}
+
+/* The unit's OWN value for the shading column, never its country's. */
+function codedValues(u, key) {
+  if (!u || !key) return null;
+  const [f, c] = key.split('.');
+  const cd = (u.coding || {})[f];
+  if (!cd || Array.isArray(cd)) return null;
+  const v = cd[c];
+  if (v === undefined || v === null || !String(v).length) return null;
+  return [].concat(v).map(String);
+}
+const isList = key => {
+  let n = 0;
+  for (const u of (B.units[domainId] || [])) { const v = codedValues(u, key); if (v && v.length > 1) n++; }
+  return n > 0;
+};
+
+/* Values present in the corpus for this column, commonest first. Six get a hue
+   and the rest share --cat-other, because six is the ceiling for a choropleth
+   anyone can read without counting swatches. */
+const CAT_MAX = 6;
+function codedScale(key) {
+  const counts = new Map();
+  for (const u of (B.units[domainId] || [])) {
+    for (const v of (codedValues(u, key) || [])) counts.set(v, (counts.get(v) || 0) + 1);
+  }
+  const ordered = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+  const [f, c] = key.split('.');
+  const sc = schemeFor(f);
+  const ordinal = (sc && (sc.ordinalColumns || []).includes(c)) || false;
+  const map = new Map();
+  if (ordinal) {
+    // An ordinal column keeps the COVERAGE ramp, because its values are ranked
+    // and the ramp is the one palette in this file that says so.
+    const asc = [...counts.keys()].sort((a, b) => (parseFloat(a) || 0) - (parseFloat(b) || 0));
+    asc.forEach((v, i) => map.set(v, `var(--cov-${Math.min(COV_STEPS, 1 + Math.floor(i * COV_STEPS / Math.max(1, asc.length)))})`));
+  } else {
+    ordered.slice(0, CAT_MAX).forEach(([v], i) => map.set(v, `var(--cat-${i + 1})`));
+  }
+  return { map, ordered, ordinal, list: isList(key), overflow: Math.max(0, ordered.length - CAT_MAX) };
+}
+let SCALE = null;
+
+function fillFor(u, st, own) {
+  // In coded mode the OWN unit decides, not the one coverage would paint from.
+  if (CODED.key) {
+    const o = own === undefined ? u : own;
+    if (!o) return 'var(--nodata)';
+    const ost = o ? stateOf(o) : 'none';
+    if (ost === 'looked') return 'url(#hatch)';
+    if (ost === 'none') return 'var(--nodata)';
+    const vals = codedValues(o, CODED.key);
+    if (!vals) return 'url(#uncoded)';                       // prose, not coded
+    if (CODED.only) return vals.includes(CODED.only) ? 'var(--cat-1)' : 'var(--cat-other)';
+    if (SCALE && SCALE.list) return 'var(--cat-other)';      // rule 2: no single colour
+    const hit = vals.map(v => SCALE && SCALE.map.get(v)).find(Boolean);
+    return hit || 'var(--cat-other)';
+  }
   if (!u) return 'var(--nodata)';
   if (st === 'has') return `var(${covVar(u)})`;
   if (st === 'looked') return 'url(#hatch)';
@@ -981,6 +1108,17 @@ const pat = el('pattern', { id: 'hatch', patternUnits: 'userSpaceOnUse', width: 
 pat.appendChild(el('rect', { width: 9, height: 9, fill: 'var(--hatch-bg)' }));
 pat.appendChild(el('path', { d: 'M-2 2 L2 -2 M0 9 L9 0 M7 11 L11 7', stroke: 'var(--hatch-line)', 'stroke-width': 1.6 }));
 defs.appendChild(pat);
+/* "Prose exists here and nobody has coded it" -- a fact about the CODING, not
+   about the place, and a state the coded view must not let collapse into
+   "nothing recorded". It is a texture rather than a seventh grey because it
+   cannot be one: this tone, --nodata and --cat-other plus the ground cannot all
+   stay 14 dE apart on one narrow lightness band, measured, so a hue was never
+   available. #hatch already carries "looked, found nothing"; dots read as
+   clearly not-hatching at every zoom. */
+const patDots = el('pattern', { id: 'uncoded', patternUnits: 'userSpaceOnUse', width: 6, height: 6 });
+patDots.appendChild(el('rect', { width: 6, height: 6, fill: 'var(--surface-2)' }));
+patDots.appendChild(el('circle', { cx: 3, cy: 3, r: 1.05, fill: 'var(--hatch-line)' }));
+defs.appendChild(patDots);
 svg.appendChild(defs);
 
 const scene = el('g');
@@ -1146,7 +1284,7 @@ function paint() {
     // entry of its own: draw it as an inert base beneath them.
     const carved = !s.name && !r.unit && (ix.byCC.get(s.cc) || []).some(x => B.subunits[keyOf(x)]);
     s.node.setAttribute('fill', carved ? 'var(--nodata)'
-      : fillFor(r.paint, r.paint ? stateOf(r.paint) : 'none'));
+      : fillFor(r.paint, r.paint ? stateOf(r.paint) : 'none', r.unit));
     s.node.setAttribute('class', 'unit'
       + (s.name ? ' sub' : '')
       + (carved ? ' base' : r.unit ? ' hit' : '')
@@ -1166,7 +1304,7 @@ function paint() {
   for (const { node, t } of TERR) {
     const u = unitFor(t.cc, null);
     node.dataset.via = t.name;
-    node.setAttribute('fill', fillFor(u, u ? stateOf(u) : 'none'));
+    node.setAttribute('fill', fillFor(u, u ? stateOf(u) : 'none', u));
     node.setAttribute('class', 'unit' + (u ? ' hit' : ''));
     node.dataset.key = u ? keyOf(u) : '';
   }
@@ -1175,7 +1313,7 @@ function paint() {
     const r = resolve(n.dataset.cc, n.dataset.name || null);
     const u = r.unit || (n.dataset.name ? null : (IDX[domainId].byCC.get(n.dataset.cc) || [])[0]) || null;
     const pnt = r.paint || u;
-    n.setAttribute('fill', fillFor(pnt, pnt ? stateOf(pnt) : 'none'));
+    n.setAttribute('fill', fillFor(pnt, pnt ? stateOf(pnt) : 'none', r.unit || u));
     n.setAttribute('class', 'dot' + (r.inherited ? ' inherited' : ''));
     n.dataset.key = u ? keyOf(u) : '';
     if (r.via) n.dataset.via = r.via; else delete n.dataset.via;
@@ -1355,6 +1493,7 @@ function sizeMap() {
 function applyView() {
   scene.setAttribute('transform', `translate(${view.tx} ${view.ty}) scale(${view.k})`);
   pat.setAttribute('patternTransform', `scale(${1 / view.k})`);
+  patDots.setAttribute('patternTransform', `scale(${1 / view.k})`);
   updateMarks();
 }
 function baseScale() {
@@ -2043,6 +2182,11 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') { closePanel
 
 /* legend swatches */
 function paintLegend() {
+  // The ramp means "share of fields documented" and means nothing while the map
+  // is shaded by a coded value, so it goes away rather than sitting there
+  // explaining a picture it is not describing.
+  const ramp = document.querySelector('.legendbox .ramp');
+  if (ramp) ramp.hidden = !!CODED.key;
   document.getElementById('sw-looked').style.background =
     'repeating-linear-gradient(45deg, var(--hatch-bg) 0 3px, var(--hatch-line) 3px 4px)';
   document.getElementById('sw-none').style.background = 'var(--nodata)';
@@ -2055,6 +2199,76 @@ function paintLegend() {
     `<span style="background:var(--cov-${i + 1})"></span>`).join('');
 }
 
+/* ---------- the shade-by picker and its legend ---------- */
+const shadeSel = document.getElementById('shadesel');
+const catLegend = document.getElementById('catlegend');
+
+function buildShadePicker() {
+  const cols = shadeableColumns();
+  const opts = ['<option value="">what is documented</option>'];
+  let lastCol = null;
+  for (const c of cols) {
+    // The column name is the question; the field says which instance of it.
+    // Both are shown because "decided by" alone is ambiguous exactly where the
+    // reader most wants to compare.
+    if (c.col !== lastCol) { lastCol = c.col; }
+    opts.push(`<option value="${esc(c.key)}">${esc(c.col.replace(/_/g, ' '))} — ${esc(c.label)}</option>`);
+  }
+  shadeSel.innerHTML = opts.join('');
+  shadeSel.value = CODED.key || '';
+}
+
+function paintCatLegend() {
+  if (!CODED.key) { catLegend.hidden = true; catLegend.innerHTML = ''; return; }
+  catLegend.hidden = false;
+  const rows = [];
+  const sw = bg => `<span class="sw" style="background:${bg}"></span>`;
+  if (SCALE.list) {
+    rows.push(`<p class="note">This answer can hold more than one value, so there is no single
+      colour for a country. Pick a value to see which systems include it.</p>`);
+  }
+  // Every value gets a row up to a point; past it the tail is summarised, or a
+  // column with twenty values would fill the pane with a legend nobody reads.
+  const LEG_MAX = 9;
+  for (const [v, n] of SCALE.ordered.slice(0, LEG_MAX)) {
+    const hue = SCALE.map.get(v);
+    const isOn = CODED.only === v;
+    const shown = CODED.only ? (isOn ? 'var(--cat-1)' : 'var(--cat-other)') : (hue || 'var(--cat-other)');
+    rows.push(`<button class="cl${CODED.only && !isOn ? ' off' : ''}" data-v="${esc(v)}"
+      title="${CODED.only && isOn ? 'Show every value again' : 'Show only this value'}">
+      ${sw(shown)}<span>${esc(v)}</span><span class="n">${n}</span></button>`);
+  }
+  const hidden = Math.max(0, SCALE.ordered.length - LEG_MAX);
+  if (hidden) {
+    rows.push(`<div class="cl" disabled>${sw('var(--cat-other)')}<span>${hidden} more value${hidden === 1 ? '' : 's'}</span></div>`);
+  }
+  rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Recorded, not yet coded</span></div>`);
+  catLegend.innerHTML = rows.join('');
+  catLegend.querySelectorAll('button.cl').forEach(b => b.addEventListener('click', () => {
+    CODED.only = CODED.only === b.dataset.v ? null : b.dataset.v;
+    paint(); paintCatLegend();
+  }));
+  // The dotted swatch cannot carry a url() as a background, so it is drawn in CSS.
+  catLegend.querySelectorAll('.cl[disabled] .sw').forEach(el => {
+    if (el.style.background.includes('uncoded')) {
+      el.style.background = 'radial-gradient(var(--hatch-line) 1px, var(--surface-2) 1.2px)';
+      el.style.backgroundSize = '5px 5px';
+    }
+  });
+}
+
+function setShade(key) {
+  CODED.key = key || null;
+  CODED.only = null;
+  SCALE = CODED.key ? codedScale(CODED.key) : null;
+  // A list column has no single colour, so it opens on its commonest value
+  // rather than on a map painted entirely in "other".
+  if (SCALE && SCALE.list && SCALE.ordered.length) CODED.only = SCALE.ordered[0][0];
+  paint(); paintCatLegend(); paintLegend();
+}
+shadeSel.addEventListener('change', () => setShade(shadeSel.value));
+
+buildShadePicker();
 buildDomainStack(); openDomainBox(domainId, false); buildDomains(); paint(); sizeMap(); applyView(); paintLegend();
 loading.classList.add('done');
 

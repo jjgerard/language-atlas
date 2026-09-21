@@ -49,6 +49,11 @@ function build(catalogs, sources) {
     // once, which is what the outcomes panel did before this was sent.
     schemes: Object.fromEntries(Object.entries(SCHEMES).map(([k, s]) => [k, {
       keyColumns: s.keyColumns,
+      // Row-grained: the field holds an ARRAY of codings per unit. keyColumns
+      // implies it but does not always accompany it -- dld.assessments is
+      // instrument-grained with no key declared -- and a picker that offers
+      // such a column would ask the map to reduce many rows to one colour.
+      many: !!s.many,
       valueColumns: Object.entries(s.columns || {})
         .filter(([, def]) => def && typeof def === "object").map(([c]) => c),
       // Which of those carry a RANK. A map shading by an ordinal column should

@@ -126,7 +126,25 @@ coding, and `EXIT_MECHANISM` says outright that the United States is NOT
 value or nothing. Inheriting a national coding onto sub-national units would
 manufacture agreement that the corpus does not assert.
 
-## One thing I want to check with you
+## Answered: the options are the columns, wherever they live
+
+Reading A, confirmed 2026-09-21 and built. The picker is a list of COLUMNS, and
+two fields carrying a column of the same name sit next to each other in it:
+
+```
+  decided by — Newcomer criteria
+  decided by — Removal criteria
+  designation — Newcomer criteria
+  exit mechanism — Removal criteria
+  rule locus — Newcomer criteria
+  rule locus — Removal criteria
+  triggers — Newcomer criteria
+```
+
+So the reader holds the question fixed and changes which decision is meant,
+which is the thing a field-shaped picker could not do.
+
+## The original question, kept for the record
 
 Your example — click `newcomer criteria`, then choose `exit criteria` or
 `categorization criteria` — reads two ways and they build differently.
@@ -191,7 +209,18 @@ schemes are summarised by row count and left to the timeline rather than
 flattened. `src/catalog.js` ships the glosses (101 KB, about 1% of the payload)
 so nothing is paraphrased in the page.
 
-**Phase 1 — one column, value-highlight only.**
+**Phases 1-3 — DONE 2026-09-21.** `fillFor()` is still the single place fill is
+decided; it takes the unit's OWN coding in this mode, never its country's.
+Categorical fill for the six commonest values, `--cat-other` beyond them, the
+coverage ramp kept for a declared-ordinal column, and a legend that lists values
+with counts and isolates one on click. A LIST column opens already isolated on
+its commonest value, with a line saying why, because it has no single colour.
+Row-grained schemes are refused -- `many` is now on the payload, since
+`dld.assessments` is instrument-grained without declaring `keyColumns` and would
+otherwise have been offered. The coverage ramp hides itself while a coded column
+is shading, rather than explaining a picture it is not describing.
+
+**Superseded phase notes:**
 `dld.identificationCriteria.rule_locus`: 331 units, 7 values, a full map. Add a
 `mode` to the map page, keep `fillFor()` as the single place fill is decided,
 and keep every fill a `var()` reference — `map.html` warns that a resolved hex
