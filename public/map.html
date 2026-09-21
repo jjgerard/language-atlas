@@ -13,6 +13,13 @@
 /* Palette, base type and the site nav come from shared.css. Only rules the
    map itself needs live here. */
 .app { display: flex; flex-direction: column; height: 100dvh; }
+/* `hidden` is UA styling -- [hidden] { display: none } at specificity (0,1,0)
+   -- so any class rule here that sets `display` silently outranks it and the
+   element stays on screen. Several do. The two below (#dcontent, .domainnote)
+   were each patched one at a time when it bit; this is the general form, and
+   it is why the legend's coverage rows were still explaining hatching on a map
+   shaded by a coded value. */
+[hidden] { display: none !important; }
 
 .searchwrap { position: relative; margin-left: auto; flex: none; }
 .searchwrap input {
@@ -304,7 +311,12 @@
 .tip.on { opacity: 1; }
 .tip .name { font-weight: 600; font-size: 13.5px; }
 .tip .meta { font-size: 11.5px; color: var(--ink-soft); margin-top: 1px; }
+.tip .cq {
+  font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-faint); margin-top: 8px;
+}
 .tip .state { display: flex; align-items: center; gap: 7px; font-size: 12px; margin-top: 7px; }
+.tip .cq + .state { margin-top: 4px; }
 .tip .state .sw { width: 13px; height: 13px; border-radius: 2px; border: 1px solid var(--hair-strong); flex: none; }
 .tip .inherit {
   font-size: 11px; color: var(--ink-soft); margin-top: 7px;
@@ -1656,7 +1668,7 @@ function hoverAt(ev) {
   if (!u) return hideTip();
   const terr = node.dataset.terr ? B.territories[+node.dataset.terr] : null;
   tip.innerHTML = tipHTML(u, terr, node.dataset.via || null,
-    node.classList.contains('inherited'));
+    node.classList.contains('inherited'), node.getAttribute('fill'));
   tip.classList.add('on');
   const r = document.getElementById('stage').getBoundingClientRect();
   const tw = tip.offsetWidth, th = tip.offsetHeight;
@@ -1783,7 +1795,63 @@ function fieldMarks(u, d) {
   }).join('');
 }
 
-function tipHTML(u, terr, via, inheriting) {
+/* The hover card while the map is shaded by ONE question.
+ *
+ * The coverage card counts fields and lists which ones are filled, which is the
+ * right summary of a map painted by how much is documented and the wrong one
+ * for a map painted by a single answer: it describes everything except the
+ * thing the reader is looking at. So this says what this unit answered.
+ *
+ * The swatch is read off the shape itself rather than recomputed, so it cannot
+ * drift from the fill on the map -- and the words for the three no-value states
+ * are the legend's words exactly, because the card is where a reader turns the
+ * legend's colour back into a unit.
+ */
+function codedTipHTML(u, terr, via, fill) {
+  const d = domain();
+  const [fk, col] = CODED.key.split('.');
+  const f = d.fields.find(x => x.k === fk) || { k: fk, label: fk };
+  const vals = codedValues(u, CODED.key);
+  const st = stateOf(u);
+
+  // url(#pattern) is an SVG fill and cannot be a CSS background, so the two
+  // textures are redrawn the way the legend redraws them.
+  let bg = fill || 'var(--nodata)', extra = '';
+  if (bg.indexOf('#hatch') >= 0) {
+    bg = 'repeating-linear-gradient(45deg,var(--hatch-bg) 0 3px,var(--hatch-line) 3px 4px)';
+  } else if (bg.indexOf('#uncoded') >= 0) {
+    bg = 'radial-gradient(var(--hatch-line) 1px, var(--surface-2) 1.2px)';
+    extra = 'background-size:5px 5px;';
+  }
+  const sw = `<span class="sw" style="background:${bg};${extra}"></span>`;
+
+  const answer = vals
+    ? vals.map(v => esc(v)).join(', ')
+    : st === 'looked' ? 'Looked, found nothing'
+    : st === 'none' ? 'Nothing recorded'
+    : 'Recorded, not yet coded';
+
+  // A list column is drawn isolated on one value, so the card says which one
+  // the colour is about rather than leaving the reader to guess from a row of
+  // values which one turned the shape blue.
+  const note = (CODED.only && vals && vals.length > 1)
+    ? `Shaded by whether this includes <b>${esc(CODED.only)}</b>.`
+    : '';
+
+  const label = terr ? terr.name : (via || u.name);
+  const meta = (terr || via) ? esc(u.name) + ' · shows that entry'
+    : esc(u.subregion || u.region) + (u.nat ? ' · national' : ' · sub-national');
+  return `
+    <div class="name">${esc(label)}</div>
+    <div class="meta">${meta}</div>
+    <div class="cq">${esc(col.replace(/_/g, ' '))} · ${esc(f.label)}</div>
+    <div class="state">${sw} ${answer}</div>
+    ${note ? `<div class="inherit">${note}</div>` : ''}
+    <div class="hintline">Click for what that was read from</div>`;
+}
+
+function tipHTML(u, terr, via, inheriting, fill) {
+  if (CODED.key) return codedTipHTML(u, terr, via, fill);
   const d = domain();
   const sibs = (IDX[domainId].byCC.get(u.cc) || []).filter(x => x !== u);
   const countryName = (B.countries[u.cc] || {}).name || u.cc;
