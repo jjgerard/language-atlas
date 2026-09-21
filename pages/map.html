@@ -209,6 +209,10 @@
   margin: 7px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--ink-soft);
   padding-left: 10px; border-left: 2px solid var(--hair); white-space: normal;
 }
+.cpanval .cgwhere {
+  font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-faint); margin: 9px 0 3px; padding-left: 12px;
+}
 .cpanval .cglist {
   margin: 5px 0 0; padding: 0 0 0 10px; list-style: none;
   border-left: 2px solid var(--hair);
@@ -2190,7 +2194,17 @@ function glossHTML(text) {
   if (items.length < 2) return `<p class="cgloss">${esc(g)}</p>`;
   const lead = g.slice(0, open).trim().replace(/[,:]$/, '');
   const tail = g.slice(close + 1).replace(/^[.\s]+/, '').trim();
+  // The list needs saying what it is. These are the entries that FORCED the
+  // value to exist -- other countries, named in coding.js -- and on a panel
+  // headed "Northern Territory" an unlabelled list of Morocco, Singapore and
+  // Suriname reads as though it describes the Northern Territory. Inside the
+  // original parenthesis the sentence carried that signal; opening it out
+  // threw the signal away, so it goes back explicitly.
+  // Not "coded this way elsewhere": a unit is often ITSELF one of the entries
+  // that forced the value, and South Africa reading "elsewhere" above its own
+  // name is the same category error one step down.
   return `<p class="cgloss">${esc(lead)}</p>
+    <div class="cgwhere">Where this value comes from</div>
     <ul class="cglist">${items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
     ${tail ? `<p class="cgloss ctail">${esc(tail)}</p>` : ''}`;
 }
