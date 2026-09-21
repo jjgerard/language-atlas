@@ -1,0 +1,60 @@
+{
+ "GI|Gibraltar": {
+  "fields": {
+   "standing": [
+    "Government commits to protecting and preserving Llanito, per its 2023 manifesto",
+    "Treated as heritage: street names revive ones lost as Spanish and Llanito speakers declined"
+   ]
+  },
+  "slots": {
+   "standing": [
+    1,
+    1
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Government commits to protecting and preserving Llanito, per its 2023 manifesto",
+    "url": "https://www.gibraltar.gov.gi/press-releases/heritage-project-to-install-gibraltarian-street-names-in-a-celebration-of-multilingualism-and-cultural-identity-7712025-11343",
+    "quote": "committed to protecting and preserving Llanito, as outlined in the Government's 2023 manifesto"
+   },
+   {
+    "bullet": "Treated as heritage: street names revive ones lost as Spanish and Llanito speakers declined",
+    "url": "https://www.gibraltar.gov.gi/press-releases/heritage-project-to-install-gibraltarian-street-names-in-a-celebration-of-multilingualism-and-cultural-identity-7712025-11343",
+    "quote": "names that have gradually faded due to the decline of Spanish and Llanito speakers in Gibraltar"
+   }
+  ]
+ },
+ "JM|Jamaica": {
+  "fields": {
+   "taughtAsSubject": [
+    "No Patois subject: stated best practice is teaching standard English as a second language",
+    "Patois is the first language teachers transition pupils from, per the Education Minister"
+   ]
+  },
+  "slots": {
+   "taughtAsSubject": [
+    1,
+    1
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "No Patois subject: stated best practice is teaching standard English as a second language",
+    "url": "https://jis.gov.jm/first-language-patois-education-minister/",
+    "quote": "The best practice is to teach standard English, for those of us who come out of a culture of Patois, as a second language"
+   },
+   {
+    "bullet": "Patois is the first language teachers transition pupils from, per the Education Minister",
+    "url": "https://jis.gov.jm/first-language-patois-education-minister/",
+    "quote": "The first language of Jamaica is Patois, and teachers need to always consider that reality"
+   }
+  ]
+ },
+ "AG|Antigua and Barbuda": {
+  "notEstablished": {
+   "standing": "Not established from the sources consulted. The Education Act 2008 names language only among what schooling must promote understanding of, and PEER's linguistic and ethnic groups section is about special educational needs rather than any standing.",
+   "mediumOfInstruction": "Not established from the sources consulted. The Education Act 2008 carries no medium-of-instruction provision, and PEER treats a home language different from the language of teaching as a care point in assessment, not as a medium."
+  }
+ }
+}

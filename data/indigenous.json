@@ -442,8 +442,8 @@
   "stubNote": "",
   "by": "",
   "localTerm": "The 2013 special education needs policy speaks of the form of language in the home",
-  "standing": "",
-  "mediumOfInstruction": "",
+  "standing": "Not established from the sources consulted. The Education Act 2008 names language only among what schooling must promote understanding of, and PEER's linguistic and ethnic groups section is about special educational needs rather than any standing.",
+  "mediumOfInstruction": "Not established from the sources consulted. The Education Act 2008 carries no medium-of-instruction provision, and PEER treats a home language different from the language of teaching as a care point in assessment, not as a medium.",
   "taughtAsSubject": "Education Act goal: understanding the history, language and culture of Antigua and Barbuda\nMinister promotes the goal through basic and continuing education strategies",
   "teacherSupply": "",
   "materials": "",
@@ -17428,7 +17428,7 @@
    }
   ],
   "localTerm": "No category term in use: curriculum differences over Spanish reflect local realities\nSpanish is listed apart from Modern Foreign Languages in the secondary curriculum",
-  "standing": "",
+  "standing": "Government commits to protecting and preserving Llanito, per its 2023 manifesto\nTreated as heritage: street names revive ones lost as Spanish and Llanito speakers declined",
   "mediumOfInstruction": "English is the language of instruction, and all schools are co-educational\nSpanish may also be employed as a teaching aid as and when appropriate",
   "taughtAsSubject": "Spanish is a formal subject from year 3 of upper primary, less formally before that\nCompulsory in secondary years 7, 8 and 9 within a broad compulsory curriculum\nAll pupils take Spanish in years 10 and 11, alongside the core subjects",
   "teacherSupply": "",
@@ -17453,6 +17453,10 @@
     2,
     2,
     4
+   ],
+   "standing": [
+    1,
+    1
    ]
   },
   "coding": {
@@ -17485,6 +17489,12 @@
     "status": "compulsory for all",
     "object": "the language",
     "stages": "into secondary"
+   },
+   "standing": {
+    "status": "protected as culture",
+    "source": "policy",
+    "force": "duty to promote",
+    "extent": "not stated"
    }
   }
  },
@@ -27302,7 +27312,7 @@
   "localTerm": "Jamaican Creole, JC, is the ministry term, set against Standard Jamaican English, SJE\nThe education minister's own word is Patois, called a first language\nFixed in ministry policy: a Language Education Policy of 2001, reviewed in 2022\nFramed as bilingualism, with neither variety ranked above the other",
   "standing": "Recognition is proposed, not enacted: the final draft awaits the Cabinet Office\nThe draft seeks official recognition of Jamaican Creole as a legitimate language\nStandard English is to remain the official language, with a literacy mandate attached",
   "mediumOfInstruction": "Rests on a policy still in draft rather than on an adopted instrument\nUse of Jamaican Creole in the classroom is one of the matters that draft addresses\nMinister's stated best practice is to teach standard English as a second language\nMinister: if pupils cannot understand the language spoken, learning is not taking place",
-  "taughtAsSubject": "",
+  "taughtAsSubject": "No Patois subject: stated best practice is teaching standard English as a second language\nPatois is the first language teachers transition pupils from, per the Education Minister",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
@@ -27331,7 +27341,18 @@
     "role": "not stated",
     "reach": "not stated",
     "secured_by": "not stated"
+   },
+   "taughtAsSubject": {
+    "status": "not taught",
+    "object": "not stated",
+    "stages": "not stated"
    }
+  },
+  "slots": {
+   "taughtAsSubject": [
+    1,
+    1
+   ]
   }
  },
  {
