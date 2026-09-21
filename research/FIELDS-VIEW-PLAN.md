@@ -146,6 +146,26 @@ reachable from the map's own legend: a map answers "who does what", a table
 answers "what exactly does each one say", and the second is a thing a colour
 cannot do. Nothing in the nav points at it.
 
+## The coded view has its own legend and its own panel
+
+**The legend states only what the shading means here.** The coverage rows are
+hidden with the ramp, and two of them are re-stated inside the value list with
+counts because they still happen — "Recorded, not yet coded", "Looked, found
+nothing", "Nothing recorded" — each shown only if any unit is in that state. The
+third, **"Follows its country", is not merely redundant in this view but wrong**:
+nothing here is painted from a parent, so a reader told otherwise would misread
+every sub-national unit on the screen.
+
+**Clicking a country answers the question on screen, not all nine.** A reader who
+arrived by clicking "Newcomer criteria", looking at a map of rule locus, has
+asked something narrow; the full entry answers something else. The focused panel
+gives that unit's value with its definition, then the prose it was read from
+under "What that was read from", then the whole entry as a way ON rather than as
+the default. Where there is no value it says which of the four reasons applies,
+because the map keeps those apart and the panel must too. Changing the question
+re-renders an open panel rather than leaving a stale answer beside a repainted
+map, and selecting a different country returns to the focused view.
+
 ## Answered: the options are the columns, wherever they live
 
 Reading A, confirmed 2026-09-21 and built. The picker is a list of COLUMNS, and

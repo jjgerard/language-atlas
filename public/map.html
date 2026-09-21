@@ -189,6 +189,35 @@
   width: 236px;
 }
 .legendbox .rows { display: flex; flex-direction: column; gap: 5px; }
+/* The focused panel: one question, one unit. */
+.cpan .where { font-size: 12px; color: var(--ink-faint); margin: 2px 0 14px; }
+.cpanval { margin: 0 0 16px; }
+.cpanval .cv {
+  display: flex; align-items: center; gap: 8px; font-size: 14px; line-height: 1.4;
+  padding: 7px 10px; border-radius: 5px; cursor: pointer; list-style: none;
+  background: var(--surface-2); border: 1px solid var(--hair); color: var(--ink);
+}
+.cpanval .cv::-webkit-details-marker { display: none; }
+.cpanval .cv .dot { width: 12px; height: 12px; border-radius: 3px; flex: none; border: 1px solid var(--hair); }
+.cpanval .cv.ord { border-left: 3px solid var(--cov-3); }
+.cpanval .cvwrap + .cvwrap, .cpanval .cvwrap + .cv, .cpanval .cv + .cv { margin-top: 6px; }
+.cpanval .cgloss {
+  margin: 7px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--ink-soft);
+  padding-left: 10px; border-left: 2px solid var(--hair); white-space: normal;
+}
+.cpanval .cnone { font-size: 13px; color: var(--ink-soft); margin: 0; }
+.cpansrc { border-top: 1px dashed var(--hair); padding-top: 11px; }
+.cpansrc .ch {
+  font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-faint); margin: 0 0 7px;
+}
+.cpansrc .cnone { font-size: 13px; color: var(--ink-faint); font-style: italic; margin: 0; }
+.wholeentry {
+  margin-top: 16px; font: inherit; font-size: 12px; color: var(--ink-soft);
+  background: none; border: 1px solid var(--hair); border-radius: 5px;
+  padding: 7px 11px; cursor: pointer; width: 100%; text-align: left;
+}
+.wholeentry:hover { color: var(--ink); border-color: var(--hair-strong); }
 .shadeby { display: flex; align-items: center; gap: 7px; margin: 0 0 9px; }
 .shadeby label { font-size: 11px; color: var(--ink-faint); letter-spacing: .04em; text-transform: uppercase; }
 .shadeby select {
@@ -1788,12 +1817,17 @@ function closePanel() { selected = null; panel.classList.remove('on'); markSelec
 function select(key, zoom, via) {
   const u = IDX[domainId].byKey.get(key);
   if (!u) return;
+  // Opening the whole entry is a choice about ONE unit, so picking another one
+  // starts from the focused view again rather than inheriting the last choice.
+  if (key !== selected) panelFull = false;
   selected = key;
   markSelection();
-  panel.innerHTML = panelHTML(u, via);
+  panel.innerHTML = (CODED.key && !panelFull) ? codedPanelHTML(u) : panelHTML(u, via);
   panel.classList.add('on');
   panel.scrollTop = 0;
   panel.querySelector('.close').onclick = closePanel;
+  const whole = panel.querySelector('[data-full]');
+  if (whole) whole.onclick = () => { panelFull = true; select(key, false, via); };
   panel.querySelectorAll('.sibs button[data-key], .tocountry[data-key]').forEach(b => {
     b.onclick = () => select(b.dataset.key, true);
   });
@@ -1874,6 +1908,71 @@ function linkList(links) {
   return links.map(l =>
     `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label || l.url)}</a>`
   ).join('');
+}
+
+/* The panel while the map is drawn by ONE question.
+ *
+ * A reader who arrived by clicking "Newcomer criteria" and is looking at a map
+ * of rule locus has asked a narrow question, and the nine-field entry answers a
+ * different one. So this shows that unit's answer to THAT question and the text
+ * the answer was read from, and offers the whole entry as a way on rather than
+ * as the default.
+ *
+ * The prose is still the record and the coding is still a reading of it, so the
+ * value comes first and the bullets underneath are headed as what it was read
+ * from -- the same separation the data keeps, in the order this reader needs.
+ */
+let panelFull = false;
+
+function codedPanelHTML(u) {
+  const d = domain();
+  const [fk, col] = CODED.key.split('.');
+  const f = d.fields.find(x => x.k === fk) || { k: fk, label: fk };
+  const sc = schemeFor(fk);
+  const vals = codedValues(u, CODED.key);
+  const defs = ((sc && sc.values) || {})[col] || {};
+  const ordinal = !!(sc && (sc.ordinalColumns || []).includes(col));
+  const question = col.replace(/_/g, ' ');
+
+  const chips = vals ? vals.map(v => {
+    const gloss = defs[v];
+    const swatch = CODED.only
+      ? (v === CODED.only ? 'var(--cat-1)' : 'var(--cat-other)')
+      : ((SCALE && SCALE.map.get(v)) || 'var(--cat-other)');
+    const head = `<span class="dot" style="background:${swatch}"></span>${esc(String(v))}`;
+    return gloss
+      ? `<details class="cvwrap" open><summary class="cv${ordinal ? ' ord' : ''}">${head}</summary><p class="cgloss">${esc(String(gloss))}</p></details>`
+      : `<div class="cv${ordinal ? ' ord' : ''}">${head}</div>`;
+  }).join('') : '';
+
+  // Why there is no value, said precisely -- the four states are not the same
+  // and the map keeps them apart, so the panel must too.
+  const st = stateOf(u);
+  const noValue = st === 'looked'
+    ? `<p class="cnone">Somebody looked for this and found nothing to record.</p>`
+    : st === 'none'
+      ? `<p class="cnone">Nothing is recorded for ${esc(u.name)} on this map at all.</p>`
+      : `<p class="cnone">${esc(u.name)} has an answer written for this question, and nobody has coded it yet. The text is below.</p>`;
+
+  const text = u.values[fk];
+  const lines = String(text == null ? '' : text).split('\n').map(x => x.trim()).filter(Boolean);
+  const body = lines.length
+    ? `<ul class="bul">${lines.map(l => `<li>${linkCitations(esc(l), u)}</li>`).join('')}</ul>`
+    : `<p class="cnone">Nothing recorded for this question.</p>`;
+
+  return `
+  <div class="inner cpan">
+    <button class="close" aria-label="Close">×</button>
+    <div class="eyebrow">${esc(u.nat ? 'National' : 'Sub-national')} · ${esc(question)}</div>
+    <h2>${esc(u.name)}</h2>
+    <div class="where">${esc(u.subregion || u.region)} · ${esc(f.label)}</div>
+    <div class="cpanval">${vals ? chips : noValue}</div>
+    <div class="cpansrc">
+      <div class="ch">What that was read from</div>
+      ${body}
+    </div>
+    <button class="wholeentry" data-full="1">The whole ${esc(u.name)} entry<span aria-hidden="true"> →</span></button>
+  </div>`;
 }
 
 function panelHTML(u, via) {
@@ -2120,6 +2219,14 @@ function paintLegend() {
   // explaining a picture it is not describing.
   const ramp = document.querySelector('.legendbox .ramp');
   if (ramp) ramp.hidden = !!CODED.key;
+  // The three coverage rows go too. Two of them still happen in a coded view
+  // and are re-stated inside the value legend where they belong; the third,
+  // "Follows its country", is not merely redundant here but WRONG -- this view
+  // deliberately does not inherit a coding, so nothing on the map is painted
+  // from a parent and a reader told otherwise would misread every sub-national
+  // unit on the screen.
+  const rows = document.querySelector('.legendbox .rows');
+  if (rows) rows.hidden = !!CODED.key;
   document.getElementById('sw-looked').style.background =
     'repeating-linear-gradient(45deg, var(--hatch-bg) 0 3px, var(--hatch-line) 3px 4px)';
   document.getElementById('sw-none').style.background = 'var(--nodata)';
@@ -2175,7 +2282,18 @@ function paintCatLegend() {
   if (hidden) {
     rows.push(`<div class="cl" disabled>${sw('var(--cat-other)')}<span>${hidden} more value${hidden === 1 ? '' : 's'}</span></div>`);
   }
-  rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Recorded, not yet coded</span></div>`);
+  // Only the states actually on the map get a row. A legend that lists what is
+  // not there is the same lie as a legend that omits what is.
+  const tally = { uncoded: 0, looked: 0, none: 0 };
+  for (const u of (B.units[domainId] || [])) {
+    const st = stateOf(u);
+    if (st === 'looked') tally.looked++;
+    else if (st === 'none') tally.none++;
+    else if (!codedValues(u, CODED.key)) tally.uncoded++;
+  }
+  if (tally.uncoded) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Recorded, not yet coded</span><span class="n">${tally.uncoded}</span></div>`);
+  if (tally.looked) rows.push(`<div class="cl" disabled>${sw('url(#hatch)')}<span>Looked, found nothing</span><span class="n">${tally.looked}</span></div>`);
+  if (tally.none) rows.push(`<div class="cl" disabled>${sw('var(--nodata)')}<span>Nothing recorded</span><span class="n">${tally.none}</span></div>`);
   // The map answers "who does what"; the table answers "what exactly does each
   // one say", which a colour cannot. It is one click from here rather than in
   // the nav, because the question it needs is the one already chosen.
@@ -2188,10 +2306,15 @@ function paintCatLegend() {
     paint(); paintCatLegend();
   }));
   // The dotted swatch cannot carry a url() as a background, so it is drawn in CSS.
+  // A swatch cannot carry url(#pattern) as a CSS background, so the two textures
+  // are redrawn here in the same idiom the coverage legend already uses.
   catLegend.querySelectorAll('.cl[disabled] .sw').forEach(el => {
-    if (el.style.background.includes('uncoded')) {
+    const bg = el.style.background || '';
+    if (bg.includes('uncoded')) {
       el.style.background = 'radial-gradient(var(--hatch-line) 1px, var(--surface-2) 1.2px)';
       el.style.backgroundSize = '5px 5px';
+    } else if (bg.includes('hatch')) {
+      el.style.background = 'repeating-linear-gradient(45deg, var(--hatch-bg) 0 3px, var(--hatch-line) 3px 4px)';
     }
   });
 }
@@ -2204,6 +2327,9 @@ function setShade(key) {
   // rather than on a map painted entirely in "other".
   if (SCALE && SCALE.list && SCALE.ordered.length) CODED.only = SCALE.ordered[0][0];
   paint(); paintCatLegend(); paintLegend();
+  // An open panel is answering the old question; re-render it against the new
+  // one rather than leaving a stale answer beside a repainted map.
+  if (selected) { panelFull = false; select(selected, false); }
 }
 shadeSel.addEventListener('change', () => setShade(shadeSel.value));
 
