@@ -554,6 +554,115 @@ const SCOPE_CHANGE = {
   'obligation added': 'What was available becomes required. 10 rows, and the distinction from `coverage widened` is that nobody new is brought inside the rule -- the same people are now bound by it: Quebec 2006, "ESL becomes compulsory from Cycle 1 of primary"; Guyana 2023, "Spanish made compulsory from Christmas Term by chief education officer circular"; Jordan 2026, "English made a compulsory Tawjihi subject for all fields"; Czechia 2007, "the Framework Education Programme for Basic Education becomes binding"; Wales 2012, "first-language reporting becomes mandatory in the Pupil Level Annual School Census". Wales 2021 is the one row carrying two values, because making Welsh "a mandatory element of EVERY school curriculum in Wales" adds the obligation and widens the coverage in the same clause',
   'obligation removed': 'What was required becomes optional or advisory. Only 2 rows, kept apart from `coverage narrowed` for the same reason as above -- the rule still reaches the same people, it just stops binding them: Lithuania 2019, where the B1 "foreign language examination ceases to be a minimum admission requirement"; New Brunswick 2025, where "2025 policy moved the proficiency standard from Requirements to Guidelines". Two rows is thin, and the value is kept rather than folded into `coverage narrowed` because the corpus distinguishes them in its own words; if it is still two after the next pass that is worth saying, not worth merging',
 };
+// WHAT STANDING AN INDIGENOUS OR REGIONAL LANGUAGE HOLDS, and what that standing
+// actually does. Derived by reading 100 of the 202 national entries across all
+// five regions, and the field's own hint proposed four elements -- the standing
+// given, the instrument, where it applies, what it obliges. Three of those
+// survived the reading. The fourth did not, and one axis the hint never
+// mentioned turned out to be what the entries keep coming back to.
+//
+// THE HINT'S "WHERE IT APPLIES" SPLIT IN TWO and only one half is this field's.
+// `extent` below is territorial reach. Whether the standing reaches SCHOOL is a
+// separate question, and it is NOT coded here even though the prose raises it
+// constantly ("Constitutional, not curricular"; "administrative only, no school
+// provision"; "Named as spoken languages, not as school subjects"). The
+// indigenous map carries `mediumOfInstruction` and `taughtAsSubject` as fields
+// of their own, and a column here would answer from their text rather than this
+// one -- the one move the coding-pass rules forbid outright.
+//
+// EUROPE ANSWERS A DIFFERENT AND THINNER QUESTION, which any distribution over
+// this field has to state rather than average away. Its 45 national entries run
+// 142 characters against 218-238 everywhere else; 20% name an instrument against
+// 40-64%; 31% mention school against 55-72%. 28 of them turn on the phrase
+// "steering documents", which is a Eurydice-shaped record of whether a language
+// is listed, not of what its status obliges. So `source`, `force` and `extent`
+// read `not stated` across much of Europe. THE PASS HAS NOW MEASURED THIS, so
+// the figures replace the prediction: `source` is named on 58% of Europe against
+// 70-95% elsewhere, and `force` is stated on 64% against 85-96%. The prediction
+// was wrong about `status`, which Europe answers BEST of the five regions -- 13%
+// `not stated` against 36% in the Americas and 38% in Asia -- because the
+// formula it was written to always answers exactly that question. Estonia's
+// "Neither officially recognised nor named in steering documents" is a
+// documented NONE rather than a silence, and 21 entries reach `none` that way.
+//
+// `extent` DOES NOT DISCRIMINATE AND IS KEPT AS A RECORD OF THAT. It came out
+// 83% `not stated` -- 0% stated in Oceania, 13% in Europe, 23% at best in Asia
+// -- so it is the column this file's own test warns about, describing the
+// corpus's silence rather than the systems. It was the hint's "where it
+// applies", and the answer is that the entries almost never say: reach is left
+// to be inferred from the instrument's level, and inferring it is what the
+// column exists NOT to do. Do not take a distribution over it, and do not read
+// its 15% `named areas or communities` as a count of regional regimes -- it is a
+// count of entries that happened to mention one.
+//
+// THE MULTI-LANGUAGE GRAIN IS THE KNOWN LIMIT. A row is one system, and a system
+// may hold several languages at several standings -- Mauritania names Fula,
+// Soninke and Wolof national while Arabic alone is official; Comoros is the
+// mirror, with Shikomor official and French and Arabic national. `status` is
+// coded for the INDIGENOUS OR REGIONAL languages the map is about, which is what
+// makes those two code differently and correctly. Where an entry gives the
+// status of the majority or colonial language only, and never says what the
+// indigenous one holds, `status` is `not stated` -- Sint Maarten is the worked
+// case, naming Dutch and English official and leaving Papiamento unsaid.
+// WHAT THE FIRST PASS FOUND, AND IT IS NOT WHAT THE VALUES WERE BUILT TO SHOW.
+// Coding all 202 national entries, `official` is NOT the strongest standing. It
+// is the one most likely to do NOTHING: 19% of official languages take `none` or
+// `declaratory only` on `force`, against 8% of `national, not official` and 8%
+// of `recognised without official status`, while `national, not official` is
+// MORE often enforceable (46% against 42%). Comoros, Haiti, Greenland, Guam and
+// Guernsey are all official and all declaratory. The grandest status does the
+// least work, which is worth knowing before anyone reads `official` as the top
+// of a ladder. It is not a ladder, and nothing here is scored.
+const STANDING_STATUS = {
+  'official': 'Named an official language of the state or territory, on the same footing as any other (Comoros: "Shikomor is the official language under the 2001 Constitution"; Aruba: "Official language of Aruba alongside Dutch"; Northern Mariana Islands: "Official languages: Chamorro, Carolinian and English"; New Zealand, where te reo Maori and NZSL are "official languages by statute, not foreign languages"; Samoa, whose 2014 Act "declares Samoan an official language of Samoa")',
+  'official in named areas only': 'Official where it is spoken and not beyond, so the status is real but bounded (Spain: "The other Spanish languages are ALSO OFFICIAL IN THEIR AUTONOMOUS COMMUNITIES", against Castilian as "the official Spanish language of the State"). Distinct from `official` because a speaker outside the named area holds nothing, and distinct from `extent` below, which records reach for a standing of any kind',
+  'national, not official': 'Carries the label "national language" while another language is the official one -- the distinction the francophone and Maghreb constitutions draw, and it is a real demotion rather than a synonym (Mauritania: the Constitution "names Arabic, Fula, Soninke and Wolof as national languages... Arabic alone is the official language of the four"; Mozambique, whose Constitution "values national languages while keeping Portuguese official"; Burkina Faso and Guinea likewise). 38 entries use the phrase, 21 of them in Africa',
+  'recognised without official status': 'Recognised, scheduled or listed in law, with no claim to official status (India: "22 scheduled languages sit in the Eighth Schedule of the Constitution"; Switzerland: "Officially recognised, but not named in top-level steering documents"; Panama, where "Ley 88 of 2010 recognises the languages and alphabets of the indigenous peoples"; Israel, where "Arabic has a special status"; French Polynesia, where the local languages are "the languages of the territory")',
+  'protected as culture': 'What the instrument protects is the people, the culture or the heritage, with the language carried along inside it. Kept separate from recognition of the LANGUAGE because the duty it creates points elsewhere (Japan: "What is protected is Ainu culture: the state must foster those who will inherit it"; Guyana, whose art 149G right "runs with cultural heritage and way of life, in one article of the fundamental rights title"; American Samoa: "Policy to protect against destruction of the Samoan way of life and language")',
+  'named in policy only': 'Appears in a policy, strategy or curriculum document and nowhere with legal force (Serbia: "Ten or more named in steering documents, including Bunjevac"; Micronesia, where "the FSM Language Policy is the instrument promoting local languages and cultures"; South Sudan, whose "General Education Strategy Paper 2012-2017 commits to mother-tongue medium"). The Europe entries reach this value most often, for the reason given above',
+  'none': 'Somebody looked and there is no standing -- NOT the same as nobody having looked (Estonia and Bosnia and Herzegovina: "Neither officially recognised nor named in steering documents"; Egypt: "PEER records no constitutional mention of Nubian or of Berber at Siwa"; Kuwait, whose Constitution "bars discrimination by language but confers no language right")',
+  'not stated': 'The entry does not say what standing the indigenous or regional languages hold, including where it gives the majority language\'s status and stops (Sint Maarten, naming Dutch and English official and leaving Papiamento unsaid; Brazil, which assures use of mother tongues in school under the LDB without ever saying what status they carry)',
+};
+
+// Reusing INSTRUMENT_TYPES verbatim and adding one value, rather than editing
+// the shared constant: `none` there means the entry established that NO
+// instrument creates an entitlement, which is a finding. Several entries here
+// instead describe a standing and never name the instrument behind it, and
+// coding those `none` would assert a finding nobody made. Adding `not stated` to
+// INSTRUMENT_TYPES itself would have changed dld.legalEntitlement's vocabulary
+// underneath 209 stored codings, which is a migration and not this pass's job.
+const STANDING_SOURCE = Object.assign({}, INSTRUMENT_TYPES, {
+  'not stated': 'A standing is described and no instrument is named for it (Benin: "National languages are used first as a subject, then as a vehicle of teaching. The State is bound to fund research and materials" -- a duty, with nothing cited that imposes it). Distinct from `none`, which is the finding that no instrument exists',
+});
+
+// A LIST, because a single instrument routinely does two of these at once and
+// coding one throws the other away. Spain is the clearest: the Constitution both
+// obliges -- "Education administrations MUST GUARANTEE the right to be taught in
+// those languages" -- and confers, in the same breath, the right being
+// guaranteed. Ecuador, Myanmar and Guyana carry the same pair.
+//
+// NON-BINDINGNESS IS NOT A VALUE HERE, deliberately. A policy that "commits to"
+// something is doing the same verb as a statute that does; what differs is the
+// instrument, and `source` already carries that. South Sudan's strategy paper
+// takes `duty to promote` with `source: policy`, and the two columns read
+// together say what one column with a `commitment only` value would have said
+// less clearly.
+const STANDING_FORCE = {
+  'duty to provide': 'Somebody must actually do something -- teach it, fund it, supply it, or comply with a standard (Isle of Man: the "Education Act 2001 REQUIRES the curriculum to provide for the teaching of Manx Gaelic"; Poland: "Schools must provide one where enough students apply"; Myanmar, where "Law obliges state, self-administered division and regional governments to set up ethnic classes"; Nicaragua: "Art. 70 requires units on Caribbean Coast languages"; Curacao, where "official spelling rules bind all publicly funded education institutions")',
+  'duty to promote': 'A duty to protect, promote or develop, with nothing named that anyone must deliver. The commonest force in the corpus and the weakest (Angola, whose Constitution "makes protecting languages of African origin a state task"; Dominica: "Education Act 1997 duty to promote the language and culture of Dominica"; Japan, where the "duty on government is to deepen public understanding of the Ainu through education"; Samoa, where the declaration "obliges promotion of its development and maintenance as a living language")',
+  'right held by speakers': 'Framed as something the speakers hold rather than something the state owes (Tajikistan: "All nations and nationalities hold a constitutional right to use their native language"; Brazil: "Indigenous communities are ASSURED use of their mother tongues in school"; Guyana: "Constitution art 149G gives indigenous peoples a right to protect and preserve their languages"; Myanmar: "Every citizen has a constitutional right to develop their language, literature and culture")',
+  'permission only': 'May, not must -- the language is allowed rather than owed (Mozambique, where the constitutional clause and the 1992 decree were "neither binding -- ENABLING rather than mandatory"; Indonesia: "Local languages may be the medium in the first two grades of primary"; Malaysia and Singapore: "No person may be prohibited from using, teaching or learning any other language"; Nepal, where "the local-subject slot is the route for teaching any of them")',
+  'declaratory only': 'The standing is stated and no consequence is attached to it (India, where the Eighth Schedule lists 22 languages and the entry records that only six non-scheduled languages are actually used as media; Odisha: "Official-language statute is administrative only, no school provision"; Mauritania: "Constitutional, not curricular: PEER names no school programme in these languages"; Guam, where Chamorro is official yet "not required for official recording of public acts and transactions" and the English version binds "where it materially differs")',
+  'none': 'The entry establishes that the standing obliges nobody to anything -- checked, and there is nothing (Kuwait: the Constitution "bars discrimination by language but confers no language right"; American Samoa: "A policy clause, NOT AN ENTITLEMENT"). Distinct from `declaratory only`, where a standing exists and simply does no work, and from `not stated`',
+  'not stated': 'The entry does not say what the standing obliges. Expected to be the commonest value across Europe, whose entries record whether a language is listed and stop',
+};
+
+const STANDING_EXTENT = {
+  'nationwide': 'The standing runs across the whole state or territory (Japan: "Policy runs nationwide, as the Ainu live not only in Hokkaido but throughout Japan" -- the entry says so outright, which is why it is the worked example rather than an inference from silence)',
+  'named areas or communities': 'The standing runs in named regions, districts or communities and not elsewhere (Spain\'s Autonomous Communities; Nicaragua, whose art. 70 requirement attaches to "Caribbean Coast languages"; Albania, where the home language is studiable "in Macedonian and Greek minority areas"; South Australia, binding "all educators and staff in ten named Anangu schools" and "elsewhere only a guide")',
+  'not stated': 'The entry does not say how far the standing reaches. The honest value wherever reach is left to be inferred from the instrument\'s own level, since a national constitution saying nothing about territory is not the same as one saying "nationwide"',
+};
+
 const HISTORY_SCHEME = id => ({
   // MANY: one coding row per policyHistory row, not per entry.
   many: true,
@@ -599,6 +708,18 @@ const HISTORY_SCHEME = id => ({
   },
 });
 const SCHEMES = {
+  'indigenous.standing': {
+    // One system, so this fits what storage holds. A system may hold several
+    // languages at several standings; see the grain note on STANDING_STATUS.
+    row: 'one national or sub-national system',
+    columns: {
+      status: STANDING_STATUS,
+      source: STANDING_SOURCE,
+      // A LIST -- Spain obliges and confers in one clause. The rest take one.
+      force: STANDING_FORCE,
+      extent: STANDING_EXTENT,
+    },
+  },
   'dld.identificationCriteria': {
     row: 'one national or sub-national system',
     columns: {
@@ -716,10 +837,15 @@ module.exports = {
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
   HISTORY_OPERATION,
   NOT_AN_OPERATION, SCOPE_CHANGE,
+  STANDING_STATUS, STANDING_SOURCE, STANDING_FORCE, STANDING_EXTENT,
   SCHEMES,
   isHistoryOperation: v => has(HISTORY_OPERATION, v),
   isNotAnOperation: v => has(NOT_AN_OPERATION, v),
   isScopeChange: v => has(SCOPE_CHANGE, v),
+  isStandingStatus: v => has(STANDING_STATUS, v),
+  isStandingSource: v => has(STANDING_SOURCE, v),
+  isStandingForce: v => has(STANDING_FORCE, v),
+  isStandingExtent: v => has(STANDING_EXTENT, v),
   isThresholdBasis: v => has(THRESHOLD_BASIS, v),
   isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
   isAssessmentLanguage: v => has(ASSESSMENT_LANGUAGE, v),
