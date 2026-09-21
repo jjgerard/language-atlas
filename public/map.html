@@ -212,6 +212,20 @@
   margin: 7px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--ink-soft);
   padding-left: 10px; border-left: 2px solid var(--hair); white-space: normal;
 }
+.cpanval .cglist {
+  margin: 5px 0 0; padding: 0 0 0 10px; list-style: none;
+  border-left: 2px solid var(--hair);
+}
+.cpanval .cglist li {
+  position: relative; margin: 0 0 4px; padding-left: 13px;
+  font-size: 12.5px; line-height: 1.55; color: var(--ink-soft);
+}
+.cpanval .cglist li:last-child { margin-bottom: 0; }
+.cpanval .cglist li::before {
+  content: ''; position: absolute; left: 2px; top: .62em;
+  width: 4px; height: 4px; border-radius: 50%; background: var(--ink-faint);
+}
+.cpanval .ctail { font-style: italic; }
 .cpanval .cnone { font-size: 13px; color: var(--ink-soft); margin: 0; }
 .cpansrc { border-top: 1px dashed var(--hair); padding-top: 11px; }
 .cpansrc .ch {
@@ -2139,6 +2153,39 @@ function linkList(links) {
  */
 let panelFull = false;
 
+/* A gloss laid out so it can be read rather than waded through.
+ *
+ * Every one of them is written the same way -- a definition, then the entries
+ * that forced the value to exist, semicolon-separated inside one parenthesis,
+ * then sometimes a note about what it is NOT. Run together that is a wall; the
+ * examples are the part a reader checks the coding against, and they are a
+ * list, so they are laid out as one.
+ *
+ * Nothing is reworded, dropped or reordered. Only the parenthesis is opened
+ * out, and only when it holds more than one example -- a single example reads
+ * better in the sentence that introduces it.
+ */
+function glossHTML(text) {
+  const g = String(text);
+  const open = g.indexOf('(');
+  if (open < 0) return `<p class="cgloss">${esc(g)}</p>`;
+  // The matching close, counting depth -- several glosses quote a source that
+  // has parentheses of its own.
+  let depth = 0, close = -1;
+  for (let i = open; i < g.length; i++) {
+    if (g[i] === '(') depth++;
+    else if (g[i] === ')' && --depth === 0) { close = i; break; }
+  }
+  if (close < 0) return `<p class="cgloss">${esc(g)}</p>`;
+  const items = g.slice(open + 1, close).split(/;\s+/).map(x => x.trim()).filter(Boolean);
+  if (items.length < 2) return `<p class="cgloss">${esc(g)}</p>`;
+  const lead = g.slice(0, open).trim().replace(/[,:]$/, '');
+  const tail = g.slice(close + 1).replace(/^[.\s]+/, '').trim();
+  return `<p class="cgloss">${esc(lead)}</p>
+    <ul class="cglist">${items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+    ${tail ? `<p class="cgloss ctail">${esc(tail)}</p>` : ''}`;
+}
+
 function codedPanelHTML(u) {
   const d = domain();
   const [fk, col] = CODED.key.split('.');
@@ -2156,7 +2203,7 @@ function codedPanelHTML(u) {
       : ((SCALE && SCALE.map.get(v)) || 'var(--cat-other)');
     const head = `<span class="dot" style="background:${swatch}"></span>${esc(String(v))}`;
     return gloss
-      ? `<details class="cvwrap" open><summary class="cv${ordinal ? ' ord' : ''}">${head}</summary><p class="cgloss">${esc(String(gloss))}</p></details>`
+      ? `<details class="cvwrap" open><summary class="cv${ordinal ? ' ord' : ''}">${head}</summary>${glossHTML(gloss)}</details>`
       : `<div class="cv${ordinal ? ' ord' : ''}">${head}</div>`;
   }).join('') : '';
 

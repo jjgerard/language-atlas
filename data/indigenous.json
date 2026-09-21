@@ -2321,7 +2321,20 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the community, not the language",
+    "stages": "into secondary"
+   }
+  }
  },
  {
   "countryCode": "AU",
@@ -2435,7 +2448,23 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "coding": {
+   "standing": {
+    "status": "recognised without official status",
+    "source": "statute",
+    "force": [
+     "right held by speakers",
+     "duty to promote"
+    ],
+    "extent": "nationwide"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "into secondary"
+   }
+  }
  },
  {
   "countryCode": "AU",
@@ -2481,7 +2510,25 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "coding": {
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "duty to provide",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "not stated",
+    "secured_by": "left to the school"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "language and culture together",
+    "stages": "not stated"
+   }
+  }
  },
  {
   "countryCode": "AU",
@@ -2531,7 +2578,25 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "coding": {
+   "standing": {
+    "status": "recognised without official status",
+    "source": "statute",
+    "force": "right held by speakers",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "support only",
+    "reach": "not stated",
+    "secured_by": "permission"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "into secondary"
+   }
+  }
  },
  {
   "countryCode": "AU",
@@ -2585,7 +2650,25 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "coding": {
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "duty to provide",
+    "extent": "named areas or communities"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "into secondary",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the language",
+    "stages": "into secondary"
+   }
+  }
  },
  {
   "countryCode": "AU",
@@ -2627,7 +2710,20 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "coding": {
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "right held by speakers",
+    "extent": "nationwide"
+   },
+   "taughtAsSubject": {
+    "status": "not taught",
+    "object": "not stated",
+    "stages": "not stated"
+   }
+  }
  },
  {
   "countryCode": "AU",
@@ -2783,7 +2879,23 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "declaratory only",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -2834,7 +2946,25 @@
     "genus": "Western Pama-Nyungan",
     "typology": ""
    }
-  ]
+  ],
+  "coding": {
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "declaratory only",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "support only",
+    "reach": "not stated",
+    "secured_by": "practice only"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "not stated"
+   }
+  }
  },
  {
   "countryCode": "AW",
@@ -3533,7 +3663,20 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "none",
+    "source": "none",
+    "force": "none",
+    "extent": "not stated"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   }
+  }
  },
  {
   "countryCode": "BF",
@@ -5565,7 +5708,23 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "permission only",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "permitted, not implemented",
+    "reach": "not stated",
+    "secured_by": "permission"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "language and culture together",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -5867,7 +6026,23 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "permitted, not implemented",
+    "reach": "not stated",
+    "secured_by": "permission"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -6149,7 +6324,23 @@
      ],
      "operation": "state of affairs recorded"
     }
-   ]
+   ],
+   "standing": {
+    "status": "recognised without official status",
+    "source": "statute",
+    "force": "declaratory only",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "not stated",
+    "secured_by": "permission"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "language and culture together",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -6286,7 +6477,23 @@
      ],
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "standing": {
+    "status": "recognised without official status",
+    "source": "statute",
+    "force": "declaratory only",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "sole medium",
+    "reach": "early primary",
+    "secured_by": "practice only"
+   },
+   "taughtAsSubject": {
+    "status": "not taught",
+    "object": "not stated",
+    "stages": "not stated"
+   }
   }
  },
  {
@@ -6420,7 +6627,18 @@
      ],
      "operation": "body or programme changed"
     }
-   ]
+   ],
+   "standing": {
+    "status": "not stated",
+    "source": "not stated",
+    "force": "not stated",
+    "extent": "not stated"
+   },
+   "mediumOfInstruction": {
+    "role": "not stated",
+    "reach": "not stated",
+    "secured_by": "not stated"
+   }
   }
  },
  {
@@ -6929,7 +7147,23 @@
      ],
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "standing": {
+    "status": "official",
+    "source": "statute",
+    "force": "duty to provide",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "sole medium",
+    "reach": "not stated",
+    "secured_by": "on request or threshold"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -6988,7 +7222,25 @@
     "genus": "Algonquian",
     "typology": ""
    }
-  ]
+  ],
+  "coding": {
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "not stated",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the community, not the language",
+    "stages": "into secondary"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -7205,7 +7457,23 @@
      ],
      "operation": "body or programme changed"
     }
-   ]
+   ],
+   "standing": {
+    "status": "official",
+    "source": "statute",
+    "force": "duty to provide",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "into secondary",
+    "secured_by": "right"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -7312,7 +7580,25 @@
     "genus": "Northern Iroquoian",
     "typology": "Word order No dominant order; Weakly prefixing; Simple tone system"
    }
-  ]
+  ],
+  "coding": {
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "not stated",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "into secondary"
+   }
+  }
  },
  {
   "countryCode": "CA",
@@ -7427,7 +7713,23 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "not stated",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   },
+   "taughtAsSubject": {
+    "status": "not taught",
+    "object": "the community, not the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -7587,7 +7889,23 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "standing": {
+    "status": "recognised without official status",
+    "source": "statute",
+    "force": "duty to provide",
+    "extent": "named areas or communities"
+   },
+   "mediumOfInstruction": {
+    "role": "sole medium",
+    "reach": "not stated",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "not taught",
+    "object": "not stated",
+    "stages": "not stated"
+   }
   }
  },
  {
@@ -7894,7 +8212,23 @@
      ],
      "operation": "instrument made"
     }
-   ]
+   ],
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "not stated",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "permitted, not implemented",
+    "reach": "not stated",
+    "secured_by": "permission"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -8094,7 +8428,23 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "duty to promote",
+    "extent": "named areas or communities"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "language and culture together",
+    "stages": "not stated"
+   }
   }
  },
  {
@@ -9370,7 +9720,20 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "not stated",
+    "source": "not stated",
+    "force": "not stated",
+    "extent": "not stated"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -9407,7 +9770,25 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "protected as culture",
+    "source": "regulation",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the community, not the language",
+    "stages": "not stated"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -9444,7 +9825,20 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "recognised without official status",
+    "source": "statute",
+    "force": "right held by speakers",
+    "extent": "nationwide"
+   },
+   "taughtAsSubject": {
+    "status": "not stated",
+    "object": "not stated",
+    "stages": "not stated"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -9503,6 +9897,24 @@
     2,
     4
    ]
+  },
+  "coding": {
+   "standing": {
+    "status": "protected as culture",
+    "source": "regulation",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "permitted, not implemented",
+    "reach": "not stated",
+    "secured_by": "permission"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the community, not the language",
+    "stages": "all levels"
+   }
   }
  },
  {
@@ -9562,6 +9974,24 @@
     2,
     3
    ]
+  },
+  "coding": {
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "right held by speakers",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "transitional, early exit",
+    "reach": "into secondary",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "not stated"
+   }
   }
  },
  {
@@ -9612,7 +10042,25 @@
     "genus": "",
     "typology": ""
    }
-  ]
+  ],
+  "coding": {
+   "standing": {
+    "status": "recognised without official status",
+    "source": "statute",
+    "force": "right held by speakers",
+    "extent": "named areas or communities"
+   },
+   "mediumOfInstruction": {
+    "role": "permitted, not implemented",
+    "reach": "not stated",
+    "secured_by": "permission"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the community, not the language",
+    "stages": "into secondary"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -9684,7 +10132,26 @@
      ],
      "operation": "instrument made"
     }
-   ]
+   ],
+   "standing": {
+    "status": "official",
+    "source": "statute",
+    "force": [
+     "duty to provide",
+     "right held by speakers"
+    ],
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "not stated",
+    "secured_by": "permission"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "all levels"
+   }
   }
  },
  {
@@ -9752,7 +10219,23 @@
      ],
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "standing": {
+    "status": "recognised without official status",
+    "source": "statute",
+    "force": "declaratory only",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "permitted, not implemented",
+    "reach": "not stated",
+    "secured_by": "permission"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "the community, not the language",
+    "stages": "all levels"
+   }
   }
  },
  {
@@ -9829,7 +10312,18 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "standing": {
+    "status": "protected as culture",
+    "source": "regulation",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "taughtAsSubject": {
+    "status": "not taught",
+    "object": "the community, not the language",
+    "stages": "all levels"
+   }
   }
  },
  {
@@ -9921,6 +10415,24 @@
     3,
     4
    ]
+  },
+  "coding": {
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "right held by speakers",
+    "extent": "named areas or communities"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "into secondary",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "language and culture together",
+    "stages": "not stated"
+   }
   }
  },
  {
@@ -9954,7 +10466,15 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "protected as culture",
+    "source": "regulation",
+    "force": "duty to provide",
+    "extent": "nationwide"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -9987,7 +10507,20 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "not stated",
+    "source": "not stated",
+    "force": "not stated",
+    "extent": "not stated"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -10050,7 +10583,23 @@
      ],
      "operation": "instrument made"
     }
-   ]
+   ],
+   "standing": {
+    "status": "protected as culture",
+    "source": "statute",
+    "force": "duty to promote",
+    "extent": "named areas or communities"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the community, not the language",
+    "stages": "all levels"
+   }
   }
  },
  {
@@ -10159,7 +10708,23 @@
      ],
      "operation": "instrument replaced"
     }
-   ]
+   ],
+   "standing": {
+    "status": "recognised without official status",
+    "source": "regulation",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "not stated",
+    "secured_by": "not stated"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the language",
+    "stages": "not stated"
+   }
   }
  },
  {
@@ -10197,7 +10762,25 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "protected as culture",
+    "source": "regulation",
+    "force": "not stated",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   },
+   "taughtAsSubject": {
+    "status": "not stated",
+    "object": "the community, not the language",
+    "stages": "not stated"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -10238,7 +10821,15 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "protected as culture",
+    "source": "regulation",
+    "force": "duty to provide",
+    "extent": "named areas or communities"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -10313,7 +10904,26 @@
      ],
      "operation": "instrument made"
     }
-   ]
+   ],
+   "standing": {
+    "status": "official in named areas only",
+    "source": "statute",
+    "force": [
+     "duty to provide",
+     "right held by speakers"
+    ],
+    "extent": "named areas or communities"
+   },
+   "mediumOfInstruction": {
+    "role": "permitted, not implemented",
+    "reach": "not stated",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -10381,6 +10991,24 @@
     2,
     3
    ]
+  },
+  "coding": {
+   "standing": {
+    "status": "recognised without official status",
+    "source": "regulation",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "into secondary",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the language",
+    "stages": "all levels"
+   }
   }
  },
  {
@@ -10430,7 +11058,25 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "protected as culture",
+    "source": "regulation",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the community, not the language",
+    "stages": "into secondary"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -10515,7 +11161,23 @@
      ],
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "standing": {
+    "status": "official in named areas only",
+    "source": "statute",
+    "force": "duty to provide",
+    "extent": "named areas or communities"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "not stated",
+    "secured_by": "permission"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the language",
+    "stages": "all levels"
+   }
   }
  },
  {
@@ -10577,7 +11239,20 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "protected as culture",
+    "source": "regulation",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "the community, not the language",
+    "stages": "all levels"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -10622,6 +11297,19 @@
     2,
     4
    ]
+  },
+  "coding": {
+   "standing": {
+    "status": "recognised without official status",
+    "source": "regulation",
+    "force": "permission only",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "permitted, not implemented",
+    "reach": "not stated",
+    "secured_by": "permission"
+   }
   }
  },
  {
@@ -10655,7 +11343,20 @@
   "speakers": [],
   "policyHistory": [],
   "inventory": "Not applicable: Glottolog counts living languages per country, so this unit has no count of its own. Its country entry carries the national figure.",
-  "languages": []
+  "languages": [],
+  "coding": {
+   "standing": {
+    "status": "not stated",
+    "source": "not stated",
+    "force": "not stated",
+    "extent": "not stated"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   }
+  }
  },
  {
   "countryCode": "CN",
@@ -10743,7 +11444,23 @@
      ],
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "standing": {
+    "status": "recognised without official status",
+    "source": "statute",
+    "force": "duty to provide",
+    "extent": "named areas or communities"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "into secondary",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -10874,7 +11591,23 @@
      ],
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "standing": {
+    "status": "official",
+    "source": "statute",
+    "force": "duty to provide",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "into secondary",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -10930,6 +11663,24 @@
     2,
     4
    ]
+  },
+  "coding": {
+   "standing": {
+    "status": "official",
+    "source": "regulation",
+    "force": "duty to provide",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "into secondary",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -10993,7 +11744,26 @@
      ],
      "operation": "instrument made"
     }
-   ]
+   ],
+   "standing": {
+    "status": "recognised without official status",
+    "source": "statute",
+    "force": [
+     "right held by speakers",
+     "duty to promote"
+    ],
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "into secondary",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "all levels"
+   }
   }
  },
  {
@@ -11048,7 +11818,23 @@
      ],
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "standing": {
+    "status": "protected as culture",
+    "source": "statute",
+    "force": "duty to promote",
+    "extent": "named areas or communities"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -14549,7 +15335,23 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "standing": {
+    "status": "official in named areas only",
+    "source": "statute",
+    "force": "duty to provide",
+    "extent": "named areas or communities"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "into secondary",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -16387,7 +17189,25 @@
     "genus": "Indic",
     "typology": "Word order SOV; Adjective-Noun; Strongly suffixing"
    }
-  ]
+  ],
+  "coding": {
+   "standing": {
+    "status": "not stated",
+    "source": "not stated",
+    "force": "not stated",
+    "extent": "not stated"
+   },
+   "mediumOfInstruction": {
+    "role": "support only",
+    "reach": "not stated",
+    "secured_by": "practice only"
+   },
+   "taughtAsSubject": {
+    "status": "elective",
+    "object": "the language",
+    "stages": "into secondary"
+   }
+  }
  },
  {
   "countryCode": "GB",
@@ -16509,7 +17329,23 @@
      ],
      "operation": "instrument replaced"
     }
-   ]
+   ],
+   "standing": {
+    "status": "recognised without official status",
+    "source": "statute",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "sole medium",
+    "reach": "not stated",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "not stated",
+    "object": "not stated",
+    "stages": "not stated"
+   }
   }
  },
  {
@@ -16619,7 +17455,23 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "standing": {
+    "status": "official",
+    "source": "statute",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "sole medium",
+    "reach": "all primary",
+    "secured_by": "on request or threshold"
+   },
+   "taughtAsSubject": {
+    "status": "not stated",
+    "object": "not stated",
+    "stages": "not stated"
+   }
   }
  },
  {
@@ -16805,7 +17657,26 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "standing": {
+    "status": "official",
+    "source": "statute",
+    "force": [
+     "duty to provide",
+     "right held by speakers"
+    ],
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "into secondary",
+    "secured_by": "system rule"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
@@ -19065,7 +19936,23 @@
      ],
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "standing": {
+    "status": "official",
+    "source": "constitution",
+    "force": "not stated",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "into secondary",
+    "secured_by": "left to the school"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "the language",
+    "stages": "into secondary"
+   }
   }
  },
  {
