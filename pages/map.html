@@ -1107,6 +1107,18 @@ const FIELD_STATE = { h: 'has', l: 'looked', x: 'na', n: 'none' };
    Spain, Italy and the United States, whose rule_locus carries what they say.
    Both keep the dot texture, because the map's claim is only "text here, no
    value"; the legend and the card carry the why. */
+/* A DOCUMENTED ABSENCE answers the field and is complete -- the ruling this
+   project already made, and what derive.js encodes by counting one as filled on
+   the coverage map. 117 of the 125 national newcomerCriteria entries with no
+   coding carry one, which is why they never reached a coding: `coding.js` says
+   outright that the absence case is NOT a value in DESIGNATION, because a
+   system with no category carries the flag on the field instead and its
+   removalCriteria is Not applicable.
+   So this is not a gap and the coded view must stop drawing it as one. It takes
+   #hatch, which already means "somebody looked and there is nothing here"; a
+   documented absence is the stronger form of the same claim, and the legend
+   keeps the two rows apart in words. */
+const isAbsent = (u, key) => !!((u && u.absences) || {})[key.split('.')[0]];
 const isUnset = (u, key) => {
   const cd = (u && u.coding) || {};
   const f = key.split('.')[0];
@@ -1128,6 +1140,7 @@ function fillFor(u, st, own) {
     if (!vals) {
       // Why there is no colour, taken from the FIELD. Four answers, and three
       // of them are answers rather than gaps.
+      if (isAbsent(o, CODED.key)) return 'url(#hatch)';  // established: nothing here
       const fs = fieldStateOf(o, CODED.key.split('.')[0]);
       if (fs === 'has') return 'url(#uncoded)';   // prose here, nobody coded it
       if (fs === 'looked') return 'url(#hatch)';  // looked, found nothing
@@ -1941,6 +1954,7 @@ function codedTipHTML(u, terr, via, fill) {
   const fs = fieldStateOf(u, fk);
   const answer = vals
     ? vals.map(v => esc(v)).join(', ')
+    : isAbsent(u, CODED.key) ? 'Recorded as absent'
     : isUnset(u, CODED.key) ? 'Coded, and no value fitted'
     : fs === 'looked' ? 'Looked, found nothing'
     : fs === 'na' ? 'Not applicable here'
@@ -2147,7 +2161,9 @@ function codedPanelHTML(u) {
   // an entry can be full and this question still unanswered, or answered by
   // saying it does not apply.
   const fs = fieldStateOf(u, fk);
-  const noValue = isUnset(u, CODED.key)
+  const noValue = isAbsent(u, CODED.key)
+    ? `<p class="cnone">${esc(u.name)} has no such thing, and the entry establishes that rather than leaving it open. That is a complete answer to this question, not a gap.</p>`
+    : isUnset(u, CODED.key)
     ? `<p class="cnone">Somebody coded this entry and left this question with no value, because none of them fitted what it says. The text is below.</p>`
     : fs === 'looked'
     ? `<p class="cnone">Somebody looked for this on ${esc(u.name)} and found nothing to record.</p>`
@@ -2510,12 +2526,16 @@ function paintCatLegend() {
   // Only the states actually on the map get a row. A legend that lists what is
   // not there is the same lie as a legend that omits what is.
   const fk0 = CODED.key.split('.')[0];
-  const tally = { has: 0, unset: 0, looked: 0, na: 0, none: 0 };
+  const tally = { has: 0, unset: 0, absent: 0, looked: 0, na: 0, none: 0 };
   for (const u of (B.units[domainId] || [])) {
     if (codedValues(u, CODED.key)) continue;
+    if (isAbsent(u, CODED.key)) { tally.absent++; continue; }
     if (isUnset(u, CODED.key)) { tally.unset++; continue; }
     tally[fieldStateOf(u, fk0)]++;
   }
+  // First, because on several questions it is the largest group and it is an
+  // ANSWER -- the entry establishes that the thing does not exist.
+  if (tally.absent) rows.push(`<div class="cl" disabled>${sw('url(#hatch)')}<span>Recorded as absent</span><span class="n">${tally.absent}</span></div>`);
   if (tally.has) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Recorded, not yet coded</span><span class="n">${tally.has}</span></div>`);
   if (tally.unset) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Coded, no value fitted</span><span class="n">${tally.unset}</span></div>`);
   if (tally.looked) rows.push(`<div class="cl" disabled>${sw('url(#hatch)')}<span>Looked, found nothing</span><span class="n">${tally.looked}</span></div>`);
