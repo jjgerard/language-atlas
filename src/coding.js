@@ -336,6 +336,63 @@ const EVIDENCE_TYPE = {
   'not stated': 'The entry does not make clear what kind of source this is',
 };
 
+// ===========================================================================
+// dld.serviceModel
+// ===========================================================================
+//
+// Derived 2026-09-21 by reading 65 entries sampled across all five regions,
+// not by proposing a shape and checking it fitted. What VARIES turned out to
+// be four things, and only the first was expected.
+//
+// The field is a description of a service, so the temptation is to code what
+// the service IS. That is not comparable -- "resource centres", "logopedic
+// points", "Centros de Atencion Multiple" and "the Frank Hilton Organisation"
+// are four names for four countries. What compares is who pays, who does the
+// work, where the child is when it happens, and what kind of source says so.
+
+// WHICH SECTOR CARRIES IT. The axis that separates systems most sharply, and
+// the reason this field is worth coding: the same nominal entitlement lands
+// completely differently depending on who employs the therapist.
+//
+// A LIST, because the corpus keeps naming more than one and coding a single
+// "main" sector would throw away the interesting cases. Nepal is health AND
+// private ("98% of the rehabilitation workforce is private"); Cambodia is
+// "NGO- and private-led"; Australia is "fragmented across three systems that
+// do not align". Sixteen of the 65 read named two or more.
+const SERVICE_SECTOR = {
+  'education service': 'The education system employs or sites the service (New Zealand: "Education-led: SLTs are employed by the Ministry of Education"; Kazakhstan\'s statutory logopedic points attached to schools; Romania, public education 81%)',
+  'health service': 'The health system does (Brunei, whose Child Development Centre is the paediatric hub; India\'s District Early Intervention Centre at the district hospital; China, where "the profession sits in rehabilitation medicine, not in education"; Czechia, public health 77%)',
+  'private practice': 'Paid-for private provision is what the entry describes (France, private practice 84%; Senegal, where "all orthophonistes work in the private sector, and all are based in Dakar"; Burkina Faso: "All work in private structures")',
+  'ngo or charity': 'Non-state organisations carry it (Cambodia, "NGO- and private-led"; Madagascar, where "most specialised centres are run by NGOs or faith-based organisations"; Fiji\'s Frank Hilton Organisation; Vanuatu Society for People with Disability)',
+  'none established': 'Checked, and no sector provides it (Cameroon: "No logopedie or orthophonie service exists in the public sector"; Eritrea: "No speech or language therapy of any kind"; Nauru, where "speech" returns 0 hits in the Act, the policy and the review)',
+  'not stated': 'The entry describes provision without establishing who carries it',
+};
+
+// WHO ACTUALLY DOES THE WORK. Independent of the sector, and the corpus states
+// it often enough to be worth its own column because the answer is frequently
+// "not a clinician". Mozambique says it outright.
+const SERVICE_PRACTITIONER = {
+  'specialist clinician': 'A speech and language therapist, orthophoniste or logopedist is named as the person delivering it (Nepal, "delivered by speech and language therapists within a multi-disciplinary rehabilitation team"; Jordan, one speech therapist per school support unit)',
+  'teacher or generalist': 'Teachers or special-education staff deliver it and no clinician is named (Mozambique: "Service is teacher-mediated, not clinician-mediated, in PEER\'s account"; Guinea-Bissau, "delivered by early childhood educators and teachers who completed special courses")',
+  'clinician advises, teacher delivers': 'A consultative model: the specialist advises and the class teacher carries it out (Belize, where "the model is consultative teacher support rather than direct therapy" and "the officer advises the class teacher"; Liechtenstein, "specialists cooperating with in-school teachers"; Montenegro\'s resource centres, which do "advisory work, teacher training and materials")',
+  'nobody named': 'The entry establishes that no practitioner exists to deliver it (Marshall Islands and Palau, each reporting "zero speech-language pathologists" to IDEA Part B; Tonga, where the Pacific review "lists speech pathologists as a needed specialist, not a present one")',
+  'not stated': 'The entry does not establish who delivers it',
+};
+
+// WHERE THE CHILD IS. Kept separate from sector because they cross: a service
+// can be education-run and still deliver in a segregated school.
+//
+// Comes out `not stated` on roughly two thirds, which is a fact about the
+// corpus worth having rather than a fault in the column -- most entries name a
+// provider without saying where the child sits while receiving it.
+const SERVICE_PLACEMENT = {
+  'mainstream first': 'The ordinary class is the default and a special setting needs justifying (Montenegro: "Mainstream inclusion is stated as the first option and an imperative"; Guam, "Special classes only where regular class with supplementary aids cannot work"; New Caledonia, "Ordinary class first"; Palau, whose statute "puts services in regular classrooms and regular schools")',
+  'withdrawal from class': 'The child leaves the ordinary class for sessions (Marshall Islands: "part-time direct instruction in the regular class, or a pull-out programme"; Singapore\'s programme sending a professional into the preschool "for 2 to 4 hours weekly")',
+  'both routes named': 'Mainstream and special settings are both named as available (Guyana: "Dual track: integration into regular schools plus state and private special schools"; Guinea-Bissau, "special education in regular or specific establishments"; Mexico, where the Centros de Atencion Multiple option does "not cancel" the mainstream one)',
+  'special setting': 'A special school, centre or class is what the entry names (Eritrea\'s three special schools; Angola\'s "22 provincial special schools across 15 provinces"; the Dominican Republic\'s 36 special education centres; Suriname, where 18 of the special schools are in Paramaribo and five districts have none)',
+  'not stated': 'The entry does not establish where the child is taught',
+};
+
 // WHO DECIDES. Same purpose as the eal axis -- the same test applied by a
 // clinician, a commission or a school is three different systems.
 const DECIDER_TYPES = {
@@ -1005,6 +1062,16 @@ const SCHEMES = {
   // properly. `bilingual_handling` lived only on identificationCriteria, where
   // it came out `silent` on 187 of 193 -- a finding about where drafters put
   // the answer, not about what systems do. 104 of those 187 have prose here.
+  'dld.serviceModel': {
+    row: 'one national or sub-national system',
+    columns: {
+      // `sectors` is a LIST -- see the note on SERVICE_SECTOR.
+      sectors: SERVICE_SECTOR,
+      practitioner: SERVICE_PRACTITIONER,
+      placement: SERVICE_PLACEMENT,
+      evidence_type: EVIDENCE_TYPE,
+    },
+  },
   'dld.multilingualProvision': {
     row: 'one national or sub-national system',
     columns: {
@@ -1063,6 +1130,7 @@ module.exports = {
   INSTRUMENT_TYPES, OBLIGES_LEVELS, DUTY_TYPES, REDRESS_TYPES,
   TEST_TYPES, BILINGUAL_FIT, MODALITY, LANGUAGE_DOMAINS,
   ASSESSMENT_LANGUAGE, LOCAL_NORMS, EVIDENCE_TYPE,
+  SERVICE_SECTOR, SERVICE_PRACTITIONER, SERVICE_PLACEMENT,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
   HISTORY_OPERATION,
@@ -1087,6 +1155,9 @@ module.exports = {
   isThresholdBasis: v => has(THRESHOLD_BASIS, v),
   isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
   isAssessmentLanguage: v => has(ASSESSMENT_LANGUAGE, v),
+  isServiceSector: v => has(SERVICE_SECTOR, v),
+  isServicePractitioner: v => has(SERVICE_PRACTITIONER, v),
+  isServicePlacement: v => has(SERVICE_PLACEMENT, v),
   isLocalNorms: v => has(LOCAL_NORMS, v),
   isEvidenceType: v => has(EVIDENCE_TYPE, v),
   isDecider: v => has(DECIDER_TYPES, v),

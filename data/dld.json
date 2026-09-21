@@ -132,7 +132,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -234,7 +240,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -356,7 +368,13 @@
      "occurrence": 1,
      "operation": "instrument made"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "none established",
+    "practitioner": "nobody named",
+    "placement": "special setting",
+    "evidence_type": "not stated"
+   }
   }
  },
  {
@@ -509,7 +527,13 @@
      "occurrence": 1,
      "operation": "international instrument accepted"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -681,7 +705,13 @@
      ],
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "not stated",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "not stated"
+   }
   }
  },
  {
@@ -836,7 +866,13 @@
      "occurrence": 1,
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -918,7 +954,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -1041,7 +1083,13 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "clinician advises, teacher delivers",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   },
   "slots": {
    "dischargeCriteria": [
@@ -1267,7 +1315,13 @@
      "occurrence": 1,
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -1446,7 +1500,17 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "private practice",
+     "health service",
+     "education service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "practitioner survey"
+   }
   }
  },
  {
@@ -1604,7 +1668,16 @@
      "occurrence": 1,
      "operation": "state of affairs recorded"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "education service",
+     "private practice"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -2748,7 +2821,16 @@
      "duty_type": "insurer",
      "redress_type": "not stated"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "health service",
+     "education service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "special setting",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -2854,7 +2936,13 @@
      "occurrence": 1,
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -2996,7 +3084,13 @@
      "occurrence": 1,
      "operation": "instrument replaced"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -3146,7 +3240,13 @@
      "occurrence": 1,
      "operation": "state of affairs recorded"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -3234,7 +3334,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "ngo or charity",
+    "practitioner": "specialist clinician",
+    "placement": "special setting",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -3563,7 +3669,13 @@
      "occurrence": 1,
      "operation": "plan or strategy issued"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "private practice",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -3759,7 +3871,16 @@
      ],
      "operation": "instrument replaced"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "education service",
+     "private practice"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "practitioner survey"
+   }
   }
  },
  {
@@ -3840,7 +3961,16 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "education service",
+     "ngo or charity"
+    ],
+    "practitioner": "not stated",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -3954,7 +4084,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "none established",
+    "practitioner": "nobody named",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -4082,7 +4218,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "not stated",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -4186,7 +4328,13 @@
      "occurrence": 1,
      "operation": "instrument made"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "health service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -4320,7 +4468,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -4414,7 +4568,13 @@
      "occurrence": 1,
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "not stated",
+    "practitioner": "not stated",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -4588,7 +4748,13 @@
      "occurrence": 1,
      "operation": "international instrument accepted"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "nobody named",
+    "placement": "special setting",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -4657,7 +4823,13 @@
      "duty_type": "not stated",
      "redress_type": "not stated"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -4797,7 +4969,13 @@
      "occurrence": 1,
      "operation": "plan or strategy issued"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "teacher or generalist",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -4928,7 +5106,13 @@
      "occurrence": 1,
      "operation": "instrument made"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "withdrawal from class",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -5017,7 +5201,13 @@
      "occurrence": 1,
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "clinician advises, teacher delivers",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -5097,7 +5287,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -6348,7 +6544,13 @@
      "occurrence": 1,
      "operation": "plan or strategy issued"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "ngo or charity",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -6436,7 +6638,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "ngo or charity",
+    "practitioner": "nobody named",
+    "placement": "special setting",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -6569,7 +6777,13 @@
      "occurrence": 1,
      "operation": "plan or strategy issued"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "not stated",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -6745,7 +6959,16 @@
      "occurrence": 1,
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "education service",
+     "private practice"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "practitioner survey"
+   }
   }
  },
  {
@@ -6888,7 +7111,13 @@
      "occurrence": 1,
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "private practice",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -7077,7 +7306,13 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "both routes named",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -7192,7 +7427,12 @@
      "occurrence": 1,
      "operation": "plan or strategy issued"
     }
-   ]
+   ],
+   "serviceModel": {
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -7349,7 +7589,13 @@
      "occurrence": 1,
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "health service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -9096,7 +9342,13 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "teacher or generalist",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   },
   "slots": {
    "dischargeCriteria": [
@@ -9207,7 +9459,13 @@
      "occurrence": 1,
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -9431,7 +9689,13 @@
      ],
      "operation": "state of affairs recorded"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -9505,7 +9769,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "nobody named",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -9582,7 +9852,13 @@
      "occurrence": 1,
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "special setting",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -9850,7 +10126,16 @@
      ],
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "private practice",
+     "education service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "practitioner survey"
+   }
   }
  },
  {
@@ -10080,7 +10365,16 @@
      ],
      "operation": "instrument replaced"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "health service",
+     "private practice"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "practitioner survey"
+   }
   }
  },
  {
@@ -10394,7 +10688,17 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "private practice",
+     "health service",
+     "education service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "practitioner survey"
+   }
   }
  },
  {
@@ -10946,7 +11250,13 @@
      "occurrence": 1,
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "none established",
+    "practitioner": "nobody named",
+    "placement": "special setting",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -11144,7 +11454,16 @@
      ],
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "education service",
+     "health service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "both routes named",
+    "evidence_type": "practitioner survey"
+   }
   }
  },
  {
@@ -11321,7 +11640,13 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "both routes named",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -11594,7 +11919,13 @@
      ],
      "operation": "plan or strategy issued"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "special setting",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -11732,7 +12063,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "not stated",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -11886,7 +12223,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -12109,7 +12452,16 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "education service",
+     "health service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "practitioner survey"
+   }
   }
  },
  {
@@ -12296,7 +12648,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "health service",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -12368,7 +12726,13 @@
      "occurrence": 1,
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "none established",
+    "practitioner": "nobody named",
+    "placement": "special setting",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -12666,7 +13030,16 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "private practice",
+     "education service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "practitioner survey"
+   }
   }
  },
  {
@@ -13369,7 +13742,16 @@
      "occurrence": 1,
      "operation": "state of affairs recorded"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "health service",
+     "private practice"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -13888,7 +14270,16 @@
      ],
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "private practice",
+     "health service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "practitioner survey"
+   }
   }
  },
  {
@@ -14120,7 +14511,13 @@
      "occurrence": 1,
      "operation": "state of affairs recorded"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "ngo or charity",
+    "practitioner": "specialist clinician",
+    "placement": "special setting",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -14417,7 +14814,13 @@
      ],
      "operation": "international instrument accepted"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "nobody named",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -14587,7 +14990,13 @@
      "occurrence": 1,
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "clinician advises, teacher delivers",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -14823,7 +15232,16 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "private practice",
+     "health service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "practitioner survey"
+   }
   }
  },
  {
@@ -14999,7 +15417,13 @@
      "occurrence": 1,
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "not stated",
+    "practitioner": "not stated",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -15969,7 +16393,13 @@
      "occurrence": 1,
      "operation": "plan or strategy issued"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "specialist clinician",
+    "placement": "special setting",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -16189,7 +16619,13 @@
      ],
      "operation": "instrument amended"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "not stated",
+    "practitioner": "nobody named",
+    "placement": "not stated",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -16316,7 +16752,16 @@
      ],
      "operation": "instrument replaced"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": [
+     "health service",
+     "education service"
+    ],
+    "practitioner": "clinician advises, teacher delivers",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -16493,7 +16938,13 @@
      "occurrence": 1,
      "operation": "plan or strategy issued"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "not stated",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -16841,7 +17292,13 @@
      ],
      "operation": "provision described"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "education service",
+    "practitioner": "not stated",
+    "placement": "mainstream first",
+    "evidence_type": "policy"
+   }
   }
  },
  {
@@ -16952,7 +17409,13 @@
      "occurrence": 1,
      "operation": "plan or strategy issued"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "none established",
+    "practitioner": "nobody named",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
@@ -17074,7 +17537,13 @@
      "occurrence": 1,
      "operation": "state of affairs recorded"
     }
-   ]
+   ],
+   "serviceModel": {
+    "sectors": "ngo or charity",
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
+    "evidence_type": "study or project"
+   }
   }
  },
  {
