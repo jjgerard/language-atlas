@@ -1068,7 +1068,22 @@ function codedScale(key) {
   } else {
     ordered.slice(0, CAT_MAX).forEach(([v], i) => map.set(v, `var(--cat-${i + 1})`));
   }
-  return { map, ordered, ordinal, list: isList(key), overflow: Math.max(0, ordered.length - CAT_MAX) };
+  // How many DISTINCT COLOURS the busiest unit resolves to -- not how many
+  // values, because two values past CAT_MAX both come out --cat-other and a
+  // unit holding those two is paintable as one colour. This is the number that
+  // decides whether the column can be drawn whole.
+  let maxCols = 0, striped = 0;
+  for (const u of (B.units[domainId] || [])) {
+    const vs = codedValues(u, key);
+    if (!vs) continue;
+    const n = new Set(vs.map(v => map.get(v) || 'var(--cat-other)')).size;
+    if (n > maxCols) maxCols = n;
+    if (n === 2) striped++;
+  }
+  return {
+    map, ordered, ordinal, list: isList(key), maxCols, striped,
+    overflow: Math.max(0, ordered.length - CAT_MAX),
+  };
 }
 let SCALE = null;
 
@@ -1083,7 +1098,19 @@ function fillFor(u, st, own) {
     const vals = codedValues(o, CODED.key);
     if (!vals) return 'url(#uncoded)';                       // prose, not coded
     if (CODED.only) return vals.includes(CODED.only) ? 'var(--cat-1)' : 'var(--cat-other)';
-    if (SCALE && SCALE.list) return 'var(--cat-other)';      // rule 2: no single colour
+    if (SCALE && SCALE.list) {
+      // A list column was painted entirely in "other" here, on the grounds that
+      // an answer holding several values has no single colour. True -- but two
+      // values have two, and half the corpus's list columns never hold more
+      // than two: exit mechanism tops out at 2 (89 units hold one, 24 hold
+      // two), as do standing's force and taught-as-subject's status. Those are
+      // drawn in both, whole, dropping nothing. A third value is what actually
+      // has nowhere to go, and that is what the isolation is for.
+      const cols = [...new Set(vals.map(v => SCALE.map.get(v) || 'var(--cat-other)'))].sort();
+      if (cols.length === 1) return cols[0];
+      if (cols.length === 2) return stripeFill(cols[0], cols[1]);
+      return 'var(--cat-other)';
+    }
     const hit = vals.map(v => SCALE && SCALE.map.get(v)).find(Boolean);
     return hit || 'var(--cat-other)';
   }
@@ -1137,6 +1164,48 @@ const patDots = el('pattern', { id: 'uncoded', patternUnits: 'userSpaceOnUse', w
 patDots.appendChild(el('rect', { width: 6, height: 6, fill: 'var(--surface-2)' }));
 patDots.appendChild(el('circle', { cx: 3, cy: 3, r: 1.05, fill: 'var(--hatch-line)' }));
 defs.appendChild(patDots);
+/* Two colours on one shape. The pattern is a plain vertical band turned 45
+   degrees rather than a drawn diagonal, because a rotated rect splits the tile
+   exactly in half and a stroked path does not -- an unequal stripe would read
+   as one value with the other decorating it.
+   Patterns are keyed on the COLOUR PAIR, not on the values, so a pair keeps the
+   same pattern whichever column or domain asks for it, and the cache survives
+   changing the question. Both colours come from the same six-hue set, which is
+   measured to hold 14 dE apart under protanopia and deuteranopia, so a stripe
+   cannot collapse into a solid for a dichromat. */
+const STRIPES = new Map();
+const STRIPE_CSS = new Map();
+function stripeAngle() { return `rotate(45) scale(${1 / view.k})`; }
+function stripeFill(a, b) {
+  const tok = c => String(c).replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '');
+  const id = `stripe-${tok(a)}-${tok(b)}`;
+  if (!STRIPES.has(id)) {
+    const q = el('pattern', {
+      id, patternUnits: 'userSpaceOnUse', width: 8, height: 8,
+      patternTransform: stripeAngle(),
+    });
+    q.appendChild(el('rect', { width: 8, height: 8, fill: a }));
+    q.appendChild(el('rect', { width: 4, height: 8, fill: b }));
+    defs.appendChild(q);
+    STRIPES.set(id, q);
+    STRIPE_CSS.set(id, `repeating-linear-gradient(45deg, ${b} 0 4px, ${a} 4px 8px)`);
+  }
+  return `url(#${id})`;
+}
+// A swatch is an HTML span and cannot carry url(#pattern), so every fill the map
+// can produce has a CSS twin. One function, because three places need it.
+function fillToCSS(fill) {
+  const f = String(fill || '');
+  if (f.indexOf('#hatch') >= 0) {
+    return { bg: 'repeating-linear-gradient(45deg,var(--hatch-bg) 0 3px,var(--hatch-line) 3px 4px)', size: '' };
+  }
+  if (f.indexOf('#uncoded') >= 0) {
+    return { bg: 'radial-gradient(var(--hatch-line) 1px, var(--surface-2) 1.2px)', size: '5px 5px' };
+  }
+  const m = /url\(#(stripe-[a-z0-9-]+)\)/i.exec(f);
+  if (m && STRIPE_CSS.has(m[1])) return { bg: STRIPE_CSS.get(m[1]), size: '' };
+  return { bg: f || 'var(--nodata)', size: '' };
+}
 svg.appendChild(defs);
 
 const scene = el('g');
@@ -1519,6 +1588,7 @@ function applyView() {
   scene.setAttribute('transform', `translate(${view.tx} ${view.ty}) scale(${view.k})`);
   pat.setAttribute('patternTransform', `scale(${1 / view.k})`);
   patDots.setAttribute('patternTransform', `scale(${1 / view.k})`);
+  STRIPES.forEach(q => q.setAttribute('patternTransform', stripeAngle()));
   updateMarks();
 }
 function baseScale() {
@@ -1811,16 +1881,8 @@ function codedTipHTML(u, terr, via, fill) {
   const vals = codedValues(u, CODED.key);
   const st = stateOf(u);
 
-  // url(#pattern) is an SVG fill and cannot be a CSS background, so the two
-  // textures are redrawn the way the legend redraws them.
-  let bg = fill || 'var(--nodata)', extra = '';
-  if (bg.indexOf('#hatch') >= 0) {
-    bg = 'repeating-linear-gradient(45deg,var(--hatch-bg) 0 3px,var(--hatch-line) 3px 4px)';
-  } else if (bg.indexOf('#uncoded') >= 0) {
-    bg = 'radial-gradient(var(--hatch-line) 1px, var(--surface-2) 1.2px)';
-    extra = 'background-size:5px 5px;';
-  }
-  const sw = `<span class="sw" style="background:${bg};${extra}"></span>`;
+  const css = fillToCSS(fill);
+  const sw = `<span class="sw" style="background:${css.bg};${css.size ? 'background-size:' + css.size + ';' : ''}"></span>`;
 
   const answer = vals
     ? vals.map(v => esc(v)).join(', ')
@@ -1828,12 +1890,14 @@ function codedTipHTML(u, terr, via, fill) {
     : st === 'none' ? 'Nothing recorded'
     : 'Recorded, not yet coded';
 
-  // A list column is drawn isolated on one value, so the card says which one
-  // the colour is about rather than leaving the reader to guess from a row of
-  // values which one turned the shape blue.
+  // Say what the colour is doing. Isolated, it is a yes/no about one value and
+  // the card names it; striped, it is both values at once and the card says so,
+  // because a two-colour shape otherwise looks like a rendering fault.
   const note = (CODED.only && vals && vals.length > 1)
     ? `Shaded by whether this includes <b>${esc(CODED.only)}</b>.`
-    : '';
+    : (vals && vals.length > 1 && String(fill || '').indexOf('#stripe-') >= 0)
+      ? 'Striped because this answer holds both.'
+      : '';
 
   const label = terr ? terr.name : (via || u.name);
   const meta = (terr || via) ? esc(u.name) + ' · shows that entry'
@@ -2359,9 +2423,12 @@ function paintCatLegend() {
   catLegend.hidden = false;
   const rows = [];
   const sw = bg => `<span class="sw" style="background:${bg}"></span>`;
-  if (SCALE.list) {
+  if (SCALE.list && CODED.only) {
     rows.push(`<p class="note">This answer can hold more than one value, so there is no single
       colour for a country. Pick a value to see which systems include it.</p>`);
+  } else if (SCALE.list && SCALE.striped) {
+    rows.push(`<p class="note">${SCALE.striped} answer${SCALE.striped === 1 ? '' : 's'} hold two of
+      these values and are striped in both. Click a value to see only that one.</p>`);
   }
   // Every value gets a row up to a point; past it the tail is summarised, or a
   // column with twenty values would fill the pane with a legend nobody reads.
@@ -2401,17 +2468,12 @@ function paintCatLegend() {
     CODED.only = CODED.only === b.dataset.v ? null : b.dataset.v;
     paint(); paintCatLegend();
   }));
-  // The dotted swatch cannot carry a url() as a background, so it is drawn in CSS.
-  // A swatch cannot carry url(#pattern) as a CSS background, so the two textures
-  // are redrawn here in the same idiom the coverage legend already uses.
+  // A swatch cannot carry url(#pattern) as a CSS background, so every texture is
+  // redrawn through the one translator the hover card also uses.
   catLegend.querySelectorAll('.cl[disabled] .sw').forEach(el => {
-    const bg = el.style.background || '';
-    if (bg.includes('uncoded')) {
-      el.style.background = 'radial-gradient(var(--hatch-line) 1px, var(--surface-2) 1.2px)';
-      el.style.backgroundSize = '5px 5px';
-    } else if (bg.includes('hatch')) {
-      el.style.background = 'repeating-linear-gradient(45deg, var(--hatch-bg) 0 3px, var(--hatch-line) 3px 4px)';
-    }
+    const css = fillToCSS(el.style.background || '');
+    el.style.background = css.bg;
+    if (css.size) el.style.backgroundSize = css.size;
   });
 }
 
@@ -2419,9 +2481,12 @@ function setShade(key) {
   CODED.key = key || null;
   CODED.only = null;
   SCALE = CODED.key ? codedScale(CODED.key) : null;
-  // A list column has no single colour, so it opens on its commonest value
-  // rather than on a map painted entirely in "other".
-  if (SCALE && SCALE.list && SCALE.ordered.length) CODED.only = SCALE.ordered[0][0];
+  // Only a column that goes past two values opens isolated. Up to two it is
+  // painted whole -- one colour, or two stripes -- and the isolation stays
+  // available from the legend for a reader who wants it.
+  if (SCALE && SCALE.list && SCALE.maxCols > 2 && SCALE.ordered.length) {
+    CODED.only = SCALE.ordered[0][0];
+  }
   paint(); paintCatLegend(); paintLegend();
   // An open panel is answering the old question; re-render it against the new
   // one rather than leaving a stale answer beside a repainted map.
