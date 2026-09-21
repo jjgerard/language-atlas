@@ -19,6 +19,15 @@ main h2 {
   letter-spacing: -.015em; margin: 0 0 6px; text-wrap: balance;
 }
 main .standfirst { margin: 0 0 30px; font-size: 16px; color: var(--ink-soft); line-height: 1.6; max-width: 68ch; }
+.scopenote {
+  font-size: 12.5px; line-height: 1.55; color: var(--ink-soft);
+  border-left: 2px solid var(--hair); padding-left: 11px; margin: 0 0 14px;
+}
+.subtoggle {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-left: 4px; cursor: pointer; white-space: nowrap;
+}
+.subtoggle input { cursor: pointer; }
 main h3 {
   font-size: 21px; font-weight: 500; letter-spacing: -.01em;
   margin: 40px 0 10px; padding-top: 16px; border-top: 1px solid var(--hair);
@@ -249,6 +258,12 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
     Each coded field, by category. A system stating two rules at once is counted under both,
     so these add up to more than the number of systems.
   </p>
+  <p class="scopenote">
+    <b>National systems only.</b> A sub-national unit here would be a country counted once per
+    unit, and the United States alone has 51 &mdash; one federal framework read fifty-one times.
+    The maps do include them, so a column can legitimately read a different total there.
+    <label class="subtoggle"><input type="checkbox" id="codesubs"> count sub-national systems too</label>
+  </p>
   <div id="coding"></div>
 
 
@@ -421,6 +436,32 @@ const PAIRS = [
 // twelve of the twenty-nine columns, including `obliges` and `redress_type` --
 // were coded and then rendered nowhere. A page that only shows the fields
 // somebody remembered to add is a page that hides work.
+/* NATIONAL ONLY BY DEFAULT, AND THIS IS A DECISION RATHER THAN AN OVERSIGHT.
+ *
+ * These are frequency tables, and a sub-national unit in one is a country
+ * counted as many times as it has units. CROSSTABS.md names the case: 61 US
+ * units under one federal framework is "one decision counted fifty times, the
+ * Chinese-provinces problem again". The 2026-09-21 coding pass made it sharper
+ * still -- ALL 24 of the `excluded on language grounds` units on
+ * dld.multilingualProvision are US states, so counting them would report one
+ * federal statute as a fact about the world.
+ *
+ * The MAP does include them, and should: a unit there is a place on screen,
+ * not a row in a count, and colouring Wyoming claims nothing about global
+ * proportions. That is why the same column reads 115 here and 187 on the map,
+ * and the note under the heading now says so rather than leaving a reader to
+ * find the discrepancy themselves.
+ *
+ * The toggle exists because the sub-national distributions are real findings
+ * that were otherwise readable only one shape at a time on the map. It
+ * defaults OFF, so the page's own claim stays the defensible one.
+ */
+const subsOn = () => {
+  const el = document.getElementById('codesubs');
+  return !!(el && el.checked);
+};
+const countable = u => u.nat || subsOn();
+
 function codedFields(atlas) {
   const seen = new Map();
   for (const d of atlas.domains) {
@@ -430,7 +471,7 @@ function codedFields(atlas) {
     // "he" before this.
     const label = LABELS[d.id] || d.label || d.id;
     for (const u of (atlas.units[d.id] || [])) {
-      if (!u.nat || !u.coding) continue;
+      if (!countable(u) || !u.coding) continue;
       for (const key of Object.keys(u.coding)) {
         const id = d.id + '.' + key;
         if (seen.has(id)) continue;
@@ -462,7 +503,7 @@ function renderCoding(atlas) {
   for (const [id, key, map, asks] of codedFields(atlas)) {
     const d = doms[id];
     if (!d) continue;
-    const units = (atlas.units[id] || []).filter(u => u.nat && u.coding && u.coding[key]);
+    const units = (atlas.units[id] || []).filter(u => countable(u) && u.coding && u.coding[key]);
     if (!units.length) continue;
     // A coding is one object for a system-grained field and an ARRAY of rows
     // for an instrument-grained one, so both are read as rows. That also means
@@ -1252,7 +1293,15 @@ function render() {
 // panel each fetched their own copy before this — so the page pulled it twice
 // on every load, for data neither of them changes.
 const atlas = fetch('/api/atlas').then(r => r.ok ? r.json() : Promise.reject(new Error('atlas ' + r.status)));
-atlas.then(a => { mountNav(null, a.domains); renderCoding(a); renderOutcomes(a); }).catch(() => mountNav(null));
+atlas.then(a => {
+  mountNav(null, a.domains);
+  renderCoding(a);
+  renderOutcomes(a);
+  // Re-render in place. The tables are built from the payload already in
+  // memory, so this costs nothing and needs no round trip.
+  const t = document.getElementById('codesubs');
+  if (t) t.addEventListener('change', () => renderCoding(a));
+}).catch(() => mountNav(null));
 
 
 fetch('/api/trends')
