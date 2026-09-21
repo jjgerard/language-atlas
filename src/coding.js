@@ -663,6 +663,79 @@ const STANDING_EXTENT = {
   'not stated': 'The entry does not say how far the standing reaches. The honest value wherever reach is left to be inferred from the instrument\'s own level, since a national constitution saying nothing about territory is not the same as one saying "nationwide"',
 };
 
+// HOW FAR AN INDIGENOUS OR REGIONAL LANGUAGE CARRIES TEACHING. Derived by
+// reading 90 of the 195 national entries across the five regions, then tested
+// blind on 25 more before anything was wired in.
+//
+// IT EXISTS TO CLOSE A LOOP LEFT OPEN ON `standing`. That pass refused to code
+// whether a standing reaches SCHOOL, although the prose begs for it
+// ("Constitutional, not curricular"; "administrative only, no school
+// provision"), because answering there would have meant reading this field's
+// text from that field's column. Coding it here instead puts the two on the same
+// 396-unit key, so the question `standing` raised can actually be asked: is the
+// 19% of official languages that oblige nobody also the 19% that never reach a
+// classroom?
+//
+// THE FIELD'S HINT PROPOSED "a right, a permission or an observed practice" AND
+// THAT TRICHOTOMY IS MISSING ITS COMMONEST CASE. Niger's LOSEN art. 19 says the
+// mother tongue IS the language of instruction in cycle de base 1; Eritrea's
+// sector plan, Seychelles, Tuvalu and Rwanda do the same. Nobody holds a right,
+// nobody is permitted, nobody is observed doing it off their own bat -- the
+// instrument simply sets the medium. `system rule` is that case, and it was the
+// single gap the blind test found.
+//
+// `WHO DECIDES` WAS DROPPED AS A COLUMN AND FOLDED IN AS TWO VALUES. Measured
+// across the corpus it appears in 10% of entries and 15 of those 20 are European
+// -- Norway's ten pupils, Belarus's school founder, Austria's Anmeldeprinzip --
+// which makes it a regional flag rather than an axis, the same shape as the
+// provenance rows. `on request or threshold` and `left to the school` carry it
+// inside a column that every entry can answer, and Curacao and Sint Maarten show
+// it is not purely European.
+//
+// THE GRAIN LIMIT IS THE ONE `standing` HAS. A row is one system, and a system
+// may run several languages at several roles: Montenegro has Albanian as a
+// medium "in most schools with many Albanian speakers" while "Romani is still
+// not taught at any level of public education". The coding follows the languages
+// the map is about, and where an entry splits that far the dominant arrangement
+// is coded and the rest is lost. Botswana is the same shape with Setswana.
+const MEDIUM_ROLE = {
+  'sole medium': 'The language carries the teaching, by itself, in the schools where it runs (Ireland, where Gaeltacht recognition "needs a school to run entirely through Irish, bar language subjects", with a "two-year total-immersion programme in the infant cycle, during which no English is taught"; Finland, whose "Sami schools at Utsjoki and Inari teach in Inari, North and Skolt Sami, ages 6 to 15"; Montenegro, where "Albanian is the medium in most schools with many Albanian speakers" and the Council of Europe "rejects the bilingual label: the two language streams never mix")',
+  'shared medium': 'The language and another both carry subjects, in parallel or by division of the timetable (Andorra, where "Catalan and French are both llengues vehiculars in primera ensenyanca"; the Marshall Islands, where Marshallese is the medium "in grades K-6, bar English classes" and then takes "social studies, health, PE and art" while English takes "maths and science"; New Caledonia\'s "experimental bilingual schools teach half in a kanak language, half in French"; France, where the stated aim is "parite horaire, equal weekly time in both languages"). Includes a separate-schools split, where each stream is whole but the SYSTEM runs both: Israel, where "Arabic is the language of instruction in Arab sector schools" and "Hebrew... in Jewish sector schools"',
+  'transitional, early exit': 'The language is the medium for the early years and then hands over, which the corpus names in its own words (Seychelles: "Seselwa Creole is the medium of instruction in Creche, P1 and P2. English is the language of instruction from P3 onwards: EARLY-EXIT TRANSITIONAL"; South Sudan, "early-exit transitional model, with English taking over as medium from P4"; Lesotho, "transitional in form, but the profile names no grade at which the switch falls"; Tuvalu, Class 1 to 3 then "bridging to English"; Burkina Faso, where the national language is "90% of year 1, then 80, 50, 20, 10 percent"; Cambodia, where the mother tongue "takes 60% of the grade 2 timetable and 30% of grade 3" and "grades 4 to 6 are Khmer only"). The handover is the point: a language that stops early because the SCHOOL stops early is not this',
+  'support only': 'The language is used to help pupils through teaching conducted in another, and never carries the teaching itself. The distinction the corpus insists on, often in so many words (American Samoa: Samoan "usable ONLY TO FACILITATE teaching English"; Angola, whose Lei 17/16 art 16(3) "allows Angolan languages as a complement and learning instrument" while Portuguese "is the medium from the start"; the Central African Republic, where "primary teachers use sango to explain what pupils miss in French"; Suriname, where "home languages are used in class incidentally and not systematically"; the Philippines since RA 12027, where "regional languages become auxiliary media")',
+  'permitted, not implemented': 'An instrument allows the language as a medium and nothing is recorded as running on it (Guam: "AUTHORISATION ONLY: DOE may develop a bilingual-bicultural Chamorro programme"; the Central African Republic\'s Ordonnance 84/031, whose provisions "stayed without effect and French remained the only language used"). Kept apart from `support only`, which describes something that happens, and from `not a medium`, which is a finding that it does not',
+  'not a medium': 'Somebody checked and the language does not carry teaching at any stage -- a finding, not a silence (Egypt: "No indigenous language of Egypt is used as a medium at any stage"; Qatar: "No language other than Arabic is recorded as a medium in the sources"; Bulgaria: "No teaching IN minority languages exists; Art 13(2) ZPUO makes Bulgarian the medium"; Mauritania, whose profile "records no use of Fula, Soninke or Wolof as a medium at any stage")',
+  'not stated': 'The entry does not establish what role the language plays, including where the search itself came up empty (Dominica and Grenada: "No medium-of-instruction provision was found in the sources cited"; Saint Lucia, whose Education Act "carries no medium-of-instruction provision at all"). Distinct from `not a medium`: Grenada found no rule, Egypt found a rule that excludes',
+};
+
+// 50% of entries answer this, which is thin but usable -- and deliberately
+// checked before the column was kept, because `extent` on `standing` was built
+// on the same hope and came out 83% `not stated`. Stage boundaries are the thing
+// these entries are most specific about, so the risk ran the other way here.
+const MEDIUM_REACH = {
+  'preschool only': 'The language carries teaching before school proper and no further (Bangladesh, whose mother tongue-based multilingual education runs at the "pre-primary stage only"; Aruba, where "Papiamento is the language of instruction in kindergarten" and "Dutch is officially the language of instruction from grade 1"; Guinea, where "pre-primary is usually in the child\'s mother tongue, but is private and urban only")',
+  'early primary': 'Through roughly the first three or four years, then no further (Seychelles Creche to P2; Tuvalu Class 1 to 3; Lebanon "to grade three"; Indonesia, "the first two grades of primary only"; Eswatini, "the first four school grades"; the Philippines before RA 12027, K to Grade 3)',
+  'all primary': 'Through the whole primary phase (Eritrea: "mother tongue is the medium at primary, grades 1-5", with English "at middle level, grade 6"; Niger, the whole cycle de base 1; India, whose art 350A duty "runs at the primary stage only")',
+  'into secondary': 'Beyond primary into secondary schooling (Finland\'s Sami schools, "ages 6 to 15"; Russia\'s right to "preschool, primary and basic general education in the rodnoy yazyk"; Nepal\'s constitutional "right to education in mother tongue up to secondary level"; the Marshall Islands, grades 7-12 by subject)',
+  'all levels': 'Every stage the entry recognises, higher education included where it says so (Peru, whose art. 22 gives a right to intercultural bilingual education "at every level"; Ecuador, where the nationality\'s language is "the principal language of education" across the SEIB sub-system)',
+  'not stated': 'The entry does not say how far up the language goes. Common where the entry is about status or attempts rather than about a stage, and the honest value wherever a boundary would have to be inferred',
+};
+
+// `system rule` is first because the blind test found it missing and it turned
+// out to be the commonest answer -- the hint's "right, permission or observed
+// practice" describes how a language is SECURED to somebody, and most systems do
+// not secure it to anybody, they simply set it.
+const MEDIUM_SECURED_BY = {
+  'system rule': 'The instrument sets the medium. Nobody holds it, nobody elects it, nobody is observed choosing it (Niger: "LOSEN art. 19: mother tongue is the language of instruction in cycle de base 1"; Eritrea, where the 2018 sector plan is the instrument and states the grades; Seychelles; Tuvalu; Rwanda, whose Law 10 of 2021 art 20 "states flatly \'English is the medium of instruction\'"; Israel, where the sector split simply is the system)',
+  'right': 'A pupil, parent or community holds it and can call for it (Peru: "pupils with an indigenous mother tongue have a RIGHT to EIB at every level"; Nepal\'s Constitution art 31; Sri Lanka, "entitled to be educated through either National Language"; Russia, a right "exercised by creating the necessary schools, classes and groups" though "bounded by the possibilities provided by the education system"; Belarus, where the "right to choose Belarusian-medium schooling is guaranteed to citizens by art 82.1")',
+  'permission': 'May, not must, with nobody obliged to offer it (Malawi: the 2013 Act "PERMITS, BUT DOES NOT REQUIRE, Chichewa as medium for Standards 1 to 4"; Indonesia, "local languages MAY be the medium in the first two grades"; Eswatini, "siSwati MAY be the medium for the first four school grades, but is not required to be"; Tajikistan, where schools in areas of high ethnic concentration "may use those groups\' native languages"; Guam\'s authorisation)',
+  'on request or threshold': 'Access turns on somebody asking, or on enough of them (Norway, where outside the revitalisation municipalities "it takes 10 pupils to request it, and survives while six remain"; New Caledonia, "only for children whose parents or legal representatives asked, and as resources allow"; Austria\'s Anmeldeprinzip of 1959, where "parents decide whether a child joins bilingual teaching")',
+  'left to the school': 'The rule delegates the choice to the provider rather than granting or withholding it (Curacao: "school board picks the medium; only English, Dutch or Papiamentu are allowed", and changing it "needs 16 months notice"; Sint Maarten, the same arrangement; Fiji, "no national rule: school committees decide the medium in practice"; Belarus, where "the founder of the school fixes the language, \'if such a possibility exists\'")',
+  'practice only': 'It happens, and no instrument accounts for it (Guyana, where UNESCO "records limited attempts, so this is practice rather than entitlement"; Belize, where lessons in Q\'eqchi\' are "a school-level attempt rather than an entitlement"; Suriname, reported from "a study of pupils\' and teachers\' practices and views"; Sri Lanka, where the medium is the mother tongue "in practice")',
+  'none': 'Established that nothing secures it (Bulgaria, where art 13(3)-(4) "allow subjects in a FOREIGN language only, never a minority language"; Egypt; Qatar). Distinct from `not stated`, and it will usually accompany `not a medium`',
+  'not stated': 'The entry does not say what secures the arrangement it describes',
+};
+
 const HISTORY_SCHEME = id => ({
   // MANY: one coding row per policyHistory row, not per entry.
   many: true,
@@ -708,6 +781,16 @@ const HISTORY_SCHEME = id => ({
   },
 });
 const SCHEMES = {
+  'indigenous.mediumOfInstruction': {
+    // One system. Where a system runs several languages at several roles the
+    // dominant arrangement is coded; see the grain note on MEDIUM_ROLE.
+    row: 'one national or sub-national system',
+    columns: {
+      role: MEDIUM_ROLE,
+      reach: MEDIUM_REACH,
+      secured_by: MEDIUM_SECURED_BY,
+    },
+  },
   'indigenous.standing': {
     // One system, so this fits what storage holds. A system may hold several
     // languages at several standings; see the grain note on STANDING_STATUS.
@@ -838,6 +921,7 @@ module.exports = {
   HISTORY_OPERATION,
   NOT_AN_OPERATION, SCOPE_CHANGE,
   STANDING_STATUS, STANDING_SOURCE, STANDING_FORCE, STANDING_EXTENT,
+  MEDIUM_ROLE, MEDIUM_REACH, MEDIUM_SECURED_BY,
   SCHEMES,
   isHistoryOperation: v => has(HISTORY_OPERATION, v),
   isNotAnOperation: v => has(NOT_AN_OPERATION, v),
@@ -846,6 +930,9 @@ module.exports = {
   isStandingSource: v => has(STANDING_SOURCE, v),
   isStandingForce: v => has(STANDING_FORCE, v),
   isStandingExtent: v => has(STANDING_EXTENT, v),
+  isMediumRole: v => has(MEDIUM_ROLE, v),
+  isMediumReach: v => has(MEDIUM_REACH, v),
+  isMediumSecuredBy: v => has(MEDIUM_SECURED_BY, v),
   isThresholdBasis: v => has(THRESHOLD_BASIS, v),
   isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
   isAssessmentLanguage: v => has(ASSESSMENT_LANGUAGE, v),
