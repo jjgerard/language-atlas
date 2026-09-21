@@ -1090,16 +1090,53 @@ function codedScale(key) {
 }
 let SCALE = null;
 
+/* What this unit's THIS FIELD is, which is the only state a coded map is about.
+ *
+ * The coded view was reading stateOf(u) -- the state of the whole ENTRY -- and
+ * so painted "Recorded, not yet coded" over every unit that was documented
+ * somewhere and had no coded value here. On eal.removalCriteria that was 274
+ * units, of which 0 were actually prose waiting to be coded: 206 have nothing
+ * in the field, 65 say Not applicable and 3 say Not established from the
+ * sources consulted. The last two are somebody's deliberate answer, and the
+ * label asserted the opposite of both.
+ *
+ * derive.js already computes exactly this, one character per field, so nothing
+ * needs to be sent that is not already here. */
+const FIELD_STATE = { h: 'has', l: 'looked', x: 'na', n: 'none' };
+/* Prose with no colour has two quite different reasons, and calling both
+   "not yet coded" mislabels the more interesting one. A field somebody has
+   coded, where THIS column still has no value, is a deliberate unset -- the
+   entry answers and no value fitted. EXIT_MECHANISM instructs exactly that for
+   Spain, Italy and the United States, whose rule_locus carries what they say.
+   Both keep the dot texture, because the map's claim is only "text here, no
+   value"; the legend and the card carry the why. */
+const isUnset = (u, key) => {
+  const cd = (u && u.coding) || {};
+  const f = key.split('.')[0];
+  return !!cd[f] && !Array.isArray(cd[f]) && !codedValues(u, key);
+};
+function fieldStateOf(u, fieldKey) {
+  if (!u || typeof u.fieldStates !== 'string') return 'none';
+  const i = domain().fields.findIndex(f => f.k === fieldKey);
+  if (i < 0) return 'none';
+  return FIELD_STATE[u.fieldStates[i]] || 'none';
+}
+
 function fillFor(u, st, own) {
   // In coded mode the OWN unit decides, not the one coverage would paint from.
   if (CODED.key) {
     const o = own === undefined ? u : own;
     if (!o) return 'var(--nodata)';
-    const ost = o ? stateOf(o) : 'none';
-    if (ost === 'looked') return 'url(#hatch)';
-    if (ost === 'none') return 'var(--nodata)';
     const vals = codedValues(o, CODED.key);
-    if (!vals) return 'url(#uncoded)';                       // prose, not coded
+    if (!vals) {
+      // Why there is no colour, taken from the FIELD. Four answers, and three
+      // of them are answers rather than gaps.
+      const fs = fieldStateOf(o, CODED.key.split('.')[0]);
+      if (fs === 'has') return 'url(#uncoded)';   // prose here, nobody coded it
+      if (fs === 'looked') return 'url(#hatch)';  // looked, found nothing
+      if (fs === 'na') return 'url(#na)';         // the question cannot apply
+      return 'var(--nodata)';                     // nothing recorded here
+    }
     if (CODED.only) return vals.includes(CODED.only) ? 'var(--cat-1)' : 'var(--cat-other)';
     if (SCALE && SCALE.list) {
       // A list column was painted entirely in "other" here, on the grounds that
@@ -1167,6 +1204,19 @@ const patDots = el('pattern', { id: 'uncoded', patternUnits: 'userSpaceOnUse', w
 patDots.appendChild(el('rect', { width: 6, height: 6, fill: 'var(--surface-2)' }));
 patDots.appendChild(el('circle', { cx: 3, cy: 3, r: 1.05, fill: 'var(--hatch-line)' }));
 defs.appendChild(patDots);
+/* "Not applicable" -- a deliberate answer, and the one state the coded view had
+   nowhere to put. It cannot be a fourth grey for the reason #uncoded is a
+   texture, so it is the nodata grey STRUCK THROUGH: the same ground as nothing
+   recorded, because in both cases there is no value, plus a mark saying the
+   absence was decided rather than left. The strokes lean the other way from
+   #hatch so the two do not read as versions of each other. */
+const patNA = el('pattern', { id: 'na', patternUnits: 'userSpaceOnUse', width: 7, height: 7 });
+patNA.appendChild(el('rect', { width: 7, height: 7, fill: 'var(--nodata)' }));
+patNA.appendChild(el('path', {
+  d: 'M-2 5 L2 9 M0 -1 L7 6 M5 -3 L9 1',
+  stroke: 'var(--surface)', 'stroke-width': 1.3, 'stroke-opacity': '.85',
+}));
+defs.appendChild(patNA);
 /* Two colours on one shape. The pattern is a plain vertical band turned 45
    degrees rather than a drawn diagonal, because a rotated rect splits the tile
    exactly in half and a stroked path does not -- an unequal stripe would read
@@ -1204,6 +1254,9 @@ function fillToCSS(fill) {
   }
   if (f.indexOf('#uncoded') >= 0) {
     return { bg: 'radial-gradient(var(--hatch-line) 1px, var(--surface-2) 1.2px)', size: '5px 5px' };
+  }
+  if (f.indexOf('#na') >= 0) {
+    return { bg: 'repeating-linear-gradient(-45deg, var(--nodata) 0 4px, var(--surface) 4px 5px)', size: '' };
   }
   const m = /url\(#(stripe-[a-z0-9-]+)\)/i.exec(f);
   if (m && STRIPE_CSS.has(m[1])) return { bg: STRIPE_CSS.get(m[1]), size: '' };
@@ -1591,6 +1644,7 @@ function applyView() {
   scene.setAttribute('transform', `translate(${view.tx} ${view.ty}) scale(${view.k})`);
   pat.setAttribute('patternTransform', `scale(${1 / view.k})`);
   patDots.setAttribute('patternTransform', `scale(${1 / view.k})`);
+  patNA.setAttribute('patternTransform', `scale(${1 / view.k})`);
   STRIPES.forEach(q => q.setAttribute('patternTransform', stripeAngle()));
   updateMarks();
 }
@@ -1887,10 +1941,13 @@ function codedTipHTML(u, terr, via, fill) {
   const css = fillToCSS(fill);
   const sw = `<span class="sw" style="background:${css.bg};${css.size ? 'background-size:' + css.size + ';' : ''}"></span>`;
 
+  const fs = fieldStateOf(u, fk);
   const answer = vals
     ? vals.map(v => esc(v)).join(', ')
-    : st === 'looked' ? 'Looked, found nothing'
-    : st === 'none' ? 'Nothing recorded'
+    : isUnset(u, CODED.key) ? 'Coded, and no value fitted'
+    : fs === 'looked' ? 'Looked, found nothing'
+    : fs === 'na' ? 'Not applicable here'
+    : fs === 'none' ? 'Nothing recorded'
     : 'Recorded, not yet coded';
 
   // Say what the colour is doing. Isolated, it is a yes/no about one value and
@@ -2089,14 +2146,19 @@ function codedPanelHTML(u) {
       : `<div class="cv${ordinal ? ' ord' : ''}">${head}</div>`;
   }).join('') : '';
 
-  // Why there is no value, said precisely -- the four states are not the same
-  // and the map keeps them apart, so the panel must too.
-  const st = stateOf(u);
-  const noValue = st === 'looked'
-    ? `<p class="cnone">Somebody looked for this and found nothing to record.</p>`
-    : st === 'none'
-      ? `<p class="cnone">Nothing is recorded for ${esc(u.name)} on this map at all.</p>`
-      : `<p class="cnone">${esc(u.name)} has an answer written for this question, and nobody has coded it yet. The text is below.</p>`;
+  // Why there is no value, said precisely -- and read off THIS FIELD, because
+  // an entry can be full and this question still unanswered, or answered by
+  // saying it does not apply.
+  const fs = fieldStateOf(u, fk);
+  const noValue = isUnset(u, CODED.key)
+    ? `<p class="cnone">Somebody coded this entry and left this question with no value, because none of them fitted what it says. The text is below.</p>`
+    : fs === 'looked'
+    ? `<p class="cnone">Somebody looked for this on ${esc(u.name)} and found nothing to record.</p>`
+    : fs === 'na'
+      ? `<p class="cnone">This question does not apply to ${esc(u.name)}, and the entry says so.</p>`
+      : fs === 'none'
+        ? `<p class="cnone">Nothing is recorded for ${esc(u.name)} on this question.</p>`
+        : `<p class="cnone">${esc(u.name)} has an answer written for this question, and nobody has coded it yet. The text is below.</p>`;
 
   const text = u.values[fk];
   const lines = String(text == null ? '' : text).split('\n').map(x => x.trim()).filter(Boolean);
@@ -2450,15 +2512,17 @@ function paintCatLegend() {
   }
   // Only the states actually on the map get a row. A legend that lists what is
   // not there is the same lie as a legend that omits what is.
-  const tally = { uncoded: 0, looked: 0, none: 0 };
+  const fk0 = CODED.key.split('.')[0];
+  const tally = { has: 0, unset: 0, looked: 0, na: 0, none: 0 };
   for (const u of (B.units[domainId] || [])) {
-    const st = stateOf(u);
-    if (st === 'looked') tally.looked++;
-    else if (st === 'none') tally.none++;
-    else if (!codedValues(u, CODED.key)) tally.uncoded++;
+    if (codedValues(u, CODED.key)) continue;
+    if (isUnset(u, CODED.key)) { tally.unset++; continue; }
+    tally[fieldStateOf(u, fk0)]++;
   }
-  if (tally.uncoded) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Recorded, not yet coded</span><span class="n">${tally.uncoded}</span></div>`);
+  if (tally.has) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Recorded, not yet coded</span><span class="n">${tally.has}</span></div>`);
+  if (tally.unset) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Coded, no value fitted</span><span class="n">${tally.unset}</span></div>`);
   if (tally.looked) rows.push(`<div class="cl" disabled>${sw('url(#hatch)')}<span>Looked, found nothing</span><span class="n">${tally.looked}</span></div>`);
+  if (tally.na) rows.push(`<div class="cl" disabled>${sw('url(#na)')}<span>Not applicable here</span><span class="n">${tally.na}</span></div>`);
   if (tally.none) rows.push(`<div class="cl" disabled>${sw('var(--nodata)')}<span>Nothing recorded</span><span class="n">${tally.none}</span></div>`);
   // The map answers "who does what"; the table answers "what exactly does each
   // one say", which a colour cannot. It is one click from here rather than in
