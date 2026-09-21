@@ -259,6 +259,13 @@
 .cpanlinks .rest > summary:hover { color: var(--ink-soft); }
 .cpanlinks .rest .links { margin-top: 7px; }
 .cpanlinks .note { font-size: 11px; color: var(--ink-faint); margin: 9px 0 0; line-height: 1.5; }
+.cpanlinks .drafted { margin-bottom: 13px; }
+.cpanlinks .drafted .ch { color: var(--ink-soft); }
+.cpanlinks blockquote.q {
+  margin: 3px 0 0; padding: 0 0 0 9px; border-left: 2px solid var(--hair);
+  font-size: 11.5px; line-height: 1.5; color: var(--ink-soft);
+}
+.cpanlinks blockquote.q .where { display: block; margin-top: 2px; color: var(--ink-faint); font-size: 10.5px; }
 .wholeentry {
   margin-top: 16px; font: inherit; font-size: 12px; color: var(--ink-soft);
   background: none; border: 1px solid var(--hair); border-radius: 5px;
@@ -2315,6 +2322,33 @@ function srcHit(tok, lab) {
   return null;
 }
 
+/* Sources recorded against THIS FIELD when the entry was drafted.
+ *
+ * Not a guess and not a match: research/parts/*.md carries an EVIDENCE block of
+ * field -> verbatim quote -> source URL, written by the reader who did the
+ * work, and derive.js ships it per unit. Where it exists it is the answer, and
+ * the text matcher below is only the fallback for the entries it does not
+ * cover -- roughly four in five, because the parts format post-dates most of
+ * the corpus.
+ *
+ * A recorded source is sometimes NOT one of the entry's docLinks (317 of
+ * 2,509): quoted while drafting, never added to the entry. It is still shown,
+ * since the quote is the evidence that it was read, and it falls back to the
+ * host name when no docLink supplies a label.
+ */
+function draftedSources(u, fieldKey) {
+  const rows = (u.fieldSources || {})[fieldKey];
+  if (!Array.isArray(rows) || !rows.length) return [];
+  const byUrl = new Map();
+  for (const l of (u.docLinks || [])) byUrl.set(String(l.url).split('#')[0], l.label || l.url);
+  return rows.map(r => {
+    const bare = String(r.url).split('#')[0];
+    let label = byUrl.get(bare);
+    if (!label) { try { label = new URL(r.url).hostname.replace(/^www\./, ''); } catch (e) { label = r.url; } }
+    return { url: r.url, label, quote: r.quote, where: r.where };
+  });
+}
+
 function fieldSources(u, fieldKey) {
   const links = u.docLinks || [];
   const text = String((u.values || {})[fieldKey] == null ? '' : u.values[fieldKey]);
@@ -2331,8 +2365,12 @@ function fieldSources(u, fieldKey) {
     if (r && r.url) cited.add(r.url);
   }
 
+  // Anything already shown as a recorded source is not repeated below it.
+  const drafted = new Set(draftedSources(u, fieldKey).map(d => String(d.url).split('#')[0]));
+
   const named = [], rest = [];
   for (const l of links) {
+    if (drafted.has(String(l.url).split('#')[0])) continue;
     const lab = { f: srcFlat(l.label || l.url || ''), c: srcFlatCase(l.label || l.url || '') };
     const on = [];
     for (const t of toks) { const h = srcHit(t, lab); if (h && on.indexOf(h) < 0) on.push(h); }
@@ -2344,9 +2382,29 @@ function fieldSources(u, fieldKey) {
 
 function fieldSourcesHTML(u, fieldKey) {
   const { named, rest, total } = fieldSources(u, fieldKey);
-  if (!total) return `<div class="cpanlinks"><p class="cnone">No source is recorded on this entry.</p></div>`;
+  const drafted = draftedSources(u, fieldKey);
+  if (!total && !drafted.length) return `<div class="cpanlinks"><p class="cnone">No source is recorded on this entry.</p></div>`;
+
+  const draftedHTML = drafted.length ? `<div class="drafted">
+      <div class="ch">Read for this question</div>
+      <div class="links">${drafted.map(d => `<div class="srcrow">
+        <a href="${esc(d.url)}" target="_blank" rel="noopener noreferrer">${esc(d.label)}</a>
+        ${d.quote ? `<blockquote class="q">${esc(d.quote)}${d.where ? `<span class="where">${esc(d.where)}</span>` : ''}</blockquote>` : ''}
+      </div>`).join('')}</div>
+    </div>` : '';
 
   if (!named.length) {
+    if (drafted.length) {
+      return `<div class="cpanlinks">
+        ${draftedHTML}
+        ${rest.length ? `<details class="rest">
+            <summary>${rest.length} other source${rest.length === 1 ? '' : 's'} on the ${esc(u.name)} entry</summary>
+            <div class="links">${linkList(rest)}</div>
+          </details>` : ''}
+        <p class="note">Recorded against this question when the entry was drafted, with the
+          sentence it was read from.</p>
+      </div>`;
+    }
     return `<div class="cpanlinks">
       <div class="ch">Sources on this entry</div>
       <div class="links">${linkList(rest)}</div>
@@ -2363,15 +2421,16 @@ function fieldSourcesHTML(u, fieldKey) {
     </div>`).join('');
 
   return `<div class="cpanlinks">
+    ${draftedHTML}
     <div class="ch">Named in this text</div>
     <div class="links">${rows}</div>
     ${rest.length ? `<details class="rest">
         <summary>${rest.length} other source${rest.length === 1 ? '' : 's'} on the ${esc(u.name)} entry</summary>
         <div class="links">${linkList(rest)}</div>
       </details>` : ''}
-    <p class="note">Matched on what the text names, which is a claim about the words above
-      rather than about what the coder read. A source in the second list may well be the
-      one this answer came from.</p>
+    <p class="note">${drafted.length
+      ? 'The first block was recorded against this question when the entry was drafted. The rest is matched on what the text names, which is a claim about the words above rather than about what the coder read.'
+      : 'Matched on what the text names, which is a claim about the words above rather than about what the coder read. A source in the second list may well be the one this answer came from.'}</p>
   </div>`;
 }
 

@@ -6,6 +6,30 @@
 
 const { makeHistoryMatcher } = require('./history');
 
+/* WHICH SOURCE BACKS WHICH FIELD, recovered from the drafting files.
+ *
+ * docLinks are per ENTRY, so a panel showing one field could only ever offer
+ * all fifteen of South Africa's sources under four lines about SIAS. The
+ * association does exist: every fill wave's part file carries an EVIDENCE
+ * block of field -> verbatim quote -> source URL, written by the reader who
+ * did the work, and it was dropped on the way into the data.
+ *
+ * research/tools/build-evidence-index.js joins it back into
+ * data/field-sources.json. This is a build artefact of the research material,
+ * so it is OPTIONAL: a checkout without it derives exactly as before, and the
+ * panel falls back to matching the field's own words against source titles.
+ */
+let FIELD_SOURCES = {};
+try { FIELD_SOURCES = require('../data/field-sources.json'); } catch { /* not built */ }
+
+// The client gets the citation, not an essay. A quote runs to 1,516 characters
+// in places and a drafter's note to 781, and the panel shows a line or two of
+// each. Cut on a word boundary so the ellipsis lands somewhere readable.
+const QUOTE_CAP = 320;
+const WHERE_CAP = 160;
+const clip = (t, n) => !t ? null
+  : t.length > n ? t.slice(0, n).replace(/\s+\S*$/, '') + '…' : t;
+
 // A contributor who looked and found nothing writes that into the field. It is
 // worth showing, and it must never count as coverage: three states, not two.
 // Written form is "Not established from the sources consulted.", and fl/apply.js
@@ -171,6 +195,23 @@ function deriveUnits(domain, entries, sharedMatcher) {
       if (e.absences && e.absences[k] === true && values[k]) absences[k] = true;
     }
 
+    // The sources recorded against individual FIELDS when this entry was
+    // drafted. Same gate as coding and slots: only for fields this unit has
+    // text in, so a source cannot outlive the sentence it backed.
+    const fieldSources = {};
+    {
+      const forUnit = (FIELD_SOURCES[domain.id] || {})[`${e.countryCode}|${e.unitName}`];
+      for (const [k] of domain.fields) {
+        const list = forUnit && forUnit[k];
+        if (!Array.isArray(list) || !list.length || !values[k]) continue;
+        fieldSources[k] = list.map(x => ({
+          url: x.url,
+          quote: clip(x.quote, QUOTE_CAP),
+          where: clip(x.where, WHERE_CAP),
+        }));
+      }
+    }
+
     // What a reader made of each filled field, as values from a fixed list.
     // Passed through for the same reason slots are: it is knowledge somebody
     // had and the prose does not preserve, and re-deriving it downstream would
@@ -209,6 +250,7 @@ function deriveUnits(domain, entries, sharedMatcher) {
       slots,
       absences,
       coding,
+      fieldSources,
       filled,
       looked,
       // Labels of fields this unit has nothing of its own for that ARE answered
