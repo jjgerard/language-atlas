@@ -41,7 +41,7 @@ if (!domainId || !file) {
 
 const root = path.join(__dirname, "..", "..");
 const { DOMAINS } = require(path.join(root, "src", "domains.js"));
-const { SCHEMES } = require(path.join(root, "src", "coding.js"));
+const { SCHEMES, mixedAbsence } = require(path.join(root, "src", "coding.js"));
 const domain = (Array.isArray(DOMAINS) ? DOMAINS : Object.values(DOMAINS)).find(d => d.id === domainId);
 if (!domain) { console.error("no such domain: " + domainId); process.exit(2); }
 
@@ -102,6 +102,12 @@ for (const [key, byField] of Object.entries(coding)) {
         const bad = value.filter(x => !ok(x));
         for (const b of bad) refused.push(key + "/" + field + "/" + col + ': "' + b + '" is not in the vocabulary');
         const kept = value.filter(ok);
+        // Every value can be in the vocabulary and the CELL still be incoherent:
+        // a value saying there is no rule cannot sit beside one read from the
+        // same text. Refused whole rather than silently dropping the absence,
+        // because which of the two the coder meant is theirs to say.
+        const mixed = mixedAbsence(kept);
+        if (mixed) { refused.push(key + "/" + field + "/" + col + ": " + mixed); continue; }
         if (kept.length) row[col] = kept;
       } else if (ok(value)) row[col] = value;
       else refused.push(key + "/" + field + "/" + col + ': "' + value + '" is not in the vocabulary');
@@ -132,7 +138,7 @@ for (const [key, byField] of Object.entries(coding)) {
 if (missing.length) console.log("no entry for: " + missing.join(", "));
 if (empty.length) console.log("field has no text to code, skipped: " + empty.join(", "));
 if (refused.length) {
-  console.log(String.fromCharCode(10) + "REFUSED " + refused.length + " value(s) not in the vocabulary:");
+  console.log(String.fromCharCode(10) + "REFUSED " + refused.length + " -- a value off the list, or a cell the list cannot hold:");
   for (const r of refused) console.log("  " + r);
   console.log("  A pile of these is information about the vocabulary, not only an error log.");
 }

@@ -474,6 +474,56 @@ const HISTORY_OPERATION = {
   'provision described': 'The row dates an instrument and states what it PROVIDES, recording no operation on it. The residual, and 48% of the corpus (Antigua and Barbuda: "Education Act 2008 (No. 21 of 2008); s.83 makes communicative exceptionalities the route to special education"; Azerbaijan: "Law on Education Art. 7.1 makes Azerbaijani the official medium")',
 };
 
+// ===========================================================================
+// VALUES THAT CANNOT SHARE A CELL
+// ===========================================================================
+//
+// A list column holds several values because a system really does run several
+// rules at once. These seven are the ones that say there is NO rule -- either
+// that the entry does not answer, or that somebody checked and the system has
+// nothing -- and neither claim can be true alongside a value read from the same
+// text. Coding both is not a system doing two things; it is two readings of one
+// text, and it silently inflates the count of whichever absence is named.
+//
+// Derived from the corpus, not assumed: across every list column in every
+// domain exactly ONE cell had done it -- Queensland's exit_mechanism as
+// ["test", "not stated"] -- and reading the entry showed what the coder meant.
+// Queensland publishes a Bandscale level for the international-student stream
+// and "no published exit criterion for domestic EAL/D pupils". That is two
+// POPULATIONS under different rules, which the row grain cannot hold: the row
+// is one system. `not stated` was the nearest thing to hand and it is false,
+// because the entry reaches the question and answers it.
+//
+// The test is the gloss, not the name. `not solely because of language` begins
+// with "not" and is a substantive protection that can sit beside anything;
+// `none` on secured_by reads "established that nothing secures it", which
+// cannot.
+const EXCLUSIVE_VALUES = new Set([
+  'not stated',        // the entry does not reach the question
+  'not determined',    // nobody has established which field a row touched
+  'none established',  // checked, and no rule of any kind exists
+  'none stated',       // the entry establishes the rule and names nothing here
+  'none',              // established that nothing secures it
+  'not taught',        // somebody checked and it is not taught
+  'not a medium',      // somebody checked and it carries no teaching
+]);
+
+/** True where `value` asserts there is nothing on this axis, so it cannot
+ *  share a list cell with any other value. */
+const isExclusiveValue = v => EXCLUSIVE_VALUES.has(String(v));
+
+/** The reason a list cell is incoherent, or null where it is fine. Takes the
+ *  whole cell, because the fault is the COMBINATION rather than any one value. */
+function mixedAbsence(values) {
+  const arr = [].concat(values == null ? [] : values);
+  if (arr.length < 2) return null;
+  const neg = arr.filter(isExclusiveValue);
+  if (!neg.length) return null;
+  return '"' + neg[0] + '" says there is nothing on this axis, so it cannot '
+    + 'sit beside ' + arr.filter(x => !isExclusiveValue(x)).map(x => '"' + x + '"').join(', ')
+    + (neg.length > 1 ? ' or "' + neg[1] + '"' : '');
+}
+
 /** The fields a policyHistory row on this domain could have touched. */
 const fieldsTouchedFor = id => {
   const list = Array.isArray(DOMAINS) ? DOMAINS : Object.values(DOMAINS);
@@ -1008,6 +1058,7 @@ const has = (o, v) => Object.prototype.hasOwnProperty.call(o, v);
 const isObligesLevel = v => Number.isInteger(v) && v >= 0 && v <= 4;
 
 module.exports = {
+  EXCLUSIVE_VALUES, isExclusiveValue, mixedAbsence,
   codingRows,
   INSTRUMENT_TYPES, OBLIGES_LEVELS, DUTY_TYPES, REDRESS_TYPES,
   TEST_TYPES, BILINGUAL_FIT, MODALITY, LANGUAGE_DOMAINS,

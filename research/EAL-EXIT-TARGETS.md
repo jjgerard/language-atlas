@@ -260,3 +260,33 @@ Eurydice will produce the same nothing. The instruments to find are:
 | CY Cyprus | the Ministry circular behind the bilingual-children provision |
 | HU Hungary | the ministerial decree behind the start-of-schooling diagnostic test |
 | MD Moldova | whether any newcomer support exists to exit from; the plan-cadru is a timetable |
+
+## One entry the column cannot hold, and a target it names
+
+`AU|Queensland` was coded `["test", "not stated"]` -- the only cell in the
+corpus mixing an absence with a value, and the reason is in the entry:
+
+> Clear only for the international-student funding stream
+> Bandscale Level 6 equals zero funding -- proficiency no longer warranting support
+> No published exit criterion for domestic EAL/D pupils -- a genuine documentation gap
+
+Two POPULATIONS under different rules, where the scheme's row is one system.
+`not stated` was the nearest thing to hand and it is false, because the entry
+reaches the question and answers it: for domestic pupils nothing is published.
+Corrected to `["test"]`, which is true of the rule the entry establishes, and
+`apply-coding` now refuses the combination so it cannot recur silently.
+
+What that correction LOSES is the domestic gap, which is the more interesting
+half. Two ways to get it back, and the choice is the maintainer's:
+
+- **A row-grained exit_mechanism**, one row per population. That is the same
+  grain problem `dld.legalEntitlement` and `dld.assessments` are blocked on,
+  and it would be a third reason to solve it rather than a new one.
+- **An `absences` entry on Queensland**, since `entry.absences` already exists
+  to record a documented absence that answers a field. This is cheaper and
+  needs no vocabulary change, but the absence would be about a population
+  rather than the field, which is not what the flag was built for.
+
+Either way Queensland is a research target in its own right: a state that
+publishes an exit level for fee-paying international students and none for its
+own EAL/D pupils is a finding, not a hole, and it wants a second source.

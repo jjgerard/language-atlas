@@ -159,7 +159,7 @@ const SHAPES = {
 
 const NOT_ESTABLISHED_RE = /^Not established from the sources consulted/i;
 const { slotCount, validSlots, orderBySlot } = require('./slots');
-const { SCHEMES } = require('./coding');
+const { SCHEMES, mixedAbsence } = require('./coding');
 
 // Which question each bullet answers. A field's hint lists its four questions
 // in the order they must be answered, and drafters compose bullet by bullet
@@ -353,6 +353,11 @@ function codingFor(domain, body, fields) {
         const ok = x => Object.prototype.hasOwnProperty.call(spec, String(x));
         if (Array.isArray(v)) {
           const kept = v.filter(ok);
+          // A cell whose values are each in the vocabulary can still be
+          // incoherent: one saying there is no rule cannot sit beside one
+          // read from the same text. Dropped whole rather than guessed at,
+          // on the same grounds as a grain mismatch above.
+          if (mixedAbsence(kept)) continue;
           if (kept.length) row[col] = kept;
         } else if (ok(v)) row[col] = v;
       }
