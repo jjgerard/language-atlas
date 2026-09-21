@@ -448,6 +448,55 @@ const FUNDING_SCOPE = {
   'not stated': 'The entry does not make the scope of its source clear',
 };
 
+// ===========================================================================
+// eal.l1Support
+// ===========================================================================
+//
+// Derived 2026-09-21 from 40 entries sampled across all five regions.
+//
+// The field asks what a newcomer gets in their OWN language. Reading it, the
+// striking thing is how often the answer describes somebody else: the
+// provision named is for a national or indigenous minority, or for the whole
+// cohort, and several entries say so in terms. Greece: Thrace minority
+// schooling is "treaty-based, for the recognised Muslim minority -- distinct
+// from newcomer provision". Lebanon: "Mother tongue here means dialectal
+// Arabic, not a migrant language". Palau: "the stated rationale is
+// preservation of Palauan, not access to the curriculum". So `for_whom` is a
+// column, and it is the one that makes the rest of the field readable.
+
+// WHAT FORM IT TAKES. A timetabled subject, the medium of teaching, and a
+// bridge to the school language are three different policies, and the corpus
+// separates them cleanly.
+const L1_FORM = {
+  'taught as a subject': 'The language is on the timetable as a subject (Chile, Asignatura Lengua Indigena, four hours a week; Denmark, modersmalsundervisning under decree 689 of 2014; Israel, where mother tongue is one of eight core subjects in Arab primary education; Haiti, where Creole has seven weekly periods in AF1)',
+  'medium of instruction': 'Teaching is carried in the language (Malaysia, whose national-type primary schools use Chinese or Tamil as the main medium; Kyrgyzstan, with Russian, Uzbek and Tajik medium schools; Mauritania, art. 65, each child learning primary science in their own mother tongue)',
+  'transitional bridge': 'Used only until the school language is reached, and the entry says so (Norway: given "only if necessary to acquire the language of instruction" and read in practice "as a bridge to Norwegian"; Vanuatu, vernacular for the first two years with French or English from Year 3; American Samoa, Samoan "when necessary to facilitate teaching English")',
+  'incidental use': 'The language appears in communication around school rather than in teaching (Guam, where schools "translated parent notices into Chuukese" and ran ESL family workshops)',
+  'none established': 'Checked, and there is no provision in a home language (Bahrain: "No home-language provision is recorded in any cited source"; Italy: "No mandated mother-tongue instruction programme found"; New Zealand: "No unified national policy")',
+  'not stated': 'The entry does not establish what form any provision takes',
+};
+
+// WHO IT IS FOR. The column this field needed, and the reason a distribution
+// of `form` alone would mislead: a reader asking what a newly arrived child
+// gets would be shown provision built for somebody else.
+const L1_FOR_WHOM = {
+  'newly arrived pupils': 'Arrivals are the named population (Denmark, "for children of EU/EEA nationals", extended to Iceland, Liechtenstein and Norway; Greenland, for "pupils with neither Greenlandic nor Danish"; Mexico, whose arts. 56-58 name MIGRANTS and agricultural day-labourers beside indigenous peoples)',
+  'national or indigenous minority': 'A settled minority is, and the provision is not about arrival (Greece, Thrace, "treaty-based, for the recognised Muslim minority -- distinct from newcomer provision"; Lebanon, where "mother tongue here means dialectal Arabic, not a migrant language"; Brazil, where the guarantee runs to indigenous communities; Chile, Israel, Angola, Algeria)',
+  'whole cohort': 'Every pupil gets it, so it is not support for anyone in particular (Marshall Islands, where Marshallese is compulsory at every level and "framed as culture and heritage, not as support for reaching the curriculum"; Palau, written Palauan a mandatory core subject grades 1 to 12; Tonga)',
+  'not stated': 'The entry does not establish who the provision is for',
+};
+
+// WHAT SECURES IT. Same question MEDIUM_SECURED_BY asks of the indigenous map,
+// asked here of a newcomer, and the answers differ: permission is much the
+// commoner form.
+const L1_SECURED_BY = {
+  'entitlement': 'A pupil can call for it (Norway, "entitled to mother-tongue instruction and/or bilingual subject teaching", Education Act s 2-8; Denmark, where municipalities MUST offer it)',
+  'compulsory': 'It is required, of the school or of the pupil (Marshall Islands, compulsory at every school level; Palau, binding on "every school chartered in the Republic or funded from public funds")',
+  'on request or threshold': 'It turns on somebody asking, or on enough of them (Belarus, where minority-language groups "may be created on request" with a local executive decision; Chile, compulsory only "where indigenous enrolment exceeds 20%"; Puerto Rico, whose 30% threshold for significant presence nothing reaches)',
+  'permission': 'May, not must, with nobody obliged to offer it (Greenland, where mother-tongue teaching MAY be arranged and must sit outside normal teaching time; Russia, where the right is "bounded by the possibilities the education system provides"; Vanuatu; American Samoa)',
+  'not stated': 'The entry does not establish what secures the arrangement it describes',
+};
+
 // WHO DECIDES. Same purpose as the eal axis -- the same test applied by a
 // clinician, a commission or a school is three different systems.
 const DECIDER_TYPES = {
@@ -1117,6 +1166,15 @@ const SCHEMES = {
   // properly. `bilingual_handling` lived only on identificationCriteria, where
   // it came out `silent` on 187 of 193 -- a finding about where drafters put
   // the answer, not about what systems do. 104 of those 187 have prose here.
+  'eal.l1Support': {
+    row: 'one national or sub-national system',
+    columns: {
+      form: L1_FORM,
+      for_whom: L1_FOR_WHOM,
+      secured_by: L1_SECURED_BY,
+      evidence_type: EVIDENCE_TYPE,
+    },
+  },
   'dld.funding': {
     row: 'one national or sub-national system',
     columns: {
@@ -1197,6 +1255,7 @@ module.exports = {
   ASSESSMENT_LANGUAGE, LOCAL_NORMS, EVIDENCE_TYPE,
   SERVICE_SECTOR, SERVICE_PRACTITIONER, SERVICE_PLACEMENT,
   FUNDERS, FAMILY_PAYS, FUNDING_SCOPE,
+  L1_FORM, L1_FOR_WHOM, L1_SECURED_BY,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
   HISTORY_OPERATION,
@@ -1221,6 +1280,9 @@ module.exports = {
   isThresholdBasis: v => has(THRESHOLD_BASIS, v),
   isBilingualHandling: v => has(BILINGUAL_HANDLING, v),
   isAssessmentLanguage: v => has(ASSESSMENT_LANGUAGE, v),
+  isL1Form: v => has(L1_FORM, v),
+  isL1ForWhom: v => has(L1_FOR_WHOM, v),
+  isL1SecuredBy: v => has(L1_SECURED_BY, v),
   isFunder: v => has(FUNDERS, v),
   isFamilyPays: v => has(FAMILY_PAYS, v),
   isFundingScope: v => has(FUNDING_SCOPE, v),
