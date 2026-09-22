@@ -579,6 +579,88 @@ const WORKFORCE_COUNT = {
 };
 
 // ===========================================================================
+// dld.terminology
+// ===========================================================================
+//
+// Derived 2026-09-22, and rederived twice the same day. The first attempt coded
+// facts ABOUT the term -- whether one existed, what umbrella it sat under, what
+// authority it carried. None of that was about the term itself, and what a
+// system CALLS this is the thing the field is for, so these columns classify
+// the words.
+//
+// The first two columns are the CATALISE question made countable. Bishop et al.
+// (2017) asked the field to settle on "developmental language disorder"; this
+// records who did, who kept "specific language impairment", who never qualified
+// it, who frames it as a DELAY or a DIFFICULTY rather than a disorder, and who
+// has a word for SPEECH that never reaches comprehension.
+//
+// BEWARE THE RAW COUNTS. 51 entries mention DLD and 48 of those mention it to
+// say it is ABSENT -- "no term corresponding to DLD appears", "DLD returns 0
+// hits". Reading what each entry LEADS with instead, the label actually in use
+// is DLD on about 7 systems against 26 on an unqualified language impairment.
+// Counting mentions here inverts the finding.
+//
+// THE FAMILIES WERE EXTENDED after reading the 74 entries the first set left
+// homeless. Two thirds of those were families already here, missed because the
+// matching was English-centric -- Albania’Crregullimet Gjuhesore, Italy’Disturbo
+// del Linguaggio, Sweden’Sprakstorning and Paraguay’trastornos de lenguaje are
+// all the unqualified family in their own languages. The other third were three
+// real shapes: a DELAY framing, a DIFFICULTY framing, and a refusal to
+// categorise at all. The last sits on `term_type`, not `label`, because a
+// system that declines to name a category has not chosen a label.
+//
+// `profession` was drafted as a fifth column and DROPPED. Six traditions do
+// appear -- orthophonie in francophone Africa, logopedics, speech and language
+// therapy, speech-language pathology, fonoaudiologia, and phoniatrics in Egypt
+// alone -- but 175 of 206 entries name no practitioner at all, several of the
+// 31 name one only to record its absence (Cape Verde: "No terapeuta da fala,
+// fonoaudiologo or logopedia anywhere in the law"), and what the split really
+// maps is which language the country speaks. The one useful part of it is kept
+// as `a profession term only` on `term_type`.
+//
+// The COST 2017 awareness bands were drafted and dropped too. 17 entries carry
+// one in three ordinal levels the drafters wrote out. 17 of 206 measures which
+// countries the survey covered, not which systems have public awareness.
+//
+// Switzerland is the entry to read before trusting any of this: "No Swiss term
+// can be drawn from the sources this entry cites, AND NONE IS INVENTED HERE."
+
+// WHAT KIND OF WORD THE SYSTEM HAS.
+const TERM_TYPE = {
+  'a disorder term': 'A word for the condition itself (Australia’s "developmental language disorder"; Belarus’s statutory "severe speech and language disorders"; San Marino, where "Disturbo del linguaggio is a named statutory category in its own right")',
+  'a profession term only': 'A word for the discipline or the practitioner and none for the condition (Burundi, "orthophonie ou logopedie in the official text"; Algeria, where orthophonie is "housed in psychology and education-science faculties, not in medicine"; Indonesia, "the practitioner is terapis wicara"; Thailand, whose practitioner is literally "speech corrector")',
+  'an umbrella category only': 'Only a wider administrative heading, with nothing language-specific inside it (Ecuador’s necesidades educativas especiales "with no language category"; Bangladesh’s "challenged children"; Luxembourg’s "eleves a besoins educatifs particuliers ou specifiques")',
+  'a functional or barriers framing': 'Need is defined by what a pupil cannot do or by what obstructs them, DELIBERATELY instead of by category, and the entries say so (South Africa, "learners who experience barriers to learning, deliberately broad"; Mexico, working from "barreras para el aprendizaje y la participacion"; the Marshall Islands, "a disabled child is defined functionally, not by category"; Ukraine, "the category is functional -- sensory, motor, speech-language -- not a named disorder"; the Maldives, "students with complex learning profiles, not a disorder label")',
+  'none located': 'Somebody looked and found no word of any kind (Andorra, Bhutan, Equatorial Guinea)',
+  'sub-national only': 'The naming happens below the national level (Canada: "Ontario codes Language Impairment, Alberta codes by severity, BC codes nothing")',
+  'not stated': 'The entry does not establish what word, if any, exists',
+};
+
+// WHICH LABEL, WHERE THERE IS ONE.
+const TERM_LABEL = {
+  'developmental language disorder': 'The post-CATALISE label, in English or in translation (Australia; Finland’s "kehityksellinen kielihairio", "one of the few translations that adds developmental where English said impairment"; Estonia’s "Arenguline keelepuue"; French Polynesia, where "since 2017 the DGEE glosses dysphasie as trouble developpemental du langage")',
+  'specific language impairment': 'The pre-CATALISE label, still in use (Cyprus’s "Eidiki Glossiki Diatarachi"; Malta, where the 2017 survey ran in English with no translation; Poland’s "Specyficzne zaburzenie jezykowe"; Chile, registered as "trastorno especifico del lenguaje")',
+  'language impairment or disorder, unqualified': 'Neither developmental nor specific, and the commonest answer by a distance (Austria’s "Sprachstorung"; Italy’s "Disturbo del Linguaggio (DL)", "capitalised as a diagnostic label"; Sweden’s "Sprakstorning"; Greece’s "Glossiki Diatarachi"; France’s "trouble du langage"; Paraguay’s "trastornos de lenguaje", a statutory SEN category under Ley 1264/1998 Art. 80)',
+  'language development disorder': 'The Germanic and Nordic family, which names development without naming DLD (Germany’s "Sprachentwicklungsstorung (SES)"; the Netherlands’ TOS, "standard across health, education and advocacy"; Denmark’s "sprogforstyrrelse"; Slovakia’s "naruseny vyvin reci", disturbed development of speech)',
+  'language delay': 'The word says the child is BEHIND rather than disordered (Romania’s "Retard de limbaj", which the entry glosses as "language delay or language retardation"; China’s national standard, listing childhood delayed speech development)',
+  'language difficulties': 'A DIFFICULTY rather than a disorder, and the entries draw the distinction themselves (Norway’s "sprakvansker (SV), language difficulties, NOT A DISORDER WORD"; the Seychelles, "speech and language difficulties is one of ten recognised SEN categories"; Botswana, which "lists language difficulties as an example category"; Jordan, where "speech difficulties appears only as a service target, not a defined category")',
+  'speech disorder': 'A word for SPEECH that does not reach comprehension (China’s 言语残疾, where "grading turns on speech intelligibility and expression, not on comprehension"; Armenia’s repealed "severe speech disorders"; North Macedonia’s "narusuvanje na govorot", disturbance of speech; Vietnam, whose statutory category "fuses hearing and speech")',
+  'communication needs': 'Framed as communication, with language inside it (Guernsey’s Speech, Language and Communication Needs Service; Antigua and Barbuda, Saint Kitts and Nevis and Dominica, all hooking on "communicative ... exceptionalities"; Micronesia, copying the US federal definition)',
+  'not applicable': 'There is no disorder term to classify',
+  'not stated': 'A term exists and the entry does not make its family clear',
+};
+
+// WHETHER THE WORD IS REAL WHERE IT IS SPOKEN.
+const TERM_STANDING = {
+  'in statute': 'Set in law (Singapore’s Allied Health Professions Act; Belarus, where the category is one of eight named groups; American Samoa, "listed in ASCA 16.1603, wording following IDEA, with no term set by the territory"; Puerto Rico, where "Ley 51-1996 lists problemas del habla o lenguaje among qualifying impedimentos")',
+  'in policy or an official list': 'Below statute but official (Belize, where "speech/language disorder is one of thirteen exceptional-learning-needs categories" and the entry adds it is "an administrative service-category list, not a statutory definition"; Botswana’s Inclusive Education Policy 2011; the Seychelles’ ten recognised SEN categories)',
+  'in professional use only': 'Circulating without an instrument behind it (the Netherlands, where "clinicians, schools and parent bodies all use the same term"; Bosnia and Herzegovina, "widespread in practice but not legally defined"; Saint Kitts and Nevis, where the Act says speech zero times and "ministry service is nonetheless called speech and language therapy"; Burkina Faso, a "practitioner account")',
+  'a researcher translation': 'It exists because a study needed it, and the entry says so (Albania and Portugal, both "COST IS1406 survey translation, not statutory"; Czechia; North Macedonia; Iran, where "evidence is a research task list, not an Iranian clinical nomenclature")',
+  'none': 'There is no word to place',
+  'not stated': 'The entry does not establish where the word lives',
+};
+
+// ===========================================================================
 // indigenous.materials
 // ===========================================================================
 //
@@ -1674,6 +1756,14 @@ const SCHEMES = {
       evidence_type: EVIDENCE_TYPE,
     },
   },
+  'dld.terminology': {
+    row: 'one national or sub-national system',
+    columns: {
+      term_type: TERM_TYPE,
+      label: TERM_LABEL,
+      standing: TERM_STANDING,
+    },
+  },
   'indigenous.materials': {
     row: 'one national or sub-national system',
     columns: {
@@ -1827,6 +1917,7 @@ module.exports = {
   REVIT_ACTOR, REVIT_ACTIVITY, REVIT_STATUS, REVIT_FUNDING,
   L3_REQUIREMENT, L3_SECOND, L3_EXEMPTION, L3_TARGETING,
   MAT_CURRICULUM, MAT_MATERIALS, MAT_ORTHOGRAPHY, MAT_CHARGED,
+  TERM_TYPE, TERM_LABEL, TERM_STANDING,
   L1_FORM, L1_FOR_WHOM, L1_SECURED_BY, L2_MODELS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
@@ -1856,6 +1947,9 @@ module.exports = {
   isL2Model: v => has(L2_MODELS, v),
   isL1ForWhom: v => has(L1_FOR_WHOM, v),
   isL1SecuredBy: v => has(L1_SECURED_BY, v),
+  isTermType: v => has(TERM_TYPE, v),
+  isTermLabel: v => has(TERM_LABEL, v),
+  isTermStanding: v => has(TERM_STANDING, v),
   isMatCurriculum: v => has(MAT_CURRICULUM, v),
   isMatMaterials: v => has(MAT_MATERIALS, v),
   isMatOrthography: v => has(MAT_ORTHOGRAPHY, v),
