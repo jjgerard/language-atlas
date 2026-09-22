@@ -7,6 +7,10 @@ sources/
 # machine boots from.
 data/*.db
 data/*.db-journal
+# Dated backups taken when the local db is re-seeded from data/*.json.
+# seedIfEmpty() only fills an EMPTY database, so a local db keeps whatever
+# it was seeded with and quietly serves stale coding until it is replaced.
+data/*.db.stale-*
 
 # Local admin credentials for development.
 .env
