@@ -1096,14 +1096,87 @@ function schemeFor(fieldKey) { return (B.schemes || {})[domainId + '.' + fieldKe
    list, so the reader can hold "who decides" fixed and change which decision
    is meant. That is the whole reason the picker is built from columns rather
    than from fields. */
+/* Values that say the ENTRY does not answer. They are findings about the
+   record rather than about the system, and a map shaded mostly by them is a
+   map of the corpus's silence. */
+const NON_ANSWER = new Set(['not stated', 'not available', 'none stated',
+  'not established', 'unknown', 'not recorded']);
+
+/* WHICH COLUMNS ARE WORTH DRAWING.
+   Every coded column used to be offered, which was 36 questions on dld, 28 on
+   eal and 22 on indigenous -- a picker nobody could read, most of whose entries
+   drew a map of one colour. Two different things were wrong with them and both
+   are tested here, because neither test catches the other.
+
+   A column can be dominated by a NON-ANSWER: identificationCriteria.exclusions
+   is 96% `none stated`, multilingualProvision.local_norms 94% `not stated`,
+   l3Support.exemption 92%. Those maps show where the record is silent, which is
+   worth knowing and is not worth a choropleth.
+
+   Or it can be dominated by ONE REAL VALUE, which is the opposite problem and
+   passes a silence test cleanly: the seven `evidence_type` columns run 76-96%
+   `policy`, outcomesEvidence.scope is 94% `disability generally`,
+   revitalisation.status 91% `established`. The column is coded, answered, and
+   tells a reader nothing they can see on a map.
+
+   A third cut is coverage. materials is coded on 24 units of 396 and
+   removalCriteria.exit_period_months on 26; a map with two dozen countries
+   coloured is a map of a handful of entries, whatever the spread inside it.
+
+   NOTHING IS DELETED. These columns stay in the data, in /views/table and in
+   the coded panel; this decides only what is worth SHADING A MAP by, which is
+   a question about legibility rather than about the coding. The test is run
+   against the live data rather than written down as a list, so a column that
+   fills out later appears on its own. */
+const SHADE_MIN_UNITS = 60;      // below this the map is mostly blank
+const SHADE_MAX_TOP = 0.65;      // one value owning more than this is one colour
+const SHADE_MAX_SILENT = 0.40;   // non-answers taking more than this is a silence map
+const SHADE_MIN_VALUES = 3;      // distinct real answers worth telling apart
+const SHADE_VALUE_FLOOR = 0.05;  // ...each carried by at least this share
+
+function columnVaries(key) {
+  const counts = new Map();
+  let coded = 0;
+  for (const u of (B.units[domainId] || [])) {
+    const vs = codedValues(u, key);
+    if (!vs) continue;
+    coded++;
+    for (const v of vs) counts.set(v, (counts.get(v) || 0) + 1);
+  }
+  if (coded < SHADE_MIN_UNITS) return false;
+  let top = 0, silent = 0, real = 0;
+  for (const [v, n] of counts) {
+    if (n > top) top = n;
+    if (NON_ANSWER.has(v)) silent += n;
+    else if (n / coded >= SHADE_VALUE_FLOOR) real++;
+  }
+  return top / coded <= SHADE_MAX_TOP
+      && silent / coded <= SHADE_MAX_SILENT
+      && real >= SHADE_MIN_VALUES;
+}
+
+/* Counting every column against every unit is cheap once and wasteful on every
+   field heading in an open panel, which is what mappable() asks for. Keyed on
+   the unit count as well as the domain so a picker built before the data
+   arrived is not cached as the answer. */
+let shadeCache = null;
 function shadeableColumns() {
+  const units = B.units[domainId] || [];
+  const stamp = domainId + ':' + units.length;
+  if (shadeCache && shadeCache.stamp === stamp) return shadeCache.cols;
   const out = [];
   for (const f of domain().fields) {
     const sc = schemeFor(f.k);
     if (!sc || sc.many || (sc.keyColumns || []).length) continue;   // row-grained: rule 3
-    for (const c of (sc.valueColumns || [])) out.push({ field: f.k, label: f.label, col: c, key: f.k + '.' + c });
+    for (const c of (sc.valueColumns || [])) {
+      const key = f.k + '.' + c;
+      if (!columnVaries(key)) continue;
+      out.push({ field: f.k, label: f.label, col: c, key: key });
+    }
   }
-  return out.sort((a, b) => a.col.localeCompare(b.col) || a.label.localeCompare(b.label));
+  out.sort((a, b) => a.col.localeCompare(b.col) || a.label.localeCompare(b.label));
+  shadeCache = { stamp: stamp, cols: out };
+  return out;
 }
 
 /* The unit's OWN value for the shading column, never its country's. */
