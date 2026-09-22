@@ -579,6 +579,63 @@ const WORKFORCE_COUNT = {
 };
 
 // ===========================================================================
+// indigenous.localTerm
+// ===========================================================================
+//
+// Derived 2026-09-22, and like dld.terminology this codes WHAT THE WORDS ARE.
+// The field’s hint asks four things -- the term in its own language, what it
+// covers, where it is fixed, and whether the system rejects the minority
+// framing -- and three of them are columns. What it covers stays prose,
+// because the answer is a list of languages.
+//
+// THE COMMONEST ANSWER IS NOT A CATEGORY AT ALL. A large group of systems use
+// no collective word and simply name the language: Gagana Samoa, CHamoru
+// "spelling enacted by P.L. 33-236", Papiamento "the spelling used in Aruban
+// law", foroyskt, iTaukei "the state’s own name for the language WALS calls
+// Fijian", Le Creole, Kweyol. `the language’s own name` exists for those, and
+// coding them as `not stated` would have thrown away the finding.
+//
+// The other shape worth naming is a system that names THE PROVISION instead of
+// the languages -- Colombia’s "Etnoeducacion is the statutory name of the whole
+// provision", Argentina’s and Honduras’ Educacion Intercultural Bilingue, Costa
+// Rica’s Educacion indigena. The languages themselves go unnamed: Colombia’s
+// entry says "no individual language is named anywhere in arts. 55-59".
+
+// WHICH WORD. A LIST, because systems really do run several at once -- Angola,
+// "two terms coexist"; Sierra Leone, "three terms in one profile"; Cambodia,
+// where the action plan says indigenous peoples and the Education Law says
+// learners of minority Khmer origin.
+const LOCALTERM_FAMILY = {
+  'national language': 'The state calls them national (Benin’s "langues nationales, the statute’s own category, art. 8"; Guinea’s, where "only Maninka, Pular and Sosso are named"; Ethiopia’s "nationality languages"; Angola’s "Angolan languages")',
+  'official or co-official language': 'Named by official status rather than by community (Algeria, whose Constitution art. 4 says "langue nationale et officielle -- national AND official"; Spain’s "las demas lenguas espanolas, official in their Communities"; the Faroe Islands, where foroyskt is "hovudsmal, the principal language, in law"; Ecuador’s "idiomas oficiales de relacion intercultural")',
+  'indigenous or originary language': 'Indigeneity is the category (Chile’s "Lenguas Originarias, MINEDUC’s own heading"; Bolivia’s "idiomas de las naciones y pueblos indigena originario campesinos"; Guatemala’s "idiomas de los pueblos Mayas, Garifuna y Xinka")',
+  'minority language': 'The minority framing is adopted (Germany’s "Regional- oder Minderheitensprachen, the federal term, taken from the Charter"; Belarus’s "yazyk natsionalnogo menshinstva"; China’s 少数民族语言, "minority nationality language")',
+  'the people rather than the language': 'The term names a community or a status, and the language follows from it (Austria’s "sechs anerkannte autochthone Volksgruppen"; Azerbaijan’s three categories of "national minorities, small peoples and ethnic groups"; Bangladesh’s constitutional "tribes, minor races, ethnic sects and communities"; Georgia’s "citizens whose native language is not Georgian")',
+  'mother tongue or first language': 'Named by the speaker’s relation to it (Singapore, where "the category is Mother Tongue Language, offered as a second language"; Micronesia’s "local Micronesian language and first language")',
+  'vernacular or local language': 'Named as local speech (Papua New Guinea’s "vernacular, or tok ples in the older Tok Ples Skuls", where "individual vernaculars are named by communities, not by the ministry")',
+  'the language own name': 'NO category word: the system names the language (American Samoa’s Gagana Samoa "in the Commission’s own Samoan name"; Guam’s CHamoru, "the spelling enacted by P.L. 33-236"; Aruba’s Papiamento; the Faroes’ foroyskt; Fiji’s iTaukei; Haiti’s "Le Creole, the constitutional term for the language common to all Haitians"; Saint Lucia’s Kweyol)',
+  'the provision, not the language': 'The name belongs to the programme and the languages go unnamed (Colombia’s "Etnoeducacion is the statutory name of the whole provision" -- "no individual language is named anywhere in arts. 55-59"; Argentina’s and Honduras’ Educacion Intercultural Bilingue; Costa Rica’s Educacion indigena)',
+  'none in use': 'Checked, and the system has no term (the Dominican Republic, "no term for a minority or community language is in use"; Gibraltar, "no category term in use")',
+  'not stated': 'The entry does not establish what the system calls them',
+};
+
+// WHETHER THE MINORITY FRAMING IS ACCEPTED. The field’s hint asks this outright,
+// and 14 entries answer it by refusing the framing in as many words.
+const LOCALTERM_MINORITY = {
+  'adopted': 'The system calls them a minority language and means it',
+  'rejected': 'The entry records the system declining the framing (Andorra, "Catalan is Andorra’s official language, NOT A MINORITY ONE"; Greenland, "it is the language of the majority here, not of a minority"; Botswana, "Setswana is a national and official language, not a minority one"; Afghanistan, whose Constitution says "current languages in the country, NOT MINORITY"; Saint Lucia, where "no statutory category such as national or minority language attaches to it")',
+  'not stated': 'The entry does not reach the question',
+};
+
+// WHERE THE WORD IS FIXED.
+const LOCALTERM_FIXED = {
+  'in statute': 'A constitution, act or decree (Andorra’s Llei 17/2018; Guam’s P.L. 33-236; Benin’s art. 8; Colombia’s Ley 115 art. 55; Nicaragua, where "lenguas nicaraguenses de la Costa del Caribe is the Act’s own phrase, art. 70")',
+  'in guidance or curriculum': 'A ministry heading or a curriculum slot (Chile’s MINEDUC heading; Angola, where "the curriculum slot itself is called simply a national language"; Saint Lucia, where "Kweyol is the curriculum’s own word for the island vernacular")',
+  'in practice only': 'In use with no instrument behind it (Curacao, "Papiamentu in the ordinances, Papiaments in Dutch-language education reports")',
+  'not stated': 'The entry does not establish where the term is fixed',
+};
+
+// ===========================================================================
 // dld.terminology
 // ===========================================================================
 //
@@ -1756,6 +1813,15 @@ const SCHEMES = {
       evidence_type: EVIDENCE_TYPE,
     },
   },
+  'indigenous.localTerm': {
+    row: 'one national or sub-national system',
+    columns: {
+      // `family` is a LIST -- see the note on LOCALTERM_FAMILY.
+      family: LOCALTERM_FAMILY,
+      minority_framing: LOCALTERM_MINORITY,
+      fixed_in: LOCALTERM_FIXED,
+    },
+  },
   'dld.terminology': {
     row: 'one national or sub-national system',
     columns: {
@@ -1918,6 +1984,7 @@ module.exports = {
   L3_REQUIREMENT, L3_SECOND, L3_EXEMPTION, L3_TARGETING,
   MAT_CURRICULUM, MAT_MATERIALS, MAT_ORTHOGRAPHY, MAT_CHARGED,
   TERM_TYPE, TERM_LABEL, TERM_STANDING,
+  LOCALTERM_FAMILY, LOCALTERM_MINORITY, LOCALTERM_FIXED,
   L1_FORM, L1_FOR_WHOM, L1_SECURED_BY, L2_MODELS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
@@ -1947,6 +2014,9 @@ module.exports = {
   isL2Model: v => has(L2_MODELS, v),
   isL1ForWhom: v => has(L1_FOR_WHOM, v),
   isL1SecuredBy: v => has(L1_SECURED_BY, v),
+  isLocalTermFamily: v => has(LOCALTERM_FAMILY, v),
+  isLocalTermMinority: v => has(LOCALTERM_MINORITY, v),
+  isLocalTermFixed: v => has(LOCALTERM_FIXED, v),
   isTermType: v => has(TERM_TYPE, v),
   isTermLabel: v => has(TERM_LABEL, v),
   isTermStanding: v => has(TERM_STANDING, v),
