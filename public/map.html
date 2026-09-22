@@ -1174,7 +1174,19 @@ function shadeableColumns() {
       out.push({ field: f.k, label: f.label, col: c, key: key });
     }
   }
-  out.sort((a, b) => a.col.localeCompare(b.col) || a.label.localeCompare(b.label));
+  // BY FIELD, in the domain's own field order, not alphabetically by column.
+  // Sorting on the column name scattered the three terminology questions to
+  // three different places in the list -- `label`, `standing` and `term type`
+  // have nothing in common as words -- and put `rule locus - Discharge
+  // criteria` next to `rule locus - Identification criteria`, which are the
+  // same question about two different things. The field is the subject; the
+  // column is what is being asked about it, so the field groups.
+  //
+  // domains.js orders the fields as a reader should meet them, so that order is
+  // reused rather than sorted again here.
+  const order = domain().fields.map(f => f.k);
+  out.sort((a, b) => order.indexOf(a.field) - order.indexOf(b.field)
+                  || a.col.localeCompare(b.col));
   shadeCache = { stamp: stamp, cols: out };
   return out;
 }
@@ -2952,14 +2964,20 @@ const catLegend = document.getElementById('catlegend');
 function buildShadePicker() {
   const cols = shadeableColumns();
   const opts = ['<option value="">what is documented</option>'];
-  let lastCol = null;
+  // Grouped under the field, so the questions about one subject sit together
+  // and the select's own headings carry the subject. The option text then drops
+  // the field name it used to repeat: inside a Terminology group, "label —
+  // Terminology" said Terminology twice.
+  let open = null;
   for (const c of cols) {
-    // The column name is the question; the field says which instance of it.
-    // Both are shown because "decided by" alone is ambiguous exactly where the
-    // reader most wants to compare.
-    if (c.col !== lastCol) { lastCol = c.col; }
-    opts.push(`<option value="${esc(c.key)}">${esc(c.col.replace(/_/g, ' '))} — ${esc(c.label)}</option>`);
+    if (c.label !== open) {
+      if (open !== null) opts.push('</optgroup>');
+      opts.push(`<optgroup label="${esc(c.label)}">`);
+      open = c.label;
+    }
+    opts.push(`<option value="${esc(c.key)}">${esc(c.col.replace(/_/g, ' '))}</option>`);
   }
+  if (open !== null) opts.push('</optgroup>');
   shadeSel.innerHTML = opts.join('');
   shadeSel.value = CODED.key || '';
 }
