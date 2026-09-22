@@ -266,6 +266,40 @@ function languages(payload) {
 
   const present = gaps.reduce((a, g) => a + g.present, 0);
   const named = gaps.reduce((a, g) => a + g.named, 0);
+  // THE TWO NUMBERS ARE NOT NESTED, and five units prove it by naming more
+  // languages than the catalogue counts for them: Croatia, Serbia, Mauritius,
+  // the Marshall Islands and Taiwan, each by one.
+  //
+  // Checked properly rather than assumed, by matching the atlas's own ISO codes
+  // against Glottolog's: of 889 named languages, 504 are filed by Glottolog
+  // under that country, 297 carry no ISO code to match on, 12 are a dialect or
+  // a family in Glottolog's terms, and 72 are filed under some other country.
+  // Only 38% of units have a named list wholly inside the catalogue's.
+  //
+  // Most of the 72 are not disagreements about fact. Glottolog's `Countries`
+  // column is a short list, not an exhaustive one: Russian's omits Armenia and
+  // Azerbaijan, which both name it.
+  //
+  // The five are NOT each one language over, whatever the arithmetic looks like.
+  // Checked one at a time, their two lists barely overlap at all -- Glottolog
+  // files 5 of Taiwan's 17 named languages under Taiwan, 6 of Serbia's 15, 3 of
+  // Croatia's 15, and 1 each of Mauritius's 3 and the Marshall Islands' 2. Three
+  // different things put a named language outside the count: Glottolog files it
+  // under the neighbour it came from (Czech and Slovak for Croatia; Atayal, Amis
+  // and Paiwan under CN rather than TW) or under everywhere-but-here (English is
+  // on 34 countries' lists, not the Marshall Islands'); it carries no ISO code
+  // in the atlas, which is 9 of Taiwan's 17 and 4 of Serbia's 15; or Glottolog
+  // holds it as a dialect (Bosnian) or not at all (Rusyn, Kreol Rodrige).
+  //
+  // So the counts cross because the two lists are largely disjoint, not because
+  // one overshot the other. That is the same fact the share measures, showing up
+  // at the only place where it can produce a negative number.
+  //
+  // So the share below is two counts set beside each other, not a subset of one
+  // in the other, and the text says so.
+  const exceeding = gaps.filter(g => g.named > g.present)
+    .map(g => ({ unit: g.unit, present: g.present, named: g.named }))
+    .sort((a, b) => a.unit.localeCompare(b.unit));
 
   return {
     rows: rows.length,
@@ -276,7 +310,7 @@ function languages(payload) {
     adjective: tally(r => r.adjective),
     withWals: rows.filter(r => r.wals).length,
     gap: gaps.length ? {
-      units: gaps.length, present, named,
+      units: gaps.length, present, named, exceeding,
       share: present ? Math.round((named / present) * 1000) / 10 : 0,
       widest: gaps.slice().sort((a, b) => (b.present - b.named) - (a.present - a.named))[0],
     } : null,
@@ -425,8 +459,8 @@ const FINDINGS = [
     scope: 'indigenous',
     compute: c => c.languages.gap,
     holds: v => v.units >= 25 && v.share < 50,
-    text: v => `School systems name a small fraction of the languages around them: across ${v.units} countries that record both, ${v.named} languages are named out of ${v.present} counted as living there — ${v.share}%. The widest single gap is ${v.widest.unit}, naming ${v.widest.named} of ${v.widest.present}.`,
-    note: 'Both numbers come from the entry itself: the count from Glottolog, the list from what the school system names, teaches or recognises. The distance between them is the subject of that map, not a shortfall in the record.',
+    text: v => `School systems name a small fraction of the languages around them: across ${v.units} countries that record both, Glottolog counts ${v.present} languages and the systems name ${v.named} — ${v.share} named for every hundred counted. The widest distance is ${v.widest.unit}, naming ${v.widest.named} against ${v.widest.present}.`,
+    note: v => `Two counts set beside each other, NOT a subset of one in the other. The count is Glottolog's for the country; the list is what the school system names, teaches or recognises, and it is not drawn from Glottolog. Matching the atlas's ISO codes against Glottolog's puts 504 of the ${v.named} named languages under the same country in both, 297 carrying no ISO code to match on, and 72 filed by Glottolog elsewhere — Russian is not on its list for Armenia or Azerbaijan, though both name it. ${v.exceeding.length} systems name more languages than the catalogue counts for them (${v.exceeding.map(e => e.unit).join(', ')}), which happens because the two lists are largely disjoint rather than because one overshot: Glottolog files 5 of Taiwan's 17 named languages under Taiwan, and 3 of Croatia's 15. The distance is the subject of that map; the overlap is not exact, and the share is a ratio rather than a proportion.`,
   },
   {
     id: 'word-order',
@@ -581,7 +615,8 @@ function findings(ctx) {
     try { v = f.compute(ctx); } catch { v = null; }
     if (!v) { withdrawn.push({ id: f.id, scope: f.scope, reason: 'not computable from the current data' }); continue; }
     if (!f.holds(v)) { withdrawn.push({ id: f.id, scope: f.scope, reason: 'the data no longer supports the claim' }); continue; }
-    held.push({ id: f.id, scope: f.scope, text: f.text(v), note: f.note, value: v });
+    held.push({ id: f.id, scope: f.scope, text: f.text(v),
+      note: typeof f.note === 'function' ? f.note(v) : f.note, value: v });
   }
   const rank = f => {
     const i = FINDING_ORDER.indexOf(f.id);
