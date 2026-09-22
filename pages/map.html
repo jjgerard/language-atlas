@@ -1141,6 +1141,10 @@ const NON_ANSWER = new Set(['not stated', 'not available', 'none stated',
    against the live data rather than written down as a list, so a column that
    fills out later appears on its own. */
 const SHADE_MAX_GREY = 0.45;     // above this the map is mostly grey
+/* Past this share of units holding more than three values, a column opens on
+   one isolated value instead of striping. Nothing reaches it today: the worst
+   is `initiated by` at 2 units of 185, or 1.1%. It is a valve, not a rule. */
+const SHADE_ISOLATE_SHARE = 0.08;
 const SHADE_MAX_TOP = 0.65;      // one value owning more than this is one colour
 const SHADE_MAX_SILENT = 0.40;   // non-answers taking more than this is a silence map
 const SHADE_MIN_VALUES = 3;      // distinct real answers worth telling apart
@@ -1254,16 +1258,18 @@ function codedScale(key) {
   // values, because two values past CAT_MAX both come out --cat-other and a
   // unit holding those two is paintable as one colour. This is the number that
   // decides whether the column can be drawn whole.
-  let maxCols = 0, striped = 0;
+  let maxCols = 0, striped = 0, over = 0, coded = 0;
   for (const u of (B.units[domainId] || [])) {
     const vs = codedValues(u, key);
     if (!vs) continue;
+    coded++;
     const n = new Set(vs.map(v => map.get(v) || 'var(--cat-other)')).size;
     if (n > maxCols) maxCols = n;
-    if (n === 2) striped++;
+    if (n > 1 && n <= STRIPE_MAX) striped++;
+    if (n > STRIPE_MAX) over++;
   }
   return {
-    map, ordered, ordinal, list: isList(key), maxCols, striped,
+    map, ordered, ordinal, list: isList(key), maxCols, striped, over, coded,
     overflow: Math.max(0, ordered.length - CAT_MAX),
   };
 }
@@ -1332,16 +1338,16 @@ function fillFor(u, st, own) {
     if (CODED.only) return vals.includes(CODED.only) ? 'var(--cat-1)' : 'var(--cat-other)';
     if (SCALE && SCALE.list) {
       // A list column was painted entirely in "other" here, on the grounds that
-      // an answer holding several values has no single colour. True -- but two
-      // values have two, and half the corpus's list columns never hold more
-      // than two: exit mechanism tops out at 2 (89 units hold one, 24 hold
-      // two), as do standing's force and taught-as-subject's status. Those are
-      // drawn in both, whole, dropping nothing. A third value is what actually
-      // has nowhere to go, and that is what the isolation is for.
+      // an answer holding several values has no single colour. True of six,
+      // false of two, and false of three: a rotated tile splits as evenly into
+      // thirds as into halves. Drawing up to three whole is what lets these
+      // columns open on the map at all rather than on one isolated value --
+      // `initiated by` has 18 units of 185 holding three and `triggers` 16 of
+      // 164, and forcing the isolation for their sake hid the other 167 and 148.
       const cols = [...new Set(vals.map(v => SCALE.map.get(v) || 'var(--cat-other)'))].sort();
       if (cols.length === 1) return cols[0];
-      if (cols.length === 2) return stripeFill(cols[0], cols[1]);
-      return 'var(--cat-other)';
+      if (cols.length <= STRIPE_MAX) return stripeFill(cols);
+      return 'url(#manyvals)';
     }
     const hit = vals.map(v => SCALE && SCALE.map.get(v)).find(Boolean);
     return hit || 'var(--cat-other)';
@@ -1409,6 +1415,18 @@ patNA.appendChild(el('path', {
   stroke: 'var(--surface)', 'stroke-width': 1.3, 'stroke-opacity': '.85',
 }));
 defs.appendChild(patNA);
+/* MORE VALUES THAN A STRIPE CAN CARRY. Three bands is the readable ceiling, and
+   across the whole atlas exactly three units go past it: two on referral
+   pathway's `initiated by` and one on newcomer criteria's `triggers`. They get
+   a texture of their own rather than --cat-other, which already means "a value
+   outside the top six" and would make a unit holding four answers look like one
+   holding a rare one. The legend gives it a row and says what it means. */
+const patMany = el('pattern', { id: 'manyvals', patternUnits: 'userSpaceOnUse', width: 6, height: 6 });
+patMany.appendChild(el('rect', { width: 6, height: 6, fill: 'var(--cat-other)' }));
+patMany.appendChild(el('path', {
+  d: 'M0 0 L6 6 M6 0 L0 6', stroke: 'var(--surface)', 'stroke-width': 1.1, 'stroke-opacity': '.9',
+}));
+defs.appendChild(patMany);
 /* Two colours on one shape. The pattern is a plain vertical band turned 45
    degrees rather than a drawn diagonal, because a rotated rect splits the tile
    exactly in half and a stroked path does not -- an unequal stripe would read
@@ -1449,19 +1467,24 @@ function measureStripes() {
 function stripeAngle() {
   return `rotate(45) scale(${(STRIPE_PX / 4) * stripeUnitsPerPx / view.k})`;
 }
-function stripeFill(a, b) {
+/* TWO OR THREE BANDS. The tile grows with the number of colours and each band
+   stays 4 units, so stripeAngle()'s scale keeps working and a band is the same
+   thickness whether there are two of them or three. */
+const STRIPE_MAX = 3;
+function stripeFill(cols) {
   const tok = c => String(c).replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '');
-  const id = `stripe-${tok(a)}-${tok(b)}`;
+  const id = 'stripe-' + cols.map(tok).join('-');
   if (!STRIPES.has(id)) {
+    const band = 4, w = band * cols.length;
     const q = el('pattern', {
-      id, patternUnits: 'userSpaceOnUse', width: 8, height: 8,
+      id, patternUnits: 'userSpaceOnUse', width: w, height: 8,
       patternTransform: stripeAngle(),
     });
-    q.appendChild(el('rect', { width: 8, height: 8, fill: a }));
-    q.appendChild(el('rect', { width: 4, height: 8, fill: b }));
+    cols.forEach((c, i) => q.appendChild(el('rect', { x: i * band, width: band, height: 8, fill: c })));
     defs.appendChild(q);
     STRIPES.set(id, q);
-    STRIPE_CSS.set(id, `repeating-linear-gradient(45deg, ${b} 0 ${STRIPE_PX}px, ${a} ${STRIPE_PX}px ${STRIPE_PX * 2}px)`);
+    const stops = cols.map((c, i) => `${c} ${i * STRIPE_PX}px ${(i + 1) * STRIPE_PX}px`).join(', ');
+    STRIPE_CSS.set(id, `repeating-linear-gradient(45deg, ${stops})`);
   }
   return `url(#${id})`;
 }
@@ -1474,6 +1497,9 @@ function fillToCSS(fill) {
   }
   if (f.indexOf('#uncoded') >= 0) {
     return { bg: 'radial-gradient(var(--hatch-line) 1px, var(--surface-2) 1.2px)', size: '5px 5px' };
+  }
+  if (f.indexOf('#manyvals') >= 0) {
+    return { bg: 'repeating-linear-gradient(45deg,var(--cat-other) 0 2px,var(--surface) 2px 3px),repeating-linear-gradient(-45deg,transparent 0 2px,var(--surface) 2px 3px)', size: '' };
   }
   if (f.indexOf('#na') >= 0) {
     return { bg: 'repeating-linear-gradient(-45deg, var(--nodata) 0 4px, var(--surface) 4px 5px)', size: '' };
@@ -2182,11 +2208,15 @@ function codedTipHTML(u, terr, via, fill) {
   // Say what the colour is doing. Isolated, it is a yes/no about one value and
   // the card names it; striped, it is both values at once and the card says so,
   // because a two-colour shape otherwise looks like a rendering fault.
+  const bands = (vals && SCALE && SCALE.list)
+    ? new Set(vals.map(v => SCALE.map.get(v) || 'var(--cat-other)')).size : 0;
   const note = (CODED.only && vals && vals.length > 1)
     ? `Shaded by whether this includes <b>${esc(CODED.only)}</b>.`
-    : (vals && vals.length > 1 && String(fill || '').indexOf('#stripe-') >= 0)
-      ? 'Striped because this answer holds both.'
-      : '';
+    : String(fill || '').indexOf('#manyvals') >= 0
+      ? 'Crosshatched because this answer holds more values than a stripe can show.'
+      : (bands > 1 && String(fill || '').indexOf('#stripe-') >= 0)
+        ? `Striped because this answer holds ${bands === 2 ? 'both' : 'all three'}.`
+        : '';
 
   const label = terr ? terr.name : (via || u.name);
   const meta = (terr || via) ? esc(u.name) + ' · shows that entry'
@@ -3043,9 +3073,13 @@ function paintCatLegend() {
   if (SCALE.list && CODED.only) {
     rows.push(`<p class="note">This answer can hold more than one value, so there is no single
       colour for a country. Pick a value to see which systems include it.</p>`);
-  } else if (SCALE.list && SCALE.striped) {
-    rows.push(`<p class="note">${SCALE.striped} answer${SCALE.striped === 1 ? '' : 's'} hold two of
-      these values and are striped in both. Click a value to see only that one.</p>`);
+  } else if (SCALE.list && (SCALE.striped || SCALE.over)) {
+    const many = SCALE.over
+      ? ` ${SCALE.over} hold${SCALE.over === 1 ? 's' : ''} more than three and ${SCALE.over === 1 ? 'is' : 'are'} crosshatched instead.`
+      : '';
+    rows.push(`<p class="note">${SCALE.striped} answer${SCALE.striped === 1 ? '' : 's'} hold
+      ${SCALE.maxCols > 2 ? 'two or three' : 'two'} of these values and are striped in each.${many}
+      Click a value to see only that one.</p>`);
   }
   // Every value gets a row up to a point; past it the tail is summarised, or a
   // column with twenty values would fill the pane with a legend nobody reads.
@@ -3074,6 +3108,7 @@ function paintCatLegend() {
   }
   // First, because on several questions it is the largest group and it is an
   // ANSWER -- the entry establishes that the thing does not exist.
+  if (SCALE.over && !CODED.only) rows.push(`<div class="cl" disabled>${sw('url(#manyvals)')}<span>More than three values</span><span class="n">${SCALE.over}</span></div>`);
   if (tally.absent) rows.push(`<div class="cl" disabled>${sw('url(#hatch)')}<span>Recorded as absent</span><span class="n">${tally.absent}</span></div>`);
   if (tally.has) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Recorded, not yet coded</span><span class="n">${tally.has}</span></div>`);
   if (tally.unset) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Coded, no value fitted</span><span class="n">${tally.unset}</span></div>`);
@@ -3104,10 +3139,16 @@ function setShade(key) {
   CODED.key = key || null;
   CODED.only = null;
   SCALE = CODED.key ? codedScale(CODED.key) : null;
-  // Only a column that goes past two values opens isolated. Up to two it is
-  // painted whole -- one colour, or two stripes -- and the isolation stays
-  // available from the legend for a reader who wants it.
-  if (SCALE && SCALE.list && SCALE.maxCols > 2 && SCALE.ordered.length) {
+  // WHICH COLUMNS OPEN ISOLATED. The old test was `any unit holds more than
+  // two colours`, and it was all-or-nothing: one entry out of hundreds shut the
+  // whole map down to a single value. On `models` that was 2 units of 301, on
+  // `discharge basis` 1 of 61. The reader met "pick a value" on a column where
+  // 299 countries had exactly one answer and could have been drawn outright.
+  // Three bands now draw whole, so the question is only how many units go past
+  // THREE -- and a column opens isolated when enough of them do to make the
+  // striping a lie rather than a corner case.
+  const isoShare = SCALE && SCALE.coded ? SCALE.over / SCALE.coded : 0;
+  if (SCALE && SCALE.list && isoShare > SHADE_ISOLATE_SHARE && SCALE.ordered.length) {
     CODED.only = SCALE.ordered[0][0];
   }
   paint(); paintCatLegend(); paintLegend();
