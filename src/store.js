@@ -237,6 +237,23 @@ function notEstablishedFor(domain, body, fields) {
   return out;
 }
 
+// The Not-applicable twin of notEstablishedFor, held to the same discipline:
+// only typed fields of THIS domain, only the exact sentinel, and never for a
+// field that has rows in the same body.
+function notApplicableFor(domain, body, fields) {
+  const src = body && body.notApplicable;
+  const out = {};
+  if (!src || typeof src !== 'object') return out;
+  for (const [k, , type] of domain.fields) {
+    if (!SHAPES[type]) continue;
+    const t = str(Array.isArray(src) ? (src.includes(k) ? 'Not applicable.' : '') : src[k], 1000).trim();
+    if (!t || !NOT_APPLICABLE_RE.test(t)) continue;
+    if (Array.isArray(fields[k]) && fields[k].length) continue;
+    out[k] = t;
+  }
+  return out;
+}
+
 // A documented absence: the sources say there is no such rule here.
 //
 // This is NOT `notEstablished`, and conflating the two would destroy the
@@ -429,6 +446,8 @@ function fieldsFor(domain, body) {
   }
   const ne = notEstablishedFor(domain, body, out);
   if (Object.keys(ne).length) out.notEstablished = ne;
+  const nap = notApplicableFor(domain, body, out);
+  if (Object.keys(nap).length) out.notApplicable = nap;
   const sl = slotsFor(domain, body, out);
   if (Object.keys(sl).length) out.slots = sl;
   const ab = absencesFor(domain, body, out);
@@ -472,6 +491,7 @@ function rowToEntry(row) {
   // Re-checked on the way out as well as on the way in, so a blob written by
   // an older build cannot flag a prose field or a field that has since gained rows.
   entry.notEstablished = domain ? notEstablishedFor(domain, blob, entry) : {};
+  entry.notApplicable = domain ? notApplicableFor(domain, blob, entry) : {};
   // Re-validated on the way out as well as in, so a blob written by an older
   // build cannot carry a slot list that no longer fits its field's bullets.
   entry.slots = domain ? slotsFor(domain, blob, entry) : {};
@@ -570,6 +590,10 @@ function mergeEntries(domain, rows) {
   out.notEstablished = {};
   for (const r of rows) for (const [k, v] of Object.entries(r.notEstablished || {})) {
     if (!(Array.isArray(out[k]) && out[k].length)) out.notEstablished[k] = out.notEstablished[k] || v;
+  }
+  out.notApplicable = {};
+  for (const r of rows) for (const [k, v] of Object.entries(r.notApplicable || {})) {
+    if (!(Array.isArray(out[k]) && out[k].length)) out.notApplicable[k] = out.notApplicable[k] || v;
   }
   // A slot list belongs to a particular text, so it survives the merge only for
   // the contribution whose text won. Anything else would number the wrong

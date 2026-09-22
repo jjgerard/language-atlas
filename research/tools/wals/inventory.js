@@ -42,16 +42,27 @@ for (const r of glot)
 const P = path.join(ATLAS, "data", "indigenous.json");
 const rows = JSON.parse(fs.readFileSync(P, "utf8"));
 let filled = 0, skippedSub = 0, noCount = [];
+// `inventory` is a SERIES field now, not prose. An entry already holding a row
+// is left alone, exactly as a filled string was before.
 for (const e of rows) {
-  if (String(e.inventory || "").trim()) continue;
+  if (Array.isArray(e.inventory) ? e.inventory.length : String(e.inventory || "").trim()) continue;
   if (!e.isNational) { skippedSub++; continue; }
   const n = byCountry[e.countryCode];
   if (!n) { noCount.push(e.countryCode + " " + e.unitName); continue; }
-  // ONE bullet, not three. The two explanatory lines this used to add were
-  // identical on all 193 entries, which is noise on every one of them: a
-  // sentence a reader has already met forty times stops being read at all.
-  // The explanation belongs in the field's hint, where it is said once.
-  e.inventory = `Glottolog counts ${n} living language${n === 1 ? "" : "s"} for this country`;
+  // ONE row. `counted` and `basis` carry what the sentence used to say, which
+  // is where they belong: a number whose unit and population are left to prose
+  // is how Angola's 28467 came to read as a language-disorder prevalence.
+  //
+  // `year` IS DELIBERATELY BLANK. This script records WHICH release it counted
+  // -- glottolog/glottolog-cldf, cldf/languages.csv, Level == "language" -- and
+  // not which version, so there is no date to write and inventing one would
+  // make 194 rows look comparable when that is not established. Capture the
+  // version here on the next run and this stops being blank.
+  e.inventory = [{
+    year: "", value: String(n), unit: "count", denominator: "",
+    counted: "living languages Glottolog records for this country",
+    basis: "reference catalogue", note: "",
+  }];
   if (e.status === "stub") { e.status = "partial"; e.lastVerified = "2026-08"; }
   filled++;
 }

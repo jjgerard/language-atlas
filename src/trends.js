@@ -239,8 +239,22 @@ function languages(payload) {
         adjective: parts.find(p => /Adjective|Noun-Adj/i.test(p)) || '',
       });
     }
-    const m = String((u.values && u.values.inventory) || '').match(/Glottolog counts (\d+) living language/);
-    if (m && named.length) gaps.push({ unit: u.name, region: u.region, present: Number(m[1]), named: named.length });
+    // `inventory` used to be prose and this read the number out of the sentence
+    // "Glottolog counts N living languages for this country". It is a series
+    // field now, so the number is the row's `value` -- which is the whole point
+    // of having retyped it, and the reason this line had to change with it.
+    // Read from `records`, not from the flattened text: the text is for humans.
+    // Only rows counted the same way are added together. 193 of the 194 are
+    // Glottolog's count; Greenland's is its own act, "one indigenous language,
+    // Greenlandic, of three main dialects named in act 7/2010 s 3". Summing a
+    // statutory count into a catalogue total is the Angola mistake in
+    // miniature, and until the field was typed there was no `basis` to see it
+    // by -- the old regex simply failed to read Greenland and got the right
+    // answer by accident.
+    const inv = ((u.records && u.records.inventory) || [])
+      .filter(r => String(r.basis || '') === 'reference catalogue');
+    const present = Number(String((inv[0] || {}).value || '').replace(/[^\d]/g, ''));
+    if (present > 0 && named.length) gaps.push({ unit: u.name, region: u.region, present, named: named.length });
   }
 
   const tally = (get, filter = () => true) => {

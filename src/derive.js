@@ -130,6 +130,18 @@ const typedNotEstablished = (e, k) => {
   return typeof v === 'string' && NOT_DOCUMENTED_RE.test(v.trim()) ? v.trim() : '';
 };
 
+// The same idea for the OTHER sentinel, and needed the moment a typed field
+// replaced a prose one. indigenous.inventory was text, and its 143 sub-national
+// entries each said "Not applicable: Glottolog counts living languages per
+// country, so this unit has no count of its own." Retyping it to a number
+// would have left those as an empty array -- indistinguishable from nobody
+// having looked -- and thrown away a sourced statement about why the figure
+// cannot exist here. Rows win, exactly as above.
+const typedNotApplicable = (e, k) => {
+  const v = e && e.notApplicable && e.notApplicable[k];
+  return typeof v === 'string' && NOT_APPLICABLE_RE.test(v.trim()) ? v.trim() : '';
+};
+
 const cleanLinks = links =>
   (Array.isArray(links) ? links : [])
     .filter(l => l && typeof l.url === 'string' && /^https?:\/\//i.test(l.url))
@@ -156,6 +168,7 @@ function deriveUnits(domain, entries, sharedMatcher) {
         if (isNotEstablished(e[k])) { looked.push(label); return 'l'; }
         if (Array.isArray(e[k]) && typedNotEstablished(e, k)) { looked.push(label); return 'l'; }
         if (isNotApplicable(e[k])) { na.push(label); return 'x'; }
+        if (Array.isArray(e[k]) && typedNotApplicable(e, k)) { na.push(label); return 'x'; }
         return 'n';
       })
       .join('');
@@ -167,12 +180,22 @@ function deriveUnits(domain, entries, sharedMatcher) {
     // a language row has to keep its WALS code to be linkable at all.
     const records = {};
     for (const [k, , type] of domain.fields) {
-      if ((type === 'languages' || type === 'offering' || type === 'programme') && Array.isArray(e[k])) records[k] = e[k];
+      // `series` is here because a typed NUMBER is only worth typing if
+      // something downstream can read it as one. trends.js used to pull
+      // indigenous.inventory out of the sentence "Glottolog counts N living
+      // languages" with a regex; once the field became a series row there was
+      // nothing to regex, and nothing structured to read either, because series
+      // was not in this list.
+      if ((type === 'languages' || type === 'offering' || type === 'programme' || type === 'series')
+        && Array.isArray(e[k])) records[k] = e[k];
       const t = asText(e[k]).trim();
       if (t) values[k] = t;
       // An empty typed field flagged not-established shows its sentinel text
       // exactly where a prose field would, so the panel needs no new branch.
-      else if (Array.isArray(e[k])) { const ne = typedNotEstablished(e, k); if (ne) values[k] = ne; }
+      else if (Array.isArray(e[k])) {
+        const ne = typedNotEstablished(e, k) || typedNotApplicable(e, k);
+        if (ne) values[k] = ne;
+      }
     }
 
     // Which question each bullet answers, passed through so a field view or a
@@ -342,4 +365,4 @@ function deriveUnits(domain, entries, sharedMatcher) {
   };
 }
 
-module.exports = { deriveUnits, hasContent, isNotEstablished, isNotApplicable, typedNotEstablished, asText, NOT_DOCUMENTED_RE, NOT_APPLICABLE_RE };
+module.exports = { deriveUnits, hasContent, isNotEstablished, isNotApplicable, typedNotEstablished, typedNotApplicable, asText, NOT_DOCUMENTED_RE, NOT_APPLICABLE_RE };
