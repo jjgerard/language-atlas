@@ -732,15 +732,38 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
     /* The desktop box is a fixed 236px so the ramp does not resize as domains
        change; in the phone layout it is a full-width strip instead. */
     position: static; order: 3; flex: 0 0 auto; width: auto;
-    flex-direction: row; align-items: center; justify-content: space-between;
+    /* TOP-ALIGNED, because #catlegend is not the coverage key. These row rules
+       were written for three short rows and a ramp; the category key carries
+       one row per value -- 14 at the widest, on localTerm.family -- and as a
+       column that is around 400px. Centred against it, the Shade by control
+       sat 93px below the bottom of .stage, which has overflow:hidden, so the
+       one control that gets a reader back OUT of a field view was not just
+       off-screen but unreachable. */
+    flex-direction: row; align-items: flex-start; justify-content: space-between;
     border-radius: 0; border-left: 0; border-right: 0; border-bottom: 0;
     border-top: 1px solid var(--hair); box-shadow: none;
     padding: 9px 14px 11px; gap: 8px 14px;
   }
   .legendbox .rows { display: flex; flex-direction: row; flex-wrap: wrap; gap: 4px 14px; }
+  /* Cap the values and let them scroll, the same answer .domainstack already
+     gives: a key that does not fit scrolls instead of spilling past the clipped
+     stage. sizeMap() hands the map whatever this leaves, so a short column
+     still gets a big map. */
+  .legendbox .catlegend { max-height: 34dvh; overflow-y: auto; }
   .legendbox .row { margin-bottom: 0; font-size: 11.5px; }
   .legendbox .ramp { flex: 0 1 190px; min-width: 0; }
   .legend .hues { margin-top: 12px; }
+
+  /* The zoom buttons are an overlay on .stage, and on a phone the bottom of the
+     stage is the blurb and the key rather than map. At 14px they sat on top of
+     the legend -- over the ramp labels before, and over the category rows and
+     their counts once the key grew. sizeMap() publishes what the furniture
+     takes so they clear it and stay over the map.
+     They cannot simply be hidden: there is no pinch handler on the SVG, only a
+     pointerdown pan, so these buttons are the only way to zoom on a touch
+     screen. The short-phone query below does hide them, and that is a trade
+     made against a screen with no room, not a statement that they are spare. */
+  .zoomctl { bottom: calc(var(--keyh, 0px) + 14px); }
 }
 
 /* A short phone has no room for the region key on top of everything else, and
@@ -1696,6 +1719,10 @@ function sizeMap() {
   // full field, the ocean sits symmetrically above and below the continents.
   // `natural` is still measured because a landscape phone can be shorter than
   // the map is tall, and there the box must not exceed what the drawing needs.
+  // The overlay controls are positioned against the stage, whose bottom edge
+  // is furniture on this layout. Publish the measurement rather than letting
+  // the CSS guess at it.
+  stage.style.setProperty('--keyh', Math.round(need) + 'px');
   const room = Math.max(140, stage.clientHeight - need);
   svg.style.height = Math.round(room < natural ? room : Math.max(room, natural)) + 'px';
 }
@@ -2937,6 +2964,13 @@ function setShade(key) {
     CODED.only = SCALE.ordered[0][0];
   }
   paint(); paintCatLegend(); paintLegend();
+  // THE KEY JUST CHANGED HEIGHT, so the map's share of the screen is stale.
+  // sizeMap() has always measured the key and given the map what was left, but
+  // nothing told it when the key itself changed -- it ran on load, on domain
+  // switch and on resize, and picking a question is none of those. On a phone
+  // that left the map at its full-height size and pushed the key, and the
+  // Shade by control with it, off the bottom of the clipped stage.
+  sizeMap(); clampView(); applyView();
   // An open panel is answering the old question; re-render it against the new
   // one rather than leaving a stale answer beside a repainted map.
   if (selected) { panelFull = false; select(selected, false); }
