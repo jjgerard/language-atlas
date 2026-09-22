@@ -39,14 +39,41 @@ for (const r of glot)
   for (const c of String(r.Countries || "").split(";").map(s => s.trim()).filter(Boolean))
     byCountry[c] = (byCountry[c] || 0) + 1;
 
+// TWO UNITS WHOSE COUNT WOULD BE WORSE THAN NOTHING.
+//
+// Glottolog files Jerriais as a DIALECT of Normand (Countries=GB;JE) and does
+// not carry Guernesiais at all. This script counts Level == "language", so the
+// figure it would give Jersey is 1 and the figure for Guernsey is 1 -- and in
+// both cases that 1 is ENGLISH. Guernsey's own entry names Guernesiais as its
+// indigenous language and Jersey's localTerm calls Jerriais "the Island's
+// indigenous language", so the number would contradict the atlas beside it, and
+// trends.js would read "one language present, one named" for two different
+// languages.
+//
+// They get the third state instead: somebody looked, and this source cannot
+// answer. A count from another catalogue would be a different `basis` and is a
+// separate job.
+const DIALECT_FILED = {
+  GG: "Not established from the sources consulted. Glottolog does not carry Guernesiais, filing Norman varieties under Normand as dialects, so its count of languages for Guernsey is 1 and that 1 is English.",
+  JE: "Not established from the sources consulted. Glottolog files Jerriais as a dialect of Normand rather than as a language, so its count of languages for Jersey is 1 and that 1 is English.",
+};
+
 const P = path.join(ATLAS, "data", "indigenous.json");
 const rows = JSON.parse(fs.readFileSync(P, "utf8"));
-let filled = 0, skippedSub = 0, noCount = [];
+let filled = 0, skippedSub = 0, dialectFiled = 0, noCount = [];
 // `inventory` is a SERIES field now, not prose. An entry already holding a row
 // is left alone, exactly as a filled string was before.
 for (const e of rows) {
   if (Array.isArray(e.inventory) ? e.inventory.length : String(e.inventory || "").trim()) continue;
   if (!e.isNational) { skippedSub++; continue; }
+  const filed = DIALECT_FILED[e.countryCode];
+  if (filed) {
+    e.notEstablished = e.notEstablished || {};
+    e.notEstablished.inventory = filed;
+    e.inventory = [];
+    dialectFiled++;
+    continue;
+  }
   const n = byCountry[e.countryCode];
   if (!n) { noCount.push(e.countryCode + " " + e.unitName); continue; }
   // ONE row. `counted` and `basis` carry what the sentence used to say, which
@@ -71,4 +98,5 @@ if (process.argv.includes("--write")) {
   console.log("wrote indigenous.json");
 }
 console.log(`${filled} national units given a count; ${skippedSub} sub-national units left empty on purpose`);
+console.log(dialectFiled + " units left not-established: their language is a Glottolog DIALECT");
 if (noCount.length) console.log(`no Glottolog count for ${noCount.length}: ${noCount.slice(0, 12).join(", ")}`);
