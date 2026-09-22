@@ -579,6 +579,60 @@ const WORKFORCE_COUNT = {
 };
 
 // ===========================================================================
+// indigenous.materials
+// ===========================================================================
+//
+// Derived 2026-09-22 by reading all 24 uncoded national entries, which is the
+// whole field. Small, and the only one in the atlas whose hint decomposes into
+// columns with nothing left over: whether a curriculum exists, whether
+// materials exist, whether an agreed orthography exists, who is charged with
+// producing them. Four questions, four columns, and the entries answer them in
+// that order.
+//
+// The value worth watching is `no body named` on `orthography`. Three entries
+// record that somebody LOOKED for the body that fixes the writing system and
+// the instrument does not name one -- Colombia, "read law names no orthography
+// body"; Ethiopia, "framework names no orthography body"; Kenya, where
+// "development of orthography [is] named as a career the subject can lead to,
+// not as a body". That is a different finding from silence, and it is only
+// visible because the drafters wrote down what they had checked.
+
+// IS THERE A CURRICULUM, AND IS IT FOR A LANGUAGE OR FOR THE CATEGORY.
+const MAT_CURRICULUM = {
+  'language-specific': 'Written for named languages (Chile\'s Programas de Estudio for aymara, mapuzugun, quechua and rapa nui; Nigeria\'s basic-education curricula for Hausa, Igbo, Yoruba, Efik, Izon, Edo and Tiv; Norway\'s Sámi curricula as first and second language from autumn 2020; New Zealand\'s Te Aho Arataki Marau)',
+  'generic framework': 'One document for all of them, naming none (Kenya, where "one generic Indigenous Languages design serves all of them; it names no language"; Australia, whose Framework for Aboriginal Languages and Torres Strait Islander Languages is "a framework, not a language curriculum: its achievement standards are generalised")',
+  'none national': 'Curriculum is made below the national level or not at all (Colombia, "no national curriculum: intensity set by accord between state and community authorities"; the United States, where "a Tlingit grantee is developing its own curriculum framework")',
+  'none established': 'Checked, and the languages carry no curriculum (Tanzania, whose 2023 policy names "the teaching languages are Kiswahili and English only")',
+  'not stated': 'The entry does not reach the curriculum question',
+};
+
+// DO TEACHING MATERIALS EXIST.
+const MAT_MATERIALS = {
+  'published': 'They exist and are named (Ecuador\'s Serie Sabiduria Amazonica, Gramatica waodani tededo and Diccionario trilingue Sapara; Nigeria\'s bilingual dictionaries and a science and mathematics glossary in nine languages; Greenland, where "necessary teaching materials are supplied free of charge to pupils")',
+  'in development': 'Work in progress rather than a product (the United States, where an Ojibwemowin project "designs K-5 curriculum with pre- and post-assessments" and a Tlingit project "is to create 42 elementary curriculum units by year three"; Australia\'s ACARA support resource, "still under development")',
+  'not stated': 'The entry does not establish whether materials exist',
+};
+
+// IS THE WRITING SYSTEM AGREED, AND BY WHOM.
+const MAT_ORTHOGRAPHY = {
+  'official, language by language': 'Each language has its own recognised alphabet (Guatemala, where Acuerdo Gubernativo 1046-87 "recognises 21 alphabets for the 21 Mayan languages"; Mexico, where INALI issues writing norms in the Diario Oficial, each "a unified alphabet and rules covering the variants of one language"; Peru, where "all 48 originary languages have an official alphabet, agreed with their speakers")',
+  'a single standard': 'One agreed norm for the language (Ireland\'s An Caighdean Oifigiuil, which the Oireachtas Commission "must review at least once every 7 years"; Morocco\'s Tifinaghe-IRCAM alphabet of 33 characters; Spain, where the Real Academia Galega is charged with "the grammatical, orthographic and phonetic norm")',
+  'set locally or by community': 'The speakers choose (Canada, where in Ontario\'s programme "elders and community select the dialect and orthography used")',
+  'the majority script is used': 'No distinct orthography exists (Chile, where the "written code [is] taught via the grafemas del castellano, not a distinct orthography")',
+  'no body named': 'Somebody looked for the body that fixes it and the instrument names none (Colombia, Ethiopia, Kenya -- see the note above)',
+  'not stated': 'The entry does not reach the orthography question',
+};
+
+// WHO IS CHARGED WITH PRODUCING IT.
+const MAT_CHARGED = {
+  'language academy or institute': 'A body constituted for the language (Guatemala\'s ALMG, "rector of the Mayan languages" under Decreto 65-90; Morocco\'s IRCAM; Mexico\'s INALI; Paraguay\'s Academia de la Lengua Guarani; Venezuela\'s INIDI; Bolivia\'s IPELC and its one Instituto de Lengua y Cultura per people)',
+  'curriculum agency or ministry': 'The education machinery (Kenya\'s KICD; Nigeria\'s NERDC and its Language Development Centre; Ecuador\'s Ministerio de Educacion; Greenland\'s Naalakkersuisut; South Africa\'s DBE)',
+  'indigenous representative body': 'The people\'s own elected or statutory body (Norway\'s Sametinget, which "sets the premises, finances the projects and awards learning-material grants"; Finland\'s Saamelaiskarajat; New Zealand\'s Te Taura Whiri i te Reo Maori)',
+  'communities or grantees': 'Whoever applies and is funded (the United States, whose eligible makers are "Indian tribes, TEAs, LEAs, BIE-funded schools and tribal nonprofits" under the Native American Languages Act of 1990)',
+  'not stated': 'The entry does not establish who is charged',
+};
+
+// ===========================================================================
 // eal.l3Support
 // ===========================================================================
 //
@@ -1620,6 +1674,15 @@ const SCHEMES = {
       evidence_type: EVIDENCE_TYPE,
     },
   },
+  'indigenous.materials': {
+    row: 'one national or sub-national system',
+    columns: {
+      curriculum: MAT_CURRICULUM,
+      materials: MAT_MATERIALS,
+      orthography: MAT_ORTHOGRAPHY,
+      charged_to: MAT_CHARGED,
+    },
+  },
   'eal.l3Support': {
     row: 'one national or sub-national system',
     columns: {
@@ -1763,6 +1826,7 @@ module.exports = {
   GAP_MEASURE, GAP_PROXY, GAP_DIRECTION, GAP_AFTER_ADJUSTMENT,
   REVIT_ACTOR, REVIT_ACTIVITY, REVIT_STATUS, REVIT_FUNDING,
   L3_REQUIREMENT, L3_SECOND, L3_EXEMPTION, L3_TARGETING,
+  MAT_CURRICULUM, MAT_MATERIALS, MAT_ORTHOGRAPHY, MAT_CHARGED,
   L1_FORM, L1_FOR_WHOM, L1_SECURED_BY, L2_MODELS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
@@ -1792,6 +1856,10 @@ module.exports = {
   isL2Model: v => has(L2_MODELS, v),
   isL1ForWhom: v => has(L1_FOR_WHOM, v),
   isL1SecuredBy: v => has(L1_SECURED_BY, v),
+  isMatCurriculum: v => has(MAT_CURRICULUM, v),
+  isMatMaterials: v => has(MAT_MATERIALS, v),
+  isMatOrthography: v => has(MAT_ORTHOGRAPHY, v),
+  isMatCharged: v => has(MAT_CHARGED, v),
   isL3Requirement: v => has(L3_REQUIREMENT, v),
   isL3Second: v => has(L3_SECOND, v),
   isL3Exemption: v => has(L3_EXEMPTION, v),
