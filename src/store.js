@@ -158,6 +158,13 @@ const SHAPES = {
 };
 
 const NOT_ESTABLISHED_RE = /^Not established from the sources consulted/i;
+// The other sentinel, for notApplicableFor below. It is declared HERE rather
+// than imported from derive.js because store.js deliberately does not depend on
+// derive.js -- and leaving it out is what broke the deploy of 66ac071: the app
+// seeded dld and eal, then threw ReferenceError on the first indigenous entry
+// carrying the flag, so the machine started and died before any health check
+// could pass. Strict here, liberal in derive: this is what may be WRITTEN.
+const NOT_APPLICABLE_RE = /^Not applicable\b/i;
 const { slotCount, validSlots, orderBySlot } = require('./slots');
 const { SCHEMES, mixedAbsence } = require('./coding');
 
