@@ -1119,31 +1119,55 @@ const NON_ANSWER = new Set(['not stated', 'not available', 'none stated',
    revitalisation.status 91% `established`. The column is coded, answered, and
    tells a reader nothing they can see on a map.
 
-   A third cut is coverage. materials is coded on 24 units of 396 and
-   removalCriteria.exit_period_months on 26; a map with two dozen countries
-   coloured is a map of a handful of entries, whatever the spread inside it.
+   A third cut is coverage, and what it counts is HOW MUCH OF THE MAP IS GREY.
+   Sixty units was the first bar and it was far too low: it let through columns
+   that leave 330 countries blank. discharge basis, rule locus, evidence found
+   and reporting each drew a map whose legend read `Nothing recorded 323`, which
+   is a true statement about the corpus and an unreadable map -- and the default
+   `what is documented` view already answers that question properly.
+   Counting COLOURED units was the obvious measure and it was the wrong one,
+   because it treats a documented absence as a hole. eal.removalCriteria colours
+   122 units and marks 114 more `Recorded as absent`: 236 of 396 units carry an
+   answer, and the colour count alone called it a sixth-empty map. So this
+   counts what the legend's last row counts -- units in state `none`, and
+   nothing else. An absence, a deliberate unset and a looked-and-found-nothing
+   are all answers, and the map draws each of them.
+   The corpus then puts the bar where it belongs. Ordered by grey the columns
+   run 94, 87, 83, 82, 74, 61, 49, 40, then 28, 22, 20, 18 -- and the gap
+   between 49 and 40, and again 40 and 28, is where the readable maps start.
+   SHADE_MAX_GREY sits at 45. Coverage only grows, so a column above the line
+   reappears once it has been coded enough to draw.
 
    NOTHING IS DELETED. These columns stay in the data, in /views/table and in
    the coded panel; this decides only what is worth SHADING A MAP by, which is
    a question about legibility rather than about the coding. The test is run
    against the live data rather than written down as a list, so a column that
    fills out later appears on its own. */
-const SHADE_MIN_UNITS = 60;      // below this the map is mostly blank
+const SHADE_MAX_GREY = 0.45;     // above this the map is mostly grey
 const SHADE_MAX_TOP = 0.65;      // one value owning more than this is one colour
 const SHADE_MAX_SILENT = 0.40;   // non-answers taking more than this is a silence map
 const SHADE_MIN_VALUES = 3;      // distinct real answers worth telling apart
 const SHADE_VALUE_FLOOR = 0.05;  // ...each carried by at least this share
 
 function columnVaries(key) {
+  const units = B.units[domainId] || [];
   const counts = new Map();
   let coded = 0;
-  for (const u of (B.units[domainId] || [])) {
+  for (const u of units) {
     const vs = codedValues(u, key);
     if (!vs) continue;
     coded++;
     for (const v of vs) counts.set(v, (counts.get(v) || 0) + 1);
   }
-  if (coded < SHADE_MIN_UNITS) return false;
+  // Exactly the legend's `Nothing recorded` tally, by the same three tests in
+  // the same order, so the number this judges is the number a reader sees.
+  let grey = 0;
+  for (const u of units) {
+    if (codedValues(u, key)) continue;
+    if (isAbsent(u, key) || isUnset(u, key)) continue;
+    if (fieldStateOf(u, key.split('.')[0]) === 'none') grey++;
+  }
+  if (grey > units.length * SHADE_MAX_GREY) return false;
   let top = 0, silent = 0, real = 0;
   for (const [v, n] of counts) {
     if (n > top) top = n;
