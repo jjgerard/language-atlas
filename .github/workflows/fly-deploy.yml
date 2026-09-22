@@ -17,6 +17,33 @@ jobs:
     concurrency: deploy-group    # optional: ensure only one action runs at a time
     steps:
       - uses: actions/checkout@v4
+
+      # Boot the app against an EMPTY database before shipping it.
+      #
+      # There is no volume on Fly, so every machine seeds from data/*.json on
+      # boot — and that is the one path local development never takes, because
+      # seedIfEmpty() returns immediately once the local atlas.db has rows.
+      # 66ac071 shipped a ReferenceError in that path: the machine started,
+      # died on the first indigenous entry, and the deploy sat five minutes
+      # waiting for a health check that could never arrive. The build and the
+      # image push had both succeeded.
+      #
+      # This runs in about 30 seconds and fails before flyctl is reached.
+      # boot-check.js is a plain script, so the same command reproduces it
+      # locally: `node boot-check.js`.
+      # The Dockerfile pins the version production actually runs, so it is read
+      # from there rather than repeated here. A check on a different Node than
+      # the machine boots is a check of something else.
+      - id: node
+        run: echo "version=$(sed -n 's/^ARG NODE_VERSION=//p' Dockerfile | head -1)" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ steps.node.outputs.version }}
+          cache: npm
+      - run: npm ci
+      - name: Boot check
+        run: node boot-check.js
+
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --remote-only
         env:
