@@ -1396,7 +1396,35 @@ defs.appendChild(patNA);
    cannot collapse into a solid for a dichromat. */
 const STRIPES = new Map();
 const STRIPE_CSS = new Map();
-function stripeAngle() { return `rotate(45) scale(${1 / view.k})`; }
+
+/* HOW WIDE A BAND IS, IN SCREEN PIXELS -- which is not what the tile measures.
+   The tile is 8 wide with a 4-wide band, but those are viewBox units, and this
+   map's viewBox is 5316 across. Drawn at 1024px that is 0.193px per unit, so a
+   band came out 0.77px WIDE: under one pixel, and the two colours blended into
+   a solid average that read as neither of them. On a phone at 375px it was
+   0.28px. The swatch never had the problem, because its CSS twin below is in
+   real pixels and has always used 4px bands -- so the key showed stripes the
+   map could not draw, on the same pair of colours.
+   One constant drives both now. The scale factor converts it into tile units
+   against the map's CURRENT width, so a band is the same thickness on a phone
+   and on a desktop, and `1 / view.k` keeps it there through a zoom. */
+const STRIPE_PX = 5;
+let stripeUnitsPerPx = 1;
+function measureStripes() {
+  const r = svg.getBoundingClientRect();
+  if (!r.width || !r.height) return;
+  // preserveAspectRatio is xMidYMid MEET, so the viewBox is letterboxed and the
+  // scale the SVG actually applies is the SMALLER of the two fits, not the one
+  // along the width. Measuring on width alone made the band 12.8px instead of 5
+  // wherever the box is shorter than the map's 2.26:1 -- which is most of the
+  // time, since the legend and the blurb take height from it.
+  stripeUnitsPerPx = Math.max(VB.w / r.width, VB.h / r.height);
+}
+/* Measured on resize rather than here, because applyView() rewrites this on
+   every frame of a pan and getBoundingClientRect() forces layout. */
+function stripeAngle() {
+  return `rotate(45) scale(${(STRIPE_PX / 4) * stripeUnitsPerPx / view.k})`;
+}
 function stripeFill(a, b) {
   const tok = c => String(c).replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '');
   const id = `stripe-${tok(a)}-${tok(b)}`;
@@ -1409,7 +1437,7 @@ function stripeFill(a, b) {
     q.appendChild(el('rect', { width: 4, height: 8, fill: b }));
     defs.appendChild(q);
     STRIPES.set(id, q);
-    STRIPE_CSS.set(id, `repeating-linear-gradient(45deg, ${b} 0 4px, ${a} 4px 8px)`);
+    STRIPE_CSS.set(id, `repeating-linear-gradient(45deg, ${b} 0 ${STRIPE_PX}px, ${a} ${STRIPE_PX}px ${STRIPE_PX * 2}px)`);
   }
   return `url(#${id})`;
 }
@@ -1784,6 +1812,10 @@ addEventListener('popstate', () => {
 });
 
 function sizeMap() {
+  // The band's thickness depends on how wide the map is drawn, and this runs
+  // whenever that can have changed. Ahead of the early return, because a
+  // desktop window resizes too.
+  measureStripes();
   if (!matchMedia('(max-width: 820px)').matches) { svg.style.height = ''; return; }
   const stage = document.getElementById('stage');
   const controls = document.getElementById('domainstack');
