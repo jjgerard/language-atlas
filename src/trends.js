@@ -280,16 +280,23 @@ function languages(payload) {
   // column is a short list, not an exhaustive one: Russian's omits Armenia and
   // Azerbaijan, which both name it.
   //
-  // The five are NOT each one language over, whatever the arithmetic looks like.
+  // They are NOT each one language over, whatever the arithmetic looks like.
   // Checked one at a time, their two lists barely overlap at all -- Glottolog
-  // files 5 of Taiwan's 17 named languages under Taiwan, 6 of Serbia's 15, 3 of
-  // Croatia's 15, and 1 each of Mauritius's 3 and the Marshall Islands' 2. Three
-  // different things put a named language outside the count: Glottolog files it
-  // under the neighbour it came from (Czech and Slovak for Croatia; Atayal, Amis
-  // and Paiwan under CN rather than TW) or under everywhere-but-here (English is
-  // on 34 countries' lists, not the Marshall Islands'); it carries no ISO code
-  // in the atlas, which is 9 of Taiwan's 17 and 4 of Serbia's 15; or Glottolog
-  // holds it as a dialect (Bosnian) or not at all (Rusyn, Kreol Rodrige).
+  // files 6 of Serbia's 15 named languages under Serbia, 3 of Croatia's 15, and
+  // 1 each of Mauritius's 3 and the Marshall Islands' 2. Three different things
+  // put a named language outside the count: Glottolog files it under the
+  // neighbour it came from (Czech and Slovak for Croatia) or under
+  // everywhere-but-here (English is on 34 countries' lists, not the Marshall
+  // Islands'); it carries no ISO code in the atlas, which is 4 of Serbia's 15;
+  // or Glottolog holds it as a dialect (Bosnian) or not at all (Rusyn, Kreol
+  // Rodrige).
+  //
+  // Taiwan was the fifth and is no longer, because its COUNT was wrong rather
+  // than its list: Glottolog filed its Formosan languages under CN, and
+  // inventory.js now counts the languages Glottolog's own coordinates place on
+  // the island, which took Taiwan from 16 to 28. That was fixable only because
+  // the catalogue held those languages all along. The other four are not the
+  // same case and are not fixable this way.
   //
   // So the counts cross because the two lists are largely disjoint, not because
   // one overshot the other. That is the same fact the share measures, showing up
@@ -460,7 +467,7 @@ const FINDINGS = [
     compute: c => c.languages.gap,
     holds: v => v.units >= 25 && v.share < 50,
     text: v => `School systems name a small fraction of the languages around them: across ${v.units} countries that record both, Glottolog counts ${v.present} languages and the systems name ${v.named} — ${v.share} named for every hundred counted. The widest distance is ${v.widest.unit}, naming ${v.widest.named} against ${v.widest.present}.`,
-    note: v => `Two counts set beside each other, NOT a subset of one in the other. The count is Glottolog's for the country; the list is what the school system names, teaches or recognises, and it is not drawn from Glottolog. Matching the atlas's ISO codes against Glottolog's puts 504 of the ${v.named} named languages under the same country in both, 297 carrying no ISO code to match on, and 72 filed by Glottolog elsewhere — Russian is not on its list for Armenia or Azerbaijan, though both name it. ${v.exceeding.length} systems name more languages than the catalogue counts for them (${v.exceeding.map(e => e.unit).join(', ')}), which happens because the two lists are largely disjoint rather than because one overshot: Glottolog files 5 of Taiwan's 17 named languages under Taiwan, and 3 of Croatia's 15. The distance is the subject of that map; the overlap is not exact, and the share is a ratio rather than a proportion.`,
+    note: v => `Two counts set beside each other, NOT a subset of one in the other. The count is Glottolog's for the country; the list is what the school system names, teaches or recognises, and it is not drawn from Glottolog. Matching the atlas's ISO codes against Glottolog's puts 504 of the ${v.named} named languages under the same country in both, 297 carrying no ISO code to match on, and 72 filed by Glottolog elsewhere — Russian is not on its list for Armenia or Azerbaijan, though both name it. ${v.exceeding.length} systems name more languages than the catalogue counts for them (${v.exceeding.map(e => e.unit).join(', ')}), which happens because the two lists are largely disjoint rather than because one overshot: Glottolog files 6 of Serbia's 15 named languages under Serbia, and 3 of Croatia's 15. Taiwan was a fifth until its count was corrected — Glottolog files the Formosan languages under China, so the figure here counts the languages its own coordinates place on the island. The distance is the subject of that map; the overlap is not exact, and the share is a ratio rather than a proportion.`,
   },
   {
     id: 'word-order',
