@@ -1,0 +1,102 @@
+{
+  "AU|Australian Capital Territory": {
+    "achievementGap": {
+      "measure": "national assessment",
+      "proxy": "home language use",
+      "after_adjustment": "not adjusted"
+    }
+  },
+  "AU|Northern Territory": {
+    "achievementGap": {
+      "measure": "national assessment",
+      "proxy": "home language use",
+      "direction": "gap",
+      "after_adjustment": "not adjusted"
+    }
+  },
+  "AU|Tasmania": {
+    "achievementGap": {
+      "measure": "national assessment",
+      "proxy": "home language use",
+      "direction": "advantage",
+      "after_adjustment": "not adjusted"
+    }
+  },
+  "BE|Belgium — French Community (Wallonia-Brussels Federation)": {
+    "achievementGap": {
+      "measure": "international assessment",
+      "proxy": "immigrant background",
+      "direction": "gap",
+      "after_adjustment": "narrows but persists"
+    }
+  },
+  "CA|Nunavut": {
+    "achievementGap": {
+      "measure": "not stated",
+      "proxy": "not stated",
+      "direction": "not measured",
+      "after_adjustment": "not adjusted"
+    }
+  },
+  "GB|England": {
+    "achievementGap": {
+      "measure": "international assessment",
+      "direction": "gap",
+      "after_adjustment": "not adjusted"
+    }
+  },
+  "GB|Northern Ireland": {
+    "achievementGap": {
+      "measure": "international assessment",
+      "proxy": "immigrant background",
+      "direction": "gap",
+      "after_adjustment": "not adjusted"
+    }
+  },
+  "GB|Scotland": {
+    "achievementGap": {
+      "measure": "international assessment",
+      "proxy": "immigrant background",
+      "direction": "negligible",
+      "after_adjustment": "negligible throughout"
+    }
+  },
+  "GB|Wales": {
+    "achievementGap": {
+      "measure": "international assessment",
+      "after_adjustment": "not adjusted"
+    }
+  },
+  "HK|Hong Kong": {
+    "achievementGap": {
+      "measure": "international assessment",
+      "proxy": "immigrant background",
+      "direction": "negligible",
+      "after_adjustment": "reverses to advantage"
+    }
+  },
+  "US|Michigan": {
+    "achievementGap": {
+      "measure": "national assessment",
+      "proxy": "learner designation",
+      "direction": "gap",
+      "after_adjustment": "not adjusted"
+    }
+  },
+  "US|Minnesota": {
+    "achievementGap": {
+      "measure": "national assessment",
+      "proxy": "learner designation",
+      "direction": "gap",
+      "after_adjustment": "not adjusted"
+    }
+  },
+  "US|New Jersey": {
+    "achievementGap": {
+      "measure": "national assessment",
+      "proxy": "learner designation",
+      "direction": "gap",
+      "after_adjustment": "not adjusted"
+    }
+  }
+}

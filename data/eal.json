@@ -1271,6 +1271,11 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "on request or threshold",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "national assessment",
+    "proxy": "home language use",
+    "after_adjustment": "not adjusted"
    }
   }
  },
@@ -1532,6 +1537,12 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "entitlement",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "national assessment",
+    "proxy": "home language use",
+    "direction": "gap",
+    "after_adjustment": "not adjusted"
    }
   }
  },
@@ -1782,6 +1793,12 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "not stated",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "national assessment",
+    "proxy": "home language use",
+    "direction": "advantage",
+    "after_adjustment": "not adjusted"
    }
   }
  },
@@ -2525,6 +2542,12 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "on request or threshold",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "international assessment",
+    "proxy": "immigrant background",
+    "direction": "gap",
+    "after_adjustment": "narrows but persists"
    }
   }
  },
@@ -4443,6 +4466,12 @@
     "for_whom": "whole cohort",
     "secured_by": "compulsory",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "not stated",
+    "proxy": "not stated",
+    "direction": "not measured",
+    "after_adjustment": "not adjusted"
    }
   }
  },
@@ -10800,6 +10829,11 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "entitlement",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "international assessment",
+    "direction": "gap",
+    "after_adjustment": "not adjusted"
    }
   }
  },
@@ -10978,6 +11012,12 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "entitlement",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "international assessment",
+    "proxy": "immigrant background",
+    "direction": "gap",
+    "after_adjustment": "not adjusted"
    }
   }
  },
@@ -11116,6 +11156,12 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "entitlement",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "international assessment",
+    "proxy": "immigrant background",
+    "direction": "negligible",
+    "after_adjustment": "negligible throughout"
    }
   }
  },
@@ -11265,6 +11311,10 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "not stated",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "international assessment",
+    "after_adjustment": "not adjusted"
    }
   }
  },
@@ -12745,6 +12795,12 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "entitlement",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "international assessment",
+    "proxy": "immigrant background",
+    "direction": "negligible",
+    "after_adjustment": "reverses to advantage"
    }
   }
  },
@@ -30612,6 +30668,12 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "entitlement",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "national assessment",
+    "proxy": "learner designation",
+    "direction": "gap",
+    "after_adjustment": "not adjusted"
    }
   }
  },
@@ -30772,6 +30834,12 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "entitlement",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "national assessment",
+    "proxy": "learner designation",
+    "direction": "gap",
+    "after_adjustment": "not adjusted"
    }
   }
  },
@@ -31408,6 +31476,12 @@
     "for_whom": "newly arrived pupils",
     "secured_by": "on request or threshold",
     "evidence_type": "policy"
+   },
+   "achievementGap": {
+    "measure": "national assessment",
+    "proxy": "learner designation",
+    "direction": "gap",
+    "after_adjustment": "not adjusted"
    }
   }
  },
