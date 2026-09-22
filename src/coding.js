@@ -579,6 +579,59 @@ const WORKFORCE_COUNT = {
 };
 
 // ===========================================================================
+// eal.l3Support
+// ===========================================================================
+//
+// Derived 2026-09-22 by reading all 37 uncoded national entries -- the whole
+// field, which is small enough not to sample.
+//
+// THE QUESTION IS WHETHER A PUPIL ALREADY CARRYING A NEW SCHOOL LANGUAGE IS
+// MADE TO CARRY A THIRD, and the field's hint asks four things about it:
+// whether a further language is taught, whether these pupils may be exempted,
+// who decides, and what replaces the time. The first is answered almost
+// everywhere and the other three almost nowhere -- THREE entries of 37 mention
+// an exemption at all -- which is why `exemption` is here despite being thin.
+// A column that is empty on 92% of the corpus is normally a column that does no
+// work; this one is the finding. The systems stack a third language on these
+// pupils and say nothing about letting them put it down.
+//
+// `what replaces the time` did not become a column: ONE entry answers it
+// (Czechia, "replaced with additional Czech as a second language"), which is a
+// fact to read in the prose, not a category.
+
+// IS A FURTHER LANGUAGE REQUIRED AT ALL.
+const L3_REQUIREMENT = {
+  'compulsory for all': 'Every pupil takes one, newcomers included (most of Europe: "a foreign language is compulsory for all at some point in schooling", from age 3 in Poland and age 5 in Cyprus)',
+  'a national or local language': 'The further language is one of the country\'s own (Guam, where 17 GCA 8103 requires "six years of mandatory Chamorro coursework in elementary schools"; Fiji, whose Education Act 2026 requires Vosa Vaka Viti, Hindi and Rotuman; Mauritania, where Arabic-mother-tongue children "must learn at least one of the three national languages")',
+  'not compulsory': 'No further language is required of anyone (Ireland, "no foreign language is compulsory for any pupil" -- though Irish is, which is a different matter and has its own exemption)',
+  'not stated': 'The entry does not establish whether one is required',
+};
+
+// AND A SECOND ONE. The column Eurydice\'s own data answers and few others do.
+const L3_SECOND = {
+  'compulsory for all': 'A second further language is required of everyone',
+  'at upper secondary only': 'It becomes compulsory late (Austria, Bulgaria, Liechtenstein, Norway, Slovenia, Slovakia, Turkiye)',
+  'never compulsory': 'One is as far as it goes (Albania, Germany, Spain, Croatia, Sweden)',
+  'not stated': 'The entry does not reach a second language',
+};
+
+// WHETHER THESE PUPILS MAY PUT IT DOWN. Answered by three entries of 37.
+const L3_EXEMPTION = {
+  'on prior schooling abroad': 'Time spent in another school system excuses it (Ireland\'s Circular 0052/2019: "educated abroad to age 12 without a chance to study Irish, or 3+ years abroad and 12 on return", with the parent applying in writing and the principal deciding within 21 school days)',
+  'at the school\'s discretion': 'A head may substitute it (Czechia, where from 1 September 2023 "schools may substitute the second foreign language" at the school leader\'s discretion "where in the pupil\'s best interest", replacing it with additional Czech as a second language)',
+  'on disability': 'A named impairment excuses it (Cuba, whose Resolucion 56 de 2008 "lets rectors exempt deaf university students from a foreign language" -- and the entry adds that this "applies to higher education, not to schools")',
+  'not stated': 'The entry says nothing about exemption, which is 34 of the 37',
+};
+
+// WHO THE ARRANGEMENT IS FOR. The same question l1Support, l2Support,
+// bilingualEducationNotes and achievementGap each answered the same way.
+const L3_TARGETING = {
+  'general curriculum': 'It applies to everyone and the entry often says so unprompted (Switzerland, "not migrant-specific -- the general curriculum applies to all pupils"; New Zealand, "available to all pupils -- not a targeted newcomer policy"; Hungary, "not migrant-specific"; Luxembourg, "no distinct migrant-specific provision found")',
+  'reaches newcomers': 'The entry addresses what a newcomer in particular carries (Taiwan, "a newcomer without Mandarin still carries English as a further language"; Greece, where foreign languages "continue as mainstream subjects alongside reception support" and the DYEP refugee curriculum "includes English as a core subject"; Lebanon, where "arrivals therefore face Standard Arabic and a European medium together")',
+  'not stated': 'The entry does not establish who it is for',
+};
+
+// ===========================================================================
 // indigenous.revitalisation
 // ===========================================================================
 //
@@ -1567,6 +1620,15 @@ const SCHEMES = {
       evidence_type: EVIDENCE_TYPE,
     },
   },
+  'eal.l3Support': {
+    row: 'one national or sub-national system',
+    columns: {
+      requirement: L3_REQUIREMENT,
+      second_language: L3_SECOND,
+      exemption: L3_EXEMPTION,
+      targeting: L3_TARGETING,
+    },
+  },
   'indigenous.revitalisation': {
     row: 'one national or sub-national system',
     columns: {
@@ -1700,6 +1762,7 @@ module.exports = {
   BILINGUAL_PROVISION, BILINGUAL_PURPOSE, BILINGUAL_FOR_WHOM,
   GAP_MEASURE, GAP_PROXY, GAP_DIRECTION, GAP_AFTER_ADJUSTMENT,
   REVIT_ACTOR, REVIT_ACTIVITY, REVIT_STATUS, REVIT_FUNDING,
+  L3_REQUIREMENT, L3_SECOND, L3_EXEMPTION, L3_TARGETING,
   L1_FORM, L1_FOR_WHOM, L1_SECURED_BY, L2_MODELS,
   DESIGNATION_FORMS, NEWCOMER_TRIGGERS, DECIDED_BY, RULE_LOCUS, EXIT_MECHANISM,
   THRESHOLD_BASIS, BILINGUAL_HANDLING, DECIDER_TYPES, EXCLUSIONS, DISCHARGE_BASIS,
@@ -1729,6 +1792,10 @@ module.exports = {
   isL2Model: v => has(L2_MODELS, v),
   isL1ForWhom: v => has(L1_FOR_WHOM, v),
   isL1SecuredBy: v => has(L1_SECURED_BY, v),
+  isL3Requirement: v => has(L3_REQUIREMENT, v),
+  isL3Second: v => has(L3_SECOND, v),
+  isL3Exemption: v => has(L3_EXEMPTION, v),
+  isL3Targeting: v => has(L3_TARGETING, v),
   isRevitActor: v => has(REVIT_ACTOR, v),
   isRevitActivity: v => has(REVIT_ACTIVITY, v),
   isRevitStatus: v => has(REVIT_STATUS, v),
