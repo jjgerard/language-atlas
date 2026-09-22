@@ -239,7 +239,26 @@ async function prefetch(urls) {
       // know that rather than guess it.
       const discriminating = ws.filter(w => df.get(w) > 0 && df.get(w) < docs.length);
       if (explain) console.log(`  ${field}: ${ws.length} content words, ${discriminating.length} discriminating`);
-      if (discriminating.length < 4) continue;   // nothing here tells the sources apart
+
+      /* AN ENTRY WITH ONE SOURCE HAS NOTHING TO DISCRIMINATE BETWEEN, and the
+       * test above silently refuses every one of them: a word cannot be in
+       * FEWER than all of one document, so `discriminating` is always empty and
+       * the field is skipped. That was 305 of 1,255 unattributed fields in a
+       * sample of 360 entries -- a quarter of the backlog, failing on a rule
+       * written for a choice that does not arise.
+       *
+       * Choosing is not the only claim worth making. Where an entry cites one
+       * document and the field's wording is in it, "this text is in that
+       * document" is true, checkable, and exactly what the panel's heading
+       * says. So the same evidentiary standard applies, measured on PRESENCE
+       * instead: at least half the field's content words, never fewer than
+       * four, inside one window. A field whose words are not there still gets
+       * nothing, which is the case that matters -- roughly a quarter of these
+       * entries paraphrase a source in another language and must keep saying
+       * so rather than being handed the only url on the entry. */
+      const sole = docs.length === 1 && ws.length >= 4;
+      if (!sole && discriminating.length < 4) continue;   // nothing tells the sources apart
+      const probe = sole ? ws : discriminating;
 
       // THE WORDS HAVE TO OCCUR TOGETHER, and this is the rule that matters.
       //
@@ -257,7 +276,7 @@ async function prefetch(urls) {
       // reach and a paragraph of the actual rule reaches easily.
       const WINDOW = 400;
       const scored = docs.map(d => {
-        const want = new Set(discriminating);
+        const want = new Set(probe);
         const hits = [];                       // positions carrying a wanted word
         for (let i = 0; i < d.arr.length; i++) if (want.has(d.arr[i])) hits.push(i);
         let best = 0, bestAt = 0;
@@ -267,12 +286,12 @@ async function prefetch(urls) {
           if (seen.size > best) { best = seen.size; bestAt = hits[a]; }
         }
         let weight = 0;
-        for (const w of discriminating) if (d.w.has(w)) weight += 1 / df.get(w);
+        for (const w of probe) if (d.w.has(w)) weight += 1 / df.get(w);
         return { d, s: best, weight, at: bestAt };
       }).sort((a, b) => (b.s - a.s) || (b.weight - a.weight));
 
       if (explain) for (const r of scored.slice(0, 3))
-        console.log(`      ${String(r.s).padStart(3)}/${discriminating.length} in one window  ${String(r.d.link.label).slice(0, 58)}`);
+        console.log(`      ${String(r.s).padStart(3)}/${probe.length} in one window  ${String(r.d.link.label).slice(0, 58)}`);
 
       /* SEVERAL SOURCES CAN CARRY THE SAME RULE, and demanding a single winner
        * loses that. England's discharge criteria put the SEND Code of Practice
@@ -289,10 +308,13 @@ async function prefetch(urls) {
        * DISCRIMINATE: if more than half the entry's readable sources clear it,
        * the words are not telling the sources apart and nothing is claimed.
        */
-      const bar = Math.max(4, Math.ceil(discriminating.length / 2));
+      const bar = Math.max(4, Math.ceil(probe.length / 2));
       const passed = scored.filter(r => r.s >= bar);
       if (!passed.length) continue;
-      if (passed.length > Math.max(1, Math.floor(docs.length / 2))) continue;
+      // The discrimination guard: if more than half the entry's sources clear
+      // the bar, the words are not telling them apart. It cannot apply to a
+      // lone source, where clearing the bar is the whole claim.
+      if (!sole && passed.length > Math.max(1, Math.floor(docs.length / 2))) continue;
       const winners = passed.slice(0, 3);
       const covered = winners[0].s;
 
@@ -302,7 +324,7 @@ async function prefetch(urls) {
         url: w.d.link.url,
         label: w.d.link.label || null,
         found: w.s,
-        of: discriminating.length,
+        of: probe.length,
       });
       attributed += winners.length;
     }
