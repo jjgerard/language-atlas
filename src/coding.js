@@ -1892,7 +1892,18 @@ const SCHEMES = {
       // `initiated_by` is a LIST -- see the note on REFERRAL_SOURCE.
       initiated_by: REFERRAL_SOURCE,
       trigger: REFERRAL_TRIGGER,
-      scope: RECORD_SCOPE,
+      // `scope` RETIRED 2026-09-24. It used two of its four values 315 times
+      // running -- 252 `disability generally`, 62 `language specific`, one
+      // stray `education generally` (Tripura, whose RTE s.4 special training is
+      // about late admission and not disability at all) and never `not stated`.
+      // A column that cannot come out any other way is not describing the
+      // systems. The 62 were mostly not even about scope: they are US states
+      // requiring a speech-language pathologist on the eligibility team, which
+      // is a workforce fact arriving in the wrong column.
+      // RECORD_SCOPE itself stays, because dld.funding and dld.outcomesEvidence
+      // still use it. The stored values stay in data/dld.json too: dropping the
+      // column stops it being offered, validated and rendered, and leaving the
+      // data makes that reversible.
       evidence_type: EVIDENCE_TYPE,
     },
   },
