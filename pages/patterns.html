@@ -172,6 +172,16 @@ footer.foot a { color: var(--ink-soft); }
   border: 1px solid var(--hair); background: var(--surface); color: var(--ink-soft); }
 .xmode[aria-pressed="true"] { background: var(--ink); color: var(--ground); border-color: var(--ink); }
 
+.xpairs { margin: 0 0 14px; }
+.xpairlead { font-size: 13px; color: var(--ink-soft); margin: 0 0 8px; }
+.xpairlist { display: flex; flex-direction: column; gap: 6px; }
+.xpair { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; width: 100%; text-align: left;
+  font: inherit; font-size: 13px; padding: 8px 11px; cursor: pointer;
+  background: var(--surface); border: 1px solid var(--hair); border-radius: 8px; }
+.xpair:hover { background: var(--surface-2); border-color: var(--hair-strong); }
+.xpn { font-weight: 600; }
+.xpx { color: var(--ink-faint); font-size: 12px; }
+.xpv { margin-left: auto; color: var(--ink-faint); font-size: 12px; white-space: nowrap; }
 .xout { margin-top: 16px; overflow-x: auto; border: 1px solid var(--hair); border-radius: 8px; }
 table.xtab { border-collapse: collapse; font-size: 13px; width: 100%; }
 table.xtab th, table.xtab td { text-align: left; padding: 7px 11px; border-bottom: 1px solid var(--hair); white-space: nowrap; }
@@ -243,6 +253,55 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
 </header>
 
 <main>
+  <h2>One question against another</h2>
+  <p class="standfirst">
+    Every coded question on every map, counted against every other. Pick two, or take one of the
+    pairs below &mdash; they are ranked by how strongly the two move together, so the panel opens
+    on the handful worth looking at rather than on two empty dropdowns.
+  </p>
+
+  <div id="xpairs" class="xpairs"></div>
+
+  <div class="xask">
+    <label for="xq" id="xasklabel">Describe what you want to see</label>
+    <div class="xaskrow">
+      <input id="xq" type="text" autocomplete="off" spellcheck="false"
+             placeholder="who decides, by region">
+      <button class="xbtn" id="xgo">Show</button>
+    </div>
+    <p class="xsaid" id="xsaid"></p>
+    <p class="xleft" id="xleft"></p>
+    <p class="xegs" id="xegs"></p>
+  </div>
+
+  <blockquote class="note">
+    <span id="xasknote"></span>
+    Nothing here is read out of entry text. A coded value is a reading somebody recorded against a
+    fixed vocabulary, stored beside the prose and never inside it &mdash; so a question the atlas
+    cannot answer is told so rather than answered with the nearest thing that fits.
+  </blockquote>
+
+  <div class="xcontrols">
+    <div class="xctl"><label for="x">Rows</label><select id="x"></select></div>
+    <div class="xctl"><label for="y">Columns</label><select id="y"></select></div>
+    <div class="xctl"><label for="scope">Limited to</label><select id="scope"></select></div>
+  </div>
+
+  <div class="xmodes">
+    <button class="xmode" id="xm-cross" aria-pressed="true">Cross-tabulate</button>
+    <button class="xmode" id="xm-bars" aria-pressed="false">Distribution</button>
+    <button class="xmode" id="xm-units" aria-pressed="false">List the units</button>
+  </div>
+
+  <div class="xout" id="xout"></div>
+  <p class="xsummary" id="xsummary"></p>
+
+  <div class="xreading hidden" id="xreading">
+    <h4>Reading of the table above</h4>
+    <p id="xreadingtext"></p>
+    <p class="prov" id="xreadingprov"></p>
+  </div>
+
   <h2>Build a plot: coded categories against a PISA outcome</h2>
   <p class="standfirst">
     Coded columns from these maps against the PISA immigrant attainment gap, 2015 to 2025.
@@ -343,6 +402,7 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
 
 <script type="module">
 import { mountNav } from '/nav.js';
+import { mountExplore } from '/explore-panel.js';
 
 const esc = s => String(s == null ? '' : s)
   .replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -1294,6 +1354,12 @@ atlas.then(a => {
   mountNav(null, a.domains);
   renderCoding(a);
   renderOutcomes(a);
+  // The explorer takes the SAME payload rather than fetching its own. It is
+  // over 3MB and nothing here changes it.
+  mountExplore(a).catch(err => {
+    document.getElementById('xout').innerHTML =
+      '<p class="xempty">The entries could not be loaded (' + String(err && err.message) + ').</p>';
+  });
   // Re-render in place. The tables are built from the payload already in
   // memory, so this costs nothing and needs no round trip.
   const t = document.getElementById('codesubs');

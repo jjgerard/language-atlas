@@ -63,12 +63,29 @@ function flatten(payload) {
         sources: ((u.docLinks || []).length) + ((u.supportLinks || []).length),
         // Substantive facts, read off the entry rather than off its metadata.
         named: (u.records && u.records.languages) ? u.records.languages.length : null,
-        // "Glottolog counts 899 living languages for this country" — the count
-        // is in the inventory text because that is where the field puts it.
+        // How many languages the country has. This READ THE SENTENCE until
+        // inventory was retyped from prose to a series: the string it matched,
+        // "Glottolog counts 899 living languages", no longer exists, and the
+        // word "living" was dropped as well because the count always included
+        // extinct languages. Both changes were right and both broke this
+        // silently -- 0 of 353 units matched, so `present` was null everywhere
+        // and took presentCount and engagedShare down with it, showing an empty
+        // variable rather than an error.
+        // It reads the ROW now, which is what a typed field is for. The old
+        // sentence is still tried afterwards, so an entry left in the prose
+        // form is not dropped.
         present: (() => {
+          const rows = (u.records && u.records.inventory) || [];
+          for (const row of rows) {
+            const n = Number(String(row && row.value).replace(/[^0-9.]/g, ''));
+            if (Number.isFinite(n) && n > 0) return n;
+          }
           const m = String((u.values && u.values.inventory) || '').match(/Glottolog counts (\d+) living language/);
           return m ? Number(m[1]) : null;
         })(),
+        // The coded readings, which are the only structured account of what an
+        // entry SAYS rather than of how complete it is.
+        coding: u.coding || {},
         firstYear: (u.history || []).length ? Math.min(...u.history.map(h => h.year)) : null,
         lastYear: (u.history || []).length ? Math.max(...u.history.map(h => h.year)) : null,
       };
@@ -196,6 +213,46 @@ function buildVars(payload) {
     r => r.lastYear ? (Math.floor(r.lastYear / 10) * 10) + 's' : null);
   push('changeSpan', 'Years between first and last change', 'When policy changed',
     r => (r.firstYear && r.lastYear) ? band(r.lastYear - r.firstYear, [0, 10, 30, 60], ['One year only', 'Up to 10 years', '11 to 30', '31 to 60', 'More than 60']) : null);
+
+  /* ---- WHAT THE ENTRIES SAY ------------------------------------------
+   * The coded columns, one variable each. This is the part the panel was
+   * built for and could not have: its header says "nothing is read out of
+   * entry prose", because a classifier over hedged wording leaves the
+   * interesting cases unresolved. A coding is not a classifier over prose --
+   * it is a reading somebody recorded against a fixed vocabulary, stored
+   * beside the prose and never inside it, which is exactly the kind of
+   * variable the rest of this registry holds.
+   *
+   * A coding belongs to one map, and a row here is one (unit, domain) pair,
+   * so each variable answers only on its own map and is null elsewhere. That
+   * is what makes "identification decider against referral route" a crosstab
+   * rather than a join.
+   *
+   * A LIST COLUMN CANNOT SIT IN ONE CELL. `initiated_by` holds up to four
+   * values and a crosstab row goes in one place, so a unit holding several
+   * is counted as `more than one` rather than being silently reduced to its
+   * first value. The label says so, and the distribution mode still shows
+   * the values separately. */
+  for (const d of payload.domains) {
+    const sc = payload.schemes || {};
+    for (const f of (d.fields || [])) {
+      const scheme = sc[d.id + '.' + f.k];
+      if (!scheme || scheme.many || (scheme.keyColumns || []).length) continue;
+      for (const col of (scheme.valueColumns || [])) {
+        const pretty = col.replace(/_/g, ' ');
+        push('c_' + d.id + '_' + f.k + '_' + col,
+          pretty + ' — ' + f.label,
+          'What the entries say · ' + d.label,
+          r => {
+            if (r.domain !== d.id) return null;
+            const v = (r.coding[f.k] || {})[col];
+            if (v === undefined || v === null || !String(v).length) return null;
+            if (Array.isArray(v)) return v.length === 1 ? String(v[0]) : 'more than one';
+            return String(v);
+          });
+      }
+    }
+  }
 
   // ---- where ----
   push('region', 'Region', 'Where', r => r.region, { unit: true });
@@ -490,6 +547,126 @@ function draw() {
         : 'Each entry counted once per map.');
 }
 
+/* ---- WHICH PAIRS ARE WORTH LOOKING AT --------------------------------
+ *
+ * There are about ninety coded columns, so there are thousands of pairs, and
+ * a reader given two dropdowns and no steer will mostly find nothing. This
+ * ranks the pairs BEFORE anyone picks, so the panel opens on the handful that
+ * actually move together.
+ *
+ * The measure is Cramer's V, which is the chi-squared statistic normalised by
+ * the table's size so a 3x3 and a 9x6 can be put in the same list. It runs
+ * 0 (the two columns tell you nothing about each other) to 1 (one determines
+ * the other). It is symmetric and it says nothing whatever about cause: that
+ * a standing's force predicts the classroom does not mean it produces it, and
+ * the strongest pair in the atlas is usually two columns of one instrument
+ * being read twice.
+ *
+ * ONLY WITHIN A MAP. A coding belongs to a domain, so a dld column and an
+ * indigenous column are never both filled on the same row and their V is
+ * undefined rather than zero.
+ *
+ * MIN_N exists because V is inflated by small tables -- two columns with four
+ * values each over twenty units can hardly help looking associated. Forty is
+ * where the rank order stops changing as the threshold moves.
+ *
+ * COCHRAN'S RULE DOES THE REAL WORK, though. Without it the whole ranking was
+ * `evidence type` against `evidence type`: those columns run 76 to 96 per cent
+ * `policy`, so nearly every cell is empty, the two or three entries that are
+ * `study or project` on both fields land in one cell, and chi-squared treats a
+ * cell holding 3 where it expected 0.1 as an enormous result. Three of the top
+ * four pairs were that, and what they actually report is that one source backs
+ * two fields -- a fact about sourcing, not about systems.
+ * So a table is rejected when more than a fifth of its cells expect fewer than
+ * five, which is the standard condition for chi-squared meaning anything. It
+ * removes the lopsided columns from the RANKING only; they stay selectable by
+ * hand, because a column that is 97 per cent silent can still be the point.
+ */
+const PAIR_MIN_N = 40;
+const PAIR_MIN_VALUES = 2;
+
+function cramersV(pairs) {
+  const rowT = new Map(), colT = new Map(), cell = new Map();
+  let n = 0;
+  for (const [a, b] of pairs) {
+    rowT.set(a, (rowT.get(a) || 0) + 1);
+    colT.set(b, (colT.get(b) || 0) + 1);
+    const k = a + SEP + b;
+    cell.set(k, (cell.get(k) || 0) + 1);
+    n++;
+  }
+  const r = rowT.size, c = colT.size;
+  if (n < PAIR_MIN_N || r < PAIR_MIN_VALUES || c < PAIR_MIN_VALUES) return null;
+  let chi2 = 0, thin = 0;
+  for (const [a, ra] of rowT) for (const [b, cb] of colT) {
+    const e = (ra * cb) / n;
+    if (e < 5) thin++;
+    const o = cell.get(a + SEP + b) || 0;
+    chi2 += ((o - e) * (o - e)) / e;
+  }
+  if (thin / (r * c) > 0.2) return null;
+  const v = Math.sqrt(chi2 / (n * Math.min(r - 1, c - 1)));
+  return { v: Math.min(1, v), n, r, c };
+}
+
+function rankPairs() {
+  const coded = VARS.filter(x => x.id.startsWith('c_'));
+  const byDomain = new Map();
+  for (const x of coded) {
+    const d = x.id.split('_')[1];
+    if (!byDomain.has(d)) byDomain.set(d, []);
+    byDomain.get(d).push(x);
+  }
+  const out = [];
+  for (const [, list] of byDomain) {
+    // Read each variable once per row rather than once per pair: ninety
+    // columns over four hundred rows is nothing, ninety CHOOSE TWO of them is
+    // not.
+    const vals = list.map(x => ROWS.map(r => x.of(r)));
+    for (let i = 0; i < list.length; i++) {
+      for (let j = i + 1; j < list.length; j++) {
+        // Two columns of the SAME field are the same reading split in two, and
+        // they crowd out everything else. They are still selectable by hand.
+        if (list[i].id.split('_').slice(0, 3).join('_') === list[j].id.split('_').slice(0, 3).join('_')) continue;
+        const pairs = [];
+        for (let k = 0; k < ROWS.length; k++) {
+          const a = vals[i][k], b = vals[j][k];
+          if (a == null || b == null) continue;
+          pairs.push([a, b]);
+        }
+        const m = cramersV(pairs);
+        if (m) out.push({ x: list[i], y: list[j], ...m });
+      }
+    }
+  }
+  out.sort((a, b) => b.v - a.v);
+  return out;
+}
+
+function renderPairs() {
+  const host = $('xpairs');
+  if (!host) return;
+  const top = rankPairs().slice(0, 10);
+  if (!top.length) {
+    host.innerHTML = '<p class="xempty">No pair of coded questions has enough entries in common yet.</p>';
+    return;
+  }
+  host.innerHTML = '<p class="xpairlead">Questions that move together, strongest first. '
+    + 'This says they are related, not that one causes the other — often it is one instrument being read twice.</p>'
+    + '<div class="xpairlist">' + top.map(p =>
+      `<button class="xpair" data-x="${esc(p.x.id)}" data-y="${esc(p.y.id)}">
+         <span class="xpn">${esc(p.x.label)}</span><span class="xpx">against</span><span class="xpn">${esc(p.y.label)}</span>
+         <span class="xpv">V ${p.v.toFixed(2)} · ${p.n} entries</span>
+       </button>`).join('') + '</div>';
+  host.querySelectorAll('.xpair').forEach(b => b.addEventListener('click', () => {
+    $('x').value = b.dataset.x;
+    $('y').value = b.dataset.y;
+    MODE = 'cross';
+    draw();
+    $('xout').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }));
+}
+
 /* ---- asking ---------------------------------------------------------- */
 
 /** The table as plain text. This is the ONLY thing sent for a reading. */
@@ -649,6 +826,10 @@ export async function mountExplore(payload) {
   $('scope').innerHTML = SCOPES.map(s => `<option value="${esc(s.id)}">${esc(s.label)}</option>`).join('');
   $('x').value = 'region';
   $('y').value = 'coverage';
+  // Ranking every pair is a one-off sweep over the flattened rows, so it runs
+  // after the dropdowns exist and before the first draw. If #xpairs is not on
+  // the page -- the archived copy has no such block -- it does nothing.
+  renderPairs();
 
   try { MODEL = await fetch('/api/ask').then(r => r.json()); } catch { MODEL = { available: false }; }
   if (typeof MODEL.left === 'number') LEFT = MODEL.left;
