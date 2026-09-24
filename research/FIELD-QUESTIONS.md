@@ -556,6 +556,32 @@ and let the reader sort them, which is what the typed rows already permit. The
 question is only whether the absence is asserted or left to the reader.
 Recorded here because it is a decision, not a finding.
 
+**`outcomesEvidence` has no question about WHO IS COUNTED.** Its four are:
+what was measured · by whom and when · what it found · whether it is repeated.
+The European fill wave of 2026-09 found that the first thing worth saying
+about almost every system is none of those. It is whether these children are
+separable in the count at all, and it splits Europe cleanly. Germany reports a
+Förderschwerpunkt Sprache headcount as a line of its own and Russia carries a
+severe-speech-disorder line on federal form OO-1; Spain says in terms that
+pupils with language and communication disorders are NOT counted as having
+SEN; North Macedonia bundles speech with hearing and classifies the SCHOOL
+rather than the pupil; Ukraine and Montenegro publish no category of need at
+all. Every one of those is the answer a reader wants first, and every one had
+to be tagged 1 or 3 by proximity.
+
+This is the same shape as the `for_whom` axis the eal fields needed: the
+measure is legible only once you know who is inside it. A fifth question —
+*who is separated in it* — would hold these properly, and would give the coded
+scheme a column it currently has to infer.
+
+**The pan-European instrument says outright that it is neither.** EASIE, which
+now backs 29 of the 48 European entries, states that its data "does not inform
+about learners with some pre-defined needs or disabilities" and is not to be
+read "as covering or implying the quality of the education provision or its
+results". A regular, annual, ministry-supplied count that disclaims being
+about need OR about outcome is a strange thing for this field to hold, and it
+is most of what Europe has.
+
 ## Related
 
 `fields-must-be-countable` in the maintainer's notes: a field that can only
