@@ -82,6 +82,12 @@ main a { color: var(--focus); }
 .ans .slot { color: var(--ink-faint); font-size: 11px; font-variant-numeric: tabular-nums; }
 .ans .quiet { color: var(--ink-faint); font-style: italic; margin: 0; }
 .ans .rows { margin: 0 0 3px; font-size: 13px; color: var(--ink-faint); }
+.ans .src { margin: 4px 0 0; font-size: 11.5px; line-height: 1.5; color: var(--ink-faint); }
+.ans .src .ch { text-transform: uppercase; letter-spacing: .06em; font-size: 10px; margin-right: 6px; }
+.ans .src a { color: var(--ink-faint); text-decoration-color: var(--hair-strong); }
+.ans .src a:hover { color: var(--ink); }
+.ans .src .sep { margin: 0 5px; color: var(--hair-strong); }
+.ans .src.none { font-style: italic; }
 .chip {
   display: inline-block; font-size: 10px; letter-spacing: .07em; text-transform: uppercase;
   padding: 2px 6px; border-radius: 4px; background: var(--surface-2); color: var(--ink-soft);
@@ -293,6 +299,58 @@ function renderBody(u, f) {
   return '<ul>' + txt.split(NL).filter(Boolean).map(l => `<li>${esc(l)}</li>`).join('') + '</ul>';
 }
 
+/* THE SOURCE FOR THIS ANSWER, NOT FOR THE COUNTRY.
+ *
+ * This page had no source on it at all, and the one number it exported was
+ * the length of the entry's docLinks list -- so a country with eleven
+ * documents on its entry reported eleven against every one of its thirteen
+ * fields, which says nothing about the sentence in front of the reader.
+ *
+ * `fieldSources` is the per-field record, carried through derive.js on the
+ * same gate as coding and slots so a source cannot outlive the sentence it
+ * backed. The map's entry panel has shown it all along; this is the same
+ * data on the page organised BY field, where it belongs most.
+ *
+ * Two headings, because they are two different claims and the panel keeps
+ * them apart: RECORDED is somebody writing this document down against this
+ * question while drafting, FOUND is attribute-sources.js reading the entry's
+ * own sources afterwards and finding this wording inside one. Where a field
+ * has neither, the line says so and gives the entry's count -- the honest
+ * version of the number this page used to print.
+ *
+ * The quote sits in the title attribute rather than on the page: two hundred
+ * countries of blockquotes would bury the answers they are evidence for.
+ */
+function fieldSourceRows(u, key) {
+  const rows = (u.fieldSources || {})[key];
+  if (!Array.isArray(rows) || !rows.length) return [];
+  const byUrl = new Map();
+  for (const l of (u.docLinks || [])) byUrl.set(String(l.url).split('#')[0], l.label || l.url);
+  return rows.map(r => {
+    // The entry's own wording first, then the drafter's, and a hostname only
+    // when there is nothing else: "education-profiles.org" is a worse answer
+    // than "UNESCO PEER, Suriname - Inclusion profile".
+    let label = byUrl.get(String(r.url).split('#')[0]) || r.label;
+    if (!label) { try { label = new URL(r.url).hostname.replace(/^www\./, ''); } catch (e) { label = r.url; } }
+    return { url: r.url, label, quote: r.quote || '', where: r.where || '', found: !!r.found };
+  });
+}
+
+function sourcesHTML(u, key) {
+  const rows = fieldSourceRows(u, key);
+  if (!rows.length) {
+    const n = (u.docLinks || []).length;
+    return `<p class="src none">No source recorded against this question`
+      + (n ? ` · ${n} on the entry` : '') + `</p>`;
+  }
+  const anyRecorded = rows.some(r => !r.found);
+  return `<p class="src"><span class="ch">${anyRecorded ? 'Read for this question' : 'This text is in'}</span>`
+    + rows.map(r => `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer"`
+        + (r.quote ? ` title="${esc(r.quote + (r.where ? ' — ' + r.where : ''))}"` : '')
+        + `>${esc(r.label)}</a>`).join('<span class="sep">·</span>')
+    + '</p>';
+}
+
 function draw() {
   const d = live.find(x => x.id === $('map').value) || live[0];
   const f = d.fields.find(x => x.k === $('field').value) || d.fields[0];
@@ -348,7 +406,11 @@ function draw() {
             // under a finished field says the opposite of what is true: the
             // rest of the questions are not missing, they cannot arise.
             + (st !== 'absent' && Array.isArray(slots) && slots.length
-              ? `<span class="slot">answers question ${slots.join(', ')}</span>` : '');
+              ? `<span class="slot">answers question ${slots.join(', ')}</span>` : '')
+            // An absence gets one too, and it matters more there than anywhere:
+            // "the instruments cited on this entry set no such rule" is a claim
+            // about documents, and the reader should be able to see which.
+            + sourcesHTML(u, f.k);
         } else if (st === 'looked') {
           body = '<p class="quiet">Somebody looked and recorded finding nothing</p>'
             + (u.stubNote ? `<p class="rows">${esc(u.stubNote)}</p>` : '');
@@ -393,7 +455,13 @@ const CSV_COLS = [
   'code', 'unit', 'level', 'region', 'subregion',
   'domain', 'field', 'field_label',
   'state', 'is_absence', 'n_bullets', 'bullet_no', 'slot', 'question', 'text',
-  'row_year', 'row_value', 'sources',
+  'row_year', 'row_value',
+  // `sources` was one number -- the length of the entry's docLinks -- repeated
+  // against every field of that entry, which is a fact about the country and
+  // not about the answer in the row. Three columns now: what is recorded
+  // against THIS field, where to read it, and the entry total kept separately
+  // so nothing that was exportable stopped being exportable.
+  'field_sources', 'field_source_urls', 'entry_sources',
 ];
 
 /** Coded columns present on this field, discovered from the units. */
@@ -432,12 +500,15 @@ function csvRows() {
   const out = [];
   for (const u of units) {
     const st = stateOf(u, i, field.k);
+    const fsRows = fieldSourceRows(u, field.k);
     const base = {
       code: u.cc, unit: u.name, level: u.nat ? 'national' : 'sub-national',
       region: u.region || '', subregion: u.subregion || '',
       domain: domain.id, field: field.k, field_label: field.label,
       state: st, is_absence: st === 'absent' ? 1 : 0,
-      sources: (u.docLinks || []).length,
+      field_sources: fsRows.length,
+      field_source_urls: fsRows.map(r => r.url).join(' | '),
+      entry_sources: (u.docLinks || []).length,
     };
     // A coding belongs to the unit, not to a bullet, so it repeats down every
     // row for that unit. A list joins with "; " -- a system with a fixed period and
