@@ -2780,24 +2780,20 @@ function panelHTML(u, via) {
   // that question -- every country's answer to it, in one picture -- which is
   // what the old /views table was for and is a better answer than a table.
   //
-  // TO THE TABLE, NOT TO THE MAP. The heading used to redraw the map by this
-  // question, which is a worse answer to the thing a reader is asking when
-  // they click a field name on one country's entry: they want to know what
-  // every OTHER country says to the same question, and a colour cannot tell
-  // them. The table can, and it is the page built for it.
+  // THE HEADING REDRAWS THE MAP; THE NAV TAB LEAVES IT. These two were briefly
+  // swapped, which put both clicks on the page the reader was already on: a
+  // heading inside an entry sent them to a table, and "Field views" in the nav
+  // opened another map. Clicking a field name here is a question asked from
+  // inside the map -- draw this one instead -- and the words are a tab away.
   //
-  // The map is still one click further on -- the category key on a shaded map
-  // carries "Read every country's answer" pointing the same way, and the
-  // picker draws any question on demand. This just stops the heading being the
-  // long way round to a table.
-  //
-  // Still only where there is something to show: a field with no coded column,
-  // or a row-grained one, has no table of answers either, so its heading stays
-  // plain text.
+  // Only where the map can actually shade by it: a field with no coded column,
+  // or a row-grained one, has nothing to colour, so its heading stays plain
+  // text rather than a link that leads to the coverage map with nothing
+  // changed.
   const mappable = key => shadeableColumns().some(c => c.field === key);
   const head = (label, key) => key && mappable(key)
-    ? `<a class="fieldmap" href="/views/table?map=${encodeURIComponent(d.id)}&amp;field=${encodeURIComponent(key)}"
-         title="Read every country's answer to this question">${esc(label)}<span aria-hidden="true"> →</span></a>`
+    ? `<a class="fieldmap" href="/${encodeURIComponent(d.id)}?field=${encodeURIComponent(key)}"
+         title="Draw the map by this question">${esc(label)}<span aria-hidden="true"> →</span></a>`
     : esc(label);
   const block = (cls, label, body, from, key) =>
     `<div class="field ${cls}"><h4>${head(label, key)}${from ? `<span class="from">inherited from ${esc(from)}</span>` : ''}</h4>${body}</div>`;
@@ -3129,7 +3125,7 @@ function paintCatLegend() {
   // one say", which a colour cannot. It is one click from here rather than in
   // the nav, because the question it needs is the one already chosen.
   const [fk] = CODED.key.split('.');
-  rows.push(`<a class="readall" href="/views/table?map=${encodeURIComponent(domainId)}&field=${encodeURIComponent(fk)}"
+  rows.push(`<a class="readall" href="/views?map=${encodeURIComponent(domainId)}&field=${encodeURIComponent(fk)}"
     >Read every country's answer<span aria-hidden="true"> →</span></a>`);
   catLegend.innerHTML = rows.join('');
   catLegend.querySelectorAll('button.cl').forEach(b => b.addEventListener('click', () => {
