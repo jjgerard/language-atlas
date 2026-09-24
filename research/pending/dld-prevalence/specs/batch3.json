@@ -1,0 +1,62 @@
+{
+ "CA|Ontario": {
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2021,
+     "value": "10235",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "students whose primary area of exceptionality is Language Impairment",
+     "denominator": "students receiving special education programs or services",
+     "note": "Students in publicly funded elementary and secondary schools whose primary area of exceptionality is Language Impairment, 2021-22: 6,630 elementary and 3,605 secondary, of 352,875 in all areas; Ontario Ministry of Education, Special Education Enrolment by Exceptionality (OnSIS). A student with more than one exceptionality is counted once, under the primary one. Ontario records Speech Impairment as a separate exceptionality, at 300 that year, so this figure is language and not speech. Enrolments are rounded to the nearest 5."
+    },
+    {
+     "year": 2024,
+     "value": "10605",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "students whose primary area of exceptionality is Language Impairment",
+     "denominator": "students receiving special education programs or services",
+     "note": "Students whose primary area of exceptionality is Language Impairment, 2024-25: 7,195 elementary and 3,415 secondary, of 362,670 in all areas; Ontario Ministry of Education, Special Education Enrolment by Exceptionality (OnSIS). Speech Impairment is counted separately at 395, so this is one of the few collections anywhere that keeps language and speech apart. An identification made by an Identification, Placement and Review Committee, not an epidemiological estimate. Enrolments are rounded to the nearest 5."
+    },
+    {
+     "year": 2024,
+     "value": "395",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "students whose primary area of exceptionality is Speech Impairment",
+     "denominator": "students receiving special education programs or services",
+     "note": "Students whose primary area of exceptionality is Speech Impairment, 2024-25: 320 elementary and 70 secondary; Ontario Ministry of Education, Special Education Enrolment by Exceptionality (OnSIS). Recorded here beside the Language Impairment figure because the contrast is the point: Ontario identifies 27 children under language for every one under speech. Enrolments are rounded to the nearest 5."
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "2021 10235",
+    "url": "https://data.ontario.ca/dataset/b498b7ab-c6d0-4791-b8bd-c25c58e5bdbf/resource/078faf11-1072-46bf-aa3f-bed327fad695/download/2021-2022_special_education_enrolment_by_exceptionality_en.txt",
+    "quote": "2021-2022|Lang Impairment|6630|3605|10235"
+   },
+   {
+    "bullet": "2024 10605",
+    "url": "https://data.ontario.ca/dataset/b498b7ab-c6d0-4791-b8bd-c25c58e5bdbf/resource/d644aa6c-371d-48ba-aaed-e6c560abfc72/download/special_education_enrolment_by_exceptionality_2024-2025_en.txt",
+    "quote": "2024-2025|Lang Impairment|7195|3415|10605"
+   },
+   {
+    "bullet": "2024 395",
+    "url": "https://data.ontario.ca/dataset/b498b7ab-c6d0-4791-b8bd-c25c58e5bdbf/resource/d644aa6c-371d-48ba-aaed-e6c560abfc72/download/special_education_enrolment_by_exceptionality_2024-2025_en.txt",
+    "quote": "2024-2025|Speech Impairment|320|70|395"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Ontario Ministry of Education, Special Education Enrolment by Exceptionality, 2024-25 (Ontario School Information System)",
+    "url": "https://data.ontario.ca/dataset/b498b7ab-c6d0-4791-b8bd-c25c58e5bdbf/resource/d644aa6c-371d-48ba-aaed-e6c560abfc72/download/special_education_enrolment_by_exceptionality_2024-2025_en.txt"
+   },
+   {
+    "label": "Ontario Ministry of Education, Special Education Enrolment by Exceptionality, 2021-22",
+    "url": "https://data.ontario.ca/dataset/b498b7ab-c6d0-4791-b8bd-c25c58e5bdbf/resource/078faf11-1072-46bf-aa3f-bed327fad695/download/2021-2022_special_education_enrolment_by_exceptionality_en.txt"
+   }
+  ]
+ }
+}

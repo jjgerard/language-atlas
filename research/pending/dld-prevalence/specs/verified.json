@@ -1,4 +1,1110 @@
 {
+ "JP|Japan": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2023,
+     "value": "47069",
+     "note": "Children in national, public and private primary, lower and upper secondary schools receiving tsukyu ni yoru shido (resource-room instruction) for the disability type gengo shogai, 2023; MEXT, Reiwa 5 nendo Tsukyu ni yoru shido jisshi jokyo chosa, table (1). gengo shogai is the largest single category of the 203,376 children receiving such instruction. A count of children the school system has placed in the category, not an epidemiological estimate; the category covers speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "children receiving tsukyu resource-room instruction for gengo shogai (speech and language disorder)"
+    },
+    {
+     "year": 2023,
+     "value": "45855",
+     "note": "Of the 166,403 children in public primary schools receiving tsukyu ni yoru shido in 2023, those in the gengo shogai category; MEXT, Reiwa 5 nendo Tsukyu ni yoru shido jisshi jokyo chosa. Almost all of Japan's identified figure sits in primary school: the same collection records 1,145 in public lower secondary and 23 in public upper secondary.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "public primary school children receiving tsukyu instruction for gengo shogai"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "MEXT (Japan, Ministry of Education), Reiwa 5 nendo Tsukyu ni yoru shido jisshi jokyo chosa (2023 survey of resource-room instruction), July 2025",
+    "url": "https://www.mext.go.jp/content/20250715-mxt_tokubetu01-000043733_2.pdf"
+   }
+  ]
+ },
+ "NL|Netherlands": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2025,
+     "value": "5455",
+     "note": "Pupils in special primary education (speciaal onderwijs) cluster 2 registered with a taalontwikkelingsstoornis (developmental language disorder), of 6,142 pupils in so cluster 2 in 2025; OCW in cijfers, Speciaal en voortgezet speciaal onderwijs, from DUO pupil files. Cluster 2 also serves deaf and hard-of-hearing pupils, so this is the language-disorder share of a wider cluster, and it counts only pupils placed in cluster 2 schools.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in so cluster 2 with a taalontwikkelingsstoornis (tos)",
+     "denominator": "pupils in so cluster 2"
+    },
+    {
+     "year": 2025,
+     "value": "29.3",
+     "note": "Share of secondary special education (vso) cluster 2 pupils registered with a taalontwikkelingsstoornis in 2025; OCW in cijfers, from DUO pupil files. Language disorders were first registered in vso only in 2022, and OCW in cijfers says the vso figure is probably an under-registration and that the true number of vso pupils with tos is expected to be higher.",
+     "unit": "percent",
+     "basis": "administrative count",
+     "counted": "vso cluster 2 pupils registered with a taalontwikkelingsstoornis (tos)",
+     "denominator": "vso cluster 2 pupils"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "OCW in cijfers (Netherlands, Ministry of Education), Speciaal en voortgezet speciaal onderwijs: type problematiek cluster 2, from DUO pupil files",
+    "url": "https://www.ocwincijfers.nl/themas/passend-onderwijs/speciaal-voortgezet-onderwijs"
+   }
+  ]
+ },
+ "FR|France": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2006,
+     "value": "19000",
+     "note": "Pupils recorded with troubles du langage et de la parole among pupils with a disability schooled in milieu ordinaire, 2006; MENESR-DEPP, Note d'Information 36, December 2016, figure 2. The definitions page states that troubles du langage ou de la parole comprend la dyslexie, la dysphasie -- so the category is wider than language disorder. An administrative count following an MDPH decision, not an epidemiological estimate.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils with troubles du langage et de la parole schooled in ordinary settings; DEPP's classification says the category comprises dyslexia, dysphasia and the like"
+    },
+    {
+     "year": 2015,
+     "value": "47000",
+     "note": "Pupils recorded with troubles du langage et de la parole among pupils with a disability schooled in milieu ordinaire, 2015; MENESR-DEPP, Note d'Information 36, December 2016. DEPP reports the number as having practically doubled in nine years. The definitions page states that troubles du langage ou de la parole comprend la dyslexie, la dysphasie -- so the category is wider than language disorder.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils with troubles du langage et de la parole schooled in ordinary settings; DEPP's classification says the category comprises dyslexia, dysphasia and the like"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "MENESR-DEPP, Note d'Information n. 36, December 2016: Les eleves en situation de handicap depuis la loi de 2005",
+    "url": "https://www.education.gouv.fr/sites/default/files/imported_files/document/depp-ni-2016-36-eleves-handicapes-loi-2005_674365.pdf"
+   }
+  ]
+ },
+ "GB|Wales": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2024,
+     "value": "35.0",
+     "note": "The most common type of need reported in the January 2024 schools' census in Wales, of 75,225 reports of ALN or SEN type. Schools may report as many needs for a pupil as required and the reports are not ranked, so a pupil is counted once under each type reported and the number of reports exceeds the number of pupils. An identification count made by schools, not an epidemiological estimate.",
+     "unit": "percent",
+     "basis": "administrative count",
+     "counted": "pupils with some form of ALN or SEN for whom 'Speech, language and communication difficulties' was reported as a type of need",
+     "denominator": "pupils with some form of ALN or SEN"
+    },
+    {
+     "year": 2025,
+     "value": "36.2",
+     "note": "The most common type of need reported in the January 2025 schools' census in Wales, of 66,471 reports of ALN or SEN type, an average of 1.5 per pupil with ALN or SEN. Schools may report as many needs for a pupil as required and the reports are not ranked, so a pupil is counted once under each type reported. An identification count made by schools, not an epidemiological estimate.",
+     "unit": "percent",
+     "basis": "administrative count",
+     "counted": "pupils with some form of ALN or SEN for whom 'Speech, language and communication difficulties' was reported as a type of need",
+     "denominator": "pupils with some form of ALN or SEN"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "Welsh Government, Schools' census results: January 2024",
+    "url": "https://www.gov.wales/schools-census-results-january-2024-html"
+   },
+   {
+    "label": "Welsh Government, Schools' census results: January 2025",
+    "url": "https://www.gov.wales/schools-census-results-january-2025-html"
+   }
+  ]
+ },
+ "OM|Oman": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2019,
+     "value": "647",
+     "note": "Students with language and speech disorders enrolled in 2019/20 in the Ministry of Education's Pronunciation and Speech Programme, which was implemented in 2004/05; UNESCO GEM Report PEER country profile for Oman, inclusion. A count of children enrolled in one named programme, not a count of all children the system identifies and not an epidemiological estimate.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "students with language and speech disorders enrolled in the Pronunciation and Speech Programme"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "UNESCO GEM Report PEER, country profile: Oman, inclusion",
+    "url": "https://education-profiles.org/northern-africa-and-western-asia/oman/~inclusion"
+   }
+  ]
+ },
+ "CL|Chile": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2012,
+     "value": "17.9",
+     "note": "TEL was the third most frequent diagnosis in Chile's Programa de Integracion Escolar, at 17.9% of all diagnoses made in 2012, as reported in a peer-reviewed study of enrolment in escuelas de lenguaje (Revista Electronica Educare, 2023). This is a share of diagnoses recorded by the school integration programme, not a share of children and not an epidemiological estimate.",
+     "unit": "percent",
+     "basis": "administrative count",
+     "counted": "diagnoses of trastorno especifico del lenguaje (TEL) among all diagnoses made in the Programa de Integracion Escolar",
+     "denominator": "diagnoses made in the Programa de Integracion Escolar"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "Trastorno especifico del lenguaje y retraso de lenguaje: un estudio sobre matriculas en escuelas de lenguaje en Chile, Revista Electronica Educare (2023)",
+    "url": "https://www.scielo.sa.cr/scielo.php?script=sci_arttext&pid=S1409-42582023000100446"
+   }
+  ]
+ },
+ "KR|South Korea": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2020,
+     "value": "2404",
+     "note": "Students recognised as special-education subjects in the disability type uisasotong jangae (communication disorder), of 95,420 in all types, 2020; Ministry of Education, 2024 Special Education Statistics, annual series by disability type. An administrative count of children the system has designated, not an epidemiological estimate; the Korean category covers communication broadly rather than language disorder alone.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "special-education students in the disability type uisasotong jangae (communication disorder)",
+     "denominator": "special-education students in all disability types"
+    },
+    {
+     "year": 2024,
+     "value": "2600",
+     "note": "Students recognised as special-education subjects in the disability type uisasotong jangae (communication disorder) as at 1 April 2024, 2.2% of the 115,610 in all types; Ministry of Education, 2024 Special Education Statistics. The number has moved 2,404 - 2,450 - 2,622 - 2,645 - 2,600 across 2020 to 2024 while the all-types total rose by a fifth, so the share fell from 2.5% to 2.2%. An administrative count, not an epidemiological estimate.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "special-education students in the disability type uisasotong jangae (communication disorder)",
+     "denominator": "special-education students in all disability types"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "Ministry of Education (Korea), 2024 Special Education Statistics (2024 teuksu gyoyuk tonggye), National Assembly Library copy",
+    "url": "https://clik.nanet.go.kr/clikr-collection/policyinfo/202/1010/2024/CLIKC3041701665575324_attach_1.pdf"
+   }
+  ]
+ },
+ "SI|Slovenia": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "1180",
+     "note": "Pupils with govorno jezikovne motnje (speech and language disorders), 11.7% of the 10,091 pupils formally directed (usmerjeni) into mainstream primary schools with adapted delivery and additional professional help, 2015/16; Ministry of Education, Science and Sport, table of pupils with special needs. A count of children the placement procedure has designated, not an epidemiological estimate. It excludes pupils in adapted and special programmes.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "ucenci z govorno jezikovnimi motnjami (pupils with speech and language disorders) among pupils formally directed to additional professional help",
+     "denominator": "pupils with special needs in mainstream primary schools with adapted delivery and additional professional help"
+    },
+    {
+     "year": 2021,
+     "value": "1882",
+     "note": "Pupils with govorno jezikovne motnje, 13.3% of the 14,829 pupils formally directed into mainstream primary schools with adapted delivery and additional professional help, 2021/22; Ministry of Education, Science and Sport. The count rose from 1,180 in 2015/16 while the directed population rose by half, so the category's share rose from 11.7% to 13.3%. It excludes pupils in adapted and special programmes.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "ucenci z govorno jezikovnimi motnjami (pupils with speech and language disorders) among pupils formally directed to additional professional help",
+     "denominator": "pupils with special needs in mainstream primary schools with adapted delivery and additional professional help"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "Ministrstvo za izobrazevanje, znanost in sport (Slovenia), Podatki v zvezi z ucenci s posebnimi potrebami v osnovnih solah s prilagojenim izvajanjem in dodatno strokovno pomocjo",
+    "url": "https://www.gov.si/assets/ministrstva/MIZM/Dokumenti/Izobrazevanje-otrok-s-posebnimi-potrebami/Statistike-in-analize/Tabela_ucenci_s_posebnimi_potrebami.pdf"
+   }
+  ]
+ },
+ "NZ|New Zealand": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2023,
+     "value": "338",
+     "note": "Of 776 mothers in the Growing Up in New Zealand cohort who expressed concern about their child's speech at 54 months, 338 (46.2%) had received speech-language therapy intervention to some extent; MSD Children and Families Research Fund, Access to Speech-language Therapy Services in Aotearoa New Zealand. This is service receipt in one birth cohort as reported by mothers, not a count of children the system identified and not an epidemiological estimate.",
+     "unit": "count",
+     "basis": "survey",
+     "counted": "children in the Growing Up in New Zealand cohort whose mothers expressed concern about speech at 54 months and who had received speech-language therapy to some extent",
+     "denominator": "776 mothers who expressed concern about their child's speech at 54 months"
+    },
+    {
+     "year": 2023,
+     "value": "13",
+     "note": "Mothers reported concerns about the communication of 13% of children at 54 months, and 56% of those children had received some intervention for communication; MSD Children and Families Research Fund, Access to Speech-language Therapy Services in Aotearoa New Zealand. The figure is mother-reported concern in one birth cohort, not a clinical or administrative identification, and the report gives 16% at two years for comparison.",
+     "unit": "percent",
+     "basis": "survey",
+     "counted": "children whose mothers reported concerns about communication at 54 months",
+     "denominator": "children in the Growing Up in New Zealand cohort"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "Ministry of Social Development (New Zealand), Children and Families Research Fund: Access to Speech-language Therapy Services in Aotearoa New Zealand",
+    "url": "https://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/research/children-and-families-research-fund/access-to-speech-language-therapy.pdf"
+   }
+  ]
+ },
+ "CA|Ontario": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2021,
+     "value": "10235",
+     "note": "Students in publicly funded elementary and secondary schools whose primary area of exceptionality is Language Impairment, 2021-22: 6,630 elementary and 3,605 secondary, of 352,875 in all areas; Ontario Ministry of Education, Special Education Enrolment by Exceptionality (OnSIS). A student with more than one exceptionality is counted once, under the primary one. Ontario records Speech Impairment as a separate exceptionality, at 300 that year, so this figure is language and not speech. Enrolments are rounded to the nearest 5.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "students whose primary area of exceptionality is Language Impairment",
+     "denominator": "students receiving special education programs or services"
+    },
+    {
+     "year": 2024,
+     "value": "10605",
+     "note": "Students whose primary area of exceptionality is Language Impairment, 2024-25: 7,195 elementary and 3,415 secondary, of 362,670 in all areas; Ontario Ministry of Education, Special Education Enrolment by Exceptionality (OnSIS). Speech Impairment is counted separately at 395, so this is one of the few collections anywhere that keeps language and speech apart. An identification made by an Identification, Placement and Review Committee, not an epidemiological estimate. Enrolments are rounded to the nearest 5.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "students whose primary area of exceptionality is Language Impairment",
+     "denominator": "students receiving special education programs or services"
+    },
+    {
+     "year": 2024,
+     "value": "395",
+     "note": "Students whose primary area of exceptionality is Speech Impairment, 2024-25: 320 elementary and 70 secondary; Ontario Ministry of Education, Special Education Enrolment by Exceptionality (OnSIS). Recorded here beside the Language Impairment figure because the contrast is the point: Ontario identifies 27 children under language for every one under speech. Enrolments are rounded to the nearest 5.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "students whose primary area of exceptionality is Speech Impairment",
+     "denominator": "students receiving special education programs or services"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "Ontario Ministry of Education, Special Education Enrolment by Exceptionality, 2024-25 (Ontario School Information System)",
+    "url": "https://data.ontario.ca/dataset/b498b7ab-c6d0-4791-b8bd-c25c58e5bdbf/resource/d644aa6c-371d-48ba-aaed-e6c560abfc72/download/special_education_enrolment_by_exceptionality_2024-2025_en.txt"
+   },
+   {
+    "label": "Ontario Ministry of Education, Special Education Enrolment by Exceptionality, 2021-22",
+    "url": "https://data.ontario.ca/dataset/b498b7ab-c6d0-4791-b8bd-c25c58e5bdbf/resource/078faf11-1072-46bf-aa3f-bed327fad695/download/2021-2022_special_education_enrolment_by_exceptionality_en.txt"
+   }
+  ]
+ },
+ "DE|Baden-Württemberg": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "5908",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Baden-Württemberg, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "6124",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Baden-Württemberg, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "2428",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Baden-Württemberg, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "2501",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Baden-Württemberg, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Bayern": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "1769",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Bayern, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language. Bayern reports a combined category Lernen, Sprache, emotionale und soziale Entwicklung (LSE) alongside Sprache (1,714 pupils in 2024), so Sprache is undercounted here.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "1983",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Bayern, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language. Bayern reports a combined category Lernen, Sprache, emotionale und soziale Entwicklung (LSE) alongside Sprache (1,714 pupils in 2024), so Sprache is undercounted here.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "2103",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Bayern, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language. Bayern reports a combined category Lernen, Sprache, emotionale und soziale Entwicklung (LSE) alongside Sprache (1,714 pupils in 2024), so Sprache is undercounted here.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "2751",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Bayern, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language. Bayern reports a combined category Lernen, Sprache, emotionale und soziale Entwicklung (LSE) alongside Sprache (1,714 pupils in 2024), so Sprache is undercounted here.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Berlin": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "1202",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Berlin, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "754",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Berlin, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "2625",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Berlin, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "1500",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Berlin, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Brandenburg": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "217",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Brandenburg, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "162",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Brandenburg, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "779",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Brandenburg, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "714",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Brandenburg, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Bremen": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "70",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Bremen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "163",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Bremen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Hamburg": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "840",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Hamburg, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "360",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Hamburg, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "893",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Hamburg, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "1177",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Hamburg, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Hessen": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "2563",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Hessen, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "1922",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Hessen, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "692",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Hessen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "761",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Hessen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Mecklenburg-Vorpommern": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "508",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Mecklenburg-Vorpommern, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "594",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Mecklenburg-Vorpommern, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "612",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Mecklenburg-Vorpommern, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Niedersachsen": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "3200",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Niedersachsen, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "4115",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Niedersachsen, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "2278",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Niedersachsen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "5017",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Niedersachsen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Nordrhein-Westfalen": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "11130",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Nordrhein-Westfalen, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "12714",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Nordrhein-Westfalen, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "7595",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Nordrhein-Westfalen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "11792",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Nordrhein-Westfalen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Rheinland-Pfalz": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "206",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Rheinland-Pfalz, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "303",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Rheinland-Pfalz, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Saarland": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "248",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Saarland, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "192",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Saarland, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "786",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Saarland, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Sachsen": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "1200",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Sachsen, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "1108",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Sachsen, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "2484",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Sachsen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "3302",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Sachsen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Sachsen-Anhalt": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "266",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Sachsen-Anhalt, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "375",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Sachsen-Anhalt, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "606",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Sachsen-Anhalt, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "466",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Sachsen-Anhalt, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Schleswig-Holstein": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "49",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Schleswig-Holstein, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "45",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Schleswig-Holstein, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "787",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Schleswig-Holstein, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "459",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Schleswig-Holstein, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
+ "DE|Thüringen": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2015,
+     "value": "561",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Thüringen, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2024,
+     "value": "300",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Thüringen, Foerderschulen (special schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.1.1.2.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, Foerderschulen (special schools)"
+    },
+    {
+     "year": 2015,
+     "value": "612",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Thüringen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    },
+    {
+     "year": 2024,
+     "value": "552",
+     "note": "Pupils with the special-educational support focus (Foerderschwerpunkt) Sprache in Thüringen, allgemeine Schulen (mainstream schools), headcount. KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, table B.2.1.1.3.3. The category is assigned by a sonderpaedagogisches Feststellungsverfahren, so this counts children the school system has identified and placed in it, not an epidemiological estimate; it is a school-organisational label covering speech as well as language.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "pupils in the special-educational support focus Sprache, allgemeine Schulen (mainstream schools)"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "KMK, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024, Dokumentation Nr. 249, Laenderergebnisse tables B.1.1.2.3 and B.2.1.1.3.3",
+    "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+   }
+  ]
+ },
  "US|Alabama": {
   "fields": {},
   "series": {

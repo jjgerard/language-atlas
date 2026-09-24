@@ -81,5 +81,11 @@
     "OM|Oman": "every register door refused: qanoon.om HTTP 525, oaaa.gov.om NXDOMAIN (2026-09)",
     "SR|Suriname": "Universiteitswet G.B. 1966 no. 78 located and fetched at 527 KB and is an image scan yielding 10 characters. Read visually it carries NO language provision and delegates curriculum to landsbesluiten by art. 6 -- so the answer is known and simply not quotable. This one needs OCR, not searching (2026-09)",
     "WF|Wallis and Futuna": "no higher-education institution of its own; nothing located establishes the field either way (2026-09)"
+  },
+  "indigenous.revitalisation": {
+    "BS|Bahamas": "PEER Bahamas inclusion profile has zero occurrences of \"language\" and no ethnic-and-linguistic-groups section; laws.bahamas.gov.bs, bahamas.gov.bs/wps/portal and thestudentshed.com all serve an identical 75,193-byte 403 page, so a second source was unreachable and the silence could not be established (2026-09)",
+    "BN|Brunei": "Dewan Bahasa dan Pustaka is plainly the actor but dbp.gov.bn renders every substantive page as a JPEG (WP REST API: no body text on 30 of 35 pages); pelitabrunei.gov.bn would not connect and has no Wayback snapshot; no dedicated DBP act in the Laws of Brunei. The silence is the host's, not the state's (2026-09)",
+    "KP|North Korea": "naenara.com.kp reachable over http only, with no site search and no language-policy section; kcna.kp fails TLS (SEC_E_INVALID_TOKEN); korean-books.com.kp times out. Nothing quotable (2026-09)",
+    "MV|Maldives": "dhivehiacademy.edu.mv fails the TLS handshake to both curl and Node; the Government Gazette listing for the Dhivehi Language Academy carries notices but the bullet naming the Academy itself did not survive the gate, and gazette detail pages render client-side with no extractable text (2026-09)"
   }
 }
