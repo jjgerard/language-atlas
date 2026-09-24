@@ -644,7 +644,19 @@ if (!isCLI) return;
         if (!p || p.status !== 200) { dropped.push(field + ": source returned " + (p ? p.status : "?") + " for " + r.value); continue; }
         if (!p.text) { dropped.push(field + ": no text extracted from the source of " + r.value); continue; }
         if (!quoteOn(e.quote, p.text)) { dropped.push(field + ": quote not found for the figure " + r.value); continue; }
-        good.push({ year: r.year, value: String(r.value), note: String(r.note) });
+        // The TYPING travels with the row. `unit`, `basis`, `counted` and
+        // `denominator` are declared parts of a series row in src/domains.js --
+        // "a figure for all special educational needs is not a figure for
+        // language disorder, and only `counted` can say so" -- and rebuilding
+        // three keys and a whitelisted array was all this line kept, so every
+        // drafted `counted` was thrown away between the gate and the store and
+        // had to be reconstructed by hand afterwards. The value is checked
+        // against the page; the words that say WHAT was counted come from the
+        // drafter and are carried, not invented and not dropped.
+        const row = { year: r.year, value: String(r.value), note: String(r.note) };
+        for (const k of ["unit", "basis", "counted", "denominator"])
+          if (r[k] !== undefined && r[k] !== null && String(r[k]).trim()) row[k] = String(r[k]).trim();
+        good.push(row);
       }
       if (good.length) keptSeries[field] = good;
     }
