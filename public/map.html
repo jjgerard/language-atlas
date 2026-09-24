@@ -2783,14 +2783,24 @@ function panelHTML(u, via) {
   // that question -- every country's answer to it, in one picture -- which is
   // what the old /views table was for and is a better answer than a table.
   //
-  // Only where the map can actually shade by it: a field with no coded column,
-  // or a row-grained one, has nothing to colour, so its heading stays plain
-  // text rather than a link that leads to the coverage map with nothing
-  // changed.
+  // TO THE TABLE, NOT TO THE MAP. The heading used to redraw the map by this
+  // question, which is a worse answer to the thing a reader is asking when
+  // they click a field name on one country's entry: they want to know what
+  // every OTHER country says to the same question, and a colour cannot tell
+  // them. The table can, and it is the page built for it.
+  //
+  // The map is still one click further on -- the category key on a shaded map
+  // carries "Read every country's answer" pointing the same way, and the
+  // picker draws any question on demand. This just stops the heading being the
+  // long way round to a table.
+  //
+  // Still only where there is something to show: a field with no coded column,
+  // or a row-grained one, has no table of answers either, so its heading stays
+  // plain text.
   const mappable = key => shadeableColumns().some(c => c.field === key);
   const head = (label, key) => key && mappable(key)
-    ? `<a class="fieldmap" href="/${encodeURIComponent(d.id)}?field=${encodeURIComponent(key)}"
-         title="Draw the map by this question">${esc(label)}<span aria-hidden="true"> →</span></a>`
+    ? `<a class="fieldmap" href="/views/table?map=${encodeURIComponent(d.id)}&amp;field=${encodeURIComponent(key)}"
+         title="Read every country's answer to this question">${esc(label)}<span aria-hidden="true"> →</span></a>`
     : esc(label);
   const block = (cls, label, body, from, key) =>
     `<div class="field ${cls}"><h4>${head(label, key)}${from ? `<span class="from">inherited from ${esc(from)}</span>` : ''}</h4>${body}</div>`;
