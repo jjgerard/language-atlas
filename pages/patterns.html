@@ -43,6 +43,25 @@ main a { color: var(--focus); }
 .ocontrols { display: flex; flex-wrap: wrap; gap: 1rem 1.25rem; margin: 0 0 .9rem; align-items: center; }
 .ocontrols label { font-size: .85rem; color: var(--muted, #555); display: flex; align-items: center; gap: .4rem; }
 .ocontrols select { font: inherit; font-size: .85rem; padding: .2rem .35rem; max-width: 22rem; }
+/* THE PLOTS ASKED FOR COLOURS THIS PAGE DOES NOT HAVE.
+   Every chart here was written against a --border/--text-primary palette
+   that exists nowhere in the stylesheet, so seven variables resolved to
+   nothing. An invalid paint is not a fallback: `fill` became black and
+   `stroke` became none. That is why the boxes were solid black blocks, why
+   the median line inside them was invisible, why the gridlines never drew,
+   and why the scatter's y=x reference line -- the whole point of plotting
+   one cycle against another -- was absent rather than faint.
+   Aliased to the palette the rest of the page uses, so the charts inherit
+   light and dark with everything else. */
+:root {
+  --border: var(--hair);
+  --border-strong: var(--hair-strong);
+  --border-accent: var(--hair-strong);
+  --bg-accent: var(--surface-2);
+  --text-accent: var(--ink);
+  --text-primary: var(--ink);
+  --text-muted: var(--ink-faint);
+}
 .olab { font-size: 12px; fill: currentColor; }
 .oaxis { font-size: 10px; fill: var(--text-muted); letter-spacing: .03em; }
 .on { font-size: 11px; fill: var(--muted, #777); }
@@ -1395,7 +1414,7 @@ function plotOutcome(atlas, pick, outcome, cycle, split, min) {
       const q1 = oquant(d, 0.25), q2 = oquant(d, 0.5), q3 = oquant(d, 0.75);
       const ll = wrapLines(lab, Math.max(12, Math.floor((X0 - 24) / GLYPH)));
       s += textLines(X0 - 14, cy + 1 - (ll.length - 1) * 5.5, 'end', 'olab', ll, 11)
-        + '<text x="' + (X0 - 14) + '" y="' + (cy + 8 + (ll.length - 1) * 5.5) + '" text-anchor="end" class="on">' + g.length + ' countries</text>'
+        + '<text x="' + (X0 - 14) + '" y="' + (cy + 12 + (ll.length - 1) * 5.5) + '" text-anchor="end" class="on">' + g.length + ' countries</text>'
         + '<line x1="' + f(sx(d[0])) + '" y1="' + cy + '" x2="' + f(sx(d[d.length - 1])) + '" y2="' + cy + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
         + '<line x1="' + f(sx(d[0])) + '" y1="' + (cy - 6) + '" x2="' + f(sx(d[0])) + '" y2="' + (cy + 6) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
         + '<line x1="' + f(sx(d[d.length - 1])) + '" y1="' + (cy - 6) + '" x2="' + f(sx(d[d.length - 1])) + '" y2="' + (cy + 6) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
