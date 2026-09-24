@@ -175,6 +175,13 @@ footer.foot a { color: var(--ink-soft); }
   border: 1px solid var(--hair); background: var(--surface); color: var(--ink-soft); }
 .xmode[aria-pressed="true"] { background: var(--ink); color: var(--ground); border-color: var(--ink); }
 
+.oask { background: var(--surface); border: 1px solid var(--hair); border-radius: 10px;
+  padding: 14px 16px; margin: 0 0 12px; }
+.oask label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 7px; }
+.oaskrow { display: flex; gap: 8px; flex-wrap: wrap; }
+.oask input { flex: 1 1 320px; min-width: 0; font: inherit; font-size: 14px; padding: 8px 11px;
+  border: 1px solid var(--hair-strong); border-radius: 7px; background: var(--surface); color: inherit; }
+.osaid { font-size: 13px; color: var(--ink-soft); margin: 8px 0 0; }
 .orank { margin: 0 0 14px; }
 .oranklead { font-size: 13px; color: var(--ink-soft); margin: 0 0 8px; }
 .oranklist { display: flex; flex-direction: column; gap: 6px; }
@@ -856,7 +863,20 @@ function etaSquared(groups, min) {
     ssBet += vs.length * (m - grand) * (m - grand);
     n += vs.length;
   }
-  return { eta: ssBet / ssTot, n, k: kept.length };
+  const eta = ssBet / ssTot;
+  const k = kept.length;
+  /* ADJUSTED, because the raw figure rewards splitting for its own sake.
+     Eta-squared rises mechanically with the number of groups -- cut sixty
+     countries into twelve groups of five and the between-group share goes up
+     whatever the groups mean, so a split was always going to beat the column
+     it was added to. The first ranking read "33% between, up from 1%" on
+     twelve groups, and most of that was the arithmetic.
+     The adjustment is the standard one: it charges each extra group a degree
+     of freedom, so a split only scores if it explains more than the groups it
+     spends. It can go below zero, which is the honest reading of a category
+     that does nothing -- clamped at zero for display. */
+  const adj = (n > k) ? 1 - ((1 - eta) * (n - 1)) / (n - k) : 0;
+  return { eta, adj: Math.max(0, adj), n, k };
 }
 
 function renderOutcomes(atlas) {
@@ -903,7 +923,16 @@ function renderOutcomes(atlas) {
   }
   if (openGroup !== null) catOptions += '</optgroup>';
 
-  host.innerHTML = '<div id="orank" class="orank"></div>'
+  host.innerHTML = '<div class="oask">'
+      + '<label for="o-q">Describe the split you want</label>'
+      + '<div class="oaskrow">'
+        + '<input id="o-q" type="text" autocomplete="off" spellcheck="false" '
+        + 'placeholder="newcomer criteria decided by split by removal criteria exit mechanism">'
+        + '<button class="xbtn" id="o-qgo">Show</button>'
+      + '</div>'
+      + '<p class="osaid" id="o-qsaid"></p>'
+    + '</div>'
+    + '<div id="orank" class="orank"></div>'
     + '<div class="ocontrols">'
     + '<label>Plot <select id="o-kind">'
       + '<option value="box">box plots by category</option>'
@@ -1020,59 +1049,152 @@ function renderOutcomes(atlas) {
     });
   };
 
-  /* Scored once per (cycle, floor) and cached, because every pair means a
-     grouping pass and the menus redraw on every change. */
+  /* WHICH SPLIT IS WORTH MAKING.
+   *
+   * Ranking one column at a time answered a question nobody asked. The split
+   * is the whole point of the plot, and a list of single columns cannot say
+   * which SECOND column is worth crossing with the first.
+   *
+   * So every suggestion is a pair, and it is ranked on what the split ADDS:
+   * the separation with the split, minus the separation the first column
+   * managed alone, over the same countries. A pair only appears if crossing
+   * the two puts the groups further apart than one of them did by itself. A
+   * large gain on a small base is the interesting case and sorts to the top,
+   * because it means the first column says nothing until you condition on the
+   * second.
+   *
+   * COST. Every pair is a grouping pass, and ninety columns is eight thousand
+   * pairs per outcome. It is scored for the SELECTED outcome only, over the
+   * columns with the most countries behind them -- a few hundred passes, the
+   * same order as the Split by menu's own viability check, which already runs
+   * on every redraw. Cached per outcome, cycle and floor.
+   */
+  const SPLIT_CANDS = 22;
   const rankCache = new Map();
-  const rankBox = (cycle, min) => {
-    const ck = cycle + '|' + min;
+  const rankSplits = (outcome, cycle, min) => {
+    const ck = outcome + '|' + cycle + '|' + min;
     if (rankCache.has(ck)) return rankCache.get(ck);
-    const scored = [];
-    for (let i = 0; i < opts.length; i++) {
-      // A COLUMN READ OFF THE OUTCOME CANNOT BE RANKED AGAINST IT. Every
-      // column of eal.achievementGap is a reading of an attainment gap, and
-      // 81% of those entries take it from an international assessment, which
-      // is this assessment. `direction` came second in the list at 53% between
-      // over 66 countries, and what it reported was that a column saying "there
-      // is a gap" agrees with the gap it was read from. It stays selectable --
-      // seeing the agreement is fair enough -- but it is not a finding and it
-      // is not going at the top of a list of them.
-      if (opts[i].id === 'eal' && opts[i].key === 'achievementGap') continue;
-      for (const outcome of OUT) {
-        const { groups } = groupsFor(atlas, opts[i], outcome, null, { cycle });
-        const e = etaSquared(groups, min);
-        if (e) scored.push({ i, outcome, ...e });
-      }
+    // A COLUMN READ OFF THE OUTCOME CANNOT BE RANKED AGAINST IT. Every column
+    // of eal.achievementGap is a reading of an attainment gap, and 81% of
+    // those entries take it from an international assessment -- this one. A
+    // column saying "there is a gap" agreeing with the gap it was read from is
+    // not a finding. It stays selectable by hand.
+    const usable = opts.map((o, i) => i)
+      .filter(i => !(opts[i].id === 'eal' && opts[i].key === 'achievementGap'))
+      .sort((a, b) => opts[b].n - opts[a].n)
+      .slice(0, SPLIT_CANDS);
+    const base = new Map();
+    for (const i of usable) {
+      const e = etaSquared(groupsFor(atlas, opts[i], outcome, null, { cycle }).groups, min);
+      if (e) base.set(i, e.adj);
     }
-    scored.sort((a, b) => b.eta - a.eta);
+    const scored = [];
+    for (const i of base.keys()) for (const j of base.keys()) {
+      if (i === j) continue;
+      // Two columns of one field are one reading split in two.
+      if (opts[i].id === opts[j].id && opts[i].key === opts[j].key) continue;
+      const e = etaSquared(groupsFor(atlas, opts[i], outcome, opts[j], { cycle }).groups, min);
+      if (!e) continue;
+      const gain = e.adj - base.get(i);
+      if (gain <= 0.02) continue;
+      scored.push({ i, j, outcome, gain, eta: e.adj, base: base.get(i), n: e.n, k: e.k });
+    }
+    scored.sort((a, b) => b.gain - a.gain);
     rankCache.set(ck, scored);
     return scored;
   };
+
+  const nameOf = i => esc(opts[i].map) + ': ' + esc(opts[i].field) + ' ' + esc(opts[i].col.replace(/_/g, ' '));
 
   const renderRank = () => {
     const el = $('#orank');
     if (!el) return;
     if ($('#o-kind').value !== 'box') { el.innerHTML = ''; return; }
     const min = Math.max(MIN_FLOOR, Number($('#o-min').value) || MIN_FLOOR);
-    const top = rankBox($('#o-cyc').value, min).slice(0, 8);
-    if (!top.length) { el.innerHTML = ''; return; }
-    el.innerHTML = '<p class="oranklead">Where the groups actually sit apart, strongest first. '
-      + 'The figure is the share of the variation that lies BETWEEN groups rather than inside them &mdash; '
-      + 'on these data the inside is nearly always wider, which is the point. '
-      + 'It says the groups differ, not that the policy caused it.</p>'
+    const outcome = $('#o-out').value;
+    const label = esc(((pisa.outcomes || {})[outcome] || {}).label || outcome);
+    const top = rankSplits(outcome, $('#o-cyc').value, min).slice(0, 8);
+    if (!top.length) {
+      el.innerHTML = '<p class="oranklead">No split pulls the groups further apart than the category '
+        + 'manages alone, for ' + label + ' at this cycle and floor.</p>';
+      return;
+    }
+    el.innerHTML = '<p class="oranklead">Splits worth making on <b>' + label + '</b>, by how much the '
+      + 'second column pulls the groups further apart than the first does on its own. The figure is the '
+      + 'share of the variation lying BETWEEN groups, charged a degree of freedom per group so that '
+      + 'cutting the countries finer does not score by itself. On these data the spread inside a group '
+      + 'is nearly always the wider of the two, which is the point. It says the groups differ, not that '
+      + 'the policy caused it.</p>'
       + '<div class="oranklist">' + top.map(t =>
-        '<button class="orankitem" data-i="' + t.i + '" data-out="' + esc(t.outcome) + '">'
-        + '<span class="orn">' + esc(opts[t.i].field) + ': ' + esc(opts[t.i].col.replace(/_/g, ' ')) + '</span>'
-        + '<span class="orx">on</span>'
-        + '<span class="orn">' + esc(((pisa.outcomes || {})[t.outcome] || {}).label || t.outcome) + '</span>'
-        + '<span class="orv">' + Math.round(t.eta * 100) + '% between &middot; ' + t.n + ' countries, ' + t.k + ' groups</span>'
+        '<button class="orankitem" data-i="' + t.i + '" data-j="' + t.j + '" data-out="' + esc(t.outcome) + '">'
+        + '<span class="orn">' + nameOf(t.i) + '</span>'
+        + '<span class="orx">split by</span>'
+        + '<span class="orn">' + nameOf(t.j) + '</span>'
+        + '<span class="orv">' + Math.round(t.eta * 100) + '% between, up from '
+        + Math.round(t.base * 100) + '% &middot; ' + t.n + ' countries, ' + t.k + ' groups'
+        + (opts[t.i].id !== opts[t.j].id ? ' &middot; joined by country' : '') + '</span>'
         + '</button>').join('') + '</div>';
     el.querySelectorAll('.orankitem').forEach(b => b.addEventListener('click', () => {
       $('#o-cat').value = b.dataset.i;
       $('#o-out').value = b.dataset.out;
-      $('#o-by').value = '';
       fillCycles();
+      $('#o-by').value = b.dataset.j;
       draw();
     }));
+  };
+
+  /* THE BOX. It matches what you type against the column names and moves the
+     three menus. It never counts, so it cannot produce a figure of its own --
+     everything it shows you is the same plot the menus would have drawn.
+     "split by", "by", "against" and "vs" separate the two halves. */
+  const norm = t => String(t).toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter(w => w.length > 2);
+  const bestOpt = q => {
+    const want = norm(q);
+    if (!want.length) return null;
+    let top = null;
+    opts.forEach((o, i) => {
+      const hay = norm(o.map + ' ' + o.field + ' ' + o.col.replace(/_/g, ' '));
+      let hit = 0;
+      for (const w of want) if (hay.some(h => h.startsWith(w) || w.startsWith(h))) hit++;
+      if (hit && (!top || hit > top.hit || (hit === top.hit && o.n > opts[top.i].n))) top = { i: i, hit: hit };
+    });
+    return top ? top.i : null;
+  };
+  const bestOutcome = q => {
+    const want = norm(q);
+    let top = null;
+    for (const k of OUT) {
+      const hay = norm(((pisa.outcomes || {})[k] || {}).label || k);
+      let hit = 0;
+      for (const w of want) if (hay.indexOf(w) >= 0) hit++;
+      if (hit && (!top || hit > top.hit)) top = { k: k, hit: hit };
+    }
+    return top ? top.k : null;
+  };
+  const runAsk = () => {
+    const q = String($('#o-q').value || '').trim();
+    const said = $('#o-qsaid');
+    if (!q) { said.textContent = ''; return; }
+    const parts = q.split(/\s+split\s+by\s+|\s+by\s+|\s+against\s+|\s+vs\.?\s+/i);
+    const ci = bestOpt(parts[0]);
+    const ji = parts.length > 1 ? bestOpt(parts.slice(1).join(' ')) : null;
+    const oc = bestOutcome(q);
+    if (ci == null) {
+      said.textContent = 'Nothing matched "' + parts[0] + '". The menus below list all '
+        + opts.length + ' columns, grouped by map and question.';
+      return;
+    }
+    $('#o-kind').value = 'box';
+    $('#o-cat').value = ci;
+    if (oc) $('#o-out').value = oc;
+    fillCycles();
+    $('#o-by').value = (ji != null && ji !== ci) ? ji : '';
+    draw();
+    const bits = ['Showing ' + opts[ci].field + ': ' + opts[ci].col.replace(/_/g, ' ')];
+    if (ji != null && ji !== ci) bits.push('split by ' + opts[ji].field + ': ' + opts[ji].col.replace(/_/g, ' '));
+    else if (parts.length > 1) bits.push('but nothing matched "' + parts.slice(1).join(' ') + '" for the split');
+    if (oc) bits.push('on ' + (((pisa.outcomes || {})[oc] || {}).label || oc));
+    said.textContent = bits.join(', ') + '.';
   };
 
   const showFor = kind => {
@@ -1111,6 +1233,8 @@ function renderOutcomes(atlas) {
   ['o-kind', 'o-cat', 'o-by', 'o-cyc', 'o-x', 'o-y', 'o-min'].forEach(id =>
     $('#' + id).addEventListener('change', draw));
   $('#o-out').addEventListener('change', () => { fillCycles(); draw(); });
+  $('#o-qgo').addEventListener('click', runAsk);
+  $('#o-q').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); runAsk(); } });
   fillCycles();
   draw();
 }
