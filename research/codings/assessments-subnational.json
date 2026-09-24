@@ -1,0 +1,63 @@
+{
+  "AU|New South Wales": { "assessments": [
+    { "instrument": "No instrument named; the rule requires at least one standardised language test reporting receptive and expressive skills", "test_type": "none", "bilingual_fit": "not stated", "modality": "both" }
+  ] },
+  "CA|Alberta": { "assessments": [
+    { "instrument": "No instrument named; formal and informal measures, with parent or observational report standing in where formal assessment is not possible", "test_type": "none", "bilingual_fit": "not stated", "modality": "not stated" }
+  ] },
+  "CA|British Columbia": { "assessments": [
+    { "instrument": "No instrument named; standardised measures alongside behaviour samples, observation and interviews", "test_type": "none", "bilingual_fit": "not stated", "modality": "not stated" }
+  ] },
+  "CA|Nunavut": { "assessments": [
+    { "instrument": "No instrument named; all practices and tools must take account of first and second language context and be culturally and linguistically appropriate", "test_type": "none", "modality": "not stated" }
+  ] },
+  "CA|Quebec": { "assessments": [
+    { "instrument": "No instrument named; systematic observation techniques and appropriate tests, by an orthophoniste in a multidisciplinary team", "test_type": "none", "bilingual_fit": "not stated", "modality": "not stated" }
+  ] },
+  "ES|Catalonia": { "assessments": [
+    { "instrument": "LITMUS sentence repetition (SRep), Catalan", "test_type": "single task", "bilingual_fit": "designed multilingual", "modality": "production", "language_domains": ["morphosyntax"] }
+  ] },
+  "GB|England": { "assessments": [
+    { "instrument": "No mandated national battery; services choose, mostly UK-English-normed tools", "test_type": "none", "bilingual_fit": "monolingual", "modality": "not stated" },
+    { "instrument": "LITMUS sentence repetition (SRep), English", "test_type": "single task", "bilingual_fit": "designed multilingual", "modality": "production", "language_domains": ["morphosyntax"] }
+  ] },
+  "GB|Scotland": { "assessments": [
+    { "instrument": "LITMUS sentence repetition (SRep), Scottish Gaelic", "test_type": "single task", "bilingual_fit": "designed multilingual", "modality": "production", "language_domains": ["morphosyntax"] }
+  ] },
+  "GB|Wales": { "assessments": [
+    { "instrument": "LITMUS sentence repetition (SRep), Welsh", "test_type": "single task", "bilingual_fit": "designed multilingual", "modality": "production", "language_domains": ["morphosyntax"] }
+  ] },
+  "HK|Hong Kong": { "assessments": [
+    { "instrument": "Hong Kong Cantonese Oral Language Assessment Scale (2006)", "test_type": "battery", "bilingual_fit": "monolingual", "modality": "not stated", "language_domains": ["general"] }
+  ] },
+  "US|Idaho": { "assessments": [
+    { "instrument": "Fluency Communication Rating Scale", "test_type": "criterion checklist", "bilingual_fit": "not stated", "modality": "not stated" },
+    { "instrument": "Voice Rating Scale", "test_type": "criterion checklist", "bilingual_fit": "not stated", "modality": "not stated" }
+  ] },
+  "US|Louisiana": { "assessments": [
+    { "instrument": "No instrument named; the rule requires standardized tests or published normative data", "test_type": "none", "bilingual_fit": "not stated", "modality": "not stated" }
+  ] },
+  "US|Michigan": { "assessments": [
+    { "instrument": "No instrument named; a spontaneous language sample AND results on not fewer than two standardised instruments or subtests, both required", "test_type": "none", "bilingual_fit": "not stated", "modality": "not stated" }
+  ] },
+  "US|Minnesota": { "assessments": [
+    { "instrument": "No instrument named; where no technically adequate normed test is available, two documented procedures substitute -- language samples, criterion-referenced instruments, observation in natural environments or parent reports", "test_type": "none", "bilingual_fit": "not stated", "modality": "not stated" }
+  ] },
+  "US|New Hampshire": { "assessments": [
+    { "instrument": "No instrument named; Ed 1107.04 Table 1100.1 fixes academic performance and communicative skills as the required assessments for speech-language impairment", "test_type": "none", "bilingual_fit": "not stated", "modality": "not stated" }
+  ] },
+  "US|Oregon": { "assessments": [
+    { "instrument": "No instrument named; a language sample plus standardized tests, with a medical statement from an otolaryngologist for voice", "test_type": "none", "bilingual_fit": "not stated", "modality": "not stated" }
+  ] },
+  "US|South Carolina": { "assessments": [
+    { "instrument": "Pediatric Voice Index, parent/caregiver and teacher versions", "test_type": "criterion checklist", "bilingual_fit": "not stated", "modality": "not stated" },
+    { "instrument": "Overall Assessment of the Speaker's Experience of Stuttering", "test_type": "criterion checklist", "bilingual_fit": "not stated", "modality": "not stated" }
+  ] },
+  "US|Utah": { "assessments": [
+    { "instrument": "No instrument named; the rule requires only multiple formal and informal measures", "test_type": "none", "bilingual_fit": "not stated", "modality": "not stated" }
+  ] },
+  "US|West Virginia": { "assessments": [
+    { "instrument": "Functional Communication Assessment Summary (2022 state guidance)", "test_type": "criterion checklist", "bilingual_fit": "not stated", "modality": "not stated", "language_domains": ["general"] },
+    { "instrument": "Speech Production Assessment Summary (2022 state guidance)", "test_type": "criterion checklist", "bilingual_fit": "not stated", "modality": "not stated", "language_domains": ["phonology"] }
+  ] }
+}
