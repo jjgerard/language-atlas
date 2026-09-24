@@ -1106,6 +1106,54 @@ function renderOutcomes(atlas) {
 
   const nameOf = i => esc(opts[i].map) + ': ' + esc(opts[i].field) + ' ' + esc(opts[i].col.replace(/_/g, ' '));
 
+  /* TWO PAIRS ARE PINNED, because they are the comparison this panel exists to
+     make: what a system uses to decide a child is IN, set against what it uses
+     to decide they are OUT. Both maps ask it, so both are shown -- eal's
+     newcomer against removal criteria, dld's identification against discharge.
+     They lead whatever the ranking says, and they are the only two that do.
+     The FIELD pair is pinned, not the column pair: each field has several
+     columns and which two of them go together is exactly the question the
+     ranking already answers, so the best-scoring combination is chosen by the
+     same measure. Where the crossing is too thin to score -- dld.discharge
+     criteria is on 61 entries and the PISA join cuts it further -- the pair is
+     still shown and still drawable, and says so instead of being dropped. */
+  const PINNED = [
+    { a: ['eal', 'newcomerCriteria'], b: ['eal', 'removalCriteria'] },
+    { a: ['dld', 'identificationCriteria'], b: ['dld', 'dischargeCriteria'] },
+  ];
+  const colsOf = ([id, key]) => opts.map((o, i) => i).filter(i => opts[i].id === id && opts[i].key === key);
+  const pinnedItems = (outcome, cycle, min, scored) => {
+    const out = [];
+    for (const pin of PINNED) {
+      const as = colsOf(pin.a), bs = colsOf(pin.b);
+      if (!as.length || !bs.length) continue;
+      // Prefer whatever the ranking already scored for this field pair.
+      let best = scored.find(t => as.includes(t.i) && bs.includes(t.j)) || null;
+      if (!best) {
+        // Not in the ranking: score the field pair directly, and if nothing
+        // clears the floor fall back to the fullest column on each side so the
+        // pair is still offered.
+        for (const i of as) for (const j of bs) {
+          const e = etaSquared(groupsFor(atlas, opts[i], outcome, opts[j], { cycle }).groups, min);
+          if (!e) continue;
+          if (!best || e.adj > best.eta) {
+            // The baseline too, so a pinned pair can say whether the split
+            // added anything rather than only what it reached.
+            const b = etaSquared(groupsFor(atlas, opts[i], outcome, null, { cycle }).groups, min);
+            best = { i, j, outcome, eta: e.adj, base: b ? b.adj : null, n: e.n, k: e.k };
+          }
+        }
+      }
+      if (!best) {
+        const i = as.sort((x, y) => opts[y].n - opts[x].n)[0];
+        const j = bs.sort((x, y) => opts[y].n - opts[x].n)[0];
+        best = { i, j, outcome, eta: null, base: null, n: null, k: null };
+      }
+      out.push(Object.assign({ pinned: true }, best));
+    }
+    return out;
+  };
+
   const renderRank = () => {
     const el = $('#orank');
     if (!el) return;
@@ -1113,7 +1161,14 @@ function renderOutcomes(atlas) {
     const min = Math.max(MIN_FLOOR, Number($('#o-min').value) || MIN_FLOOR);
     const outcome = $('#o-out').value;
     const label = esc(((pisa.outcomes || {})[outcome] || {}).label || outcome);
-    const top = rankSplits(outcome, $('#o-cyc').value, min).slice(0, 8);
+    const scored = rankSplits(outcome, $('#o-cyc').value, min);
+    const pins = pinnedItems(outcome, $('#o-cyc').value, min, scored);
+    const used = new Set(pins.map(t => opts[t.i].id + '.' + opts[t.i].key + '|' + opts[t.j].id + '.' + opts[t.j].key));
+    const rest = scored.filter(t =>
+      !used.has(opts[t.i].id + '.' + opts[t.i].key + '|' + opts[t.j].id + '.' + opts[t.j].key));
+    // Three, not eight. A list long enough to scroll is a list nobody reads to
+    // the end of, and the two pinned pairs are most of the point.
+    const top = pins.concat(rest).slice(0, 3);
     if (!top.length) {
       el.innerHTML = '<p class="oranklead">No split pulls the groups further apart than the category '
         + 'manages alone, for ' + label + ' at this cycle and floor.</p>';
@@ -1124,14 +1179,21 @@ function renderOutcomes(atlas) {
       + 'share of the variation lying BETWEEN groups, charged a degree of freedom per group so that '
       + 'cutting the countries finer does not score by itself. On these data the spread inside a group '
       + 'is nearly always the wider of the two, which is the point. It says the groups differ, not that '
-      + 'the policy caused it.</p>'
+      + 'the policy caused it. The first two are always in against out &mdash; what decides a child is '
+      + 'taken on, set against what decides they are let go.</p>'
       + '<div class="oranklist">' + top.map(t =>
         '<button class="orankitem" data-i="' + t.i + '" data-j="' + t.j + '" data-out="' + esc(t.outcome) + '">'
         + '<span class="orn">' + nameOf(t.i) + '</span>'
         + '<span class="orx">split by</span>'
         + '<span class="orn">' + nameOf(t.j) + '</span>'
-        + '<span class="orv">' + Math.round(t.eta * 100) + '% between, up from '
-        + Math.round(t.base * 100) + '% &middot; ' + t.n + ' countries, ' + t.k + ' groups'
+        + '<span class="orv">'
+        + (t.eta == null
+            ? 'too few countries to score at this floor'
+            : (Math.round(t.eta * 100) === 0
+                ? 'groups sit on top of each other once they are paid for'
+                : Math.round(t.eta * 100) + '% between'
+                  + (t.base == null ? '' : ', up from ' + Math.round(t.base * 100) + '%'))
+              + ' &middot; ' + t.n + ' countries, ' + t.k + ' groups')
         + (opts[t.i].id !== opts[t.j].id ? ' &middot; joined by country' : '') + '</span>'
         + '</button>').join('') + '</div>';
     el.querySelectorAll('.orankitem').forEach(b => b.addEventListener('click', () => {
