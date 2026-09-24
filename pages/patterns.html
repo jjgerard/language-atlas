@@ -172,6 +172,16 @@ footer.foot a { color: var(--ink-soft); }
   border: 1px solid var(--hair); background: var(--surface); color: var(--ink-soft); }
 .xmode[aria-pressed="true"] { background: var(--ink); color: var(--ground); border-color: var(--ink); }
 
+.orank { margin: 0 0 14px; }
+.oranklead { font-size: 13px; color: var(--ink-soft); margin: 0 0 8px; }
+.oranklist { display: flex; flex-direction: column; gap: 6px; }
+.orankitem { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; width: 100%; text-align: left;
+  font: inherit; font-size: 13px; padding: 8px 11px; cursor: pointer;
+  background: var(--surface); border: 1px solid var(--hair); border-radius: 8px; }
+.orankitem:hover { background: var(--surface-2); border-color: var(--hair-strong); }
+.orn { font-weight: 600; }
+.orx { color: var(--ink-faint); font-size: 12px; }
+.orv { margin-left: auto; color: var(--ink-faint); font-size: 12px; white-space: nowrap; }
 .xpairs { margin: 0 0 14px; }
 .xpairlead { font-size: 13px; color: var(--ink-soft); margin: 0 0 8px; }
 .xpairlist { display: flex; flex-direction: column; gap: 6px; }
@@ -253,55 +263,6 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
 </header>
 
 <main>
-  <h2>One question against another</h2>
-  <p class="standfirst">
-    Every coded question on every map, counted against every other. Pick two, or take one of the
-    pairs below &mdash; they are ranked by how strongly the two move together, so the panel opens
-    on the handful worth looking at rather than on two empty dropdowns.
-  </p>
-
-  <div id="xpairs" class="xpairs"></div>
-
-  <div class="xask">
-    <label for="xq" id="xasklabel">Describe what you want to see</label>
-    <div class="xaskrow">
-      <input id="xq" type="text" autocomplete="off" spellcheck="false"
-             placeholder="who decides, by region">
-      <button class="xbtn" id="xgo">Show</button>
-    </div>
-    <p class="xsaid" id="xsaid"></p>
-    <p class="xleft" id="xleft"></p>
-    <p class="xegs" id="xegs"></p>
-  </div>
-
-  <blockquote class="note">
-    <span id="xasknote"></span>
-    Nothing here is read out of entry text. A coded value is a reading somebody recorded against a
-    fixed vocabulary, stored beside the prose and never inside it &mdash; so a question the atlas
-    cannot answer is told so rather than answered with the nearest thing that fits.
-  </blockquote>
-
-  <div class="xcontrols">
-    <div class="xctl"><label for="x">Rows</label><select id="x"></select></div>
-    <div class="xctl"><label for="y">Columns</label><select id="y"></select></div>
-    <div class="xctl"><label for="scope">Limited to</label><select id="scope"></select></div>
-  </div>
-
-  <div class="xmodes">
-    <button class="xmode" id="xm-cross" aria-pressed="true">Cross-tabulate</button>
-    <button class="xmode" id="xm-bars" aria-pressed="false">Distribution</button>
-    <button class="xmode" id="xm-units" aria-pressed="false">List the units</button>
-  </div>
-
-  <div class="xout" id="xout"></div>
-  <p class="xsummary" id="xsummary"></p>
-
-  <div class="xreading hidden" id="xreading">
-    <h4>Reading of the table above</h4>
-    <p id="xreadingtext"></p>
-    <p class="prov" id="xreadingprov"></p>
-  </div>
-
   <h2>Build a plot: coded categories against a PISA outcome</h2>
   <p class="standfirst">
     Coded columns from these maps against the PISA immigrant attainment gap, 2015 to 2025.
@@ -402,7 +363,6 @@ table.xtab tfoot td { font-weight: 600; border-top: 1px solid var(--hair-strong)
 
 <script type="module">
 import { mountNav } from '/nav.js';
-import { mountExplore } from '/explore-panel.js';
 
 const esc = s => String(s == null ? '' : s)
   .replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -849,6 +809,53 @@ function guardLine(kept, countries, min, label, extra, pickValue) {
     + ', by permutation.</span>';
 }
 
+/* WHICH COLUMN ACTUALLY SEPARATES AN OUTCOME.
+ *
+ * Ninety columns against four outcomes is 360 plots, and picking from two
+ * menus one pair at a time is how a reader never finds the three that show
+ * anything. This scores every pair before anyone picks.
+ *
+ * The measure is eta-squared: the share of the variation in the outcome that
+ * lies BETWEEN the category's groups rather than inside them. 0 means the
+ * groups sit on top of each other and the box plot is one box drawn several
+ * times; 1 would mean the category sorts the countries perfectly. It is the
+ * right measure here precisely because it is the thing the standfirst already
+ * tells a reader to look for -- the spread INSIDE a category against the gap
+ * between categories -- and on these data the inside is nearly always wider.
+ *
+ * IT IS NOT A TEST AND NOT A CAUSE. A high score says the groups differ, not
+ * that the policy produced the difference: `rule locus` separating an
+ * attainment gap is much likelier to be Europe sitting in one group than a
+ * statute doing anything. The countries are not a sample, so there is no
+ * p-value here and none is implied.
+ */
+// Thirty countries, not twelve. At twelve the list opened on `Curriculum and
+// materials: orthography` at 64% between, over THIRTEEN countries in three
+// groups -- a figure that size says the groups are small, not that they are
+// far apart, and it pushed genuine 65-country results below it.
+const RANK_MIN_COUNTRIES = 30;
+
+function etaSquared(groups, min) {
+  const kept = Object.values(groups).filter(g => g.length >= min);
+  if (kept.length < 2) return null;
+  const all = [];
+  for (const g of kept) for (const d of g) if (d && typeof d.v === 'number') all.push(d.v);
+  if (all.length < RANK_MIN_COUNTRIES) return null;
+  const grand = all.reduce((a, b) => a + b, 0) / all.length;
+  let ssTot = 0;
+  for (const v of all) ssTot += (v - grand) * (v - grand);
+  if (!ssTot) return null;
+  let ssBet = 0, n = 0;
+  for (const g of kept) {
+    const vs = g.map(d => d.v).filter(v => typeof v === 'number');
+    if (!vs.length) continue;
+    const m = vs.reduce((a, b) => a + b, 0) / vs.length;
+    ssBet += vs.length * (m - grand) * (m - grand);
+    n += vs.length;
+  }
+  return { eta: ssBet / ssTot, n, k: kept.length };
+}
+
 function renderOutcomes(atlas) {
   const host = $('#outcomes');
   if (!host) return;
@@ -863,10 +870,38 @@ function renderOutcomes(atlas) {
     return;
   }
   const OUT = Object.keys(pisa.outcomes || {});
-  const catOptions = opts.map((o, i) =>
-    '<option value="' + i + '">' + esc(o.map) + ' — ' + esc(o.field) + ': ' + esc(o.col.replace(/_/g, ' ')) + '</option>').join('');
 
-  host.innerHTML = '<div class="ocontrols">'
+  /* GROUPED BY MAP AND FIELD. Eighty-odd options in one flat list, in whatever
+     order the columns happened to be discovered, put `Newcomer criteria: rule
+     locus` nowhere near `Newcomer criteria: decided by` and made the menu
+     unreadable. An <optgroup> per map-and-field puts one question's columns
+     together, and inside a group the option only has to name the column.
+     The VALUE STAYS THE INDEX INTO `opts`, so reordering the menu cannot move
+     what a selection means -- everything that reads this list reads o.value.
+     Fields keep the order domains.js gives them, which is the order a reader
+     meets them on the map, rather than being sorted alphabetically into a
+     different arbitrary order. */
+  const fieldOrder = new Map();
+  atlas.domains.forEach((d, di) =>
+    (d.fields || []).forEach((f, fi) => fieldOrder.set(d.id + '.' + f.k, di * 1000 + fi)));
+  const groupKey = o => o.map + ' — ' + o.field;
+  const order = opts.map((o, i) => i).sort((a, b) =>
+    (fieldOrder.get(opts[a].id + '.' + opts[a].key) ?? 9e6) - (fieldOrder.get(opts[b].id + '.' + opts[b].key) ?? 9e6)
+    || opts[a].col.localeCompare(opts[b].col));
+  let catOptions = '', openGroup = null;
+  for (const i of order) {
+    const g = groupKey(opts[i]);
+    if (g !== openGroup) {
+      if (openGroup !== null) catOptions += '</optgroup>';
+      catOptions += '<optgroup label="' + esc(g) + '">';
+      openGroup = g;
+    }
+    catOptions += '<option value="' + i + '">' + esc(opts[i].col.replace(/_/g, ' ')) + '</option>';
+  }
+  if (openGroup !== null) catOptions += '</optgroup>';
+
+  host.innerHTML = '<div id="orank" class="orank"></div>'
+    + '<div class="ocontrols">'
     + '<label>Plot <select id="o-kind">'
       + '<option value="box">box plots by category</option>'
       + '<option value="trend">category spread across cycles</option>'
@@ -912,8 +947,8 @@ function renderOutcomes(atlas) {
     // Disabled options grey out, but not by much, and most of this list is
     // disabled — so the few that will draw something carry the weight instead.
     // “nothing” stays plain: it is the default, not a recommendation.
-    [...sel.options].forEach((o, i) => {
-      if (i === 0) { o.style.fontWeight = ''; return; }
+    [...sel.options].forEach(o => {
+      if (o.value === '') { o.style.fontWeight = ''; return; }
       const cand = opts[Number(o.value)];
       const base = o.textContent.split('  — ')[0];
       if (cand === pick) {
@@ -967,12 +1002,74 @@ function renderOutcomes(atlas) {
     const rank = best.map((b, i) => i)
       .sort((x, y) => best[y].n - best[x].n || best[y].c - best[x].c)
       .slice(0, RECOMMEND_TOP);
-    [...$('#o-cat').options].forEach((o, i) => {
+    // BY o.value, NOT BY DOM POSITION. The menu is grouped now, so the two
+    // stopped agreeing, and reading the position would have relabelled every
+    // option with another column's recommendation -- silently, and looking
+    // perfectly plausible.
+    [...$('#o-cat').options].forEach(o => {
+      const i = Number(o.value);
       const b = best[i];
-      const label = esc(opts[i].map) + ' — ' + esc(opts[i].field) + ': ' + esc(opts[i].col.replace(/_/g, ' '));
-      o.style.fontWeight = rank.includes(i) && best[i].n > 0 ? '500' : '';
+      if (!b) return;
+      // The group heading already carries the map and the field.
+      const label = esc(opts[i].col.replace(/_/g, ' '));
+      o.style.fontWeight = rank.includes(i) && b.n > 0 ? '500' : '';
       o.textContent = label + (b.col ? '  · best split: ' + b.col.replace(/_/g, ' ') + ' (' + b.n + ')' : '');
     });
+  };
+
+  /* Scored once per (cycle, floor) and cached, because every pair means a
+     grouping pass and the menus redraw on every change. */
+  const rankCache = new Map();
+  const rankBox = (cycle, min) => {
+    const ck = cycle + '|' + min;
+    if (rankCache.has(ck)) return rankCache.get(ck);
+    const scored = [];
+    for (let i = 0; i < opts.length; i++) {
+      // A COLUMN READ OFF THE OUTCOME CANNOT BE RANKED AGAINST IT. Every
+      // column of eal.achievementGap is a reading of an attainment gap, and
+      // 81% of those entries take it from an international assessment, which
+      // is this assessment. `direction` came second in the list at 53% between
+      // over 66 countries, and what it reported was that a column saying "there
+      // is a gap" agrees with the gap it was read from. It stays selectable --
+      // seeing the agreement is fair enough -- but it is not a finding and it
+      // is not going at the top of a list of them.
+      if (opts[i].id === 'eal' && opts[i].key === 'achievementGap') continue;
+      for (const outcome of OUT) {
+        const { groups } = groupsFor(atlas, opts[i], outcome, null, { cycle });
+        const e = etaSquared(groups, min);
+        if (e) scored.push({ i, outcome, ...e });
+      }
+    }
+    scored.sort((a, b) => b.eta - a.eta);
+    rankCache.set(ck, scored);
+    return scored;
+  };
+
+  const renderRank = () => {
+    const el = $('#orank');
+    if (!el) return;
+    if ($('#o-kind').value !== 'box') { el.innerHTML = ''; return; }
+    const min = Math.max(MIN_FLOOR, Number($('#o-min').value) || MIN_FLOOR);
+    const top = rankBox($('#o-cyc').value, min).slice(0, 8);
+    if (!top.length) { el.innerHTML = ''; return; }
+    el.innerHTML = '<p class="oranklead">Where the groups actually sit apart, strongest first. '
+      + 'The figure is the share of the variation that lies BETWEEN groups rather than inside them &mdash; '
+      + 'on these data the inside is nearly always wider, which is the point. '
+      + 'It says the groups differ, not that the policy caused it.</p>'
+      + '<div class="oranklist">' + top.map(t =>
+        '<button class="orankitem" data-i="' + t.i + '" data-out="' + esc(t.outcome) + '">'
+        + '<span class="orn">' + esc(opts[t.i].field) + ': ' + esc(opts[t.i].col.replace(/_/g, ' ')) + '</span>'
+        + '<span class="orx">on</span>'
+        + '<span class="orn">' + esc(((pisa.outcomes || {})[t.outcome] || {}).label || t.outcome) + '</span>'
+        + '<span class="orv">' + Math.round(t.eta * 100) + '% between &middot; ' + t.n + ' countries, ' + t.k + ' groups</span>'
+        + '</button>').join('') + '</div>';
+    el.querySelectorAll('.orankitem').forEach(b => b.addEventListener('click', () => {
+      $('#o-cat').value = b.dataset.i;
+      $('#o-out').value = b.dataset.out;
+      $('#o-by').value = '';
+      fillCycles();
+      draw();
+    }));
   };
 
   const showFor = kind => {
@@ -998,6 +1095,7 @@ function renderOutcomes(atlas) {
     if (kind === 'trend') html = plotTrend(atlas, pick, outcome, cy, min, split);
     else if (kind === 'scatter') html = plotScatter(atlas, pick, outcome, $('#o-x').value, $('#o-y').value, min);
     else html = plotOutcome(atlas, pick, outcome, $('#o-cyc').value, split, min);
+    renderRank();
     $('#o-plot').innerHTML = html;
     const meta = pisa.outcomes[outcome] || {};
     $('#o-src').innerHTML = esc(meta.note || '') + ' <span class="osrcline">'
@@ -1354,12 +1452,6 @@ atlas.then(a => {
   mountNav(null, a.domains);
   renderCoding(a);
   renderOutcomes(a);
-  // The explorer takes the SAME payload rather than fetching its own. It is
-  // over 3MB and nothing here changes it.
-  mountExplore(a).catch(err => {
-    document.getElementById('xout').innerHTML =
-      '<p class="xempty">The entries could not be loaded (' + String(err && err.message) + ').</p>';
-  });
   // Re-render in place. The tables are built from the payload already in
   // memory, so this costs nothing and needs no round trip.
   const t = document.getElementById('codesubs');
