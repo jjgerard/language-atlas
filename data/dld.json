@@ -1319,6 +1319,15 @@
     "term_type": "an umbrella category only",
     "label": "not applicable",
     "standing": "in statute"
+   },
+   "funding": {
+    "funders": [
+     "state health or insurance",
+     "state social services"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "language specific",
+    "evidence_type": "policy"
    }
   },
   "slots": {
@@ -3495,6 +3504,12 @@
     "term_type": "a disorder term",
     "label": "language development disorder",
     "standing": "in statute"
+   },
+   "workforce": {
+    "entry_route": "licence or registration",
+    "training": "overseas or planned",
+    "headcount": "not stated",
+    "evidence_type": "policy"
    }
   },
   "slots": {
@@ -5374,6 +5389,20 @@
     "term_type": "a profession term only",
     "label": "communication needs",
     "standing": "in statute"
+   },
+   "funding": {
+    "funders": [
+     "state health or insurance"
+    ],
+    "family_pays": "co-payment or reimbursement",
+    "scope": "language specific",
+    "evidence_type": "policy"
+   },
+   "workforce": {
+    "entry_route": "licence or registration",
+    "training": "not stated",
+    "headcount": "not stated",
+    "evidence_type": "policy"
    }
   },
   "slots": {
@@ -16000,6 +16029,14 @@
     "term_type": "an umbrella category only",
     "label": "not applicable",
     "standing": "in policy or an official list"
+   },
+   "funding": {
+    "funders": [
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
    }
   },
   "slots": {
@@ -21769,6 +21806,21 @@
     "trigger": "not stated",
     "scope": "disability generally",
     "evidence_type": "policy"
+   },
+   "terminology": {
+    "term_type": "an umbrella category only",
+    "label": "language difficulties",
+    "standing": "in policy or an official list"
+   },
+   "serviceModel": {
+    "sectors": [
+     "education service",
+     "health service",
+     "private practice"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "both routes named",
+    "evidence_type": "study or project"
    }
   }
  },
@@ -24987,6 +25039,32 @@
     ],
     "trigger": "not stated",
     "scope": "language specific",
+    "evidence_type": "policy"
+   },
+   "funding": {
+    "funders": [
+     "state health or insurance"
+    ],
+    "family_pays": "not stated",
+    "scope": "language specific",
+    "evidence_type": "policy"
+   },
+   "workforce": {
+    "entry_route": "licence or registration",
+    "training": "not stated",
+    "evidence_type": "policy"
+   },
+   "terminology": {
+    "term_type": "a disorder term",
+    "label": "developmental language disorder",
+    "standing": "in professional use only"
+   },
+   "serviceModel": {
+    "sectors": [
+     "health service"
+    ],
+    "practitioner": "specialist clinician",
+    "placement": "not stated",
     "evidence_type": "policy"
    }
   }
@@ -28346,6 +28424,12 @@
     ],
     "data_verdict": "no verdict stated",
     "scope": "language specific"
+   },
+   "workforce": {
+    "entry_route": "licence or registration",
+    "training": "not stated",
+    "headcount": "not stated",
+    "evidence_type": "policy"
    }
   }
  },
@@ -28481,6 +28565,14 @@
     "term_type": "an umbrella category only",
     "label": "not applicable",
     "standing": "in policy or an official list"
+   },
+   "funding": {
+    "funders": [
+     "state social services"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "language specific",
+    "evidence_type": "policy"
    }
   },
   "slots": {
@@ -34651,6 +34743,14 @@
     "term_type": "an umbrella category only",
     "label": "not applicable",
     "standing": "not stated"
+   },
+   "funding": {
+    "funders": [
+     "state social services"
+    ],
+    "family_pays": "means-tested",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   },
   "slots": {
@@ -37684,6 +37784,14 @@
     "term_type": "an umbrella category only",
     "label": "not applicable",
     "standing": "in statute"
+   },
+   "funding": {
+    "funders": [
+     "state education budget"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   }
  },
@@ -46365,6 +46473,14 @@
     "term_type": "a disorder term",
     "label": "speech disorder",
     "standing": "in policy or an official list"
+   },
+   "funding": {
+    "funders": [
+     "state education budget"
+    ],
+    "family_pays": "co-payment or reimbursement",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   },
   "slots": {
@@ -57634,7 +57750,16 @@
     "term_type": "none located",
     "label": "not applicable",
     "standing": "none"
-   }
+   },
+   "legalEntitlement": [
+    {
+     "instrument": "No national school system; any entitlement arises under the law of the State running the school",
+     "instrument_type": "none",
+     "obliges": 0,
+     "duty_type": "not stated",
+     "redress_type": "not stated"
+    }
+   ]
   }
  },
  {

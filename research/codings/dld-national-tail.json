@@ -1,0 +1,29 @@
+{
+  "AR|Argentina": { "funding": { "funders": ["state health or insurance", "state social services"], "family_pays": "free at the point of use", "scope": "language specific", "evidence_type": "policy" } },
+  "BN|Brunei": {
+    "funding": { "funders": ["state health or insurance"], "family_pays": "co-payment or reimbursement", "scope": "language specific", "evidence_type": "policy" },
+    "workforce": { "entry_route": "licence or registration", "training": "not stated", "headcount": "not stated", "evidence_type": "policy" }
+  },
+  "EC|Ecuador": { "funding": { "funders": ["state health or insurance"], "family_pays": "not stated", "scope": "language specific", "evidence_type": "policy" } },
+  "IM|Isle of Man": {
+    "funding": { "funders": ["state health or insurance"], "family_pays": "not stated", "scope": "language specific", "evidence_type": "policy" },
+    "workforce": { "entry_route": "licence or registration", "training": "not stated", "evidence_type": "policy" },
+    "terminology": { "term_type": "a disorder term", "label": "developmental language disorder", "standing": "in professional use only" },
+    "serviceModel": { "sectors": ["health service"], "practitioner": "specialist clinician", "placement": "not stated", "evidence_type": "policy" }
+  },
+  "JM|Jamaica": { "funding": { "funders": ["state social services"], "family_pays": "free at the point of use", "scope": "language specific", "evidence_type": "policy" } },
+  "MR|Mauritania": { "funding": { "funders": ["state social services"], "family_pays": "means-tested", "scope": "disability generally", "evidence_type": "policy" } },
+  "NR|Nauru": { "funding": { "funders": ["state education budget"], "family_pays": "free at the point of use", "scope": "disability generally", "evidence_type": "policy" } },
+  "TM|Turkmenistan": { "funding": { "funders": ["state education budget"], "family_pays": "co-payment or reimbursement", "scope": "disability generally", "evidence_type": "policy" } },
+  "AW|Aruba": { "workforce": { "entry_route": "licence or registration", "training": "overseas or planned", "headcount": "not stated", "evidence_type": "policy" } },
+  "JE|Jersey": { "workforce": { "entry_route": "licence or registration", "training": "not stated", "headcount": "not stated", "evidence_type": "policy" } },
+  "GI|Gibraltar": {
+    "terminology": { "term_type": "an umbrella category only", "label": "language difficulties", "standing": "in policy or an official list" },
+    "serviceModel": { "sectors": ["education service", "health service", "private practice"], "practitioner": "specialist clinician", "placement": "both routes named", "evidence_type": "study or project" }
+  },
+  "VA|Vatican City": {
+    "legalEntitlement": [
+      { "instrument": "No national school system; any entitlement arises under the law of the State running the school", "instrument_type": "none", "obliges": 0, "duty_type": "not stated", "redress_type": "not stated" }
+    ]
+  }
+}
