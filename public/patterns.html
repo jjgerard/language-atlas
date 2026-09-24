@@ -1160,7 +1160,6 @@ function renderOutcomes(atlas) {
     if ($('#o-kind').value !== 'box') { el.innerHTML = ''; return; }
     const min = Math.max(MIN_FLOOR, Number($('#o-min').value) || MIN_FLOOR);
     const outcome = $('#o-out').value;
-    const label = esc(((pisa.outcomes || {})[outcome] || {}).label || outcome);
     const scored = rankSplits(outcome, $('#o-cyc').value, min);
     const pins = pinnedItems(outcome, $('#o-cyc').value, min, scored);
     const used = new Set(pins.map(t => opts[t.i].id + '.' + opts[t.i].key + '|' + opts[t.j].id + '.' + opts[t.j].key));
@@ -1170,17 +1169,12 @@ function renderOutcomes(atlas) {
     // the end of, and the two pinned pairs are most of the point.
     const top = pins.concat(rest).slice(0, 3);
     if (!top.length) {
-      el.innerHTML = '<p class="oranklead">No split pulls the groups further apart than the category '
-        + 'manages alone, for ' + label + ' at this cycle and floor.</p>';
+      el.innerHTML = '<p class="oranklead">No split adds anything at this cycle and floor.</p>';
       return;
     }
-    el.innerHTML = '<p class="oranklead">Splits worth making on <b>' + label + '</b>, by how much the '
-      + 'second column pulls the groups further apart than the first does on its own. The figure is the '
-      + 'share of the variation lying BETWEEN groups, charged a degree of freedom per group so that '
-      + 'cutting the countries finer does not score by itself. On these data the spread inside a group '
-      + 'is nearly always the wider of the two, which is the point. It says the groups differ, not that '
-      + 'the policy caused it. The first two are always in against out &mdash; what decides a child is '
-      + 'taken on, set against what decides they are let go.</p>'
+    el.innerHTML = '<p class="oranklead">Ranked by how much the split adds. The figure is the share of '
+      + 'variation between groups, adjusted so that finer groups do not score by themselves. '
+      + 'Association, not cause.</p>'
       + '<div class="oranklist">' + top.map(t =>
         '<button class="orankitem" data-i="' + t.i + '" data-j="' + t.j + '" data-out="' + esc(t.outcome) + '">'
         + '<span class="orn">' + nameOf(t.i) + '</span>'
