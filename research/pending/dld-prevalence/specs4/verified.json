@@ -1,0 +1,38 @@
+{
+ "ES|Spain": {
+  "fields": {},
+  "series": {
+   "identifiedPrevalence": [
+    {
+     "year": 2023,
+     "value": "40625",
+     "note": "Pupils assessed as having special educational needs arising from trastornos graves de la comunicacion y el lenguaje in 2023-24, 13.9% of the 292,897 with special educational needs; Ministerio de Educacion, Formacion Profesional y Deportes, Alumnado con necesidad especifica de apoyo educativo, nota resumen, 12 May 2025. An assessed administrative count, not an epidemiological estimate, and it counts SEVERE cases only: milder language difficulties sit in a separate category below. 98.6% of them are schooled in ordinary settings, the highest share of any disability type.",
+     "unit": "count",
+     "basis": "administrative count",
+     "counted": "alumnado con necesidades educativas especiales por trastornos graves de la comunicacion y el lenguaje",
+     "denominator": "292,897 pupils assessed as having necesidades educativas especiales"
+    },
+    {
+     "year": 2023,
+     "value": "8.0",
+     "note": "Share of the 838,919 pupils receiving support for needs NOT counted as special educational needs who are supported for trastornos leves y moderados del desarrollo del lenguaje y la comunicacion, 2023-24; same source. Spain splits language and communication across two statistical populations, severe and mild-to-moderate, so neither figure alone is the country's identified total and adding them would mix two different thresholds.",
+     "unit": "percent",
+     "basis": "administrative count",
+     "counted": "alumnado supported for trastornos leves y moderados del desarrollo del lenguaje y la comunicacion",
+     "denominator": "838,919 pupils supported for needs other than special educational needs"
+    }
+   ]
+  },
+  "notEstablished": {},
+  "history": [],
+  "languages": {},
+  "programme": {},
+  "offerings": {},
+  "sources": [
+   {
+    "label": "Ministerio de Educacion, Formacion Profesional y Deportes (Spain), Ensenanzas no universitarias: Alumnado con necesidad especifica de apoyo educativo, curso 2023-2024, nota resumen",
+    "url": "https://www.educacionfpydeportes.gob.es/dam/jcr:fe64d3f7-b701-44dc-93fa-7f5df60df603/2023-24-nota-resumen.pdf"
+   }
+  ]
+ }
+}

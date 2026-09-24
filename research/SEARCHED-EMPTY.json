@@ -87,5 +87,17 @@
     "BN|Brunei": "Dewan Bahasa dan Pustaka is plainly the actor but dbp.gov.bn renders every substantive page as a JPEG (WP REST API: no body text on 30 of 35 pages); pelitabrunei.gov.bn would not connect and has no Wayback snapshot; no dedicated DBP act in the Laws of Brunei. The silence is the host's, not the state's (2026-09)",
     "KP|North Korea": "naenara.com.kp reachable over http only, with no site search and no language-policy section; kcna.kp fails TLS (SEC_E_INVALID_TOKEN); korean-books.com.kp times out. Nothing quotable (2026-09)",
     "MV|Maldives": "dhivehiacademy.edu.mv fails the TLS handshake to both curl and Node; the Government Gazette listing for the Dhivehi Language Academy carries notices but the bullet naming the Academy itself did not survive the gate, and gazette detail pages render client-side with no extractable text (2026-09)"
+  },
+  "dld.identifiedPrevalence": {
+    "GB|Scotland": "the pupil census DOES carry a `language or speech disorder` reason for support, but only inside the Pupil census supplementary statistics spreadsheet; gov.scot HTML pages, the Audit Scotland ASL briefing and two 2025 FOI releases all name the category and print no figure, and a spreadsheet cannot be quote-gated (2026-09)",
+    "GB|Northern Ireland": "DE NI publishes SEN by category, but the enrolment bulletins are spreadsheets and the one comparative analysis of NI SEN prevalence is behind tandfonline, which returns 403 to every fetch (2026-09)",
+    "PL|Poland": "SIO records aphasia only inside the category `niepelnosprawnosc ruchowa, w tym z afazja` -- motor disability INCLUDING aphasia -- so the published 15,436 is not a language figure and was refused (2026-09)",
+    "CZ|Czechia": "MSMT publishes `vady reci` among SEN categories but the statistical yearbook is served from statis.msmt.cz as generated tables; the linked SVP file returned 101 bytes (2026-09)",
+    "CH|Switzerland": "BFS Statistik der Sonderpaedagogik counts Logopaedie STAFF (1,716 FTE) and not pupils by type of need; no language category in the pupil tables (2026-09)",
+    "PT|Portugal": "DGEEC Educacao Inclusiva 2023/24 report carries no count by type of difficulty; the searchable text has no language or communication category (2026-09)",
+    "IE|Ireland": "NCSE publishes lists of special classes for Specific Speech and Language Disorder school by school, which would have to be counted rather than read; the gov.ie SSLD publication page serves no figure (2026-09)",
+    "HR|Croatia": "no ministry or state statistics source located that counts pupils under `poremecaji govorno-glasovne komunikacije` (2026-09)",
+    "BR|Brazil": "INEP Censo Escolar disability categories carry no speech or language line, so only an all-disabilities total is available and it was refused (2026-09)",
+    "AU|Australia (states)": "the Nationally Consistent Collection of Data categorises by cognitive, physical, sensory and social-emotional need with no language category, so no state figure answers this field (2026-09)"
   }
 }
