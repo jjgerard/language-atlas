@@ -1117,11 +1117,20 @@ function renderOutcomes(atlas) {
      same measure. Where the crossing is too thin to score -- dld.discharge
      criteria is on 61 entries and the PISA join cuts it further -- the pair is
      still shown and still drawable, and says so instead of being dropped. */
+  /* THE SPLIT COLUMN IS NAMED, the category column is not. Left to choose from
+     the whole field, the ranking put eal's split on `decided by` -- WHO ends
+     the support -- when the question being asked is WHAT ends it: a fixed
+     period, a test, a proficiency judgement, an age ceiling. That is
+     `exit_mechanism`, and `discharge_basis` is the same question on dld. Both
+     are named here so the ranking cannot substitute a near neighbour.
+     The category side stays open, because which column of identification
+     criteria pairs best is exactly what the ranking is for. */
   const PINNED = [
-    { a: ['eal', 'newcomerCriteria'], b: ['eal', 'removalCriteria'] },
-    { a: ['dld', 'identificationCriteria'], b: ['dld', 'dischargeCriteria'] },
+    { a: ['eal', 'newcomerCriteria'], b: ['eal', 'removalCriteria', 'exit_mechanism'] },
+    { a: ['dld', 'identificationCriteria'], b: ['dld', 'dischargeCriteria', 'discharge_basis'] },
   ];
-  const colsOf = ([id, key]) => opts.map((o, i) => i).filter(i => opts[i].id === id && opts[i].key === key);
+  const colsOf = ([id, key, col]) => opts.map((o, i) => i)
+    .filter(i => opts[i].id === id && opts[i].key === key && (!col || opts[i].col === col));
   const pinnedItems = (outcome, cycle, min, scored) => {
     const out = [];
     for (const pin of PINNED) {
