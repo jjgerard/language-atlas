@@ -44,6 +44,7 @@ main a { color: var(--focus); }
 .ocontrols label { font-size: .85rem; color: var(--muted, #555); display: flex; align-items: center; gap: .4rem; }
 .ocontrols select { font: inherit; font-size: .85rem; padding: .2rem .35rem; max-width: 22rem; }
 .olab { font-size: 12px; fill: currentColor; }
+.oaxis { font-size: 10px; fill: var(--text-muted); letter-spacing: .03em; }
 .on { font-size: 11px; fill: var(--muted, #777); }
 .otick { font-size: 11px; fill: var(--muted, #777); }
 .osrc { font-size: .78rem; }
@@ -1090,6 +1091,14 @@ function renderOutcomes(atlas) {
       if (i === j) continue;
       // Two columns of one field are one reading split in two.
       if (opts[i].id === opts[j].id && opts[i].key === opts[j].key) continue;
+      /* SAME MAP ONLY, in the RANKING. A cross-map pair is joined by country,
+         so it asks what a system's disorder policy has to do with its
+         indigenous-language policy -- a question with no mechanism behind it
+         and a smaller country count once both codings are required. They
+         scored well and were unreadable, and they crowded out pairs from one
+         map that can actually be interpreted. Still selectable by hand, and
+         still labelled "joined by country" when chosen. */
+      if (opts[i].id !== opts[j].id) continue;
       const e = etaSquared(groupsFor(atlas, opts[i], outcome, opts[j], { cycle }).groups, min);
       if (!e) continue;
       const gain = e.adj - base.get(i);
@@ -1120,11 +1129,15 @@ function renderOutcomes(atlas) {
      period, a test, a proficiency judgement, an age ceiling. That is
      `exit_mechanism`, and `discharge_basis` is the same question on dld. Both
      are named here so the ranking cannot substitute a near neighbour.
-     The category side stays open, because which column of identification
-     criteria pairs best is exactly what the ranking is for. */
+     The dld CATEGORY is named too, for the same reason in reverse: left open,
+     the ranking picked `rule_locus`, which is who writes the rule rather than
+     what the rule tests. `threshold_basis` is the criteria themselves --
+     clinical diagnosis, educational need, diagnosis plus impact, a service
+     threshold. eal's category stays `triggers`, which already is the criteria.
+     Only eal's category is left to the ranking. */
   const PINNED = [
     { a: ['eal', 'newcomerCriteria'], b: ['eal', 'removalCriteria', 'exit_mechanism'] },
-    { a: ['dld', 'identificationCriteria'], b: ['dld', 'dischargeCriteria', 'discharge_basis'] },
+    { a: ['dld', 'identificationCriteria', 'threshold_basis'], b: ['dld', 'dischargeCriteria', 'discharge_basis'] },
   ];
   const colsOf = ([id, key, col]) => opts.map((o, i) => i)
     .filter(i => opts[i].id === id && opts[i].key === key && (!col || opts[i].col === col));
@@ -1318,6 +1331,38 @@ function vbox(bx, bw, vals, sy, f) {
 // readable because the whole-value drop runs first: a row or column that reaches
 // the floor nowhere is removed rather than drawn empty, so there are no blank
 // bands for the eye to read as structure.
+/* LABELS THAT DO NOT COLLIDE.
+ *
+ * Every label in these plots was one <text>, centred or right-aligned, and the
+ * vocabularies are phrases rather than words: "decision on continuing need"
+ * ran straight through "re-evaluation cycle" in the next column, and "national
+ * rule, local application" ran off the left edge of the chart. Both are
+ * unreadable rather than ugly -- a reader cannot tell which header belongs to
+ * which column.
+ *
+ * So a label wraps to the width it actually has. The character budget is the
+ * available pixels over an average glyph width at this font size; it does not
+ * have to be exact, only to break before the text reaches the neighbour.
+ */
+const GLYPH = 6.3;
+function wrapLines(txt, maxChars) {
+  const words = String(txt).split(/\s+/).filter(Boolean);
+  const out = [];
+  let cur = '';
+  for (const w of words) {
+    if (!cur) cur = w;
+    else if ((cur + ' ' + w).length <= maxChars) cur += ' ' + w;
+    else { out.push(cur); cur = w; }
+  }
+  if (cur) out.push(cur);
+  return out.length ? out : [''];
+}
+function textLines(x, y, anchor, cls, lines, lh) {
+  return '<text x="' + x + '" y="' + y + '" text-anchor="' + anchor + '" class="' + cls + '">'
+    + lines.map((l, k) => '<tspan x="' + x + '" dy="' + (k ? lh : 0) + '">' + esc(l) + '</tspan>').join('')
+    + '</text>';
+}
+
 function plotOutcome(atlas, pick, outcome, cycle, split, min) {
   const { groups, countries } = groupsFor(atlas, pick, outcome, split, { cycle });
   const s0 = sift(groups, min, pick, split);
@@ -1348,8 +1393,9 @@ function plotOutcome(atlas, pick, outcome, cycle, split, min) {
       const cy = TOP + RH * i + RH / 2;
       const d = g.map(val).sort((a, b) => a - b);
       const q1 = oquant(d, 0.25), q2 = oquant(d, 0.5), q3 = oquant(d, 0.75);
-      s += '<text x="' + (X0 - 14) + '" y="' + (cy + 1) + '" text-anchor="end" class="olab">' + esc(lab) + '</text>'
-        + '<text x="' + (X0 - 14) + '" y="' + (cy + 14) + '" text-anchor="end" class="on">' + g.length + ' countries</text>'
+      const ll = wrapLines(lab, Math.max(12, Math.floor((X0 - 24) / GLYPH)));
+      s += textLines(X0 - 14, cy + 1 - (ll.length - 1) * 5.5, 'end', 'olab', ll, 11)
+        + '<text x="' + (X0 - 14) + '" y="' + (cy + 8 + (ll.length - 1) * 5.5) + '" text-anchor="end" class="on">' + g.length + ' countries</text>'
         + '<line x1="' + f(sx(d[0])) + '" y1="' + cy + '" x2="' + f(sx(d[d.length - 1])) + '" y2="' + cy + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
         + '<line x1="' + f(sx(d[0])) + '" y1="' + (cy - 6) + '" x2="' + f(sx(d[0])) + '" y2="' + (cy + 6) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
         + '<line x1="' + f(sx(d[d.length - 1])) + '" y1="' + (cy - 6) + '" x2="' + f(sx(d[d.length - 1])) + '" y2="' + (cy + 6) + '" stroke="var(--text-muted)" stroke-width="1.2"/>'
@@ -1369,20 +1415,35 @@ function plotOutcome(atlas, pick, outcome, cycle, split, min) {
   const cell = {};
   for (const [, g] of s0.kept) cell[g[0].a + PAIR + g[0].b] = g;
   const L = 178, CW = Math.min(168, (664 - L) / cols.length);
-  const RH = rows.length > 5 ? 92 : 108, TOP = 34;
+  const RH = rows.length > 5 ? 92 : 108;
+  // The header band grows to fit the longest wrapped column name, under a
+  // caption naming the field each axis is showing -- without it the reader is
+  // looking at six phrases with nothing to say what question they answer.
+  const colChars = Math.max(8, Math.floor((CW - 8) / GLYPH));
+  const RLAB = L - 56;   // ticks keep the 46px to the right of this
+  const rowChars = Math.max(9, Math.floor((RLAB - 6) / GLYPH));
+  const colWrapped = cols.map(c => wrapLines(c, colChars));
+  const headLines = Math.max(1, ...colWrapped.map(w => w.length));
+  const CAP = 40;
+  const TOP = CAP + headLines * 11 + 8;
   const H = TOP + RH * rows.length + 14, half = RH / 2 - 16;
   const syFor = cy => v => cy + half - (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (half * 2);
   const bw = Math.min(30, CW * 0.26);
 
   let s = '<svg viewBox="0 0 684 ' + H + '" width="100%" role="img" aria-label="grid of box plots, '
-    + esc(pick.col.replace(/_/g, ' ')) + ' by ' + esc(split.col.replace(/_/g, ' ')) + '">';
-  cols.forEach((c, j) =>
-    s += '<text x="' + (L + CW * j + CW / 2) + '" y="20" text-anchor="middle" class="olab">' + esc(c) + '</text>');
+    + esc(pick.col.replace(/_/g, ' ')) + ' by ' + esc(split.col.replace(/_/g, ' ')) + '">'
+    + '<text x="2" y="11" text-anchor="start" class="oaxis">rows &#8212; '
+    + esc(pick.field) + ': ' + esc(pick.col.replace(/_/g, ' ')) + '</text>'
+    + '<text x="2" y="24" text-anchor="start" class="oaxis">columns &#8212; '
+    + esc(split.field) + ': ' + esc(split.col.replace(/_/g, ' ')) + '</text>';
+  colWrapped.forEach((w, j) =>
+    s += textLines(L + CW * j + CW / 2, CAP, 'middle', 'olab', w, 11));
   let hits = '';
   rows.forEach((r, i) => {
     const cy = TOP + RH * i + RH / 2, sy = syFor(cy);
+    const rl = wrapLines(r, rowChars);
     s += '<line x1="0" y1="' + (TOP + RH * i) + '" x2="664" y2="' + (TOP + RH * i) + '" stroke="var(--border)" stroke-width="1"/>'
-      + '<text x="' + (L - 16) + '" y="' + (cy + 4) + '" text-anchor="end" class="olab">' + esc(r) + '</text>';
+      + textLines(RLAB, cy + 4 - (rl.length - 1) * 5.5, 'end', 'olab', rl, 11);
     // Ticks on every row: the rows are separate bands, so labels on one of them
     // cannot be read against a box in another.
     const step = (hi - lo) > 120 ? 50 : (hi - lo) > 45 ? 25 : 10;
