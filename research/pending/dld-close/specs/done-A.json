@@ -1,0 +1,321 @@
+{
+  "GI|Gibraltar": {
+    "fields": {
+      "serviceModel": [
+        "Statute allows SEND provision outside Gibraltar, in a Government school, the home or hospital",
+        "Parents said they feel they have to go to Spain to see private therapists (2024 review)",
+        "Family-focused therapy programmes are shaped to the needs of the child by the paediatric service",
+        "A 2024 review weighs spreading LSAs through mainstream classes against SEN in separate settings"
+      ],
+      "terminology": [
+        "Speech and language difficulties is the SEN category used in Gibraltar school data",
+        "The 2024 review records that specific definitions of each type of need are not available",
+        "In statute SEND is defined as Supported Educational Needs and Disabilities, not Special",
+        "The paediatric service names specific language impairment among the difficulties it supports"
+      ]
+    },
+    "slots": {
+      "serviceModel": [
+        1,
+        1,
+        2,
+        4
+      ],
+      "terminology": [
+        1,
+        2,
+        4,
+        4
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "Statute allows SEND provision outside Gibraltar, in a Government school, the home or hospital",
+        "url": "https://www.gibraltarlaws.gov.gi/uploads/legislations/education-and-training/1974-11/1974-11(23-12-24).pdf",
+        "quote": "The Minister shall make provision for the education of pupils with SEND requirements, either within or outside Gibraltar"
+      },
+      {
+        "bullet": "Parents said they feel they have to go to Spain to see private therapists (2024 review)",
+        "url": "https://www.gibraltar.gov.gi/uploads/Children%20with%20Special%20Educational%20Needs%20report%2014th%20March%202024.pdf",
+        "quote": "Parents said that they feel they have to go to Spain to see private therapists"
+      },
+      {
+        "bullet": "Family-focused therapy programmes are shaped to the needs of the child by the paediatric service",
+        "url": "https://disability.gov.gi/professional-support/speech-language-therapy",
+        "quote": "Family-focused therapy programmes are delivered in the Primary Care Centre, in schools, nurseries and in some cases at home"
+      },
+      {
+        "bullet": "A 2024 review weighs spreading LSAs through mainstream classes against SEN in separate settings",
+        "url": "https://www.gibraltar.gov.gi/uploads/Children%20with%20Special%20Educational%20Needs%20report%2014th%20March%202024.pdf",
+        "quote": "distributing LSAs throughout mainstream schools and classes, as opposed to concentrating resources for supporting SEN in separate settings"
+      },
+      {
+        "bullet": "Speech and language difficulties is the SEN category used in Gibraltar school data",
+        "url": "https://www.gibraltar.gov.gi/uploads/Children%20with%20Special%20Educational%20Needs%20report%2014th%20March%202024.pdf",
+        "quote": "in recent years, speech and language difficulties and autistic spectrum disorders respectively are making up a growing share of need"
+      },
+      {
+        "bullet": "The 2024 review records that specific definitions of each type of need are not available",
+        "url": "https://www.gibraltar.gov.gi/uploads/Children%20with%20Special%20Educational%20Needs%20report%2014th%20March%202024.pdf",
+        "quote": "Specific definitions of each type of need are not available for Gibraltar."
+      },
+      {
+        "bullet": "In statute SEND is defined as Supported Educational Needs and Disabilities, not Special",
+        "url": "https://www.gibraltarlaws.gov.gi/uploads/legislations/education-and-training/1974-11/1974-11(23-12-24).pdf",
+        "quote": "“SEND” means Supported Educational Needs and Disabilities; “SEND school” means a school which is specially organised to make SEND educational provision for pupils with SEND;"
+      },
+      {
+        "bullet": "The paediatric service names specific language impairment among the difficulties it supports",
+        "url": "https://disability.gov.gi/professional-support/speech-language-therapy",
+        "quote": "who support children with speech, language and communication or swallowing difficulties associated with specific language impairment"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Laws of Gibraltar, Education and Training Act 1974-11, consolidated to 23 December 2024, ss. 2, 45",
+        "url": "https://www.gibraltarlaws.gov.gi/uploads/legislations/education-and-training/1974-11/1974-11(23-12-24).pdf"
+      },
+      {
+        "label": "HM Government of Gibraltar, Review of factors linked to increased prevalence of special educational needs among children in Gibraltar, 14 March 2024",
+        "url": "https://www.gibraltar.gov.gi/uploads/Children%20with%20Special%20Educational%20Needs%20report%2014th%20March%202024.pdf"
+      },
+      {
+        "label": "Supported Needs and Disability Office, Speech and Language Therapy, reproducing the Gibraltar Health Authority service description",
+        "url": "https://disability.gov.gi/professional-support/speech-language-therapy"
+      }
+    ]
+  },
+  "IM|Isle of Man": {
+    "fields": {
+      "serviceModel": [
+        "Children are seen from birth to 18 in clinic, home, nursery and school",
+        "Manx Care's Children's Therapy team delivers it alongside physiotherapy and occupational therapy",
+        "Therapists work with off-island specialists as well as health and education colleagues",
+        "The service also trains families and the adults who support the child, not only the child"
+      ],
+      "terminology": [
+        "Developmental Language Disorder is a named specialism within the children's therapy team",
+        "The service's remit is difficulties with communication or with eating, drinking and swallowing",
+        "The Education Act 2001 fixes only learning difficulty and names no speech or language category",
+        "The 2004 SEN Regulations likewise name only learning difficulty, no speech or language category"
+      ],
+      "workforce": [
+        "The service page says it currently has 10 therapists and 1 assistant, with no date given",
+        "Most of the team work part-time, which the page states without giving hours",
+        "Therapists are RCSLT members registered with the Health Care Professions Council",
+        "The team travels round the island to the child rather than working from its base alone"
+      ],
+      "funding": [
+        "DHSC must lay an annual Mandate to Manx Care before Tynwald ahead of the financial year",
+        "The Mandate sets out the services, funding, performance requirements and objectives",
+        "Children's physio, occupational and speech and language therapy is a service named in it",
+        "The Mandate must also cover when charges may be made, under Schedule 2 of the 2021 Act"
+      ]
+    },
+    "slots": {
+      "serviceModel": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "terminology": [
+        1,
+        2,
+        4,
+        4
+      ],
+      "workforce": [
+        1,
+        1,
+        3,
+        4
+      ],
+      "funding": [
+        1,
+        2,
+        2,
+        3
+      ]
+    },
+    "history": [
+      {
+        "year": 2001,
+        "description": "Education Act 2001 puts the Department under a duty to identify children with special educational needs",
+        "evidenceKey": "Education Act 2001"
+      },
+      {
+        "year": 2004,
+        "description": "Education (Special Educational Needs) Regulations 2004 set the assessment procedure and a parental right of appeal",
+        "evidenceKey": "SEN Regulations 2004"
+      },
+      {
+        "year": 2021,
+        "description": "Manx Care Act 2021 establishes Manx Care as the Statutory Board providing health and care services",
+        "evidenceKey": "Manx Care Act 2021"
+      }
+    ],
+    "evidence": [
+      {
+        "bullet": "Children are seen from birth to 18 in clinic, home, nursery and school",
+        "url": "https://www.gov.im/categories/health-and-wellbeing/therapy-services/speech-and-language-therapy-service/childrens-speech-and-language-therapy-service/",
+        "quote": "years old across all settings including clinic, home, nursery, Pre-School Assessment Centre, and school"
+      },
+      {
+        "bullet": "Manx Care's Children's Therapy team delivers it alongside physiotherapy and occupational therapy",
+        "url": "https://www.gov.im/media/1380503/202290_mc_ar_2023-public-final-web_compressed.pdf",
+        "quote": "including Physiotherapy, Occupational Therapy and Speech and Language Therapy, for a wide range of short and long-term illnesses and disabilities"
+      },
+      {
+        "bullet": "Therapists work with off-island specialists as well as health and education colleagues",
+        "url": "https://www.gov.im/categories/health-and-wellbeing/therapy-services/speech-and-language-therapy-service/childrens-speech-and-language-therapy-service/",
+        "quote": "We work in collaboration with other health care and educational professionals including off-island specialists."
+      },
+      {
+        "bullet": "The service also trains families and the adults who support the child, not only the child",
+        "url": "https://www.gov.im/categories/health-and-wellbeing/therapy-services/speech-and-language-therapy-service/childrens-speech-and-language-therapy-service/",
+        "quote": "We also provide information sessions and training to families and adults who support the child."
+      },
+      {
+        "bullet": "Developmental Language Disorder is a named specialism within the children's therapy team",
+        "url": "https://www.gov.im/categories/health-and-wellbeing/therapy-services/speech-and-language-therapy-service/childrens-speech-and-language-therapy-service/",
+        "quote": "I work with school age children, and my special areas of interest are Developmental Language Disorder, Speech Sound Disorder, and Stammering"
+      },
+      {
+        "bullet": "The service's remit is difficulties with communication or with eating, drinking and swallowing",
+        "url": "https://www.gov.im/categories/health-and-wellbeing/therapy-services/speech-and-language-therapy-service/childrens-speech-and-language-therapy-service/",
+        "quote": "Speech and Language Therapy provides treatment, support, and advice for children who have difficulties with communication or with eating, drinking and swallowing."
+      },
+      {
+        "bullet": "The Education Act 2001 fixes only learning difficulty and names no speech or language category",
+        "url": "https://desc.gov.im/media/4apbwfrx/educationact2001_9.pdf",
+        "quote": "he has a significantly greater difficulty in learning than the majority of children of his age"
+      },
+      {
+        "bullet": "The 2004 SEN Regulations likewise name only learning difficulty, no speech or language category",
+        "url": "https://desc.gov.im/media/sahomldz/education__special_needs__regulations_2004.pdf",
+        "quote": "to inform the Department of any learning difficulty which he believes the child has"
+      },
+      {
+        "bullet": "The service page says it currently has 10 therapists and 1 assistant, with no date given",
+        "url": "https://www.gov.im/categories/health-and-wellbeing/therapy-services/speech-and-language-therapy-service/childrens-speech-and-language-therapy-service/",
+        "quote": "We currently have 10 speech and language therapists and 1 speech and language therapy assistant in our team."
+      },
+      {
+        "bullet": "Most of the team work part-time, which the page states without giving hours",
+        "url": "https://www.gov.im/categories/health-and-wellbeing/therapy-services/speech-and-language-therapy-service/childrens-speech-and-language-therapy-service/",
+        "quote": "and 1 speech and language therapy assistant in our team. Most of us work part-time."
+      },
+      {
+        "bullet": "Therapists are RCSLT members registered with the Health Care Professions Council",
+        "url": "https://www.gov.im/categories/health-and-wellbeing/therapy-services/speech-and-language-therapy-service/childrens-speech-and-language-therapy-service/",
+        "quote": "We are members of the Royal College of Speech and Language Therapists (RCSLT) and are registered with the Health Care Professions Council (HCPC)."
+      },
+      {
+        "bullet": "The team travels round the island to the child rather than working from its base alone",
+        "url": "https://www.gov.im/categories/health-and-wellbeing/therapy-services/speech-and-language-therapy-service/childrens-speech-and-language-therapy-service/",
+        "quote": "We are based at the Central Community Health Centre and we travel round the island to work with the children."
+      },
+      {
+        "bullet": "Education Act 2001",
+        "url": "https://desc.gov.im/media/4apbwfrx/educationact2001_9.pdf",
+        "quote": "The Department shall take reasonable steps to identify children who have special educational needs."
+      },
+      {
+        "bullet": "SEN Regulations 2004",
+        "url": "https://desc.gov.im/media/sahomldz/education__special_needs__regulations_2004.pdf",
+        "quote": "the parent may by notice in writing to the Department appeal against the decision"
+      },
+      {
+        "bullet": "Manx Care Act 2021",
+        "url": "https://www.gov.im/media/1377793/manxcareact2021_1.pdf",
+        "quote": "A Statutory Board known as Manx Care is established and Schedule 1 has effect."
+      },
+      {
+        "bullet": "DHSC must lay an annual Mandate to Manx Care before Tynwald ahead of the financial year",
+        "url": "https://www.gov.im/media/1392045/mandate-to-manx-care-2026-27_compressed.pdf",
+        "quote": "the Department must produce and lay before Tynwald the annual Mandate before the start of each financial year"
+      },
+      {
+        "bullet": "The Mandate sets out the services, funding, performance requirements and objectives",
+        "url": "https://www.gov.im/media/1392045/mandate-to-manx-care-2026-27_compressed.pdf",
+        "quote": "The annual document issued by the Department under Section 14 of the Act setting out the services, funding, performance requirements and objectives for Manx Care."
+      },
+      {
+        "bullet": "Children's physio, occupational and speech and language therapy is a service named in it",
+        "url": "https://www.gov.im/media/1392045/mandate-to-manx-care-2026-27_compressed.pdf",
+        "quote": "Provision of physio, occupational and speech and language therapy services to children in a variety of settings."
+      },
+      {
+        "bullet": "The Mandate must also cover when charges may be made, under Schedule 2 of the 2021 Act",
+        "url": "https://www.gov.im/media/1377793/manxcareact2021_1.pdf",
+        "quote": "when charges may be made in respect of the provision of services provided by Manx Care or any other person in accordance with this Act"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Isle of Man Government, Children's Speech and Language Therapy Service",
+        "url": "https://www.gov.im/categories/health-and-wellbeing/therapy-services/speech-and-language-therapy-service/childrens-speech-and-language-therapy-service/"
+      },
+      {
+        "label": "Isle of Man Education Act 2001 (AT 33 of 2001), sections 11 and 18",
+        "url": "https://desc.gov.im/media/4apbwfrx/educationact2001_9.pdf"
+      },
+      {
+        "label": "The Education (Special Educational Needs) Regulations 2004, Statutory Document No. 433/04",
+        "url": "https://desc.gov.im/media/sahomldz/education__special_needs__regulations_2004.pdf"
+      },
+      {
+        "label": "Manx Care Annual Report 2022/2023, September 2023",
+        "url": "https://www.gov.im/media/1380503/202290_mc_ar_2023-public-final-web_compressed.pdf"
+      },
+      {
+        "label": "Manx Care Act 2021 (AT 2 of 2021), section 12 and Schedule 2",
+        "url": "https://www.gov.im/media/1377793/manxcareact2021_1.pdf"
+      },
+      {
+        "label": "GD 2026/0023, Department of Health and Social Care Mandate to Manx Care 2026/27",
+        "url": "https://www.gov.im/media/1392045/mandate-to-manx-care-2026-27_compressed.pdf"
+      }
+    ]
+  },
+  "JE|Jersey": {
+    "fields": {
+      "workforce": [
+        "Speech and language therapist is a registrable occupation with a prescribed qualification",
+        "The prescribed qualification is entry as a speech and language therapist on the register",
+        "That register is the one kept under the Health Professions Order 2001 of the United Kingdom"
+      ]
+    },
+    "slots": {
+      "workforce": [
+        3,
+        3,
+        3
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "Speech and language therapist is a registrable occupation with a prescribed qualification",
+        "url": "https://www.jerseylaw.je/laws/current/Pages/20.300.50.aspx",
+        "quote": "is a prescribed qualification for the registrable occupation specified in column 2 of that entry"
+      },
+      {
+        "bullet": "The prescribed qualification is entry as a speech and language therapist on the register",
+        "url": "https://www.jerseylaw.je/laws/current/Pages/20.300.50.aspx",
+        "quote": "Entry as a speech and language therapist in the register established and maintained under article 5 of the Health Professions Order"
+      },
+      {
+        "bullet": "That register is the one kept under the Health Professions Order 2001 of the United Kingdom",
+        "url": "https://www.jerseylaw.je/laws/current/Pages/20.300.50.aspx",
+        "quote": "“Health Professions Order” means the Health Professions Order 2001 of the United Kingdom (S.I. 2002/254)"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Health Care (Registration) (Prescribed Qualifications) (Jersey) Order 2003, R&O.65/2003, official consolidated version",
+        "url": "https://www.jerseylaw.je/laws/current/Pages/20.300.50.aspx"
+      }
+    ]
+  }
+}

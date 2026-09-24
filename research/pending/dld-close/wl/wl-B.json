@@ -1,0 +1,74 @@
+[
+ {
+  "key": "VA|Vatican City",
+  "cc": "VA",
+  "unit": "Vatican City",
+  "region": "Europe",
+  "subregion": "Southern Europe",
+  "national": true,
+  "missing": [
+   "policyHistory"
+  ],
+  "docLinks": [
+   {
+    "label": "Holy See, second periodic report to the UN Committee on the Rights of the Child, CRC/C/VAT/2 (22 October 2012), section IV on Vatican City State, paras. 107–114",
+    "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf"
+   },
+   {
+    "label": "Direzione di Sanità e Igiene, Stato della Città del Vaticano — 'Poliambulatorio', list of services provided (Elenco delle prestazioni erogate)",
+    "url": "https://dsi.va/assistenza/poliambulatorio"
+   },
+   {
+    "label": "Direzione di Sanità e Igiene — 'Fruitori' (who is entitled to assistance)",
+    "url": "https://dsi.va/assistenza/fruitori"
+   },
+   {
+    "label": "Direzione di Sanità e Igiene — 'Funzioni e competenze'",
+    "url": "https://dsi.va/direzione/funzioni-competenze"
+   },
+   {
+    "label": "Fondo Assistenza Sanitaria (F.A.S.), Stato Città del Vaticano — Carta Servizi, 'Assistenza diretta'",
+    "url": "https://www.fas.va/content/fas/it/servizi-procedure/carta-servizi/assistenza-diretta.html"
+   },
+   {
+    "label": "Fondo Assistenza Sanitaria — Enti convenzionati: 'Logopedia' (list of contracted speech-therapy providers)",
+    "url": "https://www.fas.va/content/fas/it/servizi-procedure/carta-servizi/enti-convenzionati/logopedia.html"
+   },
+   {
+    "label": "Fondo Assistenza Sanitaria — Carta Servizi, 'Assistenza indiretta' (reimbursement route)",
+    "url": "https://www.fas.va/content/fas/it/servizi-procedure/carta-servizi/assistenza-indiretta.html"
+   }
+  ],
+  "existing_terminology": "No disorder category, service or school-language provision is named anywhere in it\nSourced absence, not an inference: 'speech' 0 in 147,617 chars of the cited report\nSanity check on the same text: 'Holy See' 136, 'Vatican' 15, 'school' 16\nThe report answers concluding observations on education, girls, health and the CRC",
+  "existing_identificationCriteria": "Not established from the sources consulted. The Holy See's second periodic report to the Committee on the Rights of the Child records that children of Vatican City State attend legally recognised schools under various State legislation, and describes no school system inside the territory, so no body there identifies a language disorder.",
+  "existing_referralPathway": "Prescription from a doctor outside the fund needs approval by a DSI polyclinic doctor\nGynaecology, paediatric, eye, dental and dermatology visits need no prior authorisation\nThe prescribing doctor sets the priority band that governs access\nIf a deferrable service cannot be booked in 30 days an outside centre may be used",
+  "existing_serviceModel": "The DSI polyclinic's own service list has paediatrics and ENT but no logopedia\nTherapy is bought in: FAS contracts named logopedia providers, all at Rome addresses\nEach episode needs prior authorisation from a DSI or FAS-contracted doctor\nCovers clergy, Vatican citizens and residents, and Holy See staff insured by the FAS fund",
+  "existing_legalEntitlement": "There is no national school system, so no support framework exists to record\nThe Holy See's own report to the UN says children attend schools elsewhere\nThe report names no health or education service inside the territory\nAny entitlement therefore arises under the law of the State running the school",
+  "existing_funding": "The FAS health fund pays, via the DSI polyclinic or providers contracted to the fund\nIndirect route: the family pays first and claims a pre-authorised reimbursement\nReimbursement uses the DSI tariff for anything its own polyclinic could have provided\nThe patient's share of the cost is paid at the counter before the service is given\nChoosing an outside contracted provider over a DSI clinic leaves the tariff difference to pay",
+  "existing_workforce": "Not established from the sources consulted. Neither the Direzione di Sanita e Igiene nor the Fondo Assistenza Sanitaria publishes any count of speech and language therapists. The FAS names six contracted logopedia providers by name, street address and telephone number, and the DSI's own list of services provided at its polyclinic runs from angiologia to medicina dei viaggi without naming logopedia."
+ },
+ {
+  "key": "WF|Wallis and Futuna",
+  "cc": "WF",
+  "unit": "Wallis and Futuna",
+  "region": "Oceania",
+  "subregion": "Polynesia",
+  "national": true,
+  "missing": [
+   "terminology",
+   "policyHistory"
+  ],
+  "docLinks": [
+   {
+    "label": "Vice-rectorat des îles Wallis et Futuna — Scolarisation des élèves en situation de handicap (web.archive.org mirror; ac-wf.wf will not accept connections from this pipeline)",
+    "url": "https://web.archive.org/web/20240724103018/https://www.ac-wf.wf/-Scolarisation-des-eleves-en-107-.html"
+   }
+  ],
+  "existing_identificationCriteria": "Needs are assessed with the national GEVASCO grids and the standard PPS form\nThe Equipes de Suivi de Scolarite work at the pupil's own place of schooling",
+  "existing_referralPathway": "Human support follows a family request and a notification by the CTHD\nThe CSPE draws up the PPS, standing in for the MDPH evaluation team\nThe CTHD then validates the PPS, in place of the CDAPH",
+  "existing_serviceModel": "ULIS units run in three schools and two colleges across Wallis and Futuna\nNo medico-social or health establishment on the islands can take a disabled child\nInclusion is therefore the core of the scheme, full time or part time in school",
+  "existing_legalEntitlement": "The 2005 French disability rights law is not applied, given the territory's status",
+  "existing_funding": "Health spending on the territory is borne by the State\nThe State bears health cover under article 68 of the 1972 finance law\nThe Agence de santé is funded by the Ministry of Overseas France as financeur\nThere is no social security body and no sickness insurance fund in Wallis and Futuna",
+  "existing_workforce": "The Agence de santé employs 200 people, including eight general practitioners\nThere is no private medical practice on the islands, so care runs through the agency\nThe agency provides outpatient care in dentistry and functional rehabilitation\nNo orthophoniste is named among the staff the agency lists"
+ }
+]

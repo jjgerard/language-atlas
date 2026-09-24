@@ -1,0 +1,160 @@
+{
+ "JE|Jersey": {
+  "fields": {
+   "outcomesEvidence": [
+    "Pupils with SEN/D are counted by description, one description being speech and language",
+    "Counted each January in the government report on schools, pupils and their characteristics",
+    "19 per cent of pupils with SEN/D had speech, language and communication needs in 2020",
+    "1,378 pupils had SEN/D in January 2020, 257 of them holding a Record of Need",
+    "The report calls the pattern similar to that observed in previous years"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    2,
+    3,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Pupils with SEN/D are counted by description, one description being speech and language",
+    "url": "https://www.gov.je/SiteCollectionDocuments/Government%20and%20administration/R%20Schools%20pupils%20and%20their%20characteristics%202020%20SS.pdf",
+    "quote": "Compulsory school age pupils with SEN/D by description in Government schools in Jersey"
+   },
+   {
+    "bullet": "Counted each January in the government report on schools, pupils and their characteristics",
+    "url": "https://www.gov.je/SiteCollectionDocuments/Government%20and%20administration/R%20Schools%20pupils%20and%20their%20characteristics%202020%20SS.pdf",
+    "quote": "Information is presented on school and pupil numbers, average primary class sizes and pupil characteristics"
+   },
+   {
+    "bullet": "19 per cent of pupils with SEN/D had speech, language and communication needs in 2020",
+    "url": "https://www.gov.je/SiteCollectionDocuments/Government%20and%20administration/R%20Schools%20pupils%20and%20their%20characteristics%202020%20SS.pdf",
+    "quote": "A fifth were recorded as having speech, language and communication needs (19%)"
+   },
+   {
+    "bullet": "1,378 pupils had SEN/D in January 2020, 257 of them holding a Record of Need",
+    "url": "https://www.gov.je/SiteCollectionDocuments/Government%20and%20administration/R%20Schools%20pupils%20and%20their%20characteristics%202020%20SS.pdf",
+    "quote": "This represents 1,378 pupils, of which 257 had a Record of Need"
+   },
+   {
+    "bullet": "The report calls the pattern similar to that observed in previous years",
+    "url": "https://www.gov.je/SiteCollectionDocuments/Government%20and%20administration/R%20Schools%20pupils%20and%20their%20characteristics%202020%20SS.pdf",
+    "quote": "This pattern is similar to that observed in previous years"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Government of Jersey, Schools, pupils and their characteristics, academic year 2019/2020 (Statistics Jersey)",
+    "url": "https://www.gov.je/SiteCollectionDocuments/Government%20and%20administration/R%20Schools%20pupils%20and%20their%20characteristics%202020%20SS.pdf"
+   }
+  ]
+ },
+ "LI|Liechtenstein": {
+  "fields": {
+   "outcomesEvidence": [
+    "School children are counted by stage and school type, the Sonderschule among them",
+    "Sonderschule pupils are broken down by sociodemographic characteristics and school place",
+    "The Amt fuer Statistik in Vaduz publishes the Bildungsstatistik"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    1,
+    2
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "School children are counted by stage and school type, the Sonderschule among them",
+    "url": "https://www.statistikportal.li/statistikportal/publications/765-bildungsstatistik/2021/01/1/765.2021.01_01_bildungsstatistik-2021.pdf",
+    "quote": "Schulkinder in Liechtenstein nach Schulstufe und Schultyp"
+   },
+   {
+    "bullet": "Sonderschule pupils are broken down by sociodemographic characteristics and school place",
+    "url": "https://www.statistikportal.li/statistikportal/publications/765-bildungsstatistik/2021/01/1/765.2021.01_01_bildungsstatistik-2021.pdf",
+    "quote": "in der Sonderschule nach soziodemografischen Merkmalen und Schulort"
+   },
+   {
+    "bullet": "The Amt fuer Statistik in Vaduz publishes the Bildungsstatistik",
+    "url": "https://www.statistikportal.li/statistikportal/publications/765-bildungsstatistik/2021/01/1/765.2021.01_01_bildungsstatistik-2021.pdf",
+    "quote": "Amt für Statistik Äulestrasse 51 9490 Vaduz"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Amt für Statistik, Fürstentum Liechtenstein, Bildungsstatistik 2021",
+    "url": "https://www.statistikportal.li/statistikportal/publications/765-bildungsstatistik/2021/01/1/765.2021.01_01_bildungsstatistik-2021.pdf"
+   }
+  ]
+ },
+ "AD|Andorra": {
+  "notEstablished": {
+   "outcomesEvidence": "Not established from the sources consulted for this entry — the Govern d’Andorra education pages already on this entry carry no outcome reporting, and estadistica.ad serves its education tables only through a JavaScript portal that returned no readable text to this pipeline. If you work in this system, this is exactly the field to fill in."
+  },
+  "sources": [
+   {
+    "label": "Departament d’Estadística, Govern d’Andorra",
+    "url": "https://www.estadistica.ad/"
+   }
+  ]
+ },
+ "FO|Faroe Islands": {
+  "notEstablished": {
+   "outcomesEvidence": "Not established from the sources consulted for this entry — Statistics Faroe Islands publishes public school and leisure-time education under Education and nothing on special needs or on language; the figures themselves sit in a StatBank that returned no readable text to this pipeline, and the two education paths tried under hagstova.fo returned 404. If you work in this system, this is exactly the field to fill in."
+  },
+  "sources": [
+   {
+    "label": "Hagstova Føroya (Statistics Faroe Islands), Public school",
+    "url": "https://hagstova.fo/en/society/education/public-school"
+   }
+  ]
+ },
+ "GG|Guernsey": {
+  "notEstablished": {
+   "outcomesEvidence": "Not established from the sources consulted for this entry — the States of Guernsey Education Strategy annual report for 2024 names raising mathematics outcomes and improving attendance as its priorities and reports nothing about how pupils with speech, language or communication needs do, and the Inclusion and Education Services page lists a Communication, Interaction and Autism outreach service without any figures at all. If you work in this system, this is exactly the field to fill in."
+  },
+  "sources": [
+   {
+    "label": "States of Guernsey, Education Strategy annual report 2024",
+    "url": "https://www.gov.gg/educationstrategyreport-2024"
+   },
+   {
+    "label": "States of Guernsey, Inclusion and Education Services",
+    "url": "https://www.gov.gg/article/206256/Inclusion-and-Education-Services"
+   }
+  ]
+ },
+ "GI|Gibraltar": {
+  "notEstablished": {
+   "outcomesEvidence": "Not established from the sources consulted for this entry — the Department of Education pages on gibraltar.gov.gi answer and publish no pupil statistics, and no Gibraltar statistical publication separating special educational needs was located. This entry already records that the Gibraltar register could not be read; the same is true of any outcome reporting. If you work in this system, this is exactly the field to fill in."
+  },
+  "sources": [
+   {
+    "label": "HM Government of Gibraltar, Department of Education",
+    "url": "https://www.gibraltar.gov.gi/education"
+   }
+  ]
+ },
+ "IM|Isle of Man": {
+  "notEstablished": {
+   "outcomesEvidence": "Not established from the sources consulted for this entry — gov.im and desc.gov.im both answer a plain GET with a short challenge stub rather than a document, so the Department of Education, Sport and Culture’s plans and the government’s education open data pages could not be read from here. This is a register that could not be reached, not a place where nothing is reported. If you work in this system, this is exactly the field to fill in."
+  },
+  "sources": []
+ },
+ "MC|Monaco": {
+  "notEstablished": {
+   "outcomesEvidence": "Not established from the sources consulted for this entry — gouv.mc and the Monaco statistics institute IMSEE both refuse this pipeline with a 403 and a 120-byte body, so no Monegasque education statistic could be read. This is a register that could not be reached, not a place where nothing is reported. If you work in this system, this is exactly the field to fill in."
+  },
+  "sources": []
+ },
+ "VA|Vatican City": {
+  "notEstablished": {
+   "outcomesEvidence": "Not established from the sources consulted for this entry — no school census or education statistic for Vatican City State was located, and the sources already on this entry are UN treaty documents and Holy See texts, which report on the Holy See’s international position rather than on any school population. If you work in this system, this is exactly the field to fill in."
+  },
+  "sources": []
+ }
+}

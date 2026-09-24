@@ -1,0 +1,591 @@
+{
+ "LV|Latvia": {
+  "fields": {
+   "outcomesEvidence": [
+    "Counted by official decision, not by need, so no type of difficulty is separated",
+    "Language impairment is one of the named special education programme categories",
+    "The Ministry of Education and Science supplies the figures",
+    "9,150 learners in classes 1 to 6 held an official decision; sex is not reported"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    1,
+    2,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Counted by official decision, not by need, so no type of difficulty is separated",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf",
+    "quote": "EASIE data does not inform about learners with some pre-defined needs or disabilities"
+   },
+   {
+    "bullet": "Language impairment is one of the named special education programme categories",
+    "url": "https://www.european-agency.org/data/latvia/datatable-overview",
+    "quote": "There are special education programmes for learners with visual impairments, hearing impairments, physical disabilities, language impairments"
+   },
+   {
+    "bullet": "The Ministry of Education and Science supplies the figures",
+    "url": "https://www.european-agency.org/data/latvia/datatable-overview",
+    "quote": "Sources: Ministry of Education and Science"
+   },
+   {
+    "bullet": "9,150 learners in classes 1 to 6 held an official decision; sex is not reported",
+    "url": "https://www.european-agency.org/data/latvia/datatable-overview",
+    "quote": "All children/learners with an official decision of SEN in any recognised form of education 3,348 1,673 5,021 2.1 M M 9,150"
+   }
+  ],
+  "sources": [
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country data tables",
+    "url": "https://www.european-agency.org/data/latvia/datatable-overview"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country background information",
+    "url": "https://www.european-agency.org/data/latvia/background-info"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, European Agency Statistics on Inclusive Education: Key Findings and Messages 2018/2019-2022/2023",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf"
+   }
+  ]
+ },
+ "MT|Malta": {
+  "fields": {
+   "outcomesEvidence": [
+    "Counted by official decision, not by need, so no type of difficulty is separated",
+    "A speech pathologist sits on the multi-disciplinary assessment team",
+    "An internal database of the education ministry supplies the figures",
+    "2,841 primary-age learners held an official decision in 2022/23, with no sex split",
+    "The individual programme is reviewed annually, in the third term, against its outcomes"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Counted by official decision, not by need, so no type of difficulty is separated",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf",
+    "quote": "EASIE data does not inform about learners with some pre-defined needs or disabilities"
+   },
+   {
+    "bullet": "A speech pathologist sits on the multi-disciplinary assessment team",
+    "url": "https://www.european-agency.org/data/malta/background-info",
+    "quote": "Psychologist Occupational therapist Speech pathologist Physiotherapist"
+   },
+   {
+    "bullet": "An internal database of the education ministry supplies the figures",
+    "url": "https://www.european-agency.org/data/malta/datatable-overview",
+    "quote": "Internal database of the ministry responsible for education"
+   },
+   {
+    "bullet": "2,841 primary-age learners held an official decision in 2022/23, with no sex split",
+    "url": "https://www.european-agency.org/data/malta/datatable-overview",
+    "quote": "All children/learners with an official decision of SEN in any recognised form of education 0 0 623 2.1 0 0 2,841"
+   },
+   {
+    "bullet": "The individual programme is reviewed annually, in the third term, against its outcomes",
+    "url": "https://www.european-agency.org/data/malta/datatable-overview",
+    "quote": "The IEP needs to be reviewed annually (third term) through the IEP review meeting to evaluate the learner’s progress"
+   }
+  ],
+  "sources": [
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country data tables",
+    "url": "https://www.european-agency.org/data/malta/datatable-overview"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country background information",
+    "url": "https://www.european-agency.org/data/malta/background-info"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, European Agency Statistics on Inclusive Education: Key Findings and Messages 2018/2019-2022/2023",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf"
+   }
+  ]
+ },
+ "NL|Netherlands": {
+  "fields": {
+   "outcomesEvidence": [
+    "Counted by official decision, not by need, so no type of difficulty is separated",
+    "CBS, the national statistics office, supplies the figures",
+    "30,450 primary-age pupils held an official decision in 2022/23, 22,435 of them boys",
+    "There is no proxy indicator for the 80 per cent inclusion benchmark",
+    "The regional school alliance, not the state, sets how long a declaration lasts"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    2,
+    3,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Counted by official decision, not by need, so no type of difficulty is separated",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf",
+    "quote": "EASIE data does not inform about learners with some pre-defined needs or disabilities"
+   },
+   {
+    "bullet": "CBS, the national statistics office, supplies the figures",
+    "url": "https://www.european-agency.org/data/netherlands/datatable-overview",
+    "quote": "Sources: CBS - https://www.cbs.nl/"
+   },
+   {
+    "bullet": "30,450 primary-age pupils held an official decision in 2022/23, 22,435 of them boys",
+    "url": "https://www.european-agency.org/data/netherlands/datatable-overview",
+    "quote": "All children/learners with an official decision of SEN in any recognised form of education 3,012 1,179 4,191 2.1 22,435 8,015 30,450"
+   },
+   {
+    "bullet": "There is no proxy indicator for the 80 per cent inclusion benchmark",
+    "url": "https://www.european-agency.org/data/netherlands/datatable-overview",
+    "quote": "There is no (proxy) indicator for the 80% benchmark"
+   },
+   {
+    "bullet": "The regional school alliance, not the state, sets how long a declaration lasts",
+    "url": "https://www.european-agency.org/data/netherlands/datatable-overview",
+    "quote": "The regional school alliance sets the criteria for duration and review of the declaration"
+   }
+  ],
+  "sources": [
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country data tables",
+    "url": "https://www.european-agency.org/data/netherlands/datatable-overview"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country background information",
+    "url": "https://www.european-agency.org/data/netherlands/background-info"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, European Agency Statistics on Inclusive Education: Key Findings and Messages 2018/2019-2022/2023",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf"
+   }
+  ]
+ },
+ "NO|Norway": {
+  "fields": {
+   "outcomesEvidence": [
+    "Counted by official decision, not by need, so no type of difficulty is separated",
+    "GSI, the primary and lower secondary school information system, supplies the figures",
+    "29,938 primary-age pupils held an official decision in 2022/23, 20,561 of them boys",
+    "Once a year the school writes a summary of the teaching given and of the development",
+    "It is assessed against the aims in the individual curriculum and sent to the municipality"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    2,
+    3,
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Counted by official decision, not by need, so no type of difficulty is separated",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf",
+    "quote": "EASIE data does not inform about learners with some pre-defined needs or disabilities"
+   },
+   {
+    "bullet": "GSI, the primary and lower secondary school information system, supplies the figures",
+    "url": "https://www.european-agency.org/data/norway/datatable-overview",
+    "quote": "GSI - The Primary and Lower Secondary School Information System"
+   },
+   {
+    "bullet": "29,938 primary-age pupils held an official decision in 2022/23, 20,561 of them boys",
+    "url": "https://www.european-agency.org/data/norway/datatable-overview",
+    "quote": "All children/learners with an official decision of SEN in any recognised form of education 6,503 2,584 9,087 20,561 9,377 29,938"
+   },
+   {
+    "bullet": "Once a year the school writes a summary of the teaching given and of the development",
+    "url": "https://www.european-agency.org/data/norway/datatable-overview",
+    "quote": "Once every year, the school prepares a written summary of the education received by the pupil and an assessment of the pupil’s development"
+   },
+   {
+    "bullet": "It is assessed against the aims in the individual curriculum and sent to the municipality",
+    "url": "https://www.european-agency.org/data/norway/datatable-overview",
+    "quote": "assessed on the basis of the aims stipulated in the pupil’s individual curriculum"
+   }
+  ],
+  "sources": [
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country data tables",
+    "url": "https://www.european-agency.org/data/norway/datatable-overview"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country background information",
+    "url": "https://www.european-agency.org/data/norway/background-info"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, European Agency Statistics on Inclusive Education: Key Findings and Messages 2018/2019-2022/2023",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf"
+   }
+  ]
+ },
+ "PL|Poland": {
+  "fields": {
+   "outcomesEvidence": [
+    "Counted by official decision, not by need, so no type of difficulty is separated",
+    "The System Informacji Oswiatowej supplies the figures",
+    "73,303 primary-age pupils held an official decision in 2022/23, 51,140 of them boys",
+    "The team meets at least twice a year to discuss the learner progress",
+    "It runs a periodic multifaceted specialist assessment of how the learner is functioning"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    2,
+    3,
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Counted by official decision, not by need, so no type of difficulty is separated",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf",
+    "quote": "EASIE data does not inform about learners with some pre-defined needs or disabilities"
+   },
+   {
+    "bullet": "The System Informacji Oswiatowej supplies the figures",
+    "url": "https://www.european-agency.org/data/poland/datatable-overview",
+    "quote": "Sources: System Informacji Oświatowej"
+   },
+   {
+    "bullet": "73,303 primary-age pupils held an official decision in 2022/23, 51,140 of them boys",
+    "url": "https://www.european-agency.org/data/poland/datatable-overview",
+    "quote": "All children/learners with an official decision of SEN in any recognised form of education 40,055 16,608 56,663 2.1 51,140 22,163 73,303"
+   },
+   {
+    "bullet": "The team meets at least twice a year to discuss the learner progress",
+    "url": "https://www.european-agency.org/data/poland/datatable-overview",
+    "quote": "The frequency of meetings depends on the needs, but they are held at least twice in a school year"
+   },
+   {
+    "bullet": "It runs a periodic multifaceted specialist assessment of how the learner is functioning",
+    "url": "https://www.european-agency.org/data/poland/datatable-overview",
+    "quote": "The team conducts a periodic multifaceted specialist assessment of the learner"
+   }
+  ],
+  "sources": [
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country data tables",
+    "url": "https://www.european-agency.org/data/poland/datatable-overview"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country background information",
+    "url": "https://www.european-agency.org/data/poland/background-info"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, European Agency Statistics on Inclusive Education: Key Findings and Messages 2018/2019-2022/2023",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf"
+   }
+  ]
+ },
+ "PT|Portugal": {
+  "fields": {
+   "outcomesEvidence": [
+    "Counted by official decision, not by need, so no type of difficulty is separated",
+    "DGEEC, the education and science statistics directorate, supplies the figures",
+    "SEN information for all school types is gathered by electronic questionnaire",
+    "45,776 primary-age pupils held an official decision in 2022/23, 28,923 of them boys"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    2,
+    2,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Counted by official decision, not by need, so no type of difficulty is separated",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf",
+    "quote": "EASIE data does not inform about learners with some pre-defined needs or disabilities"
+   },
+   {
+    "bullet": "DGEEC, the education and science statistics directorate, supplies the figures",
+    "url": "https://www.european-agency.org/data/portugal/datatable-overview",
+    "quote": "Direção-Geral de Estatísticas da Educação e Ciência (DGEEC)"
+   },
+   {
+    "bullet": "SEN information for all school types is gathered by electronic questionnaire",
+    "url": "https://www.european-agency.org/data/portugal/background-info",
+    "quote": "SEN information for all types of schools: electronic questionnaire"
+   },
+   {
+    "bullet": "45,776 primary-age pupils held an official decision in 2022/23, 28,923 of them boys",
+    "url": "https://www.european-agency.org/data/portugal/datatable-overview",
+    "quote": "All children/learners with an official decision of SEN in any recognised form of education 4,237 1,512 5,749 2.1 28,923 16,853 45,776"
+   }
+  ],
+  "sources": [
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country data tables",
+    "url": "https://www.european-agency.org/data/portugal/datatable-overview"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country background information",
+    "url": "https://www.european-agency.org/data/portugal/background-info"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, European Agency Statistics on Inclusive Education: Key Findings and Messages 2018/2019-2022/2023",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf"
+   }
+  ]
+ },
+ "RS|Serbia": {
+  "fields": {
+   "outcomesEvidence": [
+    "Counted by official decision, not by need, so no type of difficulty is separated",
+    "EMIS, published as ministry open data, supplies the figures",
+    "8,775 primary-age learners held an official decision; sex is not reported",
+    "The support team reviews the plan every three months in the first year",
+    "That review analyses which supports worked and what the learner has accomplished"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    2,
+    3,
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Counted by official decision, not by need, so no type of difficulty is separated",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf",
+    "quote": "EASIE data does not inform about learners with some pre-defined needs or disabilities"
+   },
+   {
+    "bullet": "EMIS, published as ministry open data, supplies the figures",
+    "url": "https://www.european-agency.org/data/serbia/datatable-overview",
+    "quote": "Sources: EMIS; https://opendata.mpn.gov.rs/"
+   },
+   {
+    "bullet": "8,775 primary-age learners held an official decision; sex is not reported",
+    "url": "https://www.european-agency.org/data/serbia/datatable-overview",
+    "quote": "All children/learners with an official decision of SEN in any recognised form of education M M M M M 8,775"
+   },
+   {
+    "bullet": "The support team reviews the plan every three months in the first year",
+    "url": "https://www.european-agency.org/data/serbia/datatable-overview",
+    "quote": "The review process is undertaken every three months in the first year"
+   },
+   {
+    "bullet": "That review analyses which supports worked and what the learner has accomplished",
+    "url": "https://www.european-agency.org/data/serbia/datatable-overview",
+    "quote": "the team analyses what means of support were successful and what outcomes the child/learner has accomplished"
+   }
+  ],
+  "sources": [
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country data tables",
+    "url": "https://www.european-agency.org/data/serbia/datatable-overview"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country background information",
+    "url": "https://www.european-agency.org/data/serbia/background-info"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, European Agency Statistics on Inclusive Education: Key Findings and Messages 2018/2019-2022/2023",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf"
+   }
+  ]
+ },
+ "SE|Sweden": {
+  "fields": {
+   "outcomesEvidence": [
+    "Counted by official decision, not by need, so no type of difficulty is separated",
+    "Skolverket official statistics for 2022/23 supply the figures",
+    "52,343 primary-age pupils held an official decision in 2022/23, 34,817 of them boys",
+    "Screening in pre-school class and primary uses national mapping material in Swedish",
+    "No regulation says how a school must evaluate whether an action programme worked"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    2,
+    3,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Counted by official decision, not by need, so no type of difficulty is separated",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf",
+    "quote": "EASIE data does not inform about learners with some pre-defined needs or disabilities"
+   },
+   {
+    "bullet": "Skolverket official statistics for 2022/23 supply the figures",
+    "url": "https://www.european-agency.org/data/sweden/datatable-overview",
+    "quote": "Official statistics (school year 2022/23), Skolverket (Swedish National Agency for Education)"
+   },
+   {
+    "bullet": "52,343 primary-age pupils held an official decision in 2022/23, 34,817 of them boys",
+    "url": "https://www.european-agency.org/data/sweden/datatable-overview",
+    "quote": "All children/learners with an official decision of SEN in any recognised form of education 490 138 628 2.1 34,817 17,526 52,343"
+   },
+   {
+    "bullet": "Screening in pre-school class and primary uses national mapping material in Swedish",
+    "url": "https://www.european-agency.org/data/sweden/datatable-overview",
+    "quote": "The screenings are based on national mapping materials in the subjects Swedish or Swedish as a second language and mathematics"
+   },
+   {
+    "bullet": "No regulation says how a school must evaluate whether an action programme worked",
+    "url": "https://www.european-agency.org/data/sweden/datatable-overview",
+    "quote": "There is no regulation on how this evaluation should be made"
+   }
+  ],
+  "sources": [
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country data tables",
+    "url": "https://www.european-agency.org/data/sweden/datatable-overview"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country background information",
+    "url": "https://www.european-agency.org/data/sweden/background-info"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, European Agency Statistics on Inclusive Education: Key Findings and Messages 2018/2019-2022/2023",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf"
+   }
+  ]
+ },
+ "SI|Slovenia": {
+  "fields": {
+   "outcomesEvidence": [
+    "Counted by official decision, not by need, so no type of difficulty is separated",
+    "Statistics based on administrative data supply the figures",
+    "12,489 primary-age learners held an official decision in 2022/23, 8,313 of them boys",
+    "Where a time limit is set, the National Education Institute must obtain an evaluation"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Counted by official decision, not by need, so no type of difficulty is separated",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf",
+    "quote": "EASIE data does not inform about learners with some pre-defined needs or disabilities"
+   },
+   {
+    "bullet": "Statistics based on administrative data supply the figures",
+    "url": "https://www.european-agency.org/data/slovenia/datatable-overview",
+    "quote": "Sources: Statistics based on administrative data"
+   },
+   {
+    "bullet": "12,489 primary-age learners held an official decision in 2022/23, 8,313 of them boys",
+    "url": "https://www.european-agency.org/data/slovenia/datatable-overview",
+    "quote": "All children/learners with an official decision of SEN in any recognised form of education M M M 2.1 8,313 4,176 12,489"
+   },
+   {
+    "bullet": "Where a time limit is set, the National Education Institute must obtain an evaluation",
+    "url": "https://www.european-agency.org/data/slovenia/datatable-overview",
+    "quote": "to obtain a report on the implementation of the individualised programme"
+   }
+  ],
+  "sources": [
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country data tables",
+    "url": "https://www.european-agency.org/data/slovenia/datatable-overview"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country background information",
+    "url": "https://www.european-agency.org/data/slovenia/background-info"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, European Agency Statistics on Inclusive Education: Key Findings and Messages 2018/2019-2022/2023",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf"
+   }
+  ]
+ },
+ "SK|Slovakia": {
+  "fields": {
+   "outcomesEvidence": [
+    "Counted by official decision, not by need, so no type of difficulty is separated",
+    "An internal ministry database supplies the figures",
+    "30,565 primary-age pupils held an official decision in 2022/23, 17,700 of them boys",
+    "48 per cent of the lower-primary figure is disadvantage rather than any other SEN",
+    "By law there is no obligation to review an SEN decision at all"
+   ]
+  },
+  "slots": {
+   "outcomesEvidence": [
+    1,
+    2,
+    3,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Counted by official decision, not by need, so no type of difficulty is separated",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf",
+    "quote": "EASIE data does not inform about learners with some pre-defined needs or disabilities"
+   },
+   {
+    "bullet": "An internal ministry database supplies the figures",
+    "url": "https://www.european-agency.org/data/slovakia/datatable-overview",
+    "quote": "Sources: Internal ministry database"
+   },
+   {
+    "bullet": "30,565 primary-age pupils held an official decision in 2022/23, 17,700 of them boys",
+    "url": "https://www.european-agency.org/data/slovakia/datatable-overview",
+    "quote": "All children/learners with an official decision of SEN in any recognised form of education 2,407 1,602 4,009 2.1 17,700 12,865 30,565"
+   },
+   {
+    "bullet": "48 per cent of the lower-primary figure is disadvantage rather than any other SEN",
+    "url": "https://www.european-agency.org/data/slovakia/datatable-overview",
+    "quote": "48% children/learners from socially disadvantaged background without other SEN"
+   },
+   {
+    "bullet": "By law there is no obligation to review an SEN decision at all",
+    "url": "https://www.european-agency.org/data/slovakia/datatable-overview",
+    "quote": "By law, there is no obligation to regularly review the decision of SEN"
+   }
+  ],
+  "sources": [
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country data tables",
+    "url": "https://www.european-agency.org/data/slovakia/datatable-overview"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, EASIE country background information",
+    "url": "https://www.european-agency.org/data/slovakia/background-info"
+   },
+   {
+    "label": "European Agency for Special Needs and Inclusive Education, European Agency Statistics on Inclusive Education: Key Findings and Messages 2018/2019-2022/2023",
+    "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf"
+   }
+  ]
+ }
+}

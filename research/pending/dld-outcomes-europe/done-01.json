@@ -1,0 +1,275 @@
+{
+  "DE|Germany": {
+    "fields": {
+      "outcomesEvidence": [
+        "KMK school statistics break out Förderschwerpunkt Sprache as a category of its own",
+        "Figures are asked of the Länder education ministries and compiled by the KMK secretariat",
+        "Sprache: 56,098 pupils in 2015 rising to 63,392 in 2024",
+        "KMK warns that in the worst case data on these Förderschwerpunkte can be lost",
+        "Published on a two-year cycle, this edition covering 2015 to 2024"
+      ]
+    },
+    "slots": { "outcomesEvidence": [1, 2, 3, 3, 4] },
+    "evidence": [
+      {
+        "bullet": "KMK school statistics break out Förderschwerpunkt Sprache as a category of its own",
+        "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf",
+        "quote": "Der Bericht differenziert nach den im Beschluss der KMK vom 06.05.1994 genannten Förderschwerpunkten"
+      },
+      {
+        "bullet": "Figures are asked of the Länder education ministries and compiled by the KMK secretariat",
+        "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf",
+        "quote": "Die Zahlen wurden bei den Kultusministerien der Länder erfragt"
+      },
+      {
+        "bullet": "Sprache: 56,098 pupils in 2015 rising to 63,392 in 2024",
+        "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf",
+        "quote": "Sprache56.09855.93256.11456.34557.17859.23059.27660.15961.80163.392"
+      },
+      {
+        "bullet": "KMK warns that in the worst case data on these Förderschwerpunkte can be lost",
+        "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf",
+        "quote": "kann es im ungünstigsten Fall zu Datenverlusten kommen"
+      },
+      {
+        "bullet": "Published on a two-year cycle, this edition covering 2015 to 2024",
+        "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf",
+        "quote": "Die KMK veröffentlicht in zweijährigem Turnus den Bericht"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Kultusministerkonferenz, Sonderpaedagogische Foerderung in Schulen 2015 bis 2024 (Statistische Veroeffentlichungen der Kultusministerkonferenz, Dokumentation Nr. 249, Juni 2026)",
+        "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Dok249_SoPaeFoe_2024.pdf"
+      },
+      {
+        "label": "European Agency for Special Needs and Inclusive Education, Germany country background information",
+        "url": "https://www.european-agency.org/data/germany/background-info"
+      }
+    ]
+  },
+
+  "CY|Cyprus": {
+    "fields": {
+      "outcomesEvidence": [
+        "Achievement opportunity is measured against the official SEN decision, not by type of need",
+        "European Agency resource analysis, 2020, unpublished, reported in its Cyprus mapping",
+        "Lower achievement opportunities than peers, most of all in special units",
+        "No data at all on those who got support without an official decision",
+        "A placement approach, focused more on access than on participation and achievement"
+      ]
+    },
+    "slots": { "outcomesEvidence": [1, 2, 3, 3, 3] },
+    "evidence": [
+      {
+        "bullet": "Achievement opportunity is measured against the official SEN decision, not by type of need",
+        "url": "https://www.european-agency.org/sites/default/files/CSM%20Country%20Report%20Cyprus.pdf",
+        "quote": "Learners with an official decision have lower achievement opportunities than their peers"
+      },
+      {
+        "bullet": "European Agency resource analysis, 2020, unpublished, reported in its Cyprus mapping",
+        "url": "https://www.european-agency.org/sites/default/files/CSM%20Country%20Report%20Cyprus.pdf",
+        "quote": "The resource analysis, which was implemented by the European Agency for Special Needs and Inclusive Education"
+      },
+      {
+        "bullet": "Lower achievement opportunities than peers, most of all in special units",
+        "url": "https://www.european-agency.org/sites/default/files/CSM%20Country%20Report%20Cyprus.pdf",
+        "quote": "lower achievement opportunities than their peers, especially when enrolled in special units"
+      },
+      {
+        "bullet": "No data at all on those who got support without an official decision",
+        "url": "https://www.european-agency.org/sites/default/files/CSM%20Country%20Report%20Cyprus.pdf",
+        "quote": "There is a lack of data on achievement opportunities for learners who received support without an official decision"
+      },
+      {
+        "bullet": "A placement approach, focused more on access than on participation and achievement",
+        "url": "https://www.european-agency.org/sites/default/files/CSM%20Country%20Report%20Cyprus.pdf",
+        "quote": "focuses more on access to mainstream settings than on participation and achievement opportunities"
+      }
+    ],
+    "sources": [
+      {
+        "label": "European Agency for Special Needs and Inclusive Education, Country System Mapping — Country Report: Cyprus",
+        "url": "https://www.european-agency.org/sites/default/files/CSM%20Country%20Report%20Cyprus.pdf"
+      },
+      {
+        "label": "European Agency, Cyprus data tables overview — national source given as Statistics on Education 2022/2023, MoECSY",
+        "url": "https://www.european-agency.org/data/cyprus/datatable-overview"
+      }
+    ]
+  },
+
+  "CZ|Czechia": {
+    "fields": {
+      "outcomesEvidence": [
+        "Speech shows up as a named cause of deferring school entry, reported by nursery heads",
+        "Česká školní inspekce annual report, on the causes of deferral of compulsory schooling",
+        "Poruchy řeči named as the cause in 22 %, behind overall immaturity at 35 %",
+        "Neither parents nor the counselling centre need tell the nursery the reason for a deferral",
+        "Given for 2022/2023 beside 2023/2024, so the share is tracked year on year"
+      ]
+    },
+    "slots": { "outcomesEvidence": [1, 2, 3, 3, 4] },
+    "evidence": [
+      {
+        "bullet": "Speech shows up as a named cause of deferring school entry, reported by nursery heads",
+        "url": "https://www.csicr.cz/CSICR/media/Prilohy/2024_p%C5%99%C3%ADlohy/Dokumenty/VZ_CSI_2023-2024_everze.pdf",
+        "quote": "Informace o nejčastějších důvodech OŠD od ředitelů MŠ zůstávají dlouhodobě stejné"
+      },
+      {
+        "bullet": "Česká školní inspekce annual report, on the causes of deferral of compulsory schooling",
+        "url": "https://www.csicr.cz/CSICR/media/Prilohy/2024_p%C5%99%C3%ADlohy/Dokumenty/VZ_CSI_2023-2024_everze.pdf",
+        "quote": "Příčiny odkladu povinné školní docházky – podíl příčin (v %)"
+      },
+      {
+        "bullet": "Poruchy řeči named as the cause in 22 %, behind overall immaturity at 35 %",
+        "url": "https://www.csicr.cz/CSICR/media/Prilohy/2024_p%C5%99%C3%ADlohy/Dokumenty/VZ_CSI_2023-2024_everze.pdf",
+        "quote": "celková nezralost dítěte (35 %) a poruchy řeči (22 %)"
+      },
+      {
+        "bullet": "Neither parents nor the counselling centre need tell the nursery the reason for a deferral",
+        "url": "https://www.csicr.cz/CSICR/media/Prilohy/2024_p%C5%99%C3%ADlohy/Dokumenty/VZ_CSI_2023-2024_everze.pdf",
+        "quote": "Zákonní zástupci ani ŠPZ nemají povinnost informovat MŠ o vymezených důvodech OŠD"
+      },
+      {
+        "bullet": "Given for 2022/2023 beside 2023/2024, so the share is tracked year on year",
+        "url": "https://www.csicr.cz/CSICR/media/Prilohy/2024_p%C5%99%C3%ADlohy/Dokumenty/VZ_CSI_2023-2024_everze.pdf",
+        "quote": "2023/2024 35,4 22,3 7,9 7,2 6,8 4,8 4,0 3,5 2,6 2,4 1,8 0,8 0,6"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ceska skolni inspekce, Kvalita vzdelavani v Ceske republice ve skolnim roce 2023/2024 — vyrocni zprava, Praha, prosinec 2024",
+        "url": "https://www.csicr.cz/CSICR/media/Prilohy/2024_p%C5%99%C3%ADlohy/Dokumenty/VZ_CSI_2023-2024_everze.pdf"
+      },
+      {
+        "label": "European Agency for Special Needs and Inclusive Education, Czech Republic country background information",
+        "url": "https://www.european-agency.org/data/czech-republic/background-info"
+      }
+    ]
+  },
+
+  "BG|Bulgaria": {
+    "fields": {
+      "outcomesEvidence": [
+        "Language–speech disorders is a named SEN ground, so the group is at least countable",
+        "Counts come from the national electronic information system for preschool and school",
+        "Its Strategic Framework calls the indicators for reporting progress underdeveloped",
+        "The quality management in institutions standard is repealed and currently missing",
+        "Time spent in a mainstream class is, in the country's own words, impossible to quantify"
+      ]
+    },
+    "slots": { "outcomesEvidence": [1, 2, 3, 3, 3] },
+    "evidence": [
+      {
+        "bullet": "Language–speech disorders is a named SEN ground, so the group is at least countable",
+        "url": "https://www.european-agency.org/sites/default/files/CSM%20Country%20Report%20Bulgaria.pdf",
+        "quote": "intellectual disabilities, language–speech disorders, specific disorders of the ability to learn"
+      },
+      {
+        "bullet": "Counts come from the national electronic information system for preschool and school",
+        "url": "https://www.european-agency.org/data/bulgaria/datatable-overview",
+        "quote": "National electronic information system for preschool and school education"
+      },
+      {
+        "bullet": "Its Strategic Framework calls the indicators for reporting progress underdeveloped",
+        "url": "https://www.european-agency.org/sites/default/files/CSM%20Country%20Report%20Bulgaria.pdf",
+        "quote": "underdeveloped system of uniform indicators for reporting institutional progress"
+      },
+      {
+        "bullet": "The quality management in institutions standard is repealed and currently missing",
+        "url": "https://www.european-agency.org/sites/default/files/CSM%20Country%20Report%20Bulgaria.pdf",
+        "quote": "the repealed and currently missing quality management in institutions standard"
+      },
+      {
+        "bullet": "Time spent in a mainstream class is, in the country's own words, impossible to quantify",
+        "url": "https://www.european-agency.org/data/bulgaria/background-info",
+        "quote": "it is unlikely that the time spent will be more than 80%. At the moment, it is impossible to quantify that"
+      }
+    ],
+    "sources": [
+      {
+        "label": "European Agency for Special Needs and Inclusive Education, Country System Mapping — Country Report: Bulgaria",
+        "url": "https://www.european-agency.org/sites/default/files/CSM%20Country%20Report%20Bulgaria.pdf"
+      },
+      {
+        "label": "European Agency, Bulgaria data tables overview — national source given as the national electronic information system for preschool and school education",
+        "url": "https://www.european-agency.org/data/bulgaria/datatable-overview"
+      },
+      {
+        "label": "European Agency for Special Needs and Inclusive Education, Bulgaria country background information",
+        "url": "https://www.european-agency.org/data/bulgaria/background-info"
+      }
+    ]
+  },
+
+  "RO|Romania": {
+    "fields": {
+      "outcomesEvidence": [
+        "Promotion and repetition are reported for învățământul special as one block",
+        "Ministerul Educației, Raport privind starea învățământului preuniversitar 2023-2024",
+        "17 thousand pupils at year end, 98,3 % promoted and 1,7 % repeating",
+        "Exam accommodation names sight, hearing and neurodevelopmental disorders, not language",
+        "The figures are set beside the previous school year and called constant"
+      ]
+    },
+    "slots": { "outcomesEvidence": [1, 2, 3, 3, 4] },
+    "evidence": [
+      {
+        "bullet": "Promotion and repetition are reported for învățământul special as one block",
+        "url": "https://www.edu.ro/sites/default/files/_fi%C8%99iere/Minister/2024/div/Rapoarte_sistem/Raport_Stare_invatamant_preuniv-2023-2024.pdf",
+        "quote": "Datele corespunzătoare pentru învățământul special sunt constante în comparație cu anul școlar anterior"
+      },
+      {
+        "bullet": "Ministerul Educației, Raport privind starea învățământului preuniversitar 2023-2024",
+        "url": "https://www.edu.ro/sites/default/files/_fi%C8%99iere/Minister/2024/div/Rapoarte_sistem/Raport_Stare_invatamant_preuniv-2023-2024.pdf",
+        "quote": "Raport privind starea învățământului preuniversitar din România 2023 – 2024"
+      },
+      {
+        "bullet": "17 thousand pupils at year end, 98,3 % promoted and 1,7 % repeating",
+        "url": "https://www.edu.ro/sites/default/files/_fi%C8%99iere/Minister/2024/div/Rapoarte_sistem/Raport_Stare_invatamant_preuniv-2023-2024.pdf",
+        "quote": "17 mii de elevi la final de an școlar, din care 98,3% au fost declarați promovați și 1,7% repetenți"
+      },
+      {
+        "bullet": "Exam accommodation names sight, hearing and neurodevelopmental disorders, not language",
+        "url": "https://www.edu.ro/sites/default/files/_fi%C8%99iere/Minister/2024/div/Rapoarte_sistem/Raport_Stare_invatamant_preuniv-2023-2024.pdf",
+        "quote": "elevii cu deficiențe de vedere, deficiențe de auz și tulburări de neurodezvoltare"
+      },
+      {
+        "bullet": "The figures are set beside the previous school year and called constant",
+        "url": "https://www.edu.ro/sites/default/files/_fi%C8%99iere/Minister/2024/div/Rapoarte_sistem/Raport_Stare_invatamant_preuniv-2023-2024.pdf",
+        "quote": "București, noiembrie 2024"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ministerul Educatiei, Raport privind starea invatamantului preuniversitar din Romania 2023-2024, Bucuresti, noiembrie 2024",
+        "url": "https://www.edu.ro/sites/default/files/_fi%C8%99iere/Minister/2024/div/Rapoarte_sistem/Raport_Stare_invatamant_preuniv-2023-2024.pdf"
+      },
+      {
+        "label": "Ministerul Educatiei si Cercetarii, Rapoarte publice periodice",
+        "url": "https://www.edu.ro/rapoarte-publice-periodice"
+      }
+    ]
+  },
+
+  "SM|San Marino": {
+    "notEstablished": {
+      "outcomesEvidence": "Not established from the sources consulted for this entry — Legge 142/2014 makes the Commissione Tecnica per l'Inclusione Scolastica the body responsible for monitoring, trialling and evaluating interventions, and requires the educational and dispensative measures to be put to periodic monitoring to judge their effectiveness, but no output of that monitoring was found published. The Osservatorio Scolastico of the Dipartimento Istruzione publishes only pupil counts by school site and class year, with no disturbi evolutivi or special-needs breakdown and no attainment figures. San Marino has no European Agency country page. If you work in this system, this is exactly the field to fill in."
+    },
+    "sources": [
+      {
+        "label": "Legge 9 settembre 2014 n.142, normativa in materia di disturbi evolutivi specifici in ambito scolastico e formativo (San Marino) — art. 4 comma 7 and the Commissione Tecnica per l'Inclusione Scolastica",
+        "url": "https://www.consigliograndeegenerale.sm/on-line/home/archivio-leggi-decreti-e-regolamenti/documento17068622.html"
+      },
+      {
+        "label": "Segreteria di Stato per l'Istruzione, Osservatorio Scuola — I numeri della scuola",
+        "url": "https://www.istruzioneecultura.sm/pub1/IstruzioneSM/istruzione/OSSERVATORIO-SCOLASTICO/NumeriScuola.html"
+      },
+      {
+        "label": "Segreteria di Stato per l'Istruzione, Archivio osservatorio scuola",
+        "url": "https://www.istruzioneecultura.sm/pub1/IstruzioneSM/Istruzione/OSSERVATORIO-SCOLASTICO/ArchivioOsservatorio.html"
+      }
+    ]
+  }
+}

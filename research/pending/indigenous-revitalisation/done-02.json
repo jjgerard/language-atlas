@@ -1,0 +1,343 @@
+{
+ "GH|Ghana": {
+  "fields": {
+   "revitalisation": [
+    "Ghana has no explicit national language policy, a 2025 review of the policies finds",
+    "Bureau of Ghana Languages is concerned with producing literature in Ghanaian languages",
+    "Neither BGL nor the Ghana Institute of Languages develops a national language policy",
+    "Linguistics Association of Ghana has produced no policy document to that effect either"
+   ]
+  },
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    2
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Ghana has no explicit national language policy, a 2025 review of the policies finds",
+    "url": "https://bop.unibe.ch/LPIA/article/download/11266/15560",
+    "quote": "In the case of Ghana, although it has a highly multilingual setting, there is no explicit national language policy"
+   },
+   {
+    "bullet": "Bureau of Ghana Languages is concerned with producing literature in Ghanaian languages",
+    "url": "https://bop.unibe.ch/LPIA/article/download/11266/15560",
+    "quote": "The BGL on the other hand is concerned with the production of literature in the various Ghanaian languages."
+   },
+   {
+    "bullet": "Neither BGL nor the Ghana Institute of Languages develops a national language policy",
+    "url": "https://bop.unibe.ch/LPIA/article/download/11266/15560",
+    "quote": "Ghana has an Institute of Languages (GIL) and a Bureau of Ghana languages (BGL), yet neither of these organisations is concerned with the developing of a national language policy"
+   },
+   {
+    "bullet": "Linguistics Association of Ghana has produced no policy document to that effect either",
+    "url": "https://bop.unibe.ch/LPIA/article/download/11266/15560",
+    "quote": "The Linguistics Association of Ghana (LAG), another organization with an interest in language affairs, although might have considered the issue of a national language, has not yet produced a policy document to that effect."
+   }
+  ]
+ },
+ "SL|Sierra Leone": {
+  "fields": {
+   "revitalisation": [
+    "Mani, Kim and Bom get no such support and will likely disappear in a generation",
+    "National-level support has reached four languages: Krio, Limba, Mende and Temne",
+    "Elementary schoolbooks developed and teachers trained in those four languages",
+    "Government has already taken some action in supporting indigenous languages",
+    "That schoolbook and teacher-training work was done with the help of external funding"
+   ]
+  },
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    1,
+    2,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Mani, Kim and Bom get no such support and will likely disappear in a generation",
+    "url": "https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=1040&context=ling_fac",
+    "quote": "Three languages in Sierra Leone, however, receive no such support and will likely disappear in a generation, namely, the three South Atlantic languages Mani (Bullom So), Kim (Krim) and Bom (Bum)."
+   },
+   {
+    "bullet": "National-level support has reached four languages: Krio, Limba, Mende and Temne",
+    "url": "https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=1040&context=ling_fac",
+    "quote": "Indigenous languages that have already received support at the national level in Sierra Leone are Krio, Limba, Mende, and Temne."
+   },
+   {
+    "bullet": "Elementary schoolbooks developed and teachers trained in those four languages",
+    "url": "https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=1040&context=ling_fac",
+    "quote": "schoolbooks for the elementary schools have been developed and teachers have been trained in these four languages"
+   },
+   {
+    "bullet": "Government has already taken some action in supporting indigenous languages",
+    "url": "https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=1040&context=ling_fac",
+    "quote": "The Sierra Leone Government has already taken some action in supporting indigenous languages."
+   },
+   {
+    "bullet": "That schoolbook and teacher-training work was done with the help of external funding",
+    "url": "https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=1040&context=ling_fac",
+    "quote": "With the help of external funding, schoolbooks for the elementary schools have been developed and teachers have been trained in these four languages."
+   }
+  ]
+ },
+ "ZW|Zimbabwe": {
+  "fields": {
+   "revitalisation": [
+    "ALRI researches, documents and develops the Zimbabwean indigenous languages",
+    "An interdisciplinary research unit at the University of Zimbabwe, established in 2000",
+    "ZILPA, formed by six language groups in 2001, campaigns for their revitalisation",
+    "UNICEF supports procurement of reading materials in local languages for early years"
+   ]
+  },
+  "slots": {
+   "revitalisation": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "ALRI researches, documents and develops the Zimbabwean indigenous languages",
+    "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Zimbabwe.pdf",
+    "quote": "Its goals are to research, document and develop the Zimbabwean indigenous languages in order to promote and expand their use in all spheres of life"
+   },
+   {
+    "bullet": "An interdisciplinary research unit at the University of Zimbabwe, established in 2000",
+    "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Zimbabwe.pdf",
+    "quote": "ALRI, an interdisciplinary research unit based at the University of Zimbabwe, was established in 2000."
+   },
+   {
+    "bullet": "ZILPA, formed by six language groups in 2001, campaigns for their revitalisation",
+    "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Zimbabwe.pdf",
+    "quote": "The Zimbabwe Indigenous Languages Promotion Association (ZILPA) was formed by representatives of six Zimbabwean language groups (Tonga, Kalanga, Venda, Shangani, Nambya and Sotho) to campaign for the revitalisation of their languages."
+   },
+   {
+    "bullet": "UNICEF supports procurement of reading materials in local languages for early years",
+    "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Zimbabwe.pdf",
+    "quote": "UNICEF also supports the procurement of reading materials in local languages, to support early-years teaching and learning."
+   }
+  ]
+ },
+ "MZ|Mozambique": {
+  "fields": {
+   "revitalisation": [
+    "Vamos Ler builds reading and writing in Emakhuwa, Elomwe and Echuwabo communities",
+    "Carried out by Creative Associates, the MINEDH and other partners",
+    "Ran between 2016 and 2021 in Nampula and Zambezia Provinces",
+    "USAID-funded, as a follow-on from the Aprender a Ler early-grade reading programme"
+   ]
+  },
+  "slots": {
+   "revitalisation": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Vamos Ler builds reading and writing in Emakhuwa, Elomwe and Echuwabo communities",
+    "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Mozambique.pdf",
+    "quote": "Vamos Ler is focusing on building reading and writing skills among children in the Emakhuwa, Elomwe and Echuwabo language communities of Nampula and Zambezia Provinces."
+   },
+   {
+    "bullet": "Carried out by Creative Associates, the MINEDH and other partners",
+    "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Mozambique.pdf",
+    "quote": "Carried out by Creative Associates, the MINEDH and other partners between 2016 and 2021"
+   },
+   {
+    "bullet": "Ran between 2016 and 2021 in Nampula and Zambezia Provinces",
+    "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Mozambique.pdf",
+    "quote": "Carried out by Creative Associates, the MINEDH and other partners between 2016 and 2021, Vamos Ler is focusing on building reading and writing skills among children in the Emakhuwa, Elomwe and Echuwabo language communities of Nampula and Zambezia Provinces."
+   },
+   {
+    "bullet": "USAID-funded, as a follow-on from the Aprender a Ler early-grade reading programme",
+    "url": "https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Mozambique.pdf",
+    "quote": "This USAID-funded programme has been developed as a follow-on from the Aprender a Ler early-grade reading programme"
+   }
+  ]
+ },
+ "MR|Mauritania": {
+  "fields": {
+   "revitalisation": [
+    "Contested: the negro-mauritanienne community says it fears Arabic will be imposed",
+    "Loi 2022-023 art. 65: poular, soninke and wolof introduced, promoted and developed",
+    "Art. 69 calls for a strategy and reference framework for teaching the three",
+    "Art. 69 provides for an autonomous national body to pilot that promotion",
+    "Art. 67: twelve months from the law's adoption for the language-engineering text"
+   ]
+  },
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Contested: the negro-mauritanienne community says it fears Arabic will be imposed",
+    "url": "https://www.axl.cefan.ulaval.ca/afrique/mauritanie-loi-2022-023-educ.htm",
+    "quote": "mais le texte est contesté par la communauté négro-mauritanienne qui dit craindre que l'arabe lui soit imposé"
+   },
+   {
+    "bullet": "Loi 2022-023 art. 65: poular, soninke and wolof introduced, promoted and developed",
+    "url": "https://www.axl.cefan.ulaval.ca/afrique/mauritanie-loi-2022-023-educ.htm",
+    "quote": "Les langues nationales poular,\nsoninké et wolof sont introduites,\npromues et développées à tous les niveaux d'éducation"
+   },
+   {
+    "bullet": "Art. 69 calls for a strategy and reference framework for teaching the three",
+    "url": "https://www.axl.cefan.ulaval.ca/afrique/mauritanie-loi-2022-023-educ.htm",
+    "quote": "L’élaboration d’une stratégie et d’un cadre de référence pour\nl’enseignement de ces trois langues nationales"
+   },
+   {
+    "bullet": "Art. 69 provides for an autonomous national body to pilot that promotion",
+    "url": "https://www.axl.cefan.ulaval.ca/afrique/mauritanie-loi-2022-023-educ.htm",
+    "quote": "La création d’une structure nationale autonome dotée des\ncompétences institutionnelles et techniques et des moyens\nopérationnels ayant pour mission de piloter la promotion et la mise\nen œuvre de l’enseignement de ces langues nationales"
+   },
+   {
+    "bullet": "Art. 67: twelve months from the law's adoption for the language-engineering text",
+    "url": "https://www.axl.cefan.ulaval.ca/afrique/mauritanie-loi-2022-023-educ.htm",
+    "quote": "Dans les douze mois qui suivent l’adoption de la présente loi\nd’orientation, l’autorité gouvernementale concernée doit adopter un\ntexte juridique spécifique fixant les lignes directrices de\nl’ingénierie linguistique"
+   }
+  ]
+ },
+ "SZ|Eswatini": {
+  "fields": {
+   "revitalisation": [
+    "Corpus and dictionary work are the paper's proposals for the Board, not reported activity",
+    "SiSwati Language Board created over concern that English threatens siSwati's survival",
+    "Created by the Government of Eswatini",
+    "Called recent in a 2023 Journal of Contemporary African Studies paper"
+   ]
+  },
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Corpus and dictionary work are the paper's proposals for the Board, not reported activity",
+    "url": "https://library.au.int/raising-profile-siswati-national-language",
+    "quote": "this paper proposes that the prestige of siSwati be enhanced within the English-based globally-oriented sector of emaSwati society through activities undertaken by the SiSwati Language Board, such as a project to produce a tagged digital corpus of siSwati texts"
+   },
+   {
+    "bullet": "SiSwati Language Board created over concern that English threatens siSwati's survival",
+    "url": "https://library.au.int/raising-profile-siswati-national-language",
+    "quote": "there are concerns that, in the long term, the dominance of English in key domains could pose a threat to the survival of siSwati. This concern is reflected in the recent creation of a SiSwati Language Board by the Government of Eswatini."
+   },
+   {
+    "bullet": "Created by the Government of Eswatini",
+    "url": "https://library.au.int/raising-profile-siswati-national-language",
+    "quote": "This concern is reflected in the recent creation of a SiSwati Language Board by the Government of Eswatini."
+   },
+   {
+    "bullet": "Called recent in a 2023 Journal of Contemporary African Studies paper",
+    "url": "https://library.au.int/raising-profile-siswati-national-language",
+    "quote": "Journal of Contemporary African Studies, Volume 41, No. 2 2023"
+   }
+  ]
+ },
+ "KM|Comoros": {
+  "fields": {
+   "revitalisation": [
+    "Renovated Koranic school programme introduces the Comorian language, Shikomori",
+    "Renovation is at the initiative of the Ministry of Education",
+    "Reform project launched in 2007, formalised by the Education Framework Act of 2014",
+    "Funded by UNICEF"
+   ]
+  },
+  "slots": {
+   "revitalisation": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Renovated Koranic school programme introduces the Comorian language, Shikomori",
+    "url": "https://education-profiles.org/sub-saharan-africa/comoros/~inclusion",
+    "quote": "One of the programme’s components is the introduction of the Comorian language, Shikomori."
+   },
+   {
+    "bullet": "Renovation is at the initiative of the Ministry of Education",
+    "url": "https://education-profiles.org/sub-saharan-africa/comoros/~inclusion",
+    "quote": "Koranic schools have been renovated at the initiative of the Ministry of Education with funding from UNICEF."
+   },
+   {
+    "bullet": "Reform project launched in 2007, formalised by the Education Framework Act of 2014",
+    "url": "https://education-profiles.org/sub-saharan-africa/comoros/~inclusion",
+    "quote": "In 2007, a project to reform Koranic schools was launched. Currently, several pilot schools are implementing this reform project, which was formalized by the Education Framework Act of 2014."
+   },
+   {
+    "bullet": "Funded by UNICEF",
+    "url": "https://education-profiles.org/sub-saharan-africa/comoros/~inclusion",
+    "quote": "Koranic schools have been renovated at the initiative of the Ministry of Education with funding from UNICEF."
+   }
+  ]
+ },
+ "ST|São Tomé and Príncipe": {
+  "fields": {
+   "revitalisation": [
+    "ALUSTP orthography still unknown to most principenses, lung'Ie teachers included",
+    "Linguistic instruments in preparation since 2009: a teaching method and a dictionary",
+    "Prepared by researchers, using the ALUSTP unified alphabet",
+    "Government of STP sponsored ALUSTP, drafted by a commission of academics",
+    "Lung'Ie teachers paid about 20 euros a month, only in the school months"
+   ]
+  },
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "ALUSTP orthography still unknown to most principenses, lung'Ie teachers included",
+    "url": "https://www.scielo.br/j/tla/a/rPRCqWDjXHvz3MyZmRdCd3q/?lang=pt",
+    "quote": "a proposta ortográfica continua desconhecida pela maioria dos principenses, inclusive pelos professores de lung'Ie"
+   },
+   {
+    "bullet": "Linguistic instruments in preparation since 2009: a teaching method and a dictionary",
+    "url": "https://www.scielo.br/j/tla/a/rPRCqWDjXHvz3MyZmRdCd3q/?lang=pt",
+    "quote": "instrumentos linguísticos estão sendo preparados desde 2009 por pesquisadores, utilizando-se o ALUSTP"
+   },
+   {
+    "bullet": "Prepared by researchers, using the ALUSTP unified alphabet",
+    "url": "https://www.scielo.br/j/tla/a/rPRCqWDjXHvz3MyZmRdCd3q/?lang=pt",
+    "quote": "instrumentos linguísticos estão sendo preparados desde 2009 por pesquisadores, utilizando-se o ALUSTP"
+   },
+   {
+    "bullet": "Government of STP sponsored ALUSTP, drafted by a commission of academics",
+    "url": "https://www.scielo.br/j/tla/a/rPRCqWDjXHvz3MyZmRdCd3q/?lang=pt",
+    "quote": "o Governo de STP patrocinou a criação do Alfabeto Unificado para as línguas de São Tomé e Príncipe (ALUSTP), elaborado por uma comissão formada por acadêmicos e intelectuais"
+   },
+   {
+    "bullet": "Lung'Ie teachers paid about 20 euros a month, only in the school months",
+    "url": "https://www.scielo.br/j/tla/a/rPRCqWDjXHvz3MyZmRdCd3q/?lang=pt",
+    "quote": "Os professores lecionam cerca de 14 horas/aula por mês e recebem cerca de 20 euros por mês (apenas nos meses letivos) sem auxílio alimentação e transporte"
+   }
+  ]
+ }
+}

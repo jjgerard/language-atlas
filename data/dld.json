@@ -1169,6 +1169,14 @@
    {
     "label": "Resolución CFE N° 311/16, Anexo I, art. 17 — Consejo Federal de Educación",
     "url": "https://www.argentina.gob.ar/sites/default/files/anexo-i-res-311-cfe-58add7b4b3340.pdf"
+   },
+   {
+    "label": "Ley 24.901, Sistema de Prestaciones Básicas en Habilitación y Rehabilitación Integral a favor de las Personas con Discapacidad — texto actualizado (InfoLEG)",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/45000-49999/47677/texact.htm"
+   },
+   {
+    "label": "Resolución MSyAS N° 428/1999, Nomenclador de Prestaciones Básicas para Personas con Discapacidad — texto actualizado (InfoLEG)",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/62835/texact.htm"
    }
   ],
   "supportLinks": [],
@@ -1184,7 +1192,7 @@
   "referralPathway": "Inclusion proposal drawn up jointly by level teams and the Special Education modality\nEach child has an individual Pedagogical Project for Inclusion (PPI), Anexo II sets its axes\nPlanning the PPI falls to the educational teams, who agree it with families\nEducational attention to developmental disorders or disability starts in early childhood",
   "serviceModel": "Educacion Especial is a MODALIDAD across every level, governed by inclusion\nAttention is interdisciplinary; specialised staff team with mainstream teachers\nProvinces set the procedures and resources; the national law fixes no caseload\nArt. 43 requires early identification of disability or developmental disorders",
   "legalEntitlement": "Educación Especial runs on the principle of educational inclusion (art. 42)\nIt covers the specific problems common education cannot address\nArt. 44: jurisdictions must enable an integral educational trajectory\nCovering special educational services and transport",
-  "funding": "",
+  "funding": "Obras sociales owe disabled members full cover of the prestaciones basicas (Ley 24.901 a. 2)\nThose with no obra social reach the same prestaciones through state bodies (Ley 24.901 art. 4)\nRehabilitation modules name fonoaudiologia among the types of attention (Res. 428/99)\nPrestaciones de apoyo are capped at six hours a week (Res. 428/99, 2.3.1)\nCover for the uninsured comes from funds the national budget sets yearly (Ley 24.901 a. 7 e)",
   "workforce": "Art. 44(b): enough specialised personnel, working in teams\nWith the teachers of the mainstream school rather than apart from them\nNumbers, training and distribution are not set nationally",
   "dischargeCriteria": "Los proyectos personalizados deben actualizarse periódicamente, with no interval set (art. 17)\nThe resolución fixes no point at which a PPI or its apoyos come to an end\nThe equipos educativos of the Nivel and of Educación Especial plan and develop it\nThey inform and agree the metas and responsabilidades with the family",
   "outcomesEvidence": "",
@@ -1290,6 +1298,13 @@
     1,
     2,
     2
+   ],
+   "funding": [
+    1,
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -3326,11 +3341,16 @@
   "serviceModel": "Speciaal onderwijs school types are MLK, ZMLK and dove en slechthorende kinderen\nLogopedische hulp became an AZV entitlement by landsbesluit of 29 August 2023\nToestemming is expressed in zittingen, at most fifteen, and ten further in bijzondere gevallen\nAanspraak holds only so far as the Uitvoeringsorgaan has given toestemming",
   "legalEntitlement": "A verzekerde has aanspraak op behandeling door een logopedist under the AZV\nThe decree rests on articles 13a and 22 of the Landsverordening AZV\nAn eigen bijdrage of 10 percent of the tariff falls on the verzekerde",
   "funding": "The Uitvoeringsorgaan may waive the eigen bijdrage where a verzekerde's income makes it unfair\nThe toestemming decision goes to the contractant or contracting institution as well",
-  "workforce": "",
+  "workforce": "A logopedist is whoever their country of training licenses to practise (AB 2023 no. 36)",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2023,
+    "description": "Landsbesluit logopedische hulp of 29 August 2023 makes speech and language therapy an entitlement under the general health insurance"
+   }
+  ],
   "coding": {
    "identificationCriteria": {
     "threshold_basis": "clinical diagnosis",
@@ -3387,6 +3407,11 @@
     "label": "language development disorder",
     "standing": "in statute"
    }
+  },
+  "slots": {
+   "workforce": [
+    3
+   ]
   }
  },
  {
@@ -5094,6 +5119,22 @@
    {
     "label": "UNESCO GEM Report PEER country profile, Brunei Darussalam — Inclusion (last modified 09/09/2021; the page itself states 'Validated by the country: No')",
     "url": "https://education-profiles.org/eastern-and-south-eastern-asia/brunei-darussalam/~inclusion"
+   },
+   {
+    "label": "Scheme of Charges, Ministry of Health Brunei Darussalam, updated 8 July 2025 (Schedule A registration fees; Schedule M speech therapy)",
+    "url": "https://moh.gov.bn/wp-content/uploads/2025/07/SCHEME-OF-CHARGES-V3.pdf"
+   },
+   {
+    "label": "Ministry of Health Brunei Darussalam, Soalan Lazim (FAQ) - Dasar Caj Perkhidmatan Kesihatan yang dikemaskini, 10 September 2025",
+    "url": "https://moh.gov.bn/wp-content/uploads/2025/09/FINAL-FAQ-SOC-Kementerian-Kesihatan-Updated-10-September-2025.pdf"
+   },
+   {
+    "label": "Allied Health Professions Council of Brunei Darussalam, 'Registration Eligibility'",
+    "url": "https://moh.gov.bn/wp-content/uploads/2025/02/AHPCBD-Registration-Matters-Registration-Eligibility.pdf"
+   },
+   {
+    "label": "Allied Health Professions Council of Brunei Darussalam, 'Types of Registration'",
+    "url": "https://moh.gov.bn/wp-content/uploads/2025/02/AHPCBD-Registration-Matters-Types-of-Registration.pdf"
    }
   ],
   "supportLinks": [],
@@ -5109,8 +5150,8 @@
   "referralPathway": "Referral into the psychology service is via any public or private clinic or hospital\nIts clinical psychology unit takes referrals from hospitals and private clinics in Brunei\nIts community psychology division takes referrals from government health centres and schools\nAge gate: its children team at the Kiarong Child Development Centre serves ages 3 to 11",
   "serviceModel": "Health-sector model: the Child Development Centre at Kiarong is the paediatric hub\nCDC pairs speech and language therapy with audiology, OT, physio and psychology\nTherapists must hold AHPCBD registration; the Act took effect on 1 July 2017\nSchools deploy SENA special-needs teachers; no school-based therapist post was found",
   "legalEntitlement": "2007 Compulsory Education Order ensures all children get at least 9 years of education\n2003 Education Order is the main legal document regulating the education system\nA Disability Order covering education was still a draft at the MoCYS at review\nIndividual Education Plans follow a needs assessment, under the 1997 Special Education Policy",
-  "funding": "",
-  "workforce": "",
+  "funding": "The Ministry of Health scheme of charges prices speech therapy, revised from 1 July 2025\nSpeech therapy is charged at $10.00 per session under Schedule M of that scheme\nChildren under 12 keep their exemption from charges (MoH scheme of charges FAQ, 2025)\nGreen and foreign-national Purple IC holders now pay in full for all health services",
+  "workforce": "Registration needs a basic qualification the AHPCBD recognises and a job offer in Brunei\nThe newly qualified take conditional registration: a year's supervised practice at minimum\nProof of proficiency in English and in Malay may also be required, where applicable",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -5194,6 +5235,19 @@
     "label": "communication needs",
     "standing": "in statute"
    }
+  },
+  "slots": {
+   "funding": [
+    1,
+    3,
+    3,
+    3
+   ],
+   "workforce": [
+    3,
+    3,
+    3
+   ]
   }
  },
  {
@@ -5723,7 +5777,32 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2000,
+    "description": "A Special Educational Needs unit is established in the Ministry of Education"
+   },
+   {
+    "year": 2003,
+    "description": "A school for learners with hearing impairments, now the Wangsel Institute, is established"
+   },
+   {
+    "year": 2012,
+    "description": "The National Policy on Special Educational Needs demands mainstreaming of children with mild to moderate disabilities"
+   },
+   {
+    "year": 2014,
+    "description": "The Bhutan Education Blueprint 2014-2024 addresses education for children with disabilities, with the emphasis on expanding special education"
+   },
+   {
+    "year": 2017,
+    "description": "Standards for Inclusive Education are established, operationalising inclusion at school level"
+   },
+   {
+    "year": 2019,
+    "description": "The National Policy for Persons with Disabilities defines disability on the social model"
+   }
+  ],
   "coding": {
    "identificationCriteria": {
     "threshold_basis": "diagnosis plus impact",
@@ -14845,6 +14924,18 @@
    {
     "label": "UNESCO PEER, Ecuador — inclusion profile (platform archived; profiles no longer updated)",
     "url": "https://education-profiles.org/latin-america-and-the-caribbean/ecuador/~inclusion"
+   },
+   {
+    "label": "Ley Orgánica de Discapacidades, Registro Oficial Suplemento N° 796, 25 September 2012 (CONADIS)",
+    "url": "https://www.consejodiscapacidades.gob.ec/wp-content/uploads/downloads/2014/02/ley_organica_discapacidades.pdf"
+   },
+   {
+    "label": "Tarifario de Prestaciones para el Sistema Nacional de Salud, versión año 2014, Ministerio de Salud Pública",
+    "url": "https://hcam.iess.gob.ec/wp-content/uploads/docencia/TARIFARIO.pdf"
+   },
+   {
+    "label": "Tarifario de Prestaciones para el Sistema Nacional de Salud, R.O. 235 — regulation record on Gob.ec",
+    "url": "https://www.gob.ec/regulaciones/tarifario-prestaciones-sistema-nacional-salud"
    }
   ],
   "supportLinks": [],
@@ -14860,7 +14951,7 @@
   "referralPathway": "140 District Inclusion Support Units, the UDAI, assess and route pupils\nUDAI decide between specialised education and ordinary inclusive education\nNo language-specific referral route was found",
   "serviceModel": "An Under-Secretariat of Specialized and Inclusive Education runs the system\nArt. 28 allows specialised temporary or permanent staff\nIt also allows communication and learning-space accessibility adaptations\nA National Centre for Educational Resources for Diversity supplies materials",
   "legalEntitlement": "LOEI 2011 and Ley Organica de Discapacidades 2012 are the entitling statutes\nSpecial placement is permitted only where mainstream cannot accommodate the pupil",
-  "funding": "",
+  "funding": "Integral health care for disabled people falls to the national health authority (LOD art. 19)\nThe MSP tarifario regulates the economic compensation traded between health subsystems (2014)\nThat tarifario prices terapia del lenguaje by the session (MSP tarifario 2014, code 291146)\nIts listed values are a ceiling for payment between providers and funders, not a fixed fee",
   "workforce": "94,348 teachers trained in 2018, per the National Director of Specialized Education\nTraining mechanisms cover sign language, Braille and other SEN languages\nFifty-two per cent of schools have just one or two teachers (UNESCO PEER, archived)",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -15006,6 +15097,14 @@
     "label": "not applicable",
     "standing": "in policy or an official list"
    }
+  },
+  "slots": {
+   "funding": [
+    1,
+    2,
+    2,
+    3
+   ]
   }
  },
  {
@@ -20369,18 +20468,26 @@
    {
     "label": "Laws of Gibraltar, Education and Training Act 1974-11, consolidated to 23 December 2024, ss. 45, 47, 47B, 47C, 48A",
     "url": "https://www.gibraltarlaws.gov.gi/uploads/legislations/education-and-training/1974-11/1974-11(23-12-24).pdf"
+   },
+   {
+    "label": "HM Government of Gibraltar, Review of factors linked to increased prevalence of special educational needs among children in Gibraltar, 14 March 2024",
+    "url": "https://www.gibraltar.gov.gi/uploads/Children%20with%20Special%20Educational%20Needs%20report%2014th%20March%202024.pdf"
+   },
+   {
+    "label": "Supported Needs and Disability Office, Speech and Language Therapy, reproducing the Gibraltar Health Authority service description",
+    "url": "https://disability.gov.gi/professional-support/speech-language-therapy"
    }
   ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
-  "terminology": "",
+  "terminology": "Speech and language difficulties is the SEN category used in Gibraltar school data\nThe 2024 review records that specific definitions of each type of need are not available\nIn statute SEND is defined as Supported Educational Needs and Disabilities, not Special\nThe paediatric service names specific language impairment among the difficulties it supports",
   "identificationCriteria": "A Special Needs Assessment Panel receives, examines and assesses each child referred\nPanel is drawn from education, social services and the Gibraltar Health Authority\nPanel need not act unless satisfied the parents have been consulted\nThreshold: significantly greater difficulty in learning than most children of the age\nNot a learning difficulty solely because the teaching language differs from home",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "A Department officer may serve written notice requiring a child be examined\nA parent may ask the Director to have the child medically examined\nParental consent is not needed for a child to be referred to the panel\nParent must be given notice of the examination and may attend it",
-  "serviceModel": "",
+  "serviceModel": "Statute allows SEND provision outside Gibraltar, in a Government school, the home or hospital\nParents said they feel they have to go to Spain to see private therapists (2024 review)\nFamily-focused therapy programmes are shaped to the needs of the child by the paediatric service\nA 2024 review weighs spreading LSAs through mainstream classes against SEN in separate settings",
   "legalEntitlement": "Education and Training Act obliges the Minister to make SEND education provision\nDirector, on the panel's recommendation, must ascertain which children require SEND\nDepartment of Education must keep its SEND arrangements under review\nParent may appeal a section 47(1) decision to the SEND Review Panel",
   "funding": "Education provided in Government schools is free for children of compulsory school age\nFor a placement outside Gibraltar the Department may pay fees in part or in full",
   "workforce": "Paediatric service at the Primary Care Centre is staffed by four therapists\nThe adult service at St Bernard's Hospital is staffed by one therapist\nTherapy is delivered at the Centre, in schools, nurseries and in some cases at home\nTwo paediatric vacancies arose in the twelve months to April 2023, one on retirement\nGovernment said Brexit made recruiting qualified UK specialists harder (2023 release)",
@@ -20445,6 +20552,18 @@
     1,
     1,
     4,
+    4,
+    4
+   ],
+   "serviceModel": [
+    1,
+    1,
+    2,
+    4
+   ],
+   "terminology": [
+    1,
+    2,
     4,
     4
    ]
@@ -23511,25 +23630,50 @@
    {
     "label": "The Education (Special Educational Needs) Regulations 2004, Statutory Document No. 433/04",
     "url": "https://desc.gov.im/media/sahomldz/education__special_needs__regulations_2004.pdf"
+   },
+   {
+    "label": "Manx Care Annual Report 2022/2023, September 2023",
+    "url": "https://www.gov.im/media/1380503/202290_mc_ar_2023-public-final-web_compressed.pdf"
+   },
+   {
+    "label": "Manx Care Act 2021 (AT 2 of 2021), section 12 and Schedule 2",
+    "url": "https://www.gov.im/media/1377793/manxcareact2021_1.pdf"
+   },
+   {
+    "label": "GD 2026/0023, Department of Health and Social Care Mandate to Manx Care 2026/27",
+    "url": "https://www.gov.im/media/1392045/mandate-to-manx-care-2026-27_compressed.pdf"
    }
   ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
-  "terminology": "",
+  "terminology": "Developmental Language Disorder is a named specialism within the children's therapy team\nThe service's remit is difficulties with communication or with eating, drinking and swallowing\nThe Education Act 2001 fixes only learning difficulty and names no speech or language category\nThe 2004 SEN Regulations likewise name only learning difficulty, no speech or language category",
   "identificationCriteria": "A list of support needs, not a diagnosis: understanding language and talking\nOn referral the service gives assessment, review and advice or an intervention programme",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "Referrals taken from parents or carers, GP, health visitor, school nurse, teachers\nThe team is based at the Community Health Centre in Douglas\nChildren are referred on for off-island assessment at specialist clinics",
-  "serviceModel": "",
+  "serviceModel": "Children are seen from birth to 18 in clinic, home, nursery and school\nManx Care's Children's Therapy team delivers it alongside physiotherapy and occupational therapy\nTherapists work with off-island specialists as well as health and education colleagues\nThe service also trains families and the adults who support the child, not only the child",
   "legalEntitlement": "Education Act 2001 with the Special Educational Needs Regulations 2004 approved by Tynwald\nThe Department must arrange the provision its report specifies for the child\nWhere provision is at another school the Department pays the whole of the fees\nA parent may appeal to a committee of two or more people the Department appoints",
-  "funding": "",
-  "workforce": "",
+  "funding": "DHSC must lay an annual Mandate to Manx Care before Tynwald ahead of the financial year\nThe Mandate sets out the services, funding, performance requirements and objectives\nChildren's physio, occupational and speech and language therapy is a service named in it\nThe Mandate must also cover when charges may be made, under Schedule 2 of the 2021 Act",
+  "workforce": "The service page says it currently has 10 therapists and 1 assistant, with no date given\nMost of the team work part-time, which the page states without giving hours\nTherapists are RCSLT members registered with the Health Care Professions Council\nThe team travels round the island to the child rather than working from its base alone",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2001,
+    "description": "Education Act 2001 puts the Department under a duty to identify children with special educational needs"
+   },
+   {
+    "year": 2004,
+    "description": "Education (Special Educational Needs) Regulations 2004 set the assessment procedure and a parental right of appeal"
+   },
+   {
+    "year": 2021,
+    "description": "Manx Care Act 2021 establishes Manx Care as the Statutory Board providing health and care services"
+   }
+  ],
   "slots": {
    "identificationCriteria": [
     3,
@@ -23545,6 +23689,30 @@
     2,
     2,
     4
+   ],
+   "serviceModel": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "terminology": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "workforce": [
+    1,
+    1,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    2,
+    2,
+    3
    ]
   },
   "coding": {
@@ -26705,6 +26873,10 @@
    {
     "label": "Government of Jersey, Special Educational Needs (SEN) Code of Practice (under review, Feb 2024)",
     "url": "https://www.gov.je/SiteCollectionDocuments/Education/P%20SEN%20Code%20of%20practice%20%28Under%20Review%29%2020240214GW.pdf"
+   },
+   {
+    "label": "Health Care (Registration) (Prescribed Qualifications) (Jersey) Order 2003, R&O.65/2003, official consolidated version",
+    "url": "https://www.jerseylaw.je/laws/current/Pages/20.300.50.aspx"
    }
   ],
   "supportLinks": [],
@@ -26719,7 +26891,7 @@
   "serviceModel": "SALT works in its own clinic, nurseries, schools, the hospital, the home and community clinics\nTeam is based at the Child Development and Therapy Centre, Enid Quenault centre\nSEN Code of Practice defines speech and language therapy as a health care profession\nService also trains families, education staff and other professionals in communication",
   "legalEntitlement": "The 1999 Law carries a general presumption in law of mainstream education\nMinister must ensure every child with SEN has the special educational provision required\nMinister must ensure every child with SEN is identified and their provision assessed\nParents have a right to request an assessment of whether their child has SEN",
   "funding": "SEN resources are set by a funding formula reviewed at least annually\nA Record of Need brings extra funding where cost exceeds ordinarily available support\nEarly years states providers get additional banded funding for children with SEN\nDelegated SEN funding is expected to be used exclusively to address SEN needs",
-  "workforce": "",
+  "workforce": "Speech and language therapist is a registrable occupation with a prescribed qualification\nThe prescribed qualification is entry as a speech and language therapist on the register\nThat register is the one kept under the Health Professions Order 2001 of the United Kingdom",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
@@ -26778,6 +26950,11 @@
     2,
     2,
     4
+   ],
+   "workforce": [
+    3,
+    3,
+    3
    ]
   },
   "coding": {
@@ -26889,6 +27066,18 @@
    {
     "label": "The Disabilities Act, 2014, Part V (Education and Training) and Part III (complaints to the Council), as printed by the Houses of Parliament of Jamaica",
     "url": "https://japarliament.gov.jm/attachments/341_The%20Disabilities%20bill,%202014.%20No.13.pdf"
+   },
+   {
+    "label": "Early Stimulation Programme, Ministry of Labour and Social Security (Jamaica)",
+    "url": "https://www.mlss.gov.jm/departments/early-stimulation-programme/"
+   },
+   {
+    "label": "Jamaica Information Service, '3,124 Children with Developmental Disabilities Benefiting from Early Stimulation Interventions', 6 December 2023",
+    "url": "https://jis.gov.jm/3124-children-with-developmental-disabilities-benefiting-from-early-stimulation-interventions/"
+   },
+   {
+    "label": "CHASE Fund, 'Support for Special Needs'",
+    "url": "https://chase.org.jm/support-for-special-needs/"
    }
   ],
   "supportLinks": [],
@@ -26904,7 +27093,7 @@
   "referralPathway": "Each region has a Regional Special Needs Coordinator supporting mainstream schools\nRegional Student Support Teams provide the assessment service\nThe Unit facilitates referral for educational assessment and school placement\nProvision covers ages 3 to 21",
   "serviceModel": "Where no suitable public place exists, the Ministry funds a private school place\nPupils needing more support may be given a Ministry-contracted shadow or caregiver\nAccommodations may be granted to pupils with special needs",
   "legalEntitlement": "Disabilities Act 2014, Part V: an institution must provide the support a disabled person needs\nSupport must reach facilities in the least restrictive environment suited to individual needs\nRedress: an aggrieved person or caregiver complains in writing to the Council",
-  "funding": "",
+  "funding": "Early intervention became one of the Ministry of Labour and Social Security's social programmes\nIt is the only fully publicly funded service for young children with disability\nOne private autism centre engaged a speech therapist on CHASE Fund money, 2008 to 2010\nSpeech therapy inside the programme is part time; physiotherapy is full time\nThe minister told Parliament in December 2023 that those therapies are free, at no cost",
   "workforce": "Teams are clinical psychologists, child and adolescent psychologists, and diagnosticians\nNo speech-language professional is named in the Unit's description of the service",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -26980,6 +27169,15 @@
     "label": "not applicable",
     "standing": "in policy or an official list"
    }
+  },
+  "slots": {
+   "funding": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ]
   }
  },
  {
@@ -32229,6 +32427,14 @@
    {
     "label": "UNESCO GEM Report PEER country profile, Myanmar — Inclusion (page states 'Validated by the country: No'; last modified Wed, 28/07/2021)",
     "url": "https://education-profiles.org/eastern-and-south-eastern-asia/myanmar/~inclusion"
+   },
+   {
+    "label": "MIMU, 'Disability in Myanmar (2014-2019)', analytical brief, 18 August 2021",
+    "url": "https://themimu.info/sites/themimu.info/files/documents/Report_Analytical_Brief_Disability_MIMU_18Aug2021_ENG.pdf"
+   },
+   {
+    "label": "MIMU / MCRB, 'Employing Persons with Disabilities: A Handbook for Employers in Myanmar'",
+    "url": "https://themimu.info/sites/themimu.info/files/documents/Handbook_Employing_Persons_with_Disabilities_ENG.pdf"
    }
   ],
   "supportLinks": [],
@@ -32778,6 +32984,14 @@
    {
     "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Mauritania: Inclusion",
     "url": "https://education-profiles.org/sub-saharan-africa/mauritania/~inclusion"
+   },
+   {
+    "label": "Ordonnance n° 2006-043 du 23 novembre 2006 relative à la promotion et la protection des personnes handicapées (arts. 18-20, 58)",
+    "url": "https://fonctionpublique.gov.mr/sites/default/files/2023-11/ORDONNANCE%20N%C2%B0-2006-043.pdf"
+   },
+   {
+    "label": "Ministère des Finances, Rapport sur les entreprises publiques en Mauritanie 2021 - Fiches techniques des EPA et assimilés, fiche CFPSESH",
+    "url": "https://finances.gov.mr/sites/default/files/2022-12/FT_EPA_2021_DTF_-_Nov2822.pdf"
    }
   ],
   "supportLinks": [],
@@ -32793,7 +33007,7 @@
   "referralPathway": "Children whose disability bars mainstream schooling are accommodated at the CFPSESH centre\nTwo buses run by the social affairs ministry carry children with disabilities to that centre\nFor street children a separate protection centre does identification, referral and reception",
   "serviceModel": "No speech or language therapy service is named in the profile\nA centre for training and social advancement of children with disabilities\nAn educational complex for people with learning disabilities in Sebkha",
   "legalEntitlement": "Source describes special-needs provision generally, never language disorder\nThe Constitution does not enshrine a right to education, only equality before the law\nAct 054-2001 art 10 fines a guardian who refuses without good reason to enrol a child\nThe 2011-2020 sector programme has no national inclusive or special education strategy",
-  "funding": "",
+  "funding": "The State assures a disabled person the medical and paramedical care they need (art. 18)\nThe CFPSESH is a public administrative establishment, created by décret 2014-142\nIts 2021 subsidy split 92 percent to operations and 8 percent to equipment\nCare is free for the destitute holding a disability card, in state medical institutions\nA fund for the promotion of disabled persons is promised, its financing left to decree",
   "workforce": "PEER records no national policy on specialist teacher training\nThe national disability council aspires to add a special education module at the teacher college\nThe state disability centre reports a shortage of professional trainers and specialist teachers",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -32900,6 +33114,15 @@
     "label": "not applicable",
     "standing": "not stated"
    }
+  },
+  "slots": {
+   "funding": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
   }
  },
  {
@@ -33338,6 +33561,10 @@
    {
     "label": "Jhingran, D., Early Literacy and Multilingual Education in South Asia, UNICEF Regional Office for South Asia (2019), ss. 2.1.5 and 3.2.5 (Internet Archive raw-document copy)",
     "url": "https://web.archive.org/web/20240512101037id_/https://www.unicef.org/rosa/media/3036/file/Early%20literacy%20and%20multilingual%20education%20in%20South%20Asia.pdf"
+   },
+   {
+    "label": "United Nations Maldives, Situational Analysis of the Rights of Persons with Disabilities in the Maldives — country report, sections on legislation, registration and inclusive education",
+    "url": "https://maldives.un.org/sites/default/files/2025-01/Situation-Analysis-of-the-Rights-of-Persons-with-Disabilities-in-the-Maldives-country-report-1.pdf"
    }
   ],
   "supportLinks": [],
@@ -33358,7 +33585,36 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2010,
+    "description": "The Maldives ratifies the UN Convention on the Rights of Persons with Disabilities"
+   },
+   {
+    "year": 2010,
+    "description": "The Protection of the Rights of Persons with Disabilities and Provision of Financial Assistance Act 08/2010, the Disability Act, is enacted"
+   },
+   {
+    "year": 2011,
+    "description": "Regulation 2011/R-3 is made under the Disability Act to govern protection of rights and financial assistance"
+   },
+   {
+    "year": 2013,
+    "description": "An Inclusive Education Policy is formulated for the first time"
+   },
+   {
+    "year": 2020,
+    "description": "Education Act 24/2020 prohibits any form of discrimination against persons with disabilities"
+   },
+   {
+    "year": 2021,
+    "description": "The Inclusive Education Policy is revised, repositioning it from special needs to inclusive education"
+   },
+   {
+    "year": 2021,
+    "description": "Regulation 2021/R-54 sets the criteria for determining and registering a person as disabled"
+   }
+  ],
   "coding": {
    "identificationCriteria": {
     "bilingual_handling": "silent",
@@ -35596,7 +35852,7 @@
   "referralPathway": "A multi-disciplinary approach using health, education and other professionals\nThe policy seeks a memorandum between Education and Health on shared personnel",
   "serviceModel": "No speech and language service is named in any cited Nauru source\n'speech' returns 0 hits in the Act, the inclusive education policy and the PDF review\nShared specialists listed are psychologists, OTs, physios, audiologists and doctors\nCommunication difficulties appear only as a sub-item under Intellectual needs",
   "legalEntitlement": "Inclusive education is mandated by Part 11 of the Education Act 2011\nThe Act requires teachers trained in augmentative and alternative communication\nThe Minister must establish a special education centre — mandatory, unlike Kiribati",
-  "funding": "",
+  "funding": "The Minister may establish government schools at which the Government provides special education\nEducation for school-age children in government schools is free and no fees may be charged\nDisability may not bar a child from access to free primary and secondary education\nThe duty to support students with disabilities binds only within available resources",
   "workforce": "Speech pathologists are absent from the policy's list of shared specialists\nIt lists psychologists, occupational therapists, physiotherapists and audiologists",
   "dischargeCriteria": "",
   "outcomesEvidence": "Source describes special-needs provision generally, never language disorder\nData on school accessibility for specific groups is lacking\nLatest data on children with disabilities still comes from the 2011 census",
@@ -35672,6 +35928,12 @@
     1,
     1,
     2
+   ],
+   "funding": [
+    1,
+    3,
+    3,
+    4
    ]
   },
   "coding": {
@@ -39642,6 +39904,10 @@
    {
     "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Saudi Arabia: Inclusion - a comparative country profile, quoting the 2000 Disability Code",
     "url": "https://education-profiles.org/northern-africa-and-western-asia/saudi-arabia/~inclusion"
+   },
+   {
+    "label": "Alakeel, A. I., 'The Practice of Speech-Language Pathology in Saudi Arabia', Arab Journal of Applied Linguistics 7(1), 2022, pp. 87-99 (ERIC full text EJ1375033)",
+    "url": "https://files.eric.ed.gov/fulltext/EJ1375033.pdf"
    }
   ],
   "supportLinks": [],
@@ -39662,7 +39928,40 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1962,
+    "description": "The Ministry of Education establishes an Administration of Special Education"
+   },
+   {
+    "year": 1970,
+    "description": "Article 56 of Education Law 1389 obliges the ministry to offer special education and care for disabled students"
+   },
+   {
+    "year": 1985,
+    "description": "King Saud University opens the country's first undergraduate programme in speech-language pathology"
+   },
+   {
+    "year": 2000,
+    "description": "The Disability Code is enacted, guaranteeing access to free and appropriate educational and rehabilitation services"
+   },
+   {
+    "year": 2000,
+    "description": "Article 8 of the Disability Code calls for the creation of a Supreme Council for Disabled Affairs"
+   },
+   {
+    "year": 2001,
+    "description": "Regulations of Special Education Programs and Institutes (RSEPI) introduced, reported as the first regulations for students with disabilities"
+   },
+   {
+    "year": 2002,
+    "description": "Procedural regulations are issued to organise the institutes and programmes offering special education in the ministry"
+   },
+   {
+    "year": 2005,
+    "description": "The Saudi Society of Speech-Language Pathology and Audiology is established"
+   }
+  ],
   "coding": {
    "identificationCriteria": {
     "threshold_basis": "clinical diagnosis",
@@ -42928,7 +43227,36 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 2000,
+    "description": "The Ministry of Education establishes a unit dedicated to inclusion in education"
+   },
+   {
+    "year": 2004,
+    "description": "Law No. 34 of 2004 art. 9(1) obliges the state to give full care for the education of children with disabilities"
+   },
+   {
+    "year": 2006,
+    "description": "Ministerial Decree No. 515 presses for integration of students with special needs in public schools"
+   },
+   {
+    "year": 2008,
+    "description": "The National Plan for Disability 2008-25 makes integrating children with disabilities in schools a priority"
+   },
+   {
+    "year": 2009,
+    "description": "Legislative Decree No. 12 of 10 February ratifies the CRPD and its Optional Protocol"
+   },
+   {
+    "year": 2012,
+    "description": "Law No. 7 of 2012 art. 2(d) refers students with severe disability to the Ministry of Social Affairs"
+   },
+   {
+    "year": 2015,
+    "description": "The Ministry of Health opens four newborn clinics in three governorates for early identification of disabilities"
+   }
+  ],
   "coding": {
    "identificationCriteria": {
     "threshold_basis": "not stated",
@@ -43619,6 +43947,10 @@
    {
     "label": "Education Provision for Persons with Disabilities Act B.E. 2551 (2008), Thailand - unofficial English translation for the Office of the Council of State's Law for ASEAN project, third-party copy on lawlove.org",
     "url": "http://www.lawlove.org/Top8/viewContent.php?cmd=Claw_en&l=3&tid=045&bno=6125"
+   },
+   {
+    "label": "National Education Act B.E. 2542 (1999) and Amendments (Second National Education Act B.E. 2545 (2002)), official English translation — Internet Archive copy, the ONESQA original now returning 404",
+    "url": "https://web.archive.org/web/20240304015214/https://www.onesqa.or.th/upload/download/file_697c80087cce7f0f83ce0e2a98205aa3.pdf"
    }
   ],
   "supportLinks": [],
@@ -43639,7 +43971,44 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1971,
+    "description": "Diagnosis and correction of communication disorders begins as a hospital service at Ramathibodi Hospital"
+   },
+   {
+    "year": 1976,
+    "description": "Master's courses are opened in audiology and in speech-language pathology"
+   },
+   {
+    "year": 1997,
+    "description": "The Thai Speech-Language and Hearing Association is formally registered on 6 October"
+   },
+   {
+    "year": 1999,
+    "description": "National Education Act B.E. 2542 gives persons with communication deficiencies a right to specially provided basic education"
+   },
+   {
+    "year": 2002,
+    "description": "Practitioners are required to sit a registration examination for a licence as practitioners of the healing arts"
+   },
+   {
+    "year": 2007,
+    "description": "Persons with Disabilities Empowerment Act B.E. 2550 revokes the Act on Rehabilitation of Persons with Disabilities B.E. 2534"
+   },
+   {
+    "year": 2007,
+    "description": "The same Act counts impairment in communication among the impairments that make a person disabled"
+   },
+   {
+    "year": 2008,
+    "description": "Education Provision for Persons with Disabilities Act B.E. 2551 gives a right to education without cost from birth or from discovery of the disability"
+   },
+   {
+    "year": 2008,
+    "description": "The same Act creates a fund for the promotion and development of education for persons with disabilities"
+   }
+  ],
   "coding": {
    "identificationCriteria": {
     "threshold_basis": "clinical diagnosis",
@@ -43967,6 +44336,14 @@
    {
     "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Turkmenistan: Inclusion",
     "url": "https://education-profiles.org/central-and-southern-asia/turkmenistan/~inclusion"
+   },
+   {
+    "label": "The Law of Turkmenistan on Education (new edition), art. 39 'Financing of educational activities' - Ministry of Education of Turkmenistan, National Information Center",
+    "url": "https://nic.bilim.tm/en/documents/international-argeements/6"
+   },
+   {
+    "label": "Regulations on state preschool institutions - Ministry of Education of Turkmenistan, National Information Center",
+    "url": "https://nic.bilim.tm/en/documents/international-argeements/4"
    }
   ],
   "supportLinks": [],
@@ -43982,7 +44359,7 @@
   "referralPathway": "Medico-pedagogical commissions identify speech disorders and refer to institutions\nStaffed by special teachers, psychologists, speech therapists and defectologists\nThe same commissions transfer children between specialised institutions\nPEER records that parents are not required to be consulted",
   "serviceModel": "Segregated preschool institutions exist for children with speech disorders\nRemedial preschools, classes and groups are established by type of disability\nSpeech is a distinct type beside mental, physical, visual and hearing",
   "legalEntitlement": "PEER: the Law on Education embraces inclusive education for children with disabilities\nThe 2014 child rights law commits the state to regular education, inclusive in approach\nSpecial schools are kept for children who cannot attend regular schools for health reasons\nThe 2008 Constitution enshrines the right to education and free public education",
-  "funding": "",
+  "funding": "The State budget funds preschool institutions and those meeting state educational standards\nFunding standards are set per student for each type and kind of educational institution\nThat standard must take in special conditions for students with disabilities (art. 39)\nCitizens have a right to free education in state institutions on general programmes\nParents pay a fee for a child's upbringing in preschool institutions, set by the Cabinet",
   "workforce": "The 2016 quality policy aims to revise pre-service and in-service teacher curricula\nThe ministry of education must improve the professional development of education personnel\nTeachers deployed to remote villages get a salary benefit (Law on Education, art. 45.3)",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -44051,6 +44428,15 @@
     "label": "speech disorder",
     "standing": "in policy or an official list"
    }
+  },
+  "slots": {
+   "funding": [
+    1,
+    2,
+    2,
+    3,
+    3
+   ]
   }
  },
  {
@@ -53521,6 +53907,18 @@
    {
     "label": "Fondo Assistenza Sanitaria — Carta Servizi, 'Assistenza indiretta' (reimbursement route)",
     "url": "https://www.fas.va/content/fas/it/servizi-procedure/carta-servizi/assistenza-indiretta.html"
+   },
+   {
+    "label": "Fondo Assistenza Sanitaria, Stato Citta del Vaticano - 'Cenni Storici' (institution of the fund by Rescritto d'Udienza of 25 July 1953; new Statute and Regolamento approved 18 October 2016, in force 1 February 2017)",
+    "url": "https://www.fas.va/content/fas/it/chi-siamo/cenni-storici.html"
+   },
+   {
+    "label": "Fondo Assistenza Sanitaria - 'Modifica dell'articolo 3 del Regolamento del F.A.S., dal 1 agosto 2025' (Rescriptum ex audientia Ss.mi of 1 August 2025)",
+    "url": "https://www.fas.va/content/fas/it/evidenza/modificaart3.html"
+   },
+   {
+    "label": "Direzione di Sanita e Igiene, Stato della Citta del Vaticano - 'Cenni storici della Direzione Sanita e Igiene del Vaticano' (1893 to the Regolamento in force from 1 March 2022)",
+    "url": "https://dsi.va/direzione/cenni-storici"
    }
   ],
   "supportLinks": [],
@@ -53541,7 +53939,28 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1953,
+    "description": "The Fondo Assistenza Sanitaria is instituted by Rescritto d'Udienza of 25 July 1953, amended by a rescript of 7 November 1994"
+   },
+   {
+    "year": 2002,
+    "description": "The Law on the Government of Vatican City State of 16 July 2002 defines the purposes and territorial competences of the health directorate"
+   },
+   {
+    "year": 2016,
+    "description": "Pope Francis approves a new Statute and Regolamento of the Fondo Assistenza Sanitaria by Rescritto d'Udienza of 18 October 2016, in force from 1 February 2017"
+   },
+   {
+    "year": 2022,
+    "description": "A new Regolamento of the Direzione di Sanita e Igiene takes effect on 1 March 2022"
+   },
+   {
+    "year": 2025,
+    "description": "Article 3 of the F.A.S. Regolamento is amended by rescript of 1 August 2025, governing enrolment of an assisted person's family members"
+   }
+  ],
   "slots": {
    "terminology": [
     1,
@@ -54406,6 +54825,30 @@
    {
     "label": "Vice-rectorat des îles Wallis et Futuna — Scolarisation des élèves en situation de handicap (web.archive.org mirror; ac-wf.wf will not accept connections from this pipeline)",
     "url": "https://web.archive.org/web/20240724103018/https://www.ac-wf.wf/-Scolarisation-des-eleves-en-107-.html"
+   },
+   {
+    "label": "Administration superieure des iles Wallis et Futuna - 'Sante', Actions de l'Etat (web.archive.org mirror; wallis-et-futuna.gouv.fr closes the connection to this pipeline)",
+    "url": "https://web.archive.org/web/20260303164122/https://www.wallis-et-futuna.gouv.fr/Actions-de-l-Etat/Sante"
+   },
+   {
+    "label": "Vice-rectorat des iles Wallis et Futuna - 'Enseignement ASH - Ecole inclusive' (web.archive.org mirror; ac-wf.wf returns 503 to this pipeline)",
+    "url": "https://web.archive.org/web/20201125194843/https://www.ac-wf.wf/Enseignement-ASH-Ecole-inclusive-1172.html"
+   },
+   {
+    "label": "Vice-rectorat des iles Wallis et Futuna, Pole Sante Social - 'Prise en charge de la sante des personnels de l'Education nationale a Wallis et Futuna, Vademecum 2017' (web.archive.org mirror)",
+    "url": "https://web.archive.org/web/20171013063646/https://www.ac-wf.wf/IMG/pdf/vademecum_sante_2017.pdf"
+   },
+   {
+    "label": "Vice-rectorat des iles Wallis et Futuna - 'Scolarisation des eleves a besoins educatifs particuliers, chiffres 2018' (web.archive.org mirror)",
+    "url": "https://web.archive.org/web/20210813015037/https://www.ac-wf.wf/IMG/pdf/scolarisation_des_eleves_a_besoins_educatifs_particuliers_chiffres_2018.pdf"
+   },
+   {
+    "label": "Senat, delegation senatoriale aux outre-mer, rapport d'information n. 821 (2024-2025), 'Politique du handicap outre-mer : faux depart et course de fond'",
+    "url": "https://www.senat.fr/rap/r24-821/r24-8211.pdf"
+   },
+   {
+    "label": "Ministere de l'Education nationale, Eduscol - 'Maitrise de la langue francaise en contexte plurilingue: Wallis et Futuna'",
+    "url": "https://eduscol.education.gouv.fr/sites/default/files/document/fichewallisfutunapdf-67809.pdf"
    }
   ],
   "supportLinks": [],
@@ -54424,7 +54867,16 @@
   "dischargeCriteria": "",
   "outcomesEvidence": "",
   "identifiedPrevalence": [],
-  "policyHistory": [],
+  "policyHistory": [
+   {
+    "year": 1972,
+    "description": "Article 68 of the 1972 finance law puts the cost of health care in the territory on the State"
+   },
+   {
+    "year": 2000,
+    "description": "An ordonnance of 13 January 2000 creates the Agence de sante, charged with drawing up the territory's health programme and with dispensing medicines"
+   }
+  ],
   "slots": {
    "identificationCriteria": [
     2,

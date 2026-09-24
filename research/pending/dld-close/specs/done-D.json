@@ -1,0 +1,179 @@
+{
+  "BN|Brunei": {
+    "fields": {
+      "funding": [
+        "The Ministry of Health scheme of charges prices speech therapy, revised from 1 July 2025",
+        "Speech therapy is charged at $10.00 per session under Schedule M of that scheme",
+        "Children under 12 keep their exemption from charges (MoH scheme of charges FAQ, 2025)",
+        "Green and foreign-national Purple IC holders now pay in full for all health services"
+      ],
+      "workforce": [
+        "Registration needs a basic qualification the AHPCBD recognises and a job offer in Brunei",
+        "The newly qualified take conditional registration: a year's supervised practice at minimum",
+        "Proof of proficiency in English and in Malay may also be required, where applicable"
+      ]
+    },
+    "slots": { "funding": [1, 3, 3, 3], "workforce": [3, 3, 3] },
+    "evidence": [
+      { "bullet": "The Ministry of Health scheme of charges prices speech therapy, revised from 1 July 2025",
+        "url": "https://moh.gov.bn/wp-content/uploads/2025/07/SCHEME-OF-CHARGES-V3.pdf",
+        "quote": "effective 05 Muharram 1447H / 01 July 2025 the scheme of charges has been reviewed as follows" },
+      { "bullet": "Speech therapy is charged at $10.00 per session under Schedule M of that scheme",
+        "url": "https://moh.gov.bn/wp-content/uploads/2025/07/SCHEME-OF-CHARGES-V3.pdf",
+        "quote": "Audiometry with or without tympanometry $10.00 each time Vestibular Function Test $10.00 each time Speech Therapy $10.00 Per Session" },
+      { "bullet": "Children under 12 keep their exemption from charges (MoH scheme of charges FAQ, 2025)",
+        "url": "https://moh.gov.bn/wp-content/uploads/2025/09/FINAL-FAQ-SOC-Kementerian-Kesihatan-Updated-10-September-2025.pdf",
+        "quote": "Bagi kanak-kanak di bawah umur 12 tahun, pengecualian caj bagi perkhidmatan" },
+      { "bullet": "Green and foreign-national Purple IC holders now pay in full for all health services",
+        "url": "https://moh.gov.bn/wp-content/uploads/2025/09/FINAL-FAQ-SOC-Kementerian-Kesihatan-Updated-10-September-2025.pdf",
+        "quote": "Pemegang KP Hijau dan KP Ungu (warganegara asing) kini akan dikenakan caj penuh bagi semua perkhidmatan kesihatan" },
+      { "bullet": "Registration needs a basic qualification the AHPCBD recognises and a job offer in Brunei",
+        "url": "https://moh.gov.bn/wp-content/uploads/2025/02/AHPCBD-Registration-Matters-Registration-Eligibility.pdf",
+        "quote": "The applicant must fulfil the following criteria to be eligible for registration: 1. Holds a relevant basic qualification recognised by the AHPCBD" },
+      { "bullet": "The newly qualified take conditional registration: a year's supervised practice at minimum",
+        "url": "https://moh.gov.bn/wp-content/uploads/2025/02/AHPCBD-Registration-Matters-Types-of-Registration.pdf",
+        "quote": "requires the Allied Health Professionals to complete a period of practice (minimum 1 year) under the supervision of another registered AHP" },
+      { "bullet": "Proof of proficiency in English and in Malay may also be required, where applicable",
+        "url": "https://moh.gov.bn/wp-content/uploads/2025/02/AHPCBD-Registration-Matters-Registration-Eligibility.pdf",
+        "quote": "8. Proof of proficiency in English language 9. Proof of proficiency in Malay language 10. Medical fitness certificate" }
+    ],
+    "sources": [
+      { "label": "Scheme of Charges, Ministry of Health Brunei Darussalam, updated 8 July 2025 (Schedule A registration fees; Schedule M speech therapy)", "url": "https://moh.gov.bn/wp-content/uploads/2025/07/SCHEME-OF-CHARGES-V3.pdf" },
+      { "label": "Ministry of Health Brunei Darussalam, Soalan Lazim (FAQ) - Dasar Caj Perkhidmatan Kesihatan yang dikemaskini, 10 September 2025", "url": "https://moh.gov.bn/wp-content/uploads/2025/09/FINAL-FAQ-SOC-Kementerian-Kesihatan-Updated-10-September-2025.pdf" },
+      { "label": "Allied Health Professions Council of Brunei Darussalam, 'Registration Eligibility'", "url": "https://moh.gov.bn/wp-content/uploads/2025/02/AHPCBD-Registration-Matters-Registration-Eligibility.pdf" },
+      { "label": "Allied Health Professions Council of Brunei Darussalam, 'Types of Registration'", "url": "https://moh.gov.bn/wp-content/uploads/2025/02/AHPCBD-Registration-Matters-Types-of-Registration.pdf" }
+    ]
+  },
+
+  "MM|Myanmar": {
+    "notEstablished": {
+      "funding": "Not established from the sources consulted. The UNESCO PEER inclusion profile for Myanmar names no financing arrangement for special needs or disability provision: its finance content is the abolition of school fees, free textbooks and uniforms, stipends and school feeding under the 2016-21 National Education Strategic Plan, none of it tied to disability or to therapy. The MIMU analytical brief Disability in Myanmar (2014-2019) records a lack of disability-inclusive health services, rehabilitation services and health professionals without naming who pays for any of them, and the MIMU handbook on employing persons with disabilities describes the fund created by the 2015 Rights of Persons with Disabilities Law as one financed by fines on employers who miss the disability employment quota, not as a source for services. Searched: the PEER Myanmar inclusion profile, the MIMU analytical brief and the MIMU employers' handbook."
+    },
+    "sources": [
+      { "label": "MIMU, 'Disability in Myanmar (2014-2019)', analytical brief, 18 August 2021", "url": "https://themimu.info/sites/themimu.info/files/documents/Report_Analytical_Brief_Disability_MIMU_18Aug2021_ENG.pdf" },
+      { "label": "MIMU / MCRB, 'Employing Persons with Disabilities: A Handbook for Employers in Myanmar'", "url": "https://themimu.info/sites/themimu.info/files/documents/Handbook_Employing_Persons_with_Disabilities_ENG.pdf" }
+    ]
+  },
+
+  "TM|Turkmenistan": {
+    "fields": {
+      "funding": [
+        "The State budget funds preschool institutions and those meeting state educational standards",
+        "Funding standards are set per student for each type and kind of educational institution",
+        "That standard must take in special conditions for students with disabilities (art. 39)",
+        "Citizens have a right to free education in state institutions on general programmes",
+        "Parents pay a fee for a child's upbringing in preschool institutions, set by the Cabinet"
+      ]
+    },
+    "slots": { "funding": [1, 2, 2, 3, 3] },
+    "evidence": [
+      { "bullet": "The State budget funds preschool institutions and those meeting state educational standards",
+        "url": "https://nic.bilim.tm/en/documents/international-argeements/6",
+        "quote": "the funds of the State budget of Turkmenistan - for preschool institutions and educational institutions that implement educational programmes" },
+      { "bullet": "Funding standards are set per student for each type and kind of educational institution",
+        "url": "https://nic.bilim.tm/en/documents/international-argeements/6",
+        "quote": "Financing of state educational institutions is carried out on the basis of funding standards determined for each type and type of educational institution per student" },
+      { "bullet": "That standard must take in special conditions for students with disabilities (art. 39)",
+        "url": "https://nic.bilim.tm/en/documents/international-argeements/6",
+        "quote": "taking into account the content of educational programmes, learning technologies, forms of education, special conditions for obtaining education by students with disabilities" },
+      { "bullet": "Citizens have a right to free education in state institutions on general programmes",
+        "url": "https://nic.bilim.tm/en/documents/international-argeements/6",
+        "quote": "Citizens of Turkmenistan have the right to receive free education in state educational institutions when mastering general educational programmes" },
+      { "bullet": "Parents pay a fee for a child's upbringing in preschool institutions, set by the Cabinet",
+        "url": "https://nic.bilim.tm/en/documents/international-argeements/4",
+        "quote": "the fee paid by parents or persons replacing them for the upbringing of children in preschool institutions" }
+    ],
+    "sources": [
+      { "label": "The Law of Turkmenistan on Education (new edition), art. 39 'Financing of educational activities' - Ministry of Education of Turkmenistan, National Information Center", "url": "https://nic.bilim.tm/en/documents/international-argeements/6" },
+      { "label": "Regulations on state preschool institutions - Ministry of Education of Turkmenistan, National Information Center", "url": "https://nic.bilim.tm/en/documents/international-argeements/4" }
+    ]
+  },
+
+  "MR|Mauritania": {
+    "fields": {
+      "funding": [
+        "The State assures a disabled person the medical and paramedical care they need (art. 18)",
+        "The CFPSESH is a public administrative establishment, created by décret 2014-142",
+        "Its 2021 subsidy split 92 percent to operations and 8 percent to equipment",
+        "Care is free for the destitute holding a disability card, in state medical institutions",
+        "A fund for the promotion of disabled persons is promised, its financing left to decree"
+      ]
+    },
+    "slots": { "funding": [1, 1, 2, 3, 4] },
+    "evidence": [
+      { "bullet": "The State assures a disabled person the medical and paramedical care they need (art. 18)",
+        "url": "https://fonctionpublique.gov.mr/sites/default/files/2023-11/ORDONNANCE%20N%C2%B0-2006-043.pdf",
+        "quote": "L'Etat assure à la personne handicapée les soins médicaux, paramédicaux nécessaires à sa santé physique et mentale" },
+      { "bullet": "The CFPSESH is a public administrative establishment, created by décret 2014-142",
+        "url": "https://finances.gov.mr/sites/default/files/2022-12/FT_EPA_2021_DTF_-_Nov2822.pdf",
+        "quote": "Le Centre de Formation et de Promotion Sociale des Enfants en Situation de Handicap est un établissement public à caractère administratif" },
+      { "bullet": "Its 2021 subsidy split 92 percent to operations and 8 percent to equipment",
+        "url": "https://finances.gov.mr/sites/default/files/2022-12/FT_EPA_2021_DTF_-_Nov2822.pdf",
+        "quote": "Les subventions du CFPSESH sont constituées par une subvention de fonctionnement (92%) et une subvention d'équipement (8%)" },
+      { "bullet": "Care is free for the destitute holding a disability card, in state medical institutions",
+        "url": "https://fonctionpublique.gov.mr/sites/default/files/2023-11/ORDONNANCE%20N%C2%B0-2006-043.pdf",
+        "quote": "Les prestations de service citées à l'article précédent sont gratuites pour les personnes démunies titulaires de la carte de personne handicapée" },
+      { "bullet": "A fund for the promotion of disabled persons is promised, its financing left to decree",
+        "url": "https://fonctionpublique.gov.mr/sites/default/files/2023-11/ORDONNANCE%20N%C2%B0-2006-043.pdf",
+        "quote": "L'Etat mettra en place un fonds pour la promotion des personnes handicapées destiné à financer et promouvoir" }
+    ],
+    "sources": [
+      { "label": "Ordonnance n° 2006-043 du 23 novembre 2006 relative à la promotion et la protection des personnes handicapées (arts. 18-20, 58)", "url": "https://fonctionpublique.gov.mr/sites/default/files/2023-11/ORDONNANCE%20N%C2%B0-2006-043.pdf" },
+      { "label": "Ministère des Finances, Rapport sur les entreprises publiques en Mauritanie 2021 - Fiches techniques des EPA et assimilés, fiche CFPSESH", "url": "https://finances.gov.mr/sites/default/files/2022-12/FT_EPA_2021_DTF_-_Nov2822.pdf" }
+    ]
+  },
+
+  "NR|Nauru": {
+    "fields": {
+      "funding": [
+        "The Minister may establish government schools at which the Government provides special education",
+        "Education for school-age children in government schools is free and no fees may be charged",
+        "Disability may not bar a child from access to free primary and secondary education",
+        "The duty to support students with disabilities binds only within available resources"
+      ]
+    },
+    "slots": { "funding": [1, 3, 3, 4] },
+    "evidence": [
+      { "bullet": "The Minister may establish government schools at which the Government provides special education",
+        "url": "https://pacificdata.org/data/dataset/3a3dfcbc-4e57-4c25-8f6a-a291ef16ba9a/resource/6a95ff32-9ce4-4df0-9fbd-acec9107b52f/download/education-act-2011.pdf",
+        "quote": "The Minister may establish government schools at which the Government provides primary, secondary or special education" },
+      { "bullet": "Education for school-age children in government schools is free and no fees may be charged",
+        "url": "https://pacificdata.org/data/dataset/3a3dfcbc-4e57-4c25-8f6a-a291ef16ba9a/resource/6a95ff32-9ce4-4df0-9fbd-acec9107b52f/download/education-act-2011.pdf",
+        "quote": "Education for school-age children in government schools is free and no fees may be charged for it" },
+      { "bullet": "Disability may not bar a child from access to free primary and secondary education",
+        "url": "https://pacificdata.org/data/dataset/3a3dfcbc-4e57-4c25-8f6a-a291ef16ba9a/resource/6a95ff32-9ce4-4df0-9fbd-acec9107b52f/download/education-act-2011.pdf",
+        "quote": "A school-age child with a disability must not be excluded from access to free primary and secondary education" },
+      { "bullet": "The duty to support students with disabilities binds only within available resources",
+        "url": "https://pacificdata.org/data/dataset/3a3dfcbc-4e57-4c25-8f6a-a291ef16ba9a/resource/6a95ff32-9ce4-4df0-9fbd-acec9107b52f/download/education-act-2011.pdf",
+        "quote": "The Government must use its best endeavours, within available resources, to ensure that" }
+    ],
+    "sources": [
+      { "label": "Education Act 2011, Republic of Nauru, s. 73 free public education, s. 74 government schools, s. 95 provision for students with special educational needs", "url": "https://pacificdata.org/data/dataset/3a3dfcbc-4e57-4c25-8f6a-a291ef16ba9a/resource/6a95ff32-9ce4-4df0-9fbd-acec9107b52f/download/education-act-2011.pdf" }
+    ]
+  },
+
+  "AW|Aruba": {
+    "fields": {
+      "workforce": [
+        "A logopedist is whoever their country of training licenses to practise (AB 2023 no. 36)"
+      ]
+    },
+    "slots": { "workforce": [3] },
+    "history": [
+      { "year": 2023,
+        "description": "Landsbesluit logopedische hulp of 29 August 2023 makes speech and language therapy an entitlement under the general health insurance",
+        "evidenceKey": "Landsbesluit logopedische hulp 2023" }
+    ],
+    "evidence": [
+      { "bullet": "A logopedist is whoever their country of training licenses to practise (AB 2023 no. 36)",
+        "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/ab2023no.36.pdf",
+        "quote": "degene wiens opleiding en beroepsvoorbereidende er- varing hem in het Land van zijn opleiding de" },
+      { "bullet": "Landsbesluit logopedische hulp 2023",
+        "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/ab2023no.36.pdf",
+        "quote": "LANDSBESLUIT, houdende algemene maatregelen, van 29 augustus 2023 houdende regels inzake de aanspraak op logopedische hulp" }
+    ],
+    "sources": [
+      { "label": "Landsbesluit logopedische hulp, Afkondigingsblad van Aruba 2023 no. 36", "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/ab2023no.36.pdf" }
+    ]
+  }
+}

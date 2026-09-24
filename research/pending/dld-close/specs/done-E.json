@@ -1,0 +1,174 @@
+{
+ "AR|Argentina": {
+  "fields": {
+   "funding": [
+    "Obras sociales owe disabled members full cover of the prestaciones basicas (Ley 24.901 a. 2)",
+    "Those with no obra social reach the same prestaciones through state bodies (Ley 24.901 art. 4)",
+    "Rehabilitation modules name fonoaudiologia among the types of attention (Res. 428/99)",
+    "Prestaciones de apoyo are capped at six hours a week (Res. 428/99, 2.3.1)",
+    "Cover for the uninsured comes from funds the national budget sets yearly (Ley 24.901 a. 7 e)"
+   ]
+  },
+  "slots": {
+   "funding": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Obras sociales owe disabled members full cover of the prestaciones basicas (Ley 24.901 a. 2)",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/45000-49999/47677/texact.htm",
+    "quote": "tendrán a su cargo con carácter obligatorio, la cobertura total de las prestaciones básicas enunciadas en la presente ley"
+   },
+   {
+    "bullet": "Those with no obra social reach the same prestaciones through state bodies (Ley 24.901 art. 4)",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/45000-49999/47677/texact.htm",
+    "quote": "tendrán derecho al acceso a la totalidad de las prestaciones básicas comprendidas en la presente norma, a través de los organismos dependientes del Estado"
+   },
+   {
+    "bullet": "Rehabilitation modules name fonoaudiologia among the types of attention (Res. 428/99)",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/62835/texact.htm",
+    "quote": "Comprende los siguientes tipos de atención: Fisioterapia - Kinesiología Terapia ocupacional. Psicología Fonoaudiología Psicopedagogía"
+   },
+   {
+    "bullet": "Prestaciones de apoyo are capped at six hours a week (Res. 428/99, 2.3.1)",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/62835/texact.htm",
+    "quote": "El máximo de horas de prestaciones de apoyo será de hasta seis (6) horas semanales"
+   },
+   {
+    "bullet": "Cover for the uninsured comes from funds the national budget sets yearly (Ley 24.901 a. 7 e)",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/45000-49999/47677/texact.htm",
+    "quote": "con los fondos que anualmente determine el presupuesto general de la Nación para tal fin"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Ley 24.901, Sistema de Prestaciones Básicas en Habilitación y Rehabilitación Integral a favor de las Personas con Discapacidad — texto actualizado (InfoLEG)",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/45000-49999/47677/texact.htm"
+   },
+   {
+    "label": "Resolución MSyAS N° 428/1999, Nomenclador de Prestaciones Básicas para Personas con Discapacidad — texto actualizado (InfoLEG)",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/62835/texact.htm"
+   }
+  ]
+ },
+ "EC|Ecuador": {
+  "fields": {
+   "funding": [
+    "Integral health care for disabled people falls to the national health authority (LOD art. 19)",
+    "The MSP tarifario regulates the economic compensation traded between health subsystems (2014)",
+    "That tarifario prices terapia del lenguaje by the session (MSP tarifario 2014, code 291146)",
+    "Its listed values are a ceiling for payment between providers and funders, not a fixed fee"
+   ]
+  },
+  "slots": {
+   "funding": [
+    1,
+    2,
+    2,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Integral health care for disabled people falls to the national health authority (LOD art. 19)",
+    "url": "https://www.consejodiscapacidades.gob.ec/wp-content/uploads/downloads/2014/02/ley_organica_discapacidades.pdf",
+    "quote": "será de responsabilidad de la autoridad sanitaria nacional, que la prestará a través la red pública integral de salud"
+   },
+   {
+    "bullet": "The MSP tarifario regulates the economic compensation traded between health subsystems (2014)",
+    "url": "https://hcam.iess.gob.ec/wp-content/uploads/docencia/TARIFARIO.pdf",
+    "quote": "regular el sistema de compensación económica por los servicios de salud que se intercambian entre los subsistemas"
+   },
+   {
+    "bullet": "That tarifario prices terapia del lenguaje by the session (MSP tarifario 2014, code 291146)",
+    "url": "https://hcam.iess.gob.ec/wp-content/uploads/docencia/TARIFARIO.pdf",
+    "quote": "291146 TERAPIA DEL LENGUAJE, SESIÓN DE 50 MINUTOS (VARIOS PROCEDIMIENTOS TERAPEUTICOS)"
+   },
+   {
+    "bullet": "Its listed values are a ceiling for payment between providers and funders, not a fixed fee",
+    "url": "https://www.gob.ec/regulaciones/tarifario-prestaciones-sistema-nacional-salud",
+    "quote": "los valores expresados en el presente documento, registran el techo máximo del valro para el reconocimiento económico entre prestadores y financiadores"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Ley Orgánica de Discapacidades, Registro Oficial Suplemento N° 796, 25 September 2012 (CONADIS)",
+    "url": "https://www.consejodiscapacidades.gob.ec/wp-content/uploads/downloads/2014/02/ley_organica_discapacidades.pdf"
+   },
+   {
+    "label": "Tarifario de Prestaciones para el Sistema Nacional de Salud, versión año 2014, Ministerio de Salud Pública",
+    "url": "https://hcam.iess.gob.ec/wp-content/uploads/docencia/TARIFARIO.pdf"
+   },
+   {
+    "label": "Tarifario de Prestaciones para el Sistema Nacional de Salud, R.O. 235 — regulation record on Gob.ec",
+    "url": "https://www.gob.ec/regulaciones/tarifario-prestaciones-sistema-nacional-salud"
+   }
+  ]
+ },
+ "JM|Jamaica": {
+  "fields": {
+   "funding": [
+    "Early intervention became one of the Ministry of Labour and Social Security's social programmes",
+    "It is the only fully publicly funded service for young children with disability",
+    "One private autism centre engaged a speech therapist on CHASE Fund money, 2008 to 2010",
+    "Speech therapy inside the programme is part time; physiotherapy is full time",
+    "The minister told Parliament in December 2023 that those therapies are free, at no cost"
+   ]
+  },
+  "slots": {
+   "funding": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "It is the only fully publicly funded service for young children with disability",
+    "url": "https://www.mlss.gov.jm/departments/early-stimulation-programme/",
+    "quote": "is currently the only fully publicly funded service for young children with disability as well as their families"
+   },
+   {
+    "bullet": "Early intervention became one of the Ministry of Labour and Social Security's social programmes",
+    "url": "https://www.mlss.gov.jm/departments/early-stimulation-programme/",
+    "quote": "The Programme commenced operation in 1975 as a project, but subsequently became integrated into one of the Ministry"
+   },
+   {
+    "bullet": "One private autism centre engaged a speech therapist on CHASE Fund money, 2008 to 2010",
+    "url": "https://chase.org.jm/support-for-special-needs/",
+    "quote": "Touch screen equipment was also secured and a speech therapist and specialist teacher in computer studies were engaged"
+   },
+   {
+    "bullet": "Speech therapy inside the programme is part time; physiotherapy is full time",
+    "url": "https://www.mlss.gov.jm/departments/early-stimulation-programme/",
+    "quote": "Full time physiotherapy and part time speech therapy for children with speech impairment"
+   },
+   {
+    "bullet": "The minister told Parliament in December 2023 that those therapies are free, at no cost",
+    "url": "https://jis.gov.jm/3124-children-with-developmental-disabilities-benefiting-from-early-stimulation-interventions/",
+    "quote": "counselling, community and centre-based interventions, and behaviour therapy. And this is all free, at no cost to them"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Early Stimulation Programme, Ministry of Labour and Social Security (Jamaica)",
+    "url": "https://www.mlss.gov.jm/departments/early-stimulation-programme/"
+   },
+   {
+    "label": "Jamaica Information Service, '3,124 Children with Developmental Disabilities Benefiting from Early Stimulation Interventions', 6 December 2023",
+    "url": "https://jis.gov.jm/3124-children-with-developmental-disabilities-benefiting-from-early-stimulation-interventions/"
+   },
+   {
+    "label": "CHASE Fund, 'Support for Special Needs'",
+    "url": "https://chase.org.jm/support-for-special-needs/"
+   }
+  ]
+ }
+}

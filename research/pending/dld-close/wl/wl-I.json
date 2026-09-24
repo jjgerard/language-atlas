@@ -1,0 +1,207 @@
+[
+ {
+  "key": "CA|Canada",
+  "cc": "CA",
+  "unit": "Canada",
+  "region": "Americas",
+  "subregion": "Northern America",
+  "national": true,
+  "missing": [
+   "workforce",
+   "referralPathway"
+  ],
+  "docLinks": [
+   {
+    "label": "Special Education Coding Criteria — current editions (Open Alberta)",
+    "url": "https://open.alberta.ca/dataset/ee2ccea8-97fe-41a1-aa11-ed9f21421364"
+   },
+   {
+    "label": "K-12 Funding — Inclusive Education (Province of British Columbia)",
+    "url": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/legislation-policy/public-schools/k-12-funding-inclusive-education"
+   },
+   {
+    "label": "CMEC / Government of Canada, Protocol for Agreements for Minority-Language Education and Second-Language Instruction, 2024-2025 to 2027-2028 (signed)",
+    "url": "https://cmec.ca/Publications/Lists/Publications/Attachments/446/Protocol_2024-28_signed_EN.pdf"
+   },
+   {
+    "label": "Official Languages Act (R.S.C., 1985, c. 31 (4th Supp.)), s. 43 - Special mandate of Minister of Canadian Heritage",
+    "url": "https://laws-lois.justice.gc.ca/eng/acts/O-3.01/section-43.html"
+   },
+   {
+    "label": "CMEC / Government of Canada, Protocol 2019-2020 to 2022-2023",
+    "url": "https://www.cmec.ca/Publications/Lists/Publications/Attachments/413/Protocol_2019-2023-EN.pdf"
+   },
+   {
+    "label": "Constitution Act 1867, s. 93 (Justice Laws Website, Government of Canada)",
+    "url": "https://laws-lois.justice.gc.ca/eng/const/page-3.html"
+   }
+  ],
+  "existing_terminology": "There is no federal category, because there is no federal school system\nEach province names and codes language difficulty its own way\nOntario codes 'Language Impairment', Alberta codes by severity, BC codes nothing\nEducation is exclusively provincial under s. 93 of the Constitution Act 1867",
+  "existing_identificationCriteria": "Not established from the sources consulted. Section 93 of the Constitution Act 1867 gives each provincial legislature the exclusive power to make laws in relation to education, so there is no federal body that identifies a language disorder and no national criteria to record. What exists is thirteen separate provincial and territorial answers.",
+  "existing_serviceModel": "No pan-Canadian model exists; British Columbia is given here as the documented example\nBC funds speech-language pathology out of the Basic Allocation, not a supplemental category\nBC's eight supplemental Inclusive Education categories have no speech or language one\nSupplemental funding requires assessment, identification and a current IEP",
+  "existing_legalEntitlement": "No national entitlement exists to compare\nEntitlement is provincial, and the provinces do not converge\nA child moving between provinces can change category, funding and service model",
+  "existing_funding": "BC Basic Allocation is a standard per-student amount for each school-age student enrolled\nBC boards reporting one of three levels get supplemental Inclusive Education funding on top\nThose supplemental funds are not targeted to specific students, but go to the board"
+ },
+ {
+  "key": "GT|Guatemala",
+  "cc": "GT",
+  "unit": "Guatemala",
+  "region": "Americas",
+  "subregion": "Central America",
+  "national": true,
+  "missing": [
+   "referralPathway"
+  ],
+  "docLinks": [
+   {
+    "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Guatemala: Inclusion",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/guatemala/~inclusion"
+   }
+  ],
+  "existing_terminology": "The 1991 education law art. 47 reaches language obliquely (PEER rendering in English)\nIt covers disabilities 'in their linguistic, intellectual or physical' development\nThe 2007 law defines needs by curricular disadvantage, not by named condition",
+  "existing_identificationCriteria": "2007 special education law: disadvantage and difficulty benefiting from the age group curriculum\nSpecial school placement where needs prevent successful integration into mainstream schools",
+  "existing_multilingualProvision": "The 1996 law requires bilingual education in majority-indigenous areas\nThat duty applies to programmes for pupils with disabilities in rural areas\nIt is the only explicit multilingual clause found in Guatemalan SEN law",
+  "existing_serviceModel": "Resource centres for inclusive education have been rolled out since 2019\nThe Dirección General de Educación Especial runs them",
+  "existing_legalEntitlement": "The 1996 disability law gives mainstream access with required support services",
+  "existing_funding": "The Educational Inclusion Project is funded by the International Bureau of Education (PEER)\nDepartmental coordinators also help obtain scholarships for students with disabilities",
+  "existing_workforce": "The General Directorate of Special Education has a coordinator in each of the 22 departments\nSpecial education centres in municipalities have trained interdisciplinary teams (PEER)\nDepartmental special education coordinators give technical help to mainstream teachers (PEER)"
+ },
+ {
+  "key": "MX|Mexico",
+  "cc": "MX",
+  "unit": "Mexico",
+  "region": "Americas",
+  "subregion": "Central America",
+  "national": true,
+  "missing": [
+   "referralPathway"
+  ],
+  "docLinks": [
+   {
+    "label": "Ley General de Educación (DOF, 30 September 2019)",
+    "url": "https://www.dof.gob.mx/nota_detalle.php?codigo=5573858&fecha=30/09/2019"
+   },
+   {
+    "label": "Diario Oficial de la Federación, ediciones en PDF",
+    "url": "https://dof.gob.mx/"
+   }
+  ],
+  "existing_terminology": "The law works from 'barreras para el aprendizaje y la participación'\nBarriers to learning and participation, not from a list of conditions\nNo statutory category corresponds to DLD\nEducación especial is defined by what it removes, not by whom it is for",
+  "existing_identificationCriteria": "Ley General de Educación art. 64\nSpecial education is provided on the decision and prior assessment of the learner\nTogether with parents or guardians and teaching staff\nAnd where applicable on referral arising from a health condition",
+  "existing_multilingualProvision": "The state guarantees linguistic rights to indigenous and Afro-Mexican peoples, LGE art. 56\nIndigenous education must answer needs with cultural and linguistic pertinence\nMaterials, free textbooks included, must be made in the country's various languages",
+  "existing_serviceModel": "Centros de Atención Múltiple are a recognised school type in their own right\nAccessible formats are required, wherever possible inside mainstream services\nThat does not cancel the option of a school-based placement",
+  "existing_legalEntitlement": "Art. 64(IV): the state must establish a system of early diagnosis\nAnd specialised attention, to remove barriers to learning and participation\nArt. 64(V): all teaching staff must be trained to identify and remove those barriers\nEducación especial must be available across every type, level and modality",
+  "existing_funding": "Federal executive and each state jointly finance public education, LGE art. 119\nAnnual public education spending may not fall below 8 per cent of GDP",
+  "existing_workforce": "Federal authority sets accreditation and certification rules for special education staff\nTeachers are to be posted to the linguistic regions they themselves belong to"
+ },
+ {
+  "key": "NI|Nicaragua",
+  "cc": "NI",
+  "unit": "Nicaragua",
+  "region": "Americas",
+  "subregion": "Central America",
+  "national": true,
+  "missing": [
+   "referralPathway"
+  ],
+  "docLinks": [
+   {
+    "label": "Ley No. 582, Ley General de Educación (Nicaragua, 2006) — full text as published by FAOLEX from the Asamblea Nacional's Normaweb record",
+    "url": "https://faolex.fao.org/docs/pdf/nic201095.pdf"
+   },
+   {
+    "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Nicaragua: Inclusion",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/nicaragua/~inclusion"
+   },
+   {
+    "label": "Legislación de Nicaragua, Asamblea Nacional",
+    "url": "http://legislacion.asamblea.gob.ni/normaweb.nsf"
+   }
+  ],
+  "existing_terminology": "Terms in Ley 582 are 'personas con habilidades diferentes' and special educational needs\nLey 582 does not name language or speech disorder anywhere\nThe only communication-specific provision in the law is sign language",
+  "existing_identificationCriteria": "Educacion Basica Especial is for those whose disability hinders regular learning",
+  "existing_serviceModel": "Inclusion in regular classrooms, with complementary personalised attention allowed\n25 public special education schools nationally, per the ministry via PEER\nEight diversity resource centres sit inside teacher training colleges",
+  "existing_legalEntitlement": "Ley 582 binds public and private schools to include pupils with disabilities\nThe duty is framed as programme design, not an individual therapy entitlement",
+  "existing_funding": "Ley 582 art. 88: the state guarantees each public school its running-cost budget line\nArt. 90 bans fees, voluntary quotas or any other payment in state primary and secondary\nA school community may still organise economic activities for the school's benefit\nArt. 92: the state must fight any economic barrier limiting education",
+  "existing_workforce": "Teacher training must include study of Nicaraguan Sign Language\nNo speech and language therapist role appears in Ley 582"
+ },
+ {
+  "key": "PA|Panama",
+  "cc": "PA",
+  "unit": "Panama",
+  "region": "Americas",
+  "subregion": "Central America",
+  "national": true,
+  "missing": [
+   "referralPathway"
+  ],
+  "docLinks": [
+   {
+    "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Panama: Inclusion",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/panama/~inclusion"
+   }
+  ],
+  "existing_terminology": "SEN, in PEER's English rendering; the Spanish originals were not retrieved\nThe 2006 inclusive education plan defines SEN by difficulty progressing\nNo language, speech or communication category is named in the instruments read",
+  "existing_identificationCriteria": "In PEER's English: SEN assessment is the interdisciplinary team's responsibility\nThe team is external to the school: psychologists, social workers and teachers",
+  "existing_multilingualProvision": "Act 88 of 2010 recognizes indigenous languages and alphabets and regulates bilingual education\nMEDUCA must regulate indigenous language use in schools in the comarcas and collective lands\nThe stated aim is to preserve the native language and promote Spanish and English",
+  "existing_serviceModel": "Educational support services operate across thirteen educational regions\nThe support is described as temporary, advising on plans and proposals",
+  "existing_legalEntitlement": "Act 42 of 27 August 1999 requires inclusion with support services and technical aids\nExecutive Decree No. 1 of 4 February 2000 regulates placement\nPriority is given to the mainstream centre nearest the pupil's home",
+  "existing_funding": "State must allocate funds where family resources are insufficient or access is difficult",
+  "existing_workforce": "The support-service staffing list contains no speech and language therapist\nIt names special education, psychology, social work and learning difficulties"
+ },
+ {
+  "key": "PY|Paraguay",
+  "cc": "PY",
+  "unit": "Paraguay",
+  "region": "Americas",
+  "subregion": "South America",
+  "national": true,
+  "missing": [
+   "referralPathway"
+  ],
+  "docLinks": [
+   {
+    "label": "Ley 1264/1998 General de Educación (Paraguay), arts. 31, 80-84",
+    "url": "https://www.bacn.gov.py/leyes-paraguayas/3766/general-de-educacion"
+   },
+   {
+    "label": "UNESCO PEER, Paraguay — inclusion profile (platform archived; profiles no longer updated)",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/paraguay/~inclusion"
+   },
+   {
+    "label": "Paraguay, Ley N° 1264/1998 General de Educación, full text (Cap. IV, Arts. 80–84; Art. 31; Art. 75)",
+    "url": "https://paraguay.justia.com/nacionales/leyes/ley-1264-may-26-1998/gdoc/"
+   }
+  ],
+  "existing_terminology": "Ley 1264/1998 Art. 80 names trastornos de lenguaje as a statutory SEN category\nIt sits alongside superdotados, dificultades de aprendizaje, trastornos de conducta\nThe later Ley 5136/2013 drops the term for necesidades especificas de apoyo\nThe 2013 list names specific learning disorders but not language disorder",
+  "existing_identificationCriteria": "Art. 31 requires early-years prevention and early-detection assessment\nThat duty names intellectual level and sensory impairment, not language\nArt. 84 makes early diagnosis and treatment an explicit government duty",
+  "existing_multilingualProvision": "Art. 31: teaching is in the pupil's official mother tongue from first grade\nThe other official language is taught from the start as a second language\nGuarani and Spanish are both official and the rule is symmetrical between them",
+  "existing_serviceModel": "Around 70 special schools and centres existed in 2014\nInclusion support centres replace special schools under the 2018-2023 plan\nSpecial-education content and assessment are approved by the MEC under Art. 82\nEradicating special schools is a stated goal of the inclusive education directorate",
+  "existing_legalEntitlement": "Art. 80 obliges the state to guarantee formacion basica for the named groups\nArt. 81 requires integrated placement in mainstream schools where possible\nLey 5136/2013 extends the duty to public, private and subsidised institutions",
+  "existing_funding": "Admission to free public institutions must be eased for people of limited means\nWhere public places are absent or too few, the state buys private places by grant\nFONACIDE has financed school repairs and adaptations, textbooks, ICT and teacher training",
+  "existing_workforce": "Art. 83 requires specialised training for teachers in this modality\nNo fonoaudiologo or terapeuta del lenguaje is named in the statute, term count 0"
+ },
+ {
+  "key": "HN|Honduras",
+  "cc": "HN",
+  "unit": "Honduras",
+  "region": "Americas",
+  "subregion": "Central America",
+  "national": true,
+  "missing": [
+   "funding",
+   "referralPathway"
+  ],
+  "docLinks": [
+   {
+    "label": "UNESCO GEM Report, Profiles Enhancing Education Reviews (PEER), Honduras: Inclusion",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/honduras/~inclusion"
+   }
+  ],
+  "existing_terminology": "SEN, in PEER's English rendering; the Spanish originals were not retrieved\nThe 2014 resolution: difficulties of varying severity, 'not necessarily due to disability'\nNo language, speech or communication category is named in the instruments read",
+  "existing_identificationCriteria": "Resolution 1365 of 2014 creates a departmental psychopedagogical support team\nIn PEER's English, that team identifies pupils' needs via diagnostic assessments",
+  "existing_serviceModel": "Special education centres support mainstream schools through itinerant teams\nThe 2014 resolution converts special centres into inclusion resource centres",
+  "existing_legalEntitlement": "The 2005 disability equity act guarantees access at all education levels\nIn both the public and the private systems",
+  "existing_workforce": "No speech and language therapist role was found in any instrument read"
+ }
+]
