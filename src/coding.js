@@ -2058,7 +2058,7 @@ const COLUMN_LABELS = {
   exclusions: 'what rules a child out',
   exemption: 'who is exempt',
   exit_mechanism: 'what ends support',
-  exit_period_months: 'months before support ends',
+  exit_period_months: 'years before support ends',
   extent: 'where it applies',
   family: 'what kind of word',
   family_pays: 'what the family pays',
@@ -2127,6 +2127,44 @@ const COLUMN_LABELS_BY_FIELD = {
   'revitalisation.status': 'how far it has got',
   'bilingualEducationNotes.provision': 'how far provision has got',
 };
+
+// HOW A MEASURED NUMBER IS SHOWN.
+//
+// A count of months is stored as a count of months, because that is what the
+// rule says and arithmetic about it should stay true. It is not what anybody
+// reads. eal's exit period runs 2, 12, 18, 24, 30, 36, 48, 60 and 84 months
+// across 26 systems -- nine values, each its own rung on a ramp and its own
+// row in a key, for a spread that a reader holds as "about a year" or "most
+// of school".
+//
+// So a numeric column may declare bands. The stored value never changes; the
+// bands are how it is drawn and listed. `cuts` are upper bounds in the
+// column's OWN unit, in order, and the last band is everything above the last
+// cut, so the list of labels is always one longer than the list of cuts.
+//
+// Four, because four is what a lightness ramp can hold apart -- the depth
+// steps span 0.20 in oklab lightness and five was already at the limit of
+// what separates on a small country -- and because the interesting fact here
+// is the ORDER of magnitude rather than the month. Serbia's two months and
+// Minnesota's eighty-four are both called the period after which a newcomer
+// stops being one, and that is the thing to see.
+const COLUMN_BANDS = {
+  exit_period_months: {
+    cuts: [12, 24, 36],
+    labels: ['a year or less', 'one to two years', 'two to three years', 'more than three years'],
+  },
+};
+
+/** Which band a measured value falls in, or the value itself where the column
+ *  declares none. Returns a string either way, since that is what a legend,
+ *  a ramp and a group key all want. */
+function bandOf(col, value) {
+  const b = COLUMN_BANDS[col];
+  const n = Number(value);
+  if (!b || value == null || value === '' || isNaN(n)) return String(value == null ? '' : value);
+  for (let i = 0; i < b.cuts.length; i++) if (n <= b.cuts[i]) return b.labels[i];
+  return b.labels[b.labels.length - 1];
+}
 
 /** The label for a column, given the field it sits on. Never throws, never
  *  invents: an unlabelled column falls back to its own name, spaced out. */
@@ -2241,6 +2279,6 @@ module.exports = {
   isLanguageDomain: v => has(LANGUAGE_DOMAINS, v),
   isObligesLevel,
   fieldsTouchedFor,
-  COLUMN_LABELS, COLUMN_LABELS_BY_FIELD, columnLabel,
+  COLUMN_LABELS, COLUMN_LABELS_BY_FIELD, columnLabel, COLUMN_BANDS, bandOf,
   isFieldTouched: (id, v) => has(fieldsTouchedFor(id), v),
 };

@@ -13,7 +13,7 @@
 // the window to lapse.
 
 const { LIVE, DOMAINS } = require('./domains');
-const { SCHEMES, columnLabel } = require("./coding.js");
+const { SCHEMES, columnLabel, COLUMN_BANDS } = require("./coding.js");
 const { load: pisa } = require("./pisa.js");
 const store = require('./store');
 const { makeHistoryMatcher } = require('./history');
@@ -81,6 +81,10 @@ function build(catalogs, sources) {
       // to carry a copy or invent its own wording.
       labels: Object.fromEntries(Object.keys(s.columns || {})
         .map(c => [c, columnLabel(k.split(".")[1], c)])),
+      // A measured column may be drawn in bands rather than as raw numbers;
+      // the stored value is untouched and this is how to show it.
+      bands: Object.fromEntries(Object.keys(s.columns || {})
+        .filter(c => COLUMN_BANDS[c]).map(c => [c, COLUMN_BANDS[c]])),
       // The glosses themselves, so a reader who clicks a country can be told
       // what the coded value MEANS and which entries forced it, without a
       // second request and without the vocabulary being paraphrased in the

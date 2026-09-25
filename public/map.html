@@ -1283,6 +1283,8 @@ const NON_LEVEL = new Set(['not stated', 'not applicable', 'not measured', 'not 
 function rankOrder(fieldKey, col, values) {
   const sc = schemeFor(fieldKey) || {};
   const present = new Set(values);
+  const band = ((sc.bands || {})[col]);
+  if (band) return band.labels.filter(v => present.has(v));
   const declared = Object.keys(((sc.values || {})[col]) || {});
   if (!declared.length) {
     return [...present].sort((a, b) => (parseFloat(a) || 0) - (parseFloat(b) || 0));
@@ -1487,7 +1489,25 @@ const CROSS_FLOOR = 20;      // the palest step, in % of the hue
  * ordinal and perfectly rampable and would put ninety rows in the key. */
 const CROSS_VALS_MAX = 12;
 
-/** Like codedValues, but reading through an instrument-grained field's rows. */
+/* A MEASURED COLUMN COMES OUT IN BANDS. eal's exit period is stored in months
+   and runs 2, 12, 18, 24, 30, 36, 48, 60, 84 -- nine rungs on a ramp and nine
+   rows in a key, for a spread anyone reads as "about a year" or "most of
+   school". coding.js declares the bands; this is where the map takes them, so
+   the ramp, the key and the count all see the same four values. The stored
+   number is untouched. */
+function bandsFor(fieldKey, col) {
+  return (((schemeFor(fieldKey) || {}).bands) || {})[col] || null;
+}
+function bandOf(fieldKey, col, value) {
+  const b = bandsFor(fieldKey, col);
+  const n = Number(value);
+  if (!b || isNaN(n)) return String(value);
+  for (let i = 0; i < b.cuts.length; i++) if (n <= b.cuts[i]) return b.labels[i];
+  return b.labels[b.labels.length - 1];
+}
+
+/** Like codedValues, but reading through an instrument-grained field's rows,
+ *  and through a measured column's bands. */
 function crossValues(u, key) {
   if (!u || !key) return null;
   const [f, c] = key.split('.');
@@ -1497,7 +1517,7 @@ function crossValues(u, key) {
   for (const row of (Array.isArray(cd) ? cd : [cd])) {
     const v = row && row[c];
     if (v === undefined || v === null || !String(v).length) continue;
-    for (const x of [].concat(v)) out.push(String(x));
+    for (const x of [].concat(v)) out.push(bandOf(f, c, x));
   }
   return out.length ? out : null;
 }
