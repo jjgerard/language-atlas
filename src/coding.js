@@ -1978,6 +1978,130 @@ const codingRows = c => (c == null ? [] : Array.isArray(c) ? c : [c]);
 const has = (o, v) => Object.prototype.hasOwnProperty.call(o, v);
 const isObligesLevel = v => Number.isInteger(v) && v >= 0 && v <= 4;
 
+
+// ===========================================================================
+// WHAT EACH COLUMN IS CALLED WHERE SOMEBODY READS IT
+// ===========================================================================
+//
+// A column name is a key: short, lowercase, underscored, and written for the
+// code that carries it. Every page then printed that key with the underscores
+// swapped for spaces and called it a label, so a reader picking a question off
+// the map met `obliges`, `rule_locus`, `secured_by`, `charged_to` and
+// `after_adjustment` -- terms this project invented, in a form nobody outside
+// it has met, offered as though they were English.
+//
+// So the keys stay keys and the labels live here, next to the vocabularies
+// they name. A label is a QUESTION where the column asks one, because that is
+// what the reader is choosing between: not `decider` but "who decides", not
+// `discharge_basis` but "what ends support". Where a column really is a
+// property rather than a question the label is a noun phrase ("kind of
+// instrument"), and nothing is capitalised, so a label reads the same inside a
+// sentence, a legend and an <option>.
+//
+// Keyed by the bare column name, since a name means the same thing wherever it
+// appears -- `decided_by` is who decides on both eal criteria fields. The four
+// that do NOT are keyed `field.column` and override.
+const COLUMN_LABELS = {
+  activity: 'what is done',
+  actor: 'who does it',
+  after_adjustment: 'the gap after adjustment',
+  assessment_language: 'assessed in which language',
+  bilingual_fit: 'fit for bilingual children',
+  bilingual_handling: 'how bilingual children are handled',
+  charged_to: 'who is charged with it',
+  curriculum: 'is there a curriculum',
+  data_verdict: 'verdict on the data',
+  decided_by: 'who decides',
+  decider: 'who decides',
+  designation: 'how the pupil is designated',
+  direction: 'which way the gap runs',
+  discharge_basis: 'what ends support',
+  duty_org: 'the body named',
+  duty_type: 'who carries the duty',
+  entry_route: 'how a practitioner qualifies',
+  evidence_found: 'what evidence exists',
+  evidence_type: 'kind of source',
+  exclusions: 'what rules a child out',
+  exemption: 'who is exempt',
+  exit_mechanism: 'what ends support',
+  exit_period_months: 'months before support ends',
+  extent: 'where it applies',
+  family: 'what kind of word',
+  family_pays: 'what the family pays',
+  fields_touched: 'which question changed',
+  fixed_in: 'where the term is fixed',
+  for_whom: 'who it is for',
+  force: 'what it obliges',
+  form: 'what form it takes',
+  funders: 'who pays',
+  funding: 'who funds it',
+  headcount: 'how practitioners were counted',
+  initiated_by: 'who can start a referral',
+  instrument: 'the instrument named',
+  instrument_type: 'kind of instrument',
+  instrument_year: 'year of the instrument',
+  label: 'the term used',
+  language_domains: 'what it tests',
+  local_norms: 'are there local norms',
+  materials: 'are there materials',
+  measure: 'what is measured',
+  minority_framing: 'is it framed as a minority language',
+  modality: 'comprehension or production',
+  models: 'how it is taught',
+  not_an_operation: 'why it is not a change',
+  object: 'what is taught',
+  // The one this list was started for. `obliges` is an ordinal 0 to 4 and the
+  // word alone says neither that it is ranked nor what it ranks.
+  obliges: 'strength of entitlement',
+  operation: 'what happened',
+  orthography: 'who settles the spelling',
+  placement: 'where the child is taught',
+  practitioner: 'who delivers it',
+  provision: 'how far provision has got',
+  proxy: 'what stands in for language',
+  purpose: 'what it is for',
+  reach: 'how far up the school',
+  redress_type: 'how to appeal',
+  reporting: 'what reporting exists',
+  requirement: 'is a language required',
+  review_interval_months: 'months between reviews',
+  role: 'its role in teaching',
+  rule_locus: 'who writes the rule',
+  scope: 'what the source covers',
+  scope_change: 'what the change did to its reach',
+  second_language: 'is a second language required',
+  sectors: 'who runs it',
+  secured_by: 'what secures it',
+  source: 'where the status comes from',
+  stages: 'which school stages',
+  standing: 'where the term is fixed',
+  status: 'what status it has',
+  targeting: 'who it targets',
+  term_type: 'what kind of term',
+  test_type: 'kind of test',
+  threshold_basis: 'what the threshold is',
+  training: 'is there training',
+  trigger: 'what triggers a referral',
+  triggers: 'what triggers support',
+};
+
+// `status` asks three different questions on three indigenous fields, and
+// `provision` on eal asks the same one as revitalisation's `status`.
+const COLUMN_LABELS_BY_FIELD = {
+  'taughtAsSubject.status': 'how it is taught',
+  'standing.status': 'what legal status it has',
+  'revitalisation.status': 'how far it has got',
+  'bilingualEducationNotes.provision': 'how far provision has got',
+};
+
+/** The label for a column, given the field it sits on. Never throws, never
+ *  invents: an unlabelled column falls back to its own name, spaced out. */
+function columnLabel(fieldKey, col) {
+  return COLUMN_LABELS_BY_FIELD[fieldKey + '.' + col]
+    || COLUMN_LABELS[col]
+    || String(col || '').replace(/_/g, ' ');
+}
+
 module.exports = {
   EXCLUSIVE_VALUES, isExclusiveValue, mixedAbsence,
   codingRows,
@@ -2083,5 +2207,6 @@ module.exports = {
   isLanguageDomain: v => has(LANGUAGE_DOMAINS, v),
   isObligesLevel,
   fieldsTouchedFor,
+  COLUMN_LABELS, COLUMN_LABELS_BY_FIELD, columnLabel,
   isFieldTouched: (id, v) => has(fieldsTouchedFor(id), v),
 };

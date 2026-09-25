@@ -617,7 +617,18 @@ const MIN_FLOOR = 3;
 const PAIR = '  →  ';
 const SERIES = ['#2a78d6', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#6250d6', '#008300', '#e34948'];
 
+/* WHAT A COLUMN IS CALLED. The pickers and every chart title here printed
+   the column KEY with its underscores spaced out -- `obliges`, `rule_locus`,
+   `after_adjustment` -- which is a name written for the code. coding.js names
+   them for a reader and catalog.js ships the names on each scheme. */
+let SCHEMES_FOR_LABELS = {};
+function colLabel(o) {
+  const sc = SCHEMES_FOR_LABELS[o.id + '.' + o.key] || {};
+  return (sc.labels || {})[o.col] || String(o.col || '').replace(/_/g, ' ');
+}
+
 function outcomeOptions(atlas) {
+  SCHEMES_FOR_LABELS = atlas.schemes || {};
   const out = [];
   const doms = Object.fromEntries(atlas.domains.map(d => [d.id, d]));
   for (const [id, key, map] of codedFields(atlas)) {
@@ -763,8 +774,8 @@ function dropNote(s, min, pick, split) {
   // comma-joined list of these values cannot be read back apart.
   return (s.goneA.length || s.goneB.length
       ? ' Dropped whole, reaching ' + min + ' in no combination — '
-        + [s.goneA.length ? esc(pick.col.replace(/_/g, ' ')) + ': ' + s.goneA.map(esc).join('; ') : '',
-           s.goneB.length ? esc(split.col.replace(/_/g, ' ')) + ': ' + s.goneB.map(esc).join('; ') : '']
+        + [s.goneA.length ? esc(colLabel(pick)) + ': ' + s.goneA.map(esc).join('; ') : '',
+           s.goneB.length ? esc(colLabel(split)) + ': ' + s.goneB.map(esc).join('; ') : '']
           .filter(Boolean).join('. ') + '.'
       : '')
     + (s.gonePairs.length
@@ -936,7 +947,7 @@ function renderOutcomes(atlas) {
       catOptions += '<optgroup label="' + esc(g) + '">';
       openGroup = g;
     }
-    catOptions += '<option value="' + i + '">' + esc(opts[i].col.replace(/_/g, ' ')) + '</option>';
+    catOptions += '<option value="' + i + '">' + esc(colLabel(opts[i])) + '</option>';
   }
   if (openGroup !== null) catOptions += '</optgroup>';
 
@@ -1042,7 +1053,9 @@ function renderOutcomes(atlas) {
           if (q === p) continue;
           const { groups, countries } = groupsFor(atlas, p, outcome, q, spec);
           const n = Object.values(groups).filter(g => g.length >= min).length;
-          if (n > top.n || (n === top.n && countries > top.c)) top = { n, c: countries, col: q.col };
+          // The option itself, not just its column name: the label for a column
+          // depends on the field it sits on, and q's field is not p's.
+          if (n > top.n || (n === top.n && countries > top.c)) top = { n, c: countries, col: q.col, opt: q };
         }
         return top;
       });
@@ -1060,9 +1073,9 @@ function renderOutcomes(atlas) {
       const b = best[i];
       if (!b) return;
       // The group heading already carries the map and the field.
-      const label = esc(opts[i].col.replace(/_/g, ' '));
+      const label = esc(colLabel(opts[i]));
       o.style.fontWeight = rank.includes(i) && b.n > 0 ? '500' : '';
-      o.textContent = label + (b.col ? '  · best split: ' + b.col.replace(/_/g, ' ') + ' (' + b.n + ')' : '');
+      o.textContent = label + (b.col ? '  · best split: ' + colLabel(b.opt) + ' (' + b.n + ')' : '');
     });
   };
 
@@ -1129,7 +1142,7 @@ function renderOutcomes(atlas) {
     return scored;
   };
 
-  const nameOf = i => esc(opts[i].map) + ': ' + esc(opts[i].field) + ' ' + esc(opts[i].col.replace(/_/g, ' '));
+  const nameOf = i => esc(opts[i].map) + ': ' + esc(opts[i].field) + ' ' + esc(colLabel(opts[i]));
 
   /* TWO PAIRS ARE PINNED, because they are the comparison this panel exists to
      make: what a system uses to decide a child is IN, set against what it uses
@@ -1247,7 +1260,7 @@ function renderOutcomes(atlas) {
     if (!want.length) return null;
     let top = null;
     opts.forEach((o, i) => {
-      const hay = norm(o.map + ' ' + o.field + ' ' + o.col.replace(/_/g, ' '));
+      const hay = norm(o.map + ' ' + o.field + ' ' + colLabel(o));
       let hit = 0;
       for (const w of want) if (hay.some(h => h.startsWith(w) || w.startsWith(h))) hit++;
       if (hit && (!top || hit > top.hit || (hit === top.hit && o.n > opts[top.i].n))) top = { i: i, hit: hit };
@@ -1284,8 +1297,8 @@ function renderOutcomes(atlas) {
     fillCycles();
     $('#o-by').value = (ji != null && ji !== ci) ? ji : '';
     draw();
-    const bits = ['Showing ' + opts[ci].field + ': ' + opts[ci].col.replace(/_/g, ' ')];
-    if (ji != null && ji !== ci) bits.push('split by ' + opts[ji].field + ': ' + opts[ji].col.replace(/_/g, ' '));
+    const bits = ['Showing ' + opts[ci].field + ': ' + colLabel(opts[ci])];
+    if (ji != null && ji !== ci) bits.push('split by ' + opts[ji].field + ': ' + colLabel(opts[ji]));
     else if (parts.length > 1) bits.push('but nothing matched "' + parts.slice(1).join(' ') + '" for the split');
     if (oc) bits.push('on ' + (((pisa.outcomes || {})[oc] || {}).label || oc));
     said.textContent = bits.join(', ') + '.';
@@ -1405,7 +1418,7 @@ function plotOutcome(atlas, pick, outcome, cycle, split, min) {
     const H = TOP + RH * kept.length + 28;
     const sx = v => X0 + (v - (lo - pad)) / ((hi + pad) - (lo - pad)) * (X1 - X0);
     let s = '<svg viewBox="0 0 684 ' + H + '" width="100%" role="img" aria-label="box plots of the outcome by '
-      + esc(pick.col.replace(/_/g, ' ')) + '">'
+      + esc(colLabel(pick)) + '">'
       + axisTicks(lo - pad, hi + pad, sx, TOP - 4, TOP + RH * kept.length);
     let hits = '';
     kept.forEach(([lab, g], i) => {
@@ -1450,11 +1463,11 @@ function plotOutcome(atlas, pick, outcome, cycle, split, min) {
   const bw = Math.min(30, CW * 0.26);
 
   let s = '<svg viewBox="0 0 684 ' + H + '" width="100%" role="img" aria-label="grid of box plots, '
-    + esc(pick.col.replace(/_/g, ' ')) + ' by ' + esc(split.col.replace(/_/g, ' ')) + '">'
+    + esc(colLabel(pick)) + ' by ' + esc(colLabel(split)) + '">'
     + '<text x="2" y="11" text-anchor="start" class="oaxis">rows &#8212; '
-    + esc(pick.field) + ': ' + esc(pick.col.replace(/_/g, ' ')) + '</text>'
+    + esc(pick.field) + ': ' + esc(colLabel(pick)) + '</text>'
     + '<text x="2" y="24" text-anchor="start" class="oaxis">columns &#8212; '
-    + esc(split.field) + ': ' + esc(split.col.replace(/_/g, ' ')) + '</text>';
+    + esc(split.field) + ': ' + esc(colLabel(split)) + '</text>';
   colWrapped.forEach((w, j) =>
     s += textLines(L + CW * j + CW / 2, CAP, 'middle', 'olab', w, 11));
   let hits = '';
@@ -1543,7 +1556,7 @@ function plotTrend(atlas, pick, outcome, cycles, min, split) {
   const bw = Math.min(26, CW * 0.24);
 
   let s = '<svg viewBox="0 0 684 ' + H + '" width="100%" role="img" aria-label="distribution of the outcome by '
-    + esc(pick.col.replace(/_/g, ' ')) + ' across PISA cycles">';
+    + esc(colLabel(pick)) + ' across PISA cycles">';
   cycles.forEach((c, j) =>
     s += '<text x="' + (L + CW * j + CW / 2) + '" y="18" text-anchor="middle" class="otick">' + esc(c) + '</text>');
   let hits = '';

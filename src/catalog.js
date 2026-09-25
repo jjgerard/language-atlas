@@ -13,7 +13,7 @@
 // the window to lapse.
 
 const { LIVE, DOMAINS } = require('./domains');
-const { SCHEMES } = require("./coding.js");
+const { SCHEMES, columnLabel } = require("./coding.js");
 const { load: pisa } = require("./pisa.js");
 const store = require('./store');
 const { makeHistoryMatcher } = require('./history');
@@ -68,6 +68,13 @@ function build(catalogs, sources) {
       // needs the free and numeric ones -- `exit_period_months: 12` is exactly
       // what a reader wants and it has no gloss to carry it here.
       allColumns: Object.keys(s.columns || {}).filter(c => !(s.keyColumns || []).includes(c)),
+      // WHAT TO CALL EACH ONE. Every page was printing the column KEY with its
+      // underscores swapped for spaces and treating that as a label, so a reader
+      // choosing a question met `obliges` and `rule_locus`. The labels live beside
+      // the vocabularies in coding.js and are resolved here, once, so no page has
+      // to carry a copy or invent its own wording.
+      labels: Object.fromEntries(Object.keys(s.columns || {})
+        .map(c => [c, columnLabel(k.split(".")[1], c)])),
       // The glosses themselves, so a reader who clicks a country can be told
       // what the coded value MEANS and which entries forced it, without a
       // second request and without the vocabulary being paraphrased in the

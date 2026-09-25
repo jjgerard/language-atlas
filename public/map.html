@@ -280,6 +280,15 @@
    hung out over the map past the edge of the box it belongs to. Stacked, it
    takes the box's width and the option text truncates instead. */
 .shadeby { display: flex; flex-direction: column; gap: 5px; margin: 0 0 9px; }
+.crossby label { display: flex; align-items: center; gap: 6px; text-transform: none;
+  letter-spacing: 0; font-size: 12px; cursor: pointer; }
+.crossby input { accent-color: var(--ink-faint); }
+.crossby select:disabled { opacity: .45; }
+.cross-ramp { display: flex; flex-direction: column; gap: 2px; margin: 6px 0 2px; }
+.cross-ramp .rh { font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-faint); }
+.cross-ramp .rr { display: flex; align-items: center; gap: 6px; font-size: 11px; }
+.cross-ramp .rr i { width: 15px; height: 10px; border: 1px solid var(--hair); font-style: normal; }
 .shadeby label { font-size: 11px; color: var(--ink-faint); letter-spacing: .04em; text-transform: uppercase; }
 .shadeby select {
   font: inherit; font-size: 12px; padding: 4px 6px;
@@ -847,6 +856,16 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
         <label for="shadesel">Shade by</label>
         <select id="shadesel"></select>
       </div>
+      <!-- A SECOND QUESTION ON THE SAME MAP. The colour answers one question
+           and the depth of it answers another: who administers it, in four
+           hues, darkening with what the law obliges. Off by default, because
+           two variables in one fill is a thing a reader has to be told to
+           look for, and hidden entirely until a question is chosen, since
+           there is no hue to deepen on the coverage map. -->
+      <div class="shadeby crossby" id="crossby" hidden>
+        <label><input type="checkbox" id="crosson"> Deepen by a second question</label>
+        <select id="crosssel" disabled></select>
+      </div>
       <div class="catlegend" id="catlegend" hidden></div>
       <div class="rows">
         <div class="row"><span class="sw" id="sw-looked"></span> Looked, found nothing</div>
@@ -1090,6 +1109,17 @@ const CODED = { key: null, only: null };
 
 function schemeFor(fieldKey) { return (B.schemes || {})[domainId + '.' + fieldKey]; }
 
+/* WHAT A COLUMN IS CALLED. Every picker, legend and card here used to print the
+   column KEY with its underscores swapped for spaces, which put `obliges`,
+   `rule_locus`, `secured_by` and `after_adjustment` in front of a reader as
+   though they were English. coding.js names them, catalog.js ships the names,
+   and this is the only place that asks. Falls back to the old spacing, so a
+   column added without a label degrades to what it did before. */
+function colLabel(fieldKey, col) {
+  const sc = schemeFor(fieldKey);
+  return ((sc && sc.labels) || {})[col] || String(col || '').replace(/_/g, ' ');
+}
+
 /* Every column a reader can shade by, in this domain, wherever it lives. Two
    fields carrying a column of the SAME NAME -- `decided_by` and `rule_locus` sit
    on both newcomer and removal criteria -- are deliberately adjacent in the
@@ -1322,6 +1352,149 @@ function fieldStateOf(u, fieldKey) {
   return FIELD_STATE[u.fieldStates[i]] || 'none';
 }
 
+/* ===========================================================================
+ * THE SECOND CHANNEL
+ * ===========================================================================
+ *
+ * A choropleth here has always answered one question at a time, and the
+ * question that kept coming up needs two: WHO ADMINISTERS THIS, and HOW MUCH
+ * IS ANYONE OBLIGED TO. Hue carries the first because its values are names
+ * with no order between them -- a clinician is not more than a teacher -- and
+ * saturation carries the second because saturation reads as magnitude whether
+ * or not you mean it to.
+ *
+ * WHICH IS WHY THE RAMP MUST BE ORDERED, and why this does not just reuse the
+ * legend's order. The legend sorts by how many countries hold a value, which
+ * is a fact about the corpus and not about the values; ramping on it would
+ * make "commonest" read as "most". The order used here is the one src/coding.js
+ * DECLARES -- the file writes its vocabularies least-to-most on purpose, and
+ * catalog.js already ships the value objects, so Object.keys of them is the
+ * author's own ranking. An ordinal column sorts numerically instead.
+ *
+ * A UNIT HOLDING SEVERAL VALUES takes the HIGHEST, the same reduction
+ * join-export.js makes for obliges: the strongest thing anything here
+ * promises. Taking the first would make a system that guarantees two things
+ * look weaker than one that guarantees the lesser of them alone.
+ *
+ * WHAT IT REFUSES. A hue that is a stripe or a texture is left alone: a
+ * pattern cannot be mixed toward the background without becoming a different
+ * pattern, and a reader cannot read depth off one anyway. So a unit holding
+ * several hues keeps its stripes and drops out of the cross, and the legend
+ * says how many those are rather than letting them read as pale. */
+const CROSS = { key: null };
+const CROSS_FLOOR = 20;      // the palest step, in % of the hue
+// Measured rather than chosen: at a floor of 34 the five obliges steps spanned
+// 0.165 in oklab lightness, about 0.04 a step, which is under what anyone can
+// separate on a polygon the size of Belgium. Twenty spans 0.26. It cannot go
+// much lower without the palest step reading as no-data grey.
+
+/* WHY DEPTH READS COLUMNS THE HUE REFUSES.
+ *
+ * shadeableColumns() drops every instrument-grained field, and rightly: a
+ * country naming a constitution AND a statute has two answers to `obliges`,
+ * and a hue has to pick one or stripe. But the question this channel was built
+ * for IS obliges -- how much anyone is obliged to, under the colour saying who
+ * administers it -- so refusing it here would refuse the case.
+ *
+ * Depth can take it because depth reduces. A unit holding several values is
+ * drawn at its HIGHEST, which is the reduction join-export.js already makes
+ * and answers "the strongest thing any instrument here promises". That is a
+ * claim, it is stated in the key, and it is one a hue cannot make at all.
+ *
+ * Columns with more than a dozen distinct values stay out: instrument_year is
+ * ordinal and perfectly rampable and would put ninety rows in the key. */
+const CROSS_VALS_MAX = 12;
+
+/** Like codedValues, but reading through an instrument-grained field's rows. */
+function crossValues(u, key) {
+  if (!u || !key) return null;
+  const [f, c] = key.split('.');
+  const cd = (u.coding || {})[f];
+  if (!cd) return null;
+  const out = [];
+  for (const row of (Array.isArray(cd) ? cd : [cd])) {
+    const v = row && row[c];
+    if (v === undefined || v === null || !String(v).length) continue;
+    for (const x of [].concat(v)) out.push(String(x));
+  }
+  return out.length ? out : null;
+}
+
+/* ORDINAL ONLY, and that is a short list on purpose.
+ *
+ * Depth reads as magnitude whether or not a magnitude is meant, so a column
+ * whose values have no order cannot go on it: ramping `kind of instrument`
+ * from constitution to none would assert a ranking the vocabulary refuses, and
+ * a reader cannot tell an asserted order from a real one by looking. The first
+ * cut of this offered every column and was wrong for exactly that reason.
+ *
+ * coding.js declares which columns carry a rank, and across all five maps it
+ * declares FOUR: dld's strength of entitlement and months between reviews,
+ * eal's months before support ends, and the year of the instrument. The last
+ * is excluded by the value cap below -- ninety years is ninety key rows, and a
+ * date is better read as a date than as a depth.
+ *
+ * Row-grained fields stay out whatever they declare: policyHistory's rows are
+ * dated events, so a maximum across them picks one operation out of forty
+ * years and calls it a property of the country. */
+function crossColumns() {
+  const out = [];
+  for (const f of domain().fields) {
+    const sc = schemeFor(f.k);
+    if (!sc || (sc.keyColumns || []).length) continue;
+    for (const c of (sc.ordinalColumns || [])) {
+      const key = f.k + '.' + c;
+      const vals = new Set();
+      for (const u of (B.units[domainId] || [])) for (const v of (crossValues(u, key) || [])) vals.add(v);
+      if (vals.size < 2 || vals.size > CROSS_VALS_MAX) continue;
+      out.push({ field: f.k, label: f.label, col: c, key: key, n: vals.size });
+    }
+  }
+  const order = domain().fields.map(f => f.k);
+  out.sort((a, b) => order.indexOf(a.field) - order.indexOf(b.field) || a.col.localeCompare(b.col));
+  return out;
+}
+
+/** The crossed column's values, in the order the vocabulary declares them. */
+function crossOrder(key) {
+  const [f, c] = key.split('.');
+  const sc = schemeFor(f) || {};
+  const seen = new Set();
+  for (const u of (B.units[domainId] || [])) for (const v of (crossValues(u, key) || [])) seen.add(v);
+  const declared = Object.keys(((sc.values || {})[c]) || {});
+  if ((sc.ordinalColumns || []).includes(c)) {
+    return [...seen].sort((a, b) => (parseFloat(a) || 0) - (parseFloat(b) || 0));
+  }
+  const inOrder = declared.filter(v => seen.has(v));
+  // Anything present that the vocabulary does not declare goes last rather
+  // than being dropped, so the ramp still covers every unit on the map.
+  return inOrder.concat([...seen].filter(v => !inOrder.includes(v)).sort());
+}
+
+function crossScale(key) {
+  const order = crossOrder(key);
+  const rank = new Map();
+  order.forEach((v, i) => rank.set(v, order.length < 2 ? 100
+    : Math.round(CROSS_FLOOR + (100 - CROSS_FLOOR) * i / (order.length - 1))));
+  return { order, rank };
+}
+let XSCALE = null;
+
+/** The mix percentage for this unit, or null where it drops out of the cross. */
+function crossPct(u) {
+  if (!CROSS.key || !XSCALE) return null;
+  const vals = crossValues(u, CROSS.key);
+  if (!vals) return null;
+  const pcts = vals.map(v => XSCALE.rank.get(v)).filter(x => x != null);
+  return pcts.length ? Math.max(...pcts) : null;
+}
+
+/** A flat hue, deepened. Anything that is not a flat colour comes back as it was. */
+function deepen(fill, pct) {
+  if (pct == null || !fill || String(fill).indexOf('url(') === 0) return fill;
+  return `color-mix(in oklab, ${fill} ${pct}%, var(--surface-2))`;
+}
+
 function fillFor(u, st, own) {
   // In coded mode the OWN unit decides, not the one coverage would paint from.
   if (CODED.key) {
@@ -1348,12 +1521,12 @@ function fillFor(u, st, own) {
       // `initiated by` has 18 units of 185 holding three and `triggers` 16 of
       // 164, and forcing the isolation for their sake hid the other 167 and 148.
       const cols = [...new Set(vals.map(v => SCALE.map.get(v) || 'var(--cat-other)'))].sort();
-      if (cols.length === 1) return cols[0];
+      if (cols.length === 1) return deepen(cols[0], crossPct(o));
       if (cols.length <= STRIPE_MAX) return stripeFill(cols);
       return 'url(#manyvals)';
     }
     const hit = vals.map(v => SCALE && SCALE.map.get(v)).find(Boolean);
-    return hit || 'var(--cat-other)';
+    return deepen(hit || 'var(--cat-other)', crossPct(o));
   }
   if (!u) return 'var(--nodata)';
   if (st === 'has') return `var(${covVar(u)})`;
@@ -2227,7 +2400,7 @@ function codedTipHTML(u, terr, via, fill) {
   return `
     <div class="name">${esc(label)}</div>
     <div class="meta">${meta}</div>
-    <div class="cq">${esc(col.replace(/_/g, ' '))} · ${esc(f.label)}</div>
+    <div class="cq">${esc(colLabel(f.k, col))} · ${esc(f.label)}</div>
     <div class="state">${sw} ${answer}</div>
     ${note ? `<div class="inherit">${note}</div>` : ''}
     <div class="hintline">Click for what that was read from</div>`;
@@ -2707,7 +2880,7 @@ function codedPanelHTML(u) {
   const vals = codedValues(u, CODED.key);
   const defs = ((sc && sc.values) || {})[col] || {};
   const ordinal = !!(sc && (sc.ordinalColumns || []).includes(col));
-  const question = col.replace(/_/g, ' ');
+  const question = colLabel(fk, col);
 
   const chips = vals ? vals.map(v => {
     const gloss = defs[v];
@@ -3051,6 +3224,9 @@ function paintLegend() {
 
 /* ---------- the shade-by picker and its legend ---------- */
 const shadeSel = document.getElementById('shadesel');
+const crossBox = document.getElementById('crossby');
+const crossOn = document.getElementById('crosson');
+const crossSel = document.getElementById('crosssel');
 const catLegend = document.getElementById('catlegend');
 
 function buildShadePicker() {
@@ -3067,11 +3243,36 @@ function buildShadePicker() {
       opts.push(`<optgroup label="${esc(c.label)}">`);
       open = c.label;
     }
-    opts.push(`<option value="${esc(c.key)}">${esc(c.col.replace(/_/g, ' '))}</option>`);
+    opts.push(`<option value="${esc(c.key)}">${esc(colLabel(c.field, c.col))}</option>`);
   }
   if (open !== null) opts.push('</optgroup>');
   shadeSel.innerHTML = opts.join('');
   shadeSel.value = CODED.key || '';
+}
+
+/* The same list of questions, minus the one already carrying the hue: crossing
+   a column with itself paints a ramp that says exactly what the colour said. */
+function buildCrossPicker() {
+  const cols = crossColumns().filter(c => c.key !== CODED.key);
+  const opts = [];
+  let open = null;
+  for (const c of cols) {
+    if (c.label !== open) {
+      if (open !== null) opts.push('</optgroup>');
+      opts.push(`<optgroup label="${esc(c.label)}">`);
+      open = c.label;
+    }
+    opts.push(`<option value="${esc(c.key)}">${esc(colLabel(c.field, c.col))}</option>`);
+  }
+  if (open !== null) opts.push('</optgroup>');
+  crossSel.innerHTML = opts.join('');
+  if (CROSS.key && cols.some(c => c.key === CROSS.key)) crossSel.value = CROSS.key;
+}
+
+function setCross(key) {
+  CROSS.key = key || null;
+  XSCALE = CROSS.key ? crossScale(CROSS.key) : null;
+  paint(); paintCatLegend(); sizeMap(); clampView(); applyView();
 }
 
 function paintCatLegend() {
@@ -3079,6 +3280,30 @@ function paintCatLegend() {
   catLegend.hidden = false;
   const rows = [];
   const sw = bg => `<span class="sw" style="background:${bg}"></span>`;
+  if (CROSS.key && XSCALE) {
+    // Depth is the second question, and it needs its own key: a reader cannot
+    // recover an ordering from four hues at five strengths by looking. The
+    // swatch uses the commonest hue so the ramp is read as depth rather than
+    // as a sixth colour, and the count says how many units the cross reaches.
+    const base = SCALE.ordered.length ? SCALE.map.get(SCALE.ordered[0][0]) : 'var(--cat-1)';
+    const reach = (B.units[domainId] || []).filter(u => crossPct(u) != null).length;
+    const striped = (B.units[domainId] || []).filter(u => {
+      const f = fillFor(u, null, u);
+      return typeof f === 'string' && f.indexOf('url(') === 0 && crossPct(u) != null;
+    }).length;
+    const [xf, xc] = CROSS.key.split('.');
+    rows.push(`<div class="cross-ramp"><span class="rh">Depth: ${esc(colLabel(xf, xc))}</span>`
+      // A ranked column's values are often numbers with a word attached --
+      // obliges is 0 to 4 and the words are what they mean -- and the ramp
+      // prints the word. A bare 0 in a key is a level nobody can read.
+      + XSCALE.order.map(v => {
+        const def = (((schemeFor(xf) || {}).values || {})[xc] || {})[v];
+        const txt = def && def.label ? v + ' · ' + def.label : v;
+        return `<span class="rr"><i style="background:${deepen(base, XSCALE.rank.get(v))}"></i>${esc(txt)}</span>`;
+      }).join('')
+      + `<span class="rh">on ${reach} unit${reach === 1 ? '' : 's'}`
+      + (striped ? `; ${striped} striped, left flat` : '') + `</span></div>`);
+  }
   if (SCALE.list && CODED.only) {
     rows.push(`<p class="note">This answer can hold more than one value, so there is no single
       colour for a country. Pick a value to see which systems include it.</p>`);
@@ -3160,6 +3385,17 @@ function setShade(key) {
   if (SCALE && SCALE.list && isoShare > SHADE_ISOLATE_SHARE && SCALE.ordered.length) {
     CODED.only = SCALE.ordered[0][0];
   }
+  // The cross rides on a hue, so it has nowhere to sit on the coverage map,
+  // and it cannot be the column now carrying the hue. It also hides itself
+  // where the map has no ranked column to deepen by: indigenous, fl and he
+  // declare none at all, and an empty picker beside a tickbox is worse than
+  // no tickbox.
+  crossBox.hidden = !CODED.key || !crossColumns().filter(c => c.key !== CODED.key).length;
+  if (!CODED.key || CROSS.key === CODED.key) {
+    CROSS.key = null; XSCALE = null; crossOn.checked = false; crossSel.disabled = true;
+  }
+  buildCrossPicker();
+  if (crossOn.checked && !CROSS.key) setCross(crossSel.value);
   paint(); paintCatLegend(); paintLegend();
   // THE KEY JUST CHANGED HEIGHT, so the map's share of the screen is stale.
   // sizeMap() has always measured the key and given the map what was left, but
@@ -3173,6 +3409,11 @@ function setShade(key) {
   if (selected) { panelFull = false; select(selected, false); }
 }
 shadeSel.addEventListener('change', () => setShade(shadeSel.value));
+crossOn.addEventListener('change', () => {
+  crossSel.disabled = !crossOn.checked;
+  setCross(crossOn.checked ? crossSel.value : null);
+});
+crossSel.addEventListener('change', () => { if (crossOn.checked) setCross(crossSel.value); });
 
 buildShadePicker();
 
