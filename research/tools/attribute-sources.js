@@ -165,18 +165,52 @@ async function textOf(url, label) {
 }
 
 // ---- the entries that need attributing ------------------------------------
-const DOMAINS = ["dld", "eal", "indigenous"].filter(d => !onlyDomain || d === onlyDomain);
+//
+// EVERY LIVE MAP, AND EVERY FIELD WITH PROSE IN IT. Both of those used to be
+// narrower, and both narrowings were accidents of the order the maps were
+// built in rather than decisions:
+//
+// - The domain list was written out as ["dld", "eal", "indigenous"], so fl and
+//   he could not be attributed however the flag was set -- `--domain he`
+//   answered "0 entries need attribution", which reads like a finished job.
+//   It is derived from src/domains.js now, so the next map added needs no edit
+//   here. The file is resolved through datafile.js, which prefers the living
+//   snapshot and falls back to the curated seed, because fl and he have no
+//   snapshot yet and reading data/<id>.json directly is what hid them.
+//
+// - The field list was `Object.keys(e.coding)`, which attributes a field only
+//   where somebody had already CODED it. Those are two unrelated questions: a
+//   coding is a reading of the prose, and this asks which document the prose
+//   came from. It also made attribution a downstream effect of coding
+//   progress, which is how dld's newly coded fields became attributable only
+//   today. fl and he have no coding schemes at all, so under that gate they
+//   could never have been attributed even with the domain list fixed.
+//
+// What replaces it is the condition the question actually needs: the field
+// holds prose. A third-state sentence is excluded explicitly -- "Not
+// established from the sources consulted" and "Not applicable" are somebody's
+// deliberate answer rather than text any document contains, and the old gate
+// happened to exclude them only because nobody codes them.
+const NOT_ESTABLISHED_RE = /^Not established from the sources consulted/i;
+const NOT_APPLICABLE_RE = /^Not applicable\b/i;
+const { pathFor, fileFor } = require("./datafile");
+const { DOMAINS: ALL_DOMAINS } = require(path.join(root, "src", "domains.js"));
+const DOMAINS = ALL_DOMAINS
+  .filter(d => d.live && fileFor(d.id))
+  .map(d => d.id)
+  .filter(d => !onlyDomain || d === onlyDomain);
+const FIELDS_OF = Object.fromEntries(ALL_DOMAINS.map(d => [d.id, d.fields.map(f => f[0])]));
 const jobs = [];
 for (const domain of DOMAINS) {
-  const file = path.join(root, "data", `${domain}.json`);
-  if (!fs.existsSync(file)) continue;
-  const rows = JSON.parse(fs.readFileSync(file, "utf8"));
+  const rows = JSON.parse(fs.readFileSync(pathFor(domain), "utf8"));
   for (const e of rows) {
     const links = (e.docLinks || []).filter(l => l && l.url && !/doi\.org/i.test(l.url));
     if (links.length < 1) continue;
     const k = `${e.countryCode}|${e.unitName}`;
-    const fields = Object.keys(e.coding || {}).filter(f => {
-      if (typeof e[f] !== "string" || !e[f].trim()) return false;
+    const fields = (FIELDS_OF[domain] || []).filter(f => {
+      const t = e[f];
+      if (typeof t !== "string" || !t.trim()) return false;
+      if (NOT_ESTABLISHED_RE.test(t) || NOT_APPLICABLE_RE.test(t)) return false;
       return !(((INDEX[domain] || {})[k] || {})[f]);     // already recorded in drafting
     });
     if (onlyUnit && k !== onlyUnit) continue;
