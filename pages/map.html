@@ -1303,17 +1303,68 @@ function codedScale(key) {
   const sc = schemeFor(f);
   const ordinal = (sc && (sc.ordinalColumns || []).includes(c)) || false;
   const map = new Map();
+  // How many values COULD have taken a hue, which is no longer the same as how
+  // many there are: the ones that are not answers are out of the running.
+  let hueCount = ordered.length;
+  // An ordinal column's key keeps its own rank order, set in the branch below.
+  let legend = ordered;
   if (ordinal) {
     // An ordinal column keeps the COVERAGE ramp, because its values are ranked
     // and the ramp is the one palette in this file that says so.
     const asc = rankOrder(f, c, counts.keys());
+    legend = asc.map(v => [v, counts.get(v)])
+      .concat(ordered.filter(([v]) => !asc.includes(v)));
     asc.forEach((v, i) => map.set(v, `var(--cov-${Math.min(COV_STEPS, 1 + Math.floor(i * COV_STEPS / Math.max(1, asc.length)))})`));
     // A value the ramp does not rank -- `not stated` -- still needs a fill, and
     // it is not the bottom rung. It takes the neutral the rest of the map uses
     // for an answer with no position.
     for (const v of counts.keys()) if (!map.has(v)) map.set(v, 'var(--cat-other)');
   } else {
-    ordered.slice(0, CAT_MAX).forEach(([v], i) => map.set(v, `var(--cat-${i + 1})`));
+    /* WHICH SIX GET A COLOUR, AND IN WHAT ORDER.
+     *
+     * By how many countries held the value, which put the loudest colour on
+     * the map's least interesting answer. On dld terminology the commonest
+     * `label` is `not applicable` -- 104 of 287, more than any real term --
+     * so the map's cyan said "this question does not arise here", and
+     * `developmental language disorder` (10), `language development disorder`
+     * (6) and `specific language impairment` (5) were three of the quietest
+     * things on it. A map about how systems name this had its own subject in
+     * the overflow colour.
+     *
+     * Two changes. A value that is not an ANSWER -- `not stated`, `not
+     * applicable` -- never takes a hue and never occupies one of the six
+     * slots; it shares the neutral with the tail, which is what it is.
+     *
+     * And the six go in the order the VOCABULARY declares, not the order the
+     * corpus happens to use. coding.js writes each list most-specific first:
+     * `label` opens with developmental language disorder and works out through
+     * SLI, the unqualified forms and the delay words to speech disorder and
+     * communication needs. That is a claim by the people who built the
+     * vocabulary about which answers the map is about, it is checkable against
+     * the file, and it does not move when one more country is coded.
+     *
+     * The cost is real and worth stating: a common value declared seventh is
+     * now in the neutral. On `label` that is `speech disorder` (17) and
+     * `communication needs` (26). Six is the ceiling for a choropleth -- the
+     * palette carries six for a measured reason -- so something has to be in
+     * the tail, and this decides WHICH by the vocabulary rather than by how
+     * often a word happens to be used. Every value keeps its own row and count
+     * in the key either way. */
+    const declared = Object.keys(((sc && sc.values) || {})[c] || {});
+    const answers = ordered.map(([v]) => v).filter(v => !NON_LEVEL.has(v));
+    const hueOrder = declared.filter(v => answers.includes(v))
+      .concat(answers.filter(v => !declared.includes(v)));
+    hueOrder.slice(0, CAT_MAX).forEach((v, i) => map.set(v, `var(--cat-${i + 1})`));
+    hueCount = hueOrder.length;
+    // THE KEY READS IN THE SAME ORDER THE COLOURS WERE HANDED OUT. Listing it
+    // by count put the six hues in scattered positions down a list sorted by
+    // something else, so the first row was whatever happened to be commonest
+    // -- on `the term used` that is `not applicable`, in the neutral, above
+    // every term the map exists to show. Coloured values first, in vocabulary
+    // order; then the tail, commonest first, since among values that share one
+    // colour the count is the only thing left to sort on.
+    legend = hueOrder.map(v => [v, counts.get(v)])
+      .concat(ordered.filter(([v]) => !hueOrder.includes(v)));
   }
   // How many DISTINCT COLOURS the busiest unit resolves to -- not how many
   // values, because two values past CAT_MAX both come out --cat-other and a
@@ -1330,8 +1381,8 @@ function codedScale(key) {
     if (n > STRIPE_MAX) over++;
   }
   return {
-    map, ordered, ordinal, list: isList(key), maxCols, striped, over, coded,
-    overflow: Math.max(0, ordered.length - CAT_MAX),
+    map, ordered, legend, ordinal, list: isList(key), maxCols, striped, over, coded,
+    overflow: Math.max(0, hueCount - CAT_MAX),
   };
 }
 let SCALE = null;
@@ -3305,7 +3356,11 @@ function paintCatLegend() {
     // recover an ordering from four hues at five strengths by looking. The
     // swatch uses the commonest hue so the ramp is read as depth rather than
     // as a sixth colour, and the count says how many units the cross reaches.
-    const base = SCALE.ordered.length ? SCALE.map.get(SCALE.ordered[0][0]) : 'var(--cat-1)';
+    // The first value that actually HAS a hue, not the commonest one: since
+    // `not applicable` and `not stated` took the neutral, the commonest value
+    // on several columns has no colour to ramp.
+    const lead = (SCALE.legend || []).find(([v]) => SCALE.map.has(v));
+    const base = lead ? SCALE.map.get(lead[0]) : 'var(--cat-1)';
     const reach = (B.units[domainId] || []).filter(u => crossPct(u) != null).length;
     const striped = (B.units[domainId] || []).filter(u => {
       const f = fillFor(u, null, u);
@@ -3336,7 +3391,7 @@ function paintCatLegend() {
   // Every value gets a row up to a point; past it the tail is summarised, or a
   // column with twenty values would fill the pane with a legend nobody reads.
   const LEG_MAX = 9;
-  for (const [v, n] of SCALE.ordered.slice(0, LEG_MAX)) {
+  for (const [v, n] of SCALE.legend.slice(0, LEG_MAX)) {
     const hue = SCALE.map.get(v);
     const isOn = CODED.only === v;
     const shown = CODED.only ? (isOn ? 'var(--cat-1)' : 'var(--cat-other)') : (hue || 'var(--cat-other)');

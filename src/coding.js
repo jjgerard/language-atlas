@@ -693,12 +693,17 @@ const TERM_TYPE = {
   'not stated': 'The entry does not establish what word, if any, exists',
 };
 
+// THE ORDER IS THE PALETTE. A nominal column takes its six hues in the order
+// declared here, so this list is now a statement about which answers the map
+// is FOR: the three that name a developmental language disorder lead it, and
+// the unqualified form -- which is the commonest answer in the corpus by a
+// distance -- follows them rather than leading on weight of numbers.
 // WHICH LABEL, WHERE THERE IS ONE.
 const TERM_LABEL = {
   'developmental language disorder': 'The post-CATALISE label, in English or in translation (Australia; Finland’s "kehityksellinen kielihairio", "one of the few translations that adds developmental where English said impairment"; Estonia’s "Arenguline keelepuue"; French Polynesia, where "since 2017 the DGEE glosses dysphasie as trouble developpemental du langage")',
   'specific language impairment': 'The pre-CATALISE label, still in use (Cyprus’s "Eidiki Glossiki Diatarachi"; Malta, where the 2017 survey ran in English with no translation; Poland’s "Specyficzne zaburzenie jezykowe"; Chile, registered as "trastorno especifico del lenguaje")',
-  'language impairment or disorder, unqualified': 'Neither developmental nor specific, and the commonest answer by a distance (Austria’s "Sprachstorung"; Italy’s "Disturbo del Linguaggio (DL)", "capitalised as a diagnostic label"; Sweden’s "Sprakstorning"; Greece’s "Glossiki Diatarachi"; France’s "trouble du langage"; Paraguay’s "trastornos de lenguaje", a statutory SEN category under Ley 1264/1998 Art. 80)',
   'language development disorder': 'The Germanic and Nordic family, which names development without naming DLD (Germany’s "Sprachentwicklungsstorung (SES)"; the Netherlands’ TOS, "standard across health, education and advocacy"; Denmark’s "sprogforstyrrelse"; Slovakia’s "naruseny vyvin reci", disturbed development of speech)',
+  'language impairment or disorder, unqualified': 'Neither developmental nor specific, and the commonest answer by a distance (Austria’s "Sprachstorung"; Italy’s "Disturbo del Linguaggio (DL)", "capitalised as a diagnostic label"; Sweden’s "Sprakstorning"; Greece’s "Glossiki Diatarachi"; France’s "trouble du langage"; Paraguay’s "trastornos de lenguaje", a statutory SEN category under Ley 1264/1998 Art. 80)',
   'language delay': 'The word says the child is BEHIND rather than disordered (Romania’s "Retard de limbaj", which the entry glosses as "language delay or language retardation"; China’s national standard, listing childhood delayed speech development)',
   'language difficulties': 'A DIFFICULTY rather than a disorder, and the entries draw the distinction themselves (Norway’s "sprakvansker (SV), language difficulties, NOT A DISORDER WORD"; the Seychelles, "speech and language difficulties is one of ten recognised SEN categories"; Botswana, which "lists language difficulties as an example category"; Jordan, where "speech difficulties appears only as a service target, not a defined category")',
   'speech disorder': 'A word for SPEECH that does not reach comprehension (China’s 言语残疾, where "grading turns on speech intelligibility and expression, not on comprehension"; Armenia’s repealed "severe speech disorders"; North Macedonia’s "narusuvanje na govorot", disturbance of speech; Vietnam, whose statutory category "fuses hearing and speech")',
@@ -1678,43 +1683,35 @@ const HISTORY_SCHEME = id => ({
     fields_touched: fieldsTouchedFor(id),
   },
 });
-// WHICH COLUMNS CARRY A RANK, AND WHICH WAY ROUND.
+// WHICH COLUMNS CARRY A RANK.
 //
-// `ordinal` was declared on four columns, three of them numeric, because the
-// only thing reading it was a map choosing between the coverage ramp and the
-// categorical palette. That made ranking look like a property of numbers. It
-// is not: `in statute > in policy > in professional use only > a researcher
-// translation > none` is as ranked as 0 to 4, and a map that cannot say so
-// paints it in six unrelated colours.
+// A LADDER OF WORDS IS NOT A SCALE OF NUMBERS, and this list is for the second
+// kind. Sixteen worded columns were declared ordinal here and have been taken
+// out again: `what it obliges` really does run duty to provide down to none,
+// and `how it is taught` compulsory down to not taught, but the distance
+// between two rungs is not a quantity, and a saturation ramp says it is. Half
+// a shade darker between `permission only` and `declaratory only` asserts a
+// size for a gap the vocabulary never measured. Those columns keep their
+// categorical palette, where six hues say "these are different" and nothing
+// more, which is all the corpus supports.
 //
-// A column belongs here when its values form ONE scale end to end. Several
-// that look ranked do not, and are deliberately absent: `secured_by` on the
-// indigenous medium is a typology of how, not a ladder of how much, and
-// nothing decides whether `system rule` outranks `right`. `status` on
-// revitalisation runs established > pilot > proposed > discontinued, and
-// `discontinued` is off the scale rather than below `proposed`. Where the
-// ranking is arguable the column stays nominal, because a depth ramp asserts
-// an order a reader cannot check by looking.
+// So: intervals, and the one ordered scale the project made itself. What is
+// left is `obliges`, whose 0 to 4 was defined as a scale and is read as one,
+// and the month and year columns, which are numbers about which arithmetic is
+// true. Nothing else.
 //
-// `ordinalDesc` says the vocabulary is written STRONGEST FIRST, which most of
-// them are -- the file introduces the fullest case and works down. Renderers
-// ramp weak-to-strong, so those are reversed at the point of use rather than
-// by rewriting vocabularies whose declared order is also their legend order
-// and their argument.
+// The comment those sixteen carried is kept in the git history rather than
+// here, because the argument for each of them was good and the line between a
+// ranked vocabulary and an interval scale is exactly where it failed.
 //
 // `not stated` is never a level. It sits in almost every vocabulary and is
 // dropped from the ramp, so a unit that does not answer stays undeepened
-// rather than being painted as the palest rung of a ladder it is not on.
+// rather than being painted as the palest rung of a ladder it is not on. It
+// takes the neutral on the categorical palette for the same reason.
 const SCHEMES = {
   'indigenous.taughtAsSubject': {
     // One system, the grain the other two indigenous schemes use.
     row: 'one national or sub-national system',
-    // `status` is a ladder of obligation and `stages` one of reach. `object`
-    // is not: teaching the language, the language with its culture, and the
-    // community rather than the language are three different things, not more
-    // and less of one.
-    ordinal: ['status', 'stages'],
-    ordinalDesc: ['status'],
     columns: {
       // A LIST: compulsory early and optional later is common enough that coding
       // one value loses the shape. See the comment on SUBJECT_STATUS.
@@ -1727,11 +1724,6 @@ const SCHEMES = {
     // One system. Where a system runs several languages at several roles the
     // dominant arrangement is coded; see the grain note on MEDIUM_ROLE.
     row: 'one national or sub-national system',
-    // `role` runs sole medium down to not a medium, `reach` preschool up to
-    // all levels. `secured_by` is left nominal on purpose: see the note on
-    // SCHEMES.
-    ordinal: ['role', 'reach'],
-    ordinalDesc: ['role'],
     columns: {
       role: MEDIUM_ROLE,
       reach: MEDIUM_REACH,
@@ -1739,12 +1731,6 @@ const SCHEMES = {
     },
   },
   'indigenous.standing': {
-    // Three ladders: how recognised, what the recognition obliges, and how
-    // much of the country it covers. `source` is not one -- a constitution is
-    // not more than a statute in every system, and the column records which
-    // instrument carries it rather than how strong it is.
-    ordinal: ['status', 'force', 'extent'],
-    ordinalDesc: ['status', 'force', 'extent'],
     // One system, so this fits what storage holds. A system may hold several
     // languages at several standings; see the grain note on STANDING_STATUS.
     row: 'one national or sub-national system',
@@ -1774,7 +1760,11 @@ const SCHEMES = {
     // vocabulary refuses. Detection would get this wrong in both directions:
     // `obliges` has numeric keys and IS ordered, while `occurrence` has numeric
     // keys and is a row identifier. So it is declared.
-    ordinal: ['review_interval_months'],
+    //
+    // `review_interval_months` WAS declared ordinal here and is not now. It is
+    // ordered arithmetically and nobody wants to shade a map by it: 23 units,
+    // and the number is a detail inside one rule rather than a property of a
+    // system. On dld the only ranked column worth drawing is `obliges`.
 
     row: 'one national or sub-national system',
     columns: {
@@ -1848,10 +1838,6 @@ const SCHEMES = {
     },
   },
   'dld.funding': {
-    // What the family pays, free at the point of use down to bearing the cost.
-    // `funders` and `scope` name who and what, and neither is a scale.
-    ordinal: ['family_pays'],
-    ordinalDesc: ['family_pays'],
     row: 'one national or sub-national system',
     columns: {
       // `funders` is a LIST -- see the note on FUNDERS.
@@ -1862,10 +1848,6 @@ const SCHEMES = {
     },
   },
   'indigenous.localTerm': {
-    // How firmly the word is fixed, statute down to practice. The `family`
-    // column is a typology of what KIND of word it is and has no order.
-    ordinal: ['fixed_in'],
-    ordinalDesc: ['fixed_in'],
     row: 'one national or sub-national system',
     columns: {
       // `family` is a LIST -- see the note on LOCALTERM_FAMILY.
@@ -1875,11 +1857,6 @@ const SCHEMES = {
     },
   },
   'dld.terminology': {
-    // How firmly the term is fixed: statute, official list, professional use,
-    // a researcher's translation, none. The same ladder as indigenous
-    // localTerm.fixed_in, and the reason this file kept both columns apart.
-    ordinal: ['standing'],
-    ordinalDesc: ['standing'],
     row: 'one national or sub-national system',
     columns: {
       term_type: TERM_TYPE,
@@ -1888,10 +1865,6 @@ const SCHEMES = {
     },
   },
   'indigenous.materials': {
-    // Published beats in development. `curriculum`, `orthography` and
-    // `charged_to` say what kind, not how much.
-    ordinal: ['materials'],
-    ordinalDesc: ['materials'],
     row: 'one national or sub-national system',
     columns: {
       curriculum: MAT_CURRICULUM,
@@ -1901,10 +1874,6 @@ const SCHEMES = {
     },
   },
   'eal.l3Support': {
-    // Two ladders of obligation: whether a language is required at all, and
-    // whether a SECOND one is. `exemption` and `targeting` are nominal.
-    ordinal: ['requirement', 'second_language'],
-    ordinalDesc: ['requirement', 'second_language'],
     row: 'one national or sub-national system',
     columns: {
       requirement: L3_REQUIREMENT,
@@ -1942,12 +1911,6 @@ const SCHEMES = {
     },
   },
   'dld.outcomesEvidence': {
-    // How much the evidence says: nothing established, headcounts, defined
-    // indicators, substantive findings. Declared weakest-first, so it is the
-    // one ordinal here that is NOT reversed. `reporting` is nominal -- a
-    // one-off study and no regular report are different situations rather
-    // than two rungs.
-    ordinal: ['evidence_found'],
     row: 'one national or sub-national system',
     columns: {
       // BOTH of these are LISTS -- see the notes on the two constants.
@@ -1998,12 +1961,6 @@ const SCHEMES = {
     },
   },
   'dld.multilingualProvision': {
-    // `assessment_language` ranks how far a child's own language is reached,
-    // required down to the majority language only; `local_norms` is exist or
-    // none. `bilingual_handling` is not a ladder -- excluded on language
-    // grounds and case by case are different rules, not less of one.
-    ordinal: ['assessment_language', 'local_norms'],
-    ordinalDesc: ['assessment_language', 'local_norms'],
     row: 'one national or sub-national system',
     columns: {
       assessment_language: ASSESSMENT_LANGUAGE,
