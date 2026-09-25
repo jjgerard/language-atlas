@@ -860,7 +860,7 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
            look for, and hidden entirely until a question is chosen, since
            there is no hue to deepen on the coverage map. -->
       <div class="shadeby crossby" id="crossby" hidden>
-        <label><input type="checkbox" id="crosson"> Deepen by a second question</label>
+        <label><input type="checkbox" id="crosson"> Cross with</label>
         <select id="crosssel" disabled></select>
       </div>
       <div class="catlegend" id="catlegend" hidden></div>
@@ -3304,14 +3304,12 @@ function paintCatLegend() {
   if (SCALE.list && CODED.only) {
     rows.push(`<p class="note">This answer can hold more than one value, so there is no single
       colour for a country. Pick a value to see which systems include it.</p>`);
-  } else if (SCALE.list && (SCALE.striped || SCALE.over)) {
-    const many = SCALE.over
-      ? ` ${SCALE.over} hold${SCALE.over === 1 ? 's' : ''} more than three and ${SCALE.over === 1 ? 'is' : 'are'} crosshatched instead.`
-      : '';
-    rows.push(`<p class="note">${SCALE.striped} answer${SCALE.striped === 1 ? '' : 's'} hold
-      ${SCALE.maxCols > 2 ? 'two or three' : 'two'} of these values and are striped in each.${many}
-      Click a value to see only that one.</p>`);
   }
+  // The stripe count used to be spelled out here -- how many answers hold two
+  // or three values, how many go past three, and that a value can be clicked.
+  // A striped country is visibly striped and a legend row is visibly
+  // clickable; the sentence was describing the picture the reader is looking
+  // at. The counts are still in SCALE for anything that needs them.
   // Every value gets a row up to a point; past it the tail is summarised, or a
   // column with twenty values would fill the pane with a legend nobody reads.
   const LEG_MAX = 9;
