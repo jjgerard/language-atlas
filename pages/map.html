@@ -1262,6 +1262,33 @@ const isList = key => {
   return n > 0;
 };
 
+/* THE ORDER OF A RANKED COLUMN, and the only place that decides it.
+ *
+ * The coverage ramp used to sort an ordinal column with
+ * `parseFloat(a) - parseFloat(b)`, which works for `obliges` because its
+ * values are the digits 0 to 4 and for nothing else: every value of
+ * `in statute > in policy > in professional use only` parses to NaN, falls
+ * back to 0, and the ramp comes out in whatever order the units were read in.
+ * That was invisible while the only ranked columns were numbers.
+ *
+ * So the order comes from the vocabulary, which declares it, reversed where
+ * the vocabulary is written strongest-first. `not stated` is not a level and
+ * is dropped: a unit that does not answer should stay off the ramp rather than
+ * be painted as its palest rung. A column with no declared vocabulary is a
+ * number -- months, years -- and sorts numerically. */
+const NON_LEVEL = new Set(['not stated', 'not applicable', 'not measured', 'not adjusted', 'silent']);
+function rankOrder(fieldKey, col, values) {
+  const sc = schemeFor(fieldKey) || {};
+  const present = new Set(values);
+  const declared = Object.keys(((sc.values || {})[col]) || {});
+  if (!declared.length) {
+    return [...present].sort((a, b) => (parseFloat(a) || 0) - (parseFloat(b) || 0));
+  }
+  const ord = declared.filter(v => present.has(v) && !NON_LEVEL.has(v));
+  if ((sc.ordinalDescColumns || []).includes(col)) ord.reverse();
+  return ord;
+}
+
 /* Values present in the corpus for this column, commonest first. Six get a hue
    and the rest share --cat-other, because six is the ceiling for a choropleth
    anyone can read without counting swatches. */
@@ -1279,8 +1306,12 @@ function codedScale(key) {
   if (ordinal) {
     // An ordinal column keeps the COVERAGE ramp, because its values are ranked
     // and the ramp is the one palette in this file that says so.
-    const asc = [...counts.keys()].sort((a, b) => (parseFloat(a) || 0) - (parseFloat(b) || 0));
+    const asc = rankOrder(f, c, counts.keys());
     asc.forEach((v, i) => map.set(v, `var(--cov-${Math.min(COV_STEPS, 1 + Math.floor(i * COV_STEPS / Math.max(1, asc.length)))})`));
+    // A value the ramp does not rank -- `not stated` -- still needs a fill, and
+    // it is not the bottom rung. It takes the neutral the rest of the map uses
+    // for an answer with no position.
+    for (const v of counts.keys()) if (!map.has(v)) map.set(v, 'var(--cat-other)');
   } else {
     ordered.slice(0, CAT_MAX).forEach(([v], i) => map.set(v, `var(--cat-${i + 1})`));
   }
@@ -1452,20 +1483,12 @@ function crossColumns() {
   return out;
 }
 
-/** The crossed column's values, in the order the vocabulary declares them. */
+/** The crossed column's values, weakest first. */
 function crossOrder(key) {
   const [f, c] = key.split('.');
-  const sc = schemeFor(f) || {};
   const seen = new Set();
   for (const u of (B.units[domainId] || [])) for (const v of (crossValues(u, key) || [])) seen.add(v);
-  const declared = Object.keys(((sc.values || {})[c]) || {});
-  if ((sc.ordinalColumns || []).includes(c)) {
-    return [...seen].sort((a, b) => (parseFloat(a) || 0) - (parseFloat(b) || 0));
-  }
-  const inOrder = declared.filter(v => seen.has(v));
-  // Anything present that the vocabulary does not declare goes last rather
-  // than being dropped, so the ramp still covers every unit on the map.
-  return inOrder.concat([...seen].filter(v => !inOrder.includes(v)).sort());
+  return rankOrder(f, c, seen);
 }
 
 function crossScale(key) {

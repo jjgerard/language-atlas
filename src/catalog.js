@@ -63,6 +63,12 @@ function build(catalogs, sources) {
       // than detected here -- `obliges` and `occurrence` both have numeric keys
       // and only one of them is a rank.
       ordinalColumns: s.ordinal || [],
+      // Which of THOSE are written strongest-first. Most vocabularies in
+      // coding.js introduce the fullest case and work down, and a renderer that
+      // ramps weak-to-strong has to know, or it paints the strongest answer
+      // palest. Reversed at the point of use rather than by rewriting a
+      // vocabulary whose declared order is also its legend order.
+      ordinalDescColumns: s.ordinalDesc || [],
       // Every column except the key ones, in declared order. `valueColumns` is
       // the subset backed by a vocabulary; a panel showing the FULL coding also
       // needs the free and numeric ones -- `exit_period_months: 12` is exactly

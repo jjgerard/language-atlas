@@ -1678,10 +1678,43 @@ const HISTORY_SCHEME = id => ({
     fields_touched: fieldsTouchedFor(id),
   },
 });
+// WHICH COLUMNS CARRY A RANK, AND WHICH WAY ROUND.
+//
+// `ordinal` was declared on four columns, three of them numeric, because the
+// only thing reading it was a map choosing between the coverage ramp and the
+// categorical palette. That made ranking look like a property of numbers. It
+// is not: `in statute > in policy > in professional use only > a researcher
+// translation > none` is as ranked as 0 to 4, and a map that cannot say so
+// paints it in six unrelated colours.
+//
+// A column belongs here when its values form ONE scale end to end. Several
+// that look ranked do not, and are deliberately absent: `secured_by` on the
+// indigenous medium is a typology of how, not a ladder of how much, and
+// nothing decides whether `system rule` outranks `right`. `status` on
+// revitalisation runs established > pilot > proposed > discontinued, and
+// `discontinued` is off the scale rather than below `proposed`. Where the
+// ranking is arguable the column stays nominal, because a depth ramp asserts
+// an order a reader cannot check by looking.
+//
+// `ordinalDesc` says the vocabulary is written STRONGEST FIRST, which most of
+// them are -- the file introduces the fullest case and works down. Renderers
+// ramp weak-to-strong, so those are reversed at the point of use rather than
+// by rewriting vocabularies whose declared order is also their legend order
+// and their argument.
+//
+// `not stated` is never a level. It sits in almost every vocabulary and is
+// dropped from the ramp, so a unit that does not answer stays undeepened
+// rather than being painted as the palest rung of a ladder it is not on.
 const SCHEMES = {
   'indigenous.taughtAsSubject': {
     // One system, the grain the other two indigenous schemes use.
     row: 'one national or sub-national system',
+    // `status` is a ladder of obligation and `stages` one of reach. `object`
+    // is not: teaching the language, the language with its culture, and the
+    // community rather than the language are three different things, not more
+    // and less of one.
+    ordinal: ['status', 'stages'],
+    ordinalDesc: ['status'],
     columns: {
       // A LIST: compulsory early and optional later is common enough that coding
       // one value loses the shape. See the comment on SUBJECT_STATUS.
@@ -1694,6 +1727,11 @@ const SCHEMES = {
     // One system. Where a system runs several languages at several roles the
     // dominant arrangement is coded; see the grain note on MEDIUM_ROLE.
     row: 'one national or sub-national system',
+    // `role` runs sole medium down to not a medium, `reach` preschool up to
+    // all levels. `secured_by` is left nominal on purpose: see the note on
+    // SCHEMES.
+    ordinal: ['role', 'reach'],
+    ordinalDesc: ['role'],
     columns: {
       role: MEDIUM_ROLE,
       reach: MEDIUM_REACH,
@@ -1701,6 +1739,12 @@ const SCHEMES = {
     },
   },
   'indigenous.standing': {
+    // Three ladders: how recognised, what the recognition obliges, and how
+    // much of the country it covers. `source` is not one -- a constitution is
+    // not more than a statute in every system, and the column records which
+    // instrument carries it rather than how strong it is.
+    ordinal: ['status', 'force', 'extent'],
+    ordinalDesc: ['status', 'force', 'extent'],
     // One system, so this fits what storage holds. A system may hold several
     // languages at several standings; see the grain note on STANDING_STATUS.
     row: 'one national or sub-national system',
@@ -1804,6 +1848,10 @@ const SCHEMES = {
     },
   },
   'dld.funding': {
+    // What the family pays, free at the point of use down to bearing the cost.
+    // `funders` and `scope` name who and what, and neither is a scale.
+    ordinal: ['family_pays'],
+    ordinalDesc: ['family_pays'],
     row: 'one national or sub-national system',
     columns: {
       // `funders` is a LIST -- see the note on FUNDERS.
@@ -1814,6 +1862,10 @@ const SCHEMES = {
     },
   },
   'indigenous.localTerm': {
+    // How firmly the word is fixed, statute down to practice. The `family`
+    // column is a typology of what KIND of word it is and has no order.
+    ordinal: ['fixed_in'],
+    ordinalDesc: ['fixed_in'],
     row: 'one national or sub-national system',
     columns: {
       // `family` is a LIST -- see the note on LOCALTERM_FAMILY.
@@ -1823,6 +1875,11 @@ const SCHEMES = {
     },
   },
   'dld.terminology': {
+    // How firmly the term is fixed: statute, official list, professional use,
+    // a researcher's translation, none. The same ladder as indigenous
+    // localTerm.fixed_in, and the reason this file kept both columns apart.
+    ordinal: ['standing'],
+    ordinalDesc: ['standing'],
     row: 'one national or sub-national system',
     columns: {
       term_type: TERM_TYPE,
@@ -1831,6 +1888,10 @@ const SCHEMES = {
     },
   },
   'indigenous.materials': {
+    // Published beats in development. `curriculum`, `orthography` and
+    // `charged_to` say what kind, not how much.
+    ordinal: ['materials'],
+    ordinalDesc: ['materials'],
     row: 'one national or sub-national system',
     columns: {
       curriculum: MAT_CURRICULUM,
@@ -1840,6 +1901,10 @@ const SCHEMES = {
     },
   },
   'eal.l3Support': {
+    // Two ladders of obligation: whether a language is required at all, and
+    // whether a SECOND one is. `exemption` and `targeting` are nominal.
+    ordinal: ['requirement', 'second_language'],
+    ordinalDesc: ['requirement', 'second_language'],
     row: 'one national or sub-national system',
     columns: {
       requirement: L3_REQUIREMENT,
@@ -1877,6 +1942,12 @@ const SCHEMES = {
     },
   },
   'dld.outcomesEvidence': {
+    // How much the evidence says: nothing established, headcounts, defined
+    // indicators, substantive findings. Declared weakest-first, so it is the
+    // one ordinal here that is NOT reversed. `reporting` is nominal -- a
+    // one-off study and no regular report are different situations rather
+    // than two rungs.
+    ordinal: ['evidence_found'],
     row: 'one national or sub-national system',
     columns: {
       // BOTH of these are LISTS -- see the notes on the two constants.
@@ -1927,6 +1998,12 @@ const SCHEMES = {
     },
   },
   'dld.multilingualProvision': {
+    // `assessment_language` ranks how far a child's own language is reached,
+    // required down to the majority language only; `local_norms` is exist or
+    // none. `bilingual_handling` is not a ladder -- excluded on language
+    // grounds and case by case are different rules, not less of one.
+    ordinal: ['assessment_language', 'local_norms'],
+    ordinalDesc: ['assessment_language', 'local_norms'],
     row: 'one national or sub-national system',
     columns: {
       assessment_language: ASSESSMENT_LANGUAGE,
