@@ -88,6 +88,15 @@ main a { color: var(--focus); }
 .ans .src a:hover { color: var(--ink); }
 .ans .src .sep { margin: 0 5px; color: var(--hair-strong); }
 .ans .src.none { font-style: italic; }
+.ans .cod { margin: 5px 0 0; display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 12px; }
+.ans .cod .row { display: flex; flex-wrap: wrap; gap: 3px 14px; width: 100%; }
+.ans .cod .row + .row { border-top: 1px dotted var(--hair); padding-top: 4px; margin-top: 2px; }
+.ans .cod .c { display: inline-flex; gap: 5px; align-items: baseline; }
+.ans .cod .k { color: var(--ink-faint); }
+.ans .cod .k::after { content: ""; }
+.ans .cod .v { color: var(--ink); }
+.ans .cod .v[title] { text-decoration: underline dotted var(--hair-strong); text-underline-offset: 2px; cursor: help; }
+.ans .cod .inst { width: 100%; font-weight: 500; }
 .chip {
   display: inline-block; font-size: 10px; letter-spacing: .07em; text-transform: uppercase;
   padding: 2px 6px; border-radius: 4px; background: var(--surface-2); color: var(--ink-soft);
@@ -351,6 +360,96 @@ function sourcesHTML(u, key) {
     + '</p>';
 }
 
+/* THE CODING, BESIDE THE TEXT IT IS A READING OF.
+ *
+ * This page has shown the prose and nothing else, so the only way to see what
+ * anybody made of it was to download the CSV and read `coding_obliges` in a
+ * spreadsheet. That is the wrong way round: the coding is a reading of the
+ * sentences directly above it, and the two belong on one screen where a reader
+ * can disagree with the reading.
+ *
+ * It follows the same rules the map follows, from the same payload, so the two
+ * never say different things:
+ *   - key columns are skipped, because `year` and `matches` identify a coding
+ *     row rather than describe one;
+ *   - a measured column is shown in its declared BANDS, so eal's exit period
+ *     reads "one to two years" here exactly as it does in the map's key, while
+ *     the CSV keeps the month;
+ *   - an ordinal value with a name shows both, "2 - duty to provide, owed to
+ *     the population", since the digit alone is a level nobody can read;
+ *   - the gloss rides on the title attribute, so the evidenced definition from
+ *     src/coding.js is one hover away and takes no room.
+ *
+ * An instrument-grained field keeps its rows apart rather than joining them
+ * with " | " the way the CSV must: a country naming a constitution and a
+ * statute has two answers to every column, and flattening them is the thing
+ * `many` was built to stop. */
+function codLabel(fieldKey, col) {
+  const sc = (payload.schemes || {})[domain.id + '.' + fieldKey] || {};
+  return (sc.labels || {})[col] || String(col).replace(/_/g, ' ');
+}
+
+function codValue(fieldKey, col, v) {
+  const sc = (payload.schemes || {})[domain.id + '.' + fieldKey] || {};
+  const band = (sc.bands || {})[col];
+  const n = Number(v);
+  if (band && !isNaN(n)) {
+    for (let i = 0; i < band.cuts.length; i++) if (n <= band.cuts[i]) return { text: band.labels[i], gloss: v + ' in the source' };
+    return { text: band.labels[band.labels.length - 1], gloss: v + ' in the source' };
+  }
+  const def = ((sc.values || {})[col] || {})[v];
+  if (def && typeof def === 'object') return { text: v + ' \u00b7 ' + (def.label || ''), gloss: def.gloss || '' };
+  return { text: String(v), gloss: typeof def === 'string' ? def : '' };
+}
+
+function codingHTML(u, f) {
+  const c0 = (u.coding || {})[f.k];
+  if (!c0) return '';
+  const sc = (payload.schemes || {})[domain.id + '.' + f.k] || {};
+  const keyCols = new Set(sc.keyColumns || []);
+  const order = sc.allColumns || [];
+  // A ROW-GRAINED FIELD IS TALLIED, NOT LISTED. policyHistory codes one dated
+  // row at a time, and its key columns -- the year and a prefix of the
+  // description -- are the only things tying a coding back to the event it
+  // codes. Printing the rows without them gave a column of "what happened:
+  // provision described" repeated nine times with nothing to say which nine
+  // events they were. The body above shows four history rows and a count, so
+  // there is nothing here to align to; a tally says what the coding made of
+  // the entry's history as a whole, which is the honest summary at this size.
+  if (keyCols.size) {
+    const tally = {};
+    for (const r of (Array.isArray(c0) ? c0 : [c0])) {
+      for (const col of order) {
+        if (keyCols.has(col) || !r || r[col] == null || r[col] === '') continue;
+        for (const v of [].concat(r[col])) {
+          (tally[col] = tally[col] || {})[v] = (tally[col][v] || 0) + 1;
+        }
+      }
+    }
+    const cols = Object.entries(tally).map(([col, counts]) => {
+      const txt = Object.entries(counts).sort((a, b) => b[1] - a[1])
+        .map(([v, n]) => codValue(f.k, col, v).text + (n > 1 ? ' ×' + n : '')).join('; ');
+      return `<span class="c"><span class="k">${esc(codLabel(f.k, col))}</span>`
+        + `<span class="v">${esc(txt)}</span></span>`;
+    }).join('');
+    return cols ? `<div class="cod"><div class="row">${cols}</div></div>` : '';
+  }
+
+  const rows = (Array.isArray(c0) ? c0 : [c0]).map(r => {
+    const cols = order.filter(col => !keyCols.has(col) && r && r[col] != null && r[col] !== ''
+      && !(Array.isArray(r[col]) && !r[col].length));
+    if (!cols.length) return '';
+    return '<div class="row">' + cols.map(col => {
+      const vals = [].concat(r[col]).map(v => codValue(f.k, col, v));
+      const text = vals.map(v => v.text).join('; ');
+      const gloss = vals.map(v => v.gloss).filter(Boolean).join(' \u2014 ');
+      return `<span class="c"><span class="k">${esc(codLabel(f.k, col))}</span>`
+        + `<span class="v"${gloss ? ` title="${esc(gloss)}"` : ''}>${esc(text)}</span></span>`;
+    }).join('') + '</div>';
+  }).filter(Boolean).join('');
+  return rows ? `<div class="cod">${rows}</div>` : '';
+}
+
 function draw() {
   const d = live.find(x => x.id === $('map').value) || live[0];
   const f = d.fields.find(x => x.k === $('field').value) || d.fields[0];
@@ -407,6 +506,7 @@ function draw() {
             // rest of the questions are not missing, they cannot arise.
             + (st !== 'absent' && Array.isArray(slots) && slots.length
               ? `<span class="slot">answers question ${slots.join(', ')}</span>` : '')
+            + codingHTML(u, f)
             // An absence gets one too, and it matters more there than anywhere:
             // "the instruments cited on this entry set no such rule" is a claim
             // about documents, and the reader should be able to see which.
