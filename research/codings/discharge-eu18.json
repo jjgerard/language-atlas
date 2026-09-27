@@ -1,0 +1,73 @@
+{
+  "AD|Andorra": { "dischargeCriteria": {
+    "discharge_basis": ["re-evaluation cycle"],
+    "decider": "not stated", "rule_locus": "national statute" } },
+
+  "BA|Bosnia and Herzegovina": { "dischargeCriteria": {
+    "discharge_basis": ["decision on continuing need", "age ceiling"],
+    "decider": "school or authority", "rule_locus": "sub-national only" } },
+
+  "BY|Belarus": { "dischargeCriteria": {
+    "discharge_basis": ["re-evaluation cycle"],
+    "decider": "multidisciplinary team", "rule_locus": "national statute" } },
+
+  "CH|Switzerland": { "dischargeCriteria": {
+    "discharge_basis": ["re-evaluation cycle"], "review_interval_months": 12,
+    "decider": "school or authority", "rule_locus": "national framework, sub-national rules" } },
+
+  "DE|Germany": { "dischargeCriteria": {
+    "discharge_basis": ["decision on continuing need"],
+    "decider": "clinician", "rule_locus": "national framework, sub-national rules" } },
+
+  "FO|Faroe Islands": { "dischargeCriteria": {
+    "discharge_basis": ["age ceiling"],
+    "decider": "school or authority", "rule_locus": "national statute" } },
+
+  "GI|Gibraltar": { "dischargeCriteria": {
+    "discharge_basis": ["review without criterion", "age ceiling"],
+    "decider": "school or authority", "rule_locus": "national statute" } },
+
+  "IM|Isle of Man": { "dischargeCriteria": {
+    "discharge_basis": ["decision on continuing need"],
+    "decider": "school or authority", "rule_locus": "national statute" } },
+
+  "JE|Jersey": { "dischargeCriteria": {
+    "discharge_basis": ["decision on continuing need", "age ceiling"],
+    "decider": "school or authority", "rule_locus": "national, non-binding" } },
+
+  "LI|Liechtenstein": { "dischargeCriteria": {
+    "discharge_basis": ["fixed time limit", "age ceiling"],
+    "decider": "school or authority", "rule_locus": "national statute" } },
+
+  "LU|Luxembourg": { "dischargeCriteria": {
+    "discharge_basis": ["re-evaluation cycle", "decision on continuing need"],
+    "decider": "national authority", "rule_locus": "national statute" } },
+
+  "MC|Monaco": { "dischargeCriteria": {
+    "discharge_basis": ["re-evaluation cycle"],
+    "decider": "national authority", "rule_locus": "national statute" } },
+
+  "MD|Moldova": { "dischargeCriteria": {
+    "discharge_basis": ["re-evaluation cycle", "age ceiling"], "review_interval_months": 6,
+    "decider": "school or authority", "rule_locus": "national statute" } },
+
+  "ME|Montenegro": { "dischargeCriteria": {
+    "discharge_basis": ["re-evaluation cycle"], "review_interval_months": 12,
+    "decider": "not stated", "rule_locus": "national statute" } },
+
+  "MK|North Macedonia": { "dischargeCriteria": {
+    "discharge_basis": ["re-evaluation cycle", "age ceiling"], "review_interval_months": 24,
+    "decider": "multidisciplinary team", "rule_locus": "national statute" } },
+
+  "MT|Malta": { "dischargeCriteria": {
+    "discharge_basis": ["re-evaluation cycle", "decision on continuing need"], "review_interval_months": 36,
+    "decider": "multidisciplinary team", "rule_locus": "national statute" } },
+
+  "SM|San Marino": { "dischargeCriteria": {
+    "discharge_basis": ["review without criterion", "re-evaluation cycle"], "review_interval_months": 12,
+    "decider": "not stated", "rule_locus": "national statute" } },
+
+  "VA|Vatican City": { "dischargeCriteria": {
+    "discharge_basis": ["age ceiling"],
+    "decider": "medical commission", "rule_locus": "national statute" } }
+}
