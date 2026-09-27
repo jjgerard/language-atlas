@@ -912,11 +912,30 @@ if (!isCLI) return;
     const np = Object.values(keptProg).reduce((a, b) => a + b.length, 0);
     const no = Object.values(keptOff).reduce((a, b) => a + b.length, 0);
     const nh = keptHist.length;
+    const nSrc = ((s.sources && s.sources.length ? s.sources : s.addDocLinks) || []).length;
     console.log(NL + key + ": " + Object.keys(kept).length + " fields, " + nb + " bullets, " + ns + " series rows, " +
                 nh + " history rows, " + nl + " language rows, " + np + " programme rows, " + no + " offering rows verified, " + dropped.length + " dropped");
     if (nn) console.log("    " + nn + " notEstablished finding" + (nn === 1 ? "" : "s") + " passed through UNGATED (a claim of absence is not quote-checked)");
     dropped.forEach(d => console.log("    - " + d));
-    if (nb || ns || nn || nh || nl || np || no)
+    // A SOURCES-ONLY UNIT SURVIVES. terr-apply.js says in as many words that
+    // "`addDocLinks` alone is a legitimate spec. A pass that recovers the
+    // sources for work already written..." -- and it could never receive one,
+    // because this line required a verified row before it would emit anything.
+    // So the one spec shape whose whole purpose is to satisfy the repo's first
+    // rule, that every claim traces to a docLink on the same entry, was the
+    // shape the gate silently ate. Found by writing one: Canada's eal entry
+    // asserts "education is provincial under the Constitution Act 1867" and
+    // cites no such document, the section was fetched and read, and the spec
+    // carrying it came back "0 units survived" with no reason given.
+    //
+    // There is nothing here to quote-check -- a source is a document, not a
+    // claim about one -- so it passes through the way a notEstablished finding
+    // does, ungated and SAID OUT LOUD. What still gates it is apply.js, which
+    // will not add a docLink to an entry that does not exist.
+    if (nSrc && !(nb || ns || nn || nh || nl || np || no))
+      console.log("    " + nSrc + " source" + (nSrc === 1 ? "" : "s") +
+                  " passed through UNGATED with no bullets to check (a source is a document, not a claim)");
+    if (nb || ns || nn || nh || nl || np || no || nSrc)
       // `sources` and `addDocLinks` are the same thing under two names. The
       // drafting briefs have asked for `addDocLinks` all session, because that
       // is what apply.js calls the field; this file only ever read `sources`,
