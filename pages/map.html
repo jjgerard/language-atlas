@@ -1125,6 +1125,30 @@ function valueLabel(v) {
   return ((B.valueLabels || {})[v]) || String(v == null ? '' : v);
 }
 
+/* WHAT THE ABSENCE IS AN ABSENCE OF. `entry.absences[field]` is a fact about
+   the FIELD -- this system designates no newcomer pupil, sets no discharge
+   rule -- so the key should say which, rather than "no such rule here" on
+   every question in the atlas. The field's own label is a noun phrase and
+   negating it reads correctly for almost all of them; the handful where it
+   does not are named. */
+const ABSENCE_LABEL = {
+  terminology: 'No term in use here',
+  outcomesEvidence: 'No outcome evidence here',
+  identifiedPrevalence: 'No prevalence figure here',
+  policyHistory: 'No dated changes here',
+  bilingualEducationNotes: 'No bilingual education here',
+  achievementGap: 'No gap measured here',
+  localTerm: 'No local term here',
+  mediumOfInstruction: 'Not a medium here',
+  taughtAsSubject: 'Not taught as a subject here',
+};
+function absenceLabel(fieldKey) {
+  if (ABSENCE_LABEL[fieldKey]) return ABSENCE_LABEL[fieldKey];
+  const f = (domain().fields || []).find(x => x.k === fieldKey);
+  const label = f ? String(f.label) : fieldKey;
+  return 'No ' + label.charAt(0).toLowerCase() + label.slice(1) + ' here';
+}
+
 function colLabel(fieldKey, col) {
   const sc = schemeFor(fieldKey);
   return ((sc && sc.labels) || {})[col] || String(col || '').replace(/_/g, ' ');
@@ -1608,7 +1632,7 @@ function fillFor(u, st, own) {
     if (!vals) {
       // Why there is no colour, taken from the FIELD. Four answers, and three
       // of them are answers rather than gaps.
-      if (isAbsent(o, CODED.key)) return 'url(#hatch)';  // established: nothing here
+      if (isAbsent(o, CODED.key)) return 'url(#absent)'; // established: nothing here
       const fs = fieldStateOf(o, CODED.key.split('.')[0]);
       if (fs === 'has') return 'url(#uncoded)';   // prose here, nobody coded it
       if (fs === 'looked') return 'url(#hatch)';  // looked, found nothing
@@ -1671,6 +1695,19 @@ const pat = el('pattern', { id: 'hatch', patternUnits: 'userSpaceOnUse', width: 
 pat.appendChild(el('rect', { width: 9, height: 9, fill: 'var(--hatch-bg)' }));
 pat.appendChild(el('path', { d: 'M-2 2 L2 -2 M0 9 L9 0 M7 11 L11 7', stroke: 'var(--hatch-line)', 'stroke-width': 1.6 }));
 defs.appendChild(pat);
+/* A DOCUMENTED ABSENCE IS AN ANSWER AND NEEDS ITS OWN TEXTURE. It shared
+   #hatch with "looked, found nothing" for as long as the key merged them, and
+   that merge was the thing a reader kept tripping over: one of the two is
+   COMPLETE -- somebody established this system has no such rule and no amount
+   of research will change it -- and the other is a hole a source would fill.
+   Sharing a texture forced the key to describe both in one line.
+   Horizontal rather than diagonal, on the same ground, because it is still the
+   same family: no colour, and somebody looked. The direction is what separates
+   them, and it survives any zoom. */
+const patAbsent = el('pattern', { id: 'absent', patternUnits: 'userSpaceOnUse', width: 9, height: 9 });
+patAbsent.appendChild(el('rect', { width: 9, height: 9, fill: 'var(--hatch-bg)' }));
+patAbsent.appendChild(el('path', { d: 'M0 2.5 L9 2.5 M0 6.5 L9 6.5', stroke: 'var(--hatch-line)', 'stroke-width': 1.6 }));
+defs.appendChild(patAbsent);
 /* "Prose exists here and nobody has coded it" -- a fact about the CODING, not
    about the place, and a state the coded view must not let collapse into
    "nothing recorded". It is a texture rather than a seventh grey because it
@@ -1783,6 +1820,9 @@ function fillToCSS(fill) {
   const f = String(fill || '');
   if (f.indexOf('#hatch') >= 0) {
     return { bg: 'repeating-linear-gradient(45deg,var(--hatch-bg) 0 3px,var(--hatch-line) 3px 4px)', size: '' };
+  }
+  if (f.indexOf('#absent') >= 0) {
+    return { bg: 'repeating-linear-gradient(0deg,var(--hatch-bg) 0 3px,var(--hatch-line) 3px 4px)', size: '' };
   }
   if (f.indexOf('#uncoded') >= 0) {
     return { bg: 'radial-gradient(var(--hatch-line) 1px, var(--surface-2) 1.2px)', size: '5px 5px' };
@@ -3514,55 +3554,43 @@ function paintCatLegend() {
    */
   const hatched = tally.absent + tally.looked;
   const dotted = tally.has + tally.unset;
-  /* EACH ROW SAYS WHETHER ANYTHING WOULD EVER FILL IT.
+  /* ONE ROW PER STATE, EACH SAYING WHAT IT IS AND WHAT WOULD CHANGE IT.
    *
-   * These rows look alike and are not: one of them is an ANSWER and the rest
-   * are different kinds of hole, and a reader deciding where research is worth
-   * spending cannot tell which is which from a texture. So the label carries
-   * the fill status, and it is built from what is actually in the row rather
-   * than fixed -- the composition differs by column and so must the wording.
+   * These were merged into two rows to keep the key short, and every merged
+   * label was wrong in some way, because the states on either side of a merge
+   * are not the same KIND of thing:
    *
-   *   no such rule here          an answer, and complete. The system has no
-   *                              such rule, somebody established that, and no
-   *                              amount of research moves it
-   *   none established           somebody looked and could not settle it. A
-   *                              source would
-   *   not read here yet          the entry has prose nobody has read against
-   *                              this question. Reading it would settle it
-   *   none of these values fit   somebody did read it and none was true. Only
-   *                              a new value in the vocabulary moves this
-   *   nothing recorded           the field is empty. A fill wave
+   *   No <field> here       an ANSWER. Somebody established this system has no
+   *                         such rule; nothing fills it, because there is
+   *                         nothing to find. It has its own texture now, for
+   *                         exactly that reason
+   *   Looked, not found     somebody researched it and could not settle it.
+   *                         A source settles it
+   *   Text here, not yet    prose nobody has read against this question.
+   *   coded                 Coding it settles it
+   *   Coded, no value fits  somebody read it and none of the values above was
+   *                         true. Only a new value in the vocabulary moves it
+   *   Not looked up yet     the field is empty. A fill wave reaches it
    *
-   * And the coded value `not stated`, which sits with the values above, is a
-   * sixth thing again: the rule exists and this entry does not say this about
-   * it, so a NEW SOURCE is what fills it, not a re-reading.
+   * That is five, and it is what saying exactly what each means costs. It is
+   * not five on most maps: a row only renders when its count is non-zero, and
+   * across 82 columns the commonest case is two.
    *
-   * Where a row holds two of these, the label says so and the hover counts
-   * them; that is the price of three rows instead of five.
+   * The absence row names the FIELD, because that is what the flag is about --
+   * "No newcomer criteria here", not "no such rule" on every question in the
+   * atlas.
    */
-  const part = (n, what) => n ? `${n} ${what}` : '';
-  const both = (a, b) => [a, b].filter(Boolean).join(' · ');
-  if (hatched) {
-    const label = tally.absent && tally.looked ? 'No such rule here, or none established yet'
-      : tally.absent ? 'No such rule here — nothing to find'
-      : 'None established — a source would settle it';
-    rows.push(`<div class="cl" disabled title="${esc(both(
-        part(tally.absent, 'where the entry establishes there is no such rule, which is an answer and not a gap'),
-        part(tally.looked, 'where the sources consulted settled neither way, which a further source could')))}"
-      >${sw('url(#hatch)')}<span>${label}</span><span class="n">${hatched}</span></div>`);
-  }
-  if (dotted) {
-    const label = tally.has && tally.unset ? 'Text here, unread or unfitted'
-      : tally.unset ? 'None of these values fit — needs a new one'
-      : 'Text here, not read against this question yet';
-    rows.push(`<div class="cl" disabled title="${esc(both(
-        part(tally.has, 'where nobody has read this entry against this question yet, which reading would settle'),
-        part(tally.unset, 'where somebody did and none of these values was true of it, which only a new value settles')))}"
-      >${sw('url(#uncoded)')}<span>${label}</span><span class="n">${dotted}</span></div>`);
-  }
+  if (tally.absent) rows.push(`<div class="cl" disabled title="an answer, not a gap: the entry establishes this system has no such thing, so nothing will fill it"
+    >${sw('url(#absent)')}<span>${esc(absenceLabel(fk0))}</span><span class="n">${tally.absent}</span></div>`);
+  if (tally.looked) rows.push(`<div class="cl" disabled title="somebody researched this and could not establish it either way; a further source would"
+    >${sw('url(#hatch)')}<span>Looked, not found yet</span><span class="n">${tally.looked}</span></div>`);
+  if (tally.has) rows.push(`<div class="cl" disabled title="the entry has prose nobody has read against this question yet; coding it would settle it"
+    >${sw('url(#uncoded)')}<span>Text here, not yet coded</span><span class="n">${tally.has}</span></div>`);
+  if (tally.unset) rows.push(`<div class="cl" disabled title="somebody read it and none of the values above was true of it; only a new value in the vocabulary moves this"
+    >${sw('url(#uncoded)')}<span>Coded, no value fits</span><span class="n">${tally.unset}</span></div>`);
   if (tally.na) rows.push(`<div class="cl" disabled>${sw('url(#na)')}<span>Not applicable here</span><span class="n">${tally.na}</span></div>`);
-  if (tally.none) rows.push(`<div class="cl" disabled title="the field is empty here: a fill wave is what reaches these"
-    >${sw('var(--nodata)')}<span>Nothing recorded — nobody has looked</span><span class="n">${tally.none}</span></div>`);
+  if (tally.none) rows.push(`<div class="cl" disabled title="the field is empty: nobody has researched this place on this question, and a fill wave is what reaches it"
+    >${sw('var(--nodata)')}<span>Not looked up yet</span><span class="n">${tally.none}</span></div>`);
   // The map answers "who does what"; the table answers "what exactly does each
   // one say", which a colour cannot. It is one click from here rather than in
   // the nav, because the question it needs is the one already chosen.
