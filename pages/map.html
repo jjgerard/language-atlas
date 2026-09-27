@@ -2114,6 +2114,7 @@ function switchDomain(id, push = true) {
   openDomainBox(id);
   buildDomains();
   buildShadePicker();
+  syncCross();
   paintCatLegend();
   paint();
   paintLegend();
@@ -3360,6 +3361,29 @@ function buildCrossPicker() {
   if (CROSS.key && cols.some(c => c.key === CROSS.key)) crossSel.value = CROSS.key;
 }
 
+/* THE CROSS FOLLOWS THE HUE, AND THE MAP IT IS ON.
+ *
+ * It rides on a hue, so it has nowhere to sit on the coverage map; it cannot
+ * be the column now carrying the hue; and it hides where the map has no ranked
+ * column to deepen by, since an empty picker beside a tickbox is worse than no
+ * tickbox.
+ *
+ * Called from the domain switch as well as from setShade, which is the bug
+ * this was extracted for. Changing map drops the shading column -- a column
+ * belongs to a field and a field to a domain -- but nothing dropped the CROSS,
+ * so the tickbox stayed ticked and the control stayed open over "what is
+ * documented", pointing at a column of the map you had just left. */
+function syncCross() {
+  const usable = crossColumns().filter(c => c.key !== CODED.key);
+  crossBox.hidden = !CODED.key || !usable.length;
+  if (crossBox.hidden || CROSS.key === CODED.key
+      || (CROSS.key && !usable.some(c => c.key === CROSS.key))) {
+    CROSS.key = null; XSCALE = null; crossOn.checked = false; crossSel.disabled = true;
+  }
+  buildCrossPicker();
+  if (crossOn.checked && !CROSS.key) setCross(crossSel.value);
+}
+
 function setCross(key) {
   CROSS.key = key || null;
   XSCALE = CROSS.key ? crossScale(CROSS.key) : null;
@@ -3478,17 +3502,7 @@ function setShade(key) {
   if (SCALE && SCALE.list && isoShare > SHADE_ISOLATE_SHARE && SCALE.ordered.length) {
     CODED.only = SCALE.ordered[0][0];
   }
-  // The cross rides on a hue, so it has nowhere to sit on the coverage map,
-  // and it cannot be the column now carrying the hue. It also hides itself
-  // where the map has no ranked column to deepen by: indigenous, fl and he
-  // declare none at all, and an empty picker beside a tickbox is worse than
-  // no tickbox.
-  crossBox.hidden = !CODED.key || !crossColumns().filter(c => c.key !== CODED.key).length;
-  if (!CODED.key || CROSS.key === CODED.key) {
-    CROSS.key = null; XSCALE = null; crossOn.checked = false; crossSel.disabled = true;
-  }
-  buildCrossPicker();
-  if (crossOn.checked && !CROSS.key) setCross(crossSel.value);
+  syncCross();
   paint(); paintCatLegend(); paintLegend();
   // THE KEY JUST CHANGED HEIGHT, so the map's share of the screen is stale.
   // sizeMap() has always measured the key and given the map what was left, but
