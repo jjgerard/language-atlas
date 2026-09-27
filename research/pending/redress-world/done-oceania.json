@@ -1,0 +1,192 @@
+{
+ "AS|American Samoa": {
+  "fields": {
+   "legalEntitlement": [
+    "An impartial due process hearing, requested within two years (ASDOE safeguards notice)",
+    "The hearing officer may not be an ASDOE or school employee (same notice)"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "An impartial due process hearing, requested within two years (ASDOE safeguards notice)",
+    "url": "https://www.amsamoadoe.com/_files/ugd/bcdca0_0ada4514e3bc46e6817072743f3ec82f.pdf",
+    "quote": "You or the school must request an impartial hearing on a due process complaint within two years of the date you or the school knew or should have known about the issue"
+   },
+   {
+    "bullet": "The hearing officer may not be an ASDOE or school employee (same notice)",
+    "url": "https://www.amsamoadoe.com/_files/ugd/bcdca0_0ada4514e3bc46e6817072743f3ec82f.pdf",
+    "quote": "Must not be an employee of the ASDOE or the school that is involved in the education or care of the child"
+   }
+  ],
+  "sources": [
+   {
+    "label": "American Samoa Department of Education, American Samoa’s Procedural Safeguards Notice for Children Receiving Special Education and Related Services",
+    "url": "https://www.amsamoadoe.com/_files/ugd/bcdca0_0ada4514e3bc46e6817072743f3ec82f.pdf"
+   },
+   {
+    "label": "American Samoa Department of Education, Model Due Process Request Form",
+    "url": "https://www.amsamoadoe.com/_files/ugd/bcdca0_2eca59410fab42ad991fd87e4e41d213.pdf"
+   }
+  ]
+ },
+ "AU|Australia": {
+  "fields": {
+   "legalEntitlement": [
+    "It lies against an NDIS decision, not a school one: internal review (NDIS Act 2013 s 100)",
+    "Then the Administrative Review Tribunal on the reviewer’s decision (NDIS Act 2013 s 103)"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "It lies against an NDIS decision, not a school one: internal review (NDIS Act 2013 s 100)",
+    "url": "https://www.legislation.gov.au/C2013A00020/2026-09-19/2026-09-19/text/original/epub/OEBPS/document_1/document_1.html",
+    "quote": "A person who is directly affected by a reviewable decision may request the decision-maker to review the reviewable decision"
+   },
+   {
+    "bullet": "Then the Administrative Review Tribunal on the reviewer’s decision (NDIS Act 2013 s 103)",
+    "url": "https://www.legislation.gov.au/C2013A00020/2026-09-19/2026-09-19/text/original/epub/OEBPS/document_1/document_1.html",
+    "quote": "Applications may be made to the Administrative Review Tribunal for review of a decision made by a reviewer under subsection 100(6)"
+   }
+  ],
+  "sources": [
+   {
+    "label": "National Disability Insurance Scheme Act 2013 (Cth), consolidated text, Part 6 Review of decisions, Federal Register of Legislation",
+    "url": "https://www.legislation.gov.au/C2013A00020/2026-09-19/2026-09-19/text/original/epub/OEBPS/document_1/document_1.html"
+   }
+  ]
+ },
+ "FJ|Fiji": {
+  "fields": {
+   "legalEntitlement": [
+    "The High Court hears breach of the Part that holds the education right (RPWD Act 2018 s 49)",
+    "The Council and the Human Rights Commission may also enforce it (RPWD Act 2018 s 50)"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "The High Court hears breach of the Part that holds the education right (RPWD Act 2018 s 49)",
+    "url": "https://social.desa.un.org/sites/default/files/migrated/15/2019/12/Fiji_Rights-of-Persons-with-Disabilities-Act-2018.pdf",
+    "quote": "that person may apply to the High Court for remedies for breach of their rights under this Act"
+   },
+   {
+    "bullet": "The Council and the Human Rights Commission may also enforce it (RPWD Act 2018 s 50)",
+    "url": "https://social.desa.un.org/sites/default/files/migrated/15/2019/12/Fiji_Rights-of-Persons-with-Disabilities-Act-2018.pdf",
+    "quote": "The rights guaranteed under this Act may be enforced by— (a) the Council; (b) the Human Rights and Anti-Discrimination Commission"
+   }
+  ],
+  "sources": []
+ },
+ "FM|Micronesia": {
+  "fields": {
+   "legalEntitlement": [
+    "Parents file for a due process hearing with the FSM national DOE (Procedural Manual 2012)",
+    "It is heard by someone not employed by the national or local agency (same manual)"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Parents file for a due process hearing with the FSM national DOE (Procedural Manual 2012)",
+    "url": "https://www.national.doe.fm/wp-content/uploads/2026/04/FSM-Special-Education-Procedural-Manual-2012.pdf",
+    "quote": "Parents may file for a due process hearing with the FSM NDOE"
+   },
+   {
+    "bullet": "It is heard by someone not employed by the national or local agency (same manual)",
+    "url": "https://www.national.doe.fm/wp-content/uploads/2026/04/FSM-Special-Education-Procedural-Manual-2012.pdf",
+    "quote": "A hearing conducted by a person who is not an employee of the FSM national education agency or local educational agency"
+   }
+  ],
+  "sources": []
+ },
+ "GU|Guam": {
+  "fields": {
+   "legalEntitlement": [
+    "A parent files a due process hearing request with the Compliance Monitoring Office (GDOE 34B)",
+    "A state complaint reaches the same office, within 365 days (GDOE complaint form 33)"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "A parent files a due process hearing request with the Compliance Monitoring Office (GDOE 34B)",
+    "url": "https://www.gdoe.net/files/user/13/file/34B-Request-for-Due-Process.pdf",
+    "quote": "A parent or school district may file a due process hearing request with the Compliance Monitoring Office"
+   },
+   {
+    "bullet": "A state complaint reaches the same office, within 365 days (GDOE complaint form 33)",
+    "url": "https://www.gdoe.net/files/user/13/file/33-Complaint-Form.pdf",
+    "quote": "The alleged violations may not be older than one year (365 days) from the date the complaint is received by the CMO"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Guam Department of Education, Special Education Due Process Hearing Request (form 34B)",
+    "url": "https://www.gdoe.net/files/user/13/file/34B-Request-for-Due-Process.pdf"
+   },
+   {
+    "label": "Guam Department of Education, Special Education State Complaint Form (form 33)",
+    "url": "https://www.gdoe.net/files/user/13/file/33-Complaint-Form.pdf"
+   }
+  ]
+ },
+ "KI|Kiribati": {
+  "fields": {
+   "legalEntitlement": [
+    "A person aggrieved by the Director General applies to the Minister in 30 days (Act 2013 s 63)",
+    "Then to the High Court on a point of law only (Education Act 2013 s 64)"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "A person aggrieved by the Director General applies to the Minister in 30 days (Act 2013 s 63)",
+    "url": "https://kiribati.tradeportal.org/media/Education%20Act%202014.pdf",
+    "quote": "within 30 days apply in writing to have the decision reviewed by the Minister"
+   },
+   {
+    "bullet": "Then to the High Court on a point of law only (Education Act 2013 s 64)",
+    "url": "https://kiribati.tradeportal.org/media/Education%20Act%202014.pdf",
+    "quote": "may within 30 days appeal to the High Court on a point of law only"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Kiribati Education Act 2013 (No. 12 of 2013), Part VII Reviews and Appeals, text published on the Kiribati Trade Portal",
+    "url": "https://kiribati.tradeportal.org/media/Education%20Act%202014.pdf"
+   }
+  ]
+ }
+}

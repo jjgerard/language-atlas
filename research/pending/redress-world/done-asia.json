@@ -1,0 +1,157 @@
+{
+ "AE|United Arab Emirates": {
+  "fields": {
+   "legalEntitlement": [
+    "Notice to parents before any formal evaluation and any change of service place (School for All)",
+    "Parents attend assessments and are involved in the decision-making (School for All rules)"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Notice to parents before any formal evaluation and any change of service place (School for All)",
+    "url": "https://assets.u.ae/api/public/content/cba4cf63dbc14c498c5c836fbe147be3?v=fdd36abf",
+    "quote": "It is important to notify parents before any formal evaluation of the student, and before any change in the places where services are provided."
+   },
+   {
+    "bullet": "Parents attend assessments and are involved in the decision-making (School for All rules)",
+    "url": "https://assets.u.ae/api/public/content/cba4cf63dbc14c498c5c836fbe147be3?v=fdd36abf",
+    "quote": "The parents are required to attend meetings or assessments related to the education of their children with the need to focus on their involvement in the decision-making process."
+   }
+  ],
+  "sources": []
+ },
+ "BN|Brunei": {
+  "fields": {
+   "legalEntitlement": [
+    "The Compulsory Education Board may require a counselling or mediation session (Cap. 211 s. 8)",
+    "That Board only recommends to the Permanent Secretary on enforcement (Cap. 211 s. 8)",
+    "A parent may put a reason for absence to the Permanent Secretary (Cap. 211 s. 3(3)(a))"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    4,
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "The Compulsory Education Board may require a counselling or mediation session (Cap. 211 s. 8)",
+    "url": "http://web.archive.org/web/2020id_/http://www.agc.gov.bn/AGC%20Images/LAWS/ACT_PDF/cap211.pdf",
+    "quote": "require any person to attend any counselling or mediation session as the Board may specify"
+   },
+   {
+    "bullet": "That Board only recommends to the Permanent Secretary on enforcement (Cap. 211 s. 8)",
+    "url": "http://web.archive.org/web/2020id_/http://www.agc.gov.bn/AGC%20Images/LAWS/ACT_PDF/cap211.pdf",
+    "quote": "to make recommendations to the Permanent Secretary on the enforcement of any provision of this Act"
+   },
+   {
+    "bullet": "A parent may put a reason for absence to the Permanent Secretary (Cap. 211 s. 3(3)(a))",
+    "url": "http://web.archive.org/web/2020id_/http://www.agc.gov.bn/AGC%20Images/LAWS/ACT_PDF/cap211.pdf",
+    "quote": "a reason to the satisfaction of the Permanent Secretary for the absence of that child from a Government school"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Laws of Brunei, Chapter 211, Compulsory Education Act (Revised Edition 2011), ss. 3 and 8 — Attorney General's Chambers text via Internet Archive; the live agc.gov.bn ACT_PDF path now 404s",
+    "url": "http://web.archive.org/web/2020id_/http://www.agc.gov.bn/AGC%20Images/LAWS/ACT_PDF/cap211.pdf"
+   }
+  ]
+ },
+ "CN|China": {
+  "fields": {
+   "legalEntitlement": [
+    "Enrolment or transfer disputes go to the county education dept (Disability Education Regs a. 21)",
+    "Infringed rights: demand action, arbitration, or the people's court (Protection Law art. 60)"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Enrolment or transfer disputes go to the county education dept (Disability Education Regs a. 21)",
+    "url": "https://www.gov.cn/zhengce/content/2017-02/23/content_5170264.htm",
+    "quote": "残疾儿童、少年的父母或者其他监护人与学校就入学、转学安排发生争议的，可以申请县级人民政府教育行政部门处理"
+   },
+   {
+    "bullet": "Infringed rights: demand action, arbitration, or the people's court (Protection Law art. 60)",
+    "url": "https://www.gov.cn/guoqing/2021-10/29/content_5647618.htm",
+    "quote": "残疾人的合法权益受到侵害的，有权要求有关部门依法处理，或者依法向仲裁机构申请仲裁，或者依法向人民法院提起诉讼"
+   }
+  ],
+  "sources": [
+   {
+    "label": "残疾人教育条例 (Regulations on the Education of Persons with Disabilities), State Council Order No. 674, revised 2017, art. 21 — gov.cn",
+    "url": "https://www.gov.cn/zhengce/content/2017-02/23/content_5170264.htm"
+   }
+  ]
+ },
+ "KG|Kyrgyzstan": {
+  "fields": {
+   "legalEntitlement": [
+    "Protection of rights is judicial or in another order set by law (Law 38/2008 art. 19)",
+    "Personal and collective petitions to state bodies get a reasoned reply (Law 38/2008 art. 20)"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    4,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Protection of rights is judicial or in another order set by law (Law 38/2008 art. 19)",
+    "url": "https://cbd.minjust.gov.kg/api/v1/GetEdition?editionId=25328&lang=ru",
+    "quote": "Защита прав, свобод и законных интересов лиц с ограниченными возможностями здоровья обеспечивается государством в судебном или ином порядке, установленном законодательством Кыргызской Республики"
+   },
+   {
+    "bullet": "Personal and collective petitions to state bodies get a reasoned reply (Law 38/2008 art. 20)",
+    "url": "https://cbd.minjust.gov.kg/api/v1/GetEdition?editionId=25328&lang=ru",
+    "quote": "имеют право направлять личные и коллективные обращения в органы государственной власти, органы местного самоуправления и должностным лицам, которые в пределах своей компетенции обязаны рассмотреть эти обращения и дать мотивированный ответ"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Law of the Kyrgyz Republic No. 38 of 3 April 2008, On the Rights and Guarantees of Persons with Disabilities, arts. 19-20 — Ministry of Justice CBD, edition of 23.01.2025 (API text; the site's own act pages are a JS shell)",
+    "url": "https://cbd.minjust.gov.kg/api/v1/GetEdition?editionId=25328&lang=ru"
+   }
+  ]
+ },
+ "AM|Armenia": {
+  "fields": {
+   "legalEntitlement": [
+    "Territorial centre's needs assessment is appealed to the republican one (HO-160-N art. 17.1)"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Territorial centre's needs assessment is appealed to the republican one (HO-160-N art. 17.1)",
+    "url": "https://www.arlis.am/hy/acts/185512",
+    "quote": "ծնողը կարող է արդյունքները բողոքարկել հանրապետական մանկավարժահոգեբանական կենտրոն"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Republic of Armenia Law HO-160-N, On General Education, art. 17.1(4) — ARLIS consolidated text",
+    "url": "https://www.arlis.am/hy/acts/185512"
+   }
+  ]
+ }
+}
