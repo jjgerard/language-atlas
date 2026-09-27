@@ -1,4 +1,4 @@
-# dld.dischargeCriteria: what the field costs, and what Europe cost
+# Two European waves on dld, and the hosts they cost to find
 
 Stopped deliberately at 48 of 396 on 2026-09-20, with the cost measured rather
 than estimated. This is the note the next attempt should read first, because
@@ -56,6 +56,81 @@ Drafters were told to return new sources under `docLinks`. terr-verify.js
 reads `sources` or `addDocLinks` and **drops anything else without a word**:
 five genuinely new sources passed the gate, reached the applier, and vanished
 while the run reported success. Check the entry, not the log.
+
+
+## The redress wave, 2026-09-27: 30 of 30
+
+The second wave run on these countries, and the first DEPTH pass the project
+has run: `legalEntitlement` was written on all thirty and answered three of
+its four questions, leaving `redress_type` at `not stated`. That coding was
+honest -- not one of the 324 such rows on this map mentions an appeal, a
+tribunal, a complaint or a court anywhere in its text -- so nothing was
+recoverable by re-reading and every answer had to come from an instrument.
+56 bullets, gated, none dropped. The column went 30 rows of `not stated` to
+five, and those five are instruments that genuinely carry no clause while a
+sibling row on the same entry carries the route.
+
+`research/tools/deepen-apply.js` is what writes a pass like this: fl/apply.js
+refuses to write over real prose, rightly, and that guard also made it
+impossible to ADD a sentence. It merges the way policyHistory does -- existing
+bullets never touched, a new one added only if nothing matching it is there.
+
+**Fifteen of thirty answers were a few articles on in an instrument the entry
+already cited**, which is the same thing the discharge wave found and is now
+the method: start from the entry's own docLinks before searching.
+
+### Hosts, from both waves
+
+Serve full consolidated text as clean HTML or extractable PDF:
+`gibraltarlaws.gov.gi`, `logir.fo`, `gesetze.li/konso/pdf` (grep it, the
+consolidation repeats), `legimonaco.mc` (UTF-8 despite looking mangled in a
+Windows console), `legislation.mt/getpdf`, `pravo.by/upload/docs/op/*.pdf`,
+`mecc.gov.md`, `sonk.org.mk`, `portal.mdt.gov.mk`, `data.legilux.public.lu`
+(the `-n1-` ELI suffix resolves by guess; `n2`/`n3` 404),
+`ch-sodk.s3.amazonaws.com`, `notes.zh.ch` (two hops, and a literal `$File`
+segment), `desc.gov.im`, `jerseylaw.je`, `ombudsman.co.me`, `natlex.ilo.org`,
+`paragraf.ba`, `paragraf.rs`, `fas.va` (`/norme-e-regolamenti/regolamento.html`,
+inline article text; `statuto-e-regolamento.html` does not exist), `g-ba.de`,
+`kmk.org`, `cpbmd.info`, `althingi.is/lagas`, `likumi.lv/ta/id`,
+`riigiteataja.ee` blob-html, `boe.es/buscar/act.php`, `riksdagen.se` SFS (read
+the `/Träder i kraft/` markers -- it serves provisions not yet in force),
+`revisedacts.lawreform.ie` (better than irishstatutebook.ie for anything
+amended), `gesetze-im-internet.de/<law>/__<n>.html` (one section per fetch),
+`static.slov-lex.sk/static/SK/ZZ/<year>/<no>/<date>.html`,
+`parlamento.it/parlam/leggi/<yy><nnn>l.htm` (the way into Italian statute
+text; the `deleghe/` form 404s), `legalacts.ru`, `dspalba.ro`.
+
+Do not:
+- `documents.bopa.ad` is **UTF-16LE**; terr-verify decodes it, a naive read
+  does not. `lex.bg` is **windows-1251** and declares it.
+- JS shells, 200 with no law text: `diariodarepublica.pt`, `normattiva.it`,
+  `gazzettaufficiale.it` (both the `/eli/` and `caricaDettaglioAtto` forms),
+  `belex.sites.be.ch`, `bl.clex.ch`, `portaljuridicandorra.ad`,
+  `cnpdc.gov.md/ro/print/*`, `zh.ch/.../zhlex-ls/erlass-*.html` (a metadata
+  shell whose PDF link is itself a redirect stub).
+- Blocked: `ris.bka.gv.at` 503s behind a bot check -- use
+  `jusline.at/gesetz/<law>/gesamt`. `guernseylegalresources.gg` is
+  Cloudflare-challenged; `gov.gg` article pages carry the route instead, and
+  `gov.gg` has no `/search`. `legis.md` 403s. `ohchr.org` 403s.
+  `student-wellbeing-services.gov.mt` 403s a plain curl but yields to
+  terr-verify's own fallback.
+- Dead or wrong: `edu.ro/.../Ordin_6552_2011.pdf` now 404s and is stale in the
+  entries' docLinks; `mmuncii.ro` 503s for O1985/2016 while `dspalba.ro`,
+  `cjraedolj.ro` and `edums.ro` all serve it; `consigliograndeegenerale.sm`
+  serves a PDF under a .html URL and, for Legge 141/1990 only, a four-page
+  relazione rather than the law.
+
+### Two pipeline traps, both silent
+
+1. A drafter's new sources must come back under `sources` or `addDocLinks`.
+   terr-verify drops a `docLinks` key **without a word**, and five genuine
+   sources passed the gate, reached the applier and vanished while the run
+   reported success.
+2. `apply-coding.js` REPLACES a many-grained field's array. A recode written
+   by hand from a report rather than from the stored rows would have dropped
+   a duty_org and moved four `obliges` levels while printing a clean success
+   line. `research/tools/set-coding-value.js` exists so that cannot happen:
+   it deep-copies the stored rows and changes one column on one row.
 
 ## The comparative sources do not answer this field
 

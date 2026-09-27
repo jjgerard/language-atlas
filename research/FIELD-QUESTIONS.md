@@ -9,6 +9,42 @@ This file collects those, because changing a field's questions changes the
 hover checklist, the entry panel, the submission form and the coverage count
 together, and is the maintainer's call rather than a drafter's.
 
+## dld.legalEntitlement, from the European redress wave (30 units, 2026-09-27)
+
+`redress_type` is read as though it were about education appeals. On thirty
+European nationals it is not: **in half of them the forum is not part of
+education law at all.**
+
+Germany's appeal is in a procedural statute, the Sozialgerichtsgesetz, not in
+the benefit law. Guernsey's is a general Administrative Decisions (Review) Law
+of 1986, and the drafter checked first -- there is no education or SEN
+tribunal among Guernsey's seventeen. Ireland's is the Education Act 1998 s.29
+rather than the part-commenced EPSEN machinery. Italy's is an
+anti-discrimination law, Legge 67/2006. And in five more -- Andorra, Russia,
+Ukraine, Romania, the Vatican -- the appealable act is the instrument that
+GATES the support rather than the one that grants it: a commission's
+conclusion, an orientation certificate, a health fund's provvedimento.
+
+So the column records WHAT KIND OF FORUM a system points at. What it cannot
+say is WHOSE INSTRUMENT carries the route, and that separates two situations
+a reader would want apart: a support statute that provides its own appeal
+(the Faroe Islands' kaerunevnd, Estonia's hoolekogu, Montenegro's art 22)
+from a system where the only route is whatever general administrative law
+happens to exist. An `appeal_locus` axis would do it, on the same argument as
+the `interval_locus` axis dischargeCriteria wants.
+
+Spain is the case that fits neither: LO 2/2006 art 74.2 requires that a
+dispute procedure EXIST and leaves its content to the seventeen regions. The
+national instrument answers the question by delegating it.
+
+A SECOND THING THE WAVE SHOWED, about the row grain rather than the column.
+Five instrument rows are still `not stated` and every one is right: Germany's
+Heilmittel-Richtlinie, Ireland's Circular 0052/2019, Italy's D.Lgs 66/2017
+and both of Andorra's carry no clause, while a sibling row on the same entry
+carries the route. A country-level column would have had to choose between
+saying Germany has an appeal and saying its Richtlinie does not. This is the
+clearest argument yet for `many` being the right grain on this field.
+
 ## dld.dischargeCriteria, from the European fill wave (18 units, 2026-09-27)
 
 Not a re-slotting finding: this one comes from FILLING the field on every
