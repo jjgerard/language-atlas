@@ -180,7 +180,16 @@ const NEWCOMER_TRIGGERS = {
   'arrival recency': 'How recently the child arrived, or how long they have been resident (New Zealand proof of entry date, Estonia under 3 years, Finland about 4, Israel date of aliyah relative to 1 January, France not schooled in France the previous year)',
   'tested proficiency': 'A language assessment decides (Austria standardised testing, Denmark "a linguistic and functional test, not an arrival date or age cutoff", Czechia three levels, Spain initial assessment)',
   'home language': 'The language spoken at home, or a mother tongue other than the language of instruction (Iceland, Switzerland fremdsprachige Kinder, Denmark, New Zealand)',
-  'immigration status': 'Citizenship, residence permit or migration status (Italy cittadinanza non italiana, Tuerkiye residence permit under Law 6458, Poland non-Polish citizens plus Poles schooled abroad, Czechia foreigner status)',
+  // WIDENED 2026-09-28 to cover displacement that crosses no border. Nigeria's
+  // National Policy on Internally Displaced Persons designates displaced
+  // children, and none of arrival recency, home language, ethnicity, demand
+  // threshold or prior schooling describes what puts a child in that category
+  // either -- so the only thing that entry establishes had nowhere to go. The
+  // maintainer chose widening this value over a separate `displacement` one.
+  // Note what that costs: the entries already coded here assert something
+  // slightly broader than they did before, so read this value as "the pupil's
+  // legal or displacement status", not as "crossed a border".
+  'immigration status': 'Citizenship, residence permit, migration status, or displacement without crossing a border (Italy cittadinanza non italiana, Tuerkiye residence permit under Law 6458, Poland non-Polish citizens plus Poles schooled abroad, Czechia foreigner status; Nigeria internally displaced children under the National Policy on IDPs)',
   ethnicity: 'Assignment by ethnic or racial classification (Singapore, where mother-tongue assignment is by race and not by any language test)',
   'demand threshold': 'A number of parents or pupils must ask before provision exists at all (Malaysia: fifteen parents; South Africa: 40 learners in Grades 1-6). Not a pupil-level designation, and the entries say so',
   'prior schooling': 'Schooling history rather than language or arrival (Netherlands "never previously in a Dutch school", Estonia under 6 academic years of Estonian-medium schooling, Spain enrolling after the year normally starts)',
