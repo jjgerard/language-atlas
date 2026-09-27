@@ -3505,8 +3505,24 @@ function paintCatLegend() {
    */
   const hatched = tally.absent + tally.looked;
   const dotted = tally.has + tally.unset;
-  if (hatched) rows.push(`<div class="cl" disabled>${sw('url(#hatch)')}<span>Looked; no such rule here</span><span class="n">${hatched}</span></div>`);
-  if (dotted) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Text here, not placed on this question</span><span class="n">${dotted}</span></div>`);
+  // A MERGED ROW SAYS ONLY WHAT IS TRUE OF BOTH ITS HALVES, and hands the
+  // split to the hover. The first label here was "Looked; no such rule here",
+  // which is what the absence flag means and NOT what the other half means:
+  // `Not established from the sources consulted` is a statement about the
+  // record, not about the world, and the whole project turns on not saying one
+  // when it means the other. What both halves share is that somebody went
+  // looking, so that is what the row claims; the title carries the counts, and
+  // the hover card on the unit itself still names its exact state.
+  const part = (n, what) => n ? `${n} ${what}` : '';
+  const both = (a, b) => [a, b].filter(Boolean).join(' · ');
+  if (hatched) rows.push(`<div class="cl" disabled title="${esc(both(
+      part(tally.absent, 'recorded as absent: the entry establishes there is no such rule'),
+      part(tally.looked, 'not established from the sources consulted')))}"
+    >${sw('url(#hatch)')}<span>Somebody looked</span><span class="n">${hatched}</span></div>`);
+  if (dotted) rows.push(`<div class="cl" disabled title="${esc(both(
+      part(tally.has, 'text here, nobody has coded this field'),
+      part(tally.unset, 'coded, and no value on the list fitted this question')))}"
+    >${sw('url(#uncoded)')}<span>Text here, not placed on this question</span><span class="n">${dotted}</span></div>`);
   if (tally.na) rows.push(`<div class="cl" disabled>${sw('url(#na)')}<span>Not applicable here</span><span class="n">${tally.na}</span></div>`);
   if (tally.none) rows.push(`<div class="cl" disabled>${sw('var(--nodata)')}<span>Nothing recorded</span><span class="n">${tally.none}</span></div>`);
   // The map answers "who does what"; the table answers "what exactly does each
