@@ -15,6 +15,20 @@
 // anyway. Printing them would put them in front of a coder as though they were
 // work.
 //
+// A DOCUMENTED ABSENCE IS NOT WORK EITHER, and this is the third time that
+// has cost a pass. entry.absences[field] means somebody looked and recorded
+// that the system has no such thing; on eal.newcomerCriteria that is 129
+// entries, every one of which has prose describing the absence and none of
+// which is codable -- DESIGNATION_FORMS says so in its own comment: "a system
+// with no category carries the absence flag on the field... so it never
+// reaches this coding". Of the 167 entries already coded on that field,
+// exactly 0 carry the flag.
+//
+// Printing them put 136 units in front of a coder as a backlog, of which 15
+// were real. The same mistake is written up in the maintainer's notes from a
+// pass where 125 uncoded entries turned out to be 117 documented absences.
+// --absences prints them anyway, for a pass that means to revisit them.
+//
 // National only by default, for the reason progress.js gives: a sub-national
 // unit usually inherits its country, so coding both counts one system twice and
 // makes a federal country dominate a distribution. `--all` when the sub-national
@@ -42,14 +56,24 @@ if (!domain.fields.some(f => f[0] === field)) {
   process.exit(2);
 }
 
-const codable = v => {
+const codable = (v, e) => {
+  if (e && e.absences && e.absences[field] === true && !flag("--absences")) return false;
   const t = String(v == null ? "" : v).trim();
   return t && !/^Not established/i.test(t) && !/^Not applicable/i.test(t);
 };
 
 let rows = JSON.parse(fs.readFileSync(pathFor(domainId), "utf8"));
 if (!flag("--all")) rows = rows.filter(r => r.isNational !== false);
-const hits = rows.filter(r => codable(r[field]));
+const hits = rows.filter(r => codable(r[field], r));
+
+/** Said out loud rather than silently dropped: a count that vanishes without a
+ *  word is how the 136 became a backlog in the first place. */
+function skipped(all) {
+  if (flag("--absences")) return "";
+  const n = all.filter(r => r.absences && r.absences[field] === true
+    && String(r[field] == null ? "" : r[field]).trim()).length;
+  return n ? "  (" + n + " documented absence" + (n === 1 ? "" : "s") + " skipped; --absences to see them)" : "";
+}
 
 const from = val("--from", 0);
 const count = val("--count", hits.length);
@@ -58,7 +82,8 @@ const slice = hits.slice(from, from + count);
 console.log("# " + domainId + "." + field
   + "  --  " + hits.length + " codable, showing " + from + " to "
   + Math.min(from + count, hits.length)
-  + (flag("--all") ? "  (all units)" : "  (national only)"));
+  + (flag("--all") ? "  (all units)" : "  (national only)")
+  + (flag("--absences") ? "  (documented absences included)" : skipped(rows)));
 for (const e of slice) {
   console.log("\n### " + e.countryCode + "|" + e.unitName + "   [" + (e.subregion || "?") + "]");
   console.log(e[field]);
