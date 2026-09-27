@@ -3517,53 +3517,55 @@ function paintCatLegend() {
    */
   const hatched = tally.absent + tally.looked;
   const dotted = tally.has + tally.unset;
-  /* A MERGED ROW SAYS ONLY WHAT IS TRUE OF WHAT IS ACTUALLY IN IT, and the
-   * label is therefore built from the composition rather than fixed.
+  /* EACH ROW SAYS WHETHER ANYTHING WOULD EVER FILL IT.
    *
-   * Three labels were wrong before this one, each in a different way.
-   * "Looked; no such rule here" is what the absence flag means and not what
-   * the other half means -- `Not established from the sources consulted` is a
-   * statement about the RECORD, not about the world. "Somebody looked" fixed
-   * that by saying nothing at all: it reported the act and withheld the
-   * finding. And both left this row indistinguishable in words from the VALUE
-   * `not stated`, which is a third thing again.
+   * These rows look alike and are not: one of them is an ANSWER and the rest
+   * are different kinds of hole, and a reader deciding where research is worth
+   * spending cannot tell which is which from a texture. So the label carries
+   * the fill status, and it is built from what is actually in the row rather
+   * than fixed -- the composition differs by column and so must the wording.
    *
-   * The three are genuinely different and the words now carry it:
-   *   not said in the entry   there IS such a rule and the entry does not say
-   *                           this about it -- a coded value, sitting with the
-   *                           values, because that is what it is
-   *   no such rule here       somebody established there is none
-   *   none established        somebody looked and could not establish either way
+   *   no such rule here          an answer, and complete. The system has no
+   *                              such rule, somebody established that, and no
+   *                              amount of research moves it
+   *   none established           somebody looked and could not settle it. A
+   *                              source would
+   *   not read here yet          the entry has prose nobody has read against
+   *                              this question. Reading it would settle it
+   *   none of these values fit   somebody did read it and none was true. Only
+   *                              a new value in the vocabulary moves this
+   *   nothing recorded           the field is empty. A fill wave
    *
-   * So a row holding only absences says "No such rule here", a row holding
-   * only sentinels says "Looked, found nothing", and a row holding both says
-   * "No such rule, or none established" -- which is long, and is the price of
-   * not asserting the stronger half over the weaker one. The hover splits it.
+   * And the coded value `not stated`, which sits with the values above, is a
+   * sixth thing again: the rule exists and this entry does not say this about
+   * it, so a NEW SOURCE is what fills it, not a re-reading.
+   *
+   * Where a row holds two of these, the label says so and the hover counts
+   * them; that is the price of three rows instead of five.
    */
   const part = (n, what) => n ? `${n} ${what}` : '';
   const both = (a, b) => [a, b].filter(Boolean).join(' · ');
   if (hatched) {
-    const label = tally.absent && tally.looked ? 'No such rule, or none established'
-      : tally.absent ? 'No such rule here'
-      : 'Looked, found nothing';
+    const label = tally.absent && tally.looked ? 'No such rule here, or none established yet'
+      : tally.absent ? 'No such rule here — nothing to find'
+      : 'None established — a source would settle it';
     rows.push(`<div class="cl" disabled title="${esc(both(
-        part(tally.absent, 'where the entry establishes there is no such rule'),
-        part(tally.looked, 'where the sources consulted established neither way')))}"
+        part(tally.absent, 'where the entry establishes there is no such rule, which is an answer and not a gap'),
+        part(tally.looked, 'where the sources consulted settled neither way, which a further source could')))}"
       >${sw('url(#hatch)')}<span>${label}</span><span class="n">${hatched}</span></div>`);
   }
   if (dotted) {
-    // The same rule on the dotted row. "Text here, not placed on this
-    // question" described a PROCESS only somebody who works on the atlas can
-    // picture; what a reader can see is the list of values just above.
-    const label = tally.unset ? 'Text here, none of these values'
-      : 'Text here, not read for this question';
+    const label = tally.has && tally.unset ? 'Text here, unread or unfitted'
+      : tally.unset ? 'None of these values fit — needs a new one'
+      : 'Text here, not read against this question yet';
     rows.push(`<div class="cl" disabled title="${esc(both(
-        part(tally.has, 'where nobody has read this entry against this question yet'),
-        part(tally.unset, 'where somebody did, and none of these values was true of it')))}"
+        part(tally.has, 'where nobody has read this entry against this question yet, which reading would settle'),
+        part(tally.unset, 'where somebody did and none of these values was true of it, which only a new value settles')))}"
       >${sw('url(#uncoded)')}<span>${label}</span><span class="n">${dotted}</span></div>`);
   }
   if (tally.na) rows.push(`<div class="cl" disabled>${sw('url(#na)')}<span>Not applicable here</span><span class="n">${tally.na}</span></div>`);
-  if (tally.none) rows.push(`<div class="cl" disabled>${sw('var(--nodata)')}<span>Nothing recorded</span><span class="n">${tally.none}</span></div>`);
+  if (tally.none) rows.push(`<div class="cl" disabled title="the field is empty here: a fill wave is what reaches these"
+    >${sw('var(--nodata)')}<span>Nothing recorded — nobody has looked</span><span class="n">${tally.none}</span></div>`);
   // The map answers "who does what"; the table answers "what exactly does each
   // one say", which a colour cannot. It is one click from here rather than in
   // the nav, because the question it needs is the one already chosen.
