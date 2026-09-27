@@ -1,0 +1,59 @@
+{
+  "GG|Guernsey": {
+    "fields": {
+      "newcomerCriteria": [
+        "EAL covers learners exposed to a language other than English in early development or at home",
+        "A learner is EAL whatever their English proficiency, including locally born bilinguals",
+        "Where two languages were present early, the non-English one is noted as first language",
+        "EAL Service support is intended for those with some difficulty accessing the curriculum",
+        "A child joining after the first term of Year 10 is placed by an experienced Education Officer"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [
+        1,
+        1,
+        2,
+        1,
+        4
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "EAL covers learners exposed to a language other than English in early development or at home",
+        "url": "https://www.gov.gg/article/206826/English-as-an-Additional-Language",
+        "quote": "In Guernsey, English as an Additional Language (EAL) applies to learners who have been exposed to a language other than English in early development, or continue to be in their home environment, regardless of their proficiency in English"
+      },
+      {
+        "bullet": "A learner is EAL whatever their English proficiency, including locally born bilinguals",
+        "url": "https://www.gov.gg/article/206826/English-as-an-Additional-Language",
+        "quote": "they may be locally born children growing up in bilingual households, or learners who have recently arrived in Guernsey from another country"
+      },
+      {
+        "bullet": "Where two languages were present early, the non-English one is noted as first language",
+        "url": "https://www.gov.gg/article/206826/English-as-an-Additional-Language",
+        "quote": "when more than one language was present in early development, the non-English language should be noted as the learner's first language"
+      },
+      {
+        "bullet": "EAL Service support is intended for those with some difficulty accessing the curriculum",
+        "url": "https://www.gov.gg/article/206826/English-as-an-Additional-Language",
+        "quote": "Support from the EAL Service is intended for those who have some difficulty accessing the curriculum because of low proficiency in English"
+      },
+      {
+        "bullet": "A child joining after the first term of Year 10 is placed by an experienced Education Officer",
+        "url": "https://www.gov.gg/schooladmissions",
+        "quote": "Children will be allocated a place at the most appropriate school based on their current school's curriculum and their chosen examination subject options; this being determined by an experienced Education Officer"
+      }
+    ],
+    "sources": [
+      {
+        "label": "English as an Additional Language, States of Guernsey, Education Inclusion Services",
+        "url": "https://www.gov.gg/article/206826/English-as-an-Additional-Language"
+      },
+      {
+        "label": "Applying for a school place, States of Guernsey School Admissions",
+        "url": "https://www.gov.gg/schooladmissions"
+      }
+    ]
+  }
+}

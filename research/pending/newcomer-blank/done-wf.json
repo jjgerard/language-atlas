@@ -1,0 +1,37 @@
+{
+  "WF|Wallis and Futuna": {
+    "fields": {
+      "newcomerCriteria": [
+        "an inspection report records a large majority of allophone children in maternelle",
+        "a 2013 report records French at 10% in petite section rising to 90% in grande section",
+        "the graduated entry began as a 1998 experiment generalised in 2001 and 2003"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [1, 3, 1]
+    },
+    "evidence": [
+      {
+        "bullet": "an inspection report records a large majority of allophone children in maternelle",
+        "url": "https://www.vie-publique.fr/files/rapport/pdf/294784.pdf",
+        "quote": "la présence d’une grande majorité d’enfants allophones en maternelle"
+      },
+      {
+        "bullet": "a 2013 report records French at 10% in petite section rising to 90% in grande section",
+        "url": "https://www.vie-publique.fr/files/rapport/pdf/294784.pdf",
+        "quote": "en petite section 90 % de l’enseignement est dispensé en wallisien ou futunien (donc seulement 10 % en français) ; en moyenne section, la part des deux langues est équilibrée (50 % pour la langue maternelle et 50 % pour le français) ; enfin, en grande section, 90 % des activités sont conduites en langue française"
+      },
+      {
+        "bullet": "the graduated entry began as a 1998 experiment generalised in 2001 and 2003",
+        "url": "https://www.vie-publique.fr/files/rapport/pdf/294784.pdf",
+        "quote": "l’expérimentation initiée en 1998 et généralisée en 2001 à Wallis et en 2003 à Futuna"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rapport sur l'evolution du statut des enseignants du premier degre a Wallis et Futuna, inspections generales, publie sur vie-publique.fr",
+        "url": "https://www.vie-publique.fr/files/rapport/pdf/294784.pdf"
+      }
+    ]
+  }
+}

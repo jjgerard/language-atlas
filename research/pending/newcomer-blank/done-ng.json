@@ -1,0 +1,37 @@
+{
+  "NG|Nigeria": {
+    "fields": {
+      "newcomerCriteria": [
+        "All IDP children are to receive education, free and compulsory at the primary level",
+        "Missing documents must not bar a displaced child from school, replacements are provided",
+        "Placement is by the Education Sector lead agency, to neighbouring schools ascertained safe"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [1, 2, 4]
+    },
+    "evidence": [
+      {
+        "bullet": "All IDP children are to receive education, free and compulsory at the primary level",
+        "url": "https://faolex.fao.org/docs/pdf/nig229292.pdf",
+        "quote": "ensure that all IDP children receive education that shall be free and compulsory at the primary level"
+      },
+      {
+        "bullet": "Missing documents must not bar a displaced child from school, replacements are provided",
+        "url": "https://faolex.fao.org/docs/pdf/nig229292.pdf",
+        "quote": "where such documentation is not available, this should not prevent the child from accessing these essential services"
+      },
+      {
+        "bullet": "Placement is by the Education Sector lead agency, to neighbouring schools ascertained safe",
+        "url": "https://faolex.fao.org/docs/pdf/nig229292.pdf",
+        "quote": "shall liaise with relevant agencies within the locality to assist in relocating the children to neighbouring schools that are ascertained to be safe"
+      }
+    ],
+    "sources": [
+      {
+        "label": "National Policy on Internally Displaced Persons, Federal Republic of Nigeria (Federal Ministry of Humanitarian Affairs, Disaster Management and Social Development), via FAOLEX",
+        "url": "https://faolex.fao.org/docs/pdf/nig229292.pdf"
+      }
+    ]
+  }
+}

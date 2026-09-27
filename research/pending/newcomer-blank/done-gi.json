@@ -1,0 +1,55 @@
+{
+  "GI|Gibraltar": {
+    "fields": {
+      "newcomerCriteria": [
+        "Free English language tuition reaches a child who is the dependant of an EEA national worker",
+        "That child must also be of compulsory school age and resident in Gibraltar",
+        "The duty is framed as facilitating the initial reception of the child",
+        "The Director must ensure the free tuition is made available where those conditions are met",
+        "An asylum applicant or a child with refugee or subsidiary protection status counts as resident"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [
+        1,
+        1,
+        3,
+        4,
+        1
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "Free English language tuition reaches a child who is the dependant of an EEA national worker",
+        "url": "https://www.gibraltarlaws.gov.gi/legislations/education-and-training-act-414/download",
+        "quote": "the child is the dependant of an EEA national who is a worker, within the meaning given in Article 45 of the Treaty on the Functioning of the European Union"
+      },
+      {
+        "bullet": "That child must also be of compulsory school age and resident in Gibraltar",
+        "url": "https://www.gibraltarlaws.gov.gi/legislations/education-and-training-act-414/download",
+        "quote": "the child is of compulsory school age; (b) the child is resident in Gibraltar; and"
+      },
+      {
+        "bullet": "The duty is framed as facilitating the initial reception of the child",
+        "url": "https://www.gibraltarlaws.gov.gi/legislations/education-and-training-act-414/download",
+        "quote": "For the purpose of facilitating the initial reception of a child"
+      },
+      {
+        "bullet": "The Director must ensure the free tuition is made available where those conditions are met",
+        "url": "https://www.gibraltarlaws.gov.gi/legislations/education-and-training-act-414/download",
+        "quote": "the Director shall ensure that free tuition, including in particular English language tuition, is made available to that child where the following conditions are met"
+      },
+      {
+        "bullet": "An asylum applicant or a child with refugee or subsidiary protection status counts as resident",
+        "url": "https://www.gibraltarlaws.gov.gi/legislations/education-and-training-act-414/download",
+        "quote": "is an applicant or dependant family member of an applicant under the Asylum Regulations 2008; or (vi) has refugee status or subsidiary protection status under the Asylum Regulations 2008"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Education and Training Act 1974-11, ss. 53A and 73, Laws of Gibraltar consolidation",
+        "url": "https://www.gibraltarlaws.gov.gi/legislations/education-and-training-act-414/download"
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "MA|Morocco": {
+    "fields": {
+      "newcomerCriteria": [
+        "Directive 487/13 of 2013 opens school access to sub-Saharan migrant children countrywide",
+        "Directive 18-139 of 2018 adds reception, enrolment, pedagogic support and an evaluation step",
+        "Direct entry is possible at six or seven, from eight it turns on whether the child has Arabic",
+        "Those of eight to fifteen rejoin a formal class set by linguistic level, not by age",
+        "The school's own direction gives the final authorisation to accept the child"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [
+        1,
+        2,
+        3,
+        3,
+        4
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "Directive 487/13 of 2013 opens school access to sub-Saharan migrant children countrywide",
+        "url": "https://www.unicef.org/morocco/media/2076/file/module%204%20les%20enfants%20migrants.pdf",
+        "quote": "en 2013, le MENFPRS a lancé une directive ministérielle (487/13) qui autorise l’accès à l’école des enfants migrants subsahariens dans tout le pays"
+      },
+      {
+        "bullet": "Directive 18-139 of 2018 adds reception, enrolment, pedagogic support and an evaluation step",
+        "url": "https://www.unicef.org/morocco/media/2076/file/module%204%20les%20enfants%20migrants.pdf",
+        "quote": "la directive 18-139 complétait cette circulaire avec des mesures liées à la sensibilisation, l’accueil et l’inscription, l’accompagnement pédagogique et éducatif, ainsi que le processus évaluatif des enfants migrants"
+      },
+      {
+        "bullet": "Direct entry is possible at six or seven, from eight it turns on whether the child has Arabic",
+        "url": "https://www.unicef.org/morocco/media/2076/file/module%204%20les%20enfants%20migrants.pdf",
+        "quote": "entre six et sept ans, il est possible de procéder à l’intégration directe dans les écoles. À partir de huit ans, cela pose des problèmes si l’enfant ne maîtrise pas l’arabe"
+      },
+      {
+        "bullet": "Those of eight to fifteen rejoin a formal class set by linguistic level, not by age",
+        "url": "https://www.unicef.org/morocco/media/2076/file/module%204%20les%20enfants%20migrants.pdf",
+        "quote": "doivent passer par une ou deux années d’éducation non formelle avant de réintégrer une classe formelle, qui est alors déterminée par leur niveau linguistique, plutôt que par leur âge"
+      },
+      {
+        "bullet": "The school's own direction gives the final authorisation to accept the child",
+        "url": "https://www.unicef.org/morocco/media/2076/file/module%204%20les%20enfants%20migrants.pdf",
+        "quote": "l’ultime autorisation pour l’acceptation de l’enfant à l’école est donnée par la direction de l’établissement scolaire"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Situation des enfants au Maroc, Module 4: les enfants migrants (UNICEF Maroc, SitAn 2019) — names circulaires 13-487, 18-139, 135-18 and 0101-19",
+        "url": "https://www.unicef.org/morocco/media/2076/file/module%204%20les%20enfants%20migrants.pdf"
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "AW|Aruba": {
+    "fields": {
+      "newcomerCriteria": [
+        "the Leerplichtverordening defines its subject as a child between 4 and 17 years old",
+        "for a child who comes to live in Aruba later the duty starts thirty days after arrival",
+        "enrolment may not be made to depend on a statement from the population register",
+        "release for a child at a school abroad rests on a recent declaration from that school head",
+        "the Minister grants the releases and decides within thirty days of the request"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [1, 3, 2, 2, 4]
+    },
+    "evidence": [
+      {
+        "bullet": "the Leerplichtverordening defines its subject as a child between 4 and 17 years old",
+        "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/1304ab11.082.pdf",
+        "quote": "jongere : een kind tussen de 4 en 17 jaar"
+      },
+      {
+        "bullet": "for a child who comes to live in Aruba later the duty starts thirty days after arrival",
+        "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/1304ab11.082.pdf",
+        "quote": "Indien de jongere na deze eerste verplichte schooldag in Aruba is komen wonen, gaat het gebod in dertig dagen na aankomst van de jongere"
+      },
+      {
+        "bullet": "enrolment may not be made to depend on a statement from the population register",
+        "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/1304ab11.082.pdf",
+        "quote": "Bij de inschrijving van een jongere aan een school wordt de ouder niet verplicht, noch van zichzelf noch van de jongere, een verklaring uit de basisadministratie over te leggen"
+      },
+      {
+        "bullet": "release for a child at a school abroad rests on a recent declaration from that school head",
+        "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/1304ab11.082.pdf",
+        "quote": "een recente verklaring van het hoofd van de desbetreffende buitenlandse onderwijsinstelling"
+      },
+      {
+        "bullet": "the Minister grants the releases and decides within thirty days of the request",
+        "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/1304ab11.082.pdf",
+        "quote": "Ontheffingen worden verleend door de Minister; hij beslist binnen dertig dagen na ontvangst daarvan op een verzoek"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Leerplichtverordening, Landsverordening van 23 december 2011 (AB 2011 no. 82), Centraal Wettenregister van Aruba",
+        "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/1304ab11.082.pdf"
+      }
+    ]
+  }
+}

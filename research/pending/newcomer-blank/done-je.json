@@ -1,0 +1,59 @@
+{
+  "JE|Jersey": {
+    "fields": {
+      "newcomerCriteria": [
+        "International New Arrivals arrive in the Jersey school system from outside the Island or the UK",
+        "A multilingual learner is any student with a language beyond English in their repertoire",
+        "International New Arrivals sit an initial assessment in both home language and English",
+        "Every school adopts an agreed assessment framework for tracking and reporting EAL proficiency",
+        "A home language different from the teaching language is not itself a learning difficulty"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [
+        1,
+        1,
+        2,
+        4,
+        1
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "International New Arrivals arrive in the Jersey school system from outside the Island or the UK",
+        "url": "https://www.gov.je/SiteCollectionDocuments/Education/P%20Language%20Policy%2020211108.pdf",
+        "quote": "International New Arrivals (INAs): Students who arrive in the Jersey school system from outside the Island or the UK"
+      },
+      {
+        "bullet": "A multilingual learner is any student with a language beyond English in their repertoire",
+        "url": "https://www.gov.je/SiteCollectionDocuments/Education/P%20Language%20Policy%2020211108.pdf",
+        "quote": "Multilingual Learner (MLL): Any student who has a language or languages beyond English in their linguistic repertoire"
+      },
+      {
+        "bullet": "International New Arrivals sit an initial assessment in both home language and English",
+        "url": "https://www.gov.je/SiteCollectionDocuments/Education/P%20Language%20Policy%2020211108.pdf",
+        "quote": "International New Arrivals will complete an appropriate initial assessment in both home language (L1) and English (L2) if they do not have English as a home language or former language of schooling"
+      },
+      {
+        "bullet": "Every school adopts an agreed assessment framework for tracking and reporting EAL proficiency",
+        "url": "https://www.gov.je/SiteCollectionDocuments/Education/P%20Language%20Policy%2020211108.pdf",
+        "quote": "All schools will adopt an agreed-upon assessment framework for tracking and reporting on EAL proficiency development"
+      },
+      {
+        "bullet": "A home language different from the teaching language is not itself a learning difficulty",
+        "url": "https://www.jerseylaw.je/laws/current/l_27_1999",
+        "quote": "A child is not to be taken as having a learning difficulty solely because the language (or form of the language) in which the child is, or will be, taught is different from a language (or form of a language) which has at any time been spoken in the child"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Language Policy for Jersey Education, Department for Children, Young People, Education and Skills, 2021",
+        "url": "https://www.gov.je/SiteCollectionDocuments/Education/P%20Language%20Policy%2020211108.pdf"
+      },
+      {
+        "label": "Education (Jersey) Law 1999, official consolidated version",
+        "url": "https://www.jerseylaw.je/laws/current/l_27_1999"
+      }
+    ]
+  }
+}

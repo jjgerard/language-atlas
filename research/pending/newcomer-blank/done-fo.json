@@ -1,0 +1,59 @@
+{
+  "FO|Faroe Islands": {
+    "fields": {
+      "newcomerCriteria": [
+        "The group is immigrants, pupils with a non-Faroese-speaking parent, and returnees from abroad",
+        "At enrolment the school assesses each pupil's need for special teaching in Faroese",
+        "The school takes the step in consultation with the parents and the pupil",
+        "The class teacher reports in-year on progress and on continued need for the teaching",
+        "A school may admit a pupil before a residence permit where a longer stay looks likely"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [
+        1,
+        3,
+        4,
+        2,
+        3
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "The group is immigrants, pupils with a non-Faroese-speaking parent, and returnees from abroad",
+        "url": "https://logir.fo/Kunngerd/144-fra-06-10-2020-um-undirvising-i-foroyskum-sum-annadmal-og-modurmalsundirvising",
+        "quote": "Næmingarnir kunnu vera tilflytarar, næmingar, sum búgva í Føroyum, har annað ella bæði foreldrini hava eitt annað móðurmál enn føroyskt, og næmingar, sum hava føroysk foreldur, men hava búð uttanlands"
+      },
+      {
+        "bullet": "At enrolment the school assesses each pupil's need for special teaching in Faroese",
+        "url": "https://logir.fo/Kunngerd/144-fra-06-10-2020-um-undirvising-i-foroyskum-sum-annadmal-og-modurmalsundirvising",
+        "quote": "Tá ið næmingar verða innskrivaðir, ger skúlin eina meting um hvønn tørv, einstaki næmingurin hevur á serstakari undirvísing í føroyskum"
+      },
+      {
+        "bullet": "The school takes the step in consultation with the parents and the pupil",
+        "url": "https://logir.fo/Kunngerd/144-fra-06-10-2020-um-undirvising-i-foroyskum-sum-annadmal-og-modurmalsundirvising",
+        "quote": "Skúlin tekur í samráð við foreldrini og næmingin stig til, at næmingar fáa undirvísing í føroyskum sum annaðmál"
+      },
+      {
+        "bullet": "The class teacher reports in-year on progress and on continued need for the teaching",
+        "url": "https://logir.fo/Kunngerd/144-fra-06-10-2020-um-undirvising-i-foroyskum-sum-annadmal-og-modurmalsundirvising",
+        "quote": "Flokslærarin boðar í skúlaárinum leiðsluni frá, hvussu gongst hjá næminginum, og um framhaldandi tørv á undirvísing í føroyskum sum annaðmál"
+      },
+      {
+        "bullet": "A school may admit a pupil before a residence permit where a longer stay looks likely",
+        "url": "https://undirvising.fo/ukraina-og-skuli",
+        "quote": "Skúlin kann tó taka ímóti næmingum, áðrenn teir hava fingið uppihaldsloyvi, um útlit eru fyri, at næmingarnir verða verandi her í longri tíðarskeið"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Kunngerð nr. 144 frá 6. oktober 2020 um undirvísing í føroyskum sum annaðmál og móðurmálsundirvísing",
+        "url": "https://logir.fo/Kunngerd/144-fra-06-10-2020-um-undirvising-i-foroyskum-sum-annadmal-og-modurmalsundirvising"
+      },
+      {
+        "label": "Ukraina og skúli, Undirvísingarstýrið (Faroese Education Agency)",
+        "url": "https://undirvising.fo/ukraina-og-skuli"
+      }
+    ]
+  }
+}

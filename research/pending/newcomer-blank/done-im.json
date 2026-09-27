@@ -1,0 +1,49 @@
+{
+  "IM|Isle of Man": {
+    "fields": {
+      "newcomerCriteria": [
+        "EAL support is for pupils whose first language is not English and who need English proficiency",
+        "A new arrival assessment meeting follows once the pupil is registered at an Island school",
+        "The meeting clarifies the level of need and lets the EAL Service advise on a starting plan",
+        "The EAL Service works with schools and parents on the admission and progress of such pupils",
+        "Short-term reception support can sometimes be given where the family uses another language"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [1, 3, 2, 4, 1]
+    },
+    "evidence": [
+      {
+        "bullet": "EAL support is for pupils whose first language is not English and who need English proficiency",
+        "url": "https://desc.gov.im/education/education/additional-educational-needs/english-as-an-additional-language/",
+        "quote": "This is specifically for pupils whose first language is not English and who need support in gaining English proficiency to fully access the mainstream curriculum"
+      },
+      {
+        "bullet": "A new arrival assessment meeting follows once the pupil is registered at an Island school",
+        "url": "https://desc.gov.im/education/education/additional-educational-needs/english-as-an-additional-language/",
+        "quote": "is needed for eligible pupils once they are registered at an Isle of Man school"
+      },
+      {
+        "bullet": "The meeting clarifies the level of need and lets the EAL Service advise on a starting plan",
+        "url": "https://desc.gov.im/education/education/additional-educational-needs/english-as-an-additional-language/",
+        "quote": "The meeting will clarify the level of need and support for the pupil and will enable the EAL Service to advise on a starting plan"
+      },
+      {
+        "bullet": "The EAL Service works with schools and parents on the admission and progress of such pupils",
+        "url": "https://desc.gov.im/education/education/additional-educational-needs/english-as-an-additional-language/",
+        "quote": "The EAL Service supports schools and parents in the admission and progress of pupils who must learn English as part of their transition to a new educational setting"
+      },
+      {
+        "bullet": "Short-term reception support can sometimes be given where the family uses another language",
+        "url": "https://desc.gov.im/education/education/additional-educational-needs/english-as-an-additional-language/",
+        "quote": "short-term support can sometimes be provided for children who need extra help to settle when their family uses a different first language at home"
+      }
+    ],
+    "sources": [
+      {
+        "label": "English as an Additional Language, Department of Education, Sport and Culture, Isle of Man",
+        "url": "https://desc.gov.im/education/education/additional-educational-needs/english-as-an-additional-language/"
+      }
+    ]
+  }
+}

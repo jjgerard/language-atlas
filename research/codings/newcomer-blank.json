@@ -1,0 +1,102 @@
+{
+  "AW|Aruba": {
+    "newcomerCriteria": {
+      "triggers": ["arrival recency", "prior schooling"],
+      "decided_by": "national authority",
+      "rule_locus": "national statute"
+    }
+  },
+  "CW|Curacao": {
+    "newcomerCriteria": {
+      "designation": "functional",
+      "triggers": ["home language"],
+      "decided_by": "school",
+      "rule_locus": "national statute"
+    }
+  },
+  "SX|Sint Maarten": {
+    "newcomerCriteria": {
+      "designation": "functional",
+      "triggers": ["home language"],
+      "decided_by": "school",
+      "rule_locus": "national statute"
+    }
+  },
+  "NC|New Caledonia": {
+    "newcomerCriteria": {
+      "designation": "functional",
+      "triggers": ["home language"],
+      "decided_by": "not stated",
+      "rule_locus": "national statute"
+    }
+  },
+  "WF|Wallis and Futuna": {
+    "newcomerCriteria": {
+      "triggers": ["not stated"],
+      "decided_by": "not stated",
+      "rule_locus": "not stated"
+    }
+  },
+  "FO|Faroe Islands": {
+    "newcomerCriteria": {
+      "designation": "named category",
+      "triggers": ["home language", "arrival recency", "tested proficiency"],
+      "decided_by": "school",
+      "rule_locus": "national statute"
+    }
+  },
+  "GG|Guernsey": {
+    "newcomerCriteria": {
+      "designation": "named category",
+      "triggers": ["home language"],
+      "decided_by": "national authority",
+      "rule_locus": "not stated"
+    }
+  },
+  "GI|Gibraltar": {
+    "newcomerCriteria": {
+      "designation": "proxy category",
+      "triggers": ["immigration status"],
+      "decided_by": "national authority",
+      "rule_locus": "national statute"
+    }
+  },
+  "IM|Isle of Man": {
+    "newcomerCriteria": {
+      "designation": "functional",
+      "triggers": ["home language", "tested proficiency"],
+      "decided_by": "school",
+      "rule_locus": "not stated"
+    }
+  },
+  "JE|Jersey": {
+    "newcomerCriteria": {
+      "designation": "named category",
+      "triggers": ["arrival recency", "home language", "tested proficiency"],
+      "decided_by": "school",
+      "rule_locus": "national, non-binding"
+    }
+  },
+  "MA|Morocco": {
+    "newcomerCriteria": {
+      "designation": "proxy category",
+      "triggers": ["immigration status", "tested proficiency"],
+      "decided_by": "school",
+      "rule_locus": "national rule, local application"
+    }
+  },
+  "NG|Nigeria": {
+    "newcomerCriteria": {
+      "designation": "proxy category",
+      "decided_by": "statutory body",
+      "rule_locus": "national, non-binding"
+    }
+  },
+  "SN|Senegal": {
+    "newcomerCriteria": {
+      "triggers": ["immigration status"],
+      "decided_by": "not stated",
+      "rule_locus": "not stated"
+    }
+  }
+}

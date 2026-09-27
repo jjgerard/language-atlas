@@ -1,0 +1,31 @@
+{
+  "SN|Senegal": {
+    "fields": {
+      "newcomerCriteria": [
+        "Refugees and asylum seekers reach public schools on the same conditions as Senegalese",
+        "Registration asks the refugee identity card and a birth certificate, per UNHCR guidance"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [1, 2]
+    },
+    "evidence": [
+      {
+        "bullet": "Refugees and asylum seekers reach public schools on the same conditions as Senegalese",
+        "url": "https://help.unhcr.org/senegal/en/education/",
+        "quote": "Refugees and asylum seekers can access public schools under the same conditions as Senegalese"
+      },
+      {
+        "bullet": "Registration asks the refugee identity card and a birth certificate, per UNHCR guidance",
+        "url": "https://help.unhcr.org/senegal/en/education/",
+        "quote": "It will be necessary to present the refugee identity card and a birth certificate when registering for school and for school examination records"
+      }
+    ],
+    "sources": [
+      {
+        "label": "UNHCR Help Senegal — Education: access to public schools and the papers asked at registration (read 2026-09-27)",
+        "url": "https://help.unhcr.org/senegal/en/education/"
+      }
+    ]
+  }
+}
