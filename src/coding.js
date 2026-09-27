@@ -193,6 +193,35 @@ const DESIGNATION_FORMS = {
 // AND insufficient Czech; New Zealand takes arrival date, refugee documentation
 // and home language together. Coding a single "main" trigger would throw away
 // the combinations, which are the interesting part.
+// TWO AXES LIVE IN THIS COLUMN, and they are not the same one. Recorded
+// 2026-09-28 after conflating them, and after a proposal for a separate
+// language/not-language column was dropped because both readings derive from
+// here already -- and because the list grain is what carries a system that
+// designates on several things at once (1.69 values an entry, 123 of 202
+// holding two or more).
+//
+//   IS THE DESIGNATION ABOUT LANGUAGE?   `home language` and `tested
+//   proficiency` are; `immigration status`, `ethnicity`, `prior schooling`
+//   and `arrival recency` are not. 153 of 202 yes, 49 no. So ONE IN FOUR
+//   systems picks out its newcomer pupils without reference to anything about
+//   their language -- Aruba by arrival, Nigeria by displacement, Brunei by the
+//   parents' immigration status, four Latin American states by equivalence of
+//   prior study.
+//
+//   IS THE CHILD ACTUALLY ASSESSED?   only `tested proficiency` is a
+//   measurement. The rest are ASCRIBED -- facts about a household or a status,
+//   not about what the child can do. 93 of 202, 46%.
+//
+// The interesting cell is the intersection: OF THE 153 SYSTEMS THAT DESIGNATE
+// BY LANGUAGE, 60 NEVER TEST -- 39% of them. Guernsey states it outright, "a
+// learner is EAL whatever their English proficiency, including locally born
+// bilinguals", and Nova Scotia designates a child who merely "come[s] from a
+// home where one is used". Victoria is the sharpest: its LBOTE census of
+// household language background "feeds the EAL Index, which drives both
+// identification and funding", and no child is tested at any point.
+//
+// Do not read `home language` as a proficiency finding. It is a language fact
+// about the home, which is why it sits on axis 1 and not on axis 2.
 const NEWCOMER_TRIGGERS = {
   'arrival recency': 'How recently the child arrived, or how long they have been resident (New Zealand proof of entry date, Estonia under 3 years, Finland about 4, Israel date of aliyah relative to 1 January, France not schooled in France the previous year)',
   'tested proficiency': 'A language assessment decides (Austria standardised testing, Denmark "a linguistic and functional test, not an arrival date or age cutoff", Czechia three levels, Spain initial assessment)',
