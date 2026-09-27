@@ -1750,10 +1750,19 @@ function measureStripes() {
 function stripeAngle() {
   return `rotate(45) scale(${(STRIPE_PX / 4) * stripeUnitsPerPx / view.k})`;
 }
-/* TWO OR THREE BANDS. The tile grows with the number of colours and each band
+/* UP TO FOUR BANDS. The tile grows with the number of colours and each band
    stays 4 units, so stripeAngle()'s scale keeps working and a band is the same
-   thickness whether there are two of them or three. */
-const STRIPE_MAX = 3;
+   thickness whether there are two of them or four.
+   Three was the limit on the grounds that a rotated tile splits as evenly into
+   thirds as into halves -- which is true of quarters too, more so. What made it
+   worth raising is the KEY rather than the map: a unit past the limit is
+   crosshatched and earns the legend a row of its own, and at three that row was
+   appearing for ONE country. Measured across every column: thirteen units were
+   crosshatched at three and one is at four, and the crosshatch row disappears
+   from `initiated by`, `who pays`, `what triggers support` and `what is done`
+   entirely. One unit still holds five distinct colours and keeps the texture,
+   which is what it is for. */
+const STRIPE_MAX = 4;
 function stripeFill(cols) {
   const tok = c => String(c).replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '');
   const id = 'stripe-' + cols.map(tok).join('-');
