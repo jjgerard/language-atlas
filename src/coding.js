@@ -2106,7 +2106,9 @@ const COLUMN_LABELS = {
   data_verdict: 'verdict on the data',
   decided_by: 'who decides',
   decider: 'who decides',
-  designation: 'how the pupil is designated',
+  // "term used", not "how the pupil is designated": the column's own question
+  // is whether the system has A WORD for the pupil, and what kind of word it is.
+  designation: 'term used',
   direction: 'which way the gap runs',
   discharge_basis: 'what ends support',
   duty_org: 'the body named',
@@ -2229,6 +2231,13 @@ const COLUMN_BANDS = {
 // label that says plainly whose silence it is.
 const VALUE_LABELS = {
   'not stated': 'not said in the entry',
+  // `functional` reads as a property of the provision. It is not: it means the
+  // system has NO SINGLE TERM and identifies the pupil with a sentence instead
+  // -- Curacao's "pupils whose mother tongue differs from the school
+  // instruction language" against Denmark's one word, tosprogede boern. The
+  // stored value is unchanged; only what a reader is shown moves. Safe as a
+  // global entry because `functional` occurs in exactly one vocabulary.
+  functional: 'functional description (no single term)',
 };
 
 /** What to show a reader for a coded value. The stored string is unchanged. */
