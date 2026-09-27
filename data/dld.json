@@ -46,7 +46,7 @@
   "legalEntitlement": "A new specialised-support regulation was approved on 8 July 2026\nIt replaces the model in force since 2008\nThe education Act obliges the government to run diversity plans",
   "funding": "Specialised materials come from the ministry through a loan service run by its areas\nCentres themselves bear the cost of the ordinary materials their activity needs\nThe department maintains, repairs and replaces the material lent to the centre",
   "workforce": "A reference ratio of one specialised professional per five pupils with disability\nA separate ratio of one school-life companion per five pupils",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "A non-definitive Conava ruling is reviewed ex officio at the term it set (art 18, 2004)\nAlso reviewed ex officio when the administration learns the situation has changed (art 18)\nFamily may ask for review after that term, or two years from the last valuation (art 18)",
   "outcomesEvidence": "Not established from the sources consulted for this entry — the Govern d’Andorra education pages already on this entry carry no outcome reporting, and estadistica.ad serves its education tables only through a JavaScript portal that returned no readable text to this pipeline. If you work in this system, this is exactly the field to fill in.",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -93,6 +93,11 @@
    "workforce": [
     2,
     2
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    3
    ]
   },
   "coding": {
@@ -3813,7 +3818,7 @@
   "legalEntitlement": "A framework law gives a right to education in regular schools\nProvision is by a programme adapted to individual needs",
   "funding": "Schools educating these pupils receive earmarked budget funds\nFunds cover the special programme, transport, accommodation and adaptation",
   "workforce": "In one entity's laws no right to a teaching assistant is established\nIn the other the question is not defined at all\nProvision is uneven because lower levels of government differ",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Health worsening so lessons cannot be followed triggers a review (RS law, art 96)\nThe school then decides to continue or interrupt schooling, with Ministry consent (RS art 96)\nDuty to attend ends at 15; the director may allow schooling to 17 (RS law, art 74)",
   "outcomesEvidence": "In the Federation entity the ministry asked cantonal ministries by letter for the counts\nA one-off Federal Ministry of Education and Science analysis, Mostar, October 2015\nTuzla canton returned 25 under Poremecaji u govoru, glasu i jeziku, of 306 categorised\nThe report doubts comparability: cantons do not use the same names for types of difficulty\nOne cantonal ministry puts the true number at two to two and a half times the recorded one",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -3868,6 +3873,11 @@
     3,
     3,
     3
+   ],
+   "dischargeCriteria": [
+    1,
+    2,
+    4
    ]
   },
   "coding": {
@@ -14115,7 +14125,7 @@
   "legalEntitlement": "SGB V para 32 gives insured persons a claim to be supplied with Heilmittel\nThe G-BA directive binds the funds, the insured and contract doctors alike\nSick fund must decide an application within three weeks, five with an expert opinion\nMissing the deadline without good reason means the benefit counts as approved",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 258\nFunders: health insurance 77%, state health 15%, state education 13%, state social services 9%\n37% said a maximum number of sessions applied (n = 251)",
   "workforce": "Using the title Logopaede requires a licence under the Logopaedengesetz\nLicence follows a three-year training and the state examination for logopaedists\nTraining is delivered at state-recognised schools for logopaedists\nSchool support needs specialist-trained special-education teachers, KMK 1998",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "A break over 14 calendar days without good reason voids the prescription (HeilM-RL § 16)\nTherapist must interrupt and tell the prescriber if the goal looks unreachable (§ 16(5))\nSchool support need requires review at suitable intervals, none named (KMK 1994)\nThe prescriber decides on a new prescription or on ending treatment (HeilM-RL § 16(5))\nSix months with no new prescription opens a fresh Verordnungsfall (HeilM-RL § 7(1))",
   "outcomesEvidence": "KMK school statistics break out Förderschwerpunkt Sprache as a category of its own\nFigures are asked of the Länder education ministries and compiled by the KMK secretariat\nSprache: 56,098 pupils in 2015 rising to 63,392 in 2024\nKMK warns that in the worst case data on these Förderschwerpunkte can be lost\nPublished on a two-year cycle, this edition covering 2015 to 2024",
   "identifiedPrevalence": [
    {
@@ -14237,6 +14247,13 @@
     3,
     3,
     4
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    2,
+    3
    ]
   },
   "coding": {
@@ -34290,7 +34307,7 @@
   "legalEntitlement": "The basis is a 2025 Law on Education of Children with Special Educational Needs\nTheir education is defined as a public interest activity",
   "funding": "Consolidation to 047/17: this education is financed from the budget of Montenegro",
   "workforce": "752 teaching assistants were engaged in 2025/2026\nSpeech therapists sit on the state mobile support teams alongside psychologists",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Ruling must fix a term of at most a year to check the directing was right (art 21, 047/17)\nMinistry decides an appeal in second instance, on a commission it names (art 22, 047/17)",
   "outcomesEvidence": "MONSTAT counts pupils with special educational needs by sex and by where they are taught\nIts definition of that group names physical, mental and sensor difficulties, not speech\nDrawn from the Ministry of Education Information System, at each school year's start\n1,027 such pupils enrolled in 2020/21: 829 regular, 75 special, 123 in resource centres\nNo category of need is published, so children with language disorder are not visible",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -34339,6 +34356,10 @@
     2,
     3,
     3
+   ],
+   "dischargeCriteria": [
+    1,
+    2
    ]
   },
   "coding": {
@@ -59498,7 +59519,7 @@
   "legalEntitlement": "There is no national school system, so no support framework exists to record\nThe Holy See's own report to the UN says children attend schools elsewhere\nThe report names no health or education service inside the territory\nAny entitlement therefore arises under the law of the State running the school",
   "funding": "The FAS health fund pays, via the DSI polyclinic or providers contracted to the fund\nIndirect route: the family pays first and claims a pre-authorised reimbursement\nReimbursement uses the DSI tariff for anything its own polyclinic could have provided\nThe patient's share of the cost is paid at the counter before the service is given\nChoosing an outside contracted provider over a DSI clinic leaves the tariff difference to pay",
   "workforce": "Not established from the sources consulted. Neither the Direzione di Sanita e Igiene nor the Fondo Assistenza Sanitaria publishes any count of speech and language therapists. The FAS names six contracted logopedia providers by name, street address and telephone number, and the DSI's own list of services provided at its polyclinic runs from angiologia to medicina dei viaggi without naming logopedia.",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "FAS cover of an insured member’s child ends at eighteen (Regolamento art 3 § 1, 2025)\nNo age limit if the DSI-appointed Collegio Medico finds permanent incapacity (art 3 § 1)\nStudents covered to twenty in secondary studies and twenty-six at university (art 3 § 1)",
   "outcomesEvidence": "Not established from the sources consulted for this entry — no school census or education statistic for Vatican City State was located, and the sources already on this entry are UN treaty documents and Holy See texts, which report on the Holy See’s international position rather than on any school population. If you work in this system, this is exactly the field to fill in.",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -59554,6 +59575,11 @@
     2,
     3,
     3
+   ],
+   "dischargeCriteria": [
+    1,
+    2,
+    4
    ]
   },
   "coding": {

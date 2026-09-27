@@ -67,8 +67,39 @@ to quote it.
 
 ## State
 
-- [ ] batches 1-4 drafted
-- [ ] gated with `terr-verify.js research/pending/discharge-eu`
-- [ ] applied with `terr-apply.js dld <verified> research/pending/discharge-eu --write`
+- [x] batch 01 drafted, gated and applied 2026-09-27. Germany, Montenegro,
+      Bosnia and Herzegovina, Andorra, Vatican City. 16 bullets, 9 fetches,
+      all 200, **16 of 16 survived the gate**. No negatives written, no new
+      docLinks needed: in four of five the instrument that answers
+      identification answered discharge a few paragraphs on.
+- [ ] batches 02-04 (13 units) — `worklist-02/03/04.json`
+- [ ] gate with `terr-verify.js research/pending/discharge-eu`
+- [ ] apply with `terr-apply.js dld <verified> research/pending/discharge-eu --write`
       (the spec dir is a positional 4th argument; without it slots and
       absences are silently dropped)
+
+## What batch 01 found, for whoever runs 02
+
+**Yield was 5 of 5, not the 40% DISCHARGE-WAVE.md measured.** The difference
+is where the drafter looked: national primary sources first, starting from
+the entry's own docLinks, and Eurydice and the European Agency not at all.
+Nine fetches for five countries, every one 200, no image-only PDFs.
+
+**Nobody names a criterion about the child.** Five of five answer with a
+review interval or an age: one year (ME), the term set or two years (AD),
+fourteen days and six months (DE health), "suitable intervals" with no
+interval named (DE school), eighteen/twenty/twenty-six (VA), fifteen/
+seventeen (BA). The field's first question -- what ends support -- is being
+answered by *when it is looked at again*, every time. DISCHARGE-WAVE.md
+predicted this and it held.
+
+**In three of the five the answer is in the funding or recognition
+instrument, not the education one**: Germany's Heilmittel-Richtlinie,
+Andorra's CONAVA recognition reglament, the Vatican's health-fund
+regolamento. A "which route ends it" axis would separate entries that
+currently look alike.
+
+**Hosts.** g-ba.de, kmk.org, ombudsman.co.me, natlex.ilo.org, paragraf.ba
+and fas.va all serve clean PDFs or HTML. `documents.bopa.ad` serves
+**UTF-16LE** -- read as UTF-8 it is unsearchable garbage; terr-verify.js
+decodes it, but a naive read of Andorran BOPA looks empty.
