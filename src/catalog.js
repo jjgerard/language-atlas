@@ -13,7 +13,7 @@
 // the window to lapse.
 
 const { LIVE, DOMAINS } = require('./domains');
-const { SCHEMES, columnLabel, COLUMN_BANDS } = require("./coding.js");
+const { SCHEMES, columnLabel, COLUMN_BANDS, VALUE_LABELS } = require("./coding.js");
 const { load: pisa } = require("./pisa.js");
 const store = require('./store');
 const { makeHistoryMatcher } = require('./history');
@@ -47,6 +47,12 @@ function build(catalogs, sources) {
     // prose describing a number or a free-text field. A renderer that tabulates
     // the second kind gets a frequency table of instrument names, each seen
     // once, which is what the outcomes panel did before this was sent.
+    // What to SHOW for a value whose stored string is not what a reader
+    // should read. `not stated` is the whole of it today: as a row in a key it
+    // sat one word from `none established` and the difference between them --
+    // the record being silent against the system having none -- is the one this
+    // project is built on.
+    valueLabels: VALUE_LABELS,
     schemes: Object.fromEntries(Object.entries(SCHEMES).map(([k, s]) => [k, {
       keyColumns: s.keyColumns,
       // Row-grained: the field holds an ARRAY of codings per unit. keyColumns

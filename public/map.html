@@ -950,6 +950,11 @@ async function loadAtlas() {
     // MEANS rather than just naming it. Carries keyColumns, valueColumns,
     // ordinalColumns and the glosses themselves; see src/catalog.js.
     schemes: atlas.schemes || {},
+    // loadAtlas copies a NAMED SUBSET of the payload rather than spreading it,
+    // so anything new has to be added here or it arrives and is silently
+    // dropped: the value labels shipped, reached the page, and the legend went
+    // on printing the raw strings with no error anywhere.
+    valueLabels: atlas.valueLabels || {},
   };
 }
 
@@ -1115,6 +1120,14 @@ function schemeFor(fieldKey) { return (B.schemes || {})[domainId + '.' + fieldKe
    though they were English. coding.js names them, catalog.js ships the names,
    and this is the only place that asks. Falls back to the old spacing, so a
    column added without a label degrades to what it did before. */
+/* `not stated` and `none established` are one word apart and mean opposite
+   things -- the record being silent against the system having none. The stored
+   value is untouched; this is what a reader is shown. coding.js holds the
+   list, catalog.js ships it. */
+function valueLabel(v) {
+  return ((B.valueLabels || {})[v]) || String(v == null ? '' : v);
+}
+
 function colLabel(fieldKey, col) {
   const sc = schemeFor(fieldKey);
   return ((sc && sc.labels) || {})[col] || String(col || '').replace(/_/g, ' ');
@@ -3444,11 +3457,16 @@ function paintCatLegend() {
     const shown = CODED.only ? (isOn ? 'var(--cat-1)' : 'var(--cat-other)') : (hue || 'var(--cat-other)');
     rows.push(`<button class="cl${CODED.only && !isOn ? ' off' : ''}" data-v="${esc(v)}"
       title="${CODED.only && isOn ? 'Show every value again' : 'Show only this value'}">
-      ${sw(shown)}<span>${esc(v)}</span><span class="n">${n}</span></button>`);
+      ${sw(shown)}<span>${esc(valueLabel(v))}</span><span class="n">${n}</span></button>`);
   }
   const hidden = Math.max(0, SCALE.ordered.length - LEG_MAX);
   if (hidden) {
     rows.push(`<div class="cl" disabled>${sw('var(--cat-other)')}<span>${hidden} more value${hidden === 1 ? '' : 's'}</span></div>`);
+  }
+  // A unit holding four answers is CODED, so it sits with the values rather
+  // than below them among the things the map could not draw.
+  if (SCALE.over && !CODED.only) {
+    rows.push(`<div class="cl" disabled>${sw('url(#manyvals)')}<span>More than three values</span><span class="n">${SCALE.over}</span></div>`);
   }
   // Only the states actually on the map get a row. A legend that lists what is
   // not there is the same lie as a legend that omits what is.
@@ -3460,13 +3478,38 @@ function paintCatLegend() {
     if (isUnset(u, CODED.key)) { tally.unset++; continue; }
     tally[fieldStateOf(u, fk0)]++;
   }
-  // First, because on several questions it is the largest group and it is an
-  // ANSWER -- the entry establishes that the thing does not exist.
-  if (SCALE.over && !CODED.only) rows.push(`<div class="cl" disabled>${sw('url(#manyvals)')}<span>More than three values</span><span class="n">${SCALE.over}</span></div>`);
-  if (tally.absent) rows.push(`<div class="cl" disabled>${sw('url(#hatch)')}<span>Recorded as absent</span><span class="n">${tally.absent}</span></div>`);
-  if (tally.has) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Recorded, not yet coded</span><span class="n">${tally.has}</span></div>`);
-  if (tally.unset) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Coded, no value fitted</span><span class="n">${tally.unset}</span></div>`);
-  if (tally.looked) rows.push(`<div class="cl" disabled>${sw('url(#hatch)')}<span>Looked, found nothing</span><span class="n">${tally.looked}</span></div>`);
+  /* ONE ROW PER PAINT, WHICH IS NOT WHAT THIS USED TO DO.
+   *
+   * Six rows came out of a four-colour palette. `Recorded as absent` and
+   * `Looked, found nothing` are both drawn with #hatch; `Recorded, not yet
+   * coded` and `Coded, no value fitted` are both drawn with #uncoded. So the
+   * key was asking a reader to tell apart two rows that are the same texture
+   * on the map, twice over, and on the fullest questions that made six or
+   * seven lines of not-this before the reader reached anything the map is
+   * about. Measured across 82 columns: the key averaged 2.5 rows of
+   * non-answer where the map averaged 2.4 distinct fills, and eleven columns
+   * carried four or five rows for at most four paints.
+   *
+   * Collapsed, the key has at most four rows and usually two, and every one
+   * of them points at something visibly different on the map:
+   *   hatch  somebody looked and there is no such rule
+   *   dots   text is there and this question is not placed on it
+   *   #na    the question cannot arise here
+   *   grey   nobody has looked
+   *
+   * THE DISTINCTION IS NOT LOST, it is moved to where it can be acted on. The
+   * hover card and the entry panel name the exact state of the ONE unit under
+   * the cursor -- `Recorded as absent` against `Looked, found nothing`,
+   * `Recorded, not yet coded` against `Coded, no value fitted` -- which is
+   * where a reader is asking about a country rather than reading a key.
+   *
+   * `More than three values` moves up beside the values, where it belongs: a
+   * unit with four answers is coded, not missing.
+   */
+  const hatched = tally.absent + tally.looked;
+  const dotted = tally.has + tally.unset;
+  if (hatched) rows.push(`<div class="cl" disabled>${sw('url(#hatch)')}<span>Looked; no such rule here</span><span class="n">${hatched}</span></div>`);
+  if (dotted) rows.push(`<div class="cl" disabled>${sw('url(#uncoded)')}<span>Text here, not placed on this question</span><span class="n">${dotted}</span></div>`);
   if (tally.na) rows.push(`<div class="cl" disabled>${sw('url(#na)')}<span>Not applicable here</span><span class="n">${tally.na}</span></div>`);
   if (tally.none) rows.push(`<div class="cl" disabled>${sw('var(--nodata)')}<span>Nothing recorded</span><span class="n">${tally.none}</span></div>`);
   // The map answers "who does what"; the table answers "what exactly does each

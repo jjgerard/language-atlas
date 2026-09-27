@@ -2155,6 +2155,28 @@ const COLUMN_BANDS = {
   },
 };
 
+// TWO NEGATIVES THAT LOOK ALIKE AND ARE NOT.
+//
+// `none established` says somebody looked and the system has no such thing.
+// `not stated` says the entry does not answer. One is about the world and the
+// other about the record, and the whole atlas turns on keeping them apart --
+// and then a map key prints them as two grey-ish rows, one word apart, and
+// asks a reader to feel the difference.
+//
+// The stored values do not change: they are written into 6,000 cells and into
+// every vocabulary gloss that cites them. What changes is what a READER is
+// shown. Relabelling `not stated` alone is enough to separate the whole class,
+// because every "none..." value in every vocabulary then contrasts with a
+// label that says plainly whose silence it is.
+const VALUE_LABELS = {
+  'not stated': 'not said in the entry',
+};
+
+/** What to show a reader for a coded value. The stored string is unchanged. */
+function valueLabel(v) {
+  return VALUE_LABELS[v] || String(v == null ? '' : v);
+}
+
 /** Which band a measured value falls in, or the value itself where the column
  *  declares none. Returns a string either way, since that is what a legend,
  *  a ramp and a group key all want. */
@@ -2280,5 +2302,6 @@ module.exports = {
   isObligesLevel,
   fieldsTouchedFor,
   COLUMN_LABELS, COLUMN_LABELS_BY_FIELD, columnLabel, COLUMN_BANDS, bandOf,
+  VALUE_LABELS, valueLabel,
   isFieldTouched: (id, v) => has(fieldsTouchedFor(id), v),
 };
