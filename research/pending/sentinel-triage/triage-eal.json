@@ -1,0 +1,112 @@
+{
+ "eal.newcomerCriteria": {
+  "AO|Angola": {
+   "bucket": "A",
+   "why": "names Lei 17/16 art. 16 as read and reports a 7,286-diploma sweep of lex.ao finding the one instrument ever enacted under art. 107(3) — \"The deferral is unfilled rather than unfound\""
+  },
+  "KP|North Korea": {
+   "bucket": "A",
+   "why": "\"Both education laws have since been read in full\" — the Education Law (교육법, SPA Presidium Decree 847 of 1999) and General Education Law (보통교육법, Decree 1355 of 2011), with 외국인, 소수, 귀국, 재외, 편입, 전학 all returning zero"
+  }
+ },
+ "eal.removalCriteria": {
+  "CA|New Brunswick": {
+   "bucket": "A",
+   "why": "the province's own EECD guide and the EAL 110/120 curriculum were both obtained via Internet Archive and \"neither sets a rule for ending an EAL designation\", and \"there is no EAL policy in the EECD numbered policy series\"; the live 403 on every gnb.ca host was routed around rather than blocking the read"
+  },
+  "VE|Venezuela": {
+   "bucket": "A",
+   "why": "the 1999 Constitution (arts. 9 and 121) and the 2009 Ley Orgánica de Educación are read as creating no newcomer designation, so \"no exit rule, time limit or re-designation rule arises from them\""
+  }
+ },
+ "eal.achievementGap": {
+  "CU|Cuba": {
+   "bucket": "D",
+   "why": "names no source at all — \"no attainment data disaggregated by home language located\" followed by an invitation to practitioners, with no record of what was searched"
+  }
+ },
+ "eal.l2Support": {
+  "BN|Brunei": {
+   "bucket": "B",
+   "why": "\"The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57\", which \"resolves to an OECD catalogue page\" — a publication description, no primary instrument touched"
+  },
+  "EG|Egypt": {
+   "bucket": "B",
+   "why": "rests on UNESCO's PEER profile plus a December 2024 Human Rights Watch report; the 2014 Constitution's art. 24 is relayed through PEER rather than read, and no Egyptian education instrument is named"
+  },
+  "IR|Iran": {
+   "bucket": "B",
+   "why": "art. 15 of the 1989 Constitution aside, every source is secondary — PEER, the UNHCR Iran education page, a 2021 CHRI report, and \"the ADSP 2018 review of the Supreme Leader's decree\" rather than the decree itself",
+   "next": "the Supreme Leader's decree on enrolment that the ADSP 2018 review summarises, read in its own text (the sentinel reports the review found it \"access only, silent on language\", so expect a close rather than a fill)"
+  },
+  "JP|Japan": {
+   "bucket": "B",
+   "why": "\"The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57\", which \"resolves to an OECD catalogue page\" — a publication description, no primary instrument touched"
+  },
+  "KP|North Korea": {
+   "bucket": "B",
+   "why": "lists exactly the state the BRIEF's own worked example calls a gap — \"PEER DPRK inclusion profile, the 2016 Socialist Constitution via Constitute Project, UNESCO UIS and UNESDOC\" with no education law",
+   "next": "Education Law (교육법, SPA Presidium Decree 847 of 1999) and General Education Law (보통교육법, Decree 1355 of 2011) from the ROK 통일법제 database — named, and recorded as already read in full, in the eal.newcomerCriteria sentinel in this same input file; no fetch is required to settle this field"
+  },
+  "MN|Mongolia": {
+   "bucket": "B",
+   "why": "the \"2002 Law on Education as amended in 2006\" is quoted at second hand in quotation marks rather than read, and the rest is PEER, Constitute Project and asiapacificmle.net serving \"an empty JavaScript shell\"",
+   "next": "Mongolia's 2002 Law on Education as amended 2006, art. 30.1.12 and its surrounding provisions, in the law's own text"
+  },
+  "PS|Palestine": {
+   "bucket": "B",
+   "why": "UNESCO's PEER Inclusion profile is the only source; the Basic Law's language provision reaches the entry through PEER, and no Palestinian education instrument is named"
+  }
+ },
+ "eal.l1Support": {
+  "BN|Brunei": {
+   "bucket": "B",
+   "why": "\"The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57\", which \"resolves to an OECD catalogue page\" — a publication description, no primary instrument touched"
+  },
+  "JP|Japan": {
+   "bucket": "B",
+   "why": "\"The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57\", which \"resolves to an OECD catalogue page\" — a publication description, no primary instrument touched"
+  },
+  "KP|North Korea": {
+   "bucket": "B",
+   "why": "\"Searched: PEER DPRK inclusion profile, Constitute Project constitutional text, UNESCO UIS, UNESDOC\" — all comparative or constitutional, no education law",
+   "next": "Education Law (교육법, SPA Presidium Decree 847 of 1999) and General Education Law (보통교육법, Decree 1355 of 2011) from the ROK 통일법제 database — named, and recorded as already read in full, in the eal.newcomerCriteria sentinel in this same input file; no fetch is required to settle this field"
+  },
+  "LA|Laos": {
+   "bucket": "B",
+   "why": "the PEER Lao PDR profile was read in full and the remaining sources are a UNICEF country page and a unicef.org story that returned 403; no Lao statute or ministerial instrument is named anywhere"
+  },
+  "MT|Malta": {
+   "bucket": "C",
+   "why": "\"Not retrieved, which is different from absent\" — migrantlearnersunit.gov.mt does not resolve (curl exit 6, two attempts) and meae.gov.mt does not resolve either, \"so the national policy PDF could not be read\"; both hosts are DNS failures from this network"
+  },
+  "UZ|Uzbekistan": {
+   "bucket": "B",
+   "why": "the PISA link \"is a catalogue page carrying no country data\", and the one primary instrument read is the wrong one by the sentinel's own admission — \"PP-1875 is a foreign-languages resolution\", with 'родной язык' and 'двуязыч' at zero hits"
+  }
+ },
+ "eal.bilingualEducationNotes": {
+  "BN|Brunei": {
+   "bucket": "B",
+   "why": "\"The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57\", which \"resolves to an OECD catalogue page\" — a publication description, no primary instrument touched"
+  },
+  "JP|Japan": {
+   "bucket": "B",
+   "why": "\"The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57\", which \"resolves to an OECD catalogue page\" — a publication description, no primary instrument touched"
+  },
+  "KP|North Korea": {
+   "bucket": "B",
+   "why": "\"Searched: PEER DPRK inclusion profile, Constitute Project text of the 2016 Socialist Constitution, UNESCO UIS and UNESDOC\" — no education law among them",
+   "next": "Education Law (교육법, SPA Presidium Decree 847 of 1999) and General Education Law (보통교육법, Decree 1355 of 2011) from the ROK 통일법제 database — named, and recorded as already read in full, in the eal.newcomerCriteria sentinel in this same input file; no fetch is required to settle this field"
+  },
+  "LA|Laos": {
+   "bucket": "B",
+   "why": "PEER was read in full and \"does not use the words \\\"bilingual\\\" or \\\"multilingual\\\" at all\", but the rest is a UNICEF country page plus a 403 story and a 404 annual report, and no Lao instrument is named"
+  },
+  "MN|Mongolia": {
+   "bucket": "B",
+   "why": "PEER, Constitute Project, a JavaScript-shell country profile and an OSCE press release from which \"nothing is inferred\" — no Mongolian education instrument read",
+   "next": "Mongolia's 2002 Law on Education as amended 2006 — named, and quoted only at second hand, in the eal.l2Support sentinel for Mongolia in this same input file"
+  }
+ }
+}
