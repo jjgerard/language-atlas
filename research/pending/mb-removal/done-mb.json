@@ -1,0 +1,41 @@
+{
+  "CA|Manitoba": {
+    "fields": {
+      "removalCriteria": [
+        "Progress should be reviewed at least annually on English proficiency and academic progress",
+        "A learner functioning at age and grade level commensurate with abilities may no longer need EAL",
+        "Monitoring is by the classroom teacher and, where available, the EAL teacher",
+        "The EAL Support Grant is funded for a maximum of four consecutive years",
+        "Leaving does not preclude the learner receiving EAL services again should the need arise"
+      ]
+    },
+    "slots": { "removalCriteria": [1, 1, 2, 3, 4] },
+    "evidence": [
+      {
+        "bullet": "Progress should be reviewed at least annually on English proficiency and academic progress",
+        "url": "https://www.edu.gov.mb.ca/k12/docs/support/eal_sup_grant/guidelines.pdf",
+        "quote": "should be reviewed through an assessment of English language proficiency and academic progress"
+      },
+      {
+        "bullet": "A learner functioning at age and grade level commensurate with abilities may no longer need EAL",
+        "url": "https://www.edu.gov.mb.ca/k12/docs/support/eal_sup_grant/guidelines.pdf",
+        "quote": "If the review determines that the learner is functioning at the age and grade level commensurate with abilities, the learner may no longer require EAL services"
+      },
+      {
+        "bullet": "Monitoring is by the classroom teacher and, where available, the EAL teacher",
+        "url": "https://www.edu.gov.mb.ca/k12/docs/support/eal_sup_grant/guidelines.pdf",
+        "quote": "monitored by the classroom teacher and, where available, the EAL teacher"
+      },
+      {
+        "bullet": "The EAL Support Grant is funded for a maximum of four consecutive years",
+        "url": "https://www.edu.gov.mb.ca/k12/docs/support/eal_sup_grant/guidelines.pdf",
+        "quote": "Funding is provided for a maximum of four consecutive years"
+      },
+      {
+        "bullet": "Leaving does not preclude the learner receiving EAL services again should the need arise",
+        "url": "https://www.edu.gov.mb.ca/k12/docs/support/eal_sup_grant/guidelines.pdf",
+        "quote": "This does not preclude the learner receiving EAL services in the future, should the need arise"
+      }
+    ]
+  }
+}

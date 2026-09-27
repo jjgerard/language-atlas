@@ -4096,7 +4096,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "Additive 'EAL' terminology; LAL is the separate track for disrupted or limited prior schooling\nEAL Intake Process, Early, Middle and Senior Years protocols (preliminary, not diagnostic)\nInterpreter access is required",
-  "removalCriteria": "Not established in this pass — the EAL Support Grant guidelines could not be text-extracted",
+  "removalCriteria": "Progress should be reviewed at least annually on English proficiency and academic progress\nA learner functioning at age and grade level commensurate with abilities may no longer need EAL\nMonitoring is by the classroom teacher and, where available, the EAL teacher\nThe EAL Support Grant is funded for a maximum of four consecutive years\nLeaving does not preclude the learner receiving EAL services again should the need arise",
   "newcomerProportion": [],
   "achievementGap": "",
   "l2Support": "Manitoba K–12 Curriculum Framework for EAL and LAL Programming, 2021\nFunded by an EAL Support Grant, tied to limited-English-proficiency status and EAL services\nCounted at the 30 September enrolment each year",
@@ -4174,7 +4174,25 @@
     "purpose": "not stated",
     "for_whom": "not stated",
     "evidence_type": "policy"
+   },
+   "removalCriteria": {
+    "exit_mechanism": [
+     "proficiency judgement",
+     "fixed period"
+    ],
+    "exit_period_months": 48,
+    "decided_by": "school",
+    "rule_locus": "sub-national only"
    }
+  },
+  "slots": {
+   "removalCriteria": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
   }
  },
  {
