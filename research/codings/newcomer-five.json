@@ -1,0 +1,33 @@
+{
+  "BN|Brunei": {
+    "newcomerCriteria": {
+      "designation": "proxy category",
+      "triggers": ["immigration status"],
+      "decided_by": "national authority",
+      "rule_locus": "national statute"
+    }
+  },
+  "UZ|Uzbekistan": {
+    "newcomerCriteria": {
+      "designation": "proxy category",
+      "triggers": ["immigration status", "tested proficiency"],
+      "decided_by": "national authority",
+      "rule_locus": "national statute"
+    }
+  },
+  "PT|Portugal": {
+    "newcomerCriteria": {
+      "designation": "named category",
+      "triggers": ["arrival recency", "home language", "tested proficiency"],
+      "decided_by": "school",
+      "rule_locus": "national rule, local application"
+    }
+  },
+  "RO|Romania": {
+    "newcomerCriteria": {
+      "triggers": ["immigration status", "prior schooling"],
+      "decided_by": "statutory body",
+      "rule_locus": "national rule, local application"
+    }
+  }
+}
