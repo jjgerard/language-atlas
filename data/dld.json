@@ -43,7 +43,7 @@
   "multilingualProvision": "",
   "referralPathway": "A centre needing more school-life accompaniment sends a justified demand to its inspector\nAt each year's end the inspector tells the centre next year's specialised staffing\nThe inspector issues a resolution within ten working days of receiving the demand",
   "serviceModel": "Organised from the educational environment, not tied exclusively to the individual pupil\nSpecialised support now runs on universal design principles",
-  "legalEntitlement": "A new specialised-support regulation was approved on 8 July 2026\nIt replaces the model in force since 2008\nThe education Act obliges the government to run diversity plans",
+  "legalEntitlement": "A new specialised-support regulation was approved on 8 July 2026\nIt replaces the model in force since 2008\nThe education Act obliges the government to run diversity plans\nCONAVA rulings take a recurs d'alçada to the Govern in 13 working days (CONAVA decret art. 16)",
   "funding": "Specialised materials come from the ministry through a loan service run by its areas\nCentres themselves bear the cost of the ordinary materials their activity needs\nThe department maintains, repairs and replaces the material lent to the centre",
   "workforce": "A reference ratio of one specialised professional per five pupils with disability\nA separate ratio of one school-life companion per five pupils",
   "dischargeCriteria": "A non-definitive Conava ruling is reviewed ex officio at the term it set (art 18, 2004)\nAlso reviewed ex officio when the administration learns the situation has changed (art 18)\nFamily may ask for review after that term, or two years from the last valuation (art 18)",
@@ -83,7 +83,8 @@
    "legalEntitlement": [
     1,
     1,
-    2
+    2,
+    4
    ],
    "funding": [
     1,
@@ -126,6 +127,13 @@
      "duty_org": "the government",
      "duty_type": "national government",
      "redress_type": "not stated"
+    },
+    {
+     "instrument": "CONAVA reglament, Decret of 10 June 2004, art. 16",
+     "instrument_type": "regulation",
+     "instrument_year": 2004,
+     "duty_type": "not stated",
+     "redress_type": "administrative appeal"
     }
    ],
    "policyHistory": [
@@ -711,7 +719,7 @@
   "multilingualProvision": "Not established from the sources consulted — a language-appropriate LITMUS sentence repetition instrument exists for this system (see assessments above), but whether any service, clinical guideline or funder requires, supports or reimburses assessment in all of a child's languages was not determined. That gap between an available research instrument and routine clinical practice is the single most useful thing a contributor here could resolve.",
   "referralPathway": "Ministry and local self-government place the child, consulting parents and commission\nWhere neither school type is possible the local body provides schooling at home",
   "serviceModel": "Delivered by various specialists, usually language specialists (Action wording, not Albanian)\nGlossed as speech and communication therapists, clinical linguists and psychologists\nNo Albanian institution, caseload or funding route is named in either cited source",
-  "legalEntitlement": "Ligj 69/2012 as amended, Chapter XI, on educating children with disabilities\nHearing, sight and communication disability: sign language, Braille, e-materials\nPupils with disabilities are provided assistant teachers and rehabilitation service\nThe local self-government unit must provide suitable teaching and learning premises",
+  "legalEntitlement": "Ligj 69/2012 as amended, Chapter XI, on educating children with disabilities\nHearing, sight and communication disability: sign language, Braille, e-materials\nPupils with disabilities are provided assistant teachers and rehabilitation service\nThe local self-government unit must provide suitable teaching and learning premises\nThe commission only recommends; the parents choose special or mainstream (neni 64.4)\nA change to the personalised programme is decided with the parents (neni 65.2)",
   "funding": "Compulsory education and upper secondary are free in public schools\nA per-pupil formula fund covers small spending and emergency work in public schools\nA quality fund in the ministry budget is competed for by school projects",
   "workforce": "The director employs teachers and assistant teachers from the institution's own funds\nStaff in institutions with pupils with disabilities are certified in training programmes",
   "dischargeCriteria": "Pupils with disabilities stay in specialised schools until the age of 19",
@@ -758,7 +766,9 @@
     1,
     2,
     2,
-    3
+    3,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -805,7 +815,7 @@
      "obliges": 2,
      "duty_org": "the local self-government unit",
      "duty_type": "local authority",
-     "redress_type": "not stated"
+     "redress_type": "consultation right"
     }
    ],
    "assessments": [
@@ -1672,7 +1682,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 102 (Law et al., 2020)\nAssessment: mainstream only 77%, both 10%\nIntervention: mainstream only 83%\nInterpreters sometimes used — assessment 77%, intervention 55%, counselling 83%\nPractitioner training: optional 45%, none 28%, unsure 25% (n = 113)",
   "referralPathway": "The Bildungsdirektion acts on an application or of its own motion\nIt must advise parents on the options in special and in mainstream schools\nIf parents want a mainstream place it names the nearest school that can meet it",
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 204 from Austria (Law et al., 2020)\nSettings: private practice 55%, hospital 22%, mainstream school 18%\nSector: private 54%, public health 36%, public education 30%\nDirect intervention most often weekly — 81%\nAccess shaped by: urban/rural 67%, social position 67%, cost to parents 64%",
-  "legalEntitlement": "Schulpflichtgesetz 1985 para 8a entitles the child to a special or a mainstream school\nThe right holds only where such schools or classes exist and the journey is reasonable\nA child not in such a mainstream school attends a special school matching the disability\nWhere no reachable mainstream school can meet the need, the Bildungsdirektion must act",
+  "legalEntitlement": "Schulpflichtgesetz 1985 para 8a entitles the child to a special or a mainstream school\nThe right holds only where such schools or classes exist and the journey is reasonable\nA child not in such a mainstream school attends a special school matching the disability\nWhere no reachable mainstream school can meet the need, the Bildungsdirektion must act\nBerufung at the Bildungsdirektion, Beschwerde to the Bundesverwaltungsgericht (BMB FAQ)\nGutachten the parents put in are taken before the Bescheid issues (BMB FAQ)",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 204\nFunders: health insurance 70%, state education 23%, family 23%, state health 18%\n14% said a maximum number of sessions applied (n = 204)",
   "workforce": "2,427 registered in Logopädie in the federal health professions register\nThat register was counted at 31 December 2023, 41,184 people across the MTD professions\nDensity runs from 0.21 per 1,000 inhabitants in Burgenland to 0.39 in Tirol\n34% of them work exclusively freelance, the second highest share of the MTD professions",
   "dischargeCriteria": "The finding is lifted once the child can follow the general curriculum",
@@ -1723,7 +1733,9 @@
     1,
     2,
     2,
-    3
+    3,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -1777,7 +1789,7 @@
      "obliges": 3,
      "duty_org": "the Bildungsdirektion",
      "duty_type": "regional government",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "policyHistory": [
@@ -3815,7 +3827,7 @@
   "multilingualProvision": "",
   "referralPathway": "Categorisation is done by the centre for social work\nEnrolment follows a professional team that includes speech therapists\nFirst professional observation usually happens before primary enrolment",
   "serviceModel": "Preschool inclusion covers children with mild speech-voice communication disorders\nSpeech therapists sit on the school-entry team with pedagogues and psychologists\nThat centre performs the categorization and assessment of abilities",
-  "legalEntitlement": "A framework law gives a right to education in regular schools\nProvision is by a programme adapted to individual needs",
+  "legalEntitlement": "A framework law gives a right to education in regular schools\nProvision is by a programme adapted to individual needs\nA breach is reported to the school or the education inspectorate, which rules (cl. 57)\nThen a complaint to the ministry, decided in 30 days, then the courts (cl. 57)",
   "funding": "Schools educating these pupils receive earmarked budget funds\nFunds cover the special programme, transport, accommodation and adaptation",
   "workforce": "In one entity's laws no right to a teaching assistant is established\nIn the other the question is not defined at all\nProvision is uneven because lower levels of government differ",
   "dischargeCriteria": "Health worsening so lessons cannot be followed triggers a review (RS law, art 96)\nThe school then decides to continue or interrupt schooling, with Ministry consent (RS art 96)\nDuty to attend ends at 15; the director may allow schooling to 17 (RS law, art 74)",
@@ -3856,7 +3868,9 @@
    ],
    "legalEntitlement": [
     1,
-    2
+    2,
+    4,
+    4
    ],
    "funding": [
     2,
@@ -3896,7 +3910,7 @@
      "instrument_type": "statute",
      "obliges": 3,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "policyHistory": [
@@ -4752,7 +4766,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 50 (Law et al., 2020)\nAssessment: mainstream only 64%, both 23%, mother tongue if different 21%\nIntervention: mainstream only 65%, mother tongue 23%\nInterpreters sometimes used — assessment 61%, intervention 54%, counselling 67%\nPractitioner training: optional 17%, none 33%, unsure 50% (n = 60)",
   "referralPathway": "The teachers working with the child discuss the evidence and tell the parent\nThat discussion decides which children go forward for an individual-needs assessment\nFor the assessment the parent files an application to the head of the institution\nThe head issues an order setting up the support team for that named child",
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 99 from Bulgaria (Law et al., 2020)\nSettings: nursery/kindergarten 45%, private practice 41%, mainstream school 29%\nSector: public education 60%, private 51%\nDirect intervention most often twice weekly — 60%\nAccess shaped by: urban/rural 64%, linguistic/cultural community 53%, cost to parents 51%",
-  "legalEntitlement": "Preschool and School Education Act lists logopedic work as general support\nAdditional support includes rehabilitation of communicative disorders\nSupport is delivered where the child is, and at home or in hospital in named cases\nGeneral support is provided by kindergartens, schools and personal-development centres",
+  "legalEntitlement": "Preschool and School Education Act lists logopedic work as general support\nAdditional support includes rehabilitation of communicative disorders\nSupport is delivered where the child is, and at home or in hospital in named cases\nGeneral support is provided by kindergartens, schools and personal-development centres\nParent may demand a repeat assessment from the regional centre in 14 days (chl. 79.1)\nConsent or dissent is written by the parent on the assessment card (chl. 78.5)",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 99\nFunders: family 51%, state education 45%, state social services 12%, pro bono 10%\n11% said a maximum number of sessions applied (n = 98)",
   "workforce": "A logoped works in kindergartens and schools to deliver general and additional support\nRegional inclusive-education centres also carry logopeds on their support teams",
   "dischargeCriteria": "Resource support may be discontinued once the goals in the plan za podkrepa are met (chl. 123)\nThe support team tracks progress twice in the school year and may amend the plan (chl. 129/1/8)\nDiscontinuation also requires an application from the parent\nThe ekip za podkrepa na lichnostno razvitie decides, after reviewing the child's progress",
@@ -4808,7 +4822,9 @@
     1,
     2,
     2,
-    3
+    3,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -4855,7 +4871,7 @@
      "obliges": 3,
      "duty_org": "kindergartens, schools and personal-development centres",
      "duty_type": "school",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "dischargeCriteria": {
@@ -6421,7 +6437,7 @@
   "multilingualProvision": "",
   "referralPathway": "The route is a psychological-medical-pedagogical examination at a state centre\nThe output is an examination protocol plus a formal centre conclusion\nIt recommends programme, corrective help, school type and special conditions",
   "serviceModel": "Three delivery settings including correctional-pedagogical help points\nMainstream secondary schools may host such a point as a unit\nSpecial kindergartens may provide logopedic help on ministry-set rules",
-  "legalEntitlement": "Entitlement to special conditions is conditional on holding a centre conclusion\nThe same document unlocks corrective-pedagogical help",
+  "legalEntitlement": "Entitlement to special conditions is conditional on holding a centre conclusion\nThe same document unlocks corrective-pedagogical help\nDistrict CKROiR conclusion disputed: the oblast centre re-examines (Polozhenie p. 16)",
   "funding": "Free pre-school, general secondary and special education in state institutions\nThe right is secured by financing state institutions from republican and local budgets\nMeals may be paid from a family's own means or from republican and local budgets",
   "workforce": "Group sizes are set in the Code: six children under three with severe disorders\nTwelve children aged three to eight in that category\nIntegrated mainstream groups take at most three pupils of one disorder type",
   "dischargeCriteria": "The centre’s conclusion records how long it is valid for (Polozhenie 2025, para 24)\nRe-examination follows that term expiring or a change of route (Polozhenie 2025, para 26)\nThe centre’s director signs the conclusion, the PMPK chair the protocol (Polozhenie 25)",
@@ -6459,7 +6475,8 @@
    ],
    "legalEntitlement": [
     2,
-    2
+    2,
+    4
    ],
    "funding": [
     1,
@@ -6503,7 +6520,7 @@
      "instrument": "Centre conclusion (no instrument named)",
      "obliges": 3,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "policyHistory": [
