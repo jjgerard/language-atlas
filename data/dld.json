@@ -14159,7 +14159,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 137 (Law et al., 2020)\nAssessment: mainstream only 77%\nIntervention: mainstream only 83%, two+ languages 10%\nInterpreters sometimes used — assessment 59%, intervention 31%, counselling 74%\nAccess runs through a medical prescription (Scharff Rethfeldt, 2019, on Bremen)",
   "referralPathway": "Speech therapy on the sick funds requires a prescription by a contract doctor\nIndication comes from overall functioning and context, not from the diagnosis alone\nTreatment must begin within 28 calendar days of the prescription\nAuditory processing disorder needs neuropsychological and central hearing diagnostics first",
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 258 from Germany (Law et al., 2020)\nSettings: private practice 60%, nursery/kindergarten 28%\nSector: private 65%, public health 30%, public education 29%\nDirect intervention most often weekly — 64%\nAccess shaped by: parental education 67%, social position 62%, urban/rural 61%",
-  "legalEntitlement": "SGB V para 32 gives insured persons a claim to be supplied with Heilmittel\nThe G-BA directive binds the funds, the insured and contract doctors alike\nSick fund must decide an application within three weeks, five with an expert opinion\nMissing the deadline without good reason means the benefit counts as approved",
+  "legalEntitlement": "SGB V para 32 gives insured persons a claim to be supplied with Heilmittel\nThe G-BA directive binds the funds, the insured and contract doctors alike\nSick fund must decide an application within three weeks, five with an expert opinion\nMissing the deadline without good reason means the benefit counts as approved\nA refused application is checked in a Vorverfahren before any action (SGG § 78(1), (3))\nThen the Sozialgericht, whose jurisdiction covers the health funds (SGG § 51(1) no. 2)",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 258\nFunders: health insurance 77%, state health 15%, state education 13%, state social services 9%\n37% said a maximum number of sessions applied (n = 251)",
   "workforce": "Using the title Logopaede requires a licence under the Logopaedengesetz\nLicence follows a three-year training and the state examination for logopaedists\nTraining is delivered at state-recognised schools for logopaedists\nSchool support needs specialist-trained special-education teachers, KMK 1998",
   "dischargeCriteria": "A break over 14 calendar days without good reason voids the prescription (HeilM-RL § 16)\nTherapist must interrupt and tell the prescriber if the goal looks unreachable (§ 16(5))\nSchool support need requires review at suitable intervals, none named (KMK 1994)\nThe prescriber decides on a new prescription or on ending treatment (HeilM-RL § 16(5))\nSix months with no new prescription opens a fresh Verordnungsfall (HeilM-RL § 7(1))",
@@ -14265,6 +14265,8 @@
     1,
     2,
     3,
+    4,
+    4,
     4
    ],
    "funding": [
@@ -14315,7 +14317,7 @@
      "obliges": 3,
      "duty_org": "the sick funds",
      "duty_type": "insurer",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     },
     {
      "instrument": "G-BA Heilmittel-Richtlinie",
@@ -16813,7 +16815,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 19 (Law et al., 2020)\nAssessment: mainstream only 42%, mother tongue if different 33%, mother tongue only 24%\nIntervention: mainstream only 50%, two+ languages 33%\nPractitioner training: optional 57%, none 19%, unsure 24% (n = 21)",
   "referralPathway": "Parent or authorised person applies in writing to the external counselling team\nTrigger: general support given by the school did not bring the results wanted\nDecision on the recommendation falls within 30 working days of the application\nInside school, asking to see a support specialist must be met within a week",
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 39 from Estonia (Law et al., 2020)\nSettings: nursery/kindergarten 64%, mainstream school 28%, health clinic/centre 15%\nSector: public education 79%, public health 28%, private 21%\nDirect intervention most often weekly — 33%\nAccess shaped by: urban/rural 81%, regional variation 45%, cost to parents 42%",
-  "legalEntitlement": "PGS § 37 obliges a free logopeed service at school where the pupil needs it\nThe school's maintainer creates the conditions; the head organises delivery\nIf the home municipality cannot deliver the recommended teaching it must secure a place\nIt must also arrange transport or reimburse the pupil's travel costs",
+  "legalEntitlement": "PGS § 37 obliges a free logopeed service at school where the pupil needs it\nThe school's maintainer creates the conditions; the head organises delivery\nIf the home municipality cannot deliver the recommended teaching it must secure a place\nIt must also arrange transport or reimburse the pupil's travel costs\nPupil and parent may put a teaching dispute to the school's hoolekogu (PGS § 73(11))",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 39\nFunders: state education 72%, family 26%, state health 21%, pro bono 18%\n8% said a maximum number of sessions applied (n = 39)",
   "workforce": "A logopeed needs a specialist master's degree or the logopeed occupational certificate\nThe employer, not a register, judges whether the requirements are met\nAn Estonian language requirement applies as a qualification condition from 1 September 2025\nThe head either employs the specialists or arranges the service some other way",
   "dischargeCriteria": "Support is evaluated at least once a school year, and when its tahtaeg runs out (§ 46/8)\nThe HEV oppe koordineerija does that with teachers and tugispetsialistid, proposing next steps\nThe term is set by the koolivaline noustamismeeskond, applied on parental consent (§ 48/1)",
@@ -16872,7 +16874,8 @@
     1,
     3,
     3,
-    3
+    3,
+    4
    ],
    "funding": [
     1,
@@ -16920,7 +16923,7 @@
      "obliges": 3,
      "duty_org": "the home municipality and the school maintainer",
      "duty_type": "local authority",
-     "redress_type": "not stated"
+     "redress_type": "complaint to agency"
     }
    ],
    "dischargeCriteria": {
@@ -17445,7 +17448,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 134 (Law et al., 2020)\nAssessment: mainstream only 46%, both 28%, mother tongue if different 25%\nIntervention: mainstream only 55%, mother tongue 29%\nInterpreters sometimes used — assessment 39%, intervention 28%, counselling 45%\nPractitioner training: optional 37%, none 26%, unsure 32% (n = 171)",
   "referralPathway": "Early-intervention teams carry the early detection and advise the parents\nSpecific teams give specialist backup to general and early-intervention teams\nProvision starts as soon as circumstances advising it appear, at any age\nPlacement proposals come from the education administration's own services",
   "serviceModel": "Practitioner-reported, COST IS1406 survey 2017, n = 396 from Spain (Law et al., 2020)\nSettings: mainstream school 38%, private practice 32%, private rehab centre 17%\nSector: private 56%, public education 35%\nDirect intervention most often twice weekly — 58%\nAccess shaped by: cost to parents 56%, income level 51%, social position 47%",
-  "legalEntitlement": "Ley Organica 2/2006 art 71.2: authorities must secure the resources such pupils need\nArt 71.3 obliges them to set up procedures to identify those needs early\nSpecial-education placement only where mainstream diversity measures cannot meet needs\nSchooling in special units or centres may run to age twenty-one",
+  "legalEntitlement": "Ley Organica 2/2006 art 71.2: authorities must secure the resources such pupils need\nArt 71.3 obliges them to set up procedures to identify those needs early\nSpecial-education placement only where mainstream diversity measures cannot meet needs\nSchooling in special units or centres may run to age twenty-one\nParents are necessarily heard and informed during the assessment (LO 2/2006 art 74.2)\nRegions must set procedures resolving discrepancies, weighing the family's wish (art 74.2)",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 396\nFunders: family 52%, state education 48%, state health 13%, state social services 8%\n32% said a maximum number of sessions applied (n = 389)",
   "workforce": "12,196 logopedas on the professional colleges' rolls in 2024, INE colegiados statistic\nUp from 10,483 in 2020; a registration count, not a count of posts\nIn 2023 logopedas were the most female of the health professions, at 93.0%\nLey 44/2003 route: a university diploma in Logopedia is the qualifying degree",
   "dischargeCriteria": "Results are evaluated al finalizar cada curso against the initial valoración (art. 74/3)\nThat evaluation can change the plan de actuación and the modalidad de escolarización\nIts stated aim is un régimen de mayor integración for the pupil where possible\nEach Administración educativa sets the terms of identification and valoración (art. 74/2)\nSchooling in special units or centres may extend to twenty-one (art. 74/1)",
@@ -17539,7 +17542,9 @@
     1,
     2,
     2,
-    2
+    2,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -17590,7 +17595,7 @@
      "obliges": 2,
      "duty_org": "the authorities",
      "duty_type": "regional government",
-     "redress_type": "not stated"
+     "redress_type": "consultation right"
     }
    ],
    "assessments": [
@@ -19771,7 +19776,7 @@
   "multilingualProvision": "",
   "referralPathway": "Parent or staff concern goes to the setting's sernámsfundur, its special-needs meeting\nNewborns with evident need are notified to Sernám directly by the National Hospital\nParents may decline what is offered - Sernám records examples of refusal",
   "serviceModel": "Work runs primarily via the child's dagstovn or skúli, day-care centre or school\nSernám is the national pedagogical-psychological counselling centre for the islands\nAdvisory only - school or day-care leadership decides what it takes up with Sernám\nIn day-care and nurseries tala/samskifti is one of two areas engaged from the start",
-  "legalEntitlement": "Sernám's legal basis is Fólkaskúlalógin section 4, subsections 5 and 6\nPupils needing special measures, or without satisfactory results, get serundirvísing\nPre-school support is discretionary - the minister kann, may, grant it, not skal\nA læruætlan, individual teaching plan, is made for pupils on serundirvísing",
+  "legalEntitlement": "Sernám's legal basis is Fólkaskúlalógin section 4, subsections 5 and 6\nPupils needing special measures, or without satisfactory results, get serundirvísing\nPre-school support is discretionary - the minister kann, may, grant it, not skal\nA læruætlan, individual teaching plan, is made for pupils on serundirvísing\nA local school authority decision is appealed to the minister in 4 weeks (Fólkaskúlalógin § 59)\nAppeals on § 4 sernám support may go to a kærunevnd deciding finally (§ 59, stk. 2)",
   "funding": "The municipal council runs the schools and sets each school's annual budget frame\nHome or institution teaching: treasury pays teacher pay, the council bears other costs",
   "workforce": "Eight staff carry the title taliráðgevi on Sernám's own staff list, read 2026\nOne further post is titled audiologopedur and orðblindaráðgevi, dyslexia adviser\nFirst professionals on a newborn case: a physio or OT, and a taliráðgevi",
   "dischargeCriteria": "Appeals on serundirvísing may go to a kærunevnd that decides them finally (§ 59)\nMinister may arrange serundirvísing for children and young people under 18 (§ 27)\nA pupil who turns 18 may finish that school year in the same district (§ 26)\nLocal school authority may in special cases apply that past 18 (§ 26)",
@@ -19826,7 +19831,9 @@
     1,
     2,
     2,
-    2
+    2,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -19860,7 +19867,7 @@
      "instrument_type": "statute",
      "obliges": 4,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "specialist commission"
     }
    ],
    "policyHistory": [
@@ -22038,7 +22045,7 @@
   "multilingualProvision": "",
   "referralPathway": "Pre-school concerns go to a Let's Talk drop-in assessment clinic\nSchool-age concerns go first to the school Additional Learning Needs Co-ordinator\nSchool referral needs at least one term of IEP/PLP targets on SLCN as evidence\nOutcome may be advice for the school rather than the child being seen",
   "serviceModel": "Clinic at Les Marais plus home, preschools, schools, hospital, centres, library\nIntervention usually happens in the child's own educational environment\nTargeted Tier 2 needs direct SLT assessment, then delivery by staff or parents\nBalanced System Framework - a fluid three-tier approach across five strands",
-  "legalEntitlement": "A 2017 States resolution names the Education (Guernsey) Law, 1970, as amended\nThe States resolved that that Law be repealed and replaced\nReplacement is to set out the powers and duties expected of a government",
+  "legalEntitlement": "A 2017 States resolution names the Education (Guernsey) Law, 1970, as amended\nThe States resolved that that Law be repealed and replaced\nReplacement is to set out the powers and duties expected of a government\nA States committee's decision is reviewed by a Review Board (Admin Decisions Law 1986)",
   "funding": "The team provides regular free drop-in assessment clinics",
   "workforce": "All members of the team speak English as a first language; interpreters available\nThe team works Monday to Friday, including during school holidays",
   "dischargeCriteria": "Targeted caseload runs up to three terms, then specialist caseload or discharge",
@@ -22077,7 +22084,8 @@
    "legalEntitlement": [
     1,
     2,
-    2
+    2,
+    4
    ],
    "funding": [
     3
@@ -22114,7 +22122,7 @@
      "instrument_year": 1970,
      "obliges": 2,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "specialist commission"
     }
    ],
    "policyHistory": [
@@ -25300,7 +25308,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 45 (Law et al., 2020)\nAssessment: mainstream only 31%, mother tongue if different 25%, both 23%\nIntervention: mainstream only 52%, two+ languages 22%\nInterpreters sometimes used — assessment 87%, intervention 52%, counselling 45%\nPractitioner training: optional 57%, none 19%, unsure 23% (n = 47)",
   "referralPathway": "An HSE or NCSE speech and language therapist puts a child forward as a candidate\nSpeech and language therapy referral is to the HSE Primary Care children's service\nSpecial-class placement is a separate route\nEnrolment is decided by the school under the circular criteria",
   "serviceModel": "Health clinics 84%, mainstream school 34% (practitioners reporting, COST survey 2017)\nHSE therapy through Primary Care and Children's Disability Network Teams\nDE-funded DLD/SSD classes in mainstream primary, capped at 7 (Circular 0038/2007)\nSplit between health and education",
-  "legalEntitlement": "Weak, relative to the clarity of the criteria\nThe EPSEN Act 2004, which would have created enforceable entitlements, is part-commenced\nA DLD/SSD diagnosis does not entitle a child to a special-class place — availability decides\nCircular 0052/2019 exempts persistent difficulty from Irish, on need rather than diagnosis",
+  "legalEntitlement": "Weak, relative to the clarity of the criteria\nThe EPSEN Act 2004, which would have created enforceable entitlements, is part-commenced\nA DLD/SSD diagnosis does not entitle a child to a special-class place — availability decides\nCircular 0052/2019 exempts persistent difficulty from Irish, on need rather than diagnosis\nA refusal to admit is appealed to a section 29 committee (Education Act 1998 s.29(1)(c))",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 88\nFunders: state health 85%, state education 15%, family 14%\n47% said a maximum number of sessions applied (n = 86)",
   "workforce": "2,502 on the CORU speech and language therapist register at 31 December 2024\n2,389 were on it at the end of 2023, so the register grew over the year\nRegistration needs an approved qualification, language proficiency and fitness to practise",
   "dischargeCriteria": "Special-class placement is time-limited by design\nUp to two years under Circular 0038/2007, the second contingent on capacity\nAfter which the child returns to mainstream\nDischarge from HSE speech and language therapy is decided service by service",
@@ -25366,7 +25374,8 @@
     1,
     1,
     2,
-    2
+    2,
+    4
    ],
    "funding": [
     1,
@@ -25423,7 +25432,7 @@
      "instrument_year": 2004,
      "obliges": 0,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "specialist commission"
     },
     {
      "instrument": "Circular 0052/2019",
@@ -28835,7 +28844,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 18 (Law et al., 2020)\nAssessment: mainstream only 83%\nIntervention: mainstream only 72%\nInterpreters sometimes used — assessment 53%, intervention 28%, counselling 89%\nPractitioner training: optional 26%, none 32%, unsure 37% (n = 19)",
   "referralPathway": "Each school forms a nemendaverndarrad to coordinate staff handling individual pupils\nThe municipality also links the school service to specialised state assessment services\nParents themselves apply for a place in a special unit or a special school\nSchool assessments need parental consent, and no fee may be charged for them",
   "serviceModel": "Private practice 66%, nursery/kindergarten 42%, mainstream school 37%\nPublic health 55%, public education 45%, private 29% (practitioner survey, COST IS1406)\nDirect intervention most often weekly — 76%\nAccess shaped by regional variation 83%, urban/rural 78%, linguistic/cultural community 50%",
-  "legalEntitlement": "Compulsory School Act 91/2008 art 17: a right to support matched to assessed need\nPupils have a right to have their learning needs met in a general school, unsegregated\nMunicipalities must ensure the school service is provided in compulsory schools\nThe ministry may rule that a named pupil is to be given an assessment",
+  "legalEntitlement": "Compulsory School Act 91/2008 art 17: a right to support matched to assessed need\nPupils have a right to have their learning needs met in a general school, unsegregated\nMunicipalities must ensure the school service is provided in compulsory schools\nThe ministry may rule that a named pupil is to be given an assessment\nDecisions on a pupil's rights under the Act are appealable to the minister (91/2008, 47. gr.)\nMarking decisions (námsmat) are the one exception to that appeal (47. gr.)",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 38\nFunders: health insurance 58%, state education 47%, state health 34%, family 8%\n59% said a maximum number of sessions applied (n = 37)",
   "workforce": "Just under 70 self-employed therapists serve children, uncontracted since 2022\nMasters intake runs every second year, recently raised from 15 to 18 students\nAbout 100 have met the prerequisites but cannot get a place on the masters\nThe minister calls the shortage of therapists one of the biggest challenges",
   "dischargeCriteria": "The einstaklingsnamskra is reviewed reglulega with parents, at no stated interval (11. gr.)\nMunicipalities running a serskoli or serurraedi must set their own utskrift rules (20. gr.)\nNo national standard governs when support ceases — the content is set below\nThose rules may let a panel of fagadilar propose discharge to the skolastjori",
@@ -28886,6 +28895,8 @@
     1,
     2,
     3,
+    4,
+    4,
     4
    ],
    "funding": [
@@ -28936,7 +28947,7 @@
      "obliges": 3,
      "duty_org": "the municipalities",
      "duty_type": "local authority",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "dischargeCriteria": {
@@ -29111,7 +29122,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 280 (Law et al., 2020)\nAssessment: mainstream only 70%\nIntervention: mainstream only 83%\nInterpreters sometimes used — assessment 43%, intervention 30%, counselling 50%\nPractitioner training: optional 57%, none 10%, unsure 31% (n = 318)",
   "referralPathway": "Parents, or the holder of parental responsibility, must ask for the accertamento\nThe application is lodged with INPS, the national social security institute\nINPS must respond no later than thirty days from the date of lodging\nIt runs alongside the article 4 disability assessment, not separately",
   "serviceModel": "Private practice 51%, health clinic/centre 37%, private rehab centre 23%\nPrivate 61%, public health 36%, state-funded private 20% (practitioner survey, COST IS1406)\nDirect intervention most often twice weekly — 53%\nAccess shaped by cost to parents 46%, urban/rural 43%, income level 39%",
-  "legalEntitlement": "Legge 104/1992 art 12: the right runs in ordinary classes at every level\nLearning difficulty is no bar to exercising that right\nD.Lgs 66/2017: the State assigns support teachers to state schools\nLocal authorities carry the assistance duty, within available resources",
+  "legalEntitlement": "Legge 104/1992 art 12: the right runs in ordinary classes at every level\nLearning difficulty is no bar to exercising that right\nD.Lgs 66/2017: the State assigns support teachers to state schools\nLocal authorities carry the assistance duty, within available resources\nThe route is Legge 67/2006: a court action for disability discrimination (art 3)\nIt reaches persons with disability under L.104/1992 art 3 (L. 67/2006 art 1)",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 606\nFunders: family 58%, state health 44%\n23% said a maximum number of sessions applied (n = 596)",
   "workforce": "FLI president in 2019: the register held 11,500 logopedisti across Italy\nShe called that a shortage - France, same population, has three times as many\nSame interview: they work across child services, neuro-rehab and geriatrics",
   "outcomesEvidence": "Counted by official decision, not by need, so no type of difficulty is separated\nThe Ministry of Education and Merit collects it, with ISTAT for Bolzano province\n128,986 primary-age pupils held an official decision in 2022/23, 96,760 of them boys\nItaly notes that SEN pupils are not separated from non-disabled pupils in school\nReview is by school inclusion working groups of teachers, the head, parents and teams",
@@ -29171,7 +29182,9 @@
     1,
     2,
     3,
-    3
+    3,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -29219,7 +29232,7 @@
      "instrument_year": 1992,
      "obliges": 3,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "court"
     },
     {
      "instrument": "D.Lgs 66/2017",
@@ -29386,7 +29399,7 @@
   "multilingualProvision": "Difficulties related solely to limitations in English as an additional language are not SEN\nSchools must establish whether lack of progress is command of English or SEN\nAnnual review timing must account for a family whose first language is not English",
   "referralPathway": "Anyone can refer a child to the children's SALT service\nIn school, a continuing concern goes from the class teacher to the school's SENCo\nHealth staff suspecting SEN below school age must notify the Pre-School Forum\nParental consent is required before a SALT referral is accepted",
   "serviceModel": "SALT works in its own clinic, nurseries, schools, the hospital, the home and community clinics\nTeam is based at the Child Development and Therapy Centre, Enid Quenault centre\nSEN Code of Practice defines speech and language therapy as a health care profession\nService also trains families, education staff and other professionals in communication",
-  "legalEntitlement": "The 1999 Law carries a general presumption in law of mainstream education\nMinister must ensure every child with SEN has the special educational provision required\nMinister must ensure every child with SEN is identified and their provision assessed\nParents have a right to request an assessment of whether their child has SEN",
+  "legalEntitlement": "The 1999 Law carries a general presumption in law of mainstream education\nMinister must ensure every child with SEN has the special educational provision required\nMinister must ensure every child with SEN is identified and their provision assessed\nParents have a right to request an assessment of whether their child has SEN\nParents appeal any part of the assessment result to the Minister in 15 days (Art 31(3))\nThe Minister may delegate that appeal to the Chief Officer or a panel (Art 31(4))",
   "funding": "SEN resources are set by a funding formula reviewed at least annually\nA Record of Need brings extra funding where cost exceeds ordinarily available support\nEarly years states providers get additional banded funding for children with SEN\nDelegated SEN funding is expected to be used exclusively to address SEN needs",
   "workforce": "Speech and language therapist is a registrable occupation with a prescribed qualification\nThe prescribed qualification is entry as a speech and language therapist on the register\nThat register is the one kept under the Health Professions Order 2001 of the United Kingdom",
   "dischargeCriteria": "A Record of Need ceases only if it is no longer necessary to maintain it (SEN CoP 7.86)\nThat includes a child no longer requiring the provision the RoN specifies (SEN CoP 7.87)\nThe Department decides to cease, after consulting parents and the setting (SEN CoP 7.90)\nA 19-year-old leaving early keeps the RoN if they wish to return (SEN CoP 7.88)\nThe RoN may run to the end of the academic year in which they turn 19 (SEN CoP 7.91)",
@@ -29440,7 +29453,9 @@
     1,
     2,
     2,
-    2
+    2,
+    4,
+    4
    ],
    "funding": [
     2,
@@ -29492,7 +29507,7 @@
      "obliges": 3,
      "duty_org": "the Minister",
      "duty_type": "ministry",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "policyHistory": [
@@ -32108,7 +32123,7 @@
   "multilingualProvision": "Remedial school measures may also be used for children with a different mother tongue\nSeparate German-as-a-second-language provision exists alongside them",
   "referralPathway": "Early remedial education covers birth to school start, run centrally\nSupplementary teaching is the in-school first line",
   "serviceModel": "Speech therapy is delivered by specialists cooperating with in-school teachers\nFive named strands including a school psychological service and gifted support",
-  "legalEntitlement": "Entitlement runs from birth to age 20, and to 22 in certain circumstances\nThe stated aim is that the child stays in or returns to the regular class",
+  "legalEntitlement": "Entitlement runs from birth to age 20, and to 22 in certain circumstances\nThe stated aim is that the child stays in or returns to the regular class\nA Schulamt decision takes a Beschwerde to the Regierung in 14 days (SchulG Art. 114)\nThe Regierung's own ruling goes on to the Verwaltungsgerichtshof, 14 days (Art. 113)",
   "funding": "Special schooling is free of charge, and so are the measures added to it\nTravel over 30 km to the provider is reimbursed to parents at the cheapest rate\nTransport costs are covered where they relate directly to the school journey\nBoarding special school: parents may be charged 15 francs a day for meals\nParents bear the extra cost if they ask for costlier special schooling than needed",
   "workforce": "Delivery goes to qualified individuals or private institutions with qualified staff\nQualified means a diploma of a recognised special-needs university or Fachhochschule\nThe state must ensure domestic providers cover the need for these measures\nWhere a contracted provider cannot, the Schulamt may commission specialised bodies",
   "dischargeCriteria": "A Sonderschulung assignment decision must state its period of validity (SchulFMV art 49)\nSchulamt may revoke that assignment in whole or part for important reasons (SchulFMV 53)\nThe Schulrat decides special-school placement and return to the mainstream (SchulG art 108)\nClaim to pädagogisch-therapeutische Massnahmen lapses at the completed 20th year (art 15b)\nIt runs to 22 only if measures were ordered before 20 and must continue (SchulG art 15b)",
@@ -32148,7 +32163,9 @@
    ],
    "legalEntitlement": [
     2,
-    2
+    2,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -32198,7 +32215,7 @@
      "instrument_type": "statute",
      "obliges": 3,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "policyHistory": [
@@ -33213,7 +33230,7 @@
   "multilingualProvision": "New standardised tests carry an instruction language adapting to each pupil's language profile\nThe batteries assess reading, written expression and maths, not spoken language\nGiven by qualified psychologists, pedagogues and orthophonists in ESEB support teams\nThey separate difficulties tied to the pupil's language profile from specific disorders\nBefore these, tests built for German-first children had to be used",
   "referralPathway": "Specialised school teachers detect need and monitor schooling locally\nThree tiers since the 2018 reform: local, then regional, then national\nRegional support teams make the first diagnosis with the school\nNational competence centres take over only where local support is insufficient",
   "serviceModel": "One of eight national competence centres is dedicated to language and communication\nA separate centre covers dyslexia, dyspraxia and dyscalculia\nCentres also serve young people over 18 where education or training needs it",
-  "legalEntitlement": "A 2011 law entitles pupils to reasonable arrangements in programmes and assessments\nPupils are under the same compulsory schooling duty, ages 4 to 16\nAn individual support plan may be set by the school inclusion commission",
+  "legalEntitlement": "A 2011 law entitles pupils to reasonable arrangements in programmes and assessments\nPupils are under the same compulsory schooling duty, ages 4 to 16\nAn individual support plan may be set by the school inclusion commission\nDisagreement goes to the Commission médico-psycho-pédagogique nationale (2011 law, art 13)\nThat national commission decides within a month of being seised (art 13)",
   "funding": "Placement elsewhere: schooling, lodging, stay and travel costs are borne by the State",
   "workforce": "Entry is a bachelor in orthophonie or an equivalent higher-education qualification\nThe profession is regulated: practising needs a Ministry of Health authorisation\nPosts sit in fundamental and secondary education and in childcare services",
   "dischargeCriteria": "Ambulatory or specialised schooling ends on the Centres' proposal (loi 20.7.2018 art 33)\nCentres re-evaluate whether the provision still fits at twelve and at sixteen (art 31(2))\nNo fresh diagnosis where one was realised in the last three years (2018 law art 31(2))\nThe class council's orientation opinion backs it and the CNI confirms (art 33)\nThe CNI may order a re-evaluation of fit whenever it thinks necessary (2018 law art 31(1))",
@@ -33260,7 +33277,9 @@
    "legalEntitlement": [
     1,
     2,
-    3
+    3,
+    4,
+    4
    ],
    "funding": [
     1
@@ -33309,7 +33328,7 @@
      "obliges": 3,
      "duty_org": "the school inclusion commission",
      "duty_type": "statutory body",
-     "redress_type": "not stated"
+     "redress_type": "specialist commission"
     }
    ],
    "policyHistory": [
@@ -33443,7 +33462,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 31 (Law et al., 2020)\nAssessment: mother tongue if different 45%, both 39%, mainstream only 26%\nIntervention: mother tongue 50%, two+ languages 32%\nInterpreters sometimes used — assessment 32%, intervention 24%, counselling 38%\nPractitioner training: optional 36%, none 18%, unsure 33% (n = 39)",
   "referralPathway": "Opened by an application from parents or an adult learner, or an orphan's court ruling\nThe commission works from specialists' opinions and what the school reports\nA dispute over a municipal opinion goes to the state commission to be re-assessed",
   "serviceModel": "Nursery/kindergarten 64%, mainstream school 43%\nPublic education 88%, public health 22%, private 16% (practitioner survey, COST IS1406)\nDirect intervention most often twice weekly — 53%\nAccess shaped by urban/rural 51%, regional variation 34%, parental education 32%",
-  "legalEntitlement": "Izglitibas likums art 42: special education where the setting can suit health\nThe municipality must secure that education in the named special settings\nIt must also secure the pedagogical-medical commission's work and accessibility\nTransport to school and home is a municipal duty where public transport cannot serve",
+  "legalEntitlement": "Izglitibas likums art 42: special education where the setting can suit health\nThe municipality must secure that education in the named special settings\nIt must also secure the pedagogical-medical commission's work and accessibility\nTransport to school and home is a municipal duty where public transport cannot serve\nDisputes over a municipal commission's atzinums go to the state commission (MK 709, 4.5)\nA minor's legal representative takes part in the commission's sitting (MK 709, 12.2)",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 69\nFunders: state education 83%, state health 22%, family 19%, state social services 12%\n33% said a maximum number of sessions applied (n = 69)",
   "workforce": "The municipal education board may employ support staff, e.g. psychologist, logopeds\nTheir pay may be drawn from the state earmark for teachers' salaries",
   "dischargeCriteria": "Opinions for valodas traucējumi expire 31 August 2028; others carry no term (p. 24)\nNo fixed reassessment schedule is set in the noteikumi\nState commission re-evaluates only on a parent or adult pupil petition (p. 4.5)",
@@ -33496,7 +33515,9 @@
     1,
     2,
     2,
-    3
+    3,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -33541,7 +33562,7 @@
      "obliges": 2,
      "duty_org": "the municipality",
      "duty_type": "local authority",
-     "redress_type": "not stated"
+     "redress_type": "specialist commission"
     }
    ],
    "dischargeCriteria": {
@@ -34039,7 +34060,7 @@
   "multilingualProvision": "",
   "referralPathway": "Not fully documented, though a Medical Psychology Centre is a statutory body\nIts basis is an ordinance of 11 December 2008",
   "serviceModel": "Adaptation classes run in the last two primary years and in collège\nTeaching aims at compensating the disorder's effect, using digital tools\nSeparate inclusion units serve pupils with disability including neurodevelopmental",
-  "legalEntitlement": "The governing statute is an education Act of 12 July 2007\nThe text of that Act was not retrieved",
+  "legalEntitlement": "The governing statute is an education Act of 12 July 2007\nThe text of that Act was not retrieved\nOn disagreement parents ask the director to reverse his decision (Loi 1.334 art 25)\nArt 19: individual medical-inspection decisions go to a special medical commission",
   "funding": "Public education is free of charge in the Principality's state schools\nGrants may be awarded by the Government towards costs borne by families",
   "workforce": "Practising orthophonie in liberal practice needs a ministerial authorisation\nQualification is a diploma allowing practice in France, or an EU one, or an equivalent\nA foreign national is authorised only if local need is unmet by those already there\nWhere a titulaire has two associates only two may practise at the shared premises",
   "dischargeCriteria": "Needs and the measures in place are re-evaluated at a periodicity fitting the case (art 47)\nThe commission médico-pédagogique carries out that evaluation (loi 1.334 art 47)\nIts proposals go to the director of Éducation nationale, who rules (loi 1.334 art 25)\nSchooling is compulsory from six until sixteen years complete (loi 1.334 art 3)",
@@ -34076,7 +34097,9 @@
    ],
    "legalEntitlement": [
     1,
-    1
+    1,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -34110,7 +34133,7 @@
      "instrument_type": "statute",
      "instrument_year": 2007,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "complaint to agency"
     }
    ],
    "policyHistory": [
@@ -34206,7 +34229,7 @@
   "multilingualProvision": "",
   "referralPathway": "Complex examination is run by central and local authorised structures\nThe methodology is approved by the education ministry\nParents may require that determination happens in their presence",
   "serviceModel": "Mainstream schools MAY organise logopedic services where needed\nInclusive education units may be set up for severe disability\nThe provision is permissive, not a duty on every school",
-  "legalEntitlement": "Education for pupils with special educational needs is free by statute\nDelivery may be mainstream, in special institutions, or at home",
+  "legalEntitlement": "Education for pupils with special educational needs is free by statute\nDelivery may be mainstream, in special institutions, or at home\nWritten parental consent gates the complex evaluation (Ordin 683/2019, CMI regulation)\nA refusal of that evaluation is reported to the guardianship authority (Ordin 683/2019)",
   "funding": "Budget funding runs on a standard cost per child with an adjustment coefficient\nCompensatory funding exists for children with special educational needs\nFees may be charged for study programmes beyond the standard state-funded package",
   "workforce": "Support teachers work in mainstream schools\nLogoped is a listed staff category in special education",
   "dischargeCriteria": "PEI team meets at least once a semester to revise and update the plan (CMI reg 683/2019)\nA complex evaluation or re-evaluation report is laid before that meeting (CMI reg 683/2019)\nThe intraschool commission examines and approves changes to the PEI (CMI reg 683/2019)\nThe duty to attend compulsory education ends at sixteen (Codul educatiei art 13(2))",
@@ -34250,7 +34273,9 @@
    ],
    "legalEntitlement": [
     2,
-    2
+    2,
+    4,
+    4
    ],
    "funding": [
     2,
@@ -34291,7 +34316,7 @@
      "instrument_type": "statute",
      "obliges": 2,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "consultation right"
     }
    ],
    "policyHistory": [
@@ -34399,7 +34424,7 @@
   "multilingualProvision": "",
   "referralPathway": "Wording is the consolidation to Sl. list 047/17; later changes are not in it\nUsmjeravanje, the directing procedure, starts on a zahtjev, a request\nParent, primary health institution, school, social work centre or municipality may ask\nThe request is lodged with the competent local government body\nA named commission proposes; the municipal education body does the directing",
   "serviceModel": "Mainstream inclusion is stated as the first option and an imperative\nResource centres deliver advisory work, teacher training and materials\nClass size is cut by 10 per cent where such a pupil is enrolled",
-  "legalEntitlement": "The basis is a 2025 Law on Education of Children with Special Educational Needs\nTheir education is defined as a public interest activity",
+  "legalEntitlement": "The basis is a 2025 Law on Education of Children with Special Educational Needs\nTheir education is defined as a public interest activity\nAppeal to the Ministry of Education within 30 days of the decision (Zakon 047/17 art 22)\nThe Ministry rules on the opinion of a second-instance commission (art 22)\nThat ruling may then be taken to an administrative dispute, upravni spor (art 22)",
   "funding": "Consolidation to 047/17: this education is financed from the budget of Montenegro",
   "workforce": "752 teaching assistants were engaged in 2025/2026\nSpeech therapists sit on the state mobile support teams alongside psychologists",
   "dischargeCriteria": "Ruling must fix a term of at most a year to check the directing was right (art 21, 047/17)\nMinistry decides an appeal in second instance, on a commission it names (art 22, 047/17)",
@@ -34436,7 +34461,10 @@
    ],
    "legalEntitlement": [
     1,
-    2
+    2,
+    4,
+    4,
+    4
    ],
    "funding": [
     1
@@ -34474,7 +34502,7 @@
      "instrument_year": 2025,
      "obliges": 2,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "policyHistory": [
@@ -34880,7 +34908,7 @@
   "multilingualProvision": "",
   "referralPathway": "Supplementary teaching is asked for by the pupil, the parent, or on the teacher's view\nThe class or subject teacher tells the parent within three days of finding the need\nWhere the school has no specialist of a profile, support centres supply the member\nA pupil may move to a resource-centre school by their own or the parent's choice",
   "serviceModel": "SLTs work across health, education, hearing and speech centres, and private practice\nThe same four-way split as neighbouring Slovenia (Novšak Brce et al., 2023)\nNo source consulted establishes how a child moves between them, or who funds it",
-  "legalEntitlement": "Adaptation stops short of a disproportionate or unnecessary burden on the school\nZakon za osnovnoto obrazovanie art 11: schooling organised to include all children\nInfrastructure, individualised support and the curriculum are adapted to the pupil\nPupils with disability must have access to buildings, transport and information",
+  "legalEntitlement": "Adaptation stops short of a disproportionate or unnecessary burden on the school\nZakon za osnovnoto obrazovanie art 11: schooling organised to include all children\nInfrastructure, individualised support and the curriculum are adapted to the pupil\nPupils with disability must have access to buildings, transport and information\nThe school board decides appeals by pupils, parents and guardians (Zakon osnovno obr. 108)\nDeferral of a first-year pupil is appealable to a mayor's commission in 15 days (art 62)",
   "funding": "Every child has a right to free and quality primary education\nPupils with disability and escorts get free accessible transport regardless of distance\nAffirmative measures include fee exemption for foreign certificates and free transport",
   "workforce": "Of 110 therapists surveyed across the two countries, 48 practised in North Macedonia\n95.8% of therapists surveyed were female (Novšak Brce et al., 2023)\nOrganised services date from 1950, university training from the mid-1980s\nA few years later than Slovenia; students also train at the Slovenian university",
   "dischargeCriteria": "Support-measure goals re-assessed within two years (functional assessment rulebook art 29)\nThe pupil's inclusive team runs to the end of basic education (ZOO art 16(3))\nMeasures rest on the functional assessment team's finding and opinion (rulebook art 12)\nMeasures reach children and youth with a health condition up to 26 (rulebook art 1)",
@@ -34923,7 +34951,9 @@
     1,
     1,
     2,
-    2
+    2,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -34967,7 +34997,7 @@
      "obliges": 3,
      "duty_org": "the school",
      "duty_type": "school",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "policyHistory": [
@@ -42166,7 +42196,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 91 (Law et al., 2020)\nAssessment: mother tongue if different 48%, mainstream only 36%, mother tongue only 32%\nIntervention: mother tongue 55%, mainstream only 39%\nInterpreters sometimes used — assessment 26%, intervention 18%, counselling 26%\nPractitioner training: optional 24%, none 27%, unsure 45% (n = 143)",
   "referralPathway": "A teacher who has worked with the child may propose a change of support level\nCounty multidisciplinary teams do detection, evaluation and early intervention\nThe level is set at the start of compulsory schooling, or whenever it is needed\nSteering a child into special education abusively is a disciplinary offence",
   "serviceModel": "Mainstream school 57%, nursery/kindergarten 35%, private practice 24%\nPublic education 81%, private 26% (practitioner-reported, COST IS1406 survey 2017)\nDirect intervention most often weekly — 51%\nAccess shaped by urban/rural 68%, parental education 52%, cost to parents 46%",
-  "legalEntitlement": "Legea 198/2023 gives a right to free speech-therapy help in school or state units\nEvery school unit must run and equip speech-therapy and specific-therapy rooms\nEach school must set up a resource room within one school year of the law\nA personalised education plan is drawn up by the county commission",
+  "legalEntitlement": "Legea 198/2023 gives a right to free speech-therapy help in school or state units\nEvery school unit must run and equip speech-therapy and specific-therapy rooms\nEach school must set up a resource room within one school year of the law\nA personalised education plan is drawn up by the county commission\nAn orientation certificate is contested at CJRAE in 5 working days (Ordin 1985/2016 art 91)\nThe contestation commission's decision may be challenged only in court (Ordin 1985/2016)",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 288\nFunders: state education 61%, family 40%\n23% said a maximum number of sessions applied (n = 288)",
   "workforce": "Statutory norm, not a headcount: one inter-school logoped post per 500 pupils at most\nThe same norm reads 500 pupils and preschoolers, or 300 preschoolers alone\nQualification: a licence in education sciences plus a special-psychopedagogy master's\nThe multidisciplinary team at intensive support level includes profesori-logopezi",
   "dischargeCriteria": "Certificate runs to the end of that education level, or to a new reorientation (art. 41)\nReevaluare at most once a year and at least once per education level (art. 18/2)\nTriggered by a change in school performance or functionality, or at parent or teacher request\nCIEC proposes moving a pupil from special schooling towards mainstream (art. 20/3c)",
@@ -42215,7 +42245,9 @@
     1,
     2,
     3,
-    3
+    3,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -42265,7 +42297,7 @@
      "obliges": 4,
      "duty_org": "every school unit, with the county commission",
      "duty_type": "school",
-     "redress_type": "not stated"
+     "redress_type": "specialist commission"
     }
    ],
    "dischargeCriteria": {
@@ -42411,7 +42443,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 24 (Law et al., 2020)\nAssessment: mainstream only 67%, mother tongue only 47%, mother tongue if different 28%\nIntervention: mainstream only 75%, mother tongue 22%\nPractitioner training: optional 10%, none 30%, unsure 60% (n = 30)",
   "referralPathway": "The assessment behind the proposal comes from a teacher, expert associate or parent\nThe proposal goes to the head of the institution\nData gathering starts when monitoring finds physical, communication or social barriers\nGate: the parent signs to confirm agreement before the plan is drawn up",
   "serviceModel": "Private practice 45%, nursery/kindergarten 23%, special school 15%\nPublic education 43%, private 34%, public health 21% (practitioner survey, COST IS1406)\nDirect intervention most often twice weekly — 40%\nAccess shaped by urban/rural 70%, cost to parents 50%, social position 47%",
-  "legalEntitlement": "Zakon o osnovama art 3: a right to education that respects the person's needs\nIt carries individual or group additional support in teaching and learning\nInstitutions founded by the state, province or municipality provide it free",
+  "legalEntitlement": "Zakon o osnovama art 3: a right to education that respects the person's needs\nIt carries individual or group additional support in teaching and learning\nInstitutions founded by the state, province or municipality provide it free\nArt 81: a parent may complain to the Ministry within 8 days of a breach of rights\nIf founded the Ministry warns the school and sets a three-day cure period (art 81)",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 47\nFunders: family 47%, state health 30%, state education 26%\n26% said a maximum number of sessions applied (n = 47)",
   "workforce": "In a mainstream school a logoped is optional, employed as the school's needs require\nIn schools for pupils with developmental difficulties the logoped is a named associate\nA joint expert service may hold one logoped doing the work for several institutions",
   "dischargeCriteria": "Ends if further progress can be made with mere individualizacije alone (čl. 14)\nEvaluated tromesečno in the first year, then at the start of each polugodište (čl. 13)\nA prosvetni savetnik carries out the spoljašnje vrednovanje under supervision\nThe pedagoški kolegijum decides, with the inclusive education team's saglasnost (čl. 14)",
@@ -42464,7 +42496,9 @@
    "legalEntitlement": [
     1,
     2,
-    3
+    3,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -42512,7 +42546,7 @@
      "obliges": 3,
      "duty_org": "institutions founded by the state, province or municipality",
      "duty_type": "school",
-     "redress_type": "not stated"
+     "redress_type": "complaint to agency"
     }
    ],
    "dischargeCriteria": {
@@ -42678,7 +42712,7 @@
   "multilingualProvision": "Not established from the sources consulted — a language-appropriate LITMUS sentence repetition instrument exists for this system (see assessments above), but whether any service, clinical guideline or funder requires, supports or reimburses assessment in all of a child's languages was not determined. That gap between an available research instrument and routine clinical practice is the single most useful thing a contributor here could resolve.",
   "referralPathway": "Logopedic help rests on a parent's own written application or their consent\nEnrolment onto logopedic lessons may be made at any point in the school year\nChildren attending no preschool at all may also be enrolled, on a medical card",
   "serviceModel": "Delivered inside school and preschool by the uchitel-logoped, an education-service post\nHealth sector has a separate meditsinskiy logoped post in child rehabilitation units\nEntry via a PMPK or school PPk panel, or logopedist screening, with parental consent\nMinistry model regulation R-75 of 2020 governs logopedic help in education organisations",
-  "legalEntitlement": "Federal Law 273-FZ art 79: conditions are set in the PMPK's recommendations\nSpecial conditions must include group and individual corrective lessons\nRegions set up separate schools for pupils with severe speech disorders\nProviding those staff and aids is an expenditure obligation of the region",
+  "legalEntitlement": "Federal Law 273-FZ art 79: conditions are set in the PMPK's recommendations\nSpecial conditions must include group and individual corrective lessons\nRegions set up separate schools for pupils with severe speech disorders\nProviding those staff and aids is an expenditure obligation of the region\nA territorial PMPK conclusion is appealed to the central commission (prikaz 1082 p. 25)\nParents sit in on the assessment and the conclusion and state their view (1082 p. 25)",
   "funding": "Special textbooks, teaching aids and materials are provided free under 273-FZ art 79\nWhere the child is funded from the federal budget the cost falls to the Federation\nPupils with health limitations living in the school are on full state support\nThose not living there get free twice-daily meals from the organisation's founder",
   "workforce": "Recommended staffing norms in a 2020 ministry model regulation, not a count of posts\n1 logopedist post per 6 to 12 pupils with a PMPK adapted-programme recommendation\n1 post per 25 pupils recommended corrective lessons by the PPk or the PMPK\nHow many posts there are is fixed by the organisation's own local act",
   "dischargeCriteria": "Enrolment and discharge run by administrative act of the head of the organisation",
@@ -42725,7 +42759,9 @@
     1,
     2,
     3,
-    3
+    3,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -42774,7 +42810,7 @@
      "obliges": 4,
      "duty_org": "the regions",
      "duty_type": "regional government",
-     "redress_type": "not stated"
+     "redress_type": "specialist commission"
     }
    ],
    "assessments": [
@@ -44042,7 +44078,7 @@
   "multilingualProvision": "Assessment maps every language the child uses regularly\nThe logoped decides: disorder, or insufficient exposure to that language\nThe criterion is stated explicitly — difficulties must show in all the child's languages\nSchools' grasp of multilingualism and språkstörning is a reported weak point",
   "referralPathway": "Concern from a guardian, teacher or child health centre opens the history-taking\nClinical overview: referral is sent to a logopedmottagning for fuller assessment\nTrigger is reported difficulty with spoken or written language and communication\nA state specialskola place needs both a logoped and a psychologist assessment",
   "serviceModel": "Logopedi services run by the regions, with habilitering for complex needs\nEducational adaptation sits with schools, curriculum-wide rather than therapy alone\nSPSM advises municipalities, funds materials, and runs ten state specialskolor\nSplit between the regions and the schools",
-  "legalEntitlement": "Educational entitlement runs through the Education Act right to särskilt stöd\nTriggered by assessed need rather than by a diagnosis\nA child does not need a språkstörning diagnosis to receive support\nAnd having one does not automatically produce it",
+  "legalEntitlement": "Educational entitlement runs through the Education Act right to särskilt stöd\nTriggered by assessed need rather than by a diagnosis\nA child does not need a språkstörning diagnosis to receive support\nAnd having one does not automatically produce it\nÅtgärdsprogram and särskilt stöd decisions go to Skolväsendets överklagandenämnd (28 kap 16 §)\nOn an åtgärdsprogram appeal the nämnd only upholds or quashes it (28 kap 16 §)",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 101\nFunders: state health 50%, state education 47%\n30% said a maximum number of sessions applied (n = 86)",
   "workforce": "2,741 logopeds in work November 2022 - Socialstyrelsen register, via Logopedforbundet\n20 logopeds per 100,000 inhabitants nationally, November 2022\nCounty range 29 per 100,000 in Gotland down to 11 in Norrbotten in 2022\nNo logoped lives in over 60 municipalities - Dagens Medicin mapping, March 2024",
   "dischargeCriteria": "Skollagen chapter 3 sets no rule for when special support ends\nThe action programme must state when measures are followed up and evaluated and by whom\nWhere the investigation shows no need, the principal decides no programme is drawn up\nThe action programme is decided by the principal",
@@ -44103,7 +44139,9 @@
     1,
     2,
     2,
-    2
+    2,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -44159,7 +44197,7 @@
      "instrument_type": "statute",
      "obliges": 3,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "specialist commission"
     }
    ],
    "assessments": [
@@ -44730,7 +44768,7 @@
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 17 (Law et al., 2020)\nAssessment: mainstream only 71%, mother tongue if different 29%, mother tongue only 20%\nIntervention: mother tongue 28%, mainstream only 21%\nInterpreters sometimes used — assessment 21%, intervention 9%, counselling 14%\nPractitioner training: optional 40%, none 19%, unsure 38% (n = 42)",
   "referralPathway": "The special-pedagogical counselling centre seeks these children out and registers them\nIn school the vychovny poradca arranges psychological and other services when needed\nCounselling centres cover children from birth to admission to pre-primary education\nIf no local centre can do the work, a specialised centre elsewhere provides it",
   "serviceModel": "Health clinic/centre 31%, private rehab centre 31%, special school 25%\nPublic education 58%, public health 27%, private 23% (practitioner survey, COST IS1406)\nDirect intervention most often fortnightly — 47%\nAccess shaped by urban/rural 31%",
-  "legalEntitlement": "Skolsky zakon 245/2008 § 144: right to forms and methods matching the child's needs\nThe same right covers creating the conditions that make that education possible\nChildren with narusena komunikacna schopnost get alternative means of communication\nSpecial textbooks and compensatory aids are part of the same statutory right",
+  "legalEntitlement": "Skolsky zakon 245/2008 § 144: right to forms and methods matching the child's needs\nThe same right covers creating the conditions that make that education possible\nChildren with narusena komunikacna schopnost get alternative means of communication\nSpecial textbooks and compensatory aids are part of the same statutory right\nRiaditeľ's vyjadrenie is reviewed by the local school authority in 30 days (§ 145b ods. 9)\nIf unfounded the authority orders the school to provide the measure (§ 145b ods. 10)",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 64\nFunders: state education 55%, family 39%, state health 27%, health insurance 9%\n8% said a maximum number of sessions applied (n = 64)",
   "workforce": "A counselling centre's department must have at least three specialist staff\nZakon 138/2019 makes logoped and skolsky logoped a category of specialist staff\nA specialist staff member needs at least second-cycle university education",
   "dischargeCriteria": "A podporne opatrenie may be reassessed against whether it meets its purpose (§ 145b/12)\nReassessment is permissive, and the Act sets no interval and no test for ending a measure\nIt runs the original route: a vyjadrenie, then the riaditel's written answer within 10 days",
@@ -44789,7 +44827,9 @@
     1,
     2,
     2,
-    2
+    2,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -44836,7 +44876,7 @@
      "instrument_year": 2008,
      "obliges": 3,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "dischargeCriteria": {
@@ -45285,7 +45325,7 @@
   "multilingualProvision": "",
   "referralPathway": "The school must run early identification in the first years of schooling\nDiagnosis is by the state health and social-health services, at the family's request\nThe school must notify families where difficulties persist despite targeted work\nPrivate diagnoses count only if validated by those services",
   "serviceModel": "Class teachers draft an individual teaching plan with specialist services and the family\nCompulsory within the first two months\nCompensatory tools and dispensative measures are both statutory entitlements",
-  "legalEntitlement": "Only in cases of particular severity may a pupil be exonerated from the third language\nPupils so exonerated can still sit the lower secondary examination",
+  "legalEntitlement": "Only in cases of particular severity may a pupil be exonerated from the third language\nPupils so exonerated can still sit the lower secondary examination\nL3 exoneration starts from the family's request, the consiglio di classe approving (art. 6.6)\nThe PDP itself is drawn up in accordo con la famiglia within the first bimester (art. 5.1)",
   "funding": "The inclusion commission was set up with no new or greater charge on public finance",
   "workforce": "Adequate training on these disorders is a statutory aim for all school staff",
   "dischargeCriteria": "Educational and dispensative measures go to periodic monitoring, no interval set (art 4)\nThe individual plan is redrawn in the first two months of every school year (Linee Guida)\nThe Commissione Tecnica per l'Inclusione Scolastica monitors and evaluates these (art 8)",
@@ -45330,7 +45370,9 @@
    ],
    "legalEntitlement": [
     2,
-    2
+    2,
+    4,
+    4
    ],
    "funding": [
     1
@@ -45362,7 +45404,7 @@
      "instrument_type": "regulation",
      "obliges": 1,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "consultation right"
     }
    ],
    "policyHistory": [
@@ -49550,7 +49592,7 @@
   "multilingualProvision": "Assessors are required to take account of the person's language of communication\nNo separate bilingual assessment protocol appears in the regulation",
   "referralPathway": "Local self-government bodies must set up inclusive resource centres\nParental participation in the comprehensive assessment is compulsory",
   "serviceModel": "A school must open an inclusive class on the request of the pupil or parents\nIt organises psychological-pedagogical and corrective-developmental services",
-  "legalEntitlement": "Zakon Pro osvitu art 19 obliges conditions for education on a par with other people\nDischarged through funding, staffing, materials and reasonable accommodation\nNeeds are set out in the person's individual development programme\nThe duty falls on state bodies, local self-government and the education institutions",
+  "legalEntitlement": "Zakon Pro osvitu art 19 obliges conditions for education on a par with other people\nDischarged through funding, staffing, materials and reasonable accommodation\nNeeds are set out in the person's individual development programme\nThe duty falls on state bodies, local self-government and the education institutions\nParents who reject the IRC висновок ask the education authority to re-assess (KMU 545 п. 35)\nThe repeat assessment must be organised within 10 working days (KMU 545 п. 35)",
   "funding": "Funded from state and local budgets across preschool and general secondary",
   "workforce": "Centre staffing is set in regulation and names a speech and language teacher\nAlso practical psychologists and other defectologists",
   "dischargeCriteria": "Повторна комплексна оцінка is triggered rather than scheduled — no interval is set (п. 34)\nTriggers include moving between levels of education, and leaving a special setting\nThe команда психолого-педагогічного супроводу may ask for it on успіхи or труднощі\nParents may initiate it; monitoring requests run не частіше ніж раз на рік\nФахівці of the інклюзивно-ресурсний центр carry out the re-assessment",
@@ -49615,7 +49657,9 @@
     1,
     2,
     2,
-    3
+    3,
+    4,
+    4
    ],
    "funding": [
     1
@@ -49662,7 +49706,7 @@
      "obliges": 4,
      "duty_org": "state bodies, local self-government and the education institutions",
      "duty_type": "local authority",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "assessments": [
@@ -59641,7 +59685,7 @@
   "multilingualProvision": "",
   "referralPathway": "Prescription from a doctor outside the fund needs approval by a DSI polyclinic doctor\nGynaecology, paediatric, eye, dental and dermatology visits need no prior authorisation\nThe prescribing doctor sets the priority band that governs access\nIf a deferrable service cannot be booked in 30 days an outside centre may be used",
   "serviceModel": "The DSI polyclinic's own service list has paediatrics and ENT but no logopedia\nTherapy is bought in: FAS contracts named logopedia providers, all at Rome addresses\nEach episode needs prior authorisation from a DSI or FAS-contracted doctor\nCovers clergy, Vatican citizens and residents, and Holy See staff insured by the FAS fund",
-  "legalEntitlement": "There is no national school system, so no support framework exists to record\nThe Holy See's own report to the UN says children attend schools elsewhere\nThe report names no health or education service inside the territory\nAny entitlement therefore arises under the law of the State running the school",
+  "legalEntitlement": "There is no national school system, so no support framework exists to record\nThe Holy See's own report to the UN says children attend schools elsewhere\nThe report names no health or education service inside the territory\nAny entitlement therefore arises under the law of the State running the school\nA FAS provvedimento takes a ricorso to the Consiglio di Amministrazione in 30 days (art. 31)\nThe ricorso lies against a health-fund decision, not an education one (FAS regolamento art. 31)",
   "funding": "The FAS health fund pays, via the DSI polyclinic or providers contracted to the fund\nIndirect route: the family pays first and claims a pre-authorised reimbursement\nReimbursement uses the DSI tariff for anything its own polyclinic could have provided\nThe patient's share of the cost is paid at the counter before the service is given\nChoosing an outside contracted provider over a DSI clinic leaves the tariff difference to pay",
   "workforce": "Not established from the sources consulted. Neither the Direzione di Sanita e Igiene nor the Fondo Assistenza Sanitaria publishes any count of speech and language therapists. The FAS names six contracted logopedia providers by name, street address and telephone number, and the DSI's own list of services provided at its polyclinic runs from angiologia to medicina dei viaggi without naming logopedia.",
   "dischargeCriteria": "FAS cover of an insured member’s child ends at eighteen (Regolamento art 3 § 1, 2025)\nNo age limit if the DSI-appointed Collegio Medico finds permanent incapacity (art 3 § 1)\nStudents covered to twenty in secondary studies and twenty-six at university (art 3 § 1)",
@@ -59692,7 +59736,9 @@
     1,
     1,
     1,
-    3
+    3,
+    4,
+    4
    ],
    "funding": [
     1,
@@ -59743,7 +59789,7 @@
      "instrument_type": "none",
      "obliges": 0,
      "duty_type": "not stated",
-     "redress_type": "not stated"
+     "redress_type": "administrative appeal"
     }
    ],
    "policyHistory": [

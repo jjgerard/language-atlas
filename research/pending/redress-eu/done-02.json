@@ -1,0 +1,123 @@
+{
+  "DE|Germany": {
+    "fields": {
+      "legalEntitlement": [
+        "A refused application is checked in a Vorverfahren before any action (SGG § 78(1), (3))",
+        "Then the Sozialgericht, whose jurisdiction covers the health funds (SGG § 51(1) no. 2)"
+      ]
+    },
+    "slots": { "legalEntitlement": [4, 4] },
+    "evidence": [
+      {
+        "bullet": "A refused application is checked in a Vorverfahren before any action (SGG § 78(1), (3))",
+        "url": "https://www.gesetze-im-internet.de/sgg/__78.html",
+        "quote": "Für die Verpflichtungsklage gilt Absatz 1 entsprechend, wenn der Antrag auf Vornahme des Verwaltungsakts abgelehnt worden ist"
+      },
+      {
+        "bullet": "Then the Sozialgericht, whose jurisdiction covers the health funds (SGG § 51(1) no. 2)",
+        "url": "https://www.gesetze-im-internet.de/sgg/__51.html",
+        "quote": "in Angelegenheiten der gesetzlichen Krankenversicherung, der sozialen Pflegeversicherung und der privaten Pflegeversicherung"
+      }
+    ],
+    "sources": [
+      { "label": "Sozialgerichtsgesetz (SGG) § 78 Vorverfahren (Gesetze im Internet, Bundesministerium der Justiz)", "url": "https://www.gesetze-im-internet.de/sgg/__78.html" },
+      { "label": "Sozialgerichtsgesetz (SGG) § 51 Zuständigkeit der Gerichte der Sozialgerichtsbarkeit (Gesetze im Internet)", "url": "https://www.gesetze-im-internet.de/sgg/__51.html" }
+    ]
+  },
+  "EE|Estonia": {
+    "fields": {
+      "legalEntitlement": [
+        "Pupil and parent may put a teaching dispute to the school's hoolekogu (PGS § 73(11))"
+      ]
+    },
+    "slots": { "legalEntitlement": [4] },
+    "evidence": [
+      {
+        "bullet": "Pupil and parent may put a teaching dispute to the school's hoolekogu (PGS § 73(11))",
+        "url": "https://www.riigiteataja.ee/public-api/api/v1/akt/13332410/blob-html",
+        "quote": "Õpilasel ja vanemal on õigus pöörduda kooli hoolekogu poole õpetamist ja kasvatamist puudutavate vaidlusküsimuste korral"
+      }
+    ],
+    "sources": []
+  },
+  "ES|Spain": {
+    "fields": {
+      "legalEntitlement": [
+        "Parents are necessarily heard and informed during the assessment (LO 2/2006 art 74.2)",
+        "Regions must set procedures resolving discrepancies, weighing the family's wish (art 74.2)"
+      ]
+    },
+    "slots": { "legalEntitlement": [4, 4] },
+    "evidence": [
+      {
+        "bullet": "Parents are necessarily heard and informed during the assessment (LO 2/2006 art 74.2)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899",
+        "quote": "En este proceso serán preceptivamente oídos e informados los padres, madres o tutores legales del alumnado"
+      },
+      {
+        "bullet": "Regions must set procedures resolving discrepancies, weighing the family's wish (art 74.2)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899",
+        "quote": "Las Administraciones educativas regularán los procedimientos que permitan resolver las discrepancias que puedan surgir, siempre teniendo en cuenta el interés superior del menor y la voluntad de las familias"
+      }
+    ],
+    "sources": []
+  },
+  "FO|Faroe Islands": {
+    "fields": {
+      "legalEntitlement": [
+        "A local school authority decision is appealed to the minister in 4 weeks (Fólkaskúlalógin § 59)",
+        "Appeals on § 4 sernám support may go to a kærunevnd deciding finally (§ 59, stk. 2)"
+      ]
+    },
+    "slots": { "legalEntitlement": [4, 4] },
+    "evidence": [
+      {
+        "bullet": "A local school authority decision is appealed to the minister in 4 weeks (Fólkaskúlalógin § 59)",
+        "url": "https://logir.fo/Logtingslog/125-fra-20-06-1997-um-folkaskulan-sum-seinast-broytt-vid-logtingslog-nr-34-fra-28",
+        "quote": "Avgerð, sum skúlamyndugleikin á staðnum, herímillum eisini leiðari skúlans, hevur tikið, kann verða kærd til landsstýrismannin í seinasta lagi 4 vikur"
+      },
+      {
+        "bullet": "Appeals on § 4 sernám support may go to a kærunevnd deciding finally (§ 59, stk. 2)",
+        "url": "https://logir.fo/Logtingslog/125-fra-20-06-1997-um-folkaskulan-sum-seinast-broytt-vid-logtingslog-nr-34-fra-28",
+        "quote": "kærur um sernámsfrøðiliga ráðgeving, stuðul og/ella serundirvísing, sbrt. § 4, stk. 3-5, verða lagdar til kærunevnd, ið tekur endaliga støðu til hesar kærur"
+      }
+    ],
+    "sources": []
+  },
+  "GG|Guernsey": {
+    "fields": {
+      "legalEntitlement": [
+        "A States committee's decision is reviewed by a Review Board (Admin Decisions Law 1986)"
+      ]
+    },
+    "slots": { "legalEntitlement": [4] },
+    "evidence": [
+      {
+        "bullet": "A States committee's decision is reviewed by a Review Board (Admin Decisions Law 1986)",
+        "url": "https://www.gov.gg/reviewboard",
+        "quote": "made by a Committee of the States of Guernsey (including States Authorities, Boards etc), or a person acting on of behalf of a Committee, to apply to have that administrative decision reviewed by a Review Board"
+      }
+    ],
+    "sources": [
+      { "label": "States of Guernsey, Administrative Decisions Review Board — the Administrative Decisions (Review) (Guernsey) Law, 1986", "url": "https://www.gov.gg/reviewboard" }
+    ]
+  },
+  "IE|Ireland": {
+    "fields": {
+      "legalEntitlement": [
+        "A refusal to admit is appealed to a section 29 committee (Education Act 1998 s.29(1)(c))"
+      ]
+    },
+    "slots": { "legalEntitlement": [4] },
+    "evidence": [
+      {
+        "bullet": "A refusal to admit is appealed to a section 29 committee (Education Act 1998 s.29(1)(c))",
+        "url": "https://revisedacts.lawreform.ie/eli/1998/act/51/revised/en/html",
+        "quote": "and following the conclusion of any review under section 29C or any appeal procedures provided by the school in accordance with this Act, appeal a decision in accordance with this section"
+      }
+    ],
+    "sources": [
+      { "label": "Education Act 1998, s. 29 (Appeals), revised and consolidated text — Law Reform Commission, Revised Acts", "url": "https://revisedacts.lawreform.ie/eli/1998/act/51/revised/en/html" }
+    ]
+  }
+}
