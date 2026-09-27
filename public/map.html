@@ -3570,9 +3570,15 @@ function paintCatLegend() {
    *   Looked, not found     somebody researched it and could not settle it.
    *                         A source settles it
    *   Text here, not yet    prose nobody has read against this question.
-   *   coded                 Coding it settles it
+   *   coded                 Reading it settles whether the entry answers --
+   *                         and it often turns out not to reach the question,
+   *                         which makes it a fill rather than a coding
    *   Coded, no value fits  somebody read it and none of the values above was
-   *                         true. Only a new value in the vocabulary moves it
+   *                         true. SOMETIMES that is a gap in the vocabulary --
+   *                         `designation` has no `not stated`, so an entry
+   *                         read and found silent on it must stay unset -- and
+   *                         sometimes the entry is a note about sourcing
+   *                         rather than policy, and belongs in a third state
    *   Not looked up yet     the field is empty. A fill wave reaches it
    *
    * That is five, and it is what saying exactly what each means costs. It is
@@ -3587,9 +3593,9 @@ function paintCatLegend() {
     >${sw('url(#absent)')}<span>${esc(absenceLabel(fk0))}</span><span class="n">${tally.absent}</span></div>`);
   if (tally.looked) rows.push(`<div class="cl" disabled title="somebody researched this and could not establish it either way; a further source would"
     >${sw('url(#hatch)')}<span>Looked, not found yet</span><span class="n">${tally.looked}</span></div>`);
-  if (tally.has) rows.push(`<div class="cl" disabled title="the entry has prose nobody has read against this question yet; coding it would settle it"
+  if (tally.has) rows.push(`<div class="cl" disabled title="the entry has prose nobody has read against this question yet. Reading it settles whether the entry answers -- and often it turns out not to reach the question at all, which is a fill rather than a coding"
     >${sw('url(#uncoded)')}<span>Text here, not yet coded</span><span class="n">${tally.has}</span></div>`);
-  if (tally.unset) rows.push(`<div class="cl" disabled title="somebody read it and none of the values above was true of it; only a new value in the vocabulary moves this"
+  if (tally.unset) rows.push(`<div class="cl" disabled title="somebody read it and none of the values above was true of it. Sometimes that is a gap in the vocabulary; sometimes the entry is a note about sourcing rather than policy, and belongs in a different state"
     >${sw('url(#uncoded)')}<span>Coded, no value fits</span><span class="n">${tally.unset}</span></div>`);
   if (tally.na) rows.push(`<div class="cl" disabled>${sw('url(#na)')}<span>Not applicable here</span><span class="n">${tally.na}</span></div>`);
   if (tally.none) rows.push(`<div class="cl" disabled title="the field is empty: nobody has researched this place on this question, and a fill wave is what reaches it"
