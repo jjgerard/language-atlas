@@ -9,6 +9,51 @@ This file collects those, because changing a field's questions changes the
 hover checklist, the entry panel, the submission form and the coverage count
 together, and is the maintainer's call rather than a drafter's.
 
+## dld.dischargeCriteria, from the European fill wave (18 units, 2026-09-27)
+
+Not a re-slotting finding: this one comes from FILLING the field on every
+blank European national unit and reading what eighteen systems actually say.
+
+**The first question is answered by a different question, sixteen times out
+of eighteen.** `dischargeCriteria` asks *what ends support*. What comes back
+is *when it is looked at again*: two years (North Macedonia), one year
+(Montenegro, Zurich), one semester (Moldova), three years (Malta), twelve and
+sixteen (Luxembourg), fourteen days and six months (Germany's health route),
+"periodically" with no interval at all (the Swiss concordat, San Marino),
+"at suitable intervals" (Germany's KMK), "at a periodicity fitting the case"
+(Monaco), "keep under review" (Gibraltar). Only Jersey and Malta name a
+criterion about the child -- a Record of Need ceases when the child "no
+longer requires the special educational provision specified", and Maltese
+support is "re-dimensioned or removed" once the outcomes are reached. If
+sixteen of eighteen systems answer a question the field did not ask, the
+field is asking the wrong one first.
+
+**The review duty and the interval can sit in different instruments at
+different levels of government.** Switzerland's federal concordat mandates a
+periodic review and refuses to time it; canton Zurich supplies the year.
+Germany's KMK is the same shape, recommending review "at suitable intervals"
+with no number. A system like that is NOT a system with no interval, and a
+column that records one would show them identically. An `interval_locus`
+axis -- federal mandate, sub-national number -- would separate them from
+systems that genuinely never set one.
+
+**Question 4 is collecting two different things.** "Any age ceiling" is
+answered by Liechtenstein with a real entitlement ceiling (the claim to
+therapeutic measures lapses on completing the 20th year, 22 where measures
+were ordered before 20 and must continue) and by the Faroe Islands, Bosnia
+and Monaco with the age at which COMPULSORY SCHOOLING ends, which is a fact
+about school and not about support. The Vatican answers it with the age at
+which a health fund stops covering a member's child. Three different ceilings
+under one question.
+
+**And the answer is often not in the education instrument.** Across the
+eighteen: a health-insurance directive (Germany), a disability-recognition
+reglament (Andorra), a health-fund regolamento (the Vatican), a
+social-protection rulebook made jointly by three ministers (North
+Macedonia), a school-governance regulation rather than the logoped
+methodology that looked like the obvious place (Moldova). A drafter sent to
+the education act alone would have found nothing in five of eighteen.
+
 ## dld
 
 **`terminology` has no question about recognition.** Its four are: the term ·

@@ -1,8 +1,61 @@
-# Why dld.dischargeCriteria is still mostly empty
+# dld.dischargeCriteria: what the field costs, and what Europe cost
 
 Stopped deliberately at 48 of 396 on 2026-09-20, with the cost measured rather
 than estimated. This is the note the next attempt should read first, because
 the obvious way in does not work and it takes a while to find that out.
+
+
+## Europe is finished: 18 of 18, 2026-09-27
+
+The note below was written after stopping at 48 of 396. A wave run properly
+took every remaining blank European national unit -- eighteen of them -- and
+established a rule on all eighteen. 70 bullets, every quote gated against the
+live source with terr-verify.js, **none dropped**. The field stands at 74
+filled of 210 national units.
+
+**The 40% yield measured below was a fact about METHOD, not about the field.**
+The difference: national primary sources first, starting from the entry's own
+docLinks, and no fetch at all spent on Eurydice or the European Agency,
+because this note had already established they are silent on ending. Roughly
+two to three fetches per country rather than four to six, and five new
+sources added across eighteen entries -- in most cases the instrument that
+answers identification answered discharge a few paragraphs on.
+
+**What sixteen of the eighteen say** is in research/FIELD-QUESTIONS.md, and
+it is the finding of the wave: the field asks what ends support and gets back
+when it is looked at again. Only Jersey and Malta name a criterion about the
+child.
+
+### Hosts, added to the table below
+
+Work cleanly: `gibraltarlaws.gov.gi`, `logir.fo`, `gesetze.li` (konso/pdf),
+`legimonaco.mc` (UTF-8 despite looking mangled in a Windows console),
+`legislation.mt/getpdf`, `pravo.by/upload/docs/op/*.pdf`, `mecc.gov.md`,
+`sonk.org.mk`, `portal.mdt.gov.mk`, `data.legilux.public.lu`,
+`ch-sodk.s3.amazonaws.com`, `notes.zh.ch`, `desc.gov.im`, `jerseylaw.je`,
+`ombudsman.co.me`, `natlex.ilo.org`, `paragraf.ba`, `fas.va`, `g-ba.de`,
+`kmk.org`, `cpbmd.info`.
+
+Do not:
+- `documents.bopa.ad` serves **UTF-16LE**. Read as UTF-8 it is unsearchable
+  garbage; terr-verify decodes it, a naive read does not.
+- `belex.sites.be.ch` and `bl.clex.ch` run the **LexWork SPA** -- 200 with a
+  2.3 KB JS shell and no law text. Same failure as diariodarepublica.pt.
+- `zh.ch/.../zhlex-ls/erlass-*.html` is a metadata shell; the PDF link inside
+  it is itself a JS redirect stub. Two hops, and the working URL carries a
+  literal `$File` segment.
+- `student-wellbeing-services.gov.mt` is behind Cloudflare and 403s a plain
+  curl with only a UA. terr-verify's own fallback gets it.
+- `consigliograndeegenerale.sm` serves a **PDF under a .html URL**, and for
+  Legge 141/1990 serves only a four-page relazione, not the law.
+- `legis.md` still 403s; the `cpbmd.info` mirror of the Codul educatiei works.
+
+### A pipeline trap that cost a re-run
+
+Drafters were told to return new sources under `docLinks`. terr-verify.js
+reads `sources` or `addDocLinks` and **drops anything else without a word**:
+five genuinely new sources passed the gate, reached the applier, and vanished
+while the run reported success. Check the entry, not the log.
 
 ## The comparative sources do not answer this field
 

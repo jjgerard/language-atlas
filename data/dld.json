@@ -8988,6 +8988,10 @@
    {
     "label": "European Agency for Special Needs and Inclusive Education, European Agency Statistics on Inclusive Education: Key Findings and Messages 2018/2019-2022/2023",
     "url": "https://www.european-agency.org/sites/default/files/EASIE%20Key%20Findings%20and%20Messages%202018-2019%E2%80%932022-2023.pdf"
+   },
+   {
+    "label": "Kanton Zürich, Verordnung über die sonderpädagogischen Massnahmen (VSM), LS 412.103, Nachtrag 133",
+    "url": "https://www.notes.zh.ch/appl/zhlex_r.nsf/WebView/C65B7F6DA8DC6921C1258E2100274B10/$File/412.103_11.7.07_133.pdf"
    }
   ],
   "supportLinks": [],
@@ -9005,7 +9009,7 @@
   "legalEntitlement": "BehiG (SR 151.3) art 20: cantons must secure basic schooling fitted to special needs\nThe 2007 special-education concordat gives a right to appropriate measures\nFree of charge is the principle; meals and care may still be charged for\nRedress: a person disadvantaged by the state may ask a court to remove it",
   "funding": "One case per practitioner, more than one funder allowed — COST IS1406 2017, n = 372\nFunders: state education 81%, state health 17%\n36% said a maximum number of sessions applied (n = 371)",
   "workforce": "Basic training of special-needs staff is set by EDK recognition rules or federal law\nAcceding cantons apply uniform quality standards for recognising service providers",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Acceding cantons: suitability of ordered measures is reviewed periodically (concordat art 6)\nZürich: the ordering decision must record when the measure will be reviewed (VSM § 26)\nZürich: special-education measures are reviewed after a year has run (VSM § 28)\nZürich: the review is run where possible by those who ordered the measure (VSM § 28)\nZürich: lifting, changing or continuing is then decided (VSM § 28)",
   "outcomesEvidence": "Counted by official decision, not by need, so no type of difficulty is separated\nCantonal figures come from an annual survey in all schools\n21,801 primary-age learners held an official decision in 2022/23, 15,145 of them boys\nUpper secondary is blank: no data on learners with an official decision at that level\nThe standard procedure covers low-incidence disability; schools handle high-incidence",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -9076,6 +9080,13 @@
     3,
     3,
     3
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    1,
+    2,
+    2
    ]
   },
   "coding": {
@@ -19746,7 +19757,7 @@
   "legalEntitlement": "Sernám's legal basis is Fólkaskúlalógin section 4, subsections 5 and 6\nPupils needing special measures, or without satisfactory results, get serundirvísing\nPre-school support is discretionary - the minister kann, may, grant it, not skal\nA læruætlan, individual teaching plan, is made for pupils on serundirvísing",
   "funding": "The municipal council runs the schools and sets each school's annual budget frame\nHome or institution teaching: treasury pays teacher pay, the council bears other costs",
   "workforce": "Eight staff carry the title taliráðgevi on Sernám's own staff list, read 2026\nOne further post is titled audiologopedur and orðblindaráðgevi, dyslexia adviser\nFirst professionals on a newborn case: a physio or OT, and a taliráðgevi",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Appeals on serundirvísing may go to a kærunevnd that decides them finally (§ 59)\nMinister may arrange serundirvísing for children and young people under 18 (§ 27)\nA pupil who turns 18 may finish that school year in the same district (§ 26)\nLocal school authority may in special cases apply that past 18 (§ 26)",
   "outcomesEvidence": "Not established from the sources consulted for this entry — Statistics Faroe Islands publishes public school and leisure-time education under Education and nothing on special needs or on language; the figures themselves sit in a StatBank that returned no readable text to this pipeline, and the two education paths tried under hagstova.fo returned 404. If you work in this system, this is exactly the field to fill in.",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -19807,6 +19818,12 @@
    "workforce": [
     1,
     1,
+    4
+   ],
+   "dischargeCriteria": [
+    2,
+    4,
+    4,
     4
    ]
   },
@@ -32077,7 +32094,7 @@
   "legalEntitlement": "Entitlement runs from birth to age 20, and to 22 in certain circumstances\nThe stated aim is that the child stays in or returns to the regular class",
   "funding": "Special schooling is free of charge, and so are the measures added to it\nTravel over 30 km to the provider is reimbursed to parents at the cheapest rate\nTransport costs are covered where they relate directly to the school journey\nBoarding special school: parents may be charged 15 francs a day for meals\nParents bear the extra cost if they ask for costlier special schooling than needed",
   "workforce": "Delivery goes to qualified individuals or private institutions with qualified staff\nQualified means a diploma of a recognised special-needs university or Fachhochschule\nThe state must ensure domestic providers cover the need for these measures\nWhere a contracted provider cannot, the Schulamt may commission specialised bodies",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "A Sonderschulung assignment decision must state its period of validity (SchulFMV art 49)\nSchulamt may revoke that assignment in whole or part for important reasons (SchulFMV 53)\nThe Schulrat decides special-school placement and return to the mainstream (SchulG art 108)\nClaim to pädagogisch-therapeutische Massnahmen lapses at the completed 20th year (art 15b)\nIt runs to 22 only if measures were ordered before 20 and must continue (SchulG art 15b)",
   "outcomesEvidence": "School children are counted by stage and school type, the Sonderschule among them\nSonderschule pupils are broken down by sociodemographic characteristics and school place\nThe Amt fuer Statistik in Vaduz publishes the Bildungsstatistik",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -32133,6 +32150,13 @@
     1,
     1,
     2
+   ],
+   "dischargeCriteria": [
+    1,
+    2,
+    3,
+    4,
+    4
    ]
   },
   "coding": {
@@ -45226,6 +45250,10 @@
    {
     "label": "Segreteria di Stato per l'Istruzione, Archivio osservatorio scuola",
     "url": "https://www.istruzioneecultura.sm/pub1/IstruzioneSM/Istruzione/OSSERVATORIO-SCOLASTICO/ArchivioOsservatorio.html"
+   },
+   {
+    "label": "Linee Guida per il diritto allo studio degli alunni con disturbi evolutivi specifici di cui alla Legge 9 settembre 2014, n.142, Dipartimento Istruzione",
+    "url": "https://www.educazione.sm/on-line/home/legislazione/inclusione-scolastica/documento41105326.html"
    }
   ],
   "supportLinks": [],
@@ -45243,7 +45271,7 @@
   "legalEntitlement": "Only in cases of particular severity may a pupil be exonerated from the third language\nPupils so exonerated can still sit the lower secondary examination",
   "funding": "The inclusion commission was set up with no new or greater charge on public finance",
   "workforce": "Adequate training on these disorders is a statutory aim for all school staff",
-  "dischargeCriteria": "",
+  "dischargeCriteria": "Educational and dispensative measures go to periodic monitoring, no interval set (art 4)\nThe individual plan is redrawn in the first two months of every school year (Linee Guida)\nThe Commissione Tecnica per l'Inclusione Scolastica monitors and evaluates these (art 8)",
   "outcomesEvidence": "Not established from the sources consulted for this entry — Legge 142/2014 makes the Commissione Tecnica per l'Inclusione Scolastica the body responsible for monitoring, trialling and evaluating interventions, and requires the educational and dispensative measures to be put to periodic monitoring to judge their effectiveness, but no output of that monitoring was found published. The Osservatorio Scolastico of the Dipartimento Istruzione publishes only pupil counts by school site and class year, with no disturbi evolutivi or special-needs breakdown and no attainment figures. San Marino has no European Agency country page. If you work in this system, this is exactly the field to fill in.",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -45292,6 +45320,11 @@
    ],
    "workforce": [
     3
+   ],
+   "dischargeCriteria": [
+    1,
+    1,
+    2
    ]
   },
   "coding": {
