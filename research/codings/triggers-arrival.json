@@ -1,0 +1,25 @@
+{
+  "IT|Italy": {
+    "newcomerCriteria": {
+      "designation": "proxy category",
+      "triggers": [
+        "immigration status",
+        "arrival recency"
+      ],
+      "decided_by": "not stated",
+      "rule_locus": "national statute"
+    }
+  },
+  "AU|Australian Capital Territory": {
+    "newcomerCriteria": {
+      "designation": "named category",
+      "triggers": [
+        "home language",
+        "tested proficiency",
+        "arrival recency"
+      ],
+      "decided_by": "school",
+      "rule_locus": "national framework, sub-national rules"
+    }
+  }
+}
