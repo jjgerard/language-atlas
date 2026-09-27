@@ -168,7 +168,24 @@ const LANGUAGE_DOMAINS = {
 // and its removalCriteria is Not applicable, so it never reaches this coding.
 const DESIGNATION_FORMS = {
   'named category': 'A term of art in law or regulation, with a definition attached (France EANA, Austria ausserordentlicher Schueler, Poland uczen przybywajacy z zagranicy, Denmark tosprogede boern, Spain alumnado de incorporacion tardia)',
-  functional: 'No formal label, but a stated test that decides who gets support (Estonia, Finland, Germany, Iceland: "no fixed statutory newcomer label", then a criterion)',
+  // WIDENED 2026-09-28, on the maintainer's reading, and it closed 22 cells.
+  // The question "how can a system have no name for a group and still have a
+  // group" has one answer: A RULE DRAWS THE BOUNDARY AND THE NAME IS
+  // OPTIONAL. So the test does not have to be a language screen. A numeric
+  // threshold is a test (South Africa's 40 learners in Grades 1-6 asking for a
+  // language, Namibia's 20 from different language groups, Malaysia's fifteen
+  // parents); so is a circumstance (Aruba, where the schooling duty bites
+  // thirty days after a child comes to live there); so is a declaration
+  // (India's states, where the mother tongue is whatever the parent declares).
+  // Curacao is the sharpest case: the pupil is defined relative to the
+  // INDIVIDUAL SCHOOL's chosen instruction language, so the group changes from
+  // one school to the next and could not be named even in principle.
+  //
+  // 22 entries had a `triggers` value and no `designation`, which is
+  // incoherent: naming the trigger IS saying a rule exists. If a test is
+  // named, this is the value. What is NOT functional is a system where no
+  // test is named at all -- see the four left unset.
+  functional: 'No formal label, but a stated test that decides who gets support, of any kind — a language screen (Estonia, Finland, Germany, Iceland: "no fixed statutory newcomer label", then a criterion), a numeric threshold (South Africa 40 learners, Namibia 20, Malaysia fifteen parents), a circumstance (Aruba, thirty days after coming to live there), or a parental declaration (India)',
   'proxy category': 'Pupils are grouped by something that is not their language or arrival, and support follows that grouping (Singapore assigns by ethnicity; Italy by non-Italian citizenship)',
 };
 
