@@ -1,0 +1,55 @@
+{
+  "BN|Brunei": {
+    "fields": {
+      "newcomerCriteria": [
+        "Five categories of non-citizen pupils may be admitted to a school, fixed by the parents' status",
+        "A student pass from the Department of Immigration comes before the pupil is admitted",
+        "The District Education Officer approves the year or form a non-citizen pupil is admitted to",
+        "The Registrar General of Educational Institutions and Teachers signs off the admission",
+        "A pupil whose transfer is approved is placed in a class according to his age"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [
+        1,
+        2,
+        4,
+        4,
+        2
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "Five categories of non-citizen pupils may be admitted to a school, fixed by the parents' status",
+        "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/RG-9-EDUCATION-SCHOOL-ADMISSION-AND-SCHOOL-REGISTER-REGULATIONS.pdf",
+        "quote": "The following categories of pupils whose parents are not citizens of Brunei Darussalam may be admitted to a school"
+      },
+      {
+        "bullet": "A student pass from the Department of Immigration comes before the pupil is admitted",
+        "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/RG-9-EDUCATION-SCHOOL-ADMISSION-AND-SCHOOL-REGISTER-REGULATIONS.pdf",
+        "quote": "obtain a student pass issued by the Department of Immigration"
+      },
+      {
+        "bullet": "The District Education Officer approves the year or form a non-citizen pupil is admitted to",
+        "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/RG-9-EDUCATION-SCHOOL-ADMISSION-AND-SCHOOL-REGISTER-REGULATIONS.pdf",
+        "quote": "Decision of District Education Officer: Admission of pupil to year/form is approved"
+      },
+      {
+        "bullet": "The Registrar General of Educational Institutions and Teachers signs off the admission",
+        "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/RG-9-EDUCATION-SCHOOL-ADMISSION-AND-SCHOOL-REGISTER-REGULATIONS.pdf",
+        "quote": "Decision of Registrar General: Admission of pupil to year/form is approved"
+      },
+      {
+        "bullet": "A pupil whose transfer is approved is placed in a class according to his age",
+        "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/RG-9-EDUCATION-SCHOOL-ADMISSION-AND-SCHOOL-REGISTER-REGULATIONS.pdf",
+        "quote": "The head teacher or principal shall place a pupil whose transfer has been approved in a class according to his age"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Education (School Admission and School Register) Regulations, S 10/04 (Education Act, Chapter 210, Rg 9), Revised Edition 2011: Attorney General's Chambers, Brunei Darussalam",
+        "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/RG-9-EDUCATION-SCHOOL-ADMISSION-AND-SCHOOL-REGISTER-REGULATIONS.pdf"
+      }
+    ]
+  }
+}

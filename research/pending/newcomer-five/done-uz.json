@@ -1,0 +1,55 @@
+{
+  "UZ|Uzbekistan": {
+    "fields": {
+      "newcomerCriteria": [
+        "Foreign pupils entering a general school take a language course at the school where needed",
+        "The Ministry of Public Education sets the procedure for that language preparation course",
+        "Schools teaching foreign citizens are those the Ministry of Public Education determines",
+        "Higher and vocational entrants with no Uzbek or Russian study at ministry-named institutions",
+        "Those who learned Uzbek or Russian abroad are referred on after a language assessment"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [
+        1,
+        4,
+        4,
+        1,
+        2
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "Foreign pupils entering a general school take a language course at the school where needed",
+        "url": "https://lex.uz/ru/docs/1380638",
+        "quote": "Иностранные граждане, поступающие в общеобразовательные школы, при необходимости проходят курс языковой подготовки по месту учебы"
+      },
+      {
+        "bullet": "The Ministry of Public Education sets the procedure for that language preparation course",
+        "url": "https://lex.uz/ru/docs/1380638",
+        "quote": "проходят курс языковой подготовки по месту учебы в порядке, устанавливаемом Министерством народного образования Республики Узбекистан"
+      },
+      {
+        "bullet": "Schools teaching foreign citizens are those the Ministry of Public Education determines",
+        "url": "https://lex.uz/ru/docs/1380638",
+        "quote": "Обучение иностранных граждан осуществляется в образовательных учреждениях, определяемых Министерством народного образования Республики Узбекистан"
+      },
+      {
+        "bullet": "Higher and vocational entrants with no Uzbek or Russian study at ministry-named institutions",
+        "url": "https://lex.uz/ru/docs/1380638",
+        "quote": "не владеющие узбекским или русским языком, обучаются в соответствующих учреждениях, определяемых Министерством высшего и среднего специального образования Республики Узбекистан"
+      },
+      {
+        "bullet": "Those who learned Uzbek or Russian abroad are referred on after a language assessment",
+        "url": "https://lex.uz/ru/docs/1380638",
+        "quote": "выдаются направления для поступления на учебу после оценки языковых знаний"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Resolution of the Cabinet of Ministers of the Republic of Uzbekistan No. 169 of 4 August 2008, Regulation on the procedure for the admission and study of foreign citizens in educational institutions of the Republic of Uzbekistan, consolidated text (Lex.uz)",
+        "url": "https://lex.uz/ru/docs/1380638"
+      }
+    ]
+  }
+}

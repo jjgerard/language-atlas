@@ -1,0 +1,113 @@
+{
+  "PT|Portugal": {
+    "fields": {
+      "newcomerCriteria": [
+        "PLNM is for pupils newly arrived without Portuguese as mother tongue or language of schooling",
+        "The school judges PLNM the most suitable offer from path and sociolinguistic profile",
+        "Nível zero holds migrant-origin pupils entering the system with no prior Portuguese",
+        "The 2005 orientation also covers returning nationals and Portuguese-born minority pupils",
+        "Coverage applies only where language competence bars full integration in the regular curriculum",
+        "On entering the system the school profiles the pupil and applies its own PLNM diagnostic test",
+        "Placement at a PLNM proficiency level follows the information gathered and the test results",
+        "Teachers also collect languages spoken at home and with friends and time spent in Portugal",
+        "Schools may draw on CAPLE material to diagnose the pupil's Portuguese proficiency level",
+        "The test is sat and marked in the school under the tutor teacher with Portuguese staff",
+        "A multidisciplinary multilingual team is proposed even where few such pupils are enrolled",
+        "The multidisciplinary team places the pupil in a PLNM level group by the test results",
+        "Level transition can fall at year end or at any moment on passing a school intermediate test",
+        "Appraising and deciding each pupil's concrete path rests with the conselho de docentes or turma"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [
+        1,
+        4,
+        1,
+        1,
+        1,
+        3,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "PLNM is for pupils newly arrived without Portuguese as mother tongue or language of schooling",
+        "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/PLNM/faq_plnm_set2025.pdf",
+        "quote": "Alunos recém-chegados ao sistema educativo que não tenham o português como língua materna ou que não tenham tido o português como língua de escolarização"
+      },
+      {
+        "bullet": "The school judges PLNM the most suitable offer from path and sociolinguistic profile",
+        "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/PLNM/faq_plnm_set2025.pdf",
+        "quote": "de acordo com o seu percurso escolar e o seu perfil sociolinguístico, a escola considere ser a oferta curricular mais adequada"
+      },
+      {
+        "bullet": "Nível zero holds migrant-origin pupils entering the system with no prior Portuguese",
+        "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/PLNM/faq_plnm_set2025.pdf",
+        "quote": "todos os alunos de origem migrante que ingressam no sistema educativo sem conhecimentos prévios do português"
+      },
+      {
+        "bullet": "The 2005 orientation also covers returning nationals and Portuguese-born minority pupils",
+        "url": "https://www.dge.mec.pt/sites/default/files/Basico/Documentos/plnmdoc_orientador.pdf",
+        "quote": "os alunos filhos de cidadãos nacionais em situação de retorno a Portugal, bem como os alunos inseridos no sistema educativo provenientes de diferentes grupos minoritários"
+      },
+      {
+        "bullet": "Coverage applies only where language competence bars full integration in the regular curriculum",
+        "url": "https://www.dge.mec.pt/sites/default/files/Basico/Documentos/plnmdoc_orientador.pdf",
+        "quote": "sempre que se verifique que a sua competência linguística não lhes permita uma integração total no currículo regular"
+      },
+      {
+        "bullet": "On entering the system the school profiles the pupil and applies its own PLNM diagnostic test",
+        "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/PLNM/faq_plnm_set2025.pdf",
+        "quote": "deverá a sua escola traçar o seu perfil sociolinguístico e aplicar-lhe teste de diagnóstico de PLNM, elaborado pela escola, para aferir o seu conhecimento da língua portuguesa"
+      },
+      {
+        "bullet": "Placement at a PLNM proficiency level follows the information gathered and the test results",
+        "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/PLNM/faq_plnm_set2025.pdf",
+        "quote": "Em função da informação recolhida e dos resultados obtidos neste teste, o aluno é posicionado num nível de proficiência linguística de PLNM"
+      },
+      {
+        "bullet": "Teachers also collect languages spoken at home and with friends and time spent in Portugal",
+        "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/PLNM/faq_plnm_set2025.pdf",
+        "quote": "à(s) língua(s) que falam em casa, com os amigos, a família e os colegas; ao tempo de permanência em Portugal"
+      },
+      {
+        "bullet": "Schools may draw on CAPLE material to diagnose the pupil's Portuguese proficiency level",
+        "url": "https://www.dge.mec.pt/sites/default/files/Basico/Documentos/plnmdoc_orientador.pdf",
+        "quote": "As escolas/agrupamento de escolas podem recorrer ao material elaborado pelo CAPLE, a fim de diagnosticar/avaliar o nível de proficiência linguística dos alunos em Língua Portuguesa"
+      },
+      {
+        "bullet": "The test is sat and marked in the school under the tutor teacher with Portuguese staff",
+        "url": "https://www.dge.mec.pt/sites/default/files/Basico/Documentos/plnmdoc_orientador.pdf",
+        "quote": "sendo realizados e avaliados na escola, sob a coordenação do professor tutor em colaboração com os professores de Língua Portuguesa/Português"
+      },
+      {
+        "bullet": "A multidisciplinary multilingual team is proposed even where few such pupils are enrolled",
+        "url": "https://www.dge.mec.pt/sites/default/files/Basico/Documentos/plnmdoc_orientador.pdf",
+        "quote": "Propõe-se, mesmo em escolas/agrupamentos de escola com reduzido número de alunos nestas condições, a criação de uma equipa multidisciplinar e multilingue"
+      },
+      {
+        "bullet": "The multidisciplinary team places the pupil in a PLNM level group by the test results",
+        "url": "https://www.dge.mec.pt/sites/default/files/Basico/Documentos/plnmdoc_orientador.pdf",
+        "quote": "Integrar o aluno num grupo de nível em Português Língua não Materna, em função dos resultados obtidos no teste diagnóstico"
+      },
+      {
+        "bullet": "Level transition can fall at year end or at any moment on passing a school intermediate test",
+        "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/PLNM/faq_plnm_set2025.pdf",
+        "quote": "A transição de nível de proficiência pode ocorrer no final do ano letivo ou em qualquer outro momento do mesmo, desde que o aluno obtenha aprovação em teste intermédio elaborado pela escola"
+      },
+      {
+        "bullet": "Appraising and deciding each pupil's concrete path rests with the conselho de docentes or turma",
+        "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/PLNM/faq_plnm_set2025.pdf",
+        "quote": "cabe ao conselho de docentes/conselho de turma, apreciar e decidir, em face da ponderação do percurso concreto de cada aluno"
+      }
+    ],
+    "sources": []
+  }
+}

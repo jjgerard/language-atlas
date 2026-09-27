@@ -1,0 +1,77 @@
+{
+  "RO|Romania": {
+    "fields": {
+      "newcomerCriteria": [
+        "Foreign minors living in Romania access compulsory schooling on the same terms as citizens",
+        "Foreigners enrolled at any level have unrestricted access to school activities",
+        "Until parents are identified, school-age unaccompanied foreign minors have access to schooling",
+        "Enrolling a foreign pupil rests on equating the study done in the country of origin",
+        "The education ministry sets the limits for recognising study in the country of origin",
+        "Dossiers equating study done abroad are received and assessed by the school inspectorates",
+        "Romanian-citizen pupils apply to a county inspectorate to have classes I-XII equated"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [
+        1,
+        1,
+        1,
+        3,
+        2,
+        4,
+        4
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "Foreign minors living in Romania access compulsory schooling on the same terms as citizens",
+        "url": "http://www.dreptonline.ro/legislatie/oug_regimul_strainilor_romania_ordonanta_urgenta_194_2002_republicata_2008.php",
+        "quote": "Strainii minori care locuiesc in Romania au acces la invatamantul scolar obligatoriu in aceleasi conditii ca si minorii cetateni romani"
+      },
+      {
+        "bullet": "Foreigners enrolled at any level have unrestricted access to school activities",
+        "url": "http://www.dreptonline.ro/legislatie/oug_regimul_strainilor_romania_ordonanta_urgenta_194_2002_republicata_2008.php",
+        "quote": "Strainii cuprinsi in invatamantul de toate gradele au acces, fara restrictii, la activitatile scolare si de instruire in societate"
+      },
+      {
+        "bullet": "Until parents are identified, school-age unaccompanied foreign minors have access to schooling",
+        "url": "http://www.dreptonline.ro/legislatie/oug_regimul_strainilor_romania_ordonanta_urgenta_194_2002_republicata_2008.php",
+        "quote": "pana la identificarea parintilor, minorii de varsta scolara au acces la sistemul de invatamant"
+      },
+      {
+        "bullet": "Enrolling a foreign pupil rests on equating the study done in the country of origin",
+        "url": "http://www.dreptonline.ro/legislatie/oug_regimul_strainilor_romania_ordonanta_urgenta_194_2002_republicata_2008.php",
+        "quote": "limitele si conditiile recunoasterii si echivalarii studiilor efectuate in tara de origine, pentru inscrierea elevilor straini in sistemul national de invatamant"
+      },
+      {
+        "bullet": "The education ministry sets the limits for recognising study in the country of origin",
+        "url": "http://www.dreptonline.ro/legislatie/oug_regimul_strainilor_romania_ordonanta_urgenta_194_2002_republicata_2008.php",
+        "quote": "Ministerul Educatiei, Cercetarii si Tineretului stabileste, potrivit legii, limitele si conditiile recunoasterii si echivalarii studiilor efectuate in tara de origine"
+      },
+      {
+        "bullet": "Dossiers equating study done abroad are received and assessed by the school inspectorates",
+        "url": "https://cnred.edu.ro/ro/echivalare-perioade-studii-preuniversitare-clasele-1-12",
+        "quote": "Metodologiei privind echivalarea de către inspectoratele școlare județene și Inspectoratul Școlar al Municipiului București a perioadelor de studii efectuate în străinătate"
+      },
+      {
+        "bullet": "Romanian-citizen pupils apply to a county inspectorate to have classes I-XII equated",
+        "url": "https://www.edu.ro/recunoa%C8%99tere%20acte%20preuniversitar",
+        "quote": "În vederea echivalării perioadelor de studii corespunzătoare claselor I-XII, elevii trebuie să se adreseze inspectoratelor școlare județene sau Inspectoratului Școlar al Municipiului București"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OUG 194/2002 on the regime of foreigners in Romania, republished 2008 — Art. 132 on foreign minors' access to education, Art. 3(6), and Art. 131 on unaccompanied minors (dreptonline.ro copy; legislatie.just.ro is unreachable)",
+        "url": "http://www.dreptonline.ro/legislatie/oug_regimul_strainilor_romania_ordonanta_urgenta_194_2002_republicata_2008.php"
+      },
+      {
+        "label": "CNRED, equating study periods for classes I-XII completed abroad, under Order of the Minister 5638/2020",
+        "url": "https://cnred.edu.ro/ro/echivalare-perioade-studii-preuniversitare-clasele-1-12"
+      },
+      {
+        "label": "Ministry of Education, Recognition of pre-university study documents — Romanian-citizen pupils (page dated 1 February 2016)",
+        "url": "https://www.edu.ro/recunoa%C8%99tere%20acte%20preuniversitar"
+      }
+    ]
+  }
+}
