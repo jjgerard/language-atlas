@@ -193,12 +193,13 @@ const DESIGNATION_FORMS = {
 // AND insufficient Czech; New Zealand takes arrival date, refugee documentation
 // and home language together. Coding a single "main" trigger would throw away
 // the combinations, which are the interesting part.
-// TWO AXES LIVE IN THIS COLUMN, and they are not the same one. Recorded
-// 2026-09-28 after conflating them, and after a proposal for a separate
-// language/not-language column was dropped because both readings derive from
-// here already -- and because the list grain is what carries a system that
-// designates on several things at once (1.69 values an entry, 123 of 202
-// holding two or more).
+// ONE READING WORTH STATING, and one that is not an axis however it was first
+// written down. Recorded 2026-09-28, after a proposal for a separate
+// language/not-language column was dropped: it derives from here already,
+// `proxy category` on `designation` carries most of it, and a scalar would
+// flatten the 44 entries that designate on several things at once. The list
+// grain is what holds those -- 1.69 values an entry, 123 of 202 with two or
+// more.
 //
 //   IS THE DESIGNATION ABOUT LANGUAGE?   `home language` and `tested
 //   proficiency` are; `immigration status`, `ethnicity`, `prior schooling`
@@ -208,12 +209,15 @@ const DESIGNATION_FORMS = {
 //   parents' immigration status, four Latin American states by equivalence of
 //   prior study.
 //
-//   IS THE CHILD ACTUALLY ASSESSED?   only `tested proficiency` is a
-//   measurement. The rest are ASCRIBED -- facts about a household or a status,
-//   not about what the child can do. 93 of 202, 46%.
+// "Is the child actually assessed" is NOT a second axis, whatever it looked
+// like: it is the presence of one value, `tested proficiency`. Reading a
+// filter on a single value as though it were a new measurement is how a column
+// gets duplicated under a new name, so it is written here as what it is.
+// `home language` is a language fact about the HOME, not a proficiency
+// finding, which is why it counts above and not here.
 //
-// The interesting cell is the intersection: OF THE 153 SYSTEMS THAT DESIGNATE
-// BY LANGUAGE, 60 NEVER TEST -- 39% of them. Guernsey states it outright, "a
+// What that one value predicts is worth knowing: OF THE 153 SYSTEMS THAT
+// DESIGNATE BY LANGUAGE, 60 NEVER TEST -- 39% of them. Guernsey states it outright, "a
 // learner is EAL whatever their English proficiency, including locally born
 // bilinguals", and Nova Scotia designates a child who merely "come[s] from a
 // home where one is used". Victoria is the sharpest: its LBOTE census of
