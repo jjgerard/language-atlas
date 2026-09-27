@@ -3517,24 +3517,51 @@ function paintCatLegend() {
    */
   const hatched = tally.absent + tally.looked;
   const dotted = tally.has + tally.unset;
-  // A MERGED ROW SAYS ONLY WHAT IS TRUE OF BOTH ITS HALVES, and hands the
-  // split to the hover. The first label here was "Looked; no such rule here",
-  // which is what the absence flag means and NOT what the other half means:
-  // `Not established from the sources consulted` is a statement about the
-  // record, not about the world, and the whole project turns on not saying one
-  // when it means the other. What both halves share is that somebody went
-  // looking, so that is what the row claims; the title carries the counts, and
-  // the hover card on the unit itself still names its exact state.
+  /* A MERGED ROW SAYS ONLY WHAT IS TRUE OF WHAT IS ACTUALLY IN IT, and the
+   * label is therefore built from the composition rather than fixed.
+   *
+   * Three labels were wrong before this one, each in a different way.
+   * "Looked; no such rule here" is what the absence flag means and not what
+   * the other half means -- `Not established from the sources consulted` is a
+   * statement about the RECORD, not about the world. "Somebody looked" fixed
+   * that by saying nothing at all: it reported the act and withheld the
+   * finding. And both left this row indistinguishable in words from the VALUE
+   * `not stated`, which is a third thing again.
+   *
+   * The three are genuinely different and the words now carry it:
+   *   not said in the entry   there IS such a rule and the entry does not say
+   *                           this about it -- a coded value, sitting with the
+   *                           values, because that is what it is
+   *   no such rule here       somebody established there is none
+   *   none established        somebody looked and could not establish either way
+   *
+   * So a row holding only absences says "No such rule here", a row holding
+   * only sentinels says "Looked, found nothing", and a row holding both says
+   * "No such rule, or none established" -- which is long, and is the price of
+   * not asserting the stronger half over the weaker one. The hover splits it.
+   */
   const part = (n, what) => n ? `${n} ${what}` : '';
   const both = (a, b) => [a, b].filter(Boolean).join(' · ');
-  if (hatched) rows.push(`<div class="cl" disabled title="${esc(both(
-      part(tally.absent, 'recorded as absent: the entry establishes there is no such rule'),
-      part(tally.looked, 'not established from the sources consulted')))}"
-    >${sw('url(#hatch)')}<span>Somebody looked</span><span class="n">${hatched}</span></div>`);
-  if (dotted) rows.push(`<div class="cl" disabled title="${esc(both(
-      part(tally.has, 'text here, nobody has coded this field'),
-      part(tally.unset, 'coded, and no value on the list fitted this question')))}"
-    >${sw('url(#uncoded)')}<span>Text here, not placed on this question</span><span class="n">${dotted}</span></div>`);
+  if (hatched) {
+    const label = tally.absent && tally.looked ? 'No such rule, or none established'
+      : tally.absent ? 'No such rule here'
+      : 'Looked, found nothing';
+    rows.push(`<div class="cl" disabled title="${esc(both(
+        part(tally.absent, 'where the entry establishes there is no such rule'),
+        part(tally.looked, 'where the sources consulted established neither way')))}"
+      >${sw('url(#hatch)')}<span>${label}</span><span class="n">${hatched}</span></div>`);
+  }
+  if (dotted) {
+    // The same rule on the dotted row. "Text here, not placed on this
+    // question" described a PROCESS only somebody who works on the atlas can
+    // picture; what a reader can see is the list of values just above.
+    const label = tally.unset ? 'Text here, none of these values'
+      : 'Text here, not read for this question';
+    rows.push(`<div class="cl" disabled title="${esc(both(
+        part(tally.has, 'where nobody has read this entry against this question yet'),
+        part(tally.unset, 'where somebody did, and none of these values was true of it')))}"
+      >${sw('url(#uncoded)')}<span>${label}</span><span class="n">${dotted}</span></div>`);
+  }
   if (tally.na) rows.push(`<div class="cl" disabled>${sw('url(#na)')}<span>Not applicable here</span><span class="n">${tally.na}</span></div>`);
   if (tally.none) rows.push(`<div class="cl" disabled>${sw('var(--nodata)')}<span>Nothing recorded</span><span class="n">${tally.none}</span></div>`);
   // The map answers "who does what"; the table answers "what exactly does each
