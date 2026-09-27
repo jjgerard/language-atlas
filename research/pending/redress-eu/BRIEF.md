@@ -64,9 +64,40 @@ drops anything else silently. That cost a re-run on the discharge wave.
 back the existing ones too would just be deduplicated, and handing back an
 altered version of one would be silently ignored rather than applied.
 
+## What batch 01 found, 2026-09-27
+
+Six of six carried a route. 12 fetches for six countries. **Five of the six
+answers were a few articles further on in an instrument the entry already
+cited** -- the discharge method holding again.
+
+Austria is the exception and it is the shape to expect elsewhere: the
+Schulpflichtgesetz carries NO appeal clause for a special-needs Bescheid
+(s.27's Widerspruch reaches only bodies other than the school authorities),
+so the route came from the ministry's own page and the bullet cites that
+rather than the statute. Andorra is the same one level down -- the appeal
+runs against the CONAVA valuation that GATES the support, not against either
+instrument already coded, so it took an instrument row of its own.
+
+Albania is the one place with no appeal at all, and it is written as a
+POSITIVE: Ligj 69/2012 gives the commission only a recommendation and the
+parents the decision. That is `consultation right`, which is in the
+vocabulary for exactly this. Do the same rather than writing a negative.
+
+Hosts learned in batch 01, on top of the discharge table:
+- `ris.bka.gv.at` returns **503 with a bot check**. Use
+  `jusline.at/gesetz/<law>/gesamt`, which serves the whole consolidated law
+  as clean HTML.
+- `portaljuridicandorra.ad` is a **JS shell** -- 39 KB of chrome, no law text.
+- `lex.bg` serves **windows-1251** and declares it; terr-verify's legacy
+  path handles it, a naive UTF-8 read does not.
+- `paragraf.ba`, `pravo.by/upload/docs/op/*.pdf` and `documents.bopa.ad`
+  worked exactly as the discharge table says.
+
 ## State
 
-- [ ] batches 01-05 drafted (6 units each)
+- [x] batch 01 applied and recoded: Andorra, Albania, Austria, Bosnia,
+      Bulgaria, Belarus. 10 bullets, 6 of 6 established.
+- [ ] batches 02-05 drafted (6 units each)
 - [ ] gated with `terr-verify.js research/pending/redress-eu`
 - [ ] applied with `deepen-apply.js dld <verified> research/pending/redress-eu --write`
 - [ ] `redress_type` recoded from the new prose, with `apply-coding.js`
