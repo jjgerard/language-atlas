@@ -1,0 +1,53 @@
+{
+  "PS|Palestine": {
+    "fields": {
+      "newcomerCriteria": [
+        "Equivalence turns on a secondary certificate issued under non-Palestinian legislation",
+        "Study outside the State requires proof of residence with the certified transcripts",
+        "The graduation year recorded is the year the pupil met every equivalence condition",
+        "A committee under the Director-General of University Education rules uncovered cases",
+        "Arabic is required among the subjects only where the pupil studied in an Arab country"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [1, 2, 3, 4, 1]
+    },
+    "evidence": [
+      {
+        "bullet": "Equivalence turns on a secondary certificate issued under non-Palestinian legislation",
+        "url": "https://mjr.ogb.gov.ps/Decrees/ViewText/33568/%D8%AA%D8%B9%D9%84%D9%8A%D9%85%D8%A7%D8%AA-%D8%A3%D8%B3%D8%B3-%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%A8%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%B1%D9%82%D9%85-1-%D9%84%D8%B3%D9%86%D8%A9-2024%D9%85-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86",
+        "quote": "الشهادة: شهادة الدراسة الثانوية العامة الصادرة بمقتضى تشريعات غير فلسطينية"
+      },
+      {
+        "bullet": "Study outside the State requires proof of residence with the certified transcripts",
+        "url": "https://mjr.ogb.gov.ps/Decrees/ViewText/33568/%D8%AA%D8%B9%D9%84%D9%8A%D9%85%D8%A7%D8%AA-%D8%A3%D8%B3%D8%B3-%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%A8%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%B1%D9%82%D9%85-1-%D9%84%D8%B3%D9%86%D8%A9-2024%D9%85-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86",
+        "quote": "إثبات الإقامة في حال كانت الدراسة خارج الدولة"
+      },
+      {
+        "bullet": "The graduation year recorded is the year the pupil met every equivalence condition",
+        "url": "https://mjr.ogb.gov.ps/Decrees/ViewText/33568/%D8%AA%D8%B9%D9%84%D9%8A%D9%85%D8%A7%D8%AA-%D8%A3%D8%B3%D8%B3-%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%A8%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%B1%D9%82%D9%85-1-%D9%84%D8%B3%D9%86%D8%A9-2024%D9%85-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86",
+        "quote": "تكون سنة التخرج للأنظمة التعليمية الواردة في هذه التعليمات هي السنة التي يحقق فيها الطالب جميع متطلبات وشروط المعادلة"
+      },
+      {
+        "bullet": "A committee under the Director-General of University Education rules uncovered cases",
+        "url": "https://mjr.ogb.gov.ps/Decrees/ViewText/33568/%D8%AA%D8%B9%D9%84%D9%8A%D9%85%D8%A7%D8%AA-%D8%A3%D8%B3%D8%B3-%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%A8%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%B1%D9%82%D9%85-1-%D9%84%D8%B3%D9%86%D8%A9-2024%D9%85-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86",
+        "quote": "يشكل الوزير لجنة برئاسة مدير عام الإدارة العامة للتعليم الجامعي في الوزارة للبت في الحالات التي لم تتعرض لها أحكام هذه التعليمات"
+      },
+      {
+        "bullet": "Arabic is required among the subjects only where the pupil studied in an Arab country",
+        "url": "https://mjr.ogb.gov.ps/Decrees/ViewText/33568/%D8%AA%D8%B9%D9%84%D9%8A%D9%85%D8%A7%D8%AA-%D8%A3%D8%B3%D8%B3-%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%A8%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%B1%D9%82%D9%85-1-%D9%84%D8%B3%D9%86%D8%A9-2024%D9%85-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86",
+        "quote": "مادة اللغة العربية من ضمن المواد الستة المجتازة بنجاح في حال أنهى الطالب متطلبات المعادلة في بلد عربي"
+      }
+    ],
+    "sources": [
+      {
+        "label": "تعليمات أسس معادلة شهادة الثانوية العامة غير الفلسطينية بشهادة الثانوية العامة الفلسطينية رقم (1) لسنة 2024م — Instructions No. 1 of 2024 on the bases for equivalence of a non-Palestinian secondary certificate, arts. 2, 3, 12 and 13 (Official Gazette of the State of Palestine, al-Waqa'i al-Filastiniyya; repeals Instructions No. 1 of 2016 by art. 14(1))",
+        "url": "https://mjr.ogb.gov.ps/Decrees/ViewText/33568/%D8%AA%D8%B9%D9%84%D9%8A%D9%85%D8%A7%D8%AA-%D8%A3%D8%B3%D8%B3-%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%A8%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%B1%D9%82%D9%85-1-%D9%84%D8%B3%D9%86%D8%A9-2024%D9%85-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86"
+      },
+      {
+        "label": "قرار بقانون رقم (8) لسنة 2017م بشأن التربية والتعليم العام — Education Decree-Law No. 8 of 2017, arts. 1 and 10 (published in al-Waqa'i al-Filastiniyya no. 132), read in full: defines only الطالب and الطالب المتسرب, and art. 10 sets an admission age",
+        "url": "https://info.wafa.ps/userfiles/server/%D9%82%D8%B1%D8%A7%D8%B1%20%D8%A8%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%B1%D9%82%D9%85%20(%208)%20%D9%84%D8%B3%D9%86%D8%A9%202017.pdf"
+      }
+    ]
+  }
+}

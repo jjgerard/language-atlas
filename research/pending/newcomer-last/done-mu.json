@@ -1,0 +1,65 @@
+{
+  "MU|Mauritius": {
+    "fields": {
+      "newcomerCriteria": [
+        "The admission form names a Mauritian returning from abroad and a non-Mauritian's child",
+        "Every applicant files latest school reports and a transfer or leaving certificate",
+        "The National Equivalence Committee rules on qualifications for admission to school",
+        "Grade 1 admission turns on age, the school's catchment area and school capacities",
+        "Registration for Grade 1 entry in January 2025 was taken in June 2024 at the school sought"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [1, 2, 4, 1, 3]
+    },
+    "evidence": [
+      {
+        "bullet": "The admission form names a Mauritian returning from abroad and a non-Mauritian's child",
+        "url": "https://education.govmu.org/Documents/2025/NEC/FORM%20-%20ADMISSION%20TO%20A%20SCHOOL%20IN%20MAURITIUS.pdf",
+        "quote": "Mauritian citizen returning from abroad"
+      },
+      {
+        "bullet": "Every applicant files latest school reports and a transfer or leaving certificate",
+        "url": "https://education.govmu.org/Documents/2025/NEC/FORM%20-%20ADMISSION%20TO%20A%20SCHOOL%20IN%20MAURITIUS.pdf",
+        "quote": "Original and photocopy of Latest School Reports"
+      },
+      {
+        "bullet": "The National Equivalence Committee rules on qualifications for admission to school",
+        "url": "https://education.govmu.org/Pages/Education%20Sectors/Secondary%20Education/National-Equivalence-Committee.aspx",
+        "quote": "Equivalence of qualifications for the purpose of admission to primary and secondary schools in Mauritius"
+      },
+      {
+        "bullet": "Grade 1 admission turns on age, the school's catchment area and school capacities",
+        "url": "https://education.govmu.org/Documents/AboutUs/theminister/Documents/Pqs/pqpripopadm.pdf",
+        "quote": "he lives in such catchment area as may be drawn up by the Minister in relation to the school to which admission is sought"
+      },
+      {
+        "bullet": "Registration for Grade 1 entry in January 2025 was taken in June 2024 at the school sought",
+        "url": "https://publicnotice.govmu.org/publicnotice/wp-content/uploads/2024/05/Admission-en-Grade-1-2025.pdf",
+        "quote": "peuvent faire une demande d’enregistrement d’admission en Grade 1 en Janvier 2025 selon le calendrier ci-dessous"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ministry of Education, National Equivalence Committee: Application for Admission to a School in Mauritius (categories of request and Notes 2 to 4 on documents required)",
+        "url": "https://education.govmu.org/Documents/2025/NEC/FORM%20-%20ADMISSION%20TO%20A%20SCHOOL%20IN%20MAURITIUS.pdf"
+      },
+      {
+        "label": "Ministry of Education, National Equivalence Committee: functions, including equivalence of qualifications for admission to primary and secondary schools",
+        "url": "https://education.govmu.org/Pages/Education%20Sectors/Secondary%20Education/National-Equivalence-Committee.aspx"
+      },
+      {
+        "label": "Ministry of Education, Parliamentary Questions on primary school population and admission, quoting regulation 10 of the Education Regulations 1957",
+        "url": "https://education.govmu.org/Documents/AboutUs/theminister/Documents/Pqs/pqpripopadm.pdf"
+      },
+      {
+        "label": "Ministère de l'Éducation, Communiqué de presse: Admission en Grade 1 (2025)",
+        "url": "https://publicnotice.govmu.org/publicnotice/wp-content/uploads/2024/05/Admission-en-Grade-1-2025.pdf"
+      },
+      {
+        "label": "Ministry of Education, Proof of Residency form, citing Regulation 10 of the Education Regulations 1957",
+        "url": "https://education.govmu.org/Documents/2025/NEC/FORM%20-%20PROOF%20OF%20RESIDENCE.pdf"
+      }
+    ]
+  }
+}

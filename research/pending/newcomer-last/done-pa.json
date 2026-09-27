@@ -1,0 +1,49 @@
+{
+  "PA|Panama": {
+    "fields": {
+      "newcomerCriteria": [
+        "Foreign pupils apply for a place at the school where they seek the cupo",
+        "MEDUCA revalidates the titles, certificates and credits issued by schools abroad",
+        "Enrolment runs in a single period before the school year ends",
+        "The school director analyses and approves it, and can reject no enrolment request",
+        "Decreto 55 of 1998 puts that revalidation with the Direcciones Regionales"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [1, 2, 3, 4, 4]
+    },
+    "evidence": [
+      {
+        "bullet": "Foreign pupils apply for a place at the school where they seek the cupo",
+        "url": "https://www.meduca.gob.pa/wp-content/uploads/2025/04/marco-juridico-meduca.pdf",
+        "quote": "Los estudiantes extranjeros que deseen obtener un cupo de matricula en un centro educativo del País, deben retirar y entregar la solicitud de matrícula en el centro educativo donde aspiren obtener el cupo"
+      },
+      {
+        "bullet": "MEDUCA revalidates the titles, certificates and credits issued by schools abroad",
+        "url": "https://www.meduca.gob.pa/wp-content/uploads/2025/04/marco-juridico-meduca.pdf",
+        "quote": "El Ministerio de Educación revalidará y/o convalidará los títulos académicos, certificados y créditos del primer y segundo nivel de enseñanza expedidos por centros educativos provenientes del exterior"
+      },
+      {
+        "bullet": "Enrolment runs in a single period before the school year ends",
+        "url": "https://www.meduca.gob.pa/wp-content/uploads/2025/04/marco-juridico-meduca.pdf",
+        "quote": "La matricula en los niveles de Educación Básica General y Educación Media, se desarrollará en un periodo único, antes de finalizar el año escolar"
+      },
+      {
+        "bullet": "The school director analyses and approves it, and can reject no enrolment request",
+        "url": "https://www.meduca.gob.pa/wp-content/uploads/2025/04/marco-juridico-meduca.pdf",
+        "quote": "La solicitud de matrícula será analizada en cada centro educativo por el director del centro educativo, o la persona que el delegue a quien le corresponde además, aprobar y autorizar la misma"
+      },
+      {
+        "bullet": "Decreto 55 of 1998 puts that revalidation with the Direcciones Regionales",
+        "url": "https://www.meduca.gob.pa/wp-content/uploads/2025/04/marco-juridico-meduca.pdf",
+        "quote": "El Ministerio de Educación, por conducto de las Direcciones Regionales, revalidará y/o convalidará los títulos académicos, certificados y créditos del Primer y Segundo Ciclo Nivel de Enseñanza expedidos por los centros educativos provenientes del exterior"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Marco Jurídico de la Educación en Panamá (MEDUCA, 2025): Resuelto 1277 de 22 de octubre de 1997 arts. 2, 3 y 14; Decreto Ejecutivo 70 de 14 de marzo de 1998 art. 1; Decreto Ejecutivo 55 de 7 de abril de 1998 art. 1",
+        "url": "https://www.meduca.gob.pa/wp-content/uploads/2025/04/marco-juridico-meduca.pdf"
+      }
+    ]
+  }
+}

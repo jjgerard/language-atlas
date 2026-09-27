@@ -132,6 +132,71 @@ Do not:
    line. `research/tools/set-coding-value.js` exists so that cannot happen:
    it deep-copies the stored rows and changes one column on one row.
 
+## A gazette with an llms.txt can be swept EXHAUSTIVELY, not sampled
+
+`lex.ao` turned out to publish a machine-readable index, and finding it changed
+an Angolan question from "we looked and did not find it" into "it does not
+exist". Worth checking for on every legal host before starting a sample:
+
+    lex.ao/robots.txt    ->  points at lex.ao/llms.txt
+    lex.ao/llms.txt      ->  per-year indexes AND FULL TEXT for 2020-2026
+    lex.ao/sitemap.xml   ->  2,002,190 bytes, 11,715 document URLs
+
+That allowed 7,286 diplomas to be read: 4,835 as full text for 2020-2026 (nine
+files, ~112 MB) and 2,451 pre-2020 pages fetched individually and parsed from
+their `<article>`, with zero fetch errors. The result was a negative that can
+be relied on -- exactly ONE instrument in eleven years cites art. 107(3) of
+Angola's Lei 17/16, it wrote nothing on the subject, and it has been revoked.
+
+`lex.ao` traps found on the way:
+- `lex.ao/docs/presidente-da-republica/<year>/` is **404 with 0 bytes**. There
+  is no year directory listing; the sitemap is the only enumeration.
+- The `.md` route exists only from 2020. On a 2017 document it 404s with 0
+  bytes AND `content-type: text/markdown`, which looks like a valid empty
+  document rather than a miss.
+- `sitemap_index.xml` and `wp-sitemap.xml` are both 404. Only `sitemap.xml`
+  and `llms.txt` work.
+- `lex.ao/?s=` is JS-driven: 200 with no links at all, so a document can look
+  absent when it is there. Find it by search engine, then fetch `/docs/`.
+
+## Three more 200s that are refusals, and one stale link on a live page
+
+The pattern is now frequent enough to state as a rule: **a 200 means the server
+answered, not that it answered your question.** Check the final URL and the
+body, not the status.
+
+- `med.gov.ao/ao/legislacao/` -- 200, 26,879 bytes, and it is a **redirect to
+  `med.gov.ao/ops/404`**. (`www.mined.gov.ao` does not resolve at all, curl 6;
+  the live name is `med.gov.ao`.)
+- `lawsofmauritius.govmu.org/portal/regulations` -- 200, 63,259 bytes, but the
+  listing is an AJAX table with no `<a href>` for any regulation, and
+  `?keywords=Education&searchType=title` returns **byte-identical** 63,259
+  bytes: a search that silently ignores the query. Its
+  `/portal/viewlegislationdocument/...` returns 200 with a 14,901-byte
+  "Invalid Request" page for anything but an exact stored title.
+- `publicnotice.govmu.org/publicnotice/?p=<id>` serves a pdfjs viewer shell --
+  200, ~81 KB, ~730 bytes of text. The document is at the page's
+  `wp-content/uploads/<yyyy>/<mm>/` path.
+- **A live Ministry page can link a dead file.** Mauritius's National
+  Equivalence Committee page links its own admission form at
+  `education.govmu.org/Documents/downloads/Documents/FORM - ADMISSION TO A
+  SCHOOL IN MAURITIUS.pdf`, which is **404**. The live copy is under
+  `Documents/2025/NEC/`. A drafter following the obvious link would conclude
+  the form does not exist.
+
+Mauritius law, for the next attempt: the **Education Act 1957** serves cleanly
+from three hosts (`mauritiuslii.org/akn/mu/act/1957/39/eng@2017-06-30`,
+`attorneygeneral.govmu.org` A-Z Acts, `education.govmu.org`). Its **subsidiary
+legislation cannot be swept** -- the Attorney-General's subsidiary index is
+gone (404 on every path tried) and the replacement portal is the broken AJAX
+table above. `supremecourt.govmu.org` is curl 28. The consolidated Education
+Regulations 1957 were never reached; regulation 10 had to be sourced from the
+Ministry quoting it verbatim in a PQ compilation plus two amending instruments.
+
+Minor: `education.govmu.org` emits some hrefs with **unencoded spaces** and
+curl refuses them ("URL rejected: Malformed input to a URL function").
+Percent-encode before fetching.
+
 ## UNESCO PEER: the profiles did NOT move, and the new path 404s at 1.8 MB
 
 Checked 2026-09-27, after two drafters in one session each spent fetches

@@ -602,7 +602,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Not established from the sources consulted. Angola's Lei de Bases do Sistema de Educação e Ensino (Lei 17/16, art. 16) requires teaching to be delivered in Portuguese and permits Angola's other languages to be used only as a complement and instrument of learning, and the law creates no newcomer or second-language pupil category, leaving the regime of access to and attendance at schools by foreign citizens to be defined in a separate instrument that the law does not name. UNICEF's 2016 study of the impact of language policy and practice on children's learning in Angola records no such designation either; its nearest equivalent is a ministry study of the language fluency of mobile and migrating populations.",
+  "newcomerCriteria": "Not established from the sources consulted. Angola's Lei de Bases do Sistema de Educação e Ensino (Lei 17/16, art. 16) requires teaching to be delivered in Portuguese and permits Angola's other languages to be used only as a complement and instrument of learning, and the law creates no newcomer or second-language pupil category, leaving the regime of access to and attendance at schools by foreign citizens to be defined in a separate instrument that the law does not name. UNICEF's 2016 study of the impact of language policy and practice on children's learning in Angola records no such designation either; its nearest equivalent is a ministry study of the language fluency of mobile and migrating populations. A systematic sweep of lex.ao in September 2026 — 7,286 diplomas, the full text of 4,835 covering 2020 to 2026 and 2,451 document pages fetched individually for 2016 to 2019 — found exactly one instrument ever enacted under art. 107(3): Decreto Presidencial 276/19, whose preamble cites \"o n.º 3 do artigo 107.º\" of Lei 17/16, which wrote nothing on foreign citizens and was revoked by Decreto Presidencial 162/23. The deferral is unfilled rather than unfound.",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
@@ -8790,7 +8790,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Unfillable: the entry cites only the OECD PISA 2022 landing page\nIt resolves 200 but is a publication description, not the data annex\nTable I.B1.7.57 is reading performance data, not a policy criterion\nA national law or ministry instrument is needed before this can be written",
+  "newcomerCriteria": "Convalidations regularise the schooling of Dominican and foreign pupils from other countries\nThe Consejo Nacional de Educacion sets the generic norms for recognition and equivalence\nLey 136-03 forbids refusing education for want of identity documents or a present parent",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 36 points below their non-immigrant peers\n26 points below after accounting for socio-economic profile\n17 points below once home language is accounted for as well\nA gap that narrows but survives both adjustments",
@@ -8830,7 +8830,22 @@
     "proxy": "immigrant background",
     "direction": "gap",
     "after_adjustment": "narrows but persists"
+   },
+   "newcomerCriteria": {
+    "designation": "proxy category",
+    "triggers": [
+     "prior schooling"
+    ],
+    "decided_by": "national authority",
+    "rule_locus": "national statute"
    }
+  },
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    4,
+    2
+   ]
   }
  },
  {
@@ -12730,7 +12745,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Unfillable: the entry cites only the OECD PISA 2022 landing page\nIt resolves 200 but is a publication description, not the data annex\nTable I.B1.7.57 is reading performance data, not a policy criterion\nA national law or ministry instrument is needed before this can be written",
+  "newcomerCriteria": "Equiparacion covers pupils entering the country legally, returnees and diplomatic families\nA refugee or asylum applicant may identify with the RENAP special DPIE document\nA media placement test in science and maths runs in Spanish or English as the pupil needs\nThe school admits and enrols the pupil provisionally while the documentation is completed\nThe departmental office assigns level, cycle and grade within two working days",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 1 point above their non-immigrant peers\n7 points below after accounting for socio-economic profile\n4 points below once home language is accounted for as well\nSmall on all three measures",
@@ -12757,7 +12772,25 @@
     "proxy": "immigrant background",
     "direction": "negligible",
     "after_adjustment": "negligible throughout"
+   },
+   "newcomerCriteria": {
+    "designation": "proxy category",
+    "triggers": [
+     "immigration status",
+     "prior schooling"
+    ],
+    "decided_by": "statutory body",
+    "rule_locus": "national rule, local application"
    }
+  },
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
   }
  },
  {
@@ -18815,7 +18848,7 @@
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Not established from the sources consulted. The UNESCO PEER inclusion profile for the DPRK, read in full, contains no occurrence of \"minority\", \"ethnic\", \"foreign\", \"refugee\", \"migrant\" or \"language of instruction\" anywhere in the document; its entire inclusion content concerns disability, and \"Korean\" appears only in institution names. The 2016 Socialist Constitution's language provisions (Arts. 54 and 159) concern protecting the Korean language and the language of court proceedings, not schooling. Searched: PEER DPRK inclusion profile, Constitute Project text of the Socialist Constitution, UNESCO UIS country pages (uis.unesco.org/en/country/kp redirects to a generic landing page and does not resolve to a DPRK profile), and UNESDOC. Not asserted either way.",
+  "newcomerCriteria": "Not established from the sources consulted. The UNESCO PEER inclusion profile for the DPRK, read in full, contains no occurrence of \"minority\", \"ethnic\", \"foreign\", \"refugee\", \"migrant\" or \"language of instruction\" anywhere in the document; its entire inclusion content concerns disability, and \"Korean\" appears only in institution names. The 2016 Socialist Constitution's language provisions (Arts. 54 and 159) concern protecting the Korean language and the language of court proceedings, not schooling. Searched: PEER DPRK inclusion profile, Constitute Project text of the Socialist Constitution, UNESCO UIS country pages (uis.unesco.org/en/country/kp redirects to a generic landing page and does not resolve to a DPRK profile), and UNESDOC. Not asserted either way. Both education laws have since been read in full from the ROK 통일법제 database: the Education Law (교육법, SPA Presidium Decree 847 of 1999, as amended to 2015) and the General Education Law (보통교육법, Decree 1355 of 2011, as amended to 2015). Across both, 외국인, 언어, 조선어, 소수, 귀국, 재외, 편입 and 전학 return zero occurrences; 외국 appears once, as 외국어, a school subject. The only pupil categories either law creates are the universal duty on local people's committees to identify and enrol every child of school age, and provision for children in deep mountains, remote islands and with disabilities. The single non-discrimination clause is on sex.",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
@@ -21752,6 +21785,26 @@
    {
     "label": "Mauritius Institute of Education, Kreol Repiblik Moris department",
     "url": "http://web.mie.ac.mu/kreol-department/"
+   },
+   {
+    "label": "Ministry of Education, National Equivalence Committee: Application for Admission to a School in Mauritius (categories of request and Notes 2 to 4 on documents required)",
+    "url": "https://education.govmu.org/Documents/2025/NEC/FORM%20-%20ADMISSION%20TO%20A%20SCHOOL%20IN%20MAURITIUS.pdf"
+   },
+   {
+    "label": "Ministry of Education, National Equivalence Committee: functions, including equivalence of qualifications for admission to primary and secondary schools",
+    "url": "https://education.govmu.org/Pages/Education%20Sectors/Secondary%20Education/National-Equivalence-Committee.aspx"
+   },
+   {
+    "label": "Ministry of Education, Parliamentary Questions on primary school population and admission, quoting regulation 10 of the Education Regulations 1957",
+    "url": "https://education.govmu.org/Documents/AboutUs/theminister/Documents/Pqs/pqpripopadm.pdf"
+   },
+   {
+    "label": "Ministère de l'Éducation, Communiqué de presse: Admission en Grade 1 (2025)",
+    "url": "https://publicnotice.govmu.org/publicnotice/wp-content/uploads/2024/05/Admission-en-Grade-1-2025.pdf"
+   },
+   {
+    "label": "Ministry of Education, Proof of Residency form, citing Regulation 10 of the Education Regulations 1957",
+    "url": "https://education.govmu.org/Documents/2025/NEC/FORM%20-%20PROOF%20OF%20RESIDENCE.pdf"
    }
   ],
   "supportLinks": [],
@@ -21760,7 +21813,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Not established from the sources consulted. The Mauritius Institute of Education's 2024 pre-primary National Curriculum Framework treats English and French as target languages for the whole cohort, scaffolded on each child's first language, rather than designating a subgroup of second-language pupils, and UNESCO PEER's Mauritius inclusion profile records no newcomer or additional-language designation. Searches of the Ministry of Education and Mauritius Institute of Education sites found no admission rule that turns on a pupil's language.",
+  "newcomerCriteria": "The admission form names a Mauritian returning from abroad and a non-Mauritian's child\nEvery applicant files latest school reports and a transfer or leaving certificate\nThe National Equivalence Committee rules on qualifications for admission to school\nGrade 1 admission turns on age, the school's catchment area and school capacities\nRegistration for Grade 1 entry in January 2025 was taken in June 2024 at the school sought",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
@@ -21890,7 +21943,25 @@
     "purpose": "not stated",
     "for_whom": "not stated",
     "evidence_type": "policy"
+   },
+   "newcomerCriteria": {
+    "designation": "proxy category",
+    "triggers": [
+     "immigration status",
+     "prior schooling"
+    ],
+    "decided_by": "statutory body",
+    "rule_locus": "national statute"
    }
+  },
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    4,
+    1,
+    3
+   ]
   }
  },
  {
@@ -23600,7 +23671,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Unfillable: the entry cites only the OECD PISA 2022 landing page\nIt resolves 200 but is a publication description, not the data annex\nTable I.B1.7.57 is reading performance data, not a policy criterion\nA national law or ministry instrument is needed before this can be written",
+  "newcomerCriteria": "Foreign pupils apply for a place at the school where they seek the cupo\nMEDUCA revalidates the titles, certificates and credits issued by schools abroad\nEnrolment runs in a single period before the school year ends\nThe school director analyses and approves it, and can reject no enrolment request\nDecreto 55 of 1998 puts that revalidation with the Direcciones Regionales",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 37 points above their non-immigrant peers\n19 points above after accounting for socio-economic profile\n29 points above once home language is accounted for as well\nAn advantage that survives both adjustments",
@@ -23627,7 +23698,24 @@
     "proxy": "immigrant background",
     "direction": "advantage",
     "after_adjustment": "advantage persists"
+   },
+   "newcomerCriteria": {
+    "designation": "proxy category",
+    "triggers": [
+     "prior schooling"
+    ],
+    "decided_by": "school",
+    "rule_locus": "national rule, local application"
    }
+  },
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    3,
+    4,
+    4
+   ]
   }
  },
  {
@@ -24422,7 +24510,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "No cited source defines any pupil category\n'newcomer' and 'immigrant' both return 0 hits on the OECD page\nThe LITMUS pages classify tasks by language, not pupils by status\nThe entry needs a Palestinian source before this field can be filled",
+  "newcomerCriteria": "Equivalence turns on a secondary certificate issued under non-Palestinian legislation\nStudy outside the State requires proof of residence with the certified transcripts\nThe graduation year recorded is the year the pupil met every equivalence condition\nA committee under the Director-General of University Education rules uncovered cases\nArabic is required among the subjects only where the pupil studied in an Arab country",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 30 points below their non-immigrant peers\n41 points below after accounting for socio-economic profile\n37 points below once home language is accounted for as well\nThe gap is no smaller after either adjustment",
@@ -24462,7 +24550,24 @@
     "proxy": "immigrant background",
     "direction": "gap",
     "after_adjustment": "persists undiminished"
+   },
+   "newcomerCriteria": {
+    "designation": "proxy category",
+    "triggers": [
+     "prior schooling"
+    ],
+    "decided_by": "national authority",
+    "rule_locus": "national statute"
    }
+  },
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    3,
+    4,
+    1
+   ]
   }
  },
  {
@@ -27291,7 +27396,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Unfillable: the entry cites only the OECD PISA 2022 landing page\nIt resolves 200 but is a publication description, not the data annex\nTable I.B1.7.57 is reading performance data, not a policy criterion\nA national law or ministry instrument is needed before this can be written",
+  "newcomerCriteria": "Equivalence is for persons who studied abroad and wish to join the national system\nThe last grade passed must be certified, authenticated and apostilled by the source country\nWhere the documents are in a foreign language the applicant may have an interpreter appointed\nThe competent authority has eight working days from receipt of the documents to resolve\nThe Gerencia de Gestion y Registro Academico is the unit that provides the service",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 33 points below their non-immigrant peers\n48 points below after accounting for socio-economic profile\n42 points below once home language is accounted for as well\nThe gap is no smaller after either adjustment",
@@ -27331,7 +27436,24 @@
     "proxy": "immigrant background",
     "direction": "gap",
     "after_adjustment": "persists undiminished"
+   },
+   "newcomerCriteria": {
+    "designation": "proxy category",
+    "triggers": [
+     "prior schooling"
+    ],
+    "decided_by": "national authority",
+    "rule_locus": "national statute"
    }
+  },
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ]
   }
  },
  {

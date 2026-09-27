@@ -1,0 +1,53 @@
+{
+  "GT|Guatemala": {
+    "fields": {
+      "newcomerCriteria": [
+        "Equiparacion covers pupils entering the country legally, returnees and diplomatic families",
+        "A refugee or asylum applicant may identify with the RENAP special DPIE document",
+        "A media placement test in science and maths runs in Spanish or English as the pupil needs",
+        "The school admits and enrols the pupil provisionally while the documentation is completed",
+        "The departmental office assigns level, cycle and grade within two working days"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [1, 1, 2, 3, 4]
+    },
+    "evidence": [
+      {
+        "bullet": "Equiparacion covers pupils entering the country legally, returnees and diplomatic families",
+        "url": "https://digeace.mineduc.gob.gt/wp-content/uploads/2026/05/Instructivo_version-6_equiparaciones_y_equivalencias.pdf",
+        "quote": "se conceden equiparaciones de estudios a estudiantes que ingresan legalmente al país, a personas retornadas y a estudiantes familiares del Cuerpo Diplomático Nacional o Extranjero"
+      },
+      {
+        "bullet": "A refugee or asylum applicant may identify with the RENAP special DPIE document",
+        "url": "https://digeace.mineduc.gob.gt/wp-content/uploads/2026/05/Instructivo_version-6_equiparaciones_y_equivalencias.pdf",
+        "quote": "En el caso de solicitantes o personas reconocidas con estatuto de refugiado, es válido el Documento Personal de Identificación Especial -DPIE-, emitido por el Registro Nacional de las Personas -RENAP-"
+      },
+      {
+        "bullet": "A media placement test in science and maths runs in Spanish or English as the pupil needs",
+        "url": "https://digeace.mineduc.gob.gt/wp-content/uploads/2026/05/Instructivo_version-6_equiparaciones_y_equivalencias.pdf",
+        "quote": "genera constancia de evaluación de ubicación, en las áreas de Ciencias Naturales y Matemáticas, en el centro educativo en dónde continuará sus estudios. Las pruebas se realizarán en el idioma español o inglés según las necesidades del estudiante"
+      },
+      {
+        "bullet": "The school admits and enrols the pupil provisionally while the documentation is completed",
+        "url": "https://digeace.mineduc.gob.gt/wp-content/uploads/2026/05/Instructivo_version-6_equiparaciones_y_equivalencias.pdf",
+        "quote": "el centro educativo admite al estudiante e inscribe provisionalmente conforme al procedimiento, mientras se completa la documentación"
+      },
+      {
+        "bullet": "The departmental office assigns level, cycle and grade within two working days",
+        "url": "https://digeace.mineduc.gob.gt/wp-content/uploads/2026/05/Instructivo_version-6_equiparaciones_y_equivalencias.pdf",
+        "quote": "Asigna el nivel, ciclo y grado correspondiente en un plazo máximo de dos días hábiles"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MINEDUC DIGEACE, Instructivo ACR-INS-01 v.6, Equiparación y equivalencias de estudios (aplica el Acuerdo Ministerial 1753-2019)",
+        "url": "https://digeace.mineduc.gob.gt/wp-content/uploads/2026/05/Instructivo_version-6_equiparaciones_y_equivalencias.pdf"
+      },
+      {
+        "label": "MINEDUC DIGEACE, Equivalencias de estudios (página del proceso, enlaza el Acuerdo Ministerial 1753-2019)",
+        "url": "https://digeace.mineduc.gob.gt/proceso-digeace/equivalencias-de-estudios/"
+      }
+    ]
+  }
+}

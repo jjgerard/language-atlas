@@ -1,0 +1,53 @@
+{
+  "SV|El Salvador": {
+    "fields": {
+      "newcomerCriteria": [
+        "Equivalence is for persons who studied abroad and wish to join the national system",
+        "The last grade passed must be certified, authenticated and apostilled by the source country",
+        "Where the documents are in a foreign language the applicant may have an interpreter appointed",
+        "The competent authority has eight working days from receipt of the documents to resolve",
+        "The Gerencia de Gestion y Registro Academico is the unit that provides the service"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [1, 2, 2, 3, 4]
+    },
+    "evidence": [
+      {
+        "bullet": "Equivalence is for persons who studied abroad and wish to join the national system",
+        "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/1990-1999/1995/10/89204.PDF",
+        "quote": "Las personas que habiendo realizado estudios en el extranjero, equivalentes a los de educación básica o media en El Salvador, deseen incorporarse al Sistema Educativo Nacional"
+      },
+      {
+        "bullet": "The last grade passed must be certified, authenticated and apostilled by the source country",
+        "url": "https://www.mined.gob.sv/servicios/equivalencia-de-estudios-en-el-extranjero/",
+        "quote": "Certificado o certificación de notas del ultimo grado cursado y aprobado autenticado y apostillado por el país de procedencia"
+      },
+      {
+        "bullet": "Where the documents are in a foreign language the applicant may have an interpreter appointed",
+        "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/1990-1999/1995/10/89204.PDF",
+        "quote": "el interesado podrá ocurrir ante un juez de lo civil o un notario para que nombre perito a un intérprete y realice la traducción"
+      },
+      {
+        "bullet": "The competent authority has eight working days from receipt of the documents to resolve",
+        "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/1990-1999/1995/10/89204.PDF",
+        "quote": "La autoridad competente dispondrá de ocho días hábiles a partir de la fecha de recepción de la documentación para resolver"
+      },
+      {
+        "bullet": "The Gerencia de Gestion y Registro Academico is the unit that provides the service",
+        "url": "https://www.mined.gob.sv/servicios/equivalencia-de-estudios-en-el-extranjero/",
+        "quote": "Gerencia de Gestión y Registro Académico, Edificios A, Plan Maestro, Centro de Gobierno"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Decreto Ejecutivo Nº 82 de 28 de septiembre de 1995, Reglamento para Equivalencias y Pruebas de Suficiencia en Educación Básica y Media e Incorporación de Títulos de Educación Media, arts. 2, 3, 5, 6 y 21",
+        "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/1990-1999/1995/10/89204.PDF"
+      },
+      {
+        "label": "MINED, Equivalencia de Estudios en el Extranjero (ficha de servicio, publicada 27-02-2024)",
+        "url": "https://www.mined.gob.sv/servicios/equivalencia-de-estudios-en-el-extranjero/"
+      }
+    ]
+  }
+}
