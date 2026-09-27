@@ -1,0 +1,59 @@
+{
+  "GT|Guatemala": {
+    "fields": {
+      "bilingualEducationNotes": [
+        "Some curriculum areas are taught in Maya, Garifuna or Xinka and others in Spanish",
+        "The first language for learning is each pupil's mother tongue and the second another national",
+        "The national education system must use Maya, Garifuna and Xinka at every level",
+        "Where Maya, Garifuna or Xinka monolingualism predominates teaching is in the pupils' language",
+        "Bilingualism in national languages is compulsory for public and private sector pupils"
+      ]
+    },
+    "slots": {
+      "bilingualEducationNotes": [
+        1,
+        2,
+        3,
+        3,
+        4
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "Some curriculum areas are taught in Maya, Garifuna or Xinka and others in Spanish",
+        "url": "https://www.munidetejutla.gob.gt/wp-content/uploads/2017/07/Ley-de-Idiomas-Nacionales-y-su-Reglamento.pdf",
+        "quote": "la enseñanza de las áreas curriculares, unas serán en idioma maya, garífuna y Xinka y otras en idioma español"
+      },
+      {
+        "bullet": "The first language for learning is each pupil's mother tongue and the second another national",
+        "url": "https://www.biblioteca.mujica.org/guatemala/docs/modeloEBI.pdf",
+        "quote": "El primer idioma para el aprendizaje es el materno de cada persona, el segundo idioma es otro nacional"
+      },
+      {
+        "bullet": "The national education system must use Maya, Garifuna and Xinka at every level",
+        "url": "https://www.munidetejutla.gob.gt/wp-content/uploads/2017/07/Ley-de-Idiomas-Nacionales-y-su-Reglamento.pdf",
+        "quote": "deberá aplicar en todos los procesos, modalidades y niveles, el respeto, promoción, desarrollo y utilización de los idiomas Mayas, Garífuna y Xinka"
+      },
+      {
+        "bullet": "Where Maya, Garifuna or Xinka monolingualism predominates teaching is in the pupils' language",
+        "url": "https://www.munidetejutla.gob.gt/wp-content/uploads/2017/07/Ley-de-Idiomas-Nacionales-y-su-Reglamento.pdf",
+        "quote": "la enseñanza será en el idioma que hablan los educandos, y el idioma español se enseñará en un proceso gradual"
+      },
+      {
+        "bullet": "Bilingualism in national languages is compulsory for public and private sector pupils",
+        "url": "https://www.biblioteca.mujica.org/guatemala/docs/modeloEBI.pdf",
+        "quote": "Se establece la obligatoriedad del bilingüismo en idiomas nacionales como política lingüística nacional, la cual tendrá aplicación para todos los y las estudiantes de los sectores público y privado"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ley de Idiomas Nacionales, Decreto Número 19-2003, artículo 13, y su Reglamento, Acuerdo Gubernativo Número 320-2011, artículos 7 y 8 (compilation hosted by Municipalidad de Tejutla)",
+        "url": "https://www.munidetejutla.gob.gt/wp-content/uploads/2017/07/Ley-de-Idiomas-Nacionales-y-su-Reglamento.pdf"
+      },
+      {
+        "label": "Modelo Educativo Bilingüe e Intercultural, MINEDUC/DIGEBI, quoting Acuerdo Gubernativo 22-2004 artículos 1 y 2",
+        "url": "https://www.biblioteca.mujica.org/guatemala/docs/modeloEBI.pdf"
+      }
+    ]
+  }
+}

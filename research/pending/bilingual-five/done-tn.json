@@ -1,0 +1,55 @@
+{
+  "US|Tennessee": {
+    "fields": {
+      "l1Support": [
+        "Heritage Language is one of the accepted ESL service models an LEA may use",
+        "Many structured English immersion programmes provide bilingual support",
+        "An LEA may decide to assess a pupil in the native language on a case-by-case basis",
+        "Notifications to parents must be translated into a language the parents can understand",
+        "A bilingual published paper dictionary is listed among EL testing accommodations"
+      ]
+    },
+    "slots": {
+      "l1Support": [
+        1,
+        2,
+        4,
+        2,
+        4
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "Heritage Language is one of the accepted ESL service models an LEA may use",
+        "url": "https://eplan.tn.gov/documentlibrary/ViewDocument.aspx?DocumentKey=2136172&inline=true",
+        "quote": "An ESL program may be provided through various service models, including: 1. Sheltered English Instruction, 2. Structured English Immersion, 3. Specially Designed Academic Instruction in English (SDAIE), 4. Content-Based Instruction (CBI), 5. Heritage Language"
+      },
+      {
+        "bullet": "Many structured English immersion programmes provide bilingual support",
+        "url": "https://eplan.tn.gov/documentlibrary/ViewDocument.aspx?DocumentKey=2136172&inline=true",
+        "quote": "Many SEI programs provide bilingual support"
+      },
+      {
+        "bullet": "An LEA may decide to assess a pupil in the native language on a case-by-case basis",
+        "url": "https://eplan.tn.gov/documentlibrary/ViewDocument.aspx?DocumentKey=2136172&inline=true",
+        "quote": "the LEA may decide to assess such a student in the native language"
+      },
+      {
+        "bullet": "Notifications to parents must be translated into a language the parents can understand",
+        "url": "https://eplan.tn.gov/documentlibrary/ViewDocument.aspx?DocumentKey=2136172&inline=true",
+        "quote": "all notifications sent to parents must be translated into a language that the parents can understand"
+      },
+      {
+        "bullet": "A bilingual published paper dictionary is listed among EL testing accommodations",
+        "url": "https://eplan.tn.gov/documentlibrary/ViewDocument.aspx?DocumentKey=2136172&inline=true",
+        "quote": "Provides a bilingual, published, paper dictionary"
+      }
+    ],
+    "sources": [
+      {
+        "label": "English as a Second Language Manual, Tennessee Department of Education, October 2024 (ePlan document library)",
+        "url": "https://eplan.tn.gov/documentlibrary/ViewDocument.aspx?DocumentKey=2136172&inline=true"
+      }
+    ]
+  }
+}

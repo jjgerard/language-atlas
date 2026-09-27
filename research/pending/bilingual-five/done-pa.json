@@ -1,0 +1,67 @@
+{
+  "PA|Panama": {
+    "fields": {
+      "bilingualEducationNotes": [
+        "Indigenous languages are used in the official and private schools of the comarcas",
+        "The recognised languages are Ngäbe, Buglé, Kuna, Emberá, Wounaan, Naso Tjerdi and Bri Bri",
+        "A gradual and staged process carries it through all levels and modalities",
+        "Implementation is obligatory in official and private schools in all indigenous communities",
+        "The implementation plan is to reach more than 132,000 children and young people"
+      ]
+    },
+    "slots": {
+      "bilingualEducationNotes": [
+        1,
+        2,
+        3,
+        4,
+        3
+      ]
+    },
+    "evidence": [
+      {
+        "bullet": "Indigenous languages are used in the official and private schools of the comarcas",
+        "url": "https://education-profiles.org/latin-america-and-the-caribbean/panama/~inclusion",
+        "quote": "regulate the use of indigenous languages in all official and private schools in the comarcas, surrounding areas and collective lands"
+      },
+      {
+        "bullet": "The recognised languages are Ngäbe, Buglé, Kuna, Emberá, Wounaan, Naso Tjerdi and Bri Bri",
+        "url": "https://siteal.iiep.unesco.org/bdnp/3433/ley-882010-reconoce-lenguas-alfabetos-pueblos-indigenas-panama-dicta-normas-educacion",
+        "quote": "se reconocen las lenguas de los pueblos indígenas Ngäbe, Bunglé, Kuna, Emberá, Wounaan, Naso Tjerdi y Bri Bri"
+      },
+      {
+        "bullet": "A gradual and staged process carries it through all levels and modalities",
+        "url": "https://www.educapanama.edu.pa/?q=educasitio%2Fdireccion-nacional-de-educacion-intercultural-bilingue",
+        "quote": "en todos los niveles y modalidades mediante un proceso paulatino y escalonado"
+      },
+      {
+        "bullet": "Implementation is obligatory in official and private schools in all indigenous communities",
+        "url": "https://faolex.fao.org/docs/pdf/pan164765.pdf",
+        "quote": "en las escuelas oficiales y particulares que funcionen en todas las comunidades indígenas"
+      },
+      {
+        "bullet": "The implementation plan is to reach more than 132,000 children and young people",
+        "url": "https://www.educapanama.edu.pa/?q=educasitio%2Fdireccion-nacional-de-educacion-intercultural-bilingue",
+        "quote": "para así atender a más de 132,000 niños y jóvenes de los pueblos más vulnerables"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ley 88 de 22 de noviembre de 2010, que reconoce las lenguas y los alfabetos de los pueblos indígenas de Panamá y dicta normas para la Educación Intercultural Bilingüe, artículos 4, 5, 7 y 11 (Gaceta Oficial 26669-A, FAOLEX copy)",
+        "url": "https://faolex.fao.org/docs/pdf/pan164765.pdf"
+      },
+      {
+        "label": "Dirección Nacional de Educación Intercultural Bilingüe, MEDUCA (Educa Panamá)",
+        "url": "https://www.educapanama.edu.pa/?q=educasitio%2Fdireccion-nacional-de-educacion-intercultural-bilingue"
+      },
+      {
+        "label": "Panama inclusion profile, UNESCO PEER, on Ley 88 de 2010 and Decreto Ejecutivo 274 de 2007",
+        "url": "https://education-profiles.org/latin-america-and-the-caribbean/panama/~inclusion"
+      },
+      {
+        "label": "Ley 88/2010. Reconoce las lenguas y los alfabetos de los pueblos indígenas de Panamá, SITEAL/IIEP-UNESCO",
+        "url": "https://siteal.iiep.unesco.org/bdnp/3433/ley-882010-reconoce-lenguas-alfabetos-pueblos-indigenas-panama-dicta-normas-educacion"
+      }
+    ]
+  }
+}
