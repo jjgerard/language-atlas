@@ -3015,7 +3015,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Repatriated children in the communes with the highest returnee rates are the target group\nSchools set the French and Kirundi activities in partnership with the communes",
+  "newcomerCriteria": "Repatriated children in the communes with the highest returnee rates are the target group\nSchools set the French and Kirundi activities in partnership with the communes\nLoi 1/19 art 10 admits pupils from an approved school abroad straight into schools in Burundi\nLoi 1/19 art 51 decentralises basic education administration to the commune\nLoi 1/19 art 50 adopts co-management between the State the collectivites and the partners",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
@@ -3036,7 +3036,7 @@
      "immigration status"
     ],
     "decided_by": "not stated",
-    "rule_locus": "not stated"
+    "rule_locus": "national rule, local application"
    },
    "policyHistory": [
     {
@@ -3064,6 +3064,15 @@
     "for_whom": "national or indigenous languages",
     "evidence_type": "policy"
    }
+  },
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    4,
+    1,
+    4,
+    4
+   ]
   }
  },
  {
@@ -34907,7 +34916,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "UNHCR: refugee and asylum-seeking children may have free primary and secondary education\nEnrolment needs valid refugee or asylum certificates for parents and children\nDecided at enrolment at a school near the family's residence, on the documents produced\nIn Sana'a the Ministry of Education's Control Office issues the admission acceptance form",
+  "newcomerCriteria": "UNHCR: refugee and asylum-seeking children may have free primary and secondary education\nEnrolment needs valid refugee or asylum certificates for parents and children\nDecided at enrolment at a school near the family's residence, on the documents produced\nIn Sana'a the Ministry of Education's Control Office issues the admission acceptance form\nDecree 28/1993 provides for equivalence criteria for pre-university papers gained abroad\nGovernorate education administrations issue the equivalence paper fixing the school level",
   "removalCriteria": "Nothing found: no designation exists, so no exit criteria exist",
   "newcomerProportion": [],
   "achievementGap": "",
@@ -34928,7 +34937,7 @@
      "immigration status"
     ],
     "decided_by": "school",
-    "rule_locus": "not stated"
+    "rule_locus": "national rule, local application"
    },
    "removalCriteria": {
     "exit_mechanism": [
@@ -34966,6 +34975,16 @@
     "for_whom": "not stated",
     "evidence_type": "policy"
    }
+  },
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    2,
+    3,
+    4,
+    2,
+    4
+   ]
   }
  },
  {

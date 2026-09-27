@@ -1,0 +1,31 @@
+{
+  "YE|Yemen": {
+    "fields": {
+      "newcomerCriteria": [
+        "Decree 28/1993 provides for equivalence criteria for pre-university papers gained abroad",
+        "Governorate education administrations issue the equivalence paper fixing the school level"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [2, 4]
+    },
+    "evidence": [
+      {
+        "bullet": "Decree 28/1993 provides for equivalence criteria for pre-university papers gained abroad",
+        "url": "http://www.yemen-nic.info/ministations/detail.php?ID=10122",
+        "quote": "اقتراح المعايير والضوابط الخاصة بمعادلة الشهادات والوثائق الدراسية للتعليم قبل الجامعي للتلاميذ والطلاب الحاصلين عليها من خارج الوطن"
+      },
+      {
+        "bullet": "Governorate education administrations issue the equivalence paper fixing the school level",
+        "url": "http://www.yemen-nic.info/ministations/detail.php?ID=10122",
+        "quote": "وتفويض الإدارات العامة للتربية والتعليم بالمحافظات في إصدار وثائق المعادلة التي تحدد المستوى الدراسي لهذه الشهادات أو الوثائق الدراسية"
+      }
+    ],
+    "sources": [
+      {
+        "label": "قرار جمهوري رقم (28) لسنة 1993م بشأن لائحة وزارة التربية والتعليم — Republican Decree No. 28 of 1993, regulation of the Ministry of Education, article 22(5) on equivalence of school papers obtained outside the country (Yemen National Information Center)",
+        "url": "http://www.yemen-nic.info/ministations/detail.php?ID=10122"
+      }
+    ]
+  }
+}

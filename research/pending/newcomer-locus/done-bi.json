@@ -1,0 +1,37 @@
+{
+  "BI|Burundi": {
+    "fields": {
+      "newcomerCriteria": [
+        "Loi 1/19 art 10 admits pupils from an approved school abroad straight into schools in Burundi",
+        "Loi 1/19 art 51 decentralises basic education administration to the commune",
+        "Loi 1/19 art 50 adopts co-management between the State the collectivites and the partners"
+      ]
+    },
+    "slots": {
+      "newcomerCriteria": [1, 4, 4]
+    },
+    "evidence": [
+      {
+        "bullet": "Loi 1/19 art 10 admits pupils from an approved school abroad straight into schools in Burundi",
+        "url": "https://natlex.ilo.org/dyn/natlex2/natlex2/files/download/94543/BDI-94543.pdf",
+        "quote": "Les élèves issus d’un établissement scolaire agréé ouvert à l’étranger intègrent sans examens de contrôle les écoles établies au Burundi."
+      },
+      {
+        "bullet": "Loi 1/19 art 51 decentralises basic education administration to the commune",
+        "url": "https://natlex.ilo.org/dyn/natlex2/natlex2/files/download/94543/BDI-94543.pdf",
+        "quote": "Article 51 : L’administration de l’enseignement fondamental est décentralisée jusqu’au niveau de la commune."
+      },
+      {
+        "bullet": "Loi 1/19 art 50 adopts co-management between the State the collectivites and the partners",
+        "url": "https://natlex.ilo.org/dyn/natlex2/natlex2/files/download/94543/BDI-94543.pdf",
+        "quote": "Article 50 : Le système éducatif burundais adopte le système de cogestion entre l’Etat, les collectivités et les partenaires."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Loi n° 1/19 du 10 septembre 2013 portant organisation de l'enseignement de base et secondaire, articles 10, 50 et 51 — texte de la Présidence de la République publié par NATLEX",
+        "url": "https://natlex.ilo.org/dyn/natlex2/natlex2/files/download/94543/BDI-94543.pdf"
+      }
+    ]
+  }
+}

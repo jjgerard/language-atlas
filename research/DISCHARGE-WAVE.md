@@ -132,6 +132,148 @@ Do not:
    line. `research/tools/set-coding-value.js` exists so that cannot happen:
    it deep-copies the stored rows and changes one column on one row.
 
+## UNESCO PEER: the profiles did NOT move, and the new path 404s at 1.8 MB
+
+Checked 2026-09-27, after two drafters in one session each spent fetches
+finding this out separately.
+
+**The per-country profiles are still at `education-profiles.org` and still
+serve 200.** Verified the same day:
+
+    education-profiles.org/northern-africa-and-western-asia/morocco/~inclusion   200   49,587b
+    education-profiles.org/sub-saharan-africa/nigeria/~inclusion                 200   49,005b
+    education-profiles.org/eastern-and-south-eastern-asia/                       200   45,000b approx
+      democratic-peoples-republic-of-korea/~inclusion
+
+What moved is the INDEX. `www.unesco.org/gem-report/en/peer` is 200 and is the
+landing page. **There is no per-country profile under it**, and asking for one
+is the byte-count trap at its worst:
+
+    www.unesco.org/gem-report/en/peer/morocco    404   1,789,233b
+
+A 404 serving 1.8 MB of HTML. `terr-verify.js` is safe because it tests the
+status code first, and its `TINY = 1000` second-opinion rule is aimed at the
+opposite failure -- a 200 carrying a few hundred bytes of refusal. But a
+drafter using WebFetch sees a large body come back and can easily read it as a
+page. **Check the status code. The size tells you nothing in either direction:
+desc.gov.im rejects at 200 in 269 bytes, and this accepts nothing at 404 in
+1.8 MB.**
+
+Two further PEER facts that still hold:
+- WebFetch's extractor returns "no content" on these pages. **Use curl and
+  strip tags.**
+- The Saint Vincent PEER URL resolves to **Colombia** boilerplate -- wrong
+  rather than dead, which no status code will tell you. Suspect the other
+  Caribbean profiles.
+
+## gibraltarlaws.gov.gi serves a stale consolidation at 200, and it changes a duty
+
+The guessable upload path fetches cleanly and is out of date:
+
+    /uploads/legislations/education-and-training/1974-11/1974-11(29-11-12).pdf
+      200, 325,035b, and the document stamps itself "This version is out of date"
+
+On the Education and Training Act s. 53B that stale text reads "the Director
+**shall** ... take measures", where the current consolidation reads "may use
+his best endeavours", softened by Act 2023-19 in force 23.12.2024. Citing the
+guessable path would have turned a discretion into a duty.
+
+**Use the `/download` form instead**, which is current:
+
+    /legislations/education-and-training-act-414/download     200, 432,000b approx
+
+## desc.gov.im rejects the gate's own Node client
+
+`desc.gov.im` hands Node **269 bytes of an F5 "Request Rejected" page at HTTP
+200**, and hands WebFetch the same. Only `getViaCurl` with a full Chrome UA
+gets the real page. This is already handled -- `terr-verify.js` sends any 200
+under `TINY = 1000` bytes for a second opinion and names this host in the
+comment -- so a bullet citing it does gate. Worth knowing when drafting, since
+a drafter's own fetch will show the rejection.
+
+`legislation.gov.im` is a different matter: **curl error 35, "Recv failure:
+Connection was reset"**, TLS handshake completing and then reset, unchanged by
+`--tlsv1.2` or a browser UA. The Isle of Man Education Act 2001 could not be
+read.
+
+## logir.fo returns the search form at 200 for a near-miss slug
+
+A wrong slug gives an honest 404 (1,245 bytes). A **nearly** right one --
+missing the tail of a long title -- returns **200 with 45 KB of the site
+search form** and no law text. Byte count does not distinguish that from a
+short regulation. The full-title slug returns 81 KB with the text.
+
+## Dead or blocked, added 2026-09-27
+
+- **`www.men.gov.ma`** -- Morocco's ministry has been rebuilt on Drupal and the
+  2013 and 2018 circulars are **gone**: `/Ar/Documents/Note1391805102018.pdf`
+  and siblings return **404 with a 74,689-byte HTML error page**. Its
+  `/مذكرات` archive is 200 but carries only 2026 notes. Morocco's primary
+  circulars are not retrievable from the ministry; secondary sources are the
+  only route.
+- **`education.gouv.sn`** -- DNS does not resolve, curl 6, with and without
+  `www`. The name is dead.
+- **`www.jo.gouv.sn`** -- TCP connect fails after 21 s, curl 28. Senegal's
+  official gazette is unreachable.
+- **`refworld.org`** -- 403, 5,662-byte challenge page. Put it beside
+  `ohchr.org`.
+- **`legislatie.just.ro`** -- **curl 56, "schannel: server closed abruptly
+  (missing close_notify)"**, five document ids tried, unchanged by
+  `--tlsv1.2`. A TLS-layer failure, so the curl fallback cannot rescue it
+  either. `dreptonline.ro` carries republished texts as clean HTML and is what
+  Romania's Art. 132 citation rests on, labelled as a mirror.
+- **`angolex.com`** -- 403 behind a JS interstitial, 2,482 bytes. It was
+  believed to be the only host carrying Angola's Decreto Presidencial 163/25
+  and it is NOT: `lex.ao/docs/presidente-da-republica/2025/decreto-presidencial
+  -n-o-163-25-de-15-de-agosto/` serves the whole diploma plus its annexed
+  Regulamento at 200 / 182,478 bytes on a plain curl. The wrong belief came
+  from `lex.ao/?s=` being JS-driven and returning 200 with no links, so the
+  document looked absent. **Find lex.ao documents by search engine, then fetch
+  the /docs/ path directly.**
+- **`tdh.tierradehombres.org`** -- 403, 5,686 bytes.
+
+## Two wrong documents behind right-looking links
+
+Neither of these is a status-code problem and no fetch check catches them.
+
+- `data.unhcr.org/en/documents/download/123045` serves 200,
+  `application/pdf`, 981,712 bytes -- and it is the **Ethiopia** education
+  factsheet, with zero occurrences of "Yemen", behind a Yemen-looking search
+  title.
+- A **FAOLEX** id taken from a search snippet is not a guarantee of the
+  document you wanted: `ang205985.pdf` serves 200 and 12.8 MB and turns out to
+  be Diario da Republica I Serie N.o 184 of 29 September 2021, on child labour
+  and a visa protocol.
+
+Same family as the Saint Vincent PEER URL resolving to Colombia. **Open the
+document and check it is the one you asked for.**
+
+## Extractor quirks that break a quote
+
+- The **NATLEX** Burundi PDF's text layer inserts a space after some capital C
+  -- "C onstitution", "C HAPITRE". A quote containing such a word survives only
+  on terr-verify's spaces-removed fallback, so avoid those words when choosing
+  a span.
+- WebFetch reported both `data.unhcr.org` PDFs as "encoded image data / Adobe
+  Illustrator metadata" and read nothing, while `research/tools/pdftext.js`
+  extracted 33 KB and 617 KB of text from the same bytes. **Always extract PDFs
+  with the project's own tool.**
+
+Worth adding to the works-cleanly list: **`agc.gov.bn`** (Brunei), but only on
+its new WordPress route -- `/services_brulaw-2/?agc_letter=E` to
+`/documents/education-act/` to `/wp-content/uploads/2026/07/<ACT>.pdf`. The old
+`AGC%20Images/LAWS/ACT_PDF/cap210.pdf` path is **404 with a 15,795-byte
+WordPress error page** while search engines still index and quote it. The
+listing page emits hrefs with a doubled slash; normalise before citing. Also
+clean: `lex.uz`, `lex.ao` (document pages -- but `lex.ao/?s=` search is
+JS-driven and returns 200 with no links), `dge.mec.pt`, `cnred.edu.ro`,
+`www.edu.ro`, `jerseylaw.je`, `gov.je`, `gov.gg`, `undirvising.fo`,
+`unicef.org/<country>/media/*.pdf`, `help.unhcr.org`, `faolex.fao.org`,
+`yemen-nic.info` (`/ministations/detail.php?ID=` and `/db/laws_ye/detail.php?
+ID=`, http and https both 200, UTF-8, full law text), `agoyemen.net`,
+`natlex.ilo.org/dyn/natlex2/.../files/download/`, `yaga-burundi.com`,
+`sosmediasburundi.org`.
+
 ## The comparative sources do not answer this field
 
 Three source families were checked and all three describe how support STARTS
