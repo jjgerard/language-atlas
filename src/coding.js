@@ -674,7 +674,14 @@ const LOCALTERM_FAMILY = {
   'vernacular or local language': 'Named as local speech (Papua New Guinea’s "vernacular, or tok ples in the older Tok Ples Skuls", where "individual vernaculars are named by communities, not by the ministry")',
   'the language own name': 'NO category word: the system names the language (American Samoa’s Gagana Samoa "in the Commission’s own Samoan name"; Guam’s CHamoru, "the spelling enacted by P.L. 33-236"; Aruba’s Papiamento; the Faroes’ foroyskt; Fiji’s iTaukei; Haiti’s "Le Creole, the constitutional term for the language common to all Haitians"; Saint Lucia’s Kweyol)',
   'the provision, not the language': 'The name belongs to the programme and the languages go unnamed (Colombia’s "Etnoeducacion is the statutory name of the whole provision" -- "no individual language is named anywhere in arts. 55-59"; Argentina’s and Honduras’ Educacion Intercultural Bilingue; Costa Rica’s Educacion indigena)',
-  'none in use': 'Checked, and the system has no term (the Dominican Republic, "no term for a minority or community language is in use"; Gibraltar, "no category term in use")',
+  // ADDED 2026-09-28, by carrying across the distinction eal's `designation`
+  // column already draws between a NAME and a SENTENCE. `none in use` was
+  // holding both, and the tell was mechanical: an entry cannot be coded
+  // `none in use` AND `fixed_in: in statute`, because if there is no term
+  // nothing is fixed anywhere. Exactly two entries held that contradiction and
+  // they are exactly the two that needed this value.
+  'functional description (no single term)': 'The instrument refers to the languages by a PHRASE rather than by a term or a name (Dominica, whose Education Act says "the language and culture of Dominica", naming no language; Grenada, whose Act goal (g) reaches "the language ... of Grenadians"). Distinct from `none in use`, where the system says nothing at all, and from `the language own name`, where it names the language itself',
+  'none in use': 'Checked, and the system has no term AND no phrase either (the Dominican Republic, where "lengua materna" appears only in generic graduate-profile wording; Gibraltar, "no category term in use"). 47 of its 51 entries are United States states, so read a high count here as a coverage fact before a finding',
   'not stated': 'The entry does not establish what the system calls them',
 };
 
