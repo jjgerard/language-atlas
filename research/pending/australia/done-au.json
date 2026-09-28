@@ -1,0 +1,41 @@
+{
+  "AU|Australia": {
+    "fields": {
+      "newcomerCriteria": [
+        "EAL/D pupils have a first language or dialect other than English and need SAE support",
+        "The category covers overseas and Australian-born pupils alike, so arrival is not the test",
+        "It reaches Aboriginal and Torres Strait Islander pupils whose first language is Indigenous",
+        "Traditional languages, creoles, related varieties and Aboriginal English all count",
+        "Prior schooling ranges from age-equivalent to limited or no previous education"
+      ]
+    },
+    "slots": { "newcomerCriteria": [1, 1, 1, 1, 2] },
+    "evidence": [
+      {
+        "bullet": "EAL/D pupils have a first language or dialect other than English and need SAE support",
+        "url": "https://www.acara.edu.au/verve/_resources/EALD_teacher_resource.pdf",
+        "quote": "EAL/D students are those whose first language is a language or dialect other than English and who require additional support to assist them to develop proficiency in Standard Australian English"
+      },
+      {
+        "bullet": "The category covers overseas and Australian-born pupils alike, so arrival is not the test",
+        "url": "https://www.acara.edu.au/verve/_resources/EALD_teacher_resource.pdf",
+        "quote": "overseas and Australian-born students whose first language is a language other than English"
+      },
+      {
+        "bullet": "It reaches Aboriginal and Torres Strait Islander pupils whose first language is Indigenous",
+        "url": "https://www.acara.edu.au/verve/_resources/EALD_teacher_resource.pdf",
+        "quote": "Aboriginal and Torres Strait Islander students whose first language is an Indigenous language"
+      },
+      {
+        "bullet": "Traditional languages, creoles, related varieties and Aboriginal English all count",
+        "url": "https://www.acara.edu.au/verve/_resources/EALD_teacher_resource.pdf",
+        "quote": "including traditional languages, creoles and related varieties, or Aboriginal English"
+      },
+      {
+        "bullet": "Prior schooling ranges from age-equivalent to limited or no previous education",
+        "url": "https://www.acara.edu.au/verve/_resources/EALD_teacher_resource.pdf",
+        "quote": "limited or no previous education"
+      }
+    ]
+  }
+}

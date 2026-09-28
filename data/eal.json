@@ -1128,7 +1128,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Cited link is a catalogue page; 'newcomer' returns 0 hits on it\nNo EAL/D eligibility definition can be traced to this entry's cited source\nACARA's EAL/D definition is cited by the state entries instead\nNothing here should be written into the national entry",
+  "newcomerCriteria": "EAL/D pupils have a first language or dialect other than English and need SAE support\nThe category covers overseas and Australian-born pupils alike, so arrival is not the test\nIt reaches Aboriginal and Torres Strait Islander pupils whose first language is Indigenous\nTraditional languages, creoles, related varieties and Aboriginal English all count\nPrior schooling ranges from age-equivalent to limited or no previous education",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 14 points above their non-immigrant peers\n16 points above after accounting for socio-economic profile\n20 points above once home language is accounted for as well\nAn advantage that survives both adjustments",
@@ -1142,7 +1142,8 @@
     1,
     1,
     1,
-    1
+    1,
+    2
    ],
    "achievementGap": [
     1,
@@ -1174,7 +1175,12 @@
   },
   "coding": {
    "newcomerCriteria": {
-    "rule_locus": "sub-national only"
+    "rule_locus": "sub-national only",
+    "designation": "named category",
+    "triggers": [
+     "home language"
+    ],
+    "decided_by": "not stated"
    },
    "l1Support": {
     "form": "taught as a subject",
