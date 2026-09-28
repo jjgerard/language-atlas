@@ -187,6 +187,29 @@ const DESIGNATION_FORMS = {
   // test is named at all -- see the four left unset.
   functional: 'No formal label, but a stated test that decides who gets support, of any kind — a language screen (Estonia, Finland, Germany, Iceland: "no fixed statutory newcomer label", then a criterion), a numeric threshold (South Africa 40 learners, Namibia 20, Malaysia fifteen parents), a circumstance (Aruba, thirty days after coming to live there), or a parental declaration (India)',
   'proxy category': 'Pupils are grouped by something that is not their language or arrival, and support follows that grouping (Singapore assigns by ethnicity; Italy by non-Italian citizenship)',
+  // ADDED 2026-09-28, on the maintainer's call, with the name taken from
+  // indigenous.localTerm.family where the same value has worked on 51 entries.
+  //
+  // The column could not say that a system picks NOBODY out, and the cost was
+  // not the two empty cells -- it was sixteen entries flagged as a documented
+  // absence that ALSO carried a positive designation contradicting the flag.
+  // A coder who read "the Education Code defines no newcomer category" had
+  // nowhere to put that, so they coded the nearest adjacent rule instead:
+  // Belarus off an exemption from Belarusian or Russian study, India and eight
+  // states off the mother-tongue medium rule, Nepal and Tajikistan off a
+  // minimum-pupils rule for medium of instruction. Every one of those rules is
+  // real and none of them designates a newcomer.
+  //
+  // THE TEST IS NOT "does the entry say the word newcomer". Several entries
+  // open "no newcomer designation exists" and then name a real one, and those
+  // keep their value: Qatar, where "the operative category is nationality";
+  // the Philippines, where "learners are classified by mother tongue via
+  // language mapping"; Cyprus, Georgia, Monaco and the UAE, each with a test
+  // that picks second-language pupils out. The test is whether ANY rule
+  // designates a pupil for this question -- and where the entry is flagged a
+  // documented absence, the answer is already no, so the coding must agree
+  // with the flag rather than argue with it.
+  'none in use': 'Checked, and the system designates nobody: no term, and no rule that picks a pupil out for this question either (India, "the category in play is linguistic minority group, not a newcomer designation"; South Africa, where the trigger is 40 learners asking for one of the 11 official languages, "so it is not a newcomer provision"). Distinct from `functional`, where there is no term but a rule does pick pupils out',
 };
 
 // WHAT PUTS A PUPIL IN. A list, not one value: Czechia takes foreigner status
