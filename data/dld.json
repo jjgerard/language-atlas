@@ -483,6 +483,12 @@
     "term_type": "an umbrella category only",
     "label": "speech disorder",
     "standing": "not stated"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "not stated",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "rule_locus": "not stated"
    }
   },
   "slots": {
@@ -1203,6 +1209,13 @@
     "term_type": "an umbrella category only",
     "label": "not applicable",
     "standing": "not stated"
+   },
+   "identificationCriteria": {
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national statute"
    }
   },
   "slots": {
@@ -1820,7 +1833,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -2475,7 +2489,8 @@
    "workforce": {
     "entry_route": "not stated",
     "training": "not stated",
-    "evidence_type": "policy"
+    "evidence_type": "policy",
+    "headcount": "employer or service count"
    },
    "referralPathway": {
     "initiated_by": [
@@ -4445,7 +4460,7 @@
     }
    ],
    "multilingualProvision": {
-    "assessment_language": "majority language only",
+    "assessment_language": "reported practice, no rule",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
@@ -4914,7 +4929,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -8733,6 +8749,15 @@
     "term_type": "a profession term only",
     "label": "not applicable",
     "standing": "in professional use only"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "listed impairment category",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national statute"
    }
   },
   "slots": {
@@ -8794,7 +8819,8 @@
     "exclusions": [
      "none stated"
     ],
-    "rule_locus": "national statute"
+    "rule_locus": "national statute",
+    "threshold_basis": "listed impairment category"
    },
    "legalEntitlement": [
     {
@@ -9189,7 +9215,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -13348,7 +13375,8 @@
     "exclusions": [
      "none stated"
     ],
-    "rule_locus": "national statute"
+    "rule_locus": "national statute",
+    "threshold_basis": "listed impairment category"
    },
    "legalEntitlement": [
     {
@@ -13693,7 +13721,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -14015,7 +14044,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -14386,7 +14416,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -15821,7 +15852,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -16233,7 +16265,8 @@
     "exclusions": [
      "none stated"
     ],
-    "rule_locus": "national statute"
+    "rule_locus": "national statute",
+    "threshold_basis": "listed impairment category"
    },
    "dischargeCriteria": {
     "discharge_basis": [
@@ -16999,7 +17032,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -17196,7 +17230,8 @@
     "exclusions": [
      "none stated"
     ],
-    "rule_locus": "national statute"
+    "rule_locus": "national statute",
+    "threshold_basis": "listed impairment category"
    },
    "multilingualProvision": {
     "assessment_language": "protocol or adapted instrument",
@@ -17670,7 +17705,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -19119,7 +19155,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -20006,7 +20043,8 @@
    "workforce": {
     "entry_route": "named qualification",
     "training": "not stated",
-    "evidence_type": "policy"
+    "evidence_type": "policy",
+    "headcount": "employer or service count"
    },
    "referralPathway": {
     "initiated_by": [
@@ -20244,7 +20282,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -20441,7 +20480,8 @@
     "exclusions": [
      "none stated"
     ],
-    "rule_locus": "not stated"
+    "rule_locus": "not stated",
+    "threshold_basis": "listed impairment category"
    },
    "legalEntitlement": [
     {
@@ -21019,7 +21059,7 @@
     }
    ],
    "multilingualProvision": {
-    "assessment_language": "interpreter",
+    "assessment_language": "reported practice, no rule",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
@@ -21050,7 +21090,8 @@
    "workforce": {
     "entry_route": "licence or registration",
     "training": "domestic programme",
-    "evidence_type": "policy"
+    "evidence_type": "policy",
+    "headcount": "employer or service count"
    },
    "referralPathway": {
     "initiated_by": [
@@ -21314,7 +21355,7 @@
     }
    ],
    "multilingualProvision": {
-    "assessment_language": "interpreter",
+    "assessment_language": "reported practice, no rule",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
@@ -21345,7 +21386,8 @@
    "workforce": {
     "entry_route": "not stated",
     "training": "not stated",
-    "evidence_type": "policy"
+    "evidence_type": "policy",
+    "headcount": "employer or service count"
    },
    "referralPathway": {
     "initiated_by": [
@@ -21565,7 +21607,7 @@
     }
    ],
    "multilingualProvision": {
-    "assessment_language": "interpreter",
+    "assessment_language": "reported practice, no rule",
     "bilingual_handling": "silent",
     "local_norms": "not stated",
     "evidence_type": "practitioner survey"
@@ -22711,7 +22753,8 @@
    "workforce": {
     "entry_route": "named qualification",
     "training": "not stated",
-    "evidence_type": "policy"
+    "evidence_type": "policy",
+    "headcount": "employer or service count"
    },
    "referralPathway": {
     "initiated_by": [
@@ -23524,7 +23567,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -24509,6 +24553,14 @@
     "term_type": "an umbrella category only",
     "label": "not applicable",
     "standing": "in policy or an official list"
+   },
+   "funding": {
+    "funders": [
+     "state education budget"
+    ],
+    "family_pays": "free at the point of use",
+    "scope": "disability generally",
+    "evidence_type": "policy"
    }
   },
   "slots": {
@@ -24687,7 +24739,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -25133,7 +25186,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -25537,7 +25591,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -25772,7 +25827,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -25866,6 +25922,15 @@
     "term_type": "a disorder term",
     "label": "language impairment or disorder, unqualified",
     "standing": "a researcher translation"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "diagnosis plus impact",
+    "bilingual_handling": "silent",
+    "decider": "national authority",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national statute"
    }
   }
  },
@@ -26032,7 +26097,8 @@
    "workforce": {
     "entry_route": "licence or registration",
     "training": "not stated",
-    "evidence_type": "policy"
+    "evidence_type": "policy",
+    "headcount": "employer or service count"
    },
    "terminology": {
     "term_type": "a disorder term",
@@ -26632,7 +26698,8 @@
    "workforce": {
     "entry_route": "not stated",
     "training": "not stated",
-    "evidence_type": "policy"
+    "evidence_type": "policy",
+    "headcount": "employer or service count"
    },
    "referralPathway": {
     "initiated_by": [
@@ -28687,7 +28754,8 @@
     "exclusions": [
      "none stated"
     ],
-    "rule_locus": "national statute"
+    "rule_locus": "national statute",
+    "threshold_basis": "listed impairment category"
    },
    "legalEntitlement": [
     {
@@ -29069,7 +29137,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -29355,7 +29424,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -31091,6 +31161,11 @@
     "term_type": "an umbrella category only",
     "label": "communication needs",
     "standing": "in statute"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": "age ceiling",
+    "decider": "not stated",
+    "rule_locus": "national statute"
    }
   },
   "slots": {
@@ -31917,7 +31992,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -32807,6 +32883,15 @@
     "term_type": "none located",
     "label": "not applicable",
     "standing": "none"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "listed impairment category",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national, non-binding"
    }
   },
   "slots": {
@@ -33227,7 +33312,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -33732,7 +33818,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -34097,7 +34184,8 @@
     "exclusions": [
      "none stated"
     ],
-    "rule_locus": "national statute"
+    "rule_locus": "national statute",
+    "threshold_basis": "listed impairment category"
    },
    "multilingualProvision": {
     "assessment_language": "majority language only",
@@ -34304,7 +34392,8 @@
     "exclusions": [
      "none stated"
     ],
-    "rule_locus": "national statute"
+    "rule_locus": "national statute",
+    "threshold_basis": "listed impairment category"
    },
    "legalEntitlement": [
     {
@@ -35578,6 +35667,15 @@
     "term_type": "a disorder term",
     "label": "language impairment or disorder, unqualified",
     "standing": "in professional use only"
+   },
+   "funding": {
+    "funders": [
+     "the family",
+     "private insurance"
+    ],
+    "family_pays": "family bears the cost",
+    "scope": "not stated",
+    "evidence_type": "policy"
    }
   },
   "slots": {
@@ -36553,7 +36651,8 @@
     "exclusions": [
      "none stated"
     ],
-    "rule_locus": "national statute"
+    "rule_locus": "national statute",
+    "threshold_basis": "listed impairment category"
    },
    "multilingualProvision": {
     "assessment_language": "not stated",
@@ -36743,7 +36842,8 @@
     "exclusions": [
      "none stated"
     ],
-    "rule_locus": "national statute"
+    "rule_locus": "national statute",
+    "threshold_basis": "listed impairment category"
    },
    "multilingualProvision": {
     "assessment_language": "not stated",
@@ -38138,6 +38238,15 @@
     "term_type": "none located",
     "label": "not applicable",
     "standing": "none"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "listed impairment category",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national, non-binding"
    }
   },
   "slots": {
@@ -38794,7 +38903,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -40986,7 +41096,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -41493,6 +41604,15 @@
     "term_type": "a disorder term",
     "label": "language impairment or disorder, unqualified",
     "standing": "a researcher translation"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national, non-binding"
    }
   },
   "slots": {
@@ -42548,7 +42668,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -42798,7 +42919,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -43942,7 +44064,8 @@
     "exclusions": [
      "none stated"
     ],
-    "rule_locus": "national statute"
+    "rule_locus": "national statute",
+    "threshold_basis": "listed impairment category"
    },
    "legalEntitlement": [
     {
@@ -45128,7 +45251,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -46718,6 +46842,15 @@
     "term_type": "an umbrella category only",
     "label": "not applicable",
     "standing": "in statute"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "educational psychology service",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "not stated"
    }
   },
   "slots": {
@@ -48832,7 +48965,8 @@
    "multilingualProvision": {
     "bilingual_handling": "silent",
     "local_norms": "not stated",
-    "evidence_type": "practitioner survey"
+    "evidence_type": "practitioner survey",
+    "assessment_language": "reported practice, no rule"
    },
    "legalEntitlement": [
     {
@@ -49125,6 +49259,11 @@
     "term_type": "an umbrella category only",
     "label": "language impairment or disorder, unqualified",
     "standing": "in professional use only"
+   },
+   "dischargeCriteria": {
+    "discharge_basis": "none established",
+    "decider": "not stated",
+    "rule_locus": "national statute"
    }
   },
   "slots": {
@@ -61079,7 +61218,12 @@
      "occurrence": 1,
      "operation": "body or programme established"
     }
-   ]
+   ],
+   "terminology": {
+    "term_type": "a profession term only",
+    "label": "not applicable",
+    "standing": "in professional use only"
+   }
   }
  },
  {
@@ -61614,6 +61758,15 @@
     "term_type": "a functional or barriers framing",
     "label": "not applicable",
     "standing": "in policy or an official list"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "educational need",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national rule, local application"
    }
   },
   "slots": {

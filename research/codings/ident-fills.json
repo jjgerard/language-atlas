@@ -1,0 +1,80 @@
+{
+  "AF|Afghanistan": {
+    "identificationCriteria": {
+      "threshold_basis": "not stated",
+      "bilingual_handling": "silent",
+      "decider": "not stated",
+      "rule_locus": "not stated"
+    }
+  },
+  "AO|Angola": {
+    "identificationCriteria": {
+      "decider": "not stated",
+      "exclusions": ["none stated"],
+      "rule_locus": "national statute"
+    }
+  },
+  "CD|DR Congo": {
+    "identificationCriteria": {
+      "threshold_basis": "listed impairment category",
+      "bilingual_handling": "silent",
+      "decider": "not stated",
+      "exclusions": ["none stated"],
+      "rule_locus": "national statute"
+    }
+  },
+  "IL|Israel": {
+    "identificationCriteria": {
+      "threshold_basis": "diagnosis plus impact",
+      "bilingual_handling": "silent",
+      "decider": "national authority",
+      "exclusions": ["none stated"],
+      "rule_locus": "national statute"
+    }
+  },
+  "LR|Liberia": {
+    "identificationCriteria": {
+      "threshold_basis": "listed impairment category",
+      "bilingual_handling": "silent",
+      "decider": "multidisciplinary team",
+      "exclusions": ["none stated"],
+      "rule_locus": "national, non-binding"
+    }
+  },
+  "NG|Nigeria": {
+    "identificationCriteria": {
+      "threshold_basis": "listed impairment category",
+      "bilingual_handling": "silent",
+      "decider": "multidisciplinary team",
+      "exclusions": ["none stated"],
+      "rule_locus": "national, non-binding"
+    }
+  },
+  "PS|Palestine": {
+    "identificationCriteria": {
+      "threshold_basis": "educational need",
+      "bilingual_handling": "silent",
+      "decider": "multidisciplinary team",
+      "exclusions": ["none stated"],
+      "rule_locus": "national, non-binding"
+    }
+  },
+  "SV|El Salvador": {
+    "identificationCriteria": {
+      "threshold_basis": "educational need",
+      "bilingual_handling": "silent",
+      "decider": "educational psychology service",
+      "exclusions": ["none stated"],
+      "rule_locus": "not stated"
+    }
+  },
+  "ZA|South Africa": {
+    "identificationCriteria": {
+      "threshold_basis": "educational need",
+      "bilingual_handling": "silent",
+      "decider": "multidisciplinary team",
+      "exclusions": ["none stated"],
+      "rule_locus": "national rule, local application"
+    }
+  }
+}

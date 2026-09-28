@@ -3826,6 +3826,11 @@
     "family": "none in use",
     "minority_framing": "not stated",
     "fixed_in": "not stated"
+   },
+   "taughtAsSubject": {
+    "status": "extracurricular only",
+    "object": "the language",
+    "stages": "all primary"
    }
   }
  },
@@ -3921,7 +3926,23 @@
      ],
      "operation": "plan or strategy issued"
     }
-   ]
+   ],
+   "taughtAsSubject": {
+    "status": "not taught",
+    "object": "not stated",
+    "stages": "not stated"
+   },
+   "standing": {
+    "status": "none",
+    "source": "none",
+    "force": "none",
+    "extent": "not stated"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   }
   },
   "slots": {
    "standing": [
@@ -5542,6 +5563,19 @@
     3,
     4
    ]
+  },
+  "coding": {
+   "standing": {
+    "status": "named in policy only",
+    "source": "policy",
+    "force": "duty to promote",
+    "extent": "nationwide"
+   },
+   "mediumOfInstruction": {
+    "role": "not a medium",
+    "reach": "not stated",
+    "secured_by": "none"
+   }
   }
  },
  {
@@ -20079,6 +20113,11 @@
     "family": "functional description (no single term)",
     "minority_framing": "not stated",
     "fixed_in": "in statute"
+   },
+   "taughtAsSubject": {
+    "status": "not taught",
+    "object": "not stated",
+    "stages": "not stated"
    }
   },
   "slots": {
@@ -34661,6 +34700,11 @@
     "activity": "materials",
     "status": "proposed or draft",
     "funding": "not stated"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "language and culture together",
+    "stages": "into secondary"
    }
   },
   "slots": {
@@ -34980,6 +35024,11 @@
     ],
     "status": "established",
     "funding": "not stated"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "the language",
+    "stages": "all primary"
    }
   },
   "slots": {
@@ -37107,6 +37156,11 @@
     ],
     "status": "proposed or draft",
     "funding": "not stated"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "the language",
+    "stages": "all primary"
    }
   },
   "slots": {
@@ -37749,6 +37803,11 @@
     ],
     "status": "established",
     "funding": "donor or NGO"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "the language",
+    "stages": "into secondary"
    }
   },
   "slots": {
@@ -44635,6 +44694,12 @@
     ],
     "status": "established",
     "funding": "not stated"
+   },
+   "standing": {
+    "status": "none",
+    "source": "none",
+    "force": "none",
+    "extent": "not stated"
    }
   }
  },
@@ -44865,6 +44930,11 @@
     "activity": "standardisation",
     "status": "established",
     "funding": "not stated"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory for all",
+    "object": "language and culture together",
+    "stages": "all primary"
    }
   },
   "slots": {
@@ -46049,6 +46119,12 @@
     "activity": "standardisation",
     "status": "established",
     "funding": "donor or NGO"
+   },
+   "standing": {
+    "status": "none",
+    "source": "none",
+    "force": "none",
+    "extent": "not stated"
    }
   },
   "slots": {
@@ -55926,6 +56002,12 @@
     "activity": "teaching in school",
     "status": "established",
     "funding": "not stated"
+   },
+   "standing": {
+    "status": "official",
+    "source": "decree",
+    "force": "duty to promote",
+    "extent": "nationwide"
    }
   },
   "absences": {
@@ -56046,6 +56128,12 @@
     ],
     "status": "established",
     "funding": "not stated"
+   },
+   "standing": {
+    "status": "none",
+    "source": "none",
+    "force": "none",
+    "extent": "not stated"
    }
   }
  },
@@ -57838,6 +57926,11 @@
     ],
     "status": "established",
     "funding": "not stated"
+   },
+   "taughtAsSubject": {
+    "status": "compulsory in some schools or areas",
+    "object": "the language",
+    "stages": "into secondary"
    }
   },
   "slots": {
