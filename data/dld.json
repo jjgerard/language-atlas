@@ -30920,7 +30920,7 @@
   "legalEntitlement": "Chief Education Officer \"shall provide special education programmes\", s.82(1)\nAct allows a council on special education to be established, Art. 85",
   "funding": "IEP cost is \"apportioned between\" the parent or adult student and the Ministry, Art. 82.4\nManner of apportionment left to regulations",
   "workforce": "The Act names no therapist or other support professional\nSector plan finds training opportunities for special needs staff insufficient",
-  "dischargeCriteria": "Not established from the sources consulted for this entry — no exit or discharge rule located in Act or sector plan. If you work in this system, this is exactly the field to fill in.",
+  "dischargeCriteria": "Education Act 2005 sets no exit or discharge rule for a special education programme\nIts only termination clause, s.81, ends a home education programme, not special education\nThe entitlement at s.82(1) is bounded to students of compulsory school age",
   "outcomesEvidence": "Sector plan calls the EMIS \"underdeveloped and underutilized\"\nNo outcome data on speech and language therapy located",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -31038,6 +31038,13 @@
     "label": "communication needs",
     "standing": "in statute"
    }
+  },
+  "slots": {
+   "dischargeCriteria": [
+    1,
+    1,
+    4
+   ]
   }
  },
  {
@@ -48839,14 +48846,14 @@
   "source": "seed",
   "terminology": "Statute's words are \"deaf, mute, blind, retarded or otherwise handicapped\", s.6(2)\nAct uses \"speech\" zero times, sanity word school=433\n\"Speech and language impairments\" appears only in the Ministry's service description\nMinister may define categories of children requiring special education by regulation",
   "identificationCriteria": "Categories and the mode of determining them are left entirely to regulations\nAct also lets regulations provide \"for the examination of children\" in a category\n2017-22 draft policy promises students will be \"properly diagnosed\"",
-  "assessments": "Not established from the sources consulted for this entry — no instrument named in the Act or in policy documents retrieved. If you work in this system, this is exactly the field to fill in.",
+  "assessments": "Education Act Chap. 39:01 names no assessment instrument and uses the word speech zero times\nIt leaves the mode of determining a category and the examination of children to Regulations\nPEER's policy statements promise diagnostic testing at primary level but name no test",
   "multilingualProvision": "Admission cannot be refused on account of the language of a child or parent, s.7\nSpanish, Hindi, Creole and French Patois are spoken alongside English\nDraft policy \"mentions multilingual education but there are no specific policies\"\nNo rule on assessing a Creole-speaking child against standard English",
   "referralPathway": "Student Support Services Division runs diagnostic assessment intervention units\nMultidisciplinary teams sit in each of the seven education district offices",
   "serviceModel": "Minister may establish a \"special school, class, clinic or service\", s.39(1)\nSpecial schools cater for speech and language impairments among other categories\nProvision split between private and publicly funded special schools\nInclusive School Project launched January 2020 in 21 schools across 7 districts",
   "legalEntitlement": "Act only permits special schools; it creates no individual entitlement\nAdmission cannot be refused on grounds of language, s.7",
   "funding": "Minister may recognise other special education services for financial assistance, s.40\nPublic special schools funded through Ministry of Education allocation",
   "workforce": "The Act names no therapist or support professional\nStudent Support Services Division deploys multidisciplinary specialist teams",
-  "dischargeCriteria": "Not established from the sources consulted for this entry — no exit or discharge rule located. If you work in this system, this is exactly the field to fill in.",
+  "dischargeCriteria": "Education Act Chap. 39:01 sets no rule ending a child's special education\nThe Act's only ending power is the Minister disestablishing a special school, class or service\nDischarge appears in the Act only at s.63, on a teacher discharging the duties of office",
   "outcomesEvidence": "\"There is no evidence of monitoring and reporting mechanisms for inclusive education\"",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -48996,6 +49003,18 @@
     "label": "language impairment or disorder, unqualified",
     "standing": "in professional use only"
    }
+  },
+  "slots": {
+   "assessments": [
+    1,
+    4,
+    1
+   ],
+   "dischargeCriteria": [
+    1,
+    2,
+    1
+   ]
   }
  },
  {

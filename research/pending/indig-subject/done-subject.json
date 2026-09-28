@@ -1,0 +1,359 @@
+{
+  "MW|Malawi": {
+    "fields": {
+      "taughtAsSubject": [
+        "All secondary schools teach Chichewa, alongside English and Mathematics",
+        "Chichewa sits in the core set of ten secondary subjects rather than among the electives",
+        "Chichewa is a primary subject area assessed at Standard 4 and at Standard 7",
+        "The 2008 PCAR primary curriculum emphasises literacy in English and Chichewa",
+        "The Education Act 2013 leaves the language of instruction to a ministerial Gazette notice"
+      ]
+    },
+    "slots": { "taughtAsSubject": [1, 2, 3, 3, 1] },
+    "evidence": [
+      {
+        "bullet": "All secondary schools teach Chichewa, alongside English and Mathematics",
+        "url": "https://www.unicef.org/malawi/media/4581/file/Malawi%20Education%20Sector%20Analysis.pdf",
+        "quote": "All schools teach Chichewa, English, and Mathematics"
+      },
+      {
+        "bullet": "Chichewa sits in the core set of ten secondary subjects rather than among the electives",
+        "url": "https://www.unicef.org/malawi/media/4581/file/Malawi%20Education%20Sector%20Analysis.pdf",
+        "quote": "There is a core set of 10 subjects, that is, Chichewa, English, Mathematics, chemistry, physics"
+      },
+      {
+        "bullet": "Chichewa is a primary subject area assessed at Standard 4 and at Standard 7",
+        "url": "https://www.unicef.org/malawi/media/4581/file/Malawi%20Education%20Sector%20Analysis.pdf",
+        "quote": "deteriorating average performance by students in all subject areas between Standard 4 and Standard 7 with the exception of Chichewa"
+      },
+      {
+        "bullet": "The 2008 PCAR primary curriculum emphasises literacy in English and Chichewa",
+        "url": "https://www.unicef.org/malawi/media/4581/file/Malawi%20Education%20Sector%20Analysis.pdf",
+        "quote": "OBE emphasizes literacy in English and Chichewa for academic work across the schooling experience"
+      },
+      {
+        "bullet": "The Education Act 2013 leaves the language of instruction to a ministerial Gazette notice",
+        "url": "https://media.malawilii.org/files/legislation/akn-mw-act-2013-21-eng-2014-12-31.pdf",
+        "quote": "the Minister may, by notice published in the Gazette prescribe the language of instruction in schools"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Education Act 2013 (Chapter 30:01), section 78 Language of instruction, consolidated to 31 December 2014 (MalawiLII / Laws.Africa)",
+        "url": "https://media.malawilii.org/files/legislation/akn-mw-act-2013-21-eng-2014-12-31.pdf"
+      },
+      {
+        "label": "Government of the Republic of Malawi, Malawi Education Sector Analysis (2019), primary and secondary curriculum and MLA 2015 sections",
+        "url": "https://www.unicef.org/malawi/media/4581/file/Malawi%20Education%20Sector%20Analysis.pdf"
+      }
+    ]
+  },
+
+  "ZM|Zambia": {
+    "fields": {
+      "taughtAsSubject": [
+        "Zambian Languages is offered as a core subject for all on the Academic Career Pathway",
+        "Junior secondary timetables it at 3hrs 20min a week, five periods",
+        "In the senior Technology curriculum Zambian Language is one of the optional subjects",
+        "At Grades 1 to 4 all learning areas are taught in familiar Zambian Languages",
+        "English remains the official medium of instruction from Grade 5 up to tertiary"
+      ]
+    },
+    "slots": { "taughtAsSubject": [2, 3, 2, 3, 3] },
+    "evidence": [
+      {
+        "bullet": "Zambian Languages is offered as a core subject for all on the Academic Career Pathway",
+        "url": "https://www.giakonda.org.uk/wp-content/uploads/2018/05/ZECF-FINAL-COPY.pdf",
+        "quote": "Zambian Languages shall be offered in the new curriculum as core subjects to be studied by all learners pursuing the Academic Career Pathway"
+      },
+      {
+        "bullet": "Junior secondary timetables it at 3hrs 20min a week, five periods",
+        "url": "https://www.giakonda.org.uk/wp-content/uploads/2018/05/ZECF-FINAL-COPY.pdf",
+        "quote": "3 Zambian Languages 3hrs 20min 5"
+      },
+      {
+        "bullet": "In the senior Technology curriculum Zambian Language is one of the optional subjects",
+        "url": "https://www.giakonda.org.uk/wp-content/uploads/2018/05/ZECF-FINAL-COPY.pdf",
+        "quote": "Compulsory Subjects Optional Subjects Any two Subjects from this group: i. Zambian Language"
+      },
+      {
+        "bullet": "At Grades 1 to 4 all learning areas are taught in familiar Zambian Languages",
+        "url": "https://www.giakonda.org.uk/wp-content/uploads/2018/05/ZECF-FINAL-COPY.pdf",
+        "quote": "All the teaching and learning in all the learning areas at the Lower Primary level will be in familiar Zambian Languages"
+      },
+      {
+        "bullet": "English remains the official medium of instruction from Grade 5 up to tertiary",
+        "url": "https://www.giakonda.org.uk/wp-content/uploads/2018/05/ZECF-FINAL-COPY.pdf",
+        "quote": "English will still remain as the official medium of instruction beginning at Grade 5 up to tertiary"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ministry of Education, Science, Vocational Training and Early Education, The Zambia Education Curriculum Framework 2013, Curriculum Development Centre, Lusaka",
+        "url": "https://www.giakonda.org.uk/wp-content/uploads/2018/05/ZECF-FINAL-COPY.pdf"
+      }
+    ]
+  },
+
+  "BA|Bosnia and Herzegovina": {
+    "fields": {
+      "taughtAsSubject": [
+        "Regional and minority languages are absent from primary, secondary and vocational education",
+        "Ministries must secure supplementary extra-curricular optional classes about the languages",
+        "Italian and Ukrainian run as optional classes two hours a week in a few Prnjavor schools",
+        "At secondary level such optional classes do not exist, the Committee of Experts records",
+        "Teaching about minority history and culture is still not part of the compulsory curricula"
+      ]
+    },
+    "slots": { "taughtAsSubject": [1, 2, 3, 3, 4] },
+    "evidence": [
+      {
+        "bullet": "Regional and minority languages are absent from primary, secondary and vocational education",
+        "url": "https://rm.coe.int/min-lang-2026-2-4th-ecrml-evaluation-repoort-on-bosnia-and-herzegovina/48802c7561",
+        "quote": "regional and minority languages are also absent from primary, secondary, as well as technical and vocational education"
+      },
+      {
+        "bullet": "Ministries must secure supplementary extra-curricular optional classes about the languages",
+        "url": "https://rm.coe.int/min-lang-2026-2-4th-ecrml-evaluation-repoort-on-bosnia-and-herzegovina/48802c7561",
+        "quote": "the ministries of education at all levels shall secure instruction about their languages, literature, history, and culture, if they so request, as supplementary (extra-curricular), so called \"optional\" classes"
+      },
+      {
+        "bullet": "Italian and Ukrainian run as optional classes two hours a week in a few Prnjavor schools",
+        "url": "https://rm.coe.int/min-lang-2026-2-4th-ecrml-evaluation-repoort-on-bosnia-and-herzegovina/48802c7561",
+        "quote": "teaching of Italian and Ukrainian is available in optional classes two hours a week in a few primary schools in Prnjavor"
+      },
+      {
+        "bullet": "At secondary level such optional classes do not exist, the Committee of Experts records",
+        "url": "https://rm.coe.int/min-lang-2026-2-4th-ecrml-evaluation-repoort-on-bosnia-and-herzegovina/48802c7561",
+        "quote": "When it comes to secondary education, such optional classes do not exist"
+      },
+      {
+        "bullet": "Teaching about minority history and culture is still not part of the compulsory curricula",
+        "url": "https://rm.coe.int/min-lang-2026-2-4th-ecrml-evaluation-repoort-on-bosnia-and-herzegovina/48802c7561",
+        "quote": "teaching about these is still not part of the compulsory curricula"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Council of Europe, Committee of Experts, Fourth evaluation report on Bosnia and Herzegovina under the European Charter for Regional or Minority Languages, MIN-LANG (2026) 2, education section paras 23-27",
+        "url": "https://rm.coe.int/min-lang-2026-2-4th-ecrml-evaluation-repoort-on-bosnia-and-herzegovina/48802c7561"
+      }
+    ]
+  },
+
+  "BE|Belgium — French Community (Wallonia-Brussels Federation)": {
+    "fields": {
+      "taughtAsSubject": [
+        "Regional languages reach classes through a funded animator programme open to every network",
+        "Any member of the teaching or educational staff may request an intervention",
+        "One intervention covers at most 8 course periods for a class, spread as the school chooses",
+        "Most resource people prefer primary, though the programme is not limited to it",
+        "The object is the regional language of the region where the school itself is situated"
+      ]
+    },
+    "slots": { "taughtAsSubject": [1, 2, 3, 3, 4] },
+    "evidence": [
+      {
+        "bullet": "Regional languages reach classes through a funded animator programme open to every network",
+        "url": "https://livre.cfwb.be/activites/activites-pour-les-ecoles/langues-et-cultures-regionales-en-classe/faq",
+        "quote": "Les animations sont accessibles à tout établissement appartenant à un réseau scolaire organisé ou subventionné par la Fédération Wallonie-Bruxelles"
+      },
+      {
+        "bullet": "Any member of the teaching or educational staff may request an intervention",
+        "url": "https://livre.cfwb.be/activites/activites-pour-les-ecoles/langues-et-cultures-regionales-en-classe/faq",
+        "quote": "La demande peut être introduite par n’importe quel membre du personnel enseignant ou éducatif"
+      },
+      {
+        "bullet": "One intervention covers at most 8 course periods for a class, spread as the school chooses",
+        "url": "https://livre.cfwb.be/activites/activites-pour-les-ecoles/langues-et-cultures-regionales-en-classe/faq",
+        "quote": "Une intervention en classe peut couvrir un maximum de 8 périodes de cours pour une classe"
+      },
+      {
+        "bullet": "Most resource people prefer primary, though the programme is not limited to it",
+        "url": "https://livre.cfwb.be/activites/activites-pour-les-ecoles/langues-et-cultures-regionales-en-classe/faq",
+        "quote": "la majorité de nos personnes-ressources expriment une préférence pour des interventions dans l’enseignement primaire"
+      },
+      {
+        "bullet": "The object is the regional language of the region where the school itself is situated",
+        "url": "https://livre.cfwb.be/activites/activites-pour-les-ecoles/langues-et-cultures-regionales-en-classe/faq",
+        "quote": "L’objet de ce programme-ci est la langue régionale pratiquée dans la région où est située l’école"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Fédération Wallonie-Bruxelles, Langues, Lettres & Livre, Langues et Cultures régionales en classe — FAQ",
+        "url": "https://livre.cfwb.be/activites/activites-pour-les-ecoles/langues-et-cultures-regionales-en-classe/faq"
+      }
+    ]
+  },
+
+  "LU|Luxembourg": {
+    "fields": {
+      "taughtAsSubject": [
+        "The national plan d'etudes carries German, French and Luxembourgish at cycles 2 to 4",
+        "Cycle 1 has its own domain, language and Luxembourgish with awakening to languages",
+        "Luxembourgish is the language of instruction at cycle 1 and German at cycles 2, 3 and 4",
+        "Cycle 4 work includes listening to extracts of Luxembourgish literature read aloud"
+      ]
+    },
+    "slots": { "taughtAsSubject": [1, 1, 3, 4] },
+    "evidence": [
+      {
+        "bullet": "The national plan d'etudes carries German, French and Luxembourgish at cycles 2 to 4",
+        "url": "https://men.public.lu/dam-assets/catalogue-publications/courriers-de-leducation-nationale/numeros-speciaux/plan-etudes-ecoles-fondamentale.pdf",
+        "quote": "Cycle 2 à 4 : L'alphabétisation Les langues allemande, française et luxembourgeoise"
+      },
+      {
+        "bullet": "Cycle 1 has its own domain, language and Luxembourgish with awakening to languages",
+        "url": "https://men.public.lu/dam-assets/catalogue-publications/courriers-de-leducation-nationale/numeros-speciaux/plan-etudes-ecoles-fondamentale.pdf",
+        "quote": "Le langage, la langue luxembourgeoise et l'éveil aux langues"
+      },
+      {
+        "bullet": "Luxembourgish is the language of instruction at cycle 1 and German at cycles 2, 3 and 4",
+        "url": "https://men.public.lu/dam-assets/catalogue-publications/courriers-de-leducation-nationale/numeros-speciaux/plan-etudes-ecoles-fondamentale.pdf",
+        "quote": "La langue d'enseignement est le luxembourgeois au cycle 1 et l'allemand aux cycles 2, 3 et 4"
+      },
+      {
+        "bullet": "Cycle 4 work includes listening to extracts of Luxembourgish literature read aloud",
+        "url": "https://men.public.lu/dam-assets/catalogue-publications/courriers-de-leducation-nationale/numeros-speciaux/plan-etudes-ecoles-fondamentale.pdf",
+        "quote": "Écouter des extraits de livres de la littérature luxembourgeoise lus à haute"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ministère de l'Éducation nationale, de l'Enfance et de la Jeunesse, Plan d'études — École fondamentale (règlement grand-ducal du 11 août 2011), domaines Langue luxembourgeoise cycles 1 à 4",
+        "url": "https://men.public.lu/dam-assets/catalogue-publications/courriers-de-leducation-nationale/numeros-speciaux/plan-etudes-ecoles-fondamentale.pdf"
+      }
+    ]
+  },
+
+  "SC|Seychelles": {
+    "fields": {
+      "taughtAsSubject": [
+        "All three national languages are taught as components of the Languages learning area",
+        "The framework specifies the essential learning areas of the national curriculum",
+        "From the beginning of Key Stage 2 (P3) English becomes the medium for certain subjects",
+        "The area carries literacy in Kreol and the literature associated with it"
+      ]
+    },
+    "slots": { "taughtAsSubject": [1, 2, 3, 4] },
+    "evidence": [
+      {
+        "bullet": "All three national languages are taught as components of the Languages learning area",
+        "url": "https://belombrepri.edu.sc/wp-content/uploads/2024/02/Seychelles-National-Curriculum-Framework-SR.pdf",
+        "quote": "all three languages are taught in the school curriculum as components of the Languages learning area"
+      },
+      {
+        "bullet": "The framework specifies the essential learning areas of the national curriculum",
+        "url": "https://belombrepri.edu.sc/wp-content/uploads/2024/02/Seychelles-National-Curriculum-Framework-SR.pdf",
+        "quote": "specifies the essential learning areas of the national curriculum"
+      },
+      {
+        "bullet": "From the beginning of Key Stage 2 (P3) English becomes the medium for certain subjects",
+        "url": "https://belombrepri.edu.sc/wp-content/uploads/2024/02/Seychelles-National-Curriculum-Framework-SR.pdf",
+        "quote": "From the beginning of Key Stage 2 (P3) English becomes the medium for certain subjects"
+      },
+      {
+        "bullet": "The area carries literacy in Kreol and the literature associated with it",
+        "url": "https://belombrepri.edu.sc/wp-content/uploads/2024/02/Seychelles-National-Curriculum-Framework-SR.pdf",
+        "quote": "Literacy in Kreol, English and French and the literature associated with them"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ministry of Education, The Seychelles National Curriculum Framework, Languages essential learning area",
+        "url": "https://belombrepri.edu.sc/wp-content/uploads/2024/02/Seychelles-National-Curriculum-Framework-SR.pdf"
+      }
+    ]
+  },
+
+  "LS|Lesotho": {
+    "fields": {
+      "taughtAsSubject": [
+        "Sesotho is a syllabus subject whose study develops understanding of the language's structure",
+        "The Curriculum and Assessment Policy 2009 makes Sesotho a compulsory secondary subject",
+        "It sits in the Linguistic and literary learning area with English and other languages",
+        "ECoL recommends four guided hours a week, six periods of 40 minutes, over two years",
+        "Paper 3 examines Sesotho literature and culture, not the language alone"
+      ]
+    },
+    "slots": { "taughtAsSubject": [1, 2, 1, 3, 4] },
+    "evidence": [
+      {
+        "bullet": "Sesotho is a syllabus subject whose study develops understanding of the language's structure",
+        "url": "https://skulchat.com/lecture/online/files/6533-Sesotho%20Syllabus.pdf",
+        "quote": "The study of Sesotho develops an understanding of the structure of the Sesotho language"
+      },
+      {
+        "bullet": "The Curriculum and Assessment Policy 2009 makes Sesotho a compulsory secondary subject",
+        "url": "https://files.eric.ed.gov/fulltext/EJ1134907.pdf",
+        "quote": "the core curriculum, consisting of Sesotho, English, Mathematics, Life Skills, Science and any other subject from the Creative and Entrepreneurial learning area, as compulsory subjects for secondary education"
+      },
+      {
+        "bullet": "It sits in the Linguistic and literary learning area with English and other languages",
+        "url": "https://files.eric.ed.gov/fulltext/EJ1134907.pdf",
+        "quote": "Linguistic and literary  Sesotho, English, Art & Crafts, Drama, Music and other languages"
+      },
+      {
+        "bullet": "ECoL recommends four guided hours a week, six periods of 40 minutes, over two years",
+        "url": "https://skulchat.com/lecture/online/files/6533-Sesotho%20Syllabus.pdf",
+        "quote": "candidates should have 4 hours guided hours per week (6 periods of 40 minutes each per week) for 2 years"
+      },
+      {
+        "bullet": "Paper 3 examines Sesotho literature and culture, not the language alone",
+        "url": "https://skulchat.com/lecture/online/files/6533-Sesotho%20Syllabus.pdf",
+        "quote": "PAPER 3: SESOTHO LITERATURE AND CULTURE"
+      }
+    ],
+    "sources": [
+      {
+        "label": "National Curriculum Development Centre with the Examinations Council of Lesotho, Lesotho General Certificate of Secondary Education Syllabus: Sesotho 0176, for examination in November 2020",
+        "url": "https://skulchat.com/lecture/online/files/6533-Sesotho%20Syllabus.pdf"
+      },
+      {
+        "label": "Raselimo and Mahao, The Lesotho curriculum and assessment policy: opportunities and threats, South African Journal of Education 35(1) 2015, Table 1 reproducing the MoET 2009 secondary curriculum structure",
+        "url": "https://files.eric.ed.gov/fulltext/EJ1134907.pdf"
+      }
+    ]
+  },
+
+  "MR|Mauritania": {
+    "fields": {
+      "taughtAsSubject": [
+        "The 2022 education law extends teaching in the national languages poular, soninke and wolof",
+        "They are carried both as languages of communication and as languages of instruction",
+        "Every child whose mother tongue is Arabic must learn at least one of the three",
+        "At primary each child studies the scientific disciplines in his or her mother tongue"
+      ]
+    },
+    "slots": { "taughtAsSubject": [1, 1, 2, 3] },
+    "evidence": [
+      {
+        "bullet": "The 2022 education law extends teaching in the national languages poular, soninke and wolof",
+        "url": "https://www.axl.cefan.ulaval.ca/afrique/mauritanie-loi-2022-023-educ.htm",
+        "quote": "de promouvoir et d'etendre l'enseignement dans les autres langues nationales, poular"
+      },
+      {
+        "bullet": "They are carried both as languages of communication and as languages of instruction",
+        "url": "https://www.axl.cefan.ulaval.ca/afrique/mauritanie-loi-2022-023-educ.htm",
+        "quote": "comme langues de communication et comme langues d'enseignement"
+      },
+      {
+        "bullet": "Every child whose mother tongue is Arabic must learn at least one of the three",
+        "url": "https://www.axl.cefan.ulaval.ca/afrique/mauritanie-loi-2022-023-educ.htm",
+        "quote": "Tout enfant de langue maternelle arabe doit apprendre au moins l'une des trois langues nationales"
+      },
+      {
+        "bullet": "At primary each child studies the scientific disciplines in his or her mother tongue",
+        "url": "https://www.axl.cefan.ulaval.ca/afrique/mauritanie-loi-2022-023-educ.htm",
+        "quote": "Au niveau du primaire, chaque enfant mauritanien effectue l'apprentissage des disciplines scientifiques dans sa langue maternelle"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Loi n° 2022-023 portant orientation du système éducatif national (Mauritanie), articles 5 et 65, texte reproduit par L'aménagement linguistique dans le monde, Université Laval",
+        "url": "https://www.axl.cefan.ulaval.ca/afrique/mauritanie-loi-2022-023-educ.htm"
+      }
+    ]
+  }
+}

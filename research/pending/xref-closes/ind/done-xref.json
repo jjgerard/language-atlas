@@ -1,0 +1,216 @@
+{
+ "BB|Barbados": {
+  "fields": {
+   "standing": [
+    "Education Act Cap. 41 gives the vernacular no standing and no language-promotion clause",
+    "Its only three uses of language are offences of abusive language to teachers and officers",
+    "PEER's language section records only conversational Spanish in primary, a foreign language"
+   ],
+   "mediumOfInstruction": [
+    "Education Act Cap. 41 has no medium-of-instruction clause; curriculum is left to regulations",
+    "Its three uses of language are all offence provisions about abusive language to staff",
+    "PEER names no language of instruction; its only entry is primary conversational Spanish"
+   ],
+   "taughtAsSubject": [
+    "Education Act Cap. 41 names no language as a subject; subjects are left to regulations",
+    "The Act's three uses of language are offence provisions, not curriculum",
+    "PEER records only a conversational Spanish programme in primary schools, since 1997"
+   ]
+  },
+  "slots": {
+   "standing": [1, 2, 1],
+   "mediumOfInstruction": [1, 1, 1],
+   "taughtAsSubject": [1, 1, 1]
+  },
+  "evidence": [
+   {
+    "bullet": "Education Act Cap. 41 gives the vernacular no standing and no language-promotion clause",
+    "url": "https://barbadosparliament-laws.com/uploads/Barbados-cs/Education.pdf",
+    "quote": "provide for a co-ordinated and effective system of education related to the needs of the people of Barbados"
+   },
+   {
+    "bullet": "Its only three uses of language are offences of abusive language to teachers and officers",
+    "url": "https://barbadosparliament-laws.com/uploads/Barbados-cs/Education.pdf",
+    "quote": "assaults, obstructs, or uses insulting, abusive or indecent language to"
+   },
+   {
+    "bullet": "PEER's language section records only conversational Spanish in primary, a foreign language",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/barbados/~inclusion",
+    "quote": "Since 1997, Barbados has had a programme for conversational Spanish in primary schools"
+   },
+   {
+    "bullet": "Education Act Cap. 41 has no medium-of-instruction clause; curriculum is left to regulations",
+    "url": "https://barbadosparliament-laws.com/uploads/Barbados-cs/Education.pdf",
+    "quote": "specifying, in respect of public educational institutions, the curriculum of study to be followed and the examinations to be taken by pupils"
+   },
+   {
+    "bullet": "Its three uses of language are all offence provisions about abusive language to staff",
+    "url": "https://barbadosparliament-laws.com/uploads/Barbados-cs/Education.pdf",
+    "quote": "uses insulting, abusive or indecent language to a teacher carrying out or attempting to carry out a search"
+   },
+   {
+    "bullet": "PEER names no language of instruction; its only entry is primary conversational Spanish",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/barbados/~inclusion",
+    "quote": "The major objective of the programme is to stimulate the teaching of language as a foreign language"
+   },
+   {
+    "bullet": "Education Act Cap. 41 names no language as a subject; subjects are left to regulations",
+    "url": "https://barbadosparliament-laws.com/uploads/Barbados-cs/Education.pdf",
+    "quote": "specifying, in respect of public educational institutions, the curriculum of study to be followed"
+   },
+   {
+    "bullet": "The Act's three uses of language are offence provisions, not curriculum",
+    "url": "https://barbadosparliament-laws.com/uploads/Barbados-cs/Education.pdf",
+    "quote": "uses insulting, abusive or indecent language to a principal, deputy principal or teacher carrying out a search"
+   },
+   {
+    "bullet": "PEER records only a conversational Spanish programme in primary schools, since 1997",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/barbados/~inclusion",
+    "quote": "The 2002-12 education strategic plan promoted the introduction of a Spanish awareness programme in the curriculum of primary schools"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Barbados, Education Act, Cap. 41 (L.R.O. 2002 consolidation) — long title, the Minister's regulation-making power over the curriculum of study, and ss. 62 and the search provisions, the Act's only three uses of the word language",
+    "url": "https://barbadosparliament-laws.com/uploads/Barbados-cs/Education.pdf"
+   }
+  ]
+ },
+ "GD|Grenada": {
+  "fields": {
+   "taughtAsSubject": [
+    "Education Act Cap. 86 names no language as a school subject at any level",
+    "It leaves core and foundation subjects to a national curriculum the Minister must establish",
+    "Its only language clause is goal (g), on the history, language and culture of Grenadians"
+   ]
+  },
+  "slots": {
+   "taughtAsSubject": [1, 1, 4]
+  },
+  "evidence": [
+   {
+    "bullet": "Education Act Cap. 86 names no language as a school subject at any level",
+    "url": "https://grenadaparliament.gd/wp-content/uploads/2021/08/Cap86-EDUCATION-ACT.pdf",
+    "quote": "The curriculum for every educational institution must include core and foundation subjects"
+   },
+   {
+    "bullet": "It leaves core and foundation subjects to a national curriculum the Minister must establish",
+    "url": "https://grenadaparliament.gd/wp-content/uploads/2021/08/Cap86-EDUCATION-ACT.pdf",
+    "quote": "The Minister must establish a national curriculum for all educational institutions"
+   },
+   {
+    "bullet": "Its only language clause is goal (g), on the history, language and culture of Grenadians",
+    "url": "https://grenadaparliament.gd/wp-content/uploads/2021/08/Cap86-EDUCATION-ACT.pdf",
+    "quote": "to promote knowledge and understanding of the history, language, culture, rights and values of Grenadians"
+   }
+  ]
+ },
+ "VC|Saint Vincent and the Grenadines": {
+  "fields": {
+   "standing": [
+    "The Education Act 2006 gives no language a standing of its own",
+    "It names language only at goal (g), on understanding Vincentian history and culture",
+    "PEER cites the EFA 2015 review: no distinct ethnic minorities despite a heterogeneous population"
+   ]
+  },
+  "slots": {
+   "standing": [1, 2, 1]
+  },
+  "evidence": [
+   {
+    "bullet": "The Education Act 2006 gives no language a standing of its own",
+    "url": "https://education.gov.vc/education/images/PDF/education_act_2006.pdf",
+    "quote": "The Minister shall, subject to the resources of the State, establish and pursue for the education system general and specific goals and objectives"
+   },
+   {
+    "bullet": "It names language only at goal (g), on understanding Vincentian history and culture",
+    "url": "https://education.gov.vc/education/images/PDF/education_act_2006.pdf",
+    "quote": "to promote knowledge and understanding of the history, language, culture, rights and values of Saint Vincent and the Grenadines"
+   },
+   {
+    "bullet": "PEER cites the EFA 2015 review: no distinct ethnic minorities despite a heterogeneous population",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/saint-vincent-and-the-grenadines/~inclusion",
+    "quote": "There are no distinct ethnic minorities despite the heterogeneity of the population"
+   }
+  ]
+ },
+ "TT|Trinidad and Tobago": {
+  "fields": {
+   "assessments": [
+    "Education Act Chap. 39:01 names no assessment instrument and uses the word speech zero times",
+    "It leaves the mode of determining a category and the examination of children to Regulations",
+    "PEER's policy statements promise diagnostic testing at primary level but name no test"
+   ],
+   "dischargeCriteria": [
+    "Education Act Chap. 39:01 sets no rule ending a child's special education",
+    "The Act's only ending power is the Minister disestablishing a special school, class or service",
+    "Discharge appears in the Act only at s.63, on a teacher discharging the duties of office"
+   ]
+  },
+  "slots": {
+   "assessments": [1, 4, 1],
+   "dischargeCriteria": [1, 2, 1]
+  },
+  "evidence": [
+   {
+    "bullet": "Education Act Chap. 39:01 names no assessment instrument and uses the word speech zero times",
+    "url": "https://rgd.legalaffairs.gov.tt/laws2/alphabetical_list/lawspdfs/39.01.pdf",
+    "quote": "defining the categories of children requiring special education, providing for the mode of determining which children come within any category"
+   },
+   {
+    "bullet": "It leaves the mode of determining a category and the examination of children to Regulations",
+    "url": "https://rgd.legalaffairs.gov.tt/laws2/alphabetical_list/lawspdfs/39.01.pdf",
+    "quote": "for the examination of children who come within that category"
+   },
+   {
+    "bullet": "PEER's policy statements promise diagnostic testing at primary level but name no test",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/trinidad-and-tobago/~inclusion",
+    "quote": "Continuing to facilitate diagnostic testing at the primary level to ensure that students receive requisite, prompt remedial interventions"
+   },
+   {
+    "bullet": "Education Act Chap. 39:01 sets no rule ending a child's special education",
+    "url": "https://rgd.legalaffairs.gov.tt/laws2/alphabetical_list/lawspdfs/39.01.pdf",
+    "quote": "cause to be established or authorise the establishment of, any special school, class, clinic or service"
+   },
+   {
+    "bullet": "The Act's only ending power is the Minister disestablishing a special school, class or service",
+    "url": "https://rgd.legalaffairs.gov.tt/laws2/alphabetical_list/lawspdfs/39.01.pdf",
+    "quote": "The Minister may after consultation with the controlling authority disestablish any special school, class, clinic or service"
+   },
+   {
+    "bullet": "Discharge appears in the Act only at s.63, on a teacher discharging the duties of office",
+    "url": "https://rgd.legalaffairs.gov.tt/laws2/alphabetical_list/lawspdfs/39.01.pdf",
+    "quote": "A teacher shall effectively and conscientiously discharge the duties of the office to which he is appointed"
+   }
+  ]
+ },
+ "KN|Saint Kitts and Nevis": {
+  "fields": {
+   "dischargeCriteria": [
+    "Education Act 2005 sets no exit or discharge rule for a special education programme",
+    "Its only termination clause, s.81, ends a home education programme, not special education",
+    "The entitlement at s.82(1) is bounded to students of compulsory school age"
+   ]
+  },
+  "slots": {
+   "dischargeCriteria": [1, 1, 4]
+  },
+  "evidence": [
+   {
+    "bullet": "Education Act 2005 sets no exit or discharge rule for a special education programme",
+    "url": "https://education.gov.kn/wp-content/uploads/2022/11/The-Education-Act-2005.pdf",
+    "quote": "A student who is entitled to a special education programme shall have the programme delivered in the least restrictive and most enabling environment"
+   },
+   {
+    "bullet": "Its only termination clause, s.81, ends a home education programme, not special education",
+    "url": "https://education.gov.kn/wp-content/uploads/2022/11/The-Education-Act-2005.pdf",
+    "quote": "the Chief Education Officer shall, in writing, terminate the home education programme"
+   },
+   {
+    "bullet": "The entitlement at s.82(1) is bounded to students of compulsory school age",
+    "url": "https://education.gov.kn/wp-content/uploads/2022/11/The-Education-Act-2005.pdf",
+    "quote": "shall provide special education programmes for students of compulsory school age"
+   }
+  ]
+ }
+}
