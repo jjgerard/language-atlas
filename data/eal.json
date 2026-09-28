@@ -18894,7 +18894,7 @@
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Not established from the sources consulted. The UNESCO PEER inclusion profile for the DPRK, read in full, contains no occurrence of \"minority\", \"ethnic\", \"foreign\", \"refugee\", \"migrant\" or \"language of instruction\" anywhere in the document; its entire inclusion content concerns disability, and \"Korean\" appears only in institution names. The 2016 Socialist Constitution's language provisions (Arts. 54 and 159) concern protecting the Korean language and the language of court proceedings, not schooling. Searched: PEER DPRK inclusion profile, Constitute Project text of the Socialist Constitution, UNESCO UIS country pages (uis.unesco.org/en/country/kp redirects to a generic landing page and does not resolve to a DPRK profile), and UNESDOC. Not asserted either way. Both education laws have since been read in full from the ROK 통일법제 database: the Education Law (교육법, SPA Presidium Decree 847 of 1999, as amended to 2015) and the General Education Law (보통교육법, Decree 1355 of 2011, as amended to 2015). Across both, 외국인, 언어, 조선어, 소수, 귀국, 재외, 편입 and 전학 return zero occurrences; 외국 appears once, as 외국어, a school subject. The only pupil categories either law creates are the universal duty on local people's committees to identify and enrol every child of school age, and provision for children in deep mountains, remote islands and with disabilities. The single non-discrimination clause is on sex.",
+  "newcomerCriteria": "No newcomer or second-language category exists, and no provision for one either\nBoth education laws read in full: 외국인, 언어, 조선어, 소수, 귀국, 재외, 편입 and 전학 all return zero\n외국 appears once across both, as 외국어, a school subject at art. 40 of the 2011 law\nThe only pupil categories are universal enrolment and children in remote areas or with disabilities\nPEER, the 2016 Constitution arts 54 and 159, UIS and UNESDOC were searched earlier and record nothing",
   "removalCriteria": "",
   "newcomerProportion": [],
   "achievementGap": "",
@@ -18902,7 +18902,19 @@
   "l1Support": "Not established from the sources consulted. No source retrieved in this session records any provision in a pupil's home language other than Korean in DPRK schools, nor any recognised linguistic minority in education policy. The PEER DPRK inclusion profile has no ethnic or linguistic minority section, unlike the other nine profiles consulted in this batch, which all do. Searched: PEER DPRK inclusion profile, Constitute Project constitutional text, UNESCO UIS, UNESDOC. Not asserted either way. Both DPRK education laws have since been read in full from the ROK 통일법제 database — the Education Law (교육법, SPA Presidium Decree 847 of 1999 as amended to 2015) and the General Education Law (보통교육법, Decree 1355 of 2011 as amended to 2015). Neither recognises a linguistic minority: 소수, 외국인, 귀국 and 재외 all return zero across both laws, and 민족 appears only at art. 10 of the Education Law, upholding national education for overseas Korean compatriots — abroad, not pupils inside the DPRK. The only non-discrimination clause in either law is on sex.",
   "l3Support": "",
   "bilingualEducationNotes": "Not established from the sources consulted. No source retrieved in this session describes any programme in the DPRK teaching content through two languages. Searched: PEER DPRK inclusion profile, Constitute Project text of the 2016 Socialist Constitution, UNESCO UIS and UNESDOC. Not asserted either way. Both DPRK education laws have since been read in full from the ROK 통일법제 database — the Education Law (교육법, SPA Presidium Decree 847 of 1999 as amended to 2015) and the General Education Law (보통교육법, Decree 1355 of 2011 as amended to 2015). Neither describes teaching content through two languages: 조선어 and 언어 return zero occurrences across both, and the single occurrence of 외국 is 외국어, foreign language as a school subject at art. 40 of the General Education Law.",
-  "policyHistory": []
+  "policyHistory": [],
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "newcomerCriteria": true
+  }
  },
  {
   "countryCode": "KR",
