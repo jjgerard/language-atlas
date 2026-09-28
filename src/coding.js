@@ -2276,6 +2276,14 @@ const VALUE_LABELS = {
   // The cost of the shorter label is that a reader can no longer tell those 17
   // from the binding national values beside them in the key.
   'national, non-binding': 'national',
+  // "none established" reads as "nobody established anything" -- a gap -- and
+  // it means the exact opposite: somebody looked and there is none. It sat in
+  // the key one row above "not said in the entry", which IS the gap, and the
+  // two were being read as the same thing. All eleven columns that carry it
+  // gloss it identically ("Checked, and no sector provides it", "Checked, and
+  // the system sets no exit rule of any kind", "Somebody looked and there is
+  // no outcome data of any kind"), so one global label is right; 276 cells.
+  'none established': 'checked, and there is none',
 };
 
 // LABELS THAT ARE ONLY RIGHT IN ONE COLUMN. `none in use` is stored in 72
