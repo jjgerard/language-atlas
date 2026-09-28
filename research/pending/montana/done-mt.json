@@ -1,0 +1,41 @@
+{
+  "US|Montana": {
+    "fields": {
+      "newcomerCriteria": [
+        "A language other than English on the Home Language Survey starts identification",
+        "An educator noticing a language of impact starts it equally, without a survey",
+        "The WIDA Screener, Screener for Kindergarten or Alternate Screener is then given",
+        "A transfer already identified in another Montana school skips the Screener for ACCESS",
+        "The district identifies the pupil where the Screener is not proficient under state guidance"
+      ]
+    },
+    "slots": { "newcomerCriteria": [2, 2, 2, 3, 4] },
+    "evidence": [
+      {
+        "bullet": "A language other than English on the Home Language Survey starts identification",
+        "url": "https://wida.wisc.edu/sites/default/files/id-placement/MT-ID-Placement-Guidance.pdf",
+        "quote": "a language other than English is indicated on the Home Language Survey"
+      },
+      {
+        "bullet": "An educator noticing a language of impact starts it equally, without a survey",
+        "url": "https://wida.wisc.edu/sites/default/files/id-placement/MT-ID-Placement-Guidance.pdf",
+        "quote": "or an educator notices that there may be a language of impact"
+      },
+      {
+        "bullet": "The WIDA Screener, Screener for Kindergarten or Alternate Screener is then given",
+        "url": "https://wida.wisc.edu/sites/default/files/id-placement/MT-ID-Placement-Guidance.pdf",
+        "quote": "WIDA Screener, WIDA Screener for Kindergarten, or WIDA Alternate Screener is administered"
+      },
+      {
+        "bullet": "A transfer already identified in another Montana school skips the Screener for ACCESS",
+        "url": "https://wida.wisc.edu/sites/default/files/id-placement/MT-ID-Placement-Guidance.pdf",
+        "quote": "the student will not take the WIDA Screener but will take the WIDA ACCESS"
+      },
+      {
+        "bullet": "The district identifies the pupil where the Screener is not proficient under state guidance",
+        "url": "https://wida.wisc.edu/sites/default/files/id-placement/MT-ID-Placement-Guidance.pdf",
+        "quote": "If student does not score proficient as defined in Montana's English Learner Guidance for School Districts, the district identifies the student as an EL"
+      }
+    ]
+  }
+}

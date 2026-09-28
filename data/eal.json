@@ -32351,7 +32351,7 @@
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "A no-opt-out state for statewide assessment, though services may be declined",
+  "newcomerCriteria": "A language other than English on the Home Language Survey starts identification\nAn educator noticing a language of impact starts it equally, without a survey\nThe WIDA Screener, Screener for Kindergarten or Alternate Screener is then given\nA transfer already identified in another Montana school skips the Screener for ACCESS\nThe district identifies the pupil where the Screener is not proficient under state guidance",
   "removalCriteria": "Exit threshold: WIDA ACCESS overall composite of at least 4.7\nAlternate ACCESS proficiency is an overall composite P2 or higher\nThis threshold has moved: the 2018 plan required 5.0 plus 4.0 in every domain",
   "newcomerProportion": [],
   "achievementGap": "",
@@ -32367,7 +32367,13 @@
   ],
   "coding": {
    "newcomerCriteria": {
-    "rule_locus": "national framework, sub-national rules"
+    "rule_locus": "national framework, sub-national rules",
+    "designation": "named category",
+    "triggers": [
+     "home language",
+     "tested proficiency"
+    ],
+    "decided_by": "school"
    },
    "removalCriteria": {
     "exit_mechanism": [
@@ -32405,6 +32411,15 @@
     "for_whom": "not stated",
     "evidence_type": "policy"
    }
+  },
+  "slots": {
+   "newcomerCriteria": [
+    2,
+    2,
+    2,
+    3,
+    4
+   ]
   }
  },
  {
