@@ -1,0 +1,779 @@
+# 88 entry-fields to grade, over 3 field(s)
+# Grade each A (a source states the absence), B (a search came up empty)
+# or C (the prose says neither and the source must be re-read).
+
+=== AE|United Arab Emirates   indigenous.taughtAsSubject
+    coded: status = not taught
+    | Private schools must offer Arabic as a second language among their core programmes
+    | Those are special classes for non-Arabic speakers, beside Islamic and social studies
+    src https://uaelegislation.gov.ae/en/legislations/1000/download
+    src https://uaelegislation.gov.ae/ar/legislations/1000/download
+    src https://u.ae/en/information-and-services/education/school-education-k-12/curricula-and-language-of-instruction-
+    src https://abudhabiculture.ae/en/cultural-programmes/cultural-platforms/abu-dhabi-arabic-language-centre
+
+=== BA|Bosnia and Herzegovina   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Neither officially recognised nor named in steering documents
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf
+    src https://rm.coe.int/min-lang-2026-2-4th-ecrml-evaluation-repoort-on-bosnia-and-herzegovina/48802c7561
+
+=== BA|Bosnia and Herzegovina   indigenous.localTerm
+    coded: family = none in use
+    | No regional or minority language category is in use
+    | Bosnian, Croatian and Serbian are all three state languages, Eurydice Fig. A1
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf
+    src https://rm.coe.int/min-lang-2026-2-4th-ecrml-evaluation-repoort-on-bosnia-and-herzegovina/48802c7561
+
+=== BE|Belgium — French Community (Wallonia-Brussels Federation)   indigenous.standing   (sub-national)
+    coded: status = none; source = none; force = none
+    | Neither officially recognised nor named in steering documents
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://publications.europa.eu/resource/cellar/e0f69418-d915-11ed-a05c-01aa75ed71a1.0001.01/DOC_1
+    src https://livre.cfwb.be/activites/activites-pour-les-ecoles/langues-et-cultures-regionales-en-classe/faq
+
+=== BE|Belgium — French Community (Wallonia-Brussels Federation)   indigenous.localTerm   (sub-national)
+    coded: family = none in use
+    | No regional or minority language category is in use in the French Community
+    | German, French and Dutch are all three state languages, Eurydice Fig. A1
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://publications.europa.eu/resource/cellar/e0f69418-d915-11ed-a05c-01aa75ed71a1.0001.01/DOC_1
+    src https://livre.cfwb.be/activites/activites-pour-les-ecoles/langues-et-cultures-regionales-en-classe/faq
+
+=== BH|Bahrain   indigenous.taughtAsSubject
+    coded: status = not taught
+    | Arabic is a core subject through the whole of basic education
+    | Even private schools must use ministry-approved Arabic language curricula
+    src https://timss2023.org/wp-content/uploads/2024/10/Bahrain.pdf
+    src https://pirls2021.org/wp-content/uploads/2022/10/Bahrain.pdf
+    src https://education-profiles.org/northern-africa-and-western-asia/bahrain/~inclusion
+
+=== CA|Prince Edward Island   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Mi'kmaw LANGUAGE course appears in any Program of Studies
+    | MKS801A runs in pilot schools only, at senior high
+    | Grade 11 Mi'kmaw Studies was still under development in 2024-25
+    | About the community, not the language: MKS801A is a social studies course
+    src https://www.princeedwardisland.ca/sites/default/files/legislation/e-.02-education_act.pdf
+    src https://www.princeedwardisland.ca/sites/default/files/legislation/F-15-2-French%20Language%20Services%20Act.pdf
+    src https://www.princeedwardisland.ca/sites/default/files/feb2/DEEY%20-%20Senior%20High%20POS%20%202026-2027.pdf
+    src https://www.princeedwardisland.ca/sites/default/files/publications/intermediate_program_of_studies_and_authorized_materials.pdf
+
+=== CA|Quebec   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous language appears in the Regime pedagogique subject tables at all
+    | The compulsory second language is "francais ou anglais" at primary and both secondary cycles
+    | The only opening is art 23.1 local programmes of study offered as optional subjects
+    | Those are designed by the school, and carry credits only if approved as such
+    src https://cdn-contenu.quebec.ca/cdn-contenu/education/pfeq/primaire/programmes/PFEQ-anglais-langue-seconde-1er-cycle-primaire.pdf
+    src https://www.quebec.ca/en/education/preschool-elementary-and-secondary-schools/programs-training-evaluation/quebec-education-program/elementary/english-second-language
+    src https://web.archive.org/web/20260309210503/https://www.legisquebec.gouv.qc.ca/fr/document/rc/I-13.3,%20r.%208
+    src https://web.archive.org/web/20260411172545/https://www.legisquebec.gouv.qc.ca/fr/document/lc/C-11
+
+=== CN|Hainan   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | Schools in minority areas must run education activities on minority culture
+    | Colleges and vocational schools encouraged to open minority-culture majors and electives
+    | A 2017 report on the NPC site says 黎语 teaching is not in school classrooms
+    src http://www.npc.gov.cn/c2/c190/c1174/c1259/201905/t20190522_65643.html
+    src https://www.neac.gov.cn/seac/ztzl/lz/gk.shtml
+    src http://www.npc.gov.cn/npc/c2/c185/c12492/201905/t20190521_277602.html
+
+=== CZ|Czechia   indigenous.taughtAsSubject
+    coded: status = not taught
+    | German mostly sits in the foreign-language slot, extended teaching at some schools
+    | Romani is not taught as a separate subject in primary or secondary education
+    | Slovak is not taught as a subject in primary; the Committee says it should be
+    | Moravian Croatian absent from mainstream pre-school, primary and secondary teaching
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://eurydice.eacea.ec.europa.eu/eurypedia/czechia/teaching-and-learning-single-structure-education
+    src https://rm.coe.int/czechiaecrml5-en/1680afb27b
+
+=== DO|Dominican Republic   indigenous.taughtAsSubject
+    coded: status = not taught
+    | Haitian Creole is not taught as a subject at any stage
+    | The seven Haitian references teach ABOUT Haiti, as history content
+    | French is a foreign language in its own right, not a bridge to Kreyòl
+    src https://education-profiles.org/latin-america-and-the-caribbean/dominican-republic/~inclusion
+
+=== DO|Dominican Republic   indigenous.localTerm
+    coded: family = none in use
+    | No term for a minority or community language is in use
+    | "Lengua materna" appears only in generic graduate-profile wording
+    | Haitian Creole carries no curricular designation at all
+    src https://education-profiles.org/latin-america-and-the-caribbean/dominican-republic/~inclusion
+
+=== EE|Estonia   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Neither officially recognised nor named in steering documents
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://wi.ee/et/instituudist/
+    src https://wi.ee/et/voru-keele-ja-kultuuri-opetamine/
+
+=== EE|Estonia   indigenous.taughtAsSubject
+    coded: status = not taught
+    | No top-level steering document names Russian as a subject to be provided
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://wi.ee/et/instituudist/
+    src https://wi.ee/et/voru-keele-ja-kultuuri-opetamine/
+
+=== GE|Georgia   indigenous.taughtAsSubject
+    coded: status = not taught
+    | The mandatory subject runs the other way: Georgian must be taught in minority-medium schools
+    | Art 4(3): teaching of the official language is mandatory in such institutions
+    | In Abkhazia, whichever official language is the medium, the other must also be taught
+    | Teach Georgian as a Second Language programme targets minority-populated regions
+    src https://matsne.gov.ge/ka/document/view/3285991
+    src https://matsne.gov.ge/ka/document/view/113476
+    src https://matsne.gov.ge/en/document/view/29248
+    src https://education-profiles.org/northern-africa-and-western-asia/georgia/~inclusion
+
+=== GQ|Equatorial Guinea   indigenous.taughtAsSubject
+    coded: status = not taught
+    | Spanish is a compulsory subject for students
+    | French's addition as a compulsory school language was seen as a threat to Spanish
+    | Attitude studies place indigenous languages in informal communication, not education
+    src https://education-profiles.org/sub-saharan-africa/equatorial-guinea/~inclusion
+    src https://www.cervantes.es/imagenes/file/biblioteca/situacion_espanol/guinea_ecuatorial_humanities.pdf
+
+=== GY|Guyana   indigenous.taughtAsSubject
+    coded: status = not taught
+    | Nothing timetabled is recorded, only support for projects such as the Macushi Language project
+    src https://education-profiles.org/latin-america-and-the-caribbean/guyana/~inclusion
+    src https://www.parliament.gov.gy/Constitution%20of%20the%20Cooperatiive%20Republic%20of%20Guyana.pdf
+    src https://parliament.gov.gy/documents/acts/4680-act_no_6_of_2006.pdf
+    src https://education.gov.gy/web2/index.php/other-resources/other-files/policy-documents/5784-education-sector-plan-esp-2021-2025/file
+
+=== IE|Ireland   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Neither officially recognised nor named in steering documents
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://assets.gov.ie/27471/6add2a93f75e40c19233c552f226bcac.pdf
+    src https://assets.gov.ie/static/documents/623b62e3-circular-00542022-.docx
+
+=== IN|Andaman and Nicobar Islands   indigenous.standing   (sub-national)
+    coded: status = none; source = none; force = none
+    | The UT told the CLM that no language is declared a minority language there
+    | It also reported no district with 15 pct minority speakers, though Bengali is 25.71 pct
+    | Provision exists in Bengali, Tamil and Telugu medium despite that declaration
+    | No academy, no promotion scheme and no monitoring machinery reported
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+    src https://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Gujarat   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | Only Hindi and English returned as subjects, at primary and upper primary
+    | No tribal language of Gujarat is listed as a subject anywhere in the return
+    | Nothing furnished on subjects at secondary or higher secondary stage
+    | Formula's first language: Gujarati, Hindi, Marathi, English or Urdu
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+    src https://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Puducherry   indigenous.standing   (sub-national)
+    coded: status = none; source = none; force = none
+    | Four official languages, but school boards are borrowed from three states
+    | As reported to the Commissioner in February 2016, not a questionnaire return
+    | CLM: the UT "needs to recognize the minority languages spoken in the UT regions"
+    | Bengali, French, Hindi, Kannada, Malayalam and Telugu speakers in Puducherry
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://web.archive.org/web/20180216025959/http://nclm.nic.in/shared/linkimages/NCLM51stReport.pdf
+    src https://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Rajasthan   indigenous.standing   (sub-national)
+    coded: status = none; source = none; force = none
+    | Official language Hindi, with English as additional official language
+    | Census-2001: Hindi 90.97%, Bhili 4.60%, Punjabi 2.01%, Urdu 1.17%
+    | 15% tehsil/municipality threshold areas were still not notified in 2014-15
+    | CLM asked the state to provide facilities for learning Bhili/Bhilodi
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://web.archive.org/web/20180216025959/http://nclm.nic.in/shared/linkimages/NCLM51stReport.pdf
+    src https://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Uttar Pradesh   indigenous.standing   (sub-national)
+    coded: status = none; source = none; force = none
+    | State says no language is declared a minority language in Uttar Pradesh
+    | Academies exist for Urdu, Sindhi and Punjabi despite the non-declaration
+    | Urdu Academy budget dwarfs the others at Rs 6.20 crore in 2014-15
+    | Hindi 91.32%, Urdu 7.99%, Punjabi 0.31%, Nepali 0.16%, Bengali 0.11% (Census-2001)
+    | The report carries no later count
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+    src https://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://cdnbbsr.s3waas.gov.in/s380537a945c7aaa788ccfcdf1b99b5d8f/uploads/2023/03/2023030239-1.pdf
+
+=== IS|Iceland   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Neither officially recognised nor named in steering documents
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://publications.europa.eu/resource/cellar/e0f69418-d915-11ed-a05c-01aa75ed71a1.0001.01/DOC_1
+    src https://www.althingi.is/lagas/nuna/2011061.html
+
+=== IS|Iceland   indigenous.localTerm
+    coded: family = none in use
+    | No regional or minority language category is in use
+    | Icelandic is the sole state language, Eurydice Fig. A1
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://publications.europa.eu/resource/cellar/e0f69418-d915-11ed-a05c-01aa75ed71a1.0001.01/DOC_1
+    src https://www.althingi.is/lagas/nuna/2011061.html
+
+=== JM|Jamaica   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Recognition is proposed, not enacted: the final draft awaits the Cabinet Office
+    | The draft seeks official recognition of Jamaican Creole as a legitimate language
+    | Standard English is to remain the official language, with a literacy mandate attached
+    src https://moey.gov.jm/wp-content/uploads/2022/08/LEGACY-POLICIES-OF-THE-MOEY-REVISED-AUGUST-3-2022.pdf
+    src https://jis.gov.jm/first-language-patois-education-minister/
+
+=== JM|Jamaica   indigenous.taughtAsSubject
+    coded: status = not taught
+    | No Patois subject: stated best practice is teaching standard English as a second language
+    | Patois is the first language teachers transition pupils from, per the Education Minister
+    src https://moey.gov.jm/wp-content/uploads/2022/08/LEGACY-POLICIES-OF-THE-MOEY-REVISED-AUGUST-3-2022.pdf
+    src https://jis.gov.jm/first-language-patois-education-minister/
+
+=== KW|Kuwait   indigenous.taughtAsSubject
+    coded: status = not taught
+    | English is the sole additional language, taught to all children
+    | Classical Arabic is itself counted a second language for every pupil
+    src https://education-profiles.org/northern-africa-and-western-asia/kuwait/~inclusion
+    src https://timssandpirls.bc.edu/timss2019/encyclopedia/pdf/Kuwait.pdf
+    src https://timss2023.org/wp-content/uploads/2024/10/Kuwait.pdf
+    src https://law.almohami.com/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%B1%D9%82%D9%85-11-%D9%84%D8%B3%D9%86%D8%A9-1965-%D9%81%D9%8A-%D8%B4%D8%A3%D9%86-%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%A7%D9%84%D8%B2%D8%A7%D9%85/
+
+=== KW|Kuwait   indigenous.localTerm
+    coded: family = none in use
+    | No minority, community or heritage language category exists in the sources
+    | Art 29 bars discrimination by language without granting a language right
+    src https://education-profiles.org/northern-africa-and-western-asia/kuwait/~inclusion
+    src https://timssandpirls.bc.edu/timss2019/encyclopedia/pdf/Kuwait.pdf
+    src https://timss2023.org/wp-content/uploads/2024/10/Kuwait.pdf
+    src https://law.almohami.com/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%B1%D9%82%D9%85-11-%D9%84%D8%B3%D9%86%D8%A9-1965-%D9%81%D9%8A-%D8%B4%D8%A3%D9%86-%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%A7%D9%84%D8%B2%D8%A7%D9%85/
+
+=== LI|Liechtenstein   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Neither officially recognised nor named in steering documents
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf
+    src https://rm.coe.int/5th-op-liechtenstein-en/1680a15dfc
+
+=== LI|Liechtenstein   indigenous.localTerm
+    coded: family = none in use
+    | No regional or minority language category is in use
+    | German is the sole state language, Eurydice Fig. A1
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf
+    src https://rm.coe.int/5th-op-liechtenstein-en/1680a15dfc
+
+=== LU|Luxembourg   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Neither officially recognised nor named in steering documents
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://publications.europa.eu/resource/cellar/e0f69418-d915-11ed-a05c-01aa75ed71a1.0001.01/DOC_1
+    src https://men.public.lu/dam-assets/catalogue-publications/courriers-de-leducation-nationale/numeros-speciaux/plan-etudes-ecoles-fondamentale.pdf
+
+=== LU|Luxembourg   indigenous.localTerm
+    coded: family = none in use
+    | No regional or minority language category is in use
+    | Luxembourgish is a state language alongside German and French, Fig. A1
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://publications.europa.eu/resource/cellar/e0f69418-d915-11ed-a05c-01aa75ed71a1.0001.01/DOC_1
+    src https://men.public.lu/dam-assets/catalogue-publications/courriers-de-leducation-nationale/numeros-speciaux/plan-etudes-ecoles-fondamentale.pdf
+
+=== MT|Malta   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Neither officially recognised nor named in steering documents
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf
+
+=== MT|Malta   indigenous.localTerm
+    coded: family = none in use
+    | No regional or minority language category is in use
+    | Maltese and English are both state languages, Eurydice Fig. A1
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf
+
+=== OM|Oman   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Named as spoken languages, not as school subjects
+    | Other spoken languages in Oman include Swahili, Baluchi, Lawati and Jabali
+    | No mother-tongue instruction provision found in the retrieved sources
+    src https://education-profiles.org/northern-africa-and-western-asia/oman/~inclusion
+    src https://timssandpirls.bc.edu/timss2019/encyclopedia/pdf/Oman.pdf
+    src https://pirls2021.org/wp-content/uploads/2022/10/Oman.pdf
+
+=== OM|Oman   indigenous.taughtAsSubject
+    coded: status = not taught
+    | English is the only additional language subject named, taught from first grade
+    | National assessments name Arabic, English, Mathematics and Science, no other language
+    | Arabic is timetabled across Grades 1 to 12
+    src https://education-profiles.org/northern-africa-and-western-asia/oman/~inclusion
+    src https://timssandpirls.bc.edu/timss2019/encyclopedia/pdf/Oman.pdf
+    src https://pirls2021.org/wp-content/uploads/2022/10/Oman.pdf
+
+=== PS|Palestine   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Source calls Hebrew a second language, never a minority or regional language
+    | No minority language internal to Palestine is named in the profile
+    src https://education-profiles.org/northern-africa-and-western-asia/state-of-palestine/~inclusion
+    src https://timss2023.org/wp-content/uploads/2024/10/Palestinian-National-Authority.pdf
+
+=== PS|Palestine   indigenous.taughtAsSubject
+    coded: status = not taught
+    | Hebrew is learned as a second language from the third grade on
+    | Rationale given is social mobility, higher education and shared citizenship
+    src https://education-profiles.org/northern-africa-and-western-asia/state-of-palestine/~inclusion
+    src https://timss2023.org/wp-content/uploads/2024/10/Palestinian-National-Authority.pdf
+
+=== QA|Qatar   indigenous.standing
+    coded: status = none; source = none; force = none
+    | PEER records no explicit mention of any linguistic or ethnic minorities
+    | The 2017-22 MOEHE strategy frames other cultures as respect, not language provision
+    src https://pirls2021.org/wp-content/uploads/2022/10/Qatar.pdf
+    src https://timss2023.org/wp-content/uploads/2024/10/Qatar.pdf
+    src https://education-profiles.org/northern-africa-and-western-asia/qatar/~inclusion
+    src https://www.almeezan.qa/LawView.aspx?opt=&LawID=3973&language=en
+
+=== QA|Qatar   indigenous.localTerm
+    coded: family = none in use
+    | No linguistic or ethnic minority is explicitly mentioned in the profile
+    | 2017-22 strategy frames other cultures as respect, not language provision
+    src https://pirls2021.org/wp-content/uploads/2022/10/Qatar.pdf
+    src https://timss2023.org/wp-content/uploads/2024/10/Qatar.pdf
+    src https://education-profiles.org/northern-africa-and-western-asia/qatar/~inclusion
+    src https://www.almeezan.qa/LawView.aspx?opt=&LawID=3973&language=en
+
+=== SA|Saudi Arabia   indigenous.taughtAsSubject
+    coded: status = not taught
+    | Arabic as a second language is compulsory in the schools for foreign nationals
+    src https://education-profiles.org/northern-africa-and-western-asia/saudi-arabia/~inclusion
+    src https://ksaa.gov.sa/en/about
+    src https://www.constituteproject.org/constitution/Saudi_Arabia_2013
+
+=== SM|San Marino   indigenous.standing
+    coded: status = none; source = none; force = none
+    | No minority standing: San Marino reports it has no ethnic minorities on its territory
+    | Said in a state report under FCNM art. 25(1), not in any San Marino instrument
+    | Its recognition of national minorities is called only a hypothetical commitment
+    src https://www.educazione.sm/on-line/home/docenti/indicazioni-curricolari/documento41103851.html
+    src https://rm.coe.int/CoERMPublicCommonSearchServices/DisplayDCTMContent?documentId=090000168008b53e
+
+=== SX|Sint Maarten   indigenous.taughtAsSubject
+    coded: status = not taught
+    | Language education area covers English, Dutch and Spanish only, art. 11
+    | Primary exit exam tests English, Dutch as a foreign language, maths, general knowledge
+    src https://lokaleregelgeving.overheid.nl/CVDR179884
+    src https://lokaleregelgeving.overheid.nl/CVDR142707
+    src https://lokaleregelgeving.overheid.nl/CVDR142611
+    src https://www.sintmaartengov.org/Documents/Reports/Final%20Report%20Education%20Review%20measure%20G1%20Country%20Package.pdf
+
+=== TN|Tunisia   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Amazigh is not mentioned anywhere in the Tunisia profile
+    | 'Few programmes seem to directly address the educational inclusion' of minorities
+    | The profile carries only two sentences on language
+    src https://education-profiles.org/northern-africa-and-western-asia/tunisia/~inclusion
+    src https://www.axl.cefan.ulaval.ca/afrique/tunisie.htm
+
+=== TN|Tunisia   indigenous.taughtAsSubject
+    coded: status = not taught
+    | No text formally bans the language; the absence of teaching and media is what shows it
+    | Government told the UN CERD that Amazigh is oral only, with no systematic teaching
+    | Leclerc: teaching of Berber is non-existent
+    | Written Berber does not exist in Tunisia and its teaching remains forbidden
+    src https://education-profiles.org/northern-africa-and-western-asia/tunisia/~inclusion
+    src https://www.axl.cefan.ulaval.ca/afrique/tunisie.htm
+
+=== TR|Türkiye   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Neither officially recognised nor named in steering documents
+    src https://doi.org/10.2797/529032
+    src https://www.mevzuat.gov.tr/mevzuatmetin/1.5.2709.pdf
+    src https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5580.pdf
+    src https://tegm.meb.gov.tr/www/yasayan-diller-ve-lehceler-dersi-istisare-toplantisi-gerceklestirildi/icerik/437
+
+=== TR|Türkiye   indigenous.localTerm
+    coded: family = none in use
+    | No category exists: such languages are neither recognised nor named in the steering documents
+    src https://doi.org/10.2797/529032
+    src https://www.mevzuat.gov.tr/mevzuatmetin/1.5.2709.pdf
+    src https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5580.pdf
+    src https://tegm.meb.gov.tr/www/yasayan-diller-ve-lehceler-dersi-istisare-toplantisi-gerceklestirildi/icerik/437
+
+=== US|Alabama   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Arkansas   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Colorado   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Connecticut   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Delaware   indigenous.standing   (sub-national)
+    coded: status = none; source = none; force = none
+    | No provision for an Indigenous or other language of the state was found (50-state inventory)
+    | Seal awarded in 17 languages 2022-23, none Native American or Pacific (2024 Seal report)
+    | Only AK, AZ, CA, HI, NM, OR, WA awarded Indigenous US languages
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Delaware   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|District of Columbia   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Florida   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Georgia   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Idaho   indigenous.standing   (sub-national)
+    coded: status = none; source = none; force = none
+    | No provision for an Indigenous or state language was found (2024 Seal, 50-state inventory)
+    | Seal awarded in 4 languages 2022-23, none Native American or Pacific
+    | Only AK, AZ, CA, HI, NM, OR, WA awarded Indigenous US languages
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Idaho   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Illinois   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Indiana   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Iowa   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Kansas   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Kentucky   indigenous.standing   (sub-national)
+    coded: status = none; source = none; force = none
+    | No provision for an Indigenous or other language of the state was found (50-state inventory)
+    | Seal awarded in 34 languages 2022-23, none Native American or Pacific (2024 report)
+    | Only AK, AZ, CA, HI, NM, OR, WA awarded Indigenous US languages
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Kentucky   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Maryland   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Massachusetts   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Michigan   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Minnesota   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Mississippi   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Missouri   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Nebraska   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Nevada   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|New Hampshire   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|New Jersey   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|New York   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Ohio   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Pennsylvania   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Rhode Island   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|South Carolina   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Tennessee   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Texas   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No language Indigenous to Texas is named in any source cited
+    | Texas did not report to the 2024 Seal survey, so its language list is unknown
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Utah   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Virginia   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|West Virginia   indigenous.taughtAsSubject   (sub-national)
+    coded: status = not taught
+    | No Indigenous or regional language subject was found in the sources cited
+    | Only AK, AZ, CA, HI, NM, OR and WA awarded the Seal in an Indigenous US language
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== UY|Uruguay   indigenous.taughtAsSubject
+    coded: status = not taught
+    | No compulsory subject in Uruguayan Portuguese or LSU is recorded
+    | The plurilingual aim starts from varieties already spoken in the country
+    src https://www.impo.com.uy/bases/leyes/18437-2008
+    src https://www.dgeip.edu.uy/c-f-p/13-departamentos/lenguas/28-inmersion-dual-espanol-portugues/
+
+=== VE|Venezuela   indigenous.taughtAsSubject
+    coded: status = not taught
+    | Right runs to the whole bilingual regime, not to a named language subject
+    src https://siteal.iiep.unesco.org/sites/default/files/sit_accion_files/proceso_de_transformacion_curricular_para_la_educacion_media_general_en_la_modalidad_jovenes_y_adultos.pdf
+    src https://web.archive.org/web/20220122033846id_/https://www.teachingenglish.org.uk/sites/teacheng/files/RPD_Publication.pdf
+    src https://www.mpppst.gob.ve/mpppstweb/wp-content/uploads/2014/03/LEY_PARA_LAS_PERSONAS_CON_DISCAPACIDAD.pdf
+    src https://www.axl.cefan.ulaval.ca/amsudant/venezuela-loi-2008.htm
+
+=== YE|Yemen   indigenous.standing
+    coded: status = none; source = none; force = none
+    | Listed as spoken varieties, not as taught subjects
+    | No mother-tongue instruction provision found in the retrieved source
+    | Sokotri and Mehri are non-Arabic Semitic languages, each around 0.3% of speakers
+    | Most listed varieties are regional Arabics, led by Sanaani at 41.2%
+    src https://education-profiles.org/northern-africa-and-western-asia/yemen/~inclusion
+    src https://www.unesco.org/en/articles/safeguarding-soqotri-language-first-workshop-unified-alphabet
+    src https://soqotralanguage.org/
+

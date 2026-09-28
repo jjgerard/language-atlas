@@ -1,0 +1,711 @@
+# 85 entry-fields to grade, over 1 field(s)
+# Grade each A (a source states the absence), B (a search came up empty)
+# or C (the prose says neither and the source must be re-read).
+
+=== AE|United Arab Emirates   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | Arabic is the language of instruction for all subjects in government schools
+    | English is taught as a second language and used for technical or scientific subjects
+    | Private schools run IB, British, American, French, German, Indian and other syllabuses
+    src https://uaelegislation.gov.ae/en/legislations/1000/download
+    src https://uaelegislation.gov.ae/ar/legislations/1000/download
+    src https://u.ae/en/information-and-services/education/school-education-k-12/curricula-and-language-of-instruction-
+    src https://abudhabiculture.ae/en/cultural-programmes/cultural-platforms/abu-dhabi-arabic-language-centre
+
+=== BE|Belgium — French Community (Wallonia-Brussels Federation)   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | CLIL pairs French with Dutch or German, both state languages, ISCED 1-3
+    | That is state-language immersion, not regional-language provision
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://publications.europa.eu/resource/cellar/e0f69418-d915-11ed-a05c-01aa75ed71a1.0001.01/DOC_1
+    src https://livre.cfwb.be/activites/activites-pour-les-ecoles/langues-et-cultures-regionales-en-classe/faq
+
+=== BG|Bulgaria   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | No teaching IN minority languages exists; Art 13(2) ZPUO makes Bulgarian the medium
+    | Advisory Committee 2024: no offer in teaching in minority languages
+    | No preschool education in any minority language is available in Bulgaria
+    | Art 13(3)-(4) allow subjects in a FOREIGN language only, never a minority language
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://conventions-ws.coe.int/WS_LFRConventions/api/signatures?numSTE=148&langue=ENG
+    src https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=148
+
+=== BH|Bahrain   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | Arabic is the language of instruction in all public schools
+    | Most private schools present all subjects in English, some in Arabic or French
+    src https://timss2023.org/wp-content/uploads/2024/10/Bahrain.pdf
+    src https://pirls2021.org/wp-content/uploads/2022/10/Bahrain.pdf
+    src https://education-profiles.org/northern-africa-and-western-asia/bahrain/~inclusion
+
+=== CA|Nova Scotia   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | Conseil scolaire acadien provincial is the only francophone board, French first language
+    | No Gaelic or Mi'kmaw medium-of-instruction provision was found
+    src https://curriculum.novascotia.ca/core-french
+    src https://www.ednet.ns.ca/psp/french-second-language
+    src https://www.ednet.ns.ca/docs/creditsforgraduationdiplomaen.pdf
+
+=== CA|Ontario   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Native-language medium-of-instruction provision was found in either instrument
+    | French-language schools are a separate system, not a second-language programme
+    src https://www.edu.gov.on.ca/eng/curriculum/elementary/FSL18-2013curr.pdf
+    src https://www.ontario.ca/document/ontario-schools-kindergarten-grade-12-policy-and-program-requirements/diploma-and-certificate-requirements-related-procedures
+    src https://www.edu.gov.on.ca/eng/curriculum/secondary/fsl912curr2014.pdf
+    src https://www.ontario.ca/laws/regulation/900298
+
+=== CA|Prince Edward Island   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Mi'kmaw medium-of-instruction provision appears in any cited instrument
+    src https://www.princeedwardisland.ca/sites/default/files/legislation/e-.02-education_act.pdf
+    src https://www.princeedwardisland.ca/sites/default/files/legislation/F-15-2-French%20Language%20Services%20Act.pdf
+    src https://www.princeedwardisland.ca/sites/default/files/feb2/DEEY%20-%20Senior%20High%20POS%20%202026-2027.pdf
+    src https://www.princeedwardisland.ca/sites/default/files/publications/intermediate_program_of_studies_and_authorized_materials.pdf
+
+=== CA|Yukon   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No provision makes a First Nation language the medium for other subjects
+    | Revitalization runs "through classroom instruction" and on the land
+    src https://open.yukon.ca/information/b1cbb21a-1e7d-4bd5-b4ee-01b04901749c/resource/4d4ec8c9-1cd0-4b3c-ba80-240e220db42e/download/19-176.html
+    src https://open.yukon.ca/information/e47f800b-7763-4d5e-b08a-c1334e932057/resource/4d7309cd-76c2-4d85-b8cc-c16a7fab06fc/download/18-173.html
+    src https://open.yukon.ca/information/9a5f1a39-3ef6-4bd8-a118-5c507fda8df9/resource/1fff40c7-c775-4fe0-93ba-5a91d4ca3896/download/21-163.html
+    src https://www.fnsb.ca/land-and-language
+
+=== CN|Anhui   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | Schools and other educational institutions must use Putonghua as basic teaching language
+    | Education department monitors school language use and folds it into inspection
+    src https://www.055110.com/law/2/5785.html
+
+=== CN|Beijing   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | Schools must use Putonghua as the basic language in teaching, meetings and group activities
+    | Standard Chinese characters are the basic script for handouts, exam papers and blackboard work
+    | Compliance is inspected: language use is written into school checks and evaluations
+    src https://www.beijing.gov.cn/zhengce/dfxfg/202012/t20201210_2161327.html
+    src http://www.bjrd.gov.cn/rdzl/dfxfgk/dfxfg/202101/t20210106_2200102.html
+
+=== CN|Hubei   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | Schools, kindergartens and other institutions must use Putonghua as basic teaching language
+    | School and kindergarten teaching language is a named priority area for the campaign
+    src https://ywb.hbnu.edu.cn/2013/0428/c1685a36763/page.htm
+
+=== CN|Hunan   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | Schools in the prefecture shall use the national common language and script for teaching
+    | The prefecture is to promote and popularise the national common language across the board
+    src http://www.hnxxrd.gov.cn/zztlhdxtl/202405/t20240509_2146654.html
+    src https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=57343
+
+=== CN|Jiangsu   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | Putonghua is the basic language of teaching in Jiangsu schools under the 2006 measure
+    | Rule reaches teaching, meetings, publicity and other public activities in schools
+    | Standard Chinese characters are the basic script for handouts, papers and blackboards
+    | Applies province-wide to schools and other educational institutions in Jiangsu
+    src https://jyt.jiangsu.gov.cn/art/2007/11/13/art_57834_7005169.html
+    src https://www.nanjing.gov.cn/zdgk/201411/t20141105_1056503.html
+
+=== CN|Ningxia   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | Ningxia reports promoting the common language and nationally unified textbooks
+    | Schools must make Putonghua and standard characters part of quality education
+    | Education inspection covers how schools teach and use the national common language
+    src https://www.nx.gov.cn/zwgk/zc/gzk/202112/t20211228_3258055.html
+    src http://www.nxrd.gov.cn/rdlz/lfgz/fglb/202011/t20201130_250965.html
+    src http://www.nxrd.gov.cn/rdzt/zzqrmdbdh/ssjec/hywj/202402/t20240204_833963.html
+    src https://hudong.moe.gov.cn/jyb_sjzl/s3165/202202/t20220208_597725.html
+
+=== CN|Shanxi   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | Schools and other educational institutions must use Putonghua as basic teaching language
+    | Classroom teaching and other school activities must be conducted in Putonghua
+    src https://jyj.changzhi.gov.cn/flfg/201303/t20130321_545253.html
+
+=== CV|Cape Verde   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | Kriolu is a medium only inside the optional LCCV subject, DL 28/2022 art 15(2)(c)
+    | MoE 2024 programme: basic-education plans do not yet include school learning of kriolu
+    | DL 27/2022 art 13: Portuguese is 'lingua nao materna' but the school's lingua veicular
+    | Portuguese prioritised across all subjects, pre-school to the end of secondary
+    src https://observalinguaportuguesa.org/governo-suspende-manual-escolar-de-lingua-cabo-verdiana-apos-polemica/
+    src https://expressodasilhas.cv/opiniao/2025/12/15/o-manual-de-lingua-e-cultura-cabo-verdiana-e-a-grafia-que-precipitou-o-debate/100404
+    src https://education-profiles.org/sub-saharan-africa/cabo-verde/~inclusion
+    src https://minedu.gov.cv/media/orientacao/2024/08/05/bo_12-07-2022_68_1.pdf
+
+=== GA|Gabon   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | French remains the main language of instruction at every level, pre-primary to university
+    | French has continued to be the only language of instruction in all schools
+    | Nine national languages trialled in primary schools since 1975, mienné and fang among them
+    | PASEC2019 names Burundi, Madagascar, Cameroon and Chad as the exceptions, not Gabon
+    src https://education-profiles.org/sub-saharan-africa/gabon/~inclusion
+    src https://www.confemen.org/wp-content/uploads/2022/07/RapportPasec2019_Rev2022_WebOK.pdf
+    src https://www.axl.cefan.ulaval.ca/afrique/gabon.htm
+
+=== GQ|Equatorial Guinea   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | Spanish is the medium of instruction and a compulsory subject, spoken by over 85%
+    | Local languages seem confined mainly to the family sphere
+    | Spanish was prohibited in favour of Fang between 1968 and 1979
+    src https://education-profiles.org/sub-saharan-africa/equatorial-guinea/~inclusion
+    src https://www.cervantes.es/imagenes/file/biblioteca/situacion_espanol/guinea_ecuatorial_humanities.pdf
+
+=== IN|Arunachal Pradesh   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No tribal language appears as a medium anywhere in the state's returns
+    | English is the state's official language and the formula's FIRST language
+    | State furnished no data on facilities at any stage of school education
+    | CLM urges primary education in mother tongues; no such scheme exists
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+    src https://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://cdnbbsr.s3waas.gov.in/s380537a945c7aaa788ccfcdf1b99b5d8f/uploads/2023/03/2023030239-1.pdf
+
+=== IN|Manipur   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No tribal language is a medium: only English and Manipuri, Class I to X
+    | Beyond Class X English alone continues as the medium of instruction
+    | The thirteen recognised Tribal languages are subjects, never the medium
+    | No sanctioned posts exist for regional or minority language teachers
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+    src https://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://cdnbbsr.s3waas.gov.in/s380537a945c7aaa788ccfcdf1b99b5d8f/uploads/2023/03/2023030239-1.pdf
+
+=== IN|Sikkim   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No mother tongue is a medium at upper primary, secondary or higher secondary (51st Report)
+    | Nothing at all furnished about the primary stage, medium or subject
+    | State told the Commissioner no language is identified as a minority language
+    | English is the first language of the formula, regional languages the second
+    | The state made no return at all to the 52nd Report
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://web.archive.org/web/20180216025959/http://nclm.nic.in/shared/linkimages/NCLM51stReport.pdf
+    src https://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://www.sikkim.gov.in/department/departmentmenudetails?url=Menu%3Deducation-department%2Fintroduction-of-master-courses-in-bhutia-lepcha-and-limboo-languages
+
+=== IN|Tripura   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No minority language is a medium at primary, upper primary or secondary (state return, 2014-15)
+    | Higher secondary too: no minority language used as a medium of instruction
+    | Kokborok teacher posts: none sanctioned as medium, 2,517 filled as subject
+    | DIET training at four centres covers Kokborok as a subject, not as a medium
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+    src https://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Uttar Pradesh   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | U.P. Board Notification 1952 grants recognition only for education through Hindi
+    | CLM says that clause deprives non-Hindi-medium schools of recognition entirely
+    | Urdu is Additional Official Language, but no Urdu-medium provision is reported
+    | State furnished no data on facilities at any stage of school education
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+    src https://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://cdnbbsr.s3waas.gov.in/s380537a945c7aaa788ccfcdf1b99b5d8f/uploads/2023/03/2023030239-1.pdf
+
+=== IR|Iran   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | Official documents, correspondence, texts and textbooks must be in Persian language and script
+    | In schools the permitted use is teaching their literature, not instruction through them
+    src https://www.constituteproject.org/constitution/Iran_1989.pdf
+    src https://education-profiles.org/central-and-southern-asia/iran-islamic-republic-of/~inclusion
+
+=== KW|Kuwait   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | Arabic is the only language of instruction at every level
+    src https://education-profiles.org/northern-africa-and-western-asia/kuwait/~inclusion
+    src https://timssandpirls.bc.edu/timss2019/encyclopedia/pdf/Kuwait.pdf
+    src https://timss2023.org/wp-content/uploads/2024/10/Kuwait.pdf
+    src https://law.almohami.com/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%B1%D9%82%D9%85-11-%D9%84%D8%B3%D9%86%D8%A9-1965-%D9%81%D9%8A-%D8%B4%D8%A3%D9%86-%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%A7%D9%84%D8%B2%D8%A7%D9%85/
+
+=== LU|Luxembourg   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | All instruction is in a language other than Luxembourgish
+    | Mostly French or German, Eurydice Annex 2 country note
+    src https://doi.org/10.2797/529032
+    src https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_lang02/default/table
+    src https://publications.europa.eu/resource/cellar/e0f69418-d915-11ed-a05c-01aa75ed71a1.0001.01/DOC_1
+    src https://men.public.lu/dam-assets/catalogue-publications/courriers-de-leducation-nationale/numeros-speciaux/plan-etudes-ecoles-fondamentale.pdf
+
+=== MC|Monaco   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | Lessons are taught in French - Monegasque is a subject, not a medium
+    src https://monservicepublic.gouv.mc/en/themes/education/education-and-teaching/primary-and-secondary-education/the-primary-and-secondary-education-system-in-monaco
+    src https://monservicepublic.gouv.mc/content/download/28960/file/L'%C3%89ducation%20en%20Principaut%C3%A9_Livret%20d'accueil_2025.pdf
+
+=== QA|Qatar   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | No language other than Arabic is recorded as a medium in the sources
+    src https://pirls2021.org/wp-content/uploads/2022/10/Qatar.pdf
+    src https://timss2023.org/wp-content/uploads/2024/10/Qatar.pdf
+    src https://education-profiles.org/northern-africa-and-western-asia/qatar/~inclusion
+    src https://www.almeezan.qa/LawView.aspx?opt=&LawID=3973&language=en
+
+=== SA|Saudi Arabia   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | UNESCO's country profile: only classical Arabic is used in primary schools
+    | Private schools may use a language other than Arabic as a medium
+    | Higher study is in institutions where the languages are Arabic and English
+    src https://education-profiles.org/northern-africa-and-western-asia/saudi-arabia/~inclusion
+    src https://ksaa.gov.sa/en/about
+    src https://www.constituteproject.org/constitution/Saudi_Arabia_2013
+
+=== SD|Sudan   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | The constitutional guarantee does not reach school-level medium of instruction
+    | Arabic and English are the languages of instruction for higher education
+    src https://education-profiles.org/northern-africa-and-western-asia/sudan/~inclusion
+    src https://media.unesco.org/sites/default/files/webform/r2e002/96804ceccc71831cf9d9f1dd9c7fbcb641dadf3e.pdf
+    src https://faolex.fao.org/docs/pdf/sud132848.pdf
+    src https://faolex.fao.org/docs/pdf/sud199003E.pdf
+
+=== SL|Sierra Leone   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | The sector plan concedes English is the only language promoted
+    src https://waecsierraleone.org/examinations/wassce
+    src https://education-profiles.org/sub-saharan-africa/sierra-leone/~inclusion
+    src https://www.commonlii.org/sl/legis/const/1991/2.html
+    src https://www.sierra-leone.org/Laws/2004-2p.pdf
+
+=== SM|San Marino   indigenous.mediumOfInstruction
+    coded: role = not a medium
+    | Teaching runs in Italian, with English and other European languages used alongside it
+    | Early years build multilingual settings rather than teach the languages formally
+    src https://www.educazione.sm/on-line/home/docenti/indicazioni-curricolari/documento41103851.html
+    src https://rm.coe.int/CoERMPublicCommonSearchServices/DisplayDCTMContent?documentId=090000168008b53e
+
+=== ST|São Tomé and Príncipe   indigenous.mediumOfInstruction
+    coded: role = not a medium
+    | Portuguese is used in all acts of the State, in education and in the media
+    | European Portuguese norm is taught in schools and mastering it is the system's goal
+    src https://www.scielo.br/j/tla/a/rPRCqWDjXHvz3MyZmRdCd3q/?lang=pt
+    src https://faolex.fao.org/docs/pdf/sao117335POR.pdf
+
+=== SX|Sint Maarten   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | Foundation Based Education rests on English as medium, Dutch as a foreign language
+    | Most funded primary schools teach in English; five teach in Dutch
+    | English-medium primary schools rose from seven in 2008 to thirteen by 2013
+    | School board picks the medium, but only English or Dutch are allowed
+    src https://lokaleregelgeving.overheid.nl/CVDR179884
+    src https://lokaleregelgeving.overheid.nl/CVDR142707
+    src https://lokaleregelgeving.overheid.nl/CVDR142611
+    src https://www.sintmaartengov.org/Documents/Reports/Final%20Report%20Education%20Review%20measure%20G1%20Country%20Package.pdf
+
+=== TN|Tunisia   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | Leclerc: Tunisia's indigenous population is taught only in classical Arabic and French
+    | Berber speakers get no teaching in their mother tongue
+    | The State has always refused to bring Berber into the education system
+    src https://education-profiles.org/northern-africa-and-western-asia/tunisia/~inclusion
+    src https://www.axl.cefan.ulaval.ca/afrique/tunisie.htm
+
+=== US|Alabama   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Alaska   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Arizona   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Arkansas   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|California   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Colorado   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Connecticut   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Delaware   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|District of Columbia   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Florida   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Georgia   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Idaho   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Illinois   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Indiana   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Iowa   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Kansas   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Kentucky   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Louisiana   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No French medium-of-instruction requirement appears in R.S. 17:272
+    | The duty falls on what schools must OFFER, not on what they teach in
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Maine   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Maryland   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Massachusetts   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Michigan   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Minnesota   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Mississippi   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Missouri   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Montana   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Nebraska   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Nevada   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|New Hampshire   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|New Jersey   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|New Mexico   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|New York   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|North Carolina   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|North Dakota   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Ohio   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Oklahoma   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Oregon   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Pennsylvania   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Rhode Island   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|South Carolina   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|South Dakota   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | Recognition only: SDCL 1-27-20 creates no schooling entitlement at all
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Tennessee   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Utah   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Vermont   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Virginia   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Washington   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|West Virginia   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No Indigenous or regional medium-of-instruction provision was found
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Wisconsin   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== US|Wyoming   indigenous.mediumOfInstruction   (sub-national)
+    coded: role = not a medium; secured_by = none
+    | No medium-of-instruction provision was found in the sources cited
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://sealofbiliteracy.org/doc/2024-National-Seal-of-Biliteracy-Report-Final.pdf
+    src https://www.americancouncils.org/sites/default/files/FLE-report-June17.pdf
+
+=== YE|Yemen   indigenous.mediumOfInstruction
+    coded: role = not a medium; secured_by = none
+    | UNESCO: Arabic is the only language of instruction in public schools, primary to university
+    | Soqotri, Mehri and Hobyot appear only as languages spoken, never as media of instruction
+    | No conditional or local exception to the Arabic medium was found in the source consulted
+    src https://education-profiles.org/northern-africa-and-western-asia/yemen/~inclusion
+    src https://www.unesco.org/en/articles/safeguarding-soqotri-language-first-workshop-unified-alphabet
+    src https://soqotralanguage.org/
+

@@ -1,0 +1,862 @@
+# 96 entry-fields to grade, over 2 field(s)
+# Grade each A (a source states the absence), B (a search came up empty)
+# or C (the prose says neither and the source must be re-read).
+
+=== AD|Andorra   eal.l1Support
+    coded: form = none established
+    | Neither source names any provision for a pupil's home language other than these four
+    | Escola Andorrana runs on two vehicular languages, Catalan and French, from primary
+    | Every classroom has both a Catalan tutor teacher and a French tutor teacher
+    | Spanish enters in the third cycle, taught by a Spanish specialist
+    src https://www.govern.ad/ca/tematiques/educacio-formacio-investigacio-i-divulgacio-del-coneixement/estudiar-a-andorra/sistemes-educatius-a-andorra/sistema-educatiu-andorra/primera-ensenyanca
+    src https://portaljuridicandorra.ad/L2018017_1
+
+=== AD|Andorra   eal.l2Support
+    coded: models = none established
+    | No dedicated Catalan-as-an-additional-language programme is documented
+    | Dual Catalan and French tutoring in every primary classroom is the standing arrangement
+    src https://www.govern.ad/ca/tematiques/educacio-formacio-investigacio-i-divulgacio-del-coneixement/estudiar-a-andorra/sistemes-educatius-a-andorra/sistema-educatiu-andorra/primera-ensenyanca
+    src https://portaljuridicandorra.ad/L2018017_1
+
+=== AU|Western Australia   eal.l1Support   (sub-national)
+    coded: form = none established
+    | No first-language provision appears in either cited WA source
+    | 'first language', 'home language' and 'mother tongue' each return 0 hits
+    | The funding model's own term is 'children with English as a second language'
+    | The EAL/D Progress Map covers overseas arrivals and Aboriginal students alike
+    src https://myresources.education.wa.edu.au/programs/eal-d-progress-map
+    src https://www.education.wa.edu.au/funding-public-schools
+
+=== BA|Bosnia and Herzegovina   eal.l1Support
+    coded: form = none established
+    | Neither Eurypedia page describes any home-language provision at all
+    | 'Children with special needs' is the working category and it is not legally defined
+    | National minorities, returnees and refugees fall under it only rarely
+    | So the country's support architecture is a disability one, not a language one
+    src https://doi.org/10.2797/529032
+    src https://eurydice.eacea.ec.europa.eu/eurypedia/bosnia-and-herzegovina/special-education-needs-provision-within-mainstream-education
+    src https://eurydice.eacea.ec.europa.eu/eurypedia/bosnia-and-herzegovina/educational-support-and-guidance
+
+=== BA|Bosnia and Herzegovina   eal.l2Support
+    coded: models = none established
+    | Neither cited page names a language-support measure for new arrivals
+    | Individual adapted teaching programmes follow an expert opinion, on disability grounds
+    | The procedure is not defined for preschool institutions at all
+    | Enrolment of students in secondary school is not precisely defined either
+    src https://doi.org/10.2797/529032
+    src https://eurydice.eacea.ec.europa.eu/eurypedia/bosnia-and-herzegovina/special-education-needs-provision-within-mainstream-education
+    src https://eurydice.eacea.ec.europa.eu/eurypedia/bosnia-and-herzegovina/educational-support-and-guidance
+
+=== BH|Bahrain   eal.l2Support
+    coded: models = none established
+    | No Arabic-as-additional-language provision documented for arrivals
+    src https://education-profiles.org/northern-africa-and-western-asia/bahrain/~inclusion
+    src https://timss2023.org/wp-content/uploads/2024/10/Bahrain.pdf
+    src https://pirls2021.org/wp-content/uploads/2022/10/Bahrain.pdf
+
+=== BJ|Benin   eal.l2Support
+    coded: models = none established
+    | No newcomer or additional-language designation (PEER inclusion profile, archived)
+    | No provision described for teaching French as the language of schooling
+    src https://archivespasec.confemen.org/wp-content/uploads/sites/2/2023/03/Rapport-PASEC2019_Benin.pdf
+    src https://ifef.francophonie.org/elan/
+    src https://education-profiles.org/sub-saharan-africa/benin/~inclusion
+
+=== BR|Brazil   eal.l2Support
+    coded: models = none established
+    | No national provision was found for children arriving without Portuguese
+    | The bilingual instruments are built for indigenous and for deaf pupils
+    | Neither is a newcomer or migrant route
+    src https://www.planalto.gov.br/ccivil_03/leis/l9394compilado.htm
+    src https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm
+    src https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html
+
+=== BT|Bhutan   eal.l1Support
+    coded: form = none established
+    | English has been the medium from the start of primary, since modern education began in Bhutan
+    | Dzongkha, the national language, is taught as a subject only
+    | No other language is used in primary education
+    src https://web.archive.org/web/20240512101037/https://www.unicef.org/rosa/media/3036/file/Early%20literacy%20and%20multilingual%20education%20in%20South%20Asia.pdf
+    src http://web.archive.org/web/20220331171101id_/https://www.unicef.org/rosa/media/16991/file/Country%20Profile%20-%20Bhutan.pdf
+
+=== BZ|Belize   eal.l1Support
+    coded: form = none established
+    | Spanish is timetabled as a taught subject, not as home-language support
+    | The only trace is an unexplained parenthesis, 'Other language included'
+    | Full-text search of all 40 pages: 'Kriol', 'Creole', 'mother tongue' and 'Garifuna' absent
+    src https://www.moecst.gov.bz/wp-content/uploads/2022/07/National-Curriculum-Framework.pdf
+    src https://education-profiles.org/latin-america-and-the-caribbean/belize/~inclusion
+
+=== CF|Central African Republic   eal.l2Support
+    coded: models = none established
+    | PEER profile 2021 names no newcomer or additional-language designation
+    | Profile never states the language of instruction in Central African schools
+    | No support described for pupils arriving without the school language
+    src https://education-profiles.org/sub-saharan-africa/central-african-republic/~inclusion
+
+=== CI|Ivory Coast   eal.l2Support
+    coded: models = none established
+    | PEER profile 2021 names no newcomer or additional-language designation
+    | Every use of the word "language" in the profile is "sign language"
+    | No support described for pupils arriving without French
+    src https://archivespasec.confemen.org/wp-content/uploads/sites/2/2023/03/Rapport-PASEC2019_Cote-dIvoire.pdf
+    src https://ifef.francophonie.org/elan/
+    src https://education-profiles.org/sub-saharan-africa/cote-divoire/~inclusion
+
+=== CM|Cameroon   eal.l2Support
+    coded: models = none established
+    | PEER profile 2021 names no newcomer or additional-language designation for Cameroon
+    | Profile never uses the phrase language of instruction
+    | No support described for a pupil placed in a system whose language they lack
+    src https://www.minedub.cm/download/336/texts-legislatifs-fr/5614/loi-n98-004-du-4-avril-1998-orientation-de-leducation-au-cameroun.pdf
+    src https://education-profiles.org/sub-saharan-africa/cameroon/~inclusion
+
+=== CU|Cuba   eal.l1Support
+    coded: form = none established
+    | No home-language maintenance provision exists for any language
+    | Cuban Sign Language interpreters are named, but only within special education
+    src https://www.gacetaoficial.gob.cu/sites/default/files/goc-2019-ex5.pdf
+    src https://education-profiles.org/es/america-latina-y-el-caribe/cuba/~inclusion
+
+=== CU|Cuba   eal.l2Support
+    coded: models = none established
+    | Not found: no Spanish-as-an-additional-language provision located in any instrument
+    | Constitution makes no medium-of-instruction provision at all
+    src https://www.gacetaoficial.gob.cu/sites/default/files/goc-2019-ex5.pdf
+    src https://education-profiles.org/es/america-latina-y-el-caribe/cuba/~inclusion
+
+=== CV|Cape Verde   eal.l2Support
+    coded: models = none established
+    | PEER profile 2021 names no newcomer or additional-language designation
+    | Portuguese, the language of schooling, is not mentioned in the profile at all
+    src https://expressodasilhas.cv/opiniao/2025/12/15/o-manual-de-lingua-e-cultura-cabo-verdiana-e-a-grafia-que-precipitou-o-debate/100404
+    src https://observalinguaportuguesa.org/governo-suspende-manual-escolar-de-lingua-cabo-verdiana-apos-polemica/
+    src https://education-profiles.org/sub-saharan-africa/cabo-verde/~inclusion
+
+=== DJ|Djibouti   eal.l2Support
+    coded: models = none established
+    | PEER profile 2021 names no newcomer or additional-language designation
+    | Profile never uses the phrase language of instruction for Djibouti
+    | Refugee education addressed by integration into sector plans, not by language support
+    src https://education-profiles.org/sub-saharan-africa/djibouti/~inclusion
+
+=== DZ|Algeria   eal.l2Support
+    coded: models = none established
+    | PEER profile 2021 names no newcomer or additional-language designation
+    | Profile never uses the phrase language of instruction and never names Arabic
+    | No support described for a pupil arriving without the school language
+    src https://www.joradp.dz/FTP/jo-francais/2008/F2008004.pdf
+    src https://education-profiles.org/northern-africa-and-western-asia/algeria/~inclusion
+
+=== ES|Spain   eal.l1Support
+    coded: form = none established
+    | Sourced absence: LOMLOE says 'lengua materna' 0 times in 392,506 chars of consolidated text
+    | Madrid's named measure, the Aula de Enlace, is Spanish acquisition, not home-language support
+    | It runs alongside the ordinary class, which pupils share for as much of the week as possible
+    | Spain is third in Europe on pupils speaking another language at home, at 20.6 per cent
+    src https://www.boe.es/buscar/doc.php?id=BOE-A-2020-17264
+    src https://www.comunidad.madrid/servicios/educacion/integracion-tardia-sistema-educativo-espanol
+    src https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/educacion-fp-deportes/Documents/2024/280624-%20Avance%20estad%C3%ADstica%20de%20ense%C3%B1anzas%20no%20universitarias%202023-24.pdf
+    src https://doi.org/10.2797/529032
+
+=== GA|Gabon   eal.l2Support
+    coded: models = none established
+    | PEER profile 2021 names no newcomer or additional-language designation
+    | Profile never uses the phrase language of instruction for Gabon
+    | Foreign residents aged 3 to 16 have a right of access, with no language support attached
+    src https://education-profiles.org/sub-saharan-africa/gabon/~inclusion
+    src https://www.confemen.org/wp-content/uploads/2022/07/RapportPasec2019_Rev2022_WebOK.pdf
+
+=== GM|Gambia   eal.l2Support
+    coded: models = none established
+    | PEER profile 2021 uses no EAL, ESL or additional-language term for the Gambia
+    | English named as the formal language of instruction, with no support route described
+    | National technical advisory committee on national languages established by MoBSE
+    src https://education-profiles.org/sub-saharan-africa/gambia/~inclusion
+
+=== GN|Guinea   eal.l2Support
+    coded: models = none established
+    | PEER profile 2021 names no newcomer or additional-language designation for Guinea
+    | Profile never uses the word instruction and never names a medium of instruction
+    | French recorded only as the official language, with no support route attached
+    src https://archivespasec.confemen.org/wp-content/uploads/sites/2/2023/03/Rapport-PASEC2019_Guinee.pdf
+    src https://ifef.francophonie.org/elan/
+    src https://education-profiles.org/sub-saharan-africa/guinea/~inclusion
+
+=== GQ|Equatorial Guinea   eal.l2Support
+    coded: models = none established
+    | PEER profile 2021 names no newcomer or additional-language designation
+    | Profile never states which language Equatoguinean schools teach in
+    src https://education-profiles.org/sub-saharan-africa/equatorial-guinea/~inclusion
+    src https://cvc.cervantes.es/lengua/eeas/capitulo13.htm
+
+=== GW|Guinea-Bissau   eal.l2Support
+    coded: models = none established
+    | PEER profile 2021 names no newcomer or additional-language designation
+    | Most pupils arrive without Portuguese, yet no support category is described
+    | GPE and World Bank project 2018-2023 targets attainment in maths and Portuguese
+    src https://education-profiles.org/sub-saharan-africa/guinea-bissau/~inclusion
+
+=== GY|Guyana   eal.l2Support
+    coded: models = none established
+    | No structured English-as-an-additional-language programme was found
+    | Hinterland measures address teacher supply and incentives, not language provision
+    src https://education-profiles.org/latin-america-and-the-caribbean/guyana/~inclusion
+    src https://education.gov.gy/en/index.php/media2/news-events/5175-ministry-of-education-and-intercultural-bilingual-education-organization-and-wapichan-communities-celebrate-the-4th-anniversary-of-the-quality-bilingual-education-programme
+
+=== HK|Hong Kong   eal.l1Support   (sub-national)
+    coded: form = none established
+    | No mother-tongue maintenance programme referenced
+    | EDB's public pages describe only Chinese acquisition and general integration support
+    | Nothing for Urdu, Nepali or Tagalog
+    src https://www.edb.gov.hk/en/student-parents/ncs-students/about-ncs-students/index.html
+    src https://www.edb.gov.hk/en/student-parents/ncs-students/summary-ncs-support-services/index.html
+    src https://www.edb.gov.hk/en/curriculum-development/cross-kla-studies/applied-learning/applied-learning-chinese/index.html
+    src https://www.info.gov.hk/gia/general/202505/28/P2025052800526.htm
+
+=== HN|Honduras   eal.l2Support
+    coded: models = none established
+    | The State is responsible for regulating intercultural bilingual education
+    | It is L1-medium; the school language is Spanish and PEER documents no Spanish-as-L2 route
+    | PEER term count: second language 0, castellanizacion 0, newcomer 0
+    src https://education-profiles.org/latin-america-and-the-caribbean/honduras/~inclusion
+
+=== IN|Andaman and Nicobar Islands   eal.l2Support   (sub-national)
+    coded: models = none established
+    | No second-language programme: R1 must be the language most familiar to the pupil
+    | R1 is the medium of instruction until literacy in another language is attained
+    | Where R1 is not the mother tongue, wide use of the mother tongue in class is prescribed
+    | 'second language' occurs 0 times in NCFSE 2023; 'R1' occurs 98 times
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+
+=== IN|Assam   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Bihar   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Dadra and Nagar Haveli and Daman and Diu   eal.l2Support   (sub-national)
+    coded: models = none established
+    | UT furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Goa   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Gujarat   eal.l2Support   (sub-national)
+    coded: models = none established
+    | No second-language programme: R1 must be the language most familiar to the pupil
+    | R1 is the medium of instruction until literacy in another language is attained
+    | Where R1 is not the mother tongue, wide use of the mother tongue in class is prescribed
+    | 'second language' occurs 0 times in NCFSE 2023; 'R1' occurs 98 times
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+
+=== IN|Himachal Pradesh   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Jammu and Kashmir   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://prsindia.org/files/bills_acts/acts_states/jammu-and-kashmir/2020/Act%20No.%2023%20of%202020%20J&K.pdf
+
+=== IN|Jharkhand   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Karnataka   eal.l2Support   (sub-national)
+    coded: models = none established
+    | No second-language programme: R1 must be the language most familiar to the pupil
+    | R1 is the medium of instruction until literacy in another language is attained
+    | Where R1 is not the mother tongue, wide use of the mother tongue in class is prescribed
+    | 'second language' occurs 0 times in NCFSE 2023; 'R1' occurs 98 times
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+
+=== IN|Kerala   eal.l2Support   (sub-national)
+    coded: models = none established
+    | No second-language programme: R1 must be the language most familiar to the pupil
+    | R1 is the medium of instruction until literacy in another language is attained
+    | Where R1 is not the mother tongue, wide use of the mother tongue in class is prescribed
+    | 'second language' occurs 0 times in NCFSE 2023; 'R1' occurs 98 times
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+
+=== IN|Madhya Pradesh   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Maharashtra   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://prsindia.org/files/bills_acts/acts_states/maharashtra/2020/Act%20No.%203%20of%202020%20MH.pdf
+
+=== IN|Meghalaya   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Mizoram   eal.l2Support   (sub-national)
+    coded: models = none established
+    | No second-language programme: R1 must be the language most familiar to the pupil
+    | R1 is the medium of instruction until literacy in another language is attained
+    | Where R1 is not the mother tongue, wide use of the mother tongue in class is prescribed
+    | 'second language' occurs 0 times in NCFSE 2023; 'R1' occurs 98 times
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+
+=== IN|Nagaland   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Odisha   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://prsindia.org/files/bills_acts/acts_states/odisha/1954/Odisha%20Act.%2014%20of%201954.pdf
+
+=== IN|Puducherry   eal.l1Support   (sub-national)
+    coded: form = none established
+    | Recorded at a Commissioner visit of February 2016; UT filed no questionnaire reply
+    | Minority speakers in Puducherry and Karaikal had no mother-tongue provision
+    | Bengali, French, Hindi, Kannada, Malayalam and Telugu speakers named
+    | Minority representatives demanded a separate Board of Education for the UT
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Punjab   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://prsindia.org/files/bills_acts/acts_states/punjab/2022/Punjab%20Act%20No.%204%20of%202022.pdf
+
+=== IN|Rajasthan   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Sikkim   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|Tripura   eal.l2Support   (sub-national)
+    coded: models = none established
+    | No second-language programme: R1 must be the language most familiar to the pupil
+    | R1 is the medium of instruction until literacy in another language is attained
+    | Where R1 is not the mother tongue, wide use of the mother tongue in class is prescribed
+    | 'second language' occurs 0 times in NCFSE 2023; 'R1' occurs 98 times
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+
+=== IN|Uttar Pradesh   eal.l1Support   (sub-national)
+    coded: form = none established
+    | No newcomer designation; the frame is mother-tongue instruction under Art. 350A
+    | 1952 Board notification grants recognition only to Hindi-medium institutions
+    | CLM says that deprives non-Hindi-medium schools and breaches Arts. 29 and 30
+    | The state furnished NO medium-of-instruction data at any stage for 2014-15
+    | Language Preference Registers: no information provided to the CLM
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://www.ncert.nic.in/pdf/NCFSE-2023-August_2023.pdf
+
+=== IN|Uttarakhand   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+
+=== IN|West Bengal   eal.l2Support   (sub-national)
+    coded: models = none established
+    | State furnished no reply to the Commissioner for 2014-15, so provision is unverified
+    | Regional/State language introduced not earlier than class III if different from mother tongue
+    | Regional language a compulsory subject throughout the Secondary Stage (1949 Resolution)
+    | Pupils may answer in mother tongue for the first two years after the Junior Basic Stage
+    | No second-language pupil category: the safeguard secures mother-tongue medium instead
+    src http://web.archive.org/web/20250707083449/https://www.minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf
+    src https://prsindia.org/files/bills_acts/acts_states/west-bengal/1961/Act%20No.%2024%20of%201961%20WB.pdf
+
+=== IT|Italy   eal.l1Support
+    coded: form = none established
+    | Guidelines call for 'valorizzazione delle diversità linguistiche'
+    | No mandated mother-tongue instruction programme found
+    src https://www.mim.gov.it/documents/20182/2223566/linee_guida_integrazione_alunni_stranieri.pdf
+    src https://eurydice.eacea.ec.europa.eu/eurypedia/italy/overview
+    src https://doi.org/10.2797/529032
+    src https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html
+
+=== JO|Jordan   eal.l1Support
+    coded: form = none established
+    | No first-language provision in any cited source ('first language' 0 hits in both chapters)
+    | The only languages named are Arabic and English
+    src https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html
+    src https://pirls2021.org/wp-content/uploads/2022/10/Jordan.pdf
+    src https://timss2023.org/wp-content/uploads/2024/10/Jordan.pdf
+    src https://timssandpirls.bc.edu/timss2015/encyclopedia/countries/jordan/
+
+=== JO|Jordan   eal.l2Support
+    coded: models = none established
+    | No pupil-level Arabic support is described in any cited source
+    | Queen Rania Teacher Academy trains Arabic teachers: development, not pupil provision
+    src https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html
+    src https://pirls2021.org/wp-content/uploads/2022/10/Jordan.pdf
+    src https://timss2023.org/wp-content/uploads/2024/10/Jordan.pdf
+    src https://timssandpirls.bc.edu/timss2015/encyclopedia/countries/jordan/
+
+=== KI|Kiribati   eal.l2Support
+    coded: models = none established
+    | English initiatives are aimed at study abroad and at vocational entrants
+    | English proficiency becomes a teacher registration requirement, not a pupil service
+    src https://www.paclii.org/ki/legis/num_act/ea2013104
+    src https://education-profiles.org/oceania/kiribati/~inclusion
+    src https://eqap.spc.int/sites/default/files/EQAP/Reports/PILNA%20Regional%20Report%202018_0.pdf
+
+=== KM|Comoros   eal.l2Support
+    coded: models = none established
+    | Review describes no support for children entering school without French or Arabic
+    | Arabic and English are said to be taught in later grades, on Laval's account
+    | Comorian is spoken by over 95 per cent of the population but stays largely oral
+    | Term counts in the retrieved 2,589-char body: 'second language' 0, bilingual 0
+    src https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Comoros.pdf
+
+=== ME|Montenegro   eal.l2Support
+    coded: models = none established
+    | No dedicated language-support scheme for school-age migrant pupils identified
+    | Immigrants are a named target group only in adult education
+    | Roma and Egyptian measures are more developed
+    | Inclusion assistants, scholarships, free transport and literacy programmes
+    src https://eurydice.eacea.ec.europa.eu/national-education-systems/montenegro/support-measures-learners-early-childhood-and-school
+    src https://www.skolskiportal.edu.me/Docs/Propisi/Zakoni/Zakon%20o%20osnovnom%20obrazovanju%20i%20vaspitanju.pdf
+    src https://doi.org/10.2797/529032
+    src https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html
+
+=== ML|Mali   eal.l2Support
+    coded: models = none established
+    | No teaching of French to arriving pupils is described ("second language" 0 in the body)
+    | French is the medium, not a foreign language: PEER's "official language of expression"
+    | The bilingual programme runs the other way: reading and writing in the mother tongue
+    src https://education-profiles.org/sub-saharan-africa/mali/~inclusion
+    src https://ifef.francophonie.org/elan/
+
+=== MU|Mauritius   eal.l2Support
+    coded: models = none established
+    | No designated language-of-schooling support programme is named
+    | Ministry stresses assessing pupils in the spoken language, not the medium of instruction
+    | Its stated remedy is teacher awareness of the role of language in learning
+    | 2008-20 Strategy Plan expects teachers trained on the impacts of bilingualism
+    src https://education-profiles.org/sub-saharan-africa/mauritius/~inclusion
+    src http://web.mie.ac.mu/kreol-department/
+    src https://education.govmu.org/Documents/2025/NEC/FORM%20-%20ADMISSION%20TO%20A%20SCHOOL%20IN%20MAURITIUS.pdf
+    src https://education.govmu.org/Pages/Education%20Sectors/Secondary%20Education/National-Equivalence-Committee.aspx
+
+=== MZ|Mozambique   eal.l2Support
+    coded: models = none established
+    | Portuguese is the medium of instruction here, not an additional language taught to newcomers
+    | Lopes quoted: Portuguese is the exclusive medium from first grade and also a subject
+    | Only 7 per cent spoke Portuguese at independence in 1975
+    | Bilingual programme reached 370 schools in 10 provinces in 16 languages by 2013
+    src https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Mozambique.pdf
+    src https://education-profiles.org/sub-saharan-africa/mozambique/~inclusion
+
+=== NG|Nigeria   eal.l2Support
+    coded: models = none established
+    | English-only from pre-primary upwards, as of the November 2025 reversal
+    | Minister blamed WAEC, NECO and JAMB results on mother tongue, arguing 'evidence, not emotions'
+    | Reported through the GEM Report's blog, not a peer-reviewed source
+    src https://world-education-blog.org/2026/04/22/unlocking-potential-amid-nigerias-return-to-english-only-education/
+    src https://faolex.fao.org/docs/pdf/nig229292.pdf
+
+=== OM|Oman   eal.l1Support
+    coded: form = none established
+    | Swahili, Baluchi, Lawati and Jabali are recorded as spoken, not taught
+    src https://education-profiles.org/northern-africa-and-western-asia/oman/~inclusion
+    src https://timssandpirls.bc.edu/timss2019/encyclopedia/pdf/Oman.pdf
+    src https://qanoon.om/p/2017/moe20170234/
+
+=== OM|Oman   eal.l2Support
+    coded: models = none established
+    | No Arabic-as-additional-language support for arrivals is documented
+    | Caution: PEER's second language for Oman means English as a foreign subject
+    src https://education-profiles.org/northern-africa-and-western-asia/oman/~inclusion
+    src https://timssandpirls.bc.edu/timss2019/encyclopedia/pdf/Oman.pdf
+    src https://qanoon.om/p/2017/moe20170234/
+
+=== PH|Philippines   eal.l2Support
+    coded: models = none established
+    | RA 10533 had required a mother language transition programme across Grades 4 to 6
+    | Filipino and English were introduced gradually until they became primary at secondary level
+    | That transition design is what RA 12027 removes
+    src https://lawphil.net/statutes/repacts/ra2024/ra_12027_2024.html
+    src https://lawphil.net/statutes/repacts/ra2013/ra_10533_2013.html
+    src https://lawphil.net/statutes/repacts/ra2019/ra_11249_2019.html
+    src https://lawphil.net/statutes/repacts/ra2022/ra_11650_2022.html
+
+=== PK|Pakistan   eal.l2Support
+    coded: models = none established
+    | The review records culture-shaming of Punjabi
+    | Elite English-medium schools have policies forbidding pupils from speaking it
+    src https://web.archive.org/web/20240512101037/https://www.unicef.org/rosa/media/3036/file/Early%20literacy%20and%20multilingual%20education%20in%20South%20Asia.pdf
+    src http://web.archive.org/web/20220108022422id_/https://www.unicef.org/rosa/media/17011/file/Country%20Profile%20-%20Pakistan.pdf
+    src https://riphah.edu.pk/programs/detail/?p=139
+
+=== PR|Puerto Rico   eal.l1Support
+    coded: form = none established
+    | No Puerto Rico assessment is translated into any language other than Spanish
+    | No language other than Spanish reaches PRDE's 30% threshold for significant presence
+    src https://www.ed.gov/sites/ed/files/2023/05/2023-PR-State-Plan.pdf
+    src https://nces.ed.gov/programs/digest/d23/tables/dt23_204.20.asp
+    src https://www.law.cornell.edu/uscode/text/20/6823
+    src https://www.law.cornell.edu/uscode/text/20/6311
+
+=== PW|Palau   eal.l2Support
+    coded: models = none established
+    | No second-language, ESL or newcomer designation appears in the profile
+    | 2006-16 Education Master Plan backs literacy work to raise English proficiency
+    | That work targets indigenous groups, not newly arrived pupils
+    src https://www.paclii.org/pw/legis/consol_act/et22144.pdf
+    src https://education-profiles.org/oceania/palau/~inclusion
+    src https://eqap.spc.int/sites/default/files/EQAP/Reports/PILNA%20Regional%20Report%202018_0.pdf
+
+=== SA|Saudi Arabia   eal.l2Support
+    coded: models = none established
+    | No cited source describes teaching Arabic to pupils who lack it
+    | 'second language' returns 0 hits on the OECD catalogue page
+    | The Ministry release concerns English proficiency only
+    src https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html
+    src https://www.moe.gov.sa/ar/mediacenter/MOEnews/Pages/en-tech-1443-25.aspx
+    src https://www.litmus-srep.info/
+    src https://www.bi-sli.org/
+
+=== SD|Sudan   eal.l1Support
+    coded: form = none established
+    | No first-language support programme is named (UNESCO PEER account; no document retrieved)
+    | Over 100 local dialects are reported across Sudan's language groups
+    src https://education-profiles.org/northern-africa-and-western-asia/sudan/~inclusion
+
+=== SL|Sierra Leone   eal.l2Support
+    coded: models = none established
+    | No English-as-additional-language provision is named for the one-fifth minority speakers
+    | Term counts in the retrieved body: newcomer 0, bilingual 0, "mother tongue" 0
+    | Radical Inclusion (2021) lists disability, gender, pregnancy, location, income, not language
+    src https://education-profiles.org/sub-saharan-africa/sierra-leone/~inclusion
+
+=== SR|Suriname   eal.l2Support
+    coded: models = none established
+    | No designated Dutch-as-a-second-language school programme was found
+    | The 2008-2015 interior plan targets the home, not the classroom
+    | Its lever is raising the share of households speaking Dutch as a second language
+    src https://platform.openjournals.nl/pedagogischestudien/article/download/14220/16334/32159
+    src https://education-profiles.org/latin-america-and-the-caribbean/suriname/~inclusion
+    src https://userblogs.fu-berlin.de/dutch/taalgebruik/taalgebruik-op-school/
+
+=== ST|São Tomé and Príncipe   eal.l1Support
+    coded: form = none established
+    | No home-language provision appears in PEER
+    | The one language rule runs the other way: Portuguese mainstreamed at all levels
+    | No creole of the islands is named; "Creole" 0, "Forro" 0, "mother tongue" 0
+    | The word "language" occurs 0 times in the whole retrieved profile body
+    src https://education-profiles.org/sub-saharan-africa/sao-tome-and-principe/~inclusion
+
+=== SY|Syria   eal.l2Support
+    coded: models = none established
+    | No Arabic-as-a-second-language provision appears in the cited profile
+    | Admission of non-Syrian pupils turns on documents and enrolment conditions
+    | The Group B Module compresses grades 1-8 into four years for ages 8-15
+    | That programme targets interrupted schooling, not language of instruction
+    src https://education-profiles.org/northern-africa-and-western-asia/syrian-arab-republic/~inclusion
+    src https://www.litmus-srep.info/
+    src https://www.bi-sli.org/
+
+=== SZ|Eswatini   eal.l2Support
+    coded: models = none established
+    | No English-as-an-additional-language syllabus appears in any subject list
+    | The one second-language syllabus runs into siSwati, not into English
+    | The leaving certificate splits first-language siSwati from siSwati as a second language
+    src https://www.examscouncil.org.sz/
+    src https://education-profiles.org/sub-saharan-africa/eswatini/~inclusion
+
+=== US|Alabama   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The survey identifies the home language; it is not instruction or support in that language
+    | Only a federal floor applies (the 2015 letter stating it now carries a rescinded stamp)
+    | Home language survey is not state-mandated; LEAs write their own with five set questions
+    | Guidance sets no translation or interpreting duty: neither word occurs in it
+    src https://wida.wisc.edu/sites/default/files/id-placement/AL-ID-Placement-Guidance.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+
+=== US|Alaska   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The home language is identified and reported, not a medium in which support is given
+    | DEED posts the Home Language Survey that districts must use, or a similar form
+    | Districts report each EL's native language in the Summer OASIS data collection
+    | Language Observation Checklist catches heritage-language influence a survey can miss
+    src https://wida.wisc.edu/sites/default/files/id-placement/AK-ID-Placement-Guidance.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+
+=== US|Arizona   eal.l1Support   (sub-national)
+    coded: form = none established
+    | A statutory English-only rule: children are taught English by being taught in English
+    | No subject matter may be taught in a language other than English
+    | A parental waiver under A.R.S. 15-753 is the only route to bilingual technique
+    | Where 20 pupils in a grade hold waivers the school must offer the class
+    src https://www.azleg.gov/ars/15/00756-05.htm
+    src https://www.ed.gov/media/document/arizona-approved-esea-state-plan-april-18-2025-113724.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+
+=== US|Delaware   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The home language is surveyed for identification, not used as a medium of support
+    | State-mandated home language survey sits in every enrolment packet, repeated on transfer
+    | Any non-English answer to the first three questions triggers identification
+    | Survey result is stored with screener scores in the statewide multilingual learner database
+    src https://wida.wisc.edu/sites/default/files/id-placement/DE-ID-Placement-Guidance.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+
+=== US|Idaho   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The survey identifies the dominant language; it is not support given in that language
+    | Guidance sets no translation or interpreting duty: neither word occurs in it
+    | Home language survey published in English and Spanish, the only versions the guidance names
+    | Parent notification of LIEP placement within 30 calendar days, language unspecified
+    src https://wida.wisc.edu/sites/default/files/id-placement/ID-ID-Placement-Guidance.pdf
+    src https://www.sde.idaho.gov/wp-content/uploads/2025/09/English-Learner-Manual.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+
+=== US|Indiana   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The home language is recorded in the state portal, not used as a medium of support
+    | Only three set questions may be used to determine a pupil's home language
+    | The non-English language must be displayed for the pupil in the IDOE ED ID portal
+    | Annual parent notification within 30 days, or 14 days for a mid-year identification
+    src https://wida.wisc.edu/sites/default/files/id-placement/IN-ID-Placement-Guidance.pdf
+    src https://secure.in.gov/doe/files/Exit-Criteria-for-English-Learners-Guidance-2025-2026-1.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+
+=== US|Maryland   eal.l1Support   (sub-national)
+    coded: form = none established
+    | Home language survey is used only to decide whether ELD services are needed
+    | Two or more of three questions must show a non-English language to trigger screening
+    | Guidance sets no translation or interpreting duty: neither word occurs in it
+    src https://wida.wisc.edu/sites/default/files/id-placement/MD-ID-Placement-Guidance.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+
+=== US|Missouri   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The home language is surveyed at enrolment, not used as a medium of support
+    | Any language other than English spoken or understood triggers active district steps
+    | Parents notified of results and placement within 30 days, language unspecified
+    | Guidance sets no translation or interpreting duty: neither word occurs in it
+    src https://wida.wisc.edu/sites/default/files/id-placement/MO-ID-Placement-Guidance.pdf
+    src https://dese.mo.gov/college-career-readiness/curriculum/english-language-development
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+
+=== US|Montana   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The home language is surveyed once at enrolment, not used as a medium of support
+    | State-mandated survey sits in every enrolment packet and is reviewed on return
+    | A Language Observation Checklist covers pupils whose survey is missing or incomplete
+    | Guidance sets no translation or interpreting duty: neither word occurs in it
+    src https://wida.wisc.edu/sites/default/files/id-placement/MT-ID-Placement-Guidance.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://mca.legmt.gov/bills/mca/title_0000/article_0100/part_0010/section_0010/0000-0100-0010-0010.html
+    src https://mca.legmt.gov/bills/mca/title_0200/chapter_0010/part_0050/section_0010/0200-0010-0050-0010.html
+
+=== US|New Hampshire   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The home language is surveyed and followed up, not used as a medium of support
+    | A certified ESOL teacher must review any non-English answer on the survey
+    | That teacher must follow up with the family to confirm the dominant home language
+    | Survey follows the pupil in the cumulative folder between New Hampshire districts
+    src https://wida.wisc.edu/sites/default/files/id-placement/NH-ID-Placement-Guidance.pdf
+    src https://wida.wisc.edu/sites/default/files/Website/State%20Pages/New-Hampshire/NH-exit-reclassification.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+
+=== US|North Carolina   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The home language is surveyed and confirmed, not used as a medium of support
+    | State Board requires a home language survey of every pupil at initial enrolment
+    | The state supplies a sample survey with recommended questions, not a mandatory form
+    | A non-English answer obliges the school to investigate the actual home language
+    src https://wida.wisc.edu/sites/default/files/id-placement/NC-ID-Placement-Guidance.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+
+=== US|Oklahoma   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The home language is surveyed and recorded, not used as a medium of support
+    | Every pupil in an Oklahoma public school must have a current survey on file
+    | The survey alone may neither qualify nor disqualify a pupil for EL services
+    | A non-English signed language on the survey also triggers English proficiency screening
+    src https://wida.wisc.edu/sites/default/files/id-placement/OK-ID-Placement-Guidance.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+
+=== US|South Dakota   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The home language is surveyed once per pupil, not used as a medium of support
+    | The department publishes a sample survey rather than a mandatory statewide form
+    | Survey given district-wide in the first year, then to new pupils only thereafter
+    | Guidance sets no translation or interpreting duty: neither word occurs in it
+    src https://wida.wisc.edu/sites/default/files/id-placement/SD-ID-Placement-Guidance.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://sdlegislature.gov/api/Statutes/Statute/1-27-20
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+
+=== US|Utah   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The home language is surveyed and weighed, not used as a medium of support
+    | USBE publishes a standardised home language survey form all parents complete at registration
+    | Literacy in the native language is named as a factor in how long English takes
+    | Guidance sets no translation or interpreting duty: neither word occurs in it
+    src https://wida.wisc.edu/sites/default/files/id-placement/UT-ID-Placement-Guidance.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+
+=== US|Virginia   eal.l1Support   (sub-national)
+    coded: form = none established
+    | The home language is surveyed, not used as a medium of support
+    | Virginia uses the joint US Education and Justice model questions verbatim
+    | Questions sit on registration documents or on a separate home language survey
+    | A survey from a previous Virginia division must be cross-checked for inconsistency
+    src https://wida.wisc.edu/sites/default/files/id-placement/VA-ID-Placement-Guidance.pdf
+    src https://onlinelibrary.wiley.com/doi/10.1111/flan.70020?af=R
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-2023
+    src https://reports.ecs.org/comparisons/high-school-graduation-requirements-01
+
+=== UY|Uruguay   eal.l2Support
+    coded: models = none established
+    | No newcomer-specific provision was found
+    | The frame is the country's own three mother tongues, not arrival
+    src https://www.impo.com.uy/bases/leyes/18437-2008
+    src https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html
+    src https://www.impo.com.uy/bases/leyes/18651-2010
+
+=== UZ|Uzbekistan   eal.l2Support
+    coded: models = none established
+    | Neither cited source describes teaching the school language to those who lack it
+    | PP-1875's whole subject is foreign-language, mainly English, teaching
+    | Textbook supply duties cover general and specialised secondary institutions
+    src https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html
+    src https://lex.uz/ru/docs/2126030
+    src https://lex.uz/ru/docs/1380638
+    src https://lex.uz/ru/docs/5013009
+
+=== VC|Saint Vincent and the Grenadines   eal.l1Support
+    coded: form = none established
+    | No first-language, bilingual or newcomer provision is described
+    | The profile never uses the word "language", and asserts no distinct ethnic minorities
+    | Basis given is the Education For All 2015 National Review
+    src https://camdu.edu.lc/wp-content/uploads/2019/06/Primary-School-Language-Arts-Curriculum-Grades_K-2.pdf
+    src https://education-profiles.org/latin-america-and-the-caribbean/saint-vincent-and-the-grenadines/~inclusion
+    src https://www.cxc.org/SiteAssets/syllabusses/CSEC/CSEC%20Modern%20Languages.pdf
+    src https://uwispace.sta.uwi.edu/bitstreams/0a9645d7-1969-4307-a0f7-6883148a2642/download
+
+=== VN|Vietnam   eal.l2Support
+    coded: models = none established
+    | Vietnamese is the official language of education institutions
+    | Government stipulates any teaching and learning through foreign languages
+    | Ethnic minority people are encouraged, not entitled, to learn their own language
+    | Sign language and Braille are named as media for disabled learners
+    src https://english.luatvietnam.vn/law-on-education-no-43-2019-tt-qh14-of-the-national-assembly-175003-doc1.html
+
+=== YE|Yemen   eal.l1Support
+    coded: form = none established
+    | No mother-tongue or transitional first-language provision named in the profile
+    | Arabic is the sole language of instruction from primary school to university
+    | PEER lists Soqotri, Mehri and Hobyot as small non-Arabic speech communities
+    | Home varieties are regional Arabics: Sanaani 41.2%, Taizi-Adeni 36%, Hadrami 17%
+    src https://education-profiles.org/northern-africa-and-western-asia/yemen/~inclusion
+    src https://help.unhcr.org/yemen/refugee-assistance/education-for-refugees-in-yemen/
+
+=== YE|Yemen   eal.l2Support
+    coded: models = none established
+    | No Arabic-as-additional-language support documented for displaced children
+    | The profile's second language means English as a foreign subject
+    src https://education-profiles.org/northern-africa-and-western-asia/yemen/~inclusion
+    src https://help.unhcr.org/yemen/refugee-assistance/education-for-refugees-in-yemen/
+

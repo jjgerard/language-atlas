@@ -1,0 +1,941 @@
+# 104 entry-fields to grade, over 9 field(s)
+# Grade each A (a source states the absence), B (a search came up empty)
+# or C (the prose says neither and the source must be re-read).
+
+=== AF|Afghanistan   dld.serviceModel
+    coded: sectors = none established
+    | Segregated schools existed for visual, hearing and speech impairments (a pre-2021 picture)
+    | No speech-language therapy workforce or training programme was located
+    | The country profile is part of a UNICEF regional mapping study, not a government statement
+    src http://web.archive.org/web/20220701064831id_/https://www.unicef.org/rosa/media/16981/file/Country%20Profile%20-%20Afghanistan.pdf
+    src https://web.archive.org/web/20240512101037/https://www.unicef.org/rosa/media/3036/file/Early%20literacy%20and%20multilingual%20education%20in%20South%20Asia.pdf
+    src https://education-profiles.org/central-and-southern-asia/afghanistan/~inclusion
+    src https://web.archive.org/web/20170201175655/http://planipolis.iiep.unesco.org/upload/Afghanistan/Afghanistan_Education_law.pdf
+
+=== AF|Afghanistan   dld.outcomesEvidence
+    coded: evidence_found = none established
+    | PEER profile is no longer updated and describes the system before 2021
+    | No data existed on developmental impairment, autism, ADHD or multiple impairments
+    | No comprehensive figure for the prevalence or number of children with disabilities
+    | The 2018 Out-of-school Children report works from existing data only
+    src http://web.archive.org/web/20220701064831id_/https://www.unicef.org/rosa/media/16981/file/Country%20Profile%20-%20Afghanistan.pdf
+    src https://web.archive.org/web/20240512101037/https://www.unicef.org/rosa/media/3036/file/Early%20literacy%20and%20multilingual%20education%20in%20South%20Asia.pdf
+    src https://education-profiles.org/central-and-southern-asia/afghanistan/~inclusion
+    src https://web.archive.org/web/20170201175655/http://planipolis.iiep.unesco.org/upload/Afghanistan/Afghanistan_Education_law.pdf
+
+=== AM|Armenia   dld.multilingualProvision
+    coded: local_norms = none
+    | Reported to UNICEF's consultants: the school itself judges if another language explains it
+    | A methodological guide is given to the school for that first-stage assessment
+    | International standard tools and open-source tests are still to be adapted and validated
+    src https://www.arlis.am/hy/acts/67166
+    src https://www.unicef.org/eca/media/31131/file/Assessing%20disability%20of%20children%20report.pdf
+    src https://education-profiles.org/northern-africa-and-western-asia/armenia/~inclusion
+
+=== AS|American Samoa   dld.workforce
+    coded: entry_route = none named
+    | Health licensing rule 31.0421 lists licensed professions; speech-language pathology is absent
+    | Director of Special Education must be qualified by education, training and experience
+    src https://asbar.org/code-annotated/16-1601-short-title/
+    src https://asbar.org/code-annotated/16-1602-purpose/
+    src https://asbar.org/code-annotated/16-1603-definitions/
+    src https://asbar.org/code-annotated/16-1604-division-of-special-education-administration/
+
+=== AU|New South Wales   dld.assessments   (sub-national)
+    coded: test_type = none
+    | NSW names no instrument, only a required property of the test
+    | At least one standardised language test is required
+    | It must report both receptive and expressive language skills
+    src https://education.nsw.gov.au/content/dam/main-education/teaching-and-learning/disability-learning-and-support/disability-criteria/NSW_Department_of_Education_Disability_Criteria_2024.pdf
+    src https://www.swslhd.health.nsw.gov.au/communityhealth/speechPathology.html
+    src https://www.islhd.health.nsw.gov.au/services-clinics/speech-pathology-nowra
+    src https://www.nccd.edu.au/wider-support-materials/step-3-what-category-disability
+
+=== AZ|Azerbaijan   dld.terminology
+    coded: term_type = none located
+    | UNESCO PEER: 'An explicit definition of persons with SEN has not been found'
+    | No speech or language category appears anywhere in the PEER Azerbaijan profile
+    | The special schools PEER records are described by impairment, not by speech
+    | The special-education statute could not be read: e-qanun.az served a JS shell
+    src https://education-profiles.org/northern-africa-and-western-asia/azerbaijan/~inclusion
+    src https://e-qanun.az/framework/4353
+
+=== BH|Bahrain   dld.workforce
+    coded: entry_route = none named
+    | No speech or language specialism among them: the 540 specialise in mental disability and autism
+    | PEER profile, last modified 2021: 540 specialised personnel in government-run schools
+    | All hold psychology degrees with a special-needs focus and special education diplomas
+    | Government funds special education teacher training at the Arabian Gulf University
+    src https://education-profiles.org/northern-africa-and-western-asia/bahrain/~inclusion
+
+=== BI|Burundi   dld.serviceModel
+    coded: sectors = none established
+    | 0 speech therapists in 2015, with 6 ENT surgeons and 10 audiologists (self-reported)
+    | 3 medical schools and 1 ENT training programme, no speech programme
+    | No 2009 figure at all, so no trend can be read from the survey
+    src https://minisante.gov.bi/wp-content/uploads/pnilmcnt/mpr/Normes%20des%20services%20de%20M%D0%92decine%20Physique%20et%20R%D0%92adaptation%20au%20Burundi.pdf
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/
+    src https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Burundi.pdf
+    src https://education-profiles.org/sub-saharan-africa/burundi/~inclusion
+
+=== BI|Burundi   dld.workforce
+    coded: entry_route = none named; training = no programme found; headcount = none reported
+    | A government document stating the profession does not yet exist in the country
+    | Ministry rehabilitation norms list orthophonie as not yet present in Burundi
+    | Only rehabilitation physicians, physiotherapists and orthoprosthetists are represented
+    | Norms for orthophonistes are to be added when such professionals appear
+    | The 2015 ENT survey independently recorded zero speech therapists
+    src https://minisante.gov.bi/wp-content/uploads/pnilmcnt/mpr/Normes%20des%20services%20de%20M%D0%92decine%20Physique%20et%20R%D0%92adaptation%20au%20Burundi.pdf
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/
+    src https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Burundi.pdf
+    src https://education-profiles.org/sub-saharan-africa/burundi/~inclusion
+
+=== BJ|Benin   dld.multilingualProvision
+    coded: local_norms = none
+    | A 2015 sub-regional poster on francophone sub-Saharan Africa, not a Benin-specific rule
+    | Plurilingualism and tools unsuited to the local population are named as daily difficulties
+    | African SLPs were adapting European tests to assess patients; no locally normed tool is named
+    src https://eduactions.org/pour-plus-dorthophonistes-dans-le-domaine-paramedical-labepo-sensibilise-les-nouveaux-bacheliers/
+    src https://orthophonistesdumonde.fr/IMG/pdf/poster_cplol_180415-2.pdf
+    src https://sgg.gouv.bj/doc/loi-2003-17/download
+    src https://education-profiles.org/sub-saharan-africa/benin/~inclusion
+
+=== BT|Bhutan   dld.terminology
+    coded: term_type = none located; standing = none
+    | No term for a language disorder appears in either cited source
+    | 'language disorder' and 'speech and language' both return 0 hits in the profile
+    | Two of the three 'speech' hits are the software phrase text-to-speech
+    | Speech therapists are named once, as collaborators in early childhood provision
+    src http://web.archive.org/web/20220331171101id_/https://www.unicef.org/rosa/media/16991/file/Country%20Profile%20-%20Bhutan.pdf
+    src https://web.archive.org/web/20240512101037/https://www.unicef.org/rosa/media/3036/file/Early%20literacy%20and%20multilingual%20education%20in%20South%20Asia.pdf
+
+=== BZ|Belize   dld.workforce
+    coded: training = no programme found
+    | The ministry lists speech therapy among services to increase, implying scarcity
+    | No Belizean regulator or in-country training route was identified
+    src https://education-profiles.org/latin-america-and-the-caribbean/belize/~inclusion
+    src https://www.moecst.gov.bz/education-services/student-services/special-education-unit/
+
+=== CA|Canada   dld.legalEntitlement
+    coded: instrument_type = none
+    | No national entitlement exists to compare
+    | Entitlement is provincial, and the provinces do not converge
+    | A child moving between provinces can change category, funding and service model
+    src https://open.alberta.ca/dataset/ee2ccea8-97fe-41a1-aa11-ed9f21421364
+    src https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/legislation-policy/public-schools/k-12-funding-inclusive-education
+    src https://cmec.ca/Publications/Lists/Publications/Attachments/446/Protocol_2024-28_signed_EN.pdf
+    src https://laws-lois.justice.gc.ca/eng/acts/O-3.01/section-43.html
+
+=== CA|Alberta   dld.assessments   (sub-national)
+    coded: test_type = none
+    | Formal and informal measures — standardised tests, checklists, observation, parent interview
+    | Where formal assessment is not possible, parent or observational report may stand in
+    | Eligibility rests on the developmental profile, NOT on individual subtest scores
+    | Reports must be completed within six months of the child starting the programme
+    src https://files.eric.ed.gov/fulltext/ED506088.pdf
+    src https://open.alberta.ca/dataset/ee2ccea8-97fe-41a1-aa11-ed9f21421364
+    src https://files.eric.ed.gov/fulltext/ED491438.pdf
+    src https://kings-printer.alberta.ca/documents/Acts/e00p3.pdf
+
+=== CA|British Columbia   dld.assessments   (sub-national)
+    coded: test_type = none
+    | Both formal and informal measures, against norms, school expectations and need
+    | Standardised measures alongside behaviour samples from the school context
+    | Plus observation and interviews with the student, parents and relevant others
+    src https://www2.gov.bc.ca/assets/gov/education/administration/kindergarten-to-grade-12/inclusive/inclusive_ed_policy_manual.pdf
+    src https://www2.gov.bc.ca/assets/gov/education/administration/legislation-policy/legislation/schoollaw/e/m149_89.pdf
+    src https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/legislation-policy/public-schools/k-12-funding-inclusive-education
+    src https://www2.gov.bc.ca/assets/gov/education/administration/legislation-policy/legislation/schoollaw/e/m150_89.pdf
+
+=== CA|Nunavut   dld.assessments   (sub-national)
+    coded: test_type = none
+    | All practices and tools must take account of first and second language context
+    | An assessor must be qualified to use and interpret the procedures
+    | Culturally and linguistically appropriate to the circumstances
+    | And must understand Inuit values and how they relate to the assessment
+    src https://www.gov.nu.ca/sites/default/files/publications/2022-03/inuglugijaittuq_eng.pdf
+    src https://www.nunavutlegislation.ca/en/file-download/download/public/7561
+    src https://www.nunavutlegislation.ca/en/file-download/download/public/2884
+    src https://www.nunavutlegislation.ca/en/file-download/download/public/8291
+
+=== CA|Quebec   dld.assessments   (sub-national)
+    coded: test_type = none
+    | Carried out by an orthophoniste within a multidisciplinary team
+    | Using systematic observation techniques and appropriate tests
+    | A minimum six months of regular speech therapy must PRECEDE the diagnostic evaluation
+    | Reports are normally under 12 months old at 30 September
+    src https://cdn-contenu.quebec.ca/cdn-contenu/education/soutien-eleves/Organisation-services-educatifs-eleves-hdaa.pdf
+    src https://www.publicationsduquebec.gouv.qc.ca/fileadmin/Fichiers_client/lois_et_reglements/LoisAnnuelles/fr/1997/1997C96F.PDF
+    src https://www.publicationsduquebec.gouv.qc.ca/fileadmin/Fichiers_client/lois_et_reglements/LoisAnnuelles/fr/2002/2002C33F.PDF
+    src https://www.publicationsduquebec.gouv.qc.ca/fileadmin/Fichiers_client/lois_et_reglements/LoisAnnuelles/fr/2008/2008C29F.PDF
+
+=== CD|DR Congo   dld.workforce
+    coded: training = no programme found
+    | A single practitioner's estimate from a 2017 interview, with no register found
+    | The number of logopèdes was said not to exceed ten
+    | No degree course in logopédie, only an introductory unit at a Kinshasa university
+    src https://www.africanewsrdc.net/education/logopede-corneille-ekolele-deplore-enfants-nes-handicap-soient-taxes-de-sorciers/
+    src https://www.radiookapi.net/2023/06/27/actualite/sante/nord-kivu-ouverture-dun-camp-dorthophonie-pour-reeduquer-les-enfants-et
+    src https://education-profiles.org/sub-saharan-africa/democratic-republic-of-congo/~inclusion
+    src https://media.unesco.org/sites/default/files/webform/r2e002/989f00058496b07efeda7d9bb07aef8b5ebe7279.pdf
+
+=== CF|Central African Republic   dld.workforce
+    coded: entry_route = none named
+    | Source counts teachers, not any speech or language therapy workforce
+    | Very few teachers or support personnel are trained for children with disabilities
+    | Forty per cent of teachers are parent-teachers with no training or qualifications
+    | 1,050 regular and 709 community teachers were trained between 2015 and 2017
+    src https://education-profiles.org/sub-saharan-africa/central-african-republic/~inclusion
+
+=== CG|Congo   dld.workforce
+    coded: training = no programme found
+    | No headcount is published; the association says practitioners are few
+    | The Association des Orthophonistes du Congo was founded on 31 December 2013
+    | No national orthophonie training programme was found
+    src http://web.archive.org/web/20191212223623id_/http://foafafrique.org/republique-democratique-du-congo/
+    src https://orthophonistesdumonde.fr/IMG/pdf/poster_cplol_180415-2.pdf
+    src https://education-profiles.org/sub-saharan-africa/congo/~inclusion
+
+=== CM|Cameroon   dld.workforce
+    coded: training = no programme found
+    | Figures are a country-report estimate from named contacts, not a register
+    | Between three and five orthophonistes nationally, all in private practice
+    | Two practise in Yaoundé and one in Douala
+    | No university training programme in orthophonie exists in Cameroon
+    src http://web.archive.org/web/20231214095704/https://www.refugeecouncil.ch/fileadmin/user_upload/Publikationen/Herkunftslaenderberichte/Afrika/Kamerun/190215-kam-acces-soins-medicaux-f.pdf
+    src https://droitcamerounais.info/en/files/83.04.10-Loi-du-13-avril-2020_Personnes-handicapees.pdf
+    src https://education-profiles.org/sub-saharan-africa/cameroon/~inclusion
+
+=== DM|Dominica   dld.dischargeCriteria
+    coded: discharge_basis = none established
+    | No discharge-from-support rule exists, only an attendance exemption
+    | Art. 37 exempts a child incapable of education "by ordinary methods of instruction"
+    src https://education-profiles.org/latin-america-and-the-caribbean/dominica/~inclusion
+
+=== DM|Dominica   dld.outcomesEvidence
+    coded: evidence_found = none established
+    | No monitoring or reporting mechanism measures progress towards inclusive education
+    src https://education-profiles.org/latin-america-and-the-caribbean/dominica/~inclusion
+
+=== DO|Dominican Republic   dld.assessments
+    coded: test_type = none
+    | No instrument is named in any retrieved source
+    | Flexible learning assessments must use "appropriate language" and adapted media
+    src https://education-profiles.org/latin-america-and-the-caribbean/dominican-republic/~inclusion
+
+=== DZ|Algeria   dld.outcomesEvidence
+    coded: evidence_found = none established
+    | Source describes special-needs provision generally, never language disorder
+    | Algeria does not have an education monitoring report
+    | Inclusion data differ between the solidarity ministry and the education ministry
+    | Parents rarely report children with disabilities, so data have not been collected
+    | Reliable statistics on children with disabilities remain difficult to obtain
+    src https://asjp.cerist.dz/en/downArticle/415/5/3/57226
+    src https://www.un.org/development/desa/disabilities/wp-content/uploads/sites/15/2019/11/Algeria_Law-No.-02-09-of-8-May-2002-on-the-protection-and-promotion-of-disabled-persons.pdf
+    src https://www.arjals.com/ajal/article/download/347/168
+    src https://education-profiles.org/northern-africa-and-western-asia/algeria/~inclusion
+
+=== ER|Eritrea   dld.serviceModel
+    coded: sectors = none established
+    | Three special schools only: two for deaf pupils, one for blind, all elementary boarding
+    | Self-contained special classes in mainstream schools, 15 classes in 2 zobas in 2015/16
+    | 25 special resource rooms built across 6 zobas under the sector development plan
+    | No speech or language therapy of any kind (PEER profile, updated 2026)
+    src https://education-profiles.org/sub-saharan-africa/eritrea/~inclusion
+    src https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf
+
+=== ES|Catalonia   dld.terminology   (sub-national)
+    coded: term_type = none located; standing = none
+    | Not found in the cited sources, and nothing is filled from a weaker one
+    | The education act uses no language-disorder term: 'logoped' 0 in 341,554 chars
+    | Neither litmus-srep.info nor bi-sli.org, task and network sites, carries a Catalan label
+    src https://www.litmus-srep.info/
+    src https://www.bi-sli.org/
+    src https://www.boe.es/buscar/act.php?id=BOE-A-2009-13038
+    src https://xtec.gencat.cat/ca/serveis/see/creda/
+
+=== FM|Micronesia   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | College of Micronesia course covers assessing and diagnosing special needs
+    | That course is limited to the areas of reading and mathematics
+    src https://www.national.doe.fm/wp-content/uploads/2026/04/FSM-Special-Education-Procedural-Manual-2012.pdf
+    src https://www.fsmlaw.org/fsm/code/title40/T40_Ch02.htm
+    src https://www.law.cornell.edu/uscode/text/20/1411
+    src https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv
+
+=== FM|Micronesia   dld.workforce
+    coded: headcount = none reported
+    | An official US federal return, not a survey estimate
+    | Zero speech-language pathologists reported for 2023-24
+    src https://www.national.doe.fm/wp-content/uploads/2026/04/FSM-Special-Education-Procedural-Manual-2012.pdf
+    src https://www.fsmlaw.org/fsm/code/title40/T40_Ch02.htm
+    src https://www.law.cornell.edu/uscode/text/20/1411
+    src https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv
+
+=== GA|Gabon   dld.outcomesEvidence
+    coded: evidence_found = none established
+    | Source describes special-needs provision generally, never language disorder
+    | Gabon has no education monitoring report and no sectoral plan
+    | The last statistical collection was 2012-13 and its results were never published
+    | A UN-backed programme signed in 2018 aims to produce the first yearbooks
+    src https://gabonactu.com/blog/2026/01/15/orthophonie-luniversite-des-sciences-de-la-sante-lance-sa-premiere-promotion
+    src https://education-profiles.org/sub-saharan-africa/gabon/~inclusion
+
+=== GE|Georgia   dld.workforce
+    coded: entry_route = none named
+    | Source describes special-needs provision generally, never language disorder
+    | Named specialists: psychologist, occupational therapist, psychiatrist, special teacher
+    | That list is not exhaustive and no speech or language therapist appears in it
+    | Teacher training and development programmes are described only in general terms
+    src https://matsne.gov.ge/en/document/view/29248?publication=95
+    src https://www.unicef.org/eca/media/31131/file/Assessing%20disability%20of%20children%20report.pdf
+    src https://matsne.gov.ge/ka/document/view/3285991
+    src https://matsne.gov.ge/ka/document/view/113476
+
+=== GH|Ghana   dld.assessments
+    coded: test_type = none
+    | No standardised national assessment is documented
+    | A Ghanaian-English speech and language assessment tool is under development
+    src https://sbahs.ug.edu.gh/department-audiology-speech-and-language-therapy
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/
+    src https://bop.unibe.ch/LPIA/article/download/11266/15560
+    src https://education-profiles.org/sub-saharan-africa/ghana/~inclusion
+
+=== GM|Gambia   dld.serviceModel
+    coded: sectors = none established
+    | An explicit statement of no known activity, not a blank
+    | Not among the 22 countries in the 2015 sub-Saharan ENT survey
+    | A single directory entry rather than a survey; the page invites correction
+    src https://www.speech-language-therapy.com/resources/speech-language-pathology-in-west-africa
+    src https://education-profiles.org/sub-saharan-africa/gambia/~inclusion
+
+=== GM|Gambia   dld.workforce
+    coded: entry_route = none named; training = no programme found; headcount = none reported
+    | A single crowd-sourced directory entry, undated, and hedged in its own words
+    | It reports no known speech and language therapy work in The Gambia
+    | Gambia appears in neither the 2009 nor the 2015 sub-Saharan ENT survey
+    | No training programme, association or workforce count was found anywhere
+    src https://www.speech-language-therapy.com/resources/speech-language-pathology-in-west-africa
+    src https://education-profiles.org/sub-saharan-africa/gambia/~inclusion
+
+=== GQ|Equatorial Guinea   dld.assessments
+    coded: test_type = none
+    | No instrument is named in the profile
+    | Needs are assessed by teams of professionals of different specialties
+    src https://education-profiles.org/sub-saharan-africa/equatorial-guinea/~inclusion
+
+=== GY|Guyana   dld.workforce
+    coded: entry_route = none named
+    | No speech and language therapist role appears anywhere in the national profile
+    | Ministry data: under 40 per cent of special education teachers have sufficient training
+    src https://education-profiles.org/latin-america-and-the-caribbean/guyana/~inclusion
+
+=== HN|Honduras   dld.workforce
+    coded: entry_route = none named
+    | No speech and language therapist role was found in any instrument read
+    src https://education-profiles.org/latin-america-and-the-caribbean/honduras/~inclusion
+
+=== HT|Haiti   dld.workforce
+    coded: training = no programme found
+    | No module on inclusive or special education in universities or teacher training colleges
+    | Many private-sector teachers have not completed the baccalauréat
+    | PIPE aimed to train 50 teachers per department
+    src https://education-profiles.org/latin-america-and-the-caribbean/haiti/~inclusion
+
+=== HT|Haiti   dld.outcomesEvidence
+    coded: evidence_found = none established
+    | No national monitoring report on education exists
+    | Few established indicators measure inclusive education
+    src https://education-profiles.org/latin-america-and-the-caribbean/haiti/~inclusion
+
+=== IN|Karnataka   dld.workforce   (sub-national)
+    coded: entry_route = none named
+    | 430 dedicated RBSK mobile health teams are formed for check-up and treatment
+    | A team is two medical officers, one staff nurse and an ophthalmic assistant or pharmacist
+    | Eighteen District Early Intervention Centres are recorded as functional
+
+=== IN|Manipur   dld.workforce   (sub-national)
+    coded: entry_route = none named
+    | State RBSK page: 36 block teams, each of two AYUSH doctors, one ANM and one pharmacist
+    | Two government special schools run, one for visual and one for hearing impairment
+    src https://socialwelfare.mn.gov.in/en/sctet-sckim/disabled/
+    src https://socialwelfare.mn.gov.in/rules-regulations/disabled-persons/
+
+=== IN|Nagaland   dld.workforce   (sub-national)
+    coded: entry_route = none named
+    | The state records a shortage of manpower in special education training
+    | District manpower under Samagra Shiksha: coordinators, RCI-trained staff, physiotherapists
+    | Physiotherapist is the only therapy post that table names, and it carries no date
+    src https://samagra.nagaland.gov.in/inclusive-education/
+
+=== IN|Uttarakhand   dld.workforce   (sub-national)
+    coded: entry_route = none named
+    | The 2026-27 NHM approval names audiologists, not speech or language therapists
+    | Audiologist saturation at district hospitals is targeted at 70 per cent for 2026-27
+    src https://socialwelfare.uk.gov.in/service/divyang-bharan-poshan-anudaan/
+    src https://cdnbbsr.s3waas.gov.in/s357bafb2c2dfeefba931bb03a835b1fa9/uploads/2025/01/202501241603238692.pdf
+    src https://socialwelfare.uk.gov.in/rts-act/
+    src https://cdnbbsr.s3waas.gov.in/s37993e11204b215b27694b6f139e34ce8/uploads/2026/07/202608101086718331.pdf
+
+=== JM|Jamaica   dld.workforce
+    coded: entry_route = none named
+    | Teams are clinical psychologists, child and adolescent psychologists, and diagnosticians
+    | No speech-language professional is named in the Unit's description of the service
+    src https://pep.moey.gov.jm/wp-content/uploads/2018/10/Special-Education-Support.pdf
+    src https://moey.gov.jm/
+    src https://laws.moj.gov.jm/
+    src https://japarliament.gov.jm/
+
+=== KM|Comoros   dld.serviceModel
+    coded: sectors = none established
+    | No therapist or therapy service is mentioned in the profile
+    | The sector plan states there is no capacity to establish special education
+    src https://education-profiles.org/sub-saharan-africa/comoros/~inclusion
+    src https://justice.gouv.km/wp-content/uploads/2025/03/decret-n-21-005pr-portant-promulgation-de-la-loi-n-20-034au-du-29-decembre-2020-portant-revision-de-la-loi-n-94-035af-relative-a-lorientation-et-a-leducation.pdf
+    src https://www.adry.up.ac.za/country-reports-2018/union-des-comores
+
+=== KN|Saint Kitts and Nevis   dld.outcomesEvidence
+    coded: evidence_found = none established
+    | Sector plan calls the EMIS "underdeveloped and underutilized"
+    | No outcome data on speech and language therapy located
+    src https://education.gov.kn/wp-content/uploads/2022/11/The-Education-Act-2005.pdf
+    src https://education-profiles.org/latin-america-and-the-caribbean/saint-kitts-and-nevis/~inclusion
+
+=== LR|Liberia   dld.serviceModel
+    coded: sectors = none established
+    | An explicit statement of no known activity, not a blank
+    | Liberia is not among the 22 countries in the 2015 sub-Saharan ENT survey
+    | A single directory entry rather than a survey; the page invites correction
+    src https://www.speech-language-therapy.com/resources/speech-language-pathology-in-west-africa
+    src https://education-profiles.org/sub-saharan-africa/liberia/~inclusion
+    src https://www.changemakersforchildren.community/system/files/2021-05/Liberia-Inclusive-Education-Policy.pdf
+
+=== LR|Liberia   dld.workforce
+    coded: entry_route = none named; training = no programme found; headcount = none reported
+    | A single crowd-sourced directory entry, undated, and hedged in its own words
+    | It reports no known speech and language therapy work in Liberia
+    | Liberia appears in neither the 2009 nor the 2015 sub-Saharan ENT survey
+    | No training programme, association or workforce count was found anywhere
+    src https://www.speech-language-therapy.com/resources/speech-language-pathology-in-west-africa
+    src https://education-profiles.org/sub-saharan-africa/liberia/~inclusion
+    src https://www.changemakersforchildren.community/system/files/2021-05/Liberia-Inclusive-Education-Policy.pdf
+
+=== LY|Libya   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | Higher Evaluation Committee in the EIDG assesses levels of student integration
+    | Committee established by ministerial Decision No. 1498 of 2017
+    | Gifted-student committees use special assessments of talent and intelligence
+    src https://www.arjals.com/ajal/article/download/347/168
+    src https://education-profiles.org/northern-africa-and-western-asia/libya/~inclusion
+
+=== LY|Libya   dld.serviceModel
+    coded: sectors = none established
+    | The editorial's authors are unaware of any university speech-language therapy programme
+    | Libya is named twice in the same list of countries without programmes
+    | Not among the 22 countries in the 2015 sub-Saharan ENT survey
+    | An absence stated by the editorial, not a Libyan government statement
+    src https://www.arjals.com/ajal/article/download/347/168
+    src https://education-profiles.org/northern-africa-and-western-asia/libya/~inclusion
+
+=== MA|Morocco   dld.multilingualProvision
+    coded: local_norms = none
+    | No adapted standardized assessments exist in Moroccan Arabic or Amazigh
+    | None of the twelve interviewees spoke Amazigh, an official language
+    | Therapy is mostly in French and Moroccan Arabic
+    | A dyslexic child may need assessing in both Arabic and French
+    src https://arjals.com/ajal/article/download/348/169
+    src https://www.arjals.com/ajal/article/download/347/168
+    src https://education-profiles.org/northern-africa-and-western-asia/morocco/~inclusion
+
+=== MA|Morocco   dld.assessments
+    coded: test_type = none
+    | No Moroccan-normed instrument is named; informal clinical assessment predominates
+    src https://arjals.com/ajal/article/download/348/169
+    src https://www.arjals.com/ajal/article/download/347/168
+    src https://education-profiles.org/northern-africa-and-western-asia/morocco/~inclusion
+
+=== MH|Marshall Islands   dld.workforce
+    coded: headcount = none reported
+    | An official US federal return, not a survey estimate
+    | Zero speech-language pathologists reported for 2023-24
+    src https://pacificdata.org/data/dataset/aad9ce43-0f09-4b43-8cb4-391c46ffd7bd/resource/21d89637-dd38-4bf8-9b1a-e8d9115bdfb5/download/school-system-rules-and-regulations-2015.pdf
+    src https://www.law.cornell.edu/uscode/text/20/1411
+    src https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv
+    src https://data.ed.gov/dataset/fc85541b-d729-4722-8622-e814dae86b5b/resource/4f814d4e-a6b2-409c-ad14-a66f6718a669/download/bpersonnel2023-24.csv
+
+=== ML|Mali   dld.workforce
+    coded: entry_route = none named
+    | Source counts teachers, not any speech or language therapy workforce
+    | Sign language and Braille training sits with specialised facilities, not the ministry
+    | The education ministry does not yet have any specialists of its own
+    | 258 pedagogical advisers from the 20 education academies were trained to train teachers
+    | Travelling teacher is a Handicap International pilot, absent from ministry job descriptions
+    src https://education-profiles.org/sub-saharan-africa/mali/~inclusion
+    src https://www.gpekix.org/sites/default/files/Media%20Document/PRODEC-2-Mali2019-2028.pdf
+
+=== MR|Mauritania   dld.serviceModel
+    coded: sectors = none established
+    | No speech or language therapy service is named in the profile
+    | A centre for training and social advancement of children with disabilities
+    | An educational complex for people with learning disabilities in Sebkha
+    src https://education-profiles.org/sub-saharan-africa/mauritania/~inclusion
+    src https://fonctionpublique.gov.mr/sites/default/files/2023-11/ORDONNANCE%20N%C2%B0-2006-043.pdf
+    src https://finances.gov.mr/sites/default/files/2022-12/FT_EPA_2021_DTF_-_Nov2822.pdf
+
+=== MW|Malawi   dld.workforce
+    coded: entry_route = none named; training = no programme found; headcount = none reported
+    | Key-informant survey estimates, not register counts
+    | Zero speech therapists recorded in both the 2009 and the 2015 surveys
+    | WHO's 2021 hearing report names Malawi as having no practising speech therapists
+    | The only allied training listed is audiology, not speech and language therapy
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/
+    src https://www.efhoh.org/wp-content/uploads/2021/03/World-Hearing-Report.pdf
+    src https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf
+    src https://www.africa.saslha.co.za/wp-content/uploads/2021/09/Academic-institutions-in-Africa-offering-Speech-Therapy-and-Audiology-training.pdf
+
+=== MW|Malawi   dld.outcomesEvidence
+    coded: evidence_found = none established
+    | Source describes special-needs provision generally, never language disorder
+    | 2013/14-2017/18 sector plan: no indicators to monitor performance for SEN learners
+    | Ministry expected to identify new indicators for target groups at secondary level
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/
+    src https://www.efhoh.org/wp-content/uploads/2021/03/World-Hearing-Report.pdf
+    src https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf
+    src https://www.africa.saslha.co.za/wp-content/uploads/2021/09/Academic-institutions-in-Africa-offering-Speech-Therapy-and-Audiology-training.pdf
+
+=== NE|Niger   dld.serviceModel
+    coded: sectors = none established
+    | No speech or language therapy service is named in the profile
+    | The ministry's special education division counts 129 inclusive schools
+    | A disability federation counted 61 schools taking disabled children
+    src https://education-profiles.org/sub-saharan-africa/niger/~inclusion
+
+=== NG|Nigeria   dld.terminology
+    coded: term_type = none located; standing = none
+    | No professional title or disorder label is given (a one-line institution listing)
+    | SASLHA places training at the University of Ibadan in a Department of Special Education
+    | No statutory or ministry term for language disorder was reachable from the cited links
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/
+    src https://www.africa.saslha.co.za/wp-content/uploads/2021/09/Academic-institutions-in-Africa-offering-Speech-Therapy-and-Audiology-training.pdf
+    src https://education-profiles.org/sub-saharan-africa/nigeria/~inclusion
+    src http://www.rodra.co.za/images/countries/nigeria/policy/National%20Policy%20on%20Special%20Needs%20Education.pdf
+
+=== NZ|New Zealand   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | 2016-20 education plan aimed to strengthen data use to improve individual assessment
+    src https://www.education.govt.nz/education-professionals/schools-year-0-13/learning-support/speech-language-and-communication-support-children
+    src https://www.education.govt.nz/education-professionals/schools-year-0-13/learning-support/overview-ongoing-resourcing-scheme
+    src https://www.education.govt.nz/education-professionals/schools-year-0-13/learning-support/apply-ongoing-resourcing-scheme-school-students
+    src https://web-assets.education.govt.nz/s3fs-public/2025-03/ORS-Guidelines-January%202025.docx?VersionId=g0e_IqErT5r2ubArtxK.iqZNnpPshQu3
+
+=== PA|Panama   dld.workforce
+    coded: entry_route = none named
+    | The support-service staffing list contains no speech and language therapist
+    | It names special education, psychology, social work and learning difficulties
+    src https://education-profiles.org/latin-america-and-the-caribbean/panama/~inclusion
+
+=== PH|Philippines   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | Resource centres for inclusive education provide continuous assessment
+    src https://lawphil.net/statutes/repacts/ra2019/ra_11249_2019.html
+    src https://lawphil.net/statutes/repacts/ra2022/ra_11650_2022.html
+    src https://prc.gov.ph/Pages/PRBv4/SpeechLanguagePathology.htm
+    src https://lawphil.net/statutes/repacts/ra2024/ra_12027_2024.html
+
+=== PW|Palau   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | Schools implement protocols to identify, locate and evaluate children in need
+    | Special education programme of the Ministry of Education coordinates identification
+    | Annual IEP developed and approved by a team of parents, teachers and principal
+    src https://www.palaumoe.net/files/sped/policies/RPPL_3-9.pdf
+    src https://www.palaumoe.net/files/sped/policies/Special_Education_Policies.pdf
+    src https://www.palaumoe.net/files/sped/policies/PW.SpEdProceduralManual.Updated.9.6.10.pdf
+    src https://www.law.cornell.edu/uscode/text/20/1411
+
+=== PW|Palau   dld.workforce
+    coded: entry_route = none named; headcount = none reported
+    | An official US federal return, not a survey estimate
+    | Zero speech-language pathologists reported for 2023-24
+    | Speech is excluded from the services special education teachers provide
+    src https://www.palaumoe.net/files/sped/policies/RPPL_3-9.pdf
+    src https://www.palaumoe.net/files/sped/policies/Special_Education_Policies.pdf
+    src https://www.palaumoe.net/files/sped/policies/PW.SpEdProceduralManual.Updated.9.6.10.pdf
+    src https://www.law.cornell.edu/uscode/text/20/1411
+
+=== RW|Rwanda   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | Ministry of Health tasked with diagnostic assessment and support services for learners
+    | Special schools equipped with rehabilitation and specialized instructional materials
+    src https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf
+    src https://www.speech-language-therapy.com/resources/speech-language-pathology-in-east-africa
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/
+    src https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Rwanda.pdf
+
+=== SC|Seychelles   dld.assessments
+    coded: test_type = none
+    | No speech or language instrument is named in the profile
+    | Learning and multiple difficulties are assessed by IQ or baseline testing
+    src https://education-profiles.org/sub-saharan-africa/seychelles/~inclusion
+    src https://www.gazette.sc/sites/default/files/2022-01/Gazette%20No%206%20-%2031st%20January%202022.pdf
+
+=== SD|Sudan   dld.workforce
+    coded: training = no programme found
+    | One line of evidence, and it is a negative one
+    | The 2022 review's editors are unaware of any university SLT programme in Sudan
+    | Nothing else bearing on Sudan was retrieved
+    src https://www.arjals.com/ajal/article/download/347/168
+    src https://education-profiles.org/northern-africa-and-western-asia/sudan/~inclusion
+
+=== SG|Singapore   dld.multilingualProvision
+    coded: local_norms = none
+    | The evidence is a 2018 survey of 26 practitioners, not an official audit
+    | Most respondents were themselves bilingual and still found bilingual assessment hard
+    | No local norms exist and no data on local languages' developmental trajectories
+    | Practitioners used standardised tests not designed for the population
+    | The authors urge alternative assessment over re-norming existing tests
+    src https://www.ahpc.gov.sg/for-professionals/registers-of-allied-health-professionals/
+    src https://isomer-user-content.by.gov.sg/81/9beb9051-a77a-418a-b232-ba1982d50ba7/2024_ahpc-annual-report_final.pdf
+    src https://www.moh.gov.sg/newsroom/number-of-speech-and-language-therapists-registered-to-practise-and-waiting-time-to-get-a-first-appointment-through-public-healthcare-system/
+    src https://www.moe.gov.sg/special-educational-needs/school-support/sped-schools
+
+=== SL|Sierra Leone   dld.workforce
+    coded: entry_route = none named; training = no programme found; headcount = none reported
+    | Sierra Leone appears in neither the 2009 nor the 2015 sub-Saharan ENT survey
+    | A crowd-sourced practitioner directory reports no known SLT work in the country
+    | No training programme and no professional association is documented
+    src https://www.speech-language-therapy.com/resources/speech-language-pathology-in-west-africa
+    src https://www.kcl.ac.uk/kghp/assets/speech-and-language-volunteer-tor.pdf
+    src https://education-profiles.org/sub-saharan-africa/sierra-leone/~inclusion
+
+=== SN|Senegal   dld.workforce
+    coded: training = no programme found
+    | Practitioner-reported counts, with no public register found
+    | Ten orthophonistes nationally, of whom only five are Senegalese
+    | Profession began in Senegal in 1983; the first Senegalese trained at Lyon in 1989
+    | No public school of orthophonie, and a university module only mooted
+    src https://www.santetropicale.com/sites_pays/actus.asp?id=30784&action=lire&rep=senegal
+    src http://web.archive.org/web/20200123224704id_/http://foafafrique.org/senegal/
+    src https://education-profiles.org/sub-saharan-africa/senegal/~inclusion
+    src https://www.adry.up.ac.za/country-reports-2016/senegal
+
+=== SO|Somalia   dld.serviceModel
+    coded: sectors = none established
+    | Nothing speech-specific in PEER: "speech" 0 and "therap" 0 in the retrieved body
+    | Named special provision is deaf schooling: Borama, Hargeisa, and Sound and Silent
+    | 2018-20 sector plan: "no information about schools for special needs children"
+    | PEER infers from that silence that special-needs children attend regular schools
+    src https://education-profiles.org/sub-saharan-africa/somalia/~inclusion
+
+=== SO|Somalia   dld.workforce
+    coded: entry_route = none named
+    | Source counts teachers, not any speech or language therapy workforce
+    | Somali National University trains teachers; inclusion is not among the nine subjects taught
+    | A 2005 Save the Children programme trained 26 teacher mentors and head teachers
+    | GPE plans two national primary teacher training institutes enrolling 240 student teachers
+    src https://education-profiles.org/sub-saharan-africa/somalia/~inclusion
+
+=== SS|South Sudan   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | Trained educational assessors judge readiness for the regular education system
+    | Inclusion resource centres were to support educational functional assessment
+    src https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf
+    src https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2016-Language-and-Learning-South-Sudan.pdf
+    src https://education-profiles.org/sub-saharan-africa/south-sudan/~inclusion
+
+=== SS|South Sudan   dld.serviceModel
+    coded: sectors = none established
+    | Neither source names a speech or language service of any kind in South Sudan
+    | Planned provision is low-cost temporary learning spaces, with permanent ones in the pipeline
+    | South Sudan is not among the 22 countries in the 2015 sub-Saharan ENT survey
+    | UNICEF ESA: types of disability are not currently captured in the EMIS at all
+    src https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf
+    src https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2016-Language-and-Learning-South-Sudan.pdf
+    src https://education-profiles.org/sub-saharan-africa/south-sudan/~inclusion
+
+=== SS|South Sudan   dld.outcomesEvidence
+    coded: evidence_found = none established
+    | Source describes special-needs provision generally, never language disorder
+    | The country does not have a national monitoring report
+    | No data on succession, completion or out-of-school children with disabilities
+    | EMIS inadequate on retention, transition and capacity to support disabled pupils
+    src https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf
+    src https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2016-Language-and-Learning-South-Sudan.pdf
+    src https://education-profiles.org/sub-saharan-africa/south-sudan/~inclusion
+
+=== SY|Syria   dld.serviceModel
+    coded: sectors = none established
+    | No speech and language service of any kind is recorded in the cited sources
+    | 'speech' and 'therapist' each return 0 hits in the PEER Syria profile
+    | Newborn screening from 2015 covers hearing, sight and hip dysplasia only
+    | The Syrian Arabic research task is hosted entirely at Canadian institutions
+    src https://www.litmus-srep.info/
+    src https://www.bi-sli.org/
+    src https://education-profiles.org/northern-africa-and-western-asia/syrian-arab-republic/~inclusion
+    src https://education-profiles.org/northern-africa-and-western-asia/syrian-arab-republic/~financing-for-equity-in-primary-and-secondary-education
+
+=== SZ|Eswatini   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | Special needs data rest on needs teachers identify, not medically diagnosed statistics
+    | Ministry of Health has been developing a tool to assist early identification
+    src https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/
+    src https://education-profiles.org/sub-saharan-africa/eswatini/~inclusion
+
+=== SZ|Eswatini   dld.workforce
+    coded: training = no programme found
+    | Key-informant survey estimates, not register counts
+    | 2009: one speech therapist recorded; 2015: three recorded nationally
+    | No medical school and no training programme of any kind in either survey year
+    src https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/
+    src https://education-profiles.org/sub-saharan-africa/eswatini/~inclusion
+
+=== TD|Chad   dld.assessments
+    coded: test_type = none
+    | School and university health facilities screen physical and learning disability
+    | Screening is free of charge, and no speech or language screen is named
+    src https://education-profiles.org/sub-saharan-africa/chad/~inclusion
+
+=== TG|Togo   dld.assessments
+    coded: test_type = none
+    | Regional account: African orthophonistes are adapting European tests
+    src http://www.orthophonistesdumonde.fr/spip.php?article61=
+    src https://orthophonistesdumonde.fr/IMG/pdf/poster_cplol_180415-2.pdf
+    src https://www.medbox.org/index.php/dl/5e6ee7efc12eb532c27d0dde
+    src https://education-profiles.org/sub-saharan-africa/togo/~inclusion
+
+=== TJ|Tajikistan   dld.terminology
+    coded: term_type = none located; standing = none
+    | No speech or language category was identified for Tajikistan in any source read
+    | UNESCO PEER: 'An explicit definition of persons with SEN has not been found'
+    | The twelve ministry special boarding schools cover no speech category
+    | The word 'speech' does not occur in the PEER Tajikistan profile
+    src https://education-profiles.org/central-and-southern-asia/tajikistan/~inclusion
+    src https://education-profiles.org/central-and-southern-asia/tajikistan/~financing-for-equity-in-primary-and-secondary-education
+
+=== TN|Tunisia   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | Tunisia lacks standardized tests to determine nature and severity of special needs
+    | A database on students' special needs in school is being developed
+    src https://www.arjals.com/ajal/article/download/347/168
+    src https://arjals.com/ajal/article/download/348/169
+    src https://education-profiles.org/northern-africa-and-western-asia/tunisia/~inclusion
+
+=== TO|Tonga   dld.workforce
+    coded: entry_route = none named
+    | The regional review names speech pathologists as a specialist Tonga needs
+    src https://www.pacificdata.org/data/dataset/bc8bc6ca-1887-4d9f-adad-6703ee621cde/resource/257c9ec9-74bc-4fd2-af9b-956683d3b887/download/Tonga%20-%20Special%20Needs%20and%20Inclusive%20Education,%20Education%20Act,%202013
+    src https://neqmap.bangkok.unesco.org/wp-content/uploads/2019/08/Tonga-Education-Policy-Framework-2004-2019.pdf
+    src https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf
+    src https://pacificdata.org/data/dataset/bcb5ef56-cee5-4426-a74c-b367e64d34e4/resource/4f6f165d-b17f-4383-897a-c36af2396391/download/education-act-2013.pdf
+
+=== TV|Tuvalu   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | Early grade reading assessment listed as an inclusive education dimension
+    | Tuvalu Early Human Capital Index survey planned to check school readiness
+    | Schools report assistive devices, human assistance, difficulty and immunization
+    src https://www.paclii.org/tv/legis/consol_act/eo157/
+    src https://meys.gov.tv/images/curriculum/1._Revised_Tuvaulu_National_Curriculum_Policy_Framework_TNCPF.pdf
+    src https://www.pacificdata.org/data/dataset/230b0944-c9c4-4e80-aff4-45e49f5b699c/resource/4a893ce0-10c2-4d98-8b0b-edac1ab7c25e/download/Tuvalu%20Study%20on%20People%20with%20Disability%20
+    src https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf
+
+=== TV|Tuvalu   dld.serviceModel
+    coded: sectors = none established
+    | The regional review records rehabilitation and early intervention as not available
+    | The 2018 national study found no community based rehabilitation in Tuvalu
+    src https://www.paclii.org/tv/legis/consol_act/eo157/
+    src https://meys.gov.tv/images/curriculum/1._Revised_Tuvaulu_National_Curriculum_Policy_Framework_TNCPF.pdf
+    src https://www.pacificdata.org/data/dataset/230b0944-c9c4-4e80-aff4-45e49f5b699c/resource/4a893ce0-10c2-4d98-8b0b-edac1ab7c25e/download/Tuvalu%20Study%20on%20People%20with%20Disability%20
+    src https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf
+
+=== TV|Tuvalu   dld.workforce
+    coded: entry_route = none named
+    | No speech therapist appears in the listed health ministry paramedical staff
+    | Listed instead: physiotherapist, pharmacist, radiologist, dentist, lab technician
+    | Education staff report lacking the skills to diagnose disabilities
+    src https://www.paclii.org/tv/legis/consol_act/eo157/
+    src https://meys.gov.tv/images/curriculum/1._Revised_Tuvaulu_National_Curriculum_Policy_Framework_TNCPF.pdf
+    src https://www.pacificdata.org/data/dataset/230b0944-c9c4-4e80-aff4-45e49f5b699c/resource/4a893ce0-10c2-4d98-8b0b-edac1ab7c25e/download/Tuvalu%20Study%20on%20People%20with%20Disability%20
+    src https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf
+
+=== US|United States   dld.outcomesEvidence
+    coded: evidence_found = none established
+    | Not systematically reported at national level for language disorder as such
+    | Federal reporting covers IDEA categories in aggregate
+    | So DLD-specific attainment, graduation and post-school data is not routinely published
+    src https://sites.ed.gov/idea/
+    src https://sites.ed.gov/idea/regs/b/a/300.8/c/11
+    src https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/
+    src https://www.asha.org/advocacy/idea/idea-part-b-issue-brief-individualized-education-programs-and-eligibility-for-services/
+
+=== US|Idaho   dld.multilingualProvision   (sub-national)
+    coded: local_norms = none
+    | No language disorder where differences are due to non-standard English or regional dialect
+    | Manual states the acquisition of English is not to be mistaken as a language impairment
+    | Where no culturally appropriate test exists, preponderance of evidence replaces test scores
+    src https://www.sde.idaho.gov/wp-content/uploads/2026/07/Idaho-Special-Education-Manual-2025.pdf
+    src https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv
+    src https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/9e399910-ae82-4153-a944-40ac45bcfa99/download/bchildcountandedenvironments2014.csv
+
+=== US|Louisiana   dld.assessments   (sub-national)
+    coded: test_type = none
+    | No instrument named: the rule requires standardized tests or published normative data
+    src https://www.doa.la.gov/media/qknk551n/28v101.docx
+    src https://www.law.cornell.edu/regulations/louisiana/La-Admin-Code-tit-28-SS-CXV-351
+    src https://reports.ecs.org/comparisons/english-learner-policies
+    src https://legis.la.gov/legis/Law.aspx?d=80045
+
+=== US|Michigan   dld.assessments   (sub-national)
+    coded: test_type = none
+    | A spontaneous language sample demonstrating inadequate language functioning
+    | AND results on not fewer than two standardised instruments or two subtests
+    | Both are required — neither route stands alone
+    src https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-340-1710
+    src https://ars.apps.lara.state.mi.us/AdminCode/DownloadAdminCodeFile?FileName=R+340.1701+to+R+340.1873.pdf
+    src https://ars.apps.lara.state.mi.us/AdminCode/DownloadAdminCodeFile?FileName=R+338.601+to+R+338.649.pdf
+    src https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv
+
+=== US|Minnesota   dld.assessments   (sub-national)
+    coded: test_type = none
+    | The 'if available' clause is unusual and does real work
+    | Where no technically adequate normed test exists, two documented procedures substitute
+    | Language samples, criterion-referenced instruments, observation in natural environments
+    | Or parent reports — written into the rule, not left to clinical improvisation
+    src https://www.law.cornell.edu/regulations/minnesota/Minn-R-3525-1343
+    src https://www.revisor.mn.gov/statutes/cite/125A.03
+    src https://www.revisor.mn.gov/statutes/cite/120B.12
+    src https://www.revisor.mn.gov/rules/3525.1343/
+
+=== US|New Hampshire   dld.assessments   (sub-national)
+    coded: test_type = none
+    | No instrument is named in the rule
+    | Ed 1107.04 Table 1100.1 fixes required assessments by disability category
+    | For speech-language impairment these are academic performance and communicative skills
+    | The examiner must be a speech-language pathologist or speech-language specialist
+    src https://web.archive.org/web/20241228042623/https://www.gencourt.state.nh.us/rules/state_agencies/ed1100.html
+    src https://www.gencourt.state.nh.us/
+    src https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv
+    src https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/9e399910-ae82-4153-a944-40ac45bcfa99/download/bchildcountandedenvironments2014.csv
+
+=== US|Oregon   dld.assessments   (sub-national)
+    coded: test_type = none
+    | No instrument is named in the rule
+    | Language evaluation needs a language sample plus standardized tests
+    | Voice disorder needs a medical statement from an otolaryngologist
+    src https://oregon.public.law/rules/oar_581-015-2135
+    src https://oregon.public.law/rules/oar_581-015-2000
+    src https://www.oregon.gov/ode/educator-resources/assessment/Documents/Unified_ELPA_Guidance.pdf
+    src https://reports.ecs.org/comparisons/english-learner-policies
+
+=== US|Utah   dld.assessments   (sub-national)
+    coded: test_type = none
+    | The rule names no instrument, requiring only multiple formal and informal measures
+    | A complete battery of intellectual or adaptive assessments may not be needed
+    src https://www.schools.utah.gov/specialeducation/_specialeducation/_rulesandpolicies/_specialeducationrules/RulesSpecialEducationReport.pdf
+    src https://le.utah.gov/xcode/Title53E/Chapter7/C53E-7-S202_2019051420190514.html
+    src https://le.utah.gov/xcode/Title53E/Chapter7/C53E-7-S201_2022050420220504.html
+    src https://data.ed.gov/dataset/71ca7d0c-a161-4abe-9e2b-4e68ffb1061a/resource/fdc6eb2c-4a4e-44ef-8b3d-01e68671e47c/download/bchildcountandedenvironment2024-25.csv
+
+=== VA|Vatican City   dld.terminology
+    coded: term_type = none located; standing = none
+    | No disorder category, service or school-language provision is named anywhere in it
+    | Sourced absence, not an inference: 'speech' 0 in 147,617 chars of the cited report
+    | Sanity check on the same text: 'Holy See' 136, 'Vatican' 15, 'school' 16
+    | The report answers concluding observations on education, girls, health and the CRC
+    src https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf
+    src https://dsi.va/assistenza/poliambulatorio
+    src https://dsi.va/assistenza/fruitori
+    src https://dsi.va/direzione/funzioni-competenze
+
+=== VC|Saint Vincent and the Grenadines   dld.dischargeCriteria
+    coded: discharge_basis = none established
+    | No discharge-from-support rule exists, only an attendance exemption
+    | Child excused if incapable of education "by ordinary methods of instruction"
+    src https://education-profiles.org/latin-america-and-the-caribbean/saint-vincent-and-the-grenadines/~inclusion
+    src https://education.gov.vc/education/images/PDF/education_act_2006.pdf
+
+=== VC|Saint Vincent and the Grenadines   dld.workforce
+    coded: entry_route = none named
+    | EFA 2015 review found "an acute shortage of trained staff, including therapists"
+    | Shortage named for speech impairment specifically
+    | No evidence of teacher training for inclusive education in the Act
+    src https://education-profiles.org/latin-america-and-the-caribbean/saint-vincent-and-the-grenadines/~inclusion
+    src https://education.gov.vc/education/images/PDF/education_act_2006.pdf
+
+=== VC|Saint Vincent and the Grenadines   dld.outcomesEvidence
+    coded: evidence_found = none established
+    | Ministry reports no record-keeping system, so no prevalence data exists
+    | No national reporting mechanism monitors inclusive education
+    src https://education-profiles.org/latin-america-and-the-caribbean/saint-vincent-and-the-grenadines/~inclusion
+    src https://education.gov.vc/education/images/PDF/education_act_2006.pdf
+
+=== VU|Vanuatu   dld.funding
+    coded: funders = none established
+    | Vanuatu is one of only two Pacific states with no inclusive education budget line
+    src https://mjcs.gov.vu/images/policy/DID_Policy_2018-2025.pdf
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC12718632/
+    src https://pacificdisability.org/wp-content/uploads/2023/04/Pacific-IE-Report_2022.pdf
+    src https://education-profiles.org/oceania/vanuatu/~inclusion
+
+=== WF|Wallis and Futuna   dld.workforce
+    coded: entry_route = none named
+    | The Agence de santé employs 200 people, including eight general practitioners
+    | There is no private medical practice on the islands, so care runs through the agency
+    | The agency provides outpatient care in dentistry and functional rehabilitation
+    | No orthophoniste is named among the staff the agency lists
+    src https://web.archive.org/web/20240724103018/https://www.ac-wf.wf/-Scolarisation-des-eleves-en-107-.html
+    src https://web.archive.org/web/20260303164122/https://www.wallis-et-futuna.gouv.fr/Actions-de-l-Etat/Sante
+    src https://web.archive.org/web/20201125194843/https://www.ac-wf.wf/Enseignement-ASH-Ecole-inclusive-1172.html
+    src https://web.archive.org/web/20171013063646/https://www.ac-wf.wf/IMG/pdf/vademecum_sante_2017.pdf
+
+=== WS|Samoa   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | Disability data for mainstream classes relies on teacher knowledge
+    | Since 2017 education and women's ministries define disability areas for regular classes
+    src https://www.mesc.gov.ws/wp-content/uploads/2019/09/Education-Act-2009.pdf
+    src https://www.mesc.gov.ws/education/samoan-schools-becoming-more-inclusive/
+    src https://mpmc.gov.ws/pr-children-and-youth-with-hearing-and-speech-impediments-benefit-from-seneses-project/
+    src https://www.mesc.gov.ws/wp-content/uploads/2026/02/ESP2025-2030-FINAL.pdf
+
+=== WS|Samoa   dld.workforce
+    coded: entry_route = none named
+    | No established government speech-language therapist post is documented
+    | The ministry names a volunteer speech language therapist on its specialist team
+    | Supplied through the Australian Volunteer Program rather than as a ministry post
+    src https://www.mesc.gov.ws/wp-content/uploads/2019/09/Education-Act-2009.pdf
+    src https://www.mesc.gov.ws/education/samoan-schools-becoming-more-inclusive/
+    src https://mpmc.gov.ws/pr-children-and-youth-with-hearing-and-speech-impediments-benefit-from-seneses-project/
+    src https://www.mesc.gov.ws/wp-content/uploads/2026/02/ESP2025-2030-FINAL.pdf
+
+=== ZM|Zambia   dld.assessments
+    coded: test_type = none
+    | Source describes special-needs provision generally, never language disorder
+    | Special Education Unit tasked with developing screening and assessment tools
+    | Specialized materials continue to be procured
+    src https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/
+    src https://www.africa.saslha.co.za/wp-content/uploads/2021/09/Academic-institutions-in-Africa-offering-Speech-Therapy-and-Audiology-training.pdf
+    src https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Zambia.pdf
+
+=== ZW|Zimbabwe   dld.assessments
+    coded: test_type = none
+    | Named assessment provision is hearing and audiology, not speech or language
+    | LWS, SPS & SNE arranges hearing assessments for all schools
+    | Delivered through the National Educational Audiology Laboratory
+    | No language assessment instrument is named
+    src https://www.uz.ac.zw/index.php/2-uncategorised/1561-rehabilitation-unit-progs
+    src https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf
+    src https://pmc.ncbi.nlm.nih.gov/articles/PMC5496047/
+    src https://www.unicef.org/esa/sites/unicef.org.esa/files/2018-09/UNICEF-2017-Language-and-Learning-Zimbabwe.pdf
+
