@@ -1,0 +1,166 @@
+{
+  "TM|Turkmenistan": {
+    "fields": {
+      "identificationCriteria": [
+        "Medico-pedagogical commissions identify children with speech disorders and refer them on",
+        "They are special teachers with psychologists, speech therapists and defectologists",
+        "The same commissions transfer a child from one specialized institution to another",
+        "Parents are not required to be consulted at any point in that process",
+        "No explicit definition of special education needs has been found, so no threshold is set"
+      ]
+    },
+    "slots": { "identificationCriteria": [1, 1, 1, 2, 3] },
+    "evidence": [
+      {
+        "bullet": "Medico-pedagogical commissions identify children with speech disorders and refer them on",
+        "url": "https://education-profiles.org/central-and-southern-asia/turkmenistan/~inclusion",
+        "quote": "medico-pedagogical commissions are responsible for identifying children with speech disorders"
+      },
+      {
+        "bullet": "They are special teachers with psychologists, speech therapists and defectologists",
+        "url": "https://education-profiles.org/central-and-southern-asia/turkmenistan/~inclusion",
+        "quote": "Consisting of special teachers and specialists in health care, such as psychologists, speech therapists and defectologists"
+      },
+      {
+        "bullet": "The same commissions transfer a child from one specialized institution to another",
+        "url": "https://education-profiles.org/central-and-southern-asia/turkmenistan/~inclusion",
+        "quote": "in charge of transferring these children from one specialized institution to another"
+      },
+      {
+        "bullet": "Parents are not required to be consulted at any point in that process",
+        "url": "https://education-profiles.org/central-and-southern-asia/turkmenistan/~inclusion",
+        "quote": "Parents are not required to be consulted"
+      },
+      {
+        "bullet": "No explicit definition of special education needs has been found, so no threshold is set",
+        "url": "https://education-profiles.org/central-and-southern-asia/turkmenistan/~inclusion",
+        "quote": "An explicit definition of special education needs has not been found"
+      }
+    ],
+    "sources": [
+      {
+        "label": "UNESCO PEER, Turkmenistan inclusion profile — early identification, screening and assessment: the medico-pedagogical commissions, their composition, and the absence of an explicit definition of special education needs",
+        "url": "https://education-profiles.org/central-and-southern-asia/turkmenistan/~inclusion"
+      }
+    ]
+  },
+  "SR|Suriname": {
+    "fields": {
+      "identificationCriteria": [
+        "The 2008 National Report on the Development of Special Education sets out the categories",
+        "They are mental, physical, sight or multiple handicaps and learning or behavioural problems",
+        "Also a specific affection such as ADHD, autism or Down syndrome; no speech or language entry",
+        "PEER records no inclusive education law, and therefore no official definition in the country",
+        "The country has very limited capacity for early detection of disabilities"
+      ]
+    },
+    "slots": { "identificationCriteria": [3, 3, 3, 3, 2] },
+    "evidence": [
+      {
+        "bullet": "The 2008 National Report on the Development of Special Education sets out the categories",
+        "url": "https://education-profiles.org/latin-america-and-the-caribbean/suriname/~inclusion",
+        "quote": "The 2008 National Report on the Development of Special Education contains provisions for the development of special education"
+      },
+      {
+        "bullet": "They are mental, physical, sight or multiple handicaps and learning or behavioural problems",
+        "url": "https://education-profiles.org/latin-america-and-the-caribbean/suriname/~inclusion",
+        "quote": "ental, physical, sight or multiple handicaps"
+      },
+      {
+        "bullet": "Also a specific affection such as ADHD, autism or Down syndrome; no speech or language entry",
+        "url": "https://education-profiles.org/latin-america-and-the-caribbean/suriname/~inclusion",
+        "quote": "a specific affection like attention deficit hyperactivity disorder, autism or Down syndrome"
+      },
+      {
+        "bullet": "PEER records no inclusive education law, and therefore no official definition in the country",
+        "url": "https://education-profiles.org/latin-america-and-the-caribbean/suriname/~inclusion",
+        "quote": "There is no evidence of an inclusive education law in Suriname and therefore no official definition adopted in the country"
+      },
+      {
+        "bullet": "The country has very limited capacity for early detection of disabilities",
+        "url": "https://education-profiles.org/latin-america-and-the-caribbean/suriname/~inclusion",
+        "quote": "the country has very limited capacity for early detection of disabilities"
+      }
+    ],
+    "sources": [
+      {
+        "label": "UNESCO PEER, Suriname inclusion profile — the special education needs categories of the 2008 National Report on the Development of Special Education, and the absence of an inclusive education law",
+        "url": "https://education-profiles.org/latin-america-and-the-caribbean/suriname/~inclusion"
+      }
+    ]
+  },
+  "TD|Chad": {
+    "fields": {
+      "identificationCriteria": [
+        "No legislation or policy fixes a definition of inclusive education or special educational needs",
+        "Disability Act No. 007/PR/2007 gives a right to education and training, and sets no criterion",
+        "Nothing formally supervises inclusive education beyond isolated and fragmented initiatives",
+        "So there is no instrument in which an identification criterion could sit, and none is applied"
+      ]
+    },
+    "slots": { "identificationCriteria": [3, 3, 1, 3] },
+    "absences": { "identificationCriteria": true },
+    "evidence": [
+      {
+        "bullet": "No legislation or policy fixes a definition of inclusive education or special educational needs",
+        "url": "https://education-profiles.org/sub-saharan-africa/chad/~inclusion",
+        "quote": "There is no legislation or policy that provides a fixed definition of inclusive education"
+      },
+      {
+        "bullet": "Disability Act No. 007/PR/2007 gives a right to education and training, and sets no criterion",
+        "url": "https://education-profiles.org/sub-saharan-africa/chad/~inclusion",
+        "quote": "Disability Act No. 007/PR/2007 recognizes the right to education and training for persons with disabilities"
+      },
+      {
+        "bullet": "Nothing formally supervises inclusive education beyond isolated and fragmented initiatives",
+        "url": "https://education-profiles.org/sub-saharan-africa/chad/~inclusion",
+        "quote": "there is no formal supervision of inclusive education in the education system, aside from a few isolated and fragmented initiatives"
+      },
+      {
+        "bullet": "So there is no instrument in which an identification criterion could sit, and none is applied",
+        "url": "https://education-profiles.org/sub-saharan-africa/chad/~inclusion",
+        "quote": "There is no legislation or policy that provides a fixed definition of inclusive education"
+      }
+    ],
+    "sources": [
+      {
+        "label": "UNESCO PEER, Chad inclusion profile — no legislation or policy fixing a definition of inclusive education or special educational needs, and no formal supervision of inclusive education",
+        "url": "https://education-profiles.org/sub-saharan-africa/chad/~inclusion"
+      }
+    ]
+  },
+  "VA|Vatican City": {
+    "fields": {
+      "identificationCriteria": [
+        "Vatican City State runs no school system, so no body inside it identifies a language disorder",
+        "Its children attend legally recognized schools under various other States' legislation",
+        "One minor seminary stands on the territory, open to non-residents and non-citizens"
+      ]
+    },
+    "slots": { "identificationCriteria": [1, 1, 1] },
+    "absences": { "identificationCriteria": true },
+    "evidence": [
+      {
+        "bullet": "Vatican City State runs no school system, so no body inside it identifies a language disorder",
+        "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf",
+        "quote": "Children attend legally recognized schools according to various State legislation"
+      },
+      {
+        "bullet": "Its children attend legally recognized schools under various other States' legislation",
+        "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf",
+        "quote": "Children attend legally recognized schools according to various State legislation"
+      },
+      {
+        "bullet": "One minor seminary stands on the territory, open to non-residents and non-citizens",
+        "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf",
+        "quote": "There is one minor seminary and a child need not be a resident or a citizen of VCS in order to attend it"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Holy See, second periodic report to the UN Committee on the Rights of the Child, CRC/C/VAT/2 (22 October 2012), section IV on Vatican City State, para. 114 — schooling of children resident in the State",
+        "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf"
+      }
+    ]
+  }
+}

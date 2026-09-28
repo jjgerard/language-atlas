@@ -46218,7 +46218,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "Dutch logopedie is the term that would apply, and it is absent from policy\nThe 2008 special-education report lists handicaps and behaviour, not language\nSuriname has no inclusive education law and no official definition",
-  "identificationCriteria": "Not established from the sources consulted. PEER records that there is no evidence of an inclusive education law in Suriname and therefore no official definition adopted in the country, so there is no instrument in which criteria could sit. It also records that the country has very limited capacity for early detection of disabilities.",
+  "identificationCriteria": "The 2008 National Report on the Development of Special Education sets out the categories\nThey are mental, physical, sight or multiple handicaps and learning or behavioural problems\nAlso a specific affection such as ADHD, autism or Down syndrome; no speech or language entry\nPEER records no inclusive education law, and therefore no official definition in the country\nThe country has very limited capacity for early detection of disabilities",
   "assessments": "",
   "multilingualProvision": "Dutch is the school language while more than 30 languages are spoken nationally\nNo source addresses distinguishing disorder from Dutch-as-second-language difficulty",
   "referralPathway": "Very limited national capacity for early detection of disabilities\nNo referral route specific to speech or language was located",
@@ -46379,7 +46379,25 @@
     "term_type": "none located",
     "label": "not applicable",
     "standing": "none"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "listed impairment category",
+    "bilingual_handling": "silent",
+    "decider": "not stated",
+    "exclusions": [
+     "none stated"
+    ],
+    "rule_locus": "national, non-binding"
    }
+  },
+  "slots": {
+   "identificationCriteria": [
+    3,
+    3,
+    3,
+    3,
+    2
+   ]
   }
  },
  {
@@ -47457,7 +47475,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "The only categories named are hearing and visual impairment\nNo speech or language category; 'speech' occurs 0 times in the profile\nNo legislation or policy gives a fixed definition of special needs at all",
-  "identificationCriteria": "Not established from the sources consulted. UNESCO's PEER profile records that no legislation or policy provides a fixed definition of inclusive education or of special educational needs in Chad, and that there is no formal supervision of inclusive education in the education system aside from a few isolated and fragmented initiatives.",
+  "identificationCriteria": "No legislation or policy fixes a definition of inclusive education or special educational needs\nDisability Act No. 007/PR/2007 gives a right to education and training, and sets no criterion\nNothing formally supervises inclusive education beyond isolated and fragmented initiatives\nSo there is no instrument in which an identification criterion could sit, and none is applied",
   "assessments": "School and university health facilities screen physical and learning disability\nScreening is free of charge, and no speech or language screen is named",
   "multilingualProvision": "",
   "referralPathway": "",
@@ -47583,6 +47601,17 @@
     "label": "not applicable",
     "standing": "not stated"
    }
+  },
+  "slots": {
+   "identificationCriteria": [
+    3,
+    3,
+    1,
+    3
+   ]
+  },
+  "absences": {
+   "identificationCriteria": true
   }
  },
  {
@@ -48253,7 +48282,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "\"Speech disorders\" is a standing placement category, not a defined diagnosis\nMedico-pedagogical commissions identify speech disorders and refer to special institutions\nPEER: \"An explicit definition of special education needs has not been found\"",
-  "identificationCriteria": "Not established from the sources consulted. The UNESCO PEER profile states that an explicit definition of special education needs has not been found. It records medico-pedagogical commissions identifying children with speech disorders and referring them to specialized institutions, but states no evidence requirement, no threshold and no exclusion that those commissions apply.",
+  "identificationCriteria": "Medico-pedagogical commissions identify children with speech disorders and refer them on\nThey are special teachers with psychologists, speech therapists and defectologists\nThe same commissions transfer a child from one specialized institution to another\nParents are not required to be consulted at any point in that process\nNo explicit definition of special education needs has been found, so no threshold is set",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "Medico-pedagogical commissions identify speech disorders and refer to institutions\nStaffed by special teachers, psychologists, speech therapists and defectologists\nThe same commissions transfer children between specialised institutions\nPEER records that parents are not required to be consulted",
@@ -48335,6 +48364,12 @@
     "family_pays": "co-payment or reimbursement",
     "scope": "disability generally",
     "evidence_type": "policy"
+   },
+   "identificationCriteria": {
+    "threshold_basis": "not stated",
+    "bilingual_handling": "silent",
+    "decider": "multidisciplinary team",
+    "rule_locus": "not stated"
    }
   },
   "slots": {
@@ -48343,6 +48378,13 @@
     2,
     2,
     3,
+    3
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    1,
+    2,
     3
    ]
   }
@@ -60117,7 +60159,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "No disorder category, service or school-language provision is named anywhere in it\nSourced absence, not an inference: 'speech' 0 in 147,617 chars of the cited report\nSanity check on the same text: 'Holy See' 136, 'Vatican' 15, 'school' 16\nThe report answers concluding observations on education, girls, health and the CRC",
-  "identificationCriteria": "Not established from the sources consulted. The Holy See's second periodic report to the Committee on the Rights of the Child records that children of Vatican City State attend legally recognised schools under various State legislation, and describes no school system inside the territory, so no body there identifies a language disorder.",
+  "identificationCriteria": "Vatican City State runs no school system, so no body inside it identifies a language disorder\nIts children attend legally recognized schools under various other States' legislation\nOne minor seminary stands on the territory, open to non-residents and non-citizens",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "Prescription from a doctor outside the fund needs approval by a DSI polyclinic doctor\nGynaecology, paediatric, eye, dental and dermatology visits need no prior authorisation\nThe prescribing doctor sets the priority band that governs access\nIf a deferrable service cannot be booked in 30 days an outside centre may be used",
@@ -60188,6 +60230,11 @@
     1,
     2,
     4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    1
    ]
   },
   "coding": {
@@ -60268,6 +60315,9 @@
     "decider": "medical commission",
     "rule_locus": "national statute"
    }
+  },
+  "absences": {
+   "identificationCriteria": true
   }
  },
  {
