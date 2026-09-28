@@ -3246,6 +3246,10 @@
    {
     "label": "Education (School Admission and School Register) Regulations, S 10/04 (Education Act, Chapter 210, Rg 9), Revised Edition 2011: Attorney General's Chambers, Brunei Darussalam",
     "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/RG-9-EDUCATION-SCHOOL-ADMISSION-AND-SCHOOL-REGISTER-REGULATIONS.pdf"
+   },
+   {
+    "label": "Ministry of Education, Brunei Darussalam, Primary Education page",
+    "url": "https://www.moe.gov.bn/primary-education/"
    }
   ],
   "supportLinks": [],
@@ -3261,7 +3265,7 @@
   "l2Support": "Not established from the sources consulted. The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57. It resolves to an OECD catalogue page, not to Table I.B1.7.57. 'immigrant', 'bilingual' and 'newcomer' each return 0 hits on it.",
   "l1Support": "Not established from the sources consulted. The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57. It resolves to an OECD catalogue page, not to Table I.B1.7.57. 'immigrant', 'bilingual' and 'newcomer' each return 0 hits on it.",
   "l3Support": "",
-  "bilingualEducationNotes": "Not established from the sources consulted. The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57. It resolves to an OECD catalogue page, not to Table I.B1.7.57. 'immigrant', 'bilingual' and 'newcomer' each return 0 hits on it.",
+  "bilingualEducationNotes": "Since the implementation of SPN21 all subjects are taught in English, with three exceptions\nThe exceptions are Bahasa Melayu, Islamic Religious Knowledge and Melayu Islam Beraja\nAll students follow a common curriculum and sit the Primary School Assessment at Year 6\nEducation is made compulsory for every child",
   "policyHistory": [],
   "coding": {
    "achievementGap": {
@@ -3277,6 +3281,12 @@
     ],
     "decided_by": "national authority",
     "rule_locus": "national statute"
+   },
+   "bilingualEducationNotes": {
+    "provision": "established",
+    "purpose": "content through an international language",
+    "for_whom": "all pupils",
+    "evidence_type": "policy"
    }
   },
   "slots": {
@@ -3286,6 +3296,12 @@
     4,
     4,
     2
+   ],
+   "bilingualEducationNotes": [
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -18221,6 +18237,14 @@
    {
     "label": "MEXT CLARINET, 日本語指導の対象となる児童生徒 (pupils subject to Japanese language instruction), Q8 to Q10, issued with the notice amending the School Education Act Enforcement Regulation",
     "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341927.htm"
+   },
+   {
+    "label": "MEXT notice 25文科初第928号 of 14 January 2014 on the amendment to the Enforcement Regulation of the School Education Act, art. 56-2, and MEXT Notification No. 1 of 2014 on the special curriculum for Japanese-language instruction",
+    "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm"
+   },
+   {
+    "label": "MEXT, biennial national survey of the reception of pupils needing Japanese-language instruction, FY2023 (令和５年度 日本語指導が必要な児童生徒の受入状況等に関する調査結果), summary of results, August 2024",
+    "url": "https://www.mext.go.jp/content/20240808-mxt_kyokoku-000037366_3.pdf"
    }
   ],
   "supportLinks": [],
@@ -18233,10 +18257,10 @@
   "removalCriteria": "Whether Japanese instruction is still needed is judged under the principal's responsibility\nSeveral staff should contribute: the Japanese teacher, class and subject teachers, assistants\nThey weigh Japanese ability, adaptation to school life, and attitude to learning together\nMEXT offers DLA, its dialogic assessment, as one objective measure alongside local methods\nReview is periodic: planning at year end, and revisiting at the end of terms\nNo instrument is named as deciding, and no fixed period runs out",
   "newcomerProportion": [],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 40 points below their non-immigrant peers\n37 points below after accounting for socio-economic profile\n7 points above once home language is accounted for as well\nClose to zero once language is allowed for — a language gap, not an immigrant one",
-  "l2Support": "Not established from the sources consulted. The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57. It resolves to an OECD catalogue page, not to Table I.B1.7.57. 'immigrant', 'bilingual' and 'newcomer' each return 0 hits on it.",
-  "l1Support": "Not established from the sources consulted. The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57. It resolves to an OECD catalogue page, not to Table I.B1.7.57. 'immigrant', 'bilingual' and 'newcomer' each return 0 hits on it.",
+  "l2Support": "A designated Japanese-language teacher plans, teaches and assesses each pupil\nTaught in a classroom other than the one the pupil is registered in\nNormally in the school the pupil attends; another school if no teacher can be found\nThe standard is 10 to 280 unit hours a year\nThe lead teacher must hold a teaching licence, part-time lecturers included",
+  "l1Support": "The 2014 notice reaches the home language only as support an assistant gives the pupil\nThat assistant works to the plan the licensed Japanese-language teacher has drawn up\nMother-tongue supporters are outside personnel that local authorities employ or register",
   "l3Support": "",
-  "bilingualEducationNotes": "Not established from the sources consulted. The only source on this entry is PISA 2022 Results (Volume I), Table I.B1.7.57. It resolves to an OECD catalogue page, not to Table I.B1.7.57. 'immigrant', 'bilingual' and 'newcomer' each return 0 hits on it.",
+  "bilingualEducationNotes": "Japanese-language instruction includes teaching of subjects pitched to the pupil's ability\nThe languages are Japanese and the pupil's own, the latter only as an assistant's support\nIt runs in primary, lower secondary and the matching departments of special schools\nThe notice frames the special curriculum as something a school may adopt, not must",
   "policyHistory": [],
   "coding": {
    "newcomerCriteria": {
@@ -18260,7 +18284,47 @@
     "proxy": "immigrant background",
     "direction": "gap",
     "after_adjustment": "closes once language is allowed for"
+   },
+   "l2Support": {
+    "models": [
+     "withdrawal for lessons"
+    ],
+    "for_whom": "not stated",
+    "secured_by": "permission",
+    "evidence_type": "policy"
+   },
+   "l1Support": {
+    "form": "incidental use",
+    "for_whom": "not stated",
+    "secured_by": "not stated",
+    "evidence_type": "policy"
+   },
+   "bilingualEducationNotes": {
+    "provision": "established",
+    "purpose": "transition",
+    "for_whom": "migrant home languages",
+    "evidence_type": "policy"
    }
+  },
+  "slots": {
+   "l2Support": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ],
+   "l1Support": [
+    1,
+    2,
+    2
+   ],
+   "bilingualEducationNotes": [
+    1,
+    2,
+    3,
+    4
+   ]
   }
  },
  {
@@ -19205,6 +19269,10 @@
    {
     "label": "UNICEF Lao PDR — Education country page",
     "url": "https://www.unicef.org/laos/education"
+   },
+   {
+    "label": "Education Law (Amended), No. 69/NA of 11 December 2024, arts. 44 and 45, unofficial translation by the Department of Education Quality Assurance, MoES (Lao Official Gazette)",
+    "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/Education%20Law%20Eng%20version%2020250715.pdf"
    }
   ],
   "supportLinks": [],
@@ -19218,9 +19286,9 @@
   "newcomerProportion": [],
   "achievementGap": "",
   "l2Support": "UNICEF supports a Community-Based School Readiness Programme in non-Lao-speaking villages\nEducation Strategic Vision 2020 recommended teaching Lao as a second language (plan only)\n2016-20 Education Sector Development Plan: materials for teaching Lao to ethnic groups\nNo entitlement, hours or staffing was found; these are plan commitments",
-  "l1Support": "Not established from the sources consulted. The UNESCO PEER inclusion profile for Lao PDR contains no occurrence of \"mother tongue\", \"bilingual\" or \"multilingual\" anywhere in the document; its ethnic-group provision is framed entirely as access to Lao-medium schooling, with \"ethnic primary and secondary schools\" described as boarding-type provision for remote learners (\"As of 2017, there were only 20 throughout the country\") rather than as minority-language schools. The closest thing to home-language provision recorded is the recruitment of ethnic teachers to teach in their home areas. Searched: PEER Lao PDR inclusion profile in full, the UNICEF Lao PDR education page, and unicef.org's Lao community-based school readiness story (HTTP 403 to both curl and WebFetch, not usable). Not asserted either way.",
+  "l1Support": "The amended Education Law makes Lao language and Lao script the official teaching languages\nIts other language article covers foreign languages, English compulsory from grade three\nLearners of ethnic origin are entitled to supports in line with regulations\nThe instrument is Education Law (Amended) No. 69/NA of 11 December 2024, unofficially translated",
   "l3Support": "",
-  "bilingualEducationNotes": "Not established from the sources consulted. No source retrieved in this session describes any programme in Lao PDR teaching content through two languages: no transition model, no language allocation by grade, no named bilingual or multilingual schools. The PEER Lao PDR inclusion profile, read in full, does not use the words \"bilingual\" or \"multilingual\" at all, and the UNICEF Lao PDR education page describes school-readiness support in non-Lao-speaking villages without stating what language it is delivered in. Searched: PEER Lao PDR inclusion profile, UNICEF Lao PDR education page, unicef.org Lao community-based school readiness story (403), UNICEF Lao PDR 2023 Country Office Annual Report at unicef.org/media/152161/... (404). Not asserted either way.",
+  "bilingualEducationNotes": "Teaching and learning in educational institutions is carried in Lao language and Lao script\nInstitutions may teach foreign languages; other languages are electives, on local context\nThe instrument is Education Law (Amended) No. 69/NA of 11 December 2024, unofficially translated",
   "policyHistory": [
    {
     "year": 2003,
@@ -19279,7 +19347,32 @@
     "for_whom": "national or indigenous minority",
     "secured_by": "not stated",
     "evidence_type": "policy"
+   },
+   "l1Support": {
+    "form": "not stated",
+    "for_whom": "national or indigenous minority",
+    "secured_by": "entitlement",
+    "evidence_type": "policy"
+   },
+   "bilingualEducationNotes": {
+    "provision": "none established",
+    "purpose": "not stated",
+    "for_whom": "not stated",
+    "evidence_type": "policy"
    }
+  },
+  "slots": {
+   "l1Support": [
+    1,
+    1,
+    2,
+    1
+   ],
+   "bilingualEducationNotes": [
+    1,
+    1,
+    1
+   ]
   }
  },
  {
@@ -21386,6 +21479,10 @@
    {
     "label": "UNESCO GEM Report PEER, Mongolia — Inclusion profile (archived platform), section 'Ethnic and linguistic groups'",
     "url": "https://education-profiles.org/eastern-and-south-eastern-asia/mongolia/~inclusion"
+   },
+   {
+    "label": "Law of Mongolia on Pre-school and General Education (Сургуулийн өмнөх болон ерөнхий боловсролын тухай), 2023, arts. 7.2 and 11.9 (legalinfo.mn)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16759959012931"
    }
   ],
   "supportLinks": [],
@@ -21398,10 +21495,10 @@
   "removalCriteria": "Not applicable: no designation appears in the PEER profile; Kazakh and Tuvan are recognised domestic minorities, not migrants",
   "newcomerProportion": [],
   "achievementGap": "",
-  "l2Support": "Not established from the sources consulted. Mongolian is the constitutional official language (Art. 8) and the 2002 Law on Education as amended in 2006 \"permits the use of the local language for communicating in the school environment (Art. 30.1.12)\", but no source retrieved in this session sets out a Mongolian-as-a-second-language provision for Kazakh- or Tuvan-speaking pupils: no entitlement, no hours, no designated staff. Searched: UNESCO PEER Mongolia inclusion profile, the Constitute Project text of the Constitution, and the Asia-Pacific Multilingual Education Working Group Mongolia country profile at asiapacificmle.net, which returned HTTP 200 but served an empty JavaScript shell with no retrievable text. Not asserted either way.",
+  "l2Support": "Minority-language learners taught in the mother tongue must study a bilingual programme\nThat programme runs under art 13.1.4 of the Law on the Mongolian Language\nThe government member in charge of education approves the bilingual programme\nIt applies where national-minority learners with another language are the majority\nDeaf learners take general education in written and in Mongolian sign language instead",
   "l1Support": "Constitution Art 8 protects minorities' use of native languages in learning\nKazakh and Tuvan children have free access to pre-primary and primary in mother tongue\nEntitlement covers pre-primary and primary only, per the PEER profile\nSpecial higher education quotas are reserved for Tuvan students",
   "l3Support": "",
-  "bilingualEducationNotes": "Not established from the sources consulted. The PEER Mongolia inclusion profile records a mother-tongue entitlement at pre-primary and primary level and a 2017 Asian Development Bank project \"improving textbooks and other teaching and learning materials in the Kazakh language\", but describes no programme that teaches content through two languages: no transition model, no language allocation, no named bilingual schools. Searched: PEER Mongolia inclusion profile, Constitute Project constitutional text, and the Asia-Pacific Multilingual Education Working Group country profile (JavaScript shell, no text). Mongolia was cited as an international example at Kyrgyzstan's 2024 National Forum on Multilingual Education (https://www.osce.org/hcnm/579406), but that release gives no description of what the Mongolian model is, so nothing is inferred from it. Not asserted either way.",
+  "bilingualEducationNotes": "Kindergarten and primary teaching may run in the mother tongue where such learners predominate\nNo language is named; the article says a national minority with a different language\nThe stages named are kindergarten and the primary grades\nThe article says teaching may be so organised, not that it must\nMother-tongue textbooks are to be produced for national-minority and deaf children",
   "policyHistory": [
    {
     "year": 2001,
@@ -21455,7 +21552,37 @@
     "for_whom": "national or indigenous minority",
     "secured_by": "entitlement",
     "evidence_type": "policy"
+   },
+   "bilingualEducationNotes": {
+    "provision": "established",
+    "purpose": "maintenance",
+    "for_whom": "national or indigenous languages",
+    "evidence_type": "policy"
+   },
+   "l2Support": {
+    "models": [
+     "taught to all as a subject"
+    ],
+    "for_whom": "national or indigenous minority",
+    "secured_by": "compulsory",
+    "evidence_type": "policy"
    }
+  },
+  "slots": {
+   "bilingualEducationNotes": [
+    1,
+    2,
+    3,
+    4,
+    1
+   ],
+   "l2Support": [
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
   }
  },
  {
@@ -21742,6 +21869,10 @@
    {
     "label": "Meehan, de Almeida, Bäckström, Borg-Axisa, Friant, Johannessen and Roman, 'Context rules! Top-level education policies for newly arrived migrant students across six European countries', International Journal of Educational Research Open 2 (2021) 100046 — §1 on newly arrived migrant students as a named category in Malta (citing Eurydice 2019 p.54)",
     "url": "https://doi.org/10.1016/j.ijedro.2021.100046"
+   },
+   {
+    "label": "Eurydice, Malta: Support measures for learners in early childhood and school education (read because migrantlearnersunit.gov.mt does not resolve)",
+    "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/malta/support-measures-learners-early-childhood-and-school-education"
    }
   ],
   "supportLinks": [],
@@ -21774,7 +21905,7 @@
   ],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 6 points above their non-immigrant peers\n5 points above after accounting for socio-economic profile\n2 points above once home language is accounted for as well\nSmall on all three measures",
   "l2Support": "Centralised induction through the Migrant Learners Unit\nAll textbooks free to all pupils; psychosocial and material support provided centrally\nBoth separate and integrated models, depending on the school\n'Language to Go' runs over the summer for newly arrived pupils and those struggling",
-  "l1Support": "Not established from the sources consulted. Not retrieved, which is different from absent. migrantlearnersunit.gov.mt does not resolve from this network (curl exit 6, two attempts). meae.gov.mt does not resolve either, so the national policy PDF could not be read.",
+  "l1Support": "One listed measure raises classmates' awareness of the child's native language and customs\nThe specific language support named is for learning Maltese and/or English\nThe measures fall under the Migrant Learners Unit",
   "l3Support": "Training for cultural mediation, University of Malta",
   "bilingualEducationNotes": "CLIL: Maltese + English (ISCED 1–3)\nSeparate from mother-tongue teaching for pupils not yet fluent in the school language",
   "policyHistory": [
@@ -21818,6 +21949,11 @@
     4
    ],
    "removalCriteria": [
+    1,
+    1,
+    2
+   ],
+   "l1Support": [
     1,
     1,
     2
@@ -21889,6 +22025,12 @@
     "second_language": "not stated",
     "exemption": "not stated",
     "targeting": "not stated"
+   },
+   "l1Support": {
+    "form": "incidental use",
+    "for_whom": "newly arrived pupils",
+    "secured_by": "not stated",
+    "evidence_type": "policy"
    }
   }
  },
@@ -34971,6 +35113,14 @@
    {
     "label": "Resolution of the Cabinet of Ministers of the Republic of Uzbekistan No. 169 of 4 August 2008, Regulation on the procedure for the admission and study of foreign citizens in educational institutions of the Republic of Uzbekistan, consolidated text (Lex.uz)",
     "url": "https://lex.uz/ru/docs/1380638"
+   },
+   {
+    "label": "Law of the Republic of Uzbekistan on Education, ЗРУ-637 of 23 September 2020, art. 33 (Lex.uz, Russian consolidated text)",
+    "url": "https://lex.uz/ru/docs/5013009"
+   },
+   {
+    "label": "Law of the Republic of Uzbekistan on the State Language, arts. 2, 5 and 6 (Lex.uz, Russian consolidated text)",
+    "url": "https://lex.uz/ru/docs/121433"
    }
   ],
   "supportLinks": [],
@@ -34984,7 +35134,7 @@
   "newcomerProportion": [],
   "achievementGap": "PISA 2022 reading: immigrant background, a proxy for home language\nImmigrant pupils scored 22 points below their non-immigrant peers\n24 points below after accounting for socio-economic profile\n25 points below once home language is accounted for as well\nThe gap is no smaller after either adjustment",
   "l2Support": "Neither cited source describes teaching the school language to those who lack it\nPP-1875's whole subject is foreign-language, mainly English, teaching\nTextbook supply duties cover general and specialised secondary institutions",
-  "l1Support": "Not established from the sources consulted. The sources on this entry are PISA 2022 Results (Volume I), Table I.B1.7.57 and Resolution of the President of the Republic of Uzbekistan No. PP-1875 of 10 December 2012 on measures to further improve the system of learning foreign languages, consolidated text (Lex.uz). Neither cited source addresses this: PP-1875 is a foreign-languages resolution. 'родной язык' and 'двуязыч' each return 0 hits in its consolidated text. The PISA link is a catalogue page carrying no country data.",
+  "l1Support": "Article 33 of the Education Law sends the language of instruction to the State Language Law\nPersons living in Uzbekistan are given the right to free choice of the language of instruction\nThe state secures general education in the state language and also in other languages\nPre-school organisations run in national groups' languages where those groups live compactly\nMaking Uzbek the state language does not curtail the right of nations there to their own",
   "l3Support": "",
   "bilingualEducationNotes": "No bilingual programme is described in either cited source\nPP-1875 concerns foreign-language teaching, not medium of instruction\nIt provides for special subjects taught in foreign languages in universities, not schools",
   "policyHistory": [],
@@ -35015,6 +35165,12 @@
     ],
     "decided_by": "national authority",
     "rule_locus": "national statute"
+   },
+   "l1Support": {
+    "form": "medium of instruction",
+    "for_whom": "national or indigenous minority",
+    "secured_by": "entitlement",
+    "evidence_type": "policy"
    }
   },
   "slots": {
@@ -35024,6 +35180,13 @@
     2,
     4,
     4
+   ],
+   "l1Support": [
+    1,
+    1,
+    2,
+    3,
+    1
    ]
   }
  },

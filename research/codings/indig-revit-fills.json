@@ -1,0 +1,31 @@
+{
+  "MU|Mauritius": {
+    "mediumOfInstruction": {
+      "role": "permitted, not implemented",
+      "reach": "early primary",
+      "secured_by": "permission"
+    }
+  },
+  "SV|El Salvador": {
+    "mediumOfInstruction": {
+      "role": "sole medium",
+      "reach": "preschool only",
+      "secured_by": "practice only"
+    }
+  },
+  "UY|Uruguay": {
+    "mediumOfInstruction": {
+      "role": "shared medium",
+      "reach": "all primary",
+      "secured_by": "practice only"
+    }
+  },
+  "MG|Madagascar": {
+    "revitalisation": {
+      "actor": "state body",
+      "activity": ["standardisation", "materials"],
+      "status": "established",
+      "funding": "not stated"
+    }
+  }
+}

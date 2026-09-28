@@ -1,0 +1,36 @@
+{
+  "LI|Liechtenstein": {
+    "fields": {
+      "revitalisation": [
+        "Liechtenstein declared that no national minorities exist in its territory",
+        "It made a similar declaration on ratifying the languages Charter, so none is named either",
+        "The Advisory Committee does not endorse that as fact; it records nobody came forward"
+      ]
+    },
+    "slots": { "revitalisation": [1, 1, 1] },
+    "absences": { "revitalisation": true },
+    "evidence": [
+      {
+        "bullet": "Liechtenstein declared that no national minorities exist in its territory",
+        "url": "https://rm.coe.int/5th-op-liechtenstein-en/1680a15dfc",
+        "quote": "Liechtenstein declared that no national minorities in the sense of the Framework Convention exist in its territory"
+      },
+      {
+        "bullet": "It made a similar declaration on ratifying the languages Charter, so none is named either",
+        "url": "https://rm.coe.int/5th-op-liechtenstein-en/1680a15dfc",
+        "quote": "Liechtenstein has made a similar declaration when ratifying the European Charter for Regional or Minority Languages"
+      },
+      {
+        "bullet": "The Advisory Committee does not endorse that as fact; it records nobody came forward",
+        "url": "https://rm.coe.int/5th-op-liechtenstein-en/1680a15dfc",
+        "quote": "While not being aware of any persons or groups who expressed interest in the protection of the Framework Convention"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Advisory Committee on the Framework Convention for the Protection of National Minorities, Fifth Opinion on Liechtenstein, adopted 1 February 2021 (ACFC/OP/V(2021)001), para. 13 and its footnote 6 — the state's declaration that no national minorities exist in its territory, the parallel declaration under the European Charter for Regional or Minority Languages, and the Advisory Committee's own qualifier that it is aware of nobody who has come forward",
+        "url": "https://rm.coe.int/5th-op-liechtenstein-en/1680a15dfc"
+      }
+    ]
+  }
+}

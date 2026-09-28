@@ -1,0 +1,201 @@
+{
+ "MU|Mauritius": {
+  "fields": {
+   "mediumOfInstruction": [
+    "Pre-primary targets English and French, scaffolded on the child's first language",
+    "The framework names that L1 only as the child's first language, never which one",
+    "Ombudsperson quotes Education Regulations s.43: in Standards IV to VI the medium is English",
+    "Up to and including Standard III any one language may be employed as the medium",
+    "The Minister decides which language that is, as most suitable for the pupils"
+   ]
+  },
+  "slots": { "mediumOfInstruction": [1, 1, 2, 2, 4] },
+  "evidence": [
+   {
+    "bullet": "Pre-primary targets English and French, scaffolded on the child's first language",
+    "url": "https://web.mie.ac.mu/wp-content/uploads/2024/04/NCF-Pre-Primary-2024.pdf",
+    "quote": "The CLL programme aims to develop the emergent skills in communicating, listening, speaking, reading, and writing in English and French (target languages), scaffolded on their first language (L1)."
+   },
+   {
+    "bullet": "The framework names that L1 only as the child's first language, never which one",
+    "url": "https://web.mie.ac.mu/wp-content/uploads/2024/04/NCF-Pre-Primary-2024.pdf",
+    "quote": "and writing in English and French (target languages), scaffolded on their first language (L1)."
+   },
+   {
+    "bullet": "Ombudsperson quotes Education Regulations s.43: in Standards IV to VI the medium is English",
+    "url": "https://www.lalitmauritius.org/en/newsarticle/2176/ombudsperson-for-children-recommends-kreol-as-medium-in-schools/",
+    "quote": "In Standards IV, V, and VI of the Government and aided primary schools the medium of instruction shall be English, and conversation between teacher and pupils shall be carried on in English"
+   },
+   {
+    "bullet": "Up to and including Standard III any one language may be employed as the medium",
+    "url": "https://www.lalitmauritius.org/en/newsarticle/2176/ombudsperson-for-children-recommends-kreol-as-medium-in-schools/",
+    "quote": "In the lower classes of Government and aided primary schools up to and including Standard III, any one language may be employed as the language of instruction"
+   },
+   {
+    "bullet": "The Minister decides which language that is, as most suitable for the pupils",
+    "url": "https://www.lalitmauritius.org/en/newsarticle/2176/ombudsperson-for-children-recommends-kreol-as-medium-in-schools/",
+    "quote": "being a language which in the opinion of the Minister is most suitable for the pupils"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Mauritius Institute of Education, National Curriculum Framework Pre-Primary (2024), section 4.2 Communication, Language and Literacy",
+    "url": "https://web.mie.ac.mu/wp-content/uploads/2024/04/NCF-Pre-Primary-2024.pdf"
+   },
+   {
+    "label": "Ombudsperson for Children (Mauritius), 'Case 3: Kreol language in the education system', quoting Education Regulations s.43 'Medium of instruction and teaching of languages' — reproduced in full by LALIT; the Regulations themselves are not published on attorneygeneral.govmu.org or lawsofmauritius.govmu.org, and the Education Act carries no medium provision",
+    "url": "https://www.lalitmauritius.org/en/newsarticle/2176/ombudsperson-for-children-recommends-kreol-as-medium-in-schools/"
+   }
+  ]
+ },
+
+ "UY|Uruguay": {
+  "fields": {
+   "mediumOfInstruction": [
+    "Dual Immersion splits the school day equitably between Spanish and Portuguese",
+    "Each class has two teachers on the same official curriculum, one per language",
+    "It sits inside Ensenanza Primaria, in schools on the frontier",
+    "Began 2003 in three full-time schools in Artigas and Rivera, on the Brazil border",
+    "The programme now covers seven schools in three departments"
+   ]
+  },
+  "slots": { "mediumOfInstruction": [1, 1, 2, 3, 3] },
+  "evidence": [
+   {
+    "bullet": "Dual Immersion splits the school day equitably between Spanish and Portuguese",
+    "url": "https://www.dgeip.edu.uy/c-f-p/13-departamentos/lenguas/28-inmersion-dual-espanol-portugues/",
+    "quote": "La jornada escolar se divide equitativamente entre ambas lenguas y cada docente es referente de una de las lenguas"
+   },
+   {
+    "bullet": "Each class has two teachers on the same official curriculum, one per language",
+    "url": "https://www.dgeip.edu.uy/c-f-p/13-departamentos/lenguas/28-inmersion-dual-espanol-portugues/",
+    "quote": "En la modalidad de Inmersión Dual cada clase es atendida por dos maestros que trabajan el mismo currículo oficial"
+   },
+   {
+    "bullet": "It sits inside Ensenanza Primaria, in schools on the frontier",
+    "url": "https://www.dgeip.edu.uy/c-f-p/13-departamentos/lenguas/28-inmersion-dual-espanol-portugues/",
+    "quote": "El Programa de Inmersión Dual constituye una innovación educativa significativa en el contexto de Enseñanza Primaria en escuelas de frontera"
+   },
+   {
+    "bullet": "Began 2003 in three full-time schools in Artigas and Rivera, on the Brazil border",
+    "url": "https://www.dgeip.edu.uy/c-f-p/13-departamentos/lenguas/28-inmersion-dual-espanol-portugues/",
+    "quote": "El Programa de Inmersión Dual Español - Portugués comenzó en 2003 en 3 Escuelas de Tiempo Completo de Artigas y Rivera, departamentos fronterizos con Brasil"
+   },
+   {
+    "bullet": "The programme now covers seven schools in three departments",
+    "url": "https://www.dgeip.edu.uy/c-f-p/13-departamentos/lenguas/28-inmersion-dual-espanol-portugues/",
+    "quote": "En la actualidad el Programa abarca 7 escuelas en 3 departamentos"
+   }
+  ],
+  "sources": [
+   {
+    "label": "ANEP / DGEIP (Dirección General de Educación Inicial y Primaria), Programa de Inmersión Dual Español-Portugués — Departamento de Lenguas, Centro de Formación Permanente",
+    "url": "https://www.dgeip.edu.uy/c-f-p/13-departamentos/lenguas/28-inmersion-dual-espanol-portugues/"
+   }
+  ]
+ },
+
+ "SV|El Salvador": {
+  "fields": {
+   "mediumOfInstruction": [
+    "Cuna Nahuat runs entirely in the indigenous language, used for all its activities",
+    "The approach is completely oral",
+    "Early immersion from 2010 for children aged 3 to 5, at Santo Domingo de Guzman",
+    "A second cuna was founded in 2018 at Santa Catarina Masahuat, also in Sonsonate",
+    "It sits inside Universidad Don Bosco's Nahuat revitalisation project, begun 2003"
+   ]
+  },
+  "slots": { "mediumOfInstruction": [1, 1, 2, 3, 4] },
+  "evidence": [
+   {
+    "bullet": "Cuna Nahuat runs entirely in the indigenous language, used for all its activities",
+    "url": "https://www.udb.edu.sv/udb/noticia/el-nahuat-ultima-lengua-indigena-viva-en-el-salvador",
+    "quote": "el programa es enteramente en la lengua indígena. La lengua náhuat se utiliza para todas las actividades que allí se desarrollan"
+   },
+   {
+    "bullet": "The approach is completely oral",
+    "url": "https://www.udb.edu.sv/udb/noticia/el-nahuat-ultima-lengua-indigena-viva-en-el-salvador",
+    "quote": "El enfoque es completamente oral. La Cuna Náhuat ha demostrado que una lengua moribunda como el náhuat puede revitalizarse"
+   },
+   {
+    "bullet": "Early immersion from 2010 for children aged 3 to 5, at Santo Domingo de Guzman",
+    "url": "https://www.udb.edu.sv/udb/noticia/el-nahuat-ultima-lengua-indigena-viva-en-el-salvador",
+    "quote": "se inició en 2010 un programa de inmersión lingüística temprana para niños de 3 a 5 años en Santo Domingo de Guzmán"
+   },
+   {
+    "bullet": "A second cuna was founded in 2018 at Santa Catarina Masahuat, also in Sonsonate",
+    "url": "https://www.udb.edu.sv/udb/noticia/el-nahuat-ultima-lengua-indigena-viva-en-el-salvador",
+    "quote": "En 2018, se fundó la Cuna Náhuat 2 en Santa Catarina Masahuat; también en Sonsonate"
+   },
+   {
+    "bullet": "It sits inside Universidad Don Bosco's Nahuat revitalisation project, begun 2003",
+    "url": "https://www.udb.edu.sv/udb/noticia/el-nahuat-ultima-lengua-indigena-viva-en-el-salvador",
+    "quote": "la Universidad Don Bosco dio inicio en 2003 al Proyecto de Revitalización del Náhuat"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Universidad Don Bosco (El Salvador), 'El náhuat, última lengua indígena viva en El Salvador' — the university's own account of its Proyecto de Revitalización del Náhuat and of the Cuna Náhuat immersion programme it runs",
+    "url": "https://www.udb.edu.sv/udb/noticia/el-nahuat-ultima-lengua-indigena-viva-en-el-salvador"
+   },
+   {
+    "label": "Universidad Don Bosco, 'Cuna Náhuat: donde florece el náhuat', 10 December 2010 — close of the five-month pilot at Santo Domingo de Guzmán",
+    "url": "https://www.udb.edu.sv/udb/noticia/92"
+   }
+  ]
+ },
+
+ "MG|Madagascar": {
+  "fields": {
+   "revitalisation": [
+    "Founding arrete sets the academy to fix definitively the rules of the Malagasy language",
+    "It published Rakibolana Miraki-pahalalana, 35,000 headwords over 1,133 pages",
+    "Akademia Malagasy, the national academy of arts, letters and sciences, does the work",
+    "Created by the arrete of 23 January 1902",
+    "The Academy issued the dictionary's first run in 2005"
+   ]
+  },
+  "slots": { "revitalisation": [1, 1, 2, 3, 3] },
+  "evidence": [
+   {
+    "bullet": "Founding arrete sets the academy to fix definitively the rules of the Malagasy language",
+    "url": "https://akademia-malagasy.mg/tanjona.php?lang=2",
+    "quote": "d'en découvrir et d'en fixer définitivement les règles, de s'occuper également de toutes les questions qui peuvent intéresser la connaissance du présent et du passé de la Grande Ile"
+   },
+   {
+    "bullet": "It published Rakibolana Miraki-pahalalana, 35,000 headwords over 1,133 pages",
+    "url": "https://akademia-malagasy.mg/rakibolana.php?lang=2",
+    "quote": "Mirakitra teny iditra miisa 35.000 ny Rakibolana Miraki-pahalalàna, lahatsoratra miisa 400 ary olomahay miisa 135 no nifarimbona tamin'ny lahasa ankapobeny. Misy pejy 1133 ny Rakibolana Miraki-pahalalàna"
+   },
+   {
+    "bullet": "Akademia Malagasy, the national academy of arts, letters and sciences, does the work",
+    "url": "https://akademia-malagasy.mg/tanjona.php?lang=2",
+    "quote": "Académie Nationale des Arts, des Lettres et des Sciences"
+   },
+   {
+    "bullet": "Created by the arrete of 23 January 1902",
+    "url": "https://akademia-malagasy.mg/tantara.php?lang=2",
+    "quote": "l'Académie malgache, créée par l'Arrêté du 23 janvier 1902 et placée, selon les termes mêmes de cet arrêté, sous la protection et le haut contrôle du Gouverneur Général"
+   },
+   {
+    "bullet": "The Academy issued the dictionary's first run in 2005",
+    "url": "https://akademia-malagasy.mg/rakibolana.php?lang=2",
+    "quote": "raha namoaka ny andiany voalohany tamin'izany ny Akademia Malagasy, ny taona 2005"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Akademia Malagasy / Académie malgache (Académie Nationale des Arts, des Lettres et des Sciences), MISSIONS — article premier of the arrêté of 23 January 1902",
+    "url": "https://akademia-malagasy.mg/tanjona.php?lang=2"
+   },
+   {
+    "label": "Akademia Malagasy, RAKIBOLANA RAKIPAHALALANA — the Academy's encyclopaedic Malagasy dictionary, first issued 2005",
+    "url": "https://akademia-malagasy.mg/rakibolana.php?lang=2"
+   },
+   {
+    "label": "Akademia Malagasy, HISTORIQUE — creation and the terms of the arrêté of 23 January 1902",
+    "url": "https://akademia-malagasy.mg/tantara.php?lang=2"
+   }
+  ]
+ }
+}

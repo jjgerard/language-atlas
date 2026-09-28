@@ -1,0 +1,324 @@
+{
+  "JP|Japan": {
+    "fields": {
+      "l2Support": [
+        "A designated Japanese-language teacher plans, teaches and assesses each pupil",
+        "Taught in a classroom other than the one the pupil is registered in",
+        "Normally in the school the pupil attends; another school if no teacher can be found",
+        "The standard is 10 to 280 unit hours a year",
+        "The lead teacher must hold a teaching licence, part-time lecturers included"
+      ],
+      "l1Support": [
+        "The 2014 notice reaches the home language only as support an assistant gives the pupil",
+        "That assistant works to the plan the licensed Japanese-language teacher has drawn up",
+        "Mother-tongue supporters are outside personnel that local authorities employ or register"
+      ],
+      "bilingualEducationNotes": [
+        "Japanese-language instruction includes teaching of subjects pitched to the pupil's ability",
+        "The languages are Japanese and the pupil's own, the latter only as an assistant's support",
+        "It runs in primary, lower secondary and the matching departments of special schools",
+        "The notice frames the special curriculum as something a school may adopt, not must"
+      ]
+    },
+    "slots": {
+      "l2Support": [1, 2, 2, 3, 4],
+      "l1Support": [1, 2, 2],
+      "bilingualEducationNotes": [1, 2, 3, 4]
+    },
+    "evidence": [
+      {
+        "bullet": "A designated Japanese-language teacher plans, teaches and assesses each pupil",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm",
+        "quote": "児童生徒の指導の中心となって，児童生徒の実態の把握，指導計画の作成，日本語指導及び学習評価を行うものとすること"
+      },
+      {
+        "bullet": "Taught in a classroom other than the one the pupil is registered in",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm",
+        "quote": "当該児童生徒の在籍学級以外の教室で行われる指導について特別の教育課程を編成・実施することができるよう制度を整備するものです"
+      },
+      {
+        "bullet": "Normally in the school the pupil attends; another school if no teacher can be found",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm",
+        "quote": "児童生徒の在学する学校において行うことを原則とするが，指導者の確保が困難である場合等は，他の学校における指導が認められること"
+      },
+      {
+        "bullet": "The standard is 10 to 280 unit hours a year",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm",
+        "quote": "日本語の能力に応じた特別の指導に係る授業時数は，年間10単位時間から280単位時間までを標準とすること"
+      },
+      {
+        "bullet": "The lead teacher must hold a teaching licence, part-time lecturers included",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm",
+        "quote": "日本語指導担当教員は，教員免許を有する教員（常勤・非常勤講師を含む）とし"
+      },
+      {
+        "bullet": "The 2014 notice reaches the home language only as support an assistant gives the pupil",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm",
+        "quote": "当該教員が行う日本語指導や教科指導等の補助や児童生徒の母語による支援を行うものとすること"
+      },
+      {
+        "bullet": "That assistant works to the plan the licensed Japanese-language teacher has drawn up",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm",
+        "quote": "指導を補助する者は，必要に応じて配置し，日本語指導担当教員が作成した指導計画に基づき"
+      },
+      {
+        "bullet": "Mother-tongue supporters are outside personnel that local authorities employ or register",
+        "url": "https://www.mext.go.jp/content/20240808-mxt_kyokoku-000037366_3.pdf",
+        "quote": "雇用・登録等されている日本語指導の母語支援員（学校において外国人の子供の支援等を行う外部人材）の人数"
+      },
+      {
+        "bullet": "Japanese-language instruction includes teaching of subjects pitched to the pupil's ability",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm",
+        "quote": "当該児童生徒の日本語の能力を高める指導のみならず，当該児童生徒の日本語の能力に応じて行う各教科等の指導も含むものであること"
+      },
+      {
+        "bullet": "The languages are Japanese and the pupil's own, the latter only as an assistant's support",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm",
+        "quote": "当該教員が行う日本語指導や教科指導等の補助や児童生徒の母語による支援を行うものとすること"
+      },
+      {
+        "bullet": "It runs in primary, lower secondary and the matching departments of special schools",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm",
+        "quote": "小学校，中学校，中等教育学校の前期課程又は特別支援学校の小学部若しくは中学部において，日本語に通じない児童又は生徒"
+      },
+      {
+        "bullet": "The notice frames the special curriculum as something a school may adopt, not must",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm",
+        "quote": "文部科学大臣が別に定めるところにより，特別の教育課程によることができることとすること"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MEXT notice 25文科初第928号 of 14 January 2014 on the amendment to the Enforcement Regulation of the School Education Act, art. 56-2, and MEXT Notification No. 1 of 2014 on the special curriculum for Japanese-language instruction",
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1341903.htm"
+      },
+      {
+        "label": "MEXT, biennial national survey of the reception of pupils needing Japanese-language instruction, FY2023 (令和５年度 日本語指導が必要な児童生徒の受入状況等に関する調査結果), summary of results, August 2024",
+        "url": "https://www.mext.go.jp/content/20240808-mxt_kyokoku-000037366_3.pdf"
+      }
+    ]
+  },
+  "BN|Brunei": {
+    "fields": {
+      "bilingualEducationNotes": [
+        "Since the implementation of SPN21 all subjects are taught in English, with three exceptions",
+        "The exceptions are Bahasa Melayu, Islamic Religious Knowledge and Melayu Islam Beraja",
+        "All students follow a common curriculum and sit the Primary School Assessment at Year 6",
+        "Education is made compulsory for every child"
+      ]
+    },
+    "slots": { "bilingualEducationNotes": [1, 2, 3, 4] },
+    "evidence": [
+      {
+        "bullet": "Since the implementation of SPN21 all subjects are taught in English, with three exceptions",
+        "url": "https://www.moe.gov.bn/primary-education/",
+        "quote": "Since the implementation of SPN21, all subjects are taught in English except for Bahasa Melayu"
+      },
+      {
+        "bullet": "The exceptions are Bahasa Melayu, Islamic Religious Knowledge and Melayu Islam Beraja",
+        "url": "https://www.moe.gov.bn/primary-education/",
+        "quote": "except for Bahasa Melayu, Islamic Religious Knowledge and Melayu Islam Beraja"
+      },
+      {
+        "bullet": "All students follow a common curriculum and sit the Primary School Assessment at Year 6",
+        "url": "https://www.moe.gov.bn/primary-education/",
+        "quote": "All students will have a common curriculum, and at the end of Year 6, they will sit for the Primary School Assessment (PSR)"
+      },
+      {
+        "bullet": "Education is made compulsory for every child",
+        "url": "https://www.moe.gov.bn/primary-education/",
+        "quote": "In view of the importance of education in the life of an individual, education is made compulsory for every child"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ministry of Education, Brunei Darussalam, Primary Education page",
+        "url": "https://www.moe.gov.bn/primary-education/"
+      }
+    ]
+  },
+  "UZ|Uzbekistan": {
+    "fields": {
+      "l1Support": [
+        "Article 33 of the Education Law sends the language of instruction to the State Language Law",
+        "Persons living in Uzbekistan are given the right to free choice of the language of instruction",
+        "The state secures general education in the state language and also in other languages",
+        "Pre-school organisations run in national groups' languages where those groups live compactly",
+        "Making Uzbek the state language does not curtail the right of nations there to their own"
+      ]
+    },
+    "slots": { "l1Support": [1, 1, 2, 3, 1] },
+    "evidence": [
+      {
+        "bullet": "Article 33 of the Education Law sends the language of instruction to the State Language Law",
+        "url": "https://lex.uz/ru/docs/5013009",
+        "quote": "Порядок использования языка обучения в образовательных организациях регулируется Законом Республики Узбекистан «О государственном языке»"
+      },
+      {
+        "bullet": "Persons living in Uzbekistan are given the right to free choice of the language of instruction",
+        "url": "https://lex.uz/ru/docs/121433",
+        "quote": "Лицам, проживающим в Республике Узбекистан, предоставляется право свободного выбора языка обучения"
+      },
+      {
+        "bullet": "The state secures general education in the state language and also in other languages",
+        "url": "https://lex.uz/ru/docs/121433",
+        "quote": "Республика Узбекистан обеспечивает получение общего, профессионально-технического, среднего специального и высшего образования на государственном языке, а также на других языках"
+      },
+      {
+        "bullet": "Pre-school organisations run in national groups' languages where those groups live compactly",
+        "url": "https://lex.uz/ru/docs/121433",
+        "quote": "создание дошкольных образовательных организаций, функционирующих на государственном языке, а в местах компактного проживания национальных групп"
+      },
+      {
+        "bullet": "Making Uzbek the state language does not curtail the right of nations there to their own",
+        "url": "https://lex.uz/ru/docs/121433",
+        "quote": "Придание узбекскому языку статуса государственного не ущемляет конституционных прав наций и народностей, проживающих на территории республики, в употреблении родного языка"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Law of the Republic of Uzbekistan on Education, ЗРУ-637 of 23 September 2020, art. 33 (Lex.uz, Russian consolidated text)",
+        "url": "https://lex.uz/ru/docs/5013009"
+      },
+      {
+        "label": "Law of the Republic of Uzbekistan on the State Language, arts. 2, 5 and 6 (Lex.uz, Russian consolidated text)",
+        "url": "https://lex.uz/ru/docs/121433"
+      }
+    ]
+  },
+  "LA|Laos": {
+    "fields": {
+      "l1Support": [
+        "The amended Education Law makes Lao language and Lao script the official teaching languages",
+        "Its other language article covers foreign languages, English compulsory from grade three",
+        "Learners of ethnic origin are entitled to supports in line with regulations",
+        "The instrument is Education Law (Amended) No. 69/NA of 11 December 2024, unofficially translated"
+      ],
+      "bilingualEducationNotes": [
+        "Teaching and learning in educational institutions is carried in Lao language and Lao script",
+        "Institutions may teach foreign languages; other languages are electives, on local context",
+        "The instrument is Education Law (Amended) No. 69/NA of 11 December 2024, unofficially translated"
+      ]
+    },
+    "slots": {
+      "l1Support": [1, 1, 2, 1],
+      "bilingualEducationNotes": [1, 1, 1]
+    },
+    "evidence": [
+      {
+        "bullet": "The amended Education Law makes Lao language and Lao script the official teaching languages",
+        "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/Education%20Law%20Eng%20version%2020250715.pdf",
+        "quote": "Lao language and Lao script are the official languages for teaching learning in educational institutions"
+      },
+      {
+        "bullet": "Its other language article covers foreign languages, English compulsory from grade three",
+        "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/Education%20Law%20Eng%20version%2020250715.pdf",
+        "quote": "English language is a compulsory subject beginning in grade three of primary education onwards"
+      },
+      {
+        "bullet": "Learners of ethnic origin are entitled to supports in line with regulations",
+        "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/Education%20Law%20Eng%20version%2020250715.pdf",
+        "quote": "Learners from poor families and disadvantaged groups, who are disabled, gifted or talented, particularly females and of ethnic origin, are entitled for supports in line with regulations"
+      },
+      {
+        "bullet": "The instrument is Education Law (Amended) No. 69/NA of 11 December 2024, unofficially translated",
+        "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/Education%20Law%20Eng%20version%2020250715.pdf",
+        "quote": "No. 69 / NA Vientiane Capital, 11 December 2024 (Unofficial Translation) (By Department of Education Quality Assurance, MoES) EDUCATION LAW (Amended)"
+      },
+      {
+        "bullet": "Teaching and learning in educational institutions is carried in Lao language and Lao script",
+        "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/Education%20Law%20Eng%20version%2020250715.pdf",
+        "quote": "Lao language and Lao script are the official languages for teaching learning in educational institutions"
+      },
+      {
+        "bullet": "Institutions may teach foreign languages; other languages are electives, on local context",
+        "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/Education%20Law%20Eng%20version%2020250715.pdf",
+        "quote": "Other languages are electives and dependent on local context and actual condition of educational institutions"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Education Law (Amended), No. 69/NA of 11 December 2024, arts. 44 and 45, unofficial translation by the Department of Education Quality Assurance, MoES (Lao Official Gazette)",
+        "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/Education%20Law%20Eng%20version%2020250715.pdf"
+      }
+    ]
+  },
+  "MN|Mongolia": {
+    "fields": {
+      "bilingualEducationNotes": [
+        "Kindergarten and primary teaching may run in the mother tongue where such learners predominate",
+        "No language is named; the article says a national minority with a different language",
+        "The stages named are kindergarten and the primary grades",
+        "The article says teaching may be so organised, not that it must",
+        "Mother-tongue textbooks are to be produced for national-minority and deaf children"
+      ]
+    },
+    "slots": { "bilingualEducationNotes": [1, 2, 3, 4, 1] },
+    "evidence": [
+      {
+        "bullet": "Kindergarten and primary teaching may run in the mother tongue where such learners predominate",
+        "url": "https://legalinfo.mn/mn/detail?lawId=16759959012931",
+        "quote": "Суралцагчийн дийлэнх олонх нь хүн амын өөр хэл бүхий үндэстний цөөнхийн суралцагч байх тохиолдолд цэцэрлэг, бага ангийн сургалт, үйл ажиллагааг эх хэлээр нь зохион байгуулж болно"
+      },
+      {
+        "bullet": "No language is named; the article says a national minority with a different language",
+        "url": "https://legalinfo.mn/mn/detail?lawId=16759959012931",
+        "quote": "хүн амын өөр хэл бүхий үндэстний цөөнхийн суралцагч байх тохиолдолд"
+      },
+      {
+        "bullet": "The stages named are kindergarten and the primary grades",
+        "url": "https://legalinfo.mn/mn/detail?lawId=16759959012931",
+        "quote": "цэцэрлэг, бага ангийн сургалт, үйл ажиллагааг эх хэлээр нь зохион байгуулж болно"
+      },
+      {
+        "bullet": "The article says teaching may be so organised, not that it must",
+        "url": "https://legalinfo.mn/mn/detail?lawId=16759959012931",
+        "quote": "сургалт, үйл ажиллагааг эх хэлээр нь зохион байгуулж болно"
+      },
+      {
+        "bullet": "Mother-tongue textbooks are to be produced for national-minority and deaf children",
+        "url": "https://legalinfo.mn/mn/detail?lawId=16759959012931",
+        "quote": "Үндэстний цөөнх, сонсголын бэрхшээлтэй хүүхдийн эх хэлний сурах бичгийг зохионо"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Law of Mongolia on Pre-school and General Education (Сургуулийн өмнөх болон ерөнхий боловсролын тухай), 2023, arts. 7.2 and 11.9 (legalinfo.mn)",
+        "url": "https://legalinfo.mn/mn/detail?lawId=16759959012931"
+      }
+    ]
+  },
+  "MT|Malta": {
+    "fields": {
+      "l1Support": [
+        "One listed measure raises classmates' awareness of the child's native language and customs",
+        "The specific language support named is for learning Maltese and/or English",
+        "The measures fall under the Migrant Learners Unit"
+      ]
+    },
+    "slots": { "l1Support": [1, 1, 2] },
+    "evidence": [
+      {
+        "bullet": "One listed measure raises classmates' awareness of the child's native language and customs",
+        "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/malta/support-measures-learners-early-childhood-and-school-education",
+        "quote": "The raising of classmates’ awareness of the child’s native language, customs, beliefs and ethnic diversity in order to facilitate the child’s inclusion in class"
+      },
+      {
+        "bullet": "The specific language support named is for learning Maltese and/or English",
+        "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/malta/support-measures-learners-early-childhood-and-school-education",
+        "quote": "Specific language support for such children to learn Maltese and/or English both during the scholastic year and through the Language to Go! Summer courses"
+      },
+      {
+        "bullet": "The measures fall under the Migrant Learners Unit",
+        "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/malta/support-measures-learners-early-childhood-and-school-education",
+        "quote": "Supporting measures include the following which fall under the responsibility of the Migrant Learners Unit"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Eurydice, Malta: Support measures for learners in early childhood and school education (read because migrantlearnersunit.gov.mt does not resolve)",
+        "url": "https://eurydice.eacea.ec.europa.eu/eurypedia/malta/support-measures-learners-early-childhood-and-school-education"
+      }
+    ]
+  }
+}

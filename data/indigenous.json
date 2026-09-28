@@ -34270,6 +34270,10 @@
    {
     "label": "European Commission/EACEA/Eurydice, Key data on teaching languages at school in Europe – 2023 edition, Figures A1 and B9 (copy hosted by Eurydice Bosnia and Herzegovina; the op.europa.eu DOI is behind an Azure WAF)",
     "url": "https://eurydice.ba/wp-content/uploads/2023/03/Key-data-on-teaching-languages-at-school-in-Europe.pdf"
+   },
+   {
+    "label": "Advisory Committee on the Framework Convention for the Protection of National Minorities, Fifth Opinion on Liechtenstein, adopted 1 February 2021 (ACFC/OP/V(2021)001), para. 13 and its footnote 6 — the state's declaration that no national minorities exist in its territory, the parallel declaration under the European Charter for Regional or Minority Languages, and the Advisory Committee's own qualifier that it is aware of nobody who has come forward",
+    "url": "https://rm.coe.int/5th-op-liechtenstein-en/1680a15dfc"
    }
   ],
   "supportLinks": [],
@@ -34283,7 +34287,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "Not established from the sources consulted. The Advisory Committee's Fifth Opinion on Liechtenstein (ACFC, adopted 1 February 2021) records that on depositing its instrument of ratification Liechtenstein declared that no national minorities in the sense of the Framework Convention exist in its territory, and that it made a similar declaration on ratifying the European Charter for Regional or Minority Languages; the Opinion describes anti-discrimination, hate-speech and integration measures but no language revitalisation or language-promotion measure, no body running one, no start date and no funding. Eurydice's Key data on teaching languages at school in Europe (2023 edition, policy position 2021/22) lists German as Liechtenstein's only state language on Figure A1 with no regional or minority language of official status, and the report describes no promotion measure for Liechtenstein anywhere in its text. Neither document addresses any measure for German itself.",
+  "revitalisation": "Liechtenstein declared that no national minorities exist in its territory\nIt made a similar declaration on ratifying the languages Charter, so none is named either\nThe Advisory Committee does not endorse that as fact; it records nobody came forward",
   "speakers": [],
   "policyHistory": [],
   "inventory": [
@@ -34315,6 +34319,16 @@
     "minority_framing": "not stated",
     "fixed_in": "not stated"
    }
+  },
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    1
+   ]
+  },
+  "absences": {
+   "revitalisation": true
   }
  },
  {
@@ -35977,6 +35991,18 @@
    {
     "label": "Constitution de la Quatrième République de Madagascar, promulguée le 11 décembre 2010 — article 4 (et non article 6) : « Les langues officielles sont le malagasy et le français »; texte officiel, Ministère de l'Économie et des Finances",
     "url": "https://www.mef.gov.mg/dgcf/textes-pdf/constitution/CONSTITUTION-IV.pdf"
+   },
+   {
+    "label": "Akademia Malagasy / Académie malgache (Académie Nationale des Arts, des Lettres et des Sciences), MISSIONS — article premier of the arrêté of 23 January 1902",
+    "url": "https://akademia-malagasy.mg/tanjona.php?lang=2"
+   },
+   {
+    "label": "Akademia Malagasy, RAKIBOLANA RAKIPAHALALANA — the Academy's encyclopaedic Malagasy dictionary, first issued 2005",
+    "url": "https://akademia-malagasy.mg/rakibolana.php?lang=2"
+   },
+   {
+    "label": "Akademia Malagasy, HISTORIQUE — creation and the terms of the arrêté of 23 January 1902",
+    "url": "https://akademia-malagasy.mg/tantara.php?lang=2"
    }
   ],
   "supportLinks": [],
@@ -35990,7 +36016,7 @@
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
-  "revitalisation": "Not established from the sources consulted. The UNICEF/Trudell 2017 country review for Madagascar sets out the language policy, the education policy and the studies feeding the Education Sector Plan 2018-2022, and the only language-policy activity it names is a national seminar on language policy in education organised by the French embassy; it names no programme, body, start date or funding for reversing shift in Malagasy or its varieties. The UNESCO PEER Madagascar inclusion profile describes only the sector plan's reading, mother-tongue transition and plurilingual aims, and records that provision is made for adopting a new language policy. Searched: Trudell 2017 Madagascar country review; PEER Madagascar inclusion profile.",
+  "revitalisation": "Founding arrete sets the academy to fix definitively the rules of the Malagasy language\nIt published Rakibolana Miraki-pahalalana, 35,000 headwords over 1,133 pages\nAkademia Malagasy, the national academy of arts, letters and sciences, does the work\nCreated by the arrete of 23 January 1902\nThe Academy issued the dictionary's first run in 2005",
   "speakers": [],
   "policyHistory": [
    {
@@ -36072,7 +36098,25 @@
     "family": "national language",
     "minority_framing": "not stated",
     "fixed_in": "not stated"
+   },
+   "revitalisation": {
+    "actor": "state body",
+    "activity": [
+     "standardisation",
+     "materials"
+    ],
+    "status": "established",
+    "funding": "not stated"
    }
+  },
+  "slots": {
+   "revitalisation": [
+    1,
+    1,
+    2,
+    3,
+    3
+   ]
   }
  },
  {
@@ -37309,6 +37353,14 @@
    {
     "label": "The Constitution (Mauritius), GN 54 of 1968 — as amended by Act 28 of 2016 and Act 30 of 2016 with effect from 17 December 2016; Revised Laws of Mauritius, Attorney-General's Office",
     "url": "https://attorneygeneral.govmu.org/Documents/Laws%20of%20Mauritius/A-Z%20Acts/C/Co/Constitution,%20GN%2054%20of%201968.pdf"
+   },
+   {
+    "label": "Mauritius Institute of Education, National Curriculum Framework Pre-Primary (2024), section 4.2 Communication, Language and Literacy",
+    "url": "https://web.mie.ac.mu/wp-content/uploads/2024/04/NCF-Pre-Primary-2024.pdf"
+   },
+   {
+    "label": "Ombudsperson for Children (Mauritius), 'Case 3: Kreol language in the education system', quoting Education Regulations s.43 'Medium of instruction and teaching of languages' — reproduced in full by LALIT; the Regulations themselves are not published on attorneygeneral.govmu.org or lawsofmauritius.govmu.org, and the Education Act carries no medium provision",
+    "url": "https://www.lalitmauritius.org/en/newsarticle/2176/ombudsperson-for-children-recommends-kreol-as-medium-in-schools/"
    }
   ],
   "supportLinks": [],
@@ -37317,7 +37369,7 @@
   "by": "Seeded via AI-assisted deep research (2026), peer-reviewed sources read",
   "localTerm": "PEER calls Bhojpuri 'an ancestral local language'\nThe MIE curriculum department is named 'Asian Language & Kreol'\nKreol Rodrige is listed beside Kreol Morisien as a separate language",
   "standing": "Kreol Morisien entered the curriculum as an optional language under the 2010-15 programme\nIt sits alongside Arabic and other Asian languages as an optional choice\nBhojuri (PEER; usually Bhojpuri), an ancestral local language, was introduced in grade 1",
-  "mediumOfInstruction": "Not established from the sources consulted. The UNESCO PEER inclusion profile for Mauritius places Kreol Morisien in the curriculum only as an optional language subject, and records the Ministry's view that pupils should be able to learn and be assessed in the spoken language 'rather than the medium of instruction', which implies Kreol is not itself the medium; the profile names no medium of instruction and no grade boundary. Searched: PEER Mauritius inclusion profile.",
+  "mediumOfInstruction": "Pre-primary targets English and French, scaffolded on the child's first language\nThe framework names that L1 only as the child's first language, never which one\nOmbudsperson quotes Education Regulations s.43: in Standards IV to VI the medium is English\nUp to and including Standard III any one language may be employed as the medium\nThe Minister decides which language that is, as most suitable for the pupils",
   "taughtAsSubject": "Kreol Morisien is in the curriculum as an optional language, per the 2010-15 programme\nIt sits alongside Arabic and the Asian languages as one optional choice\nBhojpuri, called an ancestral local language, was introduced in Grade 1\nProfile gives no upper year limit and no entry condition for taking it",
   "teacherSupply": "",
   "materials": "",
@@ -37520,6 +37572,11 @@
     "activity": "standardisation",
     "status": "established",
     "funding": "not stated"
+   },
+   "mediumOfInstruction": {
+    "role": "permitted, not implemented",
+    "reach": "early primary",
+    "secured_by": "permission"
    }
   },
   "slots": {
@@ -37528,6 +37585,13 @@
     1,
     2,
     3
+   ],
+   "mediumOfInstruction": [
+    1,
+    1,
+    2,
+    2,
+    4
    ]
   }
  },
@@ -47047,6 +47111,14 @@
    {
     "label": "Constitución de la República de El Salvador, Decreto Constituyente n.º 38 de 15 de diciembre de 1983, art. 58 — Asamblea Legislativa",
     "url": "https://www.asamblea.gob.sv/sites/default/files/2026-05/1.%20CONSTITUCI%C3%93N%20DE%20LA%20REP%C3%9ABLICA.pdf"
+   },
+   {
+    "label": "Universidad Don Bosco (El Salvador), 'El náhuat, última lengua indígena viva en El Salvador' — the university's own account of its Proyecto de Revitalización del Náhuat and of the Cuna Náhuat immersion programme it runs",
+    "url": "https://www.udb.edu.sv/udb/noticia/el-nahuat-ultima-lengua-indigena-viva-en-el-salvador"
+   },
+   {
+    "label": "Universidad Don Bosco, 'Cuna Náhuat: donde florece el náhuat', 10 December 2010 — close of the five-month pilot at Santo Domingo de Guzmán",
+    "url": "https://www.udb.edu.sv/udb/noticia/92"
    }
   ],
   "supportLinks": [],
@@ -47055,7 +47127,7 @@
   "by": "",
   "localTerm": "The Constitution art 62 calls them lenguas autoctonas\nLey de Cultura art 9 calls them lenguas de los pueblos indigenas\nThe same article's duty runs to las lenguas ancestrales\nArt 44 names nahuatl, cacahuira and lenca-poton as the languages meant",
   "standing": "Constitution art 62 makes them part of the cultural heritage, to be preserved and respected\nLey de Cultura art 9 keeps castellano as the sole official language\nArt 9 obliges the State to promote their rescate, ensenanza y respeto across the territory\nArt 44 puts preservation and diffusion of the named languages on local governments",
-  "mediumOfInstruction": "Not established from the sources consulted. The ministry records training 85 teachers in Nahuat to promote teaching of the language, not teaching in it, and PEER records the 2015 indigenous peoples policy proposing curricular changes to include knowledge of indigenous culture rather than any medium of instruction.",
+  "mediumOfInstruction": "Cuna Nahuat runs entirely in the indigenous language, used for all its activities\nThe approach is completely oral\nEarly immersion from 2010 for children aged 3 to 5, at Santo Domingo de Guzman\nA second cuna was founded in 2018 at Santa Catarina Masahuat, also in Sonsonate\nIt sits inside Universidad Don Bosco's Nahuat revitalisation project, begun 2003",
   "taughtAsSubject": "MINEDUCYT trained 85 teachers in Nahuat to promote teaching of the language\nThe ministry monitored it at one school in Izalco, Sonsonate, in the west\nLey de Cultura art 9 obliges the State to promote la ensenanza de las lenguas ancestrales\nIts 2015 indigenous policy proposed curricular changes on culture, not on the language",
   "teacherSupply": "",
   "materials": "",
@@ -47120,6 +47192,13 @@
     2,
     2,
     3
+   ],
+   "mediumOfInstruction": [
+    1,
+    1,
+    2,
+    3,
+    4
    ]
   },
   "coding": {
@@ -47173,6 +47252,11 @@
     "family": "indigenous or originary language",
     "minority_framing": "not stated",
     "fixed_in": "in statute"
+   },
+   "mediumOfInstruction": {
+    "role": "sole medium",
+    "reach": "preschool only",
+    "secured_by": "practice only"
    }
   }
  },
@@ -55710,6 +55794,10 @@
    {
     "label": "Ley 18.437, Ley General de Educación (IMPO)",
     "url": "https://www.impo.com.uy/bases/leyes/18437-2008"
+   },
+   {
+    "label": "ANEP / DGEIP (Dirección General de Educación Inicial y Primaria), Programa de Inmersión Dual Español-Portugués — Departamento de Lenguas, Centro de Formación Permanente",
+    "url": "https://www.dgeip.edu.uy/c-f-p/13-departamentos/lenguas/28-inmersion-dual-espanol-portugues/"
    }
   ],
   "supportLinks": [],
@@ -55718,7 +55806,7 @@
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "localTerm": "\"lenguas maternas existentes en el país\" is the law's category, art. 40(5)\nThe three named are Uruguayan Spanish, Uruguayan Portuguese and LSU\nPortuguese here is a border variety of Uruguay, not a foreign language",
   "standing": "Art. 40(5) recognises three mother tongues existing in the country\nEspañol del Uruguay, portugués del Uruguay, lengua de señas uruguaya\nUruguayan Portuguese is a border variety, not a foreign language\nSo the plurilingual aim starts from varieties already spoken here",
-  "mediumOfInstruction": "Not established from the sources consulted. The only source on this entry is Ley 18.437, Ley General de Educación (IMPO). No medium-of-instruction rule for the three was found in the cited source.",
+  "mediumOfInstruction": "Dual Immersion splits the school day equitably between Spanish and Portuguese\nEach class has two teachers on the same official curriculum, one per language\nIt sits inside Ensenanza Primaria, in schools on the frontier\nBegan 2003 in three full-time schools in Artigas and Rivera, on the Brazil border\nThe programme now covers seven schools in three departments",
   "taughtAsSubject": "No compulsory subject in Uruguayan Portuguese or LSU is recorded\nThe plurilingual aim starts from varieties already spoken in the country",
   "teacherSupply": "",
   "materials": "",
@@ -55789,6 +55877,11 @@
     ],
     "status": "established",
     "funding": "not stated"
+   },
+   "mediumOfInstruction": {
+    "role": "shared medium",
+    "reach": "all primary",
+    "secured_by": "practice only"
    }
   },
   "slots": {
@@ -55797,6 +55890,13 @@
     1,
     1,
     2,
+    3
+   ],
+   "mediumOfInstruction": [
+    1,
+    1,
+    2,
+    3,
     3
    ]
   }
