@@ -1117,7 +1117,22 @@ function schemeFor(fieldKey) { return (B.schemes || {})[domainId + '.' + fieldKe
 function valueLabel(v, key) {
   const k = key || (typeof CODED !== 'undefined' && CODED.key) || '';
   const byCol = k && ((B.valueLabelsByColumn || {})[k]);
-  return (byCol && byCol[v]) || ((B.valueLabels || {})[v]) || String(v == null ? '' : v);
+  if (byCol && byCol[v]) return byCol[v];
+  if ((B.valueLabels || {})[v]) return B.valueLabels[v];
+  /* A RANKED LEVEL HAS A NAME AND IS NOT ITS NUMBER. `obliges` is stored 0 to
+     4 and the vocabulary gives each level a label -- "nothing", "duty to
+     provide, owed to the population", "individual right, provision
+     specified". Drawn as the bare integers the key read "0 28, 1 108, 2 156"
+     and a reader had to know the scale by heart to get anything from the map.
+     Only levels declared as {label, gloss} objects are touched; a plain string
+     value is its own label, as it was. */
+  if (k) {
+    const [f, c] = k.split('.');
+    const sc = schemeFor(f);
+    const def = sc && ((sc.values || {})[c] || {})[v];
+    if (def && typeof def === 'object' && def.label) return def.label;
+  }
+  return String(v == null ? '' : v);
 }
 
 /* WHAT THE ABSENCE IS AN ABSENCE OF. `entry.absences[field]` is a fact about
@@ -1292,8 +1307,14 @@ function shadeableColumns() {
        and coding.js names which columns those are rather than anything here
        detecting it. */
     const ordinal = sc.ordinalColumns || [];
-    const cols = (sc.many ? [] : (sc.valueColumns || []))
-      .concat(ordinal.filter(c => !(sc.valueColumns || []).includes(c)));
+    // Dedupe against what is actually being TAKEN, not against valueColumns.
+    // On a `many` field valueColumns is discarded, and filtering the ordinal
+    // list against it anyway dropped `obliges` -- which valueColumns does list
+    // -- while keeping `instrument_year`, which it does not. Strength of
+    // entitlement silently left the picker and the year stayed, from one
+    // wrong variable in a dedupe.
+    const base = sc.many ? [] : (sc.valueColumns || []);
+    const cols = base.concat(ordinal.filter(c => !base.includes(c)));
     for (const c of cols) {
       const key = f.k + '.' + c;
       if (!columnVaries(key)) continue;
