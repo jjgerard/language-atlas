@@ -1,0 +1,59 @@
+{
+  "GB|Northern Ireland": {
+    "fields": {
+      "l2Support": [
+        "IES helps schools get newcomer pupils past the English barrier into curricular learning",
+        "Its online courses train teachers and support staff working in mainstream classrooms",
+        "A second course from January 2027 covers working with withdrawal groups",
+        "CEFR is a mandatory Department of Education assessment for managing that support",
+        "A school draws an additional annual premium for each pupil while newcomer status lasts"
+      ],
+      "removalCriteria": [
+        "Newcomer status ends at B1 across all four skills with full participation in class"
+      ]
+    },
+    "slots": { "l2Support": [1, 2, 2, 3, 4], "removalCriteria": [1] },
+    "evidence": [
+      {
+        "bullet": "IES helps schools get newcomer pupils past the English barrier into curricular learning",
+        "url": "https://www.eani.org.uk/services/support-for-schools/intercultural-education-service-ies/newcomers/common-european",
+        "quote": "to overcome their initial English language barriers, in order to help them fully engage in their curricular learning"
+      },
+      {
+        "bullet": "Its online courses train teachers and support staff working in mainstream classrooms",
+        "url": "https://www.eani.org.uk/services/support-for-schools/intercultural-education-service-ies/newcomers",
+        "quote": "Online courses for teachers developed by IES to support teachers and other staff in mainstream classrooms"
+      },
+      {
+        "bullet": "A second course from January 2027 covers working with withdrawal groups",
+        "url": "https://www.eani.org.uk/services/support-for-schools/intercultural-education-service-ies/newcomers/cpd-online-courses-for",
+        "quote": "will cover the following areas: working with pupils/students who have less well-developed literacy skills; working with withdrawal groups"
+      },
+      {
+        "bullet": "CEFR is a mandatory Department of Education assessment for managing that support",
+        "url": "https://www.eani.org.uk/services/support-for-schools/intercultural-education-service-ies/newcomers/common-european",
+        "quote": "introduced the CEFR system as a mandatory assessment to help schools to manage that"
+      },
+      {
+        "bullet": "A school draws an additional annual premium for each pupil while newcomer status lasts",
+        "url": "https://www.eani.org.uk/services/support-for-schools/intercultural-education-service-ies/newcomers/common-european",
+        "quote": "Schools receive an additional annual premium for each newcomer while they remain at"
+      },
+      {
+        "bullet": "Newcomer status ends at B1 across all four skills with full participation in class",
+        "url": "https://www.eani.org.uk/services/support-for-schools/intercultural-education-service-ies/newcomers/common-european",
+        "quote": "When a pupil has achieved all the benchmarks at B1, across all skill areas, and the pupil is able to participate fully in class, then he/she is no longer considered a newcomer pupil"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Education Authority Northern Ireland, Intercultural Education Service - Common European Framework of Reference (CEFR) for newcomer pupils, including the B1 exit benchmark and the annual newcomer premium",
+        "url": "https://www.eani.org.uk/services/support-for-schools/intercultural-education-service-ies/newcomers/common-european"
+      },
+      {
+        "label": "Education Authority Northern Ireland, Intercultural Education Service - CPD online courses for teachers and support staff, Newcomer and Traveller pathways",
+        "url": "https://www.eani.org.uk/services/support-for-schools/intercultural-education-service-ies/newcomers/cpd-online-courses-for"
+      }
+    ]
+  }
+}

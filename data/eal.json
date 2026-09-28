@@ -11320,7 +11320,7 @@
   "inst": "Ulster University",
   "source": "seed",
   "newcomerCriteria": "'Newcomer' — enrolled, without the language skills to take full part in the curriculum\nAnd without a language in common with the teacher\nDoes not cover indigenous pupils in Irish-medium schools",
-  "removalCriteria": "3 years after Newcomer designation",
+  "removalCriteria": "3 years after Newcomer designation\nNewcomer status ends at B1 across all four skills with full participation in class",
   "newcomerProportion": [
    {
     "year": "2019/20",
@@ -11360,7 +11360,7 @@
    }
   ],
   "achievementGap": "PISA 2022 reading, from Northern Ireland's own national report, not the UK figure\nMeasured on 15-year-olds only, so it says nothing about primary, where most Newcomers are\nFirst-generation immigrant pupils scored 449 against 492 for non-immigrant pupils\nSecond-generation immigrant pupils scored 492, the same as non-immigrant pupils",
-  "l2Support": "Funding per Newcomer",
+  "l2Support": "Funding per Newcomer\nIES helps schools get newcomer pupils past the English barrier into curricular learning\nA second course from January 2027 covers working with withdrawal groups\nCEFR is a mandatory Department of Education assessment for managing that support\nA school draws an additional annual premium for each pupil while newcomer status lasts",
   "l1Support": "The retrieved page is a service landing page and describes no home-language teaching\nSupport is organised centrally by the Education Authority rather than school by school\nThe service is the Intercultural Education Service",
   "l3Support": "",
   "bilingualEducationNotes": "Whether Irish-medium education counts as designated Newcomer support is unclear",
@@ -11384,6 +11384,17 @@
     1,
     2,
     3
+   ],
+   "l2Support": [
+    1,
+    1,
+    3,
+    4,
+    4
+   ],
+   "removalCriteria": [
+    3,
+    1
    ]
   },
   "coding": {
@@ -11397,10 +11408,11 @@
    },
    "removalCriteria": {
     "exit_mechanism": [
+     "proficiency judgement",
      "fixed period"
     ],
     "exit_period_months": 36,
-    "decided_by": "nobody, the period expires",
+    "decided_by": "school",
     "rule_locus": "sub-national only"
    },
    "policyHistory": [
