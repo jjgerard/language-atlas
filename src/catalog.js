@@ -13,7 +13,7 @@
 // the window to lapse.
 
 const { LIVE, DOMAINS } = require('./domains');
-const { SCHEMES, columnLabel, COLUMN_BANDS, VALUE_LABELS } = require("./coding.js");
+const { SCHEMES, columnLabel, COLUMN_BANDS, VALUE_LABELS, VALUE_LABELS_BY_COLUMN } = require("./coding.js");
 const { load: pisa } = require("./pisa.js");
 const store = require('./store');
 const { makeHistoryMatcher } = require('./history');
@@ -53,6 +53,7 @@ function build(catalogs, sources) {
     // the record being silent against the system having none -- is the one this
     // project is built on.
     valueLabels: VALUE_LABELS,
+    valueLabelsByColumn: VALUE_LABELS_BY_COLUMN,
     schemes: Object.fromEntries(Object.entries(SCHEMES).map(([k, s]) => [k, {
       keyColumns: s.keyColumns,
       // Row-grained: the field holds an ARRAY of codings per unit. keyColumns

@@ -2278,9 +2278,27 @@ const VALUE_LABELS = {
   'national, non-binding': 'national',
 };
 
+// LABELS THAT ARE ONLY RIGHT IN ONE COLUMN. `none in use` is stored in 72
+// cells and means two different things: on indigenous.localTerm.family, 48 of
+// them, the system has no term for the LANGUAGE; on
+// eal.newcomerCriteria.designation, 24, there IS provision and the system has
+// no term for the PUPILS who receive it. A global entry would have relabelled
+// the 48 with wording about pupils, silently and wrongly, so the by-column
+// table exists to stop that.
+const VALUE_LABELS_BY_COLUMN = {
+  // What these systems have is a threshold on a GROUP, not a status held by
+  // any child: South Africa's 40 learners in Grades 1-6 asking for a language,
+  // Namibia's 20 from different language groups, Malaysia's fifteen parents.
+  // The provision switches on and whoever is in that classroom receives it.
+  'newcomerCriteria.designation': {
+    'none in use': 'provision based on group (no term for pupils)',
+  },
+};
+
 /** What to show a reader for a coded value. The stored string is unchanged. */
-function valueLabel(v) {
-  return VALUE_LABELS[v] || String(v == null ? '' : v);
+function valueLabel(v, fieldKey, col) {
+  const byCol = fieldKey && col && VALUE_LABELS_BY_COLUMN[fieldKey + '.' + col];
+  return (byCol && byCol[v]) || VALUE_LABELS[v] || String(v == null ? '' : v);
 }
 
 /** Which band a measured value falls in, or the value itself where the column
@@ -2408,6 +2426,6 @@ module.exports = {
   isObligesLevel,
   fieldsTouchedFor,
   COLUMN_LABELS, COLUMN_LABELS_BY_FIELD, columnLabel, COLUMN_BANDS, bandOf,
-  VALUE_LABELS, valueLabel,
+  VALUE_LABELS, VALUE_LABELS_BY_COLUMN, valueLabel,
   isFieldTouched: (id, v) => has(fieldsTouchedFor(id), v),
 };

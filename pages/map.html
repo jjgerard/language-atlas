@@ -277,15 +277,6 @@
    hung out over the map past the edge of the box it belongs to. Stacked, it
    takes the box's width and the option text truncates instead. */
 .shadeby { display: flex; flex-direction: column; gap: 5px; margin: 0 0 9px; }
-.crossby label { display: flex; align-items: center; gap: 6px; text-transform: none;
-  letter-spacing: 0; font-size: 12px; cursor: pointer; }
-.crossby input { accent-color: var(--ink-faint); }
-.crossby select:disabled { opacity: .45; }
-.cross-ramp { display: flex; flex-direction: column; gap: 2px; margin: 6px 0 2px; }
-.cross-ramp .rh { font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
-  color: var(--ink-faint); }
-.cross-ramp .rr { display: flex; align-items: center; gap: 6px; font-size: 11px; }
-.cross-ramp .rr i { width: 15px; height: 10px; border: 1px solid var(--hair); font-style: normal; }
 .shadeby label { font-size: 11px; color: var(--ink-faint); letter-spacing: .04em; text-transform: uppercase; }
 .shadeby select {
   font: inherit; font-size: 12px; padding: 4px 6px;
@@ -859,10 +850,6 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
            two variables in one fill is a thing a reader has to be told to
            look for, and hidden entirely until a question is chosen, since
            there is no hue to deepen on the coverage map. -->
-      <div class="shadeby crossby" id="crossby" hidden>
-        <label><input type="checkbox" id="crosson"> Cross with</label>
-        <select id="crosssel" disabled></select>
-      </div>
       <div class="catlegend" id="catlegend" hidden></div>
       <div class="rows">
         <div class="row"><span class="sw" id="sw-looked"></span> Looked, found nothing</div>
@@ -952,6 +939,7 @@ async function loadAtlas() {
     // dropped: the value labels shipped, reached the page, and the legend went
     // on printing the raw strings with no error anywhere.
     valueLabels: atlas.valueLabels || {},
+    valueLabelsByColumn: atlas.valueLabelsByColumn || {},
   };
 }
 
@@ -1121,8 +1109,15 @@ function schemeFor(fieldKey) { return (B.schemes || {})[domainId + '.' + fieldKe
    things -- the record being silent against the system having none. The stored
    value is untouched; this is what a reader is shown. coding.js holds the
    list, catalog.js ships it. */
-function valueLabel(v) {
-  return ((B.valueLabels || {})[v]) || String(v == null ? '' : v);
+/* A value can need different words in different columns. `none in use` means
+   "no term for the LANGUAGE" on indigenous.localTerm and "provision based on
+   group, no term for the PUPILS" on eal.newcomerCriteria, and 48 entries hold
+   the first while 24 hold the second. The by-column table wins over the flat
+   one; CODED.key supplies the column, so the caller does not have to. */
+function valueLabel(v, key) {
+  const k = key || (typeof CODED !== 'undefined' && CODED.key) || '';
+  const byCol = k && ((B.valueLabelsByColumn || {})[k]);
+  return (byCol && byCol[v]) || ((B.valueLabels || {})[v]) || String(v == null ? '' : v);
 }
 
 /* WHAT THE ABSENCE IS AN ABSENCE OF. `entry.absences[field]` is a fact about
@@ -1158,6 +1153,19 @@ const NA_LABEL = {
   dischargeCriteria: 'No designation to discharge from',
 };
 function naLabel(fieldKey) { return NA_LABEL[fieldKey] || 'Not applicable here'; }
+
+/* AN UNSET CELL IS NOT ALWAYS A GAP. On a measured column it is the answer:
+   `exit_period_months` is declared "integer, where a fixed period is set and a
+   length is given", so leaving it empty says the system sets no fixed period.
+   90 entries do, and calling that "coded, no value fits" invites somebody to
+   go looking for ninety numbers that were never there. Only columns where the
+   blank MEANS something are listed; everywhere else the generic words stand,
+   because there the blank really is a coder finding nothing that fitted. */
+const UNSET_LABEL = {
+  'removalCriteria.exit_period_months': 'No fixed period set',
+  'legalEntitlement.instrument_year': 'No year given',
+};
+function unsetLabel(key) { return UNSET_LABEL[key] || 'Coded, no value fits'; }
 
 function absenceLabel(fieldKey) {
   if (ABSENCE_LABEL[fieldKey]) return ABSENCE_LABEL[fieldKey];
@@ -1276,8 +1284,17 @@ function shadeableColumns() {
   const out = [];
   for (const f of domain().fields) {
     const sc = schemeFor(f.k);
-    if (!sc || sc.many || (sc.keyColumns || []).length) continue;   // row-grained: rule 3
-    for (const c of (sc.valueColumns || [])) {
+    if (!sc || (sc.keyColumns || []).length) continue;
+    /* RULE 3 STILL HOLDS FOR NOMINAL COLUMNS -- a row-grained field has no one
+       value to colour a country with -- but an ORDINAL one is a different
+       case, and it is why the cross existed. Its values are ranked, so several
+       rows reduce to a position on a ramp rather than to an arbitrary pick,
+       and coding.js names which columns those are rather than anything here
+       detecting it. */
+    const ordinal = sc.ordinalColumns || [];
+    const cols = (sc.many ? [] : (sc.valueColumns || []))
+      .concat(ordinal.filter(c => !(sc.valueColumns || []).includes(c)));
+    for (const c of cols) {
       const key = f.k + '.' + c;
       if (!columnVaries(key)) continue;
       out.push({ field: f.k, label: f.label, col: c, key: key });
@@ -1305,10 +1322,34 @@ function codedValues(u, key) {
   if (!u || !key) return null;
   const [f, c] = key.split('.');
   const cd = (u.coding || {})[f];
-  if (!cd || Array.isArray(cd)) return null;
+  if (!cd) return null;
+  /* AN ORDINAL COLUMN IS READ ACROSS ROWS AND THROUGH ITS BANDS, which is what
+     the cross used to do for it and the only reason the cross could reach
+     columns the shading could not. `obliges` and `instrument_year` live on
+     dld.legalEntitlement, which is instrument-grained, so the ordinary reader
+     below returns null for them and they would have become invisible when the
+     cross came out. And `exit_period_months` is an integer: unbanded it paints
+     a key of raw numbers -- 9, 12, 48, 60 -- instead of "a year or less" and
+     "two to three years". */
+  if (isOrdinalCol(f, c)) {
+    const out = [];
+    for (const row of (Array.isArray(cd) ? cd : [cd])) {
+      const v = row && row[c];
+      if (v === undefined || v === null || !String(v).length) continue;
+      for (const x of [].concat(v)) out.push(bandOf(f, c, x));
+    }
+    return out.length ? out : null;
+  }
+  if (Array.isArray(cd)) return null;
   const v = cd[c];
   if (v === undefined || v === null || !String(v).length) return null;
   return [].concat(v).map(String);
+}
+
+/** Does coding.js declare this column ranked? */
+function isOrdinalCol(fieldKey, col) {
+  const sc = schemeFor(fieldKey);
+  return !!(sc && (sc.ordinalColumns || []).includes(col));
 }
 const isList = key => {
   let n = 0;
@@ -1516,7 +1557,7 @@ function fieldStateOf(u, fieldKey) {
  * pattern, and a reader cannot read depth off one anyway. So a unit holding
  * several hues keeps its stripes and drops out of the cross, and the legend
  * says how many those are rather than letting them read as pale. */
-const CROSS = { key: null };
+
 const CROSS_FLOOR = 20;      // the palest step, in % of the hue
 // Measured rather than chosen: at a floor of 34 the five obliges steps spanned
 // 0.165 in oklab lightness, about 0.04 a step, which is under what anyone can
@@ -1623,22 +1664,7 @@ function crossScale(key) {
     : Math.round(CROSS_FLOOR + (100 - CROSS_FLOOR) * i / (order.length - 1))));
   return { order, rank };
 }
-let XSCALE = null;
-
-/** The mix percentage for this unit, or null where it drops out of the cross. */
-function crossPct(u) {
-  if (!CROSS.key || !XSCALE) return null;
-  const vals = crossValues(u, CROSS.key);
-  if (!vals) return null;
-  const pcts = vals.map(v => XSCALE.rank.get(v)).filter(x => x != null);
-  return pcts.length ? Math.max(...pcts) : null;
-}
-
 /** A flat hue, deepened. Anything that is not a flat colour comes back as it was. */
-function deepen(fill, pct) {
-  if (pct == null || !fill || String(fill).indexOf('url(') === 0) return fill;
-  return `color-mix(in oklab, ${fill} ${pct}%, var(--surface-2))`;
-}
 
 function fillFor(u, st, own) {
   // In coded mode the OWN unit decides, not the one coverage would paint from.
@@ -1666,12 +1692,12 @@ function fillFor(u, st, own) {
       // `initiated by` has 18 units of 185 holding three and `triggers` 16 of
       // 164, and forcing the isolation for their sake hid the other 167 and 148.
       const cols = [...new Set(vals.map(v => SCALE.map.get(v) || 'var(--cat-other)'))].sort();
-      if (cols.length === 1) return deepen(cols[0], crossPct(o));
+      if (cols.length === 1) return cols[0];
       if (cols.length <= STRIPE_MAX) return stripeFill(cols);
       return 'url(#manyvals)';
     }
     const hit = vals.map(v => SCALE && SCALE.map.get(v)).find(Boolean);
-    return deepen(hit || 'var(--cat-other)', crossPct(o));
+    return hit || 'var(--cat-other)';
   }
   if (!u) return 'var(--nodata)';
   if (st === 'has') return `var(${covVar(u)})`;
@@ -2193,7 +2219,6 @@ function switchDomain(id, push = true) {
   openDomainBox(id);
   buildDomains();
   buildShadePicker();
-  syncCross();
   paintCatLegend();
   paint();
   paintLegend();
@@ -3395,9 +3420,6 @@ function paintLegend() {
 
 /* ---------- the shade-by picker and its legend ---------- */
 const shadeSel = document.getElementById('shadesel');
-const crossBox = document.getElementById('crossby');
-const crossOn = document.getElementById('crosson');
-const crossSel = document.getElementById('crosssel');
 const catLegend = document.getElementById('catlegend');
 
 function buildShadePicker() {
@@ -3421,87 +3443,11 @@ function buildShadePicker() {
   shadeSel.value = CODED.key || '';
 }
 
-/* The same list of questions, minus the one already carrying the hue: crossing
-   a column with itself paints a ramp that says exactly what the colour said. */
-function buildCrossPicker() {
-  const cols = crossColumns().filter(c => c.key !== CODED.key);
-  const opts = [];
-  let open = null;
-  for (const c of cols) {
-    if (c.label !== open) {
-      if (open !== null) opts.push('</optgroup>');
-      opts.push(`<optgroup label="${esc(c.label)}">`);
-      open = c.label;
-    }
-    opts.push(`<option value="${esc(c.key)}">${esc(colLabel(c.field, c.col))}</option>`);
-  }
-  if (open !== null) opts.push('</optgroup>');
-  crossSel.innerHTML = opts.join('');
-  if (CROSS.key && cols.some(c => c.key === CROSS.key)) crossSel.value = CROSS.key;
-}
-
-/* THE CROSS FOLLOWS THE HUE, AND THE MAP IT IS ON.
- *
- * It rides on a hue, so it has nowhere to sit on the coverage map; it cannot
- * be the column now carrying the hue; and it hides where the map has no ranked
- * column to deepen by, since an empty picker beside a tickbox is worse than no
- * tickbox.
- *
- * Called from the domain switch as well as from setShade, which is the bug
- * this was extracted for. Changing map drops the shading column -- a column
- * belongs to a field and a field to a domain -- but nothing dropped the CROSS,
- * so the tickbox stayed ticked and the control stayed open over "what is
- * documented", pointing at a column of the map you had just left. */
-function syncCross() {
-  const usable = crossColumns().filter(c => c.key !== CODED.key);
-  crossBox.hidden = !CODED.key || !usable.length;
-  if (crossBox.hidden || CROSS.key === CODED.key
-      || (CROSS.key && !usable.some(c => c.key === CROSS.key))) {
-    CROSS.key = null; XSCALE = null; crossOn.checked = false; crossSel.disabled = true;
-  }
-  buildCrossPicker();
-  if (crossOn.checked && !CROSS.key) setCross(crossSel.value);
-}
-
-function setCross(key) {
-  CROSS.key = key || null;
-  XSCALE = CROSS.key ? crossScale(CROSS.key) : null;
-  paint(); paintCatLegend(); sizeMap(); clampView(); applyView();
-}
-
 function paintCatLegend() {
   if (!CODED.key) { catLegend.hidden = true; catLegend.innerHTML = ''; return; }
   catLegend.hidden = false;
   const rows = [];
   const sw = bg => `<span class="sw" style="background:${bg}"></span>`;
-  if (CROSS.key && XSCALE) {
-    // Depth is the second question, and it needs its own key: a reader cannot
-    // recover an ordering from four hues at five strengths by looking. The
-    // swatch uses the commonest hue so the ramp is read as depth rather than
-    // as a sixth colour, and the count says how many units the cross reaches.
-    // The first value that actually HAS a hue, not the commonest one: since
-    // `not applicable` and `not stated` took the neutral, the commonest value
-    // on several columns has no colour to ramp.
-    const lead = (SCALE.legend || []).find(([v]) => SCALE.map.has(v));
-    const base = lead ? SCALE.map.get(lead[0]) : 'var(--cat-1)';
-    const reach = (B.units[domainId] || []).filter(u => crossPct(u) != null).length;
-    const striped = (B.units[domainId] || []).filter(u => {
-      const f = fillFor(u, null, u);
-      return typeof f === 'string' && f.indexOf('url(') === 0 && crossPct(u) != null;
-    }).length;
-    const [xf, xc] = CROSS.key.split('.');
-    rows.push(`<div class="cross-ramp"><span class="rh">Depth: ${esc(colLabel(xf, xc))}</span>`
-      // A ranked column's values are often numbers with a word attached --
-      // obliges is 0 to 4 and the words are what they mean -- and the ramp
-      // prints the word. A bare 0 in a key is a level nobody can read.
-      + XSCALE.order.map(v => {
-        const def = (((schemeFor(xf) || {}).values || {})[xc] || {})[v];
-        const txt = def && def.label ? v + ' · ' + def.label : v;
-        return `<span class="rr"><i style="background:${deepen(base, XSCALE.rank.get(v))}"></i>${esc(txt)}</span>`;
-      }).join('')
-      + `<span class="rh">on ${reach} unit${reach === 1 ? '' : 's'}`
-      + (striped ? `; ${striped} striped, left flat` : '') + `</span></div>`);
-  }
   if (SCALE.list && CODED.only) {
     rows.push(`<p class="note">This answer can hold more than one value, so there is no single
       colour for a country. Pick a value to see which systems include it.</p>`);
@@ -3609,8 +3555,8 @@ function paintCatLegend() {
     >${sw('url(#hatch)')}<span>Looked, not found yet</span><span class="n">${tally.looked}</span></div>`);
   if (tally.has) rows.push(`<div class="cl" disabled title="the entry has prose nobody has read against this question yet. Reading it settles whether the entry answers -- and often it turns out not to reach the question at all, which is a fill rather than a coding"
     >${sw('url(#uncoded)')}<span>Text here, not yet coded</span><span class="n">${tally.has}</span></div>`);
-  if (tally.unset) rows.push(`<div class="cl" disabled title="somebody read it and none of the values above was true of it. Sometimes that is a gap in the vocabulary; sometimes the entry is a note about sourcing rather than policy, and belongs in a different state"
-    >${sw('url(#uncoded)')}<span>Coded, no value fits</span><span class="n">${tally.unset}</span></div>`);
+  if (tally.unset) rows.push(`<div class="cl" disabled title="${UNSET_LABEL[CODED.key] ? 'the column is a measurement and this system has none to record — an answer, not a gap' : 'somebody read it and none of the values above was true of it. Sometimes that is a gap in the vocabulary; sometimes the entry is a note about sourcing rather than policy, and belongs in a different state'}"
+    >${sw('url(#uncoded)')}<span>${esc(unsetLabel(CODED.key))}</span><span class="n">${tally.unset}</span></div>`);
   if (tally.na) rows.push(`<div class="cl" disabled title="the question presupposes something this system does not have, so it cannot be answered here — not a gap and not a finding about how support ends"
     >${sw('url(#na)')}<span>${esc(naLabel(fk0))}</span><span class="n">${tally.na}</span></div>`);
   if (tally.none) rows.push(`<div class="cl" disabled title="the field is empty: nobody has researched this place on this question, and a fill wave is what reaches it"
@@ -3651,7 +3597,6 @@ function setShade(key) {
   if (SCALE && SCALE.list && isoShare > SHADE_ISOLATE_SHARE && SCALE.ordered.length) {
     CODED.only = SCALE.ordered[0][0];
   }
-  syncCross();
   paint(); paintCatLegend(); paintLegend();
   // THE KEY JUST CHANGED HEIGHT, so the map's share of the screen is stale.
   // sizeMap() has always measured the key and given the map what was left, but
@@ -3665,11 +3610,6 @@ function setShade(key) {
   if (selected) { panelFull = false; select(selected, false); }
 }
 shadeSel.addEventListener('change', () => setShade(shadeSel.value));
-crossOn.addEventListener('change', () => {
-  crossSel.disabled = !crossOn.checked;
-  setCross(crossOn.checked ? crossSel.value : null);
-});
-crossSel.addEventListener('change', () => { if (crossOn.checked) setCross(crossSel.value); });
 
 buildShadePicker();
 
