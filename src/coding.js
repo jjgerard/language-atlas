@@ -2301,6 +2301,18 @@ const VALUE_LABELS_BY_COLUMN = {
   'newcomerCriteria.designation': {
     'none in use': 'provision based on group (no term for pupils)',
   },
+  // "not applicable" says only that the question does not arise and leaves the
+  // reader to guess why. Its own gloss here says exactly why -- "There is no
+  // disorder term to classify" -- and that is what 104 entries mean: the
+  // system names something BROADER than a language disorder, so there is no
+  // word to place in any of the eight families. Andorra located no
+  // language-disorder category at all; Bolivia's nearest is "dificultades en
+  // el aprendizaje"; Bahrain's ministry programme list "omits it entirely".
+  // The column asks which family a term belongs to, and these systems have no
+  // term for it to belong to.
+  'terminology.label': {
+    'not applicable': 'no language-disorder term to classify',
+  },
 };
 
 /** What to show a reader for a coded value. The stored string is unchanged. */
