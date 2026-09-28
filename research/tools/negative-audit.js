@@ -37,7 +37,17 @@ const { fileFor } = require("./datafile");
 // Every value across the vocabularies that asserts an absence.
 const NEG = /^(none established|none in use|not taught|none|none reported|none located|none named|no programme found|no body named|not a medium)$/i;
 // The subject of the sentence is the SEARCH.
-const SEARCHY = /\b(no\w* (?:was |were )?(?:found|located|identified|retrieved|traced|reached)|not (?:found|located|identified|retrieved|established|reached)|could not be|nothing (?:found|located)|does not seem|no evidence|no source|not appear)\b/i;
+//
+// THE FIRST VERSION OF THIS PUT 33 SEARCH FAILURES IN BUCKET A. It required the
+// negative and the verb to be adjacent -- "no X was found" -- and Alabama says
+// "No state term for an Indigenous or regional language WAS FOUND", with seven
+// words in between. Worse, the very sentence that concedes the basis, "Rests on
+// a Seal survey and a 50-state inventory, NOT ON STATE STATUTE", matched the
+// instrument pattern below on the word `statute`, so the disclaimer is what
+// promoted the entry into the trustworthy pile. The gap is now allowed for, and
+// the lesson is the one this file already carries: a bucket is a place to start
+// reading and A is no safer than the rest.
+const SEARCHY = /\b(no\w*\b[^.;]{0,90}?\b(?:found|located|identified|retrieved|traced|reached)|not (?:found|located|identified|retrieved|established|reached)|could not be|nothing (?:found|located)|does not seem|no evidence|no source|not appear|rests on|is unknown|never checked)\b/i;
 // An instrument is named in the same field. Necessary for A, nowhere near sufficient.
 const NAMED = /\b(Act|Law|Ley|Loi|Lei|Decree|Decreto|Décret|Constitution|Code|Regulation|Statute|Ordinance|Policy|Framework|Curriculum|Circular|Order|Charter|Convention|Article|art\.|s\.\d|section)\b/i;
 
