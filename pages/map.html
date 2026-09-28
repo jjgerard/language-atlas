@@ -1671,7 +1671,24 @@ function fillFor(u, st, own) {
   if (CODED.key) {
     const o = own === undefined ? u : own;
     if (!o) return 'var(--nodata)';
-    const vals = codedValues(o, CODED.key);
+    /* A UNIT THAT FOLLOWS ITS COUNTRY SHOWS ITS COUNTRY'S ANSWER. Germany's 16
+       Laender and Spain's 17 autonomous communities have no entry of their own
+       on most fields, and were reading as "Not looked up yet" -- which is true
+       of the research and false about the systems, since the national answer
+       IS the answer that applies there until a state-level one is found.
+       derive.js already marks these `inherited` and resolve() already passes
+       the country's record in as `u`; only the coded branch was ignoring it,
+       because it takes the OWN unit's value so that a state which diverges
+       shows its own. That still holds -- this is the fallback, not an
+       override. It is counted separately in the key so the numbers do not
+       claim 33 documented entries that nobody has researched. */
+    let vals = codedValues(o, CODED.key);
+    let followed = false;
+    if (!vals && own !== undefined && u && u !== own && stateOf(own) === 'inherited') {
+      const nv = codedValues(u, CODED.key);
+      if (nv) { vals = nv; followed = true; }
+    }
+    if (followed) FOLLOWED.add(own);
     if (!vals) {
       // Why there is no colour, taken from the FIELD. Four answers, and three
       // of them are answers rather than gaps.
@@ -2037,7 +2054,12 @@ function resolve(cc, name) {
   return { unit: own, paint: own, inherited: false, via: null };
 }
 
+/* Units painted from their country on the current column, gathered during the
+   paint so the key can count them without resolving every shape twice. */
+const FOLLOWED = new Set();
+
 function paint() {
+  FOLLOWED.clear();
   const ix = IDX[domainId];
   for (const s of SHAPES) {
     const r = resolve(s.cc, s.name);
@@ -3093,8 +3115,22 @@ function codedPanelHTML(u) {
   // an entry can be full and this question still unanswered, or answered by
   // saying it does not apply.
   const fs = fieldStateOf(u, fk);
+  /* AN ABSENCE IS ABSENT OF ONE THING, NOT OF EVERYTHING. "X has no such
+     thing" reads as "X provides nothing", and on this field that is wrong for
+     almost all of them: of 131 entries flagged absent on eal.newcomerCriteria,
+     119 CARRY REAL LANGUAGE PROVISION CODED IN ANOTHER FIELD -- l1Support as a
+     medium of instruction, bilingual education established, in-class L2
+     support. Ukraine is the case that showed it: "No newcomer designation
+     exists: the criterion is minority or indigenous status, not arrival", and
+     the panel above it said Ukraine had no such thing.
+     So the sentence now names the FIELD's own question, and points at the rest
+     of the entry rather than implying there is nothing there. */
+  const otherFields = (domain().fields || [])
+    .filter(f => f.k !== fk && fieldStateOf(u, f.k) === 'has' && !isAbsent(u, f.k))
+    .map(f => f.label);
+  const thisLabel = ((domain().fields || []).find(f => f.k === fk) || {}).label || fk;
   const noValue = isAbsent(u, CODED.key)
-    ? `<p class="cnone">${esc(u.name)} has no such thing, and the entry establishes that rather than leaving it open. That is a complete answer to this question, not a gap.</p>`
+    ? `<p class="cnone">${esc(u.name)} has no ${esc(String(thisLabel).toLowerCase())} of its own, and the entry establishes that rather than leaving it open — a complete answer to THIS question, not a gap.${otherFields.length ? ` It says nothing about whether ${esc(u.name)} supports these pupils by another route: ${esc(otherFields.slice(0, 3).join(', '))} ${otherFields.length > 3 ? 'and others ' : ''}on this entry are answered separately.` : ''}</p>`
     : isUnset(u, CODED.key)
     ? `<p class="cnone">Somebody coded this entry and left this question with no value, because none of them fitted what it says. The text is below.</p>`
     : fs === 'looked'
@@ -3480,9 +3516,11 @@ function paintCatLegend() {
   // Only the states actually on the map get a row. A legend that lists what is
   // not there is the same lie as a legend that omits what is.
   const fk0 = CODED.key.split('.')[0];
-  const tally = { has: 0, unset: 0, absent: 0, looked: 0, na: 0, none: 0 };
+  const tally = { has: 0, unset: 0, absent: 0, looked: 0, na: 0, none: 0, follows: 0 };
   for (const u of (B.units[domainId] || [])) {
     if (codedValues(u, CODED.key)) continue;
+    // Painted from its country, so it is neither documented here nor a gap.
+    if (FOLLOWED.has(u)) { tally.follows++; continue; }
     if (isAbsent(u, CODED.key)) { tally.absent++; continue; }
     if (isUnset(u, CODED.key)) { tally.unset++; continue; }
     tally[fieldStateOf(u, fk0)]++;
@@ -3559,6 +3597,8 @@ function paintCatLegend() {
     >${sw('url(#uncoded)')}<span>${esc(unsetLabel(CODED.key))}</span><span class="n">${tally.unset}</span></div>`);
   if (tally.na) rows.push(`<div class="cl" disabled title="the question presupposes something this system does not have, so it cannot be answered here — not a gap and not a finding about how support ends"
     >${sw('url(#na)')}<span>${esc(naLabel(fk0))}</span><span class="n">${tally.na}</span></div>`);
+  if (tally.follows) rows.push(`<div class="cl" disabled title="no entry of its own on this question, so it is drawn from its country's answer — which is the answer that applies there until a state-level one is found"
+    >${sw('var(--cat-other)')}<span>Follows its country</span><span class="n">${tally.follows}</span></div>`);
   if (tally.none) rows.push(`<div class="cl" disabled title="the field is empty: nobody has researched this place on this question, and a fill wave is what reaches it"
     >${sw('var(--nodata)')}<span>Not looked up yet</span><span class="n">${tally.none}</span></div>`);
   // The map answers "who does what"; the table answers "what exactly does each
