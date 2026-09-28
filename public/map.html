@@ -1708,9 +1708,21 @@ function fillFor(u, st, own) {
        claim 33 documented entries that nobody has researched. */
     let vals = codedValues(o, CODED.key);
     let followed = false;
-    if (!vals && own !== undefined && u && u !== own && stateOf(own) === 'inherited') {
-      const nv = codedValues(u, CODED.key);
-      if (nv) { vals = nv; followed = true; }
+    /* PER FIELD, not per unit. The first version of this asked whether the
+       WHOLE unit was `inherited`, which is only true when every field is
+       empty -- and Bavaria has one filled field out of thirteen, identified
+       prevalence, so its coverage reads `has` and all twelve empty ones fell
+       through to grey. Germany's own answer was sitting one row up while its
+       sixteen Laender drew as nothing recorded.
+       derive.js already computes exactly the right thing: `inh` lists the
+       fields this unit leaves empty that its country answers. Read that. */
+    if (!vals && own !== undefined && own && Array.isArray(own.inh)) {
+      const lab = ((domain().fields || []).find(f => f.k === CODED.key.split('.')[0]) || {}).label;
+      const from = (u && u !== own) ? u : NAT_OF.get(own);
+      if (lab && from && own.inh.includes(lab)) {
+        const nv = codedValues(from, CODED.key);
+        if (nv) { vals = nv; followed = true; }
+      }
     }
     if (followed) FOLLOWED.add(own);
     if (!vals) {
@@ -2075,18 +2087,28 @@ function resolve(cc, name) {
   if (own.coverage === 'inherited' && nat && nat.coverage === 'has') {
     return { unit: own, paint: nat, inherited: true, via: null };
   }
-  return { unit: own, paint: own, inherited: false, via: null };
+  /* `nat` rides along even where this unit is NOT wholly inherited, because a
+     COLUMN can be inherited while the unit is not. Bavaria has one filled
+     field of thirteen and so reads `has`, while the other twelve are answered
+     only by Germany -- which is what derive.js records in `inh`. fillFor needs
+     the country's record in hand to use that, and without this it never saw
+     one: `paint` is the sub-unit itself in this branch. */
+  return { unit: own, paint: own, inherited: false, via: null, nat: nat };
 }
 
 /* Units painted from their country on the current column, gathered during the
    paint so the key can count them without resolving every shape twice. */
 const FOLLOWED = new Set();
+/* Each drawn sub-unit to its country's record, filled during resolve so
+   fillFor can reach it without an index lookup per shape. */
+const NAT_OF = new Map();
 
 function paint() {
   FOLLOWED.clear();
   const ix = IDX[domainId];
   for (const s of SHAPES) {
     const r = resolve(s.cc, s.name);
+    if (r.unit && r.nat) NAT_OF.set(r.unit, r.nat);
     // A country whose whole area is carved into sub-units (the UK) has no
     // entry of its own: draw it as an inert base beneath them.
     const carved = !s.name && !r.unit && (ix.byCC.get(s.cc) || []).some(x => B.subunits[keyOf(x)]);
@@ -3125,11 +3147,19 @@ function codedPanelHTML(u) {
   const question = colLabel(fk, col);
 
   const chips = vals ? vals.map(v => {
-    const gloss = defs[v];
+    /* A RANKED LEVEL IS STORED AS A NUMBER AND ITS DEFINITION IS AN OBJECT.
+       `obliges` holds 0 to 4 and each level is declared {label, gloss}, so the
+       panel was printing the heading "3" over the body "[object Object]" --
+       the number a reader cannot interpret above the one thing that would have
+       explained it. The legend learned this when the levels were restored;
+       the panel reads a different path and did not. Plain-string values are
+       unchanged: for those the definition IS the gloss. */
+    const def = defs[v];
+    const gloss = (def && typeof def === 'object') ? (def.gloss || '') : def;
     const swatch = CODED.only
       ? (v === CODED.only ? 'var(--cat-1)' : 'var(--cat-other)')
       : ((SCALE && SCALE.map.get(v)) || 'var(--cat-other)');
-    const head = `<span class="dot" style="background:${swatch}"></span>${esc(String(v))}`;
+    const head = `<span class="dot" style="background:${swatch}"></span>${esc(valueLabel(v))}`;
     return gloss
       ? `<details class="cvwrap" open><summary class="cv${ordinal ? ' ord' : ''}">${head}</summary>${glossHTML(gloss)}</details>`
       : `<div class="cv${ordinal ? ' ord' : ''}">${head}</div>`;
