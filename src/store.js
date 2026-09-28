@@ -788,7 +788,44 @@ function seedIfEmpty() {
   }
 }
 
+// SAY SO WHEN THE DATABASE IS OLDER THAN THE FILES IT WAS SEEDED FROM.
+//
+// seedIfEmpty() seeds once and never again, which is correct -- the database
+// is the source of truth for approvals and re-seeding over it would discard
+// anything submitted through the running app. But the consequence is that a
+// database seeded weeks ago serves that week's data forever, silently, while
+// data/<domain>.json moves on underneath it.
+//
+// That has cost real time. data/ currently holds THREE stale databases moved
+// aside by hand on 2026-09-20 and twice on 09-22, and a fourth was moved on
+// 09-28 after a map legend was read as a finding when it was a six-day-old
+// snapshot -- the counts on screen disagreed with the counts in the JSON and
+// the JSON was right. Moving the file aside is the fix; not knowing you need
+// to is the problem.
+//
+// So this only WARNS. It never reseeds, never deletes, and never touches the
+// database: the operator decides whether the difference matters.
+function warnIfStale() {
+  for (const domain of LIVE) {
+    try {
+      const file = path.join(__dirname, '..', 'data', `${domain.id}.json`);
+      if (!fs.existsSync(file)) continue;
+      const { n } = db.prepare('SELECT COUNT(*) AS n FROM entries WHERE domain = ?').get(domain.id);
+      if (!n) continue;                       // empty: seedIfEmpty already handled it
+      const fileAt = fs.statSync(file).mtimeMs;
+      const dbAt = fs.statSync(DB_PATH).mtimeMs;
+      if (fileAt <= dbAt) continue;
+      const days = Math.round((fileAt - dbAt) / 86400000);
+      console.warn(`[store] data/${domain.id}.json is NEWER than ${path.basename(DB_PATH)}` +
+        (days >= 1 ? ` by about ${days} day${days === 1 ? '' : 's'}` : '') +
+        ` -- the database was seeded once and is not re-read, so what is served may be behind the file.` +
+        ` Move the database aside to reseed from the JSON, or ignore this if the database is the newer truth.`);
+    } catch { /* a staleness warning must never stop the server booting */ }
+  }
+}
+
 seedIfEmpty();
+warnIfStale();
 
 module.exports = {
   approved, all, get, insert, update, setStatus, remove,
