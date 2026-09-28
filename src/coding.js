@@ -616,7 +616,7 @@ const L2_MODELS = {
   'withdrawal for lessons': 'The pupil leaves the ordinary class for language teaching (Israel, where the head appoints a teacher to "no fewer than six weekly hours per pupil", taught in a group; Guam, whose "pull-out pupils get extra academic support through SIOP sheltered instruction"; Denmark, special groups or one-to-one)',
   'in-class support': 'Help arrives inside the ordinary class (Italy, teachers reallocated where newcomer concentration is high, plus linguistic-cultural mediators and "didattica personalizzata"; Greenland, in-class support among five named forms; Puerto Rico, full immersion "with accommodations provided" and an individual language development plan)',
   'taught to all as a subject': 'The school language is a timetabled subject for the whole cohort rather than targeted support (Fiji, English "taught as a second language" with "no withdrawal, newcomer or targeted second-language programme described"; Lebanon, written classical Arabic compulsory in all primary schools at seven hours a week; Cambodia, where Khmer is "explicitly the L2 inside the multilingual education programme")',
-  'none established': 'Checked, and nothing is provided for a pupil arriving without the school language (Brazil: "No national provision was found for children arriving without Portuguese"; Chile, the same for Spanish; Bahrain; Central African Republic, Algeria and Guinea, whose PEER profiles describe no support route at all)',
+  'none established': 'A source that covers the ground describes no route for a pupil arriving without the school language -- the Central African Republic, Algeria and Guinea, whose PEER profiles run through provision and name none. NOT for a search that came up empty: Brazil ("No national provision WAS FOUND for children arriving without Portuguese"), Chile and Bahrain are carried here and should not be, because the subject of those sentences is the search and not the system. A failed search belongs at `not stated`, and these three are the standing argument for re-reading before a negative is coded',
   'not stated': 'The entry does not establish how any support is delivered',
 };
 
@@ -648,7 +648,7 @@ const WORKFORCE_ENTRY = {
 // system can require a qualification it does not teach.
 const WORKFORCE_TRAINING = {
   'domestic programme': 'A training route exists in the country and the entry names it (Algeria, an orthophonie licence created by ministerial order in 1999 and spread to seven universities; Singapore, "a university masters and a separate bachelor\'s degree"; Nigeria, the University of Ibadan)',
-  'no programme found': 'Checked, and there is none (Mongolia: "No Mongolian speech therapy degree programme was found"; Gambia and Liberia, each with "no training programme, association or workforce count found anywhere")',
+  'no programme found': 'A search for a training route came up empty, which is what the VALUE NAME says and what its evidence supports: Mongolia, "No Mongolian speech therapy degree programme WAS FOUND"; Gambia and Liberia, each with "no training programme, association or workforce count FOUND ANYWHERE". It is not established that the country trains nobody, only that no route was located, and the value is named for the search on purpose. Where an instrument or a sector review positively states that no route exists, that is a stronger finding and deserves saying so in the entry',
   'overseas or planned': 'Training happens abroad, or exists only as an aspiration (Mongolia again, where art. 16.4 requires the state to train speech correctors and "training may be domestic or overseas"; Fiji, where "a 2016 policy action was to advocate for local university-level courses")',
   'not stated': 'The entry does not reach the question of training',
 };
@@ -2296,13 +2296,21 @@ const VALUE_LABELS = {
   // from the binding national values beside them in the key.
   'national, non-binding': 'national',
   // "none established" reads as "nobody established anything" -- a gap -- and
-  // it means the exact opposite: somebody looked and there is none. It sat in
-  // the key one row above "not said in the entry", which IS the gap, and the
-  // two were being read as the same thing. All eleven columns that carry it
-  // gloss it identically ("Checked, and no sector provides it", "Checked, and
-  // the system sets no exit rule of any kind", "Somebody looked and there is
-  // no outcome data of any kind"), so one global label is right; 276 cells.
-  'none established': 'checked, and there is none',
+  // it means the exact opposite: the thing is not provided. It sat in the key
+  // one row above "not said in the entry", which IS the gap, and the two were
+  // being read as the same thing. All eleven columns that carry it gloss it
+  // identically ("Checked, and no sector provides it", "Checked, and the
+  // system sets no exit rule of any kind", "Somebody looked and there is no
+  // outcome data of any kind"), so one global label is right; 276 cells.
+  //
+  // IT WAS "checked, and there is none" AND THAT WAS WRONG TOO, on the
+  // maintainer's reading: a label whose subject is the CHECKING sounds like
+  // the reader is being told nobody looked hard enough. The subject has to be
+  // the system or the instrument, not us. A negative is worth recording only
+  // when it says what the negative IS -- the legislation makes no provision --
+  // and where all that can honestly be said is that a search failed, the value
+  // belongs at `not stated` or uncoded rather than dressed as a finding.
+  'none established': 'none provided',
 };
 
 // LABELS THAT ARE ONLY RIGHT IN ONE COLUMN. `none in use` is stored in 72
