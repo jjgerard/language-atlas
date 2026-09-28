@@ -361,7 +361,7 @@
   "assessments": "",
   "multilingualProvision": "Constitution and Education Law count children of different language backgrounds as special\nThe 2014 inclusive education policy names language background among the grounds of access\nOne hundred new primary school textbook titles were produced in Dari and Pashto",
   "referralPathway": "The 2021 mapping records no continuum from screening and identification through to referral\nCommunity-based rehabilitation carried a referral network from community to central level\nFamilies, religious leaders, health and rehabilitation centres and schools were the partners\nThe education ministry piloted a child functioning screening tool with USAID support",
-  "serviceModel": "Segregated schools existed for visual, hearing and speech impairments (a pre-2021 picture)\nNo speech-language therapy workforce or training programme was located",
+  "serviceModel": "Segregated schools existed for visual, hearing and speech impairments (a pre-2021 picture)\nNo speech-language therapy workforce or training programme was located\nThe country profile is part of a UNICEF regional mapping study, not a government statement",
   "legalEntitlement": "PEER profile is no longer updated and describes the system before 2021\nConstitution Art. 43 makes education a right, free to bachelor level\nBasic education is compulsory to grade 9 under the same article\nThe 2008 Education Law aims at universal, balanced and equitable education",
   "funding": "Funding the education system depended largely on official development assistance\nThe mapping survey suggests government money reached only central-district special schools\nThere was no specific line budget for the education of children with disabilities\nSurvey respondents reported no inclusive education funding in local or school budgets",
   "workforce": "PEER profile is no longer updated and describes the system before 2021\nFundamentals of Inclusion and Special Needs Education was in development in 2019\nIt was to become a compulsory credit course in the education plan\nUNESCO's Embracing Diversity toolkit was translated into Dari and Pashto",
@@ -1128,7 +1128,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "Special education is a modality serving all pupils with SEN, transitional or permanent\nNo speech or language category; 'speech' occurs 0 times in the profile",
-  "identificationCriteria": "The 2011 special education statute defines dificuldades da fala e da linguagem\nThe definition admits psychological, organic or sociocultural origin alike\nIt turns on a compromised capacity for oral or written expression\nA medical diagnosis enters the individual education plan only where it is necessary\nThe eligibility process may begin only after written authorisation from the guardian",
+  "identificationCriteria": "The eligibility process may begin only after written authorisation from the guardian\nA medical diagnosis enters the individual education plan only where it is necessary\nThe 2011 special education statute defines dificuldades da fala e da linguagem\nThe definition admits psychological, organic or sociocultural origin alike\nIt turns on a compromised capacity for oral or written expression",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
@@ -1207,11 +1207,11 @@
   },
   "slots": {
    "identificationCriteria": [
-    3,
-    3,
-    3,
+    1,
     2,
-    1
+    3,
+    3,
+    3
    ]
   }
  },
@@ -27291,7 +27291,7 @@
   "referralPathway": "",
   "serviceModel": "",
   "legalEntitlement": "Vidhi counts Jharkhand among 17 states giving free special learning and support material",
-  "funding": "Standing Committee: no ADIP-SSA aids camp ran in Jharkhand from 2015-16 to 2017-18",
+  "funding": "Standing Committee: no ADIP-SSA aids camp ran in Jharkhand from 2015-16 to 2017-18\nOne of 17 states whose RTE Rules provide free special learning, support material and equipment\nADIP-SSA aids are distributed at ALIMCO camps, 40% state-reimbursed and 60% ADIP-funded",
   "workforce": "",
   "dischargeCriteria": "",
   "outcomesEvidence": "",
@@ -34921,7 +34921,7 @@
   "referralPathway": "Source describes special-needs provision generally, never language disorder\nHealth ministry treats disability while schools run special education support\nMinistry also provides visits to sick children in their home\nSpecial Education Program sits under the Ministry of Education, Sports and Training\nMinistry of Health services cover children and young people aged 0 to 21",
   "serviceModel": "Manual options: part-time direct instruction in the regular class, or a pull-out programme\nGiven by a speech and language therapist; audiology through the Health Ministry\nZero speech-language pathologists reported to IDEA Part B personnel, 2023-24\nSet by the PSS procedures manual, not by the 2013 Act; speech therapy is a related service",
   "legalEntitlement": "IDEA Part B grant on State-like terms, 20 USC 1411(b)(1)\nThe statute requires eligibility to be established as a State would",
-  "funding": "Source describes special-needs provision generally, never language disorder\nDisability Coordination Office helps the disabled persons organization access funding",
+  "funding": "Source describes special-needs provision generally, never language disorder\nDisability Coordination Office helps the disabled persons organization access funding\nUS IDEA funds are received for services to special education students",
   "workforce": "An official US federal return, not a survey estimate\nZero speech-language pathologists reported for 2023-24",
   "dischargeCriteria": "",
   "outcomesEvidence": "Source describes special-needs provision generally, never language disorder\nSpecial Education Program reports annually to the US Office of Special Education Programs\nProgram requires monitoring and reporting for every student with an education plan\nCompletion rates for these learners are unavailable",
@@ -34970,7 +34970,8 @@
    ],
    "funding": [
     1,
-    2
+    2,
+    1
    ],
    "workforce": [
     1,
@@ -48968,7 +48969,7 @@
   "source": "seed",
   "terminology": "Statute's words are \"deaf, mute, blind, retarded or otherwise handicapped\", s.6(2)\nAct uses \"speech\" zero times, sanity word school=433\n\"Speech and language impairments\" appears only in the Ministry's service description\nMinister may define categories of children requiring special education by regulation",
   "identificationCriteria": "Categories and the mode of determining them are left entirely to regulations\nAct also lets regulations provide \"for the examination of children\" in a category\n2017-22 draft policy promises students will be \"properly diagnosed\"",
-  "assessments": "Education Act Chap. 39:01 names no assessment instrument and uses the word speech zero times\nIt leaves the mode of determining a category and the examination of children to Regulations\nPEER's policy statements promise diagnostic testing at primary level but name no test",
+  "assessments": "Education Act Chap. 39:01 names no assessment instrument and uses the word speech zero times\nPEER's policy statements promise diagnostic testing at primary level but name no test\nThe Act leaves the mode of determining a category and the examination of children to Regulations",
   "multilingualProvision": "Admission cannot be refused on account of the language of a child or parent, s.7\nSpanish, Hindi, Creole and French Patois are spoken alongside English\nDraft policy \"mentions multilingual education but there are no specific policies\"\nNo rule on assessing a Creole-speaking child against standard English",
   "referralPathway": "Student Support Services Division runs diagnostic assessment intervention units\nMultidisciplinary teams sit in each of the seven education district offices",
   "serviceModel": "Minister may establish a \"special school, class, clinic or service\", s.39(1)\nSpecial schools cater for speech and language impairments among other categories\nProvision split between private and publicly funded special schools\nInclusive School Project launched January 2020 in 21 schools across 7 districts",
@@ -49129,8 +49130,8 @@
   "slots": {
    "assessments": [
     1,
-    4,
-    1
+    1,
+    4
    ],
    "dischargeCriteria": [
     1,

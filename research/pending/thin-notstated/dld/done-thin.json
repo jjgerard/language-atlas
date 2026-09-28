@@ -1,0 +1,215 @@
+{
+"US|Pennsylvania": {
+  "fields": {
+    "newcomerCriteria": [
+      "Districts must serve each student whose dominant language is not English"
+    ]
+  },
+  "slots": { "newcomerCriteria": [1] },
+  "evidence": [
+    { "bullet": "Districts must serve each student whose dominant language is not English",
+      "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/022/chapter4/s4.26.html",
+      "quote": "Every school district shall provide a program for each student whose dominant language is not English" }
+  ],
+  "sources": [
+    { "label": "22 Pa. Code § 4.26, ESOL — the operative identification duty, official Pennsylvania Code database", "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/022/chapter4/s4.26.html" }
+  ]
+},
+
+"US|West Virginia": {
+  "fields": {
+    "newcomerCriteria": [
+      "Not born in the United States, or a native language other than English",
+      "Or a Native American, Alaska Native or native resident of the outlying areas",
+      "And difficulties in English that may deny the ability to meet state academic standards"
+    ]
+  },
+  "slots": { "newcomerCriteria": [1, 1, 2] },
+  "evidence": [
+    { "bullet": "Not born in the United States, or a native language other than English",
+      "url": "https://www.law.cornell.edu/regulations/west-virginia/W-Va-C-S-R-SS-126-15-2",
+      "quote": "who was not born in the United States or whose native language is a language other than English" },
+    { "bullet": "Or a Native American, Alaska Native or native resident of the outlying areas",
+      "url": "https://www.law.cornell.edu/regulations/west-virginia/W-Va-C-S-R-SS-126-15-2",
+      "quote": "who is a Native American or Alaska Native, or a native resident of outlying areas" },
+    { "bullet": "And difficulties in English that may deny the ability to meet state academic standards",
+      "url": "https://www.law.cornell.edu/regulations/west-virginia/W-Va-C-S-R-SS-126-15-2",
+      "quote": "whose difficulties speaking, reading, writing, or understanding the English language may be sufficient to deny the individual" }
+  ],
+  "sources": [
+    { "label": "W. Va. Code R. § 126-15-2, Definitions (Policy 2417) — Cornell LII republication of the Code of State Rules; the Secretary of State's own copy of Policy 2417 is served as a .docx and as an image-only PDF, neither of which yields text", "url": "https://www.law.cornell.edu/regulations/west-virginia/W-Va-C-S-R-SS-126-15-2" }
+  ]
+},
+
+"BE|Belgium — French Community (Wallonia-Brussels Federation)": {
+  "fields": {
+    "newcomerCriteria": [
+      "A primo-arrivant is a refugee claimant, a DAC-list national or a stateless child under 18",
+      "The primo-arrivant must have arrived on national territory less than a year before",
+      "An assimilated pupil has been in a Communauté française school under three months",
+      "And does not know the teaching language well enough to follow their own age class",
+      "The Government sets how sufficient knowledge of the teaching language is verified"
+    ]
+  },
+  "slots": { "newcomerCriteria": [1, 1, 1, 2, 2] },
+  "evidence": [
+    { "bullet": "A primo-arrivant is a refugee claimant, a DAC-list national or a stateless child under 18",
+      "url": "https://etaamb.openjustice.be/fr/decret-du-07-fevrier-2019_n2019040713.html",
+      "quote": "soit, être ressortissant d'un pays bénéficiaire de l'aide au développement du Comité d'aide au développement" },
+    { "bullet": "The primo-arrivant must have arrived on national territory less than a year before",
+      "url": "https://etaamb.openjustice.be/fr/decret-du-07-fevrier-2019_n2019040713.html",
+      "quote": "être arrivé sur le territoire national depuis moins d'un an" },
+    { "bullet": "An assimilated pupil has been in a Communauté française school under three months",
+      "url": "https://etaamb.openjustice.be/fr/decret-du-07-fevrier-2019_n2019040713.html",
+      "quote": "fréquenter un établissement scolaire organisé ou subventionné par la Communauté française depuis moins de 3 mois" },
+    { "bullet": "And does not know the teaching language well enough to follow their own age class",
+      "url": "https://etaamb.openjustice.be/fr/decret-du-07-fevrier-2019_n2019040713.html",
+      "quote": "ne pas connaître suffisamment la langue de l'enseignement pour s'adapter avec succès aux activités de sa classe d'âge" },
+    { "bullet": "The Government sets how sufficient knowledge of the teaching language is verified",
+      "url": "https://etaamb.openjustice.be/fr/decret-du-07-fevrier-2019_n2019040713.html",
+      "quote": "Le Gouvernement détermine les modalités permettant de vérifier la connaissance suffisante de la langue d'enseignement" }
+  ],
+  "sources": [
+    { "label": "Décret du 7 février 2019 visant à l'accueil, la scolarisation et l'accompagnement des élèves qui ne maîtrisent pas la langue (DASPA/FLA), art. 2 — etaamb.openjustice.be, a consolidator carrying the Moniteur belge text (numac 2019040713); gallilex.cfwb.be, which the entry cites, answers every path with a BIG-IP rejection page", "url": "https://etaamb.openjustice.be/fr/decret-du-07-fevrier-2019_n2019040713.html" }
+  ]
+},
+
+"LT|Lithuania": {
+  "fields": {
+    "removalCriteria": [
+      "Support ends when the pupil's Lithuanian suffices to study the subject in a general class",
+      "A levelling class lasts no longer than one year under the national general education plans",
+      "In a minority-language school the individual or temporary-group route runs one year"
+    ]
+  },
+  "slots": { "removalCriteria": [1, 3, 3] },
+  "evidence": [
+    { "bullet": "Support ends when the pupil's Lithuanian suffices to study the subject in a general class",
+      "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/05de20b230a311eea0b6cad9848a9596/",
+      "quote": "arba tol, kol mokinio lietuvių kalbos gebėjimai bus pakankami mokytis lietuvių kalbos ir literatūros dalyko bendros paskirties klasėje" },
+    { "bullet": "A levelling class lasts no longer than one year under the national general education plans",
+      "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/05de20b230a311eea0b6cad9848a9596/",
+      "quote": "ne ilgiau nei vienus metus išlyginamojoje klasėje" },
+    { "bullet": "In a minority-language school the individual or temporary-group route runs one year",
+      "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/05de20b230a311eea0b6cad9848a9596/",
+      "quote": "sudaromos sąlygos mokytis lietuvių kalbos individualiai arba laikinojoje grupėje vienus metus" }
+  ],
+  "sources": [
+    { "label": "Order V-1036 of 1 August 2023 amending order V-586 on the 2023-2024 and 2024-2025 general education plans, Annex 10 (organisation of education for foreigners and returning Lithuanian citizens), points 2.2 and 3 — e-seimas.lrs.lt; e-tar.lt, which the entry cites, answers 403 on a plain GET", "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/05de20b230a311eea0b6cad9848a9596/" }
+  ]
+},
+
+"AF|Afghanistan": {
+  "fields": {
+    "serviceModel": [
+      "The country profile is part of a UNICEF regional mapping study, not a government statement"
+    ]
+  },
+  "slots": { "serviceModel": [1] },
+  "evidence": [
+    { "bullet": "The country profile is part of a UNICEF regional mapping study, not a government statement",
+      "url": "http://web.archive.org/web/20220701064831id_/https://www.unicef.org/rosa/media/16981/file/Country%20Profile%20-%20Afghanistan.pdf",
+      "quote": "This country profile on Afghanistan was developed as part of a regional mapping study" }
+  ],
+  "sources": [
+    { "label": "UNICEF ROSA, Mapping of Disability-Inclusive Education Practices in South Asia (2021), country profile: Afghanistan — the profile's own statement of what kind of document it is (Internet Archive copy)", "url": "http://web.archive.org/web/20220701064831id_/https://www.unicef.org/rosa/media/16981/file/Country%20Profile%20-%20Afghanistan.pdf" }
+  ]
+},
+
+"IN|Jharkhand": {
+  "fields": {
+    "funding": [
+      "One of 17 states whose RTE Rules provide free special learning, support material and equipment",
+      "ADIP-SSA aids are distributed at ALIMCO camps, 40% state-reimbursed and 60% ADIP-funded"
+    ]
+  },
+  "slots": { "funding": [1, 2] },
+  "evidence": [
+    { "bullet": "One of 17 states whose RTE Rules provide free special learning, support material and equipment",
+      "url": "https://vidhilegalpolicy.in/wp-content/uploads/2020/05/InclusiveEducationReport_final_28April_0527PM-1.pdf",
+      "quote": "have a provision for free special learning, support material, and equipment in their State RTE Rules" },
+    { "bullet": "ADIP-SSA aids are distributed at ALIMCO camps, 40% state-reimbursed and 60% ADIP-funded",
+      "url": "https://vidhilegalpolicy.in/wp-content/uploads/2020/05/InclusiveEducationReport_final_28April_0527PM-1.pdf",
+      "quote": "ALIMCO is reimbursed 40% of the expenditure of the ADIP-SSA Programme by the State Government Authorities and 60% of the expenditure through grants under ADIP Scheme" }
+  ],
+  "sources": [
+    { "label": "Vidhi Centre for Legal Policy, Towards an Inclusive Education Framework for India (2020), pp. 24-25 and footnote 89, which lists Jharkhand among the 17 states", "url": "https://vidhilegalpolicy.in/wp-content/uploads/2020/05/InclusiveEducationReport_final_28April_0527PM-1.pdf" }
+  ]
+},
+
+"MH|Marshall Islands": {
+  "fields": {
+    "funding": [
+      "US IDEA funds are received for services to special education students"
+    ]
+  },
+  "slots": { "funding": [1] },
+  "evidence": [
+    { "bullet": "US IDEA funds are received for services to special education students",
+      "url": "https://education-profiles.org/oceania/marshall-islands/~inclusion",
+      "quote": "Individuals with Disabilities Education Act for services to special education students" }
+  ],
+  "sources": [
+    { "label": "UNESCO GEM Report PEER, Marshall Islands: Inclusion — the profile's statement of the funding route", "url": "https://education-profiles.org/oceania/marshall-islands/~inclusion" }
+  ]
+},
+
+"RU|Russia": {
+  "fields": {
+    "dischargeCriteria": [
+      "Pupils leave logopedic sessions as the speech difficulty is overcome or compensated",
+      "Logopedic diagnosis runs at least twice a year, an entry and a control assessment",
+      "Enrolment on logopedic sessions may be made throughout the school year"
+    ]
+  },
+  "slots": { "dischargeCriteria": [1, 1, 3] },
+  "evidence": [
+    { "bullet": "Pupils leave logopedic sessions as the speech difficulty is overcome or compensated",
+      "url": "https://legalacts.ru/doc/rasporjazhenie-minprosveshchenija-rossii-ot-06082020-n-r-75-ob-utverzhdenii/",
+      "quote": "Отчисление обучающихся с логопедических занятий осуществляется по мере преодоления речевых нарушений" },
+    { "bullet": "Logopedic diagnosis runs at least twice a year, an entry and a control assessment",
+      "url": "https://legalacts.ru/doc/rasporjazhenie-minprosveshchenija-rossii-ot-06082020-n-r-75-ob-utverzhdenii/",
+      "quote": "Логопедическая диагностика осуществляется не менее двух раз в год, включая входное и контрольное диагностические мероприятия" },
+    { "bullet": "Enrolment on logopedic sessions may be made throughout the school year",
+      "url": "https://legalacts.ru/doc/rasporjazhenie-minprosveshchenija-rossii-ot-06082020-n-r-75-ob-utverzhdenii/",
+      "quote": "Зачисление обучающихся на логопедические занятия может производиться в течение всего учебного года" }
+  ],
+  "sources": [
+    { "label": "Распоряжение Минпросвещения России от 06.08.2020 N Р-75, примерное Положение об оказании логопедической помощи, п. 2.5 and п. 2.6 — LegalActs mirror, already cited on the entry", "url": "https://legalacts.ru/doc/rasporjazhenie-minprosveshchenija-rossii-ot-06082020-n-r-75-ob-utverzhdenii/" }
+  ]
+},
+
+"AZ|Azerbaijan": {
+  "fields": {
+    "revitalisation": [
+      "The authorities run a programme to create, update and renew textbooks in these languages"
+    ]
+  },
+  "slots": { "revitalisation": [2] },
+  "evidence": [
+    { "bullet": "The authorities run a programme to create, update and renew textbooks in these languages",
+      "url": "https://rm.coe.int/5th-op-azerbaijan-en/1680b267a1",
+      "quote": "engaged in a programme to create, update and renew a certain number of textbooks in all these languages" }
+  ],
+  "sources": [
+    { "label": "Council of Europe, Advisory Committee on the FCNM, Fifth Opinion on Azerbaijan (30 May 2024), para. 147", "url": "https://rm.coe.int/5th-op-azerbaijan-en/1680b267a1" }
+  ]
+},
+
+"AU|Australian Capital Territory": {
+  "fields": {
+    "outcomesEvidence": [
+      "The audit's stated object was supports for students with disability in ACT public schools"
+    ]
+  },
+  "slots": { "outcomesEvidence": [1] },
+  "evidence": [
+    { "bullet": "The audit's stated object was supports for students with disability in ACT public schools",
+      "url": "https://www.audit.act.gov.au/__data/assets/pdf_file/0019/2306017/Report-No.-8-of-2023-Supports-for-students-with-disability-in-ACT-public-schools.pdf",
+      "quote": "The objective of the audit was to assess whether the Education Directorate is effective in providing supports for students with disability in ACT public schools" }
+  ],
+  "sources": [
+    { "label": "ACT Auditor-General, Performance Audit Report 8/2023, Supports for students with disability in ACT public schools, para. 1.70 (audit objective)", "url": "https://www.audit.act.gov.au/__data/assets/pdf_file/0019/2306017/Report-No.-8-of-2023-Supports-for-students-with-disability-in-ACT-public-schools.pdf" }
+  ]
+}
+}

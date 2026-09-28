@@ -2581,7 +2581,7 @@
   "by": "Seeded from Meehan et al. (2021)",
   "inst": "International Journal of Educational Research Open",
   "source": "seed",
-  "newcomerCriteria": "The DASPA decree that defines the newcomer category could not be retrieved\nNo criterion, threshold or duration is evidenced, so none is proposed\nEurydice puts the French Community at 17-18 per cent speaking another language at home\nThat is among the highest shares in Europe, behind only four systems",
+  "newcomerCriteria": "A primo-arrivant is a refugee claimant, a DAC-list national or a stateless child under 18\nThe primo-arrivant must have arrived on national territory less than a year before\nAn assimilated pupil has been in a Communauté française school under three months\nAnd does not know the teaching language well enough to follow their own age class\nThe Government sets how sufficient knowledge of the teaching language is verified",
   "removalCriteria": "",
   "newcomerProportion": [
    {
@@ -2704,6 +2704,15 @@
     "exemption": "not stated",
     "targeting": "general curriculum"
    }
+  },
+  "slots": {
+   "newcomerCriteria": [
+    1,
+    1,
+    1,
+    1,
+    2
+   ]
   }
  },
  {
@@ -19870,7 +19879,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "'Atvykę ar grįžę iš užsienio' — arrived or returned from abroad\nSequential Learning Procedure, Order No. 259 of 2003, formalised as ISAK-556 in 2005\nParents supply prior schooling documents; placement with age peers after interviews\nAdmitted immediately on declared residence address, with no prior testing",
-  "removalCriteria": "Exit criteria are not centrally specified\nLithuanian proficiency tracked against a CEFR A1–B2 framework in dedicated materials\nNo fixed national timeline found",
+  "removalCriteria": "Lithuanian proficiency tracked against a CEFR A1–B2 framework in dedicated materials\nSupport ends when the pupil's Lithuanian suffices to study the subject in a general class\nA levelling class lasts no longer than one year under the national general education plans\nIn a minority-language school the individual or temporary-group route runs one year",
   "newcomerProportion": [
    {
     "year": "",
@@ -19909,8 +19918,9 @@
     3
    ],
    "removalCriteria": [
+    2,
     1,
-    1,
+    3,
     3
    ],
    "achievementGap": [
@@ -33660,7 +33670,7 @@
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "Identification within 30 calendar days of term start, 14 days mid-year",
+  "newcomerCriteria": "Identification within 30 calendar days of term start, 14 days mid-year\nDistricts must serve each student whose dominant language is not English",
   "removalCriteria": "No pupil is eligible below an ACCESS overall composite of 4.5, with no exceptions\nPupils scoring 4.5 to 4.8 must show stronger evidence of independent language use\nTwo standardised teacher inventories of language use, not the score, then decide\nTwo years of district monitoring, four years of state reporting",
   "newcomerProportion": [],
   "achievementGap": "",
@@ -34666,7 +34676,7 @@
   "by": "Seeded via AI-assisted deep research (2026), primary sources verified",
   "inst": "",
   "source": "seed",
-  "newcomerCriteria": "English learner status is defined by the federal definition, reproduced in rule\nParent notification within 30 days of term start or two weeks of placement",
+  "newcomerCriteria": "English learner status is defined by the federal definition, reproduced in rule\nParent notification within 30 days of term start or two weeks of placement\nNot born in the United States, or a native language other than English\nOr a Native American, Alaska Native or native resident of the outlying areas\nAnd difficulties in English that may deny the ability to meet state academic standards",
   "removalCriteria": "Exit needs a proficient score on the state or alternate proficiency assessment\nThat assessment is ELPA21, not the WIDA ACCESS\nThe rule sets no number: the departmental guidance holding it could not be retrieved",
   "newcomerProportion": [],
   "achievementGap": "",
