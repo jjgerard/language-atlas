@@ -1,0 +1,42 @@
+{
+  "VA|Vatican City": {
+    "fields": {
+      "mediumOfInstruction": [
+        "Vatican City State runs no school system of its own, so no language is a medium there",
+        "Its children attend legally recognized schools under various other States' legislation",
+        "Parents able to pay may instruct privately instead, Law of 1 October 2008 N. LXXI art 11",
+        "One minor seminary stands on the territory, open to non-residents and non-citizens"
+      ]
+    },
+    "slots": { "mediumOfInstruction": [1, 1, 2, 1] },
+    "absences": { "mediumOfInstruction": true },
+    "evidence": [
+      {
+        "bullet": "Vatican City State runs no school system of its own, so no language is a medium there",
+        "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf",
+        "quote": "Children attend legally recognized schools according to various State legislation"
+      },
+      {
+        "bullet": "Its children attend legally recognized schools under various other States' legislation",
+        "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf",
+        "quote": "Children attend legally recognized schools according to various State legislation"
+      },
+      {
+        "bullet": "Parents able to pay may instruct privately instead, Law of 1 October 2008 N. LXXI art 11",
+        "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf",
+        "quote": "save those cases where parents and tutors are able to instruct children privately, to pay the expenses"
+      },
+      {
+        "bullet": "One minor seminary stands on the territory, open to non-residents and non-citizens",
+        "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf",
+        "quote": "There is one minor seminary and a child need not be a resident or a citizen of VCS in order to attend it"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Holy See, second periodic report to the UN Committee on the Rights of the Child, CRC/C/VAT/2 (22 October 2012), section IV on Vatican City State, para. 114 — schooling of children resident in the State",
+        "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf"
+      }
+    ]
+  }
+}

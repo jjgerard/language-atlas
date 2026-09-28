@@ -5493,14 +5493,23 @@
   "confidence": "unverified-submission",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "UNESCO GEM Report PEER, Bahamas: Inclusion profile (archived platform)",
+    "url": "https://education-profiles.org/latin-america-and-the-caribbean/bahamas/~inclusion"
+   },
+   {
+    "label": "Ministry of Education (Bahamas), Grade 1 Primary Language Arts Curriculum 2022-2027 (web.archive.org mirror of 4 February 2023; the live curriculumbahamas.com url now returns HTTP 404)",
+    "url": "https://web.archive.org/web/20230204025413/http://www.curriculumbahamas.com/uploads/1/1/1/0/111058113/language_arts_grade_1_document_.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
   "by": "",
   "localTerm": "",
-  "standing": "",
-  "mediumOfInstruction": "",
+  "standing": "No legal standing: the 1973 Constitution's equality clause does not list language\nIt is named in a curriculum, the Grade 1 Primary Language Arts Curriculum 2022-2027\nObjective 1.6 gives it seven weeks of the Grade 1 speaking and listening strand\nWhat it obliges is teaching pupils to use Standard English and dialect appropriately",
+  "mediumOfInstruction": "Not a medium: Standard English is for the classroom, dialect for casual settings\nAt Grade 1 pupils hear a dialect phrase and render it in Standard English\nThe document is the national Grade 1 Primary Language Arts Curriculum 2022-2027\nSet by a curriculum objective, a teaching expectation rather than an entitlement",
   "taughtAsSubject": "",
   "teacherSupply": "",
   "materials": "",
@@ -5519,7 +5528,21 @@
     "note": ""
    }
   ],
-  "languages": []
+  "languages": [],
+  "slots": {
+   "standing": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "mediumOfInstruction": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  },
  {
   "countryCode": "BT",
@@ -44546,6 +44569,10 @@
    {
     "label": "King Salman Global Academy for Arabic Language — About (Council of Ministers decree number 34, 01/13/1442 H / 1 September 2020; Strategic Goals)",
     "url": "https://ksaa.gov.sa/en/about"
+   },
+   {
+    "label": "Basic Law of Governance of Saudi Arabia, 1992 (rev. 2013), arts. 1 and 29 - Constitute Project English text",
+    "url": "https://www.constituteproject.org/constitution/Saudi_Arabia_2013"
    }
   ],
   "supportLinks": [],
@@ -44553,7 +44580,7 @@
   "stubNote": "",
   "by": "",
   "localTerm": "",
-  "standing": "",
+  "standing": "Arabic alone: Basic Law art. 1 gives the Kingdom one language and names no other\nThe instrument is the 1992 Basic Law of Governance, in its 2013 revision\nUNESCO's profile records a vote for UNDRIP and no recognition of any other language\nArt. 29 binds the State to preserve Arab and Islamic heritage; it names no language",
   "mediumOfInstruction": "UNESCO's country profile: only classical Arabic is used in primary schools\nPrivate schools may use a language other than Arabic as a medium\nHigher study is in institutions where the languages are Arabic and English",
   "taughtAsSubject": "Arabic as a second language is compulsory in the schools for foreign nationals",
   "teacherSupply": "",
@@ -44581,6 +44608,12 @@
     1,
     2,
     3
+   ],
+   "standing": [
+    1,
+    2,
+    1,
+    4
    ]
   },
   "coding": {
@@ -45963,6 +45996,10 @@
    {
     "label": "Segreteria di Stato per l'Istruzione, Gruppi di lavoro della scuola sammarinese, Linee guida per i nuovi curricoli, 8 settembre 2016",
     "url": "https://www.educazione.sm/on-line/home/docenti/indicazioni-curricolari/documento41103851.html"
+   },
+   {
+    "label": "Second report submitted by San Marino under art. 25(1) of the Framework Convention for the Protection of National Minorities, ACFC/SR/II(2004)013, received 23 August 2004 (rm.coe.int refuses a bare curl and serves the document to a browser user-agent)",
+    "url": "https://rm.coe.int/CoERMPublicCommonSearchServices/DisplayDCTMContent?documentId=090000168008b53e"
    }
   ],
   "supportLinks": [],
@@ -45970,7 +46007,7 @@
   "stubNote": "",
   "by": "",
   "localTerm": "Curriculum guidance speaks of il dialetto and of parlate regionali, not a named language\nThe plural le lingue dialettali sits beside jargons and generational idiolects\nThe terms are fixed in curriculum guidance, the 2016 Linee guida per i nuovi curricoli",
-  "standing": "",
+  "standing": "No minority standing: San Marino reports it has no ethnic minorities on its territory\nSaid in a state report under FCNM art. 25(1), not in any San Marino instrument\nIts recognition of national minorities is called only a hypothetical commitment",
   "mediumOfInstruction": "Teaching runs in Italian, with English and other European languages used alongside it\nEarly years build multilingual settings rather than teach the languages formally",
   "taughtAsSubject": "Pupils are to gain historical and cultural awareness of how languages and dialects evolved\nDialect varieties are listed among the repertoires schools draw on for learning\nPrimary pupils are expected to notice the variety of language use around them",
   "teacherSupply": "",
@@ -46023,6 +46060,11 @@
     1,
     2,
     3,
+    4
+   ],
+   "standing": [
+    1,
+    2,
     4
    ]
   }
@@ -55821,14 +55863,23 @@
   "confidence": "unverified-submission",
   "lastVerified": "2026-08",
   "collaborators": [],
-  "docLinks": [],
+  "docLinks": [
+   {
+    "label": "Benedict XVI, Apostolic Letter issued motu proprio Latina Lingua establishing the Pontifical Academy for Latin, 10 November 2012, with its annexed Statutes",
+    "url": "https://www.vatican.va/content/benedict-xvi/en/motu_proprio/documents/hf_ben-xvi_motu-proprio_20121110_latina-lingua.html"
+   },
+   {
+    "label": "Holy See, second periodic report to the UN Committee on the Rights of the Child, CRC/C/VAT/2 (22 October 2012), section IV on Vatican City State, para. 114 — schooling of children resident in the State",
+    "url": "https://documents.un.org/doc/undoc/gen/g12/468/09/pdf/g1246809.pdf"
+   }
+  ],
   "supportLinks": [],
   "sourceLanguageNote": "",
   "stubNote": "",
   "by": "",
   "localTerm": "",
-  "standing": "",
-  "mediumOfInstruction": "",
+  "standing": "Latin is the Church's own language: the Roman Pontiffs adopted it as such\nFixed by the motu proprio Latina Lingua, given at St Peter's on 10 November 2012\nThe Academy it sets up has its headquarters in Vatican City State\nThe most solemn official Acts of the Roman Pontiffs are authentic in Latin",
+  "mediumOfInstruction": "Vatican City State runs no school system of its own, so no language is a medium there\nIts children attend legally recognized schools under various other States' legislation\nParents able to pay may instruct privately instead, Law of 1 October 2008 N. LXXI art 11\nOne minor seminary stands on the territory, open to non-residents and non-citizens",
   "taughtAsSubject": "",
   "teacherSupply": "",
   "materials": "",
@@ -55855,6 +55906,18 @@
     2,
     3,
     4
+   ],
+   "standing": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "mediumOfInstruction": [
+    1,
+    1,
+    2,
+    1
    ]
   },
   "coding": {
@@ -55864,6 +55927,9 @@
     "status": "established",
     "funding": "not stated"
    }
+  },
+  "absences": {
+   "mediumOfInstruction": true
   }
  },
  {
