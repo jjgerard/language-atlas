@@ -3753,7 +3753,7 @@
   "localTerm": "No regional or minority language category is in use\nBosnian, Croatian and Serbian are all three state languages, Eurydice Fig. A1",
   "standing": "Neither officially recognised nor named in steering documents",
   "mediumOfInstruction": "Annex 2 records no CLIL programme of any kind in Bosnia and Herzegovina",
-  "taughtAsSubject": "Not established from the sources consulted. Eurydice's Key Data on Teaching Languages at School in Europe (2023 edition, policy position 2021/22) places Bosnia and Herzegovina among the countries that neither officially recognise regional or minority languages nor refer to such languages in steering documents issued by top-level education authorities, so no regional or minority language is named as a school subject at that level. Bosnian, Croatian and Serbian are all three state languages on the same source's Figure A1.",
+  "taughtAsSubject": "Regional and minority languages are absent from primary, secondary and vocational education\nMinistries must secure supplementary extra-curricular optional classes about the languages\nItalian and Ukrainian run as optional classes two hours a week in a few Prnjavor schools\nAt secondary level such optional classes do not exist, the Committee of Experts records\nTeaching about minority history and culture is still not part of the compulsory curricula",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
@@ -3782,6 +3782,13 @@
     1,
     1,
     2,
+    3,
+    4
+   ],
+   "taughtAsSubject": [
+    1,
+    2,
+    3,
     3,
     4
    ]
@@ -4100,6 +4107,10 @@
    {
     "label": "Key data on teaching languages at school in Europe, 2023 edition (Eurydice) — Publications Office file",
     "url": "https://publications.europa.eu/resource/cellar/e0f69418-d915-11ed-a05c-01aa75ed71a1.0001.01/DOC_1"
+   },
+   {
+    "label": "Fédération Wallonie-Bruxelles, Langues, Lettres & Livre, Langues et Cultures régionales en classe — FAQ",
+    "url": "https://livre.cfwb.be/activites/activites-pour-les-ecoles/langues-et-cultures-regionales-en-classe/faq"
    }
   ],
   "supportLinks": [],
@@ -34544,6 +34555,14 @@
    {
     "label": "UNESCO GEM Report PEER, Lesotho — Inclusion profile, 'Ethnic and linguistic groups'",
     "url": "https://education-profiles.org/sub-saharan-africa/lesotho/~inclusion"
+   },
+   {
+    "label": "National Curriculum Development Centre with the Examinations Council of Lesotho, Lesotho General Certificate of Secondary Education Syllabus: Sesotho 0176, for examination in November 2020",
+    "url": "https://skulchat.com/lecture/online/files/6533-Sesotho%20Syllabus.pdf"
+   },
+   {
+    "label": "Raselimo and Mahao, The Lesotho curriculum and assessment policy: opportunities and threats, South African Journal of Education 35(1) 2015, Table 1 reproducing the MoET 2009 secondary curriculum structure",
+    "url": "https://files.eric.ed.gov/fulltext/EJ1134907.pdf"
    }
   ],
   "supportLinks": [],
@@ -34553,7 +34572,7 @@
   "localTerm": "Sesotho is an official language, not a minority or regional one\nThe country is essentially monolingual in Sesotho",
   "standing": "English and Sesotho are both official under the Constitution, Chapter 1, Section 3\nBoth are used in schools, and the country is essentially monolingual in Sesotho\nThe constraint here is parental demand for English, not linguistic diversity",
   "mediumOfInstruction": "Education is initially provided in Sesotho, per the Ministry of Education\nEnglish is the medium in the upper grades of primary and in secondary school\nTransitional in form, but the profile names no grade at which the switch falls",
-  "taughtAsSubject": "Not established from the sources consulted. The UNESCO PEER inclusion profile for Lesotho describes Sesotho only as the initial medium of instruction before an unspecified switch to English in upper primary; it says nothing about Sesotho as a timetabled subject, which years it runs, or whether it is compulsory. Searched: PEER Lesotho inclusion profile.",
+  "taughtAsSubject": "Sesotho is a syllabus subject whose study develops understanding of the language's structure\nThe Curriculum and Assessment Policy 2009 makes Sesotho a compulsory secondary subject\nIt sits in the Linguistic and literary learning area with English and other languages\nECoL recommends four guided hours a week, six periods of 40 minutes, over two years\nPaper 3 examines Sesotho literature and culture, not the language alone",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
@@ -34627,6 +34646,13 @@
     1,
     1,
     3
+   ],
+   "taughtAsSubject": [
+    1,
+    2,
+    1,
+    3,
+    4
    ]
   }
  },
@@ -34874,6 +34900,10 @@
    {
     "label": "Key data on teaching languages at school in Europe, 2023 edition (Eurydice) — Publications Office file",
     "url": "https://publications.europa.eu/resource/cellar/e0f69418-d915-11ed-a05c-01aa75ed71a1.0001.01/DOC_1"
+   },
+   {
+    "label": "Ministère de l'Éducation nationale, de l'Enfance et de la Jeunesse, Plan d'études — École fondamentale (règlement grand-ducal du 11 août 2011), domaines Langue luxembourgeoise cycles 1 à 4",
+    "url": "https://men.public.lu/dam-assets/catalogue-publications/courriers-de-leducation-nationale/numeros-speciaux/plan-etudes-ecoles-fondamentale.pdf"
    }
   ],
   "supportLinks": [],
@@ -34883,7 +34913,7 @@
   "localTerm": "No regional or minority language category is in use\nLuxembourgish is a state language alongside German and French, Fig. A1",
   "standing": "Neither officially recognised nor named in steering documents",
   "mediumOfInstruction": "All instruction is in a language other than Luxembourgish\nMostly French or German, Eurydice Annex 2 country note",
-  "taughtAsSubject": "Not established from the sources consulted. Eurydice's Key data on teaching languages at school in Europe (2023) places Luxembourg among the education systems that neither officially recognise regional or minority languages nor refer to such languages in steering documents issued by top-level education authorities, the indicator behind Figure B9, which covers national curricula, assessment documents and rules obliging schools to provide tuition in a named language. No regional or minority language subject provision is recorded for it there.",
+  "taughtAsSubject": "The national plan d'etudes carries German, French and Luxembourgish at cycles 2 to 4\nCycle 1 has its own domain, language and Luxembourgish with awakening to languages\nLuxembourgish is the language of instruction at cycle 1 and German at cycles 2, 3 and 4\nCycle 4 work includes listening to extracts of Luxembourgish literature read aloud",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
@@ -34935,6 +34965,12 @@
     1,
     2,
     3
+   ],
+   "taughtAsSubject": [
+    1,
+    1,
+    3,
+    4
    ]
   }
  },
@@ -36924,7 +36960,7 @@
   "localTerm": "'national languages': Arabic, Fula, Soninke and Wolof, Constitution art. 6\nArabic alone of the four is also the official language\nThe label covers the majority language and three minority ones alike",
   "standing": "1991 Constitution art. 6 names Arabic, Fula, Soninke and Wolof as national languages\nArabic alone is the official language of the four\nHigher education is to promote Fula, Soninke and Wolof, per the same section\nConstitutional, not curricular: PEER names no school programme in these languages",
   "mediumOfInstruction": "Arabic, or the Hassaniya dialect of it, carries teaching; the profile calls this a disadvantage\nProfile records no use of Fula, Soninke or Wolof as a medium at any stage\nOnly Arabic is official, and French has officially been removed from current policy",
-  "taughtAsSubject": "Not established from the sources consulted. The UNESCO PEER inclusion profile for Mauritania mentions Fula, Soninke and Wolof only as constitutionally named national languages whose 'promotion' higher-education law allows alongside Arabic-medium teaching; it does not say whether any of them is a timetabled school subject, in which years, or on what terms. Searched: PEER Mauritania inclusion profile.",
+  "taughtAsSubject": "The 2022 education law extends teaching in the national languages poular, soninke and wolof\nThey are carried both as languages of communication and as languages of instruction\nEvery child whose mother tongue is Arabic must learn at least one of the three\nAt primary each child studies the scientific disciplines in his or her mother tongue",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
@@ -37053,6 +37089,12 @@
   "slots": {
    "revitalisation": [
     1,
+    1,
+    1,
+    2,
+    3
+   ],
+   "taughtAsSubject": [
     1,
     1,
     2,
@@ -37521,6 +37563,10 @@
    {
     "label": "Education Act, Act 21 of 2013 (Chapter 30:01, Laws of Malawi), section 78 \"Language of instruction\" — MalawiLII / Laws.Africa consolidated text",
     "url": "https://media.malawilii.org/files/legislation/akn-mw-act-2013-21-eng-2014-12-31.pdf"
+   },
+   {
+    "label": "Government of the Republic of Malawi, Malawi Education Sector Analysis (2019), primary and secondary curriculum and MLA 2015 sections",
+    "url": "https://www.unicef.org/malawi/media/4581/file/Malawi%20Education%20Sector%20Analysis.pdf"
    }
   ],
   "supportLinks": [],
@@ -37530,7 +37576,7 @@
   "localTerm": "'national language' was conferred on Chinyanja in 1968, and it was renamed\nThe review calls the three simply 'Malawian languages'",
   "standing": "The 1996 'three plus or minus' formula puts the mother tongue as medium\nIt applies in Standards 1 to 4, in all schools",
   "mediumOfInstruction": "2013 Education Act: English is the medium of instruction in schools and colleges\nThe Act permits, but does not require, Chichewa as medium for Standards 1 to 4\nMalawian languages other than Chichewa are not mentioned in the Act\nNational Reading Strategy calls learning in Chichewa exceptional, English the norm",
-  "taughtAsSubject": "Not established from the sources consulted. The UNESCO PEER inclusion profile for Malawi covers Chichewa only as a permitted medium under the 2013 Education Act, and notes nationwide Chichewa textbook distribution plus piloted mother-tongue projects awaiting scale-up; it describes no timetabled Malawian-language subject, no year range and no optionality. Searched: PEER Malawi inclusion profile.",
+  "taughtAsSubject": "All secondary schools teach Chichewa, alongside English and Mathematics\nChichewa sits in the core set of ten secondary subjects rather than among the electives\nChichewa is a primary subject area assessed at Standard 4 and at Standard 7\nThe 2008 PCAR primary curriculum emphasises literacy in English and Chichewa\nThe Education Act 2013 leaves the language of instruction to a ministerial Gazette notice",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
@@ -37688,6 +37734,13 @@
     1,
     1,
     4
+   ],
+   "taughtAsSubject": [
+    1,
+    2,
+    3,
+    3,
+    1
    ]
   }
  },
@@ -44687,7 +44740,7 @@
   "localTerm": "Kreol here is a national language and a medium, not a minority option\nThe country's policy is described as tri-lingual: Kreol, English, French\nPEER files the medium-of-instruction rule under 'Ethnic and linguistic groups'",
   "standing": "Creole here is a national language and a medium, not a minority option\n2013-17 strategic plan seeks increased cultural diversity in promoting identity\nNo other language of Seychelles is named",
   "mediumOfInstruction": "Seselwa Creole is the medium of instruction in Creche, P1 and P2\nEnglish is the language of instruction from P3 onwards: early-exit transitional\nRule stated by UNESCO PEER, not traced here to a Seychelles curriculum instrument",
-  "taughtAsSubject": "Not established from the sources consulted. The UNESCO PEER inclusion profile for Seychelles gives the Creole medium-of-instruction rule and the 2013-17 education strategic plan's aim of increasing cultural diversity, but does not say whether Kreol Seselwa is separately timetabled as a subject after P3, for which years, or whether it is compulsory. Searched: PEER Seychelles inclusion profile.",
+  "taughtAsSubject": "All three national languages are taught as components of the Languages learning area\nThe framework specifies the essential learning areas of the national curriculum\nFrom the beginning of Key Stage 2 (P3) English becomes the medium for certain subjects\nThe area carries literacy in Kreol and the literature associated with it",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
@@ -44787,6 +44840,12 @@
     1,
     2,
     3
+   ],
+   "taughtAsSubject": [
+    1,
+    2,
+    3,
+    4
    ]
   }
  },
@@ -57531,6 +57590,10 @@
    {
     "label": "UNESCO GEM Report PEER, Zambia — Inclusion profile, 'Ethnic and linguistic groups', quoting the 2013 Zambia Education Curriculum Framework",
     "url": "https://education-profiles.org/sub-saharan-africa/zambia/~inclusion"
+   },
+   {
+    "label": "Ministry of Education, Science, Vocational Training and Early Education, The Zambia Education Curriculum Framework 2013, Curriculum Development Centre, Lusaka",
+    "url": "https://www.giakonda.org.uk/wp-content/uploads/2018/05/ZECF-FINAL-COPY.pdf"
    }
   ],
   "supportLinks": [],
@@ -57540,7 +57603,7 @@
   "localTerm": "'regional lingua francas' for the seven, 'familiar language' for the classroom one\nThe two categories are deliberately different and the distinction is the substance",
   "standing": "Zambian languages became the medium in Grades 1 to 4\n'Familiar language' means the local language of the community\nIt is NOT one of the seven regional languages, and that distinction is the substance\nBuilt on years of advocacy by Zambian linguists against English-medium teaching",
   "mediumOfInstruction": "2013 Curriculum Framework: zone languages are medium for all learning areas, Grades 1-4\nCinyanja, Chitonga, Icibemba, Kiikaonde, Lunda, Luvale and Silozi are the zone languages\nA widely used community language of the school catchment may be used instead\nEnglish is official medium from Grade 5 to tertiary: early-exit transitional",
-  "taughtAsSubject": "Not established from the sources consulted. The UNESCO PEER inclusion profile for Zambia sets out the 2013 Curriculum Framework only as a medium-of-instruction rule for Grades 1-4, and records the 2011-15 sector plan's proposal to review the policy 'to promote the teaching of local languages at primary level'; neither passage describes a timetabled Zambian-language subject, its years, or whether it is optional. Searched: PEER Zambia inclusion profile.",
+  "taughtAsSubject": "Zambian Languages is offered as a core subject for all on the Academic Career Pathway\nJunior secondary timetables it at 3hrs 20min a week, five periods\nIn the senior Technology curriculum Zambian Language is one of the optional subjects\nAt Grades 1 to 4 all learning areas are taught in familiar Zambian Languages\nEnglish remains the official medium of instruction from Grade 5 up to tertiary",
   "teacherSupply": "",
   "materials": "",
   "assessment": "",
@@ -57716,6 +57779,13 @@
     1,
     1,
     2,
+    3
+   ],
+   "taughtAsSubject": [
+    2,
+    3,
+    2,
+    3,
     3
    ]
   }

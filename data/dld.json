@@ -344,6 +344,10 @@
    {
     "label": "UNESCO GEM Report PEER, country profile: inclusion",
     "url": "https://education-profiles.org/central-and-southern-asia/afghanistan/~inclusion"
+   },
+   {
+    "label": "Islamic Republic of Afghanistan, Ministry of Education, Education Law 2008 (Decree 56, Official Gazette 955), article 15 'Education of special need person' and article 24; 2017 Internet Archive copy of the planipolis.iiep.unesco.org file, which now answers that url with a web page rather than the document. Searched in full: identification, assessment and speech each occur zero times in the law",
+    "url": "https://web.archive.org/web/20170201175655/http://planipolis.iiep.unesco.org/upload/Afghanistan/Afghanistan_Education_law.pdf"
    }
   ],
   "supportLinks": [],
@@ -353,7 +357,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "No term for a language disorder appears in either cited source\nThe single relevant phrase is 'children with visual, hearing and speech impairments'\n'language disorder' returns 0 hits in the ROSA Afghanistan profile\nThose pupils attend separate schools, not mainstream provision",
-  "identificationCriteria": "Not established from the sources consulted. UNICEF's 2021 South Asia mapping records that there was no systematic screening or identification process in place for children with disabilities, and that identification was often limited to children already in school with physical or visible impairments, leaving out-of-school children with disabilities unidentified. The mapping describes the system as it stood before August 2021.",
+  "identificationCriteria": "Education Law 2008 article 15 sends special education to related rules and sets no criterion\nIts only other disability clause promises special education for blind and disabled students\nRead from a 2017 Internet Archive copy; planipolis now serves a web page for that file",
   "assessments": "",
   "multilingualProvision": "Constitution and Education Law count children of different language backgrounds as special\nThe 2014 inclusive education policy names language background among the grounds of access\nOne hundred new primary school textbook titles were produced in Dari and Pashto",
   "referralPathway": "The 2021 mapping records no continuum from screening and identification through to referral\nCommunity-based rehabilitation carried a referral network from community to central level\nFamilies, religious leaders, health and rehabilitation centres and schools were the partners\nThe education ministry piloted a child functioning screening tool with USAID support",
@@ -480,6 +484,13 @@
     "label": "speech disorder",
     "standing": "not stated"
    }
+  },
+  "slots": {
+   "identificationCriteria": [
+    3,
+    3,
+    3
+   ]
   }
  },
  {
@@ -1104,6 +1115,10 @@
    {
     "label": "UNICEF ESA, 'Mapping and Recommendations on Disability-Inclusive Education in Eastern and Southern Africa' (March 2023)",
     "url": "https://www.unicef.org/esa/media/12201/file/UNICEF-Mapping-Recommendations-Disability-Inclusive-Education-ESA-2023.pdf"
+   },
+   {
+    "label": "Decreto Presidencial n.º 20/11 de 18 de Janeiro, Estatuto da Modalidade de Educação Especial (Diário da República I série n.º 011), articles 4, 16 and 19; read on lex.ao because the angolex.com copy renders its text only in the browser",
+    "url": "https://lex.ao/docs/presidente-da-republica/2011/decreto-presidencial-n-o-20-11-de-18-de-janeiro/"
    }
   ],
   "supportLinks": [],
@@ -1113,7 +1128,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "Special education is a modality serving all pupils with SEN, transitional or permanent\nNo speech or language category; 'speech' occurs 0 times in the profile",
-  "identificationCriteria": "Not established from the sources consulted. UNICEF's 2023 regional mapping of disability-inclusive education lists no screening or identification tool for Angola, rates it as only initiating a disability identification system, and states that most countries in the region have no comprehensive or standardized system for identifying children with disabilities.",
+  "identificationCriteria": "The 2011 special education statute defines dificuldades da fala e da linguagem\nThe definition admits psychological, organic or sociocultural origin alike\nIt turns on a compromised capacity for oral or written expression\nA medical diagnosis enters the individual education plan only where it is necessary\nThe eligibility process may begin only after written authorisation from the guardian",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
@@ -1189,6 +1204,15 @@
     "label": "not applicable",
     "standing": "not stated"
    }
+  },
+  "slots": {
+   "identificationCriteria": [
+    3,
+    3,
+    3,
+    2,
+    1
+   ]
   }
  },
  {
@@ -8586,6 +8610,10 @@
    {
     "label": "UNESCO GEM Report PEER, country profile: inclusion",
     "url": "https://education-profiles.org/sub-saharan-africa/democratic-republic-of-congo/~inclusion"
+   },
+   {
+    "label": "Loi-cadre n° 14/004 du 11 février 2014 de l'enseignement national, article 1 (definition 14) and section 3; a UNESCO-hosted print of the leganet.cd text, which serves an untrusted certificate chain. Searched in full: langage, dépistage, orthophonie and déficience each occur zero times",
+    "url": "https://media.unesco.org/sites/default/files/webform/r2e002/989f00058496b07efeda7d9bb07aef8b5ebe7279.pdf"
    }
   ],
   "supportLinks": [],
@@ -8595,7 +8623,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "Logopédie, used interchangeably with orthophonie\nCovers troubles de langage including stuttering, deafness and autism",
-  "identificationCriteria": "Not established from the sources consulted. A Kinshasa logopede interviewed in 2017 describes the specialist multidisciplinary team that would follow such a child, and then states that this kind of procedure is not applied on a large scale in the country, so that parents are obliged to go first to a paediatrician. No Congolese instrument setting criteria for identifying a language disorder was reachable from this entry's sources.",
+  "identificationCriteria": "Enseignement spécial names the gifted, the blind, the mute, the hard of hearing and deaf-mute\nThat list is sensory and giftedness only; a language disorder has no category in it\nRead from a UNESCO-hosted copy; leganet.cd's own certificate chain is untrusted here",
   "assessments": "",
   "multilingualProvision": "Source describes special-needs provision generally, never language disorder\nPlanned teacher training curriculum to cover learning in national languages\nCurricula and certification to be revised around mastery of a national language",
   "referralPathway": "The route described is paediatrician, then child psychiatrist, then logopède",
@@ -8706,6 +8734,13 @@
     "label": "not applicable",
     "standing": "in professional use only"
    }
+  },
+  "slots": {
+   "identificationCriteria": [
+    3,
+    3,
+    3
+   ]
   }
  },
  {
@@ -25672,6 +25707,10 @@
    {
     "label": "Israeli Speech, Hearing and Language Association (ISHLA), About Us — the professional association's own membership statement",
     "url": "https://ishla.org.il/about-us/"
+   },
+   {
+    "label": "Knesset Research and Information Centre, Eti Weissblei, 'The special education reform - implementing Amendment no. 11 to the Special Education Law', 10 August 2020 (Hebrew). Read because the entry's English-language sources could not reach the committees' own criteria; nevo.co.il 403s and pob.education.gov.il did not answer",
+    "url": "https://fs.knesset.gov.il/globaldocs/MMM/3c4e064a-01a4-ea11-8106-00155d0aee38/2_3c4e064a-01a4-ea11-8106-00155d0aee38_11_16289.pdf"
    }
   ],
   "supportLinks": [],
@@ -25681,7 +25720,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "2017 public term: \"לקות שפה\" (Hebrew) — \"language disorder\"\nCOST Action awareness survey: highest band — 65% or more had heard of it\nAcross the 18 systems, ~60% for language impairment against over 90% for autism",
-  "identificationCriteria": "Not established from the sources consulted for this entry — the diagnostic criteria and any score thresholds applied by the statutory placement committees could not be determined from the English-language sources consulted. If you work in this system, this is exactly the field to fill in.",
+  "identificationCriteria": "Eligibility and characterisation committees run by the Ministry of Education decide\nA school multi-professional team decides for a high-prevalence disability at level 1 or 2\nThe RAMA functional-level questionnaire is one of the components of the decision\nThe committee rates functional level 1 to 4, and that level sets the service basket\nDevelopmental delay in the language and functional domain counts as high-prevalence",
   "assessments": "LITMUS sentence repetition (SRep) task for Hebrew\nDeveloped by Sharon Armon-Lotem, Natalia Meir and Carmit Altman (Bar-Ilan)\nSRep reported highly sensitive and specific; LITMUS built for multilingual children\nPalestinian Arabic and Russian tasks also from Bar-Ilan — the two other school languages\nRecords that the instrument exists — not that any service here uses it",
   "multilingualProvision": "Practitioner perceptions, not policy — COST IS1406 survey 2017, n = 16 (Law et al., 2020)\nAssessment: mainstream only 31%, both 13%, mother tongue if different 13%\nIntervention: mainstream only 41%, mother tongue 18%\nInterpreters sometimes used — assessment 60%, intervention 47%, counselling 63%\nPractitioner training: optional 47%, none 21%, unsure 26% (n = 19)",
   "referralPathway": "A child, a parent, a school or the municipal education department may refer\nReferral goes to an Eligibility and Characterization Committee, about 369 of them locally\nThe committee decides mainly on documents; parents and teacher may be invited to attend\nTherapist shortages add to the wait before treatment starts",
@@ -25705,6 +25744,13 @@
   "slots": {
    "dischargeCriteria": [
     4
+   ],
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    3,
+    3
    ]
   },
   "coding": {
@@ -32610,6 +32656,10 @@
    {
     "label": "UNESCO GEM Report PEER, country profile: inclusion",
     "url": "https://education-profiles.org/sub-saharan-africa/liberia/~inclusion"
+   },
+   {
+    "label": "Ministry of Education, Liberia Inclusive Education Policy, December 2018, policy objective 2 (2.5 to 2.8). A policy that sets intentions rather than a rule in force, and the assessment protocols it relies on are not yet written",
+    "url": "https://www.changemakersforchildren.community/system/files/2021-05/Liberia-Inclusive-Education-Policy.pdf"
    }
   ],
   "supportLinks": [],
@@ -32619,7 +32669,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "No professional title or disorder term is recorded for Liberia\nBowen's West Africa page says no SLP/SLT work in Liberia is known to her\nAn absence reported by one directory author, not a government statement\nLiberia does not appear in the SASLHA list of African training institutions",
-  "identificationCriteria": "Not established from the sources consulted. UNESCO's PEER profile records that no education policy on children and young people with disabilities has been adopted in Liberia, and that developing an inclusive education policy and guidelines is still only identified as a component of a student well-being programme.",
+  "identificationCriteria": "School heads and teachers conduct basic screening, supported by resource specialists\nAssessment should take place in the classroom with a multidisciplinary team over time\nNo assessment should be carried out by people who do not know the child\nSpeech, language and communication disabilities are a named category in the policy\nIts assessment tools and protocols are still to be developed by the Ministry",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "",
@@ -32750,6 +32800,15 @@
     "label": "not applicable",
     "standing": "none"
    }
+  },
+  "slots": {
+   "identificationCriteria": [
+    1,
+    2,
+    2,
+    3,
+    3
+   ]
   }
  },
  {
@@ -37971,6 +38030,10 @@
    {
     "label": "UNESCO GEM Report PEER, Nigeria country profile: inclusion",
     "url": "https://education-profiles.org/sub-saharan-africa/nigeria/~inclusion"
+   },
+   {
+    "label": "Federal Ministry of Education, National Policy on Special Needs Education in Nigeria (2015), section 12.0 'Identification and Assessment of Persons with Special Needs'; read from the RODRA copy because education.gov.ng serves only a summary page. The word 'criteria' does not occur anywhere in the document",
+    "url": "http://www.rodra.co.za/images/countries/nigeria/policy/National%20Policy%20on%20Special%20Needs%20Education.pdf"
    }
   ],
   "supportLinks": [],
@@ -37980,7 +38043,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "No professional title or disorder label is given (a one-line institution listing)\nSASLHA places training at the University of Ibadan in a Department of Special Education\nNo statutory or ministry term for language disorder was reachable from the cited links",
-  "identificationCriteria": "Not established from the sources consulted. UNESCO's PEER profile records that a process for tracking early identification and referral for persons with special needs is not in place, and that the 2015 National Policy on Special Needs Education acknowledged the need to provide information to the public about diagnostic centres and referral mechanisms.",
+  "identificationCriteria": "Parents are the primary source of identification and must consent before screening\nSpeech therapists, audiologists and clinical psychologists identify alongside schools\nSchools must arrange regular sensory, medical and psychological screening assessments\nSpeech impairment is defined only by examples - stammering, stuttering and voice disorders\nThe 2015 policy's identification section names professionals and roles, and sets no threshold",
   "assessments": "",
   "multilingualProvision": "",
   "referralPathway": "Special education is for those unable to cope with the regular class curriculum (2004 policy)\nMost state-run special schools target one or two impairment types\nPoorer states have only one or two special schools, providing both boarding and day services",
@@ -38054,6 +38117,15 @@
     "label": "not applicable",
     "standing": "none"
    }
+  },
+  "slots": {
+   "identificationCriteria": [
+    1,
+    1,
+    2,
+    3,
+    3
+   ]
   }
  },
  {
@@ -61360,6 +61432,10 @@
    {
     "label": "Ndou, N.N. & Omidire, M.F. (2022), 'Systemic support for learners with developmental language disorders in Zimbabwe and South Africa', South African Journal of Communication Disorders 69(1), a850, doi:10.4102/sajcd.v69i1.850",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8907893/"
+   },
+   {
+    "label": "Department of Basic Education, Policy on Screening, Identification, Assessment and Support (SIAS), 19 December 2014 - the national identification process; 'Domains of specialised support', the rating of support as low, moderate or high, and Annexure D, the medical and health assessment form",
+    "url": "https://www.education.gov.za/Portals/0/Documents/Policies/SIAS%20Final%2019%20December%202014.pdf"
    }
   ],
   "supportLinks": [
@@ -61374,7 +61450,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "Policy category is \"learners who experience barriers to learning\", deliberately broad\nSIAS domain \"Communication\" is scoped to little or no functional speech, requiring AAC\nNo DLD or SLI category in SIAS; CATALISE terms appear in SA research, not in school policy\nWhite Paper 6 chose \"barriers to learning and development\" over \"special education needs\"",
-  "identificationCriteria": "Not established from the sources consulted for this entry — no national diagnostic or eligibility criteria were identified. The dominant constraint reported in the literature is not the criteria but the assessment tools available to apply them — see below. If you work in this system, this is exactly the field to fill in.",
+  "identificationCriteria": "The School-based Support Team refers; the District-based Support Team decides the package\nThe health professional, never the teacher, completes the diagnostic section of the form\nSupport is rated low, moderate or high, by what is needed rather than by diagnosis\nThe communication domain reaches little or no functional speech and the need for AAC\nNo decision may be based solely on the category of disability of the learner",
   "assessments": "The central documented problem\nShortage of valid tools for multilingual populations, and for several SA languages\nTests in use are built on European and American contexts, with guidance that does not fit\nLanguage sample analysis used as a partial response to the missing norms",
   "multilingualProvision": "Multilingualism is the whole problem — 11 official spoken languages, plus SASL\nHPCSA requires cultural competence; parts of the workforce reportedly do not meet it\nShortage of therapists fluent in African languages; ad hoc translation used as a stopgap\nLess experienced therapists more often able to work in African languages — a pipeline issue",
   "referralPathway": "Under SIAS, screening starts at school level with the School-Based Support Team\nEscalating to the District-Based Support Team where the school cannot meet the need\nDistrict support may include remedial work, assessment, devices, therapy or placement\nSLT is one option in a graduated response, not an entitlement in itself",
@@ -61482,6 +61558,15 @@
     "label": "not applicable",
     "standing": "in policy or an official list"
    }
+  },
+  "slots": {
+   "identificationCriteria": [
+    1,
+    2,
+    3,
+    3,
+    4
+   ]
   }
  },
  {
