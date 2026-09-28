@@ -14175,7 +14175,7 @@
    },
    "removalCriteria": {
     "exit_mechanism": [
-     "none established"
+     "assessed, no criterion"
     ],
     "decided_by": "school",
     "rule_locus": "national statute"
@@ -15227,7 +15227,7 @@
     ],
     "decided_by": "not stated",
     "rule_locus": "national framework, sub-national rules",
-    "designation": "none in use"
+    "designation": "functional"
    },
    "policyHistory": [
     {
@@ -15504,7 +15504,7 @@
     ],
     "decided_by": "not stated",
     "rule_locus": "national framework, sub-national rules",
-    "designation": "none in use"
+    "designation": "functional"
    },
    "policyHistory": [
     {
@@ -19117,9 +19117,6 @@
   "l3Support": "",
   "bilingualEducationNotes": "No bilingual programme: 'bilingual' returns 0 hits in the Framework\nMulticultural-background students sit in a list with underachievers and gifted students\nSupport is framed as school-level adaptation, not as a separate programme\nLocal offices of education are told to support returnees from overseas too",
   "policyHistory": [],
-  "absences": {
-   "newcomerCriteria": true
-  },
   "coding": {
    "l1Support": {
     "form": "none established",
@@ -19140,7 +19137,7 @@
     "evidence_type": "policy"
    },
    "newcomerCriteria": {
-    "designation": "none in use",
+    "designation": "functional",
     "triggers": [
      "immigration status",
      "prior schooling"
