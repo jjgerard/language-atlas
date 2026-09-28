@@ -1185,6 +1185,21 @@ const UNSET_LABEL = {
 };
 function unsetLabel(key) { return UNSET_LABEL[key] || 'Coded, no value fits'; }
 
+/* The three unsets are three different claims and were sharing two sentences.
+   `exit_period_months` empty says THE SYSTEM has no fixed period -- a finding
+   about policy. `instrument_year` empty says THE ENTRY dates no instrument --
+   a finding about the record, and its column is defined as "integer, where the
+   entry gives one", so nothing is owed. Everywhere else it means the reader
+   found none of the values true, which is the vocabulary's problem. */
+const UNSET_WHY = {
+  'removalCriteria.exit_period_months': 'the column is a measurement and this system has none to record — an answer, not a gap',
+  'legalEntitlement.instrument_year': 'the entry names the instrument without dating it. The column holds the year the ENTRY gives, so this is the record being silent rather than anything left to code',
+};
+function unsetWhy(key) {
+  return UNSET_WHY[key]
+    || 'somebody read it and none of the values above was true of it. Sometimes that is a gap in the vocabulary; sometimes the entry is a note about sourcing rather than policy, and belongs in a different state';
+}
+
 function absenceLabel(fieldKey) {
   if (ABSENCE_LABEL[fieldKey]) return ABSENCE_LABEL[fieldKey];
   const f = (domain().fields || []).find(x => x.k === fieldKey);
@@ -1540,10 +1555,23 @@ const FIELD_STATE = { h: 'has', l: 'looked', x: 'na', n: 'none' };
    documented absence is the stronger form of the same claim, and the legend
    keeps the two rows apart in words. */
 const isAbsent = (u, key) => !!((u && u.absences) || {})[key.split('.')[0]];
+/* A ROW-GRAINED FIELD STORES AN ARRAY, and this refused to look inside one.
+   The `!Array.isArray` guard was right while the only readable columns were
+   nominal -- codedValues() returns null for those by design, so every
+   array-coded unit would have read as unset on every one of them. But the
+   ordinal columns ARE readable across rows, and since they joined the shade
+   picker the guard has been answering for them too: 154 units whose
+   legalEntitlement names an instrument without a year, and 11 whose rows leave
+   `obliges` empty, fell past this into `has` and painted as "Text here, not yet
+   coded". That label says somebody has reading to do. The column's own
+   definition says "integer, where the entry gives one", so the truthful
+   statement is the one UNSET_LABEL already carries and could not reach. */
 const isUnset = (u, key) => {
   const cd = (u && u.coding) || {};
-  const f = key.split('.')[0];
-  return !!cd[f] && !Array.isArray(cd[f]) && !codedValues(u, key);
+  const [f, c] = key.split('.');
+  if (!cd[f]) return false;
+  if (Array.isArray(cd[f]) && !isOrdinalCol(f, c)) return false;
+  return !codedValues(u, key);
 };
 function fieldStateOf(u, fieldKey) {
   if (!u || typeof u.fieldStates !== 'string') return 'none';
@@ -3647,7 +3675,7 @@ function paintCatLegend() {
     >${sw('url(#hatch)')}<span>Looked, not found yet</span><span class="n">${tally.looked}</span></div>`);
   if (tally.has) rows.push(`<div class="cl" disabled title="the entry has prose nobody has read against this question yet. Reading it settles whether the entry answers -- and often it turns out not to reach the question at all, which is a fill rather than a coding"
     >${sw('url(#uncoded)')}<span>Text here, not yet coded</span><span class="n">${tally.has}</span></div>`);
-  if (tally.unset) rows.push(`<div class="cl" disabled title="${UNSET_LABEL[CODED.key] ? 'the column is a measurement and this system has none to record — an answer, not a gap' : 'somebody read it and none of the values above was true of it. Sometimes that is a gap in the vocabulary; sometimes the entry is a note about sourcing rather than policy, and belongs in a different state'}"
+  if (tally.unset) rows.push(`<div class="cl" disabled title="${unsetWhy(CODED.key)}"
     >${sw('url(#uncoded)')}<span>${esc(unsetLabel(CODED.key))}</span><span class="n">${tally.unset}</span></div>`);
   if (tally.na) rows.push(`<div class="cl" disabled title="the question presupposes something this system does not have, so it cannot be answered here — not a gap and not a finding about how support ends"
     >${sw('url(#na)')}<span>${esc(naLabel(fk0))}</span><span class="n">${tally.na}</span></div>`);
