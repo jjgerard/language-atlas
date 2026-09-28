@@ -1,0 +1,57 @@
+{
+  "IT|Italy": {
+    "fields": {
+      "removalCriteria": [
+        "DPR 394/1999 has the collegio dei docenti set the adaptation by each pupil's competence level",
+        "The 2014 linee guida treat the language interventions as transitory, a PDP only exceptionally",
+        "The 2014 linee guida recommend 8-10 weekly hours of Italian L2 for three to four months",
+        "The 2014 linee guida say pupils pass roughly through three phases of Italian L2 learning",
+        "The 2022 orientamenti ask support to run at least the first two years after entry"
+      ]
+    },
+    "slots": {
+      "removalCriteria": [2, 3, 3, 1, 3]
+    },
+    "evidence": [
+      {
+        "bullet": "DPR 394/1999 has the collegio dei docenti set the adaptation by each pupil's competence level",
+        "url": "https://www.istruzione.it/archivio/web/universita/regolamento-recante-norme-di-attuazione.html",
+        "quote": "Il collegio dei docenti definisce, in relazione al livello di competenza dei singoli alunni stranieri il necessario adattamento dei programmi di insegnamento"
+      },
+      {
+        "bullet": "The 2014 linee guida treat the language interventions as transitory, a PDP only exceptionally",
+        "url": "https://www.istitutocomprensivoperugia11.edu.it/wp-content/uploads/2021/12/2-linee-guida-integrazione-alunni-stranieri.pdf",
+        "quote": "gli alunni con cittadinanza non italiana necessitano anzitutto di interventi didattici di natura transitoria relativi all’apprendimento della lingua e che solo in via eccezionale si deve ricorrere alla formalizzazione di un vero e proprio piano didattico personalizzato"
+      },
+      {
+        "bullet": "The 2014 linee guida recommend 8-10 weekly hours of Italian L2 for three to four months",
+        "url": "https://www.istitutocomprensivoperugia11.edu.it/wp-content/uploads/2021/12/2-linee-guida-integrazione-alunni-stranieri.pdf",
+        "quote": "un intervento efficace dovrebbe prevedere circa 8-10 ore settimanali dedicate all’italiano L2 (circa 2 ore al giorno) per una durata di 3-4 mesi"
+      },
+      {
+        "bullet": "The 2014 linee guida say pupils pass roughly through three phases of Italian L2 learning",
+        "url": "https://www.istitutocomprensivoperugia11.edu.it/wp-content/uploads/2021/12/2-linee-guida-integrazione-alunni-stranieri.pdf",
+        "quote": "Gli alunni stranieri inseriti nella scuola attraversano grosso modo tre diverse fasi"
+      },
+      {
+        "bullet": "The 2022 orientamenti ask support to run at least the first two years after entry",
+        "url": "https://www.mim.gov.it/documents/20182/0/Orientamenti+Interculturali.pdf",
+        "quote": "sostenga la loro scolarità almeno nei primi due anni"
+      }
+    ],
+    "sources": [
+      {
+        "label": "DPR 31 agosto 1999, n. 394, art. 45 (Iscrizione scolastica) — MIUR archive extract of Capo VII",
+        "url": "https://www.istruzione.it/archivio/web/universita/regolamento-recante-norme-di-attuazione.html"
+      },
+      {
+        "label": "Linee guida per l'accoglienza e l'integrazione degli alunni stranieri (MIUR, febbraio 2014), parte II.6 — school-site copy carrying a text layer; the ministry's own PDF at mim.gov.it and miur.gov.it is image-only and extracts to 24 bytes",
+        "url": "https://www.istitutocomprensivoperugia11.edu.it/wp-content/uploads/2021/12/2-linee-guida-integrazione-alunni-stranieri.pdf"
+      },
+      {
+        "label": "Orientamenti interculturali. Idee e proposte per l'integrazione di alunne e alunni provenienti da contesti migratori (Osservatorio nazionale, Ministero dell'Istruzione, marzo 2022)",
+        "url": "https://www.mim.gov.it/documents/20182/0/Orientamenti+Interculturali.pdf"
+      }
+    ]
+  }
+}

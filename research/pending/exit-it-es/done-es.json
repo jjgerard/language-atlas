@@ -1,0 +1,61 @@
+{
+  "ES|Spain": {
+    "fields": {
+      "removalCriteria": [
+        "Andalucia gives one school year, continuous assessment ending ATAL attendance sooner",
+        "Jefatura de estudios decides with the ATAL teacher, the tutor and the orientation staff",
+        "Madrid caps the aula de enlace at nine months of effective attendance",
+        "Madrid offers the aula de enlace once only during compulsory schooling",
+        "Catalonia recommends a stay in the aula d'acollida of no more than two years"
+      ]
+    },
+    "slots": {
+      "removalCriteria": [1, 2, 3, 4, 3]
+    },
+    "evidence": [
+      {
+        "bullet": "Andalucia gives one school year, continuous assessment ending ATAL attendance sooner",
+        "url": "https://www.juntadeandalucia.es/boja/2007/33/1",
+        "quote": "El período ordinario de permanencia en un grupo de apoyo será de un curso escolar. En función de los progresos del alumnado, los resultados de la evaluación continua podrán determinar en cualquier momento la finalización de su asistencia"
+      },
+      {
+        "bullet": "Jefatura de estudios decides with the ATAL teacher, the tutor and the orientation staff",
+        "url": "https://www.juntadeandalucia.es/boja/2007/33/1",
+        "quote": "La responsabilidad de esta decisión recaerá en la Jefatura de Estudios del centro, en coordinación con el profesorado de las Aulas Temporales de Adaptación Lingüística, el profesorado encargado de las tutorías y el profesional de la Orientación"
+      },
+      {
+        "bullet": "Madrid caps the aula de enlace at nine months of effective attendance",
+        "url": "https://www.educa2.madrid.org/web/direcciones-de-area/dat-norte/-/visor/aulas-de-enlace",
+        "quote": "La permanencia en el Aula de Enlace se prolongará durante un periodo máximo de 9 meses de asistencia efectiva, a lo largo de uno o dos cursos académicos"
+      },
+      {
+        "bullet": "Madrid offers the aula de enlace once only during compulsory schooling",
+        "url": "https://www.educa2.madrid.org/web/direcciones-de-area/dat-norte/-/visor/aulas-de-enlace",
+        "quote": "Esta incorporación se realizará una sola vez durante el periodo de escolaridad obligatoria del alumno"
+      },
+      {
+        "bullet": "Catalonia recommends a stay in the aula d'acollida of no more than two years",
+        "url": "https://projectes.xtec.cat/acollidasuport/wp-content/uploads/usu2169/2024/09/Aules-dacollida.-Orientacions-per-a-la-gestio-i-lorganitzacio_Setembre-2025.pdf",
+        "quote": "El temps d’estada a l’aula d’acollida és limitat (es recomana que no superi els 2 anys)"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ley Orgánica 2/2006 de Educación, texto consolidado tras la LOMLOE — arts. 78 y 79 on late incorporation; art. 79.2 requires the specific programme to run simultaneously with schooling in the ordinary group, keyed to the pupil's level and progress",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899"
+      },
+      {
+        "label": "Andalucía: Orden de 15 de enero de 2007, por la que se regulan las medidas y actuaciones para la atención del alumnado inmigrante y, especialmente, las Aulas Temporales de Adaptación Lingüística — arts. 7 y 8, incl. art. 8.5 allowing two courses on Inspección authorisation in four listed circumstances (BOJA núm. 33, 14.02.2007)",
+        "url": "https://www.juntadeandalucia.es/boja/2007/33/1"
+      },
+      {
+        "label": "Catalunya: Aules d'acollida. Orientacions per a la gestió i l'organització, setembre 2025 — Servei de Suports i Recursos Lingüístics, Departament d'Educació i Formació Professional; aula d'acollida addressed to pupils incorporated within 24 months, exceptionally 36",
+        "url": "https://projectes.xtec.cat/acollidasuport/wp-content/uploads/usu2169/2024/09/Aules-dacollida.-Orientacions-per-a-la-gestio-i-lorganitzacio_Setembre-2025.pdf"
+      },
+      {
+        "label": "Comunidad de Madrid: Aulas de Enlace — objetivos, destinatarios, funcionamiento y permanencia (Dirección de Área Territorial, EducaMadrid)",
+        "url": "https://www.educa2.madrid.org/web/direcciones-de-area/dat-norte/-/visor/aulas-de-enlace"
+      }
+    ]
+  }
+}

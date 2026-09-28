@@ -9345,7 +9345,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "'Alumnado de incorporación tardía' — pupils enrolling after their year's normal start date\nIdentified by initial Spanish assessment and grade-level academic gap\nLOMLOE, Ley Orgánica 3/2020, Título II, Arts. 78–79\nRegional decrees implement it — for example Madrid's Decreto 23/2023, Arts. 17–18",
-  "removalCriteria": "Individual 'recovery plans' mainstreaming pupils into age-appropriate coursework\nSet by regional rules, not specified nationally\nNo fixed national timeline or test — 'as soon as possible'",
+  "removalCriteria": "Set by regional rules, not specified nationally\nAndalucia gives one school year, continuous assessment ending ATAL attendance sooner\nJefatura de estudios decides with the ATAL teacher, the tutor and the orientation staff\nMadrid caps the aula de enlace at nine months of effective attendance\nMadrid offers the aula de enlace once only during compulsory schooling",
   "newcomerProportion": [
    {
     "year": "2023-2024",
@@ -9381,8 +9381,10 @@
    ],
    "removalCriteria": [
     1,
+    1,
     2,
-    3
+    3,
+    4
    ],
    "achievementGap": [
     1,
@@ -9423,8 +9425,12 @@
     "rule_locus": "national statute"
    },
    "removalCriteria": {
-    "decided_by": "regional government",
-    "rule_locus": "national framework, sub-national rules"
+    "decided_by": "school",
+    "rule_locus": "national framework, sub-national rules",
+    "exit_mechanism": [
+     "fixed period",
+     "proficiency judgement"
+    ]
    },
    "policyHistory": [
     {
@@ -17772,7 +17778,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "'Alunni con cittadinanza non italiana' — pupils without Italian citizenship\nSpecific attention to 'neo-arrivati', the newly arrived\nNo single national statutory definition with age or time cutoffs\n2023/24: Italian-L2 teachers moved to primaries where newly enrolled exceed 20% of a class",
-  "removalCriteria": "Left to school-level personalisation plans, not centrally codified\nNo fixed national timeline found",
+  "removalCriteria": "Left to school-level personalisation plans, not centrally codified\nDPR 394/1999 has the collegio dei docenti set the adaptation by each pupil's competence level\nThe 2014 linee guida treat the language interventions as transitory, a PDP only exceptionally\nThe 2014 linee guida recommend 8-10 weekly hours of Italian L2 for three to four months\nThe 2022 orientamenti ask support to run at least the first two years after entry",
   "newcomerProportion": [
    {
     "year": "2022",
@@ -17811,7 +17817,10 @@
     1
    ],
    "removalCriteria": [
+    1,
     2,
+    1,
+    3,
     3
    ],
    "achievementGap": [
