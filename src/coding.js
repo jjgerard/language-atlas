@@ -2244,6 +2244,21 @@ const COLUMN_BANDS = {
     cuts: [12, 24, 36],
     labels: ['a year or less', 'one to two years', 'two to three years', 'more than three years'],
   },
+  // A YEAR IS A MEASUREMENT AND A KEY IS NOT A LIST. 260 instrument years run
+  // from 1964 to 2026, and drawn one value per year the map legend opened
+  // "1964 1, 1966 2, 1970 1, 1971 1, 1972 1 ..." and then gave up with "41 more
+  // values" -- a palette of six trying to carry sixty-three, and a reader
+  // learning nothing except that some laws are old.
+  //
+  // Eras rather than decades, because the decades are not what the column is
+  // about: the question is WHEN a system wrote its entitlement down, and the
+  // answer has a shape. 17 before 1990, 37 in the 1990s, 67 in the 2000s, 115
+  // in the 2010s, 24 since 2020. Each bin holds enough to colour and the ramp
+  // reads as what it is, a wave of legislating that crests in the 2010s.
+  instrument_year: {
+    cuts: [1989, 1999, 2009, 2019],
+    labels: ['before 1990', 'the 1990s', 'the 2000s', 'the 2010s', '2020 onwards'],
+  },
 };
 
 // TWO NEGATIVES THAT LOOK ALIKE AND ARE NOT.
