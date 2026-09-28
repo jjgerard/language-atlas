@@ -1,0 +1,17 @@
+{
+  "US|Missouri": { "removalCriteria": {
+    "exit_mechanism": ["test"], "decided_by": "school",
+    "rule_locus": "national framework, sub-national rules" } },
+  "US|North Dakota": { "removalCriteria": {
+    "exit_mechanism": ["test"], "decided_by": "school",
+    "rule_locus": "national framework, sub-national rules" } },
+  "US|Virginia": { "removalCriteria": {
+    "exit_mechanism": ["test"], "decided_by": "school",
+    "rule_locus": "national framework, sub-national rules" } },
+  "BG|Bulgaria": { "removalCriteria": {
+    "exit_mechanism": ["fixed period"], "exit_period_months": 12,
+    "decided_by": "school", "rule_locus": "national statute" } },
+  "MK|North Macedonia": { "removalCriteria": {
+    "exit_mechanism": ["fixed period"], "exit_period_months": 12,
+    "decided_by": "national authority", "rule_locus": "national statute" } }
+}

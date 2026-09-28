@@ -1,0 +1,53 @@
+{
+ "AU|Western Australia": {
+  "fields": {
+   "removalCriteria": [
+    "Year 12 EAL/D eligibility needs not more than seven years of English-medium education",
+    "Past seven years a pupil still qualifies on restricted knowledge of academic English",
+    "Schools determine that eligibility and the principal endorses the Year 12 declaration",
+    "A student may ask the Authority to review the school's eligibility declaration",
+    "Funding in 2018 ran two years primary and three secondary, set by time not proficiency"
+   ]
+  },
+  "slots": {
+   "removalCriteria": [3, 1, 2, 4, 3]
+  },
+  "evidence": [
+   {
+    "bullet": "Year 12 EAL/D eligibility needs not more than seven years of English-medium education",
+    "url": "https://www.scsa.wa.edu.au/__data/assets/pdf_file/0005/584060/English-as-an-Additional-Language-or-Dialect-EALD_Eligibility-guide-and-allocation-of-extra-time-for-the-OLNA.PDF",
+    "quote": "not more than seven years of education where English is the main medium of course delivery immediately prior to entering their final year of school"
+   },
+   {
+    "bullet": "Past seven years a pupil still qualifies on restricted knowledge of academic English",
+    "url": "https://www.scsa.wa.edu.au/__data/assets/pdf_file/0005/584060/English-as-an-Additional-Language-or-Dialect-EALD_Eligibility-guide-and-allocation-of-extra-time-for-the-OLNA.PDF",
+    "quote": "more than seven years where English is the main medium of course delivery but limited exposure/restricted knowledge of academic English"
+   },
+   {
+    "bullet": "Schools determine that eligibility and the principal endorses the Year 12 declaration",
+    "url": "https://www.scsa.wa.edu.au/__data/assets/pdf_file/0005/584060/English-as-an-Additional-Language-or-Dialect-EALD_Eligibility-guide-and-allocation-of-extra-time-for-the-OLNA.PDF",
+    "quote": "The School Curriculum and Standards Authority (the Authority) requires all schools to determine the eligibility of a student for enrolment in the EAL/D ATAR Year 12 course"
+   },
+   {
+    "bullet": "A student may ask the Authority to review the school's eligibility declaration",
+    "url": "https://www.scsa.wa.edu.au/__data/assets/pdf_file/0005/584060/English-as-an-Additional-Language-or-Dialect-EALD_Eligibility-guide-and-allocation-of-extra-time-for-the-OLNA.PDF",
+    "quote": "Where a student requests a review by the Authority, schools should allow approximately five working days during March and August"
+   },
+   {
+    "bullet": "Funding in 2018 ran two years primary and three secondary, set by time not proficiency",
+    "url": "https://www.education.wa.edu.au/dl/po03l6",
+    "quote": "be within a two-year time allocation for primary school aged students or three years for secondary students"
+   }
+  ],
+  "sources": [
+   {
+    "label": "School Curriculum and Standards Authority (WA), 'English as an Additional Language or Dialect (EAL/D): Eligibility guide and allocation of extra time to complete the OLNA', for use from 2023 - eligibility for the Year 12 EAL/D courses, principal endorsement and Authority review",
+    "url": "https://www.scsa.wa.edu.au/__data/assets/pdf_file/0005/584060/English-as-an-Additional-Language-or-Dialect-EALD_Eligibility-guide-and-allocation-of-extra-time-for-the-OLNA.PDF"
+   },
+   {
+    "label": "Nous Group and CIRES for the WA Department of Education, 'Evaluation of the Student-Centred Funding Model', 29 August 2018, s. 6.3.8 - the four EAL funding eligibility conditions as they stood before the 2020 methodology change",
+    "url": "https://www.education.wa.edu.au/dl/po03l6"
+   }
+  ]
+ }
+}

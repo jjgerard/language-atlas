@@ -1,0 +1,43 @@
+{
+ "MK|North Macedonia": {
+  "fields": {
+   "removalCriteria": [
+    "Art 13(2): at least one year of Macedonian and subject catch-up for foreign and refugee pupils",
+    "Art 13(2): the Bureau draws up those programmes and the minister approves them",
+    "Art 12(6): for citizens' children returning from abroad the catch-up lasts at most one year",
+    "Art 12(6): the school writes that programme and the Bureau approves it"
+   ]
+  },
+  "slots": {
+   "removalCriteria": [3, 2, 3, 2]
+  },
+  "evidence": [
+   {
+    "bullet": "Art 13(2): at least one year of Macedonian and subject catch-up for foreign and refugee pupils",
+    "url": "https://sonk.org.mk/wp-content/uploads/2026/01/zakon-za-osnovnoto-obrazovanie-konsolidiran-tekst-izvor-ministerstvo-za-obrazovanie-i-nauka.pdf",
+    "quote": "во траење од најмалку една година врз основа на програми изготвени од Бирото, а одобрени од министерот"
+   },
+   {
+    "bullet": "Art 13(2): the Bureau draws up those programmes and the minister approves them",
+    "url": "https://sonk.org.mk/wp-content/uploads/2026/01/zakon-za-osnovnoto-obrazovanie-konsolidiran-tekst-izvor-ministerstvo-za-obrazovanie-i-nauka.pdf",
+    "quote": "врз основа на програми изготвени од Бирото, а одобрени од министерот"
+   },
+   {
+    "bullet": "Art 12(6): for citizens' children returning from abroad the catch-up lasts at most one year",
+    "url": "https://sonk.org.mk/wp-content/uploads/2026/01/zakon-za-osnovnoto-obrazovanie-konsolidiran-tekst-izvor-ministerstvo-za-obrazovanie-i-nauka.pdf",
+    "quote": "трае најмногу една година и се изведува според програма што ја изготвува училиштето, а ја одобрува Бирото"
+   },
+   {
+    "bullet": "Art 12(6): the school writes that programme and the Bureau approves it",
+    "url": "https://sonk.org.mk/wp-content/uploads/2026/01/zakon-za-osnovnoto-obrazovanie-konsolidiran-tekst-izvor-ministerstvo-za-obrazovanie-i-nauka.pdf",
+    "quote": "се изведува според програма што ја изготвува училиштето, а ја одобрува Бирото"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Закон за основното образование (consolidated text, Ministry-sourced), чл. 12 ст. 3-6 - children of North Macedonian citizens returning from abroad, instruction lasting at most one year on a school programme approved by the Bureau; чл. 13 ст. 2 - children with foreign or no citizenship, refugee, asylum-seeking and protected children, Macedonian and Cyrillic plus subject catch-up for at least one year on Bureau programmes approved by the minister",
+    "url": "https://sonk.org.mk/wp-content/uploads/2026/01/zakon-za-osnovnoto-obrazovanie-konsolidiran-tekst-izvor-ministerstvo-za-obrazovanie-i-nauka.pdf"
+   }
+  ]
+ }
+}

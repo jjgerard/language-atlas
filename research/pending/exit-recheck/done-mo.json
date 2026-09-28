@@ -1,0 +1,53 @@
+{
+ "US|Missouri": {
+  "fields": {
+   "removalCriteria": [
+    "Overall 4.7 on WIDA ACCESS is the state proficiency threshold for reclassification",
+    "At 4.7-6.0 the district must exit unless the EL Portfolio contradicts the score",
+    "Below 4.7 a pupil may still be reclassified on a body of grade-level evidence",
+    "Exit is conditional: two years of monitoring follow, with no ACCESS testing in them",
+    "A monitored pupil in difficulty can be re-entered and resumes annual ACCESS testing"
+   ]
+  },
+  "slots": {
+   "removalCriteria": [1, 2, 1, 3, 4]
+  },
+  "evidence": [
+   {
+    "bullet": "Overall 4.7 on WIDA ACCESS is the state proficiency threshold for reclassification",
+    "url": "https://dese.mo.gov/sites/g/files/zuston521/files/media/pdf/2026/06/OOCR_EL_IdentifyingReclassifyingEnglishLearners2026-Accessible.pdf",
+    "quote": "Missouri defines English proficiency as achieving a minimum overall score of 4.7 on the WIDA ACCESS"
+   },
+   {
+    "bullet": "At 4.7-6.0 the district must exit unless the EL Portfolio contradicts the score",
+    "url": "https://dese.mo.gov/sites/g/files/zuston521/files/media/pdf/2026/06/OOCR_EL_IdentifyingReclassifyingEnglishLearners2026-Accessible.pdf",
+    "quote": "The student must be exited barring compelling evidence in the EL Portfolio suggesting the student should remain in the LIEP"
+   },
+   {
+    "bullet": "Below 4.7 a pupil may still be reclassified on a body of grade-level evidence",
+    "url": "https://dese.mo.gov/sites/g/files/zuston521/files/media/pdf/2026/06/OOCR_EL_IdentifyingReclassifyingEnglishLearners2026-Accessible.pdf",
+    "quote": "Students with scores below 4.7 may be reclassified if the district has collected a sufficient body of evidence showing that the student can perform at grade level"
+   },
+   {
+    "bullet": "Exit is conditional: two years of monitoring follow, with no ACCESS testing in them",
+    "url": "https://dese.mo.gov/sites/g/files/zuston521/files/media/pdf/2026/06/OOCR_EL_IdentifyingReclassifyingEnglishLearners2026-Accessible.pdf",
+    "quote": "ESSA requires that reclassified ELs be monitored for two years following their exit from the LIEP"
+   },
+   {
+    "bullet": "A monitored pupil in difficulty can be re-entered and resumes annual ACCESS testing",
+    "url": "https://dese.mo.gov/sites/g/files/zuston521/files/media/pdf/2026/06/OOCR_EL_IdentifyingReclassifyingEnglishLearners2026-Accessible.pdf",
+    "quote": "students resume participation in all components of the program, including annual WIDA ACCESS testing, as if they had not exited"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Missouri Department of Elementary and Secondary Education, 'Identifying and Reclassifying English Learners: Guidance on Missouri's Entry and Exit Criteria' (revised May 2026) - Reclassification Criteria (p.7-8) and Guidelines for Monitoring (p.12)",
+    "url": "https://dese.mo.gov/sites/g/files/zuston521/files/media/pdf/2026/06/OOCR_EL_IdentifyingReclassifyingEnglishLearners2026-Accessible.pdf"
+   },
+   {
+    "label": "Missouri's ESSA Consolidated State Plan (2019), Title III section 1 'Entrance and Exit Procedures (ESEA section 3113(b)(2))' and Appendix C 'Entry & Exit Criteria Data for English Learners'",
+    "url": "https://dese.mo.gov/sites/g/files/zuston521/files/media/pdf/2020/07/qs-ESSA-MO-Consolidated-State-Plan-2019.pdf"
+   }
+  ]
+ }
+}

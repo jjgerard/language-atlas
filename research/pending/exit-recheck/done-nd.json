@@ -1,0 +1,53 @@
+{
+ "US|North Dakota": {
+  "fields": {
+   "removalCriteria": [
+    "Statewide exit cut: 3.5 in each domain and 5.0 composite on the annual ELP assessment",
+    "Districts use the annual ELP assessment scores to approve exit from the EL program",
+    "A district EL policy must use the statewide criteria and run the LIEP until they are met",
+    "A pupil with disabilities may exit if the EL and IEP teams find growth has plateaued",
+    "Two years of monitoring after attainment, and a caseload may be kept up to four"
+   ]
+  },
+  "slots": {
+   "removalCriteria": [1, 2, 1, 2, 3]
+  },
+  "evidence": [
+   {
+    "bullet": "Statewide exit cut: 3.5 in each domain and 5.0 composite on the annual ELP assessment",
+    "url": "https://www.nd.gov/dpi/sites/www/files/documents/Indian%20Education/English%20Learners/EL%20in%20ND%20ESSA%20plan.pdf",
+    "quote": "Cut scores are the same as the entrance criteria with a 3.5 in each domain and a 5.0 required for the composite proficiency level"
+   },
+   {
+    "bullet": "Districts use the annual ELP assessment scores to approve exit from the EL program",
+    "url": "https://www.nd.gov/dpi/sites/www/files/documents/Indian%20Education/English%20Learners/EL%20in%20ND%20ESSA%20plan.pdf",
+    "quote": "Districts must use the annual ELP assessment (currently ACCESS 2.0) proficiency level scores to approve exit from the EL Program"
+   },
+   {
+    "bullet": "A district EL policy must use the statewide criteria and run the LIEP until they are met",
+    "url": "https://www.nd.gov/dpi/sites/www/files/documents/Indian%20Education/English%20Learners/ADA%20-%2022-23%20Programming%20Guidance.pdf",
+    "quote": "The policy must assure the district utilizes the statewide identification criteria and procedures and upon identification, all EL students have access to a research-based language instructional education program (LIEP) within 30 days of the first day of enrollment until they meet the reclassification criteria"
+   },
+   {
+    "bullet": "A pupil with disabilities may exit if the EL and IEP teams find growth has plateaued",
+    "url": "https://www.nd.gov/dpi/sites/www/files/documents/Indian%20Education/English%20Learners/EL%20in%20ND%20ESSA%20plan.pdf",
+    "quote": "Districts may approve to exit a student with disabilities if the EL team and IEP team (as applicable) including parents or guardians determine the student has plateaued in"
+   },
+   {
+    "bullet": "Two years of monitoring after attainment, and a caseload may be kept up to four",
+    "url": "https://www.nd.gov/dpi/sites/www/files/documents/Indian%20Education/English%20Learners/EL%20in%20ND%20ESSA%20plan.pdf",
+    "quote": "North Dakota requires districts to monitor ELs for two years after attainment of English proficiency, but allows districts to keep ELs on their monitoring caseload for up to four years"
+   }
+  ],
+  "sources": [
+   {
+    "label": "North Dakota Department of Public Instruction, 'English Learners in the ND ESSA Plan' - Title III, Part A: standardized entrance and exit procedures under ESEA sec. 3113(b)(2), and the two-year post-attainment monitoring rule",
+    "url": "https://www.nd.gov/dpi/sites/www/files/documents/Indian%20Education/English%20Learners/EL%20in%20ND%20ESSA%20plan.pdf"
+   },
+   {
+    "label": "North Dakota Department of Public Instruction, 'Guidance on English Learner Programming' - required content of the district EL policy and plan",
+    "url": "https://www.nd.gov/dpi/sites/www/files/documents/Indian%20Education/English%20Learners/ADA%20-%2022-23%20Programming%20Guidance.pdf"
+   }
+  ]
+ }
+}

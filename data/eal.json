@@ -2063,7 +2063,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "Any pupil needing Standard Australian English support, overseas-arrived or Australian-born\nEAL/D Progress Map — Early Childhood, Middle Childhood and Secondary versions\nNo published numeric threshold or formal newcomer test was found",
-  "removalCriteria": "No exit or removal criteria published on the department pages reviewed",
+  "removalCriteria": "No exit or removal criteria published on the department pages reviewed\nYear 12 EAL/D eligibility needs not more than seven years of English-medium education\nPast seven years a pupil still qualifies on restricted knowledge of academic English\nSchools determine that eligibility and the principal endorses the Year 12 declaration\nA student may ask the Authority to review the school's eligibility declaration",
   "newcomerProportion": [],
   "achievementGap": "",
   "l2Support": "The Student-Centred Funding Model gives 'additional funding' for these children\nNo public document gives the eligibility test, per-pupil amount or staffing ratio\nThe funding page refers enquiries to an email address instead of publishing the formula",
@@ -2105,6 +2105,15 @@
     "for_whom": "not stated",
     "evidence_type": "policy"
    }
+  },
+  "slots": {
+   "removalCriteria": [
+    1,
+    1,
+    1,
+    2,
+    2
+   ]
   }
  },
  {
@@ -2795,7 +2804,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "Target groups set in law: children of migrants and of third-country nationals\nAlso EU/EEA/Swiss citizens' children, and ethnic minorities whose mother tongue is not Bulgarian\nFree Bulgarian-language support triggered by native language differing from Bulgarian\nNo single formal newcomer test found",
-  "removalCriteria": "No primary-law removal timeline located\nBulgarian-language support generally available for about 12 months (secondary sources)",
+  "removalCriteria": "Naredba 6 art 13(12): Bulgarian as a foreign language runs within 12 months\nArt 13(13): capped by stage, up to 180 lesson hours in the first upper secondary stage\nArt 13(14): given once for the stage of entry and not repeated at the next stage\nArt 13(1): the receiving school's director decides, on the coordinating team's opinion\nArt 13(17): at the end the teacher describes the results the child reached",
   "newcomerProportion": [
    {
     "year": "2018",
@@ -2844,7 +2853,10 @@
    ],
    "removalCriteria": [
     3,
-    3
+    3,
+    4,
+    2,
+    1
    ],
    "achievementGap": [
     1,
@@ -2886,10 +2898,11 @@
    },
    "removalCriteria": {
     "exit_mechanism": [
-     "not stated"
+     "fixed period"
     ],
-    "decided_by": "not stated",
-    "rule_locus": "not stated"
+    "decided_by": "school",
+    "rule_locus": "national statute",
+    "exit_period_months": 12
    },
    "policyHistory": [
     {
@@ -21083,7 +21096,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "Law for Primary Education, Art. 13 — foreign or stateless children\nEducation 'under the same circumstances as citizens'\nCovers refugees, asylum seekers, and subsidiary or temporary protection holders\nDiagnostic language testing at start of schooling targets pupils older than expected school age",
-  "removalCriteria": "Not explicit — a floor rather than a defined exit test\nRemedial Macedonian guaranteed for 'at least one school year'",
+  "removalCriteria": "Not explicit — a floor rather than a defined exit test\nArt 13(2): at least one year of Macedonian and subject catch-up for foreign and refugee pupils\nArt 13(2): the Bureau draws up those programmes and the minister approves them\nArt 12(6): for citizens' children returning from abroad the catch-up lasts at most one year\nArt 12(6): the school writes that programme and the Bureau approves it",
   "newcomerProportion": [
    {
     "year": "2015-2016",
@@ -21106,7 +21119,10 @@
    ],
    "removalCriteria": [
     1,
-    3
+    3,
+    2,
+    3,
+    2
    ],
    "achievementGap": [
     1,
@@ -21145,10 +21161,11 @@
    },
    "removalCriteria": {
     "exit_mechanism": [
-     "not stated"
+     "fixed period"
     ],
-    "decided_by": "not stated",
-    "rule_locus": "national statute"
+    "decided_by": "national authority",
+    "rule_locus": "national statute",
+    "exit_period_months": 12
    },
    "l1Support": {
     "form": "medium of instruction",
@@ -32309,7 +32326,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "Newcomer is defined as in the country under four months, grade 1 upward\nA Language Use Survey at enrolment is the screening trigger\nIdentification within 30 calendar days, 15 days for later enrolment",
-  "removalCriteria": "No current state exit threshold could be retrieved\nState reclassification pages served an empty shell and the linked file 404s",
+  "removalCriteria": "Overall 4.7 on WIDA ACCESS is the state proficiency threshold for reclassification\nAt 4.7-6.0 the district must exit unless the EL Portfolio contradicts the score\nBelow 4.7 a pupil may still be reclassified on a body of grade-level evidence\nExit is conditional: two years of monitoring follow, with no ACCESS testing in them\nA monitored pupil in difficulty can be re-entered and resumes annual ACCESS testing",
   "newcomerProportion": [],
   "achievementGap": "",
   "l2Support": "No state requirements on programme type or amount of support\nThe state defers to federal civil rights requirements",
@@ -32329,9 +32346,9 @@
    },
    "removalCriteria": {
     "exit_mechanism": [
-     "not stated"
+     "test"
     ],
-    "decided_by": "not stated",
+    "decided_by": "school",
     "rule_locus": "national framework, sub-national rules"
    },
    "l1Support": {
@@ -32352,6 +32369,15 @@
     "for_whom": "not stated",
     "evidence_type": "policy"
    }
+  },
+  "slots": {
+   "removalCriteria": [
+    1,
+    1,
+    1,
+    3,
+    4
+   ]
   }
  },
  {
@@ -33295,7 +33321,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "Qualifies for services below 5.0 overall or below 3.5 in any single domain\nA statewide survey or information form is on file for every pupil\nIdentification within 30 days of enrolment in a North Dakota school",
-  "removalCriteria": "No numerical exit threshold appears on any state page retrieved\nDistricts must set out exit procedures and criteria in their own plan",
+  "removalCriteria": "Statewide exit cut: 3.5 in each domain and 5.0 composite on the annual ELP assessment\nDistricts use the annual ELP assessment scores to approve exit from the EL program\nA district EL policy must use the statewide criteria and run the LIEP until they are met\nA pupil with disabilities may exit if the EL and IEP teams find growth has plateaued\nTwo years of monitoring after attainment, and a caseload may be kept up to four",
   "newcomerProportion": [],
   "achievementGap": "",
   "l2Support": "A research-based programme is required, but districts pick the model\nThe state advisory committee recommends 4-6 units daily for newcomers",
@@ -33320,10 +33346,10 @@
    },
    "removalCriteria": {
     "exit_mechanism": [
-     "not stated"
+     "test"
     ],
     "decided_by": "school",
-    "rule_locus": "institutional"
+    "rule_locus": "national framework, sub-national rules"
    },
    "policyHistory": [
     {
@@ -33354,6 +33380,15 @@
     "for_whom": "not stated",
     "evidence_type": "policy"
    }
+  },
+  "slots": {
+   "removalCriteria": [
+    1,
+    2,
+    2,
+    1,
+    3
+   ]
   }
  },
  {
@@ -34419,7 +34454,7 @@
   "inst": "",
   "source": "seed",
   "newcomerCriteria": "A screener overall below 4.5 indicates an English learner in grades 1-12\nThree federal questions asked verbatim of every enrolling pupil\nScreening and notification within 30 calendar days, 14 days mid-year",
-  "removalCriteria": "No current exit threshold: the state education department 403s every request\nThe 2026-27 guidance states identification criteria but no exit score\nAlternate Screener entrance and exit criteria await state board approval",
+  "removalCriteria": "Alternate Screener entrance and exit criteria await state board approval\nComposite 4.4 on ACCESS for ELLs 2.0 is the statewide EL exit criterion\nThe cut was set from the composite most consistent with passing the state reading test\nThe Board of Education adopted ACCESS for ELLs as the statewide proficiency assessment\nRead from a 2024 Internet Archive copy; ed.gov and doe.virginia.gov both 403",
   "newcomerProportion": [],
   "achievementGap": "",
   "l2Support": "All identified English learners other than parent refusals must be placed in services",
@@ -34439,9 +34474,9 @@
    },
    "removalCriteria": {
     "exit_mechanism": [
-     "not stated"
+     "test"
     ],
-    "decided_by": "not stated",
+    "decided_by": "school",
     "rule_locus": "national framework, sub-national rules"
    },
    "l1Support": {
@@ -34462,6 +34497,15 @@
     "for_whom": "not stated",
     "evidence_type": "policy"
    }
+  },
+  "slots": {
+   "removalCriteria": [
+    1,
+    1,
+    2,
+    1,
+    1
+   ]
   }
  },
  {

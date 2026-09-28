@@ -1,0 +1,43 @@
+{
+ "US|Virginia": {
+  "fields": {
+   "removalCriteria": [
+    "Composite 4.4 on ACCESS for ELLs 2.0 is the statewide EL exit criterion",
+    "The cut was set from the composite most consistent with passing the state reading test",
+    "The Board of Education adopted ACCESS for ELLs as the statewide proficiency assessment",
+    "Read from a 2024 Internet Archive copy; ed.gov and doe.virginia.gov both 403"
+   ]
+  },
+  "slots": {
+   "removalCriteria": [1, 1, 2, 1]
+  },
+  "evidence": [
+   {
+    "bullet": "Composite 4.4 on ACCESS for ELLs 2.0 is the statewide EL exit criterion",
+    "url": "https://web.archive.org/web/20240706101906/https://oese.ed.gov/files/2021/07/Virginia-Final-Consolidated-State-Plan-PDF_Redacted.pdf",
+    "quote": "indicated a composite score of 4.4, which was selected as Virginia"
+   },
+   {
+    "bullet": "The cut was set from the composite most consistent with passing the state reading test",
+    "url": "https://web.archive.org/web/20240706101906/https://oese.ed.gov/files/2021/07/Virginia-Final-Consolidated-State-Plan-PDF_Redacted.pdf",
+    "quote": "ACCESS for ELLs 2.0 data were used to identify the composite score that was most consistent with passing or failing the state reading assessment"
+   },
+   {
+    "bullet": "The Board of Education adopted ACCESS for ELLs as the statewide proficiency assessment",
+    "url": "https://web.archive.org/web/20240706101906/https://oese.ed.gov/files/2021/07/Virginia-Final-Consolidated-State-Plan-PDF_Redacted.pdf",
+    "quote": "In 2007, the Virginia Board of Education adopted the ACCESS for ELLs as the statewide"
+   },
+   {
+    "bullet": "Read from a 2024 Internet Archive copy; ed.gov and doe.virginia.gov both 403",
+    "url": "https://web.archive.org/web/20240706101906/https://oese.ed.gov/files/2021/07/Virginia-Final-Consolidated-State-Plan-PDF_Redacted.pdf",
+    "quote": "standardized, statewide entrance and exit procedures, including an assurance that all students who may be English learners are assessed for such status within 30 days of enrollment"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Virginia Final Consolidated State Plan (ESSA), Title III section 1 'Entrance and Exit Procedures (ESEA section 3113(b)(2))', Exit Criteria (p.57-58); 2024 Internet Archive copy of the oese.ed.gov file, which now 403s as does doe.virginia.gov",
+    "url": "https://web.archive.org/web/20240706101906/https://oese.ed.gov/files/2021/07/Virginia-Final-Consolidated-State-Plan-PDF_Redacted.pdf"
+   }
+  ]
+ }
+}
