@@ -2351,6 +2351,68 @@ const VALUE_LABELS_BY_COLUMN = {
 };
 
 /** What to show a reader for a coded value. The stored string is unchanged. */
+/* "NOT STATED" IS NOT ONE FACT, and a single label made it look like one.
+ *
+ * 79 columns carry the value and it means something different on every one:
+ * on `decider` the entry does not say WHO decides, on `rule_locus` it does not
+ * say WHERE the rule is made, on `evidence_type` it does not say WHAT KIND OF
+ * SOURCE the entry rests on. Shown as "not said in the entry" on all 79, a
+ * reader met the same row in every key and learned nothing from it about the
+ * question they had actually chosen.
+ *
+ * So the label is DERIVED from the column's own question rather than written
+ * out 79 times -- a hand-written table would drift from COLUMN_LABELS the
+ * first time one of them was reworded, and this file has already had one
+ * gloss go stale against its own data today. `who decides` becomes "who
+ * decides — not said".
+ *
+ * Two kinds of column need writing by hand anyway, and they are in the table
+ * below. Some questions are phrased as yes/no and read badly with the suffix
+ * ("is there training — not said"), so they take a `whether` form. And some
+ * `not stated` glosses carry a PRECONDITION -- the entry establishes one thing
+ * and is silent on the next -- which is a stronger statement than plain
+ * silence and the label should say so: on `standing.source` a standing IS
+ * described and no instrument is named for it; on `terminology.label` a term
+ * exists and its family is unclear; on `assessments.bilingual_fit` the
+ * instrument IS named and nothing is said about bilingual children.
+ */
+const NOT_STATED_LABELS = {
+  // a precondition holds and the entry stops short of the question
+  'standing.source': 'a standing, with no instrument named for it',
+  'terminology.label': 'a term exists, its family unclear',
+  'newcomerCriteria.triggers': 'a category exists, what puts a pupil in it not said',
+  'legalEntitlement.duty_type': 'an entitlement, with nobody named to deliver it',
+  'assessments.bilingual_fit': 'the instrument is named, its fit for bilingual children not said',
+  'identificationCriteria.threshold_basis': 'identification happens, on what basis not said',
+  'funding.funders': 'provision described, who pays not said',
+  'serviceModel.sectors': 'provision described, who carries it not said',
+  // yes/no questions, which read badly with the suffix
+  'materials.curriculum': 'whether there is a curriculum not said',
+  'materials.materials': 'whether materials exist not said',
+  'l3Support.requirement': 'whether a language is required not said',
+  'l3Support.second_language': 'whether a second language is required not said',
+  'workforce.training': 'whether anyone is trained here not said',
+  'localTerm.minority_framing': 'whether it is framed as a minority language not said',
+  'multilingualProvision.local_norms': 'whether local norms exist not said',
+  'bilingualEducationNotes.provision': 'whether such provision exists not said',
+  'taughtAsSubject.status': 'whether it is taught not said',
+  'achievementGap.measure': 'whether anything was measured not said',
+};
+
+/* Fill VALUE_LABELS_BY_COLUMN with a derived `not stated` for every column
+ * that has one, leaving any hand-written entry alone. Done once at load, so
+ * catalog.js ships the resolved table and no page has to know the rule. */
+for (const [fieldKey, scheme] of Object.entries(SCHEMES)) {
+  const field = fieldKey.split('.')[1];
+  for (const [col, def] of Object.entries(scheme.columns || {})) {
+    if (!def || typeof def !== 'object' || !('not stated' in def)) continue;
+    const key = field + '.' + col;
+    const row = VALUE_LABELS_BY_COLUMN[key] || (VALUE_LABELS_BY_COLUMN[key] = {});
+    if (row['not stated']) continue;                 // hand-written wins
+    row['not stated'] = NOT_STATED_LABELS[key] || (columnLabel(field, col) + ' \u2014 not said');
+  }
+}
+
 function valueLabel(v, fieldKey, col) {
   const byCol = fieldKey && col && VALUE_LABELS_BY_COLUMN[fieldKey + '.' + col];
   return (byCol && byCol[v]) || VALUE_LABELS[v] || String(v == null ? '' : v);
