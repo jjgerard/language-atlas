@@ -1145,6 +1145,23 @@ const ABSENCE_LABEL = {
   mediumOfInstruction: 'Not a medium here',
   taughtAsSubject: 'Not taught as a subject here',
 };
+/* WHAT "NOT APPLICABLE" ACTUALLY MEANS, per field. The generic words say only
+   that the question does not apply and leave a reader to guess why, and the
+   reason is the same in every one of the entries that carries it. All 114
+   `Not applicable` entries on eal.removalCriteria say, in one wording or
+   another, that there is no designation to be removed FROM -- "no newcomer or
+   additional-language designation exists to exit from", "no designated cohort
+   exists", "provision runs as universal mainstreaming, not as a learner
+   designation". That nests exactly inside the newcomerCriteria absences, 114
+   of 114, with no exceptions.
+   So this is a CONDITIONAL field: it presupposes an answer to another one.
+   Where that is true the row should say it. */
+const NA_LABEL = {
+  removalCriteria: 'No designation to exit from',
+  dischargeCriteria: 'No designation to discharge from',
+};
+function naLabel(fieldKey) { return NA_LABEL[fieldKey] || 'Not applicable here'; }
+
 function absenceLabel(fieldKey) {
   if (ABSENCE_LABEL[fieldKey]) return ABSENCE_LABEL[fieldKey];
   const f = (domain().fields || []).find(x => x.k === fieldKey);
@@ -2534,7 +2551,7 @@ function codedTipHTML(u, terr, via, fill) {
     : isAbsent(u, CODED.key) ? 'Recorded as absent'
     : isUnset(u, CODED.key) ? 'Coded, and no value fitted'
     : fs === 'looked' ? 'Looked, found nothing'
-    : fs === 'na' ? 'Not applicable here'
+    : fs === 'na' ? naLabel(CODED.key ? CODED.key.split('.')[0] : '')
     : fs === 'none' ? 'Nothing recorded'
     : 'Recorded, not yet coded';
 
@@ -3597,7 +3614,8 @@ function paintCatLegend() {
     >${sw('url(#uncoded)')}<span>Text here, not yet coded</span><span class="n">${tally.has}</span></div>`);
   if (tally.unset) rows.push(`<div class="cl" disabled title="somebody read it and none of the values above was true of it. Sometimes that is a gap in the vocabulary; sometimes the entry is a note about sourcing rather than policy, and belongs in a different state"
     >${sw('url(#uncoded)')}<span>Coded, no value fits</span><span class="n">${tally.unset}</span></div>`);
-  if (tally.na) rows.push(`<div class="cl" disabled>${sw('url(#na)')}<span>Not applicable here</span><span class="n">${tally.na}</span></div>`);
+  if (tally.na) rows.push(`<div class="cl" disabled title="the question presupposes something this system does not have, so it cannot be answered here — not a gap and not a finding about how support ends"
+    >${sw('url(#na)')}<span>${esc(naLabel(fk0))}</span><span class="n">${tally.na}</span></div>`);
   if (tally.none) rows.push(`<div class="cl" disabled title="the field is empty: nobody has researched this place on this question, and a fill wave is what reaches it"
     >${sw('var(--nodata)')}<span>Not looked up yet</span><span class="n">${tally.none}</span></div>`);
   // The map answers "who does what"; the table answers "what exactly does each

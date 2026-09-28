@@ -2245,6 +2245,14 @@ const VALUE_LABELS = {
   // stored value is unchanged; only what a reader is shown moves. Safe as a
   // global entry because `functional` occurs in exactly one vocabulary.
   functional: 'functional description (no single term)',
+  // Shown as plain "national" on the maintainer's call. The stored value keeps
+  // the qualifier and so does the gloss, because what it records is real --
+  // a sector plan or strategy that states a rule without binding anyone, which
+  // is why Mali's PRODEC 2 reads "a technique still to be developed, not a
+  // rule in force". 17 cells carry it, 9 of them dld.identificationCriteria.
+  // The cost of the shorter label is that a reader can no longer tell those 17
+  // from the binding national values beside them in the key.
+  'national, non-binding': 'national',
 };
 
 /** What to show a reader for a coded value. The stored string is unchanged. */
