@@ -513,6 +513,10 @@
    {
     "label": "UNESCO GEM Report PEER, Antigua and Barbuda — INCLUSION profile (last modified 01/09/2021; 'Validated by the country: No')",
     "url": "https://education-profiles.org/latin-america-and-the-caribbean/antigua-and-barbuda/~inclusion"
+   },
+   {
+    "label": "Antigua and Barbuda, The Education Act, 2008 (No. 21 of 2008), s. 2 interpretation and ss. 83-85 — Laws of Antigua and Barbuda",
+    "url": "https://laws.gov.ag/wp-content/uploads/2019/02/a2008-21.pdf"
    }
   ],
   "supportLinks": [],
@@ -530,8 +534,8 @@
   "legalEntitlement": "Director of Education \"shall provide special education programmes\", s.83(1)\nEntitlement is to a programme, not to therapy of any named kind\nAct contains no definition of inclusive education\nParent, student or Board appeal to the Education Appeal Tribunal in 14 days (s.85(1))\nParents must be told of that right of appeal (Education Act 2008 s.84(1)(g))\nThe student stays in the s.84 programme until the Tribunal decides (s.85(3))",
   "funding": "IEP costs are \"apportioned between\" the parent or adult student and the Ministry, s.83(4)\nManner of apportionment is left to regulations under the Act",
   "workforce": "The Act names no therapist, psychologist or other support professional\nSchool-based team is picked by the principal \"on the basis of their expertise\", s.84(5)\n2013 SEN policy states \"All teachers are teachers of children with special educational needs\"",
-  "dischargeCriteria": "Not established from the sources consulted for this entry — the Act sets no exit or discharge rule for a special education programme. If you work in this system, this is exactly the field to fill in.",
-  "outcomesEvidence": "Not established from the sources consulted for this entry — no outcome data on communication or language support located. If you work in this system, this is exactly the field to fill in.",
+  "dischargeCriteria": "Who is in the programme is decided by the principal with professional staff and parents\nThe duty runs only for students of compulsory school age\nThat ceiling is not in the Act: the Minister prescribes the ages",
+  "outcomesEvidence": "Progress of individual children with special needs is observed and assessed, not published\nIt rests on the 2013 special education needs policy; no aggregate result was found",
   "identifiedPrevalence": [],
   "policyHistory": [
    {
@@ -686,6 +690,17 @@
     "label": "communication needs",
     "standing": "in statute"
    }
+  },
+  "slots": {
+   "dischargeCriteria": [
+    2,
+    4,
+    4
+   ],
+   "outcomesEvidence": [
+    1,
+    2
+   ]
   }
  },
  {
@@ -1962,6 +1977,14 @@
    {
     "label": "Speech Pathology Australia — submission to the NDIS Review (2022)",
     "url": "https://www.speechpathologyaustralia.org.au/Common/Uploaded%20files/Smart%20Suite/Smart%20Library/5a86c970-7f79-477e-8796-5677095df3a3/SPA%20submission%20NDIS%20review%2020221231.pdf"
+   },
+   {
+    "label": "Australian Early Development Census, AEDC National Report 2024 (Commonwealth of Australia)",
+    "url": "https://www.aedc.gov.au/docs/default-source/default-document-library/aedc_national-report-2024_da7-409a37b9d-95ce-43e7-af00-51aa604cf0b3.pdf?sfvrsn=b56015ba_1"
+   },
+   {
+    "label": "Australian Early Development Census, 2024 AEDC National Report resource page",
+    "url": "https://www.aedc.gov.au/resources/detail/2024-aedc-national-report"
    }
   ],
   "supportLinks": [
@@ -1989,7 +2012,7 @@
   "funding": "Mixed public and private, with the gaps carried by families\nNDIS packages for those who get access; state education budgets where SLPs exist\nMedicare subsidy capped at five sessions a year\nOtherwise private fees",
   "workforce": "Self-regulating through Speech Pathology Australia, not registered under AHPRA\nThe 2014 Senate inquiry found supply gaps, long public waits, rural and remote shortfalls\nSPA 2023: inequitably distributed, supply not meeting estimated population need\nGraduates up 27%, first-year enrolments up 25%; 98% of SPA members are women",
   "dischargeCriteria": "",
-  "outcomesEvidence": "Not established from the sources consulted for this entry — no national outcome reporting for DLD as a distinct category was identified; because DLD does not map to a funding category, it is largely invisible in administrative data. If you work in this system, this is exactly the field to fill in.",
+  "outcomesEvidence": "A developmental domain at school entry, not a DLD count: language and cognitive skills\nTeacher-reported; the 2024 round covered 288,483 children in 7,368 schools\n7.7% were developmentally vulnerable on language and cognitive skills in 2024\nVulnerability rose on all five domains in that round\nRepeated nationally every three years since 2009, 2024 being the sixth collection",
   "identifiedPrevalence": [
    {
     "year": "2026",
@@ -2048,6 +2071,13 @@
     3,
     4,
     4,
+    4
+   ],
+   "outcomesEvidence": [
+    1,
+    2,
+    3,
+    3,
     4
    ]
   },
@@ -4055,6 +4085,10 @@
    {
     "label": "UNESCO GEM Report PEER, Barbados — INCLUSION profile (last modified 31/08/2021; 'Validated by the country: No')",
     "url": "https://education-profiles.org/latin-america-and-the-caribbean/barbados/~inclusion"
+   },
+   {
+    "label": "Barbados, Education Act, Cap. 41 (L.R.O. 1997), s. 53 — Laws of Barbados, Parliament of Barbados",
+    "url": "https://barbadosparliament-laws.com/uploads/Barbados-cs/Education.pdf"
    }
   ],
   "supportLinks": [],
@@ -4072,7 +4106,7 @@
   "legalEntitlement": "The Constitution does not enshrine a right to education\nThe Act has no provisions for inclusive education\nMinister's duty under Art. 53 is permissive, not mandatory\nA parent aggrieved by refusal of admission appeals in writing to the Minister (reg. 28(2))\nRemoval to a special institution needs parental consent and medical advice (reg. 43(2))",
   "funding": "Financial assistance to private special schools was significantly increased in the 1990s\nNo dedicated special education budget line was located",
   "workforce": "The Act has no provisions for teacher training for teaching persons with disabilities\nSpecial education teacher training was intensified under the 2002-12 plan\nPlan aimed to expand recruitment of learning needs coordinators",
-  "dischargeCriteria": "Not established from the sources consulted for this entry — no exit or discharge rule located. If you work in this system, this is exactly the field to fill in.",
+  "dischargeCriteria": "The Minister decides, on such investigations as the Minister considers necessary\nThe power reaches only children of compulsory school age",
   "outcomesEvidence": "\"There is no evidence of indicators or reporting mechanisms on inclusive education\"",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -4224,6 +4258,12 @@
     "label": "not applicable",
     "standing": "in statute"
    }
+  },
+  "slots": {
+   "dischargeCriteria": [
+    2,
+    4
+   ]
   }
  },
  {
@@ -5928,6 +5968,10 @@
    {
     "label": "UNESCO GEM Report PEER, Bahamas — INCLUSION profile (last modified 31/08/2021; 'Validated by the country: No')",
     "url": "https://education-profiles.org/latin-america-and-the-caribbean/bahamas/~inclusion"
+   },
+   {
+    "label": "The Bahamas, Education Act, 2026 (No. 10 of 2026), ss. 35, 37, 38, 40 and 45 — Laws of The Bahamas (Principal legislation register). Date of Assent 23 March 2026, published by authority Nassau 25 March 2026. The Act carries NO commencement section: s.1 is the short title alone and the arrangement of sections runs 1 Short title, 2 Interpretation, 3 Application, 4 Purposes. Parts of the PDF carry a doubled-character text layer",
+    "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/2026/2026-0010/2026-0010_1.pdf"
    }
   ],
   "supportLinks": [],
@@ -5943,9 +5987,9 @@
   "referralPathway": "Department of Education requests the medical examination in writing, Art. 21.1\nSpecial Services Unit maintains inter-agency relationships for integrated services",
   "serviceModel": "Special Services Unit covers speech screening, not speech therapy\nMarjorie Davis Institute for Special Education opened 2015 for diagnostic services\nUnit also handles diagnosis and rehabilitation of learning and behavioural difficulties\nAdmission to a regular school may be REFUSED where facilities are unavailable, Art. 20.2",
   "legalEntitlement": "Entitlement is to special schools or \"special education treatment\", Art. 12.2(c)\n2014 Act provides for \"alternative communication means and formats\", Art. 33.2\nArt. 20.2 allows refusal of admission if peers' learning would be affected",
-  "funding": "Not established from the sources consulted for this entry — no funding provision for language or communication support located. If you work in this system, this is exactly the field to fill in.",
+  "funding": "Funding is for schooling generally: a child of compulsory age gets free public education\nFree means a waiver of tuition fees only, not textbooks, uniforms, supplies or transport\nTextbooks and other essential resources are discretionary, subject to available resources",
   "workforce": "Named teams are special education teachers, psychologists, counsellors and social workers\nNo therapist of any kind appears in the named service-provider list\n2014 Act makes special education a compulsory part of teacher training, Art. 30(b)",
-  "dischargeCriteria": "Not established from the sources consulted for this entry — no exit or discharge rule located. If you work in this system, this is exactly the field to fill in.",
+  "dischargeCriteria": "What ends attendance is a determination that a child cannot be educated at school\nThe Minister decides, on a medical officer's report and reports on the child's ability\nAt the far end the Minister may approve alternative graduation requirements",
   "outcomesEvidence": "Not found: no outcome data on communication support located\nEMIS was still being strengthened across 14 districts as of 2016",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -6115,6 +6159,18 @@
     "label": "communication needs",
     "standing": "in statute"
    }
+  },
+  "slots": {
+   "funding": [
+    1,
+    3,
+    1
+   ],
+   "dischargeCriteria": [
+    1,
+    2,
+    1
+   ]
   }
  },
  {
@@ -13092,7 +13148,7 @@
   "source": "seed",
   "terminology": "Umbrella category is Necesidades Educativas Especiales (NEE), not a language-disorder label\nSpecial education framed as a system of institutions, resources and professional supports\n\"Logopeda\" names a profession in Cuba, never a diagnostic category",
   "identificationCriteria": "CDO psychopedagogical diagnosis is the ONLY recognised basis for special education placement\nDiagnosis issued by a six-specialist multidisciplinary team\nApproach is explicitly psychopedagogical rather than medical",
-  "assessments": "Not established from the sources consulted for this entry — no instrument named in the retrieved source. If you work in this system, this is exactly the field to fill in.",
+  "assessments": "No instrument is named: assessment runs through the Centros de Orientacion y Diagnostico\n203 such centres across 168 municipios, staffed by 1,200 specialists\nEach centre's team is six specialists, one of them a logopeda\nThe team, working psychopedagogically, sets each child's educational needs",
   "multilingualProvision": "Not found: no minority language of instruction or home-language assessment rule located\nCuban Sign Language interpreters are named among specialist staff",
   "referralPathway": "203 Centros de Diagnóstico y Orientación across 168 municipios\nAbout 1,200 specialists staff them\nSame page names them both \"Orientación y Diagnóstico\" and \"Diagnóstico y Orientación\"",
   "serviceModel": "Special schools are non-compulsory and act as resource centres\nA logopeda sits on every CDO multidisciplinary team of six specialists\n608 itinerant teachers serve 1,651 children with NEE\nClass size in special education does not exceed 12 pupils per group",
@@ -13322,6 +13378,14 @@
     "label": "not applicable",
     "standing": "in statute"
    }
+  },
+  "slots": {
+   "assessments": [
+    1,
+    1,
+    1,
+    4
+   ]
   }
  },
  {
@@ -13459,7 +13523,7 @@
   "identificationCriteria": "A pupil is referred to speciaal onderwijs only on the basis of an onderzoek\nPart of the onderzoek is a test by specialists, carried out by private psychologists\nWith no plaatsingscommissie, parents apply and the bevoegd gezag decides admission\nThe Inspectorate finds the official referral commission and its procedures unclear",
   "assessments": "",
   "multilingualProvision": "There are no guidelines on language of instruction for special education\nWithout them curriculum and the use of teaching time cannot be checked\nInstructietaal is listed among what policy and law must still develop for special schools",
-  "referralPathway": "Not established from the sources consulted. The Inspectorate's Onderwijsverslag 2016-2017 records that an official referral commission for special education, and the procedures around it, are not clear, and that supervision of that commission happens only indirectly, through checking the pupil files held at the schools.",
+  "referralPathway": "Signalling happens at the school, by the teacher and/or the head of school\nReferral to special education runs only on an investigation by a placement commission\nThe Inspectorate records an official referral commission and its procedures are not clear\nThe investigation includes a test by specialists, carried out by private psychologists\nFor want of a placement commission, parents enrol the child at the school themselves",
   "serviceModel": "In 2016-17 speciaal onderwijs had 14 schools, three lom and four mlk\nIn 2016-17 one school covered esm together with doven en slechthorenden\nLogopedisten are named among the deskundigen in leerlingenzorg\nInspectorate counted eight logopedisten in special schools in 2016-2017",
   "legalEntitlement": "Curacao's Inspectorate cites the Landsverordening funderend onderwijs as the law in force\nArt 1 defines a speciaal funderend onderwijs school by the need for specialist provision\nArt 20(3): referral to such a school only follows an onderzoek by a plaatsingscommissie\nArt 20(2) bars refusing admission on a pupil's language background or development level",
   "funding": "31,149 pupils were taught in schools subsidised through the V&V-stelsel in 2016-17\nThe onderwijsraad, which advises on funding of schooling and pupil care, is not operational",
@@ -13529,6 +13593,15 @@
     "label": "language development disorder",
     "standing": "in policy or an official list"
    }
+  },
+  "slots": {
+   "referralPathway": [
+    1,
+    2,
+    2,
+    4,
+    4
+   ]
   }
  },
  {
@@ -21687,6 +21760,10 @@
    {
     "label": "UNESCO GEM Report PEER, Grenada — INCLUSION profile (last modified 25/08/2021; 'Validated by the country: No')",
     "url": "https://education-profiles.org/latin-america-and-the-caribbean/grenada/~inclusion"
+   },
+   {
+    "label": "Grenada, Education Act, Cap. 86, s. 2 interpretation and ss. 114-115 — Parliament of Grenada",
+    "url": "https://grenadaparliament.gd/wp-content/uploads/2021/08/Cap86-EDUCATION-ACT.pdf"
    }
   ],
   "supportLinks": [],
@@ -21704,7 +21781,7 @@
   "legalEntitlement": "Education Act 1976 Art. 14 gave a right to education appropriate to needs\nNo law explicitly prohibits discrimination against persons with disabilities\nCRPD ratified 2014 but its provisions were not yet enacted domestically",
   "funding": "Special education took 1.5% of the education budget in 2012-13\nEducation itself took 12.4% of national recurrent and capital budgets in 2012-13\nEducation's share fell to 10% in 2016",
   "workforce": "Government \"has struggled with improving the shortage of qualified teachers for decades\"\nNo specific measure for teacher training on inclusive education\nNo staffing number located for speech and language therapy",
-  "dischargeCriteria": "Not established from the sources consulted for this entry — no exit or discharge rule located. If you work in this system, this is exactly the field to fill in.",
+  "dischargeCriteria": "The principal determines the need, in consultation with professional staff and the parent\nThe duty is for compulsory school age, which the Act fixes at five to sixteen inclusive\nIt reaches past that ceiling for a child beyond the age who is still a dependant",
   "outcomesEvidence": "Not found: no outcome data on language or communication support located\nAround 80% of students fail the Caribbean Secondary Education Certificate",
   "identifiedPrevalence": [],
   "policyHistory": [
@@ -21881,6 +21958,13 @@
     "label": "not applicable",
     "standing": "none"
    }
+  },
+  "slots": {
+   "dischargeCriteria": [
+    2,
+    4,
+    4
+   ]
   }
  },
  {
@@ -22598,7 +22682,7 @@
   "funding": "Education provided in Government schools is free for children of compulsory school age\nFor a placement outside Gibraltar the Department may pay fees in part or in full",
   "workforce": "Paediatric service at the Primary Care Centre is staffed by four therapists\nThe adult service at St Bernard's Hospital is staffed by one therapist\nTherapy is delivered at the Centre, in schools, nurseries and in some cases at home\nTwo paediatric vacancies arose in the twelve months to April 2023, one on retirement\nGovernment said Brexit made recruiting qualified UK specialists harder (2023 release)",
   "dischargeCriteria": "Panel must keep the progress of every child referred under review (ETA s 47B(2)(c))\nThe panel advises the Director on the education of such a child (ETA s 47B(2)(b))\nA pupil is over compulsory school age on attaining sixteen (ETA s 49(1))\nOver-16s under nineteen may choose to remain in full-time education (ETA s 19(b)(ii))",
-  "outcomesEvidence": "Not established from the sources consulted for this entry — the Department of Education pages on gibraltar.gov.gi answer and publish no pupil statistics, and no Gibraltar statistical publication separating special educational needs was located. This entry already records that the Gibraltar register could not be read; the same is true of any outcome reporting. If you work in this system, this is exactly the field to fill in.",
+  "outcomesEvidence": "Prevalence of special educational needs, not attainment: how many, not how well\nFieldwork ran 6-28 February 2024; the analyst was a UK-based NHS public health specialist\nSEN in government nurseries and schools was 30.3% in 2022/23, against 19.8% in 2014/15\nSpeech and language difficulties were about 19% of all recorded needs in 2021/22\nThey and autism are a growing share of need; the profile is otherwise steady",
   "identifiedPrevalence": [],
   "policyHistory": [
    {
@@ -22678,6 +22762,13 @@
     2,
     4,
     4
+   ],
+   "outcomesEvidence": [
+    1,
+    2,
+    3,
+    3,
+    3
    ]
   },
   "coding": {
@@ -32118,6 +32209,10 @@
    {
     "label": "UNESCO GEM Report PEER, Saint Lucia — INCLUSION profile (last modified 26/08/2021; 'Validated by the country: No')",
     "url": "https://education-profiles.org/latin-america-and-the-caribbean/saint-lucia/~inclusion"
+   },
+   {
+    "label": "Saint Lucia, Education Act, Cap. 18.01 (Revision date 31 December 2005), ss. 4(2)(i), 16, 83(4), 84 and 85(1)(f) — Ministry of Education",
+    "url": "https://www.education.gov.lc/wp-content/uploads/2020/01/Education-Act-Cap.18.01.pdf"
    }
   ],
   "supportLinks": [],
@@ -32130,13 +32225,13 @@
   "identificationCriteria": "The principal determines the student's special education needs, Art. 84\nDecision made in consultation with parents and professional staff\nMultidisciplinary input only \"where possible\", Art. 84",
   "assessments": "No instrument named in the Act or the sector plan\n2015-20 plan aimed to strengthen health services to make assessment more affordable\n2006 draft disability policy expected a National Assessment Centre",
   "multilingualProvision": "Act requires promoting \"understanding of the local language, culture and values\", Art. 3.3(g)\nNothing in the Act on assessing a Kwéyòl-speaking child in a home language",
-  "referralPathway": "Not established from the sources consulted for this entry — the Act routes determination through the principal, not a referral pathway. If you work in this system, this is exactly the field to fill in.",
+  "referralPathway": "Parents have their own right to request a determination for their child\nA student is referred to the Chief Education Officer, who sets what assessments are required\nFrom there the Minister refers on to medical, educational or social services agencies\nThe trigger is identification by the Chief Education Officer as having learning difficulties\nWritten informed parental consent gates specialised testing not routinely used by teachers",
   "serviceModel": "Five special schools and centres nationally as of 2017, per UNICEF\nProvided \"in the least restrictive and most enabling environment\", Art. 83.2\nThe Special Education Unit coordinates the multidisciplinary assessment team\nMay be delivered as an individual education plan, Art. 83.3",
   "legalEntitlement": "\"entitled to receive an educational programme appropriate to their needs\", Art. 14\nEntitlement follows \"the assessed disability\", not a named disorder\nRefusing admission on grounds of mental or physical disability is unlawful, Art. 29",
-  "funding": "Not established from the sources consulted for this entry — no apportionment or funding clause located for Saint Lucia. If you work in this system, this is exactly the field to fill in.",
+  "funding": "Tuition at a public school is not charged to the student or the parents\nThe cost of an individual education plan is apportioned between the Ministry and the parent\nThe manner of that apportionment is left to regulations made under the Act\nA student over 18 carries the parent's share of the apportioned cost\nThe apportionment, including non-educational costs, can be appealed to the Tribunal",
   "workforce": "Special Education Unit coordinates a multidisciplinary team for needs assessment\nMinistry partnered with the University of Lynchburg to train staff in education assessment\nSir Arthur Lewis Community College made a special education course a core teaching module",
   "dischargeCriteria": "No discharge-from-support rule exists; the Act has only an attendance exemption\nArt. 38(d) exempts a child incapable of following an ordinary school curriculum",
-  "outcomesEvidence": "Not established from the sources consulted for this entry — no outcome data on language or communication support located. If you work in this system, this is exactly the field to fill in.",
+  "outcomesEvidence": "Enrolment counts by type of disability, not attainment: how many, not how well\nProduced by the Corporate Planning Unit of the Ministry of Education\nAnnual, so repeated: the series is the Education Statistical Digests",
   "identifiedPrevalence": [],
   "policyHistory": [
    {
@@ -32307,6 +32402,27 @@
     "label": "communication needs",
     "standing": "in statute"
    }
+  },
+  "slots": {
+   "referralPathway": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ],
+   "funding": [
+    1,
+    1,
+    2,
+    3,
+    3
+   ],
+   "outcomesEvidence": [
+    1,
+    2,
+    4
+   ]
   }
  },
  {
@@ -60334,6 +60450,10 @@
    {
     "label": "UNESCO GEM Report PEER, Saint Vincent and the Grenadines — INCLUSION profile (last modified 25/08/2021; 'Validated by the country: No')",
     "url": "https://education-profiles.org/latin-america-and-the-caribbean/saint-vincent-and-the-grenadines/~inclusion"
+   },
+   {
+    "label": "Saint Vincent and the Grenadines, Education Act, Cap. 202 (Act No. 34 of 2006), ss. 55(2), 112(4) and 114(1)(f) — Ministry of Education",
+    "url": "https://education.gov.vc/education/images/PDF/education_act_2006.pdf"
    }
   ],
   "supportLinks": [],
@@ -60349,7 +60469,7 @@
   "referralPathway": "Chief Education Officer identifies, Minister refers to medical or social agencies\nStatutory duty is qualified by the words \"where they exist\"\nParent has a right of appeal to the Minister",
   "serviceModel": "Programme delivered in \"least restrictive and most enabling environment that resources permit\"\nOnly three centres for children with intellectual or mental disabilities\nCentres are not located where the population needing them lives\nDonor programmes emphasise remediation for \"slow learners\" rather than therapy",
   "legalEntitlement": "Chief Education Officer \"shall provide a special education programme\", s.113\nNo entitlement to therapy of any named kind",
-  "funding": "Not established from the sources consulted for this entry — no funding or cost-apportionment provision located. If you work in this system, this is exactly the field to fill in.",
+  "funding": "The cost of an individual education plan is apportioned between the parents and the Ministry\nWhere the Minister directs enrolment elsewhere, the Government pays the fees and other costs\nThe manner of that apportionment is left to the regulations\nThe apportionment is itself a decision a parent may appeal",
   "workforce": "EFA 2015 review found \"an acute shortage of trained staff, including therapists\"\nShortage named for speech impairment specifically\nNo evidence of teacher training for inclusive education in the Act",
   "dischargeCriteria": "No discharge-from-support rule exists, only an attendance exemption\nChild excused if incapable of education \"by ordinary methods of instruction\"",
   "outcomesEvidence": "Ministry reports no record-keeping system, so no prevalence data exists\nNo national reporting mechanism monitors inclusive education",
@@ -60508,6 +60628,14 @@
     "label": "communication needs",
     "standing": "in statute"
    }
+  },
+  "slots": {
+   "funding": [
+    1,
+    1,
+    2,
+    3
+   ]
   }
  },
  {
