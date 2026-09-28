@@ -1,0 +1,108 @@
+{
+ "MC|Monaco": {
+  "fields": {
+   "legalEntitlement": [
+    "Loi 1.334 art 11: the schooling duty is met in the ordinary setting, or failing that specially",
+    "Special education is set by the child's own particular needs, in specialised services",
+    "Each such child gets a regular evaluation of competences, needs and the measures in their path",
+    "The commission medico-pedagogique does that evaluation, and the child and parents are heard",
+    "On disagreement parents ask the director to reverse his decision (Loi 1.334 art 25)"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    1,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "Loi 1.334 art 11: the schooling duty is met in the ordinary setting, or failing that specially",
+    "url": "https://journaldemonaco.gouv.mc/Journaux/2007/Journal-7817/Loi-n-1.334-du-12-juillet-2007-sur-l-education",
+    "quote": "Il est satisfait à l'obligation scolaire des enfants et des adolescents présentant un handicap ou un trouble de la santé invalidant en leur donnant une éducation en milieu scolaire ordinaire"
+   },
+   {
+    "bullet": "Special education is set by the child's own particular needs, in specialised services",
+    "url": "https://journaldemonaco.gouv.mc/Journaux/2007/Journal-7817/Loi-n-1.334-du-12-juillet-2007-sur-l-education",
+    "quote": "une éducation spéciale déterminée en fonction de leurs besoins particuliers au sein d'établissements ou services de santé, médico-sociaux ou spécialisés"
+   },
+   {
+    "bullet": "Each such child gets a regular evaluation of competences, needs and the measures in their path",
+    "url": "https://journaldemonaco.gouv.mc/Journaux/2007/Journal-7817/Loi-n-1.334-du-12-juillet-2007-sur-l-education",
+    "quote": "fait l'objet d'une évaluation régulière de ses compétences, de ses besoins et des mesures mises en oeuvre dans le cadre de son parcours"
+   },
+   {
+    "bullet": "The commission medico-pedagogique does that evaluation, and the child and parents are heard",
+    "url": "https://journaldemonaco.gouv.mc/Journaux/2007/Journal-7817/Loi-n-1.334-du-12-juillet-2007-sur-l-education",
+    "quote": "Cette évaluation est réalisée par la commission médico-pédagogique mentionnée à l'article 25"
+   },
+   {
+    "bullet": "On disagreement parents ask the director to reverse his decision (Loi 1.334 art 25)",
+    "url": "https://journaldemonaco.gouv.mc/Journaux/2007/Journal-7817/Loi-n-1.334-du-12-juillet-2007-sur-l-education",
+    "quote": "Les propositions de la commission sont transmises au directeur de l'éducation nationale qui statue"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Loi n° 1.334 du 12 juillet 2007 sur l'éducation (Monaco), arts. 11 and 25 and the individual-evaluation article — Journal de Monaco no. 7817. The Act's full text, recorded on this entry as not retrieved, serves from journaldemonaco.gouv.mc at HTTP 200",
+    "url": "https://journaldemonaco.gouv.mc/Journaux/2007/Journal-7817/Loi-n-1.334-du-12-juillet-2007-sur-l-education"
+   }
+  ]
+ },
+ "US|Maine": {
+  "fields": {
+   "legalEntitlement": [
+    "The instrument is 05-071 Chapter 101, the Maine Unified Special Education Regulation",
+    "Every school administrative unit taking federal or State funds must comply with IDEA",
+    "That duty runs to children from birth to twenty-two, under 20-A MRSA s.7006",
+    "Speech or language impairment is a named category, covering stuttering and language impairment",
+    "It qualifies only where it adversely affects the child's educational performance"
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    1,
+    1,
+    2,
+    3,
+    3
+   ]
+  },
+  "evidence": [
+   {
+    "bullet": "The instrument is 05-071 Chapter 101, the Maine Unified Special Education Regulation",
+    "url": "https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Special%20Services%20-%20MUSER%20-%208.21.2024.pdf",
+    "quote": "Chapter 101, Maine Unified Special Education Regulation"
+   },
+   {
+    "bullet": "Every school administrative unit taking federal or State funds must comply with IDEA",
+    "url": "https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Special%20Services%20-%20MUSER%20-%208.21.2024.pdf",
+    "quote": "every school administrative unit, intermediate educational unit, public school, or other public agency that receives federal or State funds"
+   },
+   {
+    "bullet": "That duty runs to children from birth to twenty-two, under 20-A MRSA s.7006",
+    "url": "https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Special%20Services%20-%20MUSER%20-%208.21.2024.pdf",
+    "quote": "free appropriate public education services to children age birth to twenty-two with disabilities"
+   },
+   {
+    "bullet": "Speech or language impairment is a named category, covering stuttering and language impairment",
+    "url": "https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Special%20Services%20-%20MUSER%20-%208.21.2024.pdf",
+    "quote": "Speech or language impairment means a communication disorder such as stuttering, impaired articulation, a language impairment, or a voice impairment"
+   },
+   {
+    "bullet": "It qualifies only where it adversely affects the child's educational performance",
+    "url": "https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Special%20Services%20-%20MUSER%20-%208.21.2024.pdf",
+    "quote": "that adversely affects the child's educational performance"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Maine Department of Education, 05-071 Chapter 101, Maine Unified Special Education Regulation Birth to Age Twenty-Two (MUSER), consolidated 21 August 2024 — the compliance duty at 20-A MRSA s.7006, and the Speech or Language Impairment category at 34 CFR 300.8(c)(11)",
+    "url": "https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Special%20Services%20-%20MUSER%20-%208.21.2024.pdf"
+   }
+  ]
+ }
+}

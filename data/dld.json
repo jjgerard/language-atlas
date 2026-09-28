@@ -34443,7 +34443,7 @@
   "multilingualProvision": "",
   "referralPathway": "Not fully documented, though a Medical Psychology Centre is a statutory body\nIts basis is an ordinance of 11 December 2008",
   "serviceModel": "Adaptation classes run in the last two primary years and in collège\nTeaching aims at compensating the disorder's effect, using digital tools\nSeparate inclusion units serve pupils with disability including neurodevelopmental",
-  "legalEntitlement": "The governing statute is an education Act of 12 July 2007\nThe text of that Act was not retrieved\nOn disagreement parents ask the director to reverse his decision (Loi 1.334 art 25)\nArt 19: individual medical-inspection decisions go to a special medical commission",
+  "legalEntitlement": "Loi 1.334 art 11: the schooling duty is met in the ordinary setting, or failing that specially\nSpecial education is set by the child's own particular needs, in specialised services\nEach such child gets a regular evaluation of competences, needs and the measures in their path\nThe commission medico-pedagogique does that evaluation, and the child and parents are heard\nOn disagreement parents ask the director to reverse his decision (Loi 1.334 art 25)",
   "funding": "Public education is free of charge in the Principality's state schools\nGrants may be awarded by the Government towards costs borne by families",
   "workforce": "Practising orthophonie in liberal practice needs a ministerial authorisation\nQualification is a diploma allowing practice in France, or an EU one, or an equivalent\nA foreign national is authorised only if local need is unmet by those already there\nWhere a titulaire has two associates only two may practise at the shared premises",
   "dischargeCriteria": "Needs and the measures in place are re-evaluated at a periodicity fitting the case (art 47)\nThe commission médico-pédagogique carries out that evaluation (loi 1.334 art 47)\nIts proposals go to the director of Éducation nationale, who rules (loi 1.334 art 25)\nSchooling is compulsory from six until sixteen years complete (loi 1.334 art 3)",
@@ -34480,8 +34480,9 @@
    ],
    "legalEntitlement": [
     1,
-    1,
-    4,
+    2,
+    2,
+    3,
     4
    ],
    "funding": [
@@ -34513,10 +34514,12 @@
    },
    "legalEntitlement": [
     {
-     "instrument": "Education Act of 12 July 2007 (text not retrieved)",
+     "instrument": "Loi n° 1.334 du 12 juillet 2007 sur l'éducation, arts. 11 and 25",
      "instrument_type": "statute",
      "instrument_year": 2007,
-     "duty_type": "not stated",
+     "obliges": 4,
+     "duty_org": "the commission médico-pédagogique and the directeur de l'éducation nationale",
+     "duty_type": "statutory body",
      "redress_type": "complaint to agency"
     }
    ],
@@ -46334,7 +46337,7 @@
   "inst": "",
   "source": "seed",
   "terminology": "Dutch logopedie is the term that would apply, and it is absent from policy\nThe 2008 special-education report lists handicaps and behaviour, not language\nSuriname has no inclusive education law and no official definition",
-  "identificationCriteria": "The 2008 National Report on the Development of Special Education sets out the categories\nThey are mental, physical, sight or multiple handicaps and learning or behavioural problems\nAlso a specific affection such as ADHD, autism or Down syndrome; no speech or language entry\nPEER records no inclusive education law, and therefore no official definition in the country\nThe country has very limited capacity for early detection of disabilities",
+  "identificationCriteria": "The country has very limited capacity for early detection of disabilities\nThe 2008 National Report on the Development of Special Education sets out the categories\nThey are mental, physical, sight or multiple handicaps and learning or behavioural problems\nAlso a specific affection such as ADHD, autism or Down syndrome; no speech or language entry\nPEER records no inclusive education law, and therefore no official definition in the country",
   "assessments": "",
   "multilingualProvision": "Dutch is the school language while more than 30 languages are spoken nationally\nNo source addresses distinguishing disorder from Dutch-as-second-language difficulty",
   "referralPathway": "Very limited national capacity for early detection of disabilities\nNo referral route specific to speech or language was located",
@@ -46508,11 +46511,11 @@
   },
   "slots": {
    "identificationCriteria": [
+    2,
     3,
     3,
     3,
-    3,
-    2
+    3
    ]
   }
  },
@@ -54462,7 +54465,7 @@
   "multilingualProvision": "Section VII carries no second-language or dialect exclusion for this category\nThe limited English proficiency exclusion in § VII applies only to learning disability",
   "referralPathway": "Any professional employee of the unit may refer, after the general education process\nA parent may refer at any time, including during general education interventions\nThe referral goes in writing to the special education director, designee or superintendent\nThe unit must send a consent to evaluate form within 15 school days",
   "serviceModel": "Diagnosis is by a certified speech/language clinician or a licensed speech/language pathologist\nRTI gate first: general-education intervention data must show inadequate response\nThe IEP Team enters evaluation data into a rating scale to decide the disability level\nNeed is defined as inability to benefit from regular education despite other services",
-  "legalEntitlement": "Adverse effect must be documented on Maine's required adverse effect form\nAdverse effect is required here but not for specific learning disability",
+  "legalEntitlement": "The instrument is 05-071 Chapter 101, the Maine Unified Special Education Regulation\nEvery school administrative unit taking federal or State funds must comply with IDEA\nSpeech or language impairment is a named category, covering stuttering and language impairment\nAdverse effect must be documented on Maine's required adverse effect form\nAdverse effect is required here but not for specific learning disability",
   "funding": "Each pupil on the annual December 1st child count carries an extra weight of 1.50\nThat weight is capped at 15% of the school administrative unit's resident pupils\nThe child count percentage may not increase more than 0.5% in any given year",
   "workforce": "Since 2011, a state SLP licence alone meets the school certification requirement",
   "dischargeCriteria": "",
@@ -54567,10 +54570,23 @@
    },
    "legalEntitlement": [
     {
-     "instrument": "Maine's required adverse effect form; the entry names no entitlement instrument",
-     "duty_type": "not stated",
+     "instrument": "05-071 Chapter 101, Maine Unified Special Education Regulation (MUSER)",
+     "instrument_type": "regulation",
+     "instrument_year": 2024,
+     "obliges": 4,
+     "duty_org": "every school administrative unit receiving federal or State funds",
+     "duty_type": "local authority",
      "redress_type": "not stated"
     }
+   ]
+  },
+  "slots": {
+   "legalEntitlement": [
+    1,
+    1,
+    2,
+    2,
+    2
    ]
   }
  },
