@@ -149,6 +149,8 @@ table.orgt tr.row:hover td { background: var(--surface-2); }
 table.orgt tr.det td { background: var(--surface-2); font-size: 13px; line-height: 1.5; }
 .chip { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; padding: 0 6px; border-radius: 3px;
   border: 1px solid var(--hair-strong); margin: 0 4px 2px 0; white-space: nowrap; color: var(--ink-soft); }
+.steps { font-size: 13px; line-height: 1.5; margin: 6px 0; padding: 6px 10px; border-left: 3px solid var(--b-fund); background: var(--surface-2); }
+table.orgt tr.cur td { background: var(--surface-2); box-shadow: inset 0 -1px 0 var(--focus); }
 footer.foot { padding: 18px 22px; border-top: 1px solid var(--hair); font-size: 12px; color: var(--ink-faint); }
 footer.foot a { color: var(--ink-soft); }
 
@@ -198,6 +200,7 @@ footer.foot a { color: var(--ink-soft); }
     </div>
     <label class="chk"><input type="checkbox" id="show-orgs" checked> Listed organisations</label>
     <label class="chk"><input type="checkbox" id="show-reg"> All register charities ticking children</label>
+    <select id="svc" aria-label="Service area"><option value="">Every service area</option></select>
   </div>
 
   <div class="mapgrid">
@@ -214,6 +217,11 @@ footer.foot a { color: var(--ink-soft); }
     Northern Ireland are registered in Belfast. Trust areas and council areas do not nest — trust
     boundaries follow the 26 pre-2015 districts — so the two are separate views, never combined.
   </p>
+
+  <h3>What the voluntary organisations provide <span class="count" id="svc-count"></span></h3>
+  <p>From each organisation's own documents, coded to one of 18 service areas. The relationship columns count only what a source states; most services have no stated relationship to government, and that is shown, not filled in. <b>Steps in</b> counts statements that a service exists because statutory provision is absent, insufficient or slow — rare, and mostly weak. Click a row to filter the map and the table.</p>
+  <div class="twrap"><table class="orgt" id="svct"><thead><tr><th>Service area</th><th class="num">Organisations</th><th class="num">Grant</th><th class="num">Contract</th><th class="num">Own funds</th><th class="num">Not stated</th><th class="num">Steps in</th></tr></thead><tbody></tbody></table></div>
+  <div id="stepsin"></div>
 
   <h3>Public bodies with children's functions <span class="count" id="bodies-count"></span></h3>
   <p>Checked one by one against each body's own documents. <b>Core</b>: children are its whole remit.
@@ -250,7 +258,7 @@ footer.foot a { color: var(--ink-soft); }
     <select id="org-area" aria-label="Filter by area"><option value="">Anywhere</option></select>
   </div>
   <div class="twrap"><table class="orgt" id="orgt"><thead><tr>
-    <th data-k="name">Organisation</th><th data-k="basis">Basis</th><th data-k="income" class="num">Income (latest)</th>
+    <th data-k="name">Organisation</th><th data-k="basis">Basis</th><th data-k="svcs">Services</th><th data-k="income" class="num">Income (latest)</th>
     <th data-k="council">Council area</th><th data-k="trust">Trust area</th>
   </tr></thead><tbody></tbody></table></div>
 </main>
@@ -278,6 +286,46 @@ const bodyById = Object.fromEntries(D.bodies.map(b => [b.id, b]));
 // Basis class for a dot: a contract outranks a grant outranks anything else.
 const cls = o => o.basisTypes.includes('commissioned') ? 'c' : o.basisTypes.includes('gov funding') ? 'f' : 'o';
 const CLS = { c: 'Contracted for a statutory service', f: 'Government children\'s funding', o: 'Network, directory or UK-wide only' };
+const SVC = { 'early-years': 'Early years', 'family-support': 'Family support', 'child-protection': 'Child protection',
+  'looked-after': 'Children in care and care leavers', 'disability-sen': 'Disability and SEN', 'mental-health': 'Mental health and wellbeing',
+  'youth-work': 'Youth work', 'youth-justice': 'Youth justice', 'education-support': 'Education support',
+  'training-employment': 'Training and employment (16–24)', 'housing-homelessness': 'Housing and homelessness (16–25)', 'health': 'Health',
+  'play-recreation': 'Play, sport and arts', 'voice-rights': 'Voice, rights and support to others', 'good-relations': 'Good relations',
+  'poverty-material': 'Poverty and material help', 'trauma-victims': 'Trauma and victims', 'other': 'Other' };
+$('#svc').innerHTML += D.serviceCodes.map(c => `<option value="${c}">${esc(SVC[c] || c)}</option>`).join('');
+const hasSvc = o => { const v = $('#svc').value; return !v || !!(o.profile && o.profile.services.some(s => s.code === v)); };
+const REL = { grant: 'grant', commissioned: 'contract', 'own funds': 'own funds', unclear: 'relationship unclear' };
+// A quote that came through a summarising fetch is shown without quotation marks, and says so.
+const say = (o, q) => !q ? '' : o.profile.paraphrased ? ` — ${esc(q)}` : ` — <q>${esc(q)}</q>`;
+function profHTML(o) {
+  const p = o.profile;
+  const warn = (o.possiblyStatutory ? `<div class="flag">possibly a statutory EA centre: ${esc(o.possiblyStatutory)}</div>` : '')
+    + (o.partOf ? `<div class="flag">part of ${esc(o.partOf)}</div>` : '');
+  if (!p) return warn + '<div class="miss">Not profiled (rests only on a weak or dated basis).</div>';
+  if (p.status === 'unreached') return warn + '<div class="miss">Profile not possible: no website or register documents could be reached.</div>';
+  const svcs = p.services.map(s => `<div><b>${esc(SVC[s.code] || s.code)}</b>${say(o, s.quote)} <a href="${esc(s.url)}" target="_blank" rel="noopener">source</a>${s.rel ? ` <span class="chip">${esc(REL[s.rel.type] || s.rel.type)}${s.rel.body ? ': ' + esc(s.rel.body) : ''}</span>` : ''}</div>`).join('');
+  const steps = p.stepsIn.map(s => `<div class="steps"><b>Steps in</b> (${esc(SVC[s.code] || s.code)}; said by ${esc(s.who)}): <q>${esc(s.quote)}</q> <a href="${esc(s.url)}" target="_blank" rel="noopener">source</a></div>`).join('');
+  const f = p.funding;
+  const fund = !f ? '' : `<div style="margin-top:4px"><b>Funding${f.year ? ', ' + esc(f.year) : ''}</b>: total ${esc(f.total || '—')} ${esc(f.unit || '')}${f.url ? ` <a href="${esc(f.url)}" target="_blank" rel="noopener">${f.page ? 'p.' + f.page : 'accounts'}</a>` : ''}
+    ${f.government.length ? '<br>Government: ' + f.government.map(g => `${esc(g.funder)}${g.amount ? ' ' + esc(g.amount) : ''}`).join('; ') : f.breakdown ? '<br>No government funder in the accounts.' : '<br><span class="miss">The accounts do not break income down by funder.</span>'}</div>`;
+  return warn + (p.focus && p.focus.value ? `<div class="miss">${esc(p.focus.value)}${p.status === 'partial' ? ' · partial profile' : ''}${p.paraphrased ? ' · some wording via a page summary, not verbatim' : ''}</div>` : '')
+    + steps + svcs + fund;
+}
+function drawSvc() {
+  const live = D.orgs.filter(o => o.profile && !o.possiblyStatutory), cur = $('#svc').value;
+  $('#svc-count').textContent = `${live.filter(o => o.profile.services.length).length} organisations profiled`;
+  $('#svct tbody').innerHTML = D.serviceCodes.map(c => {
+    const os = live.filter(o => o.profile.services.some(s => s.code === c));
+    const ents = os.flatMap(o => o.profile.services.filter(s => s.code === c));
+    const n = t => ents.filter(s => (s.rel && s.rel.type) === t).length, none = ents.filter(s => !s.rel || s.rel.type === 'unclear').length;
+    const st = os.filter(o => o.profile.stepsIn.some(s => s.code === c)).length;
+    return `<tr class="row${cur === c ? ' cur' : ''}" data-svc="${c}"><td>${esc(SVC[c] || c)}</td><td class="num">${os.length}</td><td class="num">${n('grant') || '·'}</td><td class="num">${n('commissioned') || '·'}</td><td class="num">${n('own funds') || '·'}</td><td class="num miss">${none}</td><td class="num">${st || '·'}</td></tr>`; }).join('');
+  const all = live.flatMap(o => o.profile.stepsIn.map(s => ({ o, s })));
+  $('#stepsin').innerHTML = `<p style="margin-top:14px"><b>Every “steps in” statement found (${all.length} in ${live.length} organisations)</b> — each in the source's own words; several are weak, and the profile notes say why.</p>`
+    + all.map(({ o, s }) => `<div class="steps"><b>${esc(o.name)}</b> · ${esc(SVC[s.code] || s.code)} · said by ${esc(s.who)}: <q>${esc(s.quote)}</q> <a href="${esc(s.url)}" target="_blank" rel="noopener">source</a></div>`).join('');
+}
+$('#svct tbody').addEventListener('click', e => { const r = e.target.closest('tr[data-svc]'); if (!r) return;
+  $('#svc').value = $('#svc').value === r.dataset.svc ? '' : r.dataset.svc; drawTop(); drawOrgs(); drawSvc(); $('#map').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
 const shape = (k, x, y, r) => k === 'c' ? `<rect class="dot c" x="${x - r}" y="${y - r}" width="${2 * r}" height="${2 * r}"/>`
   : k === 'f' ? `<circle class="dot f" cx="${x}" cy="${y}" r="${r}"/>`
   : `<path class="dot o" d="M${x} ${y - r * 1.25}L${x + r * 1.25} ${y}L${x} ${y + r * 1.25}L${x - r * 1.25} ${y}Z"/>`;
@@ -343,7 +391,7 @@ function drawTop() {
     return `<circle class="reg${dim ? ' dim' : ''}${on ? ' on' : ''}" data-reg="${esc(r[0])}" cx="${x}" cy="${y}" r="${(2.6 * u).toFixed(3)}"/>`; }).join('');
   if ($('#show-orgs').checked) {
     const order = { o: 0, f: 1, c: 2 };
-    h += [...placedOrgs].sort((a, b) => order[cls(a)] - order[cls(b)]).map(o => {
+    h += [...placedOrgs].filter(hasSvc).sort((a, b) => order[cls(a)] - order[cls(b)]).map(o => {
       const [x, y] = px([o.place.lon, o.place.lat]), inSel = !selected || o.place[layer === 'trust' ? 'trust' : 'council'] === selected;
       const on = focus && focus.kind === 'org' && focus.at === o.place.lat + ',' + o.place.lon;
       return shape(cls(o), +x, +y, 4.2 * u).replace('class="dot', `data-org="${esc(orgKey(o))}" class="dot${inSel ? '' : ' dim'}${on ? ' on' : ''}`); }).join('');
@@ -430,6 +478,7 @@ function focusPanel() {
       <div><a href="${ccniUrl(r[0])}" target="_blank" rel="noopener">Charity register entry</a>${o ? ` · also on the documented list (${esc(o.basisTypes.join(', '))}) — <a href="#" data-show="${esc(orgKey(o))}">show</a>` : ''}</div></div>`; };
   const orgRow = o => `<div class="fitem"><b>${esc(o.name)}</b> <span class="flag">${esc(CLS[cls(o)])}</span>
       ${o.basis.map(b => `<div>${esc(b.type)}: ${esc(b.detail || '')}${b.amount ? ' — ' + esc(b.amount) : ''}${b.year ? ' (' + esc(b.year) + ')' : ''} <a href="${esc(b.url)}" target="_blank" rel="noopener">source</a></div>`).join('')}
+      ${profHTML(o)}
       <div class="miss">${o.regNo ? `Register no. ${esc(o.regNo)} · latest income ${o.income ? '£' + (+o.income).toLocaleString('en-GB') : '—'} · <a href="${ccniUrl(o.regNo)}" target="_blank" rel="noopener">register entry</a>` : 'Not on the NI register'}</div></div>`;
   if (focus.kind === 'org') {
     const os = placedOrgs.filter(o => o.place.lat === lat && o.place.lon === lon);
@@ -584,21 +633,23 @@ $('#org-area').onchange = () => { selected = $('#org-area').value || null; drawM
 let sortK = 'income', open = null;
 function drawOrgs() {
   const q = $('#org-q').value.toLowerCase(), bf = $('#org-basis').value, af = $('#org-area').value, key = layer === 'trust' ? 'trust' : 'council';
-  const rows = D.orgs.filter(o => (!q || (o.name).toLowerCase().includes(q)) && (!bf || o.basisTypes.includes(bf)) && (!af || (o.place && o.place[key] === af)))
+  const rows = D.orgs.filter(o => (!q || (o.name).toLowerCase().includes(q)) && (!bf || o.basisTypes.includes(bf)) && (!af || (o.place && o.place[key] === af)) && hasSvc(o))
     .sort((a, b) => sortK === 'income' ? (+b.income || -1) - (+a.income || -1) : sortK === 'name' ? a.name.localeCompare(b.name)
       : String((a.place || {})[sortK] || 'zz').localeCompare(String((b.place || {})[sortK] || 'zz')));
   $('#orgt tbody').innerHTML = rows.map(o => { const id = o.orgId || o.name;
     return `<tr class="row" data-id="${esc(id)}"><td>${esc(o.name)}${o.onlyWeak ? ' <span class="flag" title="Rests only on the 2004 CiNI list or an individual\'s advisory seat">weak basis</span>' : ''}</td>
       <td>${o.basisTypes.map(t => `<span class="chip">${esc(t)}</span>`).join('')}</td>
+      <td>${o.profile ? [...new Set(o.profile.services.map(x => x.code))].map(c => `<span class="chip">${esc(SVC[c] || c)}</span>`).join('') : '<span class="miss">not profiled</span>'}</td>
       <td class="num">${o.income ? '£' + (+o.income).toLocaleString('en-GB') : '<span class="miss">not on NI register</span>'}</td>
       <td>${esc(o.place ? councilName[o.place.council] : '')}</td><td>${esc(o.place ? trustName[o.place.trust] : '')}</td></tr>`
-      + (open === id ? `<tr class="det"><td colspan="5">${o.basis.map(b => `<div><b>${esc(b.type)}</b>: ${esc(b.detail || '')}${b.amount ? ' — ' + esc(b.amount) : ''}${b.year ? ' (' + esc(b.year) + ')' : ''}${b.relationship ? ' · ' + esc(b.relationship) : ''} <a href="${esc(b.url)}" target="_blank" rel="noopener">source</a>${b.weak ? ` <span class="flag">${esc(b.weak)}</span>` : ''}</div>`).join('')}
+      + (open === id ? `<tr class="det"><td colspan="6">${profHTML(o)}<div style="margin-top:6px"><b>Why it is listed</b></div>${o.basis.map(b => `<div><b>${esc(b.type)}</b>: ${esc(b.detail || '')}${b.amount ? ' — ' + esc(b.amount) : ''}${b.year ? ' (' + esc(b.year) + ')' : ''}${b.relationship ? ' · ' + esc(b.relationship) : ''} <a href="${esc(b.url)}" target="_blank" rel="noopener">source</a>${b.weak ? ` <span class="flag">${esc(b.weak)}</span>` : ''}</div>`).join('')}
         ${o.regNo ? `<div class="miss">Register no. ${esc(o.regNo)}${o.fyEnd ? ', return for year ending ' + esc(o.fyEnd) : ''}${o.place ? ', registered at ' + esc(o.place.postcode) : ''}</div>` : ''}</td></tr>` : ''); }).join('')
-    || '<tr><td colspan="5" class="miss">No organisation matches.</td></tr>';
+    || '<tr><td colspan="6" class="miss">No organisation matches.</td></tr>';
 }
 $('#orgt tbody').addEventListener('click', e => { if (e.target.tagName === 'A') return; const r = e.target.closest('tr.row'); if (!r) return; open = open === r.dataset.id ? null : r.dataset.id; drawOrgs(); });
 $('#orgt thead').addEventListener('click', e => { const k = e.target.dataset.k; if (!k || k === 'basis') return; sortK = k; drawOrgs(); });
 $('#org-q').oninput = drawOrgs; $('#org-basis').onchange = drawOrgs;
+$('#svc').onchange = () => { drawTop(); drawOrgs(); drawSvc(); };
 
-drawMap(); applyVB(); legend(); drawPanel(); fillAreaFilter(); drawList(); drawChart();
+drawMap(); applyVB(); legend(); drawPanel(); fillAreaFilter(); drawList(); drawChart(); drawSvc();
 </script>

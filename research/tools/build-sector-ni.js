@@ -21,6 +21,8 @@ const orgs = read('ni-vcs-orgs.json');
 const reg = read('ni-vcs-register.json');
 const geo = read('ni-geo.json');
 const pcs = read('ni-postcodes.json').postcodes;
+const prof = read('ni-vcs-profiles.json');
+const profById = Object.fromEntries(prof.profiles.map(p => [p.orgId, p]));
 
 // Postcodes come from ni-register-addresses.json (regNo -> BT postcode, taken
 // from the register's public address) and are placed via ni-postcodes.json.
@@ -67,7 +69,10 @@ const out = {
     excludedByRuling: budgets.figures.filter(f => f.exclude).length,
   },
 
-  orgs: orgs.orgs.map(o => ({
+  serviceCodes: prof.codes,
+  // Duplicates are dropped here; their bases were merged into the primary by
+  // the list-building step or are restated by it.
+  orgs: orgs.orgs.filter(o => !o.duplicateOf).map(o => { const p = profById[o.orgId]; return {
     orgId: o.orgId || null, name: o.name, regNo: o.regNo, gbCharityNo: o.gbCharityNo,
     basisTypes: o.basisTypes, onlyWeak: !!o.onlyWeak,
     basis: o.basis.map(b => ({
@@ -77,7 +82,18 @@ const out = {
     income: o.register ? o.register.income : null,
     fyEnd: o.register ? o.register.fyEnd : null,
     place: o.regNo ? place(o.regNo) : null,
-  })),
+    possiblyStatutory: o.possiblyStatutory || null, partOf: o.partOf || null,
+    profile: p ? {
+      status: p.status, paraphrased: !!p.quotesParaphrased,
+      focus: p.focus ? { value: p.focus.value, quote: p.focus.quote, url: p.focus.url } : null,
+      services: (p.services || []).map(x => ({ code: x.code, quote: x.quote, url: x.url,
+        rel: x.relationship ? { type: x.relationship.type, body: x.relationship.body || null, url: x.relationship.url || null } : null })),
+      funding: p.funding ? { year: p.funding.year, total: p.funding.totalIncome, unit: p.funding.unit, breakdown: !!p.funding.breakdown,
+        government: (p.funding.government || []).map(g => ({ funder: g.funder, amount: g.amount, label: g.label })), url: p.funding.url, page: p.funding.page ?? null } : null,
+      stepsIn: (p.stepsIn || []).map(x => ({ code: x.code, quote: x.quote, who: x.who, url: x.url })),
+      annualReportUrl: p.annualReportUrl || null,
+    } : null,
+  }; }),
 
   // Every active register charity that self-declares a children's beneficiary,
   // as compact rows: [regNo, name, tier, income, lat, lon, council, trust].
