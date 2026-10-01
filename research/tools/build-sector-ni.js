@@ -22,6 +22,13 @@ const reg = read('ni-vcs-register.json');
 const geo = read('ni-geo.json');
 const pcs = read('ni-postcodes.json').postcodes;
 const prof = read('ni-vcs-profiles.json');
+const coding = read('ni-bodies-coding.json');
+// Resolve a body's service code to its evidence: a function quote, or a budget line.
+const evidence = (b, ev) => {
+  if (ev.startsWith('f:')) { const f = b.functions[+ev.slice(2)]; return { quote: f.quote || f.what, url: f.url, kind: 'function' }; }
+  const l = ev.slice(2), f = budgets.figures.find(x => x.bodyId === b.id && x.label === l);
+  return { quote: 'spending line: ' + l, url: f.url, kind: 'budget line' };
+};
 const profById = Object.fromEntries(prof.profiles.map(p => [p.orgId, p]));
 
 // Postcodes come from ni-register-addresses.json (regNo -> BT postcode, taken
@@ -54,6 +61,8 @@ const out = {
     roles: b.roles, via: b.via || null, excluded: b.excluded || null,
     functions: (b.functions || []).map(f => ({ what: f.what, quote: f.quote, url: f.url })),
     accounts: b.accounts || null, statute: b.statute || null, notes: b.notes || null,
+    services: (coding.codes[b.id] || []).map(([code, role, ev]) => ({ code, role, ...evidence(b, ev) })),
+    codingNote: coding.notes[b.id] || null,
   })),
 
   budgets: budgets.figures

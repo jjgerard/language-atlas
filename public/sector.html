@@ -223,7 +223,8 @@ footer.foot a { color: var(--ink-soft); }
 
   <h3>What the voluntary organisations provide <span class="count" id="svc-count"></span></h3>
   <p>From each organisation's own documents, coded to one of 18 service areas. The relationship columns count only what a source states; most services have no stated relationship to government, and that is shown, not filled in. <b>Steps in</b> counts statements that a service exists because statutory provision is absent, insufficient or slow — rare, and mostly weak. Click a row to filter the map and the table.</p>
-  <div class="twrap"><table class="orgt" id="svct"><thead><tr><th>Service area</th><th class="num">Organisations</th><th class="num">Grant</th><th class="num">Contract</th><th class="num">Own funds</th><th class="num">Not stated</th><th class="num">Steps in</th></tr></thead><tbody></tbody></table></div>
+  <div class="twrap"><table class="orgt" id="svct"><thead><tr><th>Service area</th><th class="num">Public bodies</th><th class="num">Voluntary organisations</th><th class="num">Grant</th><th class="num">Contract</th><th class="num">Own funds</th><th class="num">Not stated</th><th class="num">Steps in</th></tr></thead><tbody></tbody></table></div>
+  <div id="svc-detail"></div>
   <div id="stepsin"></div>
 
   <h3>Public bodies with children's functions <span class="count" id="bodies-count"></span></h3>
@@ -314,6 +315,24 @@ function profHTML(o) {
   return warn + (p.focus && p.focus.value ? `<div class="miss">${esc(p.focus.value)}${p.status === 'partial' ? ' · partial profile' : ''}${p.paraphrased ? ' · some wording via a page summary, not verbatim' : ''}</div>` : '')
     + steps + svcs + fund;
 }
+// Who provides one service area, both sides, each entry linked to its evidence.
+const ROLE_ORDER = ['delivers', 'commissions', 'funds', 'coordinates', 'regulates', 'inspects', 'advises', 'advocates', 'pays'];
+function svcDetail(c, live) {
+  const ents = D.bodies.flatMap(b => b.services.filter(s => s.code === c).map(s => ({ b, s })));
+  const byRole = ROLE_ORDER.map(r => [r, ents.filter(e => e.s.role === r)]).filter(([, es]) => es.length);
+  const os = live.filter(o => o.profile.services.some(s => s.code === c));
+  const rel = t => os.filter(o => o.profile.services.some(s => s.code === c && s.rel && s.rel.type === t)).length;
+  const pub = byRole.map(([r, es]) => '<div style="font-size:13px;margin-bottom:6px"><b>' + esc(r) + '</b>: '
+    + es.map(e => esc(e.b.name) + ' <a href="' + esc(e.s.url) + '" target="_blank" rel="noopener" title="' + esc(e.s.quote) + '">' + (e.s.kind === 'budget line' ? 'line' : 'source') + '</a>').join('; ') + '</div>').join('')
+    || '<p class="miss">No public body has this as a stated function.</p>';
+  const names = os.slice().sort((a, b) => (+b.income || 0) - (+a.income || 0)).slice(0, 12).map(o => esc(o.name)).join('; ')
+    + (os.length > 12 ? ' and ' + (os.length - 12) + ' more — see the table below' : '');
+  return '<div class="card" style="padding:14px 16px;margin-top:14px"><h4 style="margin:0 0 8px;font-size:16px">Who provides: ' + esc(SVC[c] || c) + '</h4>'
+    + '<div class="mapgrid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))"><div><h5 style="margin:0 0 6px">Public bodies (' + new Set(ents.map(e => e.b.id)).size + ')</h5>' + pub + '</div>'
+    + '<div><h5 style="margin:0 0 6px">Voluntary organisations (' + os.length + ')</h5><div style="font-size:13px">Stated relationship to government: '
+    + rel('commissioned') + ' contract, ' + rel('grant') + ' grant, ' + rel('own funds') + ' own funds; the rest not stated.</div>'
+    + '<div style="font-size:13px;margin-top:6px">' + names + '</div></div></div></div>';
+}
 function drawSvc() {
   const live = D.orgs.filter(o => o.profile && !o.possiblyStatutory), cur = $('#svc').value;
   $('#svc-count').textContent = `${live.filter(o => o.profile.services.length).length} organisations profiled`;
@@ -322,7 +341,8 @@ function drawSvc() {
     const ents = os.flatMap(o => o.profile.services.filter(s => s.code === c));
     const n = t => ents.filter(s => (s.rel && s.rel.type) === t).length, none = ents.filter(s => !s.rel || s.rel.type === 'unclear').length;
     const st = os.filter(o => o.profile.stepsIn.some(s => s.code === c)).length;
-    return `<tr class="row${cur === c ? ' cur' : ''}" data-svc="${c}"><td>${esc(SVC[c] || c)}</td><td class="num">${os.length}</td><td class="num">${n('grant') || '·'}</td><td class="num">${n('commissioned') || '·'}</td><td class="num">${n('own funds') || '·'}</td><td class="num miss">${none}</td><td class="num">${st || '·'}</td></tr>`; }).join('');
+    return `<tr class="row${cur === c ? ' cur' : ''}" data-svc="${c}"><td>${esc(SVC[c] || c)}</td><td class="num">${D.bodies.filter(b => b.services.some(s => s.code === c)).length || '·'}</td><td class="num">${os.length}</td><td class="num">${n('grant') || '·'}</td><td class="num">${n('commissioned') || '·'}</td><td class="num">${n('own funds') || '·'}</td><td class="num miss">${none}</td><td class="num">${st || '·'}</td></tr>`; }).join('');
+  $('#svc-detail').innerHTML = cur ? svcDetail(cur, live) : '';
   const all = live.flatMap(o => o.profile.stepsIn.map(s => ({ o, s })));
   $('#stepsin').innerHTML = `<p style="margin-top:14px"><b>Every “steps in” statement found (${all.length} in ${live.length} organisations)</b> — each in the source's own words; several are weak, and the profile notes say why.</p>`
     + all.map(({ o, s }) => `<div class="steps"><b>${esc(o.name)}</b> · ${esc(SVC[s.code] || s.code)} · said by ${esc(s.who)}: <q>${esc(s.quote)}</q> <a href="${esc(s.url)}" target="_blank" rel="noopener">source</a></div>`).join('');
@@ -574,7 +594,7 @@ $('#bodies-count').textContent = `${D.bodies.length} rows checked`;
 $('#depts').innerHTML = Object.entries(grp).sort((a, b) => b[1].length - a[1].length).map(([k, bs]) => `<div class="card dept"><h4>${esc(DEPT[k] || 'Councils and partnerships')}</h4>`
   + bs.sort((a, b) => vorder[a.verdict] - vorder[b.verdict]).map(b => `<div class="body${b.excluded ? ' excl' : ''}" tabindex="0"><span class="v ${b.verdict}">${b.verdict}</span>${esc(b.name)}${b.via ? ' <span class="flag">via schools</span>' : ''}
     <div class="fx">${b.excluded ? `<p>${esc(b.excluded)}</p>` : ''}${b.functions.map(f => `<div>${esc(f.what)}${f.quote ? ` — <q>${esc(f.quote)}</q>` : ''} <a href="${esc(f.url)}" target="_blank" rel="noopener">source</a></div>`).join('') || `<div>${esc(b.notes || 'No child-specific function found.')}</div>`}
-    ${b.roles && b.roles.length ? `<div class="miss">Role: ${esc(b.roles.join(', '))}</div>` : ''}</div></div>`).join('') + '</div>').join('');
+    ${b.services && b.services.length ? '<div style="margin-top:4px">' + [...new Set(b.services.map(s => s.code))].map(c => '<span class="chip">' + esc(SVC[c] || c) + '</span>').join('') + '</div>' : ''}${b.codingNote ? '<div class="miss">' + esc(b.codingNote) + '</div>' : ''}${b.roles && b.roles.length ? `<div class="miss">Role: ${esc(b.roles.join(', '))}</div>` : ''}</div></div>`).join('') + '</div>').join('');
 $('#depts').addEventListener('click', e => { const b = e.target.closest('.body'); if (b && e.target.tagName !== 'A') b.classList.toggle('open'); });
 
 // ---------------- budgets ----------------
