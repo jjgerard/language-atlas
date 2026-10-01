@@ -1,0 +1,490 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Northern Ireland children's sector — Language Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/shared.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Who provides children's services in Northern Ireland, public and voluntary, what the public side spends, and where the organisations are based.">
+
+<!--
+  The first community-sector view: one unit (Northern Ireland), one sector
+  (children). Data is public/sector/ni-children.json, built from
+  research/children-sector/ by research/tools/build-sector-ni.js.
+
+  Three rules from the content rules shape every part of this page:
+  - an amount is shown only where a source states it, with the source a click away;
+  - figures that are not comparable are never added together (there is no
+    "children's total" anywhere on this page, on purpose);
+  - what is missing is shown as missing.
+
+  Two geographies, never mixed. Trust areas carry the statutory money (trusts
+  publish children's directorate spending); council areas carry the voluntary
+  sector. They do not nest: trust boundaries follow the 26 pre-2015 districts.
+  An organisation's dot is its REGISTERED address, not where it works, which is
+  why Belfast is crowded with charities that operate across NI.
+-->
+<style>
+body { display: flex; flex-direction: column; min-height: 100dvh; background: var(--ground); }
+main { flex: 1; width: min(1240px, 100%); margin: 0 auto; padding: 34px 22px 72px; }
+main h2 { font-size: clamp(27px, 4.4vw, 36px); font-weight: 500; line-height: 1.15;
+  letter-spacing: -.015em; margin: 0 0 6px; text-wrap: balance; }
+main .standfirst { margin: 0 0 22px; font-size: 16px; color: var(--ink-soft); line-height: 1.6; max-width: 76ch; }
+main h3 { font-size: 21px; font-weight: 500; letter-spacing: -.01em; margin: 40px 0 8px;
+  padding-top: 16px; border-top: 1px solid var(--hair); text-wrap: balance; }
+main h3 .count { font-size: 13px; color: var(--ink-faint); font-weight: 400; letter-spacing: 0; }
+main p { margin: 0 0 12px; max-width: 76ch; font-size: 15px; line-height: 1.6; }
+main a { color: var(--focus); }
+.note { font-size: 13px; color: var(--ink-soft); line-height: 1.55; border-left: 3px solid var(--hair-strong);
+  padding: 6px 0 6px 12px; margin: 10px 0 16px; max-width: 82ch; }
+
+/* series identity: validated (light + dark) and doubled by shape */
+:root { --b-comm: #3F5BA9; --b-fund: #C2703D; --b-other: #93548F; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --b-comm: #7690D6; --b-fund: #C27848; --b-other: #AE6AA9; } }
+:root[data-theme="dark"] { --b-comm: #7690D6; --b-fund: #C27848; --b-other: #AE6AA9; }
+
+.card { background: var(--surface); border: 1px solid var(--hair); border-radius: 6px; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 10px; }
+.tools .grow { flex: 1; min-width: 180px; }
+.tools input, .tools select { font: inherit; font-size: 14px; padding: 6px 8px; border: 1px solid var(--hair-strong);
+  border-radius: 4px; background: var(--surface); color: var(--ink); }
+.seg { display: inline-flex; border: 1px solid var(--hair-strong); border-radius: 4px; overflow: hidden; }
+.seg button { font: inherit; font-size: 13px; padding: 6px 11px; border: 0; background: var(--surface); color: var(--ink-soft); cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--hair-strong); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
+label.chk { font-size: 13px; color: var(--ink-soft); display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+
+/* ---- map + panel ---- */
+.mapgrid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+.mapcard { padding: 10px; position: relative; }
+#map { width: 100%; height: auto; display: block; touch-action: manipulation; }
+#map .area { fill: var(--surface-2); stroke: var(--hair-strong); stroke-width: .6; cursor: pointer; vector-effect: non-scaling-stroke; }
+#map .area:hover { fill: var(--ground-deep); }
+#map .area.sel { fill: var(--ground-deep); stroke: var(--ink); stroke-width: 1.6; }
+#map .lbl { font-size: 10px; fill: var(--ink-faint); pointer-events: none; text-anchor: middle; }
+#map .reg { fill: var(--ink-faint); opacity: .35; pointer-events: none; }
+#map .dot { stroke: var(--surface); stroke-width: 1; vector-effect: non-scaling-stroke; cursor: pointer; }
+#map .dot.c { fill: var(--b-comm); } #map .dot.f { fill: var(--b-fund); } #map .dot.o { fill: var(--b-other); }
+#map .dot.dim { opacity: .18; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--ink-soft); margin: 8px 4px 2px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend svg { width: 12px; height: 12px; }
+.tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--surface); font-size: 12px; line-height: 1.4;
+  padding: 6px 8px; border-radius: 4px; max-width: 280px; display: none; z-index: 5; }
+
+.panel { padding: 16px 18px; min-height: 300px; }
+.panel h4 { margin: 0 0 2px; font-size: 18px; font-weight: 600; }
+.panel .sub { font-size: 13px; color: var(--ink-soft); margin: 0 0 12px; }
+.panel h5 { margin: 16px 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); font-weight: 600; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 6px 0 4px; }
+.stat { background: var(--surface-2); border-radius: 4px; padding: 8px 10px; }
+.stat b { display: block; font-size: 22px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 12px; color: var(--ink-soft); }
+table.mini { width: 100%; border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+table.mini th, table.mini td { padding: 4px 6px; border-bottom: 1px solid var(--hair); text-align: right; vertical-align: top; }
+table.mini th:first-child, table.mini td:first-child { text-align: left; }
+table.mini th { font-weight: 600; color: var(--ink-soft); font-size: 11.5px; }
+.flag { display: inline-block; font-size: 10.5px; padding: 0 5px; border-radius: 3px; border: 1px solid var(--hair-strong);
+  color: var(--ink-soft); margin-left: 4px; white-space: nowrap; vertical-align: 1px; }
+.miss { color: var(--ink-faint); }
+ul.orgs { list-style: none; margin: 0; padding: 0; font-size: 13px; max-height: 260px; overflow: auto; }
+ul.orgs li { padding: 4px 0; border-bottom: 1px solid var(--hair); display: flex; gap: 8px; align-items: baseline; }
+ul.orgs li .inc { margin-left: auto; color: var(--ink-faint); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* ---- bodies ---- */
+.depts { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.dept { padding: 12px 14px; }
+.dept h4 { margin: 0 0 8px; font-size: 14px; font-weight: 600; }
+.body { font-size: 13px; padding: 5px 0; border-top: 1px solid var(--hair); cursor: pointer; }
+.body:first-of-type { border-top: 0; }
+.body .v { font-size: 10.5px; border-radius: 3px; padding: 0 5px; margin-right: 6px; border: 1px solid var(--hair-strong); color: var(--ink-soft); }
+.body .v.core { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.body .v.none { opacity: .7; }
+.body.excl { opacity: .55; text-decoration: line-through; }
+.body .fx { display: none; margin: 6px 0 2px; color: var(--ink-soft); line-height: 1.5; }
+.body.open .fx { display: block; }
+.body .fx q { font-style: italic; }
+
+/* ---- budgets ---- */
+.budgrid { display: grid; grid-template-columns: minmax(240px, 340px) minmax(0, 1fr); gap: 16px; align-items: start; }
+.serieslist { max-height: 520px; overflow: auto; padding: 6px 0; }
+.serieslist .grp { font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); padding: 10px 12px 4px; }
+.serieslist button { display: block; width: 100%; text-align: left; font: inherit; font-size: 13px; padding: 5px 12px;
+  border: 0; background: none; color: var(--ink); cursor: pointer; line-height: 1.35; }
+.serieslist button:hover { background: var(--surface-2); }
+.serieslist button[aria-current="true"] { background: var(--surface-2); box-shadow: inset 3px 0 0 var(--focus); }
+.serieslist button small { color: var(--ink-faint); }
+.chartcard { padding: 14px 16px; position: relative; }
+.chartcard h4 { margin: 0; font-size: 16px; font-weight: 600; }
+.chartcard .sub { font-size: 13px; color: var(--ink-soft); margin: 2px 0 8px; }
+#chart { width: 100%; height: auto; display: block; overflow: visible; }
+#chart .grid { stroke: var(--hair); stroke-width: 1; }
+#chart .ax { font-size: 11px; fill: var(--ink-faint); font-variant-numeric: tabular-nums; }
+#chart .line { fill: none; stroke: var(--focus); stroke-width: 2; }
+#chart .pt { fill: var(--focus); stroke: var(--surface); stroke-width: 2; }
+#chart .pt.plan { fill: var(--surface); stroke: var(--focus); stroke-width: 2; }
+#chart .hit { fill: transparent; cursor: pointer; }
+.key { display: flex; gap: 16px; font-size: 12px; color: var(--ink-soft); margin: 4px 0 8px; }
+.key span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* ---- org table ---- */
+.twrap { overflow-x: auto; }
+table.orgt { width: 100%; border-collapse: collapse; font-size: 13.5px; background: var(--surface); border: 1px solid var(--hair); border-radius: 6px; }
+table.orgt th, table.orgt td { padding: 7px 10px; border-bottom: 1px solid var(--hair); text-align: left; vertical-align: top; }
+table.orgt th { font-size: 12px; color: var(--ink-soft); font-weight: 600; cursor: pointer; white-space: nowrap; }
+table.orgt td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.orgt tr.row { cursor: pointer; }
+table.orgt tr.row:hover td { background: var(--surface-2); }
+table.orgt tr.det td { background: var(--surface-2); font-size: 13px; line-height: 1.5; }
+.chip { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; padding: 0 6px; border-radius: 3px;
+  border: 1px solid var(--hair-strong); margin: 0 4px 2px 0; white-space: nowrap; color: var(--ink-soft); }
+footer.foot { padding: 18px 22px; border-top: 1px solid var(--hair); font-size: 12px; color: var(--ink-faint); }
+footer.foot a { color: var(--ink-soft); }
+
+@media (max-width: 900px) {
+  main { padding: 24px 16px 54px; }
+  .mapgrid, .budgrid { grid-template-columns: 1fr; }
+  .serieslist { max-height: 260px; }
+  .stats { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+<header class="sitebar">
+  <a class="brand" href="/">
+    <span class="name">Language Atlas</span>
+    <span class="tagline">Provision and policy, by region</span>
+  </a>
+  <nav class="pills" id="pills"></nav>
+  <div class="navright">
+    <a class="aboutlink" href="/views">Field views</a>
+    <a class="aboutlink" href="/patterns">Patterns</a>
+    <a class="aboutlink" href="/sources">Sources</a>
+    <a class="aboutlink" href="/about">About</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="menu" id="menu">
+    <nav class="pills" id="menupills"></nav>
+    <a class="aboutlink" href="/views">Field views</a>
+    <a class="aboutlink" href="/patterns">Patterns</a>
+    <a class="aboutlink" href="/sources">Sources</a>
+    <a class="aboutlink" href="/about">About</a>
+  </div>
+</header>
+
+<main>
+  <h2>Northern Ireland: the children's sector</h2>
+  <p class="standfirst">
+    Which public bodies have children's functions, what they publish about spending, and which
+    voluntary and community organisations work alongside them — each with the document it rests on.
+    A first unit, built to be repeated for others.
+  </p>
+
+  <div class="tools">
+    <div class="seg" role="group" aria-label="Map areas">
+      <button id="lay-trust" aria-pressed="true">Health trust areas</button>
+      <button id="lay-council" aria-pressed="false">Council areas</button>
+    </div>
+    <label class="chk"><input type="checkbox" id="show-orgs" checked> Listed organisations</label>
+    <label class="chk"><input type="checkbox" id="show-reg"> All register charities ticking children</label>
+  </div>
+
+  <div class="mapgrid">
+    <div class="card mapcard">
+      <svg id="map" role="img" aria-label="Map of Northern Ireland"></svg>
+      <div class="legend" id="legend"></div>
+      <div class="tip" id="tip"></div>
+    </div>
+    <div class="card panel" id="panel" aria-live="polite"></div>
+  </div>
+  <p class="note">
+    A dot is an organisation's <b>registered address</b>, not where it works: charities operating across
+    Northern Ireland are registered in Belfast. Trust areas and council areas do not nest — trust
+    boundaries follow the 26 pre-2015 districts — so the two are separate views, never combined.
+  </p>
+
+  <h3>Public bodies with children's functions <span class="count" id="bodies-count"></span></h3>
+  <p>Checked one by one against each body's own documents. <b>Core</b>: children are its whole remit.
+    <b>Part</b>: a stated children's function among others. <b>None</b>: remit read, nothing child-specific. Click a body for the function and its source.</p>
+  <div class="depts" id="depts"></div>
+
+  <h3>Published spending lines <span class="count" id="bud-count"></span></h3>
+  <p>Every line is shown exactly as the source labels it. Lines from different bodies or bases are never
+    added together; a directorate reorganisation is a break, not a trend.</p>
+  <div class="budgrid">
+    <div class="card">
+      <div class="tools" style="padding:10px 12px 0"><input id="ser-q" class="grow" type="search" placeholder="Filter lines…" aria-label="Filter spending lines"></div>
+      <div class="serieslist" id="serieslist"></div>
+    </div>
+    <div class="card chartcard">
+      <h4 id="ch-title"></h4>
+      <div class="sub" id="ch-sub"></div>
+      <div class="key"><span><svg width="12" height="12"><circle cx="6" cy="6" r="4.5" fill="var(--focus)"/></svg>Outturn (spent)</span>
+        <span><svg width="12" height="12"><circle cx="6" cy="6" r="4" fill="var(--surface)" stroke="var(--focus)" stroke-width="2"/></svg>Plan or revised plan</span></div>
+      <svg id="chart" role="img"></svg>
+      <div class="twrap" id="ch-table"></div>
+      <div class="tip" id="ctip"></div>
+    </div>
+  </div>
+
+  <h3>Voluntary and community organisations <span class="count" id="org-count"></span></h3>
+  <p>An organisation is listed only with a documented basis: government children's funding, a contract for
+    a statutory service, membership of a children's network, a directory listing, or being a UK-wide charity
+    working here. Income is the whole organisation's, from its latest register return — not its children's work,
+    so it is not added up.</p>
+  <div class="tools">
+    <input id="org-q" class="grow" type="search" placeholder="Search organisations…" aria-label="Search organisations">
+    <select id="org-basis" aria-label="Filter by basis"><option value="">Any basis</option></select>
+    <select id="org-area" aria-label="Filter by area"><option value="">Anywhere</option></select>
+  </div>
+  <div class="twrap"><table class="orgt" id="orgt"><thead><tr>
+    <th data-k="name">Organisation</th><th data-k="basis">Basis</th><th data-k="income" class="num">Income (latest)</th>
+    <th data-k="council">Council area</th><th data-k="trust">Trust area</th>
+  </tr></thead><tbody></tbody></table></div>
+</main>
+
+<footer class="foot">
+  Sources are linked from every figure · boundaries © Crown copyright, OSNI and Department of Health, Open Government Licence ·
+  charity data from the Charity Commission for Northern Ireland register
+</footer>
+
+<script type="module">
+import { mountNav } from '/nav.js';
+mountNav(null);
+
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const $ = s => document.querySelector(s);
+const NS = 'http://www.w3.org/2000/svg';
+const D = await fetch('/sector/ni-children.json').then(r => r.json());
+
+const TRUST_BODY = { BHSCT: 'trust-belfast', NHSCT: 'trust-northern', SEHSCT: 'trust-southeastern', SHSCT: 'trust-southern', WHSCT: 'trust-western' };
+const short = n => n.replace(' Health and Social Care Trust', '');
+const councilName = Object.fromEntries(D.geo.councils.map(c => [c.code, c.name]));
+const trustName = Object.fromEntries(D.geo.trusts.map(t => [t.code, short(t.name)]));
+const bodyById = Object.fromEntries(D.bodies.map(b => [b.id, b]));
+
+// Basis class for a dot: a contract outranks a grant outranks anything else.
+const cls = o => o.basisTypes.includes('commissioned') ? 'c' : o.basisTypes.includes('gov funding') ? 'f' : 'o';
+const CLS = { c: 'Contracted for a statutory service', f: 'Government children\'s funding', o: 'Network, directory or UK-wide only' };
+const shape = (k, x, y, r) => k === 'c' ? `<rect class="dot c" x="${x - r}" y="${y - r}" width="${2 * r}" height="${2 * r}"/>`
+  : k === 'f' ? `<circle class="dot f" cx="${x}" cy="${y}" r="${r}"/>`
+  : `<path class="dot o" d="M${x} ${y - r * 1.25}L${x + r * 1.25} ${y}L${x} ${y + r * 1.25}L${x - r * 1.25} ${y}Z"/>`;
+
+const num = v => { if (v == null) return null; let s = String(v).trim(); if (s === '-' || s === '–' || s === '') return null;
+  const neg = /^\(.*\)$/.test(s) || s.startsWith('-'); s = s.replace(/[^0-9.]/g, ''); if (!s) return null; const n = parseFloat(s); return neg ? -n : n; };
+const money = (v, unit) => v == null ? '—' : (unit && unit.includes('€') ? '€' : '£') + Math.round(v).toLocaleString('en-GB') + (/000/.test(unit || '') ? 'k' : /m$/i.test(unit || '') ? 'm' : '');
+const fy = y => /^\d{4}-\d{2}$/.test(y);
+
+// ---------------- map ----------------
+const PH = Math.cos(54.6 * Math.PI / 180);
+let bb = [Infinity, Infinity, -Infinity, -Infinity];
+for (const t of D.geo.trusts) for (const p of t.geometry.coordinates) for (const [x, y] of p[0]) {
+  bb = [Math.min(bb[0], x), Math.min(bb[1], y), Math.max(bb[2], x), Math.max(bb[3], y)]; }
+const W = 600, S = W / ((bb[2] - bb[0]) * PH), H = Math.round((bb[3] - bb[1]) * S) + 8;
+const px = ([x, y]) => [((x - bb[0]) * PH * S + 4).toFixed(1), ((bb[3] - y) * S + 4).toFixed(1)];
+const pathOf = g => g.coordinates.map(p => p.map(r => 'M' + r.map(px).map(q => q.join(' ')).join('L') + 'Z').join('')).join('');
+const centroid = g => { let a = 0, cx = 0, cy = 0; const r = g.coordinates.reduce((m, p) => p[0].length > m.length ? p[0] : m, []);
+  for (let i = 0; i < r.length - 1; i++) { const [x0, y0] = r[i], [x1, y1] = r[i + 1], f = x0 * y1 - x1 * y0; a += f; cx += (x0 + x1) * f; cy += (y0 + y1) * f; }
+  return px([cx / (3 * a), cy / (3 * a)]); };
+const map = $('#map'); map.setAttribute('viewBox', `0 0 ${W + 8} ${H}`);
+
+let layer = 'trust', selected = null;
+const placedOrgs = D.orgs.filter(o => o.place);
+function drawMap() {
+  const areas = layer === 'trust' ? D.geo.trusts : D.geo.councils;
+  let h = areas.map(a => `<path class="area${selected === a.code ? ' sel' : ''}" data-code="${a.code}" d="${pathOf(a.geometry)}"><title>${esc(layer === 'trust' ? short(a.name) : a.name)}</title></path>`).join('');
+  if (layer === 'trust') h += areas.map(a => { const [x, y] = centroid(a.geometry); return `<text class="lbl" x="${x}" y="${y}">${esc(short(a.name))}</text>`; }).join('');
+  if ($('#show-reg').checked) h += D.register.map(r => { const [x, y] = px([r[5], r[4]]); return `<circle class="reg" cx="${x}" cy="${y}" r="1.3"/>`; }).join('');
+  if ($('#show-orgs').checked) {
+    const order = { o: 0, f: 1, c: 2 };
+    h += [...placedOrgs].sort((a, b) => order[cls(a)] - order[cls(b)]).map(o => {
+      const [x, y] = px([o.place.lon, o.place.lat]); const inSel = !selected || o.place[layer === 'trust' ? 'trust' : 'council'] === selected;
+      return shape(cls(o), +x, +y, 3.6).replace('class="dot', `data-org="${esc(o.orgId || o.name)}" class="dot${inSel ? '' : ' dim'}`); }).join('');
+  }
+  map.innerHTML = h;
+}
+const legend = () => {
+  const sw = k => `<svg viewBox="-6 -6 12 12">${shape(k, 0, 0, 4.2).replace(/class="dot (\w)"/, (m, c) => `fill="var(--b-${({ c: 'comm', f: 'fund', o: 'other' })[c]})"`)}</svg>`;
+  $('#legend').innerHTML = Object.entries(CLS).map(([k, l]) => `<span>${sw(k)}${l} (${placedOrgs.filter(o => cls(o) === k).length})</span>`).join('')
+    + `<span class="miss">${D.orgs.length - placedOrgs.length} listed organisations have no NI register address and are not on the map</span>`;
+};
+
+const tip = $('#tip');
+map.addEventListener('mousemove', e => {
+  const t = e.target, card = map.parentElement.getBoundingClientRect(); let html = null;
+  if (t.dataset.org) { const o = D.orgs.find(x => (x.orgId || x.name) === t.dataset.org);
+    html = `<b>${esc(o.name)}</b><br>${esc(CLS[cls(o)])}<br>${esc(o.place.postcode)} · ${esc(councilName[o.place.council] || '')}`; }
+  else if (t.dataset.code) html = esc(layer === 'trust' ? trustName[t.dataset.code] : councilName[t.dataset.code]);
+  if (!html) { tip.style.display = 'none'; return; }
+  tip.innerHTML = html; tip.style.display = 'block';
+  tip.style.left = Math.min(e.clientX - card.left + 12, card.width - 200) + 'px'; tip.style.top = (e.clientY - card.top + 12) + 'px';
+});
+map.addEventListener('mouseleave', () => tip.style.display = 'none');
+map.addEventListener('click', e => {
+  const t = e.target;
+  if (t.dataset.org) { const o = D.orgs.find(x => (x.orgId || x.name) === t.dataset.org); $('#org-q').value = o.name; drawOrgs(); $('#orgt').scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+  selected = t.dataset.code && selected !== t.dataset.code ? t.dataset.code : null;
+  drawMap(); drawPanel(); syncAreaFilter();
+});
+const setLayer = l => { layer = l; selected = null; $('#lay-trust').setAttribute('aria-pressed', l === 'trust'); $('#lay-council').setAttribute('aria-pressed', l === 'council'); drawMap(); drawPanel(); fillAreaFilter(); };
+$('#lay-trust').onclick = () => setLayer('trust'); $('#lay-council').onclick = () => setLayer('council');
+$('#show-orgs').onchange = drawMap; $('#show-reg').onchange = drawMap;
+
+// ---------------- side panel ----------------
+const srcLink = f => `<a href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.label)}${f.page ? ' — p.' + f.page : ''}">src</a>`;
+const flags = f => (f.mixed ? `<span class="flag" title="${esc(f.mixedNote || f.mixed)}">${f.mixed === 'with other groups' ? 'mixed' : 'service'}</span>` : '')
+  + (f.check === 'conflict' ? `<span class="flag" title="${esc(f.note || 'another source disagrees')}">conflict</span>` : '');
+
+function yearTable(figs, years) {
+  const labels = [...new Set(figs.map(f => f.label))];
+  return `<table class="mini"><thead><tr><th>Line, as labelled</th>${years.map(y => `<th>${y.slice(2)}</th>`).join('')}</tr></thead><tbody>`
+    + labels.map(l => { const row = figs.filter(f => f.label === l);
+      return `<tr><td>${esc(l)} ${flags(row[0])}<br><span class="miss">${esc(row[0].unit)}</span></td>` + years.map(y => {
+        const c = row.filter(f => f.year === y); if (!c.length) return '<td class="miss">·</td>';
+        return `<td>${c.map(f => `<a href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.kind)}${f.page ? ', p.' + f.page : ''}${f.note ? ' — ' + esc(f.note) : ''}">${esc(f.value)}</a>${f.check === 'conflict' ? '*' : ''}`).join('<br>')}</td>`; }).join('') + '</tr>'; }).join('')
+    + '</tbody></table>';
+}
+const orgsIn = (key, code) => D.orgs.filter(o => o.place && o.place[key] === code);
+const regIn = (idx, code) => D.register.filter(r => r[idx] === code);
+const orgList = os => `<ul class="orgs">${os.sort((a, b) => (+b.income || 0) - (+a.income || 0)).map(o =>
+  `<li><svg width="10" height="10" viewBox="-6 -6 12 12">${shape(cls(o), 0, 0, 4.5).replace(/class="dot (\w)"/, (m, c) => `fill="var(--b-${({ c: 'comm', f: 'fund', o: 'other' })[c]})"`)}</svg>${esc(o.name)}<span class="inc">${o.income ? '£' + (+o.income).toLocaleString('en-GB') : ''}</span></li>`).join('')}</ul>`;
+
+function drawPanel() {
+  const P = $('#panel');
+  if (!selected) {
+    const v = k => D.bodies.filter(b => b.verdict === k && !b.excluded).length;
+    P.innerHTML = `<h4>Northern Ireland</h4><p class="sub">Select an area on the map for what is published about it.</p>
+      <div class="stats"><div class="stat"><b>${v('core')}</b><span>bodies with children as their whole remit</span></div>
+      <div class="stat"><b>${v('part')}</b><span>with some children's functions</span></div>
+      <div class="stat"><b>${D.orgs.length}</b><span>voluntary organisations on a documented basis</span></div></div>
+      <h5>What each geography can carry</h5>
+      <p style="font-size:13.5px">${layer === 'trust'
+        ? 'Trust areas are where statutory children\'s money is published: each trust reports a children\'s directorate in its accounts (2019-20 on), and the Department of Health\'s costing returns break it into services for 2022-23 to 2024-25.'
+        : 'Council areas carry the voluntary sector: organisations by registered address, and the few play and youth lines councils publish. Councils run no education or social services.'}</p>
+      <h5>Not here, and why</h5>
+      <p style="font-size:13.5px">No spending is published below trust level. No figure on this page is a "children's total": the lines are not comparable, so they are not added. ${D.budgetsLeftOut.extraction} figures whose table could not be read reliably are withheld.</p>`;
+    return;
+  }
+  if (layer === 'trust') {
+    const bid = TRUST_BODY[selected], all = D.budgets.filter(f => f.bodyId === bid && f.scope === "children's line");
+    const dir = all.filter(f => !f.label.includes(' / ') && fy(f.year)), cost = all.filter(f => f.label.includes(' / ') && fy(f.year));
+    const dYears = [...new Set(dir.map(f => f.year))].sort(), cYears = [...new Set(cost.map(f => f.year))].sort();
+    const last = cYears[cYears.length - 1];
+    const topCost = [...new Set(cost.map(f => f.label))].map(l => ({ l, v: num((cost.find(f => f.label === l && f.year === last) || {}).value) }))
+      .filter(x => x.v != null).sort((a, b) => b.v - a.v).slice(0, 10).map(x => x.l);
+    const os = orgsIn('trust', selected), rg = regIn(7, selected);
+    P.innerHTML = `<h4>${esc(trustName[selected])} Trust area</h4><p class="sub">${esc(bodyById[bid].name)}</p>
+      <div class="stats"><div class="stat"><b>${os.length}</b><span>listed organisations registered here</span></div>
+      <div class="stat"><b>${rg.length}</b><span>register charities ticking children</span></div>
+      <div class="stat"><b>${dYears.length}</b><span>years of directorate spending</span></div></div>
+      <h5>Children's directorate, from the trust's accounts</h5>${dir.length ? yearTable(dir, dYears) : '<p class="miss">None published.</p>'}
+      <p class="miss" style="font-size:12px;margin-top:6px">Directorates were reorganised; a change of label is a break in the series. * another figure exists for that year.</p>
+      <h5>Largest children's service costs, ${esc(last || '')} (Department of Health costing returns)</h5>
+      ${topCost.length ? yearTable(cost.filter(f => topCost.includes(f.label)), cYears) : '<p class="miss">None published.</p>'}
+      <h5>Listed organisations registered in this area</h5>${os.length ? orgList(os) : '<p class="miss">None.</p>'}`;
+  } else {
+    const nm = councilName[selected], os = orgsIn('council', selected), rg = regIn(6, selected);
+    const lines = D.budgets.filter(f => f.bodyId === 'councils' && f.label.startsWith(nm + ' Council') || f.bodyId === 'councils' && f.label.startsWith(nm));
+    P.innerHTML = `<h4>${esc(nm)}</h4><p class="sub">Council area</p>
+      <div class="stats"><div class="stat"><b>${os.length}</b><span>listed organisations registered here</span></div>
+      <div class="stat"><b>${rg.filter(r => r[2] === 0).length}</b><span>register charities ticking only children/youth</span></div>
+      <div class="stat"><b>${rg.length}</b><span>ticking children among others</span></div></div>
+      <h5>Council spending lines on play or young people</h5>
+      ${lines.length ? `<table class="mini"><tbody>${lines.map(f => `<tr><td>${esc(f.label.replace(nm + ':', '').replace(nm, '').replace(/^[\s:]+/, ''))} ${flags(f)}</td><td>${esc(f.year)}</td><td>${esc(f.value)} ${esc(f.unit)}</td><td>${srcLink(f)}</td></tr>`).join('')}</tbody></table>` : '<p class="miss">No children-specific line in this council\'s accounts or estimates.</p>'}
+      <h5>Listed organisations registered in this area</h5>${os.length ? orgList(os) : '<p class="miss">None.</p>'}`;
+  }
+}
+
+// ---------------- bodies ----------------
+const DEPT = { de: 'Education', doh: 'Health', doj: 'Justice', dfc: 'Communities', teo: 'The Executive Office', dfe: 'Economy', daera: 'Agriculture, Environment and Rural Affairs', dfi: 'Infrastructure', dof: 'Finance' };
+const deptOf = b => { if (DEPT[b.id]) return b.id; const s = String(b.sponsor || '').toLowerCase();
+  for (const [k, re] of [['de', /^de\b/], ['doh', /^doh/], ['doj', /^doj/], ['dfc', /^dfc/], ['teo', /^teo/], ['dfe', /^dfe/], ['dof', /^dof/]]) if (re.test(s)) return k; return 'other'; };
+const grp = {}; for (const b of D.bodies) (grp[deptOf(b)] ||= []).push(b);
+const vorder = { core: 0, part: 1, none: 2, unverified: 3 };
+$('#bodies-count').textContent = `${D.bodies.length} rows checked`;
+$('#depts').innerHTML = Object.entries(grp).sort((a, b) => b[1].length - a[1].length).map(([k, bs]) => `<div class="card dept"><h4>${esc(DEPT[k] || 'Councils and partnerships')}</h4>`
+  + bs.sort((a, b) => vorder[a.verdict] - vorder[b.verdict]).map(b => `<div class="body${b.excluded ? ' excl' : ''}" tabindex="0"><span class="v ${b.verdict}">${b.verdict}</span>${esc(b.name)}${b.via ? ' <span class="flag">via schools</span>' : ''}
+    <div class="fx">${b.excluded ? `<p>${esc(b.excluded)}</p>` : ''}${b.functions.map(f => `<div>${esc(f.what)}${f.quote ? ` — <q>${esc(f.quote)}</q>` : ''} <a href="${esc(f.url)}" target="_blank" rel="noopener">source</a></div>`).join('') || `<div>${esc(b.notes || 'No child-specific function found.')}</div>`}
+    ${b.roles && b.roles.length ? `<div class="miss">Role: ${esc(b.roles.join(', '))}</div>` : ''}</div></div>`).join('') + '</div>').join('');
+$('#depts').addEventListener('click', e => { const b = e.target.closest('.body'); if (b && e.target.tagName !== 'A') b.classList.toggle('open'); });
+
+// ---------------- budgets ----------------
+const series = {};
+for (const f of D.budgets) { if (!fy(f.year)) continue; const k = f.bodyId + '|' + f.label + '|' + f.unit; (series[k] ||= { k, bodyId: f.bodyId, label: f.label, unit: f.unit, scope: f.scope, figs: [] }).figs.push(f); }
+const SER = Object.values(series).filter(s => s.figs.length >= 2 && (s.scope === "children's line" || bodyById[s.bodyId]?.verdict === 'core'));
+$('#bud-count').textContent = `${SER.length} lines with two or more years`;
+let cur = SER.find(s => s.bodyId === 'yja' && s.scope === 'whole body') || SER[0];
+function drawList() {
+  const q = $('#ser-q').value.toLowerCase(), byB = {};
+  for (const s of SER) if (!q || (s.label + ' ' + (bodyById[s.bodyId]?.name || s.bodyId)).toLowerCase().includes(q)) (byB[s.bodyId] ||= []).push(s);
+  $('#serieslist').innerHTML = Object.entries(byB).map(([b, ss]) => `<div class="grp">${esc(bodyById[b]?.name || b)}</div>`
+    + ss.sort((x, y) => y.figs.length - x.figs.length).map(s => `<button data-k="${esc(s.k)}"${s === cur ? ' aria-current="true"' : ''}>${esc(s.label)} ${flags(s.figs[0])}<br><small>${s.figs.length} figures · ${esc(s.unit)}</small></button>`).join('')).join('');
+}
+$('#serieslist').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; cur = series[b.dataset.k]; drawList(); drawChart(); });
+$('#ser-q').oninput = drawList;
+const chart = $('#chart'), ctip = $('#ctip');
+function drawChart() {
+  const s = cur, pts = s.figs.map(f => ({ ...f, v: num(f.value) })).filter(p => p.v != null);
+  $('#ch-title').innerHTML = esc(s.label) + ' ' + flags(s.figs[0]);
+  $('#ch-sub').textContent = `${bodyById[s.bodyId]?.name || s.bodyId} · ${s.unit}${s.figs[0].mixedNote ? ' · ' + s.figs[0].mixedNote : ''}`;
+  const years = [...new Set(s.figs.map(f => f.year))].sort();
+  const w = 640, h = 240, m = { l: 64, r: 14, t: 10, b: 26 };
+  const lo = Math.min(0, ...pts.map(p => p.v)), hi = Math.max(...pts.map(p => p.v), 1);
+  const nice = (() => { const step = Math.pow(10, Math.floor(Math.log10(hi - lo || 1))); const st = [1, 2, 2.5, 5, 10].map(x => x * step).find(x => (hi - lo) / x <= 5); return st; })();
+  const top = Math.ceil(hi / nice) * nice, bot = Math.floor(lo / nice) * nice;
+  const X = i => m.l + (years.length === 1 ? (w - m.l - m.r) / 2 : i * (w - m.l - m.r) / (years.length - 1));
+  const Y = v => m.t + (top - v) / (top - bot || 1) * (h - m.t - m.b);
+  let g = '';
+  for (let v = bot; v <= top + 1e-9; v += nice) g += `<line class="grid" x1="${m.l}" x2="${w - m.r}" y1="${Y(v)}" y2="${Y(v)}"/><text class="ax" x="${m.l - 8}" y="${Y(v) + 4}" text-anchor="end">${v.toLocaleString('en-GB')}</text>`;
+  years.forEach((y, i) => g += `<text class="ax" x="${X(i)}" y="${h - 6}" text-anchor="middle">${y}</text>`);
+  // the outturn line connects only consecutive years; a missing year leaves a gap
+  const out = years.map((y, i) => { const p = pts.filter(q => q.year === y && q.kind === 'outturn'); return p.length ? [X(i), Y(p[0].v)] : null; });
+  let d = '', pen = false; out.forEach(q => { if (q) { d += (pen ? 'L' : 'M') + q.join(' '); pen = true; } else pen = false; });
+  if (d) g += `<path class="line" d="${d}"/>`;
+  pts.forEach((p, j) => { const i = years.indexOf(p.year); const off = pts.filter(q => q.year === p.year && q.kind === p.kind).indexOf(p) * 7;
+    g += `<circle class="pt${p.kind === 'outturn' ? '' : ' plan'}" cx="${X(i) + off}" cy="${Y(p.v)}" r="4.5"/><circle class="hit" data-j="${j}" cx="${X(i) + off}" cy="${Y(p.v)}" r="12"/>`; });
+  chart.setAttribute('viewBox', `0 0 ${w} ${h}`); chart.setAttribute('aria-label', s.label); chart.innerHTML = g;
+  chart.onmousemove = e => { const j = e.target.dataset.j; if (j == null) { ctip.style.display = 'none'; return; } const p = pts[+j], r = chart.parentElement.getBoundingClientRect();
+    ctip.innerHTML = `<b>${esc(p.year)}: ${esc(p.value)} ${esc(p.unit)}</b><br>${esc(p.kind)}${p.page ? ' · p.' + p.page : ''}${p.note ? '<br>' + esc(p.note) : ''}`;
+    ctip.style.display = 'block'; ctip.style.left = Math.min(e.clientX - r.left + 12, r.width - 220) + 'px'; ctip.style.top = (e.clientY - r.top + 12) + 'px'; };
+  chart.onmouseleave = () => ctip.style.display = 'none';
+  chart.onclick = e => { const j = e.target.dataset.j; if (j != null) window.open(pts[+j].url, '_blank', 'noopener'); };
+  $('#ch-table').innerHTML = `<table class="mini" style="margin-top:10px"><thead><tr><th>Year</th><th>Kind</th><th>Value</th><th>Source</th></tr></thead><tbody>`
+    + s.figs.slice().sort((a, b) => a.year.localeCompare(b.year)).map(f => `<tr><td>${esc(f.year)}</td><td>${esc(f.kind)}</td><td>${esc(f.value)} ${esc(f.unit)} ${f.check === 'conflict' ? `<span class="flag" title="${esc(f.note || '')}">conflict</span>` : ''}</td><td><a href="${esc(f.url)}" target="_blank" rel="noopener">${f.page ? 'p.' + f.page : 'open'}</a></td></tr>`).join('') + '</tbody></table>';
+}
+
+// ---------------- organisations ----------------
+const BASIS = ['gov funding', 'commissioned', 'network member', 'directory', 'gb-registered'];
+$('#org-basis').innerHTML += BASIS.map(b => `<option>${b}</option>`).join('');
+$('#org-count').textContent = `${D.orgs.length} listed`;
+function fillAreaFilter() {
+  const areas = layer === 'trust' ? D.geo.trusts.map(t => [t.code, short(t.name) + ' Trust area']) : D.geo.councils.map(c => [c.code, c.name]);
+  $('#org-area').innerHTML = '<option value="">Anywhere</option>' + areas.sort((a, b) => a[1].localeCompare(b[1])).map(([c, n]) => `<option value="${c}">${esc(n)}</option>`).join('');
+  syncAreaFilter();
+}
+function syncAreaFilter() { $('#org-area').value = selected || ''; drawOrgs(); }
+$('#org-area').onchange = () => { selected = $('#org-area').value || null; drawMap(); drawPanel(); drawOrgs(); };
+let sortK = 'income', open = null;
+function drawOrgs() {
+  const q = $('#org-q').value.toLowerCase(), bf = $('#org-basis').value, af = $('#org-area').value, key = layer === 'trust' ? 'trust' : 'council';
+  const rows = D.orgs.filter(o => (!q || (o.name).toLowerCase().includes(q)) && (!bf || o.basisTypes.includes(bf)) && (!af || (o.place && o.place[key] === af)))
+    .sort((a, b) => sortK === 'income' ? (+b.income || -1) - (+a.income || -1) : sortK === 'name' ? a.name.localeCompare(b.name)
+      : String((a.place || {})[sortK] || 'zz').localeCompare(String((b.place || {})[sortK] || 'zz')));
+  $('#orgt tbody').innerHTML = rows.map(o => { const id = o.orgId || o.name;
+    return `<tr class="row" data-id="${esc(id)}"><td>${esc(o.name)}${o.onlyWeak ? ' <span class="flag" title="Rests only on the 2004 CiNI list or an individual\'s advisory seat">weak basis</span>' : ''}</td>
+      <td>${o.basisTypes.map(t => `<span class="chip">${esc(t)}</span>`).join('')}</td>
+      <td class="num">${o.income ? '£' + (+o.income).toLocaleString('en-GB') : '<span class="miss">not on NI register</span>'}</td>
+      <td>${esc(o.place ? councilName[o.place.council] : '')}</td><td>${esc(o.place ? trustName[o.place.trust] : '')}</td></tr>`
+      + (open === id ? `<tr class="det"><td colspan="5">${o.basis.map(b => `<div><b>${esc(b.type)}</b>: ${esc(b.detail || '')}${b.amount ? ' — ' + esc(b.amount) : ''}${b.year ? ' (' + esc(b.year) + ')' : ''}${b.relationship ? ' · ' + esc(b.relationship) : ''} <a href="${esc(b.url)}" target="_blank" rel="noopener">source</a>${b.weak ? ` <span class="flag">${esc(b.weak)}</span>` : ''}</div>`).join('')}
+        ${o.regNo ? `<div class="miss">Register no. ${esc(o.regNo)}${o.fyEnd ? ', return for year ending ' + esc(o.fyEnd) : ''}${o.place ? ', registered at ' + esc(o.place.postcode) : ''}</div>` : ''}</td></tr>` : ''); }).join('')
+    || '<tr><td colspan="5" class="miss">No organisation matches.</td></tr>';
+}
+$('#orgt tbody').addEventListener('click', e => { if (e.target.tagName === 'A') return; const r = e.target.closest('tr.row'); if (!r) return; open = open === r.dataset.id ? null : r.dataset.id; drawOrgs(); });
+$('#orgt thead').addEventListener('click', e => { const k = e.target.dataset.k; if (!k || k === 'basis') return; sortK = k; drawOrgs(); });
+$('#org-q').oninput = drawOrgs; $('#org-basis').onchange = drawOrgs;
+
+drawMap(); legend(); drawPanel(); fillAreaFilter(); drawList(); drawChart();
+</script>
