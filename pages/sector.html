@@ -435,7 +435,16 @@ const legend = () => {
 };
 
 // ---- zoom and pan: wheel, drag, pinch, buttons ----
-map.addEventListener('wheel', e => { e.preventDefault(); const [cx, cy] = toView(e.clientX, e.clientY); zoomAt(Math.exp(-e.deltaY * .0016), cx, cy); }, { passive: false });
+// deltaY is in lines on Firefox and pages in a few places, not always pixels,
+// so normalise before scaling the zoom by it: unnormalised, one notch zoomed
+// 17% in Chrome and 0.5% in Firefox and read as broken there. 33 is 100/3, the
+// ratio that makes one NOTCH equal between the two, not a line height. The
+// clamp stops a kinetic fling leaping several steps in a single event.
+map.addEventListener('wheel', e => { e.preventDefault();
+  const f = e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? (map.getBoundingClientRect().height || 600) : 1;
+  const step = Math.max(-240, Math.min(240, e.deltaY * f));
+  if (!step) return;
+  const [cx, cy] = toView(e.clientX, e.clientY); zoomAt(Math.exp(-step * .0016), cx, cy); }, { passive: false });
 const ptrs = new Map(); let drag = null, pinch = null, moved = false;
 map.addEventListener('pointerdown', e => {
   if (e.button !== undefined && e.button !== 0) return;

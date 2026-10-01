@@ -759,10 +759,11 @@ a.cite:hover { color: var(--focus); text-decoration-style: solid; }
      the legend -- over the ramp labels before, and over the category rows and
      their counts once the key grew. sizeMap() publishes what the furniture
      takes so they clear it and stay over the map.
-     They cannot simply be hidden: there is no pinch handler on the SVG, only a
-     pointerdown pan, so these buttons are the only way to zoom on a touch
-     screen. The short-phone query below does hide them, and that is a trade
-     made against a screen with no room, not a statement that they are spare. */
+     They cannot simply be hidden: pinching needs two fingers landing on the map
+     rather than on the key or the blurb, which is a lot to ask of a narrow
+     screen, so these buttons are the dependable way to zoom on a touch screen.
+     The short-phone query below does hide them, and that is a trade made
+     against a screen with no room, not a statement that they are spare. */
   .zoomctl { bottom: calc(var(--keyh, 0px) + 14px); }
 }
 
@@ -2216,7 +2217,8 @@ function markSelection() {
 
 /* ---------- pan & zoom ----------
    Same canvas mechanics as the syntax-tree viewer: one finger or the mouse
-   pans, two fingers pinch, ctrl/⌘-wheel zooms, plain wheel scrolls the view. */
+   pans, two fingers pinch, and THE WHEEL ZOOMS. The handler at the end of this
+   section says why that changed, and what is left for shift and for ctrl/⌘. */
 // A fingertip needs a bigger target than a cursor, so both the marker and the
 // size below which a shape gets one grow on a touch screen.
 const COARSE = matchMedia('(pointer: coarse)').matches;
@@ -2468,15 +2470,54 @@ svg.addEventListener('pointerup', endPtr);
 svg.addEventListener('pointercancel', endPtr);
 svg.addEventListener('pointerleave', () => { hovered = null; markSelection(); hideTip(); });
 
+/* THE WHEEL ZOOMS. It used to pan, with ctrl/⌘-wheel to zoom, which gave the
+ * plainest gesture on the page the one job nobody arrives wanting: the map is
+ * fitted to the stage on load, so at k=1 there is nothing to scroll TO, and a
+ * wheel flick only slid the world sideways under the cursor. Zooming is what a
+ * reader is reaching for, and /sector has zoomed on a plain wheel since it was
+ * written -- so this also stops the two canvases in the app answering the same
+ * gesture two different ways.
+ *
+ * Panning keeps a wheel route under SHIFT, using the deltas as they arrive
+ * rather than remapping them: on a mouse that is exactly the old vertical pan,
+ * on a trackpad it pans both axes at once. Dragging never stopped working and
+ * is still the main way to move around.
+ *
+ * ctrl/⌘ stays a zoom, because that is what a browser sends for a trackpad
+ * PINCH. Reading it as a modifier worth re-purposing would have broken
+ * pinching on every laptop.
+ */
+// One wheel event is not one unit of anything. Chrome reports PIXELS and sends
+// 100 for one notch; Firefox reports LINES and sends 3 for the same notch; a
+// page-mode wheel sends 1. Scaled straight off deltaY, one notch zoomed 28% in
+// Chrome and 0.75% in Firefox -- thirty times less for the same flick, which
+// reads as a dead gesture rather than a slow one.
+//
+// So 33 is not a line height. It is 100/3: the number that makes one NOTCH
+// mean the same thing in both browsers, which is the unit a hand actually
+// works in. A real line height here would leave Firefox at half speed.
+const LINE_PX = 33;
+function wheelPx(ev) {
+  const f = ev.deltaMode === 1 ? LINE_PX
+          : ev.deltaMode === 2 ? (svg.getBoundingClientRect().height || 600)
+          : 1;
+  return [ev.deltaX * f, ev.deltaY * f];
+}
 svg.addEventListener('wheel', ev => {
   ev.preventDefault();
-  if (ev.ctrlKey || ev.metaKey) {
-    zoomAt(ev.clientX, ev.clientY, Math.exp(-ev.deltaY * 0.0025));
-  } else {
+  const [dx, dy] = wheelPx(ev);
+  if (ev.shiftKey && !(ev.ctrlKey || ev.metaKey)) {
     const s = baseScale();
-    view.tx -= ev.deltaX / s; view.ty -= ev.deltaY / s;
+    view.tx -= dx / s; view.ty -= dy / s;
     clampView(); applyView();
+    hideTip();
+    return;
   }
+  // Clamp per event. A kinetic trackpad fling and a notched mouse wheel both
+  // arrive as one large delta, and exp() turns that into a leap of several
+  // zoom steps with no frame in between for the eye to follow.
+  const step = Math.max(-240, Math.min(240, dy));
+  if (step) zoomAt(ev.clientX, ev.clientY, Math.exp(-step * 0.0025));
 }, { passive: false });
 
 document.getElementById('zin').onclick = () => { const r = svg.getBoundingClientRect(); zoomAt(r.left + r.width / 2, r.top + r.height / 2, 1.5); };
