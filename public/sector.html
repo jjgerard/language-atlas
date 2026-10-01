@@ -301,6 +301,15 @@ const hasSvc = o => { const v = $('#svc').value; return !v || !!(o.profile && o.
 const REL = { grant: 'grant', commissioned: 'contract', 'own funds': 'own funds', unclear: 'relationship unclear' };
 // A quote that came through a summarising fetch is shown without quotation marks, and says so.
 const say = (o, q) => !q ? '' : o.profile.paraphrased ? ` — ${esc(q)}` : ` — <q>${esc(q)}</q>`;
+function incomeInfo(o) {
+  const f = o.profile && o.profile.funding, ni = f && f.government.length;
+  if (o.income) return { html: '£' + (+o.income).toLocaleString('en-GB'), sub: 'year to ' + (o.fyEnd || '?') + ', NI register', sort: +o.income };
+  if (o.gbCharityNo) return { html: '<span class="miss">no NI total published</span>', sub: (f && f.total ? 'UK-wide ' + String(f.total).replace(/s*(.*$/, '') : 'UK-wide charity') + (ni ? ' · ' + f.government.length + ' NI public funders listed' : ''), sort: -1 };
+  if (f && f.total && f.total !== '—') return { html: esc(String(f.total).replace(/\s*\(.*$/, '')), sub: (f.year ? f.year + ', ' : '') + 'own accounts', sort: parseFloat(String(f.total).replace(/[^0-9.]/g, '')) || 0 };
+  if (/\bCIC\b|limited\b|ltd\b/i.test(o.name)) return { html: '<span class="miss">none public</span>', sub: 'company, not a registered charity', sort: -2 };
+  if (o.possiblyStatutory) return { html: '<span class="miss">within EA budget?</span>', sub: 'possibly an EA-run centre', sort: -2 };
+  return { html: '<span class="miss">none public</span>', sub: o.regNo ? 'register shows no income' : 'not a registered charity', sort: -3 };
+}
 function profHTML(o) {
   const p = o.profile;
   const warn = (o.possiblyStatutory ? `<div class="flag">possibly a statutory EA centre: ${esc(o.possiblyStatutory)}</div>` : '')
@@ -310,8 +319,8 @@ function profHTML(o) {
   const svcs = p.services.map(s => `<div><b>${esc(SVC[s.code] || s.code)}</b>${say(o, s.quote)} <a href="${esc(s.url)}" target="_blank" rel="noopener">source</a>${s.rel ? ` <span class="chip">${esc(REL[s.rel.type] || s.rel.type)}${s.rel.body ? ': ' + esc(s.rel.body) : ''}</span>` : ''}</div>`).join('');
   const steps = p.stepsIn.map(s => `<div class="steps"><b>Steps in</b> (${esc(SVC[s.code] || s.code)}; said by ${esc(s.who)}): <q>${esc(s.quote)}</q> <a href="${esc(s.url)}" target="_blank" rel="noopener">source</a></div>`).join('');
   const f = p.funding;
-  const fund = !f ? '' : `<div style="margin-top:4px"><b>Funding${f.year ? ', ' + esc(f.year) : ''}</b>: total ${esc(f.total || '—')} ${esc(f.unit || '')}${f.url ? ` <a href="${esc(f.url)}" target="_blank" rel="noopener">${f.page ? 'p.' + f.page : 'accounts'}</a>` : ''}
-    ${f.government.length ? '<br>Government: ' + f.government.map(g => `${esc(g.funder)}${g.amount ? ' ' + esc(g.amount) : ''}`).join('; ') : f.breakdown ? '<br>No government funder in the accounts.' : '<br><span class="miss">The accounts do not break income down by funder.</span>'}</div>`;
+  const fund = !f ? '' : `<div style="margin-top:4px"><b>Funding${f.year ? ', ' + esc(f.year) : ''}</b>: ${o.gbCharityNo ? 'UK-wide total ' : 'total '}${esc(String(f.total || '—').replace(/s*(.*$/, ''))} ${esc(f.unit || '')}${f.url ? ` <a href="${esc(f.url)}" target="_blank" rel="noopener">${f.page ? 'p.' + f.page : 'accounts'}</a>` : ''}
+    ${f.government.length ? (o.gbCharityNo ? '<br>Northern Ireland public funders, from the UK accounts: ' : '<br>Government: ') + f.government.map(g => `${esc(g.funder)}${g.amount ? ' ' + esc(g.amount) : ''}`).join('; ') : f.breakdown ? '<br>No government funder in the accounts.' : '<br><span class="miss">The accounts do not break income down by funder.</span>'}</div>`;
   return warn + (p.focus && p.focus.value ? `<div class="miss">${esc(p.focus.value)}${p.status === 'partial' ? ' · partial profile' : ''}${p.paraphrased ? ' · some wording via a page summary, not verbatim' : ''}</div>` : '')
     + steps + svcs + fund;
 }
@@ -657,13 +666,13 @@ let sortK = 'income', open = null;
 function drawOrgs() {
   const q = $('#org-q').value.toLowerCase(), bf = $('#org-basis').value, af = $('#org-area').value, key = layer === 'trust' ? 'trust' : 'council';
   const rows = D.orgs.filter(o => (!q || (o.name).toLowerCase().includes(q)) && (!bf || o.basisTypes.includes(bf)) && (!af || (o.place && o.place[key] === af)) && hasSvc(o))
-    .sort((a, b) => sortK === 'income' ? (+b.income || -1) - (+a.income || -1) : sortK === 'name' ? a.name.localeCompare(b.name)
+    .sort((a, b) => sortK === 'income' ? incomeInfo(b).sort - incomeInfo(a).sort : sortK === 'name' ? a.name.localeCompare(b.name)
       : String((a.place || {})[sortK] || 'zz').localeCompare(String((b.place || {})[sortK] || 'zz')));
   $('#orgt tbody').innerHTML = rows.map(o => { const id = o.orgId || o.name;
     return `<tr class="row" data-id="${esc(id)}"><td>${esc(o.name)}${o.onlyWeak ? ' <span class="flag" title="Rests only on the 2004 CiNI list or an individual\'s advisory seat">weak basis</span>' : ''}</td>
       <td>${o.basisTypes.map(t => `<span class="chip">${esc(t)}</span>`).join('')}</td>
       <td>${o.profile ? [...new Set(o.profile.services.map(x => x.code))].map(c => `<span class="chip">${esc(SVC[c] || c)}</span>`).join('') : '<span class="miss">not profiled</span>'}</td>
-      <td class="num">${o.income ? '£' + (+o.income).toLocaleString('en-GB') : '<span class="miss">not on NI register</span>'}</td>
+      <td class="num">${(i => i.html + '<br><small class="miss">' + esc(i.sub) + '</small>')(incomeInfo(o))}</td>
       <td>${esc(o.place ? councilName[o.place.council] : '')}</td><td>${esc(o.place ? trustName[o.place.trust] : '')}</td></tr>`
       + (open === id ? `<tr class="det"><td colspan="6">${profHTML(o)}<div style="margin-top:6px"><b>Why it is listed</b></div>${o.basis.map(b => `<div><b>${esc(b.type)}</b>: ${esc(b.detail || '')}${b.amount ? ' — ' + esc(b.amount) : ''}${b.year ? ' (' + esc(b.year) + ')' : ''}${b.relationship ? ' · ' + esc(b.relationship) : ''} <a href="${esc(b.url)}" target="_blank" rel="noopener">source</a>${b.weak ? ` <span class="flag">${esc(b.weak)}</span>` : ''}</div>`).join('')}
         ${o.regNo ? `<div class="miss">Register no. ${esc(o.regNo)}${o.fyEnd ? ', return for year ending ' + esc(o.fyEnd) : ''}${o.place ? ', registered at ' + esc(o.place.postcode) : ''}</div>` : ''}</td></tr>` : ''); }).join('')
