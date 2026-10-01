@@ -304,7 +304,7 @@ const say = (o, q) => !q ? '' : o.profile.paraphrased ? ` — ${esc(q)}` : ` —
 function incomeInfo(o) {
   const f = o.profile && o.profile.funding, ni = f && f.government.length;
   if (o.income) return { html: '£' + (+o.income).toLocaleString('en-GB'), sub: 'year to ' + (o.fyEnd || '?') + ', NI register', sort: +o.income };
-  if (o.gbCharityNo) return { html: '<span class="miss">no NI total published</span>', sub: (f && f.total ? 'UK-wide ' + String(f.total).replace(/s*(.*$/, '') : 'UK-wide charity') + (ni ? ' · ' + f.government.length + ' NI public funders listed' : ''), sort: -1 };
+  if (o.gbCharityNo) return { html: '<span class="miss">no NI total published</span>', sub: (f && f.total ? 'UK-wide ' + String(f.total).replace(/\s*\(.*$/, '') : 'UK-wide charity') + (ni ? ' · ' + f.government.length + ' NI public funders listed' : ''), sort: -1 };
   if (f && f.total && f.total !== '—') return { html: esc(String(f.total).replace(/\s*\(.*$/, '')), sub: (f.year ? f.year + ', ' : '') + 'own accounts', sort: parseFloat(String(f.total).replace(/[^0-9.]/g, '')) || 0 };
   if (/\bCIC\b|limited\b|ltd\b/i.test(o.name)) return { html: '<span class="miss">none public</span>', sub: 'company, not a registered charity', sort: -2 };
   if (o.possiblyStatutory) return { html: '<span class="miss">within EA budget?</span>', sub: 'possibly an EA-run centre', sort: -2 };
@@ -319,7 +319,7 @@ function profHTML(o) {
   const svcs = p.services.map(s => `<div><b>${esc(SVC[s.code] || s.code)}</b>${say(o, s.quote)} <a href="${esc(s.url)}" target="_blank" rel="noopener">source</a>${s.rel ? ` <span class="chip">${esc(REL[s.rel.type] || s.rel.type)}${s.rel.body ? ': ' + esc(s.rel.body) : ''}</span>` : ''}</div>`).join('');
   const steps = p.stepsIn.map(s => `<div class="steps"><b>Steps in</b> (${esc(SVC[s.code] || s.code)}; said by ${esc(s.who)}): <q>${esc(s.quote)}</q> <a href="${esc(s.url)}" target="_blank" rel="noopener">source</a></div>`).join('');
   const f = p.funding;
-  const fund = !f ? '' : `<div style="margin-top:4px"><b>Funding${f.year ? ', ' + esc(f.year) : ''}</b>: ${o.gbCharityNo ? 'UK-wide total ' : 'total '}${esc(String(f.total || '—').replace(/s*(.*$/, ''))} ${esc(f.unit || '')}${f.url ? ` <a href="${esc(f.url)}" target="_blank" rel="noopener">${f.page ? 'p.' + f.page : 'accounts'}</a>` : ''}
+  const fund = !f ? '' : `<div style="margin-top:4px"><b>Funding${f.year ? ', ' + esc(f.year) : ''}</b>: ${o.gbCharityNo ? 'UK-wide total ' : 'total '}${esc(String(f.total || '—').replace(/\s*\(.*$/, ''))} ${esc(f.unit || '')}${f.url ? ` <a href="${esc(f.url)}" target="_blank" rel="noopener">${f.page ? 'p.' + f.page : 'accounts'}</a>` : ''}
     ${f.government.length ? (o.gbCharityNo ? '<br>Northern Ireland public funders, from the UK accounts: ' : '<br>Government: ') + f.government.map(g => `${esc(g.funder)}${g.amount ? ' ' + esc(g.amount) : ''}`).join('; ') : f.breakdown ? '<br>No government funder in the accounts.' : '<br><span class="miss">The accounts do not break income down by funder.</span>'}</div>`;
   return warn + (p.focus && p.focus.value ? `<div class="miss">${esc(p.focus.value)}${p.status === 'partial' ? ' · partial profile' : ''}${p.paraphrased ? ' · some wording via a page summary, not verbatim' : ''}</div>` : '')
     + steps + svcs + fund;
