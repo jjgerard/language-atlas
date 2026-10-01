@@ -1,0 +1,324 @@
+{
+ "unit": "Northern Ireland",
+ "sector": "children",
+ "checked": "2026-10-01",
+ "method": "Universe = ni-bodies-universe.json (NIAO March 2026, Appendices 1-2) plus the 9 departments, 11 councils and bodies absent from the DoF list. Each candidate body checked against its own documents (website remit page, annual report and accounts, statute); a sponsor department or NIAO/NIFC report only where the body's own was unreachable, and marked so. Quotes are verbatim, at most 25 words. Bodies in the universe NOT listed here were screened out by name/remit and NOT checked: see screenedOut.",
+ "vocab": {
+  "verdict": {
+   "core": "children/young people are the body's whole or primary remit",
+   "part": "one or more stated children's functions among others",
+   "none": "remit read, no child-specific function found (what was read is in notes)",
+   "unverified": "no source reached"
+  },
+  "role": ["delivers", "funds", "commissions", "coordinates", "regulates", "inspects", "advises", "advocates", "pays"]
+ },
+ "bodies": [
+  {"id": "de", "name": "Department of Education", "universeName": null, "sponsor": null, "kind": "department", "verdict": "part", "roles": ["funds", "commissions"],
+   "functions": [
+    {"what": "leads the Children and Young People's Strategy 2020-2030 for the Executive", "quote": "On behalf of the Executive, the Department of Education has lead responsibility for liaising with departments as they work towards implementation of the new strategy.", "url": "https://www.education-ni.gov.uk/articles/children-and-young-people"},
+    {"what": "funds youth work", "quote": "The Department of Education invests in youth work to support and encourage children and young people", "url": "https://www.education-ni.gov.uk/articles/youth-service"},
+    {"what": "policy lead and budget holder for Sure Start (38 projects, under-4s)", "quote": "DE is the policy lead for Sure Start and oversees and allocates the annual Sure Start budget.", "url": "https://www.etini.gov.uk/publications/html-document/evaluation-sure-starts-developmental-programme-2-3-year-old-children-and"},
+    {"what": "statutory duty on Irish-medium education", "quote": "duty of the Department to encourage and facilitate the development of Irish-medium education", "url": "https://www.legislation.gov.uk/nisi/1998/1759/article/89"}
+   ],
+   "statute": "Children's Services Co-operation Act (NI) 2015 places its duties on the Executive, not DE; DE hosts the Act's page and publishes the delivery reports",
+   "accounts": "https://www.education-ni.gov.uk/annual-report-and-accounts",
+   "money": [{"what": "Sure Start", "value": "£34m", "year": "2024-25", "url": "https://www.niauditoffice.gov.uk/publications/html-document/evaluation-programmes-addressing-educational-disadvantage"}]},
+
+  {"id": "ea", "name": "Education Authority", "universeName": "Education Authority", "sponsor": "DE", "kind": "ALB", "verdict": "core", "roles": ["delivers", "funds"],
+   "functions": [
+    {"what": "primary and secondary education services", "quote": "responsible to DE for ensuring that efficient and effective primary and secondary education services are available to meet the needs of children and young people", "url": "https://web.archive.org/web/20260101024852/https://www.eani.org.uk/about-us/what-we-do"},
+    {"what": "youth service, including funding of regional voluntary youth organisations (from YCNI)", "quote": "Responsibility for the funding and support of regional youth services has also transferred to EA, from the Youth Council for Northern Ireland.", "url": "https://web.archive.org/web/20260101024852/https://www.eani.org.uk/about-us/what-we-do"},
+    {"what": "pre-school admission, school transport, newcomers, SEN", "quote": "admission to pre-school, getting transport to school… help with newcomer issues, special educational needs", "url": "https://web.archive.org/web/20260101024852/https://www.eani.org.uk/about-us/what-we-do"}
+   ],
+   "statute": "Education Act (NI) 2014",
+   "accounts": "https://www.eani.org.uk/publications/annual-reports",
+   "money": [{"what": "voluntary youth organisations grant programme", "value": "£11.86m", "year": "2026-29", "url": "https://www.eani.org.uk/news/funding-opens-for-voluntary-youth-organisations-worth-nearly-ps12million"}],
+   "notes": "Live site returns 403 to automated fetches; remit read from a Wayback snapshot of 2026-01-01. Service menu also lists Intercultural Education Service, Nurture, School Counselling, Primary Children Looked After Advisory Service, Children Entertainment & Employment Team: headings only, remit pages not reached."},
+
+  {"id": "ccms", "name": "Council for Catholic Maintained Schools", "universeName": "Council for Catholic Maintained Schools", "sponsor": "DE", "kind": "ALB", "verdict": "part", "roles": ["advises"],
+   "functions": [{"what": "advises and plans provision of Catholic maintained schools", "quote": "promote and co‐ordinate… the planning of the eﬀective provision of Catholic maintained schools", "url": "https://www.legislation.gov.uk/nisi/1989/2406/article/142"}],
+   "statute": "Education Reform (NI) Order 1989 Art 142", "accounts": null,
+   "notes": "Reaches children through schools; no child-welfare function. Own site renders by JavaScript, not read. Annual report not located."},
+
+  {"id": "ccea", "name": "Council for the Curriculum, Examinations and Assessment", "universeName": "NI Council for the Curriculum, Examinations & Assessment", "sponsor": "DE", "kind": "ALB", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "statutory pupil assessments", "quote": "conduct the relevant assessments", "url": "https://www.legislation.gov.uk/nisi/1998/1759/article/74"}],
+   "statute": "Education (NI) Order 1998 Art 74", "accounts": "https://ccea.org.uk/about/plans-reports/annual-reports"},
+
+  {"id": "cnag", "name": "Comhairle na Gaelscolaíochta", "universeName": "Comhairle Na Gaelscolaíochta", "sponsor": "DE", "kind": "ALB", "verdict": "part", "roles": ["advises"],
+   "functions": [{"what": "access to Irish-medium education from pre-school", "quote": "endeavours to ensure children have access to Irish-medium Education at pre-school, primary and post-primary level", "url": "https://web.archive.org/web/20251114143404/https://www.comhairle.org/english/about/about-us/"}],
+   "statute": null, "accounts": null,
+   "notes": "comhairle.org now redirects to gaelscolaiocht.org, where the about path is 404; read from a Wayback snapshot of 2025-11-14."},
+
+  {"id": "nicie", "name": "NI Council for Integrated Education", "universeName": "NI Council for Integrated Education", "sponsor": "DE", "kind": "ALB", "verdict": "part", "roles": ["advises"],
+   "functions": [{"what": "promotes integrated education", "quote": "a Non-Departmental Public Body grant funded by the Department of Education to promote the development of Integrated Education", "url": "https://nicie.org/who-we-are/"}],
+   "statute": null, "accounts": "https://nicie.org/who-we-are/publications/directors-reports/",
+   "notes": "Also a company limited by guarantee and registered charity."},
+
+  {"id": "middletown", "name": "Middletown Centre for Autism", "universeName": "Middletown Centre for Autism", "sponsor": "DE (jointly with Ireland's Department of Education and Youth)", "kind": "ALB, north/south", "verdict": "core", "roles": ["delivers"],
+   "functions": [{"what": "training, assessment and research on autistic children's education, NI and Ireland", "quote": "To support the promotion of excellence throughout Northern Ireland and Ireland in the education of autistic children and young people.", "url": "https://www.middletownautism.com/about"}],
+   "statute": null, "accounts": "https://find-and-update.company-information.service.gov.uk/company/NI063661/filing-history"},
+
+  {"id": "gtcni", "name": "General Teaching Council for NI", "universeName": "General Teaching Council for NI", "sponsor": "DE", "kind": "ALB", "verdict": "none", "roles": ["regulates"],
+   "functions": [], "statute": "Education (NI) Order 1998", "accounts": "https://www.gtcni.org.uk/about-us/annual-reports-accounts",
+   "notes": "Read https://www.gtcni.org.uk/about-us/overview : register of teachers, qualifications, professional regulation. Funded by teacher subscriptions."},
+
+  {"id": "ecb", "name": "Exceptional Circumstances Body", "universeName": "Exceptional Circumstances Body", "sponsor": "DE", "kind": "public body", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "decides parents' exceptional-circumstances claims for a post-primary place", "quote": "to consider applications from parents where it is claimed that a child must attend a specified post-primary school", "url": "https://www.education-ni.gov.uk/publications/parental-right-appeal-exceptional-circumstances-body"}],
+   "statute": "School Admissions (Exceptional Circumstances) Regulations (NI) 2010", "accounts": null},
+
+  {"id": "ycni", "name": "Youth Council for Northern Ireland", "universeName": "Youth Council for Northern Ireland", "sponsor": "DE", "kind": "ALB (non-operational)", "verdict": "part", "roles": ["advises"],
+   "functions": [{"what": "statutory adviser on youth service development; cannot operate without appointed members", "quote": "YCNI, while remaining a statutory body, cannot operate until a new Council can be appointed.", "url": "https://web.archive.org/web/20250222134433/https://www.education-ni.gov.uk/articles/update-youth-council-northern-ireland"}],
+   "statute": "Youth Service (NI) Order 1989 Art 4 (in force)", "accounts": null,
+   "notes": "Members' appointments ended 31 March 2019. Live DE youth-service page still calls it '(currently non-operational)'. Not dissolved: a search summary saying so is contradicted by the statute and DE."},
+
+  {"id": "doh", "name": "Department of Health, incl. Strategic Planning and Performance Group (SPPG)", "universeName": null, "sponsor": null, "kind": "department", "verdict": "part", "roles": ["commissions", "funds"],
+   "functions": [
+    {"what": "children's social care reform", "quote": "The Department of Health is overseeing the reform of Adult and Children's Social Care in Northern Ireland", "url": "https://www.health-ni.gov.uk/topics/social-care-policy"},
+    {"what": "SPPG commissions social work and social care for children and families", "quote": "commissions social work and social care services", "url": "https://online.hscni.net/our-work/social-care-and-children/"},
+    {"what": "Core Funding Scheme to the voluntary and community sector (family policy)", "quote": "The Department of Health manages a Core Funding Scheme to the Voluntary Community Sector", "url": "https://www.health-ni.gov.uk/articles/family-policy"},
+    {"what": "SPPG runs Sure Start operationally for DE", "quote": "The SPPG delivers the operational aspects of Sure Start on behalf of DE", "url": "https://www.etini.gov.uk/publications/html-document/evaluation-sure-starts-developmental-programme-2-3-year-old-children-and"}
+   ],
+   "statute": null,
+   "accounts": "https://www.health-ni.gov.uk/publications/annual-accounts",
+   "notes": "Trust spend is planned by Programme of Care (PoC 3 Family & Child Care; PoC 2 Maternity & Child Health) but NOT published by PoC (NIFC Sustainability Report 2022, Table 3.1). DoH accounts report by funded body. SPPG took over HSCB commissioning 1 April 2022."},
+
+  {"id": "cypsp", "name": "Children and Young People's Strategic Partnership", "universeName": null, "sponsor": "DoH (supported by SPPG)", "kind": "partnership", "verdict": "core", "roles": ["coordinates"],
+   "functions": [
+    {"what": "multi-agency planning partnership, statutory and VCS", "quote": "a multiagency strategic partnership, consisting of senior leaders of all key agencies across statutory, voluntary and community sectors", "url": "https://cypsp.hscni.net/children-and-young-peoples-strategic-partnership/"},
+    {"what": "29 Family Support Hubs", "quote": "a multi-agency network of statutory, community and voluntary organisations", "url": "https://cypsp.hscni.net/family-support-hubs/"}
+   ],
+   "statute": "Children's services planning duty: Children (1995 Order) (Amendment) (Children's Services Planning) Order 1998; the partnership itself is not a statutory body", "accounts": null,
+   "notes": "Not on the DoF list and holds no budget in any source found. Its pages do not cite the 2015 Co-operation Act."},
+
+  {"id": "trust-belfast", "name": "Belfast Health and Social Care Trust", "universeName": "Belfast Health and Social Care Trust", "sponsor": "DoH", "kind": "ALB (HSC trust)", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "children's social work: Gateway, looked after children, family support, fostering, leaving care, disability, residential, Early Years registration", "quote": "The looked after children (LAC) service has statutory responsibility for looked after children aged up to 18 years", "url": "https://belfasttrust.hscni.net/working-for-us/where-you-could-work/childrens-community-social-work/"}],
+   "accounts": "https://belfasttrust.hscni.net/download/27/annual-reports/25726/belfast-trust-annual-report-25-26.pdf",
+   "notes": "No Belfast CAMHS or children's SLT page found."},
+
+  {"id": "trust-northern", "name": "Northern Health and Social Care Trust", "universeName": "Northern Health and Social Care Trust", "sponsor": "DoH", "kind": "ALB (HSC trust)", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "children's social work (Gateway), disability, nursing, health visiting, school nursing, CAMHS, children's therapies", "quote": "a social work service for children and families", "url": "https://www.northerntrust.hscni.net/service/social-work/"}],
+   "accounts": "https://www.northerntrust.hscni.net/wp-content/uploads/2025/07/Annual-Accounts-2024-2025.pdf"},
+
+  {"id": "trust-southeastern", "name": "South Eastern Health and Social Care Trust", "universeName": "South Eastern Health and Social Care Trust", "sponsor": "DoH", "kind": "ALB (HSC trust)", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "children's disability, community nursing, Early Years, FNP, Gateway, health visiting, leaving care, SLT, Young People's Service", "quote": null, "url": "https://setrust.hscni.net/services/community-services/"}],
+   "accounts": "https://setrust.hscni.net/wpfd_file/annual-reports-and-accounts-2025/",
+   "notes": "Service list only (no remit sentence to quote). No CAMHS service page found."},
+
+  {"id": "trust-southern", "name": "Southern Health and Social Care Trust", "universeName": "Southern Health and Social Care Trust", "sponsor": "DoH", "kind": "ALB (HSC trust)", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "adoption/fostering, CAMHS, Gateway, disability, health visiting, FNP, paediatric SLT, school nursing", "quote": "Please find a list of Children and Young people services provided by the Trust", "url": "https://southerntrust.hscni.net/services/children-and-young-people/"}],
+   "accounts": "https://southerntrust.hscni.net/download/26/annual-reports/24759/annual_report_and_accounts_2025-26.pdf"},
+
+  {"id": "trust-western", "name": "Western Health and Social Care Trust", "universeName": "Western Health and Social Care Trust", "sponsor": "DoH", "kind": "ALB (HSC trust)", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "CAMHS, disabled children, LAC, fostering, adoption, Gateway, family centres, FNP, health visiting, children's SLT, residential", "quote": "information about Children's services we provide… This list is not exhaustive", "url": "https://westerntrust.hscni.net/services/childrens-services/"}],
+   "accounts": "https://westerntrust.hscni.net/download/253/financial-information/25446/whsct-annual-report-and-accounts-2025-26.pdf"},
+
+  {"id": "pha", "name": "Public Health Agency", "universeName": "Public Health Agency", "sponsor": "DoH", "kind": "ALB", "verdict": "part", "roles": ["commissions"],
+   "functions": [
+    {"what": "commissions Family Nurse Partnership", "quote": "The PHA commissions and supports the Family Nurse Partnership across Northern Ireland, working with Health and Social Care Trusts", "url": "https://www.publichealth.hscni.net/directorate-public-health/health-and-social-wellbeing-improvement/family-nurse-partnership"},
+    {"what": "Early Intervention Support Service, 800+ families a year", "quote": "The Early Intervention Support Service (EISS) delivers and coordinates… intervention for 800+ families per year with children 0-18 years", "url": "https://www.publichealth.hscni.net/sites/default/files/2025-07/PHA%20Annual%20report%20and%20accounts%202024-25.pdf"}
+   ],
+   "statute": "Health and Social Care (Reform) Act (NI) 2009",
+   "accounts": "https://www.publichealth.hscni.net/sites/default/files/2025-07/PHA%20Annual%20report%20and%20accounts%202024-25.pdf",
+   "notes": "Corporate host of SBNI. Contracts with the community and voluntary sector (ARA section)."},
+
+  {"id": "sbni", "name": "Safeguarding Board for NI", "universeName": null, "sponsor": "DoH (hosted by PHA)", "kind": "statutory body, unincorporated", "verdict": "core", "roles": ["coordinates"],
+   "functions": [{"what": "safeguards and promotes children's welfare across member agencies", "quote": "to safeguard and promote the welfare of children and young people in Northern Ireland", "url": "https://www.safeguardingni.org/about"}],
+   "statute": "Safeguarding Board Act (NI) 2011 s.1",
+   "accounts": "within PHA accounts; own annual report latest found 2022-23: https://www.safeguardingni.org/sites/default/files/2023-12/SBNI%20Annual%20Report%202022-2023_0.pdf",
+   "notes": "Absent from the DoF list and DoH boundary note, consistent with it being unincorporated and hosted by PHA."},
+
+  {"id": "ccga", "name": "Children's Court Guardian Agency for NI (formerly NIGALA)", "universeName": "The Children’s Court Guidance Agency for NI", "sponsor": "DoH", "kind": "ALB (special agency)", "verdict": "core", "roles": ["delivers"],
+   "functions": [{"what": "court-appointed guardians in public law and adoption proceedings", "quote": "provide Children's Court Guardians who are appointed by the court to safeguard the interests of children and young people", "url": "https://childrenscourtguardianagencyni.co.uk/assets/general/resources/publications/CCGANI-Annual-Report-and-Accounts-2024-25_2025-10-31-091427_bzxa.pdf"}],
+   "statute": "HPSS (Special Agencies) (NI) Order 1990; renamed 2023",
+   "accounts": "https://childrenscourtguardianagencyni.co.uk/assets/general/resources/publications/CCGANI-Annual-Report-and-Accounts-2024-25_2025-10-31-091427_bzxa.pdf",
+   "money": [{"what": "net expenditure (own accounts)", "value": "£5,056,416", "year": "2024-25", "url": "https://childrenscourtguardianagencyni.co.uk/assets/general/resources/publications/CCGANI-Annual-Report-and-Accounts-2024-25_2025-10-31-091427_bzxa.pdf"}],
+   "notes": "DoF list spells it 'Guidance Agency'. NIAO App 1 gives 4,932 (£k) for 2024-25 and DoH segment table 5,280 gross; three figures, not yet reconciled."},
+
+  {"id": "rqia", "name": "Regulation and Quality Improvement Authority", "universeName": "Regulation and Quality Improvement Authority", "sponsor": "DoH", "kind": "ALB", "verdict": "part", "roles": ["regulates", "inspects"],
+   "functions": [{"what": "regulates children's homes, young adult supported accommodation, CAMHS; OPCAT for secure accommodation and youth justice centres", "quote": "children's services including: children's residential care homes, young adult supported accommodation; and child and adolescent mental health services (CAMHS)", "url": "https://www.rqia.org.uk/wp-content/uploads/2025/11/RQIA_Annual_Report_Accounts_2024-25_Final_CAG-Certificate_21072025.pdf"}],
+   "statute": "HPSS (Quality, Improvement and Regulation) (NI) Order 2003",
+   "accounts": "https://www.rqia.org.uk/wp-content/uploads/2025/11/RQIA_Annual_Report_Accounts_2024-25_Final_CAG-Certificate_21072025.pdf",
+   "notes": "Childminding and day care for under-12s are registered by trust Early Years teams, not RQIA."},
+
+  {"id": "niscc", "name": "NI Social Care Council", "universeName": "NI Social Care Council", "sponsor": "DoH", "kind": "ALB", "verdict": "none", "roles": ["regulates"], "functions": [],
+   "accounts": "https://niscc.info/app/uploads/2025/09/20250821_NISCC_AnnRepAccts24-25_Laid-08-Sep-2025_AMcK.pdf",
+   "notes": "Read https://niscc.info/about/ and ARA 2024-25: workforce register and standards. Registers Education Welfare Officers; sits on the Children's Services Reform Board."},
+
+  {"id": "pcc", "name": "Patient and Client Council", "universeName": "Patient and Client Council", "sponsor": "DoH", "kind": "ALB", "verdict": "none", "roles": ["advocates"], "functions": [],
+   "accounts": "https://pcc-ni.net/media/5pebyi3h/pcc-annual-report-and-accounts-2025-2026.pdf",
+   "notes": "Read https://pcc-ni.net/about-us/ and ARA 2025-26."},
+
+  {"id": "bso", "name": "Business Services Organisation", "universeName": "Business Services Organisation", "sponsor": "DoH", "kind": "ALB", "verdict": "none", "roles": [],
+   "functions": [],
+   "accounts": "https://bso.hscni.net/wp-content/uploads/2025/07/BSO-Signed-Annual-Report-Accounts-2024-25-with-cert-report.pdf",
+   "notes": "Remit is business support. Child-specific SUPPORT activities exist: procures fostering, children's homes and short breaks (https://bso.hscni.net/directorates/operations/procurement-and-logistics-service/procurement/information-for-suppliers/what-we-buy/social-care-children-and-young-people/), family-law legal services, Day Care Foods Scheme. Coded none pending decision on whether procurement counts."},
+
+  {"id": "doj", "name": "Department of Justice", "universeName": null, "sponsor": null, "kind": "department", "verdict": "part", "roles": ["funds", "commissions"],
+   "functions": [{"what": "youth justice policy; Strategic Framework for Youth Justice (2022)", "quote": "Published in 2022, the Strategic Framework for Youth Justice drives the policy and operational delivery of youth justice in Northern Ireland.", "url": "https://www.justice-ni.gov.uk/topics/strategic-framework-youth-justice"}],
+   "statute": "Justice (NI) Act 2002 s.53: aims of the youth justice system bind all bodies with youth justice functions",
+   "accounts": "https://www.justice-ni.gov.uk/publications/department-justice-annual-report-and-accounts"},
+
+  {"id": "yja", "name": "Youth Justice Agency", "universeName": "Youth Justice Agency", "sponsor": "DoJ", "kind": "executive agency (not ALB per DoF)", "verdict": "core", "roles": ["delivers"],
+   "functions": [
+    {"what": "services for young people who offend, 10-17", "quote": "range of statute-based and non-statutory support services to young people who offend between the ages of 10 to 17 years", "url": "https://www.justice-ni.gov.uk/sites/default/files/2026-07/yja-25-26.PDF"},
+    {"what": "Woodlands Juvenile Justice Centre", "quote": "the only custodial facility for children in Northern Ireland", "url": "https://www.justice-ni.gov.uk/sites/default/files/2026-07/yja-25-26.PDF"}
+   ],
+   "accounts": "https://www.justice-ni.gov.uk/publications/youth-justice-agency-annual-reports-and-accounts",
+   "money": [{"what": "net expenditure", "value": "£17,380k", "year": "2025-26", "url": "https://www.justice-ni.gov.uk/sites/default/files/2026-07/yja-25-26.PDF"}, {"what": "net expenditure", "value": "£15,735k", "year": "2024-25", "url": "https://www.justice-ni.gov.uk/sites/default/files/2026-07/yja-25-26.PDF"}],
+   "notes": "Small grants to VCS groups mentioned; no total found."},
+
+  {"id": "psni", "name": "Police Service of NI", "universeName": "PSNI", "sponsor": "DoJ", "kind": "ALB", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "Public Protection Branch child abuse, CSE and online child protection teams; Children and Young People Strategy", "quote": "Child Abuse Investigation Unit (CAIU) and Non-recent Child Abuse Team - (NCAT)", "url": "https://www.psni.police.uk/about-us/our-departments/crime"}],
+   "accounts": "https://www.psni.police.uk/sites/default/files/2025-09/Police%20Service%20of%20Northern%20Ireland%20Annual%20Report%20and%20Accounts%20for%20the%20year%20ended%2031st%20March%202025.pdf"},
+
+  {"id": "cjini", "name": "Criminal Justice Inspection NI", "universeName": "Criminal Justice Inspection NI", "sponsor": "DoJ", "kind": "ALB", "verdict": "part", "roles": ["inspects"],
+   "functions": [{"what": "statutory inspection of the Youth Justice Agency and juvenile justice centres", "quote": "The Chief Inspector must carry out inspections of … (g) the Youth Justice Agency", "url": "https://www.legislation.gov.uk/ukpga/2002/26/section/46"}],
+   "statute": "Justice (NI) Act 2002 s.46",
+   "accounts": "https://www.cjini.org/wp-content/uploads/2026/07/2025-26-Annual-Report-and-Accounts-Criminal-Justice-Inspection-Northern-Ireland.pdf"},
+
+  {"id": "lsani", "name": "Legal Services Agency NI", "universeName": "Legal Services Agency", "sponsor": "DoJ", "kind": "executive agency", "verdict": "part", "roles": ["pays"],
+   "functions": [{"what": "legal aid category for children's cases", "quote": "Representation Lower (Children)", "url": "https://www.justice-ni.gov.uk/sites/default/files/2026-07/lsani-annual-report-and-accounts-2025-2026.pdf"}],
+   "accounts": "https://www.justice-ni.gov.uk/publications/legal-services-agency-northern-ireland-annual-reports-and-accounts",
+   "notes": "Narrow: a funding category, not a stated remit. Children-category figure not taken (table extracted misaligned)."},
+
+  {"id": "nicts", "name": "NI Courts and Tribunals Service", "universeName": "NI Courts & Tribunals Service", "sponsor": "DoJ", "kind": "executive agency", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "Youth Court and Children Order case standards; funds held for minors", "quote": "Children Order applications will be listed for first directions within six weeks", "url": "https://www.justice-ni.gov.uk/sites/default/files/2025-07/FRAG%20-%20Y25%20-%20Final%20Annual%20Report%20and%20Accounts%20-%20NICTS%20Agency%2024-25.PDF"}],
+   "accounts": "https://www.justice-ni.gov.uk/publications/nicts-annual-report-and-accounts"},
+
+  {"id": "pbni", "name": "Probation Board for NI", "universeName": "Probation Board for NI", "sponsor": "DoJ", "kind": "ALB", "verdict": "none", "roles": ["delivers", "funds"], "functions": [],
+   "accounts": "https://www.pbni.org.uk/files/pbni/2026-07/PBNI%20Annual%20Report%20%26%20Accounts%202025-26%20-%20FINAL.pdf",
+   "notes": "Read About, Key Facts, Partnership and ARA 2025-26; age profiles start at 20-29. VCS grant scheme £1,288k (2025-26), for adults. pbni.org (without .uk) is a parked domain."},
+
+  {"id": "nips", "name": "NI Prison Service", "universeName": "NI Prison Service", "sponsor": "DoJ", "kind": "executive agency", "verdict": "none", "roles": ["delivers"], "functions": [],
+   "accounts": "https://www.justice-ni.gov.uk/publications/nips-annual-reports-and-accounts",
+   "notes": "Hydebank Wood holds young men 18-24; no under-18 provision stated."},
+
+  {"id": "nipb", "name": "NI Policing Board", "universeName": "NI Policing Board", "sponsor": "DoJ", "kind": "ALB", "verdict": "none", "roles": ["funds"], "functions": [],
+   "accounts": "https://www.nipolicingboard.org.uk/files/nipolicingboard/2025-07/annual-report-and-accounts-2024-25.pdf",
+   "notes": "No statutory children's function; carried out a Human Rights Review of Children and Young People and Policing (Dec 2024). Funds PCSPs."},
+
+  {"id": "pono", "name": "Police Ombudsman for NI", "universeName": "Police Ombudsman for NI", "sponsor": "DoJ", "kind": "ALB", "verdict": "none", "roles": [], "functions": [],
+   "notes": "General complaints remit; Youth and Policing Partnership Forum (2024-25) is activity, not function."},
+
+  {"id": "ombudsman-prisoner", "name": "Prisoner Ombudsman for NI", "universeName": "Prisoner Ombudsman for NI", "sponsor": "DoJ", "kind": "public body", "verdict": "none", "roles": [], "functions": []},
+
+  {"id": "pcsp", "name": "Policing and Community Safety Partnerships (11 + Belfast DPCSPs)", "universeName": null, "sponsor": "DoJ/NIPB Joint Committee, council-based", "kind": "partnership", "verdict": "none", "roles": ["delivers", "funds"], "functions": [],
+   "statute": "Justice Act (NI) 2011 Part 3",
+   "notes": "Statutory functions are general; local youth diversion projects exist (e.g. https://www.pcsps.org/pcsp-projects-coming-life)."},
+
+  {"id": "dfc", "name": "Department for Communities", "universeName": null, "sponsor": null, "kind": "department", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "Child Maintenance Service", "quote": "administers the Statutory Child Maintenance Scheme in NI", "url": "https://www.communities-ni.gov.uk/sites/default/files/2025-08/dfc-annual-report-and-accounts-2024-25.pdf"}],
+   "accounts": "https://www.communities-ni.gov.uk/publications/dfc-annual-report-and-accounts-year-ended-31-march-2025",
+   "notes": "Sponsors NICCY. Leads the Executive anti-poverty strategy (not child-specific). Childcare, uniform grants, neighbourhood renewal children's provision: no DfC source found, unverified rather than absent."},
+
+  {"id": "niccy", "name": "NI Commissioner for Children and Young People", "universeName": "NI Commissioner for Children and Young People", "sponsor": "DfC (appointment by FM/dFM)", "kind": "ALB", "verdict": "core", "roles": ["advocates"],
+   "functions": [{"what": "safeguards and promotes children's rights; reviews law and practice; investigations and legal proceedings", "quote": "to safeguard and promote the rights and best interests of children and young persons", "url": "https://www.legislation.gov.uk/nisi/2003/439/article/6"}],
+   "statute": "Commissioner for Children and Young People (NI) Order 2003",
+   "accounts": "https://www.niccy.org/about-niccy/our-organisation/annual-reports/"},
+
+  {"id": "nihe", "name": "NI Housing Executive", "universeName": "NI Housing Executive", "sponsor": "DfC", "kind": "ALB", "verdict": "part", "roles": ["delivers", "commissions"],
+   "functions": [{"what": "Youth Homelessness Action Plan: care leavers, 16/17s, 18-25s; joint work with trusts; 21 jointly commissioned supported accommodation projects", "quote": "Young people aged 16/17 years, not known to Social Services or who do not have care experience…, and present as homeless", "url": "https://www.nihe.gov.uk/media/250/Youth-Homelessness-Action-Plan-published-November-2024/pdf/g6Youth_Homelessness_Action_Plan_published_November_2024.pdf"}],
+   "accounts": "https://www.nihe.gov.uk/media/563/20252026-Housing-Executive-Annual-Report/pdf/5h2025-2026_Housing_Executive_Annual_Report.pdf"},
+
+  {"id": "libraries", "name": "Libraries NI", "universeName": "NI Library Authority", "sponsor": "DfC", "kind": "ALB", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "statutory duty to serve children; activities up to 16", "quote": "Libraries NI delivers specific activities for all ages of children and young people up to 16 years old.", "url": "https://www.librariesni.org.uk/media/llhple4k/annual-report-and-accounts-2024-25.pdf"}],
+   "statute": "Libraries Act (NI) 2008 s.2",
+   "accounts": "https://www.librariesni.org.uk/media/llhple4k/annual-report-and-accounts-2024-25.pdf"},
+
+  {"id": "sportni", "name": "Sport NI", "universeName": "Sports Council for NI", "sponsor": "DfC", "kind": "ALB", "verdict": "part", "roles": ["funds"],
+   "functions": [{"what": "children's physical literacy with education partners", "quote": "Sport NI will work in partnership with key education stakeholders to improve physical literacy for young people", "url": "https://www.sportni.net/wp-content/uploads/2022/06/sSportNI-Corporate-Plan-2021-26-2_compressed.pdf"}],
+   "statute": "Recreation and Youth Service Order 1986",
+   "accounts": "https://www.sportni.net/wp-content/uploads/2014/01/Exchequer-Annual-Report-and-Accounts-202324.pdf"},
+
+  {"id": "acni", "name": "Arts Council NI", "universeName": "Arts Council for NI", "sponsor": "DfC", "kind": "ALB", "verdict": "part", "roles": ["funds"],
+   "functions": [{"what": "Young People and Wellbeing Arts Programme; youth arts; Youth Music Strategy", "quote": "funds arts-led projects to support vulnerable groups of young people", "url": "https://artscouncil-ni.s3-assets.com/Annual-Review_2425.pdf"}],
+   "accounts": "https://artscouncil-ni.org/resources/annual-report-and-accounts-2024-2025"},
+
+  {"id": "foras", "name": "Foras na Gaeilge", "universeName": "North South Language Body - Foras na Gaelige", "sponsor": "DfC with Irish Government (NSMC)", "kind": "north/south body", "verdict": "part", "roles": ["funds"],
+   "functions": [{"what": "core-funds Irish-medium education and pre-school lead organisations; youth schemes, summer camps", "quote": "Supporting Irish-medium education and the teaching of Irish.", "url": "https://www.ulsterscotsagency.com/fs/doc/publications/an-foras-teanga-tbandc-2023-fv-compressed.pdf"}],
+   "accounts": "https://www.ulsterscotsagency.com/fs/doc/publications/an-foras-teanga-tbandc-2023-fv-compressed.pdf",
+   "notes": "Own website behind a bot-check; not bypassed. Grant table in the 2023 ARA extracted misaligned: read amounts from the PDF."},
+
+  {"id": "usa", "name": "Ulster-Scots Agency", "universeName": "North South Language Body - Ulster Scots Agency", "sponsor": "DfC with Irish Government (NSMC)", "kind": "north/south body", "verdict": "part", "roles": ["delivers", "funds"],
+   "functions": [{"what": "summer schools grant to community groups, children 7-16; school workshops", "quote": "Children aged 7 to 16 years of age", "url": "https://ulsterscotsagency.com/news/article/564/ulster-scots-summer-schools-grant"}],
+   "accounts": "https://www.ulsterscotsagency.com/fs/doc/publications/an-foras-teanga-tbandc-2023-fv-compressed.pdf"},
+
+  {"id": "ccni", "name": "Charity Commission for NI", "universeName": "Charity Commission for NI", "sponsor": "DfC", "kind": "ALB", "verdict": "none", "roles": ["regulates"], "functions": [],
+   "accounts": "https://www.charitycommissionni.org.uk/media/dssdjt0j/20260629-ccni-annual-report-and-accounts-2025-26.pdf",
+   "notes": "Regulates the voluntary sector; its register is the source for the VCS side of this sector."},
+
+  {"id": "teo", "name": "The Executive Office", "universeName": null, "sponsor": null, "kind": "department", "verdict": "part", "roles": ["funds"],
+   "functions": [
+    {"what": "T:BUC Camps for 9-25s, administered by EA, delivered by voluntary groups", "quote": "112 camps were successfully delivered (against a target of 100) in 2024-25 with a budget of over £1.5m.", "url": "https://www.executiveoffice-ni.gov.uk/sites/default/files/2025-07/2024-25-annual-report-and-accounts%E2%80%93the-executive-office.PDF"},
+    {"what": "EVAWG regional funding to VCS children's programmes", "quote": null, "url": "https://www.executiveoffice-ni.gov.uk/sites/default/files/2025-07/2024-25-annual-report-and-accounts%E2%80%93the-executive-office.PDF"}
+   ],
+   "accounts": "https://www.executiveoffice-ni.gov.uk/publications/teo-2024-2025-annual-report-and-accounts",
+   "notes": "Cumulative T:BUC camps investment: ARA says over £11.9m, camps page says over £13m; both recorded, neither chosen."},
+
+  {"id": "cosica", "name": "Commissioner for Survivors of Institutional Childhood Abuse", "universeName": "Commissioner for Survivors of Institutional Childhood Abuse", "sponsor": "TEO", "kind": "ALB", "verdict": "part", "roles": ["advocates"],
+   "functions": [{"what": "adult survivors of historical childhood abuse; no remit for current children", "quote": "promote the interests of Victims and Survivors of historical institutional childhood abuse", "url": "https://www.cosica-ni.org/legislation"}],
+   "statute": "Historical Institutional Abuse (NI) Act 2019", "accounts": "https://www.cosica-ni.org/publications/annual-report-and-accounts-2024-2025",
+   "notes": "HISTORICAL scope: see open decision on coding."},
+
+  {"id": "hia", "name": "Historical Institutional Abuse Redress Board", "universeName": "Historical Institutional Abuse Redress Board", "sponsor": "TEO", "kind": "public body", "verdict": "part", "roles": ["pays"],
+   "functions": [{"what": "compensation for abuse suffered as a child in an institution, 1922-1995", "quote": "a person who suffered abuse while a child and while resident in an institution", "url": "https://www.legislation.gov.uk/ukpga/2019/31/section/2"}],
+   "accounts": "https://www.hiaredressni.uk/publications/2024-25-annual-report",
+   "notes": "HISTORICAL scope. Applications closed 2 April 2025."},
+
+  {"id": "crc", "name": "NI Community Relations Council", "universeName": "NI Community Relations Council", "sponsor": "TEO", "kind": "ALB", "verdict": "none", "roles": ["funds"], "functions": [],
+   "accounts": "https://www.community-relations.org.uk/files/communityrelations/2025-02/CRC_2024_Annual_Report.pdf",
+   "notes": "No dedicated children's scheme, but its core funding includes children's and youth VCS organisations (Youth Link, Youth Initiatives, Early Years). Relevant to the VCS-funding field."},
+
+  {"id": "ecni", "name": "Equality Commission for NI", "universeName": "Equality Commission for NI", "sponsor": "TEO", "kind": "ALB", "verdict": "part", "roles": ["advises"],
+   "functions": [{"what": "SEN disability discrimination advice to parents (SENDO 2005)", "quote": "We offer advice for parents and carers whose children may be experiencing unlawful discrimination at school because of their special educational needs.", "url": "https://equalityni.org/our-work/areas-of-focus/special-educational-needs"}],
+   "accounts": "https://assets.publishing.service.gov.uk/media/6877644d39d0452326e28f19/E03341297_-_Equality_Commission_NI_ARA_24-25_Accessible__1_.pdf"},
+
+  {"id": "ilc", "name": "Irish Language Commissioner", "universeName": "Irish Language Commissioner", "sponsor": "TEO", "kind": "ALB (new 2025-26)", "verdict": "none", "roles": [], "functions": [], "notes": "Read NI Act 1998 s.78L: public authorities' use of Irish; no child or education provision."},
+
+  {"id": "vss", "name": "Victims and Survivors Service", "universeName": "Victims and Survivors Service", "sponsor": "TEO", "kind": "ALB", "verdict": "part", "roles": ["funds", "pays"],
+   "functions": [{"what": "funded VCS support for young people affected by trauma; transgenerational services (16 organisations)", "quote": "Support and activities for young people affected by the impact of trauma in families and communities", "url": "https://www.victimsservice.org/wp-content/uploads/2025/12/VSS-Annual-Accounts-2024-2025.pdf"}],
+   "accounts": "https://www.victimsservice.org/wp-content/uploads/2025/12/VSS-Annual-Accounts-2024-2025.pdf"},
+
+  {"id": "dfe", "name": "Department for the Economy", "universeName": null, "sponsor": null, "kind": "department", "verdict": "part", "roles": ["delivers", "funds"],
+   "functions": [
+    {"what": "Careers Service guidance for pupils (usually Year 12)", "quote": "an impartial, all-age careers information, advice and guidance service", "url": "https://www.economy-ni.gov.uk/articles/department-economy-employment-and-skills-programmes-and-careers-service"},
+    {"what": "Skills for Life and Work, 16-17s, via training organisations and FE colleges", "quote": "provided by training organisations and Further Education Colleges, across Northern Ireland", "url": "https://www.nidirect.gov.uk/articles/skills-life-and-work"}
+   ],
+   "accounts": "https://www.economy-ni.gov.uk/publications/dfe-annual-report-and-accounts-2024-25",
+   "notes": "C&AG disclaimed the 2024-25 accounts, second year running."},
+
+  {"id": "fe-colleges", "name": "Six FE colleges (Belfast Met, Northern Regional, North West Regional, Southern Regional, South Eastern Regional, South West)", "universeName": ["Belfast Metropolitan College", "Northern Regional College", "North West Regional College", "Southern Regional College", "South Eastern Regional College", "South West College"], "sponsor": "DfE", "kind": "ALB", "verdict": "part", "roles": ["delivers"],
+   "functions": [{"what": "14-16 provision with schools under the Entitlement Framework (all six evidenced; Belfast Met only via entry-criteria exception)", "quote": "works with 23 schools as part of the School Partnerships Programme. The programme has 1,490 pupils", "url": "https://www.src.ac.uk/about-us/schools-partnership-programme"}],
+   "notes": "Per-college URLs in agent report; quote shown is Southern Regional's. To split into six rows when budgets are added."},
+
+  {"id": "citbni", "name": "Construction Industry Training Board NI", "universeName": "Construction Industry Training Board NI", "sponsor": "DfE", "kind": "ALB", "verdict": "none", "roles": ["funds"], "functions": [], "notes": "Training of persons over compulsory school age; apprentice grants to employers, no age band stated."},
+
+  {"id": "daera", "name": "Department of Agriculture, Environment and Rural Affairs", "universeName": null, "sponsor": null, "kind": "department", "verdict": "part", "roles": ["funds"],
+   "functions": [{"what": "Young Farmers' Clubs of Ulster grant (members 11-30); TRPSI youth project and one childcare centre", "quote": "£270,000 grant to provide agricultural-related education/training, personal development and rural development promotion", "url": "https://www.daera-ni.gov.uk/news/poots-announces-ps270000-investment-future-farming"}],
+   "accounts": "https://www.daera-ni.gov.uk/publications/daera-annual-reports-and-accounts",
+   "notes": "Minor; no children-only programme."},
+
+  {"id": "dfi", "name": "Department for Infrastructure", "universeName": null, "sponsor": null, "kind": "department", "verdict": "part", "roles": ["funds"],
+   "functions": [{"what": "Cycling Proficiency Scheme and Junior Road Safety Officers in schools", "quote": "help children develop their skills, increase their confidence as cyclists and identify risks", "url": "https://www.infrastructure-ni.gov.uk/articles/investigating-impact-cycling-proficiency-scheme-schools-northern-ireland"}],
+   "accounts": "https://www.infrastructure-ni.gov.uk/publications/dfi-annual-report-and-accounts-2024-25"},
+
+  {"id": "nisra", "name": "NI Statistics and Research Agency", "universeName": "NI Statistics and Research Agency", "sponsor": "DoF", "kind": "executive agency", "verdict": "none", "roles": [], "functions": [], "notes": "Runs the DE-commissioned Childcare Survey; a data source, not a function."},
+
+  {"id": "seupb", "name": "Special EU Programmes Body (PEACEPLUS)", "universeName": "Special EU Programmes Body", "sponsor": "DoF with Irish Government", "kind": "north/south body", "verdict": "part", "roles": ["funds"],
+   "functions": [{"what": "PEACEPLUS Theme 3: Shared Learning Together, Youth Programme (14-24), Youth Mental Health and Wellbeing", "quote": "Targeted capacity building programme for young people aged 14 to 24 years, who are disadvantaged, excluded or marginalised", "url": "https://www.seupb.eu/current-programmes/peaceplus/themes-and-investment-areas/theme-3"}],
+   "accounts": "https://www.seupb.eu/about-seupb/corporate-documents",
+   "money": [{"what": "PEACEPLUS Theme 3 total (ERDF + match, programme period)", "value": "€123,210,735", "year": "2021-27 programme", "url": "https://www.seupb.eu/sites/default/files/2023-05/PEACEPLUS_Overview_24052023.pdf"}],
+   "notes": "Covers NI and the border counties of Ireland; not NI-only money."},
+
+  {"id": "councils", "name": "11 district councils", "universeName": null, "sponsor": "DfC (local government)", "kind": "local government", "verdict": "part", "roles": ["delivers", "funds"],
+   "functions": [{"what": "play, youth voice, summer programmes; councils have no education or social services remit", "quote": "Local councils are not responsible for the following areas: education, personal social services, roads", "url": "https://www.nidirect.gov.uk/articles/local-councils"}],
+   "notes": "One evidencing URL per council in the agent report; to be split into 11 rows. Good Relations youth work and community-plan children's outcomes not checked."}
+ ],
+ "screenedOut": "Every other body in ni-bodies-universe.json (e.g. AFBI, NI Water, Invest NI, Tourism NI, Utility Regulator, harbour authorities, tribunals, pension boards) was screened out by name and remit WITHOUT reading its documents. Not a 'none' verdict.",
+ "openDecisions": [
+  "COSICA and HIA Redress Board serve adults abused as children. Code 'part', or add a separate 'historical' value?",
+  "BSO procures children's services for HSC bodies. Does procurement on behalf of others count as a function?",
+  "School-system bodies (CCMS, CCEA, CnaG, NICIE) reach children only through schools. Keep 'part', or separate 'via schools'?",
+  "CYPSP and SBNI are not on the DoF list and hold no own accounts. Keep them as rows (recommended: they are where statutory and VCS sectors meet)."
+ ]
+}
