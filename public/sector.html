@@ -60,12 +60,23 @@ label.chk { font-size: 13px; color: var(--ink-soft); display: inline-flex; gap: 
 /* ---- map + panel ---- */
 .mapgrid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px; align-items: start; }
 .mapcard { padding: 10px; position: relative; }
-#map { width: 100%; height: auto; display: block; touch-action: manipulation; }
+#map { width: 100%; height: auto; display: block; touch-action: none; cursor: grab; user-select: none; }
+#map.dragging { cursor: grabbing; }
+.zoom { position: absolute; top: 18px; right: 18px; display: flex; flex-direction: column; border: 1px solid var(--hair-strong); border-radius: 4px; overflow: hidden; background: var(--surface); }
+.zoom button { font: inherit; font-size: 17px; line-height: 1; width: 32px; height: 32px; border: 0; background: var(--surface); color: var(--ink); cursor: pointer; }
+.zoom button + button { border-top: 1px solid var(--hair-strong); }
+.zoom button:disabled { color: var(--hair-strong); cursor: default; }
+.zoom button:hover:not(:disabled) { background: var(--surface-2); }
+.fitem { font-size: 13px; line-height: 1.5; padding: 8px 0; border-top: 1px solid var(--hair); }
+.fitem:first-of-type { border-top: 0; }
 #map .area { fill: var(--surface-2); stroke: var(--hair-strong); stroke-width: .6; cursor: pointer; vector-effect: non-scaling-stroke; }
 #map .area:hover { fill: var(--ground-deep); }
 #map .area.sel { fill: var(--ground-deep); stroke: var(--ink); stroke-width: 1.6; }
 #map .lbl { font-size: 10px; fill: var(--ink-faint); pointer-events: none; text-anchor: middle; }
-#map .reg { fill: var(--ink-faint); opacity: .35; pointer-events: none; }
+#map .reg { fill: var(--ink-faint); opacity: .5; cursor: pointer; stroke: transparent; stroke-width: 6px; vector-effect: non-scaling-stroke; }
+#map .reg:hover, #map .reg.on { opacity: 1; fill: var(--ink); }
+#map .reg.dim { opacity: .15; }
+#map .dot.on { stroke: var(--ink); stroke-width: 2; }
 #map .dot { stroke: var(--surface); stroke-width: 1; vector-effect: non-scaling-stroke; cursor: pointer; }
 #map .dot.c { fill: var(--b-comm); } #map .dot.f { fill: var(--b-fund); } #map .dot.o { fill: var(--b-other); }
 #map .dot.dim { opacity: .18; }
@@ -195,6 +206,7 @@ footer.foot a { color: var(--ink-soft); }
   <div class="mapgrid">
     <div class="card mapcard">
       <svg id="map" role="img" aria-label="Map of Northern Ireland"></svg>
+      <div class="zoom" role="group" aria-label="Zoom"><button id="z-in" aria-label="Zoom in">+</button><button id="z-out" aria-label="Zoom out" disabled>&minus;</button><button id="z-reset" aria-label="Reset view" title="Reset view">&#8634;</button></div>
       <div class="legend" id="legend"></div>
       <div class="tip" id="tip"></div>
     </div>
@@ -279,44 +291,108 @@ const money = (v, unit) => v == null ? '—' : (unit && unit.includes('€') ? '
 const fy = y => /^\d{4}-\d{2}$/.test(y);
 
 // ---------------- map ----------------
+// Areas are drawn once per layer or selection; dots and labels are redrawn on
+// every zoom so they keep a constant size on screen. Zooming is a viewBox
+// change, so the boundaries stay sharp at any scale.
 const PH = Math.cos(54.6 * Math.PI / 180);
 let bb = [Infinity, Infinity, -Infinity, -Infinity];
 for (const t of D.geo.trusts) for (const p of t.geometry.coordinates) for (const [x, y] of p[0]) {
   bb = [Math.min(bb[0], x), Math.min(bb[1], y), Math.max(bb[2], x), Math.max(bb[3], y)]; }
 const W = 600, S = W / ((bb[2] - bb[0]) * PH), H = Math.round((bb[3] - bb[1]) * S) + 8;
-const px = ([x, y]) => [((x - bb[0]) * PH * S + 4).toFixed(1), ((bb[3] - y) * S + 4).toFixed(1)];
+const px = ([x, y]) => [((x - bb[0]) * PH * S + 4).toFixed(2), ((bb[3] - y) * S + 4).toFixed(2)];
 const pathOf = g => g.coordinates.map(p => p.map(r => 'M' + r.map(px).map(q => q.join(' ')).join('L') + 'Z').join('')).join('');
 const centroid = g => { let a = 0, cx = 0, cy = 0; const r = g.coordinates.reduce((m, p) => p[0].length > m.length ? p[0] : m, []);
   for (let i = 0; i < r.length - 1; i++) { const [x0, y0] = r[i], [x1, y1] = r[i + 1], f = x0 * y1 - x1 * y0; a += f; cx += (x0 + x1) * f; cy += (y0 + y1) * f; }
   return px([cx / (3 * a), cy / (3 * a)]); };
-const map = $('#map'); map.setAttribute('viewBox', `0 0 ${W + 8} ${H}`);
+const map = $('#map');
+map.innerHTML = '<g id="g-areas"></g><g id="g-top"></g>';
+const gAreas = $('#g-areas'), gTop = $('#g-top');
 
-let layer = 'trust', selected = null;
+const VB0 = { x: 0, y: 0, w: W + 8, h: H };
+let vb = { ...VB0 };
+const MAXZ = 40;
+const upp = () => vb.w / (map.getBoundingClientRect().width || 600);   // view units per screen pixel
+const applyVB = () => { map.setAttribute('viewBox', `${vb.x} ${vb.y} ${vb.w} ${vb.h}`); drawTop(); $('#z-out').disabled = vb.w >= VB0.w; $('#z-in').disabled = vb.w <= VB0.w / MAXZ + 1e-9; };
+function clampVB() {
+  vb.w = Math.min(VB0.w, Math.max(VB0.w / MAXZ, vb.w)); vb.h = vb.w * VB0.h / VB0.w;
+  if (vb.w >= VB0.w) { vb.x = 0; vb.y = 0; return; }
+  vb.x = Math.min(Math.max(vb.x, -vb.w * .2), VB0.w - vb.w * .8); vb.y = Math.min(Math.max(vb.y, -vb.h * .2), VB0.h - vb.h * .8);
+}
+const zoomAt = (f, cx, cy) => { vb.x = cx - (cx - vb.x) / f; vb.y = cy - (cy - vb.y) / f; vb.w /= f; vb.h /= f; clampVB(); applyVB(); };
+const toView = (X, Y) => { const r = map.getBoundingClientRect(); return [vb.x + (X - r.left) / r.width * vb.w, vb.y + (Y - r.top) / r.height * vb.h]; };
+const zoomCentre = f => zoomAt(f, vb.x + vb.w / 2, vb.y + vb.h / 2);
+
+let layer = 'trust', selected = null, focus = null;   // focus: {kind:'org'|'reg', key} — a clicked dot
 const placedOrgs = D.orgs.filter(o => o.place);
+const orgKey = o => o.orgId || o.name;
+const orgByKey = Object.fromEntries(D.orgs.map(o => [orgKey(o), o]));
+const orgByReg = Object.fromEntries(D.orgs.filter(o => o.regNo).map(o => [o.regNo, o]));
+const regByNo = Object.fromEntries(D.register.map(r => [r[0], r]));
+const TIER = D.registerTiers;
+const ccniUrl = n => `https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=${encodeURIComponent(n)}&subId=0`;
+
 function drawMap() {
   const areas = layer === 'trust' ? D.geo.trusts : D.geo.councils;
-  let h = areas.map(a => `<path class="area${selected === a.code ? ' sel' : ''}" data-code="${a.code}" d="${pathOf(a.geometry)}"><title>${esc(layer === 'trust' ? short(a.name) : a.name)}</title></path>`).join('');
-  if (layer === 'trust') h += areas.map(a => { const [x, y] = centroid(a.geometry); return `<text class="lbl" x="${x}" y="${y}">${esc(short(a.name))}</text>`; }).join('');
-  if ($('#show-reg').checked) h += D.register.map(r => { const [x, y] = px([r[5], r[4]]); return `<circle class="reg" cx="${x}" cy="${y}" r="1.3"/>`; }).join('');
+  gAreas.innerHTML = areas.map(a => `<path class="area${selected === a.code ? ' sel' : ''}" data-code="${a.code}" d="${pathOf(a.geometry)}"></path>`).join('');
+  drawTop();
+}
+function drawTop() {
+  const u = upp(); let h = '';
+  if (layer === 'trust') h += D.geo.trusts.map(a => { const [x, y] = centroid(a.geometry);
+    return `<text class="lbl" x="${x}" y="${y}" style="font-size:${(11 * u).toFixed(3)}px">${esc(short(a.name))}</text>`; }).join('');
+  const key = layer === 'trust' ? 7 : 6;
+  if ($('#show-reg').checked) h += D.register.map(r => { const [x, y] = px([r[5], r[4]]);
+    const dim = selected && r[key] !== selected, on = focus && focus.kind === 'reg' && focus.at === r[4] + ',' + r[5];
+    return `<circle class="reg${dim ? ' dim' : ''}${on ? ' on' : ''}" data-reg="${esc(r[0])}" cx="${x}" cy="${y}" r="${(2.6 * u).toFixed(3)}"/>`; }).join('');
   if ($('#show-orgs').checked) {
     const order = { o: 0, f: 1, c: 2 };
     h += [...placedOrgs].sort((a, b) => order[cls(a)] - order[cls(b)]).map(o => {
-      const [x, y] = px([o.place.lon, o.place.lat]); const inSel = !selected || o.place[layer === 'trust' ? 'trust' : 'council'] === selected;
-      return shape(cls(o), +x, +y, 3.6).replace('class="dot', `data-org="${esc(o.orgId || o.name)}" class="dot${inSel ? '' : ' dim'}`); }).join('');
+      const [x, y] = px([o.place.lon, o.place.lat]), inSel = !selected || o.place[layer === 'trust' ? 'trust' : 'council'] === selected;
+      const on = focus && focus.kind === 'org' && focus.at === o.place.lat + ',' + o.place.lon;
+      return shape(cls(o), +x, +y, 4.2 * u).replace('class="dot', `data-org="${esc(orgKey(o))}" class="dot${inSel ? '' : ' dim'}${on ? ' on' : ''}`); }).join('');
   }
-  map.innerHTML = h;
+  gTop.innerHTML = h;
 }
 const legend = () => {
   const sw = k => `<svg viewBox="-6 -6 12 12">${shape(k, 0, 0, 4.2).replace(/class="dot (\w)"/, (m, c) => `fill="var(--b-${({ c: 'comm', f: 'fund', o: 'other' })[c]})"`)}</svg>`;
   $('#legend').innerHTML = Object.entries(CLS).map(([k, l]) => `<span>${sw(k)}${l} (${placedOrgs.filter(o => cls(o) === k).length})</span>`).join('')
+    + `<span><svg viewBox="-6 -6 12 12"><circle r="3" fill="var(--ink-faint)" opacity=".6"/></svg>Register charity ticking children (switch above)</span>`
     + `<span class="miss">${D.orgs.length - placedOrgs.length} listed organisations have no NI register address and are not on the map</span>`;
 };
 
+// ---- zoom and pan: wheel, drag, pinch, buttons ----
+map.addEventListener('wheel', e => { e.preventDefault(); const [cx, cy] = toView(e.clientX, e.clientY); zoomAt(Math.exp(-e.deltaY * .0016), cx, cy); }, { passive: false });
+const ptrs = new Map(); let drag = null, pinch = null, moved = false;
+map.addEventListener('pointerdown', e => {
+  if (e.button !== undefined && e.button !== 0) return;
+  ptrs.set(e.pointerId, [e.clientX, e.clientY]); moved = false;
+  if (ptrs.size === 1) drag = { x: e.clientX, y: e.clientY, vx: vb.x, vy: vb.y };
+  if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; pinch = { d: Math.hypot(a[0] - b[0], a[1] - b[1]), w: vb.w }; drag = null; }
+});
+window.addEventListener('pointermove', e => {
+  if (!ptrs.has(e.pointerId)) return; ptrs.set(e.pointerId, [e.clientX, e.clientY]);
+  if (pinch && ptrs.size === 2) { const [a, b] = [...ptrs.values()], d = Math.hypot(a[0] - b[0], a[1] - b[1]);
+    const [cx, cy] = toView((a[0] + b[0]) / 2, (a[1] + b[1]) / 2); zoomAt(vb.w / (pinch.w * pinch.d / Math.max(d, 1)), cx, cy); moved = true; return; }
+  if (!drag) return; const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (!moved && Math.hypot(dx, dy) < 4) return;
+  moved = true; tip.style.display = 'none'; map.classList.add('dragging');
+  const r = map.getBoundingClientRect(); vb.x = drag.vx - dx / r.width * vb.w; vb.y = drag.vy - dy / r.height * vb.h; clampVB(); applyVB();
+});
+const endPtr = e => { ptrs.delete(e.pointerId); if (ptrs.size < 2) pinch = null; if (!ptrs.size) { drag = null; map.classList.remove('dragging'); } };
+window.addEventListener('pointerup', endPtr); window.addEventListener('pointercancel', endPtr);
+$('#z-in').onclick = () => zoomCentre(1.8); $('#z-out').onclick = () => zoomCentre(1 / 1.8);
+$('#z-reset').onclick = () => { vb = { ...VB0 }; applyVB(); };
+new ResizeObserver(() => drawTop()).observe(map);
+
+// ---- hover and click ----
 const tip = $('#tip');
 map.addEventListener('mousemove', e => {
+  if (drag && moved) return;
   const t = e.target, card = map.parentElement.getBoundingClientRect(); let html = null;
-  if (t.dataset.org) { const o = D.orgs.find(x => (x.orgId || x.name) === t.dataset.org);
+  if (t.dataset.org) { const o = orgByKey[t.dataset.org];
     html = `<b>${esc(o.name)}</b><br>${esc(CLS[cls(o)])}<br>${esc(o.place.postcode)} · ${esc(councilName[o.place.council] || '')}`; }
+  else if (t.dataset.reg) { const r = regByNo[t.dataset.reg]; const same = D.register.filter(q => q[4] === r[4] && q[5] === r[5]).length;
+    html = `<b>${esc(r[1])}</b><br>Register charity · ${esc(TIER[r[2]])}${same > 1 ? `<br>+${same - 1} more at this address` : ''}`; }
   else if (t.dataset.code) html = esc(layer === 'trust' ? trustName[t.dataset.code] : councilName[t.dataset.code]);
   if (!html) { tip.style.display = 'none'; return; }
   tip.innerHTML = html; tip.style.display = 'block';
@@ -324,14 +400,54 @@ map.addEventListener('mousemove', e => {
 });
 map.addEventListener('mouseleave', () => tip.style.display = 'none');
 map.addEventListener('click', e => {
+  if (moved) { moved = false; return; }
   const t = e.target;
-  if (t.dataset.org) { const o = D.orgs.find(x => (x.orgId || x.name) === t.dataset.org); $('#org-q').value = o.name; drawOrgs(); $('#orgt').scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+  // Several organisations often share one registered address, so a click opens everything at that point.
+  if (t.dataset.org) { const o = orgByKey[t.dataset.org]; focus = { kind: 'org', at: o.place.lat + ',' + o.place.lon }; drawTop(); drawPanel(); return; }
+  if (t.dataset.reg) { const r = regByNo[t.dataset.reg]; focus = { kind: 'reg', at: r[4] + ',' + r[5] }; drawTop(); drawPanel(); return; }
+  // A near miss on a small dot counts as a hit: the nearest dot within 7 screen pixels.
+  const near = nearestDot(e.clientX, e.clientY, 7);
+  if (near) { focus = near; drawTop(); drawPanel(); return; }
+  focus = null;
   selected = t.dataset.code && selected !== t.dataset.code ? t.dataset.code : null;
   drawMap(); drawPanel(); syncAreaFilter();
 });
-const setLayer = l => { layer = l; selected = null; $('#lay-trust').setAttribute('aria-pressed', l === 'trust'); $('#lay-council').setAttribute('aria-pressed', l === 'council'); drawMap(); drawPanel(); fillAreaFilter(); };
+const setLayer = l => { layer = l; selected = null; focus = null; $('#lay-trust').setAttribute('aria-pressed', l === 'trust'); $('#lay-council').setAttribute('aria-pressed', l === 'council'); drawMap(); drawPanel(); fillAreaFilter(); };
 $('#lay-trust').onclick = () => setLayer('trust'); $('#lay-council').onclick = () => setLayer('council');
-$('#show-orgs').onchange = drawMap; $('#show-reg').onchange = drawMap;
+$('#show-orgs').onchange = drawTop; $('#show-reg').onchange = drawTop;
+
+function nearestDot(X, Y, pxR) {
+  const [vx, vy] = toView(X, Y), lim = (pxR * upp()) ** 2; let best = null, bd = lim;
+  const test = (lat, lon, f) => { const [x, y] = px([lon, lat]), d = (x - vx) ** 2 + (y - vy) ** 2; if (d < bd) { bd = d; best = f; } };
+  if ($('#show-reg').checked) for (const r of D.register) test(r[4], r[5], { kind: 'reg', at: r[4] + ',' + r[5] });
+  if ($('#show-orgs').checked) for (const o of placedOrgs) test(o.place.lat, o.place.lon, { kind: 'org', at: o.place.lat + ',' + o.place.lon });
+  return best;
+}
+// The panel for a clicked dot: every organisation or register charity at that address.
+function focusPanel() {
+  const [lat, lon] = focus.at.split(',').map(Number);
+  const back = `<p class="sub"><a href="#" id="unfocus">${selected ? '← Back to the area' : '← Back to Northern Ireland'}</a></p>`;
+  const regRow = r => { const o = orgByReg[r[0]];
+    return `<div class="fitem"><b>${esc(r[1])}</b>
+      <div class="miss">Register no. ${esc(r[0])} · ${esc(TIER[r[2]])} · latest income ${r[3] ? '£' + r[3].toLocaleString('en-GB') : 'none reported'}</div>
+      <div><a href="${ccniUrl(r[0])}" target="_blank" rel="noopener">Charity register entry</a>${o ? ` · also on the documented list (${esc(o.basisTypes.join(', '))}) — <a href="#" data-show="${esc(orgKey(o))}">show</a>` : ''}</div></div>`; };
+  const orgRow = o => `<div class="fitem"><b>${esc(o.name)}</b> <span class="flag">${esc(CLS[cls(o)])}</span>
+      ${o.basis.map(b => `<div>${esc(b.type)}: ${esc(b.detail || '')}${b.amount ? ' — ' + esc(b.amount) : ''}${b.year ? ' (' + esc(b.year) + ')' : ''} <a href="${esc(b.url)}" target="_blank" rel="noopener">source</a></div>`).join('')}
+      <div class="miss">${o.regNo ? `Register no. ${esc(o.regNo)} · latest income ${o.income ? '£' + (+o.income).toLocaleString('en-GB') : '—'} · <a href="${ccniUrl(o.regNo)}" target="_blank" rel="noopener">register entry</a>` : 'Not on the NI register'}</div></div>`;
+  if (focus.kind === 'org') {
+    const os = placedOrgs.filter(o => o.place.lat === lat && o.place.lon === lon);
+    return `<h4>${os.length > 1 ? os.length + ' organisations at one address' : esc(os[0].name)}</h4>${back}
+      <p class="sub">${esc(os[0].place.postcode)} · ${esc(councilName[os[0].place.council] || '')} · ${esc(trustName[os[0].place.trust] || '')} Trust area. A registered address, not necessarily where the work happens.</p>${os.map(orgRow).join('')}`;
+  }
+  const rs = D.register.filter(r => r[4] === lat && r[5] === lon).sort((a, b) => b[3] - a[3]);
+  return `<h4>${rs.length > 1 ? rs.length + ' register charities at one address' : esc(rs[0][1])}</h4>${back}
+    <p class="sub">${esc(councilName[rs[0][6]] || '')} · ${esc(trustName[rs[0][7]] || '')} Trust area. These charities tick a children's beneficiary on the register; that is self-declared, and is not evidence of anything else.</p>${rs.map(regRow).join('')}`;
+}
+$('#panel').addEventListener('click', e => {
+  if (e.target.id === 'unfocus') { e.preventDefault(); focus = null; drawTop(); drawPanel(); }
+  const k = e.target.dataset && e.target.dataset.show;
+  if (k) { e.preventDefault(); const o = orgByKey[k]; focus = { kind: 'org', at: o.place.lat + ',' + o.place.lon }; drawTop(); drawPanel(); }
+});
 
 // ---------------- side panel ----------------
 const srcLink = f => `<a href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.label)}${f.page ? ' — p.' + f.page : ''}">src</a>`;
@@ -354,6 +470,7 @@ const orgList = os => `<ul class="orgs">${os.sort((a, b) => (+b.income || 0) - (
 
 function drawPanel() {
   const P = $('#panel');
+  if (focus) { P.innerHTML = focusPanel(); return; }
   if (!selected) {
     const v = k => D.bodies.filter(b => b.verdict === k && !b.excluded).length;
     P.innerHTML = `<h4>Northern Ireland</h4><p class="sub">Select an area on the map for what is published about it.</p>
@@ -486,5 +603,5 @@ $('#orgt tbody').addEventListener('click', e => { if (e.target.tagName === 'A') 
 $('#orgt thead').addEventListener('click', e => { const k = e.target.dataset.k; if (!k || k === 'basis') return; sortK = k; drawOrgs(); });
 $('#org-q').oninput = drawOrgs; $('#org-basis').onchange = drawOrgs;
 
-drawMap(); legend(); drawPanel(); fillAreaFilter(); drawList(); drawChart();
+drawMap(); applyVB(); legend(); drawPanel(); fillAreaFilter(); drawList(); drawChart();
 </script>
