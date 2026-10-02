@@ -94,6 +94,8 @@ flag('v312', 'duplicateOf', 'v216'); flag('v230', 'duplicateOf', 'v214');
 flag('v225', 'duplicateOf', 'v216'); flag('v311', 'duplicateOf', 'v214');
 // Found in phase 3: same register number (LORAG), and the same GB charity under two names (Mencap).
 flag('v263', 'duplicateOf', 'v059'); flag('v279', 'duplicateOf', 'v219');
+flag('v298', 'duplicateOf', 'v218');   // The Prince's Trust renamed The King's Trust (2024)
+flag('v271', 'duplicateOf', 'v215'); flag('v308', 'duplicateOf', 'v215');   // NSPCC, split on GB numbers written two ways, like AfC and Barnardo's
 // Same organisation listed twice by the list-building merge, under name variants.
 flag('v320', 'duplicateOf', 'v142');   // Marrowbone Community Hub is the Association's registered office
 flag('v222', 'duplicateOf', 'v024');   // ASCERT

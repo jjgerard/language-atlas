@@ -312,7 +312,9 @@ function incomeInfo(o) {
   const grants = o.basis.filter(b => b.type === 'gov funding' && amt(b.amount) != null).sort((a, b) => amt(b.amount) - amt(a.amount));
   if (!o.gbCharityNo && !(f && f.total && f.total !== '—') && grants.length) { const g = grants[0];
     return { html: '≥ £' + Math.round(amt(g.amount)).toLocaleString('en-GB'), sub: 'public grant only' + (g.year ? ', ' + g.year : '') + (grants.length > 1 ? ', largest of ' + grants.length : '') + ' — a floor, not a budget', sort: amt(g.amount) }; }
-  if (o.gbCharityNo) return { html: '<span class="miss">no NI total published</span>', sub: (f && f.total ? 'UK-wide ' + String(f.total).replace(/\s*\(.*$/, '') : 'UK-wide charity') + (ni ? ' · ' + f.government.length + ' NI public funders listed' : ''), sort: -1 };
+  const niInc = o.ukNI && o.ukNI.totals.find(t => t.kind === 'income');
+  if (niInc) return { html: esc(niInc.value) + ' ' + esc(niInc.unit || ''), sub: 'NI income, ' + esc(niInc.year || '') + ', from the UK accounts' + (/unaudited/i.test(niInc.label || '') ? ' (unaudited)' : ''), sort: parseFloat(String(niInc.value).replace(/[^0-9.]/g, '')) * (/000/.test(niInc.unit || '') ? 1000 : 1) || 0 };
+  if (o.gbCharityNo || o.ukNI) return { html: '<span class="miss">no NI total published</span>', sub: (f && f.total ? 'UK-wide ' + String(f.total).replace(/\s*\(.*$/, '') : 'UK-wide charity') + (ni ? ' · ' + f.government.length + ' NI public funders listed' : ''), sort: -1 };
   if (f && f.total && f.total !== '—') return { html: esc(String(f.total).replace(/\s*\(.*$/, '')), sub: (f.year ? f.year + ', ' : '') + 'own accounts', sort: parseFloat(String(f.total).replace(/[^0-9.]/g, '')) || 0 };
   if (/\bCIC\b|limited\b|ltd\b/i.test(o.name)) return { html: '<span class="miss">none public</span>', sub: 'company, not a registered charity', sort: -2 };
   if (o.possiblyStatutory) return { html: '<span class="miss">within EA budget?</span>', sub: 'possibly an EA-run centre', sort: -2 };
@@ -326,6 +328,12 @@ function profHTML(o) {
   if (pc && pc.verdict !== 'confirmed') warn += '<div class="miss">Parent charity ' + (pc.verdict === 'rejected' ? 'checked and ruled out' : 'not confirmed') + (pc.parentName ? ': ' + esc(pc.parentName) : '') + '.</div>';
   if (o.projectFigures) warn += '<div style="margin-top:4px"><b>This project in the parent\'s accounts</b>: '
     + o.projectFigures.map(f => esc(f.label) + ' ' + esc(f.value) + (f.year ? ' (' + esc(f.year) + ')' : '') + (f.url ? ' <a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + (f.page ? (/^\d+$/.test(String(f.page)) ? 'p.' + f.page : esc(String(f.page).split(',')[0])) : 'source') + '</a>' : '')).join('; ') + '</div>';
+  if (o.ukNI) { const u = o.ukNI, line = x => esc(x.label || x.funder || x.measure || '') + ' ' + esc(x.value || '') + ' ' + esc(x.unit || '') + (x.year ? ' (' + esc(x.year) + ')' : '') + (x.url ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + (x.page ? 'p.' + esc(x.page) : 'source') + '</a>' : '');
+    warn += '<div style="margin-top:4px"><b>Northern Ireland figures from the UK accounts</b>'
+      + (u.totals.length ? '<div>' + u.totals.map(line).join('; ') + '</div>' : '')
+      + (u.funders.length ? '<div>NI funders: ' + u.funders.map(line).join('; ') + '</div>' : '')
+      + (u.activity.length ? '<div>NI reach: ' + u.activity.map(line).join('; ') + '</div>' : '')
+      + (!u.totals.length && !u.funders.length && u.notFound ? '<div class="miss">' + esc(u.notFound) + '</div>' : '') + '</div>'; }
   if (!p) return warn + '<div class="miss">Not profiled (rests only on a weak or dated basis).</div>';
   if (p.status === 'unreached') return warn + '<div class="miss">Profile not possible: no website or register documents could be reached.</div>';
   const svcs = p.services.map(s => `<div><b>${esc(SVC[s.code] || s.code)}</b>${say(o, s.quote)} <a href="${esc(s.url)}" target="_blank" rel="noopener">source</a>${s.rel ? ` <span class="chip">${esc(REL[s.rel.type] || s.rel.type)}${s.rel.body ? ': ' + esc(s.rel.body) : ''}</span>` : ''}</div>`).join('');

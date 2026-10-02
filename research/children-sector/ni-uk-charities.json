@@ -1,0 +1,905 @@
+{
+ "meta": {
+  "compiled": "2026-10-02",
+  "method": "UK accounts downloaded from the Charity Commission for England & Wales register (url = direct download; register list page in accountsListUrl). Tables read from page images rendered from the PDF, not from the text layer. 'page' = printed page number unless marked 'PDF p'. No NI share computed or apportioned from UK totals.",
+  "scope_notes": [
+   "NI public bodies' own grant/contract lists (Belfast City Council, EA, PHA contracts awarded, Supporting People) were NOT opened in this pass; every funder amount below comes from the charity's own accounts.",
+   "Companies House searched by name for NI-prefixed companies for each charity (first results page per query only).",
+   "NI Assembly evidence: only the Barnardo's NI Oct 2021 written submission was opened."
+  ]
+ },
+ "charities": [
+  {
+   "name": "Barnardo's",
+   "gbCharityNo": "216250",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/216250/accounts-and-annual-returns",
+   "source": "Barnardo's Annual Report 2024-25 (year to 31 March 2025, filed 30 Jan 2026)",
+   "niTotals": [
+    {
+     "label": "Northern Ireland 49,800 Children, young people, parents and carers supported through 74 services",
+     "value": "49,800",
+     "unit": "children, young people, parents and carers supported",
+     "year": "2024-25",
+     "kind": "children",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "14"
+    },
+    {
+     "label": "Northern Ireland ... supported through 74 services",
+     "value": "74",
+     "unit": "services",
+     "year": "2024-25",
+     "kind": "services",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "14"
+    }
+   ],
+   "niFunders": [
+    {
+     "funder": "Belfast Health & Social Care Trust",
+     "value": "£2,074,132",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134"
+    },
+    {
+     "funder": "Victims & Survivors Service",
+     "value": "£144,089",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134"
+    },
+    {
+     "funder": "Department of Health (SPPG)",
+     "value": "£2,443,508",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134"
+    },
+    {
+     "funder": "DE (Through HSCB)",
+     "value": "£1,007,9223",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134",
+     "note": "Printed exactly so on the page image and in the text layer: a misprint with one digit too many. Not corrected; the intended figure cannot be determined from the page."
+    },
+    {
+     "funder": "Northern Ireland Housing Executive",
+     "value": "£127,637",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134"
+    },
+    {
+     "funder": "Supporting People",
+     "value": "£243,381",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134"
+    },
+    {
+     "funder": "Public Health Agency",
+     "value": "£1,570,051",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134"
+    },
+    {
+     "funder": "Southern Health & Social Care Trust",
+     "value": "£1,545,999",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134"
+    },
+    {
+     "funder": "Western Health & Social Care Trust",
+     "value": "£218,512",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134"
+    },
+    {
+     "funder": "Northern Ireland Prison Service",
+     "value": "£201,837",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134"
+    },
+    {
+     "funder": "South Belfast Partnership Board",
+     "value": "£34,557",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134"
+    },
+    {
+     "funder": "Belfast City Council",
+     "value": "£16,500",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134"
+    },
+    {
+     "funder": "National Lottery – Transition & Inclusion Service",
+     "value": "£63,678",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "134",
+     "note": "Listed under the Northern Ireland heading; the same line and amount also appear under 'Charitable Trusts, Grants and Foundations' on p133."
+    }
+   ],
+   "niActivity": [
+    {
+     "text": "Barnardo's NI is the largest children's charity in Northern Ireland. Every year we work with more than 18,000 children, young people and families across more than 45 different services and programmes.",
+     "year": "October 2021",
+     "url": "https://www.niassembly.gov.uk/globalassets/documents/committees/2017-2022/health/primary-legislation/adoption-and-children-bill/written-submissions/barnardos-ni.pdf",
+     "page": "1",
+     "note": "This is the source of the '18,000' figure: Barnardo's NI written evidence to the NI Assembly Committee for Health on the Adoption and Children Bill, dated October 2021. The same wording ('over 18,000 ... 45+ services') is the undated profile text on Barnardo's NI's LinkedIn and Facebook pages. It is a 2021 figure, NOT 2024-25. The 2024-25 annual report gives 49,800 through 74 services (p14), so do not use 18,000 as current."
+    },
+    {
+     "text": "Barnardo's NI currently delivers two Leaving Care services, in Belfast and Ballymena ... jointly commissioned by the NI Housing Executive's Supporting People Programme, and the five Health and Social Care Trusts.",
+     "year": "October 2021",
+     "url": "https://www.niassembly.gov.uk/globalassets/documents/committees/2017-2022/health/primary-legislation/adoption-and-children-bill/written-submissions/barnardos-ni.pdf",
+     "page": "1"
+    },
+    {
+     "text": "Our Children's Services work is managed in regions covering ... Scotland and Northern Ireland.",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "81"
+    },
+    {
+     "text": "In Northern Ireland ... A remarkable £25,000 donated by Tobermore ... £10,000 raised by ... RSA Northern Ireland ... Sweets For Life, which raised £4,600 in 2024-25",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "41",
+     "kind": "voluntary income, named donors"
+    },
+    {
+     "text": "from January 2025, a new service called Ubuntu operating in Northern Ireland, Scotland, and Hertfordshire, funded by the National Lottery Community Fund",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18253687&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216250",
+     "page": "11",
+     "note": "p133 lists 'National Lottery Community Fund (Ubuntu) £220,762', which covers three places and is not an NI figure."
+    }
+   ],
+   "subsidiaries": [],
+   "notFound": "No NI total for income, expenditure or staff. The accounts have no segment note or nation analysis; 7,404 colleagues are given only as a UK total (p14). The NI funder list is a list of statutory funders. It does not add up to NI income and was not summed here. No NI-prefixed Barnardo's company was found at Companies House."
+  },
+  {
+   "name": "NSPCC",
+   "gbCharityNo": "216401",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/216401/accounts-and-annual-returns",
+   "source": "NSPCC Annual Report and Accounts 2024/25 (filed 5 Dec 2025)",
+   "niTotals": [],
+   "niFunders": [
+    {
+     "funder": "Department of Education Northern Ireland (Childline Foyle Helpline in Londonderry)",
+     "value": "159 (£'000 income)",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18588059&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216401",
+     "page": "128",
+     "note": "Note 21 restricted funds; 2023/24 also 159"
+    },
+    {
+     "funder": "Department of Health, Social Services & Public Safety (DSSHPS) of Northern Ireland (Childline counselling staff salaries in Northern Ireland)",
+     "value": "23 (£'000 income)",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18588059&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216401",
+     "page": "128",
+     "note": "2023/24 also 23"
+    },
+    {
+     "funder": "Department of Justice Northern Ireland (Northern Ireland Young Witness Support Service)",
+     "value": "467 (£'000 income)",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18588059&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216401",
+     "page": "128",
+     "note": "2023/24 also 467"
+    },
+    {
+     "funder": "Community Foundation Northern Ireland (Practitioner Salaries delivering 'Pregnancy in Mind' in Northern Ireland)",
+     "value": "7 (£'000 income)",
+     "year": "2023/24",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18588059&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216401",
+     "page": "128",
+     "note": "2024/25 column shows '-'"
+    },
+    {
+     "funder": "Magheramourne Foundation",
+     "value": "£15,000",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18588059&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216401",
+     "page": "40",
+     "note": "Donation towards the Letting the Future In service in Belfast & Foyle. 'Since 2002 ... £265,000'."
+    }
+   ],
+   "niActivity": [
+    {
+     "text": "Last year in Northern Ireland the Young Witness Service helped 584 children and young people.",
+     "year": "undated ('last year')",
+     "url": "https://www.nspcc.org.uk/about-us/our-impact/our-work-uk/northern-ireland/",
+     "kind": "children"
+    },
+    {
+     "text": "We worked directly with 778 children and families in Northern Ireland",
+     "year": "undated ('Last year')",
+     "url": "https://www.nspcc.org.uk/about-us/our-impact/our-work-uk/northern-ireland/",
+     "kind": "children"
+    },
+    {
+     "text": "Our Childline volunteers delivered counselling sessions to an estimated 4,100 children and young people in Northern Ireland.",
+     "year": "undated",
+     "url": "https://www.nspcc.org.uk/about-us/our-impact/our-work-uk/northern-ireland/",
+     "kind": "children"
+    },
+    {
+     "text": "43,361 children in 189 schools took part in our Speak out, Stay safe programme in Northern Ireland.",
+     "year": "undated",
+     "url": "https://www.nspcc.org.uk/about-us/our-impact/our-work-uk/northern-ireland/",
+     "kind": "children"
+    },
+    {
+     "text": "We delivered 19 child protection training courses to 40 organisations in Northern Ireland.",
+     "year": "undated",
+     "url": "https://www.nspcc.org.uk/about-us/our-impact/our-work-uk/northern-ireland/"
+    },
+    {
+     "text": "approximately 67 volunteers (2024 approximately 53 volunteers) working in our service centres ... primarily providing support through our young witness in Northern Ireland",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18588059&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216401",
+     "page": "120"
+    },
+    {
+     "text": "Northern Ireland National Office and Hub Unit 7, The Lanyon Building, Jennymount Business Park, North Derby Street, Belfast BT15 3HN",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18588059&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=216401",
+     "page": "132"
+    }
+   ],
+   "subsidiaries": [],
+   "notFound": "No NI income, expenditure or staff total in the UK accounts. The NI page's figures are not dated. No NI-prefixed NSPCC company at Companies House."
+  },
+  {
+   "name": "Action for Children",
+   "gbCharityNo": "1097940",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/4000625/accounts-and-annual-returns",
+   "source": "Action for Children Annual Report and Accounts 2024-25 (filed 8 Dec 2025)",
+   "niTotals": [
+    {
+     "label": "15 Northern Ireland (Our front line services)",
+     "value": "15",
+     "unit": "front line services",
+     "year": "2024-25",
+     "kind": "services",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17958394&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=4000625",
+     "page": "10"
+    }
+   ],
+   "niFunders": [
+    {
+     "funder": "Northern Ireland Housing Executive – Rossorry Grove Supported Accommodation",
+     "value": "374 (£'000 incoming resources)",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17958394&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=4000625",
+     "page": "79"
+    },
+    {
+     "funder": "Northern Ireland Housing Executive – Sperrin and Lakeland Floating Support",
+     "value": "373 (£'000 incoming resources)",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17958394&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=4000625",
+     "page": "79"
+    },
+    {
+     "funder": "Northern Ireland Housing Executive – Waterside Sure Start",
+     "value": "686 (£'000 incoming resources)",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17958394&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=4000625",
+     "page": "79",
+     "note": "printed under the NIHE heading as on the page"
+    },
+    {
+     "funder": "Northern Ireland Housing Executive (subtotal as printed)",
+     "value": "1,434 (£'000 incoming resources)",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17958394&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=4000625",
+     "page": "79",
+     "note": "the page's own subtotal"
+    }
+   ],
+   "niActivity": [
+    {
+     "text": "With over 20 services we are based in the heart of local communities. ... helping more than 11,400 children alone in the last year.",
+     "year": "undated; CommunityNI listing 'Last updated 3 years 8 months ago' as fetched 2026-10-02, i.e. about early 2023",
+     "url": "https://www.communityni.org/organisation/action-children-northern-ireland",
+     "kind": "children",
+     "note": "CONFIRMED that '11,400' exists, but only on this self-written CommunityNI profile. It has no stated year and is about 3.7 years old. Not found on actionforchildren.org.uk, whose NI page says only 'reached thousands'. The 2024-25 accounts give 15 NI front-line services, not 'over 20'."
+    },
+    {
+     "text": "In February we gave evidence to the Northern Ireland Assembly Health Committee on Fostering Regulations.",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17958394&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=4000625",
+     "page": "26"
+    },
+    {
+     "text": "our Northern Ireland National Director, Lorna Ballard",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17958394&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=4000625",
+     "page": "24"
+    }
+   ],
+   "subsidiaries": [
+    {
+     "name": "ACTION FOR CHILDREN (NORTHERN IRELAND) LTD",
+     "number": "NI638222",
+     "status": "Active, incorporated 3 May 2016, Loughshore House, 10 Heron Road, Belfast BT3 9LE",
+     "accounts": "Accounts for a dormant company, made up to 31 March 2025 (filed 30 Oct 2025)",
+     "url": "https://find-and-update.company-information.service.gov.uk/company/NI638222/filing-history",
+     "note": "UK accounts p72: 'one share at a cost of £1 ... it has not traded'. New Articles were adopted in March 2026 (filing 27 Mar 2026, resolution 3 Jun 2026), so it may become active, but its accounts show no NI activity."
+    }
+   ],
+   "notFound": "No NI income, expenditure or staff total in the UK accounts. The NI Assembly Health Committee evidence of Feb 2025 (fostering regulations) was not opened for figures."
+  },
+  {
+   "name": "Save the Children UK",
+   "gbCharityNo": "213890",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/213890/accounts-and-annual-returns",
+   "source": "Save the Children UK financial statements, year to 31 December 2025 (filed 24 Jul 2026)",
+   "niTotals": [],
+   "niFunders": [],
+   "niActivity": [
+    {
+     "text": "In Northern Ireland, the Listen to Learn project engaged 80 children across six primary schools in North Belfast",
+     "year": "2025",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19008484&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=213890",
+     "page": "PDF p26",
+     "kind": "children",
+     "note": "The NI web page (savethechildren.org.uk/what-we-do/child-poverty/uk-child-poverty/northern-ireland) says '77 primary school children' for the same project, run in late 2024."
+    },
+    {
+     "text": "WHERE WE WORK ... Northern Ireland – Belfast",
+     "year": "2025",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19008484&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=213890",
+     "page": "26 (PDF p27)"
+    },
+    {
+     "text": "three grants from the Legal & General Health Equity Fund to improve the health of families and children affected by poverty in Sheffield, East Belfast, and Ely and Caerau in Cardiff",
+     "year": "2025",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19008484&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=213890",
+     "page": "PDF p33",
+     "note": "no amount per place"
+    }
+   ],
+   "subsidiaries": [],
+   "notFound": "No NI income, expenditure, staff or service count in the accounts. No NI-prefixed company at Companies House."
+  },
+  {
+   "name": "The King's Trust",
+   "gbCharityNo": "1079675",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/3969861/accounts-and-annual-returns",
+   "source": "The King's Trust Annual Report and Accounts 2024/25 (filed 15 Dec 2025)",
+   "niTotals": [
+    {
+     "label": "Income and expenditure account for Wales, Scotland and Northern Ireland: Northern Ireland, Total income resources",
+     "value": "2,633",
+     "unit": "£'000",
+     "year": "2024/25 (2024: 2,113)",
+     "kind": "income",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "80",
+     "note": "Under 'Additional unaudited information'. Taken from management accounts, and includes an allocation of shared head-office and UK-wide support costs."
+    },
+    {
+     "label": "Northern Ireland, Private sector",
+     "value": "763",
+     "unit": "£'000",
+     "year": "2024/25 (2024: 625)",
+     "kind": "income",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "80"
+    },
+    {
+     "label": "Northern Ireland, Public sector",
+     "value": "1,623",
+     "unit": "£'000",
+     "year": "2024/25 (2024: 1,413)",
+     "kind": "income",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "80"
+    },
+    {
+     "label": "Northern Ireland, Other",
+     "value": "247",
+     "unit": "£'000",
+     "year": "2024/25 (2024: 75)",
+     "kind": "income",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "80"
+    },
+    {
+     "label": "Northern Ireland, Total resources expended (including support costs)",
+     "value": "(4,382)",
+     "unit": "£'000",
+     "year": "2024/25 (2024: (3,863))",
+     "kind": "expenditure",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "80"
+    },
+    {
+     "label": "Northern Ireland, Staff costs",
+     "value": "(1,903)",
+     "unit": "£'000",
+     "year": "2024/25 (2024: (1,878))",
+     "kind": "staff",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "80",
+     "note": "staff COSTS, not headcount"
+    },
+    {
+     "label": "Northern Ireland, Surplus/(Deficit) for the year",
+     "value": "(1,749)",
+     "unit": "£'000",
+     "year": "2024/25 (2024: (1,750))",
+     "kind": "expenditure",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "80"
+    },
+    {
+     "label": "Income in the form of government grants from local and national government ... Northern Ireland",
+     "value": "1,616",
+     "unit": "£'000",
+     "year": "2024/25 (2024: 1,389)",
+     "kind": "funding",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "63",
+     "note": "Note 4, audited"
+    },
+    {
+     "label": "THE KING'S TRUST IN NORTHERN IRELAND 13,349 young people supported",
+     "value": "13,349",
+     "unit": "young people",
+     "year": "2024/25 (2023/24: 13,189)",
+     "kind": "children",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "26"
+    },
+    {
+     "label": "Northern Ireland 20% (of 67,368 young people supported)",
+     "value": "20%",
+     "unit": "share of young people supported",
+     "year": "2024/25",
+     "kind": "children",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "24-25"
+    }
+   ],
+   "niFunders": [
+    {
+     "funder": "YouthAction Northern Ireland – UKSPF - NI33 YouthStart",
+     "value": "1,118 (£'000 income in year)",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "81"
+    },
+    {
+     "funder": "Enterprise Northern Ireland Ltd – UKSPF - NI33 NIEESS",
+     "value": "198 (£'000 income in year)",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "81"
+    },
+    {
+     "funder": "YouthAction Northern Ireland – MULTIPLY",
+     "value": "- (income); (24) expenditure",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "81"
+    },
+    {
+     "funder": "Northern Ireland Prison Service – Prisoner and Family Support (Region/Country: NI)",
+     "value": "5,253",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "82",
+     "note": "The column header reads 'Income Received £'000's', but the other rows on the page (e.g. Julia Rausing Trust 3,333,000) only make sense as pounds, so the unit is ambiguous. Recorded as printed."
+    }
+   ],
+   "niActivity": [
+    {
+     "text": "47% of the young people we supported in Northern Ireland (2023/24: 44%) were from IMD 1 to 3, and 45% were female",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "26"
+    },
+    {
+     "text": "one of seven Youth organisations working in partnership to have NI-wide provision for economically inactive young people ('Youth Start' UKSPF Consortium)",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17991788&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=3969861",
+     "page": "26"
+    }
+   ],
+   "subsidiaries": [],
+   "notFound": "No NI headcount, only staff costs. No NI-prefixed King's Trust or Prince's Trust company at Companies House."
+  },
+  {
+   "name": "Royal Mencap Society",
+   "gbCharityNo": "222377",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/222377/accounts-and-annual-returns",
+   "source": "Royal Mencap Society Annual Report April 2025 to March 2026 (the latest, filed 1 Oct 2026). Pages are printed as spreads, so 'page' gives the printed spread.",
+   "niTotals": [
+    {
+     "label": "We run 633 personal support services ... 15 in Northern Ireland",
+     "value": "15",
+     "unit": "personal support services",
+     "year": "2025/26",
+     "kind": "services",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "34-35"
+    },
+    {
+     "label": "Total Expenditure made up from: Supporting our work in Northern Ireland £0.9m",
+     "value": "£0.9m",
+     "unit": "£",
+     "year": "2025/26",
+     "kind": "expenditure",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "118-119",
+     "note": "This is a breakdown of FUNDRAISING income and spend (fundraised total expenditure £12.9m). It is not Mencap NI's whole expenditure."
+    }
+   ],
+   "niFunders": [
+    {
+     "funder": "Northern Ireland Housing Executive - Supporting People (restricted fund, incoming resources)",
+     "value": "837 (£'000)",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "166 (note 23)"
+    },
+    {
+     "funder": "Northern Ireland Housing Executive - Supporting People (restricted fund, incoming resources)",
+     "value": "787 (£'000)",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "164-165 (note 23, prior-year table)"
+    },
+    {
+     "funder": "Belfast Health and Social Care Trusts",
+     "value": "249 (£'000)",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "176 (note 27e, 'Included in Income from Charitable activities')",
+     "note": "Read from the page image. The text layer misplaces these rows under 'Gifts in Kind'."
+    },
+    {
+     "funder": "Education Authority",
+     "value": "92 (£'000)",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "176 (note 27e)"
+    },
+    {
+     "funder": "Southern Health and Social Care Trusts",
+     "value": "79 (£'000)",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "176 (note 27e)"
+    },
+    {
+     "funder": "SEUPB: Peace Plus",
+     "value": "575 (£'000)",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "176 (note 27e)",
+     "note": "PEACEPLUS is a cross-border NI/border-counties programme. p56-57 names the PEACEPLUS-funded HEROES+ and E2T projects 'In Northern Ireland'."
+    },
+    {
+     "funder": "North West Regional College",
+     "value": "50 (£'000)",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "176 (note 27e)"
+    },
+    {
+     "funder": "Cedar Foundation",
+     "value": "118 (£'000)",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "176 (note 27e)",
+     "note": "an NI charity; the page does not say the income is for NI"
+    },
+    {
+     "funder": "Early Years",
+     "value": "53 (£'000)",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "176 (note 27e)",
+     "note": "Probably the NI organisation 'Early Years'. The page does not say so."
+    }
+   ],
+   "niActivity": [
+    {
+     "text": "In Northern Ireland, our Employment and Personal Development services supported more than 460 people ... Sixteen people moved into paid employment",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "66-67",
+     "note": "adults and young people, not only children"
+    },
+    {
+     "text": "Our Early Years service in Belfast ... Working in partnership with the Belfast Health and Social Care Trust and the Education Authority, we provide specialist early intervention for children aged 2 to 3",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "54-55"
+    },
+    {
+     "text": "Twenty-three families completed our six-week Early Learners programme",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "54-55"
+    },
+    {
+     "text": "NewBe Project - capital project in Northern Ireland funding the construction of a new building for an early intervention centre ... and a new headquarters for Mencap in Northern Ireland (restricted balance 3,013 £'000; transfer (2,949) to unrestricted)",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "166"
+    },
+    {
+     "text": "one £250,000 donation for housing adaptations ... co-beneficiary of the Waterloo Ball 2025 raised £100,000",
+     "year": "2025/26",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A19316195&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=222377",
+     "page": "116-117"
+    }
+   ],
+   "subsidiaries": [],
+   "notFound": "No NI segment total for income, expenditure or staff. No NI-prefixed Mencap company was found by the Companies House name search. The 2024-25 accounts were not re-read separately; the latest year, 2025-26, was used."
+  },
+  {
+   "name": "National Children's Bureau (NCB NI)",
+   "gbCharityNo": "258825",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/258825/accounts-and-annual-returns",
+   "source": "NCB Annual Report and Accounts 2024/25 (filed 3 Oct 2025)",
+   "niTotals": [],
+   "niFunders": [],
+   "niActivity": [
+    {
+     "text": "In Northern Ireland, the Empowering Young People programme came to an end this year. The Lottery-funded programme, which NCB supported through the LINKS network, has helped more than 150 projects in the region over almost 10 years.",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17594904&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=258825",
+     "page": "33-34"
+    },
+    {
+     "text": "NCB provided secretariat for The Reimagine Children's Collective ... Independent Review of Children's Social Care Services in Northern Ireland",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17594904&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=258825",
+     "page": "37"
+    }
+   ],
+   "subsidiaries": [],
+   "notFound": "No NI income, expenditure, funder amount or staff figure in the accounts. The funding notes (pp83, 94) name no NI body. ncb.org.uk's NI pages returned 404/403. A search summary said NCB NI early years work is 'funded by the Public Health Agency', but no source page was opened, so it is not recorded."
+  },
+  {
+   "name": "Family Fund (Family Fund Trust)",
+   "gbCharityNo": "1053866",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/1053866/accounts-and-annual-returns",
+   "source": "Family Fund Trust Annual Report and Accounts year to 31 March 2025 (filed 11 Dec 2025)",
+   "niTotals": [
+    {
+     "label": "Funding for grants and services: Government grants and contracts, Northern Ireland (Restricted / Total)",
+     "value": "1,572",
+     "unit": "£'000",
+     "year": "2025 (2024: 1,572)",
+     "kind": "funding",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17978653&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=1053866",
+     "page": "47 (note 3)"
+    },
+    {
+     "label": "Grants and services analysed by funding stream: Northern Ireland",
+     "value": "1,388",
+     "unit": "£'000",
+     "year": "2025 (2024: 1,352)",
+     "kind": "expenditure",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17978653&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=1053866",
+     "page": "50"
+    },
+    {
+     "label": "Number of Grants/Services, Grant support: Northern Ireland",
+     "value": "3,880",
+     "unit": "grants/services",
+     "year": "2025 (2024: 4,007)",
+     "kind": "services",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17978653&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=1053866",
+     "page": "51"
+    },
+    {
+     "label": "Movement on funds, Restricted funds: Northern Ireland, Income",
+     "value": "1,589",
+     "unit": "£'000",
+     "year": "2024/25",
+     "kind": "income",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17978653&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=1053866",
+     "page": "62 (note 15)"
+    },
+    {
+     "label": "Movement on funds, Restricted funds: Northern Ireland, Expenditure (incl taxation)",
+     "value": "(1,299)",
+     "unit": "£'000",
+     "year": "2024/25",
+     "kind": "expenditure",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17978653&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=1053866",
+     "page": "62 (note 15)",
+     "note": "Transfers (281); at 1 April 2024 107; at 31 March 2025 116"
+    }
+   ],
+   "niFunders": [
+    {
+     "funder": "Department of Health, Northern Ireland",
+     "value": "£1.6 million (2024: £1.6 million)",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17978653&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=1053866",
+     "page": "19"
+    },
+    {
+     "funder": "Northern Ireland (government grants, note 3)",
+     "value": "1,572 (£'000)",
+     "year": "2025",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17978653&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=1053866",
+     "page": "47"
+    }
+   ],
+   "niActivity": [
+    {
+     "text": "Our grant agreements with Scottish Government and Northern Ireland are renewed annually.",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A17978653&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=1053866",
+     "page": "25"
+    }
+   ],
+   "subsidiaries": [],
+   "notFound": "No NI staff figure. Family Fund is a UK grant-maker run from York, and the NI lines are a funding stream, not an NI office."
+  },
+  {
+   "name": "Sense",
+   "gbCharityNo": "289868",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/289868/accounts-and-annual-returns",
+   "source": "Sense, the National Deafblind and Rubella Association, financial statements year to 31 March 2025 (filed 27 Jan 2026)",
+   "niTotals": [
+    {
+     "label": "Charitable activities (income): Care and Support Northern Ireland",
+     "value": "3,679",
+     "unit": "£000s",
+     "year": "2025 (2024: 3,334)",
+     "kind": "income",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18213475&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=289868",
+     "page": "Page 66 of 86 (note 1)",
+     "note": "Most likely adult care and support (RQIA-assured services). The line is not limited to children."
+    },
+    {
+     "label": "Expenditure 2024/25: Care and Support Northern Ireland, Direct Costs",
+     "value": "3,527",
+     "unit": "£000s",
+     "year": "2025",
+     "kind": "expenditure",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18213475&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=289868",
+     "page": "Page 67 of 86 (note 4)"
+    },
+    {
+     "label": "Expenditure 2024/25: Care and Support Northern Ireland, Apportioned Support Costs",
+     "value": "378",
+     "unit": "£000s",
+     "year": "2025",
+     "kind": "expenditure",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18213475&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=289868",
+     "page": "Page 67 of 86 (note 4)"
+    },
+    {
+     "label": "Expenditure 2024/25: Care and Support Northern Ireland, total",
+     "value": "3,905",
+     "unit": "£000s",
+     "year": "2025 (2024: 3,384)",
+     "kind": "expenditure",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18213475&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=289868",
+     "page": "Page 67 of 86 (note 4); 2024 on PDF p68"
+    }
+   ],
+   "niFunders": [],
+   "niActivity": [
+    {
+     "text": "Restricted funds: Northern Ireland Day Centre (Commissioned day service opportunities for disabled adults); Northern Ireland Special Donations (5 income, (11) expenditure); Northern Ireland Out Of Schools Club (2023/24: 149 income, (152) expenditure); Belfast Hub Capital Fund (411 income)",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18213475&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=289868",
+     "page": "PDF pp74-75, 79 (£000s)"
+    },
+    {
+     "text": "Donations and legacies income increased ... partially to support the purchase of our new Hub in Belfast",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18213475&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=289868",
+     "page": "PDF p40"
+    },
+    {
+     "text": "Our services in Northern Ireland ... remain 'assured' by the Regulation and Quality Improvement Authority (RQIA)",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18213475&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=289868",
+     "page": "PDF p20"
+    }
+   ],
+   "subsidiaries": [],
+   "notFound": "No NI children-only figure and no NI staff headcount. The NI segment covers care and support of all ages. Sense's '5,232 children and families' (p5) is a UK figure."
+  },
+  {
+   "name": "The Children's Society",
+   "gbCharityNo": "221124",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/221124/accounts-and-annual-returns",
+   "source": "Church of England Children's Society accounts year to 31 March 2025 (filed 21 Jan 2026)",
+   "niTotals": [],
+   "niFunders": [],
+   "niActivity": [
+    {
+     "text": "we have set up Space to grow, delivered together with two partner organisations across all four nations of the United Kingdom. Children First in Glasgow and Edinburgh, MACS in Belfast, and The Children's Society covering England and Wales.",
+     "year": "2024/25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18171727&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=221124",
+     "page": "PDF p22"
+    }
+   ],
+   "subsidiaries": [],
+   "notFound": "The Children's Society does not deliver in NI itself. It reaches NI only through the partner MACS (Belfast) on the new Space to grow project, and no amount is given for NI."
+  },
+  {
+   "name": "Home-Start UK",
+   "gbCharityNo": "1108837",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/4014798/accounts-and-annual-returns",
+   "source": "Home-Start UK accounts year to 31 March 2025 (filed 27 Jan 2026)",
+   "niTotals": [],
+   "niFunders": [
+    {
+     "funder": "DHSS Family Policy Unit",
+     "value": "£16,432 (2024: £18,899)",
+     "year": "2024-25",
+     "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18300302&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Faccounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=4014798",
+     "page": "34",
+     "note": "'A grant was received from DHSS Family Policy Unit of £16,432 ... for our work in Northern Ireland'. Note 3 splits it 30% (£4,929) to Standing Alongside Families and 70% (£11,503) to Stronger Together."
+    }
+   ],
+   "niActivity": [
+    {
+     "text": "In the past year in Northern Ireland, 16 local Home-Starts are supporting 1,456 families. Last year 540 people volunteered for Home-Start",
+     "year": "undated ('in the past year'); the page also links a 2019 Impact Report",
+     "url": "https://www.home-start.org.uk/our-impact-in-northern-ireland",
+     "kind": "children"
+    }
+   ],
+   "subsidiaries": [
+    {
+     "name": "HOME-START NI CONSORTIUM",
+     "number": "NI662066",
+     "status": "Dissolved 13 July 2021",
+     "url": "https://find-and-update.company-information.service.gov.uk/search/companies?q=home+start+NI",
+     "note": "Found by name search. Its relationship to Home-Start UK was not checked."
+    }
+   ],
+   "notFound": "Local NI Home-Starts are separate charities, presumably on the CCNI register; this was not checked. Home-Start UK's own NI money is the DHSS grant alone."
+  },
+  {
+   "name": "Place2Be",
+   "gbCharityNo": "1040756",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/1040756/accounts-and-annual-returns",
+   "source": "Place2Be accounts year to 31 March 2025 (filed 1 Dec 2025)",
+   "niTotals": [],
+   "niFunders": [],
+   "niActivity": [],
+   "subsidiaries": [],
+   "notFound": "The 2024-25 accounts never mention Northern Ireland; they speak of influencing policy 'across England, Scotland and Wales'. The 'where we work' page does not mention NI. A search summary claimed Place2Be 'isn't yet working in any schools in Northern Ireland', but that was not confirmed on a page opened."
+  },
+  {
+   "name": "YoungMinds (Young Minds Trust)",
+   "gbCharityNo": "1016968",
+   "accountsListUrl": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/1016968/accounts-and-annual-returns",
+   "source": "Young Minds Trust accounts year to 31 March 2025 (filed 23 Jan 2026)",
+   "niTotals": [],
+   "niFunders": [],
+   "niActivity": [],
+   "subsidiaries": [],
+   "notFound": "The 2024-25 accounts never mention Northern Ireland. They have no NI service, funder or figure."
+  }
+ ]
+}

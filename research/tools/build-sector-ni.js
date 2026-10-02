@@ -24,6 +24,10 @@ const pcs = read('ni-postcodes.json').postcodes;
 const prof = read('ni-vcs-profiles.json');
 const costShare = fs.existsSync(path.join(R, 'ni-cost-share.json')) ? read('ni-cost-share.json') : null;
 const entityName = Object.fromEntries(read('ni-entities.json').entities.map(e => [e.id, e.name]));
+// NI figures for UK-wide charities, matched by GB charity number, else by exact name.
+const ukNI = fs.existsSync(path.join(R, 'ni-uk-charities.json')) ? read('ni-uk-charities.json').charities : [];
+const gbKey = s => String(s || '').split(/[\s/]/)[0];
+const niFor = o => ukNI.find(c => (o.gbCharityNo && gbKey(c.gbCharityNo) === gbKey(o.gbCharityNo)) || String(c.name).toLowerCase() === String(o.name).toLowerCase()) || null;
 const coding = read('ni-bodies-coding.json');
 // Resolve a body's service code to its evidence: a function quote, or a budget line.
 const evidence = (b, ev) => {
@@ -93,7 +97,8 @@ const out = {
     income: o.register ? o.register.income : null,
     fyEnd: o.register ? o.register.fyEnd : null,
     place: o.regNo ? place(o.regNo) : null,
-    possiblyStatutory: o.possiblyStatutory || null, partOf: o.partOf || null, incomeIsParent: o.incomeIsParent || null, projectFigures: o.projectFigures || null, parentCheck: o.parentCheck || null,
+    possiblyStatutory: o.possiblyStatutory || null, partOf: o.partOf || null, incomeIsParent: o.incomeIsParent || null,
+    ukNI: (c => c ? { totals: c.niTotals || [], funders: c.niFunders || [], activity: c.niActivity || [], notFound: c.notFound || null } : null)(niFor(o)), projectFigures: o.projectFigures || null, parentCheck: o.parentCheck || null,
     profile: p ? {
       status: p.status, paraphrased: !!p.quotesParaphrased,
       focus: p.focus ? { value: p.focus.value, quote: p.focus.quote, url: p.focus.url } : null,

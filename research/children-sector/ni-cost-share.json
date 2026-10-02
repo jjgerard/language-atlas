@@ -201,15 +201,15 @@
   }
  ],
  "B2": {
-  "gbp": 25369223,
-  "lines": 196,
-  "orgs": 66,
+  "gbp": 24720223,
+  "lines": 193,
+  "orgs": 65,
   "excludedAsB1": 11637124,
   "byPayer": [
    {
     "payer": "doh",
-    "gbp": 5811819,
-    "orgs": 11
+    "gbp": 5788819,
+    "orgs": 10
    },
    {
     "payer": "nihe",
@@ -233,8 +233,8 @@
    },
    {
     "payer": "de",
-    "gbp": 1820547,
-    "orgs": 6
+    "gbp": 1661547,
+    "orgs": 5
    },
    {
     "payer": "ukspf",
@@ -255,11 +255,6 @@
     "payer": "trust-western",
     "gbp": 696734,
     "orgs": 6
-   },
-   {
-    "payer": "doj",
-    "gbp": 569917,
-    "orgs": 7
    },
    {
     "payer": "trust-southeastern",
@@ -305,6 +300,11 @@
     "payer": "council-an",
     "gbp": 108359,
     "orgs": 5
+   },
+   {
+    "payer": "doj",
+    "gbp": 102917,
+    "orgs": 6
    },
    {
     "payer": "council-dcs",
@@ -534,7 +534,7 @@
   "excluded": {
    "noBreakdown": 32,
    "otherYear": 8,
-   "noIncome": 33
+   "noIncome": 30
   },
   "note": "nonPublic = total income minus every public or unattributed line in the same accounts: fees, donations, trusts and foundations, Children in Need, trading. Lottery distributors count as public here, per the agreed definition."
  },
