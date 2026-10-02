@@ -197,6 +197,82 @@ UK government), 2024-25:**
 **Seen only from this side:** councils pay £3.0m across 90 organisations, although
 no council publishes a children's line.
 
+## Phase 2 results (2026-10-02)
+
+**Method.** 55 payer-side figures were collected from public bodies' own 2024-25
+documents (`ni-payer-totals.json`). Each was compared with the recipient side by
+`research/tools/reconcile-payers.js`, into `ni-reconciliation.json`.
+- A programme figure is compared only with the recipients' lines for that programme.
+- Because most recipients' accounts name the payer but not the programme, the
+  recipient side is a range: lines labelled with the programme (floor) up to
+  everything from that payer (ceiling).
+- 24 bodies publish no usable figure, recorded as such.
+
+### 1. Health publishes nothing it can be checked against
+- No health body states what it pays the voluntary sector.
+- The five trusts give only "purchase of care from non-HSC bodies": about £1.3bn,
+  voluntary and private together. South Eastern says its share is mainly private
+  companies.
+- Western's £1.3m "grants to voluntary organisations" is the only voluntary line.
+- The PHA's section on its voluntary-sector contracts has no money in it.
+- The DoH accounts have no voluntary line at all. Its £1.8m Core Grant is a press
+  release figure.
+
+So for health, the only measure is the recipients' own accounts (the trusts and PHA
+seen paying £70m into listed organisations). That is a floor whose distance from the
+truth cannot be known from published sources. Closing it needs an Assembly Question
+or FOI asking each trust and the PHA for payments to voluntary organisations, split
+by programme of care.
+
+### 2. Where a payer does publish, the list sees between a third and a half of its money
+| Payer figure, 2024-25 | Payer says | Our list sees |
+|---|---|---|
+| VSS Victims Support Programme grants (outturn) | £11.66m | £5.30m (45%) |
+| CRC grants payable (outturn) | £2.03m | £0.60m (30%) |
+| Belfast City Council Community Support Programme (award) | £3.28m | £1.86m (57%) |
+| NIHE Supporting People paid to providers (outturn) | £81.18m | £22.7–28.6m (28–35%) |
+
+NIHE says 68.6% of Supporting People goes to charity or voluntary providers, about
+£55.7m. Against that share, our list sees 41–51% of the voluntary part. The rest is
+expected: VSS, CRC and Supporting People fund adult services too.
+
+### 3. Children-only programmes are better measured from the payer's side
+- **Programmes:** EA Youth Service grants £15.7m (outturn), EA Pre-School Education
+  Programme grants £18.8m (outturn), Sure Start £33.7m (DE chart value, flagged),
+  Pathway Fund £4.4m (award), T:BUC camps about £1.5m (plan, ages 9–25).
+- **Why the list cannot measure them:** recipients' accounts mostly say only
+  "Education Authority", so the youth grants can only be bounded at £0.07–9.6m. And
+  the hundreds of voluntary playgroups the Pre-School grants pay are mostly not on
+  the list.
+- **Consequence for phase 4:** these programmes' own totals are the government→VCSE
+  measure, not the sum of recipients.
+- **Two cautions:**
+  - Sure Start lead bodies include trusts as well as voluntary organisations, and no
+    document gives the split.
+  - Part of the Pre-School Education Programme goes to private providers.
+
+### 4. Recipients reporting MORE than the payer is a scope mismatch, not money
+- Western's £1.3m grants line, against £10.0m seen: trust money reaches the voluntary
+  sector mostly as purchase of care, not as grants.
+- T:BUC: £0.49–4.8m seen against a £1.5m plan.
+- These are kept and flagged, never netted off.
+
+### 5. Most councils publish no grants total
+- **Total in the accounts:** Causeway Coast and Glens, £1.6m to 219 groups.
+- **Award list only:** Belfast's Community Support Programme, £3.3m to 135 named groups.
+- **Narrative figure only:** Lisburn and Castlereagh.
+- The rest report only grants to bodies where councillors or officers have an
+  interest.
+
+### What phase 4 takes from this
+- **Children-only programmes:** use the payer's total.
+- **Children-focused organisations:** use the recipient side (phase 1).
+- **Mixed organisations:** wait for phase 3.
+- **Health:** the recipient side as a stated floor, until the trusts and PHA are
+  asked directly.
+- **Never add a payer total to recipient lines it already contains.** The EA youth
+  grants are inside both.
+
 ## Hard limits
 
 - **UK-wide charities** (Barnardo's, NSPCC, Action for Children) publish no NI
