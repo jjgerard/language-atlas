@@ -1,0 +1,556 @@
+{
+ "built": "2026-10-02",
+ "year": "2024-25",
+ "unit": "Northern Ireland",
+ "sector": "children",
+ "rule": "Layers are never added together: A includes payments to the voluntary sector that health does not publish separately, so A + B would double count. Within B, B2 excludes the payers and programmes already counted in B1.",
+ "A": [
+  {
+   "body": "trust-belfast",
+   "label": "Social Work & Children's Community Services",
+   "gbp": 124246000,
+   "unit": "£000",
+   "value": "124,246",
+   "note": "directorate line; includes payments to voluntary providers that the trust does not publish separately",
+   "mixed": "with other groups",
+   "source": {
+    "url": "https://belfasttrust.hscni.net/download/27/annual-reports/22995/belfast-trust-annual-report-24-25.pdf",
+    "page": 157,
+    "label": "Social Work & Children's Community Services"
+   }
+  },
+  {
+   "body": "trust-northern",
+   "label": "Children and Young People",
+   "gbp": 103729000,
+   "unit": "£000",
+   "value": "103,729",
+   "note": "directorate line; includes payments to voluntary providers that the trust does not publish separately",
+   "mixed": null,
+   "source": {
+    "url": "https://www.northerntrust.hscni.net/wp-content/uploads/2025/07/Annual-Accounts-2024-2025.pdf",
+    "page": 150,
+    "label": "Children and Young People"
+   }
+  },
+  {
+   "body": "trust-southeastern",
+   "label": "Childrens Services & Social Work",
+   "gbp": 102702000,
+   "unit": "£000",
+   "value": "(102,702)",
+   "note": "directorate line; includes payments to voluntary providers that the trust does not publish separately",
+   "mixed": null,
+   "source": {
+    "url": "https://setrust.hscni.net/download/235/annual-report/19183/annual-reports-and-accounts-2025.pdf",
+    "page": 140,
+    "label": "Childrens Services & Social Work"
+   }
+  },
+  {
+   "body": "trust-southern",
+   "label": "Children and Young People's Services",
+   "gbp": 131731000,
+   "unit": "£000",
+   "value": "131,731",
+   "note": "directorate line; includes payments to voluntary providers that the trust does not publish separately",
+   "mixed": null,
+   "source": {
+    "url": "https://southerntrust.hscni.net/download/26/annual-reports/21397/annual_report_and_accounts_2024-25.pdf",
+    "page": 157,
+    "label": "Children and Young People's Services"
+   }
+  },
+  {
+   "body": "trust-western",
+   "label": "Children and Families Services",
+   "gbp": 96287000,
+   "unit": "£000",
+   "value": "96,287",
+   "note": "directorate line; includes payments to voluntary providers that the trust does not publish separately",
+   "mixed": null,
+   "source": {
+    "url": "https://westerntrust.hscni.net/download/253/financial-information/23779/whsct-annual-report-and-accounts-24_2025-150825.pdf",
+    "page": 144,
+    "label": "Children and Families Services"
+   }
+  },
+  {
+   "body": "yja",
+   "label": "Net expenditure for the year",
+   "gbp": 15735000,
+   "unit": "£000",
+   "value": "15,735",
+   "note": null,
+   "mixed": null,
+   "source": {
+    "url": "https://www.justice-ni.gov.uk/sites/default/files/2025-07/2024-25%20Annual%20Report%20and%20Accounts%20-%20Youth%20Justice%20Agency.PDF",
+    "page": 87,
+    "label": "Net expenditure for the year"
+   }
+  },
+  {
+   "body": "ccga",
+   "label": "Net expenditure for the year",
+   "gbp": 5186743,
+   "unit": "£",
+   "value": "(5,186,743)",
+   "note": null,
+   "mixed": null,
+   "source": {
+    "url": "https://childrenscourtguardianagencyni.co.uk/assets/general/resources/publications/CCGANI-Annual-Report-and-Accounts-2024-25_2025-10-31-091427_bzxa.pdf",
+    "page": 88,
+    "label": "Net expenditure for the year"
+   }
+  },
+  {
+   "body": "niccy",
+   "label": "Net expenditure for the year",
+   "gbp": 1937661,
+   "unit": "£",
+   "value": "(1,937,661)",
+   "note": null,
+   "mixed": null,
+   "source": {
+    "url": "https://www.niccy.org/wp-content/uploads/2026/03/Annual-Report-and-Accounts-2024-25.pdf",
+    "page": 83,
+    "label": "Net expenditure for the year"
+   }
+  }
+ ],
+ "B1": [
+  {
+   "payer": "ea",
+   "label": "Youth Service grants",
+   "gbp": 15716000,
+   "value": "15,716",
+   "unit": "£000",
+   "kind": "outturn",
+   "year": "2024-25",
+   "check": null,
+   "note": "grants to voluntary youth organisations",
+   "source": {
+    "url": "https://www.eani.org.uk/sites/default/files/2025-11/2024-25%20Annual%20Report%20%26%20Accounts.pdf",
+    "page": 133,
+    "label": "Youth Service grants"
+   }
+  },
+  {
+   "payer": "ea",
+   "label": "Pre-School Education Programme (PEG) grants",
+   "gbp": 18834000,
+   "value": "18,834",
+   "unit": "£000",
+   "kind": "outturn",
+   "year": "2024-25",
+   "check": null,
+   "note": "includes private providers; the split is not published",
+   "source": {
+    "url": "https://www.eani.org.uk/sites/default/files/2025-11/2024-25%20Annual%20Report%20%26%20Accounts.pdf",
+    "page": 133,
+    "label": "Pre-School Education Programme (PEG) grants"
+   }
+  },
+  {
+   "payer": "de",
+   "label": "DE funding of Sure Start to 2024/25",
+   "gbp": 33700000,
+   "value": "33.7",
+   "unit": "not printed (chart data label; axis 0-30, read as £m)",
+   "kind": "outturn",
+   "year": "2024-25",
+   "check": "extraction",
+   "note": "lead bodies include trusts as well as voluntary organisations; the split is not published",
+   "source": {
+    "url": "https://www.education-ni.gov.uk/sites/default/files/2025-10/Sure%20Start%20Infographic%202024%2025.pdf",
+    "page": 1,
+    "label": "DE funding of Sure Start to 2024/25"
+   }
+  },
+  {
+   "payer": "de",
+   "label": "The extra funding brings the total Pathway Fund to nearly £4.4m in 2024-25",
+   "gbp": 4400000,
+   "value": "4.4",
+   "unit": "£m",
+   "kind": "award",
+   "year": "2024-25",
+   "check": null,
+   "note": "an award, administered by Early Years",
+   "source": {
+    "url": "https://www.education-ni.gov.uk/news/education-minister-announces-additional-pathway-funding-early-years-education",
+    "page": null,
+    "label": "The extra funding brings the total Pathway Fund to nearly £4.4m in 2024-25"
+   }
+  },
+  {
+   "payer": "teo",
+   "label": "A further 112 camps were successfully delivered (against a target of 100) in 2024-25 with a budget of over £1.5m.",
+   "gbp": 1500000,
+   "value": "1.5",
+   "unit": "£m",
+   "kind": "plan",
+   "year": "2024-25",
+   "check": null,
+   "note": "a plan figure; camps are for ages 9-25",
+   "source": {
+    "url": "https://www.executiveoffice-ni.gov.uk/sites/default/files/2025-07/2024-25-annual-report-and-accounts%E2%80%93the-executive-office.PDF",
+    "page": 44,
+    "label": "A further 112 camps were successfully delivered (against a target of 100) in 2024-25 with a budget of over £1.5m."
+   }
+  }
+ ],
+ "B2": {
+  "gbp": 25369223,
+  "lines": 196,
+  "orgs": 66,
+  "excludedAsB1": 11637124,
+  "byPayer": [
+   {
+    "payer": "doh",
+    "gbp": 5811819,
+    "orgs": 11
+   },
+   {
+    "payer": "nihe",
+    "gbp": 3868175,
+    "orgs": 7
+   },
+   {
+    "payer": "trust-belfast",
+    "gbp": 2839980,
+    "orgs": 10
+   },
+   {
+    "payer": "pha",
+    "gbp": 1982954,
+    "orgs": 13
+   },
+   {
+    "payer": "trust-southern",
+    "gbp": 1937940,
+    "orgs": 8
+   },
+   {
+    "payer": "de",
+    "gbp": 1820547,
+    "orgs": 6
+   },
+   {
+    "payer": "ukspf",
+    "gbp": 1372597,
+    "orgs": 2
+   },
+   {
+    "payer": "dfe",
+    "gbp": 1266104,
+    "orgs": 1
+   },
+   {
+    "payer": "dfc",
+    "gbp": 929012,
+    "orgs": 23
+   },
+   {
+    "payer": "trust-western",
+    "gbp": 696734,
+    "orgs": 6
+   },
+   {
+    "payer": "doj",
+    "gbp": 569917,
+    "orgs": 7
+   },
+   {
+    "payer": "trust-southeastern",
+    "gbp": 424327,
+    "orgs": 2
+   },
+   {
+    "payer": "council-belfast",
+    "gbp": 341728,
+    "orgs": 19
+   },
+   {
+    "payer": "teo",
+    "gbp": 311509,
+    "orgs": 10
+   },
+   {
+    "payer": "crc",
+    "gbp": 233671,
+    "orgs": 5
+   },
+   {
+    "payer": "nips",
+    "gbp": 201837,
+    "orgs": 1
+   },
+   {
+    "payer": "vss",
+    "gbp": 144089,
+    "orgs": 1
+   },
+   {
+    "payer": "daera",
+    "gbp": 127978,
+    "orgs": 1
+   },
+   {
+    "payer": "trust-northern",
+    "gbp": 122818,
+    "orgs": 4
+   },
+   {
+    "payer": "council-an",
+    "gbp": 108359,
+    "orgs": 5
+   },
+   {
+    "payer": "council-dcs",
+    "gbp": 60087,
+    "orgs": 5
+   },
+   {
+    "payer": "acni",
+    "gbp": 41000,
+    "orgs": 1
+   },
+   {
+    "payer": "council-abc",
+    "gbp": 35589,
+    "orgs": 7
+   },
+   {
+    "payer": "translink",
+    "gbp": 33333,
+    "orgs": 1
+   },
+   {
+    "payer": "niscreen",
+    "gbp": 18040,
+    "orgs": 1
+   },
+   {
+    "payer": "council-fo",
+    "gbp": 10200,
+    "orgs": 2
+   },
+   {
+    "payer": "yja",
+    "gbp": 10196,
+    "orgs": 5
+   },
+   {
+    "payer": "sbni",
+    "gbp": 9985,
+    "orgs": 1
+   },
+   {
+    "payer": "council-mea",
+    "gbp": 9937,
+    "orgs": 2
+   },
+   {
+    "payer": "pcsp",
+    "gbp": 9010,
+    "orgs": 2
+   },
+   {
+    "payer": "ccga",
+    "gbp": 7128,
+    "orgs": 1
+   },
+   {
+    "payer": "council-nmd",
+    "gbp": 4694,
+    "orgs": 2
+   },
+   {
+    "payer": "nipb",
+    "gbp": 4518,
+    "orgs": 1
+   },
+   {
+    "payer": "bso",
+    "gbp": 3411,
+    "orgs": 1
+   }
+  ]
+ },
+ "B3": {
+  "gbp": 7938210,
+  "orgs": 23,
+  "excludedAsB1": 4480668,
+  "list": [
+   {
+    "orgId": "v021",
+    "name": "Springboard Opportunities Limited",
+    "gbp": 3208811,
+    "youthPast18": true
+   },
+   {
+    "orgId": "v023",
+    "name": "Springvale Training Limited",
+    "gbp": 2016571,
+    "youthPast18": true
+   },
+   {
+    "orgId": "v015",
+    "name": "Clanrye Group Limited",
+    "gbp": 1184610,
+    "youthPast18": true
+   },
+   {
+    "orgId": "v011",
+    "name": "Ashton Community Trust",
+    "gbp": 337670,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v028",
+    "name": "Community Restorative Justice Ireland",
+    "gbp": 179728,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v073",
+    "name": "Newstart Education Centre",
+    "gbp": 134994,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v027",
+    "name": "Northern Ireland Alternatives",
+    "gbp": 133481,
+    "youthPast18": true
+   },
+   {
+    "orgId": "v045",
+    "name": "The Vine Centre",
+    "gbp": 130926,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v053",
+    "name": "ROE VALLEY RESIDENTS ASSOCIATION",
+    "gbp": 114919,
+    "youthPast18": true
+   },
+   {
+    "orgId": "v044",
+    "name": "Access Employment Limited",
+    "gbp": 100806,
+    "youthPast18": true
+   },
+   {
+    "orgId": "v078",
+    "name": "UPPER ANDERSONSTOWN COMMUNITY FORUM",
+    "gbp": 89828,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v068",
+    "name": "Creggan Enterprises",
+    "gbp": 72358,
+    "youthPast18": true
+   },
+   {
+    "orgId": "v110",
+    "name": "Cúnamh",
+    "gbp": 37140,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v066",
+    "name": "Arts Care",
+    "gbp": 34413,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v063",
+    "name": "Resource Centre Derry",
+    "gbp": 33035,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v061",
+    "name": "NORTH DOWN YMCA",
+    "gbp": 31969,
+    "youthPast18": true
+   },
+   {
+    "orgId": "v016",
+    "name": "Workforce Training Services Limited",
+    "gbp": 30702,
+    "youthPast18": true
+   },
+   {
+    "orgId": "v318",
+    "name": "Windsor Women's Centre",
+    "gbp": 30000,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v095",
+    "name": "Focus on Family (Charity)",
+    "gbp": 18314,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v035",
+    "name": "BELFAST YMCA",
+    "gbp": 7867,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v024",
+    "name": "ASCERT",
+    "gbp": 4997,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v209",
+    "name": "North Belfast Alternatives",
+    "gbp": 2571,
+    "youthPast18": null
+   },
+   {
+    "orgId": "v059",
+    "name": "Lower Ormeau Residents Action Group",
+    "gbp": 2500,
+    "youthPast18": null
+   }
+  ],
+  "note": "a floor: only money the accounts tie to a children's activity"
+ },
+ "C": {
+  "orgs": 78,
+  "income": 54226822,
+  "government": 25523534,
+  "otherPublic": 3088105,
+  "unattributed": 5465821,
+  "nonPublic": 20149362,
+  "excluded": {
+   "noBreakdown": 32,
+   "otherYear": 8,
+   "noIncome": 33
+  },
+  "note": "nonPublic = total income minus every public or unattributed line in the same accounts: fees, donations, trusts and foundations, Children in Need, trading. Lottery distributors count as public here, per the agreed definition."
+ },
+ "D": {
+  "model": true,
+  "volunteers": 13751,
+  "orgs": 88,
+  "hoursPerFourWeeksFloor": 3.79,
+  "bandsUsed": 7,
+  "wage": {
+   "value": 13.99,
+   "measure": "Median hourly pay excl. overtime: SOC 3221 Youth and community workers",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2024.zip"
+  },
+  "gbpFloor": 9478390,
+  "note": "A modelled floor, not cash. Volunteer counts are each organisation's own register return; hours are the lower edges of DfC's published bands (all volunteers, formal and informal, 2024/25), times 13 four-week periods; valued at the NI median hourly pay of youth and community workers (ASHE, April 2024). The top band is open, so no upper bound is given."
+ }
+}

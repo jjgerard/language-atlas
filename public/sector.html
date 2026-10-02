@@ -221,6 +221,12 @@ footer.foot a { color: var(--ink-soft); }
     boundaries follow the 26 pre-2015 districts — so the two are separate views, never combined.
   </p>
 
+  <h3>Who pays, 2024-25</h3>
+  <p>Four layers, each from published accounts and each with its source. They are <b>never added together</b>: a trust's children's spending
+    includes what it pays voluntary organisations, and health does not publish how much, so a total would count the same pounds twice.
+    Every figure is a floor, a published total or a range — and says which.</p>
+  <div id="whopays"></div>
+
   <h3>What the voluntary organisations provide <span class="count" id="svc-count"></span></h3>
   <p>From each organisation's own documents, coded to one of 18 service areas. The relationship columns count only what a source states; most services have no stated relationship to government, and that is shown, not filled in. <b>Steps in</b> counts statements that a service exists because statutory provision is absent, insufficient or slow — rare, and mostly weak. Click a row to filter the map and the table.</p>
   <div class="twrap"><table class="orgt" id="svct"><thead><tr><th>Service area</th><th class="num">Public bodies</th><th class="num">Voluntary organisations</th><th class="num">Grant</th><th class="num">Contract</th><th class="num">Own funds</th><th class="num">Not stated</th><th class="num">Steps in</th></tr></thead><tbody></tbody></table></div>
@@ -350,6 +356,41 @@ function svcDetail(c, live) {
     + '<div><h5 style="margin:0 0 6px">Voluntary organisations (' + os.length + ')</h5><div style="font-size:13px">Stated relationship to government: '
     + rel('commissioned') + ' contract, ' + rel('grant') + ' grant, ' + rel('own funds') + ' own funds; the rest not stated.</div>'
     + '<div style="font-size:13px;margin-top:6px">' + names + '</div></div></div></div>';
+}
+// "Who pays": four layers from ni-cost-share.json, never summed across layers.
+function drawWhoPays() {
+  const C = D.costShare; if (!C) { $('#whopays').innerHTML = '<p class="miss">Not built yet.</p>'; return; }
+  const m = n => n == null ? '—' : '£' + (n >= 1e6 ? (n / 1e6).toFixed(1) + 'm' : Math.round(n).toLocaleString('en-GB'));
+  const src = s => s && s.url ? ' <a href="' + esc(s.url) + '" target="_blank" rel="noopener">source</a>' : '';
+  const nm = id => esc((D.entityName || {})[id] || (bodyById[id] || {}).name || id);
+  const card = (h, sub, body) => '<div class="card" style="padding:14px 16px;margin-bottom:12px"><h4 style="margin:0 0 2px;font-size:16px">' + h + '</h4><p class="sub" style="margin:0 0 8px;font-size:13px;color:var(--ink-soft)">' + sub + '</p>' + body + '</div>';
+  const rows = r => '<table class="mini"><tbody>' + r.join('') + '</tbody></table>';
+  const A = card('A. Government delivering services itself', 'Published children\'s spending lines, 2024-25 outturn. Health\'s include payments to voluntary providers that it does not publish separately.',
+    rows(C.A.map(a => '<tr><td>' + nm(a.body) + ' — ' + esc(a.label) + (a.mixed ? ' <span class="flag">' + (a.mixed === 'with other groups' ? 'mixed' : 'service') + '</span>' : '') + '</td><td>' + m(a.gbp) + src(a.source) + '</td></tr>')));
+  const B = card('B. Government money delivered by the voluntary sector', 'Three parts that do not overlap: B2 leaves out the payers already counted in B1, and B3 leaves out money from them too.',
+    '<h5 style="margin:6px 0 4px">B1. Children-only programmes — the payer\'s own total</h5>'
+    + rows(C.B1.map(b => '<tr><td>' + nm(b.payer) + ' — ' + esc(b.label.length > 70 ? b.label.slice(0, 70) + '…' : b.label) + '<br><span class="miss">' + esc(b.kind) + (b.check ? ', figure read from a chart' : '') + ' · ' + esc(b.note) + '</span></td><td>' + m(b.gbp) + src(b.source) + '</td></tr>'))
+    + '<h5 style="margin:12px 0 4px">B2. Other government money to organisations wholly about children — from their own accounts</h5>'
+    + '<p style="font-size:13.5px;margin:0 0 6px"><b>' + m(C.B2.gbp) + '</b> across ' + C.B2.orgs + ' organisations (' + C.B2.lines + ' lines). '
+    + m(C.B2.excludedAsB1) + ' more from the B1 payers is left out because B1 already counts it.</p>'
+    + rows(C.B2.byPayer.slice(0, 8).map(p => '<tr><td>' + nm(p.payer) + '</td><td>' + m(p.gbp) + '</td><td class="miss">' + p.orgs + ' orgs</td></tr>'))
+    + '<h5 style="margin:12px 0 4px">B3. Organisations serving children among others — government money their accounts tie to children\'s work</h5>'
+    + '<p style="font-size:13.5px;margin:0">A floor of <b>' + m(C.B3.gbp) + '</b> in ' + C.B3.orgs + ' organisations, of which '
+    + m(C.B3.list.filter(o => o.youthPast18).reduce((a, o) => a + o.gbp, 0)) + ' is youth programmes that run past 18 (training, ages 16–30). '
+    + 'Only 4 of 131 such organisations publish a children\'s split, so the rest of their children\'s money is not visible.</p>');
+  const c = C.C;
+  const Cc = card('C. The voluntary sector\'s own money', c.orgs + ' organisations wholly about children whose 2024-25 accounts break income down by funder.',
+    rows([['Total income', c.income], ['Government (NI, councils, UK)', c.government], ['Other public (Irish government, PEACEPLUS, IFI, lottery)', c.otherPublic],
+      ['Funder not named in the accounts', c.unattributed], ['<b>Not public: fees, donations, trusts, Children in Need, trading</b>', c.nonPublic]]
+      .map(([l, v]) => '<tr><td>' + l + '</td><td>' + m(v) + '</td></tr>'))
+    + '<p class="miss" style="font-size:12.5px;margin:6px 0 0">Left out: ' + c.excluded.noBreakdown + ' whose accounts give no funder breakdown, ' + c.excluded.otherYear + ' with accounts for another year, '
+    + c.excluded.noIncome + ' with no register income. Organisations serving children among others are not included: their funding mix for children\'s work is not published.</p>');
+  const d = C.D;
+  const Dd = card('D. Volunteer time — a modelled floor, not cash', 'Never added to A–C.',
+    '<p style="font-size:13.5px;margin:0">At least <b>' + m(d.gbpFloor) + '</b> a year: ' + d.volunteers.toLocaleString('en-GB') + ' volunteers in ' + d.orgs
+    + ' organisations wholly about children (their own register returns) × at least ' + d.hoursPerFourWeeksFloor + ' hours per four weeks × 13 × £'
+    + esc(d.wage && d.wage.value) + ' an hour.</p><p class="miss" style="font-size:12.5px;margin:6px 0 0">' + esc(d.note) + '</p>');
+  $('#whopays').innerHTML = A + B + Cc + Dd;
 }
 function drawSvc() {
   const live = D.orgs.filter(o => o.profile && !o.possiblyStatutory), cur = $('#svc').value;
@@ -701,5 +742,5 @@ $('#orgt thead').addEventListener('click', e => { const k = e.target.dataset.k; 
 $('#org-q').oninput = drawOrgs; $('#org-basis').onchange = drawOrgs;
 $('#svc').onchange = () => { drawTop(); drawOrgs(); drawSvc(); };
 
-drawMap(); applyVB(); legend(); drawPanel(); fillAreaFilter(); drawList(); drawChart(); drawSvc();
+drawMap(); applyVB(); legend(); drawPanel(); fillAreaFilter(); drawList(); drawChart(); drawSvc(); drawWhoPays();
 </script>

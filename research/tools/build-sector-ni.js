@@ -22,6 +22,8 @@ const reg = read('ni-vcs-register.json');
 const geo = read('ni-geo.json');
 const pcs = read('ni-postcodes.json').postcodes;
 const prof = read('ni-vcs-profiles.json');
+const costShare = fs.existsSync(path.join(R, 'ni-cost-share.json')) ? read('ni-cost-share.json') : null;
+const entityName = Object.fromEntries(read('ni-entities.json').entities.map(e => [e.id, e.name]));
 const coding = read('ni-bodies-coding.json');
 // Resolve a body's service code to its evidence: a function quote, or a budget line.
 const evidence = (b, ev) => {
@@ -112,6 +114,7 @@ const out = {
     return p ? [c.regNo, c.name, TIERS.indexOf(c.registerTier),
       +c.income || 0, round(p.lat), round(p.lon), p.council, p.trust] : null;
   }).filter(Boolean),
+  costShare, entityName,
   registerRule: reg.rule,
   registerGap: reg.coverageGap,
 };
