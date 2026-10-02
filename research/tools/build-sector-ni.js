@@ -24,6 +24,8 @@ const pcs = read('ni-postcodes.json').postcodes;
 const prof = read('ni-vcs-profiles.json');
 const costShare = fs.existsSync(path.join(R, 'ni-cost-share.json')) ? read('ni-cost-share.json') : null;
 const sroi = fs.existsSync(path.join(R, 'ni-sroi.json')) ? read('ni-sroi.json') : null;
+const gfdA = fs.existsSync(path.join(R, 'ni-gfd-analysis.json')) ? (g => ({ rule: g.rule, source: g.source, coverage: g.coverage, byDept: g.byDept,
+  unlisted: g.unlistedChildrenCandidates.slice(0, 40), unlistedCount: g.unlistedChildrenCandidates.length }))(read('ni-gfd-analysis.json')) : null;
 const entityName = Object.fromEntries(read('ni-entities.json').entities.map(e => [e.id, e.name]));
 // NI figures for UK-wide charities, matched by GB charity number, else by exact name.
 const ukNI = fs.existsSync(path.join(R, 'ni-uk-charities.json')) ? read('ni-uk-charities.json').charities : [];
@@ -120,7 +122,7 @@ const out = {
     return p ? [c.regNo, c.name, TIERS.indexOf(c.registerTier),
       +c.income || 0, round(p.lat), round(p.lon), p.council, p.trust] : null;
   }).filter(Boolean),
-  costShare, entityName, sroi,
+  costShare, entityName, sroi, gfd: gfdA,
   registerRule: reg.rule,
   registerGap: reg.coverageGap,
 };

@@ -1,0 +1,6344 @@
+{
+ "built": "2026-10-02",
+ "source": "https://govfundingpublic.nics.gov.uk/GrantsAwarded.aspx",
+ "rule": "Awards (letters of offer), not payments. 2024-25. Latest offer per grant; allRowsGbp counts original and revised offers both. \"listed\" = recipient matched by normalised name to the children's organisation list; \"childLabelled\" = the award's own funding title, grant title or branch names children, young people, families, early years or schools.",
+ "coverage": {
+  "departments": [
+   "DOJ",
+   "TEO",
+   "DFE",
+   "DE",
+   "DAERA",
+   "DFC",
+   "DFI",
+   "DOH"
+  ],
+  "healthRowsFrom": "earlier pass; Belfast Trust stops at 2023/24 and Northern at 2018/19, so Health 2024-25 is incomplete",
+  "council": "the portal offers councils only for 2025/26"
+ },
+ "byDept": {
+  "DOJ": {
+   "rows": 167,
+   "gbp": 5005876,
+   "allRowsGbp": 5008038,
+   "listedGbp": 1707646,
+   "listedOrgs": 38,
+   "childFocusedGbp": 782825,
+   "childLabelledGbp": 965222,
+   "childLabelledUnlistedGbp": 85844,
+   "unlistedChildOrgs": 6,
+   "topBranches": [
+    {
+     "branch": "Victims and Witnesses Branch",
+     "rows": 4,
+     "gbp": 2470053
+    },
+    {
+     "branch": "Reducing Offending Directorate",
+     "rows": 19,
+     "gbp": 1435541
+    },
+    {
+     "branch": "Policing and Community Safety Partnership",
+     "rows": 76,
+     "gbp": 527441
+    },
+    {
+     "branch": "Organised Crime Branch",
+     "rows": 42,
+     "gbp": 437290
+    },
+    {
+     "branch": "Operations Branch",
+     "rows": 9,
+     "gbp": 100000
+    },
+    {
+     "branch": "Probation Board NI",
+     "rows": 17,
+     "gbp": 35550
+    }
+   ]
+  },
+  "TEO": {
+   "rows": 323,
+   "gbp": 33032211,
+   "allRowsGbp": 33032211,
+   "listedGbp": 9094808,
+   "listedOrgs": 50,
+   "childFocusedGbp": 998870,
+   "childLabelledGbp": 1384828,
+   "childLabelledUnlistedGbp": 486847,
+   "unlistedChildOrgs": 12,
+   "topBranches": [
+    {
+     "branch": "Victims and Survivors",
+     "rows": 83,
+     "gbp": 12686242
+    },
+    {
+     "branch": "Urban Villages Initiative",
+     "rows": 20,
+     "gbp": 9918279
+    },
+    {
+     "branch": "Equality & Strategy directorate",
+     "rows": 84,
+     "gbp": 7188645
+    },
+    {
+     "branch": "Community Relations Council",
+     "rows": 106,
+     "gbp": 2013091
+    },
+    {
+     "branch": "Racial Equality Unit",
+     "rows": 30,
+     "gbp": 1225954
+    }
+   ]
+  },
+  "DFE": {
+   "rows": 51,
+   "gbp": 15740872,
+   "allRowsGbp": 15740872,
+   "listedGbp": 1978774,
+   "listedOrgs": 9,
+   "childFocusedGbp": 211506,
+   "childLabelledGbp": 568826,
+   "childLabelledUnlistedGbp": 5361,
+   "unlistedChildOrgs": 1,
+   "topBranches": [
+    {
+     "branch": "Social Inclusion Branch",
+     "rows": 10,
+     "gbp": 8167820
+    },
+    {
+     "branch": "Training Programmes",
+     "rows": 11,
+     "gbp": 4384647
+    },
+    {
+     "branch": "Northern Ireland Screen",
+     "rows": 7,
+     "gbp": 1673940
+    },
+    {
+     "branch": "Youth Inclusion Branch",
+     "rows": 6,
+     "gbp": 563465
+    },
+    {
+     "branch": "Tourism NI",
+     "rows": 8,
+     "gbp": 372500
+    },
+    {
+     "branch": "Social Economy Branch",
+     "rows": 1,
+     "gbp": 230000
+    },
+    {
+     "branch": "Employment Rights Branch",
+     "rows": 1,
+     "gbp": 177000
+    },
+    {
+     "branch": "Apprenticeship Innovation Projects Branch",
+     "rows": 5,
+     "gbp": 150000
+    }
+   ]
+  },
+  "DE": {
+   "rows": 2230,
+   "gbp": 26110098,
+   "allRowsGbp": 26111176,
+   "listedGbp": 15833817,
+   "listedOrgs": 158,
+   "childFocusedGbp": 12489736,
+   "childLabelledGbp": 18141489,
+   "childLabelledUnlistedGbp": 5455572,
+   "unlistedChildOrgs": 357,
+   "topBranches": [
+    {
+     "branch": "Education Authority",
+     "rows": 1999,
+     "gbp": 17434071
+    },
+    {
+     "branch": "Early Years Team",
+     "rows": 187,
+     "gbp": 5689633
+    },
+    {
+     "branch": "Sectoral Bodies Support Team",
+     "rows": 1,
+     "gbp": 1032000
+    },
+    {
+     "branch": "Tackling Educational Disadvantage Team",
+     "rows": 9,
+     "gbp": 995629
+    },
+    {
+     "branch": "Children and Young People’s Strategy Team",
+     "rows": 1,
+     "gbp": 260000
+    },
+    {
+     "branch": "Education Governance Team",
+     "rows": 2,
+     "gbp": 250000
+    },
+    {
+     "branch": "Pupil Support Team",
+     "rows": 2,
+     "gbp": 239000
+    },
+    {
+     "branch": "SEN Reform and Inclusion Directorate",
+     "rows": 26,
+     "gbp": 127765
+    }
+   ]
+  },
+  "DAERA": {
+   "rows": 1921,
+   "gbp": 16247288,
+   "allRowsGbp": 16247288,
+   "listedGbp": 189195,
+   "listedOrgs": 20,
+   "childFocusedGbp": 60092,
+   "childLabelledGbp": 189517,
+   "childLabelledUnlistedGbp": 130596,
+   "unlistedChildOrgs": 61,
+   "topBranches": [
+    {
+     "branch": "NIEA Countryside Coast & Landscape",
+     "rows": 46,
+     "gbp": 9404988
+    },
+    {
+     "branch": "RSN Delivery of RMCGS",
+     "rows": 1844,
+     "gbp": 3034995
+    },
+    {
+     "branch": "Environmental Resource Policy Division (ERPD)",
+     "rows": 9,
+     "gbp": 2456554
+    },
+    {
+     "branch": "NIEA Countryside Coast & Landscape Administration",
+     "rows": 4,
+     "gbp": 656627
+    },
+    {
+     "branch": "Water Management Unit",
+     "rows": 13,
+     "gbp": 248182
+    },
+    {
+     "branch": "Climate Change Mitigation & Research",
+     "rows": 2,
+     "gbp": 235000
+    },
+    {
+     "branch": "RAD TRPSI Health and Wellbeing Branch",
+     "rows": 3,
+     "gbp": 210942
+    }
+   ]
+  },
+  "DFC": {
+   "rows": 1278,
+   "gbp": 90426755,
+   "allRowsGbp": 90426755,
+   "listedGbp": 26389285,
+   "listedOrgs": 84,
+   "childFocusedGbp": 2394607,
+   "childLabelledGbp": 4992656,
+   "childLabelledUnlistedGbp": 1586670,
+   "unlistedChildOrgs": 73,
+   "topBranches": [
+    {
+     "branch": "NIHE",
+     "rows": 444,
+     "gbp": 39545027
+    },
+    {
+     "branch": "Arts Council",
+     "rows": 173,
+     "gbp": 11135903
+    },
+    {
+     "branch": "VCD",
+     "rows": 67,
+     "gbp": 9348066
+    },
+    {
+     "branch": "Disablity Employment Service",
+     "rows": 10,
+     "gbp": 5627615
+    },
+    {
+     "branch": "NWDO",
+     "rows": 83,
+     "gbp": 5260000
+    },
+    {
+     "branch": "BRD North Team",
+     "rows": 49,
+     "gbp": 4036304
+    },
+    {
+     "branch": "BRD West Team",
+     "rows": 55,
+     "gbp": 3871624
+    },
+    {
+     "branch": "BRD South & East Team",
+     "rows": 23,
+     "gbp": 2153993
+    }
+   ]
+  },
+  "DFI": {
+   "rows": 39,
+   "gbp": 5555351,
+   "allRowsGbp": 5555351,
+   "listedGbp": 2141391,
+   "listedOrgs": 1,
+   "childFocusedGbp": 0,
+   "childLabelledGbp": 0,
+   "childLabelledUnlistedGbp": 0,
+   "unlistedChildOrgs": 0,
+   "topBranches": [
+    {
+     "branch": "Ports & Public Transport",
+     "rows": 33,
+     "gbp": 5554346
+    },
+    {
+     "branch": "Waterways Ireland",
+     "rows": 6,
+     "gbp": 1005
+    }
+   ]
+  },
+  "DOH": {
+   "rows": 448,
+   "gbp": 38796240,
+   "allRowsGbp": 38796240,
+   "listedGbp": 18339283,
+   "listedOrgs": 66,
+   "childFocusedGbp": 6290053,
+   "childLabelledGbp": 9905823,
+   "childLabelledUnlistedGbp": 2662982,
+   "unlistedChildOrgs": 71,
+   "topBranches": [
+    {
+     "branch": "South Eastern Health and Social Care Trust",
+     "rows": 111,
+     "gbp": 11195608
+    },
+    {
+     "branch": "Physical & Sensory Disability",
+     "rows": 13,
+     "gbp": 9168794
+    },
+    {
+     "branch": "Western Health and Social Care Trust",
+     "rows": 85,
+     "gbp": 6007695
+    },
+    {
+     "branch": "Southern Health and Social Care Trust",
+     "rows": 83,
+     "gbp": 5932107
+    },
+    {
+     "branch": "Public Health Agency",
+     "rows": 36,
+     "gbp": 3415504
+    },
+    {
+     "branch": "Community Foundation NI",
+     "rows": 24,
+     "gbp": 964301
+    },
+    {
+     "branch": "Family and Children’s Policy Directorate",
+     "rows": 20,
+     "gbp": 643090
+    },
+    {
+     "branch": "Social Care and Children Directorate, HSCB",
+     "rows": 46,
+     "gbp": 590018
+    }
+   ]
+  }
+ },
+ "unlistedChildrenCandidates": [
+  {
+   "organisation": "Ardmonagh Family & Community Group",
+   "gbp": 421714,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "ADOPT NI",
+   "gbp": 323582,
+   "awards": 2,
+   "departments": [
+    "TEO",
+    "DOH"
+   ],
+   "titles": [
+    "VSP Mother and Baby Institutions, Magdalene Laundries and Workhouses in Northern Ireland 2024-25",
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "Positive Futures for People With A Learning Disability",
+   "gbp": 265656,
+   "awards": 2,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25",
+    "Payments to Non-Statutory Providers 2024/25"
+   ]
+  },
+  {
+   "organisation": "Altram",
+   "gbp": 258090,
+   "awards": 3,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Altram - Irish Medium pre-school immersion education course",
+    "Altram - Irish Medium Pre-School Support Service",
+    "Early Learning and Childcare Strategy - SEN Funding"
+   ]
+  },
+  {
+   "organisation": "Bryson Care",
+   "gbp": 232320,
+   "awards": 2,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "Ballybeen Womens Centre",
+   "gbp": 232182,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Women's Centre Childcare Fund 2024/25"
+   ]
+  },
+  {
+   "organisation": "On Street Community Youth",
+   "gbp": 148481,
+   "awards": 9,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant",
+    "DE Youth Intervention",
+    "DfC Neighbourhood Renewal Youth Engagement"
+   ]
+  },
+  {
+   "organisation": "Ogras Youth Club",
+   "gbp": 143708,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "Block Grant",
+    "NEIGHBOURHOOD RENEWAL PHASE 3"
+   ]
+  },
+  {
+   "organisation": "Greenhill YMCA",
+   "gbp": 142695,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "NI Chest Heart & Stroke",
+   "gbp": 134399,
+   "awards": 2,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "Rosario Youth Club",
+   "gbp": 132812,
+   "awards": 7,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant",
+    "DE Youth Intervention",
+    "TEO - TBUC CAMPS PROGRAMME 24/25 (Together Building a United Community)",
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Catholic Schools Trustee Service",
+   "gbp": 125000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Catholic Schools Trustee Service"
+   ]
+  },
+  {
+   "organisation": "An Droichead",
+   "gbp": 118538,
+   "awards": 3,
+   "departments": [
+    "DE",
+    "DFC",
+    "DOH"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Neighbourhood Renewal Phase 2",
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Zero-8-Teen",
+   "gbp": 117369,
+   "awards": 4,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Bright Start",
+    "Payments to Non Statutory Providers FY 2024 2025 - SHSCT"
+   ]
+  },
+  {
+   "organisation": "Footprints Womens Centre",
+   "gbp": 116468,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme",
+    "Women's Centre Childcare Fund 2024/25"
+   ]
+  },
+  {
+   "organisation": "Ballymoney & District Community Playgroup",
+   "gbp": 111780,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Greenway Womens Group",
+   "gbp": 102763,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Women's Centre Childcare Fund 2024/25"
+   ]
+  },
+  {
+   "organisation": "Parenting Focus",
+   "gbp": 102284,
+   "awards": 3,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "RAISE",
+    "Grants to voluntary bodies-Family Policy Unit-core",
+    "Payments to Non Statutory Providers FY 2024 2025 - SHSCT"
+   ]
+  },
+  {
+   "organisation": "NI Childminding Association",
+   "gbp": 96850,
+   "awards": 4,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Grants to voluntary bodies-Family Policy Unit-core",
+    "Payments to Non Statutory Providers FY 2024 2025 - SHSCT",
+    "Payments to Non-Statutory Providers 2024/25"
+   ]
+  },
+  {
+   "organisation": "Belmont Playcare",
+   "gbp": 96005,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Aughnacloy Playgroup Ltd",
+   "gbp": 95505,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Falls Women's Centre",
+   "gbp": 91574,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Women's Centre Childcare Fund 2024/25"
+   ]
+  },
+  {
+   "organisation": "Hobby Horse Family Project",
+   "gbp": 90506,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Neighbourhood Renewal"
+   ]
+  },
+  {
+   "organisation": "Shankill Womens Centre",
+   "gbp": 85140,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Women's Centre Childcare Fund 2024/25"
+   ]
+  },
+  {
+   "organisation": "West Bann Development",
+   "gbp": 84164,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Neighbourhood Renewal Phase 2 Northern RDO"
+   ]
+  },
+  {
+   "organisation": "East Belfast Community Development Agency",
+   "gbp": 83067,
+   "awards": 2,
+   "departments": [
+    "DOJ",
+    "DFC"
+   ],
+   "titles": [
+    "Belfast Policing Community Safety Partnerships 2024/25",
+    "Neighbourhood Renewal Phase 2"
+   ]
+  },
+  {
+   "organisation": "Relate NI",
+   "gbp": 81983,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "Ardglass Community Playgroup",
+   "gbp": 81225,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "Pre-School Education Programme",
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "Newhill Youth Club",
+   "gbp": 76844,
+   "awards": 3,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant",
+    "DE Youth Intervention",
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Foyle Down Syndrome Trust",
+   "gbp": 76140,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Payments to Non-Statutory Providers 2024/25"
+   ]
+  },
+  {
+   "organisation": "Kilcooley Womens Centre",
+   "gbp": 73252,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Women's Centre Childcare Fund 22-24"
+   ]
+  },
+  {
+   "organisation": "GALBALLY YOUTH & COMMUNITY ASSOCIATION (GALBALLY YOUTH CLUB)",
+   "gbp": 69375,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant"
+   ]
+  },
+  {
+   "organisation": "Apple Blossom Playgroup",
+   "gbp": 68461,
+   "awards": 3,
+   "departments": [
+    "DE",
+    "DAERA"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Pre-School Education Programme",
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Family Care Adoption Services",
+   "gbp": 66932,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "RNIB",
+   "gbp": 66263,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non Statutory Providers FY 2024 2025 - SHSCT"
+   ]
+  },
+  {
+   "organisation": "Family Routes",
+   "gbp": 64272,
+   "awards": 2,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Mental Health Support Fund",
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "C.H.A.R.T.E.R for Northern Ireland",
+   "gbp": 63708,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Neighbourhood Renewal Phase 2"
+   ]
+  },
+  {
+   "organisation": "Alphabet Playgroup",
+   "gbp": 63280,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Ballinderry Bridge Playgroup",
+   "gbp": 63180,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Ballycrochan Playgroup",
+   "gbp": 63180,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Benburb Community Playgroup",
+   "gbp": 63180,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Families Beyond Conflict",
+   "gbp": 62677,
+   "awards": 1,
+   "departments": [
+    "TEO"
+   ],
+   "titles": [
+    "Victims Support Programme 2024-2025"
+   ]
+  },
+  {
+   "organisation": "Lenadoon Womens Group",
+   "gbp": 60865,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Belfast Regeneration Office Outer West Team"
+   ]
+  },
+  {
+   "organisation": "Ballyronan Community Playgroup",
+   "gbp": 58320,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Waterside Women's Centre",
+   "gbp": 58050,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Women's Centre Childcare Fund 2024/25"
+   ]
+  },
+  {
+   "organisation": "BookTrust",
+   "gbp": 56752,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "BookStart babypack programme"
+   ]
+  },
+  {
+   "organisation": "First Steps Womens Group",
+   "gbp": 56236,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Women's Centre Childcare Fund 2024/25"
+   ]
+  },
+  {
+   "organisation": "174 Trust",
+   "gbp": 56047,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Ardstraw Community Playgroup",
+   "gbp": 55504,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Wishing Well Family Centre",
+   "gbp": 54948,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Neighbourhood Renewal"
+   ]
+  },
+  {
+   "organisation": "Chrysalis Women's  Centre",
+   "gbp": 53940,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Women's Centre Childcare Fund 2024/25"
+   ]
+  },
+  {
+   "organisation": "Aghagallon Playgroup",
+   "gbp": 52170,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Ballyholme Presbyterian Church Playgroup",
+   "gbp": 51030,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Ionad Uíbh Eachach",
+   "gbp": 50563,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Armoy Cross Community Playgroup",
+   "gbp": 49229,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Banagher Community Playgroup",
+   "gbp": 48945,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Victim Support NI",
+   "gbp": 46170,
+   "awards": 1,
+   "departments": [
+    "DOJ"
+   ],
+   "titles": [
+    "Core Funding of Victim Support NI"
+   ]
+  },
+  {
+   "organisation": "Benmore Playgroup",
+   "gbp": 45070,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "North West Migrants Forum",
+   "gbp": 45000,
+   "awards": 1,
+   "departments": [
+    "TEO"
+   ],
+   "titles": [
+    "Good Relations Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Cloona Child Contact Centre",
+   "gbp": 43487,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "Strathfoyle Womens Activity Group",
+   "gbp": 43060,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Women's Centre Childcare Fund 2024/25"
+   ]
+  },
+  {
+   "organisation": "Bangor West Nursery Playgoup",
+   "gbp": 41955,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Larne Community Care Centre",
+   "gbp": 39484,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Willowfield Parish Community Association",
+   "gbp": 37083,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "DE Youth Intervention",
+    "Neighbourhood Renewal Phase 2"
+   ]
+  },
+  {
+   "organisation": "Womens Centre Derry",
+   "gbp": 36562,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Women's Centre Childcare Fund 2024/25"
+   ]
+  },
+  {
+   "organisation": "Ballybeen Womens Centre Playgroup",
+   "gbp": 36450,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "British Deaf Association",
+   "gbp": 35525,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Cultural Diversity"
+   ]
+  },
+  {
+   "organisation": "National Deaf Childrens Society",
+   "gbp": 34935,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Cultural Diversity"
+   ]
+  },
+  {
+   "organisation": "Kidzone Playgroup (Newry)",
+   "gbp": 34250,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Newtownards Contact Centre",
+   "gbp": 33604,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "Belcoo Community Playgroup",
+   "gbp": 33525,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Drumellan Community Association",
+   "gbp": 33314,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Scoil agus Naíscoil Na Fuiseoige",
+   "gbp": 32830,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "ACCORD NI",
+   "gbp": 32681,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "Ballynahinch Child Contact Centre",
+   "gbp": 32671,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "Bangor Child Contact Centre",
+   "gbp": 32319,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "Belfast & Lisburn Womens Aid",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Cairde Gaelscoil na Móna",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Clear Day Nurseries",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Cornabracken Afterschool Club",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Eskra Childcare Centre",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "First Steps Community Group Limited",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "First Steps Daycare Ltd (2)",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Giggles Daycare",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Josephs Centre Playgroup",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Little Stars Daycare",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Naíscoil an tSléibhe Dhuibh",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "New Beginnings Daycare",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Oakwood Childcare Ltd",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Oasis - Caring in Action",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "St Vincent de Paul Playgroup Belfast",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Superstars Daycare & Afterschool",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Tinytots Daycare",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "White Hare Playgroup",
+   "gbp": 32000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "SHG NI Limited",
+   "gbp": 31998,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Armagh Child Contact Centre",
+   "gbp": 31989,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non Statutory Providers FY 2024 2025 - SHSCT"
+   ]
+  },
+  {
+   "organisation": "Royal Mencap Society",
+   "gbp": 31983,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Naiscoil Ghleann Darach",
+   "gbp": 31600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Orchard Community Playgroup",
+   "gbp": 31545,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Carryduff Playcare Centre",
+   "gbp": 31450,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Aisling Centre",
+   "gbp": 31051,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers 2024/25"
+   ]
+  },
+  {
+   "organisation": "Speedwell Trust",
+   "gbp": 30534,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DAERA"
+   ],
+   "titles": [
+    "DE Youth Intervention",
+    "Water Quality Improvement Strand 2024/2025"
+   ]
+  },
+  {
+   "organisation": "Pineview Day Nursery",
+   "gbp": 30465,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Acorn Womens Group",
+   "gbp": 30242,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DAERA"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Star Neighbourhood Centre",
+   "gbp": 29622,
+   "awards": 3,
+   "departments": [
+    "DOJ",
+    "DE"
+   ],
+   "titles": [
+    "Belfast Policing Community Safety Partnerships 2024/25",
+    "The Pathway Fund 2023/24 & 2024/25",
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Castlederg Childcare Services Ltd",
+   "gbp": 29500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Newhill First Steps Playgroup 14/15",
+   "gbp": 29500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Play-A-Way Childcare Centre",
+   "gbp": 29375,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Rainbow Daycare (Eglish) Ltd",
+   "gbp": 29356,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Bloomfield Community Association Playgroup",
+   "gbp": 29280,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Roden Street Community Development Group",
+   "gbp": 28844,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Glenbank Community Association",
+   "gbp": 28433,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding",
+    "Neighbourhood Renewal"
+   ]
+  },
+  {
+   "organisation": "Atticall Playgroup",
+   "gbp": 27375,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "CDD Childcare Service T/A The Magic Roundabout",
+   "gbp": 27227,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "CAW Community Playgroup",
+   "gbp": 27000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Firs Playgroup",
+   "gbp": 27000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Childrens Law Centre",
+   "gbp": 26988,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "Foyle Womens Aid",
+   "gbp": 26969,
+   "awards": 2,
+   "departments": [
+    "DOJ",
+    "DE"
+   ],
+   "titles": [
+    "Derry and Strabane Policing and Community Safety Partnership 2024/25",
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Ballyclare Family Focus: Ballyclare Family Support & Resource Network",
+   "gbp": 26495,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DAERA"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Ballee Community Association",
+   "gbp": 26371,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Neighbourhood Renewal Phase 2 Northern RDO"
+   ]
+  },
+  {
+   "organisation": "Country Kids Childcare",
+   "gbp": 26000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Strabane Primary Community Playgroup",
+   "gbp": 25853,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "GP Federation Support Unit",
+   "gbp": 25792,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "Happy Faces Daycare Nursery",
+   "gbp": 25383,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Schomberg Society Kilkeel Ltd",
+   "gbp": 25289,
+   "awards": 3,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion",
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Limavady Family Centre",
+   "gbp": 24911,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "McClintock Children's Centre",
+   "gbp": 24895,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Banana Bunch Playgroup",
+   "gbp": 24765,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme",
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Crumlin Integrated Playgroup",
+   "gbp": 24368,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "West Kirk Community Project",
+   "gbp": 24315,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Neighbourhood Renewal"
+   ]
+  },
+  {
+   "organisation": "Epworth Playgroup",
+   "gbp": 24000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Naíscoil Cholmcille",
+   "gbp": 22893,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Northern Ireland Netball",
+   "gbp": 22872,
+   "awards": 1,
+   "departments": [
+    "TEO"
+   ],
+   "titles": [
+    "Good Relations Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Jack Horner & Mother Goose Playgroup",
+   "gbp": 22787,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Naiscoil Bheanna Boirche (previously Naiscoil Uachtar Tire)",
+   "gbp": 22257,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Ballymacarrett Youth & Community Project",
+   "gbp": 22000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "st Malachys Preschool",
+   "gbp": 22000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "White Ribbon NI",
+   "gbp": 21886,
+   "awards": 1,
+   "departments": [
+    "DOJ"
+   ],
+   "titles": [
+    "ARCS 24/25 - 25/26 - 26/27"
+   ]
+  },
+  {
+   "organisation": "The Fostering Network Northern Ireland",
+   "gbp": 21745,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "Drumahoe Childcare Limited",
+   "gbp": 21655,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Tempo Community Playgroup",
+   "gbp": 21546,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Jack & Jill  Community Group",
+   "gbp": 21001,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Bo Peeps Playgroup",
+   "gbp": 20540,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "Leafair Community Association Ltd",
+   "gbp": 20348,
+   "awards": 7,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "DfC Neighbourhood Renewal Youth Engagement",
+    "COMMUNITY SAFETY 2024/25"
+   ]
+  },
+  {
+   "organisation": "Camowen Smart Kids - Carrickmore & Beragh Centres",
+   "gbp": 20266,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Craigavon Travellers Support Committee",
+   "gbp": 19992,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non Statutory Providers FY 2024 2025 - SHSCT"
+   ]
+  },
+  {
+   "organisation": "The Appleby Trust",
+   "gbp": 19818,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non Statutory Providers FY 2024 2025 - SHSCT"
+   ]
+  },
+  {
+   "organisation": "Cabin Club",
+   "gbp": 19759,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention",
+    "DfC Neighbourhood Renewal Youth Engagement"
+   ]
+  },
+  {
+   "organisation": "Lifestart Mid-Ards",
+   "gbp": 19674,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "Magherafelt Womens Group Ltd",
+   "gbp": 19505,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Drumcree Community Trust",
+   "gbp": 19478,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non Statutory Providers FY 2024 2025 - SHSCT"
+   ]
+  },
+  {
+   "organisation": "St Ciarans Youth Club",
+   "gbp": 18747,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant"
+   ]
+  },
+  {
+   "organisation": "Little Friends Playgroup",
+   "gbp": 18341,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Naíscoil na Caille",
+   "gbp": 18271,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Mornington Community Project Limited",
+   "gbp": 18241,
+   "awards": 2,
+   "departments": [
+    "DFC",
+    "DOH"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion",
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Space Stations ASC",
+   "gbp": 17721,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Child Brain Injury Trust",
+   "gbp": 17708,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non Statutory Providers FY 2024 2025 - SHSCT"
+   ]
+  },
+  {
+   "organisation": "NI Childrens Hospice",
+   "gbp": 17660,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "Community Development & Health Network Northern Ireland",
+   "gbp": 17558,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "Women's Resource & Development Agency",
+   "gbp": 17202,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "Kids United Playcare Facilities",
+   "gbp": 17191,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Carebears Community Playgroup",
+   "gbp": 17125,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Waterside Neighbourhood Partnership",
+   "gbp": 16949,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Neighbourhood Renewal Fund NWDO"
+   ]
+  },
+  {
+   "organisation": "Castle Community Trust",
+   "gbp": 16641,
+   "awards": 2,
+   "departments": [
+    "DFC",
+    "DOH"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion",
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Derry Well Women",
+   "gbp": 16500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Loughshore Playgroup",
+   "gbp": 16500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "St Brigid's Playschool",
+   "gbp": 16500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Tober Tinys Community Playgroup",
+   "gbp": 16500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Tiny Tots Community Playgroup",
+   "gbp": 16464,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Dara Playgroup",
+   "gbp": 16462,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Home-Start NI Belfast Regional Office",
+   "gbp": 16432,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "Clogher Valley Playgroup",
+   "gbp": 16230,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Childrens Lane Day Nursery and Afterschools",
+   "gbp": 16125,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Kids R Us",
+   "gbp": 16043,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Tannaghmore Gardens Playgroup",
+   "gbp": 15985,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Short Strand Community Forum",
+   "gbp": 15883,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "DE Youth Intervention",
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Happy Tots Playgroup",
+   "gbp": 14991,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "The Y Zone",
+   "gbp": 14946,
+   "awards": 2,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion",
+    "COMMUNITY SAFETY 2024/25"
+   ]
+  },
+  {
+   "organisation": "Workspace Draperstown Ltd",
+   "gbp": 14805,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Little Explorers Daycare & Afterschool LTD",
+   "gbp": 14800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Melmount & East Banks Estates Community Associations Forum",
+   "gbp": 14662,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DfC Neighbourhood Renewal Youth Engagement"
+   ]
+  },
+  {
+   "organisation": "Gran Tots Playgroup",
+   "gbp": 14632,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Rhyme Time Nursery",
+   "gbp": 14625,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Tiggers Palace Nursery",
+   "gbp": 14625,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Tullyvallen Family Support",
+   "gbp": 14500,
+   "awards": 1,
+   "departments": [
+    "TEO"
+   ],
+   "titles": [
+    "Victims Support Programme 2024-2025"
+   ]
+  },
+  {
+   "organisation": "Greater Village Regeneration Trust",
+   "gbp": 14192,
+   "awards": 3,
+   "departments": [
+    "DOJ",
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "Belfast Policing Community Safety Partnerships 2024/25",
+    "DE Youth Intervention",
+    "COMMUNITY SAFETY 2024/25"
+   ]
+  },
+  {
+   "organisation": "Little Explorers Daycare and Afterschool LTD Culloville",
+   "gbp": 13875,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Cancer Fund for Children",
+   "gbp": 13762,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non Statutory Providers FY 2024 2025 - SHSCT"
+   ]
+  },
+  {
+   "organisation": "Doagh Preschool Playgroup",
+   "gbp": 13689,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Respect Project",
+   "gbp": 13510,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DfC Neighbourhood Renewal Youth Engagement"
+   ]
+  },
+  {
+   "organisation": "Saul Cross Community Playgroup",
+   "gbp": 13500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Cairde Ui Neill",
+   "gbp": 13364,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Rainbow Community Playgroup",
+   "gbp": 13267,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "OASIS Youth Club",
+   "gbp": 13210,
+   "awards": 3,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention",
+    "DfC Neighbourhood Renewal Youth Engagement",
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "St Josephs Centre for Deaf People",
+   "gbp": 13100,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Cultural Diversity"
+   ]
+  },
+  {
+   "organisation": "Carryduff Play Care Centre",
+   "gbp": 12815,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Strawberry Tree Playgroup",
+   "gbp": 11938,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Harmony Community Trust Strangford",
+   "gbp": 11811,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "Contact A Family Northern Ireland",
+   "gbp": 11664,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Grants to Voluntary bodies - Disability and Mental Health Unit - Core"
+   ]
+  },
+  {
+   "organisation": "Derrytrasna Playgroup",
+   "gbp": 11618,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DOH"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Buddy Bear Trust Conductive Education Trust",
+   "gbp": 11500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Kiddies Castle Playgroup",
+   "gbp": 11500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Magic Roundabout",
+   "gbp": 11500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Naiscoil Mhachaire Ratha",
+   "gbp": 11500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Tiny Tots Corner",
+   "gbp": 11467,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Killinchy After Schools Club",
+   "gbp": 11460,
+   "awards": 2,
+   "departments": [
+    "DFC",
+    "DOH"
+   ],
+   "titles": [
+    "Financial Assistance Scheme",
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Youth First",
+   "gbp": 11207,
+   "awards": 3,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention",
+    "TEO - TBUC CAMPS PROGRAMME 24/25 (Together Building a United Community)",
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "The Link Family & Community Centre",
+   "gbp": 11199,
+   "awards": 2,
+   "departments": [
+    "TEO",
+    "DE"
+   ],
+   "titles": [
+    "Minority Ethnic Development Fund – Tier 1b",
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Ligoniel Family Centre Playgroup",
+   "gbp": 11100,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Rainbow Playgroup Carrickfergus",
+   "gbp": 11036,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Pomeroy After Schools Club",
+   "gbp": 10987,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Happy Faces Playgroup",
+   "gbp": 10160,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Threeways Community Association",
+   "gbp": 10078,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DfC Neighbourhood Renewal Youth Engagement"
+   ]
+  },
+  {
+   "organisation": "Bangor Alternatives",
+   "gbp": 10000,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Ballyduff Community Redevelopment Group",
+   "gbp": 9889,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Brockagh Playgroup",
+   "gbp": 9860,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Desart Lodge Nursery",
+   "gbp": 9724,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Taughmonagh Community Forum",
+   "gbp": 9675,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Erne East Community Partnership",
+   "gbp": 9645,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Tar Isteach",
+   "gbp": 9600,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Little Rascals Community Playgroup",
+   "gbp": 9500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "SEFF",
+   "gbp": 9449,
+   "awards": 2,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Lavey Community Playgroup",
+   "gbp": 9410,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DAERA"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "North Down & Ards Womens Aid",
+   "gbp": 9095,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "St Cairealls Community Playschool",
+   "gbp": 9000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Playzone CIC",
+   "gbp": 8973,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Sen space care and respite services cic",
+   "gbp": 8907,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Department of Health Carers Fund"
+   ]
+  },
+  {
+   "organisation": "Magilligan Community Playgroup",
+   "gbp": 8741,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25",
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Keady Community Playgroup (Formerly The Den in the Glen)",
+   "gbp": 8400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Krafty Kidz",
+   "gbp": 8335,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Naiscoil Dhun Phadraig",
+   "gbp": 8250,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Clady Tiny Tots",
+   "gbp": 8228,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Treehouse Creche",
+   "gbp": 8000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Colin Neighbourhood Partnership",
+   "gbp": 7968,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "Adoption UK",
+   "gbp": 7913,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Grants to voluntary bodies-Family Policy Unit-core"
+   ]
+  },
+  {
+   "organisation": "Hospital Road Youth Club (prev Community Association)",
+   "gbp": 7796,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DFC"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding",
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Small Steps",
+   "gbp": 7647,
+   "awards": 2,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "The Edge",
+   "gbp": 7500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "TEO - TBUC CAMPS PROGRAMME 24/25 (Together Building a United Community)"
+   ]
+  },
+  {
+   "organisation": "Croí Éanna",
+   "gbp": 7434,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Youth Engagement Service",
+   "gbp": 7422,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention",
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Camphill Communities Trust NI",
+   "gbp": 6985,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Payments to Non-Statutory Providers FY2024/25"
+   ]
+  },
+  {
+   "organisation": "St Peters GAA Recreation & Youth Club",
+   "gbp": 6900,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DfC Neighbourhood Renewal Youth Engagement",
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Cosy Corner Playgroup",
+   "gbp": 6750,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Naíscoil an Traonaigh",
+   "gbp": 6750,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Naíscoil Ghreanacháin",
+   "gbp": 6644,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Dromore Childcare Centre",
+   "gbp": 6500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Beacon Playgroup",
+   "gbp": 6450,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Pre-School Education Programme"
+   ]
+  },
+  {
+   "organisation": "South Tyrone Empowerment Programme",
+   "gbp": 6213,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DSD - Neighbourhood Renewal"
+   ]
+  },
+  {
+   "organisation": "Logic",
+   "gbp": 6000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Lower Oldpark Community Association",
+   "gbp": 6000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Phoenix Education Centre CIC",
+   "gbp": 6000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Rathfriland Cross Community ABC",
+   "gbp": 6000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Regenerate",
+   "gbp": 6000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Active Communities Network",
+   "gbp": 5999,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Dervock & District Community Association",
+   "gbp": 5950,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Gort Na Mona Sports Association",
+   "gbp": 5948,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Skeoge Community Association",
+   "gbp": 5742,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Soul Studio- Belfast CIC",
+   "gbp": 5740,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "WheelWorks",
+   "gbp": 5624,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Bawnmore & District Residents Association",
+   "gbp": 5561,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Glor na Mona",
+   "gbp": 5455,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Omagh Cultural Hub",
+   "gbp": 5432,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Lisanelly Regeneration Group",
+   "gbp": 5428,
+   "awards": 2,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2023/24 Community Cohesion",
+    "COMMUNITY SAFETY 2024/25"
+   ]
+  },
+  {
+   "organisation": "Derry Youth & Community Workshop Ltd",
+   "gbp": 5361,
+   "awards": 1,
+   "departments": [
+    "DFE"
+   ],
+   "titles": [
+    "Training for Success 2017"
+   ]
+  },
+  {
+   "organisation": "Stepping Stones Playgroup",
+   "gbp": 5250,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Ardoyne After Schools Club",
+   "gbp": 5213,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Mourne Valley Cultural Association",
+   "gbp": 5200,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Oxford United Stars Football Club",
+   "gbp": 5188,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Castlederg Young Loyalists Flute Band",
+   "gbp": 5166,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Tubrid Pipe Band",
+   "gbp": 5107,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Down Academy Pipes and Drums",
+   "gbp": 5010,
+   "awards": 2,
+   "departments": [
+    "DAERA",
+    "DFC"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2",
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Multi Ethic Sports & Culture NI (MSCNI)",
+   "gbp": 4974,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Burnfoot Community Youth Club",
+   "gbp": 4952,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Bann Valley Community Group",
+   "gbp": 4789,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Belfast Islamic Centre",
+   "gbp": 4775,
+   "awards": 1,
+   "departments": [
+    "TEO"
+   ],
+   "titles": [
+    "Good Relations Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Crewe United Football and Social Club",
+   "gbp": 4773,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Clonmore Youth Club",
+   "gbp": 4500,
+   "awards": 2,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant",
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Carnagat Area Community Association",
+   "gbp": 4295,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Involvement Grants"
+   ]
+  },
+  {
+   "organisation": "Parallel Histories",
+   "gbp": 3994,
+   "awards": 1,
+   "departments": [
+    "TEO"
+   ],
+   "titles": [
+    "Community Relations/Cultural Diversity 2024 - 2025"
+   ]
+  },
+  {
+   "organisation": "Valley Rangers Youth Football Club",
+   "gbp": 3902,
+   "awards": 2,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1",
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Brocagh & District Regeneration Group",
+   "gbp": 3856,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Ballyroney Youth Club",
+   "gbp": 3836,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DAERA"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding",
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Ballybeen Educational And Cultural Heritage Hub",
+   "gbp": 3798,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Nippers Alley Playgroup",
+   "gbp": 3710,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Carrick Hill Residents Association",
+   "gbp": 3567,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Belcoo Parent Toddler Group",
+   "gbp": 3424,
+   "awards": 2,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1",
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Jack & Jill Playgroup",
+   "gbp": 3358,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Maiden City Festival Committee",
+   "gbp": 3350,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "First Steps Out of Schools Group",
+   "gbp": 3314,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "27th Belfast Holy Family Scout Group",
+   "gbp": 3300,
+   "awards": 4,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding",
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "St Molaise GAC Irvinestown",
+   "gbp": 3228,
+   "awards": 2,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1",
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Ballinamallard Youth Ministry Committee",
+   "gbp": 3177,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DAERA"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding",
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Diverse Youth NI",
+   "gbp": 3000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Dungannon United Youth",
+   "gbp": 3000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "EAST AFRICA YOUTH NI",
+   "gbp": 3000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Family Comfort NI",
+   "gbp": 3000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Mayfield Community Association",
+   "gbp": 3000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Roden Street Community Group",
+   "gbp": 3000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Trojans Youth & Community Development Group",
+   "gbp": 3000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Killycurragh Youth Club",
+   "gbp": 2981,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DAERA"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding",
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "West Winds Development Association",
+   "gbp": 2900,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Involvement Grants"
+   ]
+  },
+  {
+   "organisation": "Garvagh Cultural Awareness",
+   "gbp": 2889,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Carrickcruppen Youth Club",
+   "gbp": 2800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Hillsborough Presbyterian Church Youth",
+   "gbp": 2800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Newmills Presbyterian Church (previously known as Newmills Youth Group)",
+   "gbp": 2800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "THE GATHERING YOUTH BELFAST",
+   "gbp": 2800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Strabane Ethnic Community Association",
+   "gbp": 2778,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Kindertee Community Playgroup",
+   "gbp": 2667,
+   "awards": 2,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1",
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Magherafelt District Junior LOL (Loyal Orange Lodge) No. 80",
+   "gbp": 2635,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "St Michaels 31st Belfast Scout Group",
+   "gbp": 2600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Windsor Youth",
+   "gbp": 2600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "DE Youth Intervention"
+   ]
+  },
+  {
+   "organisation": "Colmcille Youth",
+   "gbp": 2600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Eglish Youth Club",
+   "gbp": 2600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "First Comber Presbyterian Youth",
+   "gbp": 2600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Kildress Area Youth & Community Club",
+   "gbp": 2600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "ST COMGALLS YOUTH CENTRE",
+   "gbp": 2600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "St Josephs Youth Club Ederney",
+   "gbp": 2600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Younglife International",
+   "gbp": 2600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Ballykeel 2 & District Community Association",
+   "gbp": 2600,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2023/24 Community Involvement"
+   ]
+  },
+  {
+   "organisation": "Tamnamore Community Development Association",
+   "gbp": 2558,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Involvement Grants"
+   ]
+  },
+  {
+   "organisation": "Crossroads PTA",
+   "gbp": 2538,
+   "awards": 2,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1",
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Armagh Baptist Youth Club",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Ballywalter Young Farmers Club",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Bangor Methodist Youth Club",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Cumber Upper Youth Group",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Foreglen Youth Club",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Grace Fellowship Youth Group",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Hillsborough Young Farmers Club",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Movilla Youth Forum",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Newmills Young Peoples Den - NYPD",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "The Loft Youth Club",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Tobin Youth Centre",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Youth With A Mission",
+   "gbp": 2400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Mount St Nicholas Playgroup",
+   "gbp": 2250,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Childs Play Day Nursery",
+   "gbp": 2250,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Kids @ BT9",
+   "gbp": 2250,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Little Acorns Playgroup",
+   "gbp": 2250,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Poyntzpass Community Playgroup",
+   "gbp": 2250,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Rainbow Corner Playgroup",
+   "gbp": 2250,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Twinkle Playgroup",
+   "gbp": 2250,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "East Belfast Protestant Boys Flute Band",
+   "gbp": 2240,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "1st Carrickfergus Presbyterian Church Youth Club",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Cappagh Young Farmers Club",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Derrygonnelly Youth Club",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Dungiven Young Farmers Club",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Enagh Youth Forum",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Finvoy Young Farmers Club",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Holestone Young Farmers Club",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Lisbellaw Young Farmers Club",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Lislea Youth Club",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Moneyrea Young Farmers Club",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "NEWTOWNSTEWART YFC",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Oidhreacht Mhuintir Luinigh (Greencastle Youth Club)",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Seskinore Young Farmers Club",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "SHANKILL YOUTH GROUP",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Waringstown Presbyterian Church Community Ministry",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Youth For Christ (Northern Ireland)",
+   "gbp": 2200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Gillygooley Youth Club",
+   "gbp": 2090,
+   "awards": 2,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1",
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Ballymacash Regeneration Network",
+   "gbp": 2048,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Involvement"
+   ]
+  },
+  {
+   "organisation": "Killylea Methodist Youth Club",
+   "gbp": 2033,
+   "awards": 2,
+   "departments": [
+    "DE",
+    "DAERA"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding",
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Drumquin Community & Youth Centre",
+   "gbp": 2000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant"
+   ]
+  },
+  {
+   "organisation": "Gortnaghey Youth Club",
+   "gbp": 2000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant"
+   ]
+  },
+  {
+   "organisation": "Trinity Youth Club",
+   "gbp": 2000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant"
+   ]
+  },
+  {
+   "organisation": "Bleary Young Farmers Club",
+   "gbp": 2000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Coleraine Young Farmers Club",
+   "gbp": 2000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Lisanelly Regeneration Group/GK House Youth Project",
+   "gbp": 2000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Loughmacrory Youth Club",
+   "gbp": 2000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Sarsfields Youth Club",
+   "gbp": 2000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "SEVEN DERRYS YOUTH CLUB",
+   "gbp": 2000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Crossgar Young Defenders Flute band",
+   "gbp": 1997,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Garvagh Pipe Band",
+   "gbp": 1994,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Friends of Cabragh",
+   "gbp": 1989,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Blossomhill Pipe Band",
+   "gbp": 1987,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Naiscoil Charn Tochair",
+   "gbp": 1987,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Peter Pan Playgroup",
+   "gbp": 1985,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Culloville Camogie Club",
+   "gbp": 1983,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Maguiresbridge Presbyterian Church",
+   "gbp": 1978,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Hilltown Community Association",
+   "gbp": 1976,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Cullybackey Pipe Band",
+   "gbp": 1974,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Clonmore GFC",
+   "gbp": 1972,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "John Hewitt Society",
+   "gbp": 1968,
+   "awards": 1,
+   "departments": [
+    "TEO"
+   ],
+   "titles": [
+    "Community Relations/Cultural Diversity 2024 - 2025"
+   ]
+  },
+  {
+   "organisation": "Dregish Community Group",
+   "gbp": 1958,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Friends of Glenann",
+   "gbp": 1957,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Sir Hans Sloane Centre Ltd",
+   "gbp": 1951,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Shankill Star Flute Band",
+   "gbp": 1950,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Portadown Heritage Tours",
+   "gbp": 1935,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Queen Elizabeth Pipe Band",
+   "gbp": 1908,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Ballyvoy and Carey Development Group",
+   "gbp": 1870,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Ballyneill Orange Lodge 495",
+   "gbp": 1870,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Rehaghy Rural Community Group",
+   "gbp": 1868,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Stranocum Youth Football Team",
+   "gbp": 1859,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Ballymartin GAA Club",
+   "gbp": 1826,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "1st Coleraine Youth Club (PrevThe House Youth Club)",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant"
+   ]
+  },
+  {
+   "organisation": "Annalong Youth Enterprise",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Bannside Youth Group",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Buckna Youth Club",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Collone Young Farmers Club",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Conway Youth Centre",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Cookstown Young Farmers Club",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Garvagh & District Community Association",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Kilraughts Young Farmers Club",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Langfield Youth Club",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Mountfield Youth Club",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Saturday Night Youth Club",
+   "gbp": 1800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "4th Fermanagh Lisnaskea S I Group",
+   "gbp": 1797,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Dunloy Football Club",
+   "gbp": 1795,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Killymurris Bowling Club",
+   "gbp": 1789,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Coa O'Dwyers GFC",
+   "gbp": 1785,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Taylorstown Community Playgroup",
+   "gbp": 1777,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Springhill Playgroup",
+   "gbp": 1718,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "The Pathway Fund 2023/24 & 2024/25"
+   ]
+  },
+  {
+   "organisation": "Cookstown North Community Group",
+   "gbp": 1714,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Involvement Grants"
+   ]
+  },
+  {
+   "organisation": "Friends of St. Mary’s Aughnacloy",
+   "gbp": 1700,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Rising Sons of Saintfield JLOL 247",
+   "gbp": 1676,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Brendan Keogh Youth League",
+   "gbp": 1655,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Peatlands Playgroup",
+   "gbp": 1639,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "St Anne's Parish Church, Killough",
+   "gbp": 1600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant"
+   ]
+  },
+  {
+   "organisation": "Aghavilly Youth Club",
+   "gbp": 1600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Annaclone & Magherally Young Farmers Club",
+   "gbp": 1600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Boho Youth Club",
+   "gbp": 1600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Shamrock Youth Club",
+   "gbp": 1600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "St Brigid's Youth Club",
+   "gbp": 1600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "St Patricks Parish Youth Club",
+   "gbp": 1600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Straid Young Farmers Club",
+   "gbp": 1600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Toberkeigh Youth Club",
+   "gbp": 1600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Rasharkin Womens Group",
+   "gbp": 1594,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Sensory Kids",
+   "gbp": 1565,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "Financial Assistance Scheme"
+   ]
+  },
+  {
+   "organisation": "Ballymaconnelly Sons of Conquerors Flute Band",
+   "gbp": 1564,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Killyclooney Cricket Club",
+   "gbp": 1533,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Lisbarnett & Lisbane Community Association Ltd",
+   "gbp": 1525,
+   "awards": 1,
+   "departments": [
+    "DOH"
+   ],
+   "titles": [
+    "Bright Start"
+   ]
+  },
+  {
+   "organisation": "Annahoe Junior Orange Cultural and Sports Group",
+   "gbp": 1508,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Tír na nÓg - Cushendall CIC",
+   "gbp": 1503,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Ballymoor FC",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "TEO"
+   ],
+   "titles": [
+    "Good Relations Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Bloody Sunday Trust",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "TEO"
+   ],
+   "titles": [
+    "Good Relations Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Glengormley Amateur Boxing Club",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "TEO"
+   ],
+   "titles": [
+    "Good Relations Funding Programme"
+   ]
+  },
+  {
+   "organisation": "33rd Derry Ballinascreen Scouts",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "5th Larne Guides",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "6th Newtownards BB",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Culmore Community Partnership",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Glór na Maoile",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Laurencetown Summerscheme",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Magilligan Community Association",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Happy Days Playgroup",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Jack and Jill Community Playgroup",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Naiscoil an lonnain",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "Tiddli-Winks Playgroup",
+   "gbp": 1500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "SEN PRESCHOOL EDUCATION INCLUSION SUPPORT FUND"
+   ]
+  },
+  {
+   "organisation": "6th Larne Brownies",
+   "gbp": 1499,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "5TH LARNE RANGER UNIT",
+   "gbp": 1496,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "St. Michaels Killean",
+   "gbp": 1492,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "7th Dromore Scouts",
+   "gbp": 1430,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Ardglass Parish Church of Ireland",
+   "gbp": 1414,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Cuchulainn an Ghleanna Hurling and Camogie Club",
+   "gbp": 1407,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Dungannon Baptist Church",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant"
+   ]
+  },
+  {
+   "organisation": "Fitzroy Presbyterian Church Youth Club",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant"
+   ]
+  },
+  {
+   "organisation": "Holy Family Guide Unit",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant"
+   ]
+  },
+  {
+   "organisation": "Aughentaine Youth Club",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Ballygowan Presbyterian Church",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Banbridge Youth for Christ",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "CHARIS YOUTH (BELFAST)",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Cherryvalley Youth Group",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Clough Presbyterian Youth Club",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Drumcree Youth Clubs",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Fuse Youth Ministry",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Kesh Young Farmers Club",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Loughgall Youth Club",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Mossley Parish Youth Club",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "National Young Life Campaign (Newtownabbey)",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Newtownhamilton Young Farmers Club",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Omagh Baptist Church (Youth Fellowship)",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Raffery Youth Encounter (Previously included CE and GB)",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Rathfriland Young Farmers Club",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "ST MICHAELS - THRIVE YOUTH",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Youth Alive",
+   "gbp": 1400,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Landhead Youth Club",
+   "gbp": 1371,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "St Joseph's Craigbane GAC",
+   "gbp": 1290,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "The Drummond Centre Project Limited",
+   "gbp": 1248,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Dergview Academy",
+   "gbp": 1243,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "1st Dromara Youth Club",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Ameera Youth Club",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Armagh Elim Youth",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Castledawson and Curran Youth Reach",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Cheesy Nachos Youth Group",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Cloughfin Youth Club",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Ebrington Church Youth Club",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "FUSE (Markethill Area Youth Project)",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Immanuel Youth Fellowship",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "North Belfast Young Life",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Strabane and District Young Farmers",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Tobermore Baptist Youth Fellowship",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Phoenix Athletic FC",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Berlin Swifts Football Club",
+   "gbp": 1200,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Rascals Community Playgroup",
+   "gbp": 1122,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Washingbay Parent and Child Association",
+   "gbp": 1108,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "High Street Presbyterian Church Youth Club",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Block Grant"
+   ]
+  },
+  {
+   "organisation": "Ballydown Youth Fellowship",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Clonaneese Youth Club",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Crossdernott Youth Club",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Eskra Youth Club",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "First Antrim Youth Club",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Islandmagee Presbyterian Youth Group",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Killeter Youth Club (The Loft)",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Lisburn Nazarene Youth Club",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Mixed Doubles Youth Club",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Rasharkin Church Youth Club",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Richhill Presbyterian Church Junior Youth Group (Prev Ignite/Iotas)",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "The Glens Young Farmers Club",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Whitecross Youth Club",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Youth Connect (First Garvagh Presbyterian Church)",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "ANNADALE & HAYWOOD RESIDENTS ASSOCIATION LTD",
+   "gbp": 1000,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Involvement"
+   ]
+  },
+  {
+   "organisation": "Donaghcloney & Blackskull Lazer and Youth Club",
+   "gbp": 865,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Trory Parish Church Hall",
+   "gbp": 843,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 - Tranche 1"
+   ]
+  },
+  {
+   "organisation": "Devenish Partnership Forum",
+   "gbp": 816,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Involvement"
+   ]
+  },
+  {
+   "organisation": "Castlederg Methodist Circuit Youth Club",
+   "gbp": 800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Drumduff Youth Club",
+   "gbp": 800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Druminnis Youth Club (Previously Druminnis Saturday Night Club)",
+   "gbp": 800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Faughanvale Youth Ministry",
+   "gbp": 800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Knockmoyle Youth Club Committee",
+   "gbp": 800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Redrock Presbyterian Youth Fellowship",
+   "gbp": 800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Sydenham Methodist Church",
+   "gbp": 800,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Broughshane and District Mother and Toddler Group",
+   "gbp": 754,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Thornhill Community Association",
+   "gbp": 720,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Davarr Community Initiative",
+   "gbp": 690,
+   "awards": 1,
+   "departments": [
+    "DFC"
+   ],
+   "titles": [
+    "2024/25 Community Cohesion"
+   ]
+  },
+  {
+   "organisation": "Glens Community Association",
+   "gbp": 625,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  },
+  {
+   "organisation": "Derg Parish Church",
+   "gbp": 600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Drumlee Youth Club",
+   "gbp": 600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Edenderry Youth Club",
+   "gbp": 600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Kingsmills Youth Challenge",
+   "gbp": 600,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Generic Non Targeted Funding"
+   ]
+  },
+  {
+   "organisation": "Dergina Accordion Band",
+   "gbp": 518,
+   "awards": 1,
+   "departments": [
+    "DAERA"
+   ],
+   "titles": [
+    "Rural Micro Capital Grant Scheme 2024/2025 Tranche 2"
+   ]
+  },
+  {
+   "organisation": "Gaeil Ruairí Óg agus Gaeil na nGlinntí",
+   "gbp": 500,
+   "awards": 1,
+   "departments": [
+    "DE"
+   ],
+   "titles": [
+    "Youth Small Grants Funding Programme"
+   ]
+  }
+ ]
+}

@@ -440,7 +440,16 @@ function drawWhoPays() {
     '<p style="font-size:13.5px;margin:0">At least <b>' + m(d.gbpFloor) + '</b> a year: ' + d.volunteers.toLocaleString('en-GB') + ' volunteers in ' + d.orgs
     + ' organisations wholly about children (their own register returns) × at least ' + d.hoursPerFourWeeksFloor + ' hours per four weeks × 13 × £'
     + esc(d.wage && d.wage.value) + ' an hour.</p><p class="miss" style="font-size:12.5px;margin:6px 0 0">' + esc(d.note) + '</p>');
-  $('#whopays').innerHTML = A + B + Cc + Dd;
+  // The payer's own register of awards: how much of each department's VCSE money our list sees.
+  const G = D.gfd, DN = { DE: 'Education', DOH: 'Health', DFC: 'Communities', TEO: 'The Executive Office', DOJ: 'Justice', DFE: 'Economy', DAERA: 'Agriculture, Environment and Rural Affairs', DFI: 'Infrastructure' };
+  const Gc = !G ? '' : card('Check from the payers\' side: the Government Funding Database, 2024-25',
+    'Every award each department lists to voluntary and community organisations (letters of offer, not payments). "Children\'s awards" are those whose own titles name children, young people, families, early years or schools.',
+    rows(['<tr><th style="text-align:left">Department</th><th>All VCSE awards</th><th>Children\'s awards</th><th>to organisations on this page</th><th>to organisations not on it</th></tr>']
+      .concat(Object.entries(G.byDept).sort((a, b) => b[1].gbp - a[1].gbp).map(([k, d]) => '<tr><td>' + esc(DN[k] || k) + (k === 'DOH' ? ' <span class="flag" title="' + esc(G.coverage.healthRowsFrom) + '">incomplete</span>' : '') + '</td><td>' + m(d.gbp) + '</td><td>' + m(d.childLabelledGbp)
+        + '</td><td>' + m(d.childLabelledGbp - d.childLabelledUnlistedGbp) + '</td><td>' + m(d.childLabelledUnlistedGbp) + ' <span class="miss">(' + d.unlistedChildOrgs + ')</span></td></tr>')))
+    + '<p class="miss" style="font-size:12.5px;margin:6px 0 0">' + G.unlistedCount + ' recipients of children\'s awards are not on this page, mostly small playgroups and youth clubs; public bodies and schools are left out of that count. Largest: '
+    + G.unlisted.slice(0, 6).map(u => esc(u.organisation) + ' ' + m(u.gbp)).join('; ') + '. <a href="' + esc(G.source) + '" target="_blank" rel="noopener">The register</a>.</p>');
+  $('#whopays').innerHTML = A + B + Gc + Cc + Dd;
 }
 function drawSvc() {
   const live = D.orgs.filter(o => o.profile && !o.possiblyStatutory), cur = $('#svc').value;
