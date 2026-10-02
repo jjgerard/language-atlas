@@ -1,0 +1,597 @@
+{
+ "time": [
+  {
+   "measure": "Hours volunteered in last 4 weeks: None",
+   "value": 19,
+   "unit": "% of volunteers (any type)",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_13: Time spent volunteering last 4 weeks 2024/25",
+   "cell": "B4 (row 'None', col 'All %')",
+   "note": "Question VOL5 (questionnaire PDF https://www.communities-ni.gov.uk/system/files/2025-10/experience-of-volunteering-by-adults-in-northern-ireland-202425-modules-questionnaire.pdf): 'Approximately how many hours have you spent doing any type of voluntary work in the last 4 weeks?', routed 'If VOL1=1..14 or VOL3=1..12', i.e. anyone who volunteered formally OR informally, and it covers all voluntary work. NOT formal-only. Footnote A12 says 'Figures relate to those who carried out both formal and informal volunteering', but the base (2,122) is about 46% of 4,579, the any-volunteering share in Table_1 B4, not the both-types share (27+34-46 = roughly 15%). Read the footnote as 'formal and/or informal'. That reading is my inference from the bases; DfC does not state it."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: Less than 8 hours",
+   "value": 55,
+   "unit": "% of volunteers (any type)",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_13: Time spent volunteering last 4 weeks 2024/25",
+   "cell": "B5 (row 'Less than 8 hours', col 'All %')",
+   "note": "See the 'None' row note on base and coverage."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: 8 to 16 hours",
+   "value": 17,
+   "unit": "% of volunteers (any type)",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_13: Time spent volunteering last 4 weeks 2024/25",
+   "cell": "B6 (row '8 to 16 hours', col 'All %')",
+   "note": "See the 'None' row note on base and coverage."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: 17 to 24 hours",
+   "value": 4,
+   "unit": "% of volunteers (any type)",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_13: Time spent volunteering last 4 weeks 2024/25",
+   "cell": "B7 (row '17 to 24 hours', col 'All %')",
+   "note": "See the 'None' row note on base and coverage."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: 25 to 34 hours",
+   "value": 2,
+   "unit": "% of volunteers (any type)",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_13: Time spent volunteering last 4 weeks 2024/25",
+   "cell": "B8 (row '25 to 34 hours', col 'All %')",
+   "note": "See the 'None' row note on base and coverage."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: 35 to 44 hours",
+   "value": 1,
+   "unit": "% of volunteers (any type)",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_13: Time spent volunteering last 4 weeks 2024/25",
+   "cell": "B9 (row '35 to 44 hours', col 'All %')",
+   "note": "See the 'None' row note on base and coverage."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: 45 hours or more",
+   "value": 2,
+   "unit": "% of volunteers (any type)",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_13: Time spent volunteering last 4 weeks 2024/25",
+   "cell": "B10 (row '45 hours or more', col 'All %')",
+   "note": "See the 'None' row note on base and coverage."
+  },
+  {
+   "measure": "Base for Table 13 time bands",
+   "value": 2122,
+   "unit": "respondents (unweighted)",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_13",
+   "cell": "B11 (row 'Base')",
+   "note": "Question VOL5 (questionnaire PDF https://www.communities-ni.gov.uk/system/files/2025-10/experience-of-volunteering-by-adults-in-northern-ireland-202425-modules-questionnaire.pdf): 'Approximately how many hours have you spent doing any type of voluntary work in the last 4 weeks?', routed 'If VOL1=1..14 or VOL3=1..12', i.e. anyone who volunteered formally OR informally, and it covers all voluntary work. NOT formal-only. Footnote A12 says 'Figures relate to those who carried out both formal and informal volunteering', but the base (2,122) is about 46% of 4,579, the any-volunteering share in Table_1 B4, not the both-types share (27+34-46 = roughly 15%). Read the footnote as 'formal and/or informal'. That reading is my inference from the bases; DfC does not state it."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: None",
+   "value": 7,
+   "unit": "% of volunteers",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_9: Time spent volunteering 2023/24 (contents: 'Time spent volunteering (in the last 4 weeks) 2023/24')",
+   "cell": "B4 (row 'None', col 'All %')",
+   "note": "Footnote A12 is the same: 'Figures relate to those who carried out both formal and informal volunteering'. Here the base (899 of 4,920, about 18%) DOES match the both-types share (28+37-47 = 18%). So 2023/24 and 2024/25 Table 13/9 appear to cover different populations. That is an inference from the bases, and it is unconfirmed. Do not pool or compare them without asking DfC."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: Less than 8 hours",
+   "value": 55,
+   "unit": "% of volunteers",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_9: Time spent volunteering 2023/24 (contents: 'Time spent volunteering (in the last 4 weeks) 2023/24')",
+   "cell": "B5 (row 'Less than 8 hours', col 'All %')",
+   "note": "See the 'None' row note on base."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: 8 to 16 hours",
+   "value": 25,
+   "unit": "% of volunteers",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_9: Time spent volunteering 2023/24 (contents: 'Time spent volunteering (in the last 4 weeks) 2023/24')",
+   "cell": "B6 (row '8 to 16 hours', col 'All %')",
+   "note": "See the 'None' row note on base."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: 17 to 24 hours",
+   "value": 5,
+   "unit": "% of volunteers",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_9: Time spent volunteering 2023/24 (contents: 'Time spent volunteering (in the last 4 weeks) 2023/24')",
+   "cell": "B7 (row '17 to 24 hours', col 'All %')",
+   "note": "See the 'None' row note on base."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: 25 to 34 hours",
+   "value": 2,
+   "unit": "% of volunteers",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_9: Time spent volunteering 2023/24 (contents: 'Time spent volunteering (in the last 4 weeks) 2023/24')",
+   "cell": "B8 (row '25 to 34 hours', col 'All %')",
+   "note": "See the 'None' row note on base."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: 35 to 44 hours",
+   "value": 1,
+   "unit": "% of volunteers",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_9: Time spent volunteering 2023/24 (contents: 'Time spent volunteering (in the last 4 weeks) 2023/24')",
+   "cell": "B9 (row '35 to 44 hours', col 'All %')",
+   "note": "See the 'None' row note on base."
+  },
+  {
+   "measure": "Hours volunteered in last 4 weeks: 45 hours or more",
+   "value": 5,
+   "unit": "% of volunteers",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_9: Time spent volunteering 2023/24 (contents: 'Time spent volunteering (in the last 4 weeks) 2023/24')",
+   "cell": "B10 (row '45 hours or more', col 'All %')",
+   "note": "See the 'None' row note on base."
+  },
+  {
+   "measure": "Base for Table 9 time bands",
+   "value": 899,
+   "unit": "respondents (unweighted)",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_9",
+   "cell": "B11 (row 'Base')",
+   "note": "Footnote A12 is the same: 'Figures relate to those who carried out both formal and informal volunteering'. Here the base (899 of 4,920, about 18%) DOES match the both-types share (28+37-47 = 18%). So 2023/24 and 2024/25 Table 13/9 appear to cover different populations. That is an inference from the bases, and it is unconfirmed. Do not pool or compare them without asking DfC."
+  },
+  {
+   "measure": "Frequency of volunteering: Several times a week",
+   "value": 23,
+   "unit": "% of volunteers",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_12: Frequency of volunteering 2024/25",
+   "cell": "B4 (col 'All %')",
+   "note": "Base 2,123 (B8). Same routing and footnote as Table 13 (question VOL4). Covers all volunteering, not formal only."
+  },
+  {
+   "measure": "Frequency of volunteering: About once a week",
+   "value": 28,
+   "unit": "% of volunteers",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_12: Frequency of volunteering 2024/25",
+   "cell": "B5 (col 'All %')",
+   "note": "Base 2,123 (B8). Same routing and footnote as Table 13 (question VOL4). Covers all volunteering, not formal only."
+  },
+  {
+   "measure": "Frequency of volunteering: Less than once a week but at least once a month",
+   "value": 24,
+   "unit": "% of volunteers",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_12: Frequency of volunteering 2024/25",
+   "cell": "B6 (col 'All %')",
+   "note": "Base 2,123 (B8). Same routing and footnote as Table 13 (question VOL4). Covers all volunteering, not formal only."
+  },
+  {
+   "measure": "Frequency of volunteering: Less than once a month",
+   "value": 25,
+   "unit": "% of volunteers",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_12: Frequency of volunteering 2024/25",
+   "cell": "B7 (col 'All %')",
+   "note": "Base 2,123 (B8). Same routing and footnote as Table 13 (question VOL4). Covers all volunteering, not formal only."
+  },
+  {
+   "measure": "Frequency of volunteering: Several times a week",
+   "value": 31,
+   "unit": "% of volunteers",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_8: Frequency of volunteering 2023/24",
+   "cell": "B4 (col 'All %')",
+   "note": "Base 901 (B8). Same base caveat as 2023/24 Table 9."
+  },
+  {
+   "measure": "Frequency of volunteering: About once a week",
+   "value": 33,
+   "unit": "% of volunteers",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_8: Frequency of volunteering 2023/24",
+   "cell": "B5 (col 'All %')",
+   "note": "Base 901 (B8). Same base caveat as 2023/24 Table 9."
+  },
+  {
+   "measure": "Frequency of volunteering: Less than once a week but at least once a month",
+   "value": 22,
+   "unit": "% of volunteers",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_8: Frequency of volunteering 2023/24",
+   "cell": "B6 (col 'All %')",
+   "note": "Base 901 (B8). Same base caveat as 2023/24 Table 9."
+  },
+  {
+   "measure": "Frequency of volunteering: Less than once a month",
+   "value": 13,
+   "unit": "% of volunteers",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_8: Frequency of volunteering 2023/24",
+   "cell": "B7 (col 'All %')",
+   "note": "Base 901 (B8). Same base caveat as 2023/24 Table 9."
+  },
+  {
+   "measure": "Share of adults (16+) who volunteered formally in last 12 months",
+   "value": 27,
+   "unit": "% of adults 16+",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_4: Engagement in formal volunteering 2024/25",
+   "cell": "B4 (row 'All', col '%')",
+   "note": "95% CI 25.3 to 27.8 (C4:D4). Base 4,579 respondents (E4). The CHS sample is 4,584 respondents aged 16+ (Metadata B3)."
+  },
+  {
+   "measure": "Share of adults (16+) who volunteered formally in last 12 months",
+   "value": 28,
+   "unit": "% of adults 16+",
+   "year": "2023/24",
+   "url": "https://www.communities-ni.gov.uk/system/files/2024-11/experience-of-volunteering-by-adults-in-northern-ireland-202324.xlsx",
+   "table": "Table_3: Engagement in formal volunteering 2023/24",
+   "cell": "B4 (row 'All', col '%')",
+   "note": "95% CI 26.3 to 28.8. Base 4,921. The same 28% appears in the 2024/25 workbook Table_5 D4, with no significant difference flagged against 27%."
+  },
+  {
+   "measure": "Share of adults who volunteered (formal or informal)",
+   "value": 46,
+   "unit": "% of adults 16+",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_1: Engagement in volunteering 2024/25",
+   "cell": "B4 (row 'All')",
+   "note": "CI 44.4 to 47.3, base 4,579. 2023/24: 47% (2023/24 workbook Table_1 B4, base 4,920)."
+  },
+  {
+   "measure": "Share of adults who volunteered informally",
+   "value": 34,
+   "unit": "% of adults 16+",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Table_9: Engagement in informal volunteering 2024/25",
+   "cell": "B4 (row 'All')",
+   "note": "CI 33 to 35.7, base 4,578. 2023/24: 37% (2023/24 workbook Table_6 B4)."
+  },
+  {
+   "measure": "Survey sample (CHS respondents aged 16+)",
+   "value": 4584,
+   "unit": "respondents",
+   "year": "2024/25",
+   "url": "https://www.communities-ni.gov.uk/system/files/2026-03/experience-of-volunteering-by-adults-in-northern-ireland-202425.xlsx",
+   "table": "Metadata",
+   "cell": "B3",
+   "note": "From 8,940 sampled addresses. No adult population total is given anywhere in either workbook. The workbook was published 2 Oct 2025 and updated 26 Mar 2026 to add the wellbeing tables."
+  }
+ ],
+ "wage": [
+  {
+   "measure": "Median hourly pay excl. overtime: All employees",
+   "value": 15.1,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ASHE-2024-headline-results.xlsx",
+   "table": "Sheet 'Table 1.6a Hourly exc OT' (Table 1 (NI).6a Hourly pay - Excluding overtime)",
+   "cell": "D10 (row 'All', col 'Median')",
+   "note": "Employees on adult rates whose pay was not affected by absence (note 1). The NISRA landing page (https://www.nisra.gov.uk/publications/ashe-headline-statistics-northern-ireland, published 23 Oct 2025) labels the file 'ASHE 2024 (revised)'. Indicative jobs 1060k."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: Full-time",
+   "value": 16.75,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ASHE-2024-headline-results.xlsx",
+   "table": "Sheet 'Table 1.6a Hourly exc OT' (Table 1 (NI).6a Hourly pay - Excluding overtime)",
+   "cell": "D13 (row 'Full-time', col 'Median')",
+   "note": "Employees on adult rates whose pay was not affected by absence (note 1). The NISRA landing page (https://www.nisra.gov.uk/publications/ashe-headline-statistics-northern-ireland, published 23 Oct 2025) labels the file 'ASHE 2024 (revised)'. Indicative jobs 748k."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: Part-time",
+   "value": 12.5,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ASHE-2024-headline-results.xlsx",
+   "table": "Sheet 'Table 1.6a Hourly exc OT' (Table 1 (NI).6a Hourly pay - Excluding overtime)",
+   "cell": "D14 (row 'Part-time', col 'Median')",
+   "note": "Employees on adult rates whose pay was not affected by absence (note 1). The NISRA landing page (https://www.nisra.gov.uk/publications/ashe-headline-statistics-northern-ireland, published 23 Oct 2025) labels the file 'ASHE 2024 (revised)'. Indicative jobs 312k."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: All employees",
+   "value": 16.17,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ASHE-2025-headline-results.xlsx",
+   "table": "Sheet 'Table 1.6a Hourly exc OT' (Table 1 (NI).6a Hourly pay - Excluding overtime)",
+   "cell": "D10 (row 'All', col 'Median')",
+   "note": "Employees on adult rates whose pay was not affected by absence (note 1). The NISRA landing page (https://www.nisra.gov.uk/publications/ashe-headline-statistics-northern-ireland, published 23 Oct 2025) labels the file 'ASHE 2025 (provisional)'. Indicative jobs 1119k."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: Full-time",
+   "value": 17.76,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ASHE-2025-headline-results.xlsx",
+   "table": "Sheet 'Table 1.6a Hourly exc OT' (Table 1 (NI).6a Hourly pay - Excluding overtime)",
+   "cell": "D13 (row 'Full-time', col 'Median')",
+   "note": "Employees on adult rates whose pay was not affected by absence (note 1). The NISRA landing page (https://www.nisra.gov.uk/publications/ashe-headline-statistics-northern-ireland, published 23 Oct 2025) labels the file 'ASHE 2025 (provisional)'. Indicative jobs 787k."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: Part-time",
+   "value": 13.42,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ASHE-2025-headline-results.xlsx",
+   "table": "Sheet 'Table 1.6a Hourly exc OT' (Table 1 (NI).6a Hourly pay - Excluding overtime)",
+   "cell": "D14 (row 'Part-time', col 'Median')",
+   "note": "Employees on adult rates whose pay was not affected by absence (note 1). The NISRA landing page (https://www.nisra.gov.uk/publications/ashe-headline-statistics-northern-ireland, published 23 Oct 2025) labels the file 'ASHE 2025 (provisional)'. Indicative jobs 332k."
+  },
+  {
+   "measure": "Mean hourly pay excl. overtime: All employees",
+   "value": 18.91,
+   "unit": "GBP per hour, MEAN gross hourly pay excl. overtime, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ASHE-2024-headline-results.xlsx",
+   "table": "Sheet 'Table 1.6a Hourly exc OT'",
+   "cell": "F10 (row 'All', col 'Mean')",
+   "note": "Revised. Included for reference only. NISRA prefers the median."
+  },
+  {
+   "measure": "Mean hourly pay excl. overtime: All employees",
+   "value": 20.27,
+   "unit": "GBP per hour, MEAN gross hourly pay excl. overtime, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ASHE-2025-headline-results.xlsx",
+   "table": "Sheet 'Table 1.6a Hourly exc OT'",
+   "cell": "F10 (row 'All', col 'Mean')",
+   "note": "Provisional."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 6 Caring, leisure and other service occupations",
+   "value": 12.69,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2024.zip",
+   "table": "ODS in zip: 'NI Table 3 SOC2/Occupation SOC20 (2) Table 3 (NI).6   Hourly pay - Excluding overtime 2024.ods', sheet Table3_6a_All",
+   "cell": "D33 (col 'Median')",
+   "note": "Median CV 0.5% (sheet Table3_6b_All_CV, same cell). Jobs 119k. SOC2020. Revised (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 6 Caring, leisure and other service occupations",
+   "value": 13.75,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2025.zip",
+   "table": "ODS in zip: 'NI Table 3 SOC2/Occupation SOC20 (2) Table 3 (NI).6   Hourly pay - Excluding overtime 2025.ods', sheet Table3_6a_All",
+   "cell": "D33 (col 'Median')",
+   "note": "Median CV 1.7% (sheet Table3_6b_All_CV, same cell). Jobs 136k. SOC2020. Provisional (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 61 Caring personal service occupations",
+   "value": 12.63,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2024.zip",
+   "table": "ODS in zip: 'NI Table 3 SOC2/Occupation SOC20 (2) Table 3 (NI).6   Hourly pay - Excluding overtime 2024.ods', sheet Table3_6a_All",
+   "cell": "D34 (col 'Median')",
+   "note": "Median CV 0.6% (sheet Table3_6b_All_CV, same cell). Jobs 102k. SOC2020. Revised (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 61 Caring personal service occupations",
+   "value": 13.88,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2025.zip",
+   "table": "ODS in zip: 'NI Table 3 SOC2/Occupation SOC20 (2) Table 3 (NI).6   Hourly pay - Excluding overtime 2025.ods', sheet Table3_6a_All",
+   "cell": "D34 (col 'Median')",
+   "note": "Median CV 1.9% (sheet Table3_6b_All_CV, same cell). Jobs 119k. SOC2020. Provisional (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 62 Leisure, travel and related personal service occupations",
+   "value": 12.72,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2024.zip",
+   "table": "ODS in zip: 'NI Table 3 SOC2/Occupation SOC20 (2) Table 3 (NI).6   Hourly pay - Excluding overtime 2024.ods', sheet Table3_6a_All",
+   "cell": "D35 (col 'Median')",
+   "note": "Median CV 3.5% (sheet Table3_6b_All_CV, same cell). Jobs 16k. SOC2020. Revised (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 62 Leisure, travel and related personal service occupations",
+   "value": 13.46,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2025.zip",
+   "table": "ODS in zip: 'NI Table 3 SOC2/Occupation SOC20 (2) Table 3 (NI).6   Hourly pay - Excluding overtime 2025.ods', sheet Table3_6a_All",
+   "cell": "D35 (col 'Median')",
+   "note": "Median CV 3.4% (sheet Table3_6b_All_CV, same cell). Jobs 16k. SOC2020. Provisional (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 3221 Youth and community workers",
+   "value": 13.99,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2024.zip",
+   "table": "ODS in zip: 'NI Table 15 SOC4/Occupation SOC20 (4) Table 15 (NI).6   Hourly pay - Excluding overtime 2024.ods', sheet Table15_6a_All",
+   "cell": "D216 (col 'Median')",
+   "note": "Median CV 9.6% (sheet Table15_6b_All_CV, same cell). Jobs 7k (jobs CV 19.1). SOC2020. Revised (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 3221 Youth and community workers",
+   "value": 14.07,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2025.zip",
+   "table": "ODS in zip: 'NI Table 15 SOC4/Occupation SOC20 (4) Table 15 (NI).6   Hourly pay - Excluding overtime 2025.ods', sheet Table15_6a_All",
+   "cell": "D216 (col 'Median')",
+   "note": "Median CV 11.8% (sheet Table15_6b_All_CV, same cell). Jobs [u]. SOC2020. Provisional (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 2464 Youth work professionals",
+   "value": 18.9,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2024.zip",
+   "table": "ODS in zip: 'NI Table 15 SOC4/Occupation SOC20 (4) Table 15 (NI).6   Hourly pay - Excluding overtime 2024.ods', sheet Table15_6a_All",
+   "cell": "D178 (col 'Median')",
+   "note": "The CV sheet Table15_6b_All_CV shows [x] for this median, so its precision is not published. Treat it with caution.. Jobs [u]. SOC2020. Revised (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 2464 Youth work professionals",
+   "value": 20.13,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2025.zip",
+   "table": "ODS in zip: 'NI Table 15 SOC4/Occupation SOC20 (4) Table 15 (NI).6   Hourly pay - Excluding overtime 2025.ods', sheet Table15_6a_All",
+   "cell": "D178 (col 'Median')",
+   "note": "The CV sheet Table15_6b_All_CV shows [x] for this median, so its precision is not published. Treat it with caution.. Jobs [u]. SOC2020. Provisional (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 6135 Care workers and home carers",
+   "value": 12.11,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2024.zip",
+   "table": "ODS in zip: 'NI Table 15 SOC4/Occupation SOC20 (4) Table 15 (NI).6   Hourly pay - Excluding overtime 2024.ods', sheet Table15_6a_All",
+   "cell": "D413 (col 'Median')",
+   "note": "Median CV 1.4% (sheet Table15_6b_All_CV, same cell). Jobs 33k. SOC2020. Revised (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 6135 Care workers and home carers",
+   "value": 12.87,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2025.zip",
+   "table": "ODS in zip: 'NI Table 15 SOC4/Occupation SOC20 (4) Table 15 (NI).6   Hourly pay - Excluding overtime 2025.ods', sheet Table15_6a_All",
+   "cell": "D413 (col 'Median')",
+   "note": "Median CV 1.3% (sheet Table15_6b_All_CV, same cell). Jobs 39k. SOC2020. Provisional (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 6112 Teaching assistants",
+   "value": 12.73,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2024.zip",
+   "table": "ODS in zip: 'NI Table 15 SOC4/Occupation SOC20 (4) Table 15 (NI).6   Hourly pay - Excluding overtime 2024.ods', sheet Table15_6a_All",
+   "cell": "D400 (col 'Median')",
+   "note": "Median CV 2.3% (sheet Table15_6b_All_CV, same cell). Jobs 11k. SOC2020. Revised (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 6112 Teaching assistants",
+   "value": 14.76,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2025.zip",
+   "table": "ODS in zip: 'NI Table 15 SOC4/Occupation SOC20 (4) Table 15 (NI).6   Hourly pay - Excluding overtime 2025.ods', sheet Table15_6a_All",
+   "cell": "D400 (col 'Median')",
+   "note": "The CV sheet Table15_6b_All_CV shows [x] for this median, so its precision is not published. Treat it with caution.. Jobs 31k. SOC2020. Provisional (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 3432 Sports coaches, instructors and officials",
+   "value": 14.68,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2024",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2024.zip",
+   "table": "ODS in zip: 'NI Table 15 SOC4/Occupation SOC20 (4) Table 15 (NI).6   Hourly pay - Excluding overtime 2024.ods', sheet Table15_6a_All",
+   "cell": "D248 (col 'Median')",
+   "note": "Median CV 17.7% (sheet Table15_6b_All_CV, same cell). Jobs [u]. SOC2020. Revised (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  },
+  {
+   "measure": "Median hourly pay excl. overtime: SOC 3432 Sports coaches, instructors and officials",
+   "value": 15.84,
+   "unit": "GBP per hour, median gross hourly pay excluding overtime, employee jobs, NI",
+   "year": "April 2025",
+   "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2025.zip",
+   "table": "ODS in zip: 'NI Table 15 SOC4/Occupation SOC20 (4) Table 15 (NI).6   Hourly pay - Excluding overtime 2025.ods', sheet Table15_6a_All",
+   "cell": "D248 (col 'Median')",
+   "note": "The CV sheet Table15_6b_All_CV shows [x] for this median, so its precision is not published. Treat it with caution.. Jobs [u]. SOC2020. Provisional (the zips are on https://www.nisra.gov.uk/publications/ashe-tables-ods). All employees, FT and PT combined. FT/PT splits exist on other sheets of the same file."
+  }
+ ],
+ "sector": [
+  {
+   "measure": "Volunteers affiliated to VCSE organisations in NI (total)",
+   "value": 241264,
+   "unit": "volunteers (headcount, not FTE)",
+   "year": "2015 State of the Sector survey; published Sept 2016",
+   "url": "https://scopeni.nicva.org/stateofthesector.html",
+   "table": "ScopeNI State of the Sector landing page tile 'Volunteers 241,264'",
+   "cell": "n/a (web page)",
+   "note": "Still the headline tile on the current ScopeNI page. The current Volunteers chapter (https://www.nicva.org/policy-research/state-of-the-sector/volunteers) was rewritten around Covid and CHS 2019/20 and no longer shows or derives the figure. Source of the figure: article https://www.nicva.org/article/state-of-the-sector-explores-volunteering-in-the-vcse-sector (23 Sep 2016, page last updated 2 Aug 2024). It 'includes those volunteers involved in the governance' and those in general operations, and draws on the 2015 State of the Sector survey. It is about 10 years old. NICVA has not updated it."
+  },
+  {
+   "measure": "Non-governance (operational) volunteers in the sector",
+   "value": 187477,
+   "unit": "volunteers",
+   "year": "2015 survey",
+   "url": "http://web.archive.org/web/20170227083839/http://www.nicva.org/stateofthesector/volunteers",
+   "table": "Archived State of the Sector Volunteers chapter, section 1.0",
+   "cell": "n/a",
+   "note": "187,477 + 53,787 = 241,264. The mean was 42 volunteers per organisation among the 75.7% (n=624) of respondents that involve volunteers."
+  },
+  {
+   "measure": "Governance volunteers (committee/board) in the sector",
+   "value": 53787,
+   "unit": "volunteers",
+   "year": "2015 survey",
+   "url": "http://web.archive.org/web/20170227083839/http://www.nicva.org/stateofthesector/volunteers",
+   "table": "Archived Volunteers chapter, section 2.1",
+   "cell": "n/a",
+   "note": "'Based on the State of the Sector Survey and using NICVA's administrative database'. Mean of 9 governance volunteers per organisation."
+  },
+  {
+   "measure": "Method for the total volunteer estimate",
+   "value": null,
+   "unit": "text",
+   "year": "2015 survey",
+   "url": "http://web.archive.org/web/20171128032058/http://www.nicva.org/stateofthesector/methodology",
+   "table": "Archived State of the Sector Methodology, 'Volunteers' section",
+   "cell": "n/a",
+   "note": "Mean volunteers per organisation by income band (SOS survey), multiplied by the estimated number of organisations in each band that involve volunteers. The band spread comes from NICVA database income data for 2,847 organisations, applied to a total of 6,127 organisations. The proportion involving volunteers in each band comes from the SOS survey. It is a headcount: no hours and no FTE."
+  },
+  {
+   "measure": "Hours figure published by NICVA",
+   "value": null,
+   "unit": "n/a",
+   "year": "2015 / 2019-20",
+   "url": "https://www.nicva.org/policy-research/state-of-the-sector/volunteers",
+   "table": "Volunteers chapter",
+   "cell": "n/a",
+   "note": "NICVA publishes no hours of its own. It only re-quotes CHS bands for all NI volunteers, not sector volunteers. Current page (CHS 2019/20): 40% <8 hours and 23% 8-16 hours in the previous 4 weeks. The 2016 version: 24% none, 38% <8h, 22% 8-16h, 8.1% 17-24h, 7% 25h+."
+  }
+ ],
+ "notFound": [
+  "Formal-only time distribution: neither the 2024/25 nor the 2023/24 DfC workbook splits hours by formal vs informal. The single hours question (VOL5) covers 'any type of voluntary work'.",
+  "Hours per week or per month: hours are published only as last-4-weeks bands. No weekly or monthly figure is given.",
+  "Mean or median hours volunteered: not published in either workbook or on the 2024/25 datavis page.",
+  "Adult (16+) population base: not given in the DfC workbooks. They give percentages and unweighted respondent bases only. A grossing-up would need the NISRA mid-year population estimate (16+), which was not retrieved here.",
+  "ASHE NI 'Youth and community workers' (SOC 3221): it exists, but the 2025 jobs count is [u] and the median CV is 11.8% ('acceptable'). 2024 CV 9.6%. No NI SOC4 row exists for generic 'volunteer coordinators' or charity workers. 'Charitable organisation managers and directors' (1135) is [u] in both years.",
+  "ASHE NI SOC2020 groups by name: SOC2 Table 3 and SOC4 Table 15 exist for NI. They are in the ODS zips only, not in the headline xlsx (which has only All/Male/Female/FT/PT).",
+  "NICVA volunteer estimate for any year after 2015: none found. The ScopeNI tile still shows 241,264."
+ ]
+}
