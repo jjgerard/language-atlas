@@ -91,7 +91,7 @@ const out = {
     income: o.register ? o.register.income : null,
     fyEnd: o.register ? o.register.fyEnd : null,
     place: o.regNo ? place(o.regNo) : null,
-    possiblyStatutory: o.possiblyStatutory || null, partOf: o.partOf || null,
+    possiblyStatutory: o.possiblyStatutory || null, partOf: o.partOf || null, incomeIsParent: o.incomeIsParent || null,
     profile: p ? {
       status: p.status, paraphrased: !!p.quotesParaphrased,
       focus: p.focus ? { value: p.focus.value, quote: p.focus.quote, url: p.focus.url } : null,

@@ -66,6 +66,12 @@ const REG_BY_ID = {
   v300: ['103542', 'batch 5'], v310: ['100216', 'batch 6: FUEL'], v303: ['101482', 'batch 2: Verbal Arts Centre'],
   v235: ['102681', 'batch 6: Glór Uachtar Tíre'], v254: ['101637', 'batch 3: Horn of Africa People\'s Aid NI'],
   v284: ['100114', 'batch 5: Sólás'], v262: ['100896', 'batch 6: Laurencetown, Lenaderg & Tullylish CA'],
+  // Matched in the profile notes and profiled from that charity's own accounts.
+  v231: ['103356', 'profile: Belfast Interface Project'], v239: ['106988', 'profile: Creating Help In Local Districts'],
+  v255: ['102107', 'profile: Harpurs Hill Children and Family Centre, Sure Start lead body'],
+  v263: ['104799', 'profile: Lower Ormeau Residents Action Group'], v274: ['109719', 'profile: Ogras Youth Group'],
+  v314: ['105780', 'profile: Derry Healthy Cities now operates as Developing Healthy Communities; 101856 removed'],
+  v316: ['103106', 'profile: Creggan Healthy Living Centre is run by The Old Library Trust'],
 };
 for (const [id, [no, how]] of Object.entries(REG_BY_ID)) {
   const o = byId.get(id), r = byNo.get(no);
@@ -87,8 +93,10 @@ flag('v222', 'duplicateOf', 'v024');   // ASCERT
 flag('v253', 'duplicateOf', 'v083');   // Glór na Móna
 flag('v313', 'duplicateOf', 'v055');   // SPACE NI renamed Bolster Community
 flag('v309', 'duplicateOf', 'v081');   // both profiled under NIC109540 Long Tower Youth Club Ltd
-for (const id of ['v226', 'v232', 'v233', 'v252']) flag(id, 'possiblyStatutory', 'listed as an Education Authority youth centre (EA page or ETI report); unconfirmed, keep off counts until checked');
+for (const id of ['v226', 'v232', 'v233', 'v252', 'v282']) flag(id, 'possiblyStatutory', 'listed as an Education Authority youth centre (EA page or ETI report); unconfirmed, keep off counts until checked');
 for (const o of findByName(/^Limavady Youth Resource/i)) o.possiblyStatutory = 'listed on EA youth-centre pages (403, unconfirmed)';
+// The register income for these is the parent body's, not the project's.
+flag('v316', 'incomeIsParent', 'The Old Library Trust'); flag('v278', 'incomeIsParent', 'The Resurgam Community Development Trust');
 flag('v319', 'partOf', 'Barnardo\'s NI (PosAbility is a Barnardo\'s service)');
 
 // Profiles: mark those whose notes say a quote came through a summariser, not page text.

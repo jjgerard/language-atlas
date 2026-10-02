@@ -300,7 +300,12 @@ const REL = { grant: 'grant', commissioned: 'contract', 'own funds': 'own funds'
 const say = (o, q) => !q ? '' : o.profile.paraphrased ? ` — ${esc(q)}` : ` — <q>${esc(q)}</q>`;
 function incomeInfo(o) {
   const f = o.profile && o.profile.funding, ni = f && f.government.length;
-  if (o.income) return { html: '£' + (+o.income).toLocaleString('en-GB'), sub: 'year to ' + (o.fyEnd || '?') + ', NI register', sort: +o.income };
+  if (o.income) return { html: '£' + (+o.income).toLocaleString('en-GB'), sub: (o.incomeIsParent ? 'parent body ' + o.incomeIsParent + ', ' : '') + 'year to ' + (o.fyEnd || '?') + ', NI register', sort: +o.income };
+  // No total: the largest published public grant, shown as a floor, never as a budget.
+  const amt = v => { const m = String(v || '').match(/£\s?([\d,]+(?:\.\d+)?)/); return m ? parseFloat(m[1].replace(/,/g, '')) : null; };
+  const grants = o.basis.filter(b => b.type === 'gov funding' && amt(b.amount) != null).sort((a, b) => amt(b.amount) - amt(a.amount));
+  if (!o.gbCharityNo && !(f && f.total && f.total !== '—') && grants.length) { const g = grants[0];
+    return { html: '≥ £' + Math.round(amt(g.amount)).toLocaleString('en-GB'), sub: 'public grant only' + (g.year ? ', ' + g.year : '') + (grants.length > 1 ? ', largest of ' + grants.length : '') + ' — a floor, not a budget', sort: amt(g.amount) }; }
   if (o.gbCharityNo) return { html: '<span class="miss">no NI total published</span>', sub: (f && f.total ? 'UK-wide ' + String(f.total).replace(/\s*\(.*$/, '') : 'UK-wide charity') + (ni ? ' · ' + f.government.length + ' NI public funders listed' : ''), sort: -1 };
   if (f && f.total && f.total !== '—') return { html: esc(String(f.total).replace(/\s*\(.*$/, '')), sub: (f.year ? f.year + ', ' : '') + 'own accounts', sort: parseFloat(String(f.total).replace(/[^0-9.]/g, '')) || 0 };
   if (/\bCIC\b|limited\b|ltd\b/i.test(o.name)) return { html: '<span class="miss">none public</span>', sub: 'company, not a registered charity', sort: -2 };
