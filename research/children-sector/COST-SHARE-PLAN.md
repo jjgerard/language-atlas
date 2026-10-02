@@ -273,6 +273,65 @@ expected: VSS, CRC and Supporting People fund adult services too.
 - **Never add a payer total to recipient lines it already contains.** The EA youth
   grants are inside both.
 
+## Phases 3–6 results (2026-10-02)
+
+### Phase 3: children's share of mixed organisations (`ni-children-share.json`)
+- **Only 4 of 131 publish a children's split:** Ashton, Arc Healthy Living Centre,
+  NIACRO and Springboard. 50 publish some children's lines; 77 publish none.
+- **For the 121 with readable totals, children's spending ranges from £6.0m to
+  £447m.** The floor is lines the accounts label as children's; the ceiling is the
+  whole NI spend.
+- **That range cannot be narrowed from published accounts.** Restricted funds are
+  usually listed by funder, not project. The largest organisations split only by
+  division (Inspire, Praxis, Cedar).
+- **Totals from UK-wide or all-island bodies are not used as NI ceilings**
+  (Mencap, Sense, Methodist Church in Ireland).
+
+### Pre-school (`ni-preschool-sample.json`)
+- **The register's "Playgroup/after schools" tick is unreliable.** In a seeded
+  sample of 30 charities ticking it, 10 run one. None of those under £10k do; all
+  of those in the £50–100k band do.
+- **No accounts line names the Pre-School Education Programme.** The money appears
+  as "Education Authority", or still "WELB", a board abolished in 2015.
+- **So pre-school is measured from the payer's total.** The sample is not scaled up.
+
+### Phase 4: who pays, 2024-25 (`ni-cost-share.json`, on the page)
+
+Four layers, never added together. A includes payments to the voluntary sector that
+health does not publish separately.
+
+- **A. Government delivering services itself:**
+  - trust children's directorates £96–132m each
+  - YJA £15.7m
+  - Children's Court Guardian Agency £5.2m
+  - NICCY £1.9m
+- **B. Government money through the voluntary sector.** Its three parts do not
+  overlap:
+  - **B1 children-only programmes, payer's own total:** EA youth grants £15.7m,
+    pre-school £18.8m, Sure Start £33.7m, Pathway £4.4m, T:BUC £1.5m.
+  - **B2 other government money to children-focused organisations:** £25.4m from
+    payers other than those in B1.
+  - **B3 government money that mixed organisations' accounts tie to children's
+    work:** a £7.9m floor, of which £6.9m is youth programmes running past 18.
+- **C. The VCSE's own money.** For 78 children-focused organisations with a funder
+  breakdown, income is £54.2m:
+  - government £25.5m
+  - other public £3.1m
+  - unattributed £5.5m
+  - **not public £20.1m (37%)**
+- **D. Volunteer time:** a modelled floor of £9.5m. This is 13,751 volunteers in 88
+  children-focused organisations, at ≥3.79 hours per four weeks, at £13.99 an hour.
+
+### Phase 5: activity (`ni-activity-statutory.json`, `ni-activity-vcse.json`)
+- **Statutory side: 242 figures**, per trust where published.
+- **VCSE side: only about 15 of the 44 largest children's organisations publish a
+  single reach count.** Unit costs are possible only for those, plus the statutory
+  services. Not yet computed.
+
+### Phase 6: volunteer inputs (`ni-volunteer-params.json`)
+- Hours are published only in bands, and only for all volunteers, formal and
+  informal together. So the value is a floor, with no upper bound.
+
 ## Hard limits
 
 - **UK-wide charities** (Barnardo's, NSPCC, Action for Children) publish no NI
