@@ -1,0 +1,706 @@
+{
+ "built": "2026-10-02",
+ "kinds": {
+  "ni-gov": "NI department or arm's-length body",
+  "council": "NI council",
+  "uk-gov": "UK government",
+  "other-gov": "other government (GB local authorities, Isle of Man)",
+  "irish-gov": "Irish government",
+  "intergovernmental": "PEACEPLUS, IFI, EU",
+  "north-south": "North/South body",
+  "lottery-dormant": "lottery or dormant-accounts distributor",
+  "multiple": "several funders on one line, not split",
+  "not-named": "funder not named in the accounts"
+ },
+ "governmentKinds": [
+  "ni-gov",
+  "council",
+  "uk-gov"
+ ],
+ "entities": [
+  {
+   "id": "doh",
+   "name": "Department of Health (incl. SPPG, formerly HSCB)",
+   "kind": "ni-gov",
+   "variants": [
+    "Department of Education (through SPPG)",
+    "Strategic Planning and Performance Group (DoH)",
+    "HSCB",
+    "Department of Health",
+    "Strategic Planning and Performance Group (SPPG, Department of Health)",
+    "Department of Health SPPG",
+    "Department of Health NI",
+    "Health & Social Care Board (now SPPG)",
+    "Department of Health (SPPG)",
+    "Department of Health / The Community Foundation",
+    "Health and Social Care Board",
+    "Department of Health via Community Foundation NI",
+    "Health & Social Care Board",
+    "SPPG (Department of Health)",
+    "Department of Health, Northern Ireland",
+    "HSCB / Department of Health",
+    "unclear (DoH-funded scheme)",
+    "Department of Education (through HSCB)"
+   ]
+  },
+  {
+   "id": "de",
+   "name": "Department of Education",
+   "kind": "ni-gov",
+   "variants": [
+    "Department of Education via Forward South Partnership",
+    "Department of Education",
+    "Department of Education via HSCB (Cherish Sure Start)",
+    "Department of Education (GSAP)",
+    "SureStart (Coleraine SureStart Partnership)",
+    "Coleraine Surestart Partnership (Sure Start programme)",
+    "Department of Education NI",
+    "SPPG / HSCB (Sure Start core funding)",
+    "Health and Social Care Board (Sure Start)",
+    "Sure Start (funder body not named on the line)",
+    "Department of Education (Pathway Fund via Early Years)",
+    "Department of Education (DENI)",
+    "Pathway Fund (DE, administered by Early Years)",
+    "Pathway Fund (DE)",
+    "Department of Education and Education Authority (capital grant release)",
+    "Department of Education Northern Ireland",
+    "Department of Education (via BHSCT)",
+    "Pathway Fund (Department of Education)",
+    "Pathway Fund"
+   ]
+  },
+  {
+   "id": "dfc",
+   "name": "Department for Communities",
+   "kind": "ni-gov",
+   "variants": [
+    "Department for Communities (Neighbourhood Renewal) - body not named in note",
+    "Belfast Regeneration Directorate (DfC)",
+    "Department for Communities",
+    "Department for Communities (JobStart)",
+    "Department for Communities (Neighbourhood Renewal)",
+    "Advice NI / Department for Communities"
+   ]
+  },
+  {
+   "id": "teo",
+   "name": "The Executive Office",
+   "kind": "ni-gov",
+   "variants": [
+    "The Executive Office",
+    "The Executive Office T:BUC (via EA)",
+    "The Executive Office (Urban Villages)",
+    "Education Authority (T:BUC)",
+    "The Executive Office (EA administers)",
+    "TEO",
+    "The Executive Office (via Community Restorative Justice Ireland)",
+    "Urban Villages (TEO)",
+    "The Executive Office (T:BUC)"
+   ]
+  },
+  {
+   "id": "doj",
+   "name": "Department of Justice",
+   "kind": "ni-gov",
+   "variants": [
+    "Department of Justice",
+    "Department of Justice NI",
+    "Department of Justice Northern Ireland",
+    "NIACRO (Community Foundation NI and Dept of Justice)"
+   ]
+  },
+  {
+   "id": "dfe",
+   "name": "Department for the Economy",
+   "kind": "ni-gov",
+   "variants": [
+    "Department for the Economy",
+    "Department for the Economy (ApprenticeshipsNI)",
+    "Department for Employment and Learning (now Department for the Economy)"
+   ]
+  },
+  {
+   "id": "daera",
+   "name": "Department of Agriculture, Environment and Rural Affairs",
+   "kind": "ni-gov",
+   "variants": [
+    "Department of Agriculture, Environment and Rural Affairs",
+    "DAERA"
+   ]
+  },
+  {
+   "id": "dfi",
+   "name": "Department for Infrastructure",
+   "kind": "ni-gov",
+   "variants": [
+    "Department for Infrastructure"
+   ]
+  },
+  {
+   "id": "ea",
+   "name": "Education Authority",
+   "kind": "ni-gov",
+   "variants": [
+    "Schools / Education Authority (VEP)",
+    "Education Authority",
+    "Education Authority (named in trustees' report, not in the note)",
+    "Education Authority (DE Fair Start)",
+    "SELB (Education Authority Southern Region)",
+    "Education Authority (former Western Education & Library Board)",
+    "Education Authority (Bright Start)",
+    "Education Authority (Extended Schools)",
+    "Education Authority (former SELB)"
+   ]
+  },
+  {
+   "id": "pha",
+   "name": "Public Health Agency",
+   "kind": "ni-gov",
+   "variants": [
+    "Public Health Agency",
+    "Public Health Agency (via De Paul)",
+    "Public Health Agency (via Clear)",
+    "Public Health Agency (Clear Project)"
+   ]
+  },
+  {
+   "id": "trust-belfast",
+   "name": "Belfast HSC Trust",
+   "kind": "ni-gov",
+   "variants": [
+    "Belfast Health & Social Care Trust",
+    "Belfast HSC Trust",
+    "Belfast Health and Social Care Trust"
+   ]
+  },
+  {
+   "id": "trust-northern",
+   "name": "Northern HSC Trust",
+   "kind": "ni-gov",
+   "variants": [
+    "Northern Health & Social Care Trust",
+    "Northern HSC Trust",
+    "Northern Health and Social Care Trust"
+   ]
+  },
+  {
+   "id": "trust-southeastern",
+   "name": "South Eastern HSC Trust",
+   "kind": "ni-gov",
+   "variants": [
+    "South Eastern Health & Social Care Trust",
+    "South Eastern HSC Trust",
+    "South Eastern Health and Social Care Trust"
+   ]
+  },
+  {
+   "id": "trust-southern",
+   "name": "Southern HSC Trust",
+   "kind": "ni-gov",
+   "variants": [
+    "Southern Health & Social Care Trust",
+    "Southern HSC Trust",
+    "Southern Health and Social Care Trust"
+   ]
+  },
+  {
+   "id": "trust-western",
+   "name": "Western HSC Trust",
+   "kind": "ni-gov",
+   "variants": [
+    "Western Health & Social Care Trust",
+    "Western HSC Trust",
+    "Western Health and Social Care Trust",
+    "Western HSC Trust (CAMHS)"
+   ]
+  },
+  {
+   "id": "nihe",
+   "name": "NI Housing Executive (incl. Supporting People)",
+   "kind": "ni-gov",
+   "variants": [
+    "NIHE Supporting People",
+    "Floating Support (funder not named in row)",
+    "Northern Ireland Housing Executive",
+    "Supporting People (NIHE)",
+    "NI Housing Executive",
+    "NIHE (Sustaining Tenancies)",
+    "NIHE",
+    "Supporting People (funder not named in the note)",
+    "Northern Ireland Housing Executive (Supporting People)",
+    "NIHE - Supporting People",
+    "Northern Ireland Housing Executive (as printed)"
+   ]
+  },
+  {
+   "id": "crc",
+   "name": "Community Relations Council",
+   "kind": "ni-gov",
+   "variants": [
+    "Community Relations Council (TEO-funded)",
+    "Community Relations Council",
+    "NI Community Relations Council"
+   ]
+  },
+  {
+   "id": "vss",
+   "name": "Victims and Survivors Service",
+   "kind": "ni-gov",
+   "variants": [
+    "Victims and Survivors Service (TEO)",
+    "VSS on behalf of The Executive Office",
+    "Victims and Survivors Service",
+    "Victims and Survivors Service NI",
+    "Victims & Survivors Service"
+   ]
+  },
+  {
+   "id": "yja",
+   "name": "Youth Justice Agency",
+   "kind": "ni-gov",
+   "variants": [
+    "Youth Justice (body not named further)",
+    "Youth Justice Agency",
+    "Youth Justice"
+   ]
+  },
+  {
+   "id": "pbni",
+   "name": "Probation Board for NI",
+   "kind": "ni-gov",
+   "variants": [
+    "Probation Board for Northern Ireland"
+   ]
+  },
+  {
+   "id": "nips",
+   "name": "NI Prison Service",
+   "kind": "ni-gov",
+   "variants": [
+    "Northern Ireland Prison Service"
+   ]
+  },
+  {
+   "id": "nipb",
+   "name": "NI Policing Board",
+   "kind": "ni-gov",
+   "variants": [
+    "Northern Ireland Policing Board"
+   ]
+  },
+  {
+   "id": "pcsp",
+   "name": "Policing and Community Safety Partnerships",
+   "kind": "ni-gov",
+   "variants": [
+    "Policing and Community Safety Partnership",
+    "PCSP Ards and North Down",
+    "Lisburn & Castlereagh City Council PCSP",
+    "Mid & East Antrim Borough Council PCSP",
+    "Policing & Community Safety Partnership"
+   ]
+  },
+  {
+   "id": "sbni",
+   "name": "Safeguarding Board for NI",
+   "kind": "ni-gov",
+   "variants": [
+    "Safeguarding Board for Northern Ireland"
+   ]
+  },
+  {
+   "id": "ccga",
+   "name": "Children's Court Guardian Agency",
+   "kind": "ni-gov",
+   "variants": [
+    "Children's Court Guardian Agency"
+   ]
+  },
+  {
+   "id": "bso",
+   "name": "Business Services Organisation",
+   "kind": "ni-gov",
+   "variants": [
+    "Business Services Organisation",
+    "HSS (milk refund)"
+   ]
+  },
+  {
+   "id": "acni",
+   "name": "Arts Council of Northern Ireland",
+   "kind": "ni-gov",
+   "variants": [
+    "Arts Council of Northern Ireland",
+    "Arts Council"
+   ]
+  },
+  {
+   "id": "niscreen",
+   "name": "Northern Ireland Screen",
+   "kind": "ni-gov",
+   "variants": [
+    "Northern Ireland Screen"
+   ]
+  },
+  {
+   "id": "citbni",
+   "name": "Construction Industry Training Board NI",
+   "kind": "ni-gov",
+   "variants": [
+    "Construction Industry Training Board NI"
+   ]
+  },
+  {
+   "id": "fe-colleges",
+   "name": "FE colleges",
+   "kind": "ni-gov",
+   "variants": [
+    "Belfast Metropolitan College"
+   ]
+  },
+  {
+   "id": "translink",
+   "name": "Translink (public corporation)",
+   "kind": "ni-gov",
+   "variants": [
+    "Translink (public corporation)"
+   ]
+  },
+  {
+   "id": "housing-benefit",
+   "name": "Housing Benefit",
+   "kind": "ni-gov",
+   "variants": [
+    "Housing Benefit"
+   ]
+  },
+  {
+   "id": "victims-payment",
+   "name": "Victims' Payments Board",
+   "kind": "ni-gov",
+   "variants": [
+    "Troubles Permanent Disablement Payment Scheme (Victims' Payments Board)"
+   ]
+  },
+  {
+   "id": "council-an",
+   "name": "Antrim and Newtownabbey Borough Council",
+   "kind": "council",
+   "variants": [
+    "Antrim & Newtownabbey Borough Council",
+    "Antrim and Newtownabbey Borough Council"
+   ]
+  },
+  {
+   "id": "council-and",
+   "name": "Ards and North Down Borough Council",
+   "kind": "council",
+   "variants": [
+    "Ards & North Down Borough Council"
+   ]
+  },
+  {
+   "id": "council-abc",
+   "name": "Armagh City, Banbridge and Craigavon Borough Council",
+   "kind": "council",
+   "variants": [
+    "Armagh City, Banbridge and Craigavon Borough Council",
+    "Armagh City & Banbridge Council",
+    "Armagh City, Banbridge & Craigavon Borough Council",
+    "Armagh City, Banbridge and Craigavon Council",
+    "Armagh, Banbridge & Craigavon Borough Council"
+   ]
+  },
+  {
+   "id": "council-belfast",
+   "name": "Belfast City Council",
+   "kind": "council",
+   "variants": [
+    "Belfast City Council"
+   ]
+  },
+  {
+   "id": "council-ccg",
+   "name": "Causeway Coast and Glens Borough Council",
+   "kind": "council",
+   "variants": [
+    "Causeway Coast & Glens Borough Council",
+    "Causeway Coast and Glens Borough Council"
+   ]
+  },
+  {
+   "id": "council-dcs",
+   "name": "Derry City and Strabane District Council",
+   "kind": "council",
+   "variants": [
+    "Derry City and Strabane District Council",
+    "Derry City & Strabane District Council",
+    "Derry City & Strabane D.C."
+   ]
+  },
+  {
+   "id": "council-fo",
+   "name": "Fermanagh and Omagh District Council",
+   "kind": "council",
+   "variants": [
+    "Fermanagh and Omagh District Council"
+   ]
+  },
+  {
+   "id": "council-lc",
+   "name": "Lisburn and Castlereagh City Council",
+   "kind": "council",
+   "variants": [
+    "Lisburn & Castlereagh City Council"
+   ]
+  },
+  {
+   "id": "council-mea",
+   "name": "Mid and East Antrim Borough Council",
+   "kind": "council",
+   "variants": [
+    "Mid and East Antrim Borough Council",
+    "Mid & East Antrim Borough Council"
+   ]
+  },
+  {
+   "id": "council-mu",
+   "name": "Mid Ulster District Council",
+   "kind": "council",
+   "variants": [
+    "Mid Ulster District Council"
+   ]
+  },
+  {
+   "id": "council-nmd",
+   "name": "Newry, Mourne and Down District Council",
+   "kind": "council",
+   "variants": [
+    "Newry, Mourne and Down District Council",
+    "Newry, Mourne & Down District Council"
+   ]
+  },
+  {
+   "id": "ukspf",
+   "name": "UK Shared Prosperity Fund (UK Government)",
+   "kind": "uk-gov",
+   "variants": [
+    "UK Government (UKSPF)",
+    "UK Government (UK Shared Prosperity Fund)",
+    "UK Government Shared Prosperity Fund (SkillSET consortium)",
+    "UK Shared Prosperity Fund",
+    "DLUHC (UK Shared Prosperity Fund, via Youth Action NI consortium)",
+    "UKSPF",
+    "UK Shared Prosperity Fund (via Include Youth)"
+   ]
+  },
+  {
+   "id": "homeoffice",
+   "name": "Home Office",
+   "kind": "uk-gov",
+   "variants": [
+    "Home Office"
+   ]
+  },
+  {
+   "id": "dhsc",
+   "name": "Department of Health and Social Care (England)",
+   "kind": "uk-gov",
+   "variants": [
+    "Department of Health and Social Care"
+   ]
+  },
+  {
+   "id": "electoral",
+   "name": "Electoral Commission",
+   "kind": "uk-gov",
+   "variants": [
+    "Electoral Commission"
+   ]
+  },
+  {
+   "id": "english-las",
+   "name": "English local authorities",
+   "kind": "other-gov",
+   "variants": [
+    "English local authorities (Leicester, Worcester, Manchester, Coventry, Birmingham & Solihull)",
+    "Sunderland Council"
+   ]
+  },
+  {
+   "id": "iom",
+   "name": "Isle of Man Government",
+   "kind": "other-gov",
+   "variants": [
+    "Isle of Man Government DHSS"
+   ]
+  },
+  {
+   "id": "ie-dfa",
+   "name": "Department of Foreign Affairs (Ireland)",
+   "kind": "irish-gov",
+   "variants": [
+    "Department of Foreign Affairs (Ireland)",
+    "Irish Government DFA",
+    "Department of Foreign Affairs and Trade (Ireland)",
+    "Department of Foreign Affairs & Trade (Ireland)"
+   ]
+  },
+  {
+   "id": "ie-gov",
+   "name": "Irish Government (other)",
+   "kind": "irish-gov",
+   "variants": [
+    "Irish Government (Shared Island)"
+   ]
+  },
+  {
+   "id": "ie-hse",
+   "name": "Health Service Executive (Ireland)",
+   "kind": "irish-gov",
+   "variants": [
+    "HSE (Ireland) CHO areas 1,2,4,5,8,9",
+    "Health Service Executive (Ireland)",
+    "HSE (Ireland)"
+   ]
+  },
+  {
+   "id": "ie-tusla",
+   "name": "Tusla (Ireland)",
+   "kind": "irish-gov",
+   "variants": [
+    "TUSLA",
+    "Tusla"
+   ]
+  },
+  {
+   "id": "ie-arts",
+   "name": "Arts Council (Ireland)",
+   "kind": "irish-gov",
+   "variants": [
+    "Arts Council Ireland"
+   ]
+  },
+  {
+   "id": "ie-tcagsm",
+   "name": "Dept of Tourism, Culture, Arts, Gaeltacht, Sport and Media (Ireland)",
+   "kind": "irish-gov",
+   "variants": [
+    "Dept of Tourism, Culture, Arts, Gaeltacht, Sport and Media"
+   ]
+  },
+  {
+   "id": "peaceplus",
+   "name": "PEACEPLUS / SEUPB",
+   "kind": "intergovernmental",
+   "variants": [
+    "PEACEPLUS (SEUPB, via VSS)",
+    "SEUPB PEACEPLUS",
+    "SEUPB PEACEPLUS (via Action Mental Health)",
+    "SEUPB PEACEPLUS (via Verbal)",
+    "PEACEPLUS via Royal Mencap (HEROES+)",
+    "PEACEPLUS via Mencap",
+    "PEACEPLUS (via Youth Action NI)",
+    "SEUPB (E2T, via YMCA Ireland)",
+    "PEACEPLUS (SEUPB)",
+    "SEUPB PEACEPLUS via South West College",
+    "SEUPB (PEACE IV / PEACEPLUS)",
+    "SEUPB (PEACEPLUS)",
+    "PEACEPLUS (via Include Youth)",
+    "SEUPB",
+    "PEACEPLUS (via The Rainbow Project)",
+    "PEACEPLUS (via Education Authority-led consortium)",
+    "Lisburn & Castlereagh City Council (PEACEPLUS)"
+   ]
+  },
+  {
+   "id": "ifi",
+   "name": "International Fund for Ireland",
+   "kind": "intergovernmental",
+   "variants": [
+    "International Fund for Ireland",
+    "International Fund for Ireland (intergovernmental)"
+   ]
+  },
+  {
+   "id": "eu",
+   "name": "European Union (incl. ESF)",
+   "kind": "intergovernmental",
+   "variants": [
+    "European Social Fund",
+    "EU"
+   ]
+  },
+  {
+   "id": "foras",
+   "name": "Foras na Gaeilge",
+   "kind": "north-south",
+   "variants": [
+    "Foras na Gaeilge (North/South body)",
+    "Foras na Gaeilge"
+   ]
+  },
+  {
+   "id": "safefood",
+   "name": "Safefood",
+   "kind": "north-south",
+   "variants": [
+    "Safefood (North/South body)"
+   ]
+  },
+  {
+   "id": "dormant",
+   "name": "Dormant Accounts Fund NI",
+   "kind": "lottery-dormant",
+   "variants": [
+    "Dormant Accounts Fund NI"
+   ]
+  },
+  {
+   "id": "multiple",
+   "name": "Several funders on one line",
+   "kind": "multiple",
+   "variants": [
+    "Belfast City Council & Antrim & Newtownabbey Council",
+    "Health and Social Care Trusts",
+    "SELB/DSD (legacy names: Education Authority Southern Region / Department for Communities), not split",
+    "governments and other co-funders (not separated)",
+    "Pathways Fund (Department of Education; funder body not named in note)",
+    "Dormant Accounts (statutory scheme; classification uncertain)",
+    "National Lottery Dormant Accounts (statutory scheme; classification uncertain)",
+    "Pathway Fund (Department of Education; body not named in note)",
+    "Department for Communities and Belfast City Council (capital, released from deferred income)",
+    "Education Authority (presumed; section heading does not name the funder)",
+    "Sure Start (South Belfast; funded via SPPG/DE)",
+    "Early Years (likely DE Pathway Fund; body not named)",
+    "Northern, Western & Southern Health & Social Care Trusts",
+    "Health & Social Care Trusts (incl. SureStart)",
+    "Public Health Agency (via Clear small grants; not stated in source)",
+    "Health & Social Care Trusts"
+   ]
+  },
+  {
+   "id": "not-named",
+   "name": "Funder not named",
+   "kind": "not-named",
+   "variants": [
+    "Councils (Labour Market Partnerships)",
+    "not named in note (MBMLW contract)",
+    "not named (CAMHS)",
+    "Drugs Court Programme (body not named)",
+    "not named in note",
+    "GSP (acronym not expanded in the accounts)",
+    "not named",
+    "not named on the line (note 1 says accommodation and support charges come from NIHE and HSC Trusts)",
+    "councils (not named)",
+    "Mental Health Support Fund (funder body not named in the note)",
+    "unnamed",
+    "Regional Childcare Partnership (unclear)",
+    "unclear",
+    "not named (UK Government fund)",
+    "not named (programme)",
+    "Eastern Childcare Partnership"
+   ]
+  }
+ ]
+}

@@ -120,7 +120,21 @@ Derived, never stored:
    displacement, drop-off. A sector-wide "£X saved for every £1" cannot be built
    accurately from this data and should not be published.
 
-## Decisions needed before phase 1
+## Decisions (agreed 2026-10-02: all four as recommended)
+
+- **Baseline year 2024-25.** A charity's financial year is assigned to the government
+  year (April–March) it overlaps most. Years ending 31 March 2025, 31 December 2024
+  and 31 August 2025 all count as 2024-25.
+- **Government** = NI departments, arm's-length bodies, councils, UK government.
+  Reported separately:
+  - lottery and dormant-accounts distributors (public, but not taxation)
+  - Irish government
+  - intergovernmental (PEACEPLUS, IFI)
+- **Volunteer time** valued at replacement cost (applied at phase 6).
+- **Non-statutory services** (youth work, play, good relations): VCSE spending there
+  is cost carried, not a saving to government.
+
+## Decisions as first proposed
 
 1. **Baseline year: 2024-25.** Most accounts are for that year. Charities' year-ends
    vary: count a year ending 1 April to 31 March of the following year as 2024-25.
@@ -136,6 +150,52 @@ Derived, never stored:
 4. **"Saving" for non-statutory services.** Youth work and play are not statutory
    duties, so VCSE spend there does not displace a statutory cost. Count it as cost
    carried, not as a saving to government.
+
+## Phase 1 results (2026-10-02)
+
+Built by `research/tools/build-flows.js`, into `ni-entities.json` and `ni-flows.json`.
+
+**Funders.** The 237 funder strings resolve to 64 entities, with one left over.
+Each entity has a kind:
+- NI government
+- council
+- UK government
+- other government
+- Irish government
+- intergovernmental
+- North/South body
+- lottery or dormant accounts
+- multiple
+- not named
+
+**Ledger.** 977 income lines from VCSE accounts and 242 grant-list awards. Awards
+are a separate kind and never summed with income. 880 income lines fall in
+2024-25, and 20 of those have no usable amount, so they are kept but left out of
+totals.
+
+**Pass-through: 19 lines counted once, at the intermediary.** These are lines
+received through another listed organisation: PEACEPLUS lead partners passing to
+partners, and Early Years, which administers the whole Pathway Fund. Without this,
+those pounds would sit in both organisations' income.
+
+**Headline, government money only (NI departments, arm's-length bodies, councils,
+UK government), 2024-25:**
+- **£37.0m to the 81 organisations whose own documents say children are their
+  whole purpose.** This counts as children's money as it stands.
+  - Largest payers: DE £7.0m, EA £6.0m, DoH/SPPG £5.8m, NIHE £3.9m,
+    Belfast Trust £2.8m.
+- **£143.4m to 84 organisations that serve children among others.** This is
+  dominated by adult services: Inspire, Praxis Care, the Simon Community. It is
+  NOT children's money until phase 3 finds each organisation's children's share.
+
+**Not yet usable:**
+- £12.0m on lines whose funder the accounts do not name.
+- £5.6m on lines that combine several funders.
+- 94 lines from 2025-26 accounts. Each organisation's latest accounts were read,
+  so for these organisations the 2024-25 year has not been read.
+
+**Seen only from this side:** councils pay £3.0m across 90 organisations, although
+no council publishes a children's line.
 
 ## Hard limits
 
