@@ -1,0 +1,554 @@
+{
+  "generated": "2026-10-02",
+  "note": "Only sources actually opened are in studies. Ratios are quoted verbatim; none computed. 'scope' marks NI versus UK/Ireland comparators. 'ownCommissioned' marks studies commissioned by the delivering organisation or its sector body.",
+  "studies": [
+    {
+      "id": "eif-late-intervention-ni-2018",
+      "title": "The cost of late intervention in Northern Ireland",
+      "author": "Peter Fitzsimons and William Teager (Early Intervention Foundation)",
+      "commissioner": "Early Intervention Transformation Programme (EITP) - NI Executive/Atlantic Philanthropies Delivering Social Change Signature Programme",
+      "year": 2018,
+      "url": "https://www.eif.org.uk/report/the-cost-of-late-intervention-in-northern-ireland",
+      "urlOpened": "https://web.archive.org/web/20211119111524id_/https://www.eif.org.uk/files/pdf/cost-late-intervention-northern-ireland.pdf",
+      "urlNote": "EIF site now redirects (EIF became Foundations); the PDF was read from the Wayback Machine copy.",
+      "programme": "No single programme: cost to the public sector of late intervention for children and young people",
+      "place": "Northern Ireland",
+      "scope": "NI",
+      "method": "fiscal cost estimate (cost of late intervention / cost-avoidance baseline); not SROI, not CBA",
+      "forecastOrEvaluation": "neither - a cross-sectional estimate of current spend",
+      "headlineVerbatim": "The annual short-run cost to the public sector of late intervention in Northern Ireland is estimated at £536 million per year. This is equivalent to £288 for every Northern Ireland resident, or £1,166 per child.",
+      "ratioVerbatim": null,
+      "period": "latest year's data, \"generally reflecting activity in 2016/17\"; all costs converted to 2017/18 prices",
+      "outcomesValued": [
+        "child protection and safeguarding",
+        "domestic violence",
+        "youth economic inactivity",
+        "school absence and exclusion",
+        "youth crime",
+        "child mental health (among others)"
+      ],
+      "financialProxies": "Spend apportioned from budgets, or average cost per incidence x number of service users; full methodology in report appendix",
+      "deadweight": "not applicable (not an SROI)",
+      "attribution": "not applicable (not an SROI)",
+      "displacement": "not applicable (not an SROI)",
+      "dropOff": "not applicable (not an SROI)",
+      "assurance": "none stated; commissioned analysis by an independent What Works centre",
+      "ownCommissioned": false,
+      "notes": "Largest drivers per report: child protection and safeguarding, domestic violence, youth economic inactivity. This is a cost baseline, not a return on any programme. Widely re-cited (e.g. Barnardo's NI 2023, EITP infographic)."
+    },
+    {
+      "id": "roots-of-empathy-ni-rct-2018",
+      "title": "A cluster randomised controlled trial and evaluation and cost-effectiveness analysis of the Roots of Empathy schools-based programme for improving social and emotional well-being outcomes among 8- to 9-year-olds in Northern Ireland",
+      "author": "Connolly P, Miller S, Kee F, Sloan S, Gildea A, McIntosh E, Boyer N, Bland M (Queen's University Belfast et al.)",
+      "commissioner": "NIHR Public Health Research programme (funder)",
+      "year": 2018,
+      "url": "https://www.journalslibrary.nihr.ac.uk/phr/phr06040",
+      "doi": "10.3310/phr06040",
+      "programme": "Roots of Empathy (universal school-based, Year 5)",
+      "place": "Northern Ireland, 74 primary schools randomised",
+      "scope": "NI",
+      "method": "cost-utility analysis within a cluster RCT (independent academic economic evaluation); not SROI",
+      "forecastOrEvaluation": "evaluation (trial-based)",
+      "headlineVerbatim": "The ICER was £9571 per QALY gained (95% CI –£87,776 to £106,676)",
+      "ratioVerbatim": "ICER £9571 per QALY gained",
+      "otherFiguresVerbatim": [
+        "The incremental cost was £153 (95% CI £14 to £292), significantly higher for ROE ( p = 0.032).",
+        "The incremental QALY gain of 0.0160 (95% CI –0.0143 to 0.0462) was not statistically significant ( p = 0.300).",
+        "The study also found that ROE was likely to be cost-effective in line with national guidelines."
+      ],
+      "period": "time horizon 3.75 years (45 months); costs in 2014 GBP",
+      "outcomesValued": [
+        "QALYs via CHU9D",
+        "secondary: SDQ prosocial and total difficulties scores (ICER per unit)"
+      ],
+      "financialProxies": "Public sector perspective; unit costs from PSSRU 2014 (GP £46, school nurse £63, social worker £41, educational psychologist £41, etc.) and NHS Reference Costs 2013/14 (A&E £72, psychiatrist £228)",
+      "deadweight": "not applicable - counterfactual is the randomised waiting-list control group",
+      "attribution": "not applicable - RCT",
+      "displacement": "not applicable",
+      "dropOff": "discounting at 1.5% (NICE public health rate); 3.5% as sensitivity analysis",
+      "assurance": "peer-reviewed NIHR journal; independent of programme provider",
+      "ownCommissioned": false,
+      "notes": "Threshold £20,000-30,000 per QALY. Probability cost-effective 83.1% at £20,000 (90.1% at £30,000) in base case per Table 29. QALY gain itself not significant."
+    },
+    {
+      "id": "incredible-years-ireland-2009",
+      "title": "Proving the Power of Positive Parenting: A randomised controlled trial to investigate the effectiveness of the Incredible Years BASIC Parent training programme in an Irish Context (Short-term Outcomes)",
+      "author": "Sinéad McGilloway, Tracey Bywater, Grainne Ni Mhaille, Mairéad Furlong, Donal O'Neill, Catherine Comiskey, Yvonne Leckey, Paul Kelly and Michael Donnelly",
+      "commissioner": "Archways, with support from The Atlantic Philanthropies",
+      "year": 2009,
+      "url": "http://www.atlanticphilanthropies.org/wp-content/uploads/2015/09/Incredible-Years-Ireland-Study-Proving-the-Power-of-Positive-Parenting-Report.pdf",
+      "programme": "Incredible Years BASIC parent programme (also delivered in NI)",
+      "place": "Republic of Ireland (Archways sites); co-author Michael Donnelly is at QUB",
+      "scope": "Ireland - comparable programme that also runs in NI",
+      "method": "cost-effectiveness analysis within RCT plus projected long-run net present value (cost-benefit style)",
+      "forecastOrEvaluation": "cost-effectiveness is evaluative (6-month trial outcomes); the NPV is a projection of long-run gains",
+      "headlineVerbatim": "The estimated cost of delivering the programme was €1463 per parent/ child. Further analysis indicated that, overall, it would cost €2304 to bring the average child in the study to below the clinical cut-off point for serious behavioural problems",
+      "ratioVerbatim": null,
+      "otherFiguresVerbatim": [
+        "we estimate the net present value of the IYP programme, (ie the return over and above the initial cost outlay and taking into account the fact that many of the gains may not be realised until some time in the future), to be approximately €4,599 per child.",
+        "cost €7,848 to bring the child with the highest intensity score to below the clinical cut-off for serious behavioural problems"
+      ],
+      "period": "six-month outcomes; long-run gains projected using Irish data",
+      "outcomesValued": [
+        "ECBI intensity score below clinical cut-off",
+        "long-run: antisocial/criminal behaviour, employment, education"
+      ],
+      "financialProxies": "programme delivery costs; health and welfare service use; long-run gains 'valued using Irish data' (not detailed in the summary report)",
+      "deadweight": "not applicable - RCT (2:1 allocation, waiting-list control)",
+      "attribution": "not applicable - RCT",
+      "displacement": "not stated",
+      "dropOff": "discounting implied in NPV; rate not stated in the summary report",
+      "assurance": "independent academic team; report prepared for the delivery organisation",
+      "ownCommissioned": "commissioned by Archways (the delivery organisation)",
+      "notes": "No ratio given. The peer-reviewed economic paper is O'Neill et al. 2013 (separate entry). Search snippets quoting 'an economic rate of return of 11%' and '£1612-£2418 per child' were NOT verified in an opened source."
+    },
+    {
+      "id": "oneill-iy-cea-2013",
+      "title": "A cost-effectiveness analysis of the Incredible Years parenting programme in reducing childhood health inequalities",
+      "author": "O'Neill D, McGilloway S, Donnelly M, Bywater T, Kelly P",
+      "commissioner": "not stated in abstract (economic component of the Incredible Years Ireland Study)",
+      "year": 2013,
+      "url": "https://doi.org/10.1007/s10198-011-0342-y",
+      "journal": "The European Journal of Health Economics 14(1)",
+      "programme": "Incredible Years parenting programme",
+      "place": "Republic of Ireland",
+      "scope": "Ireland - comparable programme that also runs in NI",
+      "method": "cost-effectiveness analysis within RCT",
+      "forecastOrEvaluation": "evaluation, plus a qualitative consideration of long-run benefits",
+      "headlineVerbatim": "Our results show that the programme provides a cost-effective way of reducing behavioural problems. Furthermore, our cost analysis, when combined with a consideration of the potential long-run benefits, suggests that investment in such programmes may generate favourable long-run economic returns.",
+      "ratioVerbatim": null,
+      "period": "not stated in abstract",
+      "outcomesValued": [
+        "child behaviour problems"
+      ],
+      "financialProxies": "not available - only the abstract was opened (full text paywalled)",
+      "deadweight": "RCT",
+      "attribution": "RCT",
+      "displacement": "not stated",
+      "dropOff": "not stated",
+      "assurance": "peer-reviewed",
+      "ownCommissioned": false,
+      "notes": "Abstract only (via Europe PMC). No figures recorded because none appear in the abstract."
+    },
+    {
+      "id": "yzone-portadown-sroi-2024",
+      "title": "Community Safety Initiatives Demonstrate Impressive Social Return on Investment (news item; underlying SROI report not found)",
+      "author": "Anita Doonan, Funding and Social Value Officer, Supporting Communities",
+      "commissioner": "Projects funded by the Northern Ireland Housing Executive (NIHE); analysis by Supporting Communities",
+      "year": 2024,
+      "url": "https://supportingcommunities.org/latest-news/2024/10/10/community-safety-initiatives-demonstrate-impressive-social-return-on-investment",
+      "programme": "YZone Youth Initiative, Portadown Elim Church (work with young people 'at-risk' or 'marginalised'); the same item reports Lisburn SAFE and Upper Springfield Development Trust community safety projects, which are not children-specific",
+      "place": "Portadown, Co. Armagh (Lisburn and West Belfast for the other two)",
+      "scope": "NI",
+      "method": "SROI (forecast or evaluative not stated)",
+      "forecastOrEvaluation": "not stated",
+      "headlineVerbatim": "The YZone Youth Initiative, run by Portadown Elim Church under the leadership of Campbell Best, has achieved an impressive SROI of £3.26 for every £1 invested.",
+      "ratioVerbatim": "£3.26 for every £1 invested",
+      "otherFiguresVerbatim": [
+        "The Resurgam Trust's Lisburn SAFE project has shown a social return on investment (SROI) of £3.03 for every £1 invested.",
+        "The Upper Springfield Development Trust's Community Safety Initiative in West Belfast ... has demonstrated the highest SROI of the three projects at £3.40 for every £1 invested."
+      ],
+      "period": "not stated",
+      "outcomesValued": "not stated; activities listed (outdoor spaces, cooking and budgeting classes, life skills, citizenship, work with schools; aim to reduce youth offending)",
+      "financialProxies": "not stated",
+      "deadweight": "not stated",
+      "attribution": "not stated",
+      "displacement": "not stated",
+      "dropOff": "not stated",
+      "assurance": "none stated",
+      "ownCommissioned": "analysis by Supporting Communities, which supports the funded groups; not independent",
+      "notes": "Only a news release was available; no full report located. Treat as a reported ratio without a published method."
+    },
+    {
+      "id": "frontier-ukyouth-2022",
+      "title": "The Economic Value of Youth Work: A Report for UK Youth",
+      "author": "Frontier Economics",
+      "commissioner": "UK Youth",
+      "year": 2022,
+      "url": "https://www.ukyouth.org/wp-content/uploads/2022/09/Economic-Value-of-Youth-Work-Final-260822-STC-clean75-1.pdf",
+      "programme": "Youth work sector (incl. uniformed organisations, VCS, local authority provision)",
+      "place": "England only",
+      "scope": "UK national comparator (England); no NI figures",
+      "method": "economic value / return on investment model (fiscal and social savings, cost-benefit style); not SROI",
+      "forecastOrEvaluation": "modelled estimate from secondary evidence",
+      "headlineVerbatim": "results in an estimated return on investment (ROI) range of 3.2x to 6.4x, for the central benefits estimate. This means that for every pound the government invests in the youth sector, this generates between £3.20 and £6.40 in benefits to the taxpayer.",
+      "ratioVerbatim": "3.2x to 6.4x (central); \"a minimum of 2.5x and a maximum of 7.8x\"",
+      "otherFiguresVerbatim": [
+        "We estimate the total indirect value of the youth work sector to be £3.2bn, divided across: • £0.5bn from decreased crime • £1.7bn from improved health • £0.8bn from increased employment and education.",
+        "Excluding multipliers, we estimate total (labour and non-labour) expenditure in the sector to be £2.0bn."
+      ],
+      "period": "10-year horizon for indirect benefits; 2022 analysis",
+      "outcomesValued": [
+        "decreased crime",
+        "improved health",
+        "increased employment and education",
+        "direct economic value (expenditure, volunteering)"
+      ],
+      "financialProxies": "national data e.g. Understanding Society (36% of young people engaging), MoJ knife-crime data; Green Book 3.5% discount rate",
+      "deadweight": "not framed as deadweight; low/central/high assumptions on outcomes attributable to youth work",
+      "attribution": "low/central/high assumption ranges (e.g. proportion of knife crime caused by young people 41/55/69%)",
+      "displacement": "not stated",
+      "dropOff": "10-year horizon, discounted at 3.5%",
+      "assurance": "none stated; consultancy report",
+      "ownCommissioned": "commissioned by UK Youth, a sector body",
+      "notes": "The report cites YouthLink Scotland (2016): \"a return of £7 for every £1 of public expenditure\" in Scotland. That study was not opened."
+    },
+    {
+      "id": "indecon-nyci-youthwork-2012",
+      "title": "Assessment of the Economic Value of Youth Work",
+      "author": "Indecon",
+      "commissioner": "National Youth Council of Ireland (NYCI)",
+      "year": 2012,
+      "url": "https://www.youth.ie/wp-content/uploads/2019/01/Economic-Beneifit-Youthwork-2012.pdf",
+      "programme": "Youth work sector, Exchequer-funded youth programmes",
+      "place": "Republic of Ireland",
+      "scope": "Ireland comparator (youth work)",
+      "method": "cost-benefit analysis",
+      "forecastOrEvaluation": "modelled estimate",
+      "headlineVerbatim": "an overall net economic return arising from these quantified aspects of youth work of €1.21 billion, or a Benefit-Cost Ratio (BCR) of 2.22:1",
+      "ratioVerbatim": "Benefit-Cost Ratio (BCR) of 2.22:1",
+      "period": "10-year time horizon; 2011 funding base",
+      "outcomesValued": [
+        "justice-related benefits",
+        "health-related benefits",
+        "welfare-related benefits",
+        "value of volunteering",
+        "multiplier impacts of organisation expenditure"
+      ],
+      "financialProxies": "not extracted in detail",
+      "deadweight": "counterfactual assumptions on 'what would be the likely outcomes for individuals in the absence of the youth programmes'; sensitivity analysis run",
+      "attribution": "see deadweight",
+      "displacement": "not stated",
+      "dropOff": "discounted to present value; rate not extracted",
+      "assurance": "none stated",
+      "ownCommissioned": "commissioned by NYCI, the sector representative body",
+      "notes": "Often quoted as '€2.20 for every €1'; the report's own wording is BCR 2.22:1."
+    },
+    {
+      "id": "ifs-surestart-2025",
+      "title": "The short- and medium-term effects of Sure Start on children's outcomes",
+      "author": "Pedro Carneiro, Sarah Cattan, Gabriella Conti, Claire Crawford, Christine Farquharson, Nick Ridpath (Institute for Fiscal Studies)",
+      "commissioner": "Nuffield Foundation (funder)",
+      "year": 2025,
+      "url": "https://ifs.org.uk/sites/default/files/2025-05/IFS%20Report.%20The%20short-%20and%20medium-term%20effects%20of%20Sure%20Start%20on%20children%E2%80%99s%20outcomes.pdf",
+      "programme": "Sure Start Children's Centres",
+      "place": "England",
+      "scope": "UK national comparator for Sure Start NI (a different model; the NI programme is mentioned only in the policy implications)",
+      "method": "cost-benefit analysis based on quasi-experimental effect estimates",
+      "forecastOrEvaluation": "evaluation of observed effects plus projected lifetime earnings and tax effects",
+      "headlineVerbatim": "for every £1 the government spent on Sure Start centres, there were societal benefits of £2.05.",
+      "ratioVerbatim": "£2.05 per £1 (societal benefits vs up-front cost)",
+      "otherFiguresVerbatim": [
+        "for every £1 of net spending, Sure Start may eventually generate around £11 in benefits for the children who attended.",
+        "if the actual impact on earnings and taxes were 10% lower than we estimate here, for example, this marginal value of public funds measure would fall to a ratio of £6.09 return for every £1 of net spending.",
+        "Up-front cost of Sure Start per cohort £2,690m ... Increased long-run tax revenues £1,860m"
+      ],
+      "period": "one cohort of children in 2010 at programme peak, across five years of eligibility; 2023-24 prices",
+      "outcomesValued": [
+        "hospitalisations",
+        "SEND support",
+        "children's social care (time in care)",
+        "youth justice",
+        "long-run earnings and tax revenue (projected)"
+      ],
+      "financialProxies": "cause-specific hospital costs; a month in care around £4,700 (2023-24 prices); court and offender management costs",
+      "deadweight": "not SROI terms; effects estimated against comparison areas (quasi-experimental)",
+      "attribution": "by research design",
+      "displacement": "not stated",
+      "dropOff": "lifetime projection; sensitivity shown",
+      "assurance": "independent research institute; not provider-commissioned",
+      "ownCommissioned": false,
+      "notes": "Report notes 'the ratio of costs to benefits in earlier years should not necessarily be assumed to be the same'. NIAO (2026) records DE citing this English study for NI Sure Start."
+    },
+    {
+      "id": "nspcc-soss",
+      "title": "Evaluation of the NSPCC Speak out Stay safe programme: Final report",
+      "author": "University of Central Lancashire research team (TESSE evaluation)",
+      "commissioner": "NSPCC",
+      "year": null,
+      "yearNote": "not confirmed from the pages read; costs inflated to 2019 and delivery noted as online under COVID-19, so 2020 or later",
+      "url": "https://knowledge.lancashire.ac.uk/id/eprint/39660/1/39660%20Speak%20out%20stay%20safe%20report.pdf",
+      "programme": "NSPCC Speak out Stay safe (primary-school safeguarding assemblies and workshops; promotes Childline)",
+      "place": "England, Scotland, Wales and Northern Ireland (process evaluation in 2 NI schools; NI focus groups and facilitator interviews)",
+      "scope": "UK including NI",
+      "method": "cost-consequence analysis (societal and NSPCC perspectives); not SROI, no ratio",
+      "forecastOrEvaluation": "evaluation",
+      "headlineVerbatim": "Cost analysis indicated that delivery costs approximately £73.51 per school.",
+      "ratioVerbatim": null,
+      "otherFiguresVerbatim": [
+        "The Staff Only model (Table 8.5) demonstrates that, by spending £87.02 per school, SOSS encourages increased knowledge of the different types of abuse",
+        "The cost of delivery purely by volunteers ... at £34.23 per school.",
+        "Child's HRQoL (CHU9D) No significant change between time points"
+      ],
+      "period": "cost surveys across 30 schools; 2019 prices",
+      "outcomesValued": [
+        "knowledge of abuse types",
+        "ability to identify trusted adults",
+        "knowledge of Childline number",
+        "disclosures",
+        "HRQoL (CHU9D)",
+        "fundraising revenue (£84.50 per school)"
+      ],
+      "financialProxies": "volunteer time valued with Fujiwara et al. (2013): £13,500 pa uprated to £16,577 pa (£9.10 per hour) for 2019 via the Bank of England inflation calculator",
+      "deadweight": "matched control design",
+      "attribution": "not stated",
+      "displacement": "not stated",
+      "dropOff": "not stated",
+      "assurance": "university evaluation",
+      "ownCommissioned": "commissioned by NSPCC (the provider)",
+      "notes": "Nothing found on Childline itself."
+    },
+    {
+      "id": "fnp-building-blocks-cca-2019",
+      "title": "Costs and consequences of the Family Nurse Partnership (FNP) programme in England: evidence from the Building Blocks trial",
+      "author": "Kerry Bell et al. (incl. Michael Robling, Kerry Hood, Julia Sanders, David J. Torgerson)",
+      "commissioner": "not recorded",
+      "year": 2019,
+      "url": "https://f1000research.com/articles/8-1640",
+      "altUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6784875/",
+      "programme": "Family Nurse Partnership (also delivered in NI since 2010)",
+      "place": "England",
+      "scope": "UK comparator for FNP NI (no NI economic evaluation found)",
+      "method": "cost-consequence analysis within RCT",
+      "forecastOrEvaluation": "evaluation",
+      "headlineVerbatim": "Given the extensive costs and only small beneficial consequences observed within the two year follow-up period, the cost-consequence model suggests that the FNP intervention is unlikely to be worth the substantial costs and policy makers may wish to consider other options for investment.",
+      "ratioVerbatim": null,
+      "period": "pregnancy to child's second birthday",
+      "outcomesValued": [
+        "trial primary outcomes",
+        "health and non-health resource use"
+      ],
+      "financialProxies": "HES and GP records with unit costs (Table 3 of the paper)",
+      "deadweight": "RCT",
+      "attribution": "RCT",
+      "displacement": "not stated",
+      "dropOff": "not stated",
+      "assurance": "peer-reviewed (F1000Research open review)",
+      "ownCommissioned": false,
+      "notes": "A negative result. Per-arm cost figures not recorded because the summary I read was internally inconsistent."
+    },
+    {
+      "id": "womensaid-respublica-2023",
+      "title": "Investing to save: the economic case for funding specialist domestic abuse support",
+      "author": "Women's Aid (research) and ResPublica (economic analysis; Mark Morrin)",
+      "commissioner": "Women's Aid Federation of England",
+      "year": 2023,
+      "url": "https://www.womensaid.org.uk/wp-content/uploads/2023/02/Respublica_web.pdf",
+      "programme": "Specialist domestic abuse services (refuge and community-based support) for women and their children",
+      "place": "England",
+      "scope": "UK comparator; not NI (Women's Aid Federation NI is a separate body); services are not children-specific",
+      "method": "cost-benefit analysis plus pathway cost analysis ('Tracy's journey')",
+      "forecastOrEvaluation": "forecast/modelled",
+      "headlineVerbatim": "a substantial benefit to cost ratio of at least 9.1:1, a saving of over £9 for every £1 invested.",
+      "ratioVerbatim": "at least 9.1:1",
+      "otherFiguresVerbatim": [
+        "For one woman's journey, savings of £159,407 could have been made with support from specialist domestic abuse services",
+        "Refuge services £188,575,398 Community-based support services £238,020,408 Total £426,595,806"
+      ],
+      "period": "2022/2023 prices",
+      "outcomesValued": [
+        "economic and social costs of domestic abuse (Home Office, Oliver et al. 2019, uprated)",
+        "public service costs avoided along the pathway"
+      ],
+      "financialProxies": "NHS, PSSRU and GMCA unit cost databases; Home Office (Oliver et al., 2019) costs of domestic abuse",
+      "deadweight": "not stated in the pages read",
+      "attribution": "not stated in the pages read",
+      "displacement": "not stated",
+      "dropOff": "not stated",
+      "assurance": "none stated",
+      "ownCommissioned": "commissioned by Women's Aid (the sector body)",
+      "notes": "Included only as a programme-type comparator for Women's Aid children's services; it does not value children's outcomes separately."
+    },
+    {
+      "id": "niao-children-who-offend-2017",
+      "title": "Managing children who offend (NIAO report; media release read)",
+      "author": "Northern Ireland Audit Office (Comptroller and Auditor General, Kieran Donnelly)",
+      "commissioner": "NIAO (statutory audit)",
+      "year": 2017,
+      "url": "https://niauditoffice.gov.uk/files/niauditoffice/media-files/MEDIA%20RELEASE%20Managing%20children%20who%20offend.pdf",
+      "programme": "Youth Justice Agency interventions, youth conferencing, Juvenile Justice Centre",
+      "place": "Northern Ireland",
+      "scope": "NI",
+      "method": "value-for-money audit (cost information; no cost-benefit performed)",
+      "forecastOrEvaluation": "audit",
+      "headlineVerbatim": "The Department and the Youth Justice Agency lack the capacity to identify and apportion costs to the full range of interventions. Consequently, they cannot adequately assess their cost-effectiveness and cannot currently demonstrate that the interventions to reduce reoffending by young people represent value for money.",
+      "ratioVerbatim": null,
+      "otherFiguresVerbatim": [
+        "Custodial services represent the largest element of the Youth Justice Agency's costs, £6.9 million in 2015-16",
+        "The average cost per occupant each year in the JJC is £324,000."
+      ],
+      "period": "2015-16 costs",
+      "outcomesValued": "n/a",
+      "financialProxies": "n/a",
+      "deadweight": "not applicable (not an SROI)",
+      "attribution": "not applicable (not an SROI)",
+      "displacement": "not applicable (not an SROI)",
+      "dropOff": "not applicable (not an SROI)",
+      "assurance": "statutory audit",
+      "ownCommissioned": false,
+      "notes": "Only the media release was opened, not the full report. Records that no cost-effectiveness assessment exists for youth conferencing or YJA interventions."
+    },
+    {
+      "id": "niao-educational-disadvantage-2026",
+      "title": "Evaluation of Programmes Addressing Educational Disadvantage",
+      "author": "Northern Ireland Audit Office",
+      "commissioner": "NIAO (statutory audit)",
+      "year": 2026,
+      "url": "https://www.niauditoffice.gov.uk/publications/html-document/evaluation-programmes-addressing-educational-disadvantage",
+      "programme": "Sure Start (with TSN, Extended Schools, Full Service, WRAP, SEND Transformation, Education Transformation)",
+      "place": "Northern Ireland",
+      "scope": "NI",
+      "method": "value-for-money audit of evaluation practice; no cost-benefit performed",
+      "forecastOrEvaluation": "audit",
+      "headlineVerbatim": "Financial information is not consistently integrated with outcome reporting, limiting the Department's ability to undertake value for money assessments that consider both programme costs and the results achieved.",
+      "ratioVerbatim": null,
+      "otherFiguresVerbatim": [
+        "Sure Start £34 million £326 million from 2014",
+        "There is yet to be a consistent mechanism to assess whether Sure Start interventions translate into improved educational attainment as children progress through the education system.",
+        "The Department also refers to 2025 research by the Institute for Fiscal Studies (IFS) on Sure Start in England"
+      ],
+      "period": "published March 2026",
+      "outcomesValued": "n/a",
+      "financialProxies": "n/a",
+      "deadweight": "not applicable (not an SROI)",
+      "attribution": "not applicable (not an SROI)",
+      "displacement": "not applicable (not an SROI)",
+      "dropOff": "not applicable (not an SROI)",
+      "assurance": "statutory audit",
+      "ownCommissioned": false,
+      "notes": "Confirms no published value-for-money or economic evaluation of Sure Start NI; DE relies on the English IFS study. Mentions the Ipsos UK 'Review of DE Targeted Early Years Interventions' (2024), which was not opened."
+    },
+    {
+      "id": "gmca-unit-cost-database-v3",
+      "title": "Unit Cost Database (version 3.0)",
+      "author": "Greater Manchester Combined Authority Research Team (formerly New Economy)",
+      "commissioner": "GMCA",
+      "year": 2025,
+      "url": "https://www.greatermanchester-ca.gov.uk/what-we-do/research/research-cost-benefit-analysis/",
+      "download": "https://www.greatermanchester-ca.gov.uk/media/sbdg15pr/gmca-unit-cost-database-v3-0-final.xlsx",
+      "programme": "n/a - financial proxy source used by UK SROI and CBA studies",
+      "place": "built mainly from national (UK/England) sources",
+      "scope": "proxy source, not a study",
+      "method": "unit cost reference database",
+      "forecastOrEvaluation": "n/a",
+      "headlineVerbatim": "Landing page (paraphrased): over 1,100 cost estimates across nine thematic areas; Version 3.0 published November 2025 with about 550 new or revised entries; next update planned 2027",
+      "ratioVerbatim": null,
+      "period": "v3.0, Nov 2025",
+      "outcomesValued": "n/a",
+      "financialProxies": "itself the proxy source",
+      "deadweight": "not covered on landing page",
+      "attribution": "not covered on landing page",
+      "displacement": "not covered on landing page",
+      "dropOff": "not covered on landing page",
+      "assurance": "n/a",
+      "ownCommissioned": false,
+      "notes": "The workbook was not opened by me; children-specific entries not checked. Used as a proxy source by the Women's Aid/ResPublica study above."
+    }
+  ],
+  "searchedEmpty": [
+    {
+      "target": "Sure Start NI",
+      "finding": "No SROI or CBA of Sure Start NI found. NIAO 2026 (entry above) says DE cannot currently do value-for-money assessments and cites the English IFS study. The ETI 2018 Sure Start evaluation URL returned a non-PDF page. The Ipsos 'Review of DE Targeted Early Years Interventions' (2024) covers oversight and targeting according to DE's description in search results; it was not opened."
+    },
+    {
+      "target": "Family Support Hubs / CYPSP",
+      "finding": "SCIE 'Family Support Hubs in Northern Ireland' review (2016, cypsp.hscni.net) opened: it calls Hubs cost-effective in qualitative terms only ('Upstream cost effectiveness'), with no costing, ratio or proxies. Dolan 'Understanding the Family Support Landscape for NI' (CSCS Review appendix 6) opened: no economic content. The 'Isard 2016 SROI on the value of family support' in search snippets is the National Family Support Network (Dublin) SROI on families coping with addiction. That is an Ireland-only service, not Hubs, so it was not extracted."
+    },
+    {
+      "target": "EITP",
+      "finding": "Its only economic product found is the EIF cost-of-late-intervention study (entry above). The EITP infographic (DoH) opened: it cites EIF and gives no programme-level economics. No EITP project-level SROI or CBA found."
+    },
+    {
+      "target": "Home-Start (NI or UK)",
+      "finding": "Several searches found no Home-Start SROI, CBA or economic evaluation for NI, UK, Scotland, Wales or Ireland."
+    },
+    {
+      "target": "Youth work in NI (Youth Work Alliance, YouthAction, EA Youth Service)",
+      "finding": "No NI SROI or CBA. Only leverage or match-funding claims, which are not returns: YouthAction NI written evidence EDU0003 to the NI Affairs Committee (2018), 'for every £1 invested , £6 is raised from donations, other grants, private sources and fundraising activities', and volunteering 'calculated as £13 million in 2015'. Bytes blog proposes scaling England's Frontier figures to NI and gives a YouthStart unit cost of £2,111 per participant; no NI valuation. Comparators are in studies (Frontier/UK Youth for England; Indecon/NYCI for Ireland)."
+    },
+    {
+      "target": "Uniformed youth organisations",
+      "finding": "No SROI. Scouting Ireland Annual Report 2015, a leverage claim: 'For every £1 in grant aid from the Northern Ireland Government there is £25 worth of work carried out.' Not a valued-outcome study."
+    },
+    {
+      "target": "Youth conferencing / restorative justice (YJA)",
+      "finding": "CJI 'The effectiveness of youth conferencing' (2015) opened: no cost analysis. NIAO 2017 (entry above) says cost-effectiveness cannot be demonstrated."
+    },
+    {
+      "target": "VOYPIC / advocacy for children in care",
+      "finding": "No SROI or economic evaluation found."
+    },
+    {
+      "target": "Parentline NI",
+      "finding": "No evaluation with economic content found."
+    },
+    {
+      "target": "Family Nurse Partnership NI",
+      "finding": "No NI economic evaluation found; PHA FNP page and NI 're-valuation' references are non-economic. England's Building Blocks cost-consequence study is in studies."
+    },
+    {
+      "target": "Incredible Years (NI-specific)",
+      "finding": "No NI-specific economic evaluation. Ireland studies are in studies. Edwards et al. 2007 BMJ (Wales) cost-effectiveness could not be opened (BMJ 403, Europe PMC 503), so it is not recorded."
+    },
+    {
+      "target": "PeacePlayers NI",
+      "finding": "No SROI found. The evaluations listed (ICR 2013; youth-led evaluation 2018) appear to be outcome evaluations; not opened."
+    },
+    {
+      "target": "Include Youth, Start360, NIACRO",
+      "finding": "No SROI or CBA found. NI Alternatives/Include Youth written evidence (committees.parliament.uk 110049) opened: no economic figures. The NI ESF 2014-2020 impact evaluation (which funds youth employability) was not opened."
+    },
+    {
+      "target": "Barnardo's NI services",
+      "finding": "'Reimagining Children's Social Care Services in NI' (2023) opened: re-cites EIF £536m, no own economics. PATHS NI implementation report (2018) and Atlantic's Barnardo's PATHS sustainability review (2015) opened: no cost-effectiveness. A '2012 Barnardo's family support SROI £4.50 per £1' appeared only in a search-engine summary; not opened."
+    },
+    {
+      "target": "NSPCC Childline",
+      "finding": "No Childline economic evaluation found. The NSPCC Speak out Stay safe cost-consequence study (UK incl. NI) is in studies."
+    },
+    {
+      "target": "Action for Children NI",
+      "finding": "No SROI found. The Action for Children-commissioned 'Evaluation of Roots of Empathy in Scotland 2014-15' (Qa Research) opened: no economic analysis."
+    },
+    {
+      "target": "Women's Aid NI children's services",
+      "finding": "No NI economic evaluation found. The England Women's Aid/ResPublica CBA is in studies as a comparator."
+    },
+    {
+      "target": "Playgroups / Early Years NI",
+      "finding": "No SROI. Early Years' submission to the Independent Review of Education cites Heckman's return figures only. RaISe 'Early years provision' (NIAR 68-13, 2013) opened: no cost-benefit content."
+    },
+    {
+      "target": "Social Value UK / Social Value Lab reports on NI organisations",
+      "finding": "Social Value UK report database (socialvaluereports.org) renders client-side and its search returned nothing listable; reports.isv.org.uk returned 403. Site searches found no NI children's or youth report. NI SROIs found are outside scope: ILF NI (adults; £10.89 and £13 per £1, from search snippets only); NIHE Supporting People SROI 2021 (housing support incl. a Young People theme; '£5.71' from a search snippet only, PDF not retrievable); Supporting Communities Ards and North Down SROI 2026 (community-wide; '£11 in social value for every £1 invested', news item only)."
+    },
+    {
+      "target": "NICVA, Pivotal",
+      "finding": "No economic studies found. Pivotal pieces on early intervention cite EIF."
+    },
+    {
+      "target": "DoH/DE economic appraisals",
+      "finding": "None published for these programmes."
+    },
+    {
+      "target": "Assembly RaISe papers",
+      "finding": "No RaISe paper with a cost-benefit of children's services found; the 2013 early years paper opened has none."
+    },
+    {
+      "target": "Other NI",
+      "finding": "'Hope For Every Child' (Cllr Peter Martin, hosted by CYPSP) opened: an illustrative '1% saving' calculation on EIF figures, not a study."
+    },
+    {
+      "target": "Foundations (EIF) cost-benefit",
+      "finding": "Foundations Guidebook FNP page opened: evidence rating 4+, but no cost rating displayed and no CBA. EIF England and Wales late-intervention reports (2015, 2016) not opened. No Foundations CBA of an NI-run programme found beyond the NI late-intervention study."
+    },
+    {
+      "target": "PSSRU Unit Costs",
+      "finding": "Kent repository pages for the 2024 and 2025 manuals timed out (504), so not opened. PSSRU 2014 unit costs are documented as proxies inside the Roots of Empathy NI study."
+    },
+    {
+      "target": "Tusla / Irish Department of Children (PEI)",
+      "finding": "DCEDIY 'Tusla Funded Community and Voluntary Sector Family Support Services - Spending Review 2022' opened: linking Tusla FSS expenditure to FSS activities 'is not possible at present'; no CBA. Tusla 'Systems Change Final Evaluation Report' (PPFS) opened: asserts cost-effectiveness, no economic evaluation. Lifestart RCT (QUB, Irish Educational Studies 2024; runs in NI and ROI) opened: no economic evaluation. Atlantic Philanthropies PEI Ireland/NI summary (2016) opened: no economic figures. Parent and Infant (PIN) CEA (Crealey et al. 2024) is Ireland-only and not run in NI, so not recorded."
+    }
+  ]
+}

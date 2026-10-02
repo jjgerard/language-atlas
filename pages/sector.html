@@ -224,6 +224,12 @@ footer.foot a { color: var(--ink-soft); }
     Every figure is a floor, a published total or a range — and says which.</p>
   <div id="whopays"></div>
 
+  <h3>Social return on investment</h3>
+  <p>A desk study from published data, following the Social Value UK principles as far as a desk study can. It is <b>not an assured SROI</b>:
+    that needs children, families and staff to say what changed for them. There is one ratio per programme and no sector-wide "£X per £1",
+    because programmes change different things. Method: <code>research/children-sector/SROI-METHOD.md</code>.</p>
+  <div id="sroi"></div>
+
   <h3>What the voluntary organisations provide <span class="count" id="svc-count"></span></h3>
   <p>From each organisation's own documents, coded to one of 18 service areas. The relationship columns count only what a source states; most services have no stated relationship to government, and that is shown, not filled in. <b>Steps in</b> counts statements that a service exists because statutory provision is absent, insufficient or slow — rare, and mostly weak. Click a row to filter the map and the table.</p>
   <div class="twrap"><table class="orgt" id="svct"><thead><tr><th>Service area</th><th class="num">Public bodies</th><th class="num">Voluntary organisations</th><th class="num">Grant</th><th class="num">Contract</th><th class="num">Own funds</th><th class="num">Not stated</th><th class="num">Steps in</th></tr></thead><tbody></tbody></table></div>
@@ -361,6 +367,42 @@ function svcDetail(c, live) {
     + '<div><h5 style="margin:0 0 6px">Voluntary organisations (' + os.length + ')</h5><div style="font-size:13px">Stated relationship to government: '
     + rel('commissioned') + ' contract, ' + rel('grant') + ' grant, ' + rel('own funds') + ' own funds; the rest not stated.</div>'
     + '<div style="font-size:13px;margin-top:6px">' + names + '</div></div></div></div>';
+}
+// SROI: existing studies as published, break-even from published figures only, and
+// the one indicative ratio the evidence supports, with its working shown.
+function drawSroi() {
+  const S = D.sroi; if (!S) { $('#sroi').innerHTML = '<p class="miss">Not built yet.</p>'; return; }
+  const m = v => v == null ? '—' : '£' + Math.round(v).toLocaleString('en-GB');
+  const link = s => s && s.url ? ' <a href="' + esc(s.url) + '" target="_blank" rel="noopener">source</a>' : '';
+  const card = (h, sub, body) => '<div class="card" style="padding:14px 16px;margin-bottom:12px"><h4 style="margin:0 0 2px;font-size:16px">' + h + '</h4><p class="sub" style="margin:0 0 8px;font-size:13px;color:var(--ink-soft)">' + sub + '</p>' + body + '</div>';
+  const ni = S.existing.filter(s => /NI|Northern Ireland/i.test((s.place || '') + ' ' + (s.scope || '') + ' ' + (s.geography || '')) && !/comparator/i.test(JSON.stringify(s.scope || '')));
+  const ex = card('1. What already exists', 'No published SROI of a Northern Ireland children\'s or family service with a documented method was found. These are the economic studies there are, as their authors report them.',
+    '<table class="mini"><tbody>' + S.existing.map(s => { const t = String(s.title || ''), pg = String(s.programme || '');
+      return '<tr><td><b>' + esc(pg.length > 70 ? pg.slice(0, 70) + '…' : pg) + '</b><br>' + esc(t.length > 110 ? t.slice(0, 110) + '…' : t) + ' (' + esc(s.author || '') + (s.year ? ', ' + esc(s.year) : '') + ')<br><span class="miss">'
+      + esc([s.place, s.method, s.forecastOrEvaluation, s.commissioner ? 'commissioned by ' + s.commissioner : null, s.ownCommissioned ? 'commissioned by the provider or its sector' : null].filter(Boolean).join(' · ')) + '</span></td><td>'
+      + esc(s.ratioVerbatim || s.headlineVerbatim || '') + (s.url ? ' <a href="' + esc(s.url) + '" target="_blank" rel="noopener">source</a>' : '') + '</td></tr>'; }).join('') + '</tbody></table>');
+  const U = S.unitCosts;
+  const be = card('2. Break-even: what a programme would have to prevent to pay back its cost',
+    'Published cost ÷ published reach, against published NI unit costs (Department of Health, 2024-25). No outcome is assumed, and nothing here says these programmes do prevent these things. It is the size of the claim each one would need.',
+    '<table class="mini"><thead><tr><th>Programme</th><th>Cost</th><th>Reach</th><th>Per head</th><th>Child-years of residential care</th><th>Looked after child cases</th><th>Family support cases</th></tr></thead><tbody>'
+    + S.breakEven.map(p => '<tr><td>' + esc(p.name) + (p.costNote ? '<br><span class="miss">' + esc(p.costNote) + '</span>' : '') + '</td><td>' + m(p.cost) + link(p.costSource) + '</td><td>' + p.reach.toLocaleString('en-GB') + ' ' + esc(p.reachUnit) + link(p.reachSource)
+      + '</td><td>' + m(p.costPerUnit) + '</td><td>' + p.breakEven.residentialYear + '</td><td>' + p.breakEven.lacCase + '</td><td>' + p.breakEven.familySupportCase + '</td></tr>').join('') + '</tbody></table>'
+    + '<p class="miss" style="font-size:12.5px;margin:6px 0 0">Unit costs: residential care ' + m(U.residentialYear.weekly) + ' a week (' + m(U.residentialYear.value) + ' a year); looked after children social work ' + m(U.lacCase.value) + ' per case; family support and intervention ' + m(U.familySupportCase.value) + ' per case.'
+    + ' <a href="' + esc(U.lacCase.url) + '" target="_blank" rel="noopener">DoH unit costs</a>. Read across a row: Sure Start pays back its cost if it keeps about ' + S.breakEven[0].breakEven.residentialYear + ' children a year out of residential care, out of 35,571 registered.</p>');
+  const s = S.sroi[0], P = s.params, row = (k, l) => '<tr><td>' + l + '<br><span class="miss">' + esc(P[k].why) + '</span></td><td>' + P[k].low + '</td><td>' + P[k].central + '</td><td>' + P[k].high + '</td></tr>';
+  const r = card('3. One indicative ratio: ' + esc(s.programme), 'The only programme where a measured outcome, a published value and costs on the same scope exist together. Every assumption is shown.',
+    '<p style="font-size:13.5px;margin:0 0 6px">Outcome: ' + esc(s.outcome.value) + ' ' + esc(s.outcome.measure) + ' (' + esc(s.outcome.year) + ', ' + esc(s.outcome.type) + ')' + link(s.outcome)
+    + '. Value: ' + esc(s.proxy.label) + link(s.proxy) + '. Inputs: ' + m(s.inputs) + link(s.inputsSource) + '.</p>'
+    + '<table class="mini"><thead><tr><th>Parameter</th><th>Low</th><th>Central</th><th>High</th></tr></thead><tbody>'
+    + row('improved', 'Children counted as improved') + row('wellbyGain', 'Gain per child (life-satisfaction points)') + row('deadweight', 'Deadweight') + row('attribution', 'Attribution') + row('displacement', 'Displacement') + row('years', 'Years counted')
+    + '<tr><td><b>Value of the outcome</b></td><td>' + m(s.cases.low.value) + '</td><td>' + m(s.cases.central.value) + '</td><td>' + m(s.cases.high.value) + '</td></tr>'
+    + '<tr><td><b>Ratio, per £1 spent</b></td><td><b>£' + s.cases.low.ratio + '</b></td><td><b>£' + s.cases.central.ratio + '</b></td><td><b>£' + s.cases.high.ratio + '</b></td></tr></tbody></table>'
+    + '<p style="font-size:13.5px;margin:8px 0 0">Read this as a statement about the evidence, not about VOYPIC. The only valued outcome is one self-reported wellbeing item. '
+    + 'Outcomes with no published value are left out (' + esc(s.notValued.slice(0, 3).join('; ')) + '), and no saving to public services is claimed.</p>'
+    + '<p class="miss" style="font-size:12.5px;margin:4px 0 0">' + s.caveats.map(esc).join(' · ') + '</p>');
+  const nc = card('4. Not computed, and why', 'Each would need evidence that is not published.', '<ul style="margin:0;padding-left:18px;font-size:13.5px">'
+    + Object.entries(S.notComputed).map(([k, v]) => '<li><b>' + esc(k.replace(/-ratio$/, '').replace(/-/g, ' ')) + '</b>: ' + esc(v) + '</li>').join('') + '</ul>');
+  $('#sroi').innerHTML = ex + be + r + nc;
 }
 // "Who pays": four layers from ni-cost-share.json, never summed across layers.
 function drawWhoPays() {
@@ -747,5 +789,5 @@ $('#orgt thead').addEventListener('click', e => { const k = e.target.dataset.k; 
 $('#org-q').oninput = drawOrgs; $('#org-basis').onchange = drawOrgs;
 $('#svc').onchange = () => { drawTop(); drawOrgs(); drawSvc(); };
 
-drawMap(); applyVB(); legend(); drawPanel(); fillAreaFilter(); drawList(); drawChart(); drawSvc(); drawWhoPays();
+drawMap(); applyVB(); legend(); drawPanel(); fillAreaFilter(); drawList(); drawChart(); drawSvc(); drawWhoPays(); drawSroi();
 </script>

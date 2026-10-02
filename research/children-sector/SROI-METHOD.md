@@ -58,3 +58,36 @@ UK principles as far as a desk study can, and says plainly where it cannot.
   It is never valued from what such programmes are generally thought to prevent.
 - The page shows the full working for each programme. The ratio is the last line,
   never the headline on its own.
+
+## Results (2026-10-02, `ni-sroi.json`, on the page)
+
+1. **Existing studies.**
+   - No published SROI of an NI children's or family service with a documented
+     method was found.
+   - NI has two economic studies: the EIF cost of late intervention (£536m a year,
+     2018) and the Roots of Empathy cost-utility trial (£9,571 per QALY, gain not
+     significant).
+   - It has one SROI ratio in a press release only: YZone, £3.26 per £1.
+   - Comparators from England and Ireland are listed as comparators.
+2. **Break-even, from published figures only:**
+   - **Sure Start:** £947 per registered child. It pays back its cost if it keeps
+     about 95 children a year out of residential care, out of 35,571 registered.
+   - **Family Support Hubs:** £373 per family referred, about 8.6 child-years of
+     residential care.
+   - **VOYPIC:** £1,555 per child, 3.4 child-years.
+   - **The King's Trust NI:** £328 per young person, 12.3 child-years.
+3. **One indicative ratio, VOYPIC:** £1 : £0.02 (low), £0.25 (central),
+   £1.48 (high).
+   - It rests on one self-reported wellbeing item and three assumed parameters
+     (size of gain, deadweight, attribution).
+   - It is a statement about how little of the outcome the published evidence
+     captures, not about VOYPIC's value.
+4. **Not computed:**
+   - **Youth justice:** disposals cannot be compared.
+   - **Sure Start ratio:** no comparison group and no unit value for a language gain.
+   - **Hubs and Parentline:** no outcome measure.
+   - **EISS:** its comparison-group evaluation found no robust effect.
+
+**What would make a real SROI possible:** for one or two programmes, outcomes measured
+with a comparison group. Children's care entry, school readiness and reoffending
+already have NI unit costs, so measuring those outcomes would allow them to be valued.
