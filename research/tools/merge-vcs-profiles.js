@@ -92,6 +92,8 @@ const flag = (id, k, v) => { const o = byId.get(id); if (o) o[k] = v; };
 flag('v312', 'duplicateOf', 'v216'); flag('v230', 'duplicateOf', 'v214');
 // The list-building merge split these on GB charity numbers written two ways ("1097940" vs "1097940 / SC038092").
 flag('v225', 'duplicateOf', 'v216'); flag('v311', 'duplicateOf', 'v214');
+// Found in phase 3: same register number (LORAG), and the same GB charity under two names (Mencap).
+flag('v263', 'duplicateOf', 'v059'); flag('v279', 'duplicateOf', 'v219');
 // Same organisation listed twice by the list-building merge, under name variants.
 flag('v320', 'duplicateOf', 'v142');   // Marrowbone Community Hub is the Association's registered office
 flag('v222', 'duplicateOf', 'v024');   // ASCERT

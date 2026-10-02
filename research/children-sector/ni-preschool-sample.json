@@ -1,0 +1,3099 @@
+{
+ "retrieved": "2026-10-02",
+ "rule": "Seeded random sample (seed 20261002), 6 per income band from register charities ticking Playgroup/after schools with a return for a year ending 2024-2026.",
+ "bandCounts": [
+  [
+   1,
+   10000,
+   45
+  ],
+  [
+   10000,
+   50000,
+   100
+  ],
+  [
+   50000,
+   100000,
+   178
+  ],
+  [
+   100000,
+   250000,
+   124
+  ],
+  [
+   250000,
+   1000000,
+   90
+  ]
+ ],
+ "finding": "Only 10 of 30 sampled charities that tick Playgroup/after schools run a playgroup or after-school club; 4 of the 36 over £1m are mainly childcare. No accounts line is labelled Pre-School Education Programme; EA money appears as Education Authority or WELB. The register tick cannot be used to size the sector, and the sample is not extrapolated.",
+ "sample": [
+  {
+   "regNo": "101316",
+   "name": "Dunsford Cross Community Resource Centre",
+   "type": "other",
+   "typeDetail": "community hall / resource centre hosting weekly sessions by other organisations; no playgroup is named",
+   "typeQuote": "organising, planning and providing a variety of events such as Children's Saturday Club, Summer Activity School, Mother and Toddler Mornings, Adult Keep Fit and Yogas Classes, Irish Language and Irish Dancing Classes",
+   "typeUrl": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=101316&subId=0",
+   "year": "1 April 2024 - 31 March 2025",
+   "totalIncome": 7045,
+   "totalExpenditure": 7503,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "HALL RENT",
+     "value": 3233,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101316_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "COUNCIL",
+     "value": 3033,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101316_20250331_CA.pdf",
+     "check": null,
+     "note": "TAR p1: 'Service Level Agreement from Newry, Mourne and Down District Council'"
+    },
+    {
+     "label": "Council Mistake Refund",
+     "value": -2221,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101316_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Garfield Weston",
+     "value": 3000,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101316_20250331_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Born-digital receipts sheet. Accounts state no staff or volunteer count; register page shows 0 employees, 0 volunteers. TAR thanks 'all the volunteers' without a number."
+  },
+  {
+   "regNo": "104331",
+   "name": "Friends of St Francis' Primary School, Drumaroad",
+   "type": "other",
+   "typeDetail": "primary-school PTA (fundraising for the school)",
+   "typeQuote": "We are an active PTA which organises social fundraising events for the families and children of the school",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104331_20250405_CA.pdf (p4)",
+   "year": "year ended 5 April 2025",
+   "totalIncome": 8757,
+   "totalExpenditure": 7967,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Fundraising activities",
+     "value": 8713,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104331_20250405_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Other business income",
+     "value": 44,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104331_20250405_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Scan, read from page image. No staff/volunteer count in accounts; register shows 0/0. No childcare activity in accounts."
+  },
+  {
+   "regNo": "102427",
+   "name": "Pobal Mhuileann an tSiain",
+   "type": "other",
+   "typeDetail": "Irish-language education and cultural group (classes, GCSE/A-level Irish, cultural events); no playgroup or after-school club named",
+   "typeQuote": "To promote educational achievements through the medium of the Irish language and to run an extensive programme of Irish classes catering for all levels of proficiency",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102427_20240331_CA.pdf (p4)",
+   "year": "year ended 31 March 2024",
+   "totalIncome": 460,
+   "totalExpenditure": 4182,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Donations and Fundraising",
+     "value": 460,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102427_20240331_CA.pdf",
+     "check": null,
+     "note": "SOFA p7 heads it 'Incoming resources from charitable activities'"
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Scan, OCR. Latest return is FY 2023-24. Public-benefit text mentions 'classes for parents of those children attending Irish medium schools'. Register 0 employees/0 volunteers."
+  },
+  {
+   "regNo": "108591",
+   "name": "Friends Of St Patrick's Parent Teacher Association",
+   "type": "other",
+   "typeDetail": "secondary-school PTA (St Patrick's College, Maghera)",
+   "typeQuote": "The purpose of the PTA is to encourage parents and staff to work together to benefit the children at St Patrick's College Maghera.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000108591_20260405_TAR.pdf (p1)",
+   "year": "year ended 31 March 2026",
+   "totalIncome": 5952,
+   "totalExpenditure": 1395,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Raffle/Prize Draw",
+     "value": 4385,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000108591_20260405_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Summer fair Collections/Pizza Night",
+     "value": 1394,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000108591_20260405_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Easyfundraising",
+     "value": 173,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000108591_20260405_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Receipts and payments account, born-digital. Register 0/0. No childcare activity."
+  },
+  {
+   "regNo": "106790",
+   "name": "An Grúpa Tuismitheoirí agus Tachráin",
+   "type": "other",
+   "typeDetail": "Irish-language parent and toddler group (parents stay; weekly 10.00-11.30), not a pre-school playgroup",
+   "typeQuote": "An Grúpa Tuismitheoirí agus Tachráin organised a weekly Parent and Toddler Group through Irish in Bryansford Hall.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106790_20250930_TAR.pdf (p3)",
+   "year": "1 Oct 2024 - 30 September 2025",
+   "totalIncome": 9348.52,
+   "totalExpenditure": 13166.92,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "DAERA Micro Grant",
+     "value": 43.66,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106790_20250930_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "DAERA Micro Grant",
+     "value": 1290.21,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106790_20250930_CA.pdf",
+     "check": "extraction"
+    },
+    {
+     "label": "Admission Fees from Door",
+     "value": 20,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106790_20250930_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Admissions from Fees at Door (16.01.25)",
+     "value": null,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106790_20250930_CA.pdf",
+     "check": "extraction"
+    },
+    {
+     "label": "Loan from Glór Uachtar Tíre",
+     "value": 3000,
+     "page": 3,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106790_20250930_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Admissions from Fees at Door",
+     "value": 45,
+     "page": 3,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106790_20250930_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Loan from Glór Uachtar Tíre",
+     "value": 1000,
+     "page": 4,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106790_20250930_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Loan from Glór Uachtar Tíre",
+     "value": 750,
+     "page": 4,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106790_20250930_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "(unlabelled receipt 16.05.25; bank statement p20 of TAR: \"Automated Credit NEWRY COUNCIL\")",
+     "value": 2990,
+     "page": 4,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106790_20250930_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Cash Admissions from Fees at Door",
+     "value": 209.65,
+     "page": 4,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106790_20250930_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Cash book, not a SOFA. The printed income total (TAR p5: Income £9,348.52, Expenditure £13,166.92) includes £4,750 of LOANS from a local Irish-language group, so it overstates income. Fees: £3 per family per week (TAR p3). Facilitators 'paid by grants obtained from Newry, Mourne and Down District Council' (TAR p4); Foras na Gaeilge grant not received this year. Running balances in the cash book do not always reconcile (e.g. 09.12.24), hence check flags. Register 0 employees/0 volunteers."
+  },
+  {
+   "regNo": "100639",
+   "name": "Madden Schoolhouse Heritage Committee",
+   "type": "other",
+   "typeDetail": "heritage / community group restoring a listed schoolhouse; holds open days and community events; no playgroup or club named",
+   "typeQuote": "The charity currently. hold community open days. education days, health programs and community events tk»r children. families and senior citizens.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100639_20260131_TAR.pdf (p1, OCR text as read)",
+   "year": "year ended 31 January 2026",
+   "totalIncome": 2290,
+   "totalExpenditure": 4406,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Turnover",
+     "value": 2288,
+     "page": 4,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100639_20260131_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Other interest receivable and similar income",
+     "value": 2,
+     "page": 4,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100639_20260131_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Accounts are a company-style P&L; 'Turnover' is not broken down by source. Total income not printed as one figure (2,288 + 2 = register's 2,290). Loan provision £140,000 creditor. Register 0 employees, 0 volunteers."
+  },
+  {
+   "regNo": "103191",
+   "name": "Two Castles Community And Devolpment Association",
+   "type": "other",
+   "typeDetail": "rural community association running a Christmas festival, sports and leisure activities and a senior citizens party; no playgroup or club named",
+   "typeQuote": "TCCDA provide low cost sports and leisure activities in order to promote a healthier lifestyle",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103191_20250405_TAR.pdf (p3)",
+   "year": "6 April 2024 - 5 April 2025",
+   "totalIncome": 14568.64,
+   "totalExpenditure": 15776.55,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Grants",
+     "value": 10038.64,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103191_20250405_CA.pdf",
+     "check": null,
+     "note": "TAR p4 names Derry City and Strabane District Council Community Festival grant aid and a DAERA Rural Microgrant, without amounts"
+    },
+    {
+     "label": "Associated donations",
+     "value": 3230,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103191_20250405_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Sponsorship",
+     "value": 1300,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103191_20250405_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Wages: nil. Grants line not split by funder. Register 0 employees, 0 volunteers."
+  },
+  {
+   "regNo": "103523",
+   "name": "Friends Of Tattygar Parents Association",
+   "type": "other",
+   "typeDetail": "primary-school parents association (fundraising for outdoor play equipment and iPads)",
+   "typeQuote": "many fundraising events, secured funding from our local council and had many donations from local businesses which has all gone towards providing much needed outdoor play equipment and iPads for the children in the school",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_TAR.pdf (p1)",
+   "year": "year ended 31 August 2025",
+   "totalIncome": 15580.82,
+   "totalExpenditure": 14542.61,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Summer Fete",
+     "value": 1220,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "DAERA - Grant",
+     "value": 1984.4,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Easyfundraising",
+     "value": 39.71,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Roy Nixon",
+     "value": 500,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Fundraising - Anagrams",
+     "value": 150,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Fundraising - Ditch the Dark Disco",
+     "value": 485,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Doherty Oils",
+     "value": 300,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Fundraising - M&S Bag pack",
+     "value": 692,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Easyfundraising",
+     "value": 20.45,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Crawfords",
+     "value": 1500,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Loughans",
+     "value": 250,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "ASDA Cashpot",
+     "value": 165.04,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Evan McGlynn",
+     "value": 300,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Crudden Dolan Ltd",
+     "value": 100,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Skip Services",
+     "value": 100,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Gileece Family",
+     "value": 100,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - B McCaffrey and Son",
+     "value": 200,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Fundraising - Dunnes Stores Bag pack",
+     "value": 869,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "DAERA - Grant",
+     "value": 1995.38,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Mannok Build Ltd",
+     "value": 200,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Mavic Group",
+     "value": 500,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Tracey Brothers",
+     "value": 100,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Lisbellaw Vets",
+     "value": 50,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Campbell Pharmacy",
+     "value": 500,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Spar Magiresbridge",
+     "value": 100,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - GFL Design",
+     "value": 200,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Easyfundraising",
+     "value": 42.24,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - E Leitch Dental",
+     "value": 100,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Campbell Contracts",
+     "value": 150,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - BC Engineering",
+     "value": 1000,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Donnelly Bros",
+     "value": 500,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Beechvale Water",
+     "value": 100,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Donation - Sean Hannigan",
+     "value": 1000,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Easyfundraising",
+     "value": 67.6,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103523_20250831_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Bank-transaction summary (photographed scan), read from the image. Secretary's report says funding came 'from our local council', but the only grant lines printed are 'DAERA - Grant'. Register 0/0."
+  },
+  {
+   "regNo": "103305",
+   "name": "Glen Area Parent & Toddler Group",
+   "type": "other",
+   "typeDetail": "volunteer-run parent and toddler drop-in (adults stay with children), not a pre-school playgroup",
+   "typeQuote": "Glen Area Parent and Toddler Group provide a trice weekly drop in service in Glenview Community Centre for babies and toddlers accompanied by parents, grandparents, carers and childminders.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103305_20260331_TAR.pdf (p2)",
+   "year": "year ended 31 March 2026",
+   "totalIncome": 20556.54,
+   "totalExpenditure": 20527.12,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Donation (in kind) from Glen Development Initiative (Big Lottery Fund)",
+     "value": 12036.19,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103305_20260331_TAR.pdf",
+     "check": null,
+     "note": "CA p2 prints it as 'Donation (in kind) from Glen Development Initiative'"
+    },
+    {
+     "label": "Income from Petty Cash",
+     "value": 8520.35,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103305_20260331_TAR.pdf",
+     "check": null,
+     "note": "source of petty-cash income not stated; matched by Children's lunches (Petty Cash) £8,433.30"
+    }
+   ],
+   "volunteers": 3,
+   "employees": 0,
+   "notes": "Volunteers/employees from the register page (accounts give no count); TAR p2 says it 'is run on a voluntary basis by the members of the group'. Lottery money arrives in kind via Glen Development Initiative, which paid the expenses directly."
+  },
+  {
+   "regNo": "100702",
+   "name": "St Joseph's Primary School Fundraising Group",
+   "type": "other",
+   "typeDetail": "primary-school fundraising group (PTA-type)",
+   "typeQuote": "The primary objective of the Fundraising Group is to raise funds for the maintenance and enhancement of St. Joseph's primary school and to deliver activities for the children who attend the school.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100702_20251231_TAR.pdf (p1)",
+   "year": "1 January 2025 - 31 December 2025",
+   "totalIncome": 16212,
+   "totalExpenditure": 15298,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Schoold Fundraising Events",
+     "value": 15017,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100702_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Grants Received",
+     "value": 1020,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100702_20251231_CA.pdf",
+     "check": null,
+     "note": "restricted; TAR p2: 'received a grant from Mid-Ulster District Council' (amount not tied in TAR)"
+    },
+    {
+     "label": "Asda Cashpot",
+     "value": 175,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100702_20251231_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "CCNI receipts-and-payments template, born-digital. Register 0/0."
+  },
+  {
+   "regNo": "106777",
+   "name": "ST JOHN'S BRIGHT START",
+   "type": "after-school / out-of-school club",
+   "typeDetail": "school-age daily childcare at St John's Primary School, Swatragh",
+   "typeQuote": "providing high quality and affordable daily child care facilities for pupils at St. John's Primary School and those from other schools in the Swatragh / Maghera are and its environs",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106777_20251231_CA.pdf (p4)",
+   "year": "year ended 31 December 2025",
+   "totalIncome": 35234,
+   "totalExpenditure": 26578,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "DOH SPPG",
+     "value": 5789,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106777_20251231_CA.pdf",
+     "check": null,
+     "note": "Department of Health Strategic Planning and Performance Group"
+    },
+    {
+     "label": "Other income",
+     "value": 29445,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106777_20251231_CA.pdf",
+     "check": null,
+     "note": "not broken down; parents' fees are not separately labelled"
+    }
+   ],
+   "volunteers": null,
+   "employees": 5,
+   "notes": "Employees: 'The average monthly number of persons employed by the company during the year was 5 (2024: 3)' (p12). Register: 5 employees, 0 volunteers. Fees, if any, sit inside 'Other income', which is unlabelled by source. CA and TAR files are the same document."
+  },
+  {
+   "regNo": "104667",
+   "name": "St Bernadette's Third World Group",
+   "type": "other",
+   "typeDetail": "grant-making trust funding children's centres in Lima, Peru; no NI playgroup or club",
+   "typeQuote": "The charity is a grant making trust which will apply its income by making grants to charities operating in Lima, Peru.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104667_20260331_TAR.pdf (p2)",
+   "year": "1 April 2025 - 31 March 2026",
+   "totalIncome": 45001.87,
+   "totalExpenditure": null,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Sponsorships St Bernadette's Parish, Belfast",
+     "value": 25192,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104667_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "HMRC Charities (Gift Aid)",
+     "value": 3708.24,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104667_20260331_CA.pdf",
+     "check": "extraction",
+     "note": "OCR read 8,708.24; TAR p4 states 'Gift Aid: £3,708.24', and the lines only sum to the printed total with 3,708.24"
+    },
+    {
+     "label": "Gross Interest",
+     "value": 4376.63,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104667_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Our Lady & St Pat's",
+     "value": 11025,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104667_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Holy Rosary",
+     "value": 700,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104667_20260331_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Expenditure is printed only as four lines (grant to Fr Coney, St Bernadette's Centres, Lima £42,408; bank fee £15; mailshot postage £350; laptop £450), no printed total. The 'Playgroup/after schools' tick on the register presumably reflects the Lima children's centre, not NI provision. Register 0/0."
+  },
+  {
+   "regNo": "105675",
+   "name": "Legacurry Pre-School",
+   "type": "pre-school playgroup / nursery",
+   "typeDetail": "community pre-school with EA-funded places; Early Years member",
+   "typeQuote": "The charity staff organise the day to day running of the pre-school.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105675_20250831_CA.pdf (p2)",
+   "year": "year ended 31 August 2025",
+   "totalIncome": 70278,
+   "totalExpenditure": 63087,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Fundraising activities",
+     "value": 1145,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105675_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Grants",
+     "value": 63200,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105675_20250831_CA.pdf",
+     "check": null,
+     "note": "note 3 p9 splits it"
+    },
+    {
+     "label": "Education Authority",
+     "value": 61200,
+     "page": 9,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105675_20250831_CA.pdf",
+     "check": null,
+     "note": "unrestricted; 'The grant received from the Education Authority in respect of funded places at the pre-school is for general running costs'"
+    },
+    {
+     "label": "Education Authority - outdoor play grant",
+     "value": 2000,
+     "page": 9,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105675_20250831_CA.pdf",
+     "check": null,
+     "note": "restricted"
+    },
+    {
+     "label": "Interest on deposit account",
+     "value": 114,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105675_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Enrolment fees",
+     "value": 720,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105675_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Weekly contributions",
+     "value": 4166,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105675_20250831_CA.pdf",
+     "check": null,
+     "note": "TAR p3: 'collected weekly contributions from parents'"
+    },
+    {
+     "label": "Milk refund",
+     "value": 365,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105675_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Sundry",
+     "value": 568,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105675_20250831_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": 7,
+   "employees": 5,
+   "notes": "Employee/volunteer counts from the register (accounts give none). TAR p3: 'The charity's main source of income each year is from the Education Authority which was £63,200' and attributes the rise to 'the Department of Education implementing a one off large increase to the funding per child'. Receipts and payments basis."
+  },
+  {
+   "regNo": "102206",
+   "name": "St Brigid's Play School Mountfield",
+   "type": "pre-school playgroup / nursery",
+   "typeDetail": "playgroup in Mountfield Primary School",
+   "typeQuote": "The charity operates a playgroup for pre-school children.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102206_20250831_CA.pdf (p3)",
+   "year": "year ended 31 August 2025",
+   "totalIncome": 58348,
+   "totalExpenditure": 65251,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Voluntary Contributions/Fundraising",
+     "value": 2188,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102206_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "WELB",
+     "value": 31818,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102206_20250831_CA.pdf",
+     "check": null,
+     "note": "WELB = Western Education and Library Board, a predecessor of the EA; label as printed, funder purpose not stated"
+    },
+    {
+     "label": "Grants receivable",
+     "value": 16676,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102206_20250831_CA.pdf",
+     "check": null,
+     "note": "funder not named"
+    },
+    {
+     "label": "Paying Places",
+     "value": 7395,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102206_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Bank interest receivable",
+     "value": 271,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102206_20250831_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": 0,
+   "employees": 3,
+   "notes": "SOFA prints total expenditure as 65,252 in the unrestricted column and 65,251 in the total column; detailed SOFA p15 has 65,251. Staff and volunteer counts from the register only. 'Paying Places' is the parent-fee line."
+  },
+  {
+   "regNo": "103242",
+   "name": "Tiny Tots Preschool Stewartstown",
+   "type": "pre-school playgroup / nursery",
+   "typeDetail": "term-time pre-school, ages 2y10m-4y11m",
+   "typeQuote": "The charity's aim is to provide high quality pre-school education for children aged 2 years 10 months to 4 years 11 months.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103242_20250430_CA.pdf (p3)",
+   "year": "year ended 30 April 2025",
+   "totalIncome": 64456,
+   "totalExpenditure": 64810,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Membership Fees",
+     "value": 6110,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103242_20250430_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "EA Grants",
+     "value": 53520,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103242_20250430_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Fundraising",
+     "value": null,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103242_20250430_CA.pdf",
+     "check": null,
+     "note": "printed as '-'"
+    },
+    {
+     "label": "Other Income",
+     "value": 4650,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103242_20250430_CA.pdf",
+     "check": null,
+     "note": "not explained"
+    },
+    {
+     "label": "Uniform/Photographs",
+     "value": 176,
+     "page": 7,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103242_20250430_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": 0,
+   "employees": 6,
+   "notes": "'Tiny Tots Preschool is financed mainly by EA Grants' (p3). 'Membership Fees' is the only parent-paid line; whether it is a fee for sessions is not stated. Staff/volunteer counts from the register. The I&E summary (p5) shows only 'Income 64,456'."
+  },
+  {
+   "regNo": "104907",
+   "name": "Jack and Jill Community Playgroup",
+   "type": "pre-school playgroup / nursery",
+   "typeDetail": "community playgroup, Plumbridge; NIPPA/Early Years member",
+   "typeQuote": "in a common effort to enhance the development and education of children under statutory school age",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104907_20250731_CA.pdf (p3, Principal Activity)",
+   "year": "year ended 31 July 2025",
+   "totalIncome": 59305,
+   "totalExpenditure": 49949,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Donations",
+     "value": 300,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104907_20250731_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "WELB",
+     "value": 53916,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104907_20250731_CA.pdf",
+     "check": null,
+     "note": "under 'Grants from govemments and other co-funders'; WELB = Western Education and Library Board, a predecessor of the EA"
+    },
+    {
+     "label": "Fundraising Activities",
+     "value": 1640,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104907_20250731_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Fees",
+     "value": 2851,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104907_20250731_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Bank Interest",
+     "value": 598,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104907_20250731_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": 8,
+   "employees": 4,
+   "notes": "Employees: average number employed 2025 = 4 (p13). Volunteers 8 from the register only. Expenditure includes 'Early Years/ NIPPA Consultancy Fees' 1,650. Scan; income note read from the page image."
+  },
+  {
+   "regNo": "109060",
+   "name": "Ardoyne Afterschools Club",
+   "type": "after-school / out-of-school club",
+   "typeDetail": "after-school club for children aged 5-11, 5 days a week 3.30-6pm, North Belfast",
+   "typeQuote": "We currently provide afterschool support 5 days per week from 3:30pm-6:00pm, to 35 children aged 5-11.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000109060_20250405_TAR.pdf (p2)",
+   "year": "year ended 5 April 2025",
+   "totalIncome": 89880,
+   "totalExpenditure": null,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Parental contributions",
+     "value": 56137,
+     "page": 12,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000109060_20250405_CA.pdf",
+     "check": "extraction",
+     "note": "scan; label and value columns OCR-separated, but the two lines sum to the printed income of 89,880"
+    },
+    {
+     "label": "Grant income",
+     "value": 33743,
+     "page": 12,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000109060_20250405_CA.pdf",
+     "check": "extraction",
+     "note": "funder not named anywhere in the accounts or TAR; accounting policy p8: 'Income comprises grants from statutory bodies and fees paid by parents.'"
+    }
+   ],
+   "volunteers": 4,
+   "employees": 5,
+   "notes": "No single expenditure total is printed: the I&E (p6) shows direct costs (88,613), administrative expenses (23,007) and interest (105), deficit (21,845). Employees: average monthly number 5 (p10). Volunteers 4 from the register."
+  },
+  {
+   "regNo": "102114",
+   "name": "NOAH'S ARK PLAYGROUP",
+   "type": "pre-school playgroup / nursery",
+   "typeDetail": "community playgroup, Waringstown, mornings 9.15-12.15, registered with Southern HSC Trust; 18 children at start of year; apparently NOT in the funded pre-school programme (no EA line)",
+   "typeQuote": "we are a community playgroup and we must be committee run in order to receive funding from the Trust, which amounts to £6 for every day that we are operational - a total of about £1000 per year.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102114_20250630_TAR.pdf (p3)",
+   "year": "year ending 30 June 2025",
+   "totalIncome": 50509.9,
+   "totalExpenditure": 49531.97,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Fees received from parents",
+     "value": 40669.65,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102114_20250630_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "NICSS subsidy",
+     "value": 2256,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102114_20250630_CA.pdf",
+     "check": null,
+     "note": "Northern Ireland Childcare Subsidy Scheme (introduced 2024, TAR p5)"
+    },
+    {
+     "label": "NICSS Admin Payment",
+     "value": 1024.25,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102114_20250630_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Milk Refund",
+     "value": 378.9,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102114_20250630_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Fundraising",
+     "value": 4075.1,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102114_20250630_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Grants",
+     "value": 1086,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102114_20250630_CA.pdf",
+     "check": null,
+     "note": "funder not named on the account; the Leader's report says Trust funding is 'about £1000 per year', but the line itself is unlabelled"
+    },
+    {
+     "label": "Donations",
+     "value": 1020,
+     "page": 2,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102114_20250630_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": 2,
+   "employees": 4,
+   "notes": "Scan; OCR separated labels from values, 7 labels and 7 values in order and they sum to the printed total. Staff named in TAR p5: leader, deputy, assistant, relief assistant (4) - matches register 4 employees; volunteers 2 from register. Parent fees are the dominant line; no EA/PEG, Pathway or Sure Start line."
+  },
+  {
+   "regNo": "101564",
+   "name": "Carrick Hill Residents Association",
+   "type": "community organisation that runs a playgroup among other things",
+   "typeDetail": "residents association / community centre; runs an after-schools session two days a week (not a playgroup) plus youth clubs, gym, trips; hosts Smile Sure Start parent and toddler sessions",
+   "typeQuote": "After Schools runs two days per week, Multi-Sports is 1 day per week",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_TAR.pdf (p1)",
+   "year": "year ended 31 March 2026",
+   "totalIncome": 125493,
+   "totalExpenditure": 115721,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Belfast City Council Revenue Grant",
+     "value": 40867,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Halifax Foundation Grant",
+     "value": null,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "printed '-' for 2026"
+    },
+    {
+     "label": "NIHE Community Involvement",
+     "value": 4662,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Belfast City Council Summer  Scheme",
+     "value": 2500,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Department Of Communities Voluntary Support",
+     "value": 1500,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Belfast Council Medium Grant",
+     "value": null,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "printed '-' for 2026"
+    },
+    {
+     "label": "Department Of Communities Salaries",
+     "value": 51121,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Environmental Grant",
+     "value": null,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "printed '-' for 2026"
+    },
+    {
+     "label": "Belfast City Council Recover Fund",
+     "value": 1000,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Department Of Communities Laptop",
+     "value": 500,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Belfast City Council Hardship Fund",
+     "value": null,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "printed '-' for 2026"
+    },
+    {
+     "label": "Stretch & Tone",
+     "value": 171,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Arts & Crafts",
+     "value": 115,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Centre Events",
+     "value": null,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "printed '-' for 2026"
+    },
+    {
+     "label": "Smile Sure Start",
+     "value": 2380,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "whether this is room hire from or a grant via Smile Sure Start is not stated; TAR p2 says 'Smile Surestart are still operating out of our centre every Wednesday morning facilitating parent and toddler sessions'"
+    },
+    {
+     "label": "Junior Football",
+     "value": 64,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Senior Youth Club",
+     "value": 16,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Gym",
+     "value": 4030,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Room Hire",
+     "value": 1531,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "NIHE Cohesion Grant",
+     "value": 4888,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Centre Donations",
+     "value": 400,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Spring Board",
+     "value": null,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "printed '-' for 2026"
+    },
+    {
+     "label": "Tuesday Club",
+     "value": 3150,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Junior Disco",
+     "value": 89,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "CHRA After school",
+     "value": 484,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "appears to be after-school session income; payer not stated"
+    },
+    {
+     "label": "Computer",
+     "value": 131,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Fitness Freddy",
+     "value": null,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "printed '-' for 2026"
+    },
+    {
+     "label": "Bryan Mullan Fund",
+     "value": 2000,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Dolores Quinn Reinbursement",
+     "value": null,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "printed '-' for 2026"
+    },
+    {
+     "label": "Carrwally Holdings",
+     "value": null,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "printed '-' for 2026"
+    },
+    {
+     "label": "Belfast City Council Reinbursement MUGA Lights",
+     "value": null,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null,
+     "note": "printed '-' for 2026"
+    },
+    {
+     "label": "Sundry income",
+     "value": 3731,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Deposit account interest",
+     "value": 163,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101564_20260331_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": 8,
+   "employees": 4,
+   "notes": "Every page of both PDFs is scanned sideways; read from rotated images. Detailed SOFA (p10, 'does not form part of the statutory financial statements'). The after-school line is £484 of £125,493 - the biggest lines are Department for Communities salaries and Belfast City Council revenue grant. Employees/volunteers from register; TAR mentions losing volunteers to the cost of living."
+  },
+  {
+   "regNo": "102454",
+   "name": "KILKEEL PARISH BRIDGE ASSOCIATION LIMITED",
+   "type": "community organisation that runs a playgroup among other things",
+   "typeDetail": "church-linked youth centre ('JIMS Youth Centre') and children/young people's mental health hub; runs an After Schools Club among youth programmes, not a playgroup",
+   "typeQuote": "JIMS continued to deliver core programmes such as: weekend drop-in, Girls Night In, Lads Group, monthly kids' club, After Schools Club, trips and more during the school year.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102454_20241231_CA.pdf (p4)",
+   "year": "year ended 31 December 2024",
+   "totalIncome": 191224,
+   "totalExpenditure": 188304,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Unrestricted donations",
+     "value": 11930,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102454_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Gift aid",
+     "value": 762,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102454_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Restricted grants & donations",
+     "value": 158968,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102454_20241231_CA.pdf",
+     "check": null,
+     "note": "not split by funder; note 5 says 'The major source of core operating income are grants received from National Lottery Funding and the Education Authority, Youth UK: Thriving Minds and The Irish Youth Fund: Coca-Cola Award and Thank You Fund.'"
+    },
+    {
+     "label": "Income from non-investment property in furtherance of the charity's objects",
+     "value": 4553,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102454_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "JIMS - Gross income",
+     "value": 7955,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102454_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Junior JIMS - Gross income",
+     "value": 1354,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102454_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Tuck shop income",
+     "value": 3570,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102454_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Miscellaneous income",
+     "value": 350,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102454_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Summer madness",
+     "value": 1508,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102454_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Bank interest receivable",
+     "value": 274,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102454_20241231_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": 68,
+   "employees": 10,
+   "notes": "Employees: 'The average head count of employees during the year was 10' (accounts, staff note). Volunteers 68 from the register. EA money here is youth-service funding, named only in prose, not PEG. Scan read from page image."
+  },
+  {
+   "regNo": "103414",
+   "name": "Derrytrasna Playgroup",
+   "type": "both",
+   "typeDetail": "playgroup for 0-5s plus breakfast and after-school club for 5-11s in the primary school building",
+   "typeQuote": "Our organisation provides a Playgroup for 0-5 year olds and a Breakfast/Afterschool Club for 5-11 year olds attending the primary school in the same property.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103414_20250930_TAR.pdf (TAR p3 of OCR)",
+   "year": "year ended 30 September 2025",
+   "totalIncome": 105693,
+   "totalExpenditure": 101794,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Donations and legacies",
+     "value": 2978,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103414_20250930_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Income from charitable activities",
+     "value": 102175,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103414_20250930_CA.pdf",
+     "check": null,
+     "note": "100,175 unrestricted + 2,000 restricted; not broken down by source anywhere in the accounts"
+    },
+    {
+     "label": "Investments",
+     "value": 540,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103414_20250930_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": 0,
+   "employees": 6,
+   "notes": "Funders named only in TAR prose, not as lines: reserves policy names 'major funding sources such as Pathway and the Southern Health and Social Care Trust'; 'a Take500 grant of £2,000'; fundraising Halloween Disco £607 and Santa Dash £1,759; 'a modest increase in fees' for Playgroup, Breakfast Club and Afterschool Club. No EA line visible. Staff/volunteer counts from register. Scan, OCR; SOFA values consistent with totals."
+  },
+  {
+   "regNo": "106628",
+   "name": "Transformation Centre",
+   "type": "other",
+   "typeDetail": "the charity of Mount Zion Community Church (Free Methodist), Lisburn: worship, pastoral care, counselling, drop-in; no playgroup or club named (expenditure has 'Kids Zone' and 'Sunday School Support' lines)",
+   "typeQuote": "We have promoted recreation and well-being through the provision of \"drop in\" facilities for persons who have need of such facilities by reason of their youth, age, infirmity or disability",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_TAR.pdf (p1)",
+   "year": "year ended 31 December 2024",
+   "totalIncome": 134199.35,
+   "totalExpenditure": 153491.07,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Freewill Offering (Note 3)",
+     "value": 83895.96,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Gift Aid Refund",
+     "value": 14621.25,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Gift for Bibles in Dublin",
+     "value": 500,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Towards Heat and Light",
+     "value": 1749,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Missionaries",
+     "value": 200,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Money towards Food",
+     "value": 833.69,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Youth",
+     "value": 3642.82,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Laptop for Nick",
+     "value": 1770,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Designated Offerings & Gifts (pass through)",
+     "value": 2200,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Money towards Hillhall outreach",
+     "value": 450,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Audio Ministry",
+     "value": 1500,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Bank Interest",
+     "value": 740.85,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Gift towards repairs",
+     "value": 300,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Support of DTH Treasure",
+     "value": 6000,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Misc ( pass through )",
+     "value": 86.7,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Church Planting fund income",
+     "value": 2709.08,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Gifts for new centre",
+     "value": 1350,
+     "page": 3,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Support",
+     "value": 6000,
+     "page": 3,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null,
+     "note": "payer not named"
+    },
+    {
+     "label": "Rent for 135",
+     "value": 5650,
+     "page": 3,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106628_20241231_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Church cash statement, scan read from page images. General fund total £118,490.27 (p1); Gregg Street project £13,000.00 (p3); printed 'Total Income for year' £134,199.35 includes church-planting income. Register employee/volunteer counts not captured in accounts."
+  },
+  {
+   "regNo": "102288",
+   "name": "Greater Whitewell Community Surgery",
+   "type": "other",
+   "typeDetail": "North Belfast peace-barrier / good-relations organisation; delivers a CRC/TEO-funded 'Achieving Personal Potential' programme for children aged 4-14 from 15 schools, which is the nearest thing to an out-of-school club; no playgroup",
+   "typeQuote": "GWCS facilitates the APP programme for young people aged 4 to 14 from 15 schools across our catchment area.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_TAR.pdf (p2)",
+   "year": "year ended 31 March 2025",
+   "totalIncome": 220154,
+   "totalExpenditure": 208645,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "IFI Peacewalls",
+     "value": 0,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "NIHE",
+     "value": 27825,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "AAR",
+     "value": 0,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "NI Community Relations",
+     "value": 42449,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "International Fund",
+     "value": 142722,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "SPOD",
+     "value": 0,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Clanmill Housing",
+     "value": 0,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Management Fees",
+     "value": 7075,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Cheque",
+     "value": 0,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Uplift",
+     "value": 0,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Equip Donations",
+     "value": 0,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Reserve",
+     "value": 33,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Room Hire",
+     "value": 0,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Refund",
+     "value": 50,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102288_20250331_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": 20,
+   "employees": 3,
+   "notes": "Scan read from page image; zero lines included because they are printed. 'International Fund' = International Fund for Ireland per TAR 'service providers' list; 'NI Community Relations' = CRC/The Executive Office North Belfast Strategic Good Relations Programme per TAR. Staff/volunteer counts from register."
+  },
+  {
+   "regNo": "103437",
+   "name": "Dromore Childcare Centre",
+   "type": "pre-school playgroup / nursery",
+   "typeDetail": "community playgroup (register 'other name' Dromore Community Playgroup), 40 years old; objects also allow out-of-school care but the report describes only the pre-school playgroup",
+   "typeQuote": "The charity's beneficiaries are the children who are in their pre-school year and also their parents.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103437_20250831_TAR.pdf (p2)",
+   "year": "year ended 31 August 2025",
+   "totalIncome": 116983,
+   "totalExpenditure": 107240,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Donations and legacies",
+     "value": 900,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103437_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Charitable activities - Playgroup",
+     "value": 110367,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103437_20250831_CA.pdf",
+     "check": null,
+     "note": "6,611 unrestricted + 103,756 restricted; the restricted funder is not named - the filed CA is only 3 pages and has no income note"
+    },
+    {
+     "label": "Other trading activities",
+     "value": 5643,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103437_20250831_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Investment income",
+     "value": 73,
+     "page": 1,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103437_20250831_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": 28,
+   "employees": 5,
+   "notes": "The CA filed with CCNI omits the notes, so the £103,756 restricted playgroup income cannot be tied to EA, a trust or anyone else (likely EA pre-school funding but NOT stated, so not recorded as such). Staff/volunteer counts from register. Scan, OCR; totals consistent."
+  },
+  {
+   "regNo": "100770",
+   "name": "COALISLAND TRAINING SERVICES LIMITED",
+   "type": "other",
+   "typeDetail": "vocational training provider (Training for Success, ApprenticeNI, school vocational programmes, adult classes); no playgroup or after-school club; its children's element is the Children in Need-funded Boost Programme, not described further",
+   "typeQuote": "The principal activity of the society is that of the advancement of education. This is met by the provision of day and night classes and also training facilities for the development of occupational skills and work experience.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf (p4)",
+   "year": "year ended 31 March 2025",
+   "totalIncome": 728826,
+   "totalExpenditure": 654263,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Voluntary Income - Training for Success",
+     "value": 19620,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "VEP",
+     "value": 87422,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "IEP",
+     "value": 29450,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Coalisland Neighbourhood",
+     "value": 30640,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "CSR Courses",
+     "value": 53270,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Other Workplace Courses",
+     "value": 366577,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Moving to Success",
+     "value": 51743,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf",
+     "check": "extraction",
+     "note": "printed 51,473 in the unrestricted column and 51,743 in the total column"
+    },
+    {
+     "label": "IFI - Personal Youth Development",
+     "value": null,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf",
+     "check": null,
+     "note": "printed '-'"
+    },
+    {
+     "label": "Misc Income",
+     "value": 59075,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Access NI",
+     "value": 224,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Children In Need",
+     "value": 31075,
+     "page": 11,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100770_20250331_CA.pdf",
+     "check": null,
+     "note": "restricted; TAR: 'a grant from Children in Need in the year of £31,075 which is to be used for wages, activities and management of the Boost Programme'"
+    }
+   ],
+   "volunteers": 4,
+   "employees": null,
+   "notes": "Accounts give an average monthly FTE figure in note 6 but the OCR splits it across staff categories (only 'Administration Staff ... 8' readable) - not recorded; register says 9 employees, 4 volunteers. SOFA p11 scan; 'Childcare course offered privately' is a training course, not childcare provision."
+  },
+  {
+   "regNo": "100600",
+   "name": "Clonoe Rural Development Agency Ltd",
+   "type": "other",
+   "typeDetail": "rural community centre manager; hosts user groups (sport, fitness, toddler multisensory sessions, children's workshops); no playgroup or after-school club of its own is listed",
+   "typeQuote": "managing a community centre, promoting volunteering and the community sector, advancing education,",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100600_20240930_TAR.pdf (objects section)",
+   "year": "year ended 30 September 2024",
+   "totalIncome": 363831,
+   "totalExpenditure": null,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Sales",
+     "value": 140,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100600_20240930_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Rental income",
+     "value": 33026,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100600_20240930_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Grants and donations received",
+     "value": 330665,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100600_20240930_CA.pdf",
+     "check": null,
+     "note": "funders not named; TAR names DAERA RDP funding for refurbishing the main function room and says 'We are not in receipt of any other core funding to cover overheads'"
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Latest return is FY to 30 Sept 2024. Turnover printed £363,831. No single expenditure total printed: administrative expenses (64,055) and bank loan interest (22,178). Surplus £277,598 suggests the grants are largely capital (building), but the accounts do not say so. Detailed I&E read from page image (born-scanned, clean)."
+  },
+  {
+   "regNo": "102018",
+   "name": "Community Intercultural Programme",
+   "type": "community organisation that runs a playgroup among other things",
+   "typeDetail": "Craigavon/ABC intercultural and migrant-support charity (advice service, BME youth work); its 'Oasis' youth strand runs a weekly Afterschool Club (Tuesdays) - an after-school club, not a playgroup",
+   "typeQuote": "The Afterschool Club delivers 34 sessions annually, supporting 55 children and 7 peer mentors every Tuesday.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102018_20250331_TAR.pdf (p12)",
+   "year": "year ended 31 March 2025",
+   "totalIncome": 260956,
+   "totalExpenditure": 290416,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Donations",
+     "value": 2609,
+     "page": 14,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102018_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Grants receivable",
+     "value": 196644,
+     "page": 14,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102018_20250331_CA.pdf",
+     "check": null,
+     "note": "not split by funder; TAR p15 'Schedule of CIP funders' (no amounts): ABC Borough Council (core running costs & good relations), McClay Foundation/CINI (holiday hunger), TNL Community Fund (Oasis Youth), Education Authority (BME youth projects), Neighbourhood Renewal (youth project), Red Cross (TEO crisis fund), The Executive Office, Public Health Agency"
+    },
+    {
+     "label": "Invoices for services",
+     "value": 61703,
+     "page": 14,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102018_20250331_CA.pdf",
+     "check": null,
+     "note": "payer not stated"
+    }
+   ],
+   "volunteers": 40,
+   "employees": 15,
+   "notes": "Employees: average monthly FTE 15 (CA p10). Volunteers 40 from register. EA money here is for BME youth projects / EA Newcomer Programme, not PEG. Scan, OCR; totals consistent."
+  },
+  {
+   "regNo": "101810",
+   "name": "Shantallow Community Residents Association",
+   "type": "other",
+   "typeDetail": "Derry community development association (community relations, safety, youth interventions, health); no playgroup or after-school club named in the report",
+   "typeQuote": "Youth Interventions: 770 young people benefitting from youth intervention and personat development programmes.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf (Trustees report, OCR text as read)",
+   "year": "year ended 31 March 2025",
+   "totalIncome": 658880,
+   "totalExpenditure": 666219,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Apex",
+     "value": 13950,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "WHSCT",
+     "value": 33383,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null,
+     "note": "Western Health and Social Care Trust; purpose not stated"
+    },
+    {
+     "label": "EA- Region",
+     "value": 17142,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null,
+     "note": "Education Authority; purpose not stated - consistent with youth work, not stated as pre-school"
+    },
+    {
+     "label": "The Clothworkers Foundation",
+     "value": null,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null,
+     "note": "printed '-'"
+    },
+    {
+     "label": "Department for Communities",
+     "value": 162441,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Ballyarnett Comm Safety & Develop",
+     "value": 76450,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Derry Healthy Cities",
+     "value": null,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null,
+     "note": "printed '-'"
+    },
+    {
+     "label": "Pennyburn Credit Union",
+     "value": 1500,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "PHA Clear Project",
+     "value": 1000,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Ballyarnett Empowering Women",
+     "value": 50022,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Derry City and Strabane District Council",
+     "value": 29554,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "GSAP/DENI project",
+     "value": 67919,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Project Income",
+     "value": 201019,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null,
+     "note": "source not named"
+    },
+    {
+     "label": "Youthwork Alliance",
+     "value": null,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null,
+     "note": "printed '-'"
+    },
+    {
+     "label": "NI Housing Executive",
+     "value": 4500,
+     "page": 15,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101810_20250331_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": 15,
+   "notes": "Employees: average monthly FTE 15 (notes). All income restricted. Scan; income note read from page image. Register employee/volunteer counts not checked against this."
+  },
+  {
+   "regNo": "102984",
+   "name": "Cornerstone City Church",
+   "type": "other",
+   "typeDetail": "Derry church (worship, Hope Centre food/clothing support, I Heart Derry outreach week with a kids club); no playgroup or after-school club",
+   "typeQuote": "As part of that week, we hosted a kids club, football camp and carried out clean-up projects in a few local communities.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_TAR.pdf (I Heart Derry section)",
+   "year": "year ended 31 December 2025",
+   "totalIncome": 405657,
+   "totalExpenditure": 318798,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Tithes",
+     "value": 121380,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Other Gifts,Grants and Donations",
+     "value": 200125,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Gift Aid",
+     "value": 15608,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Building Fund -  incInsurance Proceeds",
+     "value": 8512,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Hope Centre - Compassion",
+     "value": 3557,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "CAP Income",
+     "value": 2077,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "ZOC Income",
+     "value": 820,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "I Heart Derry (incMissions)",
+     "value": 48868,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Youth/Children's Ministry Income",
+     "value": 1332,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Women's Ministry Income",
+     "value": 0,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Men's Workshop Income",
+     "value": 2554,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Various Other Missions Income",
+     "value": 572,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Investment Income",
+     "value": 252,
+     "page": 5,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102984_20251231_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": null,
+   "employees": null,
+   "notes": "Born-digital. 'Other Gifts,Grants and Donations' not split by giver; TAR mentions a PEACEPLUS-funded cookery initiative without an amount."
+  },
+  {
+   "regNo": "100480",
+   "name": "Drumahoe Childcare Limited",
+   "type": "both",
+   "typeDetail": "daycare for 2-4 year olds (2 rooms) and an out-of-school club for P1-P7 (3 rooms), up to 100 children a day, at Londonderry YMCA premises",
+   "typeQuote": "We operate a daycare facility and an out of schools.",
+   "typeUrl": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100480_20250331_CA.pdf (p17, note 9)",
+   "year": "year ended 31 March 2025",
+   "totalIncome": 714973,
+   "totalExpenditure": 638617,
+   "unit": "GBP",
+   "incomeLines": [
+    {
+     "label": "Grants - Bright Start",
+     "value": 21655,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100480_20250331_CA.pdf",
+     "check": null,
+     "note": "restricted"
+    },
+    {
+     "label": "Grants - DCSDC",
+     "value": null,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100480_20250331_CA.pdf",
+     "check": null,
+     "note": "printed '-' for 2025 (4,000 in 2024)"
+    },
+    {
+     "label": "Grants - Rutledge",
+     "value": 500,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100480_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Childcare income",
+     "value": 689078,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100480_20250331_CA.pdf",
+     "check": null,
+     "note": "payer not stated (parents vs subsidy schemes not separated)"
+    },
+    {
+     "label": "Fundraising events",
+     "value": 850,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100480_20250331_CA.pdf",
+     "check": null
+    },
+    {
+     "label": "Interest receivable",
+     "value": 2890,
+     "page": 16,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100480_20250331_CA.pdf",
+     "check": null
+    }
+   ],
+   "volunteers": 0,
+   "employees": 27,
+   "notes": "Born-digital, audited. Employees: average monthly number 'Childcare staff 27' (2024: 28). Volunteers 0 per register. The only grant lines are Bright Start £21,655 and Rutledge £500 - no EA/PEG, Pathway or Sure Start line."
+  }
+ ],
+ "big": [
+  {
+   "regNo": "100005",
+   "name": "Supporting Communities NI",
+   "mainlyChildcare": false,
+   "quote": "the advancement of community development by providing encouragement and practical support services to existing and new community and voluntary organisations in Northern Ireland",
+   "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=100005&subId=0",
+   "childcareLines": [],
+   "notes": "Community development / tenant participation body; no childcare line in accounts."
+  },
+  {
+   "regNo": "100114",
+   "name": "Sólás",
+   "mainlyChildcare": false,
+   "quote": "Afterschools, respite support (afternoons, evenings, weekends), Saturday Clubs, Sibling Clubs,",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100114_20250630_CA.pdf (p4)",
+   "childcareLines": [
+    {
+     "label": "Childcare/Respite (restricted fund row)",
+     "value": null,
+     "page": 24,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100114_20250630_CA.pdf",
+     "kind": "restricted fund movement",
+     "check": "extraction",
+     "note": "funds note row reads: 120,987 / 310,486 / - 86,899 / (351,269) / 80,580 / 73,885 under columns balance 1 July 2024, incoming resources, income adj., resources expended, transfers, balance 30 June 2025 - alignment uncertain"
+    },
+    {
+     "label": "Early Years (restricted fund row)",
+     "value": null,
+     "page": 24,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100114_20250630_CA.pdf",
+     "kind": "restricted fund movement",
+     "check": "extraction",
+     "note": "row reads 249,983 / 31,797 / (155,844) / 99,324 - which figure is incoming is uncertain"
+    }
+   ],
+   "notes": "Children's special-needs charity (Belfast). Afterschools for disabled children and an SEN pre-school are among several service lines."
+  },
+  {
+   "regNo": "100193",
+   "name": "Northdown Communityworks",
+   "mainlyChildcare": false,
+   "quote": "Summer clubs and projects for young people and families, including a holiday lunch scheme",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100193_20250630_CA.pdf (p4)",
+   "childcareLines": [],
+   "notes": "Objects mention 'playgroups, children's clubs and summer schemes', but the 2024-25 activity list names a food hub, advice and summer clubs; no playgroup or after-school line."
+  },
+  {
+   "regNo": "100209",
+   "name": "Greater Shantallow Area Partnership",
+   "mainlyChildcare": false,
+   "quote": "Providing a broad range of services, programmes and activities to individuals, families and communities",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100209_20250331_CA.pdf",
+   "childcareLines": [],
+   "notes": "Area partnership (Derry); early-intervention parenting programmes; no playgroup/after-school income line found."
+  },
+  {
+   "regNo": "100381",
+   "name": "South Tyrone Empowerment Programme",
+   "mainlyChildcare": false,
+   "quote": "a) To develop a multi-cultural childcare facility to address the continuing childcare deficit;",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100381_20250331_TAR.pdf (p3, stated as an aim)",
+   "childcareLines": [],
+   "notes": "Empowerment / community-development body; childcare appears only as a development aim."
+  },
+  {
+   "regNo": "100477",
+   "name": "Omagh Early Years Centre",
+   "mainlyChildcare": true,
+   "quote": "The principal activity of the company is the provision of community, caring and educational services for young children, including those with special needs, and their families in Omagh and the surrounding areas.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100477_20250731_CA.pdf (p4)",
+   "childcareLines": [
+    {
+     "label": "Childcare Fee",
+     "value": 977019,
+     "page": 22,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100477_20250731_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Pathway Fund",
+     "value": 37000,
+     "page": 22,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100477_20250731_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Childcare Partnerships Small Grants",
+     "value": null,
+     "page": 22,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100477_20250731_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "printed '-' for 2025 (800 in 2024)"
+    }
+   ],
+   "notes": "Born-digital. Total income 1,044,943."
+  },
+  {
+   "regNo": "100531",
+   "name": "174 Trust",
+   "mainlyChildcare": false,
+   "quote": "The Nursery/Preschool was established in 1995 to address the needs of the children",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100531_20250930_TAR.pdf (p5)",
+   "childcareLines": [
+    {
+     "label": "Parental Fees",
+     "value": 25619,
+     "page": 8,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100531_20250930_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Early Years Pathway Fund",
+     "value": 36909,
+     "page": 8,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100531_20250930_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Education Authority",
+     "value": 28862,
+     "page": 8,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100531_20250930_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "restricted grant; purpose not stated on the line"
+    }
+   ],
+   "notes": "North Belfast arts/community trust (Duncairn); runs a preschool nursery in the government pre-school programme and an afterschools project among arts, disability and community work. Accounting note: 'fees are income received re childcare and afterschools projects'."
+  },
+  {
+   "regNo": "100608",
+   "name": "The Vine Centre",
+   "mainlyChildcare": false,
+   "quote": "We offer childcare through:",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100608_20250331_CA.pdf (p11) - Bulrush Day Nursery (39 places) and Vine Afterschools Club (up to 48 places)",
+   "childcareLines": [
+    {
+     "label": "Nursery Fees",
+     "value": 332924,
+     "page": 27,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100608_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Afterschools Fees",
+     "value": 114965,
+     "page": 27,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100608_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Sponsored Daycare Scheme: BH&SCT",
+     "value": 46803,
+     "page": 27,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100608_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    }
+   ],
+   "notes": "Multi-service North Belfast centre (advice, training, family support); childcare is one social-enterprise strand sustaining 16.7 FTE."
+  },
+  {
+   "regNo": "100744",
+   "name": "East Belfast Mission",
+   "mainlyChildcare": false,
+   "quote": "Turas is the parent organisation of the Integrated Irish-medium pre-school in east Belfast Naiscoil na Seolta",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100744_20241231_CA.pdf (p10)",
+   "childcareLines": [],
+   "notes": "Methodist mission (housing, employability, Turas Irish-language project); the pre-school sits under Turas. No childcare income line found."
+  },
+  {
+   "regNo": "100809",
+   "name": "Bryson Care",
+   "mainlyChildcare": false,
+   "quote": "Despite the transfer of Family services to Bryson Pathways, a strong surplus has",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100809_20250331_CA.pdf (p5)",
+   "childcareLines": [
+    {
+     "label": "Sure Start",
+     "value": null,
+     "page": 22,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100809_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "no 2025 line; 2024 comparative 851,822 - Family services transferred out during 2024-25"
+    }
+   ],
+   "notes": "Domestic care, refugee and advocacy services."
+  },
+  {
+   "regNo": "100857",
+   "name": "ARC Healthy Living Centre Ltd",
+   "mainlyChildcare": false,
+   "quote": "Afterschool's service, daily (ages 4-12) (fees charges)",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100857_20250331_CA.pdf (p8)",
+   "childcareLines": [
+    {
+     "label": "Cherish Sure Start (restricted fund row)",
+     "value": 1100224,
+     "page": 29,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100857_20250331_CA.pdf",
+     "kind": "restricted fund movement",
+     "check": null,
+     "note": "row: 78,810 / 1,100,224 / (1,102,312) / 6,355 / 83,077; 1,100,224 read as incoming"
+    }
+   ],
+   "notes": "Healthy living centre (Fermanagh); Sure Start, creche and an afterschools service alongside health programmes. No separate afterschool fee line found."
+  },
+  {
+   "regNo": "100960",
+   "name": "Bryson Energy",
+   "mainlyChildcare": false,
+   "quote": "From the acquisition of the Adventure Activities provider 'Pathways' in February 2023, we have continued to expand",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100960_20250331_CA.pdf (p5)",
+   "childcareLines": [
+    {
+     "label": "Family and Childcare",
+     "value": 1610932,
+     "page": 23,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100960_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "939,466 restricted + 671,466 unrestricted; family services moved here from Bryson Care"
+    }
+   ],
+   "notes": "'Pathways' in Bryson's reports is an adventure-activities business, NOT the DE Pathway Fund."
+  },
+  {
+   "regNo": "100984",
+   "name": "Child Evangelism Fellowship of Ireland",
+   "mainlyChildcare": false,
+   "quote": "To advance in Ireland and elsewhere the evangelical Christian faith, especially amongst children and young people",
+   "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=100984&subId=0",
+   "childcareLines": [],
+   "notes": "Runs a Preschool Teachers' Course and children's clubs; no childcare provision."
+  },
+  {
+   "regNo": "101271",
+   "name": "Belfast Central Mission",
+   "mainlyChildcare": false,
+   "quote": "Puddleducks Day Nursery has continued to provide a warm, nurturing and stimulating environment for children",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101271_20251231_CA.pdf (p14)",
+   "childcareLines": [],
+   "notes": "Large Methodist social-care charity (housing, care homes, family support) that runs Puddleducks Day Nursery (capacity 70). No separate nursery income line found in the notes read."
+  },
+  {
+   "regNo": "101396",
+   "name": "Bryson Charitable Group",
+   "mainlyChildcare": false,
+   "quote": "NIHE Supporting People and 2 Sure Start programmes (with expansions).",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101396_20250331_CA.pdf (p7)",
+   "childcareLines": [
+    {
+     "label": "Family and Childcare",
+     "value": 939466,
+     "page": 32,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101396_20250331_CA.pdf",
+     "kind": "income",
+     "check": "extraction",
+     "note": "group note, restricted column; unrestricted column OCR-truncated ('671'); Bryson Energy's own accounts give 671,466"
+    }
+   ],
+   "notes": "Group parent of Bryson Care, Bryson Energy etc."
+  },
+  {
+   "regNo": "101412",
+   "name": "CHILDREN IN CROSSFIRE",
+   "mainlyChildcare": false,
+   "quote": "to implement high quality early childhood care and education to help disadvantaged children",
+   "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=101412&subId=0",
+   "childcareLines": [],
+   "notes": "Overseas development charity (Ethiopia, Tanzania day-care centres); no NI childcare."
+  },
+  {
+   "regNo": "101504",
+   "name": "An Droichead Limited",
+   "mainlyChildcare": "unclear",
+   "quote": "2. Provision of daycare, playgroup and afterschool facilities onsite through the medium of the Irish language.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101504_20250331_CA.pdf (p4)",
+   "childcareLines": [
+    {
+     "label": "Day Care fees",
+     "value": 443863,
+     "page": 20,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101504_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Childcare Partnership",
+     "value": 18480,
+     "page": 20,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101504_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "restricted"
+    },
+    {
+     "label": "Early Years",
+     "value": 35000,
+     "page": 20,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101504_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "restricted; payer described only as 'Early Years'"
+    }
+   ],
+   "notes": "Irish-language arts and community centre (South Belfast; 'Principal Activity: Operation of arts facilities'), but daycare fees are its largest single income line. Auditor could not verify Day Care Fee debtors."
+  },
+  {
+   "regNo": "101767",
+   "name": "The Dry Arch Children's Centres Ltd",
+   "mainlyChildcare": true,
+   "quote": "The charity also generates income from its day care and out of school programmes to supplement this grant income.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101767_20250331_CA.pdf (p6)",
+   "childcareLines": [
+    {
+     "label": "HSCB (Surestart)",
+     "value": 816375,
+     "page": 28,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101767_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Playgroup",
+     "value": 34677,
+     "page": 28,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101767_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "grant line under Donations and legacies; payer not named"
+    },
+    {
+     "label": "Early Years Pathway Fund",
+     "value": 32000,
+     "page": 28,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101767_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Daycare & OOS Fees",
+     "value": 675285,
+     "page": 29,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101767_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Daycare & OOS Expenses",
+     "value": 312246,
+     "page": 30,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101767_20250331_CA.pdf",
+     "kind": "expenditure",
+     "check": null
+    },
+    {
+     "label": "Playgroup",
+     "value": 29034,
+     "page": 30,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101767_20250331_CA.pdf",
+     "kind": "expenditure",
+     "check": null
+    },
+    {
+     "label": "Pathway Fund",
+     "value": 27495,
+     "page": 30,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000101767_20250331_CA.pdf",
+     "kind": "expenditure",
+     "check": null
+    }
+   ],
+   "notes": "Children's centre (Dungiven/Limavady): full daycare/nursery, sessional creche, pre-school playgroup, Sure Start, parenting support. Principal funding is HSCB grant."
+  },
+  {
+   "regNo": "102053",
+   "name": "Glen Community Parent/Youth Group",
+   "mainlyChildcare": true,
+   "quote": "More than 55,000 User Visits were made by children, young people, families and adults using our Services for Daycare, After-schools, Youth, Education/Training, Family Support, Sporting, Healthy Living Programmes and Advocacy Services.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102053_20250331_CA.pdf (p5)",
+   "childcareLines": [
+    {
+     "label": "Members Contributions/Daycare",
+     "value": 688368,
+     "page": 18,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102053_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Pathways Fund",
+     "value": 32000,
+     "page": 18,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102053_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Education Authority",
+     "value": 101114,
+     "page": 18,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102053_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "purpose not stated on the line (youth or pre-school)"
+    },
+    {
+     "label": "Room Hire and Creche hire",
+     "value": 24265,
+     "page": 18,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102053_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Creche meals and sundry expenses (Restricted)",
+     "value": 15971,
+     "page": 18,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102053_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    }
+   ],
+   "notes": "West Belfast parent/youth group whose daycare and after-schools projects carry most of its income; also youth work. Classed true on that basis, though it is a mixed community group."
+  },
+  {
+   "regNo": "102252",
+   "name": "Belfast YMCA Limited",
+   "mainlyChildcare": false,
+   "quote": "Belfast YMCA has been providing childcare in the city for over 35 years, currently operating across two locations in Stranmillis and St Jude's on the Ravenhill Road.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102252_20260331_TAR.pdf (p7)",
+   "childcareLines": [],
+   "notes": "Early Learning and Childcare (132 registered places, about 40 staff, after-school clubs) is one strand beside youth work and the Glade. TAR lists 'Childcare Partnerships' as a funder without an amount; the filed CA income note did not OCR legibly."
+  },
+  {
+   "regNo": "102304",
+   "name": "East Belfast Sure Start",
+   "mainlyChildcare": false,
+   "quote": "East Belfast Sure Start is a Government initiative targeting 0-3 year olds and their families",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102304_20250331_CA.pdf (p2)",
+   "childcareLines": [],
+   "notes": "Sure Start programme, not a playgroup or after-school club. Trustees' report: 'The main source of grant funding for the charity has been and is currently the Department of Education administered through SPPG.' The filed CA has no income-by-source note."
+  },
+  {
+   "regNo": "102384",
+   "name": "Shankill Womens Centre",
+   "mainlyChildcare": false,
+   "quote": "The Childcare Facility is registered as Full Day Care with North & West H.S.S. Trust.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102384_20250331_CA.pdf (p6)",
+   "childcareLines": [],
+   "notes": "Women's centre with a full-daycare unit. 'Principal Funding Sources' (p10) list 'DC/ (WCCF) - Childcare Project' and 'Pathways Fund - Childcare Project' without amounts."
+  },
+  {
+   "regNo": "102504",
+   "name": "South Belfast Sure Start Ltd",
+   "mainlyChildcare": false,
+   "quote": "SBSS has worked with the SPPG at the Department of Health to develop the core Sure Start services",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102504_20250331_CA.pdf (p4)",
+   "childcareLines": [
+    {
+     "label": "Department of Education (through SPPG)",
+     "value": 1151686,
+     "page": 23,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102504_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "STEP - Forward South Partnership/ Department of Education",
+     "value": 63600,
+     "page": 23,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102504_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "DE Fair Start - Roma Hope Project",
+     "value": 54729,
+     "page": 23,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000102504_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    }
+   ],
+   "notes": "Sure Start programme; parent and toddler groups and respite childcare sessions, not a playgroup."
+  },
+  {
+   "regNo": "103339",
+   "name": "Blackie River Community Groups",
+   "mainlyChildcare": "unclear",
+   "quote": "offering vital services in our community such as: providing first class affordable child care, supporting child development.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103339_20250331_CA.pdf (p6)",
+   "childcareLines": [
+    {
+     "label": "Daycare Fees",
+     "value": 344069,
+     "page": 23,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103339_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "After School Fees",
+     "value": 63391,
+     "page": 23,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103339_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Summer Scheme Fees",
+     "value": 26790,
+     "page": 23,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103339_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "DE (through HSCB)",
+     "value": 269225,
+     "page": 23,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103339_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "purpose not stated on the line"
+    },
+    {
+     "label": "Pathway Fund",
+     "value": 32000,
+     "page": 23,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103339_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Surestart Programmes",
+     "value": 62292,
+     "page": 32,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103339_20250331_CA.pdf",
+     "kind": "expenditure",
+     "check": null
+    },
+    {
+     "label": "Creche Food",
+     "value": 12248,
+     "page": 32,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103339_20250331_CA.pdf",
+     "kind": "expenditure",
+     "check": null
+    }
+   ],
+   "notes": "West Belfast community group whose largest lines are childcare fees and DE money, alongside education, arts and regeneration."
+  },
+  {
+   "regNo": "103500",
+   "name": "Greater Shankill Partnership",
+   "mainlyChildcare": false,
+   "quote": "The Greater Shankill Sure Start, funded by DE, seeks to ensure that every child in the area has the best",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103500_20250331_TAR.pdf (p5)",
+   "childcareLines": [
+    {
+     "label": "BHSCT - Surestart (restricted fund row)",
+     "value": 759083,
+     "page": 14,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103500_20250331_CA.pdf",
+     "kind": "restricted fund movement",
+     "check": null
+    },
+    {
+     "label": "Department of Education - WBCP (restricted fund row)",
+     "value": 90000,
+     "page": 14,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103500_20250331_CA.pdf",
+     "kind": "restricted fund movement",
+     "check": null
+    }
+   ],
+   "notes": "Area partnership; childcare runs through wholly owned subsidiary The Early Years Company Limited, not in these parent accounts."
+  },
+  {
+   "regNo": "103870",
+   "name": "Coleraine Grammar School",
+   "mainlyChildcare": false,
+   "quote": "carrying on a co-educational voluntary grammar School",
+   "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=103870&subId=0",
+   "childcareLines": [],
+   "notes": "Grammar school."
+  },
+  {
+   "regNo": "104639",
+   "name": "Ashton Community Trust",
+   "mainlyChildcare": false,
+   "quote": "During the year Kinderkids Daycare provided care for 364 children, allowing 292 parents to enter or remain in employment.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104639_20250331_TAR.pdf (p5)",
+   "childcareLines": [
+    {
+     "label": "Childcare Fees",
+     "value": 1054141,
+     "page": 12,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104639_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Education Authority",
+     "value": 273921,
+     "page": 12,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104639_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "purpose not stated on the line"
+    },
+    {
+     "label": "Childcare & Family Support Services (restricted fund row)",
+     "value": 188038,
+     "page": 21,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104639_20250331_CA.pdf",
+     "kind": "restricted fund movement",
+     "check": "extraction",
+     "note": "note: 'receives funding towards Kinderkids staffing from the Department for Communities and the Pathway Fund'"
+    }
+   ],
+   "notes": "Large North Belfast community trust; Kinderkids Daycare is one division."
+  },
+  {
+   "regNo": "104797",
+   "name": "Derry Theatre Trust",
+   "mainlyChildcare": false,
+   "quote": "to promote the arts, culture, heritage and science for the benefit of the public by the establishment and maintenance of a theatre",
+   "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=104797&subId=0",
+   "childcareLines": [],
+   "notes": "Millennium Forum theatre."
+  },
+  {
+   "regNo": "104852",
+   "name": "Scripture Union Northern Ireland",
+   "mainlyChildcare": false,
+   "quote": "To aid the Christian Church in its ministries by specialised services whereby the Word of God is presented, especially to children and young people",
+   "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=104852&subId=0",
+   "childcareLines": [],
+   "notes": "Camps and missions; no childcare."
+  },
+  {
+   "regNo": "104886",
+   "name": "Integrated Education Fund",
+   "mainlyChildcare": false,
+   "quote": "the furtherance of integrated education in Northern Ireland",
+   "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=104886&subId=0",
+   "childcareLines": [],
+   "notes": "Funds integrated schools, incl. support to pre-schools; does not run childcare."
+  },
+  {
+   "regNo": "105832",
+   "name": "Early Years - the organisation for young children",
+   "mainlyChildcare": false,
+   "quote": "To encourage, develop and support the formation of playgroups, parent and toddler groups, full daycare groups, creches and other such groups.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105832_20250331_TAR.pdf (p1)",
+   "childcareLines": [
+    {
+     "label": "DE Pathways Fund",
+     "value": 3938026,
+     "page": 8,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105832_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "received to distribute; matched by DE Pathway grants paid - pass-through"
+    },
+    {
+     "label": "DE Pathway grants paid",
+     "value": 3938030,
+     "page": 10,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105832_20250331_CA.pdf",
+     "kind": "expenditure",
+     "check": null
+    },
+    {
+     "label": "Day care fees",
+     "value": 977227,
+     "page": 9,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105832_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Health & Social Care Trusts - Other, including SureStart",
+     "value": 4333639,
+     "page": 8,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105832_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "DE Core Grant (restricted fund row)",
+     "value": 265000,
+     "page": 17,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105832_20250331_CA.pdf",
+     "kind": "restricted fund movement",
+     "check": null
+    }
+   ],
+   "notes": "Sector umbrella body: administers the Pathway Fund and NICSS for DE, leads SureStarts, runs its own daycare. Related-party note: trustee-owned 'Giggles Early Years' and 'Adventures Day Nursery' received Pathway/NICSS grants."
+  },
+  {
+   "regNo": "106035",
+   "name": "Long Tower Youth and Community Centre",
+   "mainlyChildcare": false,
+   "quote": "Long Tower Youth Club (LTYC) was established to ensure opportunities for children, young people and young adults",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106035_20230331_CA.pdf",
+   "childcareLines": [],
+   "notes": "Youth club; latest return on the register is FY 2022-23."
+  },
+  {
+   "regNo": "106089",
+   "name": "Eskra Childcare Limited",
+   "mainlyChildcare": true,
+   "quote": "Eskra Childcare Ltd operates a wrap-around daycare service and playgroup based in the local community centre in Eskra.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106089_20250331_CA.pdf (p4)",
+   "childcareLines": [
+    {
+     "label": "Fees (Childcare activities)",
+     "value": 1074699,
+     "page": 19,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106089_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Education Authority (Childcare activities)",
+     "value": 96574,
+     "page": 19,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106089_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "TAR: '£96,574 from the Department of Education to deliver a pre-school education' programme"
+    },
+    {
+     "label": "Grants (Childcare activities)",
+     "value": 39647,
+     "page": 19,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106089_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "TAR: 'secured Pathway Funds of £30,000'"
+    },
+    {
+     "label": "Training grants (Childcare activities)",
+     "value": 558,
+     "page": 19,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106089_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    }
+   ],
+   "notes": "Trades as Playtime Day Nursery, Playgroup and Out of Schools Club."
+  },
+  {
+   "regNo": "106269",
+   "name": "A.B.B.E.Y. Sure Start",
+   "mainlyChildcare": false,
+   "quote": "A.B.B.E.Y Sure Start is a government funded initiative, targeting children under 4 years old.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106269_20250331_CA.pdf (p6)",
+   "childcareLines": [
+    {
+     "label": "Health & Social Care Board - Department of Education Core Funding",
+     "value": 825416,
+     "page": 18,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106269_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Health & Social Care Board - Department of Education Expansion Funding",
+     "value": 103178,
+     "page": 18,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106269_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    }
+   ],
+   "notes": "Sure Start programme, not a playgroup."
+  },
+  {
+   "regNo": "107518",
+   "name": "Kids Together Belfast",
+   "mainlyChildcare": "unclear",
+   "quote": "Our Rainbow program operates a specialist nursery setting funded by the Education Authority to provide high-quality early years education for children aged 3-4 with a Statement of Special Educational Needs.",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000107518_20250331_TAR.pdf (p5)",
+   "childcareLines": [
+    {
+     "label": "Pathway",
+     "value": 32000,
+     "page": 9,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000107518_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    },
+    {
+     "label": "Education Authority",
+     "value": 173479,
+     "page": 9,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000107518_20250331_CA.pdf",
+     "kind": "income",
+     "check": null,
+     "note": "restricted; TAR ties EA funding to the Rainbow specialist nursery, the line itself is unlabelled"
+    },
+    {
+     "label": "DOH SPPG",
+     "value": 30309,
+     "page": 9,
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000107518_20250331_CA.pdf",
+     "kind": "income",
+     "check": null
+    }
+   ],
+   "notes": "Disability children's charity; inclusive after-school/holiday programmes and an EA-funded specialist nursery are its core services. Scan, read from page image."
+  },
+  {
+   "regNo": "108435",
+   "name": "Methodist Church in Ireland",
+   "mainlyChildcare": false,
+   "quote": "Methodist Child Care Society",
+   "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000108435_20241231_CA.pdf (p53)",
+   "childcareLines": [],
+   "notes": "Church; 'Methodist Child Care Society' is a connexional fund, not childcare provision."
+  }
+ ]
+}
