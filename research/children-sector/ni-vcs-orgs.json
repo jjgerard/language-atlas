@@ -13596,7 +13596,13 @@
     "gov funding"
    ],
    "orgId": "v228",
-   "profileStatus": "unreached"
+   "profileStatus": "unreached",
+   "parentCheck": {
+    "verdict": "unconfirmed",
+    "parentRegNo": "106112",
+    "parentName": "Ballymagroarty Hazelbank Community Partnership (candidate only)",
+    "evidence": null
+   }
   },
   {
    "name": "Bardic Educational Arts and Media",
@@ -13861,7 +13867,7 @@
   {
    "name": "Cookstown & Dungannon Women's Aid",
    "aliases": [],
-   "regNo": null,
+   "regNo": "106888",
    "gbCharityNo": null,
    "basis": [
     {
@@ -13879,7 +13885,60 @@
     "gov funding"
    ],
    "orgId": "v237",
-   "profileStatus": "unreached"
+   "profileStatus": "unreached",
+   "regNoPrevious": null,
+   "regNoBy": "profiling agent, parent check: same company NI030137, renamed 2013 and merged 2020 into Causeway and Mid Ulster Women's Aid",
+   "register": {
+    "name": "Causeway and Mid Ulster Women's Aid",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "1504773",
+    "spending": "1455185",
+    "incomePrev": "0",
+    "staff": "28",
+    "who": [
+     "Addictions (drug/solvent/alcohol abuse)",
+     "Children (5-13 year olds)",
+     "Community safety/crime prevention",
+     "Ethnic minorities",
+     "Homelessness",
+     "Mental health",
+     "Older people",
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Tenants",
+     "Travellers",
+     "Unemployed/low income",
+     "Victim support",
+     "Women",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "parentCheck": {
+    "verdict": "confirmed",
+    "parentRegNo": "106888",
+    "parentName": "Causeway and Mid Ulster Women's Aid",
+    "evidence": {
+     "quote": "Previous company names ... MID-ULSTER WOMEN'S AID 01 Aug 2013 - 26 Aug 2020 COOKSTOWN & DUNGANNON WOMEN'S AID 23 Apr 1996 - 01 Aug 2013",
+     "url": "https://find-and-update.company-information.service.gov.uk/company/NI030137"
+    }
+   },
+   "projectFigures": [
+    {
+     "label": "Surestart",
+     "value": 82218,
+     "year": "FY ending 31 March 2025 (restricted fund, incoming resources)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106888_20250331_CA.pdf",
+     "page": "pdf p.30 (printed Page 28), note 18 Funds; the scan is upside down"
+    },
+    {
+     "label": "GOLD Accountable Body",
+     "value": 17175,
+     "year": "FY ending 31 March 2025 (unrestricted fund, incoming resources)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106888_20250331_CA.pdf",
+     "page": "pdf p.30 (printed Page 28), note 18 Funds"
+    }
+   ]
   },
   {
    "name": "CORE SMARTFIT CIC",
@@ -14206,7 +14265,16 @@
     "gov funding"
    ],
    "orgId": "v248",
-   "profileStatus": "unreached"
+   "profileStatus": "unreached",
+   "parentCheck": {
+    "verdict": "rejected",
+    "parentRegNo": "100769",
+    "parentName": "Galbally Youth & Community Association",
+    "evidence": {
+     "quote": "Working in partnership with other local organisations (e.g. Galbally Pearses GAC, Paddington Playgroup and Out of School Club, Cappagh Village Regeneration Group, Country Club, Galbally Youth Club",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100769_20240831_TAR.pdf"
+    }
+   }
   },
   {
    "name": "Giggles and Wiggles Childcare",
@@ -14570,7 +14638,7 @@
   {
    "name": "KPC YOUTH",
    "aliases": [],
-   "regNo": null,
+   "regNo": "104502",
    "gbCharityNo": null,
    "basis": [
     {
@@ -14588,7 +14656,82 @@
     "gov funding"
    ],
    "orgId": "v259",
-   "profileStatus": "unreached"
+   "profileStatus": "unreached",
+   "regNoPrevious": null,
+   "regNoBy": "profiling agent, parent check: KPC Youth lines in Knock Presbyterian's accounts",
+   "register": {
+    "name": "Knock Congregation of the Presbyterian Church in Ireland",
+    "status": "Received: on time",
+    "fyEnd": "31 December 2024",
+    "income": "1586451",
+    "spending": "785416",
+    "incomePrev": "0",
+    "staff": "8",
+    "who": [
+     "General public"
+    ]
+   },
+   "incomeIsParent": "Knock Presbyterian Church",
+   "parentCheck": {
+    "verdict": "confirmed",
+    "parentRegNo": "104502",
+    "parentName": "Knock Congregation of the Presbyterian Church in Ireland",
+    "evidence": {
+     "quote": "KPC Youth - EA programme",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf"
+    }
+   },
+   "projectFigures": [
+    {
+     "label": "KPC Youth - EA programme",
+     "value": 61488,
+     "year": "2024 (restricted)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.20 (printed -18-), note 5 Charitable activities"
+    },
+    {
+     "label": "KPC Youth - joint youth programmes",
+     "value": 10854,
+     "year": "2024",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.20, note 5"
+    },
+    {
+     "label": "KPC Youth - outreach events",
+     "value": 32426,
+     "year": "2024",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.20, note 5"
+    },
+    {
+     "label": "KPC Youth - resourcing organisations",
+     "value": 8417,
+     "year": "2024",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.20, note 5"
+    },
+    {
+     "label": "KPC Youth - other income",
+     "value": 18517,
+     "year": "2024",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.20, note 5"
+    },
+    {
+     "label": "KPC Youth",
+     "value": 131644,
+     "year": "2024 expenditure (unrestricted 69,191 + restricted 62,453); 2023: 117,154",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.21 (printed -19-), note 7 Expenditure by fund type"
+    },
+    {
+     "label": "Knock Youth - EA Programme",
+     "value": 8666,
+     "year": "restricted fund balance at 31 Dec 2024 (2023: 9,631)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.9, trustees' report, Restricted Funds"
+    }
+   ]
   },
   {
    "name": "LIMAVADY YOUTH RESOURCE CENTRE",
@@ -14750,7 +14893,7 @@
   {
    "name": "LOUGHGIEL YOUTH CLUB",
    "aliases": [],
-   "regNo": null,
+   "regNo": "103422",
    "gbCharityNo": null,
    "basis": [
     {
@@ -14768,7 +14911,45 @@
     "gov funding"
    ],
    "orgId": "v264",
-   "profileStatus": "unreached"
+   "profileStatus": "unreached",
+   "regNoPrevious": null,
+   "regNoBy": "profiling agent, parent check: Loughgiel Community Association trustees' report names the club",
+   "register": {
+    "name": "Loughgiel Community Association Ltd",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "490902",
+    "spending": "561540",
+    "incomePrev": "0",
+    "staff": "29",
+    "who": [
+     "Adult training",
+     "General public",
+     "Older people",
+     "Voluntary and community sector",
+     "Volunteers",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "incomeIsParent": "Loughgiel Community Association",
+   "parentCheck": {
+    "verdict": "confirmed",
+    "parentRegNo": "103422",
+    "parentName": "Loughgiel Community Association Ltd",
+    "evidence": {
+     "quote": "the Education Authority continued to provide local area-based funding for Loughgiel Youth Club ... This funding ensured that LCA could continue to deliver a vital service",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103422_20250331_TAR.pdf"
+    }
+   },
+   "projectFigures": [
+    {
+     "label": "Education Authority",
+     "value": 38684,
+     "year": "FY ending 31 March 2025 (restricted); 2024: 28,641",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103422_20250331_CA.pdf",
+     "page": "pdf p.8 (printed 24), note 3 Income from charitable activities"
+    }
+   ]
   },
   {
    "name": "METHODIST CHURCH IN IRELAND (IRISH METHODIST YOUTH AND CHILDREN'S TEAM - IMYC)",
@@ -14837,7 +15018,13 @@
     "gov funding"
    ],
    "orgId": "v267",
-   "profileStatus": "unreached"
+   "profileStatus": "unreached",
+   "parentCheck": {
+    "verdict": "unconfirmed",
+    "parentRegNo": null,
+    "parentName": null,
+    "evidence": null
+   }
   },
   {
    "name": "Milburn Community Playgroup",
@@ -14865,7 +15052,7 @@
   {
    "name": "NEWRY GATEWAY COMMUNITY CENTRE",
    "aliases": [],
-   "regNo": null,
+   "regNo": "105461",
    "gbCharityNo": null,
    "basis": [
     {
@@ -14883,7 +15070,67 @@
     "gov funding"
    ],
    "orgId": "v269",
-   "profileStatus": "unreached"
+   "profileStatus": "unreached",
+   "regNoPrevious": null,
+   "regNoBy": "profiling agent, parent check: same body; accounts headed Newry & District Gateway Club Community Centre",
+   "register": {
+    "name": "NEWRY & DISTRICT GATEWAY CLUB",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "110235",
+    "spending": "102293",
+    "incomePrev": "0",
+    "staff": "5",
+    "who": [
+     "Adult training",
+     "Carers",
+     "Community safety/crime prevention",
+     "General public",
+     "Learning disabilities",
+     "Men",
+     "Mental health",
+     "Older people",
+     "Parents",
+     "Physical disabilities",
+     "Sensory disabilities",
+     "Voluntary and community sector",
+     "Volunteers",
+     "Women",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "parentCheck": {
+    "verdict": "confirmed",
+    "parentRegNo": "105461",
+    "parentName": "NEWRY & DISTRICT GATEWAY CLUB",
+    "evidence": {
+     "quote": "NEWRY & DISTRICT GATEWAY CLUB COMMUNITY CENTRE, NEWRY RECEIPTS AND PAYMENTS ACCOUNT FOR THE YEAR ENDED 31 MARCH 2025",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105461_20250331_CA.pdf"
+    }
+   },
+   "projectFigures": [
+    {
+     "label": "EA",
+     "value": 20396,
+     "year": "FY ending 31 March 2025 (receipts)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105461_20250331_CA.pdf",
+     "page": "pdf p.3"
+    },
+    {
+     "label": "Newry Gateway Club",
+     "value": 48000,
+     "year": "FY ending 31 March 2025 (receipts)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105461_20250331_CA.pdf",
+     "page": "pdf p.3"
+    },
+    {
+     "label": "SHSCT",
+     "value": 20000,
+     "year": "FY ending 31 March 2025 (receipts)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105461_20250331_CA.pdf",
+     "page": "pdf p.3"
+    }
+   ]
   },
   {
    "name": "NORTH DOWN CRICKET CLUB COMBER",
@@ -15573,7 +15820,16 @@
     "gov funding"
    ],
    "orgId": "v291",
-   "profileStatus": "unreached"
+   "profileStatus": "unreached",
+   "parentCheck": {
+    "verdict": "rejected",
+    "parentRegNo": "105167",
+    "parentName": "St Patrick's Youth Club Donaghmore",
+    "evidence": {
+     "quote": "26-LA-AC-007 LOCAL AREA YOUTH PROVISION - KEADY ST PATRICKS YOUTH CLUB",
+     "url": "https://eanifunding.org.uk/wp-content/uploads/2026/07/Local-Area-2026-27.pdf"
+    }
+   }
   },
   {
    "name": "STRABANE RUGBY FOOTBALL CLUB",
@@ -15619,7 +15875,13 @@
     "gov funding"
    ],
    "orgId": "v293",
-   "profileStatus": "partial"
+   "profileStatus": "partial",
+   "parentCheck": {
+    "verdict": "unconfirmed",
+    "parentRegNo": "105161",
+    "parentName": "Sunnylands & Woodburn Community Development Group (candidate only)",
+    "evidence": null
+   }
   },
   {
    "name": "THE BASE, DROMORE YOUTH FOR CHRIST",
@@ -15856,7 +16118,13 @@
     "gov funding"
    ],
    "orgId": "v301",
-   "profileStatus": "unreached"
+   "profileStatus": "unreached",
+   "parentCheck": {
+    "verdict": "unconfirmed",
+    "parentRegNo": "104268",
+    "parentName": "Saintfield Road Congregation of the Presbyterian Church in Ireland (only candidate consistent with the evidence)",
+    "evidence": null
+   }
   },
   {
    "name": "Tides Training",

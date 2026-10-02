@@ -317,8 +317,12 @@ function incomeInfo(o) {
 }
 function profHTML(o) {
   const p = o.profile;
-  const warn = (o.possiblyStatutory ? `<div class="flag">possibly a statutory EA centre: ${esc(o.possiblyStatutory)}</div>` : '')
+  let warn = (o.possiblyStatutory ? `<div class="flag">possibly a statutory EA centre: ${esc(o.possiblyStatutory)}</div>` : '')
     + (o.partOf ? `<div class="flag">part of ${esc(o.partOf)}</div>` : '');
+  const pc = o.parentCheck;
+  if (pc && pc.verdict !== 'confirmed') warn += '<div class="miss">Parent charity ' + (pc.verdict === 'rejected' ? 'checked and ruled out' : 'not confirmed') + (pc.parentName ? ': ' + esc(pc.parentName) : '') + '.</div>';
+  if (o.projectFigures) warn += '<div style="margin-top:4px"><b>This project in the parent\'s accounts</b>: '
+    + o.projectFigures.map(f => esc(f.label) + ' ' + esc(f.value) + (f.year ? ' (' + esc(f.year) + ')' : '') + (f.url ? ' <a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + (f.page ? (/^\d+$/.test(String(f.page)) ? 'p.' + f.page : esc(String(f.page).split(',')[0])) : 'source') + '</a>' : '')).join('; ') + '</div>';
   if (!p) return warn + '<div class="miss">Not profiled (rests only on a weak or dated basis).</div>';
   if (p.status === 'unreached') return warn + '<div class="miss">Profile not possible: no website or register documents could be reached.</div>';
   const svcs = p.services.map(s => `<div><b>${esc(SVC[s.code] || s.code)}</b>${say(o, s.quote)} <a href="${esc(s.url)}" target="_blank" rel="noopener">source</a>${s.rel ? ` <span class="chip">${esc(REL[s.rel.type] || s.rel.type)}${s.rel.body ? ': ' + esc(s.rel.body) : ''}</span>` : ''}</div>`).join('');

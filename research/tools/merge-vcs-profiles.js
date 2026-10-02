@@ -72,6 +72,11 @@ const REG_BY_ID = {
   v263: ['104799', 'profile: Lower Ormeau Residents Action Group'], v274: ['109719', 'profile: Ogras Youth Group'],
   v314: ['105780', 'profile: Derry Healthy Cities now operates as Developing Healthy Communities; 101856 removed'],
   v316: ['103106', 'profile: Creggan Healthy Living Centre is run by The Old Library Trust'],
+  // Confirmed from the parent's own accounts: ni-vcs-parents.json (2026-10-02).
+  v259: ['104502', 'parent check: KPC Youth lines in Knock Presbyterian\'s accounts'],
+  v264: ['103422', 'parent check: Loughgiel Community Association trustees\' report names the club'],
+  v269: ['105461', 'parent check: same body; accounts headed Newry & District Gateway Club Community Centre'],
+  v237: ['106888', 'parent check: same company NI030137, renamed 2013 and merged 2020 into Causeway and Mid Ulster Women\'s Aid'],
 };
 for (const [id, [no, how]] of Object.entries(REG_BY_ID)) {
   const o = byId.get(id), r = byNo.get(no);
@@ -96,7 +101,13 @@ flag('v309', 'duplicateOf', 'v081');   // both profiled under NIC109540 Long Tow
 for (const id of ['v226', 'v232', 'v233', 'v252', 'v282']) flag(id, 'possiblyStatutory', 'listed as an Education Authority youth centre (EA page or ETI report); unconfirmed, keep off counts until checked');
 for (const o of findByName(/^Limavady Youth Resource/i)) o.possiblyStatutory = 'listed on EA youth-centre pages (403, unconfirmed)';
 // The register income for these is the parent body's, not the project's.
-flag('v316', 'incomeIsParent', 'The Old Library Trust'); flag('v278', 'incomeIsParent', 'The Resurgam Community Development Trust');
+flag('v316', 'incomeIsParent', 'The Old Library Trust');
+flag('v259', 'incomeIsParent', 'Knock Presbyterian Church'); flag('v264', 'incomeIsParent', 'Loughgiel Community Association');
+// The parent check's verdicts, with any project lines the parent's accounts break out for the club.
+const parents = JSON.parse(fs.readFileSync(path.join(R, 'ni-vcs-parents.json'), 'utf8')).clubs;
+for (const c of parents) { const o = byId.get(c.orgId); if (!o) continue;
+  o.parentCheck = { verdict: c.verdict, parentRegNo: c.parentRegNo || null, parentName: c.parentName || null, evidence: c.evidence || null };
+  if (c.verdict === 'confirmed' && (c.clubFigures || []).length) o.projectFigures = c.clubFigures; } flag('v278', 'incomeIsParent', 'The Resurgam Community Development Trust');
 flag('v319', 'partOf', 'Barnardo\'s NI (PosAbility is a Barnardo\'s service)');
 
 // Profiles: mark those whose notes say a quote came through a summariser, not page text.

@@ -1,0 +1,260 @@
+{
+ "clubs": [
+  {
+   "orgId": "v228",
+   "name": "BALLYMAGROARTY YOUTH CLUB",
+   "verdict": "unconfirmed",
+   "parentRegNo": "106112",
+   "parentName": "Ballymagroarty Hazelbank Community Partnership (candidate only)",
+   "evidence": null,
+   "parentIncome": null,
+   "clubFigures": [],
+   "tried": "Register number found: NIC106112 Ballymagroarty Hazelbank Community Partnership (company NI034517), income £334,529, year ending 31 Mar 2025. I read its full FY2025 accounts and directors' report (https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106112_20250331_CA.pdf, 16 pp; pages 8-16 are scans and I read them as images). The youth club is not named anywhere in them. Its income note (p.10) shows 'Education Authority' £112,567 restricted, but with no project label, so it cannot be tied to the club's EA Local Area award (£115,214.56, 2026-27). NICVA says BHCP runs a 'Youth Outreach Programme' (street-based, funded by Children in Need), which is a different thing from the club. The EA registered-organisations page lists 'Ballymagroarty Youth Club' on its own as a Voluntary Community Organisation, and EA PIP lists 2024-25 and 2025-26 fund the club in its own name. bhcpderry.org does not resolve. Derry Journal and Derry Now return 403. The only club page I found is on Facebook, which needs a login. One search-engine summary said the club 'uses their building'; I could not open its source and treated it as nothing."
+  },
+  {
+   "orgId": "v237",
+   "name": "Cookstown & Dungannon Women's Aid",
+   "verdict": "confirmed",
+   "parentRegNo": "106888",
+   "parentName": "Causeway and Mid Ulster Women's Aid",
+   "evidence": {
+    "quote": "Previous company names ... MID-ULSTER WOMEN'S AID 01 Aug 2013 - 26 Aug 2020 COOKSTOWN & DUNGANNON WOMEN'S AID 23 Apr 1996 - 01 Aug 2013",
+    "url": "https://find-and-update.company-information.service.gov.uk/company/NI030137"
+   },
+   "relationship": "Not a parent and child: it is the same legal entity under a new name. Company NI030137 was Cookstown & Dungannon Women's Aid (1996-2013), then Mid-Ulster Women's Aid (2013-2020), then Causeway and Mid Ulster Women's Aid after merging with Causeway Women's Aid (NIC106208) on 1 Aug 2020. NIC106208's FY2024 report says: 'merged with Mid Ulster Womens Aid on 1st August 2020 and the new merged entity, now known as Causeway & Mid Ulster Womens Aid, took over all of the charitable activities'. The CMUWA FY2025 report (pdf p.6) says: 'Our longstanding role as Accountable body for G-Old Sure Start Partnership came to an end in year. Handover to Barnardo's'. That is the same Sure Start G-old accountable-body role recorded on v237. The v237 record should probably merge into the NIC106888 org, not be shown as its child.",
+   "parentIncome": {
+    "value": 1504773,
+    "fyEnd": "2025-03-31",
+    "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=106888&subId=0"
+   },
+   "clubFigures": [
+    {
+     "label": "Surestart",
+     "value": 82218,
+     "year": "FY ending 31 March 2025 (restricted fund, incoming resources)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106888_20250331_CA.pdf",
+     "page": "pdf p.30 (printed Page 28), note 18 Funds; the scan is upside down"
+    },
+    {
+     "label": "GOLD Accountable Body",
+     "value": 17175,
+     "year": "FY ending 31 March 2025 (unrestricted fund, incoming resources)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106888_20250331_CA.pdf",
+     "page": "pdf p.30 (printed Page 28), note 18 Funds"
+    }
+   ],
+   "tried": "Companies House name history; NIC106888 FY2025 accounts and trustees' report (scans, upside down; I rotated and read them); NIC106208 Causeway Women's Aid FY2024 trustees' report (the merger statement)."
+  },
+  {
+   "orgId": "v248",
+   "name": "GALBALLY YOUTH CLUB",
+   "verdict": "rejected",
+   "parentRegNo": "100769",
+   "parentName": "Galbally Youth & Community Association",
+   "evidence": {
+    "quote": "Working in partnership with other local organisations (e.g. Galbally Pearses GAC, Paddington Playgroup and Out of School Club, Cappagh Village Regeneration Group, Country Club, Galbally Youth Club",
+    "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100769_20240831_TAR.pdf"
+   },
+   "rejectionNote": "GYCA's own trustees' report (year to 31 Aug 2024, p.2) lists Galbally Youth Club among separate 'other local organisations', and p.3 lists it among groups GYCA 'Provided facilities for'. The EA registered-organisations page also lists 'Galbally Youth Club' separately as a Voluntary Community Organisation. One caveat: GYCA itself delivers the EA 'Specification for Torrent DEA', and its p.3 says 'working in partnership with St. Patrick's Youth Club, Donaghmore'. It received 'Grants receivable - Education Authority' £72,357 (restricted, FY Aug 2024, CA p.14). The 2026-29 EA line is 'LOCAL AREA YOUTH PROVISION - TORRENT RURAL GALBALLY YOUTH CLUB', so GYCA may hold or have held the Torrent money as accountable body. No document says the club is part of GYCA.",
+   "parentIncome": null,
+   "clubFigures": [],
+   "tried": "NIC100769 register page (income £342,814, year ending 31 Aug 2024; returns 94 days overdue). Trustees' report pp.1-4 and accounts pp.7-16, all scans, read as images."
+  },
+  {
+   "orgId": "v259",
+   "name": "KPC YOUTH",
+   "verdict": "confirmed",
+   "parentRegNo": "104502",
+   "parentName": "Knock Congregation of the Presbyterian Church in Ireland",
+   "evidence": {
+    "quote": "KPC Youth - EA programme",
+    "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf"
+   },
+   "supportingEvidence": [
+    "Register 'Other name': KPC (https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=104502&subId=0)",
+    "Trustees' report p.5: 'Knock Youth reaches out to the local community through the busy Church Youth Club on Friday evenings (with 150 attending)'",
+    "Trustees' report (CA pdf p.8): 'Session has in place a 3-year funding package with the Education Authority, which commenced in April 2023, to cover the cost of the Youth Worker position'",
+    "EA registered organisations: 'KPC Youth | Belfast City Council (East) | Voluntary Church Based Organisation' (https://eanifunding.org.uk/registered-organisations/)",
+    "NI Assembly deposited paper DP1624 (AQW 5968/17-22, 2020) lists EA-registered group 'KNOCK DROP-IN/KNOCK JUNIOR YOUTH CLUB/KPC YOUTH'"
+   ],
+   "parentIncome": {
+    "value": 1586451,
+    "fyEnd": "2024-12-31",
+    "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=104502&subId=0"
+   },
+   "clubFigures": [
+    {
+     "label": "KPC Youth - EA programme",
+     "value": 61488,
+     "year": "2024 (restricted)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.20 (printed -18-), note 5 Charitable activities"
+    },
+    {
+     "label": "KPC Youth - joint youth programmes",
+     "value": 10854,
+     "year": "2024",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.20, note 5"
+    },
+    {
+     "label": "KPC Youth - outreach events",
+     "value": 32426,
+     "year": "2024",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.20, note 5"
+    },
+    {
+     "label": "KPC Youth - resourcing organisations",
+     "value": 8417,
+     "year": "2024",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.20, note 5"
+    },
+    {
+     "label": "KPC Youth - other income",
+     "value": 18517,
+     "year": "2024",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.20, note 5"
+    },
+    {
+     "label": "KPC Youth",
+     "value": 131644,
+     "year": "2024 expenditure (unrestricted 69,191 + restricted 62,453); 2023: 117,154",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.21 (printed -19-), note 7 Expenditure by fund type"
+    },
+    {
+     "label": "Knock Youth - EA Programme",
+     "value": 8666,
+     "year": "restricted fund balance at 31 Dec 2024 (2023: 9,631)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000104502_20241231_CA.pdf",
+     "page": "pdf p.9, trustees' report, Restricted Funds"
+    }
+   ],
+   "note": "The five KPC Youth income lines total £131,702 (my sum; the accounts give no subtotal).",
+   "tried": "Register page; FY2024 trustees' report and accounts (scans, Windows OCR, figures checked against the page images); knock.church/ages-stages; EA registered-organisations page; DP1624."
+  },
+  {
+   "orgId": "v264",
+   "name": "LOUGHGIEL YOUTH CLUB",
+   "verdict": "confirmed",
+   "parentRegNo": "103422",
+   "parentName": "Loughgiel Community Association Ltd",
+   "evidence": {
+    "quote": "the Education Authority continued to provide local area-based funding for Loughgiel Youth Club ... This funding ensured that LCA could continue to deliver a vital service",
+    "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103422_20250331_TAR.pdf"
+   },
+   "parentIncome": {
+    "value": 490902,
+    "fyEnd": "2025-03-31",
+    "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=103422&subId=0"
+   },
+   "clubFigures": [
+    {
+     "label": "Education Authority",
+     "value": 38684,
+     "year": "FY ending 31 March 2025 (restricted); 2024: 28,641",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000103422_20250331_CA.pdf",
+     "page": "pdf p.8 (printed 24), note 3 Income from charitable activities"
+    }
+   ],
+   "note": "The 'Education Authority' line is not labelled as youth club money. The trustees' report (pdf pp.6-7) ties the EA local-area funding to the youth club, but the same note also has separate lines 'Education Authority - SEN' £5,518 and 'North Eastern Education and Library Board - PEAG' £34,545, so £38,684 is the closest line, not a confirmed club total.",
+   "tried": "Register page; FY2025 trustees' report and accounts (scans, OCR, income note checked against the page image)."
+  },
+  {
+   "orgId": "v269",
+   "name": "NEWRY GATEWAY COMMUNITY CENTRE",
+   "verdict": "confirmed",
+   "parentRegNo": "105461",
+   "parentName": "NEWRY & DISTRICT GATEWAY CLUB",
+   "evidence": {
+    "quote": "NEWRY & DISTRICT GATEWAY CLUB COMMUNITY CENTRE, NEWRY RECEIPTS AND PAYMENTS ACCOUNT FOR THE YEAR ENDED 31 MARCH 2025",
+    "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105461_20250331_CA.pdf"
+   },
+   "supportingEvidence": [
+    "Register 'What your organisation does': 'WE OFFER OUR PREMISES AS A COMMUNTIY CENTRE TO MEMBERS OF THE PUBLIC' (https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=105461&subId=0)",
+    "EA registered organisations: 'Newry Gateway Community Centre | Newry, Mourne and Down District Council | Voluntary Community Organisation'"
+   ],
+   "relationship": "The charity files the community centre's accounts as its own return. Total receipts £110,235 equal the register's income figure. One receipt line is 'Newry Gateway Club' £48,000, so the club side transfers money into the centre account.",
+   "parentIncome": {
+    "value": 110235,
+    "fyEnd": "2025-03-31",
+    "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=105461&subId=0"
+   },
+   "clubFigures": [
+    {
+     "label": "EA",
+     "value": 20396,
+     "year": "FY ending 31 March 2025 (receipts)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105461_20250331_CA.pdf",
+     "page": "pdf p.3"
+    },
+    {
+     "label": "Newry Gateway Club",
+     "value": 48000,
+     "year": "FY ending 31 March 2025 (receipts)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105461_20250331_CA.pdf",
+     "page": "pdf p.3"
+    },
+    {
+     "label": "SHSCT",
+     "value": 20000,
+     "year": "FY ending 31 March 2025 (receipts)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000105461_20250331_CA.pdf",
+     "page": "pdf p.3"
+    }
+   ],
+   "tried": "Register page; FY2025 accounts (4-page scan) and trustee cover letter."
+  },
+  {
+   "orgId": "v291",
+   "name": "ST PATRICKS YOUTH CLUB",
+   "verdict": "rejected",
+   "parentRegNo": "105167",
+   "parentName": "St Patrick's Youth Club Donaghmore",
+   "evidence": {
+    "quote": "26-LA-AC-007 LOCAL AREA YOUTH PROVISION - KEADY ST PATRICKS YOUTH CLUB",
+    "url": "https://eanifunding.org.uk/wp-content/uploads/2026/07/Local-Area-2026-27.pdf"
+   },
+   "rejectionNote": "The EA line places this club in KEADY (Armagh City, Banbridge & Craigavon). NIC105167 is St Patrick's Youth Club Donaghmore at The Torrent Complex, Dungannon (Mid Ulster). The EA registered-organisations page lists them separately: 'St Patricks youth club | Armagh City, Banbridge and Craigavon | Voluntary Community Organisation' and 'St Patrick's Youth Centre Donaghmore | Mid Ulster'. No registered parent was found for the Keady club. The full register CSV (8,376 rows) has no Keady youth-club charity. Armagh I (23 May 2024) describes the club with its own chairman, not under a parish or association.",
+   "parentIncome": null,
+   "clubFigures": [],
+   "tried": "NIC105167 register page; full CCNI register CSV export; EA registered organisations; armaghi.com article."
+  },
+  {
+   "orgId": "v293",
+   "name": "SUNNYLANDS AND WOODBURN YOUTH GROUP",
+   "verdict": "unconfirmed",
+   "parentRegNo": "105161",
+   "parentName": "Sunnylands & Woodburn Community Development Group (candidate only)",
+   "evidence": null,
+   "parentIncome": null,
+   "clubFigures": [],
+   "tried": "Read NIC105161's full return for the year ending 30 Jan 2025 (8-page scan, OCR). It names no youth group. The money trail is close: the receipts and payments account shows 'Education Authority Belfast Region' £5,985 in both 2024 and 2025. EA's PIP 2024-25 list names 'SUNNYLANDS AND WOODBURN COMMUNITY DEVELOPMENT GROUP' £5,985, and PIP 2026-27 names 'SUNNYLANDS AND WOODBURN YOUTH GROUP' £5,990. The register text lists a 'youth engagement programme' among the group's projects. Together this suggests EA renamed the same recipient, but no document says the youth group is part of the CDG. The EA registered-organisations page has no Sunnylands youth group entry. 'Sunnylands Youth Centre' (Hawthorn Avenue) is a separate youth centre and not evidence either way."
+  },
+  {
+   "orgId": "v301",
+   "name": "THE VIBE YOUTH CLUB",
+   "verdict": "unconfirmed",
+   "parentRegNo": "104268",
+   "parentName": "Saintfield Road Congregation of the Presbyterian Church in Ireland (only candidate consistent with the evidence)",
+   "evidence": null,
+   "parentIncome": null,
+   "clubFigures": [],
+   "tried": "The T:BUC 2025-26 row reads 'THE VIBE YOUTH CLUB LISBURN AND CASTLEREAGH'. The EA registered-organisations page lists 'The Vibe Youth Club | Lisburn and Castlereagh City Council | Voluntary Church Based Organisation'. It lists separately 'Vibe | Armagh City, Banbridge and Craigavon' (= NIC100029, 214 Dundrum Road, Keady), so NIC100029 is ruled out, and VIBE at Five Lamps (Belfast) is ruled out by council. Saintfield Road Presbyterian Church (NIC104268) is at 1 Myrtledene Road, BT8 6GQ, which is Lisburn and Castlereagh (Knockbracken ward, checked via postcodes.io and the project's ni-postcodes.json). Its own site runs 'Junior Vibe Youth Club' (P4-P7) and 'Senior Vibe Youth Club' (Year 8+) (srpc.org.uk/children-young-people/...). That is a church-based club of the right name in the right council, which is still a name and place match only. Neither SRPC's FY2024 accounts and trustees' report (text PDFs; no 'Vibe', T:BUC or EA line) nor its website mentions T:BUC, camps or EA funding. Other registered 'Vibe' names (Vibe Arts & Wellbeing NIC109730 Maghera; Vibe Go Ltd NIC109845 Armagh) are outside L&C."
+  },
+  {
+   "orgId": "v267",
+   "name": "MID-ULSTER STRONGER TOGETHER (MUST)",
+   "verdict": "unconfirmed",
+   "parentRegNo": null,
+   "parentName": null,
+   "evidence": null,
+   "parentIncome": null,
+   "clubFigures": [],
+   "tried": "Searched the web again (exact name; MUST + Stronger Together + Mid Ulster towns). Nothing. The full CCNI register CSV has only 'Dunloy Stronger Together' (NIC100130, Causeway Coast & Glens, unrelated). The EA registered-organisations page has no entry. The CWSAN Mid Ulster signposting directory (Sep 2024) lists 'Stronger Together' (the NI ethnic-equality network) and a 'MUST Hostel'. That hostel is the Mid-Ulster & South Tyrone Association for the Single Homeless (NIC100309), an acronym clash and not evidence. The EA T:BUC 2025-26 list remains the only source."
+  }
+ ]
+}
