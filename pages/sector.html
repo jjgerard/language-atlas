@@ -328,10 +328,12 @@ function incomeInfo(o) {
 }
 function profHTML(o) {
   const p = o.profile;
-  let warn = (o.possiblyStatutory ? `<div class="flag">possibly a statutory EA centre: ${esc(o.possiblyStatutory)}</div>` : '')
+  let warn = (o.privateProvider ? '<div class="flag">a private company, not voluntary sector: ' + esc(o.privateProvider) + '. Left out of every count.</div>' : '')
+    + (o.outOfScope ? '<div class="flag">out of scope: ' + esc(o.outOfScope) + '. Left out of every count.</div>' : '')
+    + (o.possiblyStatutory ?`<div class="flag">possibly a statutory EA centre: ${esc(o.possiblyStatutory)}</div>` : '')
     + (o.partOf ? `<div class="flag">part of ${esc(o.partOf)}</div>` : '');
   const pc = o.parentCheck;
-  if (pc && pc.verdict !== 'confirmed') warn += '<div class="miss">Parent charity ' + (pc.verdict === 'rejected' ? 'checked and ruled out' : 'not confirmed') + (pc.parentName ? ': ' + esc(pc.parentName) : '') + '.</div>';
+  if (pc && pc.verdict !== 'confirmed') warn += '<div class="miss">Parent charity ' + (pc.verdict === 'rejected' ? 'checked and ruled out' : 'not confirmed') + (pc.parentName ? ': ' + esc(pc.parentName) : '') + '.' + (pc.conflict ? ' The sources conflict: ' + esc(pc.conflict) + '.' : '') + '</div>';
   if (o.projectFigures) warn += '<div style="margin-top:4px"><b>This project in the parent\'s accounts</b>: '
     + o.projectFigures.map(f => esc(f.label) + ' ' + esc(f.value) + (f.year ? ' (' + esc(f.year) + ')' : '') + (f.url ? ' <a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + (f.page ? (/^\d+$/.test(String(f.page)) ? 'p.' + f.page : esc(String(f.page).split(',')[0])) : 'source') + '</a>' : '')).join('; ') + '</div>';
   if (o.ukNI) { const u = o.ukNI, line = x => esc(x.label || x.funder || x.measure || '') + ' ' + esc(x.value || '') + ' ' + esc(x.unit || '') + (x.year ? ' (' + esc(x.year) + ')' : '') + (x.url ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + (x.page ? 'p.' + esc(x.page) : 'source') + '</a>' : '');
@@ -441,15 +443,15 @@ function drawWhoPays() {
   const G = D.gfd, DN = { DE: 'Education', DOH: 'Health', DFC: 'Communities', TEO: 'The Executive Office', DOJ: 'Justice', DFE: 'Economy', DAERA: 'Agriculture, Environment and Rural Affairs', DFI: 'Infrastructure' };
   const Gc = !G ? '' : card('Check from the payers\' side: the Government Funding Database, 2024-25',
     'Every award each department lists to voluntary and community organisations (letters of offer, not payments). "Children\'s awards" are those whose own titles name children, young people, families, early years or schools.',
-    rows(['<tr><th style="text-align:left">Department</th><th>All VCSE awards</th><th>Children\'s awards</th><th>to organisations on this page</th><th>to organisations not on it</th></tr>']
+    rows(['<tr><th style="text-align:left">Department</th><th>All VCSE awards</th><th>Children\'s awards</th><th>to organisations found from other evidence</th><th>to organisations found only here</th></tr>']
       .concat(Object.entries(G.byDept).sort((a, b) => b[1].gbp - a[1].gbp).map(([k, d]) => '<tr><td>' + esc(DN[k] || k) + (k === 'DOH' ? ' <span class="flag" title="' + esc(G.coverage.healthRowsFrom) + '">incomplete</span>' : '') + '</td><td>' + m(d.gbp) + '</td><td>' + m(d.childLabelledGbp)
         + '</td><td>' + m(d.childLabelledGbp - d.childLabelledUnlistedGbp) + '</td><td>' + m(d.childLabelledUnlistedGbp) + ' <span class="miss">(' + d.unlistedChildOrgs + ')</span></td></tr>')))
-    + '<p class="miss" style="font-size:12.5px;margin:6px 0 0">' + G.unlistedCount + ' recipients of children\'s awards are not on this page, mostly small playgroups and youth clubs; public bodies and schools are left out of that count. Largest: '
+    + '<p class="miss" style="font-size:12.5px;margin:6px 0 0">' + G.unlistedCount + ' recipients of children\'s awards were found only through this register, mostly small playgroups and youth clubs. They have since been added to this page; the 200 largest are profiled, and private companies and organisations with no children\'s service are labelled and left out of the counts. Largest: '
     + G.unlisted.slice(0, 6).map(u => esc(u.organisation) + ' ' + m(u.gbp)).join('; ') + '. <a href="' + esc(G.source) + '" target="_blank" rel="noopener">The register</a>.</p>');
   $('#whopays').innerHTML = A + B + Gc + Cc + Dd;
 }
 function drawSvc() {
-  const live = D.orgs.filter(o => o.profile && !o.possiblyStatutory), cur = $('#svc').value;
+  const live = D.orgs.filter(o => o.profile && !o.possiblyStatutory && !o.privateProvider && !o.outOfScope), cur = $('#svc').value;
   $('#svc-count').textContent = `${live.filter(o => o.profile.services.length).length} organisations profiled`;
   $('#svct tbody').innerHTML = D.serviceCodes.map(c => {
     const os = live.filter(o => o.profile.services.some(s => s.code === c));

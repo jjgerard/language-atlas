@@ -24,7 +24,9 @@ const read = f => JSON.parse(fs.readFileSync(path.join(R, f), 'utf8'));
 
 const gfd = read('ni-gfd.json').rows;
 const healthRows = read('ni-health-published.json').figures.filter(f => f.source === 'Government Funding Database');
-const orgs = read('ni-vcs-orgs.json').orgs.filter(o => o.orgId && !o.duplicateOf);
+// Coverage is measured against the list as built from other evidence; organisations added from
+// this register (g###) would otherwise make it look complete by construction.
+const orgs = read('ni-vcs-orgs.json').orgs.filter(o => o.orgId && !o.duplicateOf && !/^g\d/.test(o.orgId));
 const prof = Object.fromEntries(read('ni-vcs-profiles.json').profiles.map(p => [p.orgId, p]));
 
 const money = v => { const s = String(v == null ? '' : v).replace(/[£,\s]/g, ''); const n = parseFloat(s); return isNaN(n) ? null : n; };

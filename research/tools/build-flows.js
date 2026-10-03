@@ -44,6 +44,7 @@ const ent = (id, name, kind, extra = {}) => (E[id] = { id, name, kind, variants:
   ['acni', 'Arts Council of Northern Ireland', 'ni-gov'], ['niscreen', 'Northern Ireland Screen', 'ni-gov'], ['citbni', 'Construction Industry Training Board NI', 'ni-gov'],
   ['fe-colleges', 'FE colleges', 'ni-gov'], ['translink', 'Translink (public corporation)', 'ni-gov'], ['housing-benefit', 'Housing Benefit', 'ni-gov'],
   ['victims-payment', "Victims' Payments Board", 'ni-gov'],
+  ['sportni', 'Sport NI', 'ni-gov'], ['hsc-trust-unnamed', 'An HSC trust, not named', 'ni-gov'], ['hmrc', 'HM Revenue and Customs', 'uk-gov'],
   ['council-an', 'Antrim and Newtownabbey Borough Council', 'council'], ['council-and', 'Ards and North Down Borough Council', 'council'],
   ['council-abc', 'Armagh City, Banbridge and Craigavon Borough Council', 'council'], ['council-belfast', 'Belfast City Council', 'council'],
   ['council-ccg', 'Causeway Coast and Glens Borough Council', 'council'], ['council-dcs', 'Derry City and Strabane District Council', 'council'],
@@ -65,6 +66,13 @@ const ent = (id, name, kind, extra = {}) => (E[id] = { id, name, kind, variants:
 // checked first, so it is never credited to whichever one appears first.
 const MULTI = /;|Belfast City Council & Antrim|Department for Communities and Belfast|SELB\/DSD|Northern, Western & Southern|Health (&|and) Social Care Trusts|governments and other|Education Authority and/i;
 const RULES = [
+  // Round-2 profiles (2026-10-03): shortened council names, programme-only labels, and two
+  // bodies new to the list. A programme maps to the department that funds it.
+  [/^Mid Ulster \(council/i, 'council-mu'], [/^Newry Mourne/i, 'council-nmd'], [/^Ards, North/i, 'council-and'], [/^Derry (&|and) Strabane/i, 'council-dcs'],
+  [/^Causeway \(council/i, 'council-ccg'], [/^Fermanagh \(council/i, 'council-fo'], [/Cork County Council/i, 'ie-gov'], [/Erasmus/i, 'eu'],
+  [/NI Childcare Subsidy Scheme|Extended Schools/i, 'de'], [/^Pre-School Education Programme/i, 'ea'], [/Bright Start|Childcare Partnership|^DHSSPS$/i, 'doh'],
+  [/Regional Fertility Centre/i, 'trust-belfast'], [/^Health and Social Care (Trust|\(trust not named\))$|^HSC Trust$|Children's Services Planning \(HSC\)/i, 'hsc-trust-unnamed'],
+  [/^Sport Northern Ireland$/i, 'sportni'], [/HM Revenue/i, 'hmrc'], [/Environment Agency/i, 'daera'],
   [/sure ?start/i, 'de'], [/pathways? fund/i, 'de'], [/^Early Years \(likely DE/i, 'de'],
   [/PEACE|SEUPB/i, 'peaceplus'], [/UKSPF|Shared Prosperity|DLUHC/i, 'ukspf'], [/International Fund for Ireland/i, 'ifi'],
   [/European Social Fund|^EU$/i, 'eu'], [/Dormant/i, 'dormant'],
@@ -95,7 +103,8 @@ const RULES = [
 const viaOf = s => { const m = String(s).match(/\b(?:via|through|administered by|EA administers|on behalf of)\s+([^)]+)/i); return m ? m[1].trim() : null; };
 function resolve(funder) {
   const s = String(funder || '').trim();
-  if (!s || /^(not named|unnamed|unclear)\b|^not named|body not named\)?$|^Mental Health Support Fund|^GSP|^Regional Childcare|^Eastern Childcare|^councils \(not named\)|^Councils \(Labour/i.test(s)
+  if (!s || /\((funder|payer) not named\)|^not named \(strategy|^Regional Fair Play/i.test(s)) return { id: 'not-named', via: null };
+  if (/^(not named|unnamed|unclear)\b|^not named|body not named\)?$|^Mental Health Support Fund|^GSP|^Regional Childcare|^Eastern Childcare|^councils \(not named\)|^Councils \(Labour/i.test(s)
       && !/sure ?start|pathway|PEACE|DoH/i.test(s)) return { id: 'not-named', via: null };
   if (MULTI.test(s)) return { id: 'multiple', via: null };
   for (const [re, id] of RULES) if (re.test(s)) return { id, via: viaOf(s) };
@@ -146,7 +155,7 @@ function govYear(end) {
 const flows = [], unresolved = {};
 const note = (e, variant) => { if (E[e] && !E[e].variants.includes(variant)) E[e].variants.push(variant); };
 for (const p of prof) {
-  const o = orgById.get(p.orgId); if (!o || o.duplicateOf || o.possiblyStatutory) continue;
+  const o = orgById.get(p.orgId); if (!o || o.duplicateOf || o.possiblyStatutory || o.privateProvider || o.outOfScope) continue;
   const f = p.funding; if (!f || !(f.government || []).length) continue;
   const end = periodEnd(f.year, o.register && o.register.fyEnd);
   for (const g of f.government) {
@@ -171,11 +180,13 @@ for (const p of prof) {
 // so each pound is counted once, at the intermediary. (Phase 4 can re-attribute
 // it to the final deliverer once the intermediary's onward payments are known.)
 const normName = s => String(s || '').toLowerCase().replace(/\(.*$/, '').replace(/\b(ltd|limited|the|ni|northern ireland|consortium|led|royal)\b/g, '').replace(/[^a-z0-9]/g, '');
-const listed = orgs.filter(o => o.orgId && !o.duplicateOf).map(o => ({ id: o.orgId, keys: [o.name, ...(o.aliases || [])].map(normName).filter(k => k.length >= 4) }));
+// Six characters at least, and never a private or out-of-scope organisation: "via Clear"
+// (a PHA small-grants project) once matched "Clear Day Nurseries", a private company.
+const listed = orgs.filter(o => o.orgId && !o.duplicateOf && !o.privateProvider && !o.outOfScope).map(o => ({ id: o.orgId, keys: [o.name, ...(o.aliases || [])].map(normName).filter(k => k.length >= 6) }));
 for (const f of flows) {
   if (!f.via) continue;
   const v = normName(f.via);
-  const hit = v.length >= 4 && listed.find(o => o.id !== f.recipient && o.keys.some(k => k === v || k.startsWith(v) || v.startsWith(k)));
+  const hit = v.length >= 6 && listed.find(o => o.id !== f.recipient && o.keys.some(k => k === v || k.startsWith(v) || v.startsWith(k)));
   if (hit) { f.passThroughVia = hit.id; f.countOnce = false; }
 }
 // The Pathway Fund is administered in full by Early Years ("under contract", per DE;
@@ -190,7 +201,7 @@ if (earlyYears) for (const f of flows)
 
 // Grant-list awards: a separate kind, never summed with income lines.
 for (const o of orgs) {
-  if (o.duplicateOf || o.possiblyStatutory || !o.orgId) continue;
+  if (o.duplicateOf || o.possiblyStatutory || o.privateProvider || o.outOfScope || !o.orgId) continue;
   for (const b of o.basis) {
     if (b.type !== 'gov funding' || !b.amount) continue;
     const { id, via } = resolve(b.detail || '');

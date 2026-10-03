@@ -14267,13 +14267,14 @@
    "orgId": "v248",
    "profileStatus": "unreached",
    "parentCheck": {
-    "verdict": "rejected",
+    "verdict": "conflicting",
     "parentRegNo": "100769",
     "parentName": "Galbally Youth & Community Association",
     "evidence": {
      "quote": "Working in partnership with other local organisations (e.g. Galbally Pearses GAC, Paddington Playgroup and Out of School Club, Cappagh Village Regeneration Group, Country Club, Galbally Youth Club",
      "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000100769_20240831_TAR.pdf"
-    }
+    },
+    "conflict": "Government Funding Database 2024-25 names the recipient \"GALBALLY YOUTH & COMMUNITY ASSOCIATION (GALBALLY YOUTH CLUB)\"; the Association's report lists the club as a separate organisation"
    }
   },
   {
@@ -16221,7 +16222,7 @@
   {
    "name": "YMCA Ireland",
    "aliases": [],
-   "regNo": null,
+   "regNo": "105739",
    "gbCharityNo": null,
    "basis": [
     {
@@ -16249,7 +16250,27 @@
     "gov funding"
    ],
    "orgId": "v304",
-   "profileStatus": "partial"
+   "profileStatus": "partial",
+   "regNoPrevious": null,
+   "regNoBy": "profiling agent (round 2): National Council of YMCAs of Ireland, Greenhill address",
+   "register": {
+    "name": "National Council of Young Men's Christian Associations of Ireland Limited",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "2743996",
+    "spending": "2915038",
+    "incomePrev": "0",
+    "staff": "73",
+    "who": [
+     "Children (5-13 year olds)",
+     "Mental health",
+     "Parents",
+     "Unemployed/low income",
+     "Voluntary and community sector",
+     "Volunteers",
+     "Youth (14-25 year olds)"
+    ]
+   }
   },
   {
    "name": "YMCA Newcastle",
@@ -17135,7 +17156,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g002",
@@ -17193,14 +17215,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g003",
    "name": "Positive Futures for People With A Learning Disability",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "101385",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Positive Futures' returns one match, 101385; accounts name the same family support / Autism Outreach servic",
    "gbCharityNo": null,
    "basis": [
     {
@@ -17262,7 +17285,32 @@
    "gfdRank": 3,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Positive Futures: Achieving Dreams. Transforming Lives",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "16420802",
+    "spending": "16057737",
+    "incomePrev": "0",
+    "staff": "636",
+    "who": [
+     "Carers",
+     "Children (5-13 year olds)",
+     "Learning disabilities",
+     "Men",
+     "Parents",
+     "Physical disabilities",
+     "Preschool (0-5 year olds)",
+     "Sensory disabilities",
+     "Voluntary and community sector",
+     "Volunteers",
+     "Women",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g004",
@@ -17324,7 +17372,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g005",
@@ -17403,7 +17452,9 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "incomeIsParent": "Bryson Charitable Group (NIC101396; listed as v002)",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g006",
@@ -17462,7 +17513,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g007",
@@ -17571,7 +17623,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g008",
@@ -17604,7 +17657,9 @@
    "gfdRank": 8,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "duplicateOf": "v274",
+   "profileStatus": "done"
   },
   {
    "orgId": "g009",
@@ -17628,7 +17683,9 @@
    "gfdRank": 9,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "duplicateOf": "v304",
+   "profileStatus": "done"
   },
   {
    "orgId": "g010",
@@ -17707,7 +17764,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g011",
@@ -17785,7 +17843,9 @@
    "gfdRank": 11,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "duplicateOf": "v141",
+   "profileStatus": "done"
   },
   {
    "orgId": "g012",
@@ -17809,14 +17869,15 @@
    "gfdRank": 12,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g013",
    "name": "An Droichead",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "101504",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Droichead' returns one match, 101504; accounts list 'Playboard - Brightstart 23,157' and 'Early Years 35,00",
    "gbCharityNo": null,
    "basis": [
     {
@@ -17860,7 +17921,38 @@
    "gfdRank": 13,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "An Droichead Limited",
+    "status": "Received: 137 days late",
+    "fyEnd": "31 March 2025",
+    "income": "1074625",
+    "spending": "1119984",
+    "incomePrev": "0",
+    "staff": "40",
+    "who": [
+     "Adult training",
+     "Carers",
+     "Children (5-13 year olds)",
+     "Ethnic minorities",
+     "General public",
+     "Interface communities",
+     "Language community",
+     "Learning disabilities",
+     "Older people",
+     "Parents",
+     "Physical disabilities",
+     "Preschool (0-5 year olds)",
+     "Specific areas of deprivation",
+     "Unemployed/low income",
+     "Voluntary and community sector",
+     "Volunteers",
+     "Women",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g014",
@@ -17957,7 +18049,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g015",
@@ -18015,7 +18108,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g016",
@@ -18051,7 +18145,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g017",
@@ -18097,14 +18192,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g018",
    "name": "Parenting Focus",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "103613",
+   "regNoBy": "profiling agent (round 2): Trustees' report: 'Parenting Focus Limited changed its registered name from Parenting for NI Limited (operating as Paren",
    "gbCharityNo": null,
    "basis": [
     {
@@ -18175,7 +18271,33 @@
    "gfdRank": 18,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Parenting Focus Limited",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "417818",
+    "spending": "657380",
+    "incomePrev": "0",
+    "staff": "15",
+    "who": [
+     "Adult training",
+     "Carers",
+     "Children (5-13 year olds)",
+     "Ethnic minorities",
+     "General public",
+     "Men",
+     "Mental health",
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Specific areas of deprivation",
+     "Voluntary and community sector",
+     "Women",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g019",
@@ -18272,7 +18394,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g020",
@@ -18309,7 +18432,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g021",
@@ -18354,7 +18478,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g022",
@@ -18418,7 +18543,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g023",
@@ -18477,7 +18603,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g024",
@@ -18533,14 +18660,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g025",
    "name": "West Bann Development",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "101549",
+   "regNoBy": "profiling agent (round 2): Found by CCNI name search ('West Bann'). The GFD Neighbourhood Renewal row 'Churchlands Community Supporting Families Th",
    "gbCharityNo": null,
    "basis": [
     {
@@ -18566,7 +18694,32 @@
    "gfdRank": 25,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "West Bann Development",
+    "status": "Received: 48 days late",
+    "fyEnd": "31 March 2025",
+    "income": "352924",
+    "spending": "363380",
+    "incomePrev": "0",
+    "staff": "14",
+    "who": [
+     "Adult training",
+     "Children (5-13 year olds)",
+     "Community safety/crime prevention",
+     "General public",
+     "Mental health",
+     "Older people",
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Specific areas of deprivation",
+     "Unemployed/low income",
+     "Volunteers",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g026",
@@ -18618,14 +18771,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g027",
    "name": "Relate NI",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "102102",
+   "regNoBy": "profiling agent (round 2): Batch had no regNo. Register search for 'Relate' returns 102102 Relate Northern Ireland; its 2025 accounts list a Depart",
    "gbCharityNo": null,
    "basis": [
     {
@@ -18651,7 +18805,27 @@
    "gfdRank": 27,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Relate Northern Ireland",
+    "status": "Received: 2 days late",
+    "fyEnd": "31 March 2025",
+    "income": "947935",
+    "spending": "1194790",
+    "incomePrev": "0",
+    "staff": "9",
+    "who": [
+     "Addictions (drug/solvent/alcohol abuse)",
+     "Children (5-13 year olds)",
+     "Ex-offenders and prisoners",
+     "General public",
+     "Mental health",
+     "Parents",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g028",
@@ -18705,7 +18879,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g029",
@@ -18747,7 +18922,9 @@
    "gfdRank": 29,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "duplicateOf": "v008",
+   "profileStatus": "done"
   },
   {
    "orgId": "g030",
@@ -18808,14 +18985,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g031",
    "name": "Kilcooley Womens Centre",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "101001",
+   "regNoBy": "profiling agent (round 2): CCNI search 'kilcooley' returns 101001 KILCOOLEY WOMEN'S CENTRE (Bangor); company NI025080",
    "gbCharityNo": null,
    "basis": [
     {
@@ -18841,7 +19019,32 @@
    "gfdRank": 31,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "KILCOOLEY WOMEN'S CENTRE",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "824895",
+    "spending": "750656",
+    "incomePrev": "0",
+    "staff": "6",
+    "who": [
+     "Adult training",
+     "Asylum seekers/refugees",
+     "Mental health",
+     "Older people",
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Specific areas of deprivation",
+     "Unemployed/low income",
+     "Victim support",
+     "Volunteers",
+     "Women",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g032",
@@ -18885,7 +19088,9 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "duplicateOf": "v248",
+   "profileStatus": "done"
   },
   {
    "orgId": "g033",
@@ -18946,7 +19151,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g034",
@@ -19012,7 +19218,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g035",
@@ -19045,7 +19252,8 @@
    "gfdRank": 35,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g036",
@@ -19112,7 +19320,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g037",
@@ -19169,14 +19378,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g038",
    "name": "Alphabet Playgroup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "101184",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Alphabet Playgroup' returns a single match, 101184 (Greenisland). Trustees' report says 26 preschool childr",
    "gbCharityNo": null,
    "basis": [
     {
@@ -19202,7 +19412,22 @@
    "gfdRank": 38,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Alphabet Playgroup Greenisland",
+    "status": "Received: on time",
+    "fyEnd": "05 April 2025",
+    "income": "73983",
+    "spending": "76159",
+    "incomePrev": "0",
+    "staff": "5",
+    "who": [
+     "Parents",
+     "Preschool (0-5 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g039",
@@ -19247,14 +19472,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g040",
    "name": "Ballycrochan Playgroup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "105230",
+   "regNoBy": "profiling agent (round 2): No separate register entry. The congregation's 2025 trustees' report: 'There is also a vibrant Playgroup under the auspi",
    "gbCharityNo": null,
    "basis": [
     {
@@ -19271,7 +19497,22 @@
    "gfdRank": 40,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Ballycrochan Presbyterian Church a congregation of the Presbyterian Church in Ireland",
+    "status": "Received: on time",
+    "fyEnd": "31 December 2025",
+    "income": "325075",
+    "spending": "344469",
+    "incomePrev": "0",
+    "staff": "4",
+    "who": [
+     "General public"
+    ]
+   },
+   "incomeIsParent": "Ballycrochan Presbyterian Church (NIC105230)",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g041",
@@ -19321,7 +19562,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g042",
@@ -19365,7 +19607,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g043",
@@ -19420,7 +19663,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g044",
@@ -19456,7 +19700,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g045",
@@ -19502,7 +19747,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g046",
@@ -19526,14 +19772,15 @@
    "gfdRank": 46,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g047",
    "name": "First Steps Womens Group",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "101202",
+   "regNoBy": "profiling agent (round 2): Batch had no regNo. Register search 'First Steps' returns 101202 First Steps Women's Centre (Dungannon); its 2025 accoun",
    "gbCharityNo": null,
    "basis": [
     {
@@ -19559,7 +19806,33 @@
    "gfdRank": 47,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "First Steps Women's Centre",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "590892",
+    "spending": "482853",
+    "incomePrev": "0",
+    "staff": "14",
+    "who": [
+     "Addictions (drug/solvent/alcohol abuse)",
+     "Adult training",
+     "Carers",
+     "Ethnic minorities",
+     "Ex-offenders and prisoners",
+     "General public",
+     "Older people",
+     "Preschool (0-5 year olds)",
+     "Specific areas of deprivation",
+     "Unemployed/low income",
+     "Voluntary and community sector",
+     "Volunteers",
+     "Women"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g048",
@@ -19635,7 +19908,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g049",
@@ -19691,7 +19965,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g050",
@@ -19745,7 +20020,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g051",
@@ -19812,14 +20088,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g052",
    "name": "Aghagallon Playgroup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "100295",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Aghagallon' returned 100295 Aghagallon Preschool, the only preschool among 4 hits. Its 2025 accounts are ti",
    "gbCharityNo": null,
    "basis": [
     {
@@ -19845,14 +20122,28 @@
    "gfdRank": 52,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Aghagallon Preschool",
+    "status": "Received: on time",
+    "fyEnd": "31 August 2025",
+    "income": "92962",
+    "spending": "88555",
+    "incomePrev": "0",
+    "staff": "3",
+    "who": [
+     "Preschool (0-5 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g053",
    "name": "Ballyholme Presbyterian Church Playgroup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "105128",
+   "regNoBy": "profiling agent (round 2): No separate register entry for the playgroup. It runs under the congregation: the congregation's 2025 trustees' report l",
    "gbCharityNo": null,
    "basis": [
     {
@@ -19869,7 +20160,22 @@
    "gfdRank": 53,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Ballyholme Congregation of the Presbyterian Church in Ireland",
+    "status": "Received: on time",
+    "fyEnd": "31 December 2025",
+    "income": "249569",
+    "spending": "284673",
+    "incomePrev": "0",
+    "staff": "8",
+    "who": [
+     "General public"
+    ]
+   },
+   "incomeIsParent": "Ballyholme Congregation of the Presbyterian Church in Ireland (105128)",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g054",
@@ -19941,7 +20247,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g055",
@@ -19987,7 +20294,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g056",
@@ -20023,14 +20331,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g057",
    "name": "Victim Support NI",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "103651",
+   "regNoBy": "profiling agent (round 2): Batch had no regNo. Register search 'Victim Support' returns 103651 Victim Support Northern Ireland; its 2025 accounts l",
    "gbCharityNo": null,
    "basis": [
     {
@@ -20047,7 +20356,22 @@
    "gfdRank": 57,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Victim Support Northern Ireland",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "2579499",
+    "spending": "2612094",
+    "incomePrev": "0",
+    "staff": "60",
+    "who": [
+     "General public",
+     "Victim support"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g058",
@@ -20092,7 +20416,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g059",
@@ -20129,7 +20454,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g060",
@@ -20177,7 +20503,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g061",
@@ -20229,14 +20556,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g062",
    "name": "Bangor West Nursery Playgoup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "105045",
+   "regNoBy": "profiling agent (round 2): The playgroup has no register entry of its own (searched 'Bangor West Nursery', 'Bangor West Nursery Playgroup', 'Nurser",
    "gbCharityNo": null,
    "basis": [
     {
@@ -20253,7 +20581,22 @@
    "gfdRank": 62,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Bangor West Congregation of the Presbyterian Church in Ireland",
+    "status": "Received: on time",
+    "fyEnd": "31 December 2025",
+    "income": "847860",
+    "spending": "808077",
+    "incomePrev": "0",
+    "staff": "12",
+    "who": [
+     "General public"
+    ]
+   },
+   "incomeIsParent": "Bangor West Congregation of the Presbyterian Church in Ireland (CCNI 105045)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g063",
@@ -20315,7 +20658,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g064",
@@ -20377,7 +20721,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g065",
@@ -20426,7 +20771,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g066",
@@ -20459,7 +20805,9 @@
    "gfdRank": 66,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "duplicateOf": "g006",
+   "profileStatus": "done"
   },
   {
    "orgId": "g067",
@@ -20483,7 +20831,8 @@
    "gfdRank": 67,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g068",
@@ -20507,14 +20856,15 @@
    "gfdRank": 68,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g069",
    "name": "Kidzone Playgroup (Newry)",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "100922",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Kidzone' returned 100922 Kidzone (20B Millvale Road, Bessbrook, Newry; up to date) and 105881 Kidzone Presc",
    "gbCharityNo": null,
    "basis": [
     {
@@ -20540,14 +20890,29 @@
    "gfdRank": 69,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Kidzone",
+    "status": "Received: on time",
+    "fyEnd": "31 July 2025",
+    "income": "224346",
+    "spending": "218648",
+    "incomePrev": "0",
+    "staff": "12",
+    "who": [
+     "Children (5-13 year olds)",
+     "Preschool (0-5 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g070",
    "name": "Newtownards Contact Centre",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "101434",
+   "regNoBy": "profiling agent (round 2): No separate register entry for Newtownards. GFD 2024/25 row reads 'KNOCK CHILD CONTACT CENTRE Newtownards Child Contact ",
    "gbCharityNo": null,
    "basis": [
     {
@@ -20573,7 +20938,25 @@
    "gfdRank": 70,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Knock Child Contact Centre",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "98231",
+    "spending": "90841",
+    "incomePrev": "0",
+    "staff": "3",
+    "who": [
+     "Children (5-13 year olds)",
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "incomeIsParent": "Knock Child Contact Centre (NIC101434)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g071",
@@ -20609,7 +20992,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g072",
@@ -20674,7 +21058,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g073",
@@ -20716,14 +21101,15 @@
    "gfdRank": 73,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g074",
    "name": "ACCORD NI",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "102332",
+   "regNoBy": "profiling agent (round 2): Batch had no regNo. Register search 'Accord' returns 102332 Accord Northern Ireland Catholic Marriage Care Service; its ",
    "gbCharityNo": null,
    "basis": [
     {
@@ -20749,7 +21135,32 @@
    "gfdRank": 74,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Accord Northern Ireland Catholic Marriage Care Service",
+    "status": "Received: 89 days late",
+    "fyEnd": "31 March 2025",
+    "income": "297402",
+    "spending": "391952",
+    "incomePrev": "0",
+    "staff": "5",
+    "who": [
+     "Adult training",
+     "Children (5-13 year olds)",
+     "General public",
+     "Men",
+     "Mental health",
+     "Parents",
+     "Travellers",
+     "Unemployed/low income",
+     "Voluntary and community sector",
+     "Volunteers",
+     "Women",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g075",
@@ -20789,14 +21200,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g076",
    "name": "Bangor Child Contact Centre",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "101434",
+   "regNoBy": "profiling agent (round 2): The GFD 2024/25 row is titled 'KNOCK CHILD CONTACT CENTRE Bangor Child Contact Centre 24/25', and Knock's 2024-25 report",
    "gbCharityNo": null,
    "basis": [
     {
@@ -20822,7 +21234,25 @@
    "gfdRank": 76,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Knock Child Contact Centre",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "98231",
+    "spending": "90841",
+    "incomePrev": "0",
+    "staff": "3",
+    "who": [
+     "Children (5-13 year olds)",
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "incomeIsParent": "Knock Child Contact Centre (NIC101434)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g077",
@@ -20864,7 +21294,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g078",
@@ -20888,7 +21319,8 @@
    "gfdRank": 78,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g079",
@@ -20912,7 +21344,9 @@
    "gfdRank": 79,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "privateProvider": "Clear Day Nurseries: private company (NI056274)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g080",
@@ -20936,7 +21370,8 @@
    "gfdRank": 80,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g081",
@@ -20978,7 +21413,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g082",
@@ -21011,7 +21447,8 @@
    "gfdRank": 82,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g083",
@@ -21035,7 +21472,8 @@
    "gfdRank": 83,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "unreached"
   },
   {
    "orgId": "g084",
@@ -21059,7 +21497,9 @@
    "gfdRank": 84,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "privateProvider": "Giggles Early Years: appears to be a private nursery",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g085",
@@ -21083,7 +21523,9 @@
    "gfdRank": 85,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "incomeIsParent": "Unclear: St Joseph's Centre for the Deaf (NIC109492, = g195) or Acrewood Daycare CIC (Companies House NI689664)",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g086",
@@ -21119,14 +21561,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g087",
    "name": "Naíscoil an tSléibhe Dhuibh",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "106469",
+   "regNoBy": "profiling agent (round 2): The GFD award title is 'Naíonra an tSléibhe Dhuibh - The Pathway Fund'. The naíonra (voluntary Irish-medium playgroup) i",
    "gbCharityNo": null,
    "basis": [
     {
@@ -21143,7 +21586,26 @@
    "gfdRank": 87,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Naíonra an tSléibhe Dhuibh",
+    "status": "Received: on time",
+    "fyEnd": "22 September 2025",
+    "income": "61401",
+    "spending": "60314",
+    "incomePrev": "0",
+    "staff": "3",
+    "who": [
+     "Adult training",
+     "Language community",
+     "Preschool (0-5 year olds)",
+     "Unemployed/low income",
+     "Voluntary and community sector",
+     "Volunteers"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g088",
@@ -21167,7 +21629,8 @@
    "gfdRank": 88,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g089",
@@ -21191,7 +21654,9 @@
    "gfdRank": 89,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "privateProvider": "Oakwood Childcare: private company (NI623264)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g090",
@@ -21253,7 +21718,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g091",
@@ -21277,7 +21743,8 @@
    "gfdRank": 91,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g092",
@@ -21301,7 +21768,9 @@
    "gfdRank": 92,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "privateProvider": "Superstars Daycare: private company (NI678181)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g093",
@@ -21325,7 +21794,8 @@
    "gfdRank": 93,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g094",
@@ -21349,7 +21819,8 @@
    "gfdRank": 94,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g095",
@@ -21373,7 +21844,9 @@
    "gfdRank": 95,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "privateProvider": "SHG NI Limited: private limited company (NI065419, child day-care)",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g096",
@@ -21422,7 +21895,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g097",
@@ -21464,14 +21938,16 @@
    "gfdRank": 97,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "duplicateOf": "v219",
+   "profileStatus": "done"
   },
   {
    "orgId": "g098",
    "name": "Naiscoil Ghleann Darach",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "105703",
+   "regNoBy": "profiling agent (round 2): The GFD row names 'Coiste Ghaeloideachas Chromghlinne - The Pathway Fund'. The naíscoil has no register entry of its own",
    "gbCharityNo": null,
    "basis": [
     {
@@ -21488,7 +21964,40 @@
    "gfdRank": 98,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Coiste Ghaeloideachas Chromghlinne",
+    "status": "Received: on time",
+    "fyEnd": "31 August 2025",
+    "income": "146771",
+    "spending": "174355",
+    "incomePrev": "0",
+    "staff": "4",
+    "who": [
+     "Adult training",
+     "Asylum seekers/refugees",
+     "Carers",
+     "Children (5-13 year olds)",
+     "Community safety/crime prevention",
+     "Ethnic minorities",
+     "General public",
+     "Language community",
+     "Men",
+     "Mental health",
+     "Older people",
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Sexual orientation",
+     "Unemployed/low income",
+     "Voluntary and community sector",
+     "Volunteers",
+     "Women",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "incomeIsParent": "Coiste Ghaeloideachas Chromghlinne (105703)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g099",
@@ -21512,7 +22021,8 @@
    "gfdRank": 99,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g100",
@@ -21556,7 +22066,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g101",
@@ -21603,7 +22114,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g102",
@@ -21650,7 +22162,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g103",
@@ -21674,7 +22187,8 @@
    "gfdRank": 103,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g104",
@@ -21727,7 +22241,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g105",
@@ -21786,7 +22301,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g106",
@@ -21827,7 +22343,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g107",
@@ -21865,7 +22382,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g108",
@@ -21921,7 +22439,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g109",
@@ -21958,14 +22477,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g110",
    "name": "Bloomfield Community Association Playgroup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "107836",
+   "regNoBy": "profiling agent (round 2): CCNI search returns two 'Bloomfield Community Association' charities: 107836 (Belfast, 60 Hyndford Street, registered 06",
    "gbCharityNo": null,
    "basis": [
     {
@@ -21982,7 +22502,26 @@
    "gfdRank": 110,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Bloomfield Community Association (Belfast)",
+    "status": "Registered",
+    "fyEnd": "31 March 2026",
+    "income": "0",
+    "spending": "0",
+    "incomePrev": "0",
+    "staff": "0",
+    "who": [
+     "Children (5-13 year olds)",
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Volunteers",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "incomeIsParent": "Bloomfield Community Association (Belfast) runs the playgroup",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g111",
@@ -22032,7 +22571,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g112",
@@ -22065,7 +22605,8 @@
    "gfdRank": 112,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g113",
@@ -22101,7 +22642,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g114",
@@ -22141,7 +22683,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g115",
@@ -22177,7 +22720,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g116",
@@ -22215,7 +22759,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g117",
@@ -22263,7 +22808,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g118",
@@ -22312,7 +22858,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g119",
@@ -22371,7 +22918,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g120",
@@ -22422,7 +22970,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g121",
@@ -22446,7 +22995,9 @@
    "gfdRank": 121,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "privateProvider": "Country Kids: private limited company",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g122",
@@ -22482,7 +23033,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g123",
@@ -22506,7 +23058,9 @@
    "gfdRank": 123,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "outOfScope": "GP Federation Support Unit: a GP federation; the award is a pain medication review",
+   "profileStatus": "done"
   },
   {
    "orgId": "g124",
@@ -22562,7 +23116,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g125",
@@ -22629,14 +23184,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g126",
    "name": "Limavady Family Centre",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "107433",
+   "regNoBy": "profiling agent (round 2): Limavady Family Centre is a service of LCDI: the LCDI website page 'LIMAVADY FAMILY CENTRE - LCDI' lists the Roe Valley ",
    "gbCharityNo": null,
    "basis": [
     {
@@ -22653,7 +23209,43 @@
    "gfdRank": 126,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Limavady Community Development Initiative LTD",
+    "status": "Received: on time",
+    "fyEnd": "30 September 2025",
+    "income": "671868",
+    "spending": "741666",
+    "incomePrev": "0",
+    "staff": "22",
+    "who": [
+     "Addictions (drug/solvent/alcohol abuse)",
+     "Adult training",
+     "Carers",
+     "Children (5-13 year olds)",
+     "Ex-offenders and prisoners",
+     "General public",
+     "Interface communities",
+     "Language community",
+     "Learning disabilities",
+     "Men",
+     "Mental health",
+     "Older people",
+     "Parents",
+     "Physical disabilities",
+     "Preschool (0-5 year olds)",
+     "Sensory disabilities",
+     "Specific areas of deprivation",
+     "Unemployed/low income",
+     "Voluntary and community sector",
+     "Volunteers",
+     "Women",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "incomeIsParent": "Limavady Community Development Initiative Ltd (LCDI)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g127",
@@ -22690,7 +23282,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g128",
@@ -22735,7 +23328,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g129",
@@ -22771,7 +23365,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g130",
@@ -22807,14 +23402,16 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "incomeIsParent": "West Kirk Presbyterian Church (congregation of the Presbyterian Church in Ireland)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g131",
    "name": "Epworth Playgroup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "100545",
+   "regNoBy": "profiling agent (round 2): CCNI register page regId=100545 (company 621033): 'This charity was removed from the register on 13 Mar 2026'. No docume",
    "gbCharityNo": null,
    "basis": [
     {
@@ -22831,14 +23428,30 @@
    "gfdRank": 131,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Epworth Playgroup",
+    "status": "Removed",
+    "fyEnd": "31 December 2024",
+    "income": "84889",
+    "spending": "79392",
+    "incomePrev": "0",
+    "staff": "4",
+    "who": [
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Unemployed/low income"
+    ]
+   },
+   "profileStatus": "partial"
   },
   {
    "orgId": "g132",
    "name": "Naíscoil Cholmcille",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "102052",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Cholmcille' returned 102052 Naíscoil Cholmcille, marked 'This charity was removed from the register on 6 Ma",
    "gbCharityNo": null,
    "basis": [
     {
@@ -22855,14 +23468,33 @@
    "gfdRank": 132,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Naíscoil Cholmcille",
+    "status": "Removed",
+    "fyEnd": "31 August 2020",
+    "income": "50417",
+    "spending": "51505",
+    "incomePrev": "0",
+    "staff": "4",
+    "who": [
+     "Adult training",
+     "Language community",
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Specific areas of deprivation",
+     "Volunteers"
+    ]
+   },
+   "profileStatus": "partial"
   },
   {
    "orgId": "g133",
    "name": "Northern Ireland Netball",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "106894",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Netball' returns one match, 106894",
    "gbCharityNo": null,
    "basis": [
     {
@@ -22879,7 +23511,27 @@
    "gfdRank": 133,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Northern Ireland Netball",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "615030",
+    "spending": "603700",
+    "incomePrev": "0",
+    "staff": "10",
+    "who": [
+     "Children (5-13 year olds)",
+     "Men",
+     "Older people",
+     "Parents",
+     "Volunteers",
+     "Women",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g134",
@@ -22915,7 +23567,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g135",
@@ -22939,7 +23592,8 @@
    "gfdRank": 135,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g136",
@@ -22984,7 +23638,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g137",
@@ -23017,7 +23672,8 @@
    "gfdRank": 137,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g138",
@@ -23060,7 +23716,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g139",
@@ -23093,7 +23750,9 @@
    "gfdRank": 139,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "incomeIsParent": "The Fostering Network (registered charity in England and Wales 280852, Scotland SC039338; company 1507277)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g140",
@@ -23139,14 +23798,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g141",
    "name": "Tempo Community Playgroup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "106104",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Tempo preschool' returns 106104 Tempo Community Preschool; GFD row names 'Tempo Community Preschool'",
    "gbCharityNo": null,
    "basis": [
     {
@@ -23163,14 +23823,29 @@
    "gfdRank": 141,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Tempo Community Preschool",
+    "status": "Overdue: 93 days",
+    "fyEnd": "31 August 2024",
+    "income": "94271",
+    "spending": "100371",
+    "incomePrev": "0",
+    "staff": "5",
+    "who": [
+     "Parents",
+     "Preschool (0-5 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g142",
    "name": "Jack & Jill  Community Group",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "100912",
+   "regNoBy": "profiling agent (round 2): The GFD award title is 'Jack & Jill Childcare - The Pathway Fund'. CCNI search 'Jack' returned 100912 Jack & Jill Childc",
    "gbCharityNo": null,
    "basis": [
     {
@@ -23187,14 +23862,34 @@
    "gfdRank": 142,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Jack & Jill Childcare",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "119437",
+    "spending": "109345",
+    "incomePrev": "0",
+    "staff": "6",
+    "who": [
+     "Children (5-13 year olds)",
+     "Interface communities",
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Voluntary and community sector",
+     "Volunteers",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g143",
    "name": "Bo Peeps Playgroup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "101554",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Bo Peeps' returns 101554 (Boho, Enniskillen) and 104139 Bo-peep Corner; the GFD row says 'Bo Peeps Playgrou",
    "gbCharityNo": null,
    "basis": [
     {
@@ -23220,7 +23915,22 @@
    "gfdRank": 143,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Bo Peeps Playgroup",
+    "status": "Received: 8 days late",
+    "fyEnd": "31 August 2025",
+    "income": "32080",
+    "spending": "33103",
+    "incomePrev": "0",
+    "staff": "3",
+    "who": [
+     "Parents",
+     "Preschool (0-5 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g144",
@@ -23320,14 +24030,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g145",
    "name": "Camowen Smart Kids - Carrickmore & Beragh Centres",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "103789",
+   "regNoBy": "profiling agent (round 2): Camowen Smart Kids is the out-of-school club of Camowen Partnership: the register text says 'Camowen Partnership also ma",
    "gbCharityNo": null,
    "basis": [
     {
@@ -23353,7 +24064,30 @@
    "gfdRank": 145,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "CAMOWEN PARTNERSHIP TRUST",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "91436",
+    "spending": "85349",
+    "incomePrev": "0",
+    "staff": "12",
+    "who": [
+     "Adult training",
+     "Carers",
+     "Children (5-13 year olds)",
+     "General public",
+     "Learning disabilities",
+     "Parents",
+     "Physical disabilities",
+     "Sensory disabilities",
+     "Unemployed/low income"
+    ]
+   },
+   "incomeIsParent": "Camowen Partnership Trust (NIC103789)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g146",
@@ -23400,7 +24134,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g147",
@@ -23446,7 +24181,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g148",
@@ -23479,14 +24215,15 @@
    "gfdRank": 148,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "unreached"
   },
   {
    "orgId": "g149",
    "name": "Lifestart Mid-Ards",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "100644",
+   "regNoBy": "profiling agent (round 2): The GFD 2024/25 row names the recipient 'LIFESTART FOUNDATION LIMITED Parenting Programme & Home Visitation 24/25'. The ",
    "gbCharityNo": null,
    "basis": [
     {
@@ -23512,7 +24249,23 @@
    "gfdRank": 149,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Lifestart Foundation Ltd",
+    "status": "Received: 90 days late",
+    "fyEnd": "31 March 2025",
+    "income": "180517",
+    "spending": "178738",
+    "incomePrev": "0",
+    "staff": "4",
+    "who": [
+     "Parents",
+     "Preschool (0-5 year olds)"
+    ]
+   },
+   "incomeIsParent": "Lifestart Foundation Ltd (CCNI 100644), which itself runs the Mid-Ards service",
+   "profileStatus": "done"
   },
   {
    "orgId": "g150",
@@ -23571,7 +24324,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g151",
@@ -23632,7 +24386,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g152",
@@ -23656,7 +24411,8 @@
    "gfdRank": 152,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "unreached"
   },
   {
    "orgId": "g153",
@@ -23697,7 +24453,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g154",
@@ -23730,7 +24487,8 @@
    "gfdRank": 154,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "unreached"
   },
   {
    "orgId": "g155",
@@ -23798,7 +24556,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g156",
@@ -23831,7 +24590,8 @@
    "gfdRank": 156,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g157",
@@ -23864,7 +24624,8 @@
    "gfdRank": 157,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g158",
@@ -23917,14 +24678,16 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "incomeIsParent": "Northern Ireland Hospice (102337)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g159",
    "name": "Community Development & Health Network Northern Ireland",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "106078",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Health Network' returned 106078 Northern Ireland Community Development Health Network Ltd (website www.cdhn",
    "gbCharityNo": null,
    "basis": [
     {
@@ -23950,7 +24713,37 @@
    "gfdRank": 159,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Northern Ireland Community Development Health Network Ltd",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "1027907",
+    "spending": "1004101",
+    "incomePrev": "0",
+    "staff": "11",
+    "who": [
+     "Adult training",
+     "Carers",
+     "Ethnic minorities",
+     "General public",
+     "Homelessness",
+     "Interface communities",
+     "Men",
+     "Mental health",
+     "Older people",
+     "Specific areas of deprivation",
+     "Travellers",
+     "Unemployed/low income",
+     "Voluntary and community sector",
+     "Volunteers",
+     "Women",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "outOfScope": "Community Development & Health Network: no children's service; entered on a Family Policy Unit core grant",
+   "profileStatus": "done"
   },
   {
    "orgId": "g160",
@@ -23997,7 +24790,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g161",
@@ -24030,7 +24824,8 @@
    "gfdRank": 161,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g162",
@@ -24066,7 +24861,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g163",
@@ -24104,7 +24900,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g164",
@@ -24174,7 +24971,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g165",
@@ -24219,7 +25017,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g166",
@@ -24257,14 +25056,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g167",
    "name": "St Brigid's Playschool",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "102206",
+   "regNoBy": "profiling agent (round 2): Batch had no regNo. Register search 'Brigid' returns 102206 St Brigid's Play School Mountfield, matching the GFD title '",
    "gbCharityNo": null,
    "basis": [
     {
@@ -24290,7 +25090,23 @@
    "gfdRank": 167,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "St Brigid's Play School Mountfield",
+    "status": "Received: 27 days late",
+    "fyEnd": "31 August 2025",
+    "income": "58348",
+    "spending": "65252",
+    "incomePrev": "0",
+    "staff": "3",
+    "who": [
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Voluntary and community sector"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g168",
@@ -24326,7 +25142,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g169",
@@ -24371,14 +25188,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g170",
    "name": "Dara Playgroup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "101011",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Dara' returns 101011 Dara Pre-School (Armagh); GFD row names 'Dara Pre School'",
    "gbCharityNo": null,
    "basis": [
     {
@@ -24404,7 +25222,21 @@
    "gfdRank": 170,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Dara Pre-School",
+    "status": "Received: on time",
+    "fyEnd": "31 July 2025",
+    "income": "118922",
+    "spending": "113549",
+    "incomePrev": "0",
+    "staff": "10",
+    "who": [
+     "Preschool (0-5 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g171",
@@ -24437,7 +25269,9 @@
    "gfdRank": 171,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "incomeIsParent": "Home-Start UK (Charity Commission for England and Wales 1108837; company 5382181)",
+   "profileStatus": "done"
   },
   {
    "orgId": "g172",
@@ -24474,7 +25308,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g173",
@@ -24498,14 +25333,15 @@
    "gfdRank": 173,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g174",
    "name": "Kids R Us",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "102719",
+   "regNoBy": "profiling agent (round 2): Batch had no regNo. Register search 'Kids R Us' returns 102719 Kids R Us Cross Community Playgroup (Fivemiletown), match",
    "gbCharityNo": null,
    "basis": [
     {
@@ -24522,7 +25358,22 @@
    "gfdRank": 174,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Kids R Us Cross Community Playgroup",
+    "status": "Overdue: 154 days",
+    "fyEnd": "30 June 2024",
+    "income": "62639",
+    "spending": "57619",
+    "incomePrev": "0",
+    "staff": "3",
+    "who": [
+     "Parents",
+     "Preschool (0-5 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g175",
@@ -24546,7 +25397,8 @@
    "gfdRank": 175,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g176",
@@ -24615,7 +25467,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g177",
@@ -24654,7 +25507,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g178",
@@ -24687,7 +25541,9 @@
    "gfdRank": 178,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "incomeIsParent": "Portadown Elim Church (not found on CCNI register)",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g179",
@@ -24734,7 +25590,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g180",
@@ -24758,14 +25615,16 @@
    "gfdRank": 180,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "privateProvider": "Little Explorers: private limited company",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g181",
    "name": "Melmount & East Banks Estates Community Associations Forum",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "105303",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Melmount' returns 105303",
    "gbCharityNo": null,
    "basis": [
     {
@@ -24782,7 +25641,31 @@
    "gfdRank": 181,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Melmount and East Bank Estates Community Associations Forum",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "98921",
+    "spending": "94773",
+    "incomePrev": "0",
+    "staff": "2",
+    "who": [
+     "Adult training",
+     "Community safety/crime prevention",
+     "Ethnic minorities",
+     "Ex-offenders and prisoners",
+     "Older people",
+     "Physical disabilities",
+     "Sexual orientation",
+     "Tenants",
+     "Travellers",
+     "Volunteers",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g182",
@@ -24827,7 +25710,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g183",
@@ -24851,7 +25735,8 @@
    "gfdRank": 183,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "unreached"
   },
   {
    "orgId": "g184",
@@ -24875,7 +25760,8 @@
    "gfdRank": 184,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g185",
@@ -24912,7 +25798,9 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "outOfScope": "Tullyvallen Family Support: a Troubles victims' group; \"family\" means victims' families, no children's service found",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g186",
@@ -24977,7 +25865,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g187",
@@ -25001,7 +25890,9 @@
    "gfdRank": 187,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "privateProvider": "Little Explorers: private limited company (NI671166, child day-care)",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g188",
@@ -25059,14 +25950,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g189",
    "name": "Doagh Preschool Playgroup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "107499",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Doagh' returned 107499 Doagh Preschool Playgroup and 110737 Doagh Preschool Playgroup Limited, registered 0",
    "gbCharityNo": null,
    "basis": [
     {
@@ -25083,7 +25975,21 @@
    "gfdRank": 189,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Doagh Preschool Playgroup",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "33054",
+    "spending": "26264",
+    "incomePrev": "0",
+    "staff": "3",
+    "who": [
+     "Preschool (0-5 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g190",
@@ -25107,14 +26013,16 @@
    "gfdRank": 190,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "incomeIsParent": "Possibly St John Bosco Youth Centre, Newry (listed as v287, regNo 110218) - unconfirmed",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g191",
    "name": "Saul Cross Community Playgroup",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "103026",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Saul' returns 103026 Saul Community Preschool; GFD row names 'Saul Community Preschool'",
    "gbCharityNo": null,
    "basis": [
     {
@@ -25131,7 +26039,28 @@
    "gfdRank": 191,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Saul Community Preschool",
+    "status": "Received: 2 days late",
+    "fyEnd": "31 August 2025",
+    "income": "111345",
+    "spending": "109815",
+    "incomePrev": "0",
+    "staff": "5",
+    "who": [
+     "Carers",
+     "Learning disabilities",
+     "Parents",
+     "Physical disabilities",
+     "Preschool (0-5 year olds)",
+     "Sensory disabilities",
+     "Voluntary and community sector",
+     "Volunteers"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g192",
@@ -25185,7 +26114,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "partial"
   },
   {
    "orgId": "g193",
@@ -25209,14 +26139,16 @@
    "gfdRank": 193,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "duplicateOf": "v099",
+   "profileStatus": "done"
   },
   {
    "orgId": "g194",
    "name": "OASIS Youth Club",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "102018",
+   "regNoBy": "profiling agent (round 2): Probable parent, not certain. Oasis Youth (oasisyouthni.co.uk) is run by the Community Intercultural Programme (CIP), Po",
    "gbCharityNo": null,
    "basis": [
     {
@@ -25251,14 +26183,39 @@
    "gfdRank": 194,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Community Intercultural Programme",
+    "status": "Received: 1 days late",
+    "fyEnd": "31 March 2025",
+    "income": "260956",
+    "spending": "290416",
+    "incomePrev": "0",
+    "staff": "11",
+    "who": [
+     "Adult training",
+     "Asylum seekers/refugees",
+     "Children (5-13 year olds)",
+     "Community safety/crime prevention",
+     "Ethnic minorities",
+     "Interface communities",
+     "Language community",
+     "Parents",
+     "Preschool (0-5 year olds)",
+     "Victim support",
+     "Voluntary and community sector",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g195",
    "name": "St Josephs Centre for Deaf People",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "109492",
+   "regNoBy": "profiling agent (round 2): Found by CCNI name search ('Saint Joseph'). Register status 'Overdue: 337 days'; no documents uploaded.",
    "gbCharityNo": null,
    "basis": [
     {
@@ -25275,7 +26232,29 @@
    "gfdRank": 195,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "Saint Joseph's Centre for The Deaf",
+    "status": "Overdue: 335 days",
+    "fyEnd": "31 December 2026",
+    "income": "0",
+    "spending": "0",
+    "incomePrev": "0",
+    "staff": "0",
+    "who": [
+     "Children (5-13 year olds)",
+     "Ethnic minorities",
+     "General public",
+     "General public",
+     "General public",
+     "General public",
+     "Older people",
+     "Physical disabilities",
+     "Voluntary and community sector"
+    ]
+   },
+   "profileStatus": "partial"
   },
   {
    "orgId": "g196",
@@ -25328,7 +26307,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g197",
@@ -25364,14 +26344,15 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g198",
    "name": "Harmony Community Trust Strangford",
    "aliases": [],
-   "regNo": null,
-   "regNoBy": null,
+   "regNo": "102523",
+   "regNoBy": "profiling agent (round 2): CCNI search 'Harmony Community Trust' returns one match, 102523; accounts show 'Department of Health FPD 11,811', equal ",
    "gbCharityNo": null,
    "basis": [
     {
@@ -25397,7 +26378,26 @@
    "gfdRank": 198,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "regNoPrevious": null,
+   "register": {
+    "name": "THE HARMONY COMMUNITY TRUST",
+    "status": "Received: on time",
+    "fyEnd": "31 March 2025",
+    "income": "62854",
+    "spending": "80186",
+    "incomePrev": "0",
+    "staff": "2",
+    "who": [
+     "Children (5-13 year olds)",
+     "Learning disabilities",
+     "Older people",
+     "Specific areas of deprivation",
+     "Volunteers",
+     "Youth (14-25 year olds)"
+    ]
+   },
+   "profileStatus": "done"
   },
   {
    "orgId": "g199",
@@ -25430,7 +26430,9 @@
    "gfdRank": 199,
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "incomeIsParent": "Contact a Family (trading as Contact), registered charity England and Wales 284912, Scotland SC039169, company 1633333",
+   "profileStatus": "partial"
   },
   {
    "orgId": "g200",
@@ -25486,7 +26488,8 @@
    },
    "basisTypes": [
     "gov funding"
-   ]
+   ],
+   "profileStatus": "done"
   },
   {
    "orgId": "g201",

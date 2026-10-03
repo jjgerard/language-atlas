@@ -100,7 +100,7 @@ const out = {
     income: o.register ? o.register.income : null,
     fyEnd: o.register ? o.register.fyEnd : null,
     place: o.regNo ? place(o.regNo) : null,
-    possiblyStatutory: o.possiblyStatutory || null, partOf: o.partOf || null, incomeIsParent: o.incomeIsParent || null,
+    possiblyStatutory: o.possiblyStatutory || null, privateProvider: o.privateProvider || null, outOfScope: o.outOfScope || null, partOf: o.partOf || null, incomeIsParent: o.incomeIsParent || null,
     ukNI: (c => c ? { totals: c.niTotals || [], funders: c.niFunders || [], activity: c.niActivity || [], notFound: c.notFound || null } : null)(niFor(o)), projectFigures: o.projectFigures || null, parentCheck: o.parentCheck || null,
     profile: p ? {
       status: p.status, paraphrased: !!p.quotesParaphrased,

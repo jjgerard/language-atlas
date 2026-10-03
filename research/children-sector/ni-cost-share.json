@@ -1,5 +1,5 @@
 {
- "built": "2026-10-02",
+ "built": "2026-10-03",
  "year": "2024-25",
  "unit": "Northern Ireland",
  "sector": "children",
@@ -201,40 +201,40 @@
   }
  ],
  "B2": {
-  "gbp": 24720223,
-  "lines": 193,
-  "orgs": 65,
-  "excludedAsB1": 11637124,
+  "gbp": 28698512,
+  "lines": 289,
+  "orgs": 98,
+  "excludedAsB1": 13457141,
   "byPayer": [
    {
     "payer": "doh",
-    "gbp": 5788819,
-    "orgs": 10
+    "gbp": 7953090,
+    "orgs": 25
    },
    {
     "payer": "nihe",
-    "gbp": 3868175,
-    "orgs": 7
-   },
-   {
-    "payer": "trust-belfast",
-    "gbp": 2839980,
-    "orgs": 10
-   },
-   {
-    "payer": "pha",
-    "gbp": 1982954,
-    "orgs": 13
-   },
-   {
-    "payer": "trust-southern",
-    "gbp": 1937940,
+    "gbp": 3943578,
     "orgs": 8
    },
    {
+    "payer": "trust-belfast",
+    "gbp": 3086771,
+    "orgs": 15
+   },
+   {
     "payer": "de",
-    "gbp": 1661547,
-    "orgs": 5
+    "gbp": 2092090,
+    "orgs": 13
+   },
+   {
+    "payer": "pha",
+    "gbp": 2054315,
+    "orgs": 14
+   },
+   {
+    "payer": "trust-southern",
+    "gbp": 2017577,
+    "orgs": 12
    },
    {
     "payer": "ukspf",
@@ -248,28 +248,28 @@
    },
    {
     "payer": "dfc",
-    "gbp": 929012,
-    "orgs": 23
+    "gbp": 1178962,
+    "orgs": 30
    },
    {
     "payer": "trust-western",
-    "gbp": 696734,
-    "orgs": 6
+    "gbp": 957014,
+    "orgs": 8
    },
    {
     "payer": "trust-southeastern",
-    "gbp": 424327,
-    "orgs": 2
+    "gbp": 456664,
+    "orgs": 3
    },
    {
     "payer": "council-belfast",
-    "gbp": 341728,
-    "orgs": 19
+    "gbp": 444540,
+    "orgs": 22
    },
    {
     "payer": "teo",
-    "gbp": 311509,
-    "orgs": 10
+    "gbp": 330081,
+    "orgs": 11
    },
    {
     "payer": "crc",
@@ -282,13 +282,13 @@
     "orgs": 1
    },
    {
-    "payer": "vss",
-    "gbp": 144089,
-    "orgs": 1
+    "payer": "daera",
+    "gbp": 169771,
+    "orgs": 8
    },
    {
-    "payer": "daera",
-    "gbp": 127978,
+    "payer": "vss",
+    "gbp": 144089,
     "orgs": 1
    },
    {
@@ -298,8 +298,8 @@
    },
    {
     "payer": "council-an",
-    "gbp": 108359,
-    "orgs": 5
+    "gbp": 119717,
+    "orgs": 6
    },
    {
     "payer": "doj",
@@ -308,18 +308,18 @@
    },
    {
     "payer": "council-dcs",
-    "gbp": 60087,
-    "orgs": 5
+    "gbp": 95257,
+    "orgs": 9
    },
    {
     "payer": "acni",
-    "gbp": 41000,
-    "orgs": 1
+    "gbp": 51772,
+    "orgs": 2
    },
    {
     "payer": "council-abc",
-    "gbp": 35589,
-    "orgs": 7
+    "gbp": 38749,
+    "orgs": 8
    },
    {
     "payer": "translink",
@@ -327,14 +327,44 @@
     "orgs": 1
    },
    {
+    "payer": "council-mu",
+    "gbp": 29609,
+    "orgs": 2
+   },
+   {
+    "payer": "council-fo",
+    "gbp": 28609,
+    "orgs": 4
+   },
+   {
+    "payer": "council-mea",
+    "gbp": 28237,
+    "orgs": 3
+   },
+   {
+    "payer": "council-ccg",
+    "gbp": 19299,
+    "orgs": 1
+   },
+   {
+    "payer": "council-nmd",
+    "gbp": 18298,
+    "orgs": 3
+   },
+   {
     "payer": "niscreen",
     "gbp": 18040,
     "orgs": 1
    },
    {
-    "payer": "council-fo",
-    "gbp": 10200,
-    "orgs": 2
+    "payer": "pcsp",
+    "gbp": 16510,
+    "orgs": 3
+   },
+   {
+    "payer": "council-lc",
+    "gbp": 14169,
+    "orgs": 3
    },
    {
     "payer": "yja",
@@ -347,13 +377,13 @@
     "orgs": 1
    },
    {
-    "payer": "council-mea",
-    "gbp": 9937,
-    "orgs": 2
+    "payer": "council-and",
+    "gbp": 9199,
+    "orgs": 1
    },
    {
-    "payer": "pcsp",
-    "gbp": 9010,
+    "payer": "hsc-trust-unnamed",
+    "gbp": 8428,
     "orgs": 2
    },
    {
@@ -362,9 +392,9 @@
     "orgs": 1
    },
    {
-    "payer": "council-nmd",
-    "gbp": 4694,
-    "orgs": 2
+    "payer": "hmrc",
+    "gbp": 5000,
+    "orgs": 1
    },
    {
     "payer": "nipb",
@@ -373,8 +403,8 @@
    },
    {
     "payer": "bso",
-    "gbp": 3411,
-    "orgs": 1
+    "gbp": 3973,
+    "orgs": 2
    }
   ]
  },
@@ -525,23 +555,23 @@
   "note": "a floor: only money the accounts tie to a children's activity"
  },
  "C": {
-  "orgs": 78,
-  "income": 54226822,
-  "government": 25523534,
-  "otherPublic": 3088105,
-  "unattributed": 5465821,
-  "nonPublic": 20149362,
+  "orgs": 123,
+  "income": 70298167,
+  "government": 29980785,
+  "otherPublic": 3192143,
+  "unattributed": 5868668,
+  "nonPublic": 31270356,
   "excluded": {
-   "noBreakdown": 32,
-   "otherYear": 8,
-   "noIncome": 29
+   "noBreakdown": 56,
+   "otherYear": 17,
+   "noIncome": 52
   },
   "note": "nonPublic = total income minus every public or unattributed line in the same accounts: fees, donations, trusts and foundations, Children in Need, trading. Lottery distributors count as public here, per the agreed definition."
  },
  "D": {
   "model": true,
-  "volunteers": 13751,
-  "orgs": 88,
+  "volunteers": 14306,
+  "orgs": 126,
   "hoursPerFourWeeksFloor": 3.79,
   "bandsUsed": 7,
   "wage": {
@@ -550,7 +580,7 @@
    "year": "April 2024",
    "url": "https://www.nisra.gov.uk/files/nisra/documents/2025-10/ODS-format-ASHE-tables-2024.zip"
   },
-  "gbpFloor": 9478390,
+  "gbpFloor": 9860944,
   "note": "A modelled floor, not cash. Volunteer counts are each organisation's own register return; hours are the lower edges of DfC's published bands (all volunteers, formal and informal, 2024/25), times 13 four-week periods; valued at the NI median hourly pay of youth and community workers (ASHE, April 2024). The top band is open, so no upper bound is given."
  }
 }

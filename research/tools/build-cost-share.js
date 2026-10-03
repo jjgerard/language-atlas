@@ -75,7 +75,7 @@ const B3 = { gbp: Math.round(b3), orgs: b3n, excludedAsB1: Math.round(b3Excluded
 // falls in 2024-25 by the overlap rule, count.
 const C = { orgs: 0, income: 0, government: 0, otherPublic: 0, unattributed: 0, nonPublic: 0, excluded: { noBreakdown: 0, otherYear: 0, noIncome: 0 } };
 for (const [id, o] of Object.entries(orgs)) {
-  if (o.duplicateOf || o.possiblyStatutory || o.onlyWeak || focus(id) !== 'children-focused') continue;
+  if (o.duplicateOf || o.possiblyStatutory || o.privateProvider || o.outOfScope || o.onlyWeak || focus(id) !== 'children-focused') continue;
   const p = prof[id], inc = o.register ? +o.register.income : null;
   if (!inc) { C.excluded.noIncome++; continue; }
   if (!(p && p.funding && p.funding.breakdown)) { C.excluded.noBreakdown++; continue; }
@@ -101,7 +101,7 @@ let perFour = 0, bandRows = 0; for (const b of bands) { const e = lowerEdge(b.me
 const wage = vol.wage.find(w => /youth and community workers/i.test(w.measure || '') && /2024/.test(String(w.year)));
 const regVol = Object.fromEntries(read('ni-vcs-register.json').charities.map(c => [c.regNo, +c.volunteers || 0]));
 let volunteers = 0, volOrgs = 0;
-for (const [id, o] of Object.entries(orgs)) { if (o.duplicateOf || o.possiblyStatutory || o.onlyWeak || focus(id) !== 'children-focused') continue;
+for (const [id, o] of Object.entries(orgs)) { if (o.duplicateOf || o.possiblyStatutory || o.privateProvider || o.outOfScope || o.onlyWeak || focus(id) !== 'children-focused') continue;
   const n = o.regNo ? regVol[o.regNo] : 0; if (n) { volunteers += n; volOrgs++; } }
 const hoursYear = perFour * 13;
 const D = { model: true, volunteers, orgs: volOrgs, hoursPerFourWeeksFloor: Math.round(perFour * 100) / 100, bandsUsed: bandRows,

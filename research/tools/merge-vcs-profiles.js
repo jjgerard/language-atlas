@@ -12,14 +12,20 @@
 const fs = require('fs');
 const path = require('path');
 
-const [PROF, CCNI] = process.argv.slice(2);
-if (!PROF || !CCNI) { console.error('usage: merge-vcs-profiles.js <prof dir> <ccni.json>'); process.exit(1); }
+// Optional third argument: the second round's profile dir (prof2/out1..5.json), the
+// Government Funding Database recipients (orgIds g###). Their "identity" field
+// carries register numbers, duplicates and public bodies the agents found.
+const [PROF, CCNI, PROF2] = process.argv.slice(2);
+if (!PROF || !CCNI) { console.error('usage: merge-vcs-profiles.js <prof dir> <ccni.json> [prof2 dir]'); process.exit(1); }
 const R = path.join(__dirname, '..', 'children-sector');
 const full = JSON.parse(fs.readFileSync(CCNI, 'utf8'));
 const byNo = new Map(full.map(r => [r['Reg charity number'], r]));
 
 let profiles = [];
 for (let i = 1; i <= 8; i++) profiles.push(...JSON.parse(fs.readFileSync(path.join(PROF, `out${i}.json`), 'utf8')).profiles.map(p => ({ ...p, batch: i })));
+const PROF2_DIR = PROF2 || path.join(PROF, '..', 'prof2');
+if (fs.existsSync(path.join(PROF2_DIR, 'out1.json')))
+  for (let i = 1; i <= 5; i++) { const f = path.join(PROF2_DIR, `out${i}.json`); if (fs.existsSync(f)) profiles.push(...JSON.parse(fs.readFileSync(f, 'utf8')).profiles.map(p => ({ ...p, batch: 'gfd' + i }))); }
 
 const orgsFile = path.join(R, 'ni-vcs-orgs.json');
 const orgs = JSON.parse(fs.readFileSync(orgsFile, 'utf8'));
@@ -113,6 +119,40 @@ for (const c of parents) { const o = byId.get(c.orgId); if (!o) continue;
   o.parentCheck = { verdict: c.verdict, parentRegNo: c.parentRegNo || null, parentName: c.parentName || null, evidence: c.evidence || null };
   if (c.verdict === 'confirmed' && (c.clubFigures || []).length) o.projectFigures = c.clubFigures; } flag('v278', 'incomeIsParent', 'The Resurgam Community Development Trust');
 flag('v319', 'partOf', 'Barnardo\'s NI (PosAbility is a Barnardo\'s service)');
+
+// Second round (g###): apply each profile's identity findings.
+const setReg = (o, no, how) => { const r = byNo.get(String(no)); if (!r) return false;
+  if (o.regNo !== String(no)) { o.regNoPrevious = o.regNo || null; o.regNo = String(no); o.regNoBy = how; }
+  o.register = { name: r['Charity name'], status: r.Status, fyEnd: r['Date for financial year ending'], income: r['Total income'], spending: r['Total spending'], incomePrev: r['Total income. Previous financial period.'], staff: r['Employed staff'], who: (r['Who the charity helps'] || '').split(',').filter(Boolean) };
+  return true; };
+let gReg = 0, gDup = 0, gStat = 0;
+for (const p of profiles.filter(x => /^gfd/.test(String(x.batch)))) {
+  const o = byId.get(p.orgId), id = p.identity; if (!o || !id) continue;
+  if (id.duplicateOf && byId.get(id.duplicateOf)) { o.duplicateOf = id.duplicateOf; gDup++; continue; }
+  if (id.statutory === true) { o.possiblyStatutory = 'profiling agent: ' + String(id.evidence || 'public body').slice(0, 160); gStat++; }
+  const parent = id.parent || id.parentCharity;
+  if (id.regNo && setReg(o, id.regNo, 'profiling agent (round 2): ' + String(id.evidence || '').slice(0, 120))) gReg++;
+  if (parent) o.incomeIsParent = typeof parent === 'string' ? parent : (parent.name || id.registerName || 'parent body');
+  if (id.outOfScope) o.outOfScope = String(id.outOfScope === true ? (id.evidence || 'out of scope') : id.outOfScope).slice(0, 200);
+}
+// From the round-2 reports (prose, 2026-10-03): companies run for profit, which are
+// not voluntary sector, and two organisations that entered on a word in an award title.
+const PRIVATE = { g084: 'Giggles Early Years: appears to be a private nursery', g187: 'Little Explorers: private limited company (NI671166, child day-care)',
+  g180: 'Little Explorers: private limited company', g121: 'Country Kids: private limited company', g095: 'SHG NI Limited: private limited company (NI065419, child day-care)',
+  g079: 'Clear Day Nurseries: private company (NI056274)', g089: 'Oakwood Childcare: private company (NI623264)', g092: 'Superstars Daycare: private company (NI678181)' };
+for (const p of profiles) if (p.identity && p.identity.privateCompany && byId.get(p.orgId) && !PRIVATE[p.orgId]) PRIVATE[p.orgId] = 'private company (profiling agent)';
+for (const [id, why] of Object.entries(PRIVATE)) { const o = byId.get(id); if (o && !o.duplicateOf) o.privateProvider = why; }
+const OUT = { g185: 'Tullyvallen Family Support: a Troubles victims\' group; "family" means victims\' families, no children\'s service found',
+  g123: 'GP Federation Support Unit: a GP federation; the award is a pain medication review',
+  g159: 'Community Development & Health Network: no children\'s service; entered on a Family Policy Unit core grant' };
+for (const [id, why] of Object.entries(OUT)) { const o = byId.get(id); if (o) o.outOfScope = why; }
+// v304 YMCA Ireland: the round-2 agent found its register number via Greenhill YMCA (g009).
+{ const o = byId.get('v304'); if (o) setReg(o, '105739', 'profiling agent (round 2): National Council of YMCAs of Ireland, Greenhill address'); }
+// Galbally: the funding database names the recipient "GALBALLY YOUTH & COMMUNITY ASSOCIATION
+// (GALBALLY YOUTH CLUB)", against the Association's own report listing the club as separate.
+{ const o = byId.get('v248'); if (o && o.parentCheck) { o.parentCheck.verdict = 'conflicting'; o.parentCheck.conflict = 'Government Funding Database 2024-25 names the recipient "GALBALLY YOUTH & COMMUNITY ASSOCIATION (GALBALLY YOUTH CLUB)"; the Association\'s report lists the club as a separate organisation'; } }
+for (const [id, why] of Object.entries(OUT)) { const o = byId.get(id); if (o) o.outOfScope = why; }
+console.log(`round 2: ${gReg} register numbers, ${gDup} duplicates, ${gStat} public bodies, ${Object.keys(PRIVATE).length} private, ${Object.keys(OUT).length} out of scope`);
 
 // Profiles: mark those whose notes say a quote came through a summariser, not page text.
 for (const p of profiles) {
