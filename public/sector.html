@@ -152,6 +152,20 @@ table.orgt tr.row:hover td { background: var(--surface-2); }
 table.orgt tr.det td { background: var(--surface-2); font-size: 13px; line-height: 1.5; }
 .chip { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; padding: 0 6px; border-radius: 3px;
   border: 1px solid var(--hair-strong); margin: 0 4px 2px 0; white-space: nowrap; color: var(--ink-soft); }
+/* SROI key takeaways */
+ol.tks { margin: 0; padding-left: 22px; }
+ol.tks > li.tk { margin: 0 0 14px; padding-left: 4px; }
+ol.tks > li.tk::marker { font-weight: 600; color: var(--ink-soft); }
+.tk-h { margin: 0 0 4px; font-size: 15.5px; font-weight: 600; line-height: 1.45; max-width: 80ch; }
+.tk-d { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); line-height: 1.55; max-width: 80ch; }
+details.tk-c > summary, details.fullwork > summary { cursor: pointer; font-size: 13px; color: var(--focus); }
+details.tk-c { font-size: 13px; line-height: 1.5; }
+details.tk-c[open] { background: var(--surface-2); border-radius: 4px; padding: 8px 12px; margin-top: 4px; }
+.tk-l { margin: 8px 0 2px; font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-faint); font-weight: 600; }
+ol.tk-a, ul.tk-s { margin: 0; padding-left: 18px; }
+ol.tk-a li { font-variant-numeric: tabular-nums; }
+details.fullwork { margin: 4px 0 12px; }
+details.fullwork[open] > summary { margin-bottom: 10px; }
 .steps { font-size: 13px; line-height: 1.5; margin: 6px 0; padding: 6px 10px; border-left: 3px solid var(--b-fund); background: var(--surface-2); }
 table.orgt tr.cur td { background: var(--surface-2); box-shadow: inset 0 -1px 0 var(--focus); }
 footer.foot { padding: 18px 22px; border-top: 1px solid var(--hair); font-size: 12px; color: var(--ink-faint); }
@@ -407,7 +421,13 @@ function drawSroi() {
     + '<p class="miss" style="font-size:12.5px;margin:4px 0 0">' + s.caveats.map(esc).join(' · ') + '</p>');
   const nc = card('4. Not computed, and why', 'Each would need evidence that is not published.', '<ul style="margin:0;padding-left:18px;font-size:13.5px">'
     + Object.entries(S.notComputed).map(([k, v]) => '<li><b>' + esc(k.replace(/-ratio$/, '').replace(/-/g, ' ')) + '</b>: ' + esc(v) + '</li>').join('') + '</ul>');
-  $('#sroi').innerHTML = ex + be + r + nc;
+  // Key takeaways first, each with its own "check this": figures, arithmetic, sources.
+  const tk = (S.takeaways || []).map((t, i) => '<li class="tk"><p class="tk-h">' + esc(t.headline) + '</p><p class="tk-d">' + esc(t.detail) + '</p>'
+    + '<details class="tk-c"><summary>Check this</summary>'
+    + (t.arithmetic && t.arithmetic.length ? '<p class="tk-l">The arithmetic</p><ol class="tk-a">' + t.arithmetic.map(a => '<li>' + esc(a) + '</li>').join('') + '</ol>' : '')
+    + '<p class="tk-l">Sources</p><ul class="tk-s">' + t.checks.map(c => '<li>' + esc(c.text) + (c.url ? ' — <a href="' + esc(c.url) + '" target="_blank" rel="noopener">open</a>' : '') + '</li>').join('') + '</ul></details></li>').join('');
+  $('#sroi').innerHTML = '<div class="card" style="padding:16px 18px;margin-bottom:12px"><h4 style="margin:0 0 10px;font-size:17px">Key takeaways</h4><ol class="tks">' + tk + '</ol></div>'
+    + '<details class="fullwork"><summary>Show the full working: every study, the break-even table, the VOYPIC calculation, and what was not computed</summary>' + ex + be + r + nc + '</details>';
 }
 // "Who pays": four layers from ni-cost-share.json, never summed across layers.
 function drawWhoPays() {

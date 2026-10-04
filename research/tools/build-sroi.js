@@ -105,8 +105,65 @@ const why = {
   eiss: 'the only evaluation with a comparison group (QUB 2018) found no robust effect; a ratio would be near zero on that evidence',
   parentline: 'reach only (7,070 parents), no outcome measure',
 };
+// ---------- key takeaways ----------
+// Each headline is built from the data above, never typed, and carries the figures,
+// the arithmetic and the source links a reader needs to check it.
+const gbp = v => '£' + Math.round(v).toLocaleString('en-GB');
+const gbpm = v => '£' + (v / 1e6).toFixed(2).replace(/0$/, '') + 'm';
+const studyUrl = id => (existing.studies.find(s => s.id === id) || {}).url;
+// The Northern Ireland studies, named: a place filter missed YZone, listed under "Portadown".
+const NI_IDS = ['eif-late-intervention-ni-2018', 'roots-of-empathy-ni-rct-2018', 'yzone-portadown-sroi-2024', 'niao-children-who-offend-2017', 'niao-educational-disadvantage-2026'];
+const niStudies = NI_IDS.map(id => must(existing.studies.find(s => s.id === id), id));
+const qolText = (() => { const m = String(qol.value).match(/^\s*(\d+)\s*\((\d+)%\)/); return m ? `${m[1]} of ${qol.n} respondents (${m[2]}%) said they have a better quality of life` : `${qol.value} ${qol.measure}`; })();
+const strongDesign = e => /comparison|RCT|randomi|quasi/i.test(e.design || '') && !/in progress/i.test(e.design || '') && +String(e.year).slice(0, 4) >= 2019 && !/no comparison/i.test(e.design || '');
+const progs = outcomes.map(o => ({ name: o.programme, best: (o.evaluations || []).map(e => `${e.design} (${e.year})`), strong: (o.evaluations || []).filter(strongDesign) }));
+const withStrong = progs.filter(p => p.strong.length);
+const ss = P.find(p => p.id === 'sure-start'), fsh = P.find(p => p.id === 'family-support-hubs'), R0 = UNIT.residentialYear;
+const oneIn = Math.round(ss.reach / ss.breakEven.residentialYear);
+const niao = existing.studies.filter(s => /^niao-/.test(s.id));
+const comp = ['ifs-surestart-2025', 'indecon-nyci-youthwork-2012', 'frontier-ukyouth-2022'].map(id => existing.studies.find(s => s.id === id)).filter(Boolean);
+const takeaways = [
+  { id: 'no-ni-sroi',
+    headline: `No published SROI with a documented method exists for any Northern Ireland children's or family service.`,
+    detail: `We reviewed ${existing.studies.length} economic studies and ran ${existing.searchedEmpty.length} further searches that found nothing. Northern Ireland has ${niStudies.length}: a cost of late intervention, a cost-utility trial, two Audit Office reports, and one SROI ratio (YZone, Portadown) that appears only in a press release with no published method.`,
+    checks: niStudies.map(s => ({ text: `${s.programme ? String(s.programme).split(/[(:]/)[0].trim() : s.id}: ${String(s.ratioVerbatim || s.headlineVerbatim || '').slice(0, 160)}`, url: s.url })) },
+  { id: 'no-comparison-evidence',
+    headline: `None of the ${progs.length} programmes examined has a post-2019 outcome evaluation that compares children who got the service with children who did not.`,
+    detail: `Without that comparison, what would have happened anyway cannot be measured, and that is the core of an SROI. The one comparison-group study found (the Early Intervention Support Service, 2018) found no robust effect; a Sure Start study using linked records is under way with no results yet.`,
+    checks: outcomes.flatMap(o => { const n = o.programme.split(/[(;]/)[0].trim();
+      return (o.evaluations || []).length ? o.evaluations.map(e => ({ text: `${n}: ${e.design} (${e.year})`, url: e.url || null })) : [{ text: `${n}: no outcome evaluation found` }]; }),
+    assert: withStrong.length === 0 },
+  { id: 'audit-office',
+    headline: `Northern Ireland's Audit Office found that youth justice interventions cannot currently be shown to be value for money (2017), and that the Department of Education's ability to assess value for money for Sure Start and related programmes is limited (2026).`,
+    detail: niao.map(s => `${s.id.includes('2017') ? 'Youth justice (2017)' : 'Sure Start and educational disadvantage (2026)'}: "${String(s.ratioVerbatim || s.headlineVerbatim)}"`).join(' '),
+    checks: niao.map(s => ({ text: s.title || s.id, url: s.url })) },
+  { id: 'break-even',
+    headline: `Sure Start would pay back its cost if it kept about ${ss.breakEven.residentialYear} children a year out of residential care: about 1 in every ${oneIn} children it registers.`,
+    detail: `This is the size of effect needed, not evidence that it happens. The same test for the Family Support Hubs: ${fsh.breakEven.residentialYear} child-years of residential care, or ${Math.round(fsh.breakEven.familySupportCase)} statutory family support cases, against ${fsh.reach.toLocaleString('en-GB')} families referred.`,
+    arithmetic: [
+      `Sure Start cost ${gbpm(ss.cost)} ÷ ${ss.reach.toLocaleString('en-GB')} children registered = ${gbp(ss.costPerUnit)} per child (${ss.costNote})`,
+      `Residential care ${gbp(R0.weekly)} a week × 52 = ${gbp(R0.value)} per child-year`,
+      `${gbpm(ss.cost)} ÷ ${gbp(R0.value)} = ${ss.breakEven.residentialYear} child-years; ${ss.reach.toLocaleString('en-GB')} ÷ ${ss.breakEven.residentialYear} = 1 in ${oneIn}`,
+      `Family Support Hubs ${gbpm(fsh.cost)} (${fsh.costNote}) ÷ ${gbp(R0.value)} = ${fsh.breakEven.residentialYear}; ÷ ${gbp(UNIT.familySupportCase.value)} per family support case = ${Math.round(fsh.breakEven.familySupportCase)}`],
+    checks: [{ text: 'Sure Start cost: DE infographic 2024/25', url: ss.costSource.url }, { text: 'Children registered: DE Sure Start report card 2024-25', url: ss.reachSource.url },
+      { text: `Residential care and family support unit costs: DoH NI average unit costs 2024-25 (${R0.table})`, url: R0.url },
+      { text: 'Family Support Hub funding: Assembly written answer AQW 16883/22-27', url: fsh.costSource.url }, { text: 'Families referred: CYPSP report card 2024/25', url: fsh.reachSource.url }] },
+  { id: 'voypic-ratio',
+    headline: `The one ratio the evidence allowed, for VOYPIC, runs from £${sroi.cases.low.ratio} to £${sroi.cases.high.ratio} per £1 — a measure of the evidence, not of the charity.`,
+    detail: `It values a single self-reported outcome (${qolText}, ${sroi.outcome.year}) and rests on three assumptions no one has measured: how big the change is, how many would have improved anyway, and how much is due to VOYPIC. Its other reported outcomes have no published value, and no saving to public services is claimed.`,
+    arithmetic: ['low', 'central', 'high'].map(c => `${c}: ${P_STR(c)} = ${gbp(sroi.cases[c].value)} ÷ ${gbp(sroi.inputs)} = £${sroi.cases[c].ratio}`),
+    checks: [{ text: 'Outcome: VOYPIC annual report 2023-24', url: sroi.outcome.url }, { text: 'Spending: Charity Commission NI register', url: sroi.inputsSource.url }, { text: 'WELLBY value £13,000: HACT wellbeing methodology note', url: sroi.proxy.url }] },
+  { id: 'comparators',
+    headline: `Studies elsewhere found returns above £1 for similar services, but none is from Northern Ireland and they should not be transferred.`,
+    detail: comp.map(s => `${s.place}: ${String(s.programme).split(/[(,]/)[0].trim()} — ${s.ratioVerbatim || s.headlineVerbatim}`).join('. ') + '. Programmes, populations and costs differ, and some were commissioned by the sector itself.',
+    checks: comp.map(s => ({ text: `${s.title} (${s.author}, ${s.year})`, url: s.url })) },
+];
+function P_STR(c) { const p = sroi.params; return `${p.improved[c]} children × ${p.wellbyGain[c]} points × £${sroi.proxy.value.toLocaleString('en-GB')} × (1 − ${p.deadweight[c]}) × ${p.attribution[c]}`; }
+const failed = takeaways.filter(t => t.assert === false);
+if (failed.length) throw new Error('takeaway contradicted by the data: ' + failed.map(t => t.id).join(', '));
+
 const out = { built: new Date().toISOString().slice(0, 10), method: 'research/children-sector/SROI-METHOD.md',
-  existing: existing.studies, unitCosts: UNIT, breakEven: P, sroi: [sroi], notComputed: why };
+  takeaways, existing: existing.studies, unitCosts: UNIT, breakEven: P, sroi: [sroi], notComputed: why };
 fs.writeFileSync(path.join(R, 'ni-sroi.json'), JSON.stringify(out, null, 1));
 
 const f = v => '£' + Math.round(v).toLocaleString('en-GB');

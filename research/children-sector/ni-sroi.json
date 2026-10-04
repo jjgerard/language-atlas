@@ -1,6 +1,205 @@
 {
- "built": "2026-10-03",
+ "built": "2026-10-04",
  "method": "research/children-sector/SROI-METHOD.md",
+ "takeaways": [
+  {
+   "id": "no-ni-sroi",
+   "headline": "No published SROI with a documented method exists for any Northern Ireland children's or family service.",
+   "detail": "We reviewed 14 economic studies and ran 26 further searches that found nothing. Northern Ireland has 5: a cost of late intervention, a cost-utility trial, two Audit Office reports, and one SROI ratio (YZone, Portadown) that appears only in a press release with no published method.",
+   "checks": [
+    {
+     "text": "No single programme: The annual short-run cost to the public sector of late intervention in Northern Ireland is estimated at £536 million per year. This is equivalent to £288 for ev",
+     "url": "https://www.eif.org.uk/report/the-cost-of-late-intervention-in-northern-ireland"
+    },
+    {
+     "text": "Roots of Empathy: ICER £9571 per QALY gained",
+     "url": "https://www.journalslibrary.nihr.ac.uk/phr/phr06040"
+    },
+    {
+     "text": "YZone Youth Initiative, Portadown Elim Church: £3.26 for every £1 invested",
+     "url": "https://supportingcommunities.org/latest-news/2024/10/10/community-safety-initiatives-demonstrate-impressive-social-return-on-investment"
+    },
+    {
+     "text": "Youth Justice Agency interventions, youth conferencing, Juvenile Justice Centre: The Department and the Youth Justice Agency lack the capacity to identify and apportion costs to the full range of interventions. Consequently, they cannot adeq",
+     "url": "https://niauditoffice.gov.uk/files/niauditoffice/media-files/MEDIA%20RELEASE%20Managing%20children%20who%20offend.pdf"
+    },
+    {
+     "text": "Sure Start: Financial information is not consistently integrated with outcome reporting, limiting the Department's ability to undertake value for money assessments that con",
+     "url": "https://www.niauditoffice.gov.uk/publications/html-document/evaluation-programmes-addressing-educational-disadvantage"
+    }
+   ]
+  },
+  {
+   "id": "no-comparison-evidence",
+   "headline": "None of the 8 programmes examined has a post-2019 outcome evaluation that compares children who got the service with children who did not.",
+   "detail": "Without that comparison, what would have happened anyway cannot be measured, and that is the core of an SROI. The one comparison-group study found (the Early Intervention Support Service, 2018) found no robust effect; a Sure Start study using linked records is under way with no results yet.",
+   "checks": [
+    {
+     "text": "Sure Start NI: qualitative (inspection: observation of 149 children in 16 settings at 5 projects; discussions with 96 parents, staff and SPPG; documentation review) (2025)",
+     "url": "https://www.etini.gov.uk/publications/html-document/evaluation-sure-starts-developmental-programme-2-3-year-old-children-and"
+    },
+    {
+     "text": "Sure Start NI: pre-post monitoring (no comparison group) plus area-level administrative indicators (2025)",
+     "url": "https://www.education-ni.gov.uk/sites/default/files/2025-10/Sure%20Start%20OBA%20Report%20Card%202024-25%20FINAL%2022%20Oct%2025.pdf"
+    },
+    {
+     "text": "Sure Start NI: qualitative (constructivist grounded theory; interviews with mothers at one rural project) (2022)",
+     "url": "https://pure.hud.ac.uk/en/publications/parental-perspectives-of-involvement-in-a-sure-start-programme-in/"
+    },
+    {
+     "text": "Sure Start NI: quasi-experimental (natural experiment on expansion waves, linked administrative data) - IN PROGRESS (2025)",
+     "url": "https://healthdatagateway.org/en/data-use/2876"
+    },
+    {
+     "text": "Family Support Hubs: monitoring report card (no comparison) (2025)",
+     "url": "https://cypsp.hscni.net/download/391/family-support-hubs/47279/fshannual_report-card-2024_25.pdf"
+    },
+    {
+     "text": "Family Support Hubs: qualitative review (2016)",
+     "url": "https://cypsp.hscni.net/wp-content/uploads/2016/06/SCIE-Family-Support-Hub-Review-2016.pdf"
+    },
+    {
+     "text": "Youth conferencing / Youth Justice Agency: administrative cohort statistics (no matching or adjustment) (2025)",
+     "url": "https://www.justice-ni.gov.uk/system/files/2025-10/Adult%20and%20Youth%20Reoffending%20in%20Northern%20Ireland%20%28202223%20Cohort%29.pdf"
+    },
+    {
+     "text": "Youth conferencing / Youth Justice Agency: OBA performance report (2026)",
+     "url": "https://www.justice-ni.gov.uk/sites/default/files/2026-07/yja-25-26.PDF"
+    },
+    {
+     "text": "VOYPIC: service self-evaluation (questionnaire after the service only) (2025)",
+     "url": "https://www.voypic.org/wp-content/uploads/2025/11/Annual-Report-24-25.pdf"
+    },
+    {
+     "text": "VOYPIC: service self-evaluation (after the service only) (2024)",
+     "url": "https://www.voypic.org/wp-content/uploads/2024/12/Annual-Report-23-24-Hi.pdf"
+    },
+    {
+     "text": "Parentline NI: no outcome evaluation found"
+    },
+    {
+     "text": "Early Intervention Support Service: comparison group (non-randomised wait-list control) + qualitative process evaluation (55 interviews) + Outcomes Star psychometric analysis (2018)",
+     "url": "https://research.hscni.net/sites/default/files/FINAL_EISS%20Report%20110618.pdf"
+    },
+    {
+     "text": "Early Intervention Support Service: qualitative case study (2022)",
+     "url": "https://www.tandfonline.com/doi/full/10.1080/13575279.2022.2088473"
+    },
+    {
+     "text": "Early Intervention Support Service: unknown (2025)",
+     "url": null
+    },
+    {
+     "text": "Home-Start NI schemes: pre-post monitoring (Journey of Change scale; no comparison) (2019)",
+     "url": "https://www.home-start.org.uk/Handlers/Download.ashx?IDMF=96af3362-99d5-422c-a2f7-a68e952d2063"
+    },
+    {
+     "text": "Home-Start NI schemes: feedback survey after support only (2024)",
+     "url": "https://apps.charitycommission.gov.uk/ccni_ar_attachments/0000106098_20240331_TAR.pdf"
+    },
+    {
+     "text": "Family Nurse Partnership NI: qualitative (revaluation: participative storytelling, 80+ stories) with cost-avoidance estimates for individual cases (2018)",
+     "url": "https://www.publichealth.hscni.net/sites/default/files/2019-03/Family%20Nurse%20Partnership%20Transforming%20Lives%20in%20Northern%20Ireland.pdf"
+    },
+    {
+     "text": "Family Nurse Partnership NI: implementation study (2025)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40517739/"
+    }
+   ],
+   "assert": true
+  },
+  {
+   "id": "audit-office",
+   "headline": "Northern Ireland's Audit Office found that youth justice interventions cannot currently be shown to be value for money (2017), and that the Department of Education's ability to assess value for money for Sure Start and related programmes is limited (2026).",
+   "detail": "Youth justice (2017): \"The Department and the Youth Justice Agency lack the capacity to identify and apportion costs to the full range of interventions. Consequently, they cannot adequately assess their cost-effectiveness and cannot currently demonstrate that the interventions to reduce reoffending by young people represent value for money.\" Sure Start and educational disadvantage (2026): \"Financial information is not consistently integrated with outcome reporting, limiting the Department's ability to undertake value for money assessments that consider both programme costs and the results achieved.\"",
+   "checks": [
+    {
+     "text": "Managing children who offend (NIAO report; media release read)",
+     "url": "https://niauditoffice.gov.uk/files/niauditoffice/media-files/MEDIA%20RELEASE%20Managing%20children%20who%20offend.pdf"
+    },
+    {
+     "text": "Evaluation of Programmes Addressing Educational Disadvantage",
+     "url": "https://www.niauditoffice.gov.uk/publications/html-document/evaluation-programmes-addressing-educational-disadvantage"
+    }
+   ]
+  },
+  {
+   "id": "break-even",
+   "headline": "Sure Start would pay back its cost if it kept about 95 children a year out of residential care: about 1 in every 374 children it registers.",
+   "detail": "This is the size of effect needed, not evidence that it happens. The same test for the Family Support Hubs: 8.6 child-years of residential care, or 875 statutory family support cases, against 8,124 families referred.",
+   "arithmetic": [
+    "Sure Start cost £33.7m ÷ 35,571 children registered = £947 per child (DE infographic value, flagged as read from a chart; the NIAO gives £34m)",
+    "Residential care £6,824 a week × 52 = £354,839 per child-year",
+    "£33.7m ÷ £354,839 = 95 child-years; 35,571 ÷ 95 = 1 in 374",
+    "Family Support Hubs £3.03m (funding is 2023/24; referrals are 2024/25, the nearest year published for each) ÷ £354,839 = 8.6; ÷ £3,466 per family support case = 875"
+   ],
+   "checks": [
+    {
+     "text": "Sure Start cost: DE infographic 2024/25",
+     "url": "https://www.education-ni.gov.uk/sites/default/files/2025-10/Sure%20Start%20Infographic%202024%2025.pdf"
+    },
+    {
+     "text": "Children registered: DE Sure Start report card 2024-25",
+     "url": "https://www.education-ni.gov.uk/sites/default/files/2025-10/Sure%20Start%20OBA%20Report%20Card%202024-25%20FINAL%2022%20Oct%2025.pdf"
+    },
+    {
+     "text": "Residential care and family support unit costs: DoH NI average unit costs 2024-25 (Sheet 1, 'Nursing & Residential Homes - Cost per Week by Programme')",
+     "url": "https://www.health-ni.gov.uk/sites/default/files/2026-03/Community%20%26%20Personal%20Social%20Services%20NI%20Average%20Unit%20Costs%202024-25.xlsx"
+    },
+    {
+     "text": "Family Support Hub funding: Assembly written answer AQW 16883/22-27",
+     "url": "http://aims.niassembly.gov.uk/questions/printquestionsummary.aspx?docid=414596"
+    },
+    {
+     "text": "Families referred: CYPSP report card 2024/25",
+     "url": "https://cypsp.hscni.net/download/391/family-support-hubs/47279/fshannual_report-card-2024_25.pdf"
+    }
+   ]
+  },
+  {
+   "id": "voypic-ratio",
+   "headline": "The one ratio the evidence allowed, for VOYPIC, runs from £0.02 to £1.48 per £1 — a measure of the evidence, not of the charity.",
+   "detail": "It values a single self-reported outcome (79 of 161 respondents (49%) said they have a better quality of life, 2023-24) and rests on three assumptions no one has measured: how big the change is, how many would have improved anyway, and how much is due to VOYPIC. Its other reported outcomes have no published value, and no saving to public services is claimed.",
+   "arithmetic": [
+    "low: 79 children × 0.1 points × £13,000 × (1 − 0.6) × 0.5 = £20,540 ÷ £1,208,310 = £0.02",
+    "central: 218 children × 0.25 points × £13,000 × (1 − 0.4) × 0.7 = £297,570 ÷ £1,208,310 = £0.25",
+    "high: 381 children × 0.5 points × £13,000 × (1 − 0.2) × 0.9 = £1,783,080 ÷ £1,208,310 = £1.48"
+   ],
+   "checks": [
+    {
+     "text": "Outcome: VOYPIC annual report 2023-24",
+     "url": "https://www.voypic.org/wp-content/uploads/2024/12/Annual-Report-23-24-Hi.pdf"
+    },
+    {
+     "text": "Spending: Charity Commission NI register",
+     "url": "https://www.charitycommissionni.org.uk/charity-search/charity-details-page/?regId=105019&subId=0"
+    },
+    {
+     "text": "WELLBY value £13,000: HACT wellbeing methodology note",
+     "url": "https://hact.org.uk/wp-content/uploads/2026/02/Wellbeing-Methodology-Note-March-202694.pdf"
+    }
+   ]
+  },
+  {
+   "id": "comparators",
+   "headline": "Studies elsewhere found returns above £1 for similar services, but none is from Northern Ireland and they should not be transferred.",
+   "detail": "England: Sure Start Children's Centres — £2.05 per £1 (societal benefits vs up-front cost). Republic of Ireland: Youth work sector — Benefit-Cost Ratio (BCR) of 2.22:1. England only: Youth work sector — 3.2x to 6.4x (central); \"a minimum of 2.5x and a maximum of 7.8x\". Programmes, populations and costs differ, and some were commissioned by the sector itself.",
+   "checks": [
+    {
+     "text": "The short- and medium-term effects of Sure Start on children's outcomes (Pedro Carneiro, Sarah Cattan, Gabriella Conti, Claire Crawford, Christine Farquharson, Nick Ridpath (Institute for Fiscal Studies), 2025)",
+     "url": "https://ifs.org.uk/sites/default/files/2025-05/IFS%20Report.%20The%20short-%20and%20medium-term%20effects%20of%20Sure%20Start%20on%20children%E2%80%99s%20outcomes.pdf"
+    },
+    {
+     "text": "Assessment of the Economic Value of Youth Work (Indecon, 2012)",
+     "url": "https://www.youth.ie/wp-content/uploads/2019/01/Economic-Beneifit-Youthwork-2012.pdf"
+    },
+    {
+     "text": "The Economic Value of Youth Work: A Report for UK Youth (Frontier Economics, 2022)",
+     "url": "https://www.ukyouth.org/wp-content/uploads/2022/09/Economic-Value-of-Youth-Work-Final-260822-STC-clean75-1.pdf"
+    }
+   ]
+  }
+ ],
  "existing": [
   {
    "id": "eif-late-intervention-ni-2018",
