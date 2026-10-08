@@ -48,6 +48,8 @@ main a { color: var(--focus); }
 .tools .grow { flex: 1; min-width: 180px; }
 .tools input, .tools select { font: inherit; font-size: 14px; padding: 6px 8px; border: 1px solid var(--hair-strong);
   border-radius: 4px; background: var(--surface); color: var(--ink); }
+.unitsw { margin-bottom: 18px; }
+[hidden] { display: none !important; }
 .seg { display: inline-flex; border: 1px solid var(--hair-strong); border-radius: 4px; overflow: hidden; }
 .seg button { font: inherit; font-size: 13px; padding: 6px 11px; border: 0; background: var(--surface); color: var(--ink-soft); cursor: pointer; }
 .seg button + button { border-left: 1px solid var(--hair-strong); }
@@ -200,6 +202,14 @@ footer.foot a { color: var(--ink-soft); }
 </header>
 
 <main>
+  <div class="tools unitsw">
+    <div class="seg" role="group" aria-label="Part of Ireland">
+      <button id="u-north" aria-pressed="true">North (Northern Ireland)</button>
+      <button id="u-south" aria-pressed="false">South (Republic of Ireland)</button>
+    </div>
+  </div>
+
+  <div id="unit-north">
   <h2>Northern Ireland: the children's sector</h2>
   <p class="standfirst">
     Which public bodies have children's functions, what they publish about spending, and which
@@ -288,6 +298,34 @@ footer.foot a { color: var(--ink-soft); }
     <th data-k="name">Organisation</th><th data-k="basis">Basis</th><th data-k="svcs">Services</th><th data-k="income" class="num">Income (latest)</th>
     <th data-k="council">Council area</th><th data-k="trust">Trust area</th>
   </tr></thead><tbody></tbody></table></div>
+  </div><!-- /unit-north -->
+
+  <div id="unit-south" hidden>
+  <h2>Republic of Ireland: the children's sector</h2>
+  <p class="standfirst">
+    Not built yet. The Northern Ireland page is the template; the same build is to be repeated for the
+    Republic, and nothing on this side is filled in until it can be traced to a document.
+    Nothing is estimated or carried over from the North, so no figure is shown here.
+  </p>
+  <div class="note">
+    <b>Why it is empty rather than approximate.</b> Every claim in this atlas has to trace to a source on the same
+    record, and a stub is more honest than a plausible guess. Northern Ireland's bodies, budgets, organisations and
+    costs cannot stand in for the Republic's: different departments, different registers, euros not pounds.
+  </div>
+  <h3>What the South will hold, in build order</h3>
+  <div class="twrap"><table class="orgt"><thead><tr><th>Stage</th><th>What it will show</th><th>Status</th></tr></thead><tbody>
+    <tr><td>1. Public bodies</td><td>Every State body with a children's or family function, checked one by one against its own documents, with the function quoted.</td><td class="miss">not started</td></tr>
+    <tr><td>2. Budgets</td><td>Published spending lines for those bodies, estimate and outturn kept apart, in euro as printed.</td><td class="miss">not started</td></tr>
+    <tr><td>3. Voluntary organisations</td><td>Charities and companies working in the children's sector, profiled from their own documents, placed on a map.</td><td class="miss">not started</td></tr>
+    <tr><td>4. Who pays</td><td>Each euro recorded once at its source, with government and voluntary shares in separate layers, never added.</td><td class="miss">not started</td></tr>
+    <tr><td>5. Social return</td><td>Only as far as published evidence allows; one figure per programme, no sector-wide multiplier.</td><td class="miss">not started</td></tr>
+  </tbody></table></div>
+  <p class="note">
+    Method and rules for the build are in <code>research/children-sector/IRELAND-START.md</code>. The pounds on the
+    Northern Ireland side and any euros here will never be mixed in one figure; any conversion would name its rate and source.
+    Money that crosses the border (north–south bodies, PEACEPLUS) will be counted once, not once per side.
+  </p>
+  </div><!-- /unit-south -->
 </main>
 
 <footer class="foot">
@@ -821,4 +859,17 @@ $('#org-q').oninput = drawOrgs; $('#org-basis').onchange = drawOrgs;
 $('#svc').onchange = () => { drawTop(); drawOrgs(); drawSvc(); };
 
 drawMap(); applyVB(); legend(); drawPanel(); fillAreaFilter(); drawList(); drawChart(); drawSvc(); drawWhoPays(); drawSroi();
+// North / South switch. The North view is fully built and draws on load while visible
+// (the map measures itself); the South is an honest stub until its data exists.
+const UNITS = { north: { t: "Northern Ireland children's sector", d: "Who provides children's services in Northern Ireland, public and voluntary, what the public side spends, and where the organisations are based." },
+  south: { t: "Republic of Ireland children's sector", d: "The Republic of Ireland children's sector: not yet built. Nothing is shown until it can be traced to a source." } };
+function setUnit(u, push) {
+  for (const k of ['north', 'south']) { $('#unit-' + k).hidden = k !== u; $('#u-' + k).setAttribute('aria-pressed', String(k === u)); }
+  document.title = UNITS[u].t + ' — Language Atlas';
+  $('meta[name=description]').content = UNITS[u].d;
+  const url = new URL(location.href); if (u === 'south') url.searchParams.set('unit', 'south'); else url.searchParams.delete('unit');
+  if (push !== false) history.replaceState(null, '', url);
+}
+$('#u-north').onclick = () => setUnit('north'); $('#u-south').onclick = () => setUnit('south');
+if (new URLSearchParams(location.search).get('unit') === 'south' || location.pathname.endsWith('/ie-children')) setUnit('south', false);
 </script>

@@ -423,6 +423,7 @@ app.get('/admin', page('admin.html'));
 // Community-sector views, one per unit and sector. Data is public/sector/<id>.json,
 // built from research/ by research/tools/build-sector-ni.js.
 app.get('/sector/ni-children', page('sector.html'));
+app.get('/sector/ie-children', page('sector.html'));
 for (const d of LIVE) app.get('/' + d.id, page('map.html'));
 
 // Anything else is a real 404, not a silent fallback to the map.
