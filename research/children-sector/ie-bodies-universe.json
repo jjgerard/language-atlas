@@ -1,0 +1,3691 @@
+{
+ "source": "https://www.cso.ie/en/releasesandpublications/ep/p-rpbi/registerofpublicsectorbodies2024-final/",
+ "retrieved": "2026-10-08",
+ "note": "Universe of Irish public bodies: the CSO Register of Public Sector Bodies 2024 (final, released 2025-10-20), central government Tables 3.1-3.19 plus local authorities (Table 4.1). Sponsor = the department table the body sits in, under the department names the 2024 register uses (the children department was renamed in 2025; see ie-bodies.json). The Register classifies bodies as general government for national accounts, so it is NOT a complete list of bodies with a children function: voluntary organisations are outside it except those classified into government (Table 3.19), and coordinating structures hosted by another body (e.g. county committees) are not rows in it. Commercial corporations are listed here but screened out by name and remit without reading their documents.",
+ "bodies": [
+  {
+   "name": "Department of Agriculture, Food and the Marine",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Vote",
+   "parent": "30"
+  },
+  {
+   "name": "Fishery Harbour Centres Fund",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Horse and Greyhound Racing Fund",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "An Rialálaí Agraibhia (The Agri Food Regulator)",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Aquaculture Licences Appeals Board",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Bord Bia",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Bord Iascaigh Mhara",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Horse Sport Ireland",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "HRI Racecourses",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies",
+   "parent": "Horse Racing Ireland"
+  },
+  {
+   "name": "Irish Thoroughbred Marketing Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies",
+   "parent": "Horse Racing Ireland"
+  },
+  {
+   "name": "Marine Institute - Foras na Mara",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Moorepark Technology Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies",
+   "parent": "Teagasc Group"
+  },
+  {
+   "name": "National Milk Agency",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Sea-Fisheries Protection Authority (SFPA)",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Teagasc (The Agriculture and Food Development Authority of Ireland)",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Abargrove Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Rásaíocht Con Éireann"
+  },
+  {
+   "name": "Coillte CGA",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Cork Racecourse Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Horse Racing Ireland"
+  },
+  {
+   "name": "Fairyhouse Club Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Horse Racing Ireland"
+  },
+  {
+   "name": "Greyhound Racing Operations Ireland Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Rásaíocht Con Éireann"
+  },
+  {
+   "name": "INS Commercial Enterprises DAC",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "The Irish National Stud DAC"
+  },
+  {
+   "name": "Medite Europe DAC",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Coillte CGA"
+  },
+  {
+   "name": "Moylurg Rockingham Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Coillte CGA / Roscommon County Council"
+  },
+  {
+   "name": "Mullingar Greyhound Racing Company Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Rásaíocht Con Éireann"
+  },
+  {
+   "name": "Navan Races Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Horse Racing Ireland"
+  },
+  {
+   "name": "Rásaíocht Con Éireann",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Shelbourne Greyhound Stadium Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Rásaíocht Con Éireann"
+  },
+  {
+   "name": "Smartply Europe DAC",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Coillte CGA"
+  },
+  {
+   "name": "The Irish National Stud DAC",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "The Leopardstown Club Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Horse Racing Ireland"
+  },
+  {
+   "name": "The Tipperary Race Company PLC",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Horse Racing Ireland"
+  },
+  {
+   "name": "Tote Ireland Ltd",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Horse Racing Ireland"
+  },
+  {
+   "name": "Veterinary Council of Ireland",
+   "sponsor": "Department of Agriculture, Food and Marine",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Department of Children, Equality, Disability, Integration and Youth",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "status": "Vote",
+   "parent": "40"
+  },
+  {
+   "name": "Irish Human Rights and Equality Commission",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "status": "Vote",
+   "parent": "25"
+  },
+  {
+   "name": "Adoption Authority of Ireland (AAI)",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Child and Family Agency (Tusla)",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Gaisce - The President's Award",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Disability Authority",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Oberstown Children Detention Campus",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Ombudsman for Children's Office",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Office of Director of Authorised Intervention",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Department of Defence",
+   "sponsor": "Department of Defence",
+   "status": "Vote",
+   "parent": "36"
+  },
+  {
+   "name": "Army Pensions",
+   "sponsor": "Department of Defence",
+   "status": "Vote",
+   "parent": "35"
+  },
+  {
+   "name": "Army Pensions Board",
+   "sponsor": "Department of Defence",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Defence Forces Canteen Board",
+   "sponsor": "Department of Defence",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Office of the Ombudsman for the Defence Forces",
+   "sponsor": "Department of Defence",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Department of Education",
+   "sponsor": "Department of Education",
+   "status": "Vote",
+   "parent": "26"
+  },
+  {
+   "name": "Residential Institutions Redress Board (RIRB)",
+   "sponsor": "Department of Education",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "An Chomhairle um Oideachas Gaeltachta agus Gaelscolaíochta (COGG)",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Commission to Inquire into Child Abuse (CICA)",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Educational Research Centre (ERC)",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Council for Curriculum and Assessment (NCCA)",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Council for Special Education (NCSE)",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "State Examinations Commission (SEC)",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Teaching Council",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Educational Training Boards",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Cavan and Monaghan Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "City of Dublin Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Cork Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Donegal Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Dublin and Dun Laoghaire Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Galway and Roscommon Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Kerry Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Kildare and Wicklow Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Kilkenny and Carlow Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Laois and Offaly Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Limerick and Clare Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Longford and Westmeath Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Louth and Meath Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Mayo, Sligo and Leitrim Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Tipperary Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Waterford and Wexford Education and Training Board",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Schools: State funded primary",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Schools: State funded post primary",
+   "sponsor": "Department of Education",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Department of Enterprise, Trade and Employment",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Vote",
+   "parent": "32"
+  },
+  {
+   "name": "Competition and Consumer Protection Commission",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Corporate Enforcement Agency (CEA)",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Enterprise Ireland",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Health and Safety Authority",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "IDA Ireland",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Intellectual Property Office of Ireland (IPOI)",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "InterTradeIreland (Trade and Business Development Body)",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Irish Auditing and Accounting Supervisory Authority",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Microfinance Ireland",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Non-Commercial Agencies",
+   "parent": "Social Finance Foundation"
+  },
+  {
+   "name": "National Standards Authority of Ireland (NSAI)",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Workplace Relations Commission (WRC)",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Personal Injuries Assessment Board",
+   "sponsor": "Department of Enterprise, Trade and Employment",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Department of Environment, Climate and Communications",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Vote",
+   "parent": "29"
+  },
+  {
+   "name": "S1311",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Vote",
+   "parent": "Extra-Budgetary Funds; Climate Action Fund"
+  },
+  {
+   "name": "Commission for Communications Regulation",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Commission for Regulation of Utilities (CRU)",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Dogpatch Labs Investment DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Dogpatch Labs Management DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies",
+   "parent": "Dogpatch Labs Management DAC"
+  },
+  {
+   "name": "Environmental Protection Agency (EPA)",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Inland Fisheries Ireland",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Irish National Petroleum Corporation",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Maritime Area Regulatory Authority",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Oil Reserves Agency (NORA)",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "NBI Infrastructure DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Sustainable Energy Authority of Ireland (SEAI)",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Loughs Agency",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Advanced Environmental Solutions Irl Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Airstream Wind Energy Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "An Post",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "An Post BillPost Processing Services Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "An Post"
+  },
+  {
+   "name": "An Post GeoDirectory DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "An Post"
+  },
+  {
+   "name": "Arcade Property Company Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "An Post"
+  },
+  {
+   "name": "Ballinagree Wind Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "Bellair Wind Farm DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna"
+  },
+  {
+   "name": "Bord na Móna Biomass Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Bord na Móna Energy Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Bord na Móna Horticulture Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Bord na Móna New Business Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Bord na Móna PLC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Bord na Móna Powergen Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Bord na Móna Resource Recovery Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Bord na Móna Treasury DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Bruckana Supply Company Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Bruckana Wind Farm Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Bullstown Solar Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Cahermurphy Renewables Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "Cappawhite Wind Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Castlepook Power DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Celtic 1 OSW Power DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Celtic 2 OSW Power DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Celtic 2 OSW Power Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Celtic Horizon offshore Wind Farm Limited",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Celtic Horizon Wind Farm Holding Limited",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Celtic Interconnector DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "EirGrid PLC - Joint Venture"
+  },
+  {
+   "name": "Celtic OSW Power Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Clogherhead Offshore Wind DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Clogherhead Offshore Wind Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Cloncreen BESS DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna"
+  },
+  {
+   "name": "Cloncreen Wind Farm DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Cloncreen Wind Farm Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Coolnagun Wind Farm DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna"
+  },
+  {
+   "name": "Cornafulla Wind Farm DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna"
+  },
+  {
+   "name": "Corvoderry Wind Farm Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Crockahenny Wind Farm DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "CUMMEENNABUDDOGE Wind Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "Cushaling Power Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Derrinlough Wind Farm DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Derrinlough Wind Farm Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Derrinlough Wind Farm Supply DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Derryarkin Sand and Gravel DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Derryfadda Wind Farm DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna"
+  },
+  {
+   "name": "Digital Hub Development Agency",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Dublin Offshore Technology Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Edenderry Power Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Edenderry Power Operations Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Edenderry Supply Company Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Eirgrid Interconnector DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "EirGrid PLC"
+  },
+  {
+   "name": "EirGrid PLC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Eirgrid SPV 2022 DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "EirGrid PLC"
+  },
+  {
+   "name": "EirGrid Telecoms DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "EirGrid PLC"
+  },
+  {
+   "name": "Electricity Exchange DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Electricity Supply Board",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Emerald Bridge Fibres DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Commercial Properties Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Energy International Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Finance DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Financial Enterprises Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Independent Energy (NI) Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Independent Energy Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Independent Generation Trading Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Innovation ROI Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB International Investments Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB International Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Networks DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Novus Modus GP Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Power Generation Holding Company Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Solar (Ireland) Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Telecoms Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Trading Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESB Wind Development Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "ESBI Engineering and Facility Management Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Fitzwilliam Street Lower Management Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "FuturEnergy Ballyhoura Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Barracree Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Broemountain Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Carrownagowan Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Clonbullogue Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Corbally Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Corravaddy Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Croagh Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Croaghaun Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Crowagh Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Cullenagh Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Glenard Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Gortnahurra Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Ireland Development Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Ireland Development Holdings Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Kealafreaghane Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Lissinagroagh Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Mongorry Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy North Mayo Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Slieve Rusheen Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Slieveragh Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Tievemore Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "FuturEnergy Tullintowell Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "Garravagh Solar Farm Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Garryhinch Wind Farm DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna"
+  },
+  {
+   "name": "Garvagh Glebe Power Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Gort Windfarms Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Gortyrahilly Wind Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "GPO IEC Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "An Post"
+  },
+  {
+   "name": "HarmonySolarClareLtd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "HarmonySolarCorkLtd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Harmony Solar Dennistown Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "HarmonySolarKerryLtd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Harmony Solar Kildare Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "HarmonySolarKilkennyLtd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Harmony Solar Knockanoura Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Harmony Solar Limerick Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Harmony Solar Longford Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "HarmonySolarLouthLtd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Harmony Solar Mayglass Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "HarmonySolarMeathLtd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "HarmonySolarMilltownLtd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Harmony Solar Mullingar Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "HarmonySolarOffalyLtd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Harmony Solar Ralphtown Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Harmony Solar Smithstown Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Helvick Head Offshore Wind DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Helvick Head Offshore Wind Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Hibernian Wind Power Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Inchamore Wind Designated Activity Company",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "Kerry Wind Power Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Kilberry Wind Farm DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna"
+  },
+  {
+   "name": "Lemanaghan Wind Farm DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna"
+  },
+  {
+   "name": "Littleton Wind Farm DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna"
+  },
+  {
+   "name": "Loch Garman Offshore Wind DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Loch Garman Offshore Wind Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Merrion Park Owners Management Company CLG",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "Moneypoint 1 Offshore Wind DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Moneypoint 2 Offshore Wind DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Moneypoint 2 Offshore Wind Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Moneypoint Offshore Wind Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Mount Eagle Wind Farm Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Mount Lucas Supply Company Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Mount Lucas Wind Farm Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Mountainlodge Power DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Orliven Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Oweninny Power 2 DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Oweninny Power 2 Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Oweninny Power DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Oweninny Power Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "PallasEnergySupplyLtd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "PallasWindfarmLtd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Post Consult International Limited",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "An Post"
+  },
+  {
+   "name": "Post.Trust Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "An Post"
+  },
+  {
+   "name": "Postpoint Services Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "An Post"
+  },
+  {
+   "name": "PrintPost Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "An Post"
+  },
+  {
+   "name": "Raheenleagh Power DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Realt na Mara Offshore Wind Farm Holding Limited",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Realt na Mara Offshore Wind Farm Limited",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Renewable Energy Ireland Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC"
+  },
+  {
+   "name": "Retrofit Superhomes Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Tipperary Energy Agency CLG"
+  },
+  {
+   "name": "Saoirse Wave Energy Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Seastacks Offshore Wind DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Seastacks Offshore Wind Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Shanoagh PV Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Shantallow Solar Farm Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Siro JV Holdco Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Coillte"
+  },
+  {
+   "name": "SIRO Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Sliabh Bawn Power DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC / Coillte CGA"
+  },
+  {
+   "name": "Sliabh Bawn Supply DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC / Coillte CGA"
+  },
+  {
+   "name": "Sliabh Bawn Wind Holdings DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna PLC / Coillte CGA"
+  },
+  {
+   "name": "Sundew Solar DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Superhomes Ireland DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board / Tipperary Energy Agency CLG"
+  },
+  {
+   "name": "Synergen Power Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Timahoe North Supply DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Bord na Móna"
+  },
+  {
+   "name": "Transpost Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "An Post"
+  },
+  {
+   "name": "Tullamore Solar Farm Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Tullynahaw Power Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Waterfern Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "Woodhouse Wind Farm Ltd",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Electricity Supply Board"
+  },
+  {
+   "name": "One Direct (Ireland) Limited",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Financial Corporations",
+   "parent": "An Post"
+  },
+  {
+   "name": "The Prize Bond Company DAC",
+   "sponsor": "Department of Environment, Climate and Communications",
+   "status": "Commercial Financial Corporations",
+   "parent": "An Post"
+  },
+  {
+   "name": "Department of Finance",
+   "sponsor": "Department of Finance",
+   "status": "Vote",
+   "parent": "7"
+  },
+  {
+   "name": "Comptroller and Auditor General",
+   "sponsor": "Department of Finance",
+   "status": "Vote",
+   "parent": "8"
+  },
+  {
+   "name": "Office of the Revenue Commissioners",
+   "sponsor": "Department of Finance",
+   "status": "Vote",
+   "parent": "9"
+  },
+  {
+   "name": "Tax Appeals Commission",
+   "sponsor": "Department of Finance",
+   "status": "Vote",
+   "parent": "10"
+  },
+  {
+   "name": "Bank Guarantee Scheme Fund",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Capital Service Redemption Account",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Carbon Fund",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Credit Institutions Resolution Fund",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Credit Union Fund",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Deposit Guarantee Scheme",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Intestate Estates Fund Deposit Account",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Ireland Strategic Investment Fund",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Ireland-United States Educational Fund 2013",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Land Bond Account",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Post Office Savings Bank Fund",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds",
+   "parent": "NTMA"
+  },
+  {
+   "name": "State Property (Misc. Deposits) Account",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Sundry Moneys Deposit Account",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "The Future Ireland Fund",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "The Infrastructure, Climate and Nature Fund",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "The Insurance Compensation Fund",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Traveller's Protection Fund",
+   "sponsor": "Department of Finance",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Financial Services and Pensions Ombudsman (FSPO)",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Home Building Finance Ireland",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Irish Bank Resolution Corporation",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Irish Financial Services Appeals Tribunal",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Irish Fiscal Advisory Council",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Asset JV A DAC",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies",
+   "parent": "National Asset Management Agency Group"
+  },
+  {
+   "name": "National Asset Loan Management DAC",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies",
+   "parent": "National Asset Management Agency Group"
+  },
+  {
+   "name": "NationalAssetManagementDAC",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies",
+   "parent": "National Asset Management Agency Group"
+  },
+  {
+   "name": "National Asset Management Agency Group",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Asset Management Agency Group Services DAC",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies",
+   "parent": "National Asset Management Agency Group"
+  },
+  {
+   "name": "National Asset Management AgencyInvestment DAC",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies",
+   "parent": "National Asset Management Agency Group"
+  },
+  {
+   "name": "National Asset North Quays DAC",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies",
+   "parent": "National Asset Management Agency Group"
+  },
+  {
+   "name": "National Asset Property Management DAC",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies",
+   "parent": "National Asset Management Agency Group"
+  },
+  {
+   "name": "National Asset Residential Property Services DAC",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies",
+   "parent": "National Asset Management Agency Group"
+  },
+  {
+   "name": "National Treasury Management Agency (NTMA)",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Strategic Banking Corporation of Ireland",
+   "sponsor": "Department of Finance",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "GaiastreamLimited",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "General Estates and Trust Company Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "Payzone Ireland Limited",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "AIB Capital Markets Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "AIB Commercial Finance Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "AIB Corporate Finance Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "AIB Debt Management Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "AIB Group PLC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations"
+  },
+  {
+   "name": "AIB Insurance Services Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "AIB Leasing Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "AIB Mortgage Bank",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "Allied Irish Banks (Holdings & Investments) Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "Allied Irish Banks PLC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "Augmentum Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "Autolease Fleet Management Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC - Joint Venture"
+  },
+  {
+   "name": "Autolease Personal Leasing Limited",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC - Joint Venture"
+  },
+  {
+   "name": "Clearpay DAC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC - Joint Venture"
+  },
+  {
+   "name": "EBS DAC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "EIIS Management Limited",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC - Joint Venture"
+  },
+  {
+   "name": "Eyke Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "Fastnet Securities 16 DAC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "Permanent TSB Group Holdings PLC"
+  },
+  {
+   "name": "Fastnet Securities 17 DAC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "Permanent TSB Group Holdings PLC"
+  },
+  {
+   "name": "Fastnet Securities 18 DAC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "Permanent TSB Group Holdings PLC"
+  },
+  {
+   "name": "Fastnet Securities 19 DAC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "Permanent TSB Group Holdings PLC"
+  },
+  {
+   "name": "First Home Scheme Ireland DAC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC - Joint Venture"
+  },
+  {
+   "name": "First Merchant Processing (Ireland) Designated Activity Company",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC - Joint Venture"
+  },
+  {
+   "name": "Goodbody Holdings (UC)",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "Goodbody Stockbrokers UC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "Haven Mortgages Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "Joint Mortgage Holdings No.1 Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "Permanent TSB Group Holdings PLC"
+  },
+  {
+   "name": "ParkMagicMobileSolutionsLimited",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "Permanent TSB Finance Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "Permanent TSB Group Holdings PLC"
+  },
+  {
+   "name": "Permanent TSB Group Holdings PLC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations"
+  },
+  {
+   "name": "Permanent TSB PLC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "Permanent TSB Group Holdings PLC"
+  },
+  {
+   "name": "Saol Assurance DAC",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC - Joint Venture"
+  },
+  {
+   "name": "Saol Assurance Holdings Limited",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC - Joint Venture"
+  },
+  {
+   "name": "Semeral Limited",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC"
+  },
+  {
+   "name": "Springboard Mortgages Ltd",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "Permanent TSB Group Holdings PLC"
+  },
+  {
+   "name": "Zolter Services Designated Activity Company",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations",
+   "parent": "AIB Group PLC - Joint Venture"
+  },
+  {
+   "name": "Central Bank of Ireland",
+   "sponsor": "Department of Finance",
+   "status": "Commercial Financial Corporations"
+  },
+  {
+   "name": "Department of Foreign Affairs",
+   "sponsor": "Department of Foreign Affairs",
+   "status": "Vote",
+   "parent": "28"
+  },
+  {
+   "name": "International Co-operation",
+   "sponsor": "Department of Foreign Affairs",
+   "status": "Vote",
+   "parent": "27"
+  },
+  {
+   "name": "Department of Further and Higher Education, Research, Innovation and Science",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Vote",
+   "parent": "45"
+  },
+  {
+   "name": "National Training Fund",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Atlantic Technological University",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Dublin Institute for Advanced Studies (DIAS)",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Grangegorman Development Agency",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Higher Education Authority (HEA)",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Léargas - The Exchange Bureau",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Munster Technological University",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National University of Ireland",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Quality and Qualifications Ireland",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Skillnet Ireland",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "SOLAS An tSeirbhís Oideachais Leanúnaigh agus Scileanna",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "South East Technological University",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Taighde Éireann - Research Ireland",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Technological University Dublin",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Technological University of the Shannon",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Institutes of Technology",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Dundalk Institute of Technology (DkIT)",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Institute of Art, Design and Technology (IADT) Dun Laoghaire",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Dublin City University",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "National University of Ireland Galway",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "National University of Ireland Maynooth",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Trinity College Dublin",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "University College Cork",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "University College Dublin",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "University of Limerick",
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Department of Health",
+   "sponsor": "Department of Health",
+   "status": "Vote",
+   "parent": "38"
+  },
+  {
+   "name": "Risk Equalisation Fund",
+   "sponsor": "Department of Health",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Special Account for Compensation of Hepatitis C",
+   "sponsor": "Department of Health",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Children's Health Ireland",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Dental Council",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Dental Health Foundation",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Food Safety Authority of Ireland (FSAI)",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Food Safety Promotion Board (FSPB) (safefood)",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Health and Social Care Professionals Council (CORU)",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Health Information and Quality Authority (HIQA)",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Health Insurance Authority",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Health Products Regulatory Authority (HPRA)",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Health Research Board (HRB)",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Health Service Executive",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Institute of Public Health in Ireland (IPH)",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Irish Blood Transfusion Service (IBTS)",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Medical Council",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Mental Health Commission",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Cancer Registry Board",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Haemophilia Council",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Paediatric Hospital Development Board (NPHDB)",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Treatment Purchase Fund",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Nursing and Midwifery Board of Ireland (NMBI)",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Pharmaceutical Society of Ireland",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Pre-Hospital Emergency Care Council (PHECC)",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Voluntary hospitals and hospices",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Beaumont Hospital",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Children's Health Ireland (CHI) at Connolly",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Children's Health Ireland at Crumlin",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Children's Health Ireland at Tallaght",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Children's Health Ireland at Temple Street",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Coombe Women and Infants University Hospital",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Dublin Dental Hospital",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Incorporated Orthopaedic Hospital",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Mater Misericordiae University Hospital",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Mercy University Hospital, Cork",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Maternity Hospital, Holles St, Dublin",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Rehabilitation Hospital, Dun Laoghaire",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Our Lady's Hospice",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Peamount Hospital",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Royal Victoria Eye and Ear Hospital",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "South Infirmary Victoria University Hospital",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "St Joseph's Hospital, Raheny, Dublin",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "St Vincents Hospital Fairview",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "St. James's Hospital , Dublin",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "St. John's Hospital, Limerick",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "St. Luke's Hospital, Rathgar",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "St. Michael's Hospital, Dun Laoghaire",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "St. Vincent's University Hospital",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Tallaght University Hospital",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The National Orthopaedic Hospital Cappagh DAC",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Rotunda Hospital, Dublin",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Royal Hospital Donnybrook",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Organisations providing health and personal social services1",
+   "sponsor": "Department of Health",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Rehab Enterprises Ltd",
+   "sponsor": "Department of Health",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "The Rehab Group"
+  },
+  {
+   "name": "Vhi Abbey DAC",
+   "sponsor": "Department of Health",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Voluntary Health Insurance Board"
+  },
+  {
+   "name": "Vhi Cumhdach DAC",
+   "sponsor": "Department of Health",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Voluntary Health Insurance Board"
+  },
+  {
+   "name": "Vhi Group Services DAC",
+   "sponsor": "Department of Health",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Voluntary Health Insurance Board"
+  },
+  {
+   "name": "Vhi Health & Wellbeing DAC",
+   "sponsor": "Department of Health",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Voluntary Health Insurance Board"
+  },
+  {
+   "name": "Vhi Health Services DAC",
+   "sponsor": "Department of Health",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Voluntary Health Insurance Board"
+  },
+  {
+   "name": "Vhi Occupational Health DAC",
+   "sponsor": "Department of Health",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Voluntary Health Insurance Board"
+  },
+  {
+   "name": "Vhi Portfolio DAC",
+   "sponsor": "Department of Health",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Voluntary Health Insurance Board"
+  },
+  {
+   "name": "Vhi Group DAC",
+   "sponsor": "Department of Health",
+   "status": "Commercial Financial Corporations",
+   "parent": "Voluntary Health Insurance Board"
+  },
+  {
+   "name": "Vhi Health & Wellbeing Holdings DAC",
+   "sponsor": "Department of Health",
+   "status": "Commercial Financial Corporations",
+   "parent": "Voluntary Health Insurance Board"
+  },
+  {
+   "name": "Vhi Healthcare DAC",
+   "sponsor": "Department of Health",
+   "status": "Commercial Financial Corporations",
+   "parent": "Voluntary Health Insurance Board"
+  },
+  {
+   "name": "Vhi Insurance DAC",
+   "sponsor": "Department of Health",
+   "status": "Commercial Financial Corporations",
+   "parent": "Voluntary Health Insurance Board"
+  },
+  {
+   "name": "Voluntary Health Insurance Board",
+   "sponsor": "Department of Health",
+   "status": "Commercial Financial Corporations"
+  },
+  {
+   "name": "Department of Housing, Local Government and Heritage",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Vote",
+   "parent": "34"
+  },
+  {
+   "name": "An Coimisiún Toghcháin, The Electoral Commission",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Vote",
+   "parent": "23"
+  },
+  {
+   "name": "Tailte Éireann",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Vote",
+   "parent": "16"
+  },
+  {
+   "name": "Local Government Fund",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Voluntary Housing Scheme",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "An Bord Pleanála",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Approved Housing Bodies Regulatory Authority (AHBRA)",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Heritage Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Housing Finance Agency",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Local Government Management Agency (LGMA)",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Oversight and Audit Commission",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Office of the Planning Regulator",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Pyrite Resolution Board",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Residential Tenancies Board (RTB)",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Discovery Programme CLG",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Housing Agency (Housing & Sustainable Communities Agency)",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Land Development Agency DAC",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Uisce Éireann",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Valuation Tribunal",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Waterways Ireland",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Organisations providing health and personal social services1",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Gas Networks Ireland",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Gas Networks Ireland (IOM) DAC",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Gas Networks Ireland"
+  },
+  {
+   "name": "Network Services Transition DAC",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Gas Networks Ireland"
+  },
+  {
+   "name": "An Garda Síochána",
+   "sponsor": "Department of Justice",
+   "status": "Vote",
+   "parent": "20"
+  },
+  {
+   "name": "Courts Service",
+   "sponsor": "Department of Justice",
+   "status": "Vote",
+   "parent": "22"
+  },
+  {
+   "name": "Department of Justice",
+   "sponsor": "Department of Justice",
+   "status": "Vote",
+   "parent": "24"
+  },
+  {
+   "name": "Irish Prison Service",
+   "sponsor": "Department of Justice",
+   "status": "Vote",
+   "parent": "21"
+  },
+  {
+   "name": "Policing Authority",
+   "sponsor": "Department of Justice",
+   "status": "Vote",
+   "parent": "41"
+  },
+  {
+   "name": "The Data Protection Commission (DPC)",
+   "sponsor": "Department of Justice",
+   "status": "Vote",
+   "parent": "44"
+  },
+  {
+   "name": "An Garda Síochána Ombudsman Commission (GSOC)",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Criminal Assets Bureau",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Criminal Injuries Compensation Tribunal",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Cuan or - An Ghníomhaireacht um Fhoréigean Baile, Gnéasach agus Inscnebhunaithe",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Forensic Science Ireland",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Insolvency Service Ireland",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "International Protection Appeals Tribunal",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Irish Film Classification Office",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Legal Aid Board",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Legal Services Regulatory Authority",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Mental Health (Criminal Law) Review Board",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "OfficeoftheIndependentExaminer",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Office of the Inspector of Prisons",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Office of the State Pathologist",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Parole Board",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Policing and Community Safety Authority",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Private Security Authority",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Probation Service",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Property Services Regulatory Authority",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Stepping Out (Athlone) Ltd",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies",
+   "parent": "The Rehab Group"
+  },
+  {
+   "name": "The Garda Síochána Inspectorate",
+   "sponsor": "Department of Justice",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Department of Public Expenditure, NDP Delivery and Reform",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "11"
+  },
+  {
+   "name": "National Shared Services Office",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "18"
+  },
+  {
+   "name": "Office of Government Procurement",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "39"
+  },
+  {
+   "name": "Office of Public Works",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "13"
+  },
+  {
+   "name": "Office of the Commission for Public Service Appointments",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "19"
+  },
+  {
+   "name": "Office of the Commissioner for Environmental Information",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "19"
+  },
+  {
+   "name": "Office of the Government Chief Information Officer",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "43"
+  },
+  {
+   "name": "Office of the Information Commissioner",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "19"
+  },
+  {
+   "name": "Office of the Ombudsman",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "19"
+  },
+  {
+   "name": "Office of the Protected Disclosures Commissioner",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "19"
+  },
+  {
+   "name": "Public Appointments Service",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "17"
+  },
+  {
+   "name": "Secret Service",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "15"
+  },
+  {
+   "name": "Standards in Public Office Commission",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "19"
+  },
+  {
+   "name": "State Laboratory",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "14"
+  },
+  {
+   "name": "Superannuation and Retired Allowances",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Vote",
+   "parent": "12"
+  },
+  {
+   "name": "Regulator of the National Lottery",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Special EU Programmes Body",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Economic and Social Research Institute",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Institute of Public Administration",
+   "sponsor": "Department of Public Expenditure, NDP Delivery and Reform",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Department of Rural and Community Development",
+   "sponsor": "Department of Rural and Community Development",
+   "status": "Vote",
+   "parent": "42"
+  },
+  {
+   "name": "Dormant Accounts Fund",
+   "sponsor": "Department of Rural and Community Development",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Local Authority Library and Archive Service",
+   "sponsor": "Department of Rural and Community Development",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Programme for Peace and Reconciliation",
+   "sponsor": "Department of Rural and Community Development",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Western Investment Fund",
+   "sponsor": "Department of Rural and Community Development",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Charities Regulator",
+   "sponsor": "Department of Rural and Community Development",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Pobal",
+   "sponsor": "Department of Rural and Community Development",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Water Safety Ireland",
+   "sponsor": "Department of Rural and Community Development",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Western Development Commission (WDC)",
+   "sponsor": "Department of Rural and Community Development",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Department of Social Protection",
+   "sponsor": "Department of Social Protection",
+   "status": "Vote",
+   "parent": "37"
+  },
+  {
+   "name": "Citizens Information Board",
+   "sponsor": "Department of Social Protection",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Pensions Authority",
+   "sponsor": "Department of Social Protection",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Pensions Council",
+   "sponsor": "Department of Social Protection",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Central Statistics Office",
+   "sponsor": "Department of the Taoiseach",
+   "status": "Vote",
+   "parent": "4"
+  },
+  {
+   "name": "Chief State Solicitor's Office",
+   "sponsor": "Department of the Taoiseach",
+   "status": "Vote",
+   "parent": "6"
+  },
+  {
+   "name": "Department of the Taoiseach",
+   "sponsor": "Department of the Taoiseach",
+   "status": "Vote",
+   "parent": "2"
+  },
+  {
+   "name": "Office of the Attorney General",
+   "sponsor": "Department of the Taoiseach",
+   "status": "Vote",
+   "parent": "3"
+  },
+  {
+   "name": "Office of the Director of Public Prosecutions (DPP)",
+   "sponsor": "Department of the Taoiseach",
+   "status": "Vote",
+   "parent": "5"
+  },
+  {
+   "name": "President's Establishment",
+   "sponsor": "Department of the Taoiseach",
+   "status": "Vote",
+   "parent": "1"
+  },
+  {
+   "name": "Law Reform Commission",
+   "sponsor": "Department of the Taoiseach",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Economic and Social Development Office (NESDO)",
+   "sponsor": "Department of the Taoiseach",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Vote",
+   "parent": "33"
+  },
+  {
+   "name": "Abbey Theatre Amharclann Na Mainistreach",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "An Foras Teanga - Foras na Gaeilge",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "An Foras Teanga - Ulster-Scots Agency",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Chester Beatty Library",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Coimisiún na Meán",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Crawford Art Gallery",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Fáilte Ireland",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Fís Éireann/Screen Ireland",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Galway Cultural Development and Activity CLG",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Irish Manuscripts Commission",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Irish Museum of Modern Art",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Gallery of Ireland",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Library of Ireland",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Museum of Ireland",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Oifig Choimisinéir na dTeangacha Oifigúla",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Raidió Teilifís Éireann - RTÉ",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Sport Ireland",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Teilifís na Gaeilge - TG4",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Arts Council (An Chomhairle Ealaíon)",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Tourism Ireland",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "&Uacute;darás na Gaeltachta",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "GAAGO Media Ltd",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "RTÉ"
+  },
+  {
+   "name": "National Concert Hall",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "RTÉ Commercial Enterprises DAC",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "RTÉ"
+  },
+  {
+   "name": "RTÉ Music DAC",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "RTÉ"
+  },
+  {
+   "name": "RTÉ Transmission Network DAC (trading as 2rn)",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "RTÉ"
+  },
+  {
+   "name": "Sport Ireland Facilities DAC",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Sport Ireland"
+  },
+  {
+   "name": "Department of Transport",
+   "sponsor": "Department of Transport",
+   "status": "Vote",
+   "parent": "31"
+  },
+  {
+   "name": "Commission for Railway Regulation",
+   "sponsor": "Department of Transport",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Commissioners of Irish Lights",
+   "sponsor": "Department of Transport",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Irish Rail (Iarnród Éireann)",
+   "sponsor": "Department of Transport",
+   "status": "Non-Commercial Agencies",
+   "parent": "Córas Iompair Éireann"
+  },
+  {
+   "name": "Marine Casualty Investigation Board",
+   "sponsor": "Department of Transport",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Medical Bureau of Road Safety",
+   "sponsor": "Department of Transport",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "National Transport Authority (NTA)",
+   "sponsor": "Department of Transport",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Road Safety Authority",
+   "sponsor": "Department of Transport",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Transport Infrastructure Ireland",
+   "sponsor": "Department of Transport",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Circular Economy Fund",
+   "sponsor": "Department of Transport",
+   "status": "Extra-Budgetary Funds"
+  },
+  {
+   "name": "Aer Rianta International cpt",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "daa plc"
+  },
+  {
+   "name": "AirNav Ireland",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "ASC Airport Services Consolidated Ltd",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "daa plc"
+  },
+  {
+   "name": "Bantry Bay Port Company DAC",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Port of Cork Company"
+  },
+  {
+   "name": "Belvelly Marino Development Company DAC (BMDC)",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Port of Cork Company"
+  },
+  {
+   "name": "Bus Átha Cliath",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Córas Iompair Éireann"
+  },
+  {
+   "name": "Bus Éireann",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Córas Iompair Éireann"
+  },
+  {
+   "name": "Córas Iompair Éireann",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Cork Port Terminals Services DAC",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Port of Cork Company"
+  },
+  {
+   "name": "daa Airport Services Ltd",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "daa plc"
+  },
+  {
+   "name": "daa International Ltd",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "daa plc"
+  },
+  {
+   "name": "daa Operations Ltd",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "daa plc"
+  },
+  {
+   "name": "daa plc",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Dublin Port Company",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Gatland Property Ltd",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "daa plc"
+  },
+  {
+   "name": "Halamar Developments Ltd",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "daa plc"
+  },
+  {
+   "name": "Irish Aviation Authority",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Limerick Cargo Handling Ltd",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Shannon Foynes Port Company"
+  },
+  {
+   "name": "Port of Cork Company",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Port of Cork infrastructure Development Company DAC",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Port of Cork Company"
+  },
+  {
+   "name": "Port of Waterford Company",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Shannon Airport Authority DAC",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Shannon Group plc"
+  },
+  {
+   "name": "Shannon Commercial Enterprises DAC",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "Shannon Group plc"
+  },
+  {
+   "name": "Shannon Foynes Port Company",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Shannon Group PLC",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations"
+  },
+  {
+   "name": "Skyzone Ltd",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Non-Financial Corporations",
+   "parent": "daa plc"
+  },
+  {
+   "name": "daa Finance plc",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Financial Corporations",
+   "parent": "daa plc"
+  },
+  {
+   "name": "daa Pension Corporate Trustee DAC",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Financial Corporations",
+   "parent": "daa plc"
+  },
+  {
+   "name": "Shannon Airport Authority Financial Services DAC",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Financial Corporations",
+   "parent": "Shannon Group plc"
+  },
+  {
+   "name": "Shannon Airport Authority Pension Corporate Trustee DAC",
+   "sponsor": "Department of Transport",
+   "status": "Commercial Financial Corporations",
+   "parent": "Shannon Group plc"
+  },
+  {
+   "name": "Ability West",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Avista CLG (Daughters of Charity Disability Support Services CLG)",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Brothers of Charity Services Ireland",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Care Trust",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Carriglea Cairde Services",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Central Remedial Clinic",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Cheeverstown House CLG",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Cheshire Homes Ireland",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Cope Foundation",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Enable Ireland",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Gheel Autism Services",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Irish Wheelchair Association",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Kare, Promoting Inclusion for People with Intellectual Disability",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Kerry Parents and Friends Association",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Leopardstown Park Hospital",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Muiriosa Foundation",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Saint John of God Community Services CLG",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Saint Michael's House",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Saint Patrick's Centre (Kilkenny) T/A Aurora Enriching Lives Enriching Communities",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "SOS Kilkenny Housing Association CLG",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "St. Joseph's Foundation",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Stewarts Care Limited",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Sunbeam House Services CLG",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Children's Sunshine Home",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "The Polio Fellowship Of Ireland",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies",
+   "parent": "The Rehab Group"
+  },
+  {
+   "name": "The Rehab Group",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Western Care Association",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  },
+  {
+   "name": "Threshold",
+   "sponsor": "Organisations providing health and personal social services",
+   "status": "Non-Commercial Agencies"
+  }
+ ],
+ "localAuthorities": [
+  {
+   "name": "Carlow County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Cavan County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Clare County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Cork City Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Cork County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Donegal County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Dublin City Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Dun Laoghaire Rathdown County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Fingal County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Galway City Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Galway County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Kerry County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Kildare County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Kilkenny County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Laois County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Leitrim County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Limerick City & County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Longford County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Louth County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Mayo County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Meath County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Monaghan County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Offaly County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Roscommon County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Sligo County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "South Dublin County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Tipperary County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Waterford City and County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Westmeath County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Wexford County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  },
+  {
+   "name": "Wicklow County Council",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "status": "Local authority (S.1313)"
+  }
+ ]
+}

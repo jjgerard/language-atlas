@@ -1,0 +1,182 @@
+{
+ "batch": "E",
+ "checked": "2026-10-08",
+ "bodies": [
+  {
+   "id": "local-authorities",
+   "name": "Local authorities (31 city and county councils, treated as one class)",
+   "universeName": null,
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "currentSponsor": null,
+   "kind": "Local authority",
+   "verdict": "part",
+   "roles": [
+    "delivers",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "statutory power to take measures and incur expenditure for community amenity, recreation and related matters (general, not child-specific)",
+     "quote": "a local authority may take such measures, engage in such activities or do such things (including the incurring of expenditure)",
+     "url": "https://www.irishstatutebook.ie/2001/en/act/pub/0037/sec0067.html"
+    },
+    {
+     "what": "statute lists playgrounds and play equipment among provision a council may make (Schedule 13)",
+     "quote": "The provision of parks, gardens, open spaces, playgrounds, play equipment, animals, picnic sites,",
+     "url": "https://revisedacts.lawreform.ie/eli/2001/act/37/schedule/13/revised/en/html"
+    },
+    {
+     "what": "Dublin City Council: play provision and play events for children",
+     "quote": "We host play events year round, including National Play Day, Playful Streets, and Play in the Park.",
+     "url": "https://www.dublincity.ie/residential/parks/recreation-and-play/about-play"
+    },
+    {
+     "what": "Dublin City Council: public libraries run activities for children and families",
+     "quote": "From toddler groups to book clubs, there are always lots of activities for families and children to enjoy in Dublin City Libraries.",
+     "url": "https://www.dublincity.ie/leabharlanna/using-your-library/children"
+    },
+    {
+     "what": "Dublin City Council: hosts the city youth council (Comhairle na nÓg)",
+     "quote": "Dublin City Comhairle na nÓg is the official youth council for Dublin City.",
+     "url": "https://www.dublincity.ie/residential/improving-my-community/comhairle-na-nog"
+    },
+    {
+     "what": "Cork County Council: refurbished a playground, funded in part by the council",
+     "quote": "Refurbishment works at Leap Playground have now been completed, creating a modern and vibrant recreational space for children and families in the local community.",
+     "url": "https://www.corkcoco.ie/ga/node/10423"
+    },
+    {
+     "what": "Cork County Council: library service page lists children's book clubs (page heading only; no descriptive sentence found)",
+     "quote": "Children's Book Clubs",
+     "url": "https://www.corkcoco.ie/en/resident/libraries",
+     "headingOnly": true
+    },
+    {
+     "what": "Galway County Council: playgrounds, with inclusion upgrades supported by the children's department",
+     "quote": "Galway County Council is committed to making playgrounds more inclusive through ongoing upgrades and refurbishments.",
+     "url": "https://www.galway.ie/en/recreation-amenity/playgrounds"
+    },
+    {
+     "what": "Galway County Council: hosts a steering group monitoring the local Comhairle na nÓg",
+     "quote": "Galway County Council host a Steering Group to monitor the delivery of Comhairle na nÓg at a local level.",
+     "url": "https://www.galway.ie/en/community-tourism-arts/community-development/comhairle-na-nog"
+    },
+    {
+     "what": "Leitrim County Council (small rural): LCDC linked to Comhairle na nÓg on the council's Comhairle page",
+     "quote": "Leitrim LCDC (Local Community Development Committee) is mandated to actively involve and collaborate with Comhairle na nÓg.",
+     "url": "https://leitrim.ie/Live/Your-Community/Comhairle-na-nOg"
+    },
+    {
+     "what": "Leitrim County Council (small rural): council website carries a Children & Young People section that includes the Leitrim County Childcare Committee",
+     "quote": "Leitrim County Childcare Committee offers support and information to enable families to access childcare within the county and also support to childcare providers.",
+     "url": "https://www.leitrim.ie/Live/Children-Young-People/Leitrim-Childcare-Committee/"
+    }
+   ],
+   "statute": "Local Government Act 2001, s.67 (amenity, recreation and other functions) and Schedule 13, read at the urls given",
+   "accounts": null,
+   "money": [],
+   "notes": "Class entry for all 31 authorities in the universe localAuthorities list (Table 4.1); NOT one verdict per council. Verdict is part: children are never the council's whole remit, and the statutory text read (s.67, Sch.13) is general amenity/recreation, naming playgrounds and play equipment but no children's function as such. Children-specific work is evidenced only council by council. PER-COUNCIL EVIDENCE READ: Dublin City (play, libraries, Comhairle page, all own site); Cork County (Leap Playground news item, whose text also says \"Funding for the refurbishment works was secured through several programmes from Cork County Council, and the Department of Children, Disability and Equality\"; libraries page headings only); Galway County (playgrounds, Comhairle na nÓg); Leitrim (Comhairle page; Children & Young People section with Childcare Committee). PER-COUNCIL DIFFERENCES: (1) Comhairle na nÓg: Cork City's own page says the Comhairle \"is funded by the Department of Children, Disability and Equality and is supported by Cork City Council Community Team\" (https://www.corkcity.ie/en/council-services/services/community/get-involved-in-your-community/comhairle-na-nog/) and that YMCA Ireland is its home in 2026; Galway County's page says Youth Work Ireland works directly with the committee while the council hosts the steering group; Leitrim's council page ties the LCDC to it. So the council role ranges from steering-group host to support team, and the youth-work body that runs it differs by county. Cork County Council's own Comhairle page was not reached (the comhairlenanog.ie county page returned HTTP 429). (2) Dublin City holds the Dublin Region Homeless Executive: its homepage says it \"is provided by Dublin City Council as the lead statutory local authority in the response to homelessness in Dublin\" (https://www.homelessdublin.ie/) and shares the service with South Dublin, Fingal and Dun Laoghaire-Rathdown. That page does not mention families or children, so no family-homelessness function is recorded; family hubs and child homelessness remain NOT ESTABLISHED. (3) Libraries: the universe also lists 'Local Authority Library and Archive Service' as a separate body under Dept of Rural and Community Development; children's library activity is recorded here only as it appears on council pages. NOT ESTABLISHED / not read: housing duties to families with children (Housing Acts not read); Department of Housing, Local Government and Heritage pages (none found naming a children function; not exhaustively searched); every council other than the four above. Search snippets about Galway's library service, Cork County Comhairle and Galway LSP were not opened and are not recorded. Hosted structures are recorded as separate entries: city-county-childcare-committees, lcdc-lecp, local-sports-partnerships, public-participation-networks."
+  },
+  {
+   "id": "city-county-childcare-committees",
+   "name": "City and County Childcare Committees (30)",
+   "universeName": null,
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "Hosted structure",
+   "verdict": "core",
+   "roles": [
+    "coordinates",
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "support providers of early learning and care, school-age childcare and childminders",
+     "quote": "City/County Childcare Committees (CCCs) work collaboratively to provide support to early education and childcare service providers",
+     "url": "https://www.pobal.ie/programmes/county-city-childcare-committees-ccc/"
+    },
+    {
+     "what": "local agents implementing early education and childcare programmes",
+     "quote": "There are 30 City and County Childcare Committees who operate as local agents of the DCDE.",
+     "url": "https://www.pobal.ie/programmes/county-city-childcare-committees-ccc/"
+    },
+    {
+     "what": "first point of contact for providers and parents on national childcare funding programmes",
+     "quote": "CCCs are often the first point of contact for service providers and parents in relation to early childhood care and education initiatives",
+     "url": "https://www.pobal.ie/programmes/county-city-childcare-committees-ccc/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Funding and oversight: Pobal page says \"Pobal, on behalf of the Department of Children, Disability and Equality (DCDE), manages the funding of CCCs, oversees their work and provides development supports.\" (https://www.pobal.ie/programmes/county-city-childcare-committees-ccc/). Not hosted by councils in a legal sense: Leitrim's council site presents its committee under Children & Young People but the committee's own footer reads \"Leitrim County Childcare Committee CLG\" (https://www.leitrim.ie/Live/Children-Young-People/Leitrim-Childcare-Committee/), i.e. a separate company. Whether all 30 are independent companies was not read. The department's 2025 name (DCDE) is what the Pobal page uses; the universe uses the 2024 name. Verdict core is a judgement: remit is early learning and childcare programmes (children plus providers, parents and childminders); see openQuestions. No money figure read."
+  },
+  {
+   "id": "lcdc-lecp",
+   "name": "Local Community Development Committees and Local Economic and Community Plans",
+   "universeName": null,
+   "sponsor": "Department of Rural and Community Development",
+   "currentSponsor": "Department of Rural and Community Development and the Gaeltacht",
+   "kind": "Hosted structure",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Department's LCDC page (https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/policy-information/local-community-development-committees-lcdcs/). It says \"Local Community Development Committees (LCDCs) are groups established in each local authority area.\" and \"A key function of the LCDCs is to prepare the community elements of 6-year Local Economic and Community Plans (LECPs)\". The page names no child-specific function. Children-related items appear only as titles or passing mentions: a file titled \"Wicklow LCDC - Local Area Child Poverty Action Plan Pilot Scheme\", a conference presentation on \"one of the Local Area Child Poverty Action Plan Pilots\", and a file titled \"Children and Young People's Services Committees -Review\" (linked documents not opened). Leitrim's council page says its LCDC is \"mandated to actively involve and collaborate with Comhairle na nÓg\" (https://leitrim.ie/Live/Your-Community/Comhairle-na-nOg), a single-county statement. LECP contents for any county were not read, so whether plans carry children's actions is NOT ESTABLISHED. Section 49A of the Local Government Act 2001 appeared only in a search snippet, not recorded."
+  },
+  {
+   "id": "local-sports-partnerships",
+   "name": "Local Sports Partnerships (29)",
+   "universeName": null,
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "currentSponsor": null,
+   "kind": "Hosted structure",
+   "verdict": "part",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Carlow LSP runs youth sport initiatives",
+     "quote": "The goal of the Carlow Sports Partnership youth initiatives is to support the development of sport and physical activity programmes",
+     "url": "https://carlowsports.ie/children-young-people/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Sport Ireland (sponsor in universe: Dept of Tourism, Culture, Arts, Gaeltacht, Sport and Media) page says \"There is a network of 29 Local Sports Partnerships across Ireland.\" and \"Sport Ireland through its network of Local Sports Partnerships helps people to get active\" (https://www.sportireland.ie/participation/local-sports-partnerships). That page names no children focus and does not say who hosts or funds them. HOSTING, from LSPs' own pages: Carlow: \"The LSP is funded primarily through Sport Ireland and operates as a sub-committee of Carlow County Council.\" (https://carlowsports.ie/carlow-local-sports-partnership/); Offaly page labels it \"a multi-sectoral subcommittee of Offaly County Council\" and \"core funded by Sport Ireland\" (https://www.offaly.ie/offaly-sports-partnership/). Not uniform: CSO Table 4.2 lists \"Limerick Local Sports Partnership Ltd\" and \"Meath Local Sports Partnership CLG\" as separate companies under those councils, so some LSPs are companies and others council sub-committees. The part verdict rests on one county (Carlow); the Offaly page shows safeguarding-children headings only. Nationally children are one possible audience, not the remit. No money read."
+  },
+  {
+   "id": "public-participation-networks",
+   "name": "Public Participation Networks (31)",
+   "universeName": null,
+   "sponsor": "Department of Rural and Community Development",
+   "currentSponsor": "Department of Rural and Community Development and the Gaeltacht",
+   "kind": "Hosted structure",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Department's PPN page (https://www.gov.ie/ppn): \"A Public Participation Network (PPN) is a network that allows local authorities to connect with community groups around the country.\" and \"Each of Ireland’s 31 local authority areas has a PPN\". It names community, environmental and socially excluded groups (disability, migrants, Travellers); no child or young-person function. Who funds PPNs, and the Act, appeared only in search snippets, not recorded. Handbook and structural review not opened."
+  }
+ ],
+ "openQuestions": [
+  "CSO Table 4.2 (Local Authorities Non-Commercial Agencies, https://www.cso.ie/en/releasesandpublications/ep/p-rpbi/registerofpublicsectorbodies2024-final/localgovernment/) read in full: no entry has a children's body in its name. Name-only observations, not researched: 'Limerick Local Sports Partnership Ltd', 'Meath Local Sports Partnership CLG' and probably 'Sligo Sports and Recreation Partnership CLG' look like Local Sports Partnerships (covered by local-sports-partnerships); 'Fingal Community and Recreation Services CLG', 'Mulhuddart Community Centre CLG', 'Tyrrelstown Community Centre CLG', 'Athboy Social Needs and Recreational Company CLG', 'Sligo Volunteer Bureau CLG' and 'Clonmel Resource Centre CLG' are community bodies whose children role cannot be judged from the name. Childcare committees and Comhairle na nÓg are NOT rows in Table 4.2, consistent with the universe note.",
+  "Should City and County Childcare Committees be coded core? Remit is early learning/childcare programmes (children, parents, providers, childminders). I coded core because the programmes concern children; a stricter reading would be part.",
+  "Local authorities are one class entry with verdict part; per-council evidence read for only Dublin City, Cork County, Galway County and Leitrim (plus Cork City for one Comhairle sentence). Should the other councils be checked, or is class-level evidence enough?",
+  "Family homelessness (Dublin Region Homeless Executive, family hubs) is NOT established: the DRHE page read says nothing about families. It needs a page that does before any children function is recorded. Housing duties to children are also unread.",
+  "Children's library services: only Dublin City has a descriptive sentence; Cork County gave headings only and Leitrim's library page was not usable. Libraries are also a separate universe body (Local Authority Library and Archive Service, Dept of Rural and Community Development).",
+  "Cork County Council's own Comhairle na nÓg page was not reached; the Comhairle role differs by county (see local-authorities notes).",
+  "LCDC verdict none rests on the national Department page; Leitrim's council says its LCDC is mandated to collaborate with Comhairle na nÓg, arguably part for that county. The Wicklow Child Poverty Action Plan pilot (file title only) deserves a look if LCDCs are in scope."
+ ]
+}

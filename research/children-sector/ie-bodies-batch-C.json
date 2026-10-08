@@ -1,0 +1,474 @@
+{
+ "batch": "C",
+ "checked": "2026-10-08",
+ "bodies": [
+  {
+   "id": "doe",
+   "name": "Department of Education and Youth (Department of Education until the May 2025 reorganisation)",
+   "universeName": "Department of Education",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "Department",
+   "verdict": "part",
+   "roles": [
+    "funds",
+    "inspects"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "youth work: this Department now holds the UBU youth-services capital funding stream (announced 2 October 2026)",
+     "quote": "The funding will support minor works, equipment purchases and facility upgrades in youth services nationwide",
+     "url": "https://web.archive.org/web/20261002165034/https://www.gov.ie/en/department-of-education/press-releases/minister-naughton-announces-over-16-million-in-capital-funding-for-upgrades-to-ubu-youth-services-nationwide/"
+    },
+    {
+     "what": "youth: a senior-management post sits in this Department",
+     "quote": "Assistant Secretary for Schools, Social Inclusion and Youth",
+     "url": "https://web.archive.org/web/20261005210855/https://www.gov.ie/en/department-of-education/"
+    },
+    {
+     "what": "2025 reorganisation: Youth transferred into this Department (Education Plan 2025, hosted copy)",
+     "quote": "With Youth now transferred into the Department of Education, there is also a significant opportunity to better align the formal education system with youth services.",
+     "url": "https://www.drugsandalcohol.ie/43490/1/Education_Plan_2025.pdf"
+    },
+    {
+     "what": "early-years education inspections (ECCE Programme services), as described on this Department's policy page",
+     "quote": "Early-years education inspections are carried out in early-years services participating in the Early Childhood Care and Education (ECCE) Programme",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "early childhood care and education is delivered outside the formal education system, per this Department",
+     "quote": "early childhood care and education (ECCE) is delivered outside the formal education system",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "child protection procedures for schools",
+     "quote": "The Department of Education and Youth is responsible for developing and implementing child protection procedures for schools",
+     "url": "https://web.archive.org/web/20260316180424/https://www.gov.ie/en/department-of-education/policy-information/child-protection-procedures-in-schools/"
+    },
+    {
+     "what": "inspectors check school compliance with child protection procedures",
+     "quote": "department inspectors check that a school is complying with the requirements of the Child Protection Procedures",
+     "url": "https://web.archive.org/web/20260316180424/https://www.gov.ie/en/department-of-education/policy-information/child-protection-procedures-in-schools/"
+    },
+    {
+     "what": "mission",
+     "quote": "The Department of Education and Youth's mission is to facilitate children and young people, through learning, to achieve their full potential",
+     "url": "https://web.archive.org/web/20261005210855/https://www.gov.ie/en/department-of-education/"
+    },
+    {
+     "what": "where early learning and childcare and school-age childcare sit: a division of the Department of Children, Disability and Equality (the former DCEDIY), not this Department",
+     "quote": "Early Learning and Care and School-Age Childcare Division",
+     "url": "https://web.archive.org/web/20260416082233/https://www.gov.ie/en/department-of-children-disability-and-equality/organisation-information/about-the-department-of-children-equality-disability-integration-and-youth/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [
+    {
+     "what": "allocation: capital funding for UBU Your Place Your Space youth services (minor works and equipment), as announced; 'over' as printed",
+     "value": "over €1.6 million",
+     "year": "2026 (announced 2 October 2026)",
+     "url": "https://web.archive.org/web/20261002165034/https://www.gov.ie/en/department-of-education/press-releases/minister-naughton-announces-over-16-million-in-capital-funding-for-upgrades-to-ubu-youth-services-nationwide/"
+    }
+   ],
+   "notes": "gov.ie returns a bot-verification wall (HTTP 403/405) to WebFetch and curl, so every Department page was read from its Internet Archive copy (URLs are the archive copies actually fetched; each is a copy of the Department's own gov.ie page). WHICH DEPARTMENT HOLDS WHAT AFTER 2025: (1) Youth work / UBU funding / youth services: this Department (press release by the 'Minister for Education and Youth'; Education Plan 2025 says 'Youth now transferred into the Department of Education'). (2) Early learning and childcare and school-age childcare: the Department of Children, Disability and Equality (its own about page, last updated 3 December 2025, lists an 'Early Learning and Care and School-Age Childcare Division'; its homepage lists 'Early Learning and Care (ELC) and School-Age Childcare (SAC) Supports'). (3) Not moved with Youth: children and young people's participation in decision-making (Comhairle na nOg, Dail na nOg, National Participation Office) stays with the Department of Children, Disability and Equality ('The Department of Children, Disability and Equality (DCDE) ensures that children and young people have a voice in the design, delivery and monitoring of Government policies', https://web.archive.org/web/20260419153039/https://www.gov.ie/en/department-of-children-disability-and-equality/policy-information/youth-participation/ , last updated 10 March 2026). This Department's own policy page describes ECCE as outside the formal education system but names early-years education inspections (who carries them out is not stated in the sentence quoted). The 2025 transfer orders (statutory instruments) were not read; transfer dates seen only in a search summary of Wikipedia are NOT recorded as fact here. The youth/ELC split above rests on the two departments' own current pages. The Education Plan 2025 url is a hosted copy (drugsandalcohol.ie) of the Department's PDF, not the gov.ie original."
+  },
+  {
+   "id": "ncse",
+   "name": "National Council for Special Education",
+   "universeName": "National Council for Special Education (NCSE)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers",
+    "advises"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "remit: education services for persons with special educational needs, emphasis on children",
+     "quote": "set up to improve the delivery of education services to persons with special educational needs arising from disabilities, with particular emphasis on children",
+     "url": "https://www.ncse.ie/ncse/about-us/"
+    },
+    {
+     "what": "mission statement",
+     "quote": "we support children and young people with special educational needs by working with families, schools, and professionals to promote inclusive education across Ireland",
+     "url": "https://www.ncse.ie/ncse/about-us/"
+    },
+    {
+     "what": "local delivery through SENOs who work with parents as well as schools",
+     "quote": "SENOs interact with parents and schools and work with other agencies and departments in providing resources to support children with special educational needs",
+     "url": "https://www.ncse.ie/ncse/about-us/"
+    }
+   ],
+   "statute": "Education of Persons with Special Educational Needs Act 2004 (the page names it for the Consultative Forum, 'section 22'; it does not itself say this Act established the Council)",
+   "accounts": null,
+   "money": [],
+   "notes": "Read the NCSE's own About us page (curl, full text). Page refers to 'the Minster for Education and Youth' (spelling as printed; 2025 department rename). Parents are served directly by SENOs, so via is null. Annual reports are listed on the site under Publications but that page was not opened, so accounts is null."
+  },
+  {
+   "id": "ncca",
+   "name": "National Council for Curriculum and Assessment",
+   "universeName": "National Council for Curriculum and Assessment (NCCA)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "advises"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "advises the Minister on curriculum and assessment for early childhood education, primary and post-primary schools",
+     "quote": "The role of the NCCA is to advise the Minister for Education on: 1. curriculum and assessment for early childhood education, primary and post-primary schools.",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    },
+    {
+     "what": "statutory basis",
+     "quote": "statutory body of the Department of Education established under Section 39 of the Education Act 1998",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    }
+   ],
+   "statute": "Education Act 1998, section 39 (as stated on the Department's page)",
+   "accounts": null,
+   "money": [],
+   "notes": "FALLBACK SOURCE: ncca.ie (and ncca.ie/en/about-us/) sits behind a Cloudflare bot-verification wall (HTTP 403 for WebFetch and curl; the in-app browser showed the verification page; not bypassed). Remit taken from the Department's own 'Bodies under the aegis' page (Internet Archive copy of 2026-01-05; the page states 'Last updated on 1 September 2022'), as the brief allows when the body's own documents cannot be reached. Verdict part: a curriculum/assessment advisory body whose remit extends to early childhood education as well as schools, so via is null; arguable (see openQuestions)."
+  },
+  {
+   "id": "sec",
+   "name": "State Examinations Commission",
+   "universeName": "State Examinations Commission (SEC)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "delivers"
+   ],
+   "via": "schools",
+   "functions": [
+    {
+     "what": "develops, assesses, accredits and certifies the Junior Cycle and Leaving Certificate examinations",
+     "quote": "The SEC is responsible for the development, assessment, accreditation and certification of the second-level examinations of the Irish state",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "FALLBACK SOURCE: examinations.ie sits behind a bot-verification wall (HTTP 403 to WebFetch and curl); not bypassed. Remit from the Department's 'Bodies under the aegis' page (Internet Archive copy 2026-01-05; page 'Last updated on 1 September 2022'). The same page says SEC was 'established in 2003, is a non-departmental public body'; no statute named. Reaches students only through second-level school examinations."
+  },
+  {
+   "id": "teaching-council",
+   "name": "The Teaching Council",
+   "universeName": "The Teaching Council",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "regulates"
+   ],
+   "via": "schools",
+   "functions": [
+    {
+     "what": "role framed as protecting the public by regulating professional standards in teaching",
+     "quote": "Our role is to protect the public by promoting and regulating professional standards in teaching.",
+     "url": "https://www.teachingcouncil.ie/"
+    },
+    {
+     "what": "fitness to teach, stated to be for the benefit of pupils and students",
+     "quote": "The Teaching Council is responsible for promoting high professional standards in teaching, for the benefit of pupils and students, and the profession.",
+     "url": "https://www.teachingcouncil.ie/"
+    },
+    {
+     "what": "administers vetting of teachers",
+     "quote": "It is the role of the Teaching Council to administer vetting for teachers in Ireland.",
+     "url": "https://www.teachingcouncil.ie/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Council's own home page (curl, full text); /about-us/ returned 404 so the homepage navigation text was used. The page names no establishing Act. Children are reached only via teachers in schools. Verdict part rests on the stated 'benefit of pupils and students' and the child-related vetting role; the NI equivalent (GTCNI) was coded none, so this is a consistency decision for the user (see openQuestions)."
+  },
+  {
+   "id": "cogg",
+   "name": "An Chomhairle um Oideachas Gaeltachta agus Gaelscolaíochta (COGG)",
+   "universeName": "An Chomhairle um Oideachas Gaeltachta agus Gaelscolaíochta (COGG)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "advises",
+    "commissions"
+   ],
+   "via": "schools",
+   "functions": [
+    {
+     "what": "established to meet the needs of Gaeltacht schools and Irish-medium schools",
+     "quote": "established under the provisions of Section 31 of the Education Act 1998",
+     "url": "https://cogg.ie/about-us/background/?lang=en"
+    },
+    {
+     "what": "covers primary and post-primary; three areas of work",
+     "quote": "The Council's role covers both primary and post-primary education and the three main areas of work are as follows:",
+     "url": "https://cogg.ie/about-us/background/?lang=en"
+    },
+    {
+     "what": "mission statement",
+     "quote": "the development of the Gaeltacht and Irish-medium education sector and the teaching of Irish in every school effectively, professionally and to a high standard",
+     "url": "https://cogg.ie/about-us/mission-statement/?lang=en"
+    },
+    {
+     "what": "advises the Minister on Irish-medium education in schools (Department's description)",
+     "quote": "to advise the Minister on policies relating to the provision and promotion of education through the medium of Irish in recognised schools",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    }
+   ],
+   "statute": "Education Act 1998, section 31 (named on COGG's own page)",
+   "accounts": null,
+   "money": [],
+   "notes": "Read COGG's own Background and Mission Statement pages (curl). The three areas of work listed are 'The provision of teaching resources / The provision of support services / Research'. Reaches children only through schools. The 'advises' quote is from the Department's aegis page (Internet Archive copy), not COGG's own site. Role 'commissions' is inferred from 'provision of teaching resources' and is weak; drop it if you want roles strictly quote-backed."
+  },
+  {
+   "id": "erc",
+   "name": "Educational Research Centre",
+   "universeName": "Educational Research Centre (ERC)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "delivers"
+   ],
+   "via": "schools",
+   "functions": [
+    {
+     "what": "supplies standardised tests to primary and post-primary schools",
+     "quote": "The ERC provides an assessment support service to schools, supplying a range of standardised tests to primary and post-primary schools.",
+     "url": "https://www.erc.ie/about-us/"
+    },
+    {
+     "what": "national surveys of pupil achievement at primary level",
+     "quote": "national surveys of achievement at primary level have been carried out in association with the DES since 1972",
+     "url": "https://www.erc.ie/about-us/"
+    },
+    {
+     "what": "PISA (15- and 16-year-olds)",
+     "quote": "The Programme for International Student Assessment (PISA, every 3 years; 15- and 16-year-olds)",
+     "url": "https://www.erc.ie/about-us/"
+    },
+    {
+     "what": "research at all levels of the education system",
+     "quote": "The Centre carries out research at all levels of the education system.",
+     "url": "https://www.erc.ie/about-us/"
+    }
+   ],
+   "statute": "Education Act 1998, section 54 (Establishment Order S.I. no. 392 of 2015, named on ERC's own page)",
+   "accounts": null,
+   "money": [],
+   "notes": "Read the ERC's own About us page (curl, full text). Page writes 'Education Act (1998)' for the establishing section and 'Section 9 of the Education Act 1988' in the objectives list, both as printed. Pupils reached through schools only."
+  },
+  {
+   "id": "leargas",
+   "name": "Léargas",
+   "universeName": null,
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "currentSponsor": null,
+   "kind": "Other",
+   "verdict": "part",
+   "roles": [
+    "delivers",
+    "funds"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "runs international and national exchange programmes in education, youth and community work",
+     "quote": "Léargas manage international and national exchange programmes in education, youth and community work, and vocational education and training.",
+     "url": "https://www.leargas.ie/about-us/"
+    },
+    {
+     "what": "National Agency for Erasmus+ including Youth and School Education",
+     "quote": "We are the National Agency for Erasmus+ in Adult Education, School Education, Vocational Education and Training, Youth and Sport.",
+     "url": "https://www.leargas.ie/about-us/"
+    },
+    {
+     "what": "managing funding for international collaboration and exchange (amount not stated on this page)",
+     "quote": "effectively managing significant levels of funding to support international collaboration and exchange",
+     "url": "https://www.leargas.ie/about-us/"
+    },
+    {
+     "what": "legal form",
+     "quote": "Léargas is a company limited by guarantee and a registered charity.",
+     "url": "https://www.leargas.ie/about-us/"
+    }
+   ],
+   "statute": null,
+   "accounts": "https://www.leargas.ie/about-us/annual-reports/",
+   "money": [],
+   "notes": "Not in the CSO universe file (company limited by guarantee / charity, so outside the Register). Read Léargas's own About page (curl). The page says it works 'under the aegis of' the Department of Further and Higher Education, Research, Innovation and Science and in partnership with the Department of Education, the Department of Children, Equality, Disability, Integration and Youth and the Department for Arts, Tourism Sports (names as printed; they do not reflect the 2025 renames). Not specific to children: adult education, VET and volunteering are also covered; youth and school education are two of its strands. Annual reports link taken from the site's own navigation, not opened. Sponsor is as the body names it."
+  },
+  {
+   "id": "cica",
+   "name": "Commission to Inquire into Child Abuse (CICA)",
+   "universeName": "Commission to Inquire into Child Abuse (CICA)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [],
+   "via": null,
+   "functions": [
+    {
+     "what": "statutory basis and date established",
+     "quote": "was established on 23 May, 2000, pursuant to the \"Commission to Inquire into Child Abuse Act 2000\"",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    },
+    {
+     "what": "function: inquiry into abuse of children in institutions (historical)",
+     "quote": "to conduct an inquiry into abuse of children in institutions during that period",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    }
+   ],
+   "statute": "Commission to Inquire into Child Abuse Act 2000 (named on the Department's page)",
+   "accounts": null,
+   "money": [],
+   "notes": "HISTORICAL scope: the inquiry concerns abuse in childhood in institutions 'from 1940 or earlier, to the present day' as the Department's page puts the period; no remit for current children. The body's own site childabusecommission.ie returned HTTP 500 (PHP error), so the Department's 'Bodies under the aegis' page (Internet Archive copy 2026-01-05, 'Last updated on 1 September 2022') is the fallback source. Whether the Commission still exists as a live body was not established. roles left empty: none of the nine role words fits an inquiry (see openQuestions). Verdict part follows the NI precedent for historical-abuse bodies (COSICA, HIA Redress Board)."
+  },
+  {
+   "id": "rirb",
+   "name": "Residential Institutions Redress Board (RIRB)",
+   "universeName": "Residential Institutions Redress Board (RIRB)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "pays"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "makes awards to people abused as children in institutions (historical)",
+     "quote": "awards to persons who, as children, were abused while resident in industrial schools, reformatories and other institutions subject to state regulation or inspection",
+     "url": "https://www.rirb.ie/about-us/"
+    },
+    {
+     "what": "no longer accepting new applications",
+     "quote": "no longer has the power to accept new applications",
+     "url": "https://www.rirb.ie/about-us/"
+    }
+   ],
+   "statute": "Residential Institutions Redress Act, 2002 (named on RIRB's own page)",
+   "accounts": "https://www.rirb.ie/annual-report/",
+   "money": [],
+   "notes": "HISTORICAL scope; no remit for current children; no new applications. Read RIRB's own About us page (curl). The home page says 'While the Redress Board remains open' while the About page says it can no longer accept new applications: both as printed. Annual report link taken from the site's navigation, not opened."
+  },
+  {
+   "id": "etbs",
+   "name": "Education and Training Boards (16, treated as one class)",
+   "universeName": "Educational Training Boards",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "delivers",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "statutory function: establish and maintain recognised schools",
+     "quote": "establish and maintain recognised schools, centres for education and education or training facilities in its functional area",
+     "url": "https://www.irishstatutebook.ie/eli/2013/act/11/section/10/enacted/en/html"
+    },
+    {
+     "what": "statutory function: youth work services in the ETB's area",
+     "quote": "support the provision, coordination, administration and assessment of youth work services in its functional area",
+     "url": "https://www.irishstatutebook.ie/eli/2013/act/11/section/10/enacted/en/html"
+    },
+    {
+     "what": "ETBI (the ETBs' association) restates that youth work is an ETB responsibility under the 2013 Act",
+     "quote": "Education and Training Boards are charged with responsibility for Youth Work in the ETB 2013 Act",
+     "url": "https://www.etbi.ie/about-etbi/youth-work/"
+    },
+    {
+     "what": "ETBs are a delivery partner for the UBU youth funding scheme",
+     "quote": "The Education and Training Boards (ETB) works with the DCYA, as a strategic partner, to deliver UBU Your Place Your Space across the country.",
+     "url": "https://ubu.gov.ie/etb-information"
+    },
+    {
+     "what": "ETB Youth Officers support, develop and monitor local youth services",
+     "quote": "The ETB Youth Officers play a crucial role supporting, developing and monitoring their local youth services.",
+     "url": "https://ubu.gov.ie/etb-information"
+    }
+   ],
+   "statute": "Education and Training Boards Act 2013, section 10 (functions); youth work as defined in the Youth Work Act 2001 (section 10(6), as printed)",
+   "accounts": null,
+   "money": [],
+   "notes": "Class entry for the 16 ETBs (universe lists 'Educational Training Boards' plus 16 named boards: Cavan and Monaghan; City of Dublin; Cork; Donegal; Dublin and Dun Laoghaire; Galway and Roscommon; Kerry; Kildare and Wicklow; Kilkenny and Carlow; Laois and Offaly; Limerick and Clare; Longford and Westmeath; Louth and Meath; Mayo, Sligo and Leitrim; Tipperary; Waterford and Wexford). Primary evidence is the Act (Irish Statute Book, section 10 as enacted; 'Minister for Children and Youth Affairs' and 'DCYA' are the 2013-era and UBU-page names, superseded by the 2025 reorganisation under which the Department of Education and Youth holds youth work). ETBI pages and the ubu.gov.ie ETB page confirm the youth role in current practice. The ubu.gov.ie page says ETBs work with the department to 'deliver' the scheme; it does NOT say that ETBs hold or distribute the funding, so 'funds' is NOT recorded as a role. ETBs also run schools (Community Colleges are ETB-established per the Department's policy page) and, per the Act, provide education in children detention schools. SOLAS (further education and training) was not read: it is adult-oriented and not needed for the youth question. One ETB's own site (Kerry ETB, kerryetb.ie/schools-youth-music/youth-services/) was opened and lists a 'Youth Clubs Grants Scheme' registration page, but the text read did not say who funds it, so it is not recorded. via is null because the youth-work function does not run through schools."
+  },
+  {
+   "id": "state-schools",
+   "name": "State-funded primary and post-primary schools (class entry)",
+   "universeName": "Schools: State funded primary",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "Other",
+   "verdict": "core",
+   "roles": [
+    "delivers"
+   ],
+   "via": "schools",
+   "functions": [
+    {
+     "what": "free primary education",
+     "quote": "In Ireland all children are entitled to free primary education.",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "compulsory age band",
+     "quote": "Education is compulsory for children in Ireland from the ages of 6 to 16 or until students have completed three years of post-primary education",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "post-primary schools funded by the Department",
+     "quote": "are funded by the Department of Education and Youth and deliver the post-primary curriculum determined by the Minister for Education",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "school patrons",
+     "quote": "All primary schools in Ireland have a patron, which sets the ethos for the school.",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "child protection procedures apply to primary and post-primary schools",
+     "quote": "The Department of Education and Youth is responsible for developing and implementing child protection procedures for schools",
+     "url": "https://web.archive.org/web/20260316180424/https://www.gov.ie/en/department-of-education/policy-information/child-protection-procedures-in-schools/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "One class entry for the two universe rows 'Schools: State funded primary' and 'Schools: State funded post primary' (both sponsor Department of Education). Read the Department's Education policy page and child-protection page (Internet Archive copies of gov.ie, dates in the URLs); individual schools not researched. The Department page also says 'Most children attend state-funded schools'. Children are reached through schools by definition, hence via 'schools'; verdict core because the whole remit is the education of children and young people."
+  }
+ ],
+ "openQuestions": [
+  "Teaching Council: coded part/via schools on the strength of 'for the benefit of pupils and students' and its vetting role. The NI equivalent (GTCNI) was coded none. Same treatment for both, or keep Ireland as part?",
+  "NCCA and SEC: coded part (NCCA via null because its remit includes early childhood education; SEC via schools). NI's CCEA was part/schools. Is NCCA's early-childhood reach enough to leave via null?",
+  "CICA and RIRB (historical abuse): per your NI ruling I was to include them only if there are corresponding voluntary-sector organisations. I cannot assess that from this batch (no voluntary-sector universe was in the brief), so both are recorded normally as part with HISTORICAL scope; decide whether to keep them in the Ireland children's-sector list. CICA's roles are empty because none of the nine role words fits an inquiry: add 'investigates', or leave blank?",
+  "CICA: the Department page describing it is 'Last updated on 1 September 2022' and CICA's own site is down (HTTP 500). Is it still a live body? Not established.",
+  "Department of Education and Youth: youth work/UBU sits there; early learning and childcare and school-age childcare sit with the Department of Children, Disability and Equality, which will need its own entry (it is not in my batch). The exact 2025 transfer order was not read; the split rests on the two departments' own current pages.",
+  "ETBs as a class: the youth-work function is statutory (Act s.10) and they deliver UBU with the Department, but I could not confirm from a source that ETBs hold or distribute the youth funding streams, so no 'funds' role was recorded. Worth a targeted check of an ETB youth-services page or the UBU funding guidelines in the money stage.",
+  "Leargas is not in the CSO universe (charity / company limited by guarantee) and its sponsor is the Department of Further and Higher Education, not Education. Keep it in this children's-sector list as part, or move/drop it?",
+  "gov.ie (AWS WAF), ncca.ie and examinations.ie (Cloudflare) refuse automated access, so Department pages were read through Internet Archive copies. If you want live-URL citations for those, a manual fetch in a normal browser would be needed."
+ ]
+}

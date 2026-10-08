@@ -1,0 +1,447 @@
+{
+ "batch": "A",
+ "checked": "2026-10-08",
+ "bodies": [
+  {
+   "id": "dcde",
+   "name": "Department of Children, Disability and Equality",
+   "universeName": "Department of Children, Equality, Disability, Integration and Youth",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "Department",
+   "verdict": "part",
+   "roles": [
+    "funds",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "renamed 2 May 2025 by S.I. 180/2025; the English name is now the Department of Children, Disability and Equality (previously Department of Children, Equality, Disability, Integration and Youth)",
+     "quote": "in the English language, to that of the Department of Children, Disability and Equality",
+     "url": "https://www.irishstatutebook.ie/pdf/2025/en.si.2025.0180.pdf"
+    },
+    {
+     "what": "stated mission, covering children and young people among other groups",
+     "quote": "mission is to enhance the lives of children, young people, adults, families and communities, recognising diversity and promoting equality of opportunity",
+     "url": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/organisation-information/about-the-department-of-children-equality-disability-integration-and-youth/"
+    },
+    {
+     "what": "Statement of Strategy 2025-2028 goal: funding and providing services for children among other groups",
+     "quote": "Key goals include providing and funding accessible and quality services to support children, disabled people and those experiencing inequalities",
+     "url": "https://web.archive.org/web/2026/https://www.gov.ie/en/department-of-children-disability-and-equality/publications/department-of-children-disability-and-equality-statement-of-strategy-2025-2028"
+    },
+    {
+     "what": "runs children and young people's participation structures through the National Participation Office, which manages Comhairle na nÓg",
+     "quote": "The National Participation Office (NPO) was established in 2021 within DCDE to manage and coordinate the activities of Comhairle na nÓg",
+     "url": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/policy-information/youth-participation/"
+    },
+    {
+     "what": "funds and is Accounting Officer for the bodies on its Vote (Tusla, AAI, OCO, Oberstown, NDA)",
+     "quote": "The public bodies funded through the department’s Vote and for which the Secretary General is the Accounting Officer, are as follows",
+     "url": "https://web.archive.org/web/20260416082233/https://www.gov.ie/en/department-of-children-disability-and-equality/organisation-information/bodies-under-the-aegis-of-the-department-of-children-equality-disability-integration-and-youth/"
+    }
+   ],
+   "statute": null,
+   "accounts": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/organisation-information/financial-information/",
+   "money": [],
+   "notes": "RENAME AND REORGANISATION (all effective 1-2 May 2025). Name: S.I. 180/2025 (in operation 2 May 2025) alters the name from Department of Children, Equality, Disability, Integration and Youth to Department of Children, Disability and Equality, and the Minister's title likewise: https://www.irishstatutebook.ie/pdf/2025/en.si.2025.0180.pdf . Functions OUT to Department of Justice: S.I. 159/2025, Integration and Reception (Transfer of Departmental Administration and Ministerial Functions) Order 2025, in operation 1 May 2025: international protection accommodation (IPAS) and procurement, State-owned centres for international protection, anti-racism policy and migrant integration and its funds, resettlement/temporary protection permissions, plus s.10(2)(l) of the IHREC Act 2014 insofar as it relates to promotion of integration of migrants, and Part 2 of the Civil Law (Miscellaneous Provisions) Act 2022: https://www.irishstatutebook.ie/pdf/2025/en.si.2025.0159.pdf . Functions OUT to Department of Education: S.I. 181/2025, Youth (Transfer of Departmental Administration and Ministerial Functions) Order 2025, in operation 1 May 2025: functions under the Youth Work Act 2001; s.2(1)(d) and (2) of the Community, Rural and Gaeltacht Affairs (Miscellaneous Provisions) Act 2007 in so far as they relate to the Young People's Facilities and Services Fund; s.10(1)(j) of the Education and Training Boards Act 2013; and funding, oversight and support of youth work organisations, youth organisations and ETB youth work functions, and youth policy: https://www.irishstatutebook.ie/pdf/2025/en.si.2025.0181.pdf . One small function back IN from Education: S.I. 185/2025 (1 May 2025) transfers the functions under s.18(4)(d) of the Youth Work Act 2001 to the children's department: https://www.irishstatutebook.ie/pdf/2025/en.si.2025.0185.pdf . Earlier (2020, not 2025): youth justice in the community went to the Department of Justice and Oberstown stayed (see iyjs). The three 2025 transfer orders themselves still use the old department name. Education side: Gaisce's 2025 annual report and Tusla's 2025 financial statements both name a 'Department of Education and Youth'; I did not read the order that renamed it. The Youth Participation page (last updated 10 March 2026) still shows the children's department running Comhairle na nÓg after the youth transfer. WHAT WAS READ: gov.ie blocks automated fetching (HTTP 403/405 and a bot-verification page, which I did not attempt to pass), so the department's own pages were read through Internet Archive snapshots of gov.ie (snapshot 5 Oct 2026; aegis page snapshot 16 Apr 2026); the three S.I.s from irishstatutebook.ie directly. The department's 'Functions and Services Provided to the Public' page is dated 2019 and still speaks of the Department of Children and Youth Affairs, so it was not used. Its 'Who Does What' page returned 403 even via the archive. Verdict part, not core: the stated mission sets children alongside disabled people and equality (see openQuestions)."
+  },
+  {
+   "id": "tusla",
+   "name": "Tusla - Child and Family Agency",
+   "universeName": "Child and Family Agency (Tusla)",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers",
+    "funds",
+    "commissions",
+    "regulates",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "statutory remit: development, welfare and protection of children",
+     "quote": "Supporting and promoting the development, welfare and protection of children, and the effective functioning of families;",
+     "url": "https://www.tusla.ie/about/"
+    },
+    {
+     "what": "educational welfare: ensuring school attendance",
+     "quote": "Responsibility for ensuring that every child in the State attends school or otherwise receives an education",
+     "url": "https://www.tusla.ie/about/"
+    },
+    {
+     "what": "commissions services",
+     "quote": "Commissioning services relating to the provision of child and family services",
+     "url": "https://www.tusla.ie/about/"
+    },
+    {
+     "what": "funds organisations under Section 56 of the Child and Family Agency Act 2013 (the page says \"organisations funded under Section 56\"; it does not itself call them community or voluntary organisations)",
+     "quote": "requires assurance from organisations funded under Section 56 of The Child and Family Agency Act 2013 that sufficient controls are in place",
+     "url": "https://www.tusla.ie/about/commissioning/"
+    },
+    {
+     "what": "funds service providers under Section 56 (financial statements accounting-policy note)",
+     "quote": "The Child and Family Agency funds a number of service providers and bodies for the provision of health and personal social services on its behalf",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    },
+    {
+     "what": "2025 annual report: number of organisations commissioned through Section 56",
+     "quote": "During 2025, the Agency commissioned 473 organisations operating through Section 56 funding",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    },
+    {
+     "what": "funds CYPSCs (Vote 40 other subhead income description)",
+     "quote": "CYPSCs are a key structure identified by the government to plan and coordinate services for children and young people in every county in Ireland.",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    },
+    {
+     "what": "inspection and regulation listed under 'Children's Services Regulation' (service-menu label only)",
+     "quote": "Early Years (Pre School) Inspectorate",
+     "url": "https://www.tusla.ie/about/"
+    }
+   ],
+   "statute": "Child and Family Agency Act 2013",
+   "accounts": "https://www.tusla.ie/publications/annual-reports/",
+   "money": [
+    {
+     "what": "2025 annual report summary panel: 473 organisations funded in 2025, Section 56 Arrangements, funding provided (printed as \"193m\"; estimate/outturn not stated on the panel)",
+     "value": "193m",
+     "year": "2025",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    },
+    {
+     "what": "2025 annual report summary panel: 124 School Completion Programme (SCP) organisations funded (printed as \"38m for the SCP\"; estimate/outturn not stated)",
+     "value": "38m",
+     "year": "2025",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    }
+   ],
+   "notes": "READ: tusla.ie About Us (remit), Commissioning page, Annual Report and Financial Statements 2025 PDF (searched for Section 56 text and appendices; not read in full). SECTION 56: the commissioning page and the 2025 financial statements both state that Tusla funds organisations under s.56 of the 2013 Act; the financial statements (note headed 'Community, Voluntary and Charitable Organisations') and the appendix titles call the funded organisations community, voluntary and charitable; the About and Commissioning pages do not use that wording. RECIPIENT LIST: YES, the 2025 Annual Report and Financial Statements publish a named recipient list - Appendix 3 (summary by grant type, with lines for ABC, CCA, CYPSC, Adoption, Disability, National Early Years, SCP, FRC, FSS Counselling), Appendix 4 (summary by grant type, service and region) and Appendix 5 'Community, Voluntary and Charitable Organisations by Providers', a numbered list of organisations with columns Section 56 All Other / SCP / FRC / Counselling / Total 2025 / Total 2024, in EUR '000. It is near the end of the PDF (printed pages c.205-208 onward): https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf. Not extracted. Earlier years: https://www.tusla.ie/publications/annual-reports/ . Tusla is funded by two departments: the 2025 statements name funding received from the Department of Children, Disability and Equality (DCDE) and the Department of Education and Youth (DEY). Tusla is also the operational lead for CYPSC (see cypsc). The 193m and 38m figures are as printed in the summary panel; no conversion. The income and expenditure statement also has a 'Section 56-59 Arrangements' expenditure line, but the PDF text extraction garbled the column alignment, so it was not recorded."
+  },
+  {
+   "id": "aai",
+   "name": "Adoption Authority of Ireland",
+   "universeName": "Adoption Authority of Ireland (AAI)",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers",
+    "regulates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "independent quasi-judicial body, under the aegis of the children's department",
+     "quote": "The Adoption Authority is an independent quasi-judicial body under the aegis of the Department of Children, Disability and Equality.",
+     "url": "https://www.aai.gov.ie/en/about-us/"
+    },
+    {
+     "what": "stated mission: child's best interests paramount in adoption-related services",
+     "quote": "the highest possible standards of adoption-related services, with the best interests of the child and young person as the first and paramount objective",
+     "url": "https://www.aai.gov.ie/en/about-us/"
+    },
+    {
+     "what": "central authority for intercountry adoption",
+     "quote": "It is also the central authority for intercountry adoption in Ireland",
+     "url": "https://www.aai.gov.ie/en/about-us/"
+    },
+    {
+     "what": "power to grant adoption orders (the page says the right was the Adoption Board's, now vested in the Authority)",
+     "quote": "This right is now vested in the Adoption Authority of Ireland under the current 2010 legislation.",
+     "url": "https://www.aai.gov.ie/en/about-us/"
+    },
+    {
+     "what": "birth information and tracing functions (serves adopted people of all ages, so partly adult-facing)",
+     "quote": "can apply for access to their birth certificates and birth and early life information",
+     "url": "https://www.aai.gov.ie/en/about-us/"
+    }
+   ],
+   "statute": "Adoption Act 2010",
+   "accounts": "https://www.aai.gov.ie/en/publications",
+   "money": [],
+   "notes": "READ: AAI About Us page; the Publications page lists Annual Reports (2025, 2024) but the report PDFs were not opened. The page carries the new department name. The Birth Information and Tracing Act 2022 functions serve adults who were adopted etc.; the adoption-order and intercountry functions concern children, hence core."
+  },
+  {
+   "id": "oco",
+   "name": "Ombudsman for Children's Office",
+   "universeName": "Ombudsman for Children's Office",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "advocates",
+    "advises",
+    "regulates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "investigates complaints by or for children about public organisations",
+     "quote": "to deal with complaints made by or for children and young people about the actions of public organisations.",
+     "url": "https://www.oco.ie/about-us/"
+    },
+    {
+     "what": "promotes children's rights and welfare",
+     "quote": "to promote the rights and welfare of children and young people under 18 living in Ireland.",
+     "url": "https://www.oco.ie/about-us/"
+    },
+    {
+     "what": "advice to government on law and policy",
+     "quote": "We offer advice to government at early stages of policy and law development and throughout the legislative process.",
+     "url": "https://www.oco.ie/about-us/"
+    }
+   ],
+   "statute": "Ombudsman for Children Act 2002",
+   "accounts": "https://www.oco.ie/library/",
+   "money": [],
+   "notes": "READ: OCO About us page; the library page lists Financial Statements for 2025 and the 2025 Annual Report (not opened). The OCO page says it is 'directly accountable to the Oireachtas'; the department's aegis page lists it among the bodies funded through the department's Vote. Role 'regulates' is used loosely for the complaint-investigation power."
+  },
+  {
+   "id": "oberstown",
+   "name": "Oberstown Children Detention Campus",
+   "universeName": "Oberstown Children Detention Campus",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "national detention, care and education facility for under-18s",
+     "quote": "Ireland’s national facility for the detention, care and education of young people under 18 years referred by the courts on detention or remand orders",
+     "url": "https://oberstown.com/About-Oberstown/About-Oberstown"
+    },
+    {
+     "what": "sits under the Children Detention Schools Unit in the children's department",
+     "quote": "Oberstown falls under the aegis of the Children Detention Schools Unit in the Department of Children, Disability and Equality (DCDE).",
+     "url": "https://oberstown.com/About-Oberstown/About-Oberstown"
+    },
+    {
+     "what": "principal statutory objective",
+     "quote": "Section 158 of the Act states that the principal objective of Oberstown is to provide appropriate educational and training programmes and facilities for children",
+     "url": "https://oberstown.com/About-Oberstown/Governance-and-management"
+    }
+   ],
+   "statute": "Children Act 2001",
+   "accounts": "https://oberstown.com/Information-resources/Annual-reports",
+   "money": [],
+   "notes": "READ: Oberstown About and Governance and management pages. Annual reports and audited financial statements are published (2025 annual report listed; not opened, so no amounts recorded). Inspection is by HIQA and the Department of Education Inspectorate (school), per the Governance page; those are other bodies' functions and are not recorded here."
+  },
+  {
+   "id": "gaisce",
+   "name": "Gaisce - The President's Award",
+   "universeName": "Gaisce - The President's Award",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "Other",
+   "verdict": "core",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "national youth award",
+     "quote": "is Ireland’s National Youth Award.",
+     "url": "https://gaisce.ie/about-gaisce/"
+    },
+    {
+     "what": "age range 14 to 25 (so extends beyond 18)",
+     "quote": "certification for non-formal learning experiences for young people aged 14 to 25",
+     "url": "https://gaisce.ie/about-gaisce/"
+    },
+    {
+     "what": "not a state body; under the aegis of the Department of Education and Youth (annual report 2025)",
+     "quote": "Whilst Gaisce is not a state body, it is",
+     "url": "https://gaisce.ie/wp-content/uploads/Gaisce-Annual-Report-2025.pdf"
+    }
+   ],
+   "statute": null,
+   "accounts": "https://gaisce.ie/governance/",
+   "money": [],
+   "notes": "READ: Gaisce About page, Governance page, Annual Report 2025 (searched). SPONSOR MOVED: the department's aegis page (last updated 13 May 2025) said the children's department 'also provides the primary source of funding for Gaisce'; Gaisce's own 2025 annual report now says it is under the aegis of the Department of Education and Youth and that the Minister for Education and Youth appoints the Council, consistent with the youth transfer of S.I. 181/2025 (that order does not itself name Gaisce). Gaisce is a charitable company limited by guarantee, not a statutory body, so no statute. Delivered through partner organisations (schools, youth services etc.). Programme ages 14-25: treated as core on the youth remit; see openQuestions."
+  },
+  {
+   "id": "odait",
+   "name": "Office of the Director of Authorised Intervention, Tuam",
+   "universeName": "The Office of Director of Authorised Intervention",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": "Institutional Burials Act 2022",
+   "accounts": null,
+   "money": [],
+   "notes": "READ: Institutional Burials Act 2022 (No. 18 of 2022), long title and s.10 functions of the Director (https://www.irishstatutebook.ie/eli/2022/act/18/enacted/en/print); S.I. 518/2022 (Director of Authorised Intervention, Tuam, Order 2022) and S.I. 87/2023 (Office stood established 20 March 2023, to continue in operation for 30 months from that date, i.e. to about September 2025; I could not establish whether it was extended or dissolved); and the department's gov.ie page on the Office via Internet Archive (https://web.archive.org/web/2026/https://www.gov.ie/en/department-of-children-disability-and-equality/publications/office-of-the-director-of-authorised-intervention-tuam). The functions are forensic excavation, recovery, analysis and final arrangements for human remains buried in a manifestly inappropriate manner on institutional land, and updates to relatives: none of that text is specific to children (the Act defines 'institution' as a residential facility for adults or children, or both). The Tuam site is a former Mother and Baby Institution, but no page read says the Office's function is about children as such, so none; this is arguable (see openQuestions). Other sources: https://www.irishstatutebook.ie/pdf/2022/en.si.2022.0518.pdf ; https://www.irishstatutebook.ie/pdf/2023/en.si.2023.0087.pdf . No annual report or accounts page found; no website of its own reached."
+  },
+  {
+   "id": "ihrec",
+   "name": "Irish Human Rights and Equality Commission",
+   "universeName": "Irish Human Rights and Equality Commission",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": "Irish Human Rights and Equality Commission Act 2014",
+   "accounts": "https://www.ihrec.ie/publications",
+   "money": [],
+   "notes": "READ: IHREC home page, About page (https://www.ihrec.ie/about) and Mandates page (human trafficking rapporteur, UNCRPD monitoring, torture prevention, AI Act, gender pay gap). Remit is general human rights and equality ('Ireland's independent National Human Rights Institution and National Equality Body'); no child-specific function stated. The home page lists a research publication on child trafficking, which is an output, not a stated function, so not recorded. The statute name comes from the department's aegis page ('IHREC Act 2014'), not from the IHREC pages I read. 2025: S.I. 159/2025 transferred s.10(2)(l) of the 2014 Act (so far as it relates to promotion of integration of migrants) from the children's minister to the Minister for Justice. A disclosure-log link on the site was ignored (FOI material excluded). Annual report not opened."
+  },
+  {
+   "id": "nda",
+   "name": "National Disability Authority",
+   "universeName": "National Disability Authority",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": "National Disability Authority Act 1999 and Disability Act 2005",
+   "accounts": "https://nda.ie/publications/annual-reports",
+   "money": [],
+   "notes": "READ: NDA About page (https://nda.ie/about-us), What We Do page (https://nda.ie/about/what-we-do; statutory functions: research and statistics, standards, Codes of Practice, monitoring, Universal Design), and its Child Safeguarding Statement (https://nda.ie/about/child-safeguarding-statement). No child-specific function. The safeguarding statement says the NDA occasionally conducts research, consultations and educational activities with disabled and non-disabled children; that is a compliance document, not a stated function. Statute names are from the What We Do page. The About page says it assists the Minister for Children, Disability and Equality in the co-ordination of disability policy."
+  },
+  {
+   "id": "iyjs",
+   "name": "Irish Youth Justice Service",
+   "universeName": null,
+   "sponsor": "Department of Justice",
+   "currentSponsor": "Department of Justice, Home Affairs and Migration",
+   "kind": "Hosted structure",
+   "verdict": "core",
+   "roles": [
+    "coordinates",
+    "advises"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "IYJS remit: reform of youth justice",
+     "quote": "leading and driving reform in the area of youth justice",
+     "url": "https://web.archive.org/web/2026/https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/policy-information/youth-justice/"
+    },
+    {
+     "what": "IYJS remit: policies to reduce youth offending",
+     "quote": "policies aimed at reducing youth offending",
+     "url": "https://web.archive.org/web/2026/https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/policy-information/youth-justice/"
+    },
+    {
+     "what": "split of responsibility: community youth justice sits in Justice; detention stays with the children's department",
+     "quote": "Following departmental realignment after government formation in 2020, the Department of Justice has full responsibility for Youth Justice Issues in the community.",
+     "url": "https://web.archive.org/web/2026/https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/policy-information/youth-justice/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "NOT A REGISTER ROW. Where it sits: the page is published by the Department of Justice (gov.ie 'From: Department of Justice, Home Affairs and Migration'; contact address Criminal Justice, Department of Justice, 51 St. Stephen's Green), and says that since the 2020 realignment the Department of Justice has full responsibility for youth justice in the community while the children's department (named DCEDIY on the page) retains responsibility for youth detention and the operation of the Oberstown Child Detention Campus. The page does not say in so many words that the IYJS is a unit of the Department of Justice; that is inferred from its being the Department of Justice's own policy page with a Justice contact address. The page was last updated 2 April 2024 and uses pre-May-2025 department names. Read via Internet Archive because gov.ie blocks automated fetching. Not checked: whether the IYJS still exists as a named unit in 2026."
+  },
+  {
+   "id": "cypsc",
+   "name": "Children and Young People's Services Committees (CYPSC)",
+   "universeName": null,
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "Hosted structure",
+   "verdict": "core",
+   "roles": [
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "county-level interagency planning and coordination, ages 0-24",
+     "quote": "plan and co-ordinate services in local authority (city or county council) areas for children and young people aged between 0 – 24 years.",
+     "url": "https://www.cypsc.ie/about-us/faqs.1201.html"
+    },
+    {
+     "what": "policy direction from the children's department (page still uses the pre-2025 name)",
+     "quote": "The Department of Children, Equality, Disability, Integration and Youth provides strategic and policy direction for Children and Young People's Services Committees (CYPSC).",
+     "url": "https://www.cypsc.ie/about-us/background.442.html"
+    },
+    {
+     "what": "operational leadership at national and local level by Tusla",
+     "quote": "National and local level operational leadership of CYPSC is provided by TUSLA – Child and Family Agency.",
+     "url": "https://www.cypsc.ie/about-us/background.442.html"
+    },
+    {
+     "what": "chaired by a Tusla Area Manager, vice-chaired by the local authority (FAQ page; older text)",
+     "quote": "CYPSC are chaired by an Area Manager from Tusla, the Child and Family Agency and vice chaired by a representative from the Local Authority",
+     "url": "https://www.cypsc.ie/about-us/faqs.1201.html"
+    },
+    {
+     "what": "funded through Tusla: 'Funding of CYPSCs' described in Tusla's 2025 financial statements",
+     "quote": "CYPSCs are a key structure identified by the government to plan and coordinate services for children and young people in every county in Ireland.",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "WHO HOSTS / FUNDS: policy and strategic direction from the children's department (now DCDE); operational leadership, national office, county chair and the funding channel via Tusla (its 2025 financial statements carry a 'Funding of CYPSCs' item under Vote 40 other subhead income and a CYPSC line in the Appendix 3 grant summary). Local authorities vice-chair. 27 CYPSC areas per the Background page. READ: cypsc.ie home, About Us, Background, Governance, FAQs, Membership. The Background, Governance and FAQ pages still use the pre-2025 department name (and DCYA in places); the cypsc.ie home page text uses the new name (DCDE). No separate statute or accounts; not shown as a legal entity on the pages read. No amounts recorded: the CYPSC line in the Tusla appendix could not be read reliably from the PDF text layout."
+  },
+  {
+   "id": "comhairle",
+   "name": "Comhairle na nÓg",
+   "universeName": null,
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "Hosted structure",
+   "verdict": "core",
+   "roles": [
+    "advocates",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "local youth councils giving 12-18s a voice on local policy, in each local authority",
+     "quote": "have been giving young people a voice on the development of local policies and services in each of the 31 Local Authorities.",
+     "url": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/policy-information/youth-participation/"
+    },
+    {
+     "what": "coordinated nationally by the department's National Participation Office",
+     "quote": "The National Participation Office (NPO) was established in 2021 within DCDE to manage and coordinate the activities of Comhairle na nÓg",
+     "url": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/policy-information/youth-participation/"
+    },
+    {
+     "what": "supported by a Development Fund and the National Participation Office",
+     "quote": "The Comhairle na nÓg network of youth councils are supported by the Comhairle na nÓg Development Fund and the National Participation Office.",
+     "url": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/policy-information/youth-participation/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "WHO RUNS IT: nationally, the children's department (DCDE) through its National Participation Office, under the department's oversight (page: 'The NPO operates under the guidance and oversight of DCDE'), with a Comhairle na nÓg Development Fund; locally, one Comhairle in each of the 31 local authorities. The page does not say which body in each local authority runs the local Comhairle, so I do not record that. Source is the department's Youth Participation page (last updated 10 March 2026), read through the Internet Archive. comhairlenanog.ie returned HTTP 429 (rate limited) on every attempt, so the structure's own site was not read. No amounts stated in what was read."
+  }
+ ],
+ "openQuestions": [
+  "Department of Children, Disability and Equality is recorded 'part' because its own mission and Statement of Strategy put children alongside disabled people and equality (and the 2025 transfers took youth and integration out). Should it be core?",
+  "Office of the Director of Authorised Intervention, Tuam is recorded 'none': the Act and orders speak of human remains in institutions for 'adults or children, or both', not children; but the site is a former mother and baby institution and the sponsor is the children's department. Include as part/core on a judgement, or leave it out? Also unresolved: the Office was set up for 30 months from 20 March 2023; whether it was extended or closed in 2025 was not established.",
+  "Gaisce: core on a 14-25 programme (so partly adults), and its sponsor appears to have moved to the Department of Education and Youth (its own 2025 annual report), while the gov.ie aegis page (May 2025) still says the children's department is the primary funder. Which sponsor should the map show?",
+  "Irish Youth Justice Service: no page I read says in terms that it is a unit of the Department of Justice (it is on Justice's policy page, last updated April 2024, with a Justice contact address). Is that enough to place it there?",
+  "Tusla Section 56: the 2025 financial statements publish a named recipient list (Appendix 5; 473 s.56 organisations plus 124 SCP). A later stage must decide whether to extract it.",
+  "Source route: gov.ie blocks automated fetching, so the department, aegis, strategy, youth-participation, Tuam and Justice youth-justice pages were read via Internet Archive snapshots (URLs show the snapshot). Acceptable as the body's own documents?",
+  "Department of Education and Youth is the sponsor of Gaisce and a co-funder of Tusla; the order renaming the Education department was not read. The Department of Education batch should confirm its current name and remit."
+ ]
+}

@@ -1,0 +1,2314 @@
+{
+ "unit": "Republic of Ireland",
+ "sector": "children",
+ "checked": "2026-10-08",
+ "method": "Universe = ie-bodies-universe.json (CSO Register of Public Sector Bodies 2024, central-government Tables 3.1-3.19 and local authorities Table 4.1). Candidates were chosen by name and remit, then each checked against its own documents (website remit page, annual report, the Act); a sponsor department page was used only where the body's own was unreachable, and the entry says so. Several gov.ie, ncca.ie and examinations.ie pages refuse automated access, so some remits are read from Internet Archive copies of the body's own pages (the urls are those copies). Quotes are verbatim, at most 25 words. No FOI material. Bodies in the universe NOT listed here were screened out by name and remit WITHOUT reading their documents: see screenedOut.",
+ "vocab": {
+  "verdict": {
+   "core": "children/young people are the body's whole or primary remit",
+   "part": "one or more stated children's functions among others",
+   "none": "remit read, no child-specific function found (what was read is in notes)",
+   "unverified": "no source reached"
+  },
+  "role": [
+   "delivers",
+   "funds",
+   "commissions",
+   "coordinates",
+   "regulates",
+   "inspects",
+   "advises",
+   "advocates",
+   "pays"
+  ],
+  "via": "schools = reaches children only through the school system (ruling 2026-10-01: stays part, tagged separately)"
+ },
+ "bodies": [
+  {
+   "id": "dcde",
+   "name": "Department of Children, Disability and Equality",
+   "universeName": "Department of Children, Equality, Disability, Integration and Youth",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "Department",
+   "verdict": "part",
+   "roles": [
+    "funds",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "renamed 2 May 2025 by S.I. 180/2025; the English name is now the Department of Children, Disability and Equality (previously Department of Children, Equality, Disability, Integration and Youth)",
+     "quote": "in the English language, to that of the Department of Children, Disability and Equality",
+     "url": "https://www.irishstatutebook.ie/pdf/2025/en.si.2025.0180.pdf"
+    },
+    {
+     "what": "stated mission, covering children and young people among other groups",
+     "quote": "mission is to enhance the lives of children, young people, adults, families and communities, recognising diversity and promoting equality of opportunity",
+     "url": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/organisation-information/about-the-department-of-children-equality-disability-integration-and-youth/"
+    },
+    {
+     "what": "Statement of Strategy 2025-2028 goal: funding and providing services for children among other groups",
+     "quote": "Key goals include providing and funding accessible and quality services to support children, disabled people and those experiencing inequalities",
+     "url": "https://web.archive.org/web/2026/https://www.gov.ie/en/department-of-children-disability-and-equality/publications/department-of-children-disability-and-equality-statement-of-strategy-2025-2028"
+    },
+    {
+     "what": "runs children and young people's participation structures through the National Participation Office, which manages Comhairle na nÓg",
+     "quote": "The National Participation Office (NPO) was established in 2021 within DCDE to manage and coordinate the activities of Comhairle na nÓg",
+     "url": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/policy-information/youth-participation/"
+    },
+    {
+     "what": "funds and is Accounting Officer for the bodies on its Vote (Tusla, AAI, OCO, Oberstown, NDA)",
+     "quote": "The public bodies funded through the department’s Vote and for which the Secretary General is the Accounting Officer, are as follows",
+     "url": "https://web.archive.org/web/20260416082233/https://www.gov.ie/en/department-of-children-disability-and-equality/organisation-information/bodies-under-the-aegis-of-the-department-of-children-equality-disability-integration-and-youth/"
+    }
+   ],
+   "statute": null,
+   "accounts": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/organisation-information/financial-information/",
+   "money": [],
+   "notes": "RENAME AND REORGANISATION (all effective 1-2 May 2025). Name: S.I. 180/2025 (in operation 2 May 2025) alters the name from Department of Children, Equality, Disability, Integration and Youth to Department of Children, Disability and Equality, and the Minister's title likewise: https://www.irishstatutebook.ie/pdf/2025/en.si.2025.0180.pdf . Functions OUT to Department of Justice: S.I. 159/2025, Integration and Reception (Transfer of Departmental Administration and Ministerial Functions) Order 2025, in operation 1 May 2025: international protection accommodation (IPAS) and procurement, State-owned centres for international protection, anti-racism policy and migrant integration and its funds, resettlement/temporary protection permissions, plus s.10(2)(l) of the IHREC Act 2014 insofar as it relates to promotion of integration of migrants, and Part 2 of the Civil Law (Miscellaneous Provisions) Act 2022: https://www.irishstatutebook.ie/pdf/2025/en.si.2025.0159.pdf . Functions OUT to Department of Education: S.I. 181/2025, Youth (Transfer of Departmental Administration and Ministerial Functions) Order 2025, in operation 1 May 2025: functions under the Youth Work Act 2001; s.2(1)(d) and (2) of the Community, Rural and Gaeltacht Affairs (Miscellaneous Provisions) Act 2007 in so far as they relate to the Young People's Facilities and Services Fund; s.10(1)(j) of the Education and Training Boards Act 2013; and funding, oversight and support of youth work organisations, youth organisations and ETB youth work functions, and youth policy: https://www.irishstatutebook.ie/pdf/2025/en.si.2025.0181.pdf . One small function back IN from Education: S.I. 185/2025 (1 May 2025) transfers the functions under s.18(4)(d) of the Youth Work Act 2001 to the children's department: https://www.irishstatutebook.ie/pdf/2025/en.si.2025.0185.pdf . Earlier (2020, not 2025): youth justice in the community went to the Department of Justice and Oberstown stayed (see iyjs). The three 2025 transfer orders themselves still use the old department name. Education side: Gaisce's 2025 annual report and Tusla's 2025 financial statements both name a 'Department of Education and Youth'; I did not read the order that renamed it. The Youth Participation page (last updated 10 March 2026) still shows the children's department running Comhairle na nÓg after the youth transfer. WHAT WAS READ: gov.ie blocks automated fetching (HTTP 403/405 and a bot-verification page, which I did not attempt to pass), so the department's own pages were read through Internet Archive snapshots of gov.ie (snapshot 5 Oct 2026; aegis page snapshot 16 Apr 2026); the three S.I.s from irishstatutebook.ie directly. The department's 'Functions and Services Provided to the Public' page is dated 2019 and still speaks of the Department of Children and Youth Affairs, so it was not used. Its 'Who Does What' page returned 403 even via the archive. Verdict part, not core: the stated mission sets children alongside disabled people and equality (see openQuestions).",
+   "batch": "A"
+  },
+  {
+   "id": "tusla",
+   "name": "Tusla - Child and Family Agency",
+   "universeName": "Child and Family Agency (Tusla)",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers",
+    "funds",
+    "commissions",
+    "regulates",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "statutory remit: development, welfare and protection of children",
+     "quote": "Supporting and promoting the development, welfare and protection of children, and the effective functioning of families;",
+     "url": "https://www.tusla.ie/about/"
+    },
+    {
+     "what": "educational welfare: ensuring school attendance",
+     "quote": "Responsibility for ensuring that every child in the State attends school or otherwise receives an education",
+     "url": "https://www.tusla.ie/about/"
+    },
+    {
+     "what": "commissions services",
+     "quote": "Commissioning services relating to the provision of child and family services",
+     "url": "https://www.tusla.ie/about/"
+    },
+    {
+     "what": "funds organisations under Section 56 of the Child and Family Agency Act 2013 (the page says \"organisations funded under Section 56\"; it does not itself call them community or voluntary organisations)",
+     "quote": "requires assurance from organisations funded under Section 56 of The Child and Family Agency Act 2013 that sufficient controls are in place",
+     "url": "https://www.tusla.ie/about/commissioning/"
+    },
+    {
+     "what": "funds service providers under Section 56 (financial statements accounting-policy note)",
+     "quote": "The Child and Family Agency funds a number of service providers and bodies for the provision of health and personal social services on its behalf",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    },
+    {
+     "what": "2025 annual report: number of organisations commissioned through Section 56",
+     "quote": "During 2025, the Agency commissioned 473 organisations operating through Section 56 funding",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    },
+    {
+     "what": "funds CYPSCs (Vote 40 other subhead income description)",
+     "quote": "CYPSCs are a key structure identified by the government to plan and coordinate services for children and young people in every county in Ireland.",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    },
+    {
+     "what": "inspection and regulation listed under 'Children's Services Regulation' (service-menu label only)",
+     "quote": "Early Years (Pre School) Inspectorate",
+     "url": "https://www.tusla.ie/about/"
+    }
+   ],
+   "statute": "Child and Family Agency Act 2013",
+   "accounts": "https://www.tusla.ie/publications/annual-reports/",
+   "money": [
+    {
+     "what": "2025 annual report summary panel: 473 organisations funded in 2025, Section 56 Arrangements, funding provided (printed as \"193m\"; estimate/outturn not stated on the panel)",
+     "value": "193m",
+     "year": "2025",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    },
+    {
+     "what": "2025 annual report summary panel: 124 School Completion Programme (SCP) organisations funded (printed as \"38m for the SCP\"; estimate/outturn not stated)",
+     "value": "38m",
+     "year": "2025",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    }
+   ],
+   "notes": "READ: tusla.ie About Us (remit), Commissioning page, Annual Report and Financial Statements 2025 PDF (searched for Section 56 text and appendices; not read in full). SECTION 56: the commissioning page and the 2025 financial statements both state that Tusla funds organisations under s.56 of the 2013 Act; the financial statements (note headed 'Community, Voluntary and Charitable Organisations') and the appendix titles call the funded organisations community, voluntary and charitable; the About and Commissioning pages do not use that wording. RECIPIENT LIST: YES, the 2025 Annual Report and Financial Statements publish a named recipient list - Appendix 3 (summary by grant type, with lines for ABC, CCA, CYPSC, Adoption, Disability, National Early Years, SCP, FRC, FSS Counselling), Appendix 4 (summary by grant type, service and region) and Appendix 5 'Community, Voluntary and Charitable Organisations by Providers', a numbered list of organisations with columns Section 56 All Other / SCP / FRC / Counselling / Total 2025 / Total 2024, in EUR '000. It is near the end of the PDF (printed pages c.205-208 onward): https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf. Not extracted. Earlier years: https://www.tusla.ie/publications/annual-reports/ . Tusla is funded by two departments: the 2025 statements name funding received from the Department of Children, Disability and Equality (DCDE) and the Department of Education and Youth (DEY). Tusla is also the operational lead for CYPSC (see cypsc). The 193m and 38m figures are as printed in the summary panel; no conversion. The income and expenditure statement also has a 'Section 56-59 Arrangements' expenditure line, but the PDF text extraction garbled the column alignment, so it was not recorded.",
+   "batch": "A"
+  },
+  {
+   "id": "aai",
+   "name": "Adoption Authority of Ireland",
+   "universeName": "Adoption Authority of Ireland (AAI)",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers",
+    "regulates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "independent quasi-judicial body, under the aegis of the children's department",
+     "quote": "The Adoption Authority is an independent quasi-judicial body under the aegis of the Department of Children, Disability and Equality.",
+     "url": "https://www.aai.gov.ie/en/about-us/"
+    },
+    {
+     "what": "stated mission: child's best interests paramount in adoption-related services",
+     "quote": "the highest possible standards of adoption-related services, with the best interests of the child and young person as the first and paramount objective",
+     "url": "https://www.aai.gov.ie/en/about-us/"
+    },
+    {
+     "what": "central authority for intercountry adoption",
+     "quote": "It is also the central authority for intercountry adoption in Ireland",
+     "url": "https://www.aai.gov.ie/en/about-us/"
+    },
+    {
+     "what": "power to grant adoption orders (the page says the right was the Adoption Board's, now vested in the Authority)",
+     "quote": "This right is now vested in the Adoption Authority of Ireland under the current 2010 legislation.",
+     "url": "https://www.aai.gov.ie/en/about-us/"
+    },
+    {
+     "what": "birth information and tracing functions (serves adopted people of all ages, so partly adult-facing)",
+     "quote": "can apply for access to their birth certificates and birth and early life information",
+     "url": "https://www.aai.gov.ie/en/about-us/"
+    }
+   ],
+   "statute": "Adoption Act 2010",
+   "accounts": "https://www.aai.gov.ie/en/publications",
+   "money": [],
+   "notes": "READ: AAI About Us page; the Publications page lists Annual Reports (2025, 2024) but the report PDFs were not opened. The page carries the new department name. The Birth Information and Tracing Act 2022 functions serve adults who were adopted etc.; the adoption-order and intercountry functions concern children, hence core.",
+   "batch": "A"
+  },
+  {
+   "id": "oco",
+   "name": "Ombudsman for Children's Office",
+   "universeName": "Ombudsman for Children's Office",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "advocates",
+    "advises",
+    "regulates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "investigates complaints by or for children about public organisations",
+     "quote": "to deal with complaints made by or for children and young people about the actions of public organisations.",
+     "url": "https://www.oco.ie/about-us/"
+    },
+    {
+     "what": "promotes children's rights and welfare",
+     "quote": "to promote the rights and welfare of children and young people under 18 living in Ireland.",
+     "url": "https://www.oco.ie/about-us/"
+    },
+    {
+     "what": "advice to government on law and policy",
+     "quote": "We offer advice to government at early stages of policy and law development and throughout the legislative process.",
+     "url": "https://www.oco.ie/about-us/"
+    }
+   ],
+   "statute": "Ombudsman for Children Act 2002",
+   "accounts": "https://www.oco.ie/library/",
+   "money": [],
+   "notes": "READ: OCO About us page; the library page lists Financial Statements for 2025 and the 2025 Annual Report (not opened). The OCO page says it is 'directly accountable to the Oireachtas'; the department's aegis page lists it among the bodies funded through the department's Vote. Role 'regulates' is used loosely for the complaint-investigation power.",
+   "batch": "A"
+  },
+  {
+   "id": "oberstown",
+   "name": "Oberstown Children Detention Campus",
+   "universeName": "Oberstown Children Detention Campus",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "national detention, care and education facility for under-18s",
+     "quote": "Ireland’s national facility for the detention, care and education of young people under 18 years referred by the courts on detention or remand orders",
+     "url": "https://oberstown.com/About-Oberstown/About-Oberstown"
+    },
+    {
+     "what": "sits under the Children Detention Schools Unit in the children's department",
+     "quote": "Oberstown falls under the aegis of the Children Detention Schools Unit in the Department of Children, Disability and Equality (DCDE).",
+     "url": "https://oberstown.com/About-Oberstown/About-Oberstown"
+    },
+    {
+     "what": "principal statutory objective",
+     "quote": "Section 158 of the Act states that the principal objective of Oberstown is to provide appropriate educational and training programmes and facilities for children",
+     "url": "https://oberstown.com/About-Oberstown/Governance-and-management"
+    }
+   ],
+   "statute": "Children Act 2001",
+   "accounts": "https://oberstown.com/Information-resources/Annual-reports",
+   "money": [],
+   "notes": "READ: Oberstown About and Governance and management pages. Annual reports and audited financial statements are published (2025 annual report listed; not opened, so no amounts recorded). Inspection is by HIQA and the Department of Education Inspectorate (school), per the Governance page; those are other bodies' functions and are not recorded here.",
+   "batch": "A"
+  },
+  {
+   "id": "gaisce",
+   "name": "Gaisce - The President's Award",
+   "universeName": "Gaisce - The President's Award",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "Other",
+   "verdict": "core",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "national youth award",
+     "quote": "is Ireland’s National Youth Award.",
+     "url": "https://gaisce.ie/about-gaisce/"
+    },
+    {
+     "what": "age range 14 to 25 (so extends beyond 18)",
+     "quote": "certification for non-formal learning experiences for young people aged 14 to 25",
+     "url": "https://gaisce.ie/about-gaisce/"
+    },
+    {
+     "what": "not a state body; under the aegis of the Department of Education and Youth (annual report 2025)",
+     "quote": "Whilst Gaisce is not a state body, it is",
+     "url": "https://gaisce.ie/wp-content/uploads/Gaisce-Annual-Report-2025.pdf"
+    }
+   ],
+   "statute": null,
+   "accounts": "https://gaisce.ie/governance/",
+   "money": [],
+   "notes": "READ: Gaisce About page, Governance page, Annual Report 2025 (searched). SPONSOR MOVED: the department's aegis page (last updated 13 May 2025) said the children's department 'also provides the primary source of funding for Gaisce'; Gaisce's own 2025 annual report now says it is under the aegis of the Department of Education and Youth and that the Minister for Education and Youth appoints the Council, consistent with the youth transfer of S.I. 181/2025 (that order does not itself name Gaisce). Gaisce is a charitable company limited by guarantee, not a statutory body, so no statute. Delivered through partner organisations (schools, youth services etc.). Programme ages 14-25: treated as core on the youth remit; see openQuestions.",
+   "batch": "A"
+  },
+  {
+   "id": "odait",
+   "name": "Office of the Director of Authorised Intervention, Tuam",
+   "universeName": "The Office of Director of Authorised Intervention",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": "Institutional Burials Act 2022",
+   "accounts": null,
+   "money": [],
+   "notes": "READ: Institutional Burials Act 2022 (No. 18 of 2022), long title and s.10 functions of the Director (https://www.irishstatutebook.ie/eli/2022/act/18/enacted/en/print); S.I. 518/2022 (Director of Authorised Intervention, Tuam, Order 2022) and S.I. 87/2023 (Office stood established 20 March 2023, to continue in operation for 30 months from that date, i.e. to about September 2025; I could not establish whether it was extended or dissolved); and the department's gov.ie page on the Office via Internet Archive (https://web.archive.org/web/2026/https://www.gov.ie/en/department-of-children-disability-and-equality/publications/office-of-the-director-of-authorised-intervention-tuam). The functions are forensic excavation, recovery, analysis and final arrangements for human remains buried in a manifestly inappropriate manner on institutional land, and updates to relatives: none of that text is specific to children (the Act defines 'institution' as a residential facility for adults or children, or both). The Tuam site is a former Mother and Baby Institution, but no page read says the Office's function is about children as such, so none; this is arguable (see openQuestions). Other sources: https://www.irishstatutebook.ie/pdf/2022/en.si.2022.0518.pdf ; https://www.irishstatutebook.ie/pdf/2023/en.si.2023.0087.pdf . No annual report or accounts page found; no website of its own reached.",
+   "batch": "A"
+  },
+  {
+   "id": "ihrec",
+   "name": "Irish Human Rights and Equality Commission",
+   "universeName": "Irish Human Rights and Equality Commission",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": "Irish Human Rights and Equality Commission Act 2014",
+   "accounts": "https://www.ihrec.ie/publications",
+   "money": [],
+   "notes": "READ: IHREC home page, About page (https://www.ihrec.ie/about) and Mandates page (human trafficking rapporteur, UNCRPD monitoring, torture prevention, AI Act, gender pay gap). Remit is general human rights and equality ('Ireland's independent National Human Rights Institution and National Equality Body'); no child-specific function stated. The home page lists a research publication on child trafficking, which is an output, not a stated function, so not recorded. The statute name comes from the department's aegis page ('IHREC Act 2014'), not from the IHREC pages I read. 2025: S.I. 159/2025 transferred s.10(2)(l) of the 2014 Act (so far as it relates to promotion of integration of migrants) from the children's minister to the Minister for Justice. A disclosure-log link on the site was ignored (FOI material excluded). Annual report not opened.",
+   "batch": "A"
+  },
+  {
+   "id": "nda",
+   "name": "National Disability Authority",
+   "universeName": "National Disability Authority",
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "ALB",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": "National Disability Authority Act 1999 and Disability Act 2005",
+   "accounts": "https://nda.ie/publications/annual-reports",
+   "money": [],
+   "notes": "READ: NDA About page (https://nda.ie/about-us), What We Do page (https://nda.ie/about/what-we-do; statutory functions: research and statistics, standards, Codes of Practice, monitoring, Universal Design), and its Child Safeguarding Statement (https://nda.ie/about/child-safeguarding-statement). No child-specific function. The safeguarding statement says the NDA occasionally conducts research, consultations and educational activities with disabled and non-disabled children; that is a compliance document, not a stated function. Statute names are from the What We Do page. The About page says it assists the Minister for Children, Disability and Equality in the co-ordination of disability policy.",
+   "batch": "A"
+  },
+  {
+   "id": "iyjs",
+   "name": "Irish Youth Justice Service",
+   "universeName": null,
+   "sponsor": "Department of Justice",
+   "currentSponsor": "Department of Justice, Home Affairs and Migration",
+   "kind": "Hosted structure",
+   "verdict": "core",
+   "roles": [
+    "coordinates",
+    "advises"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "IYJS remit: reform of youth justice",
+     "quote": "leading and driving reform in the area of youth justice",
+     "url": "https://web.archive.org/web/2026/https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/policy-information/youth-justice/"
+    },
+    {
+     "what": "IYJS remit: policies to reduce youth offending",
+     "quote": "policies aimed at reducing youth offending",
+     "url": "https://web.archive.org/web/2026/https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/policy-information/youth-justice/"
+    },
+    {
+     "what": "split of responsibility: community youth justice sits in Justice; detention stays with the children's department",
+     "quote": "Following departmental realignment after government formation in 2020, the Department of Justice has full responsibility for Youth Justice Issues in the community.",
+     "url": "https://web.archive.org/web/2026/https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/policy-information/youth-justice/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "NOT A REGISTER ROW. Where it sits: the page is published by the Department of Justice (gov.ie 'From: Department of Justice, Home Affairs and Migration'; contact address Criminal Justice, Department of Justice, 51 St. Stephen's Green), and says that since the 2020 realignment the Department of Justice has full responsibility for youth justice in the community while the children's department (named DCEDIY on the page) retains responsibility for youth detention and the operation of the Oberstown Child Detention Campus. The page does not say in so many words that the IYJS is a unit of the Department of Justice; that is inferred from its being the Department of Justice's own policy page with a Justice contact address. The page was last updated 2 April 2024 and uses pre-May-2025 department names. Read via Internet Archive because gov.ie blocks automated fetching. Not checked: whether the IYJS still exists as a named unit in 2026.",
+   "batch": "A"
+  },
+  {
+   "id": "cypsc",
+   "name": "Children and Young People's Services Committees (CYPSC)",
+   "universeName": null,
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "Hosted structure",
+   "verdict": "core",
+   "roles": [
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "county-level interagency planning and coordination, ages 0-24",
+     "quote": "plan and co-ordinate services in local authority (city or county council) areas for children and young people aged between 0 – 24 years.",
+     "url": "https://www.cypsc.ie/about-us/faqs.1201.html"
+    },
+    {
+     "what": "policy direction from the children's department (page still uses the pre-2025 name)",
+     "quote": "The Department of Children, Equality, Disability, Integration and Youth provides strategic and policy direction for Children and Young People's Services Committees (CYPSC).",
+     "url": "https://www.cypsc.ie/about-us/background.442.html"
+    },
+    {
+     "what": "operational leadership at national and local level by Tusla",
+     "quote": "National and local level operational leadership of CYPSC is provided by TUSLA – Child and Family Agency.",
+     "url": "https://www.cypsc.ie/about-us/background.442.html"
+    },
+    {
+     "what": "chaired by a Tusla Area Manager, vice-chaired by the local authority (FAQ page; older text)",
+     "quote": "CYPSC are chaired by an Area Manager from Tusla, the Child and Family Agency and vice chaired by a representative from the Local Authority",
+     "url": "https://www.cypsc.ie/about-us/faqs.1201.html"
+    },
+    {
+     "what": "funded through Tusla: 'Funding of CYPSCs' described in Tusla's 2025 financial statements",
+     "quote": "CYPSCs are a key structure identified by the government to plan and coordinate services for children and young people in every county in Ireland.",
+     "url": "https://www.tusla.ie/uploads/content/Annual_Report_and_AFS_2025.pdf"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "WHO HOSTS / FUNDS: policy and strategic direction from the children's department (now DCDE); operational leadership, national office, county chair and the funding channel via Tusla (its 2025 financial statements carry a 'Funding of CYPSCs' item under Vote 40 other subhead income and a CYPSC line in the Appendix 3 grant summary). Local authorities vice-chair. 27 CYPSC areas per the Background page. READ: cypsc.ie home, About Us, Background, Governance, FAQs, Membership. The Background, Governance and FAQ pages still use the pre-2025 department name (and DCYA in places); the cypsc.ie home page text uses the new name (DCDE). No separate statute or accounts; not shown as a legal entity on the pages read. No amounts recorded: the CYPSC line in the Tusla appendix could not be read reliably from the PDF text layout.",
+   "batch": "A"
+  },
+  {
+   "id": "comhairle",
+   "name": "Comhairle na nÓg",
+   "universeName": null,
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "Hosted structure",
+   "verdict": "core",
+   "roles": [
+    "advocates",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "local youth councils giving 12-18s a voice on local policy, in each local authority",
+     "quote": "have been giving young people a voice on the development of local policies and services in each of the 31 Local Authorities.",
+     "url": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/policy-information/youth-participation/"
+    },
+    {
+     "what": "coordinated nationally by the department's National Participation Office",
+     "quote": "The National Participation Office (NPO) was established in 2021 within DCDE to manage and coordinate the activities of Comhairle na nÓg",
+     "url": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/policy-information/youth-participation/"
+    },
+    {
+     "what": "supported by a Development Fund and the National Participation Office",
+     "quote": "The Comhairle na nÓg network of youth councils are supported by the Comhairle na nÓg Development Fund and the National Participation Office.",
+     "url": "https://web.archive.org/web/20261005213758/https://www.gov.ie/en/department-of-children-disability-and-equality/policy-information/youth-participation/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "WHO RUNS IT: nationally, the children's department (DCDE) through its National Participation Office, under the department's oversight (page: 'The NPO operates under the guidance and oversight of DCDE'), with a Comhairle na nÓg Development Fund; locally, one Comhairle in each of the 31 local authorities. The page does not say which body in each local authority runs the local Comhairle, so I do not record that. Source is the department's Youth Participation page (last updated 10 March 2026), read through the Internet Archive. comhairlenanog.ie returned HTTP 429 (rate limited) on every attempt, so the structure's own site was not read. No amounts stated in what was read.",
+   "batch": "A"
+  },
+  {
+   "id": "department-of-health",
+   "name": "Department of Health",
+   "universeName": "Department of Health",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "Department",
+   "verdict": "part",
+   "roles": [
+    "funds",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Statement of Strategy 2025-2028 commits to implementing the paediatric model of care and opening the National Children's Hospital",
+     "quote": "Implement the Paediatric Model of Care in paediatric settings across the country, opening the National Children's Hospital",
+     "url": "https://assets.gov.ie/static/documents/ba6c4270/DoH_Statement_of_Strategy_2025-2028.pdf"
+    },
+    {
+     "what": "Statement of Strategy 2025-2028 commits to extending free GP services to children (a commitment, not a delivered scheme)",
+     "quote": "Extend free GP services to children up to at least 12 years.",
+     "url": "https://assets.gov.ie/static/documents/ba6c4270/DoH_Statement_of_Strategy_2025-2028.pdf"
+    },
+    {
+     "what": "Annual Report 2025 reports on the National Maternity Strategy 2016-2026",
+     "quote": "The National Maternity Strategy - Creating a Better Future Together 2016 - 2026 is entering its final year.",
+     "url": "https://assets.gov.ie/static/documents/86a93d97/Department_of_Health_Annual_Report_2025.pdf"
+    },
+    {
+     "what": "Annual Report 2025 reports on the National Children's Hospital Ireland capital project",
+     "quote": "The National Children's Hospital Ireland continues to progress towards substantial completion.",
+     "url": "https://assets.gov.ie/static/documents/86a93d97/Department_of_Health_Annual_Report_2025.pdf"
+    }
+   ],
+   "statute": null,
+   "accounts": "https://assets.gov.ie/static/documents/86a93d97/Department_of_Health_Annual_Report_2025.pdf",
+   "money": [],
+   "notes": "The Department's own gov.ie pages (about-us, department home, publications page) could not be read: curl and WebFetch got 403/405 and the Browser pane showed a \"Human Verification\" page, which was not attempted. Read instead the Department's own PDFs on assets.gov.ie: Statement of Strategy 2025-2028 (published 10 December 2025 per the gov.ie publications listing seen only as a search result, not opened) and Annual Report 2025. Verdict rests on those two documents only; no remit/functions page was read, so the list of children's and maternity functions is a floor, not a full inventory. Healthy Ireland and similar programmes not recorded because no page read states a child function for them. Roles are my classification of the quoted wording (policy and programme leadership; the free GP item is a stated commitment). Maternity Strategy investment figure in the Annual Report (2025 Budget / 2026 full-year cost) exists but the euro sign did not survive text extraction, so it is NOT recorded in money; a later stage should read it from the PDF page. Reorganisation: community disability services moved from this Department to DCEDIY in March 2023 (HSE Annual Report 2023: \"Specialist Community-Based Disability Services transferred to the Department of Children, Equality, Disability, Integration and Youth in March 2023\", https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/). No 2025 move of children's or maternity health functions into or out of the Department was found in the two documents read.",
+   "batch": "B"
+  },
+  {
+   "id": "hse",
+   "name": "Health Service Executive",
+   "universeName": "Health Service Executive",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "delivers",
+    "funds"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Children's disability network teams (CDNTs)",
+     "quote": "Children’s disability network teams (CDNTs) support children up to age 18 who have complex needs.",
+     "url": "https://www2.hse.ie/babies-children/disabilities/services/cdnt/"
+    },
+    {
+     "what": "Child and Adolescent Mental Health Services (CAMHS)",
+     "quote": "Child and Adolescent Mental Health Services (CAMHS) is a specialist service for people under 18 with moderate to severe mental health difficulties.",
+     "url": "https://www2.hse.ie/mental-health/services-support/camhs/introduction/"
+    },
+    {
+     "what": "Children's disability services routes (primary care, CDNT, CAMHS, CAMHS-ID)",
+     "quote": "Children's disability services are for children and young people up to age 18.",
+     "url": "https://www2.hse.ie/babies-children/disabilities/services/childrens-disability-services/"
+    },
+    {
+     "what": "Paediatric homecare packages (Annual Report and Financial Statements 2023)",
+     "quote": "Paediatric Homecare Packages provide care to children with complex needs within their own home.",
+     "url": "https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/"
+    },
+    {
+     "what": "Community healthcare, including disability and mental health services, is provided to children as well as adults (AFS 2023)",
+     "quote": "disability services and mental health services and is provided to children and adults, including those who are experiencing marginalisation and health inequalities",
+     "url": "https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/"
+    }
+   ],
+   "statute": "Health Act 2004 (named on the HSE financial management page as the law governing grants to outside agencies; not read as the establishing Act)",
+   "accounts": "https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/",
+   "money": [],
+   "notes": "Read: HSE public service pages (CDNT, children's disability services, CAMHS), about.hse.ie financial management page, and the HSE Annual Report and Financial Statements 2023 (full PDF; 2024 report not looked for). about.hse.ie/our-work/what-the-hse-does is script-rendered; WebFetch returned no children's content from it. HSE is the delivery body for most health services to children, so the five functions are examples, not an inventory (child health/public health nursing, primary care, maternity not itemised). SECTION 38/39 LISTS (note only, no figures recorded): the HSE page https://about.hse.ie/leadership-and-operations/hse-financial-management/ says \"Each year, we fund around 1830 agencies in Ireland.\" and \"Grants are governed under the Health Act 2004.\" The only agency-by-agency amounts found are in the Annual Report and Financial Statements 2023, Appendix 1 \"Analysis of Grants to Outside Agencies in Note 8 and Note 13\" (https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/), which names each agency with grants of 100,000 or more in either year with amounts and groups smaller grants as \"Total Grants under 100,000\"; the table as extracted does not label agencies Section 38 or Section 39, and no separate Section 38/39 list page was found (the old hse.ie \"section-38-documentation\" URL returned 404). Per-agency grants to children-sector agencies are therefore recoverable from that appendix only by agency name. 2023 Annual Report also states: \"In 2023, 6.74bn of the HSE's total expenditure related to grants to outside agencies.\" (euro sign lost in extraction; all-purpose, not child-specific, so not entered in money). Reorganisation: the Annual Report states \"Specialist Community-Based Disability Services transferred to the Department of Children, Equality, Disability, Integration and Youth in March 2023\" and that \"The HSE is accountable to and provides advice as appropriate to the Minister for Health and the Minister for Children, Equality, Disability, Integration and Youth\" (both https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/). Roles are my classification: delivers (CDNT/CAMHS/homecare), funds (grants to outside agencies, generally; no child-specific funding line was read).",
+   "batch": "B"
+  },
+  {
+   "id": "chi",
+   "name": "Children's Health Ireland",
+   "universeName": "Children's Health Ireland",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers",
+    "advocates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Statutory object of CHI",
+     "quote": "The object of Children's Health Ireland is to improve, promote and protect the health, mental health and well-being of children",
+     "url": "https://www.irishstatutebook.ie/eli/2018/act/27/enacted/en/print.html"
+    },
+    {
+     "what": "Statutory function: paediatric services in the hospital",
+     "quote": "to plan, conduct, maintain, manage, provide and develop paediatric services in the hospital",
+     "url": "https://www.irishstatutebook.ie/eli/2018/act/27/enacted/en/print.html"
+    },
+    {
+     "what": "Statutory function: advocacy",
+     "quote": "to advocate on behalf of children and young people about healthcare issues",
+     "url": "https://www.irishstatutebook.ie/eli/2018/act/27/enacted/en/print.html"
+    }
+   ],
+   "statute": "Children's Health Act 2018 (No. 27 of 2018), section 6 (object and functions)",
+   "accounts": null,
+   "money": [],
+   "notes": "CHI's own website (childrenshealth.ie) returned 403 / a Cloudflare \"Just a moment\" check to curl and WebFetch and was not attempted further. Read the Act that set it up, as enacted, on irishstatutebook.ie (later amendments not checked), and the CHI page hosted by the NPHDB site (https://newchildrenshospital.ie/about-chi/the-childrens-hospital-group/) which says CHI took over the three Dublin paediatric hospitals on 1 January 2019. That hosted page appears dated (it speaks of the new hospital \"in due course\"). The universe also lists four hospital-level rows (CHI at Connolly, CHI at Crumlin, CHI at Tallaght, CHI at Temple Street) as separate bodies; they are not checked here and sit inside this entity. Verdict core: the object clause is children-only. No amounts read.",
+   "batch": "B"
+  },
+  {
+   "id": "nphdb",
+   "name": "National Paediatric Hospital Development Board",
+   "universeName": "National Paediatric Hospital Development Board (NPHDB)",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Statutory function in the establishing Order: build the national paediatric hospital",
+     "quote": "to plan, design, build, furnish and equip a national paediatric hospital",
+     "url": "https://www.irishstatutebook.ie/eli/2007/si/246"
+    },
+    {
+     "what": "Annual Report 2024 describes its responsibility",
+     "quote": "responsible for planning, designing, building, and equipping the National Children's Hospital Ireland (NCHI)",
+     "url": "https://newchildrenshospital.ie/wp-content/uploads/2026/01/NPHDB-Annual-Report-2024-Board-Approved-ID-179259.pdf"
+    }
+   ],
+   "statute": "S.I. No. 246 of 2007 (National Paediatric Hospital Development Board (Establishment) Order 2007), section 5; the Annual Report 2024 says it was \"amended by the Children's Health Act 2018\"",
+   "accounts": "https://newchildrenshospital.ie/wp-content/uploads/2026/01/NPHDB-Annual-Report-2024-Board-Approved-ID-179259.pdf",
+   "money": [],
+   "notes": "nphdb.ie does not resolve (DNS error). The Board's public site is newchildrenshospital.ie; read the Annual Report 2024 PDF there and the establishing S.I. on irishstatutebook.ie. Its function is a capital build for a children's hospital, not a service to children; classed core because the whole remit is a paediatric facility, role delivers (infrastructure). The S.I. title was not captured from the page text; the Order title in \"statute\" follows the S.I. number and the search listing, so confirm the title text. No amounts recorded (the project capital costs are a later-stage budget item).",
+   "batch": "B"
+  },
+  {
+   "id": "hiqa",
+   "name": "Health Information and Quality Authority",
+   "universeName": "Health Information and Quality Authority (HIQA)",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "inspects"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Inspects children's social care services",
+     "quote": "We work to make sure that children’s social care services in Ireland are safe and of good quality.",
+     "url": "https://www.hiqa.ie/areas-we-work/childrens-services"
+    },
+    {
+     "what": "Inspects Tusla child protection and welfare services",
+     "quote": "We also inspect child protection services that work with families to make sure children who need extra support are getting the right help.",
+     "url": "https://www.hiqa.ie/areas-we-work/childrens-services"
+    },
+    {
+     "what": "Children's Team of HIQA",
+     "quote": "HIQA’s Children’s Team promotes safety and quality in some of the children’s social care services in Ireland.",
+     "url": "https://www.hiqa.ie/guidance-providers/childrens-services"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Answer to \"does it inspect children's services\": yes, but children's SOCIAL CARE services, not health services. The page lists Tusla residential care centres, foster care, special care and Oberstown Children Detention Campus, plus Tusla child protection and welfare services. Those providers sit under the children and justice departments, so this function belongs in the children/justice stage of the chain as much as in health. HIQA's inspection of disability services (which include children) and healthcare services was not read here. Read: the \"Children's Services\" areas-we-work page and the guidance-for-providers page. No statute is named on those pages (the guidance page names the Child Care Act 1991 and Child and Family Agency Act 2013 as Tusla's duties, not HIQA's). HIQA's corporate remit/about page and annual report were not read.",
+   "batch": "B"
+  },
+  {
+   "id": "mhc",
+   "name": "Mental Health Commission",
+   "universeName": "Mental Health Commission",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "regulates",
+    "inspects"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Remit explicitly includes child and adolescent mental health services",
+     "quote": "as well as mental health services for children and adolescents, older people, people with intellectual disabilities",
+     "url": "https://www.mhcirl.ie/about/background-and-remit"
+    },
+    {
+     "what": "Public consultation on draft CAMHS standards (the page does not say when or whether statutory registration of CAMHS applies)",
+     "quote": "New draft standards for Child and Adolescent Mental Health Services (CAMHS) Public Consultation",
+     "url": "https://www.mhcirl.ie/public-consultations"
+    }
+   ],
+   "statute": "Mental Health Act 2001 (named on the About and Background and Remit pages)",
+   "accounts": null,
+   "money": [],
+   "notes": "mhcirl.ie returned 403 to curl and WebFetch but loaded in the Browser pane; /about, /about/background-and-remit and /public-consultations were read there (quotes checked by eye against the page text, not scripted). The remit page also says approved centres must be inspected and reported on at least once a year; it does not single out child and adolescent approved centres. Secondary search snippets claimed that a 2026 Mental Health Act would bring CAMHS under registration; not opened, not recorded.",
+   "batch": "B"
+  },
+  {
+   "id": "hrb",
+   "name": "Health Research Board",
+   "universeName": "Health Research Board (HRB)",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read hrb.ie/about (remit, \"Roles, responsibilities and functions\"), /about/evidence-for-policy and /funding. The remit lists research funding, four national health information systems (drug and alcohol deaths, addiction treatment, disability service use and need, inpatient mental health), the Evidence Centre, the National Drugs Library and the National Office for Research Ethics Committees. None is child-specific on the pages read. Individual funded projects, the disability database's child coverage and the Strategy 2026-2030 document were not read, so a child-related activity inside those cannot be ruled out.",
+   "batch": "B"
+  },
+  {
+   "id": "safefood",
+   "name": "Food Safety Promotion Board (safefood)",
+   "universeName": "Food Safety Promotion Board (FSPB) (safefood)",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "advises",
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Develops educational resources (Education section of its remit)",
+     "quote": "Safefood develops educational tools and resources for different age groups across the island of Ireland.",
+     "url": "https://www.safefood.net/about-us/who-we-are"
+    },
+    {
+     "what": "Educational work is framed around young people",
+     "quote": "Teachers play a vital role in developing the habits of young people.",
+     "url": "https://www.safefood.net/about-us/who-we-are"
+    },
+    {
+     "what": "Public nutrition advice aimed at parents of school children",
+     "quote": "Water and milk are the best option for children of all ages.",
+     "url": "https://www.safefood.net/healthy-eating/children/school-children"
+    }
+   ],
+   "statute": "British-Irish Agreement Act 1999 (named on the Who we are page)",
+   "accounts": null,
+   "money": [],
+   "notes": "Read safefood.net/about-us/who-we-are and the /healthy-eating/children/school-children page. safefood is an all-island body, so the universe's sponsor (Department of Health) is only the Republic-side sponsor; the pages read name no Northern Ireland sponsor. Child content is one strand (children's section of the healthy-eating site, school lunchboxes, Children's Food Pyramid, education resources) of a general food-safety and nutrition remit. The Education section page itself was not opened.",
+   "batch": "B"
+  },
+  {
+   "id": "iph",
+   "name": "Institute of Public Health",
+   "universeName": "Institute of Public Health in Ireland (IPH)",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "unverified",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Tried publichealth.ie (301 to instituteofpublichealth.org), /about-us, the 2022 annual report PDF and WebFetch: all returned 403 behind a Cloudflare bot check; the Browser pane showed \"Performing security verification\" and the check was not bypassed. A search result suggested the body is all-island, jointly funded by both health departments and may now trade as All Island Institute of Public Health, but no page was opened, so nothing is recorded. Needs the user to open the About page or an annual report by hand.",
+   "batch": "B"
+  },
+  {
+   "id": "health-pss-organisations",
+   "name": "Organisations providing health and personal social services (CSO Table 3.19: 28 organisations)",
+   "universeName": null,
+   "sponsor": "Organisations providing health and personal social services",
+   "currentSponsor": "Department of Children, Disability and Equality (the Table 3.19 funding department; the CSO page says the Department's name changed in 2025). One entity (Threshold) is under the Department of Housing, Local Government and Heritage.",
+   "kind": "Other",
+   "verdict": "part",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Enable Ireland: children's disability network teams",
+     "quote": "20 Children’s Disability Network Teams in 14 counties",
+     "url": "https://enableireland.ie/about-enable-ireland/what-we-do"
+    },
+    {
+     "what": "Saint Michael's House: mission for its Children's Services",
+     "quote": "To work in partnership with Children, Young people and their Families to develop their individual potential",
+     "url": "https://www.smh.ie/services/children/"
+    },
+    {
+     "what": "Cope Foundation (now trading as Horizons): autism service for children in Cork",
+     "quote": "In 2005 we developed the North Lee ASD Service for children with autism spectrum disorder.",
+     "url": "https://www.horizonscork.ie/about/our-journey/"
+    },
+    {
+     "what": "The Children's Sunshine Home (operating as LauraLynn, Ireland's Children's Hospice): children's disability respite service",
+     "quote": "The Children's Disability Respite Service accepts referrals for children who:",
+     "url": "https://www.lauralynn.ie/sites/default/files/2026-07/1.01-statement-of-purpose_0.pdf"
+    },
+    {
+     "what": "Brothers of Charity Services Ireland (now Corlann): children's disability network team in West Limerick",
+     "quote": "Over 900 children and their families receive support in West Limerick for our Children’s Disability Network Team.",
+     "url": "https://corlann.ie/regions/limerick/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "WHY THESE ARE CLASSIFIED AS GOVERNMENT (CSO Register of Public Sector Bodies 2024 Final, read on cso.ie): Central Government Table 3.19 page: \"Table 3.19 sets out organisations that provide health and personal services on behalf of government and are classified in the central government sector.\" and \"These organisations receive high levels of funding from government with stringent conditions and the majority of their services are being provided on behalf of government.\" (https://www.cso.ie/en/releasesandpublications/ep/p-rpbi/registerofpublicsectorbodies2024-final/centralgovernment/). Background Notes: \"A number of HSE Section 38 and Section 39 organisations providing health and personal social services are classified in the central government sector.\" and \"Disability services are delivered through HSE services, section 38 and section 39 agreements.\" (https://www.cso.ie/en/releasesandpublications/ep/p-rpbi/registerofpublicsectorbodies2024-final/backgroundnotes/). The Background Notes add that responsibility for community disability-specific services moved from the Department of Health to DCEDIY in March 2023 and that for statistical purposes these organisations are listed under DCEDIY except one whose majority funding comes from the Department of Housing, Local Government and Heritage (Threshold). So: the criterion is funding and control (high government funding with stringent conditions, services provided on behalf of government), not ownership; they are voluntary organisations by legal form. The universe file assigns them the sponsor \"Organisations providing health and personal social services\", but in the CSO table they sit under DCEDIY, not the Department of Health. The 28 names in the universe: Ability West; Avista CLG (Daughters of Charity Disability Support Services CLG); Brothers of Charity Services Ireland; Care Trust; Carriglea Cairde Services; Central Remedial Clinic; Cheeverstown House CLG; Cheshire Homes Ireland; Cope Foundation; Enable Ireland; Gheel Autism Services; Irish Wheelchair Association; Kare, Promoting Inclusion for People with Intellectual Disability; Kerry Parents and Friends Association; Leopardstown Park Hospital; Muiriosa Foundation; Saint John of God Community Services CLG; Saint Michael's House; Saint Patrick's Centre (Kilkenny) T/A Aurora Enriching Lives Enriching Communities; SOS Kilkenny Housing Association CLG; St. Joseph's Foundation; Stewarts Care Limited; Sunbeam House Services CLG; The Children's Sunshine Home; The Polio Fellowship Of Ireland; The Rehab Group; Western Care Association; Threshold. ONLY FIVE WERE CHECKED, as instructed; the other 23 are unchecked, so this entry does not say that any of them has or lacks a child function (the Irish Wheelchair Association, Polio Fellowship, Threshold and Leopardstown Park Hospital in particular are not obviously children's services). Verdict \"part\" refers only to the five checked. Sector note: Brothers of Charity Services Ireland now trades as Corlann, whose home page says it is \"Funded under Section 38 of the Health Act\" (https://corlann.ie/); Cope Foundation now trades as Horizons (horizonscork.ie states the name changed in 2020 and keeps \"Cope Foundation\" in its footer); the Children's Sunshine Home Statement of Purpose (issued 26.06.2026) says it is operating as LauraLynn. The Corlann quote was read in the Browser pane (not scripted-verified). For Enable Ireland the same page also says it is \"patron to two special schools\".",
+   "batch": "B"
+  },
+  {
+   "id": "doe",
+   "name": "Department of Education and Youth (Department of Education until the May 2025 reorganisation)",
+   "universeName": "Department of Education",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "Department",
+   "verdict": "part",
+   "roles": [
+    "funds",
+    "inspects"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "youth work: this Department now holds the UBU youth-services capital funding stream (announced 2 October 2026)",
+     "quote": "The funding will support minor works, equipment purchases and facility upgrades in youth services nationwide",
+     "url": "https://web.archive.org/web/20261002165034/https://www.gov.ie/en/department-of-education/press-releases/minister-naughton-announces-over-16-million-in-capital-funding-for-upgrades-to-ubu-youth-services-nationwide/"
+    },
+    {
+     "what": "youth: a senior-management post sits in this Department",
+     "quote": "Assistant Secretary for Schools, Social Inclusion and Youth",
+     "url": "https://web.archive.org/web/20261005210855/https://www.gov.ie/en/department-of-education/"
+    },
+    {
+     "what": "2025 reorganisation: Youth transferred into this Department (Education Plan 2025, hosted copy)",
+     "quote": "With Youth now transferred into the Department of Education, there is also a significant opportunity to better align the formal education system with youth services.",
+     "url": "https://www.drugsandalcohol.ie/43490/1/Education_Plan_2025.pdf"
+    },
+    {
+     "what": "early-years education inspections (ECCE Programme services), as described on this Department's policy page",
+     "quote": "Early-years education inspections are carried out in early-years services participating in the Early Childhood Care and Education (ECCE) Programme",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "early childhood care and education is delivered outside the formal education system, per this Department",
+     "quote": "early childhood care and education (ECCE) is delivered outside the formal education system",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "child protection procedures for schools",
+     "quote": "The Department of Education and Youth is responsible for developing and implementing child protection procedures for schools",
+     "url": "https://web.archive.org/web/20260316180424/https://www.gov.ie/en/department-of-education/policy-information/child-protection-procedures-in-schools/"
+    },
+    {
+     "what": "inspectors check school compliance with child protection procedures",
+     "quote": "department inspectors check that a school is complying with the requirements of the Child Protection Procedures",
+     "url": "https://web.archive.org/web/20260316180424/https://www.gov.ie/en/department-of-education/policy-information/child-protection-procedures-in-schools/"
+    },
+    {
+     "what": "mission",
+     "quote": "The Department of Education and Youth's mission is to facilitate children and young people, through learning, to achieve their full potential",
+     "url": "https://web.archive.org/web/20261005210855/https://www.gov.ie/en/department-of-education/"
+    },
+    {
+     "what": "where early learning and childcare and school-age childcare sit: a division of the Department of Children, Disability and Equality (the former DCEDIY), not this Department",
+     "quote": "Early Learning and Care and School-Age Childcare Division",
+     "url": "https://web.archive.org/web/20260416082233/https://www.gov.ie/en/department-of-children-disability-and-equality/organisation-information/about-the-department-of-children-equality-disability-integration-and-youth/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [
+    {
+     "what": "allocation: capital funding for UBU Your Place Your Space youth services (minor works and equipment), as announced; 'over' as printed",
+     "value": "over €1.6 million",
+     "year": "2026 (announced 2 October 2026)",
+     "url": "https://web.archive.org/web/20261002165034/https://www.gov.ie/en/department-of-education/press-releases/minister-naughton-announces-over-16-million-in-capital-funding-for-upgrades-to-ubu-youth-services-nationwide/"
+    }
+   ],
+   "notes": "gov.ie returns a bot-verification wall (HTTP 403/405) to WebFetch and curl, so every Department page was read from its Internet Archive copy (URLs are the archive copies actually fetched; each is a copy of the Department's own gov.ie page). WHICH DEPARTMENT HOLDS WHAT AFTER 2025: (1) Youth work / UBU funding / youth services: this Department (press release by the 'Minister for Education and Youth'; Education Plan 2025 says 'Youth now transferred into the Department of Education'). (2) Early learning and childcare and school-age childcare: the Department of Children, Disability and Equality (its own about page, last updated 3 December 2025, lists an 'Early Learning and Care and School-Age Childcare Division'; its homepage lists 'Early Learning and Care (ELC) and School-Age Childcare (SAC) Supports'). (3) Not moved with Youth: children and young people's participation in decision-making (Comhairle na nOg, Dail na nOg, National Participation Office) stays with the Department of Children, Disability and Equality ('The Department of Children, Disability and Equality (DCDE) ensures that children and young people have a voice in the design, delivery and monitoring of Government policies', https://web.archive.org/web/20260419153039/https://www.gov.ie/en/department-of-children-disability-and-equality/policy-information/youth-participation/ , last updated 10 March 2026). This Department's own policy page describes ECCE as outside the formal education system but names early-years education inspections (who carries them out is not stated in the sentence quoted). The 2025 transfer orders (statutory instruments) were not read; transfer dates seen only in a search summary of Wikipedia are NOT recorded as fact here. The youth/ELC split above rests on the two departments' own current pages. The Education Plan 2025 url is a hosted copy (drugsandalcohol.ie) of the Department's PDF, not the gov.ie original.",
+   "batch": "C"
+  },
+  {
+   "id": "ncse",
+   "name": "National Council for Special Education",
+   "universeName": "National Council for Special Education (NCSE)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers",
+    "advises"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "remit: education services for persons with special educational needs, emphasis on children",
+     "quote": "set up to improve the delivery of education services to persons with special educational needs arising from disabilities, with particular emphasis on children",
+     "url": "https://www.ncse.ie/ncse/about-us/"
+    },
+    {
+     "what": "mission statement",
+     "quote": "we support children and young people with special educational needs by working with families, schools, and professionals to promote inclusive education across Ireland",
+     "url": "https://www.ncse.ie/ncse/about-us/"
+    },
+    {
+     "what": "local delivery through SENOs who work with parents as well as schools",
+     "quote": "SENOs interact with parents and schools and work with other agencies and departments in providing resources to support children with special educational needs",
+     "url": "https://www.ncse.ie/ncse/about-us/"
+    }
+   ],
+   "statute": "Education of Persons with Special Educational Needs Act 2004 (the page names it for the Consultative Forum, 'section 22'; it does not itself say this Act established the Council)",
+   "accounts": null,
+   "money": [],
+   "notes": "Read the NCSE's own About us page (curl, full text). Page refers to 'the Minster for Education and Youth' (spelling as printed; 2025 department rename). Parents are served directly by SENOs, so via is null. Annual reports are listed on the site under Publications but that page was not opened, so accounts is null.",
+   "batch": "C"
+  },
+  {
+   "id": "ncca",
+   "name": "National Council for Curriculum and Assessment",
+   "universeName": "National Council for Curriculum and Assessment (NCCA)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "advises"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "advises the Minister on curriculum and assessment for early childhood education, primary and post-primary schools",
+     "quote": "The role of the NCCA is to advise the Minister for Education on: 1. curriculum and assessment for early childhood education, primary and post-primary schools.",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    },
+    {
+     "what": "statutory basis",
+     "quote": "statutory body of the Department of Education established under Section 39 of the Education Act 1998",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    }
+   ],
+   "statute": "Education Act 1998, section 39 (as stated on the Department's page)",
+   "accounts": null,
+   "money": [],
+   "notes": "FALLBACK SOURCE: ncca.ie (and ncca.ie/en/about-us/) sits behind a Cloudflare bot-verification wall (HTTP 403 for WebFetch and curl; the in-app browser showed the verification page; not bypassed). Remit taken from the Department's own 'Bodies under the aegis' page (Internet Archive copy of 2026-01-05; the page states 'Last updated on 1 September 2022'), as the brief allows when the body's own documents cannot be reached. Verdict part: a curriculum/assessment advisory body whose remit extends to early childhood education as well as schools, so via is null; arguable (see openQuestions).",
+   "batch": "C"
+  },
+  {
+   "id": "sec",
+   "name": "State Examinations Commission",
+   "universeName": "State Examinations Commission (SEC)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "delivers"
+   ],
+   "via": "schools",
+   "functions": [
+    {
+     "what": "develops, assesses, accredits and certifies the Junior Cycle and Leaving Certificate examinations",
+     "quote": "The SEC is responsible for the development, assessment, accreditation and certification of the second-level examinations of the Irish state",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "FALLBACK SOURCE: examinations.ie sits behind a bot-verification wall (HTTP 403 to WebFetch and curl); not bypassed. Remit from the Department's 'Bodies under the aegis' page (Internet Archive copy 2026-01-05; page 'Last updated on 1 September 2022'). The same page says SEC was 'established in 2003, is a non-departmental public body'; no statute named. Reaches students only through second-level school examinations.",
+   "batch": "C"
+  },
+  {
+   "id": "teaching-council",
+   "name": "The Teaching Council",
+   "universeName": "The Teaching Council",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "regulates"
+   ],
+   "via": "schools",
+   "functions": [
+    {
+     "what": "role framed as protecting the public by regulating professional standards in teaching",
+     "quote": "Our role is to protect the public by promoting and regulating professional standards in teaching.",
+     "url": "https://www.teachingcouncil.ie/"
+    },
+    {
+     "what": "fitness to teach, stated to be for the benefit of pupils and students",
+     "quote": "The Teaching Council is responsible for promoting high professional standards in teaching, for the benefit of pupils and students, and the profession.",
+     "url": "https://www.teachingcouncil.ie/"
+    },
+    {
+     "what": "administers vetting of teachers",
+     "quote": "It is the role of the Teaching Council to administer vetting for teachers in Ireland.",
+     "url": "https://www.teachingcouncil.ie/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Council's own home page (curl, full text); /about-us/ returned 404 so the homepage navigation text was used. The page names no establishing Act. Children are reached only via teachers in schools. Verdict part rests on the stated 'benefit of pupils and students' and the child-related vetting role; the NI equivalent (GTCNI) was coded none, so this is a consistency decision for the user (see openQuestions).",
+   "batch": "C"
+  },
+  {
+   "id": "cogg",
+   "name": "An Chomhairle um Oideachas Gaeltachta agus Gaelscolaíochta (COGG)",
+   "universeName": "An Chomhairle um Oideachas Gaeltachta agus Gaelscolaíochta (COGG)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "advises",
+    "commissions"
+   ],
+   "via": "schools",
+   "functions": [
+    {
+     "what": "established to meet the needs of Gaeltacht schools and Irish-medium schools",
+     "quote": "established under the provisions of Section 31 of the Education Act 1998",
+     "url": "https://cogg.ie/about-us/background/?lang=en"
+    },
+    {
+     "what": "covers primary and post-primary; three areas of work",
+     "quote": "The Council's role covers both primary and post-primary education and the three main areas of work are as follows:",
+     "url": "https://cogg.ie/about-us/background/?lang=en"
+    },
+    {
+     "what": "mission statement",
+     "quote": "the development of the Gaeltacht and Irish-medium education sector and the teaching of Irish in every school effectively, professionally and to a high standard",
+     "url": "https://cogg.ie/about-us/mission-statement/?lang=en"
+    },
+    {
+     "what": "advises the Minister on Irish-medium education in schools (Department's description)",
+     "quote": "to advise the Minister on policies relating to the provision and promotion of education through the medium of Irish in recognised schools",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    }
+   ],
+   "statute": "Education Act 1998, section 31 (named on COGG's own page)",
+   "accounts": null,
+   "money": [],
+   "notes": "Read COGG's own Background and Mission Statement pages (curl). The three areas of work listed are 'The provision of teaching resources / The provision of support services / Research'. Reaches children only through schools. The 'advises' quote is from the Department's aegis page (Internet Archive copy), not COGG's own site. Role 'commissions' is inferred from 'provision of teaching resources' and is weak; drop it if you want roles strictly quote-backed.",
+   "batch": "C"
+  },
+  {
+   "id": "erc",
+   "name": "Educational Research Centre",
+   "universeName": "Educational Research Centre (ERC)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "delivers"
+   ],
+   "via": "schools",
+   "functions": [
+    {
+     "what": "supplies standardised tests to primary and post-primary schools",
+     "quote": "The ERC provides an assessment support service to schools, supplying a range of standardised tests to primary and post-primary schools.",
+     "url": "https://www.erc.ie/about-us/"
+    },
+    {
+     "what": "national surveys of pupil achievement at primary level",
+     "quote": "national surveys of achievement at primary level have been carried out in association with the DES since 1972",
+     "url": "https://www.erc.ie/about-us/"
+    },
+    {
+     "what": "PISA (15- and 16-year-olds)",
+     "quote": "The Programme for International Student Assessment (PISA, every 3 years; 15- and 16-year-olds)",
+     "url": "https://www.erc.ie/about-us/"
+    },
+    {
+     "what": "research at all levels of the education system",
+     "quote": "The Centre carries out research at all levels of the education system.",
+     "url": "https://www.erc.ie/about-us/"
+    }
+   ],
+   "statute": "Education Act 1998, section 54 (Establishment Order S.I. no. 392 of 2015, named on ERC's own page)",
+   "accounts": null,
+   "money": [],
+   "notes": "Read the ERC's own About us page (curl, full text). Page writes 'Education Act (1998)' for the establishing section and 'Section 9 of the Education Act 1988' in the objectives list, both as printed. Pupils reached through schools only.",
+   "batch": "C"
+  },
+  {
+   "id": "leargas",
+   "name": "Léargas",
+   "universeName": null,
+   "sponsor": "Department of Further and Higher Education, Research, Innovation and Science",
+   "currentSponsor": null,
+   "kind": "Other",
+   "verdict": "part",
+   "roles": [
+    "delivers",
+    "funds"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "runs international and national exchange programmes in education, youth and community work",
+     "quote": "Léargas manage international and national exchange programmes in education, youth and community work, and vocational education and training.",
+     "url": "https://www.leargas.ie/about-us/"
+    },
+    {
+     "what": "National Agency for Erasmus+ including Youth and School Education",
+     "quote": "We are the National Agency for Erasmus+ in Adult Education, School Education, Vocational Education and Training, Youth and Sport.",
+     "url": "https://www.leargas.ie/about-us/"
+    },
+    {
+     "what": "managing funding for international collaboration and exchange (amount not stated on this page)",
+     "quote": "effectively managing significant levels of funding to support international collaboration and exchange",
+     "url": "https://www.leargas.ie/about-us/"
+    },
+    {
+     "what": "legal form",
+     "quote": "Léargas is a company limited by guarantee and a registered charity.",
+     "url": "https://www.leargas.ie/about-us/"
+    }
+   ],
+   "statute": null,
+   "accounts": "https://www.leargas.ie/about-us/annual-reports/",
+   "money": [],
+   "notes": "Not in the CSO universe file (company limited by guarantee / charity, so outside the Register). Read Léargas's own About page (curl). The page says it works 'under the aegis of' the Department of Further and Higher Education, Research, Innovation and Science and in partnership with the Department of Education, the Department of Children, Equality, Disability, Integration and Youth and the Department for Arts, Tourism Sports (names as printed; they do not reflect the 2025 renames). Not specific to children: adult education, VET and volunteering are also covered; youth and school education are two of its strands. Annual reports link taken from the site's own navigation, not opened. Sponsor is as the body names it.",
+   "batch": "C"
+  },
+  {
+   "id": "cica",
+   "name": "Commission to Inquire into Child Abuse (CICA)",
+   "universeName": "Commission to Inquire into Child Abuse (CICA)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [],
+   "via": null,
+   "functions": [
+    {
+     "what": "statutory basis and date established",
+     "quote": "was established on 23 May, 2000, pursuant to the \"Commission to Inquire into Child Abuse Act 2000\"",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    },
+    {
+     "what": "function: inquiry into abuse of children in institutions (historical)",
+     "quote": "to conduct an inquiry into abuse of children in institutions during that period",
+     "url": "https://web.archive.org/web/20260105215412/https://www.gov.ie/en/department-of-education/organisation-information/bodies-under-the-aegis-of-the-department-of-education/"
+    }
+   ],
+   "statute": "Commission to Inquire into Child Abuse Act 2000 (named on the Department's page)",
+   "accounts": null,
+   "money": [],
+   "notes": "HISTORICAL scope: the inquiry concerns abuse in childhood in institutions 'from 1940 or earlier, to the present day' as the Department's page puts the period; no remit for current children. The body's own site childabusecommission.ie returned HTTP 500 (PHP error), so the Department's 'Bodies under the aegis' page (Internet Archive copy 2026-01-05, 'Last updated on 1 September 2022') is the fallback source. Whether the Commission still exists as a live body was not established. roles left empty: none of the nine role words fits an inquiry (see openQuestions). Verdict part follows the NI precedent for historical-abuse bodies (COSICA, HIA Redress Board).",
+   "batch": "C"
+  },
+  {
+   "id": "rirb",
+   "name": "Residential Institutions Redress Board (RIRB)",
+   "universeName": "Residential Institutions Redress Board (RIRB)",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "pays"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "makes awards to people abused as children in institutions (historical)",
+     "quote": "awards to persons who, as children, were abused while resident in industrial schools, reformatories and other institutions subject to state regulation or inspection",
+     "url": "https://www.rirb.ie/about-us/"
+    },
+    {
+     "what": "no longer accepting new applications",
+     "quote": "no longer has the power to accept new applications",
+     "url": "https://www.rirb.ie/about-us/"
+    }
+   ],
+   "statute": "Residential Institutions Redress Act, 2002 (named on RIRB's own page)",
+   "accounts": "https://www.rirb.ie/annual-report/",
+   "money": [],
+   "notes": "HISTORICAL scope; no remit for current children; no new applications. Read RIRB's own About us page (curl). The home page says 'While the Redress Board remains open' while the About page says it can no longer accept new applications: both as printed. Annual report link taken from the site's navigation, not opened.",
+   "batch": "C"
+  },
+  {
+   "id": "etbs",
+   "name": "Education and Training Boards (16, treated as one class)",
+   "universeName": "Educational Training Boards",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "delivers",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "statutory function: establish and maintain recognised schools",
+     "quote": "establish and maintain recognised schools, centres for education and education or training facilities in its functional area",
+     "url": "https://www.irishstatutebook.ie/eli/2013/act/11/section/10/enacted/en/html"
+    },
+    {
+     "what": "statutory function: youth work services in the ETB's area",
+     "quote": "support the provision, coordination, administration and assessment of youth work services in its functional area",
+     "url": "https://www.irishstatutebook.ie/eli/2013/act/11/section/10/enacted/en/html"
+    },
+    {
+     "what": "ETBI (the ETBs' association) restates that youth work is an ETB responsibility under the 2013 Act",
+     "quote": "Education and Training Boards are charged with responsibility for Youth Work in the ETB 2013 Act",
+     "url": "https://www.etbi.ie/about-etbi/youth-work/"
+    },
+    {
+     "what": "ETBs are a delivery partner for the UBU youth funding scheme",
+     "quote": "The Education and Training Boards (ETB) works with the DCYA, as a strategic partner, to deliver UBU Your Place Your Space across the country.",
+     "url": "https://ubu.gov.ie/etb-information"
+    },
+    {
+     "what": "ETB Youth Officers support, develop and monitor local youth services",
+     "quote": "The ETB Youth Officers play a crucial role supporting, developing and monitoring their local youth services.",
+     "url": "https://ubu.gov.ie/etb-information"
+    }
+   ],
+   "statute": "Education and Training Boards Act 2013, section 10 (functions); youth work as defined in the Youth Work Act 2001 (section 10(6), as printed)",
+   "accounts": null,
+   "money": [],
+   "notes": "Class entry for the 16 ETBs (universe lists 'Educational Training Boards' plus 16 named boards: Cavan and Monaghan; City of Dublin; Cork; Donegal; Dublin and Dun Laoghaire; Galway and Roscommon; Kerry; Kildare and Wicklow; Kilkenny and Carlow; Laois and Offaly; Limerick and Clare; Longford and Westmeath; Louth and Meath; Mayo, Sligo and Leitrim; Tipperary; Waterford and Wexford). Primary evidence is the Act (Irish Statute Book, section 10 as enacted; 'Minister for Children and Youth Affairs' and 'DCYA' are the 2013-era and UBU-page names, superseded by the 2025 reorganisation under which the Department of Education and Youth holds youth work). ETBI pages and the ubu.gov.ie ETB page confirm the youth role in current practice. The ubu.gov.ie page says ETBs work with the department to 'deliver' the scheme; it does NOT say that ETBs hold or distribute the funding, so 'funds' is NOT recorded as a role. ETBs also run schools (Community Colleges are ETB-established per the Department's policy page) and, per the Act, provide education in children detention schools. SOLAS (further education and training) was not read: it is adult-oriented and not needed for the youth question. One ETB's own site (Kerry ETB, kerryetb.ie/schools-youth-music/youth-services/) was opened and lists a 'Youth Clubs Grants Scheme' registration page, but the text read did not say who funds it, so it is not recorded. via is null because the youth-work function does not run through schools.",
+   "batch": "C"
+  },
+  {
+   "id": "state-schools",
+   "name": "State-funded primary and post-primary schools (class entry)",
+   "universeName": "Schools: State funded primary",
+   "sponsor": "Department of Education",
+   "currentSponsor": "Department of Education and Youth",
+   "kind": "Other",
+   "verdict": "core",
+   "roles": [
+    "delivers"
+   ],
+   "via": "schools",
+   "functions": [
+    {
+     "what": "free primary education",
+     "quote": "In Ireland all children are entitled to free primary education.",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "compulsory age band",
+     "quote": "Education is compulsory for children in Ireland from the ages of 6 to 16 or until students have completed three years of post-primary education",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "post-primary schools funded by the Department",
+     "quote": "are funded by the Department of Education and Youth and deliver the post-primary curriculum determined by the Minister for Education",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "school patrons",
+     "quote": "All primary schools in Ireland have a patron, which sets the ethos for the school.",
+     "url": "https://web.archive.org/web/20260409102224/https://www.gov.ie/en/department-of-education/policies/education/"
+    },
+    {
+     "what": "child protection procedures apply to primary and post-primary schools",
+     "quote": "The Department of Education and Youth is responsible for developing and implementing child protection procedures for schools",
+     "url": "https://web.archive.org/web/20260316180424/https://www.gov.ie/en/department-of-education/policy-information/child-protection-procedures-in-schools/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "One class entry for the two universe rows 'Schools: State funded primary' and 'Schools: State funded post primary' (both sponsor Department of Education). Read the Department's Education policy page and child-protection page (Internet Archive copies of gov.ie, dates in the URLs); individual schools not researched. The Department page also says 'Most children attend state-funded schools'. Children are reached through schools by definition, hence via 'schools'; verdict core because the whole remit is the education of children and young people.",
+   "batch": "C"
+  },
+  {
+   "id": "department-of-justice",
+   "name": "Department of Justice (now Department of Justice, Home Affairs and Migration)",
+   "universeName": "Department of Justice",
+   "sponsor": "Department of Justice",
+   "currentSponsor": "Department of Justice, Home Affairs and Migration",
+   "kind": "Department",
+   "verdict": "part",
+   "roles": [
+    "funds",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Minister for Justice holds youth crime policy and legislation, including diversion and diversion projects",
+     "quote": "The Minister for Justice has responsibility for youth crime policy and legislation, including crime prevention/reduction/detection, criminal proceedings, diversion and diversion projects",
+     "url": "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/policy-information/youth-justice/"
+    },
+    {
+     "what": "implements the Youth Justice Strategy 2021-2027",
+     "quote": "The Department of Justice is focused on implementing the Youth Justice Strategy 2021 - 2027.",
+     "url": "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/policy-information/youth-justice/"
+    },
+    {
+     "what": "community projects: Youth Diversion Projects (page says a network of 100; page last updated 2 April 2024)",
+     "quote": "a network of 100 Youth Diversion Projects which engage young people who have become involved in anti-social behaviour",
+     "url": "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/policy-information/youth-justice/"
+    },
+    {
+     "what": "Youth Diversion Projects and Young Persons Probation Projects co-funded (ESF Programme 2014-2020, as the page states)",
+     "quote": "Youth Diversion Projects and a number of Young Persons Probation Projects are co-funded by the Irish Government and the European Social Fund",
+     "url": "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/policy-information/youth-justice/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Department's own Youth Justice policy page (gov.ie, last updated 2 April 2024; published under the name Department of Justice, Home Affairs and Migration). The same page says the Department of Children, Equality, Disability, Integration and Youth (DCEDIY, now Department of Children, Disability and Equality per pobal.ie and the Dormant Accounts 2026 plan) 'retains responsibility for youth detention and the operation of the Oberstown Child Detention Campus', so detention of children is NOT a Justice function on this page. The page also says the Minister is responsible 'via the Irish Prison Service for the small number of remaining children in adult prison facilities' (see irish-prison-service entry and openQuestions). Dormant Accounts Fund 2026 plan lists two Justice-led child/young-person measures (see dormant-accounts-fund). Rename to Department of Justice, Home Affairs and Migration is evidenced only by the publisher line and URL on gov.ie pages read; no dedicated reorganisation page read.",
+   "batch": "D"
+  },
+  {
+   "id": "an-garda-siochana",
+   "name": "An Garda Síochána (Garda National Youth Diversion Bureau / Juvenile Liaison Officers)",
+   "universeName": "An Garda Síochána",
+   "sponsor": "Department of Justice",
+   "currentSponsor": "Department of Justice, Home Affairs and Migration",
+   "kind": "Other",
+   "verdict": "part",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Garda National Youth Diversion Bureau administers, coordinates and develops the Diversion Programme nationally",
+     "quote": "The remit of the GNYDB includes the administration, coordination and development of the Diversion Programme nationally.",
+     "url": "https://www.garda.ie/en/crime-prevention/garda-national-youth-diversion-bureau/"
+    },
+    {
+     "what": "network of Juvenile Liaison Officers in every Garda division",
+     "quote": "It also supports a network of JLO Sergeants and JLO Gardaí distributed across every Garda division countrywide.",
+     "url": "https://www.garda.ie/en/crime-prevention/garda-national-youth-diversion-bureau/"
+    },
+    {
+     "what": "young people coming to Garda attention must first be considered for the Diversion Programme (statutory duty)",
+     "quote": "they are required by law (S.18 of the Children Act 2001) to be first considered for the Diversion Programme",
+     "url": "https://www.garda.ie/en/crime-prevention/garda-national-youth-diversion-bureau/"
+    }
+   ],
+   "statute": "Children Act 2001 (Part 4, Diversion Programme; S.18 and S.20(1) named on the page)",
+   "accounts": null,
+   "money": [],
+   "notes": "Read the GNYDB page on garda.ie (the page fetched redirected to /en/crime-prevention/garda-national-youth-diversion-bureau/). Only the Diversion Programme / JLO function was recorded, per the brief. The page also covers the Garda Youth Diversion Projects only in passing; not recorded. The universe lists An Garda Síochána as a Vote; 'Other' used for kind. No other Garda pages (annual report, Garda Schools Programme etc.) were read.",
+   "batch": "D"
+  },
+  {
+   "id": "probation-service",
+   "name": "Probation Service (Young Persons Probation)",
+   "universeName": "Probation Service",
+   "sponsor": "Department of Justice",
+   "currentSponsor": "Department of Justice, Home Affairs and Migration",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "delivers",
+    "advises"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Young Persons Probation works with children and teenagers aged 12 to 18 who come before the courts",
+     "quote": "to work with children and teenagers between the ages of 12 and 18 who come before the Courts",
+     "url": "https://www.probation.ie/EN/PB/WebPages/WP16000038"
+    },
+    {
+     "what": "court must seek a pre-sanction report from Young Persons Probation officers",
+     "quote": "the Court is obliged to seek a Pre-Sanction Report from Probation Officers (YPP)",
+     "url": "https://www.probation.ie/EN/PB/WebPages/WP16000038"
+    },
+    {
+     "what": "Service's stated position on work with young people",
+     "quote": "The Probation Service knows that working with young people who offend is different to working with adults who offend.",
+     "url": "https://www.probation.ie/EN/PB/WebPages/WP16000038"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Source is probation.ie page WP16000038, reached via WebFetch (which extracts through a model; quotes were returned as exact copies but I could not re-check them: my own HTTP fetch of probation.ie fails certificate verification, so I did not retrieve the raw page). The page text was 528,000 characters and only the first 100,000 were read. The page as read does not name the Children Act 2001 (the extraction showed a blank where the Act name would be), so statute is left null. Probation Service is also named as a funder department on Pobal's funder-departments page.",
+   "batch": "D"
+  },
+  {
+   "id": "courts-service",
+   "name": "Courts Service",
+   "universeName": "Courts Service",
+   "sponsor": "Department of Justice",
+   "currentSponsor": "Department of Justice, Home Affairs and Migration",
+   "kind": "Other",
+   "verdict": "part",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "courts administration: the Service manages and runs the courts (it has no role in the administration of justice itself, per the same page)",
+     "quote": "The Courts Service is responsible for managing and running the courts in Ireland, and for supporting the judges and everyone who uses the courts.",
+     "url": "https://www.courts.ie/organisation-information/our-role"
+    },
+    {
+     "what": "its guide to child care cases (state care/supervision of children) sets out the District and High Court orders",
+     "quote": "Most Child Care Orders are made in the District Court, but some are also made in the High Court.",
+     "url": "https://www.courts.ie/guides/child-care-cases"
+    },
+    {
+     "what": "defines child care cases for the public",
+     "quote": "Child care cases are those where children have been placed into the care of the state",
+     "url": "https://www.courts.ie/guides/child-care-cases"
+    },
+    {
+     "what": "family law hub covers guardianship, custody, access and child passport issues",
+     "quote": "Custody – the day-to-day care and home life of a child under 18.",
+     "url": "https://www.courts.ie/hubs/arrangements-for-children"
+    },
+    {
+     "what": "dedicated Dublin Family Law Child Care Office at Chancery Street",
+     "quote": "Dublin Family Law Child Care Office",
+     "url": "https://www.courts.ie/offices/dublin-family-law-child-care-office"
+    }
+   ],
+   "statute": "Courts Service Act 1998",
+   "accounts": "https://www.courts.ie/publications?keyword=&publication_type=351dbf81-7d6a-46ce-a22d-dbdb714ddcc0",
+   "money": [],
+   "notes": "Read courts.ie pages (our role, child care cases guide, arrangements for children hub, Dublin child care office). The brief asked for 'children's court' only if pages state it: none of the pages read use the term Children Court or describe it, so none is recorded. The Courts Service administers the courts that decide child care and family matters; the decisions are for the judiciary (page says the Service 'has no role in the administration of justice'). Whether that counts as a 'children function' of the Service is arguable (openQuestions). Annual report listing page found (Annual Report 2025 listed) but not opened.",
+   "batch": "D"
+  },
+  {
+   "id": "legal-aid-board",
+   "name": "Legal Aid Board",
+   "universeName": "Legal Aid Board",
+   "sponsor": "Department of Justice",
+   "currentSponsor": "Department of Justice, Home Affairs and Migration",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "legal aid for defending child care proceedings (aid goes to the adult respondent, e.g. a parent, in applications to take children into care)",
+     "quote": "We can provide legal aid to help you defend Childcare proceedings such as a Care Order, Interim Care Order, Emergency Care Order",
+     "url": "https://legalaidboard.ie/our-legal-aid-service/how-we-can-help-you/applications-to-take-children-into-state-care/"
+    },
+    {
+     "what": "priority handling of applications to take children into care",
+     "quote": "Applications to Take Children into State care are treated with priority in our Law Centres.",
+     "url": "https://legalaidboard.ie/our-legal-aid-service/how-we-can-help-you/applications-to-take-children-into-state-care/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Board's own page on applications to take children into State care. The same site's navigation also lists services for 'Maintenance, Custody, Access & Guardianship' and 'Child Abduction'; those pages were not opened. The service is for adults involved in the proceedings, not for the child as client, on the wording of this page (the quote says 'defend'). The Board's 'About' pages (statute, annual report) were not read.",
+   "batch": "D"
+  },
+  {
+   "id": "cuan",
+   "name": "Cuan (Domestic, Sexual and Gender-Based Violence Agency)",
+   "universeName": "Cuan or - An Ghníomhaireacht um Fhoréigean Baile, Gnéasach agus Inscnebhunaithe",
+   "sponsor": "Department of Justice",
+   "currentSponsor": "Department of Justice, Home Affairs and Migration",
+   "kind": "ALB",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": "Domestic, Sexual and Gender-Based Violence Agency Act 2023",
+   "accounts": null,
+   "money": [],
+   "notes": "Read 'Cuan's Functions' (gov.ie, Department of Justice, Home Affairs and Migration publication, last updated 21 November 2025): https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/publications/cuans-functions/ . It lists the statutory functions and five core agency functions (service delivery and development, strategic engagement, communications/campaigns/education, research and data, governance); none mentions children, child victims or young people (searched the text for child/young/minor: no hits). It says Cuan coordinates 'over €51 million in funding of 78 DSGBV organizations' (not child-specific, not recorded in money). An own-domain site was not found: cuan.gov.ie does not resolve and www.cuan.ie is an unrelated organisation (Cuan an Chláir). The page is the Department's page about the agency, so this is a sponsor-hosted source, not the body's own site. The Act is named on that page.",
+   "batch": "D"
+  },
+  {
+   "id": "irish-prison-service",
+   "name": "Irish Prison Service",
+   "universeName": "Irish Prison Service",
+   "sponsor": "Department of Justice",
+   "currentSponsor": "Department of Justice, Home Affairs and Migration",
+   "kind": "Other",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "IPS's own About page (https://www.irishprisons.ie/about-us/, read via WebFetch; my own fetch fails certificate verification) says: 'The Irish Prison Service deals with male and female offenders who are 18 years of age or older.' It states no function for children. Conflict: the Department of Justice youth-justice page says the Minister is responsible 'via the Irish Prison Service for the small number of remaining children in adult prison facilities' (gov.ie, last updated 2 April 2024). The two sources are not reconciled here; I have recorded none on the body's own page and flagged the conflict. Also fetched https://www.irishprisons.ie/information-centre/children-in-prison/ via WebFetch: no sentences on children/under-18s.",
+   "batch": "D"
+  },
+  {
+   "id": "department-of-social-protection",
+   "name": "Department of Social Protection",
+   "universeName": "Department of Social Protection",
+   "sponsor": "Department of Social Protection",
+   "currentSponsor": null,
+   "kind": "Department",
+   "verdict": "part",
+   "roles": [
+    "pays",
+    "funds"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Child Benefit: monthly payment per child (qualifying child under 16, or under 19 if in full-time education/training or with a disability)",
+     "quote": "Child Benefit is a monthly payment of €140 to support parents and guardians.",
+     "url": "https://www.gov.ie/en/department-of-social-protection/services/child-benefit/"
+    },
+    {
+     "what": "Working Family Payment: weekly payment to employees with children",
+     "quote": "The Working Family Payment is a weekly, tax-free payment available to employees with children.",
+     "url": "https://www.gov.ie/en/department-of-social-protection/services/working-family-payment-wfp/"
+    },
+    {
+     "what": "One-Parent Family Payment: payment to a parent whose youngest child is under 7 (the payment is to the parent)",
+     "quote": "One-Parent Family Payment is a payment for parents under 66 who are not cohabiting, and whose youngest child is under 7.",
+     "url": "https://www.gov.ie/en/department-of-social-protection/services/one-parent-family-payment/"
+    },
+    {
+     "what": "School meals funding to schools, for providing food items to children (primary schools; secondary schools only DEIS/previously funded)",
+     "quote": "The school meals funding is for providing food items to children.",
+     "url": "https://www.gov.ie/en/department-of-social-protection/publications/school-meals-scheme-your-questions-answered/",
+     "via": "schools"
+    },
+    {
+     "what": "Hot School Meals extended to all remaining primary schools; 3,200 eligible schools covering 550,000 children from September 2025",
+     "quote": "there will be 3,200 eligible schools in respect of 550,000 children from September 2025",
+     "url": "https://www.gov.ie/en/department-of-social-protection/publications/school-meals-scheme-your-questions-answered/",
+     "via": "schools"
+    },
+    {
+     "what": "listed consultation on possible new child payments (title only; content not read)",
+     "quote": "Public Consultation on Potential New Working Age and Targeted Child Payments",
+     "url": "https://www.gov.ie/en/department-of-social-protection/"
+    }
+   ],
+   "statute": null,
+   "accounts": "https://www.gov.ie/en/department-of-social-protection/",
+   "money": [
+    {
+     "what": "Child Benefit monthly rate, one child (rate as printed; page last updated 7 October 2025, 'Budget 2026 measures')",
+     "value": "€140",
+     "year": "page last updated 7 October 2025",
+     "url": "https://www.gov.ie/en/department-of-social-protection/services/child-benefit/"
+    }
+   ],
+   "notes": "Read gov.ie service pages for Child Benefit, Working Family Payment and One-Parent Family Payment, and the School Meals Scheme Q&A publication (last updated 21 September 2026). The Department's home page lists 'Annual Report 2025' (19 August 2026) under General Publications; the report itself was not opened, so accounts points at the home page. gov.ie served a CAPTCHA page on several requests when pages were fetched in quick succession (I did not attempt to solve or bypass it; I waited and fetched again without it). The School Meals page I read does not give a programme-level budget figure, so none recorded; the 'Report on Nutrition Review of the Hot School Meals Programme' (21 September 2026) is listed on the home page but not read. The Department is the funder/payer; payments are to parents/guardians, not to children.",
+   "batch": "D"
+  },
+  {
+   "id": "citizens-information-board",
+   "name": "Citizens Information Board",
+   "universeName": "Citizens Information Board",
+   "sponsor": "Department of Social Protection",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": "Comhairle Act 2000 (also Citizens Information Act 2007 and Social Welfare (Miscellaneous Provisions) Act 2008, all named on the page)",
+   "accounts": "https://www.citizensinformationboard.ie/en/about/",
+   "money": [],
+   "notes": "Read the Board's own 'About the Citizens Information Board' page (https://www.citizensinformationboard.ie/en/about/). Its six-point mandate is information, advice and advocacy on social services, 'in particular' for people with disabilities, and MABS; no child-specific function found. The Board's website citizensinformation.ie carries general information including on children but that is content, not a stated Board function, and was not mined. Accounts column points at the About page, which has an Annual Report link in its navigation (not opened).",
+   "batch": "D"
+  },
+  {
+   "id": "department-of-rural-and-community-development",
+   "name": "Department of Rural and Community Development (now Department of Rural and Community Development and the Gaeltacht)",
+   "universeName": "Department of Rural and Community Development",
+   "sponsor": "Department of Rural and Community Development",
+   "currentSponsor": "Department of Rural and Community Development and the Gaeltacht",
+   "kind": "Department",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Department's gov.ie home page, 'What the department does' and 'The Community Development Division' pages; no child or youth function found (searched for child/youth/young/famil/school: no hits on any of the three). 2025 reorganisation: renamed Department of Rural and Community Development and the Gaeltacht, taking the Gaeltacht function: https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/news/a-new-identity-the-department-of-rural-and-community-development-and-the-gaeltacht/ (published 9 June 2025). The Department sponsors Pobal, the Charities Regulator and the Dormant Accounts Fund (see separate entries). The SICAP programme page was not read, so SICAP target groups are not recorded.",
+   "batch": "D"
+  },
+  {
+   "id": "pobal",
+   "name": "Pobal",
+   "universeName": "Pobal",
+   "sponsor": "Department of Rural and Community Development",
+   "currentSponsor": "Department of Rural and Community Development and the Gaeltacht",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "funds",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Pobal's stated programme areas include children and young people",
+     "quote": "Our programmes focus on social inclusion across three areas: children and young people, inclusion and equality, and employment and enterprise.",
+     "url": "https://www.pobal.ie/programmes/"
+    },
+    {
+     "what": "manages funding of the City/County Childcare Committees for the children's department",
+     "quote": "Pobal, on behalf of the Department of Children, Disability and Equality (DCDE), manages the funding of CCCs, oversees their work and provides development supports.",
+     "url": "https://www.pobal.ie/programmes/county-city-childcare-committees-ccc/"
+    },
+    {
+     "what": "administers functions of the Access and Inclusion Model (children with disabilities in the ECCE programme)",
+     "quote": "Pobal manages and administers a number of key functions under AIM level 1, 5 & 7",
+     "url": "https://www.pobal.ie/programmes/access-and-inclusion-model-aim/"
+    },
+    {
+     "what": "administers the Comhairle na nÓg Development Fund (children's and young people's councils) with the children's department",
+     "quote": "The Comhairle na nÓg Development Fund is overseen by the Department of Children, Disability and Equality (DCDE) and administered in conjunction with Pobal.",
+     "url": "https://www.pobal.ie/programmes/comhairle-na-nog-development-fund/"
+    }
+   ],
+   "statute": null,
+   "accounts": "https://www.pobal.ie/about-pobal/corporate-finance/",
+   "money": [],
+   "notes": "Read Pobal's own About, Funder Departments, Programmes, Corporate Publications pages and the CCC, AIM, Comhairle na nÓg and Building Blocks programme pages. Programmes page lists further childcare programmes (Better Start, Building Blocks Capital Programmes, Community Childcare Subvention Plus Saver Programme, 2025 Programme for Support Organisations to ELC/SAC and Childminding) which were not read in full; the first page of the programme list showed 14 entries and the full catalogue was not enumerated. The pages say Pobal acts for the Department of Children, Disability and Equality (the children's department as renamed in 2025) and for the Department of Rural and Community Development and the Gaeltacht. The pages differ on count ('38 programmes' on About; 'circa 41' on Funder Departments). Recipient/grant lists: none found on the pages read (About, Funder Departments, Programmes, Corporate Publications = equality duty and gender pay gap reports only); Pobal has a separate Data Hub / 'Early Learning and Childcare Data' page (https://www.pobal.ie/data-library/early-learning-and-childcare-data/) that was linked but not opened, so whether it publishes provider- or recipient-level lists is not established. Corporate-finance page linked in navigation, not opened. Dormant Accounts: Pobal lists 'DAF KickStart' and 'DAF Growing Social Enterprise Fund' programmes; their child relevance was not read.",
+   "batch": "D"
+  },
+  {
+   "id": "charities-regulator",
+   "name": "Charities Regulator",
+   "universeName": "Charities Regulator",
+   "sponsor": "Department of Rural and Community Development",
+   "currentSponsor": "Department of Rural and Community Development and the Gaeltacht",
+   "kind": "ALB",
+   "verdict": "unverified",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "No source reached. charitiesregulator.ie answers every request (my own fetches of the home page and /en/about-us, and WebFetch on /en/information-for-the-public/about-us) with HTTP 403 / a 'Just a moment... Enable JavaScript' bot-challenge page. I did not attempt to solve or bypass it. Nothing else was used as a substitute.",
+   "batch": "D"
+  },
+  {
+   "id": "dormant-accounts-fund",
+   "name": "Dormant Accounts Fund",
+   "universeName": "Dormant Accounts Fund",
+   "sponsor": "Department of Rural and Community Development",
+   "currentSponsor": "Department of Rural and Community Development and the Gaeltacht",
+   "kind": "Other",
+   "verdict": "part",
+   "roles": [
+    "funds"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "the Fund's eligible purposes are disadvantage and disability, not children as such",
+     "quote": "Money in the Dormant Accounts Fund can be used to fund measures that address economic, social, or educational disadvantage",
+     "url": "https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/press-releases/minister-buttimer-publishes-the-dormant-accounts-action-plan-2026"
+    },
+    {
+     "what": "2026 Action Plan example measure: youth and community justice (young people)",
+     "quote": "€3 million for youth and community justice services aimed at countering the influence and impacts of crime on young people and in communities",
+     "url": "https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/press-releases/minister-buttimer-publishes-the-dormant-accounts-action-plan-2026"
+    },
+    {
+     "what": "2026 Action Plan example measure: youth and family initiatives",
+     "quote": "€1.4 million for a youth and family initiatives to provide young people with the soft skills needed to improve employability",
+     "url": "https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/press-releases/minister-buttimer-publishes-the-dormant-accounts-action-plan-2026"
+    },
+    {
+     "what": "2026 Action Plan summary table, Department of Justice row (column 'Max allocation')",
+     "quote": "Measures to support paths for Young people leaving detention or custody",
+     "url": "https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/press-releases/minister-buttimer-publishes-the-dormant-accounts-action-plan-2026"
+    },
+    {
+     "what": "2026 Action Plan summary table, Department of Justice row (column 'Max allocation')",
+     "quote": "Resources to inform and support children and those with literacy or language barriers to navigate family justice processes",
+     "url": "https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/press-releases/minister-buttimer-publishes-the-dormant-accounts-action-plan-2026"
+    }
+   ],
+   "statute": "Dormant Accounts Acts 2001-2012 (with the Unclaimed Life Assurance Policies Act 2003, named on the page)",
+   "accounts": null,
+   "money": [
+    {
+     "what": "Dormant Accounts Action Plan 2026 total allocation across 56 measures in 11 departments (all purposes, not child-specific)",
+     "value": "€46.97 million",
+     "year": "2026",
+     "url": "https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/press-releases/minister-buttimer-publishes-the-dormant-accounts-action-plan-2026"
+    },
+    {
+     "what": "example measure approved in the 2026 Action Plan: youth and community justice services (allocation)",
+     "value": "€3 million",
+     "year": "2026",
+     "url": "https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/press-releases/minister-buttimer-publishes-the-dormant-accounts-action-plan-2026"
+    },
+    {
+     "what": "example measure approved in the 2026 Action Plan: youth and family initiatives (allocation)",
+     "value": "€1.4 million",
+     "year": "2026",
+     "url": "https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/press-releases/minister-buttimer-publishes-the-dormant-accounts-action-plan-2026"
+    },
+    {
+     "what": "Justice-led measure 'Measures to support paths for Young people leaving detention or custody', 'Max allocation' column of the summary table (euro implied by column)",
+     "value": "521,000",
+     "year": "2026",
+     "url": "https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/press-releases/minister-buttimer-publishes-the-dormant-accounts-action-plan-2026"
+    },
+    {
+     "what": "Justice-led measure 'Resources to inform and support children and those with literacy or language barriers to navigate family justice processes', 'Max allocation' column (euro implied)",
+     "value": "720,000",
+     "year": "2026",
+     "url": "https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/press-releases/minister-buttimer-publishes-the-dormant-accounts-action-plan-2026"
+    }
+   ],
+   "notes": "Read the Minister's press release for the Dormant Accounts Action Plan 2026 (published 24 November 2025; last updated 1 December 2025) including its summary table of 56 measures by lead department. The Action Plan document itself was not read. The table has further child/youth-relevant rows under the Department of Children, Disability and Equality ('Youth and/or Family Initiatives'), the Department of Education and Youth (e.g. 'Young Social Innovators', 'Supporting children and young people through GAA', 'Home visiting to support transitions to primary schools - DEIS Plus', 'To promote school attendance, participation and retention') and the Department of Health ('Ballymun Multidisciplinary School Team'); these were seen but not individually recorded with amounts, so a later stage should read the table fully. The Fund is an extra-budgetary fund; the delivering body for each measure is the lead department named in the table, so this entry records the Fund's funding role only. The 2025 Plan (€44.8 million, 51 measures per a search listing) was not opened. Department names in the table reflect the 2025 reorganisations (Department of Education and Youth; Department of Children, Disability and Equality; Department of Culture, Communications and Sport).",
+   "batch": "D"
+  },
+  {
+   "id": "department-of-housing-local-government-and-heritage",
+   "name": "Department of Housing, Local Government and Heritage",
+   "universeName": "Department of Housing, Local Government and Heritage",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "currentSponsor": null,
+   "kind": "Department",
+   "verdict": "part",
+   "roles": [
+    "funds",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Department's policy publication on children and families experiencing homelessness: stated goal on family homelessness",
+     "quote": "A major goal of this plan is to reduce long-term family homelessness and shorten the time children spend in emergency accommodation.",
+     "url": "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/publications/supporting-children-and-families-experiencing-homelessness/"
+    },
+    {
+     "what": "public consultation on a dedicated Child and Family Homelessness Action Plan (20 January 2026)",
+     "quote": "has today launched a public consultation to seek input to inform the development of a dedicated and targeted Child and Family Homelessness Action Plan",
+     "url": "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/press-releases/public-views-sought-on-child-and-family-homelessness-action-plan/"
+    },
+    {
+     "what": "capital funding to buy homes for families longest in emergency accommodation",
+     "quote": "€100 million will be provided in 2026 to buy second-hand homes for families who have been in emergency accommodation the longest.",
+     "url": "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/publications/supporting-children-and-families-experiencing-homelessness/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [
+    {
+     "what": "capital funding to buy second-hand homes for families longest in emergency accommodation ('will be provided', i.e. planned allocation)",
+     "value": "€100 million",
+     "year": "2026",
+     "url": "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/publications/supporting-children-and-families-experiencing-homelessness/"
+    }
+   ],
+   "notes": "Read two gov.ie pages from the Department: the 'Supporting Children and Families Experiencing Homelessness' publication (13 November 2025) and the consultation press release (20 January 2026, said the Child and Family Homelessness Action Plan was due in Q2 2026). Whether that Plan has been published was not established (a search summary suggested a September 2026 statement that it was still forthcoming; I did not open that page). The Department's broader housing and local government remit was not read as it is not child-specific. Domestic-violence housing measures on the first page lead back to Justice/Cuan.",
+   "batch": "D"
+  },
+  {
+   "id": "housing-agency",
+   "name": "The Housing Agency",
+   "universeName": "The Housing Agency (Housing & Sustainable Communities Agency)",
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "advises"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "produced the Supports Guide for Young People (homeless/at-risk), tasked by action 27 of the Youth Homelessness Strategy",
+     "quote": "Action 27 tasked The Housing Agency with producing a guide setting out supports available for young people.",
+     "url": "https://www.housingagency.ie/homelessness/supports-guide-young-people/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Agency's What we do page (describes it as 'a government body working with national and local partners to support the delivery of sustainable, affordable, and high-quality housing') and its Supports Guide for Young People page. The guide is for young people, not a children's service; the page does not state an age range in the text I read. Only this one child/young-person function found; the Agency's other programmes (Part V, Mortgage to Rent, Housing First etc.) are not child-specific.",
+   "batch": "D"
+  },
+  {
+   "id": "department-of-tourism-culture-arts-gaeltacht-sport-and-media",
+   "name": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media (now Department of Culture, Communications and Sport)",
+   "universeName": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "currentSponsor": "Department of Culture, Communications and Sport",
+   "kind": "Department",
+   "verdict": "part",
+   "roles": [
+    "funds",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Creative Youth Plan 2023-2027 for children and young people, launched jointly with the Departments of Education, Further and Higher Education, and Children",
+     "quote": "Creative Youth Plan 2023-2027 aims to enable the creative potential of children and young people, from birth to 24 years",
+     "url": "https://www.gov.ie/en/department-of-culture-communications-and-sport/press-releases/minister-martin-minister-foley-minister-ogorman-and-minister-harris-launch-new-creative-youth-plan-2023-2027-for-children-and-young-people/"
+    },
+    {
+     "what": "new fund under the Plan for pilot youth-led projects",
+     "quote": "new €500,000 Creative Youth Nurture Fund to support pilot youth-led projects that prioritise seldom heard children and young people",
+     "url": "https://www.gov.ie/en/department-of-culture-communications-and-sport/press-releases/minister-martin-minister-foley-minister-ogorman-and-minister-harris-launch-new-creative-youth-plan-2023-2027-for-children-and-young-people/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [
+    {
+     "what": "Creative Youth Nurture Fund, new (announced at the Plan's launch, 28 March 2023; announced amount, not outturn)",
+     "value": "€500,000",
+     "year": "2023",
+     "url": "https://www.gov.ie/en/department-of-culture-communications-and-sport/press-releases/minister-martin-minister-foley-minister-ogorman-and-minister-harris-launch-new-creative-youth-plan-2023-2027-for-children-and-young-people/"
+    }
+   ],
+   "notes": "Read the Creative Youth Plan 2023-2027 launch press release (gov.ie, published 28 March 2023, last updated 12 April 2025; issued by four departments) and the Creative Youth page of the Creative Ireland Programme (https://www.creativeireland.gov.ie/en/creative-youth/), which repeats the plan's 0-24 scope. The Department's own home page and annual report were not read. 2025 reorganisation: the gov.ie press release now sits under 'Department of Culture, Communications and Sport', and the Gaeltacht function went to the Department of Rural and Community Development and the Gaeltacht (https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/news/a-new-identity-the-department-of-rural-and-community-development-and-the-gaeltacht/). Sport and arts children's work sits in Sport Ireland and the Arts Council entries.",
+   "batch": "D"
+  },
+  {
+   "id": "sport-ireland",
+   "name": "Sport Ireland",
+   "universeName": "Sport Ireland",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "currentSponsor": "Department of Culture, Communications and Sport",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "advises",
+    "delivers",
+    "funds"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "safeguarding of children in sport as stated priority of its ethics programme",
+     "quote": "The safeguarding of children in sport is of paramount importance.",
+     "url": "https://www.sportireland.ie/ethics/safeguarding-sport"
+    },
+    {
+     "what": "guidelines and codes of practice for protecting children in sport",
+     "quote": "Guidelines and codes of practice promoting best practice for the protection of children in sport consistent with child protection guidance and legislation.",
+     "url": "https://www.sportireland.ie/ethics/safeguarding-sport"
+    },
+    {
+     "what": "expects each governing body of sport to appoint a National Children's Officer",
+     "quote": "Each Governing Body of Sport should appoint a National Children's Officer.",
+     "url": "https://www.sportireland.ie/ethics/national-children-officers"
+    },
+    {
+     "what": "describes its remit as spanning all levels of sport, from children to elite (funding, expertise and support)",
+     "quote": "From the child first starting out in sport, to the everyday sports participant, to the elite athlete representing their country",
+     "url": "https://www.sportireland.ie/about-us"
+    }
+   ],
+   "statute": null,
+   "accounts": "https://www.sportireland.ie/about-us/publications/annual-reports",
+   "money": [],
+   "notes": "Read Sport Ireland's About us, Ethics, Safeguarding Sport and National Children Officers pages. Safeguarding page also lists three safeguarding workshops, a SafeSport app and 'Staying Safe Online' (not recorded separately). Participation page was opened but no child-specific text found (searched child/young/youth/school/safeguard). The brief asked for 'children and young people's sport'; the pages read present children's safeguarding, not a children's participation programme, as the stated function. The annual reports listing was linked, not opened.",
+   "batch": "D"
+  },
+  {
+   "id": "arts-council",
+   "name": "The Arts Council / An Chomhairle Ealaíon",
+   "universeName": "The Arts Council (An Chomhairle Ealaíon)",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "currentSponsor": "Department of Culture, Communications and Sport",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "delivers",
+    "funds"
+   ],
+   "via": "schools",
+   "functions": [
+    {
+     "what": "Creative Schools programme: commitment to children and young people, delivered in schools",
+     "quote": "Creative Schools brings to life our commitment to plan and provide for children and young people by supporting schools to understand and embrace creativity.",
+     "url": "https://artscouncil.ie/developing-the-arts/flagship-programmes/creative-schools/"
+    },
+    {
+     "what": "describes the programme as child-led",
+     "quote": "This two-year child-led programme enhances the creative potential of every pupil by stimulating curiosity, communication and collaboration.",
+     "url": "https://artscouncil.ie/developing-the-arts/flagship-programmes/creative-schools/"
+    },
+    {
+     "what": "led in partnership with the Departments of Education and Culture, Communications and Sport and Creative Ireland; part of the Creative Youth Plan",
+     "quote": "The programme is led by the Arts Council in partnership with the Department of Education",
+     "url": "https://artscouncil.ie/developing-the-arts/flagship-programmes/creative-schools/"
+    },
+    {
+     "what": "child protection and welfare self-audit tool is listed on the home page (link label only; the tool is behind sign-in and was not read)",
+     "quote": "Child Protection and Welfare: self-audit tool",
+     "url": "https://artscouncil.ie/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Arts Council's Creative Schools page, the Developing the Arts page and About page, and checked the home page links. The brief mentioned a 'young people, children and education' strand: no page under that name was found in the links on the site's home or Developing the arts page, so it is not recorded. The Creative Schools page says 'Since 2018, we have supported more than 1,300 schools'. The self-audit tool at childprotection.artscouncil.ie is a sign-in page (Arts Council child welfare and protection tool); content not read. The About page says it was 'Established in 1951'; the Arts Acts are not named on the pages read. via is set to schools because the one programme read reaches children through schools; the child protection tool covers arts organisations, so 'schools' may be too narrow (see openQuestions).",
+   "batch": "D"
+  },
+  {
+   "id": "coimisiun-na-mean",
+   "name": "Coimisiún na Meán",
+   "universeName": "Coimisiún na Meán",
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "currentSponsor": "Department of Culture, Communications and Sport",
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "regulates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "responsible for the Online Safety Framework, which makes digital services accountable for protecting people, especially children",
+     "quote": "This framework makes digital services accountable for how they protect people, especially children, from harm online.",
+     "url": "https://www.cnam.ie/industry-and-professionals/online-safety-framework/"
+    },
+    {
+     "what": "rules to protect children and adults from harmful or illegal online content",
+     "quote": "Thanks to the Online Safety Framework, there are now rules to make sure children and adults are protected from harmful or illegal content online.",
+     "url": "https://www.cnam.ie/general-public/children-young-people/"
+    }
+   ],
+   "statute": "Online Safety and Media Regulation Act 2022 (named on the Online Safety Framework page, with the EU Digital Services Act and Terrorist Content Online Regulation)",
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Commission's own Online Safety Framework page, 'Children & young people' page and About page. The site has a dedicated 'Children & young people' section for the public and 'Resources for educators' (not opened). The Online Safety Code, age assurance and any child-specific provisions were not read in detail; the Codes & legislation page contained no child terms in the text extracted. Sponsor rename per gov.ie pages read for the sponsor department; no dedicated page on the Commission's move was read.",
+   "batch": "D"
+  },
+  {
+   "id": "data-protection-commission",
+   "name": "Data Protection Commission",
+   "universeName": "The Data Protection Commission (DPC)",
+   "sponsor": "Department of Justice",
+   "currentSponsor": "Department of Justice, Home Affairs and Migration",
+   "kind": "Other",
+   "verdict": "part",
+   "roles": [
+    "regulates",
+    "advises"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "published guidance, the Fundamentals for a Child-Oriented Approach to Data Processing",
+     "quote": "They introduce child-specific data protection interpretative principles and recommended measures",
+     "url": "https://www.dataprotection.ie/en/dpc-guidance/fundamentals-child-oriented-approach-data-processing"
+    },
+    {
+     "what": "awareness campaign on parents sharing children's data online (with the French CNIL)",
+     "quote": "In November 2025, the DPC launched its “Pause Before You Post” campaign to raise awareness of the potential risks and consequences of “sharenting”",
+     "url": "https://www.dataprotection.ie/en/children"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the DPC's Children page and its Fundamentals guidance page, and 'Who We Are'. The Children page also lists guidance for children on their data protection rights and for parents on complaints on behalf of a child (titles only). DPC describes itself as the national independent authority responsible for monitoring the GDPR; the page does not name the Data Protection Act 2018. DPC's decision on Children's Health Ireland (a children's hospital) appears on the home page but was not read. Universe lists the DPC as a Vote under Justice.",
+   "batch": "D"
+  },
+  {
+   "id": "local-authorities",
+   "name": "Local authorities (31 city and county councils, treated as one class)",
+   "universeName": null,
+   "sponsor": "Department of Housing, Local Government and Heritage",
+   "currentSponsor": null,
+   "kind": "Local authority",
+   "verdict": "part",
+   "roles": [
+    "delivers",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "statutory power to take measures and incur expenditure for community amenity, recreation and related matters (general, not child-specific)",
+     "quote": "a local authority may take such measures, engage in such activities or do such things (including the incurring of expenditure)",
+     "url": "https://www.irishstatutebook.ie/2001/en/act/pub/0037/sec0067.html"
+    },
+    {
+     "what": "statute lists playgrounds and play equipment among provision a council may make (Schedule 13)",
+     "quote": "The provision of parks, gardens, open spaces, playgrounds, play equipment, animals, picnic sites,",
+     "url": "https://revisedacts.lawreform.ie/eli/2001/act/37/schedule/13/revised/en/html"
+    },
+    {
+     "what": "Dublin City Council: play provision and play events for children",
+     "quote": "We host play events year round, including National Play Day, Playful Streets, and Play in the Park.",
+     "url": "https://www.dublincity.ie/residential/parks/recreation-and-play/about-play"
+    },
+    {
+     "what": "Dublin City Council: public libraries run activities for children and families",
+     "quote": "From toddler groups to book clubs, there are always lots of activities for families and children to enjoy in Dublin City Libraries.",
+     "url": "https://www.dublincity.ie/leabharlanna/using-your-library/children"
+    },
+    {
+     "what": "Dublin City Council: hosts the city youth council (Comhairle na nÓg)",
+     "quote": "Dublin City Comhairle na nÓg is the official youth council for Dublin City.",
+     "url": "https://www.dublincity.ie/residential/improving-my-community/comhairle-na-nog"
+    },
+    {
+     "what": "Cork County Council: refurbished a playground, funded in part by the council",
+     "quote": "Refurbishment works at Leap Playground have now been completed, creating a modern and vibrant recreational space for children and families in the local community.",
+     "url": "https://www.corkcoco.ie/ga/node/10423"
+    },
+    {
+     "what": "Cork County Council: library service page lists children's book clubs (page heading only; no descriptive sentence found)",
+     "quote": "Children's Book Clubs",
+     "url": "https://www.corkcoco.ie/en/resident/libraries",
+     "headingOnly": true
+    },
+    {
+     "what": "Galway County Council: playgrounds, with inclusion upgrades supported by the children's department",
+     "quote": "Galway County Council is committed to making playgrounds more inclusive through ongoing upgrades and refurbishments.",
+     "url": "https://www.galway.ie/en/recreation-amenity/playgrounds"
+    },
+    {
+     "what": "Galway County Council: hosts a steering group monitoring the local Comhairle na nÓg",
+     "quote": "Galway County Council host a Steering Group to monitor the delivery of Comhairle na nÓg at a local level.",
+     "url": "https://www.galway.ie/en/community-tourism-arts/community-development/comhairle-na-nog"
+    },
+    {
+     "what": "Leitrim County Council (small rural): LCDC linked to Comhairle na nÓg on the council's Comhairle page",
+     "quote": "Leitrim LCDC (Local Community Development Committee) is mandated to actively involve and collaborate with Comhairle na nÓg.",
+     "url": "https://leitrim.ie/Live/Your-Community/Comhairle-na-nOg"
+    },
+    {
+     "what": "Leitrim County Council (small rural): council website carries a Children & Young People section that includes the Leitrim County Childcare Committee",
+     "quote": "Leitrim County Childcare Committee offers support and information to enable families to access childcare within the county and also support to childcare providers.",
+     "url": "https://www.leitrim.ie/Live/Children-Young-People/Leitrim-Childcare-Committee/"
+    }
+   ],
+   "statute": "Local Government Act 2001, s.67 (amenity, recreation and other functions) and Schedule 13, read at the urls given",
+   "accounts": null,
+   "money": [],
+   "notes": "Class entry for all 31 authorities in the universe localAuthorities list (Table 4.1); NOT one verdict per council. Verdict is part: children are never the council's whole remit, and the statutory text read (s.67, Sch.13) is general amenity/recreation, naming playgrounds and play equipment but no children's function as such. Children-specific work is evidenced only council by council. PER-COUNCIL EVIDENCE READ: Dublin City (play, libraries, Comhairle page, all own site); Cork County (Leap Playground news item, whose text also says \"Funding for the refurbishment works was secured through several programmes from Cork County Council, and the Department of Children, Disability and Equality\"; libraries page headings only); Galway County (playgrounds, Comhairle na nÓg); Leitrim (Comhairle page; Children & Young People section with Childcare Committee). PER-COUNCIL DIFFERENCES: (1) Comhairle na nÓg: Cork City's own page says the Comhairle \"is funded by the Department of Children, Disability and Equality and is supported by Cork City Council Community Team\" (https://www.corkcity.ie/en/council-services/services/community/get-involved-in-your-community/comhairle-na-nog/) and that YMCA Ireland is its home in 2026; Galway County's page says Youth Work Ireland works directly with the committee while the council hosts the steering group; Leitrim's council page ties the LCDC to it. So the council role ranges from steering-group host to support team, and the youth-work body that runs it differs by county. Cork County Council's own Comhairle page was not reached (the comhairlenanog.ie county page returned HTTP 429). (2) Dublin City holds the Dublin Region Homeless Executive: its homepage says it \"is provided by Dublin City Council as the lead statutory local authority in the response to homelessness in Dublin\" (https://www.homelessdublin.ie/) and shares the service with South Dublin, Fingal and Dun Laoghaire-Rathdown. That page does not mention families or children, so no family-homelessness function is recorded; family hubs and child homelessness remain NOT ESTABLISHED. (3) Libraries: the universe also lists 'Local Authority Library and Archive Service' as a separate body under Dept of Rural and Community Development; children's library activity is recorded here only as it appears on council pages. NOT ESTABLISHED / not read: housing duties to families with children (Housing Acts not read); Department of Housing, Local Government and Heritage pages (none found naming a children function; not exhaustively searched); every council other than the four above. Search snippets about Galway's library service, Cork County Comhairle and Galway LSP were not opened and are not recorded. Hosted structures are recorded as separate entries: city-county-childcare-committees, lcdc-lecp, local-sports-partnerships, public-participation-networks.",
+   "batch": "E"
+  },
+  {
+   "id": "city-county-childcare-committees",
+   "name": "City and County Childcare Committees (30)",
+   "universeName": null,
+   "sponsor": "Department of Children, Equality, Disability, Integration and Youth",
+   "currentSponsor": "Department of Children, Disability and Equality",
+   "kind": "Hosted structure",
+   "verdict": "core",
+   "roles": [
+    "coordinates",
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "support providers of early learning and care, school-age childcare and childminders",
+     "quote": "City/County Childcare Committees (CCCs) work collaboratively to provide support to early education and childcare service providers",
+     "url": "https://www.pobal.ie/programmes/county-city-childcare-committees-ccc/"
+    },
+    {
+     "what": "local agents implementing early education and childcare programmes",
+     "quote": "There are 30 City and County Childcare Committees who operate as local agents of the DCDE.",
+     "url": "https://www.pobal.ie/programmes/county-city-childcare-committees-ccc/"
+    },
+    {
+     "what": "first point of contact for providers and parents on national childcare funding programmes",
+     "quote": "CCCs are often the first point of contact for service providers and parents in relation to early childhood care and education initiatives",
+     "url": "https://www.pobal.ie/programmes/county-city-childcare-committees-ccc/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Funding and oversight: Pobal page says \"Pobal, on behalf of the Department of Children, Disability and Equality (DCDE), manages the funding of CCCs, oversees their work and provides development supports.\" (https://www.pobal.ie/programmes/county-city-childcare-committees-ccc/). Not hosted by councils in a legal sense: Leitrim's council site presents its committee under Children & Young People but the committee's own footer reads \"Leitrim County Childcare Committee CLG\" (https://www.leitrim.ie/Live/Children-Young-People/Leitrim-Childcare-Committee/), i.e. a separate company. Whether all 30 are independent companies was not read. The department's 2025 name (DCDE) is what the Pobal page uses; the universe uses the 2024 name. Verdict core is a judgement: remit is early learning and childcare programmes (children plus providers, parents and childminders); see openQuestions. No money figure read.",
+   "batch": "E"
+  },
+  {
+   "id": "lcdc-lecp",
+   "name": "Local Community Development Committees and Local Economic and Community Plans",
+   "universeName": null,
+   "sponsor": "Department of Rural and Community Development",
+   "currentSponsor": "Department of Rural and Community Development and the Gaeltacht",
+   "kind": "Hosted structure",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Department's LCDC page (https://www.gov.ie/en/department-of-rural-and-community-development-and-the-gaeltacht/policy-information/local-community-development-committees-lcdcs/). It says \"Local Community Development Committees (LCDCs) are groups established in each local authority area.\" and \"A key function of the LCDCs is to prepare the community elements of 6-year Local Economic and Community Plans (LECPs)\". The page names no child-specific function. Children-related items appear only as titles or passing mentions: a file titled \"Wicklow LCDC - Local Area Child Poverty Action Plan Pilot Scheme\", a conference presentation on \"one of the Local Area Child Poverty Action Plan Pilots\", and a file titled \"Children and Young People's Services Committees -Review\" (linked documents not opened). Leitrim's council page says its LCDC is \"mandated to actively involve and collaborate with Comhairle na nÓg\" (https://leitrim.ie/Live/Your-Community/Comhairle-na-nOg), a single-county statement. LECP contents for any county were not read, so whether plans carry children's actions is NOT ESTABLISHED. Section 49A of the Local Government Act 2001 appeared only in a search snippet, not recorded.",
+   "batch": "E"
+  },
+  {
+   "id": "local-sports-partnerships",
+   "name": "Local Sports Partnerships (29)",
+   "universeName": null,
+   "sponsor": "Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media",
+   "currentSponsor": null,
+   "kind": "Hosted structure",
+   "verdict": "part",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Carlow LSP runs youth sport initiatives",
+     "quote": "The goal of the Carlow Sports Partnership youth initiatives is to support the development of sport and physical activity programmes",
+     "url": "https://carlowsports.ie/children-young-people/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Sport Ireland (sponsor in universe: Dept of Tourism, Culture, Arts, Gaeltacht, Sport and Media) page says \"There is a network of 29 Local Sports Partnerships across Ireland.\" and \"Sport Ireland through its network of Local Sports Partnerships helps people to get active\" (https://www.sportireland.ie/participation/local-sports-partnerships). That page names no children focus and does not say who hosts or funds them. HOSTING, from LSPs' own pages: Carlow: \"The LSP is funded primarily through Sport Ireland and operates as a sub-committee of Carlow County Council.\" (https://carlowsports.ie/carlow-local-sports-partnership/); Offaly page labels it \"a multi-sectoral subcommittee of Offaly County Council\" and \"core funded by Sport Ireland\" (https://www.offaly.ie/offaly-sports-partnership/). Not uniform: CSO Table 4.2 lists \"Limerick Local Sports Partnership Ltd\" and \"Meath Local Sports Partnership CLG\" as separate companies under those councils, so some LSPs are companies and others council sub-committees. The part verdict rests on one county (Carlow); the Offaly page shows safeguarding-children headings only. Nationally children are one possible audience, not the remit. No money read.",
+   "batch": "E"
+  },
+  {
+   "id": "public-participation-networks",
+   "name": "Public Participation Networks (31)",
+   "universeName": null,
+   "sponsor": "Department of Rural and Community Development",
+   "currentSponsor": "Department of Rural and Community Development and the Gaeltacht",
+   "kind": "Hosted structure",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read the Department's PPN page (https://www.gov.ie/ppn): \"A Public Participation Network (PPN) is a network that allows local authorities to connect with community groups around the country.\" and \"Each of Ireland’s 31 local authority areas has a PPN\". It names community, environmental and socially excluded groups (disability, migrants, Travellers); no child or young-person function. Who funds PPNs, and the Act, appeared only in search snippets, not recorded. Handbook and structural review not opened.",
+   "batch": "E"
+  }
+ ],
+ "screenedOut": "Every other body in ie-bodies-universe.json (e.g. the commercial corporations, the Department of Environment, Finance and Transport groups, the universities and technological universities, the 2 Extra-Budgetary funds not named here, the Table 4.2 local-authority companies) was screened out by name and remit WITHOUT reading its documents. Not a \"none\" verdict.",
+ "openQuestions": [
+  {
+   "batch": "A",
+   "q": "Department of Children, Disability and Equality is recorded 'part' because its own mission and Statement of Strategy put children alongside disabled people and equality (and the 2025 transfers took youth and integration out). Should it be core?"
+  },
+  {
+   "batch": "A",
+   "q": "Office of the Director of Authorised Intervention, Tuam is recorded 'none': the Act and orders speak of human remains in institutions for 'adults or children, or both', not children; but the site is a former mother and baby institution and the sponsor is the children's department. Include as part/core on a judgement, or leave it out? Also unresolved: the Office was set up for 30 months from 20 March 2023; whether it was extended or closed in 2025 was not established."
+  },
+  {
+   "batch": "A",
+   "q": "Gaisce: core on a 14-25 programme (so partly adults), and its sponsor appears to have moved to the Department of Education and Youth (its own 2025 annual report), while the gov.ie aegis page (May 2025) still says the children's department is the primary funder. Which sponsor should the map show?"
+  },
+  {
+   "batch": "A",
+   "q": "Irish Youth Justice Service: no page I read says in terms that it is a unit of the Department of Justice (it is on Justice's policy page, last updated April 2024, with a Justice contact address). Is that enough to place it there?"
+  },
+  {
+   "batch": "A",
+   "q": "Tusla Section 56: the 2025 financial statements publish a named recipient list (Appendix 5; 473 s.56 organisations plus 124 SCP). A later stage must decide whether to extract it."
+  },
+  {
+   "batch": "A",
+   "q": "Source route: gov.ie blocks automated fetching, so the department, aegis, strategy, youth-participation, Tuam and Justice youth-justice pages were read via Internet Archive snapshots (URLs show the snapshot). Acceptable as the body's own documents?"
+  },
+  {
+   "batch": "A",
+   "q": "Department of Education and Youth is the sponsor of Gaisce and a co-funder of Tusla; the order renaming the Education department was not read. The Department of Education batch should confirm its current name and remit."
+  },
+  {
+   "batch": "B",
+   "q": "health-pss-organisations: these 28 are voluntary organisations (charities/CLGs) that the CSO classifies into central government because of high, conditional government funding. Do you want them kept in the government stage as a grouped \"Other\" entry, or moved to the voluntary stage (where each would be a profile in its own right and their HSE/DCEDIY grants would be the funding line)? Keeping both would double-count their funding."
+  },
+  {
+   "batch": "B",
+   "q": "health-pss-organisations: in the CSO table these sit under the Department of Children, Disability and Equality (formerly DCEDIY), not the Department of Health, and the universe file records the sponsor only as \"Organisations providing health and personal social services\". Should the grouped entry be attributed to DCEDIY in the chain? Also, 23 of the 28 were not checked (by instruction); several are not obviously children's services."
+  },
+  {
+   "batch": "B",
+   "q": "department-of-health: gov.ie blocked every page behind human verification (not attempted), so the verdict rests on the Statement of Strategy 2025-2028 and Annual Report 2025 PDFs only. If you can open https://www.gov.ie/en/department-of-health/organisation-information/about-the-department-of-health/ and paste the remit text, the function list could be made firmer."
+  },
+  {
+   "batch": "B",
+   "q": "iph: unverified. instituteofpublichealth.org is behind a bot check. Can you open its About page (or an annual report) and tell me whether children are a stated focus? Search results suggested it is an all-island body that may now be named All Island Institute of Public Health."
+  },
+  {
+   "batch": "B",
+   "q": "hiqa: its children's function is inspection of children's social care (Tusla, foster care, special care, Oberstown), not health services. Should that be counted in the health chain or with the children/justice stage? The same question applies to whether inspecting Tusla counts as a \"children's service\" function of a health regulator."
+  },
+  {
+   "batch": "B",
+   "q": "chi / nphdb: the Children's Health Ireland row has four hospital-level rows in the universe (Connolly, Crumlin, Tallaght, Temple Street), and CHI and NPHDB both relate to the same National Children's Hospital programme. Treat the four hospital rows as part of CHI, and keep NPHDB (capital build) separate from CHI (service) when amounts are added later, to avoid double counting?"
+  },
+  {
+   "batch": "B",
+   "q": "hse: Section 38/39 per-agency amounts exist only in Annual Report 2023 Appendix 1 (agencies with grants of 100,000 or more, not labelled Section 38 or 39 in the table as extracted). Is that the right source for the later money stage, and is 2023 the year you want (a 2024 report was not looked for)?"
+  },
+  {
+   "batch": "B",
+   "q": "mhc: its remit covers children's mental health services and it is consulting on draft CAMHS standards, but its inspection duty is for approved (inpatient) centres. Is \"part / regulates, inspects\" the right call, or should CAMHS standards be held back until the Commission's CAMHS role is confirmed in statute?"
+  },
+  {
+   "batch": "B",
+   "q": "Name changes affecting later matching: Cope Foundation now trades as Horizons, Brothers of Charity Services Ireland as Corlann, and The Children's Sunshine Home as LauraLynn. The universe still uses the old names."
+  },
+  {
+   "batch": "C",
+   "q": "Teaching Council: coded part/via schools on the strength of 'for the benefit of pupils and students' and its vetting role. The NI equivalent (GTCNI) was coded none. Same treatment for both, or keep Ireland as part?"
+  },
+  {
+   "batch": "C",
+   "q": "NCCA and SEC: coded part (NCCA via null because its remit includes early childhood education; SEC via schools). NI's CCEA was part/schools. Is NCCA's early-childhood reach enough to leave via null?"
+  },
+  {
+   "batch": "C",
+   "q": "CICA and RIRB (historical abuse): per your NI ruling I was to include them only if there are corresponding voluntary-sector organisations. I cannot assess that from this batch (no voluntary-sector universe was in the brief), so both are recorded normally as part with HISTORICAL scope; decide whether to keep them in the Ireland children's-sector list. CICA's roles are empty because none of the nine role words fits an inquiry: add 'investigates', or leave blank?"
+  },
+  {
+   "batch": "C",
+   "q": "CICA: the Department page describing it is 'Last updated on 1 September 2022' and CICA's own site is down (HTTP 500). Is it still a live body? Not established."
+  },
+  {
+   "batch": "C",
+   "q": "Department of Education and Youth: youth work/UBU sits there; early learning and childcare and school-age childcare sit with the Department of Children, Disability and Equality, which will need its own entry (it is not in my batch). The exact 2025 transfer order was not read; the split rests on the two departments' own current pages."
+  },
+  {
+   "batch": "C",
+   "q": "ETBs as a class: the youth-work function is statutory (Act s.10) and they deliver UBU with the Department, but I could not confirm from a source that ETBs hold or distribute the youth funding streams, so no 'funds' role was recorded. Worth a targeted check of an ETB youth-services page or the UBU funding guidelines in the money stage."
+  },
+  {
+   "batch": "C",
+   "q": "Leargas is not in the CSO universe (charity / company limited by guarantee) and its sponsor is the Department of Further and Higher Education, not Education. Keep it in this children's-sector list as part, or move/drop it?"
+  },
+  {
+   "batch": "C",
+   "q": "gov.ie (AWS WAF), ncca.ie and examinations.ie (Cloudflare) refuse automated access, so Department pages were read through Internet Archive copies. If you want live-URL citations for those, a manual fetch in a normal browser would be needed."
+  },
+  {
+   "batch": "D",
+   "q": "Quote provenance: for Probation Service and Irish Prison Service the quotes came through WebFetch, which extracts via a model; both sites fail certificate verification when fetched directly. They were returned as exact copies but not independently re-checked. For all other bodies I read the page text directly. Do you want the Probation and IPS quotes re-gated, or set to paraphrased?"
+  },
+  {
+   "batch": "D",
+   "q": "Irish Prison Service: its own About page says it deals with offenders 18 or over (verdict none), but the Department of Justice youth-justice page (last updated April 2024) says the Minister is responsible 'via the Irish Prison Service for the small number of remaining children in adult prison facilities'. Record the IPS as none on its own documents, or as part on the sponsor's statement?"
+  },
+  {
+   "batch": "D",
+   "q": "Courts Service and Legal Aid Board: both administer or fund the legal process in child care proceedings, but the Courts Service does not decide cases and the Legal Aid Board's help goes to the adult who defends the application (the page says 'defend'). Are these children's functions (part) or none?"
+  },
+  {
+   "batch": "D",
+   "q": "Department of Social Protection: Child Benefit, Working Family Payment and One-Parent Family Payment are paid to parents or guardians, not children; school meals reach children via schools. Counted as part. Confirm that cash payments to families count, and whether a 'payments to parents' role distinct from 'pays' is wanted."
+  },
+  {
+   "batch": "D",
+   "q": "Arts Council 'via': set to schools because Creative Schools is the child programme read, but it also has a child protection tool for arts organisations (sign-in; unread). Keep via schools?"
+  },
+  {
+   "batch": "D",
+   "q": "Charities Regulator is unverified because its site returns a bot challenge to every automated request. Needs a hand check or another route; I did not bypass it."
+  },
+  {
+   "batch": "D",
+   "q": "Dormant Accounts Fund: the 2026 Action Plan table has more child/youth rows under the Departments of Children, Disability and Equality, Education and Youth and Health than are recorded here. A later stage should read the full table; should child measures there become separate rows under the delivering department?"
+  },
+  {
+   "batch": "D",
+   "q": "Pobal programme list: only the first page of the programmes list (14 entries) was seen and the childcare programmes beyond AIM, CCC, Comhairle na nÓg were not read. Pobal's Data Hub 'Early Learning and Childcare Data' page was not opened, so whether Pobal publishes recipient/grant lists is unresolved."
+  },
+  {
+   "batch": "D",
+   "q": "Department of Housing: the Child and Family Homelessness Action Plan was due Q2 2026; I could not establish from pages read whether it has been published. Check before the entry is treated as final."
+  },
+  {
+   "batch": "D",
+   "q": "Sponsor names after 2025 reorganisations: Justice (now Justice, Home Affairs and Migration), Rural and Community Development (now and the Gaeltacht), Tourism, Culture, Arts, Gaeltacht, Sport and Media (now Culture, Communications and Sport) are recorded in currentSponsor from gov.ie publisher lines and one DRCD news page; the other two have no dedicated reorganisation page read."
+  },
+  {
+   "batch": "E",
+   "q": "CSO Table 4.2 (Local Authorities Non-Commercial Agencies, https://www.cso.ie/en/releasesandpublications/ep/p-rpbi/registerofpublicsectorbodies2024-final/localgovernment/) read in full: no entry has a children's body in its name. Name-only observations, not researched: 'Limerick Local Sports Partnership Ltd', 'Meath Local Sports Partnership CLG' and probably 'Sligo Sports and Recreation Partnership CLG' look like Local Sports Partnerships (covered by local-sports-partnerships); 'Fingal Community and Recreation Services CLG', 'Mulhuddart Community Centre CLG', 'Tyrrelstown Community Centre CLG', 'Athboy Social Needs and Recreational Company CLG', 'Sligo Volunteer Bureau CLG' and 'Clonmel Resource Centre CLG' are community bodies whose children role cannot be judged from the name. Childcare committees and Comhairle na nÓg are NOT rows in Table 4.2, consistent with the universe note."
+  },
+  {
+   "batch": "E",
+   "q": "Should City and County Childcare Committees be coded core? Remit is early learning/childcare programmes (children, parents, providers, childminders). I coded core because the programmes concern children; a stricter reading would be part."
+  },
+  {
+   "batch": "E",
+   "q": "Local authorities are one class entry with verdict part; per-council evidence read for only Dublin City, Cork County, Galway County and Leitrim (plus Cork City for one Comhairle sentence). Should the other councils be checked, or is class-level evidence enough?"
+  },
+  {
+   "batch": "E",
+   "q": "Family homelessness (Dublin Region Homeless Executive, family hubs) is NOT established: the DRHE page read says nothing about families. It needs a page that does before any children function is recorded. Housing duties to children are also unread."
+  },
+  {
+   "batch": "E",
+   "q": "Children's library services: only Dublin City has a descriptive sentence; Cork County gave headings only and Leitrim's library page was not usable. Libraries are also a separate universe body (Local Authority Library and Archive Service, Dept of Rural and Community Development)."
+  },
+  {
+   "batch": "E",
+   "q": "Cork County Council's own Comhairle na nÓg page was not reached; the Comhairle role differs by county (see local-authorities notes)."
+  },
+  {
+   "batch": "E",
+   "q": "LCDC verdict none rests on the national Department page; Leitrim's council says its LCDC is mandated to collaborate with Comhairle na nÓg, arguably part for that county. The Wicklow Child Poverty Action Plan pilot (file title only) deserves a look if LCDCs are in scope."
+  }
+ ]
+}

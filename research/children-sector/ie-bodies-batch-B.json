@@ -1,0 +1,341 @@
+{
+ "batch": "B",
+ "checked": "2026-10-08",
+ "bodies": [
+  {
+   "id": "department-of-health",
+   "name": "Department of Health",
+   "universeName": "Department of Health",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "Department",
+   "verdict": "part",
+   "roles": [
+    "funds",
+    "coordinates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Statement of Strategy 2025-2028 commits to implementing the paediatric model of care and opening the National Children's Hospital",
+     "quote": "Implement the Paediatric Model of Care in paediatric settings across the country, opening the National Children's Hospital",
+     "url": "https://assets.gov.ie/static/documents/ba6c4270/DoH_Statement_of_Strategy_2025-2028.pdf"
+    },
+    {
+     "what": "Statement of Strategy 2025-2028 commits to extending free GP services to children (a commitment, not a delivered scheme)",
+     "quote": "Extend free GP services to children up to at least 12 years.",
+     "url": "https://assets.gov.ie/static/documents/ba6c4270/DoH_Statement_of_Strategy_2025-2028.pdf"
+    },
+    {
+     "what": "Annual Report 2025 reports on the National Maternity Strategy 2016-2026",
+     "quote": "The National Maternity Strategy - Creating a Better Future Together 2016 - 2026 is entering its final year.",
+     "url": "https://assets.gov.ie/static/documents/86a93d97/Department_of_Health_Annual_Report_2025.pdf"
+    },
+    {
+     "what": "Annual Report 2025 reports on the National Children's Hospital Ireland capital project",
+     "quote": "The National Children's Hospital Ireland continues to progress towards substantial completion.",
+     "url": "https://assets.gov.ie/static/documents/86a93d97/Department_of_Health_Annual_Report_2025.pdf"
+    }
+   ],
+   "statute": null,
+   "accounts": "https://assets.gov.ie/static/documents/86a93d97/Department_of_Health_Annual_Report_2025.pdf",
+   "money": [],
+   "notes": "The Department's own gov.ie pages (about-us, department home, publications page) could not be read: curl and WebFetch got 403/405 and the Browser pane showed a \"Human Verification\" page, which was not attempted. Read instead the Department's own PDFs on assets.gov.ie: Statement of Strategy 2025-2028 (published 10 December 2025 per the gov.ie publications listing seen only as a search result, not opened) and Annual Report 2025. Verdict rests on those two documents only; no remit/functions page was read, so the list of children's and maternity functions is a floor, not a full inventory. Healthy Ireland and similar programmes not recorded because no page read states a child function for them. Roles are my classification of the quoted wording (policy and programme leadership; the free GP item is a stated commitment). Maternity Strategy investment figure in the Annual Report (2025 Budget / 2026 full-year cost) exists but the euro sign did not survive text extraction, so it is NOT recorded in money; a later stage should read it from the PDF page. Reorganisation: community disability services moved from this Department to DCEDIY in March 2023 (HSE Annual Report 2023: \"Specialist Community-Based Disability Services transferred to the Department of Children, Equality, Disability, Integration and Youth in March 2023\", https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/). No 2025 move of children's or maternity health functions into or out of the Department was found in the two documents read."
+  },
+  {
+   "id": "hse",
+   "name": "Health Service Executive",
+   "universeName": "Health Service Executive",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "delivers",
+    "funds"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Children's disability network teams (CDNTs)",
+     "quote": "Children’s disability network teams (CDNTs) support children up to age 18 who have complex needs.",
+     "url": "https://www2.hse.ie/babies-children/disabilities/services/cdnt/"
+    },
+    {
+     "what": "Child and Adolescent Mental Health Services (CAMHS)",
+     "quote": "Child and Adolescent Mental Health Services (CAMHS) is a specialist service for people under 18 with moderate to severe mental health difficulties.",
+     "url": "https://www2.hse.ie/mental-health/services-support/camhs/introduction/"
+    },
+    {
+     "what": "Children's disability services routes (primary care, CDNT, CAMHS, CAMHS-ID)",
+     "quote": "Children's disability services are for children and young people up to age 18.",
+     "url": "https://www2.hse.ie/babies-children/disabilities/services/childrens-disability-services/"
+    },
+    {
+     "what": "Paediatric homecare packages (Annual Report and Financial Statements 2023)",
+     "quote": "Paediatric Homecare Packages provide care to children with complex needs within their own home.",
+     "url": "https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/"
+    },
+    {
+     "what": "Community healthcare, including disability and mental health services, is provided to children as well as adults (AFS 2023)",
+     "quote": "disability services and mental health services and is provided to children and adults, including those who are experiencing marginalisation and health inequalities",
+     "url": "https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/"
+    }
+   ],
+   "statute": "Health Act 2004 (named on the HSE financial management page as the law governing grants to outside agencies; not read as the establishing Act)",
+   "accounts": "https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/",
+   "money": [],
+   "notes": "Read: HSE public service pages (CDNT, children's disability services, CAMHS), about.hse.ie financial management page, and the HSE Annual Report and Financial Statements 2023 (full PDF; 2024 report not looked for). about.hse.ie/our-work/what-the-hse-does is script-rendered; WebFetch returned no children's content from it. HSE is the delivery body for most health services to children, so the five functions are examples, not an inventory (child health/public health nursing, primary care, maternity not itemised). SECTION 38/39 LISTS (note only, no figures recorded): the HSE page https://about.hse.ie/leadership-and-operations/hse-financial-management/ says \"Each year, we fund around 1830 agencies in Ireland.\" and \"Grants are governed under the Health Act 2004.\" The only agency-by-agency amounts found are in the Annual Report and Financial Statements 2023, Appendix 1 \"Analysis of Grants to Outside Agencies in Note 8 and Note 13\" (https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/), which names each agency with grants of 100,000 or more in either year with amounts and groups smaller grants as \"Total Grants under 100,000\"; the table as extracted does not label agencies Section 38 or Section 39, and no separate Section 38/39 list page was found (the old hse.ie \"section-38-documentation\" URL returned 404). Per-agency grants to children-sector agencies are therefore recoverable from that appendix only by agency name. 2023 Annual Report also states: \"In 2023, 6.74bn of the HSE's total expenditure related to grants to outside agencies.\" (euro sign lost in extraction; all-purpose, not child-specific, so not entered in money). Reorganisation: the Annual Report states \"Specialist Community-Based Disability Services transferred to the Department of Children, Equality, Disability, Integration and Youth in March 2023\" and that \"The HSE is accountable to and provides advice as appropriate to the Minister for Health and the Minister for Children, Equality, Disability, Integration and Youth\" (both https://about.hse.ie/api/v2/download-file/file_based_publications/HSE_Annual_Report_and_Financial_Statements_2023.pdf/). Roles are my classification: delivers (CDNT/CAMHS/homecare), funds (grants to outside agencies, generally; no child-specific funding line was read)."
+  },
+  {
+   "id": "chi",
+   "name": "Children's Health Ireland",
+   "universeName": "Children's Health Ireland",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers",
+    "advocates"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Statutory object of CHI",
+     "quote": "The object of Children's Health Ireland is to improve, promote and protect the health, mental health and well-being of children",
+     "url": "https://www.irishstatutebook.ie/eli/2018/act/27/enacted/en/print.html"
+    },
+    {
+     "what": "Statutory function: paediatric services in the hospital",
+     "quote": "to plan, conduct, maintain, manage, provide and develop paediatric services in the hospital",
+     "url": "https://www.irishstatutebook.ie/eli/2018/act/27/enacted/en/print.html"
+    },
+    {
+     "what": "Statutory function: advocacy",
+     "quote": "to advocate on behalf of children and young people about healthcare issues",
+     "url": "https://www.irishstatutebook.ie/eli/2018/act/27/enacted/en/print.html"
+    }
+   ],
+   "statute": "Children's Health Act 2018 (No. 27 of 2018), section 6 (object and functions)",
+   "accounts": null,
+   "money": [],
+   "notes": "CHI's own website (childrenshealth.ie) returned 403 / a Cloudflare \"Just a moment\" check to curl and WebFetch and was not attempted further. Read the Act that set it up, as enacted, on irishstatutebook.ie (later amendments not checked), and the CHI page hosted by the NPHDB site (https://newchildrenshospital.ie/about-chi/the-childrens-hospital-group/) which says CHI took over the three Dublin paediatric hospitals on 1 January 2019. That hosted page appears dated (it speaks of the new hospital \"in due course\"). The universe also lists four hospital-level rows (CHI at Connolly, CHI at Crumlin, CHI at Tallaght, CHI at Temple Street) as separate bodies; they are not checked here and sit inside this entity. Verdict core: the object clause is children-only. No amounts read."
+  },
+  {
+   "id": "nphdb",
+   "name": "National Paediatric Hospital Development Board",
+   "universeName": "National Paediatric Hospital Development Board (NPHDB)",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "core",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Statutory function in the establishing Order: build the national paediatric hospital",
+     "quote": "to plan, design, build, furnish and equip a national paediatric hospital",
+     "url": "https://www.irishstatutebook.ie/eli/2007/si/246"
+    },
+    {
+     "what": "Annual Report 2024 describes its responsibility",
+     "quote": "responsible for planning, designing, building, and equipping the National Children's Hospital Ireland (NCHI)",
+     "url": "https://newchildrenshospital.ie/wp-content/uploads/2026/01/NPHDB-Annual-Report-2024-Board-Approved-ID-179259.pdf"
+    }
+   ],
+   "statute": "S.I. No. 246 of 2007 (National Paediatric Hospital Development Board (Establishment) Order 2007), section 5; the Annual Report 2024 says it was \"amended by the Children's Health Act 2018\"",
+   "accounts": "https://newchildrenshospital.ie/wp-content/uploads/2026/01/NPHDB-Annual-Report-2024-Board-Approved-ID-179259.pdf",
+   "money": [],
+   "notes": "nphdb.ie does not resolve (DNS error). The Board's public site is newchildrenshospital.ie; read the Annual Report 2024 PDF there and the establishing S.I. on irishstatutebook.ie. Its function is a capital build for a children's hospital, not a service to children; classed core because the whole remit is a paediatric facility, role delivers (infrastructure). The S.I. title was not captured from the page text; the Order title in \"statute\" follows the S.I. number and the search listing, so confirm the title text. No amounts recorded (the project capital costs are a later-stage budget item)."
+  },
+  {
+   "id": "hiqa",
+   "name": "Health Information and Quality Authority",
+   "universeName": "Health Information and Quality Authority (HIQA)",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "inspects"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Inspects children's social care services",
+     "quote": "We work to make sure that children’s social care services in Ireland are safe and of good quality.",
+     "url": "https://www.hiqa.ie/areas-we-work/childrens-services"
+    },
+    {
+     "what": "Inspects Tusla child protection and welfare services",
+     "quote": "We also inspect child protection services that work with families to make sure children who need extra support are getting the right help.",
+     "url": "https://www.hiqa.ie/areas-we-work/childrens-services"
+    },
+    {
+     "what": "Children's Team of HIQA",
+     "quote": "HIQA’s Children’s Team promotes safety and quality in some of the children’s social care services in Ireland.",
+     "url": "https://www.hiqa.ie/guidance-providers/childrens-services"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Answer to \"does it inspect children's services\": yes, but children's SOCIAL CARE services, not health services. The page lists Tusla residential care centres, foster care, special care and Oberstown Children Detention Campus, plus Tusla child protection and welfare services. Those providers sit under the children and justice departments, so this function belongs in the children/justice stage of the chain as much as in health. HIQA's inspection of disability services (which include children) and healthcare services was not read here. Read: the \"Children's Services\" areas-we-work page and the guidance-for-providers page. No statute is named on those pages (the guidance page names the Child Care Act 1991 and Child and Family Agency Act 2013 as Tusla's duties, not HIQA's). HIQA's corporate remit/about page and annual report were not read."
+  },
+  {
+   "id": "mhc",
+   "name": "Mental Health Commission",
+   "universeName": "Mental Health Commission",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "regulates",
+    "inspects"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Remit explicitly includes child and adolescent mental health services",
+     "quote": "as well as mental health services for children and adolescents, older people, people with intellectual disabilities",
+     "url": "https://www.mhcirl.ie/about/background-and-remit"
+    },
+    {
+     "what": "Public consultation on draft CAMHS standards (the page does not say when or whether statutory registration of CAMHS applies)",
+     "quote": "New draft standards for Child and Adolescent Mental Health Services (CAMHS) Public Consultation",
+     "url": "https://www.mhcirl.ie/public-consultations"
+    }
+   ],
+   "statute": "Mental Health Act 2001 (named on the About and Background and Remit pages)",
+   "accounts": null,
+   "money": [],
+   "notes": "mhcirl.ie returned 403 to curl and WebFetch but loaded in the Browser pane; /about, /about/background-and-remit and /public-consultations were read there (quotes checked by eye against the page text, not scripted). The remit page also says approved centres must be inspected and reported on at least once a year; it does not single out child and adolescent approved centres. Secondary search snippets claimed that a 2026 Mental Health Act would bring CAMHS under registration; not opened, not recorded."
+  },
+  {
+   "id": "hrb",
+   "name": "Health Research Board",
+   "universeName": "Health Research Board (HRB)",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "none",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Read hrb.ie/about (remit, \"Roles, responsibilities and functions\"), /about/evidence-for-policy and /funding. The remit lists research funding, four national health information systems (drug and alcohol deaths, addiction treatment, disability service use and need, inpatient mental health), the Evidence Centre, the National Drugs Library and the National Office for Research Ethics Committees. None is child-specific on the pages read. Individual funded projects, the disability database's child coverage and the Strategy 2026-2030 document were not read, so a child-related activity inside those cannot be ruled out."
+  },
+  {
+   "id": "safefood",
+   "name": "Food Safety Promotion Board (safefood)",
+   "universeName": "Food Safety Promotion Board (FSPB) (safefood)",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "part",
+   "roles": [
+    "advises",
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Develops educational resources (Education section of its remit)",
+     "quote": "Safefood develops educational tools and resources for different age groups across the island of Ireland.",
+     "url": "https://www.safefood.net/about-us/who-we-are"
+    },
+    {
+     "what": "Educational work is framed around young people",
+     "quote": "Teachers play a vital role in developing the habits of young people.",
+     "url": "https://www.safefood.net/about-us/who-we-are"
+    },
+    {
+     "what": "Public nutrition advice aimed at parents of school children",
+     "quote": "Water and milk are the best option for children of all ages.",
+     "url": "https://www.safefood.net/healthy-eating/children/school-children"
+    }
+   ],
+   "statute": "British-Irish Agreement Act 1999 (named on the Who we are page)",
+   "accounts": null,
+   "money": [],
+   "notes": "Read safefood.net/about-us/who-we-are and the /healthy-eating/children/school-children page. safefood is an all-island body, so the universe's sponsor (Department of Health) is only the Republic-side sponsor; the pages read name no Northern Ireland sponsor. Child content is one strand (children's section of the healthy-eating site, school lunchboxes, Children's Food Pyramid, education resources) of a general food-safety and nutrition remit. The Education section page itself was not opened."
+  },
+  {
+   "id": "iph",
+   "name": "Institute of Public Health",
+   "universeName": "Institute of Public Health in Ireland (IPH)",
+   "sponsor": "Department of Health",
+   "currentSponsor": null,
+   "kind": "ALB",
+   "verdict": "unverified",
+   "roles": [],
+   "via": null,
+   "functions": [],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "Tried publichealth.ie (301 to instituteofpublichealth.org), /about-us, the 2022 annual report PDF and WebFetch: all returned 403 behind a Cloudflare bot check; the Browser pane showed \"Performing security verification\" and the check was not bypassed. A search result suggested the body is all-island, jointly funded by both health departments and may now trade as All Island Institute of Public Health, but no page was opened, so nothing is recorded. Needs the user to open the About page or an annual report by hand."
+  },
+  {
+   "id": "health-pss-organisations",
+   "name": "Organisations providing health and personal social services (CSO Table 3.19: 28 organisations)",
+   "universeName": null,
+   "sponsor": "Organisations providing health and personal social services",
+   "currentSponsor": "Department of Children, Disability and Equality (the Table 3.19 funding department; the CSO page says the Department's name changed in 2025). One entity (Threshold) is under the Department of Housing, Local Government and Heritage.",
+   "kind": "Other",
+   "verdict": "part",
+   "roles": [
+    "delivers"
+   ],
+   "via": null,
+   "functions": [
+    {
+     "what": "Enable Ireland: children's disability network teams",
+     "quote": "20 Children’s Disability Network Teams in 14 counties",
+     "url": "https://enableireland.ie/about-enable-ireland/what-we-do"
+    },
+    {
+     "what": "Saint Michael's House: mission for its Children's Services",
+     "quote": "To work in partnership with Children, Young people and their Families to develop their individual potential",
+     "url": "https://www.smh.ie/services/children/"
+    },
+    {
+     "what": "Cope Foundation (now trading as Horizons): autism service for children in Cork",
+     "quote": "In 2005 we developed the North Lee ASD Service for children with autism spectrum disorder.",
+     "url": "https://www.horizonscork.ie/about/our-journey/"
+    },
+    {
+     "what": "The Children's Sunshine Home (operating as LauraLynn, Ireland's Children's Hospice): children's disability respite service",
+     "quote": "The Children's Disability Respite Service accepts referrals for children who:",
+     "url": "https://www.lauralynn.ie/sites/default/files/2026-07/1.01-statement-of-purpose_0.pdf"
+    },
+    {
+     "what": "Brothers of Charity Services Ireland (now Corlann): children's disability network team in West Limerick",
+     "quote": "Over 900 children and their families receive support in West Limerick for our Children’s Disability Network Team.",
+     "url": "https://corlann.ie/regions/limerick/"
+    }
+   ],
+   "statute": null,
+   "accounts": null,
+   "money": [],
+   "notes": "WHY THESE ARE CLASSIFIED AS GOVERNMENT (CSO Register of Public Sector Bodies 2024 Final, read on cso.ie): Central Government Table 3.19 page: \"Table 3.19 sets out organisations that provide health and personal services on behalf of government and are classified in the central government sector.\" and \"These organisations receive high levels of funding from government with stringent conditions and the majority of their services are being provided on behalf of government.\" (https://www.cso.ie/en/releasesandpublications/ep/p-rpbi/registerofpublicsectorbodies2024-final/centralgovernment/). Background Notes: \"A number of HSE Section 38 and Section 39 organisations providing health and personal social services are classified in the central government sector.\" and \"Disability services are delivered through HSE services, section 38 and section 39 agreements.\" (https://www.cso.ie/en/releasesandpublications/ep/p-rpbi/registerofpublicsectorbodies2024-final/backgroundnotes/). The Background Notes add that responsibility for community disability-specific services moved from the Department of Health to DCEDIY in March 2023 and that for statistical purposes these organisations are listed under DCEDIY except one whose majority funding comes from the Department of Housing, Local Government and Heritage (Threshold). So: the criterion is funding and control (high government funding with stringent conditions, services provided on behalf of government), not ownership; they are voluntary organisations by legal form. The universe file assigns them the sponsor \"Organisations providing health and personal social services\", but in the CSO table they sit under DCEDIY, not the Department of Health. The 28 names in the universe: Ability West; Avista CLG (Daughters of Charity Disability Support Services CLG); Brothers of Charity Services Ireland; Care Trust; Carriglea Cairde Services; Central Remedial Clinic; Cheeverstown House CLG; Cheshire Homes Ireland; Cope Foundation; Enable Ireland; Gheel Autism Services; Irish Wheelchair Association; Kare, Promoting Inclusion for People with Intellectual Disability; Kerry Parents and Friends Association; Leopardstown Park Hospital; Muiriosa Foundation; Saint John of God Community Services CLG; Saint Michael's House; Saint Patrick's Centre (Kilkenny) T/A Aurora Enriching Lives Enriching Communities; SOS Kilkenny Housing Association CLG; St. Joseph's Foundation; Stewarts Care Limited; Sunbeam House Services CLG; The Children's Sunshine Home; The Polio Fellowship Of Ireland; The Rehab Group; Western Care Association; Threshold. ONLY FIVE WERE CHECKED, as instructed; the other 23 are unchecked, so this entry does not say that any of them has or lacks a child function (the Irish Wheelchair Association, Polio Fellowship, Threshold and Leopardstown Park Hospital in particular are not obviously children's services). Verdict \"part\" refers only to the five checked. Sector note: Brothers of Charity Services Ireland now trades as Corlann, whose home page says it is \"Funded under Section 38 of the Health Act\" (https://corlann.ie/); Cope Foundation now trades as Horizons (horizonscork.ie states the name changed in 2020 and keeps \"Cope Foundation\" in its footer); the Children's Sunshine Home Statement of Purpose (issued 26.06.2026) says it is operating as LauraLynn. The Corlann quote was read in the Browser pane (not scripted-verified). For Enable Ireland the same page also says it is \"patron to two special schools\"."
+  }
+ ],
+ "openQuestions": [
+  "health-pss-organisations: these 28 are voluntary organisations (charities/CLGs) that the CSO classifies into central government because of high, conditional government funding. Do you want them kept in the government stage as a grouped \"Other\" entry, or moved to the voluntary stage (where each would be a profile in its own right and their HSE/DCEDIY grants would be the funding line)? Keeping both would double-count their funding.",
+  "health-pss-organisations: in the CSO table these sit under the Department of Children, Disability and Equality (formerly DCEDIY), not the Department of Health, and the universe file records the sponsor only as \"Organisations providing health and personal social services\". Should the grouped entry be attributed to DCEDIY in the chain? Also, 23 of the 28 were not checked (by instruction); several are not obviously children's services.",
+  "department-of-health: gov.ie blocked every page behind human verification (not attempted), so the verdict rests on the Statement of Strategy 2025-2028 and Annual Report 2025 PDFs only. If you can open https://www.gov.ie/en/department-of-health/organisation-information/about-the-department-of-health/ and paste the remit text, the function list could be made firmer.",
+  "iph: unverified. instituteofpublichealth.org is behind a bot check. Can you open its About page (or an annual report) and tell me whether children are a stated focus? Search results suggested it is an all-island body that may now be named All Island Institute of Public Health.",
+  "hiqa: its children's function is inspection of children's social care (Tusla, foster care, special care, Oberstown), not health services. Should that be counted in the health chain or with the children/justice stage? The same question applies to whether inspecting Tusla counts as a \"children's service\" function of a health regulator.",
+  "chi / nphdb: the Children's Health Ireland row has four hospital-level rows in the universe (Connolly, Crumlin, Tallaght, Temple Street), and CHI and NPHDB both relate to the same National Children's Hospital programme. Treat the four hospital rows as part of CHI, and keep NPHDB (capital build) separate from CHI (service) when amounts are added later, to avoid double counting?",
+  "hse: Section 38/39 per-agency amounts exist only in Annual Report 2023 Appendix 1 (agencies with grants of 100,000 or more, not labelled Section 38 or 39 in the table as extracted). Is that the right source for the later money stage, and is 2023 the year you want (a 2024 report was not looked for)?",
+  "mhc: its remit covers children's mental health services and it is consulting on draft CAMHS standards, but its inspection duty is for approved (inpatient) centres. Is \"part / regulates, inspects\" the right call, or should CAMHS standards be held back until the Commission's CAMHS role is confirmed in statute?",
+  "Name changes affecting later matching: Cope Foundation now trades as Horizons, Brothers of Charity Services Ireland as Corlann, and The Children's Sunshine Home as LauraLynn. The universe still uses the old names."
+ ]
+}
