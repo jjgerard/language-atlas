@@ -94,6 +94,15 @@ const get = url => fetch(url).then(r => r.ok ? r.json() : Promise.reject(new Err
   const empty = live.filter(d => !((atlas.units || {})[d.id] || []).length);
   if (empty.length) { done = true; child.kill(); fail("a live domain derived no units: " + empty.map(d => d.id).join(", ")); }
 
+  // The collaboration pages read two files that no other path exercises: the
+  // deep dive (for the organisation picker) and the researcher directory.
+  try {
+    const orgs = (await get(`http://127.0.0.1:${PORT}/api/collaborate/orgs`)).orgs || [];
+    const people = ((await get(`http://127.0.0.1:${PORT}/collaborate/researchers.json`)).researchers) || [];
+    await get(`http://127.0.0.1:${PORT}/api/collaborate/projects`);
+    if (orgs.length < 100 || people.length < 10) throw new Error(`${orgs.length} organisations, ${people.length} researchers`);
+  } catch (err) { done = true; child.kill(); fail("the collaboration data did not load", (err && err.message) + NL + log); }
+
   done = true;
   child.kill();
   console.log(`boot ok — ${live.map(d => `${d.id} ${(atlas.units[d.id] || []).length}`).join(", ")}`);

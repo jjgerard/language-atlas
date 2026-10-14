@@ -654,3 +654,29 @@ against the font stack and resolves to a real glyph.
   time. Editing the stub of a place a submission has since filled looks like it
   does nothing.
 - **No composite scores**, by design.
+
+## Collaboration: project ideas and researchers
+
+`/collaborate` is where voluntary and community organisations post a project
+idea and researchers can find it. It is built on the Northern Ireland
+children's-sector deep dive (`public/sector/ni-children.json`) and is **not** a
+domain: a project is a proposal, not a finding, and feeds no map.
+
+- **Schema** — `src/projects.js` (`sanitize`). Themes are the deep dive's own
+  service codes; research areas come from the researcher directory, so the two
+  cannot drift. Moderated like entries: posts wait in `/admin` until approved.
+- **Organisation link** — a poster picks an organisation from the deep dive, or
+  adds one that is not there. The name is looked up server-side from the id. An
+  added organisation stays on its own project, flagged unverified, and is never
+  written into `ni-children.json`, which is defined by a documented basis per
+  entry. A charity number that matches a listed organisation becomes a link.
+- **Researchers** — `node research/tools/build-researchers.js` reads
+  https://nicdrn.com/network.php and each researcher's PURE profile, writing
+  `research/collaborate/researchers.json` (copied to `public/collaborate/`).
+  Topics are the network's bullets where it lists any; otherwise the top PURE
+  fingerprint terms, minus a visible stoplist of places, methods and generic
+  terms. `topicsFrom` records which, and a researcher with neither has none.
+- **Persistence** — approved projects are committed to `data/projects.json` like
+  the maps. The poster's email is never in that file; it is shown publicly only
+  if the poster ticks the box. Interest messages are emailed to the poster
+  (copied to `NOTIFY_EMAIL`), so they need the mailer configured.

@@ -89,6 +89,13 @@ footer.foot { flex: none; padding: 14px 18px; background: var(--surface); border
     <div class="filters" id="filters"></div>
     <div id="list"></div>
 
+    <div class="pagehead" style="margin-top:34px">
+      <h2 style="font-size:19px">Collaboration project ideas <span id="projn" class="meta"></span></h2>
+      <p class="lede" style="font-size:13.5px">Ideas posted from /collaborate/post. Read each as written; the site checks none of the claims. An organisation marked <b>new</b> is not in the deep dive and must not be added to it from a form — verify it against a source first. The poster's email is shown here and is never committed to the repository.</p>
+    </div>
+    <div class="filters" id="pfilters"></div>
+    <div id="plist"></div>
+
     <div class="sheet" style="margin-top:22px">
       <div class="pagehead" style="margin-bottom:12px"><h2 style="font-size:17px">Publish from a pasted entry</h2></div>
       <p class="lede" style="font-size:13.5px">Paste the JSON block from a notification email to publish it directly, without going through the queue. Useful if the queued row did not survive a restart.</p>
@@ -186,10 +193,60 @@ async function loadQueue() {
   $('foot').textContent = q.git
     ? 'Approved entries are committed back to the repository, so they survive a rebuild.'
     : 'GITHUB_TOKEN and GITHUB_REPO are not set — approved entries live only on this machine and will not survive a rebuild.';
+  state.projectsPending = q.projectsPending || 0;
   renderTabs();
   renderRequests();
+  await loadProjects();
   if (state.current) await loadEntries();
 }
+
+// ---- collaboration project ideas ----
+let pstate = { filter: 'pending', vocab: null };
+async function loadProjects() {
+  const { projects, vocab } = await api('GET', '/api/admin/projects' + (pstate.filter ? `?status=${pstate.filter}` : ''));
+  pstate.vocab = vocab;
+  const P = [['pending', 'Waiting'], ['approved', 'On the page'], ['rejected', 'Rejected'], ['', 'Everything']];
+  $('pfilters').innerHTML = P.map(([v, l]) => `<button class="btn small${v === pstate.filter ? ' on' : ''}" data-pfilter="${v}">${l}</button>`).join('');
+  $('projn').textContent = state.projectsPending ? `· ${state.projectsPending} waiting` : '';
+  if (!projects.length) { $('plist').innerHTML = `<p class="empty">No project ideas ${pstate.filter === 'pending' ? 'waiting' : 'here'}.</p>`; return; }
+  const names = (keys, map) => (keys || []).map(k => map[k] || k).join(', ') || '—';
+  $('plist').innerHTML = projects.map(p => {
+    const o = p.org || {};
+    const org = o.kind === 'listed' ? `${esc(o.name)} <span class="meta">(in the deep dive, ${esc(o.orgId)})</span>`
+      : o.kind === 'new' ? `${esc(o.name)} <b>new</b> <span class="meta">${[o.regNo && 'no. ' + o.regNo, o.registerName && 'register says: ' + o.registerName, o.town, o.website].filter(Boolean).map(esc).join(' · ')}</span>${o.what ? `<br><span class="meta">${esc(o.what)}</span>` : ''}`
+      : '<span class="meta">not tied to an organisation</span>';
+    return `<details class="entry" data-pid="${p.id}"><summary>
+        <span class="who">${esc(p.title)}</span><span class="tag ${esc(p.status)}">${esc(p.status)}</span>
+        <span class="meta">${esc(o.name || 'no organisation')}</span><span class="meta right">${esc(dateOf(p.submittedAt))}</span></summary>
+      <div class="body">
+        <p><b>Organisation:</b> ${org}</p>
+        <p><b>Contact:</b> ${esc(p.contactName)}${p.contactRole ? ', ' + esc(p.contactRole) : ''} &lt;${esc((p.private || {}).email)}&gt; ${((p.private || {}).publishEmail) ? '(email shown publicly)' : '(email private)'}</p>
+        <p><b>Summary:</b> ${esc(p.summary)}</p>
+        ${p.question ? `<p><b>Question:</b> ${esc(p.question)}</p>` : ''}${p.need ? `<p><b>Why now:</b> ${esc(p.need)}</p>` : ''}
+        <p><b>Themes:</b> ${esc(names(p.themes, vocab.themes))}<br><b>Kind:</b> ${esc(names(p.kinds, vocab.kinds))}<br><b>Areas wanted:</b> ${esc(names(p.areasWanted, vocab.areas))}<br><b>Offers:</b> ${esc(names(p.offers, vocab.offers))}</p>
+        ${p.dataNote ? `<p><b>Data:</b> ${esc(p.dataNote)}</p>` : ''}
+        ${(p.links || []).length ? `<p><b>Links:</b> ${p.links.map(l => `<a href="${esc(l.url)}" rel="noopener">${esc(l.label || l.url)}</a>`).join(' · ')}</p>` : ''}
+        <div class="actions">
+          ${p.status !== 'approved' ? `<button class="btn primary small" data-pact="approve">Put on the page</button>` : `<button class="btn small" data-pact="unpublish">Take down</button>`}
+          ${p.status !== 'rejected' ? `<button class="btn small" data-pact="reject">Reject</button>` : ''}
+          <button class="btn small" data-pact="delete">Delete</button>
+        </div>
+      </div></details>`;
+  }).join('');
+}
+document.addEventListener('click', async e => {
+  const f = e.target.closest('[data-pfilter]');
+  if (f) { pstate.filter = f.dataset.pfilter; return loadProjects(); }
+  const b = e.target.closest('[data-pact]');
+  if (!b) return;
+  const id = b.closest('[data-pid]').dataset.pid, act = b.dataset.pact;
+  if (act === 'delete' && !confirm('Delete this project idea for good?')) return;
+  try {
+    if (act === 'delete') await api('DELETE', `/api/admin/projects/${id}`);
+    else await api('POST', `/api/admin/projects/${id}/${act}`);
+    await loadQueue();
+  } catch (err) { alert(err.message); }
+});
 
 function renderTabs() {
   $('tabs').innerHTML = state.domains.map(d =>

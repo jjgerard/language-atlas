@@ -1,0 +1,67 @@
+/* Styles shared by the three collaboration pages (/collaborate, /collaborate/post,
+   /collaborate/researchers). Colours are the tokens from shared.css, so dark mode
+   comes with them. */
+
+body { display: flex; flex-direction: column; min-height: 100dvh; background: var(--ground); }
+.wrap { flex: 1; width: 100%; }
+.wrap.wide { max-width: 1100px; }
+footer.foot { flex: none; padding: 14px 18px; background: var(--surface); border-top: 1px solid var(--hair);
+  font-size: 12px; color: var(--ink-faint); line-height: 1.55; }
+footer.foot a { color: var(--ink-soft); }
+
+.subnav { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 22px; }
+.subnav a { font-size: 13.5px; text-decoration: none; color: var(--ink-soft); padding: 7px 14px; border: 1px solid var(--hair-strong);
+  border-radius: 999px; background: var(--surface); }
+.subnav a:hover { border-color: var(--ink-faint); color: var(--ink); }
+.subnav a[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 14px; }
+.bar input, .bar select { font: inherit; font-size: 14px; padding: 7px 9px; border: 1px solid var(--hair-strong); border-radius: 5px;
+  background: var(--surface); color: var(--ink); max-width: 100%; }
+.bar input[type="search"] { flex: 1; min-width: 200px; }
+.count { font-size: 13px; color: var(--ink-soft); margin: 0 0 12px; }
+
+.card { background: var(--surface); border: 1px solid var(--hair); border-radius: 7px; padding: 16px 18px; }
+.cards { display: grid; gap: 12px; }
+.cards.grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.card h3 { margin: 0 0 3px; font-size: 18px; font-weight: 600; line-height: 1.25; text-wrap: balance; }
+.card h3 a { color: var(--ink); text-decoration-color: var(--hair-strong); text-underline-offset: 3px; }
+.card h3 a:hover { text-decoration-color: var(--ink); }
+.card .who { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 10px; }
+.card p { margin: 0 0 10px; font-size: 14.5px; line-height: 1.55; max-width: 72ch; }
+.card .label { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin: 12px 0 5px; }
+.card a { color: var(--focus); }
+.card:target, .card.hl { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin: 0; padding: 0; list-style: none; }
+.chip { font-size: 12px; line-height: 1.35; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--hair-strong);
+  color: var(--ink-soft); background: var(--surface-2); text-decoration: none; }
+a.chip:hover { border-color: var(--ink-faint); color: var(--ink); }
+.chip.area { border-color: var(--focus); color: var(--focus); background: transparent; }
+.chip.theme { background: var(--surface); }
+.chip.stage { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+.flag { display: inline-block; font-size: 10.5px; padding: 0 5px; border-radius: 3px; border: 1px solid var(--hair-strong);
+  color: var(--ink-soft); margin-left: 6px; white-space: nowrap; vertical-align: 1px; }
+.flag.warn { border-color: var(--r-africa); color: var(--ink); }
+.miss { color: var(--ink-faint); }
+.srcnote { font-size: 12px; color: var(--ink-faint); margin: 6px 0 0; }
+.empty { color: var(--ink-soft); padding: 28px 4px; }
+
+dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: 3px 14px; margin: 10px 0 0; font-size: 13.5px; }
+dl.facts dt { color: var(--ink-faint); }
+dl.facts dd { margin: 0; color: var(--ink); }
+
+details.reach { margin-top: 14px; border-top: 1px solid var(--hair); padding-top: 10px; }
+details.reach > summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--focus); list-style: none; }
+details.reach > summary::-webkit-details-marker { display: none; }
+details.reach > summary::before { content: "+ "; }
+details.reach[open] > summary::before { content: "− "; }
+details.reach form { margin-top: 12px; }
+
+.field.inline { display: flex; gap: 14px; flex-wrap: wrap; }
+.field select, .field input[type="url"] { width: 100%; font: inherit; font-size: 14px; color: var(--ink); background: var(--ground);
+  border: 1px solid var(--hair-strong); border-radius: 5px; padding: 9px 11px; }
+.checkgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 6px 16px; }
+.checkgrid .check { color: var(--ink); }
+.req { color: var(--r-oceania); }
+@media (max-width: 560px) { .wrap { padding-left: 16px; padding-right: 16px; } dl.facts { grid-template-columns: 1fr; } dl.facts dt { margin-top: 6px; } }

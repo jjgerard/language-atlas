@@ -115,8 +115,78 @@ function sendEditRequestConfirmation({ entryTitle, email, description }) {
   });
 }
 
+// ---- collaboration projects ----
+
+const PLACEHOLDER_DOMAIN = '@invalid.example';
+
+function notifyNewProject(project, privateInfo, adminUrl) {
+  const org = project.org || {};
+  const orgLine = org.kind === 'listed' ? `${org.name} (listed in the deep dive, ${org.orgId})`
+    : org.kind === 'new' ? `${org.name} — NOT in the deep dive${org.regNo ? `, charity no. ${org.regNo}` : ''}${org.registerName ? ` (register says: ${org.registerName})` : ''}`
+    : 'not tied to an organisation';
+  send({
+    to: NOTIFY_EMAIL,
+    replyTo: privateInfo.email,
+    subject: `[Language Atlas] Project idea: ${project.title}`,
+    text: [
+      `Organisation: ${orgLine}`,
+      `Contact: ${project.contactName}${project.contactRole ? `, ${project.contactRole}` : ''} <${privateInfo.email}>${privateInfo.publishEmail ? ' (email will be shown publicly)' : ' (email kept private)'}`,
+      '',
+      oneLine(project.summary, 600),
+      '',
+      `Review: ${adminUrl}`,
+    ].join('\n'),
+  });
+}
+
+function sendProjectConfirmation(to, project) {
+  send({
+    to,
+    subject: `Your project idea: ${project.title}`,
+    text: [
+      `Thank you — "${project.title}" has been received and is waiting for review.`,
+      '',
+      'It will appear on the collaboration page once it has been checked. When a',
+      'researcher is interested, their message is sent to this address.',
+      '',
+      'https://language-atlas.fly.dev/collaborate',
+    ].join('\n'),
+  });
+}
+
+/**
+ * Someone asking to talk about a project. Goes to the poster when their address
+ * is known, copied to the site team; otherwise to the site team alone to pass
+ * on. The sender is the reply-to, so the poster can answer directly without
+ * their own address ever being shown to the sender.
+ */
+function sendInterest(project, privateInfo, from) {
+  const posterOk = privateInfo.email && !privateInfo.email.endsWith(PLACEHOLDER_DOMAIN);
+  send({
+    to: posterOk ? privateInfo.email : NOTIFY_EMAIL,
+    bcc: posterOk ? NOTIFY_EMAIL : undefined,
+    replyTo: from.email,
+    subject: `[Language Atlas] Interest in "${project.title}"`,
+    text: [
+      posterOk ? `Someone has asked to talk about your project "${project.title}".`
+        : `Interest in "${project.title}" (${project.contactName}) — no address on file for the poster, please pass this on.`,
+      '',
+      `From: ${from.name}${from.institution ? `, ${from.institution}` : ''} <${from.email}>`,
+      from.researcher ? `About: ${from.researcher}` : null,
+      '',
+      from.message,
+      '',
+      'Reply to this email to answer them directly. It was sent through the Language Atlas',
+      'collaboration page; the sender has not been verified beyond the address they gave.',
+    ].filter(l => l !== null).join('\n'),
+  });
+}
+
 module.exports = {
   configured,
+  notifyNewProject,
+  sendProjectConfirmation,
+  sendInterest,
   notifyNewSubmission,
   sendSubmissionConfirmation,
   notifyEditRequest,

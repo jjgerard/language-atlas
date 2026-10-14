@@ -1,0 +1,168 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Project ideas — Language Atlas</title>
+<meta name="description" content="Research project ideas posted by voluntary and community organisations in Northern Ireland, looking for a university research partner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/shared.css">
+<link rel="stylesheet" href="/collab.css">
+
+<header class="sitebar">
+  <a class="brand" href="/"><span class="name">Language Atlas</span><span class="tagline">Provision and policy, by region</span></a>
+  <nav class="pills" id="pills"></nav>
+  <div class="navright">
+    <a class="aboutlink" href="/views">Field views</a>
+    <a class="aboutlink" href="/patterns">Patterns</a>
+    <a class="aboutlink" href="/collaborate" aria-current="page">Collaborate</a>
+    <a class="aboutlink" href="/sources">Sources</a>
+    <a class="aboutlink" href="/about">About</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="menu" id="menu"><nav class="pills" id="menupills"></nav>
+      <a class="aboutlink" href="/views">Field views</a>
+      <a class="aboutlink" href="/patterns">Patterns</a>
+      <a class="aboutlink" href="/collaborate" aria-current="page">Collaborate</a>
+      <a class="aboutlink" href="/sources">Sources</a>
+      <a class="aboutlink" href="/about">About</a>
+    </div>
+</header>
+
+<div class="wrap wide">
+  <nav class="subnav" aria-label="Collaboration">
+    <a href="/collaborate" aria-current="page">Project ideas</a>
+    <a href="/collaborate/post">Post a project idea</a>
+    <a href="/collaborate/researchers">Researchers</a>
+  </nav>
+
+  <div class="pagehead">
+    <span class="eyebrow">Collaborate · Northern Ireland children's sector</span>
+    <h2>Project ideas from the voluntary and community sector</h2>
+    <p class="lede">Organisations from the <a href="/sector/ni-children">children's-sector deep dive</a> — and some not yet in it — say what they would like to find out and what they can bring. Researchers from the <a href="/collaborate/researchers">NI Child Development Research Network</a> can see what is wanted and get in touch.</p>
+  </div>
+
+  <div class="bar" role="search">
+    <input type="search" id="q" placeholder="Search ideas…" aria-label="Search project ideas">
+    <select id="f-theme" aria-label="Theme"><option value="">Any theme</option></select>
+    <select id="f-area" aria-label="Research area wanted"><option value="">Any research area</option></select>
+    <select id="f-stage" aria-label="Stage"><option value="">Any stage</option></select>
+    <a class="btn primary" href="/collaborate/post" style="text-decoration:none;margin-left:auto">Post a project idea</a>
+  </div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div class="cards" id="list"></div>
+</div>
+
+<footer class="foot">
+  Ideas are posted by the organisations themselves and read by the site team before they appear; the site has not checked the claims in them.
+  An organisation marked <em>in the deep dive</em> is one the <a href="/sector/ni-children">children's-sector view</a> lists on documented evidence.
+  Matches to researchers are by research area only — see <a href="/collaborate/researchers">the directory</a> for each person's own profile.
+</footer>
+
+<script type="module">
+import { mountNav } from '/nav.js';
+import { esc, $, getJSON, loadBase, chips, orgLine, fmtDate } from '/collab.js';
+mountNav(null);
+
+const [{ meta, rdoc }, { projects }] = await Promise.all([loadBase(), getJSON('/api/collaborate/projects')]);
+const researchers = rdoc.researchers;
+const byId = Object.fromEntries(researchers.map(r => [r.id, r]));
+
+const fill = (id, map) => { $(id).innerHTML += Object.entries(map).map(([k, v]) => `<option value="${esc(k)}">${esc(v)}</option>`).join(''); };
+fill('f-theme', meta.themes); fill('f-area', meta.areas); fill('f-stage', meta.stages);
+const params = new URLSearchParams(location.search);
+for (const [id, key] of [['f-theme', 'theme'], ['f-area', 'area'], ['f-stage', 'stage']]) $(id).value = params.get(key) || '';
+$('q').value = params.get('q') || '';
+
+const matchFor = p => researchers.filter(r => p.areasWanted.some(a => r.areas.includes(a)));
+
+function card(p) {
+  const people = matchFor(p);
+  const shown = people.slice(0, 6);
+  const facts = [
+    ['Stage', meta.stages[p.stage]], ['Funding', [meta.funding[p.funding], p.fundingNote].filter(Boolean).join(' — ')],
+    ['Timing', p.timing], ['Where', p.geography],
+    ['Who it is for', [p.ageBands.map(a => meta.ageBands[a]).join(', '), p.beneficiaries].filter(Boolean).join(' — ')],
+  ].filter(([, v]) => v);
+  return `<article class="card" id="p${p.id}">
+    <h3>${esc(p.title)}</h3>
+    <p class="who">${orgLine(p.org)}</p>
+    <p>${esc(p.summary)}</p>
+    ${p.question ? `<div class="label">The question</div><p>${esc(p.question)}</p>` : ''}
+    ${p.need ? `<div class="label">Why it matters</div><p>${esc(p.need)}</p>` : ''}
+    ${p.themes.length ? `<div class="label">Theme</div>${chips(p.themes, meta.themes, 'theme', k => '/collaborate?theme=' + k)}` : ''}
+    ${p.kinds.length ? `<div class="label">What kind of project</div>${chips(p.kinds, meta.kinds)}` : ''}
+    ${p.areasWanted.length ? `<div class="label">Research areas wanted</div>${chips(p.areasWanted, meta.areas, 'area', k => '/collaborate?area=' + k)}` : ''}
+    ${p.offers.length ? `<div class="label">What the organisation can offer</div>${chips(p.offers, meta.offers)}${p.offersNote ? `<p class="srcnote">${esc(p.offersNote)}</p>` : ''}` : ''}
+    ${p.dataNote ? `<div class="label">Data</div><p>${esc(p.dataNote)}</p>` : ''}
+    ${facts.length ? `<dl class="facts">${facts.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>` : ''}
+    ${p.links.length ? `<div class="label">Links</div><p>${p.links.map(l => `<a href="${esc(l.url)}" rel="noopener">${esc(l.label || l.url)}</a>`).join(' · ')}</p>` : ''}
+    ${people.length ? `<div class="label">Researchers in the areas asked for</div>
+      <ul class="chips">${shown.map(r => `<li><a class="chip" href="/collaborate/researchers#${esc(r.id)}">${esc(r.name)}</a></li>`).join('')}
+      ${people.length > shown.length ? `<li><a class="chip" href="/collaborate/researchers?area=${esc(p.areasWanted[0])}">+${people.length - shown.length} more</a></li>` : ''}</ul>
+      <p class="srcnote">Matched on research area only, from the network's list. It says who works in the area, not who is free or suitable.</p>` : ''}
+    <details class="reach">
+      <summary>Get in touch about this idea</summary>
+      <p class="srcnote">Posted by ${esc(p.contactName)}${p.contactRole ? ', ' + esc(p.contactRole) : ''} · ${esc(fmtDate(p.submittedAt))}
+        ${p.publicEmail ? ` · <a href="mailto:${esc(p.publicEmail)}">${esc(p.publicEmail)}</a>` : ''}</p>
+      <form data-id="${p.id}" class="reachform" novalidate>
+        <div class="grid2">
+          <div class="field"><label for="n${p.id}">Your name <span class="req">*</span></label><input type="text" id="n${p.id}" name="name" autocomplete="name"></div>
+          <div class="field"><label for="e${p.id}">Your email <span class="req">*</span></label><input type="email" id="e${p.id}" name="email" autocomplete="email"></div>
+        </div>
+        <div class="field"><label for="i${p.id}">Institution or organisation</label><input type="text" id="i${p.id}" name="institution"></div>
+        <div class="field"><label for="m${p.id}">Message <span class="req">*</span></label>
+          <span class="hint">Who you are, what you work on, and what interested you. Your message and address go to the poster${p.publicEmail ? '' : ' by email; their address is not shown to you'}.</span>
+          <textarea id="m${p.id}" name="message" maxlength="2000"></textarea></div>
+        <div class="actions"><button type="submit" class="btn primary">Send</button></div>
+        <div class="reachmsg"></div>
+      </form>
+    </details>
+  </article>`;
+}
+
+const hay = p => [p.title, p.summary, p.question, p.need, p.beneficiaries, p.org && p.org.name, p.geography].join(' ').toLowerCase();
+
+function draw() {
+  const q = $('q').value.trim().toLowerCase(), th = $('f-theme').value, ar = $('f-area').value, st = $('f-stage').value;
+  const rows = projects.filter(p => (!q || hay(p).includes(q)) && (!th || p.themes.includes(th)) && (!ar || p.areasWanted.includes(ar)) && (!st || p.stage === st));
+  $('count').textContent = projects.length
+    ? `${rows.length} of ${projects.length} project idea${projects.length === 1 ? '' : 's'}`
+    : '';
+  $('list').innerHTML = rows.map(card).join('') || (projects.length
+    ? '<p class="empty">No idea matches those filters.</p>'
+    : `<div class="card"><h3>No project ideas have been posted yet</h3>
+        <p>If your organisation has a question a researcher could help with, <a href="/collaborate/post">post the first idea</a>.
+        Or <a href="/collaborate/researchers">look through the researchers</a> to see who works on what.</p></div>`);
+  const url = new URL(location.href);
+  for (const [k, v] of [['q', q], ['theme', th], ['area', ar], ['stage', st]]) v ? url.searchParams.set(k, v) : url.searchParams.delete(k);
+  history.replaceState(null, '', url);
+}
+for (const id of ['q', 'f-theme', 'f-area', 'f-stage']) $(id).addEventListener('input', draw);
+
+const ERR = {
+  missing_fields: 'Your name and a message are needed.',
+  invalid_email: 'That email address does not look right.',
+  rate_limited: 'That is several messages in an hour from this address. Please try again later.',
+  not_accepting_yet: 'Messages cannot be delivered from this site just yet. Please try again later.',
+  not_found: 'That idea is no longer listed.',
+};
+$('list').addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = e.target, msg = f.querySelector('.reachmsg'), btn = f.querySelector('button');
+  const say = (t, k) => { msg.innerHTML = t ? `<div class="msg ${k}">${esc(t)}</div>` : ''; };
+  const d = Object.fromEntries(new FormData(f));
+  if (!d.name.trim() || !d.message.trim()) return say(ERR.missing_fields, 'bad');
+  btn.disabled = true; btn.textContent = 'Sending…'; say('');
+  try {
+    const res = await fetch(`/api/collaborate/projects/${f.dataset.id}/interest`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(d) });
+    const out = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(ERR[out.error] || out.error || `Error ${res.status}`);
+    say('Sent. The poster will reply to the address you gave.', 'ok');
+    f.reset();
+  } catch (err) { say(err.message, 'bad'); }
+  finally { btn.disabled = false; btn.textContent = 'Send'; }
+});
+
+draw();
+if (location.hash) { const t = document.querySelector(location.hash); if (t) t.scrollIntoView(); }
+</script>
