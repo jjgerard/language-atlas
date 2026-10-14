@@ -828,7 +828,6 @@ seedIfEmpty();
 warnIfStale();
 
 module.exports = {
-  db,
   approved, all, get, insert, update, setStatus, remove,
   exportDomain, pendingCounts, sanitize, SHAPES,
   addEditRequest, editRequests, setEditRequestState, openEditRequestCount,

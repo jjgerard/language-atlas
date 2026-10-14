@@ -25,10 +25,6 @@ const PAGES = {
   'sources.html': 'sources.html',
   'submit.html': 'submit.html',
   'admin.html': 'admin.html',
-  'sector.html': 'sector.html',
-  'collaborate.html': 'collaborate.html',
-  'collaborate-post.html': 'collaborate-post.html',
-  'collaborate-researchers.html': 'collaborate-researchers.html',
 };
 
 const GEOMETRY = path.join(OUT, 'geometry.json');

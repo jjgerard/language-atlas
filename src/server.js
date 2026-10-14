@@ -19,7 +19,6 @@ const store = require('./store');
 const { syncDomain, configured: gitConfigured } = require('./gitStore');
 const mail = require('./mailer');
 const ask = require('./ask');
-const projects = require('./projects');
 
 const PORT = Number(process.env.PORT || 3200);
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -279,83 +278,6 @@ app.post('/api/:domain/edit-requests', async (req, res) => {
   mail.sendEditRequestConfirmation(payload);
 });
 
-// ---- collaboration: VCSE project ideas and the researcher directory ----
-//
-// Not a domain (see projects.js): the posts are proposals, not findings, and
-// feed no map. They do share the moderation queue, the git snapshot and the
-// notification email, so nothing a stranger types is public until it has been
-// read.
-const EMAIL_OK = EMAIL_RE;
-const limits = new Map();
-/** At most `max` calls per visitor per hour for `name`. In memory, like the ask counters. */
-function limited(req, name, max) {
-  const ip = String(req.headers['fly-client-ip'] || req.ip || 'local');
-  const key = name + ':' + ip;
-  const now = Date.now();
-  const hits = (limits.get(key) || []).filter(t => now - t < ASK_WINDOW_MS);
-  if (hits.length >= max) { limits.set(key, hits); return true; }
-  hits.push(now);
-  limits.set(key, hits);
-  if (limits.size > 5000) for (const [k, v] of limits) if (!v.some(t => now - t < ASK_WINDOW_MS)) limits.delete(k);
-  return false;
-}
-
-app.get('/api/collaborate/meta', (req, res) => {
-  res.set('Cache-Control', 'public, max-age=300');
-  res.json({
-    themes: projects.THEMES, ageBands: projects.AGE_BANDS, kinds: projects.KINDS,
-    offers: projects.OFFERS, stages: projects.STAGES, funding: projects.FUNDING,
-    areas: projects.researchAreas(),
-  });
-});
-
-// The picker list: every organisation in the NI children's-sector deep dive,
-// slimmed to what choosing one needs. ~900 rows, so it is sent whole and
-// filtered in the browser.
-app.get('/api/collaborate/orgs', (req, res) => {
-  res.set('Cache-Control', 'public, max-age=300');
-  res.json({ orgs: projects.sectorIndex().orgs });
-});
-
-app.get('/api/collaborate/projects', (req, res) => {
-  res.set('Cache-Control', 'no-cache');
-  res.json({ projects: projects.approved() });
-});
-
-app.post('/api/collaborate/projects', (req, res) => {
-  const body = req.body || {};
-  if (!body.attestAuthorised || !body.attestNoPersonalData) return res.status(400).json({ error: 'attestation_required' });
-  if (!durable()) return res.status(503).json({ error: 'not_accepting_yet' });
-  if (limited(req, 'post', 5)) return res.status(429).json({ error: 'rate_limited' });
-  const out = projects.insert(body);
-  if (out.error) return res.status(400).json({ error: out.error });
-  res.status(201).json({ id: out.id });
-  const row = projects.get(out.id, { includePrivate: true });
-  mail.notifyNewProject(row, row.private, adminUrlFor(req));
-  mail.sendProjectConfirmation(row.private.email, row);
-});
-
-app.post('/api/collaborate/projects/:id/interest', (req, res) => {
-  const p = projects.get(Number(req.params.id), { includePrivate: true });
-  if (!p || p.status !== 'approved') return res.status(404).json({ error: 'not_found' });
-  const b = req.body || {};
-  const name = String(b.name || '').trim().slice(0, 100);
-  const email = String(b.email || '').trim().slice(0, 200);
-  const message = String(b.message || '').trim().slice(0, 2000);
-  if (!name || !message) return res.status(400).json({ error: 'missing_fields' });
-  if (!EMAIL_OK.test(email)) return res.status(400).json({ error: 'invalid_email' });
-  if (!mail.configured) return res.status(503).json({ error: 'not_accepting_yet' });
-  if (limited(req, 'interest', 5)) return res.status(429).json({ error: 'rate_limited' });
-  const r = String(b.researcher || '').trim().slice(0, 80);
-  const known = projects.researcherDoc().researchers.find(x => x.id === r);
-  mail.sendInterest(p, p.private, {
-    name, email, message,
-    institution: String(b.institution || '').trim().slice(0, 150),
-    researcher: known ? known.name : '',
-  });
-  res.status(201).json({ ok: true });
-});
-
 // ---- admin ----
 
 function timingSafeEqual(a, b) {
@@ -415,7 +337,6 @@ app.get('/api/admin/queue', requireAuth, (req, res) => {
   res.json({
     domains: LIVE.map(d => ({ id: d.id, label: d.label, pending: counts[d.id] || 0 })),
     editRequests: store.editRequests(),
-    projectsPending: projects.pendingCount(),
     git: gitConfigured,
   });
 });
@@ -472,35 +393,6 @@ app.post('/api/admin/edit-requests/:id/:action', requireAuth, (req, res) => {
   res.json({ request: updated });
 });
 
-// Collaboration project ideas share the dashboard but not the entry editor: a
-// project is approved, rejected or removed as written. Contact details are in
-// the response (the reviewer needs them) and never in the git snapshot.
-const persistProjects = () => syncDomain('projects', () => projects.exportApproved());
-
-app.get('/api/admin/projects', requireAuth, (req, res) => {
-  const status = typeof req.query.status === 'string' && req.query.status ? req.query.status : undefined;
-  res.json({ projects: projects.all(status), vocab: {
-    themes: projects.THEMES, kinds: projects.KINDS, offers: projects.OFFERS, stages: projects.STAGES,
-    funding: projects.FUNDING, ageBands: projects.AGE_BANDS, areas: projects.researchAreas() } });
-});
-
-app.post('/api/admin/projects/:id/:action', requireAuth, (req, res) => {
-  const STATUS = { approve: 'approved', reject: 'rejected', unpublish: 'pending' };
-  const status = STATUS[req.params.action];
-  if (!status) return res.status(404).json({ error: 'unknown_action' });
-  const p = projects.setStatus(Number(req.params.id), status);
-  if (!p) return res.status(404).json({ error: 'not_found' });
-  res.json({ project: p });
-  persistProjects();
-});
-
-app.delete('/api/admin/projects/:id', requireAuth, (req, res) => {
-  const p = projects.remove(Number(req.params.id));
-  if (!p) return res.status(404).json({ error: 'not_found' });
-  res.json({ ok: true });
-  persistProjects();
-});
-
 // ---- pages ----
 // One URL per map so it can be linked and bookmarked; the page reads the
 // domain back off the path.
@@ -528,15 +420,6 @@ app.get('/sources', page('sources.html'));
 app.get('/explore', (req, res) => res.redirect(301, '/patterns'));
 app.get('/submit', page('submit.html'));
 app.get('/admin', page('admin.html'));
-// Community-sector views, one per unit and sector. Data is public/sector/<id>.json,
-// built from research/ by research/tools/build-sector-ni.js.
-app.get('/sector/ni-children', page('sector.html'));
-app.get('/sector/ie-children', page('sector.html'));
-// Collaboration: VCSE project ideas, the form to post one, and the researcher
-// directory. Reads public/sector/ni-children.json and public/collaborate/.
-app.get('/collaborate', page('collaborate.html'));
-app.get('/collaborate/post', page('collaborate-post.html'));
-app.get('/collaborate/researchers', page('collaborate-researchers.html'));
 for (const d of LIVE) app.get('/' + d.id, page('map.html'));
 
 // Anything else is a real 404, not a silent fallback to the map.
